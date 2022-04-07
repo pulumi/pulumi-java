@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration of gVNIC feature.
- * 
  */
 public final class VirtualNICResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class VirtualNICResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether gVNIC features are enabled in the node pool.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

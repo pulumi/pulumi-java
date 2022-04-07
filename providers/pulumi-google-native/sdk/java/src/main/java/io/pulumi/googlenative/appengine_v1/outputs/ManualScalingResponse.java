@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ManualScalingResponse {
     /**
      * Number of instances to assign to the service at the start. This number can later be altered by using the Modules API (https://cloud.google.com/appengine/docs/python/modules/functions) set_num_instances() function.
-     * 
      */
     private final Integer instances;
 
@@ -22,7 +21,6 @@ public final class ManualScalingResponse {
 
     /**
      * Number of instances to assign to the service at the start. This number can later be altered by using the Modules API (https://cloud.google.com/appengine/docs/python/modules/functions) set_num_instances() function.
-     * 
     */
     public Integer getInstances() {
         return this.instances;

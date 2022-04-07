@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class VirtualMachineResponse {
     /**
      * The unique identifier of the Managed Compute Engine instance.
-     * 
      */
     private final String instanceId;
     /**
      * The user-friendly name of the Managed Compute Engine instance.
-     * 
      */
     private final String instanceName;
     /**
      * Virtual Machine configuration settings.
-     * 
      */
     private final VirtualMachineConfigResponse virtualMachineConfig;
 
@@ -38,21 +35,18 @@ public final class VirtualMachineResponse {
 
     /**
      * The unique identifier of the Managed Compute Engine instance.
-     * 
     */
     public String getInstanceId() {
         return this.instanceId;
     }
     /**
      * The user-friendly name of the Managed Compute Engine instance.
-     * 
     */
     public String getInstanceName() {
         return this.instanceName;
     }
     /**
      * Virtual Machine configuration settings.
-     * 
     */
     public VirtualMachineConfigResponse getVirtualMachineConfig() {
         return this.virtualMachineConfig;

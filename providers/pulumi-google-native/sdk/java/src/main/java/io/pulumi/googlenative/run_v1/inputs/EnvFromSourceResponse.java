@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Not supported by Cloud Run EnvFromSource represents the source of a set of ConfigMaps
- * 
  */
 public final class EnvFromSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EnvFromSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * (Optional) The ConfigMap to select from
-     * 
      */
     @Import(name="configMapRef", required=true)
       private final ConfigMapEnvSourceResponse configMapRef;
@@ -31,7 +29,6 @@ public final class EnvFromSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * (Optional) An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
-     * 
      */
     @Import(name="prefix", required=true)
       private final String prefix;
@@ -42,7 +39,6 @@ public final class EnvFromSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * (Optional) The Secret to select from
-     * 
      */
     @Import(name="secretRef", required=true)
       private final SecretEnvSourceResponse secretRef;

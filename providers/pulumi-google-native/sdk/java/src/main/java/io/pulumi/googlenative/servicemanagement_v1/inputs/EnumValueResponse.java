@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Enum value definition.
- * 
  */
 public final class EnumValueResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class EnumValueResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Enum value name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -32,7 +30,6 @@ public final class EnumValueResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Enum value number.
-     * 
      */
     @Import(name="number", required=true)
       private final Integer number;
@@ -43,7 +40,6 @@ public final class EnumValueResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Protocol buffer options.
-     * 
      */
     @Import(name="options", required=true)
       private final List<OptionResponse> options;

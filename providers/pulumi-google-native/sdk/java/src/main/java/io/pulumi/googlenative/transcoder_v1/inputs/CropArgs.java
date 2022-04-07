@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Video cropping configuration for the input video. The cropped input video is scaled to match the output resolution.
- * 
  */
 public final class CropArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CropArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of pixels to crop from the bottom. The default is 0.
-     * 
      */
     @Import(name="bottomPixels")
       private final @Nullable Output<Integer> bottomPixels;
@@ -31,7 +29,6 @@ public final class CropArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of pixels to crop from the left. The default is 0.
-     * 
      */
     @Import(name="leftPixels")
       private final @Nullable Output<Integer> leftPixels;
@@ -42,7 +39,6 @@ public final class CropArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of pixels to crop from the right. The default is 0.
-     * 
      */
     @Import(name="rightPixels")
       private final @Nullable Output<Integer> rightPixels;
@@ -53,7 +49,6 @@ public final class CropArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of pixels to crop from the top. The default is 0.
-     * 
      */
     @Import(name="topPixels")
       private final @Nullable Output<Integer> topPixels;

@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * The database provider.
-     * 
      */
     @EnumType
     public enum ConnectionProfileProvider {
         /**
          * The database provider is unknown.
-         * 
          */
         DatabaseProviderUnspecified("DATABASE_PROVIDER_UNSPECIFIED"),
         /**
          * CloudSQL runs the database.
-         * 
          */
         Cloudsql("CLOUDSQL"),
         /**
          * RDS runs the database.
-         * 
          */
         Rds("RDS"),
         /**
          * Amazon Aurora.
-         * 
          */
         Aurora("AURORA");
 

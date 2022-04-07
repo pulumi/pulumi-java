@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A SourceContext referring to a Gerrit project.
- * 
  */
 public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
 
     /**
      * An alias, which may be a branch or tag.
-     * 
      */
     @Import(name="aliasContext")
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> aliasContext;
@@ -32,7 +30,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
 
     /**
      * The full project name within the host. Projects may be nested, so "project/subproject" is a valid project name. The "repo name" is the hostURI/project.
-     * 
      */
     @Import(name="gerritProject")
       private final @Nullable Output<String> gerritProject;
@@ -43,7 +40,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
 
     /**
      * The URI of a running Gerrit instance.
-     * 
      */
     @Import(name="hostUri")
       private final @Nullable Output<String> hostUri;
@@ -54,7 +50,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
 
     /**
      * A revision (commit) ID.
-     * 
      */
     @Import(name="revisionId")
       private final @Nullable Output<String> revisionId;

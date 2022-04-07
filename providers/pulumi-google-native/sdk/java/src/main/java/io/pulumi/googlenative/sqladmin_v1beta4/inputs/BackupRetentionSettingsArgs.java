@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * We currently only support backup retention by specifying the number of backups we will retain.
- * 
  */
 public final class BackupRetentionSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class BackupRetentionSettingsArgs extends io.pulumi.resources.Resou
 
     /**
      * Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is 'COUNT', we will retain this many backups.
-     * 
      */
     @Import(name="retainedBackups")
       private final @Nullable Output<Integer> retainedBackups;
@@ -32,7 +30,6 @@ public final class BackupRetentionSettingsArgs extends io.pulumi.resources.Resou
 
     /**
      * The unit that 'retained_backups' represents.
-     * 
      */
     @Import(name="retentionUnit")
       private final @Nullable Output<BackupRetentionSettingsRetentionUnit> retentionUnit;

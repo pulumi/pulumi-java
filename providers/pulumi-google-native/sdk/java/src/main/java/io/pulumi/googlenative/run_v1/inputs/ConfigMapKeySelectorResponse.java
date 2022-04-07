@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Not supported by Cloud Run Selects a key from a ConfigMap.
- * 
  */
 public final class ConfigMapKeySelectorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ConfigMapKeySelectorResponse extends io.pulumi.resources.Invo
 
     /**
      * The key to select.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -31,7 +29,6 @@ public final class ConfigMapKeySelectorResponse extends io.pulumi.resources.Invo
 
     /**
      * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
-     * 
      */
     @Import(name="localObjectReference", required=true)
       private final LocalObjectReferenceResponse localObjectReference;
@@ -42,7 +39,6 @@ public final class ConfigMapKeySelectorResponse extends io.pulumi.resources.Invo
 
     /**
      * The ConfigMap to select from.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -53,7 +49,6 @@ public final class ConfigMapKeySelectorResponse extends io.pulumi.resources.Invo
 
     /**
      * (Optional) Specify whether the ConfigMap or its key must be defined
-     * 
      */
     @Import(name="optional", required=true)
       private final Boolean optional;

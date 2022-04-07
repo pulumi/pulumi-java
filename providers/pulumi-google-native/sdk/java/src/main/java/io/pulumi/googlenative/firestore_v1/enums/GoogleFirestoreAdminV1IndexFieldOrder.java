@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Indicates that this field supports ordering by the specified order or comparing using =, !=, <, <=, >, >=.
-     * 
      */
     @EnumType
     public enum GoogleFirestoreAdminV1IndexFieldOrder {
         /**
          * The ordering is unspecified. Not a valid option.
-         * 
          */
         OrderUnspecified("ORDER_UNSPECIFIED"),
         /**
          * The field is ordered by ascending field value.
-         * 
          */
         Ascending("ASCENDING"),
         /**
          * The field is ordered by descending field value.
-         * 
          */
         Descending("DESCENDING");
 

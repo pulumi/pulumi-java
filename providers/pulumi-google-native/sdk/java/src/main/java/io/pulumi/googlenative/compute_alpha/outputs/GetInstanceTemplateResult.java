@@ -13,47 +13,38 @@ import java.util.Objects;
 public final class GetInstanceTemplateResult {
     /**
      * The creation timestamp for this instance template in RFC3339 text format.
-     * 
      */
     private final String creationTimestamp;
     /**
      * An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     private final String description;
     /**
      * The resource type, which is always compute#instanceTemplate for instance templates.
-     * 
      */
     private final String kind;
     /**
      * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     private final String name;
     /**
      * The instance properties for this instance template.
-     * 
      */
     private final InstancePropertiesResponse properties;
     /**
      * The URL for this instance template. The server defines this URL.
-     * 
      */
     private final String selfLink;
     /**
      * Server-defined URL for this resource with the resource id.
-     * 
      */
     private final String selfLinkWithId;
     /**
-     * The source instance used to create the template. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance - projects/project/zones/zone/instances/instance
-     * 
+     * The source instance used to create the template. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance - projects/project/zones/zone/instances/instance 
      */
     private final String sourceInstance;
     /**
      * The source instance params to use to create this instance template.
-     * 
      */
     private final SourceInstanceParamsResponse sourceInstanceParams;
 
@@ -81,63 +72,54 @@ public final class GetInstanceTemplateResult {
 
     /**
      * The creation timestamp for this instance template in RFC3339 text format.
-     * 
     */
     public String getCreationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * An optional description of this resource. Provide this property when you create the resource.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * The resource type, which is always compute#instanceTemplate for instance templates.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The instance properties for this instance template.
-     * 
     */
     public InstancePropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The URL for this instance template. The server defines this URL.
-     * 
     */
     public String getSelfLink() {
         return this.selfLink;
     }
     /**
      * Server-defined URL for this resource with the resource id.
-     * 
     */
     public String getSelfLinkWithId() {
         return this.selfLinkWithId;
     }
     /**
-     * The source instance used to create the template. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance - projects/project/zones/zone/instances/instance
-     * 
+     * The source instance used to create the template. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance - projects/project/zones/zone/instances/instance 
     */
     public String getSourceInstance() {
         return this.sourceInstance;
     }
     /**
      * The source instance params to use to create this instance template.
-     * 
     */
     public SourceInstanceParamsResponse getSourceInstanceParams() {
         return this.sourceInstanceParams;

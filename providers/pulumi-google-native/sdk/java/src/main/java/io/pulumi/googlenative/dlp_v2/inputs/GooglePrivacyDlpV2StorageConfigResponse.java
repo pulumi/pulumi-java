@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Shared message indicating Cloud storage type.
- * 
  */
 public final class GooglePrivacyDlpV2StorageConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class GooglePrivacyDlpV2StorageConfigResponse extends io.pulumi.res
 
     /**
      * BigQuery options.
-     * 
      */
     @Import(name="bigQueryOptions", required=true)
       private final GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions;
@@ -33,7 +31,6 @@ public final class GooglePrivacyDlpV2StorageConfigResponse extends io.pulumi.res
 
     /**
      * Google Cloud Storage options.
-     * 
      */
     @Import(name="cloudStorageOptions", required=true)
       private final GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions;
@@ -44,7 +41,6 @@ public final class GooglePrivacyDlpV2StorageConfigResponse extends io.pulumi.res
 
     /**
      * Google Cloud Datastore options.
-     * 
      */
     @Import(name="datastoreOptions", required=true)
       private final GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions;
@@ -55,7 +51,6 @@ public final class GooglePrivacyDlpV2StorageConfigResponse extends io.pulumi.res
 
     /**
      * Hybrid inspection options.
-     * 
      */
     @Import(name="hybridOptions", required=true)
       private final GooglePrivacyDlpV2HybridOptionsResponse hybridOptions;

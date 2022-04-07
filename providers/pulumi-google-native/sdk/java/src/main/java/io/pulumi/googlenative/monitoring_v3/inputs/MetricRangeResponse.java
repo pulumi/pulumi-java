@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A MetricRange is used when each window is good when the value x of a single TimeSeries satisfies range.min <= x <= range.max. The provided TimeSeries must have ValueType = INT64 or ValueType = DOUBLE and MetricKind = GAUGE.
- * 
  */
 public final class MetricRangeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class MetricRangeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Range of values considered "good." For a one-sided range, set one bound to an infinite value.
-     * 
      */
     @Import(name="range", required=true)
       private final GoogleMonitoringV3RangeResponse range;
@@ -30,7 +28,6 @@ public final class MetricRangeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying the TimeSeries to use for evaluating window quality.
-     * 
      */
     @Import(name="timeSeries", required=true)
       private final String timeSeries;

@@ -13,76 +13,65 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a view.
- * 
  */
 @ResourceType(type="google-native:contactcenterinsights/v1:View")
 public class View extends io.pulumi.resources.CustomResource {
     /**
      * The time at which this view was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time at which this view was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The human-readable display name of the view.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The human-readable display name of the view.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Immutable. The resource name of the view. Format: projects/{project}/locations/{location}/views/{view}
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Immutable. The resource name of the view. Format: projects/{project}/locations/{location}/views/{view}
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The most recent time at which the view was updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The most recent time at which the view was updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
     /**
      * String with specific view properties.
-     * 
      */
     @Export(name="value", type=String.class, parameters={})
     private Output<String> value;
 
     /**
      * @return String with specific view properties.
-     * 
      */
     public Output<String> getValue() {
         return this.value;

@@ -26,7 +26,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -37,7 +36,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The settings for this topic's partitions.
-     * 
      */
     @Import(name="partitionConfig")
       private final @Nullable Output<PartitionConfigArgs> partitionConfig;
@@ -55,7 +53,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The settings for this topic's Reservation usage.
-     * 
      */
     @Import(name="reservationConfig")
       private final @Nullable Output<ReservationConfigArgs> reservationConfig;
@@ -66,7 +63,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The settings for this topic's message retention.
-     * 
      */
     @Import(name="retentionConfig")
       private final @Nullable Output<RetentionConfigArgs> retentionConfig;

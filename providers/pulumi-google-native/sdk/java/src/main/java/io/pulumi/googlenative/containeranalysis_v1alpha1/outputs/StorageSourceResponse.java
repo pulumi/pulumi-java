@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class StorageSourceResponse {
     /**
      * Google Cloud Storage bucket containing source (see [Bucket Name Requirements] (https://cloud.google.com/storage/docs/bucket-naming#requirements)).
-     * 
      */
     private final String bucket;
     /**
      * Google Cloud Storage generation for the object.
-     * 
      */
     private final String generation;
     /**
      * Google Cloud Storage object containing source.
-     * 
      */
     private final String object;
 
@@ -37,21 +34,18 @@ public final class StorageSourceResponse {
 
     /**
      * Google Cloud Storage bucket containing source (see [Bucket Name Requirements] (https://cloud.google.com/storage/docs/bucket-naming#requirements)).
-     * 
     */
     public String getBucket() {
         return this.bucket;
     }
     /**
      * Google Cloud Storage generation for the object.
-     * 
     */
     public String getGeneration() {
         return this.generation;
     }
     /**
      * Google Cloud Storage object containing source.
-     * 
     */
     public String getObject() {
         return this.object;

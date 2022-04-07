@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudMlV1__XraiAttributionResponse {
     /**
      * Number of steps for approximating the path integral. A good value to start is 50 and gradually increase until the sum to diff property is met within the desired error range.
-     * 
      */
     private final Integer numIntegralSteps;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudMlV1__XraiAttributionResponse {
 
     /**
      * Number of steps for approximating the path integral. A good value to start is 50 and gradually increase until the sum to diff property is met within the desired error range.
-     * 
     */
     public Integer getNumIntegralSteps() {
         return this.numIntegralSteps;

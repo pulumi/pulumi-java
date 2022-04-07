@@ -14,62 +14,53 @@ import javax.annotation.Nullable;
 /**
  * Create an SSH public key
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:oslogin/v1alpha:SshPublicKey")
 public class SshPublicKey extends io.pulumi.resources.CustomResource {
     /**
      * An expiration time in microseconds since epoch.
-     * 
      */
     @Export(name="expirationTimeUsec", type=String.class, parameters={})
     private Output<String> expirationTimeUsec;
 
     /**
      * @return An expiration time in microseconds since epoch.
-     * 
      */
     public Output<String> getExpirationTimeUsec() {
         return this.expirationTimeUsec;
     }
     /**
      * The SHA-256 fingerprint of the SSH public key.
-     * 
      */
     @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
      * @return The SHA-256 fingerprint of the SSH public key.
-     * 
      */
     public Output<String> getFingerprint() {
         return this.fingerprint;
     }
     /**
      * Public key text in SSH format, defined by RFC4253 section 6.6.
-     * 
      */
     @Export(name="key", type=String.class, parameters={})
     private Output<String> key;
 
     /**
      * @return Public key text in SSH format, defined by RFC4253 section 6.6.
-     * 
      */
     public Output<String> getKey() {
         return this.key;
     }
     /**
      * The canonical resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The canonical resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The details about how to run the execution.
- * 
  */
 public final class SpecificationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class SpecificationResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * An Android mobile test execution specification.
-     * 
      */
     @Import(name="androidTest", required=true)
       private final AndroidTestResponse androidTest;
@@ -30,7 +28,6 @@ public final class SpecificationResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * An iOS mobile test execution specification.
-     * 
      */
     @Import(name="iosTest", required=true)
       private final IosTestResponse iosTest;

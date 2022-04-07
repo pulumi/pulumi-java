@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class MixinResponse {
     /**
      * The fully qualified name of the interface which is included.
-     * 
      */
     private final String name;
     /**
      * If non-empty specifies a path under which inherited HTTP paths are rooted.
-     * 
      */
     private final String root;
 
@@ -30,14 +28,12 @@ public final class MixinResponse {
 
     /**
      * The fully qualified name of the interface which is included.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * If non-empty specifies a path under which inherited HTTP paths are rooted.
-     * 
     */
     public String getRoot() {
         return this.root;

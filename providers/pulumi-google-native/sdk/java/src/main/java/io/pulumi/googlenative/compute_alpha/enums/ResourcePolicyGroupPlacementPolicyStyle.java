@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * Specifies instances to hosts placement relationship
-     * 
      */
     @EnumType
     public enum ResourcePolicyGroupPlacementPolicyStyle {
         /**
          * VMs are placed without regard for shared hosts
-         * 
          */
         Compact("COMPACT"),
         /**
          * VMs do not share the same hosts
-         * 
          */
         FullySpread("FULLY_SPREAD"),
         UnspecifiedPlacementType("UNSPECIFIED_PLACEMENT_TYPE");

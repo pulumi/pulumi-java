@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * MembershipEndpoint contains information needed to contact a Kubernetes API, endpoint and any additional Kubernetes metadata.
- * 
  */
 public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Optional. Specific information for a Google Edge cluster.
-     * 
      */
     @Import(name="edgeCluster")
       private final @Nullable Output<EdgeClusterArgs> edgeCluster;
@@ -35,7 +33,6 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Optional. Specific information for a GKE-on-GCP cluster.
-     * 
      */
     @Import(name="gkeCluster")
       private final @Nullable Output<GkeClusterArgs> gkeCluster;
@@ -46,7 +43,6 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.
-     * 
      */
     @Import(name="kubernetesResource")
       private final @Nullable Output<KubernetesResourceArgs> kubernetesResource;
@@ -57,7 +53,6 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Optional. Specific information for a GKE Multi-Cloud cluster.
-     * 
      */
     @Import(name="multiCloudCluster")
       private final @Nullable Output<MultiCloudClusterArgs> multiCloudCluster;
@@ -68,7 +63,6 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster who has no resourceLink is not allowed to use this field, it should have a nil "type" instead.
-     * 
      */
     @Import(name="onPremCluster")
       private final @Nullable Output<OnPremClusterArgs> onPremCluster;

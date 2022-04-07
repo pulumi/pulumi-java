@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * This represents a particular channel of distribution for a given package. e.g. Debian's jessie-backports dpkg mirror
- * 
  */
 public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The CPU architecture for which packages in this distribution channel were built
-     * 
      */
     @Import(name="architecture")
       private final @Nullable Output<DistributionArchitecture> architecture;
@@ -33,7 +31,6 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The cpe_uri in [cpe format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
-     * 
      */
     @Import(name="cpeUri")
       private final @Nullable Output<String> cpeUri;
@@ -44,7 +41,6 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The distribution channel-specific description of this package.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -55,7 +51,6 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The latest available version of this package in this distribution channel.
-     * 
      */
     @Import(name="latestVersion")
       private final @Nullable Output<VersionArgs> latestVersion;
@@ -66,7 +61,6 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A freeform string denoting the maintainer of this package.
-     * 
      */
     @Import(name="maintainer")
       private final @Nullable Output<String> maintainer;
@@ -77,7 +71,6 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The distribution channel-specific homepage for this package.
-     * 
      */
     @Import(name="url")
       private final @Nullable Output<String> url;

@@ -17,7 +17,6 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of the workflow provided by the user. Must be at most 1000 unicode characters long.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -28,7 +27,6 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Labels associated with this workflow. Labels can contain at most 64 entries. Keys and values can be no longer than 63 characters and can only contain lowercase letters, numeric characters, underscores and dashes. Label keys must start with a letter. International characters are allowed.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -46,7 +44,6 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the workflow. Format: projects/{project}/locations/{location}/workflows/{workflow}
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -64,7 +61,6 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The service account associated with the latest workflow version. This service account represents the identity of the workflow and determines what permissions the workflow has. Format: projects/{project}/serviceAccounts/{account} or {account} Using `-` as a wildcard for the `{project}` or not providing one at all will infer the project from the account. The `{account}` value can be the `email` address or the `unique_id` of the service account. If not provided, workflow will use the project's default service account. Modifying this field for an existing workflow results in a new workflow revision.
-     * 
      */
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
@@ -75,7 +71,6 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Workflow code to be executed. The size limit is 128KB.
-     * 
      */
     @Import(name="sourceContents")
       private final @Nullable Output<String> sourceContents;

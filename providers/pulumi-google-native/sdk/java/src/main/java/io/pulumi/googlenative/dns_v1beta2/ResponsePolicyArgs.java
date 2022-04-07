@@ -26,7 +26,6 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User-provided description for this Response Policy.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -37,7 +36,6 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of Google Kubernetes Engine clusters to which this response policy is applied.
-     * 
      */
     @Import(name="gkeClusters")
       private final @Nullable Output<List<ResponsePolicyGKEClusterArgs>> gkeClusters;
@@ -48,7 +46,6 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unique identifier for the resource; defined by the server (output only).
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -66,7 +63,6 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of network names specifying networks to which this policy is applied.
-     * 
      */
     @Import(name="networks")
       private final @Nullable Output<List<ResponsePolicyNetworkArgs>> networks;
@@ -84,7 +80,6 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User assigned name for this Response Policy.
-     * 
      */
     @Import(name="responsePolicyName")
       private final @Nullable Output<String> responsePolicyName;

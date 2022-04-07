@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse {
     /**
      * Optional. The collection of quick replies.
-     * 
      */
     private final List<String> quickReplies;
     /**
      * Optional. The title of the collection of quick replies.
-     * 
      */
     private final String title;
 
@@ -31,14 +29,12 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse {
 
     /**
      * Optional. The collection of quick replies.
-     * 
     */
     public List<String> getQuickReplies() {
         return this.quickReplies;
     }
     /**
      * Optional. The title of the collection of quick replies.
-     * 
     */
     public String getTitle() {
         return this.title;

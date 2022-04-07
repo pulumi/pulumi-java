@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The Docker execuctor specification.
- * 
  */
 public final class DockerExecutorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class DockerExecutorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The command or newline delimited script to run. The command string will be executed within a bash shell. If the command exits with a non-zero exit code, output parameter de-localization will be skipped and the pipeline operation's `error` field will be populated. Maximum command string length is 16384.
-     * 
      */
     @Import(name="cmd", required=true)
       private final Output<String> cmd;
@@ -30,7 +28,6 @@ public final class DockerExecutorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Image name from either Docker Hub or Google Container Registry. Users that run pipelines must have READ access to the image.
-     * 
      */
     @Import(name="imageName", required=true)
       private final Output<String> imageName;

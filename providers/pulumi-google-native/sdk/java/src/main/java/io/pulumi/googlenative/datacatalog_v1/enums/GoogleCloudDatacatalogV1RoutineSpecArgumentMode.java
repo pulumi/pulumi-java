@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * Specifies whether the argument is input or output.
-     * 
      */
     @EnumType
     public enum GoogleCloudDatacatalogV1RoutineSpecArgumentMode {
         /**
          * Unspecified mode.
-         * 
          */
         ModeUnspecified("MODE_UNSPECIFIED"),
         /**
          * The argument is input-only.
-         * 
          */
         In("IN"),
         /**
          * The argument is output-only.
-         * 
          */
         Out("OUT"),
         /**
          * The argument is both an input and an output.
-         * 
          */
         Inout("INOUT");
 

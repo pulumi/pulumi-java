@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A signature object consists of the KeyID used and the signature itself.
- * 
  */
 public final class GrafeasV1beta1IntotoSignatureArgs extends io.pulumi.resources.ResourceArgs {
 

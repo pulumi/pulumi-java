@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * The complexity of the password.
-     * 
      */
     @EnumType
     public enum PasswordValidationPolicyComplexity {
         /**
          * Complexity check is not specified.
-         * 
          */
         ComplexityUnspecified("COMPLEXITY_UNSPECIFIED"),
         /**
          * A combination of lowercase, uppercase, numeric, and non-alphanumeric characters.
-         * 
          */
         ComplexityDefault("COMPLEXITY_DEFAULT");
 

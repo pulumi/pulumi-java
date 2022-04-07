@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * Default is INSTALLED. The desired state the agent should maintain for this recipe. INSTALLED: The software recipe is installed on the instance but won't be updated to new versions. UPDATED: The software recipe is installed on the instance. The recipe is updated to a higher version, if a higher version of the recipe is assigned to this instance. REMOVE: Remove is unsupported for software recipes and attempts to create or update a recipe to the REMOVE state is rejected.
-     * 
      */
     @EnumType
     public enum SoftwareRecipeDesiredState {
         /**
          * The default is to ensure the package is installed.
-         * 
          */
         DesiredStateUnspecified("DESIRED_STATE_UNSPECIFIED"),
         /**
          * The agent ensures that the package is installed.
-         * 
          */
         Installed("INSTALLED"),
         /**
          * The agent ensures that the package is installed and periodically checks for and install any updates.
-         * 
          */
         Updated("UPDATED"),
         /**
          * The agent ensures that the package is not installed and uninstall it if detected.
-         * 
          */
         Removed("REMOVED");
 

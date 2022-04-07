@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Instructs the speech synthesizer on how to generate the output audio content.
- * 
  */
 public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse extends i
 
     /**
      * Optional. Indicates whether text to speech is enabled. Even when this field is false, other settings in this proto are still retained.
-     * 
      */
     @Import(name="enableTextToSpeech", required=true)
       private final Boolean enableTextToSpeech;
@@ -32,7 +30,6 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse extends i
 
     /**
      * Audio encoding of the synthesized audio content.
-     * 
      */
     @Import(name="outputAudioEncoding", required=true)
       private final String outputAudioEncoding;
@@ -43,7 +40,6 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse extends i
 
     /**
      * Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the synthesizer will use the default sample rate based on the audio encoding. If this is different from the voice's natural sample rate, then the synthesizer will honor this request by converting to the desired sample rate (which might result in worse audio quality).
-     * 
      */
     @Import(name="sampleRateHertz", required=true)
       private final Integer sampleRateHertz;
@@ -54,7 +50,6 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse extends i
 
     /**
      * Optional. Configuration of how speech should be synthesized, mapping from language (https://cloud.google.com/dialogflow/docs/reference/language) to SynthesizeSpeechConfig.
-     * 
      */
     @Import(name="synthesizeSpeechConfigs", required=true)
       private final Map<String,String> synthesizeSpeechConfigs;

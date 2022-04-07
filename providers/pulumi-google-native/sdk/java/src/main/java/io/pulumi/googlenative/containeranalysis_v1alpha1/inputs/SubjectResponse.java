@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Subject refers to the subject of the intoto statement
- * 
  */
 public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * "": "" Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
-     * 
      */
     @Import(name="digest", required=true)
       private final Map<String,String> digest;
@@ -30,7 +28,6 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * name is the name of the Subject used here
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

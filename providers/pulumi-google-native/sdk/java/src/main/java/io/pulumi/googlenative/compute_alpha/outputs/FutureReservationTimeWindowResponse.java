@@ -14,7 +14,6 @@ public final class FutureReservationTimeWindowResponse {
     private final String endTime;
     /**
      * Start time of the Future Reservation. The start_time is an RFC3339 string.
-     * 
      */
     private final String startTime;
 
@@ -36,7 +35,6 @@ public final class FutureReservationTimeWindowResponse {
     }
     /**
      * Start time of the Future Reservation. The start_time is an RFC3339 string.
-     * 
     */
     public String getStartTime() {
         return this.startTime;

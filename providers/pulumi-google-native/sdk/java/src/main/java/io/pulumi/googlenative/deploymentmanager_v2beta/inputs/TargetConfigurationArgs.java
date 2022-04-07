@@ -18,7 +18,6 @@ public final class TargetConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The configuration to use for this deployment.
-     * 
      */
     @Import(name="config")
       private final @Nullable Output<ConfigFileArgs> config;
@@ -29,7 +28,6 @@ public final class TargetConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Specifies any files to import for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.
-     * 
      */
     @Import(name="imports")
       private final @Nullable Output<List<ImportFileArgs>> imports;

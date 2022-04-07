@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * TransferOptions define the actions to be performed on objects in a transfer.
- * 
  */
 public final class TransferOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class TransferOptionsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Whether objects should be deleted from the source after they are transferred to the sink. **Note:** This option and delete_objects_unique_in_sink are mutually exclusive.
-     * 
      */
     @Import(name="deleteObjectsFromSourceAfterTransfer")
       private final @Nullable Output<Boolean> deleteObjectsFromSourceAfterTransfer;
@@ -32,7 +30,6 @@ public final class TransferOptionsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Whether objects that exist only in the sink should be deleted. **Note:** This option and delete_objects_from_source_after_transfer are mutually exclusive.
-     * 
      */
     @Import(name="deleteObjectsUniqueInSink")
       private final @Nullable Output<Boolean> deleteObjectsUniqueInSink;
@@ -43,7 +40,6 @@ public final class TransferOptionsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Represents the selected metadata options for a transfer job.
-     * 
      */
     @Import(name="metadataOptions")
       private final @Nullable Output<MetadataOptionsArgs> metadataOptions;
@@ -54,7 +50,6 @@ public final class TransferOptionsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * When to overwrite objects that already exist in the sink. The default is that only objects that are different from the source are ovewritten. If true, all objects in the sink whose name matches an object in the source are overwritten with the source object.
-     * 
      */
     @Import(name="overwriteObjectsAlreadyExistingInSink")
       private final @Nullable Output<Boolean> overwriteObjectsAlreadyExistingInSink;

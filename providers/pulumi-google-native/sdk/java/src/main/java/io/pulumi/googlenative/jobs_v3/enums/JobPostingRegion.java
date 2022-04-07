@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * Optional. The job PostingRegion (for example, state, country) throughout which the job is available. If this field is set, a LocationFilter in a search query within the job region finds this job posting if an exact location match isn't specified. If this field is set to PostingRegion.NATION or PostingRegion.ADMINISTRATIVE_AREA, setting job Job.addresses to the same location level as this field is strongly recommended.
-     * 
      */
     @EnumType
     public enum JobPostingRegion {
         /**
          * If the region is unspecified, the job is only returned if it matches the LocationFilter.
-         * 
          */
         PostingRegionUnspecified("POSTING_REGION_UNSPECIFIED"),
         /**
          * In addition to exact location matching, job posting is returned when the LocationFilter in the search query is in the same administrative area as the returned job posting. For example, if a `ADMINISTRATIVE_AREA` job is posted in "CA, USA", it's returned if LocationFilter has "Mountain View". Administrative area refers to top-level administrative subdivision of this country. For example, US state, IT region, UK constituent nation and JP prefecture.
-         * 
          */
         AdministrativeArea("ADMINISTRATIVE_AREA"),
         /**
          * In addition to exact location matching, job is returned when LocationFilter in search query is in the same country as this job. For example, if a `NATION_WIDE` job is posted in "USA", it's returned if LocationFilter has 'Mountain View'.
-         * 
          */
         Nation("NATION"),
         /**
          * Job allows employees to work remotely (telecommute). If locations are provided with this value, the job is considered as having a location, but telecommuting is allowed.
-         * 
          */
         Telecommute("TELECOMMUTE");
 

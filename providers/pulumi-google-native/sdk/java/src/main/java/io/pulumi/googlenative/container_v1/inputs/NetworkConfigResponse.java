@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * NetworkConfig reports the relative names of network & subnetwork.
- * 
  */
 public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
-     * 
      */
     @Import(name="datapathProvider", required=true)
       private final String datapathProvider;
@@ -33,7 +31,6 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when default_snat_status is disabled. When disabled is set to false, default IP masquerade rules will be applied to the nodes to prevent sNAT on cluster internal traffic.
-     * 
      */
     @Import(name="defaultSnatStatus", required=true)
       private final DefaultSnatStatusResponse defaultSnatStatus;
@@ -44,7 +41,6 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * DNSConfig contains clusterDNS config for this cluster.
-     * 
      */
     @Import(name="dnsConfig", required=true)
       private final DNSConfigResponse dnsConfig;
@@ -55,7 +51,6 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
-     * 
      */
     @Import(name="enableIntraNodeVisibility", required=true)
       private final Boolean enableIntraNodeVisibility;
@@ -66,7 +61,6 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Whether L4ILB Subsetting is enabled for this cluster.
-     * 
      */
     @Import(name="enableL4ilbSubsetting", required=true)
       private final Boolean enableL4ilbSubsetting;
@@ -77,7 +71,6 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The relative name of the Google Compute Engine network(https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the cluster is connected. Example: projects/my-project/global/networks/my-network
-     * 
      */
     @Import(name="network", required=true)
       private final String network;
@@ -88,7 +81,6 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4)
-     * 
      */
     @Import(name="privateIpv6GoogleAccess", required=true)
       private final String privateIpv6GoogleAccess;
@@ -99,7 +91,6 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * ServiceExternalIPsConfig specifies if services with externalIPs field are blocked or not.
-     * 
      */
     @Import(name="serviceExternalIpsConfig", required=true)
       private final ServiceExternalIPsConfigResponse serviceExternalIpsConfig;
@@ -110,7 +101,6 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The relative name of the Google Compute Engine [subnetwork](https://cloud.google.com/compute/docs/vpc) to which the cluster is connected. Example: projects/my-project/regions/us-central1/subnetworks/my-subnet
-     * 
      */
     @Import(name="subnetwork", required=true)
       private final String subnetwork;

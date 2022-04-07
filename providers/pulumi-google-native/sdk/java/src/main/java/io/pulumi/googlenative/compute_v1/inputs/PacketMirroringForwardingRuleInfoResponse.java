@@ -14,7 +14,6 @@ public final class PacketMirroringForwardingRuleInfoResponse extends io.pulumi.r
 
     /**
      * Unique identifier for the forwarding rule; defined by the server.
-     * 
      */
     @Import(name="canonicalUrl", required=true)
       private final String canonicalUrl;
@@ -25,7 +24,6 @@ public final class PacketMirroringForwardingRuleInfoResponse extends io.pulumi.r
 
     /**
      * Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.
-     * 
      */
     @Import(name="url", required=true)
       private final String url;

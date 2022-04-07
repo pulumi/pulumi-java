@@ -15,118 +15,101 @@ import javax.annotation.Nullable;
 /**
  * Starts creating a new Cloud Bigtable Backup. The returned backup long-running operation can be used to track creation of the backup. The metadata field type is CreateBackupMetadata. The response field type is Backup, if successful. Cancelling the returned operation will stop the creation and delete the backup.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:bigtableadmin/v2:Backup")
 public class Backup extends io.pulumi.resources.CustomResource {
     /**
      * The encryption information for the backup.
-     * 
      */
     @Export(name="encryptionInfo", type=EncryptionInfoResponse.class, parameters={})
     private Output<EncryptionInfoResponse> encryptionInfo;
 
     /**
      * @return The encryption information for the backup.
-     * 
      */
     public Output<EncryptionInfoResponse> getEncryptionInfo() {
         return this.encryptionInfo;
     }
     /**
      * `end_time` is the time that the backup was finished. The row data in the backup will be no newer than this timestamp.
-     * 
      */
     @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
      * @return `end_time` is the time that the backup was finished. The row data in the backup will be no newer than this timestamp.
-     * 
      */
     public Output<String> getEndTime() {
         return this.endTime;
     }
     /**
      * The expiration time of the backup, with microseconds granularity that must be at least 6 hours and at most 30 days from the time the request is received. Once the `expire_time` has passed, Cloud Bigtable will delete the backup and free the resources used by the backup.
-     * 
      */
     @Export(name="expireTime", type=String.class, parameters={})
     private Output<String> expireTime;
 
     /**
      * @return The expiration time of the backup, with microseconds granularity that must be at least 6 hours and at most 30 days from the time the request is received. Once the `expire_time` has passed, Cloud Bigtable will delete the backup and free the resources used by the backup.
-     * 
      */
     public Output<String> getExpireTime() {
         return this.expireTime;
     }
     /**
      * A globally unique identifier for the backup which cannot be changed. Values are of the form `projects/{project}/instances/{instance}/clusters/{cluster}/ backups/_a-zA-Z0-9*` The final segment of the name must be between 1 and 50 characters in length. The backup is stored in the cluster identified by the prefix of the backup name of the form `projects/{project}/instances/{instance}/clusters/{cluster}`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return A globally unique identifier for the backup which cannot be changed. Values are of the form `projects/{project}/instances/{instance}/clusters/{cluster}/ backups/_a-zA-Z0-9*` The final segment of the name must be between 1 and 50 characters in length. The backup is stored in the cluster identified by the prefix of the backup name of the form `projects/{project}/instances/{instance}/clusters/{cluster}`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Size of the backup in bytes.
-     * 
      */
     @Export(name="sizeBytes", type=String.class, parameters={})
     private Output<String> sizeBytes;
 
     /**
      * @return Size of the backup in bytes.
-     * 
      */
     public Output<String> getSizeBytes() {
         return this.sizeBytes;
     }
     /**
      * Immutable. Name of the table from which this backup was created. This needs to be in the same instance as the backup. Values are of the form `projects/{project}/instances/{instance}/tables/{source_table}`.
-     * 
      */
     @Export(name="sourceTable", type=String.class, parameters={})
     private Output<String> sourceTable;
 
     /**
      * @return Immutable. Name of the table from which this backup was created. This needs to be in the same instance as the backup. Values are of the form `projects/{project}/instances/{instance}/tables/{source_table}`.
-     * 
      */
     public Output<String> getSourceTable() {
         return this.sourceTable;
     }
     /**
      * `start_time` is the time that the backup was started (i.e. approximately the time the CreateBackup request is received). The row data in this backup will be no older than this timestamp.
-     * 
      */
     @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
      * @return `start_time` is the time that the backup was started (i.e. approximately the time the CreateBackup request is received). The row data in this backup will be no older than this timestamp.
-     * 
      */
     public Output<String> getStartTime() {
         return this.startTime;
     }
     /**
      * The current state of the backup.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The current state of the backup.
-     * 
      */
     public Output<String> getState() {
         return this.state;

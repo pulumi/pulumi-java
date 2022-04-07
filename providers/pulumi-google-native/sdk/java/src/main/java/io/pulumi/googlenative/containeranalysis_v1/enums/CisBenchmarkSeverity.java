@@ -12,32 +12,26 @@ import java.util.StringJoiner;
     public enum CisBenchmarkSeverity {
         /**
          * Unknown.
-         * 
          */
         SeverityUnspecified("SEVERITY_UNSPECIFIED"),
         /**
          * Minimal severity.
-         * 
          */
         Minimal("MINIMAL"),
         /**
          * Low severity.
-         * 
          */
         Low("LOW"),
         /**
          * Medium severity.
-         * 
          */
         Medium("MEDIUM"),
         /**
          * High severity.
-         * 
          */
         High("HIGH"),
         /**
          * Critical severity.
-         * 
          */
         Critical("CRITICAL");
 

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Information that is specific to TfLite models.
- * 
  */
 public final class TfLiteModelResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class TfLiteModelResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The AutoML model id referencing a model you created with the AutoML API. The name should have format 'projects//locations//models/' (This is the model resource name returned from the AutoML API)
-     * 
      */
     @Import(name="automlModel", required=true)
       private final String automlModel;
@@ -29,7 +27,6 @@ public final class TfLiteModelResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The TfLite file containing the model. (Stored in Google Cloud). The gcs_tflite_uri should have form: gs://some-bucket/some-model.tflite Note: If you update the file in the original location, it is necessary to call UpdateModel for ML to pick up and validate the updated file.
-     * 
      */
     @Import(name="gcsTfliteUri", required=true)
       private final String gcsTfliteUri;
@@ -40,7 +37,6 @@ public final class TfLiteModelResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The size of the TFLite model
-     * 
      */
     @Import(name="sizeBytes", required=true)
       private final String sizeBytes;

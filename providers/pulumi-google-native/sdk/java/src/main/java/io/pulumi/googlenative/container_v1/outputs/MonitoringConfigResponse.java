@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class MonitoringConfigResponse {
     /**
      * Monitoring components configuration
-     * 
      */
     private final MonitoringComponentConfigResponse componentConfig;
 
@@ -22,7 +21,6 @@ public final class MonitoringConfigResponse {
 
     /**
      * Monitoring components configuration
-     * 
     */
     public MonitoringComponentConfigResponse getComponentConfig() {
         return this.componentConfig;

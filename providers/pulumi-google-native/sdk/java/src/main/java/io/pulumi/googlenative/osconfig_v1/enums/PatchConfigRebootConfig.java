@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * Post-patch reboot settings.
-     * 
      */
     @EnumType
     public enum PatchConfigRebootConfig {
         /**
          * The default behavior is DEFAULT.
-         * 
          */
         RebootConfigUnspecified("REBOOT_CONFIG_UNSPECIFIED"),
         /**
          * The agent decides if a reboot is necessary by checking signals such as registry keys on Windows or `/var/run/reboot-required` on APT based systems. On RPM based systems, a set of core system package install times are compared with system boot time.
-         * 
          */
         Default("DEFAULT"),
         /**
          * Always reboot the machine after the update completes.
-         * 
          */
         Always("ALWAYS"),
         /**
          * Never reboot the machine after the update completes.
-         * 
          */
         Never("NEVER");
 

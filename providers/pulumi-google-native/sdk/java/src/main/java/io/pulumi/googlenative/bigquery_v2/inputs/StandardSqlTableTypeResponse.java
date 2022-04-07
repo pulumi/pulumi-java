@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A table type
- * 
  */
 public final class StandardSqlTableTypeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class StandardSqlTableTypeResponse extends io.pulumi.resources.Invo
 
     /**
      * The columns in this table type
-     * 
      */
     @Import(name="columns", required=true)
       private final List<StandardSqlFieldResponse> columns;

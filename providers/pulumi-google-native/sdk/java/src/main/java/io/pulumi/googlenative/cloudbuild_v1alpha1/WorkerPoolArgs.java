@@ -19,7 +19,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User-defined name of the `WorkerPool`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -30,7 +29,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The project ID of the GCP project for which the `WorkerPool` is created.
-     * 
      */
     @Import(name="project")
       private final @Nullable Output<String> project;
@@ -41,7 +39,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of regions to create the `WorkerPool`. Regions can't be empty. If Cloud Build adds a new GCP region in the future, the existing `WorkerPool` will not be enabled in the new region automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in that region.
-     * 
      */
     @Import(name="regions")
       private final @Nullable Output<List<WorkerPoolRegionsItem>> regions;
@@ -52,7 +49,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration to be used for a creating workers in the `WorkerPool`.
-     * 
      */
     @Import(name="workerConfig")
       private final @Nullable Output<WorkerConfigArgs> workerConfig;
@@ -63,7 +59,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Total number of workers to be created across all requested regions.
-     * 
      */
     @Import(name="workerCount")
       private final @Nullable Output<String> workerCount;

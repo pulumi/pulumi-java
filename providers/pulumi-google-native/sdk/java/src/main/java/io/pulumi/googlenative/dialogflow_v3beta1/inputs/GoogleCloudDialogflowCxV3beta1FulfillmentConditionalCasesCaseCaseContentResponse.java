@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The list of messages or conditional cases to activate for this case.
- * 
  */
 public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
 
     /**
      * Additional cases to be evaluated.
-     * 
      */
     @Import(name="additionalCases", required=true)
       private final GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse additionalCases;
@@ -30,7 +28,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
 
     /**
      * Returned message.
-     * 
      */
     @Import(name="message", required=true)
       private final GoogleCloudDialogflowCxV3beta1ResponseMessageResponse message;

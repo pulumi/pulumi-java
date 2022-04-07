@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Agent Assist frequently-asked-question answer data.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
 
     /**
      * The piece of text from the `source` knowledge base document.
-     * 
      */
     @Import(name="answer", required=true)
       private final String answer;
@@ -31,7 +29,6 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
 
     /**
      * The system's confidence score that this answer is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
-     * 
      */
     @Import(name="confidenceScore", required=true)
       private final Double confidenceScore;
@@ -42,7 +39,6 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
 
     /**
      * Map that contains metadata about the FAQ answer and the document that it originates from.
-     * 
      */
     @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
@@ -53,7 +49,6 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
 
     /**
      * Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}.
-     * 
      */
     @Import(name="queryRecord", required=true)
       private final String queryRecord;
@@ -64,7 +59,6 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
 
     /**
      * The corresponding FAQ question.
-     * 
      */
     @Import(name="question", required=true)
       private final String question;
@@ -75,7 +69,6 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
 
     /**
      * The knowledge document that this answer was extracted from. Format: projects/{project}/knowledgeBases/{knowledge_base}/documents/{document}.
-     * 
      */
     @Import(name="source", required=true)
       private final String source;

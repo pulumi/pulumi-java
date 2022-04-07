@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class RowLevelSecurityStatisticsResponse {
     /**
      * [Preview] Whether any accessed data was protected by row access policies.
-     * 
      */
     private final Boolean rowLevelSecurityApplied;
 
@@ -22,7 +21,6 @@ public final class RowLevelSecurityStatisticsResponse {
 
     /**
      * [Preview] Whether any accessed data was protected by row access policies.
-     * 
     */
     public Boolean getRowLevelSecurityApplied() {
         return this.rowLevelSecurityApplied;

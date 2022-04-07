@@ -17,62 +17,53 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new Policy.
- * 
  */
 @ResourceType(type="google-native:dns/v1beta2:Policy")
 public class Policy extends io.pulumi.resources.CustomResource {
     /**
      * Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
-     * 
      */
     @Export(name="alternativeNameServerConfig", type=PolicyAlternativeNameServerConfigResponse.class, parameters={})
     private Output<PolicyAlternativeNameServerConfigResponse> alternativeNameServerConfig;
 
     /**
      * @return Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
-     * 
      */
     public Output<PolicyAlternativeNameServerConfigResponse> getAlternativeNameServerConfig() {
         return this.alternativeNameServerConfig;
     }
     /**
      * A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the policy's function.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the policy's function.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When enabled, a virtual IP address is allocated from each of the subnetworks that are bound to this policy.
-     * 
      */
     @Export(name="enableInboundForwarding", type=Boolean.class, parameters={})
     private Output<Boolean> enableInboundForwarding;
 
     /**
      * @return Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When enabled, a virtual IP address is allocated from each of the subnetworks that are bound to this policy.
-     * 
      */
     public Output<Boolean> getEnableInboundForwarding() {
         return this.enableInboundForwarding;
     }
     /**
      * Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
-     * 
      */
     @Export(name="enableLogging", type=Boolean.class, parameters={})
     private Output<Boolean> enableLogging;
 
     /**
      * @return Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
-     * 
      */
     public Output<Boolean> getEnableLogging() {
         return this.enableLogging;
@@ -85,28 +76,24 @@ public class Policy extends io.pulumi.resources.CustomResource {
     }
     /**
      * User-assigned name for this policy.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return User-assigned name for this policy.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * List of network names specifying networks to which this policy is applied.
-     * 
      */
     @Export(name="networks", type=List.class, parameters={PolicyNetworkResponse.class})
     private Output<List<PolicyNetworkResponse>> networks;
 
     /**
      * @return List of network names specifying networks to which this policy is applied.
-     * 
      */
     public Output<List<PolicyNetworkResponse>> getNetworks() {
         return this.networks;

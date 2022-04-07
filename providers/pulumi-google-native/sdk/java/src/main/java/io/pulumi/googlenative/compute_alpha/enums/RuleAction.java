@@ -10,38 +10,31 @@ import java.util.StringJoiner;
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @EnumType
     public enum RuleAction {
         /**
          * This is deprecated and has no effect. Do not use.
-         * 
          */
         Allow("ALLOW"),
         /**
          * This is deprecated and has no effect. Do not use.
-         * 
          */
         AllowWithLog("ALLOW_WITH_LOG"),
         /**
          * This is deprecated and has no effect. Do not use.
-         * 
          */
         Deny("DENY"),
         /**
          * This is deprecated and has no effect. Do not use.
-         * 
          */
         DenyWithLog("DENY_WITH_LOG"),
         /**
          * This is deprecated and has no effect. Do not use.
-         * 
          */
         Log("LOG"),
         /**
          * This is deprecated and has no effect. Do not use.
-         * 
          */
         NoAction("NO_ACTION");
 

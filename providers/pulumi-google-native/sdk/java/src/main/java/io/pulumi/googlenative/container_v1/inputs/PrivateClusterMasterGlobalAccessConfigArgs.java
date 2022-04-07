@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for controlling master global access settings.
- * 
  */
 public final class PrivateClusterMasterGlobalAccessConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PrivateClusterMasterGlobalAccessConfigArgs extends io.pulumi.
 
     /**
      * Whenever master is accessible globally or not.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * User signature.
- * 
  */
 public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. An image of the user's signature.
-     * 
      */
     @Import(name="image", required=true)
       private final ImageResponse image;
@@ -31,7 +29,6 @@ public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. Metadata associated with the user's signature. For example, the user's name or the user's title.
-     * 
      */
     @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
@@ -42,7 +39,6 @@ public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. Timestamp of the signature.
-     * 
      */
     @Import(name="signatureTime", required=true)
       private final String signatureTime;
@@ -53,7 +49,6 @@ public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * User's UUID provided by the client.
-     * 
      */
     @Import(name="userId", required=true)
       private final String userId;

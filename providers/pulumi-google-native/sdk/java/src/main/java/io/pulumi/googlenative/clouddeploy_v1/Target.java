@@ -19,188 +19,161 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new Target in a given project and location.
- * 
  */
 @ResourceType(type="google-native:clouddeploy/v1:Target")
 public class Target extends io.pulumi.resources.CustomResource {
     /**
      * Optional. User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
-     * 
      */
     @Export(name="annotations", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> annotations;
 
     /**
      * @return Optional. User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
-     * 
      */
     public Output<Map<String,String>> getAnnotations() {
         return this.annotations;
     }
     /**
      * Information specifying an Anthos Cluster.
-     * 
      */
     @Export(name="anthosCluster", type=AnthosClusterResponse.class, parameters={})
     private Output<AnthosClusterResponse> anthosCluster;
 
     /**
      * @return Information specifying an Anthos Cluster.
-     * 
      */
     public Output<AnthosClusterResponse> getAnthosCluster() {
         return this.anthosCluster;
     }
     /**
      * Time at which the `Target` was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return Time at which the `Target` was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. Description of the `Target`. Max length is 255 characters.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Optional. Description of the `Target`. Max length is 255 characters.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Optional. This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return Optional. This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Configurations for all execution that relates to this `Target`. Each `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same value multiple times is an error. When one or more configurations are specified, they must include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations are specified, execution will use the default specified in `DefaultPool`.
-     * 
      */
     @Export(name="executionConfigs", type=List.class, parameters={ExecutionConfigResponse.class})
     private Output<List<ExecutionConfigResponse>> executionConfigs;
 
     /**
      * @return Configurations for all execution that relates to this `Target`. Each `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same value multiple times is an error. When one or more configurations are specified, they must include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations are specified, execution will use the default specified in `DefaultPool`.
-     * 
      */
     public Output<List<ExecutionConfigResponse>> getExecutionConfigs() {
         return this.executionConfigs;
     }
     /**
      * Information specifying a GKE Cluster.
-     * 
      */
     @Export(name="gke", type=GkeClusterResponse.class, parameters={})
     private Output<GkeClusterResponse> gke;
 
     /**
      * @return Information specifying a GKE Cluster.
-     * 
      */
     public Output<GkeClusterResponse> getGke() {
         return this.gke;
     }
     /**
      * Optional. Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Optional. Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/targets/a-z{0,62}.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/targets/a-z{0,62}.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Optional. Whether or not the `Target` requires approval.
-     * 
      */
     @Export(name="requireApproval", type=Boolean.class, parameters={})
     private Output<Boolean> requireApproval;
 
     /**
      * @return Optional. Whether or not the `Target` requires approval.
-     * 
      */
     public Output<Boolean> getRequireApproval() {
         return this.requireApproval;
     }
     /**
      * Resource id of the `Target`.
-     * 
      */
     @Export(name="targetId", type=String.class, parameters={})
     private Output<String> targetId;
 
     /**
      * @return Resource id of the `Target`.
-     * 
      */
     public Output<String> getTargetId() {
         return this.targetId;
     }
     /**
      * Unique identifier of the `Target`.
-     * 
      */
     @Export(name="uid", type=String.class, parameters={})
     private Output<String> uid;
 
     /**
      * @return Unique identifier of the `Target`.
-     * 
      */
     public Output<String> getUid() {
         return this.uid;
     }
     /**
      * Most recent time at which the `Target` was updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return Most recent time at which the `Target` was updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

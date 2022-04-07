@@ -17,146 +17,125 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a job trigger to run DLP actions such as scanning storage for sensitive information on a set schedule. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
- * 
  */
 @ResourceType(type="google-native:dlp/v2:JobTrigger")
 public class JobTrigger extends io.pulumi.resources.CustomResource {
     /**
      * The creation timestamp of a triggeredJob.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The creation timestamp of a triggeredJob.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * User provided description (max 256 chars)
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return User provided description (max 256 chars)
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Display name (max 100 chars)
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return Display name (max 100 chars)
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * A stream of errors encountered when the trigger was activated. Repeated errors may result in the JobTrigger automatically being paused. Will return the last 100 errors. Whenever the JobTrigger is modified this list will be cleared.
-     * 
      */
     @Export(name="errors", type=List.class, parameters={GooglePrivacyDlpV2ErrorResponse.class})
     private Output<List<GooglePrivacyDlpV2ErrorResponse>> errors;
 
     /**
      * @return A stream of errors encountered when the trigger was activated. Repeated errors may result in the JobTrigger automatically being paused. Will return the last 100 errors. Whenever the JobTrigger is modified this list will be cleared.
-     * 
      */
     public Output<List<GooglePrivacyDlpV2ErrorResponse>> getErrors() {
         return this.errors;
     }
     /**
      * For inspect jobs, a snapshot of the configuration.
-     * 
      */
     @Export(name="inspectJob", type=GooglePrivacyDlpV2InspectJobConfigResponse.class, parameters={})
     private Output<GooglePrivacyDlpV2InspectJobConfigResponse> inspectJob;
 
     /**
      * @return For inspect jobs, a snapshot of the configuration.
-     * 
      */
     public Output<GooglePrivacyDlpV2InspectJobConfigResponse> getInspectJob() {
         return this.inspectJob;
     }
     /**
      * The timestamp of the last time this trigger executed.
-     * 
      */
     @Export(name="lastRunTime", type=String.class, parameters={})
     private Output<String> lastRunTime;
 
     /**
      * @return The timestamp of the last time this trigger executed.
-     * 
      */
     public Output<String> getLastRunTime() {
         return this.lastRunTime;
     }
     /**
      * Unique resource name for the triggeredJob, assigned by the service when the triggeredJob is created, for example `projects/dlp-test-project/jobTriggers/53234423`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Unique resource name for the triggeredJob, assigned by the service when the triggeredJob is created, for example `projects/dlp-test-project/jobTriggers/53234423`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * A status for this trigger.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return A status for this trigger.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * A list of triggers which will be OR'ed together. Only one in the list needs to trigger for a job to be started. The list may contain only a single Schedule trigger and must have at least one object.
-     * 
      */
     @Export(name="triggers", type=List.class, parameters={GooglePrivacyDlpV2TriggerResponse.class})
     private Output<List<GooglePrivacyDlpV2TriggerResponse>> triggers;
 
     /**
      * @return A list of triggers which will be OR'ed together. Only one in the list needs to trigger for a job to be started. The list may contain only a single Schedule trigger and must have at least one object.
-     * 
      */
     public Output<List<GooglePrivacyDlpV2TriggerResponse>> getTriggers() {
         return this.triggers;
     }
     /**
      * The last update timestamp of a triggeredJob.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The last update timestamp of a triggeredJob.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Command describes a step performed as part of the build pipeline.
- * 
  */
 public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Command-line arguments used when executing this command.
-     * 
      */
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
@@ -32,7 +30,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Working directory (relative to project source root) used when running this command.
-     * 
      */
     @Import(name="dir")
       private final @Nullable Output<String> dir;
@@ -43,7 +40,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Environment variables set before running this command.
-     * 
      */
     @Import(name="env")
       private final @Nullable Output<List<String>> env;
@@ -54,7 +50,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional unique identifier for this command, used in wait_for to reference this command as a dependency.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -65,7 +60,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the command, as presented on the command line, or if the command is packaged as a Docker container, as presented to `docker pull`.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -76,7 +70,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID(s) of the command(s) that this command depends on.
-     * 
      */
     @Import(name="waitFor")
       private final @Nullable Output<List<String>> waitFor;

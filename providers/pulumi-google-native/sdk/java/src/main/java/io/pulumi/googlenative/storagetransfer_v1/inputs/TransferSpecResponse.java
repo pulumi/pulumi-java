@@ -18,7 +18,6 @@ import java.util.Objects;
 
 /**
  * Configuration for running a transfer.
- * 
  */
 public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An AWS S3 data source.
-     * 
      */
     @Import(name="awsS3DataSource", required=true)
       private final AwsS3DataResponse awsS3DataSource;
@@ -37,7 +35,6 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An Azure Blob Storage data source.
-     * 
      */
     @Import(name="azureBlobStorageDataSource", required=true)
       private final AzureBlobStorageDataResponse azureBlobStorageDataSource;
@@ -48,7 +45,6 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A Cloud Storage data sink.
-     * 
      */
     @Import(name="gcsDataSink", required=true)
       private final GcsDataResponse gcsDataSink;
@@ -59,7 +55,6 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A Cloud Storage data source.
-     * 
      */
     @Import(name="gcsDataSource", required=true)
       private final GcsDataResponse gcsDataSource;
@@ -70,7 +65,6 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Cloud Storage intermediate data location.
-     * 
      */
     @Import(name="gcsIntermediateDataLocation", required=true)
       private final GcsDataResponse gcsIntermediateDataLocation;
@@ -81,7 +75,6 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An HTTP URL data source.
-     * 
      */
     @Import(name="httpDataSource", required=true)
       private final HttpDataResponse httpDataSource;
@@ -92,7 +85,6 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' "last modification time" do not exclude objects in a data sink.
-     * 
      */
     @Import(name="objectConditions", required=true)
       private final ObjectConditionsResponse objectConditions;
@@ -103,7 +95,6 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A POSIX Filesystem data sink.
-     * 
      */
     @Import(name="posixDataSink", required=true)
       private final PosixFilesystemResponse posixDataSink;
@@ -114,7 +105,6 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A POSIX Filesystem data source.
-     * 
      */
     @Import(name="posixDataSource", required=true)
       private final PosixFilesystemResponse posixDataSource;
@@ -125,7 +115,6 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the agent pool name associated with the posix data sink. When unspecified, the default name is used.
-     * 
      */
     @Import(name="sinkAgentPoolName", required=true)
       private final String sinkAgentPoolName;
@@ -136,7 +125,6 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used.
-     * 
      */
     @Import(name="sourceAgentPoolName", required=true)
       private final String sourceAgentPoolName;
@@ -147,7 +135,6 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A manifest file provides a list of objects to be transferred from the data source. This field points to the location of the manifest file. Otherwise, the entire source bucket is used. ObjectConditions still apply.
-     * 
      */
     @Import(name="transferManifest", required=true)
       private final TransferManifestResponse transferManifest;
@@ -158,7 +145,6 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as 'last modification time' are specified, the request fails with an INVALID_ARGUMENT error.
-     * 
      */
     @Import(name="transferOptions", required=true)
       private final TransferOptionsResponse transferOptions;

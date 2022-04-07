@@ -25,7 +25,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
-     * 
      */
     @Import(name="ipCidrRange")
       private final @Nullable Output<String> ipCidrRange;
@@ -43,7 +42,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Machine type of VM Instance underlying connector. Default is e2-micro
-     * 
      */
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
@@ -54,7 +52,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum value of instances in autoscaling group underlying the connector.
-     * 
      */
     @Import(name="maxInstances")
       private final @Nullable Output<Integer> maxInstances;
@@ -65,7 +62,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum throughput of the connector in Mbps. Default is 300, max is 1000.
-     * 
      */
     @Import(name="maxThroughput")
       private final @Nullable Output<Integer> maxThroughput;
@@ -76,7 +72,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Minimum value of instances in autoscaling group underlying the connector.
-     * 
      */
     @Import(name="minInstances")
       private final @Nullable Output<Integer> minInstances;
@@ -87,7 +82,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Minimum throughput of the connector in Mbps. Default and min is 200.
-     * 
      */
     @Import(name="minThroughput")
       private final @Nullable Output<Integer> minThroughput;
@@ -98,7 +92,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name in the format `projects/*{@literal /}locations/*{@literal /}connectors/*`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -109,7 +102,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of a VPC network.
-     * 
      */
     @Import(name="network")
       private final @Nullable Output<String> network;
@@ -127,7 +119,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The subnet in which to house the VPC Access Connector.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable Output<SubnetArgs> subnet;

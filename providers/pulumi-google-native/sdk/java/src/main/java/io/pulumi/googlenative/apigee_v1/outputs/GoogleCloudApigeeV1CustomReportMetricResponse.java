@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class GoogleCloudApigeeV1CustomReportMetricResponse {
     /**
      * aggregate function
-     * 
      */
     private final String function;
     /**
      * name of the metric
-     * 
      */
     private final String name;
 
@@ -30,14 +28,12 @@ public final class GoogleCloudApigeeV1CustomReportMetricResponse {
 
     /**
      * aggregate function
-     * 
     */
     public String getFunction() {
         return this.function;
     }
     /**
      * name of the metric
-     * 
     */
     public String getName() {
         return this.name;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Telemetry integration for the cluster.
- * 
  */
 public final class ClusterTelemetryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ClusterTelemetryArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Type of the integration.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<ClusterTelemetryType> type;

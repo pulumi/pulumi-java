@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Filter options to be applied on query.
- * 
  */
 public final class FilterOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class FilterOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Generic filter to restrict the search, such as `lang:en`, `site:xyz`.
-     * 
      */
     @Import(name="filter")
       private final @Nullable Output<FilterArgs> filter;
@@ -32,7 +30,6 @@ public final class FilterOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If object_type is set, only objects of that type are returned. This should correspond to the name of the object that was registered within the definition of schema. The maximum length is 256 characters.
-     * 
      */
     @Import(name="objectType")
       private final @Nullable Output<String> objectType;

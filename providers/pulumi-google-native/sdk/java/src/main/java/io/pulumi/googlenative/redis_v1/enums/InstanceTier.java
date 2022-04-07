@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Required. The service tier of the instance.
-     * 
      */
     @EnumType
     public enum InstanceTier {
         /**
          * Not set.
-         * 
          */
         TierUnspecified("TIER_UNSPECIFIED"),
         /**
          * BASIC tier: standalone instance
-         * 
          */
         Basic("BASIC"),
         /**
          * STANDARD_HA tier: highly available primary/replica instances
-         * 
          */
         StandardHa("STANDARD_HA");
 

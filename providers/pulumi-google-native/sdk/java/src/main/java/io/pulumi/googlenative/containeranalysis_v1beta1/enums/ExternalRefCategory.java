@@ -10,33 +10,27 @@ import java.util.StringJoiner;
 
     /**
      * An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package
-     * 
      */
     @EnumType
     public enum ExternalRefCategory {
         /**
          * Unspecified
-         * 
          */
         CategoryUnspecified("CATEGORY_UNSPECIFIED"),
         /**
          * Security (e.g. cpe22Type, cpe23Type)
-         * 
          */
         Security("SECURITY"),
         /**
          * Package Manager (e.g. maven-central, npm, nuget, bower, purl)
-         * 
          */
         PackageManager("PACKAGE_MANAGER"),
         /**
          * Persistent-Id (e.g. swh)
-         * 
          */
         PersistentId("PERSISTENT_ID"),
         /**
          * Other
-         * 
          */
         Other("OTHER");
 

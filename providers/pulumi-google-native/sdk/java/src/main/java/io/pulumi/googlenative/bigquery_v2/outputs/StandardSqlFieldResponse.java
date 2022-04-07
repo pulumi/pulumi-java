@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class StandardSqlFieldResponse {
     /**
      * Optional. The name of this field. Can be absent for struct fields.
-     * 
      */
     private final String name;
     /**
      * Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this "type" field).
-     * 
      */
     private final StandardSqlDataTypeResponse type;
 
@@ -31,14 +29,12 @@ public final class StandardSqlFieldResponse {
 
     /**
      * Optional. The name of this field. Can be absent for struct fields.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this "type" field).
-     * 
     */
     public StandardSqlDataTypeResponse getType() {
         return this.type;

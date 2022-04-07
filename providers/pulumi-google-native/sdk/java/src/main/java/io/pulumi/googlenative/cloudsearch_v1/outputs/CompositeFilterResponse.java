@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class CompositeFilterResponse {
     /**
      * The logic operator of the sub filter.
-     * 
      */
     private final String logicOperator;
     /**
      * Sub filters.
-     * 
      */
     private final List<FilterResponse> subFilters;
 
@@ -32,14 +30,12 @@ public final class CompositeFilterResponse {
 
     /**
      * The logic operator of the sub filter.
-     * 
     */
     public String getLogicOperator() {
         return this.logicOperator;
     }
     /**
      * Sub filters.
-     * 
     */
     public List<FilterResponse> getSubFilters() {
         return this.subFilters;

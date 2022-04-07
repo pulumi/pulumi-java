@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Confidential Instance Config for clusters using Confidential VMs (https://cloud.google.com/compute/confidential-vm/docs)
- * 
  */
 public final class ConfidentialInstanceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ConfidentialInstanceConfigArgs extends io.pulumi.resources.Re
 
     /**
      * Optional. Defines whether the instance should have confidential compute enabled.
-     * 
      */
     @Import(name="enableConfidentialCompute")
       private final @Nullable Output<Boolean> enableConfidentialCompute;

@@ -17,7 +17,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Resource labels associated with this namespace. No more than 64 user labels can be associated with a given resource. Label keys and values can be no longer than 63 characters.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -35,7 +34,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The resource name for the namespace in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

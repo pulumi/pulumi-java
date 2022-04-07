@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration for the PodSecurityPolicy feature.
- * 
  */
 public final class PodSecurityPolicyConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class PodSecurityPolicyConfigResponse extends io.pulumi.resources.I
 
     /**
      * Enable the PodSecurityPolicy controller for this cluster. If enabled, pods must be valid under a PodSecurityPolicy to be created.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

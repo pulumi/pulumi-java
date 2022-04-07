@@ -23,7 +23,6 @@ public final class ManagedZoneForwardingConfigResponse extends io.pulumi.resourc
 
     /**
      * List of target name servers to forward to. Cloud DNS selects the best available name server if more than one target is given.
-     * 
      */
     @Import(name="targetNameServers", required=true)
       private final List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers;

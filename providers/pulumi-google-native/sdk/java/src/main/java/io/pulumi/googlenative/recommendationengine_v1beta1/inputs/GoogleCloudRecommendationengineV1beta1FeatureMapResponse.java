@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * FeatureMap represents extra features that customers want to include in the recommendation model for catalogs/user events as categorical/numerical features.
- * 
  */
 public final class GoogleCloudRecommendationengineV1beta1FeatureMapResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapResponse exte
 
     /**
      * Categorical features that can take on one of a limited number of possible values. Some examples would be the brand/maker of a product, or country of a customer. Feature names and values must be UTF-8 encoded strings. For example: `{ "colors": {"value": ["yellow", "green"]}, "sizes": {"value":["S", "M"]}`
-     * 
      */
     @Import(name="categoricalFeatures", required=true)
       private final Map<String,String> categoricalFeatures;
@@ -30,7 +28,6 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapResponse exte
 
     /**
      * Numerical features. Some examples would be the height/weight of a product, or age of a customer. Feature names must be UTF-8 encoded strings. For example: `{ "lengths_cm": {"value":[2.3, 15.4]}, "heights_cm": {"value":[8.1, 6.4]} }`
-     * 
      */
     @Import(name="numericalFeatures", required=true)
       private final Map<String,String> numericalFeatures;

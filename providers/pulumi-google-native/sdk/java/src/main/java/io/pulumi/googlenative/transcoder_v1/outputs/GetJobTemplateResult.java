@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class GetJobTemplateResult {
     /**
      * The configuration for this template.
-     * 
      */
     private final JobConfigResponse config;
     /**
      * The resource name of the job template. Format: `projects/{project_number}/locations/{location}/jobTemplates/{job_template}`
-     * 
      */
     private final String name;
 
@@ -31,14 +29,12 @@ public final class GetJobTemplateResult {
 
     /**
      * The configuration for this template.
-     * 
     */
     public JobConfigResponse getConfig() {
         return this.config;
     }
     /**
      * The resource name of the job template. Format: `projects/{project_number}/locations/{location}/jobTemplates/{job_template}`
-     * 
     */
     public String getName() {
         return this.name;

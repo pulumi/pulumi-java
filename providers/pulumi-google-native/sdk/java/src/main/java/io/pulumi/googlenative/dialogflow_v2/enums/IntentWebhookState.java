@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Optional. Indicates whether webhooks are enabled for the intent.
-     * 
      */
     @EnumType
     public enum IntentWebhookState {
         /**
          * Webhook is disabled in the agent and in the intent.
-         * 
          */
         WebhookStateUnspecified("WEBHOOK_STATE_UNSPECIFIED"),
         /**
          * Webhook is enabled in the agent and in the intent.
-         * 
          */
         WebhookStateEnabled("WEBHOOK_STATE_ENABLED"),
         /**
          * Webhook is enabled in the agent and in the intent. Also, each slot filling prompt is forwarded to the webhook.
-         * 
          */
         WebhookStateEnabledForSlotFilling("WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING");
 

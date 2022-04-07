@@ -17,104 +17,89 @@ import javax.annotation.Nullable;
 /**
  * Creates a new Scheduled Notebook in a given project and location.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:notebooks/v1:Schedule")
 public class Schedule extends io.pulumi.resources.CustomResource {
     /**
      * Time the schedule was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return Time the schedule was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Cron-tab formatted schedule by which the job will execute. Format: minute, hour, day of month, month, day of week, e.g. 0 0 * * WED = every Wednesday More examples: https://crontab.guru/examples.html
-     * 
      */
     @Export(name="cronSchedule", type=String.class, parameters={})
     private Output<String> cronSchedule;
 
     /**
      * @return Cron-tab formatted schedule by which the job will execute. Format: minute, hour, day of month, month, day of week, e.g. 0 0 * * WED = every Wednesday More examples: https://crontab.guru/examples.html
-     * 
      */
     public Output<String> getCronSchedule() {
         return this.cronSchedule;
     }
     /**
      * A brief description of this environment.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return A brief description of this environment.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Display name used for UI purposes. Name can only contain alphanumeric characters, hyphens '-', and underscores '_'.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return Display name used for UI purposes. Name can only contain alphanumeric characters, hyphens '-', and underscores '_'.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Notebook Execution Template corresponding to this schedule.
-     * 
      */
     @Export(name="executionTemplate", type=ExecutionTemplateResponse.class, parameters={})
     private Output<ExecutionTemplateResponse> executionTemplate;
 
     /**
      * @return Notebook Execution Template corresponding to this schedule.
-     * 
      */
     public Output<ExecutionTemplateResponse> getExecutionTemplate() {
         return this.executionTemplate;
     }
     /**
      * The name of this schedule. Format: `projects/{project_id}/locations/{location}/schedules/{schedule_id}`
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of this schedule. Format: `projects/{project_id}/locations/{location}/schedules/{schedule_id}`
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The most recent execution names triggered from this schedule and their corresponding states.
-     * 
      */
     @Export(name="recentExecutions", type=List.class, parameters={ExecutionResponse.class})
     private Output<List<ExecutionResponse>> recentExecutions;
 
     /**
      * @return The most recent execution names triggered from this schedule and their corresponding states.
-     * 
      */
     public Output<List<ExecutionResponse>> getRecentExecutions() {
         return this.recentExecutions;
@@ -127,28 +112,24 @@ public class Schedule extends io.pulumi.resources.CustomResource {
     }
     /**
      * Timezone on which the cron_schedule. The value of this field must be a time zone name from the tz database. TZ Database: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones Note that some time zones include a provision for daylight savings time. The rules for daylight saving time are determined by the chosen tz. For UTC use the string "utc". If a time zone is not specified, the default will be in UTC (also known as GMT).
-     * 
      */
     @Export(name="timeZone", type=String.class, parameters={})
     private Output<String> timeZone;
 
     /**
      * @return Timezone on which the cron_schedule. The value of this field must be a time zone name from the tz database. TZ Database: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones Note that some time zones include a provision for daylight savings time. The rules for daylight saving time are determined by the chosen tz. For UTC use the string "utc". If a time zone is not specified, the default will be in UTC (also known as GMT).
-     * 
      */
     public Output<String> getTimeZone() {
         return this.timeZone;
     }
     /**
      * Time the schedule was last updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return Time the schedule was last updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

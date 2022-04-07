@@ -15,7 +15,6 @@ public final class FutureReservationSpecificSKUPropertiesResponse extends io.pul
 
     /**
      * Properties of the SKU instances being reserved.
-     * 
      */
     @Import(name="instanceProperties", required=true)
       private final AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
@@ -26,7 +25,6 @@ public final class FutureReservationSpecificSKUPropertiesResponse extends io.pul
 
     /**
      * Total number of instances for which capacity assurance is requested at a future time period.
-     * 
      */
     @Import(name="totalCount", required=true)
       private final String totalCount;

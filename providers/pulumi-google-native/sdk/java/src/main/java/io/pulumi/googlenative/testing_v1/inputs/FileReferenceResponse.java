@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A reference to a file, used for user inputs.
- * 
  */
 public final class FileReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class FileReferenceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * A path to a file in Google Cloud Storage. Example: gs://build-app-1414623860166/app%40debug-unaligned.apk These paths are expected to be url encoded (percent encoding)
-     * 
      */
     @Import(name="gcsPath", required=true)
       private final String gcsPath;

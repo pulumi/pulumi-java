@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * RoutingVPC contains information about the VPC networks that are associated with a hub's spokes.
- * 
  */
 public final class RoutingVPCResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class RoutingVPCResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If true, indicates that this VPC network is currently associated with spokes that use the data transfer feature (spokes where the site_to_site_data_transfer field is set to true). If you create new spokes that use data transfer, they must be associated with this VPC network. At most, one VPC network will have this field set to true.
-     * 
      */
     @Import(name="requiredForNewSiteToSiteDataTransferSpokes", required=true)
       private final Boolean requiredForNewSiteToSiteDataTransferSpokes;
@@ -30,7 +28,6 @@ public final class RoutingVPCResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The URI of the VPC network.
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;

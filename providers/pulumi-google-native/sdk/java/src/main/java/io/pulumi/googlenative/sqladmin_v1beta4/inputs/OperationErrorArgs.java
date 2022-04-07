@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Database instance operation error.
- * 
  */
 public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identifies the specific error that occurred.
-     * 
      */
     @Import(name="code")
       private final @Nullable Output<String> code;
@@ -31,7 +29,6 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This is always `sql#operationError`.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -42,7 +39,6 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Additional information about the error encountered.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;

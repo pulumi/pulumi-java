@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class MonitoringComponentConfigResponse {
     /**
      * Select components to collect metrics. An empty set would disable all monitoring.
-     * 
      */
     private final List<String> enableComponents;
 
@@ -23,7 +22,6 @@ public final class MonitoringComponentConfigResponse {
 
     /**
      * Select components to collect metrics. An empty set would disable all monitoring.
-     * 
     */
     public List<String> getEnableComponents() {
         return this.enableComponents;

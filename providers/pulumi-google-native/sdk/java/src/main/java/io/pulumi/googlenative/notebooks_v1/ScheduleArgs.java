@@ -18,7 +18,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Cron-tab formatted schedule by which the job will execute. Format: minute, hour, day of month, month, day of week, e.g. 0 0 * * WED = every Wednesday More examples: https://crontab.guru/examples.html
-     * 
      */
     @Import(name="cronSchedule")
       private final @Nullable Output<String> cronSchedule;
@@ -29,7 +28,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A brief description of this environment.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -40,7 +38,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Notebook Execution Template corresponding to this schedule.
-     * 
      */
     @Import(name="executionTemplate")
       private final @Nullable Output<ExecutionTemplateArgs> executionTemplate;
@@ -79,7 +76,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Timezone on which the cron_schedule. The value of this field must be a time zone name from the tz database. TZ Database: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones Note that some time zones include a provision for daylight savings time. The rules for daylight saving time are determined by the chosen tz. For UTC use the string "utc". If a time zone is not specified, the default will be in UTC (also known as GMT).
-     * 
      */
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;

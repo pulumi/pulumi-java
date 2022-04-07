@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines a Delegation Signer (DS) record, which is needed to enable DNSSEC for a domain. It contains a digest (hash) of a DNSKEY record that must be present in the domain's DNS zone.
- * 
  */
 public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The algorithm used to generate the referenced DNSKEY.
-     * 
      */
     @Import(name="algorithm")
       private final @Nullable Output<DsRecordAlgorithm> algorithm;
@@ -34,7 +32,6 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The digest generated from the referenced DNSKEY.
-     * 
      */
     @Import(name="digest")
       private final @Nullable Output<String> digest;
@@ -45,7 +42,6 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The hash function used to generate the digest of the referenced DNSKEY.
-     * 
      */
     @Import(name="digestType")
       private final @Nullable Output<DsRecordDigestType> digestType;
@@ -56,7 +52,6 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The key tag of the record. Must be set in range 0 -- 65535.
-     * 
      */
     @Import(name="keyTag")
       private final @Nullable Output<Integer> keyTag;

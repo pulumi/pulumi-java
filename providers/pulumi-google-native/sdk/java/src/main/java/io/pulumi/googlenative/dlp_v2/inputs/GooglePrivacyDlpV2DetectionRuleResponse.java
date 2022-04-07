@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Deprecated; use `InspectionRuleSet` instead. Rule for modifying a `CustomInfoType` to alter behavior under certain circumstances, depending on the specific details of the rule. Not supported for the `surrogate_type` custom infoType.
- * 
  */
 public final class GooglePrivacyDlpV2DetectionRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GooglePrivacyDlpV2DetectionRuleResponse extends io.pulumi.res
 
     /**
      * Hotword-based detection rule.
-     * 
      */
     @Import(name="hotwordRule", required=true)
       private final GooglePrivacyDlpV2HotwordRuleResponse hotwordRule;

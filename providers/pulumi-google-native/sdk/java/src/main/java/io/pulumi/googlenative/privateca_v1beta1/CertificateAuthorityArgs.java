@@ -31,7 +31,6 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
 
     /**
      * Optional. The CertificateAuthorityPolicy to enforce when issuing Certificates from this CertificateAuthority.
-     * 
      */
     @Import(name="certificatePolicy")
       private final @Nullable Output<CertificateAuthorityPolicyArgs> certificatePolicy;
@@ -42,7 +41,6 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
 
     /**
      * Immutable. The config used to create a self-signed X.509 certificate or CSR.
-     * 
      */
     @Import(name="config", required=true)
       private final Output<CertificateConfigArgs> config;
@@ -53,7 +51,6 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
 
     /**
      * Immutable. The name of a Cloud Storage bucket where this CertificateAuthority will publish content, such as the CA certificate and CRLs. This must be a bucket name, without any prefixes (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named `my-bucket`, you would simply specify `my-bucket`. If not specified, a managed bucket will be created.
-     * 
      */
     @Import(name="gcsBucket")
       private final @Nullable Output<String> gcsBucket;
@@ -64,7 +61,6 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
 
     /**
      * Optional. The IssuingOptions to follow when issuing Certificates from this CertificateAuthority.
-     * 
      */
     @Import(name="issuingOptions")
       private final @Nullable Output<IssuingOptionsArgs> issuingOptions;
@@ -75,7 +71,6 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
 
     /**
      * Immutable. Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA certificate. Otherwise, it is used to sign a CSR.
-     * 
      */
     @Import(name="keySpec", required=true)
       private final Output<KeyVersionSpecArgs> keySpec;
@@ -86,7 +81,6 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
 
     /**
      * Optional. Labels with user-defined metadata.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -97,7 +91,6 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
 
     /**
      * The desired lifetime of the CA certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate.
-     * 
      */
     @Import(name="lifetime", required=true)
       private final Output<String> lifetime;
@@ -129,7 +122,6 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
 
     /**
      * Optional. If this is a subordinate CertificateAuthority, this field will be set with the subordinate configuration, which describes its issuers. This may be updated, but this CertificateAuthority must continue to validate.
-     * 
      */
     @Import(name="subordinateConfig")
       private final @Nullable Output<SubordinateConfigArgs> subordinateConfig;
@@ -140,7 +132,6 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
 
     /**
      * Immutable. The Tier of this CertificateAuthority.
-     * 
      */
     @Import(name="tier", required=true)
       private final Output<CertificateAuthorityTier> tier;
@@ -151,7 +142,6 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
 
     /**
      * Immutable. The Type of this CertificateAuthority.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<CertificateAuthorityType> type;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Control over how the notification channels in notification_channels are notified when this alert fires.
- * 
  */
 public final class AlertStrategyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AlertStrategyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If an alert policy that was active has no data for this long, any open incidents will close
-     * 
      */
     @Import(name="autoClose")
       private final @Nullable Output<String> autoClose;
@@ -32,7 +30,6 @@ public final class AlertStrategyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Required for alert policies with a LogMatch condition.This limit is not implemented for alert policies that are not log-based.
-     * 
      */
     @Import(name="notificationRateLimit")
       private final @Nullable Output<NotificationRateLimitArgs> notificationRateLimit;

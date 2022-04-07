@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class GoogleCloudRunOpV2CloudSqlInstanceResponse {
     /**
      * The Cloud SQL instance connection names, as can be found in https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}
-     * 
      */
     private final List<String> connections;
 
@@ -23,7 +22,6 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceResponse {
 
     /**
      * The Cloud SQL instance connection names, as can be found in https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}
-     * 
     */
     public List<String> getConnections() {
         return this.connections;

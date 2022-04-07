@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ToolExecutionStepResponse {
     /**
      * A Tool execution. - In response: present if set by create/update request - In create/update request: optional
-     * 
      */
     private final ToolExecutionResponse toolExecution;
 
@@ -22,7 +21,6 @@ public final class ToolExecutionStepResponse {
 
     /**
      * A Tool execution. - In response: present if set by create/update request - In create/update request: optional
-     * 
     */
     public ToolExecutionResponse getToolExecution() {
         return this.toolExecution;

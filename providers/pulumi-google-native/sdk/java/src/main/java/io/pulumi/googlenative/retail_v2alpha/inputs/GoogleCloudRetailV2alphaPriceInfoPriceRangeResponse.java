@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The price range of all variant Product having the same Product.primary_product_id.
- * 
  */
 public final class GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse extends i
 
     /**
      * The inclusive Product.pricing_info.original_price internal of all variant Product having the same Product.primary_product_id.
-     * 
      */
     @Import(name="originalPrice", required=true)
       private final GoogleCloudRetailV2alphaIntervalResponse originalPrice;
@@ -29,7 +27,6 @@ public final class GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse extends i
 
     /**
      * The inclusive Product.pricing_info.price interval of all variant Product having the same Product.primary_product_id.
-     * 
      */
     @Import(name="price", required=true)
       private final GoogleCloudRetailV2alphaIntervalResponse price;

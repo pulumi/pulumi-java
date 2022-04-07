@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Details of a discovery occurrence.
- * 
  */
 public final class GrafeasV1beta1DiscoveryDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GrafeasV1beta1DiscoveryDetailsResponse extends io.pulumi.reso
 
     /**
      * Analysis status for the discovered resource.
-     * 
      */
     @Import(name="discovered", required=true)
       private final DiscoveredResponse discovered;

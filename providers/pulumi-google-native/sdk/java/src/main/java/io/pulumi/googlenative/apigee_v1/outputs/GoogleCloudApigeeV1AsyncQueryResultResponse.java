@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class GoogleCloudApigeeV1AsyncQueryResultResponse {
     /**
      * Query result will be unaccessable after this time.
-     * 
      */
     private final String expires;
     /**
      * Self link of the query results. Example: `/organizations/myorg/environments/myenv/queries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result` or following format if query is running at host level: `/organizations/myorg/hostQueries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result`
-     * 
      */
     private final String self;
 
@@ -30,14 +28,12 @@ public final class GoogleCloudApigeeV1AsyncQueryResultResponse {
 
     /**
      * Query result will be unaccessable after this time.
-     * 
     */
     public String getExpires() {
         return this.expires;
     }
     /**
      * Self link of the query results. Example: `/organizations/myorg/environments/myenv/queries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result` or following format if query is running at host level: `/organizations/myorg/hostQueries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result`
-     * 
     */
     public String getSelf() {
         return this.self;

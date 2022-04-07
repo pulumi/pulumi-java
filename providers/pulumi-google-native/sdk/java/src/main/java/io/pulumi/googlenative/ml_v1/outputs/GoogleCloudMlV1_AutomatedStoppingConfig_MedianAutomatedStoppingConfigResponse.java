@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse {
     /**
      * If true, the median automated stopping rule applies to measurement.use_elapsed_time, which means the elapsed_time field of the current trial's latest measurement is used to compute the median objective value for each completed trial.
-     * 
      */
     private final Boolean useElapsedTime;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppi
 
     /**
      * If true, the median automated stopping rule applies to measurement.use_elapsed_time, which means the elapsed_time field of the current trial's latest measurement is used to compute the median objective value for each completed trial.
-     * 
     */
     public Boolean getUseElapsedTime() {
         return this.useElapsedTime;

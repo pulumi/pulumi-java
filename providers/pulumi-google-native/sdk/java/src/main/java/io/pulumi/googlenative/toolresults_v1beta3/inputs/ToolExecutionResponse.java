@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * An execution of an arbitrary tool. It could be a test runner or a tool copying artifacts or deploying code.
- * 
  */
 public final class ToolExecutionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ToolExecutionResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The full tokenized command line including the program name (equivalent to argv in a C program). - In response: present if set by create request - In create request: optional - In update request: never set
-     * 
      */
     @Import(name="commandLineArguments", required=true)
       private final List<String> commandLineArguments;
@@ -33,7 +31,6 @@ public final class ToolExecutionResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Tool execution exit code. This field will be set once the tool has exited. - In response: present if set by create/update request - In create request: optional - In update request: optional, a FAILED_PRECONDITION error will be returned if an exit_code is already set.
-     * 
      */
     @Import(name="exitCode", required=true)
       private final ToolExitCodeResponse exitCode;
@@ -44,7 +41,6 @@ public final class ToolExecutionResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * References to any plain text logs output the tool execution. This field can be set before the tool has exited in order to be able to have access to a live view of the logs while the tool is running. The maximum allowed number of tool logs per step is 1000. - In response: present if set by create/update request - In create request: optional - In update request: optional, any value provided will be appended to the existing list
-     * 
      */
     @Import(name="toolLogs", required=true)
       private final List<FileReferenceResponse> toolLogs;
@@ -55,7 +51,6 @@ public final class ToolExecutionResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * References to opaque files of any format output by the tool execution. The maximum allowed number of tool outputs per step is 1000. - In response: present if set by create/update request - In create request: optional - In update request: optional, any value provided will be appended to the existing list
-     * 
      */
     @Import(name="toolOutputs", required=true)
       private final List<ToolOutputReferenceResponse> toolOutputs;

@@ -15,7 +15,6 @@ public final class ResponsePolicyRuleLocalDataResponse extends io.pulumi.resourc
 
     /**
      * All resource record sets for this selector, one per resource record type. The name must match the dns_name.
-     * 
      */
     @Import(name="localDatas", required=true)
       private final List<ResourceRecordSetResponse> localDatas;

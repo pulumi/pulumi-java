@@ -36,7 +36,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Lifetime of cookies in seconds. This setting is applicable to external and internal HTTP(S) load balancers and Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session affinity. If set to 0, the cookie is non-persistent and lasts only until the end of the browser session (or equivalent). The maximum allowed value is one day (86,400). Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
-     * 
      */
     @Import(name="affinityCookieTtlSec")
       private final @Nullable Output<Integer> affinityCookieTtlSec;
@@ -47,7 +46,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The list of backends that serve this BackendService.
-     * 
      */
     @Import(name="backends")
       private final @Nullable Output<List<BackendArgs>> backends;
@@ -58,7 +56,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Cloud CDN configuration for this BackendService. Only available for specified load balancer types.
-     * 
      */
     @Import(name="cdnPolicy")
       private final @Nullable Output<BackendServiceCdnPolicyArgs> cdnPolicy;
@@ -83,7 +80,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Connection Tracking configuration for this BackendService. Connection tracking policy settings are only available for Network Load Balancing and Internal TCP/UDP Load Balancing.
-     * 
      */
     @Import(name="connectionTrackingPolicy")
       private final @Nullable Output<BackendServiceConnectionTrackingPolicyArgs> connectionTrackingPolicy;
@@ -93,8 +89,7 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
     }
 
     /**
-     * Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular destination host will be lost when one or more hosts are added/removed from the destination service. This field specifies parameters that control consistent hashing. This field is only applicable when localityLbPolicy is set to MAGLEV or RING_HASH. This field is applicable to either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
-     * 
+     * Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular destination host will be lost when one or more hosts are added/removed from the destination service. This field specifies parameters that control consistent hashing. This field is only applicable when localityLbPolicy is set to MAGLEV or RING_HASH. This field is applicable to either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED. 
      */
     @Import(name="consistentHash")
       private final @Nullable Output<ConsistentHashLoadBalancerSettingsArgs> consistentHash;
@@ -105,7 +100,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Headers that the load balancer adds to proxied requests. See [Creating custom headers](https://cloud.google.com/load-balancing/docs/custom-headers).
-     * 
      */
     @Import(name="customRequestHeaders")
       private final @Nullable Output<List<String>> customRequestHeaders;
@@ -116,7 +110,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Headers that the load balancer adds to proxied responses. See [Creating custom headers](https://cloud.google.com/load-balancing/docs/custom-headers).
-     * 
      */
     @Import(name="customResponseHeaders")
       private final @Nullable Output<List<String>> customResponseHeaders;
@@ -127,7 +120,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -138,7 +130,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * If true, enables Cloud CDN for the backend service of an external HTTP(S) load balancer.
-     * 
      */
     @Import(name="enableCDN")
       private final @Nullable Output<Boolean> enableCDN;
@@ -149,7 +140,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Requires at least one backend instance group to be defined as a backup (failover) backend. For load balancers that have configurable failover: [Internal TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and [external TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/network/networklb-failover-overview).
-     * 
      */
     @Import(name="failoverPolicy")
       private final @Nullable Output<BackendServiceFailoverPolicyArgs> failoverPolicy;
@@ -160,7 +150,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The list of URLs to the healthChecks, httpHealthChecks (legacy), or httpsHealthChecks (legacy) resource for health checking this backend service. Not all backend services support legacy health checks. See Load balancer guide. Currently, at most one health check can be specified for each backend service. Backend services with instance group or zonal NEG backends must have a health check. Backend services with internet or serverless NEG backends must not have a health check.
-     * 
      */
     @Import(name="healthChecks")
       private final @Nullable Output<List<String>> healthChecks;
@@ -171,7 +160,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The configurations for Identity-Aware Proxy on this resource. Not available for Internal TCP/UDP Load Balancing and Network Load Balancing.
-     * 
      */
     @Import(name="iap")
       private final @Nullable Output<BackendServiceIAPArgs> iap;
@@ -182,7 +170,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Specifies the load balancer type. A backend service created for one type of load balancer cannot be used with another. For more information, refer to Choosing a load balancer.
-     * 
      */
     @Import(name="loadBalancingScheme")
       private final @Nullable Output<RegionBackendServiceLoadBalancingScheme> loadBalancingScheme;
@@ -193,7 +180,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The load balancing algorithm used within the scope of the locality. The possible values are: - ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin order. This is the default. - LEAST_REQUEST: An O(1) algorithm which selects two random healthy hosts and picks the host which has fewer active requests. - RING_HASH: The ring/modulo hash load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a host from a set of N hosts only affects 1/N of the requests. - RANDOM: The load balancer selects a random healthy host. - ORIGINAL_DESTINATION: Backend host is selected based on the client connection metadata, i.e., connections are opened to the same address as the destination address of the incoming connection before the connection was redirected to the load balancer. - MAGLEV: used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host selection times. For more information about Maglev, see https://ai.google/research/pubs/pub44824 This field is applicable to either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED. If sessionAffinity is not NONE, and this field is not set to MAGLEV or RING_HASH, session affinity settings will not take effect. Only ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
-     * 
      */
     @Import(name="localityLbPolicy")
       private final @Nullable Output<RegionBackendServiceLocalityLbPolicy> localityLbPolicy;
@@ -204,7 +190,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * This field denotes the logging options for the load balancer traffic served by this backend service. If logging is enabled, logs will be exported to Stackdriver.
-     * 
      */
     @Import(name="logConfig")
       private final @Nullable Output<BackendServiceLogConfigArgs> logConfig;
@@ -215,7 +200,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Specifies the default maximum duration (timeout) for streams to this service. Duration is computed from the beginning of the stream until the response has been completely processed, including all retries. A stream that does not complete in this duration is closed. If not specified, there will be no timeout limit, i.e. the maximum duration is infinite. This value can be overridden in the PathMatcher configuration of the UrlMap that references this backend service. This field is only allowed when the loadBalancingScheme of the backend service is INTERNAL_SELF_MANAGED.
-     * 
      */
     @Import(name="maxStreamDuration")
       private final @Nullable Output<DurationArgs> maxStreamDuration;
@@ -226,7 +210,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -237,7 +220,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The URL of the network to which this backend service belongs. This field can only be specified when the load balancing scheme is set to INTERNAL.
-     * 
      */
     @Import(name="network")
       private final @Nullable Output<String> network;
@@ -248,7 +230,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Settings controlling the eviction of unhealthy hosts from the load balancing pool for the backend service. If not set, this feature is considered disabled. This field is applicable to either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
-     * 
      */
     @Import(name="outlierDetection")
       private final @Nullable Output<OutlierDetectionArgs> outlierDetection;
@@ -259,7 +240,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * A named port on a backend instance group representing the port for communication to the backend VMs in that group. The named port must be [defined on each backend instance group](https://cloud.google.com/load-balancing/docs/backend-service#named_ports). This parameter has no meaning if the backends are NEGs. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port_name.
-     * 
      */
     @Import(name="portName")
       private final @Nullable Output<String> portName;
@@ -277,7 +257,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The protocol this BackendService uses to communicate with backends. Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, UDP or GRPC. depending on the chosen load balancer or Traffic Director configuration. Refer to the documentation for the load balancers or for Traffic Director for more information. Must be set to GRPC when the backend service is referenced by a URL map that is bound to target gRPC proxy.
-     * 
      */
     @Import(name="protocol")
       private final @Nullable Output<RegionBackendServiceProtocol> protocol;
@@ -302,7 +281,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * This field specifies the security settings that apply to this backend service. This field is applicable to a global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
-     * 
      */
     @Import(name="securitySettings")
       private final @Nullable Output<SecuritySettingsArgs> securitySettings;
@@ -313,7 +291,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Type of session affinity to use. The default is NONE. Only NONE and HEADER_FIELD are supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. For more details, see: [Session Affinity](https://cloud.google.com/load-balancing/docs/backend-service#session_affinity).
-     * 
      */
     @Import(name="sessionAffinity")
       private final @Nullable Output<RegionBackendServiceSessionAffinity> sessionAffinity;
@@ -331,7 +308,6 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
-     * 
      */
     @Import(name="timeoutSec")
       private final @Nullable Output<Integer> timeoutSec;

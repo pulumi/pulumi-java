@@ -32,7 +32,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes an attestation of an artifact.
-     * 
      */
     @Import(name="attestation")
       private final @Nullable Output<AttestationArgs> attestation;
@@ -43,7 +42,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Build details for a verifiable build.
-     * 
      */
     @Import(name="buildDetails")
       private final @Nullable Output<BuildDetailsArgs> buildDetails;
@@ -54,7 +52,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes whether or not a resource passes compliance checks.
-     * 
      */
     @Import(name="compliance")
       private final @Nullable Output<ComplianceOccurrenceArgs> compliance;
@@ -65,7 +62,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes the deployment of an artifact on a runtime.
-     * 
      */
     @Import(name="deployment")
       private final @Nullable Output<DeploymentArgs> deployment;
@@ -76,7 +72,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes how this resource derives from the basis in the associated note.
-     * 
      */
     @Import(name="derivedImage")
       private final @Nullable Output<DerivedArgs> derivedImage;
@@ -87,7 +82,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes the initial scan status for this resource.
-     * 
      */
     @Import(name="discovered")
       private final @Nullable Output<DiscoveredArgs> discovered;
@@ -98,7 +92,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This represents a DSSE attestation occurrence
-     * 
      */
     @Import(name="dsseAttestation")
       private final @Nullable Output<DSSEAttestationOccurrenceArgs> dsseAttestation;
@@ -109,7 +102,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * https://github.com/secure-systems-lab/dsse
-     * 
      */
     @Import(name="envelope")
       private final @Nullable Output<EnvelopeArgs> envelope;
@@ -120,7 +112,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes the installation of a package on the linked resource.
-     * 
      */
     @Import(name="installation")
       private final @Nullable Output<InstallationArgs> installation;
@@ -131,7 +122,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An analysis note associated with this image, in the form "providers/{provider_id}/notes/{NOTE_ID}" This field can be used as a filter in list requests.
-     * 
      */
     @Import(name="noteName")
       private final @Nullable Output<String> noteName;
@@ -149,7 +139,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description of actions that can be taken to remedy the `Note`
-     * 
      */
     @Import(name="remediation")
       private final @Nullable Output<String> remediation;
@@ -160,7 +149,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      *  The resource for which the `Occurrence` applies.
-     * 
      */
     @Import(name="resource")
       private final @Nullable Output<ResourceArgs> resource;
@@ -171,7 +159,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique URL of the image or the container for which the `Occurrence` applies. For example, https://gcr.io/project/image@sha256:foo This field can be used as a filter in list requests.
-     * 
      */
     @Import(name="resourceUrl")
       private final @Nullable Output<String> resourceUrl;
@@ -182,7 +169,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes a specific software bill of materials document.
-     * 
      */
     @Import(name="sbom")
       private final @Nullable Output<DocumentOccurrenceArgs> sbom;
@@ -193,7 +179,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes a specific SPDX File.
-     * 
      */
     @Import(name="spdxFile")
       private final @Nullable Output<FileOccurrenceArgs> spdxFile;
@@ -204,7 +189,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes a specific SPDX Package.
-     * 
      */
     @Import(name="spdxPackage")
       private final @Nullable Output<PackageInfoOccurrenceArgs> spdxPackage;
@@ -215,7 +199,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes a specific relationship between SPDX elements.
-     * 
      */
     @Import(name="spdxRelationship")
       private final @Nullable Output<RelationshipOccurrenceArgs> spdxRelationship;
@@ -226,7 +209,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes an upgrade.
-     * 
      */
     @Import(name="upgrade")
       private final @Nullable Output<UpgradeOccurrenceArgs> upgrade;
@@ -237,7 +219,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Details of a security vulnerability note.
-     * 
      */
     @Import(name="vulnerabilityDetails")
       private final @Nullable Output<VulnerabilityDetailsArgs> vulnerabilityDetails;

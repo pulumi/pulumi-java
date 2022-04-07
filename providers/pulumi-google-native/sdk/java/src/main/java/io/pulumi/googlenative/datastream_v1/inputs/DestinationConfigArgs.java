@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration of the stream destination.
- * 
  */
 public final class DestinationConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DestinationConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Destination connection profile resource. Format: `projects/{project}/locations/{location}/connectionProfiles/{name}`
-     * 
      */
     @Import(name="destinationConnectionProfile", required=true)
       private final Output<String> destinationConnectionProfile;
@@ -32,7 +30,6 @@ public final class DestinationConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A configuration for how data should be loaded to Cloud Storage.
-     * 
      */
     @Import(name="gcsDestinationConfig")
       private final @Nullable Output<GcsDestinationConfigArgs> gcsDestinationConfig;

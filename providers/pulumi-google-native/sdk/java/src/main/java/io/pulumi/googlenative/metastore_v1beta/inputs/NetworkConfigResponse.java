@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Network configuration for the Dataproc Metastore service.
- * 
  */
 public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Immutable. The consumer-side network configuration for the Dataproc Metastore instance.
-     * 
      */
     @Import(name="consumers", required=true)
       private final List<ConsumerResponse> consumers;

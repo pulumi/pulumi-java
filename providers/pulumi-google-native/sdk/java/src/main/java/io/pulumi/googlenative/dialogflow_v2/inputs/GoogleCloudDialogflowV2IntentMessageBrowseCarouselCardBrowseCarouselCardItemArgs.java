@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Browsing carousel tile
- * 
  */
 public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
 
     /**
      * Optional. Description of the carousel item. Maximum of four lines of text.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -33,7 +31,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
 
     /**
      * Optional. Text that appears at the bottom of the Browse Carousel Card. Maximum of one line of text.
-     * 
      */
     @Import(name="footer")
       private final @Nullable Output<String> footer;
@@ -44,7 +41,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
 
     /**
      * Optional. Hero image for the carousel item.
-     * 
      */
     @Import(name="image")
       private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
@@ -55,7 +51,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
 
     /**
      * Action to present to the user.
-     * 
      */
     @Import(name="openUriAction", required=true)
       private final Output<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs> openUriAction;
@@ -66,7 +61,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
 
     /**
      * Title of the carousel item. Maximum of two lines of text.
-     * 
      */
     @Import(name="title", required=true)
       private final Output<String> title;

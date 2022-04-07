@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * The set of columns' values that share the same ldiversity value.
- * 
  */
 public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends 
 
     /**
      * Size of the k-anonymity equivalence class.
-     * 
      */
     @Import(name="equivalenceClassSize", required=true)
       private final String equivalenceClassSize;
@@ -32,7 +30,6 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends 
 
     /**
      * Number of distinct sensitive values in this equivalence class.
-     * 
      */
     @Import(name="numDistinctSensitiveValues", required=true)
       private final String numDistinctSensitiveValues;
@@ -43,7 +40,6 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends 
 
     /**
      * Quasi-identifier values defining the k-anonymity equivalence class. The order is always the same as the original request.
-     * 
      */
     @Import(name="quasiIdsValues", required=true)
       private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
@@ -54,7 +50,6 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends 
 
     /**
      * Estimated frequencies of top sensitive values.
-     * 
      */
     @Import(name="topSensitiveValues", required=true)
       private final List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues;

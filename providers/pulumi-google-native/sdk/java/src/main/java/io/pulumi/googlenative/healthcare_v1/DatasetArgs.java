@@ -30,7 +30,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource name of the dataset, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -48,7 +47,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The default timezone used by this dataset. Must be a either a valid IANA time zone name such as "America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources, such as HL7 messages, where no explicit timezone is specified.
-     * 
      */
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;

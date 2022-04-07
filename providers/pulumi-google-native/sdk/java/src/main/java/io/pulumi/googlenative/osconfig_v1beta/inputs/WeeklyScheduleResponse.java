@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Represents a weekly schedule.
- * 
  */
 public final class WeeklyScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class WeeklyScheduleResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Day of the week.
-     * 
      */
     @Import(name="dayOfWeek", required=true)
       private final String dayOfWeek;

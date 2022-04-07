@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse {
     /**
      * A filter to reduce the conversations used for training the model to a specific subset.
-     * 
      */
     private final String filter;
     /**
      * Medium of conversations used in training data. This field is being deprecated. To specify the medium to be used in training a new issue model, set the `medium` field on `filter`.
-     * 
      */
     private final String medium;
     /**
      * Number of conversations used in training. Output only.
-     * 
      */
     private final String trainingConversationsCount;
 
@@ -37,21 +34,18 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigRe
 
     /**
      * A filter to reduce the conversations used for training the model to a specific subset.
-     * 
     */
     public String getFilter() {
         return this.filter;
     }
     /**
      * Medium of conversations used in training data. This field is being deprecated. To specify the medium to be used in training a new issue model, set the `medium` field on `filter`.
-     * 
     */
     public String getMedium() {
         return this.medium;
     }
     /**
      * Number of conversations used in training. Output only.
-     * 
     */
     public String getTrainingConversationsCount() {
         return this.trainingConversationsCount;

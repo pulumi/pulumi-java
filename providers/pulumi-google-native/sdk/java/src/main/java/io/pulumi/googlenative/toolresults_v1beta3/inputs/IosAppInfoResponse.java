@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * iOS app information
- * 
  */
 public final class IosAppInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class IosAppInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the app. Required
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

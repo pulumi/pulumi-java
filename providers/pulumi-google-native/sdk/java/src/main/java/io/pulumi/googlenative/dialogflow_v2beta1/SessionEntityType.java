@@ -16,48 +16,41 @@ import javax.annotation.Nullable;
 /**
  * Creates a session entity type. If the specified session entity type already exists, overrides the session entity type. This method doesn't work with Google Assistant integration. Contact Dialogflow support if you need to use session entities with Google Assistant integration.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:dialogflow/v2beta1:SessionEntityType")
 public class SessionEntityType extends io.pulumi.resources.CustomResource {
     /**
      * The collection of entities associated with this session entity type.
-     * 
      */
     @Export(name="entities", type=List.class, parameters={GoogleCloudDialogflowV2beta1EntityTypeEntityResponse.class})
     private Output<List<GoogleCloudDialogflowV2beta1EntityTypeEntityResponse>> entities;
 
     /**
      * @return The collection of entities associated with this session entity type.
-     * 
      */
     public Output<List<GoogleCloudDialogflowV2beta1EntityTypeEntityResponse>> getEntities() {
         return this.entities;
     }
     /**
      * Indicates whether the additional data should override or supplement the custom entity type definition.
-     * 
      */
     @Export(name="entityOverrideMode", type=String.class, parameters={})
     private Output<String> entityOverrideMode;
 
     /**
      * @return Indicates whether the additional data should override or supplement the custom entity type definition.
-     * 
      */
     public Output<String> getEntityOverrideMode() {
         return this.entityOverrideMode;
     }
     /**
      * The unique identifier of this session entity type. Supported formats: - `projects//agent/sessions//entityTypes/` - `projects//locations//agent/sessions//entityTypes/` - `projects//agent/environments//users//sessions//entityTypes/` - `projects//locations//agent/environments/ /users//sessions//entityTypes/` If `Location ID` is not specified we assume default 'us' location. If `Environment ID` is not specified, we assume default 'draft' environment. If `User ID` is not specified, we assume default '-' user. `` must be the display name of an existing entity type in the same agent that will be overridden or supplemented.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The unique identifier of this session entity type. Supported formats: - `projects//agent/sessions//entityTypes/` - `projects//locations//agent/sessions//entityTypes/` - `projects//agent/environments//users//sessions//entityTypes/` - `projects//locations//agent/environments/ /users//sessions//entityTypes/` If `Location ID` is not specified we assume default 'us' location. If `Environment ID` is not specified, we assume default 'draft' environment. If `User ID` is not specified, we assume default '-' user. `` must be the display name of an existing entity type in the same agent that will be overridden or supplemented.
-     * 
      */
     public Output<String> getName() {
         return this.name;

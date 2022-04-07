@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Specifies how metastore metadata should be integrated with external services.
- * 
  */
 public final class MetadataIntegrationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class MetadataIntegrationResponse extends io.pulumi.resources.Invok
 
     /**
      * The integration config for the Data Catalog service.
-     * 
      */
     @Import(name="dataCatalogConfig", required=true)
       private final DataCatalogConfigResponse dataCatalogConfig;
@@ -30,7 +28,6 @@ public final class MetadataIntegrationResponse extends io.pulumi.resources.Invok
 
     /**
      * The integration config for the Dataplex service.
-     * 
      */
     @Import(name="dataplexConfig", required=true)
       private final DataplexConfigResponse dataplexConfig;

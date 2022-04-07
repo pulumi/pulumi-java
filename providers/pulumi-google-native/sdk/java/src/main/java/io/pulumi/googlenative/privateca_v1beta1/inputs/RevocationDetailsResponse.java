@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Describes fields that are relavent to the revocation of a Certificate.
- * 
  */
 public final class RevocationDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class RevocationDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Indicates why a Certificate was revoked.
-     * 
      */
     @Import(name="revocationState", required=true)
       private final String revocationState;
@@ -29,7 +27,6 @@ public final class RevocationDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The time at which this Certificate was revoked.
-     * 
      */
     @Import(name="revocationTime", required=true)
       private final String revocationTime;

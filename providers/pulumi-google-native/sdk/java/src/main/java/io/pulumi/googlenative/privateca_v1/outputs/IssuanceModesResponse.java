@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class IssuanceModesResponse {
     /**
      * Optional. When true, allows callers to create Certificates by specifying a CertificateConfig.
-     * 
      */
     private final Boolean allowConfigBasedIssuance;
     /**
      * Optional. When true, allows callers to create Certificates by specifying a CSR.
-     * 
      */
     private final Boolean allowCsrBasedIssuance;
 
@@ -30,14 +28,12 @@ public final class IssuanceModesResponse {
 
     /**
      * Optional. When true, allows callers to create Certificates by specifying a CertificateConfig.
-     * 
     */
     public Boolean getAllowConfigBasedIssuance() {
         return this.allowConfigBasedIssuance;
     }
     /**
      * Optional. When true, allows callers to create Certificates by specifying a CSR.
-     * 
     */
     public Boolean getAllowCsrBasedIssuance() {
         return this.allowCsrBasedIssuance;

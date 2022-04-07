@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Input only. Options for job processing.
- * 
  */
 public final class ProcessingOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ProcessingOptionsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. If set to `true`, the service does not attempt to resolve a more precise address for the job.
-     * 
      */
     @Import(name="disableStreetAddressResolution", required=true)
       private final Boolean disableStreetAddressResolution;
@@ -30,7 +28,6 @@ public final class ProcessingOptionsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. Option for job HTML content sanitization. Applied fields are: * description * applicationInfo.instruction * incentives * qualifications * responsibilities HTML tags in these fields may be stripped if sanitiazation is not disabled. Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.
-     * 
      */
     @Import(name="htmlSanitization", required=true)
       private final String htmlSanitization;

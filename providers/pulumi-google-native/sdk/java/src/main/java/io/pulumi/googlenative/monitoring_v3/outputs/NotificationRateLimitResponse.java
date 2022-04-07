@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class NotificationRateLimitResponse {
     /**
      * Not more than one notification per period.
-     * 
      */
     private final String period;
 
@@ -22,7 +21,6 @@ public final class NotificationRateLimitResponse {
 
     /**
      * Not more than one notification per period.
-     * 
     */
     public String getPeriod() {
         return this.period;

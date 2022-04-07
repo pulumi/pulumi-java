@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class CustomErrorRuleResponse {
     /**
      * Mark this message as possible payload in error response. Otherwise, objects of this type will be filtered when they appear in error payload.
-     * 
      */
     private final Boolean isErrorType;
     /**
      * Selects messages to which this rule applies. Refer to selector for syntax details.
-     * 
      */
     private final String selector;
 
@@ -31,14 +29,12 @@ public final class CustomErrorRuleResponse {
 
     /**
      * Mark this message as possible payload in error response. Otherwise, objects of this type will be filtered when they appear in error payload.
-     * 
     */
     public Boolean getIsErrorType() {
         return this.isErrorType;
     }
     /**
      * Selects messages to which this rule applies. Refer to selector for syntax details.
-     * 
     */
     public String getSelector() {
         return this.selector;

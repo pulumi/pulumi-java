@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Stores rollup test status of multiple steps that were run as a group and outcome of each individual step.
- * 
  */
 public final class PrimaryStepArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class PrimaryStepArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Step Id and outcome of each individual step.
-     * 
      */
     @Import(name="individualOutcome")
       private final @Nullable Output<List<IndividualOutcomeArgs>> individualOutcome;
@@ -33,7 +31,6 @@ public final class PrimaryStepArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Rollup test status of multiple steps that were run with the same configuration as a group.
-     * 
      */
     @Import(name="rollUp")
       private final @Nullable Output<PrimaryStepRollUp> rollUp;

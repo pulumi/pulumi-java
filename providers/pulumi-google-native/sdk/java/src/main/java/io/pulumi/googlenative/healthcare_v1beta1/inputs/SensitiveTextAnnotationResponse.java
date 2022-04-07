@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A TextAnnotation specifies a text range that includes sensitive information.
- * 
  */
 public final class SensitiveTextAnnotationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class SensitiveTextAnnotationResponse extends io.pulumi.resources.I
 
     /**
      * Maps from a resource slice. For example, FHIR resource field path to a set of sensitive text findings. For example, Appointment.Narrative text1 --> {findings_1, findings_2, findings_3}
-     * 
      */
     @Import(name="details", required=true)
       private final Map<String,String> details;

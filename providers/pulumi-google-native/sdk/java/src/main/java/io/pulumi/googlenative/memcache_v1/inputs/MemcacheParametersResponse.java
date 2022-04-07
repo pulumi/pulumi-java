@@ -15,7 +15,6 @@ public final class MemcacheParametersResponse extends io.pulumi.resources.Invoke
 
     /**
      * User defined set of parameters to use in the memcached process.
-     * 
      */
     @Import(name="params", required=true)
       private final Map<String,String> params;

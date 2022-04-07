@@ -17,7 +17,6 @@ public final class ServiceAttachmentConsumerProjectLimitArgs extends io.pulumi.r
 
     /**
      * The value of the limit to set.
-     * 
      */
     @Import(name="connectionLimit")
       private final @Nullable Output<Integer> connectionLimit;
@@ -28,7 +27,6 @@ public final class ServiceAttachmentConsumerProjectLimitArgs extends io.pulumi.r
 
     /**
      * The project id or number for the project to set the limit for.
-     * 
      */
     @Import(name="projectIdOrNum")
       private final @Nullable Output<String> projectIdOrNum;

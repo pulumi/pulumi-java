@@ -10,48 +10,39 @@ import java.util.StringJoiner;
 
     /**
      * The HTTP method to use for the request. The default is POST.
-     * 
      */
     @EnumType
     public enum HttpRequestHttpMethod {
         /**
          * HTTP method unspecified
-         * 
          */
         HttpMethodUnspecified("HTTP_METHOD_UNSPECIFIED"),
         /**
          * HTTP POST
-         * 
          */
         Post("POST"),
         /**
          * HTTP GET
-         * 
          */
         Get("GET"),
         /**
          * HTTP HEAD
-         * 
          */
         Head("HEAD"),
         /**
          * HTTP PUT
-         * 
          */
         Put("PUT"),
         /**
          * HTTP DELETE
-         * 
          */
         Delete("DELETE"),
         /**
          * HTTP PATCH
-         * 
          */
         Patch("PATCH"),
         /**
          * HTTP OPTIONS
-         * 
          */
         Options("OPTIONS");
 

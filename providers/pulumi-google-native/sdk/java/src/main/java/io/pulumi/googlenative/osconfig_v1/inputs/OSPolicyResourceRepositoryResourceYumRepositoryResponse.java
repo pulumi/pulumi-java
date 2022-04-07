@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Represents a single yum package repository. These are added to a repo file that is managed at `/etc/yum.repos.d/google_osconfig.repo`.
- * 
  */
 public final class OSPolicyResourceRepositoryResourceYumRepositoryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryResponse exten
 
     /**
      * The location of the repository directory.
-     * 
      */
     @Import(name="baseUrl", required=true)
       private final String baseUrl;
@@ -30,7 +28,6 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryResponse exten
 
     /**
      * The display name of the repository.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -41,7 +38,6 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryResponse exten
 
     /**
      * URIs of GPG keys.
-     * 
      */
     @Import(name="gpgKeys", required=true)
       private final List<String> gpgKeys;

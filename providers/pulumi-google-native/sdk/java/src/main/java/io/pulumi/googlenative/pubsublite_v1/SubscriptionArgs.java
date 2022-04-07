@@ -17,7 +17,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The settings for this subscription's message delivery.
-     * 
      */
     @Import(name="deliveryConfig")
       private final @Nullable Output<DeliveryConfigArgs> deliveryConfig;
@@ -35,7 +34,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the subscription. Structured like: projects/{project_number}/locations/{location}/subscriptions/{subscription_id}
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -67,7 +65,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the topic this subscription is attached to. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
-     * 
      */
     @Import(name="topic")
       private final @Nullable Output<String> topic;

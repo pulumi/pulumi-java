@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Uses Google Cloud Endpoints to handle requests.
- * 
  */
 public final class ApiEndpointHandlerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ApiEndpointHandlerResponse extends io.pulumi.resources.Invoke
 
     /**
      * Path to the script from the application root directory.
-     * 
      */
     @Import(name="scriptPath", required=true)
       private final String scriptPath;

@@ -14,7 +14,6 @@ public final class FileContentBufferResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The raw content in the secure keys file.
-     * 
      */
     @Import(name="content", required=true)
       private final String content;
@@ -25,7 +24,6 @@ public final class FileContentBufferResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The file type of source file.
-     * 
      */
     @Import(name="fileType", required=true)
       private final String fileType;

@@ -24,244 +24,209 @@ import javax.annotation.Nullable;
 /**
  * Creates a batch workload that executes asynchronously.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:dataproc/v1:Batch")
 public class Batch extends io.pulumi.resources.CustomResource {
     /**
      * The time when the batch was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time when the batch was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The email address of the user who created the batch.
-     * 
      */
     @Export(name="creator", type=String.class, parameters={})
     private Output<String> creator;
 
     /**
      * @return The email address of the user who created the batch.
-     * 
      */
     public Output<String> getCreator() {
         return this.creator;
     }
     /**
      * Optional. Environment configuration for the batch execution.
-     * 
      */
     @Export(name="environmentConfig", type=EnvironmentConfigResponse.class, parameters={})
     private Output<EnvironmentConfigResponse> environmentConfig;
 
     /**
      * @return Optional. Environment configuration for the batch execution.
-     * 
      */
     public Output<EnvironmentConfigResponse> getEnvironmentConfig() {
         return this.environmentConfig;
     }
     /**
      * Optional. The labels to associate with this batch. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a batch.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Optional. The labels to associate with this batch. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a batch.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * The resource name of the batch.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the batch.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The resource name of the operation associated with this batch.
-     * 
      */
     @Export(name="operation", type=String.class, parameters={})
     private Output<String> operation;
 
     /**
      * @return The resource name of the operation associated with this batch.
-     * 
      */
     public Output<String> getOperation() {
         return this.operation;
     }
     /**
      * Optional. PySpark batch config.
-     * 
      */
     @Export(name="pysparkBatch", type=PySparkBatchResponse.class, parameters={})
     private Output<PySparkBatchResponse> pysparkBatch;
 
     /**
      * @return Optional. PySpark batch config.
-     * 
      */
     public Output<PySparkBatchResponse> getPysparkBatch() {
         return this.pysparkBatch;
     }
     /**
      * Optional. Runtime configuration for the batch execution.
-     * 
      */
     @Export(name="runtimeConfig", type=RuntimeConfigResponse.class, parameters={})
     private Output<RuntimeConfigResponse> runtimeConfig;
 
     /**
      * @return Optional. Runtime configuration for the batch execution.
-     * 
      */
     public Output<RuntimeConfigResponse> getRuntimeConfig() {
         return this.runtimeConfig;
     }
     /**
      * Runtime information about batch execution.
-     * 
      */
     @Export(name="runtimeInfo", type=RuntimeInfoResponse.class, parameters={})
     private Output<RuntimeInfoResponse> runtimeInfo;
 
     /**
      * @return Runtime information about batch execution.
-     * 
      */
     public Output<RuntimeInfoResponse> getRuntimeInfo() {
         return this.runtimeInfo;
     }
     /**
      * Optional. Spark batch config.
-     * 
      */
     @Export(name="sparkBatch", type=SparkBatchResponse.class, parameters={})
     private Output<SparkBatchResponse> sparkBatch;
 
     /**
      * @return Optional. Spark batch config.
-     * 
      */
     public Output<SparkBatchResponse> getSparkBatch() {
         return this.sparkBatch;
     }
     /**
      * Optional. SparkR batch config.
-     * 
      */
     @Export(name="sparkRBatch", type=SparkRBatchResponse.class, parameters={})
     private Output<SparkRBatchResponse> sparkRBatch;
 
     /**
      * @return Optional. SparkR batch config.
-     * 
      */
     public Output<SparkRBatchResponse> getSparkRBatch() {
         return this.sparkRBatch;
     }
     /**
      * Optional. SparkSql batch config.
-     * 
      */
     @Export(name="sparkSqlBatch", type=SparkSqlBatchResponse.class, parameters={})
     private Output<SparkSqlBatchResponse> sparkSqlBatch;
 
     /**
      * @return Optional. SparkSql batch config.
-     * 
      */
     public Output<SparkSqlBatchResponse> getSparkSqlBatch() {
         return this.sparkSqlBatch;
     }
     /**
      * The state of the batch.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The state of the batch.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Historical state information for the batch.
-     * 
      */
     @Export(name="stateHistory", type=List.class, parameters={StateHistoryResponse.class})
     private Output<List<StateHistoryResponse>> stateHistory;
 
     /**
      * @return Historical state information for the batch.
-     * 
      */
     public Output<List<StateHistoryResponse>> getStateHistory() {
         return this.stateHistory;
     }
     /**
      * Batch state details, such as a failure description if the state is FAILED.
-     * 
      */
     @Export(name="stateMessage", type=String.class, parameters={})
     private Output<String> stateMessage;
 
     /**
      * @return Batch state details, such as a failure description if the state is FAILED.
-     * 
      */
     public Output<String> getStateMessage() {
         return this.stateMessage;
     }
     /**
      * The time when the batch entered a current state.
-     * 
      */
     @Export(name="stateTime", type=String.class, parameters={})
     private Output<String> stateTime;
 
     /**
      * @return The time when the batch entered a current state.
-     * 
      */
     public Output<String> getStateTime() {
         return this.stateTime;
     }
     /**
      * A batch UUID (Unique Universal Identifier). The service generates this value when it creates the batch.
-     * 
      */
     @Export(name="uuid", type=String.class, parameters={})
     private Output<String> uuid;
 
     /**
      * @return A batch UUID (Unique Universal Identifier). The service generates this value when it creates the batch.
-     * 
      */
     public Output<String> getUuid() {
         return this.uuid;

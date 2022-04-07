@@ -19,7 +19,6 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional description of the hub.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -37,7 +36,6 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -48,7 +46,6 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The name of the hub. Hub names must be unique. They use the following form: `projects/{project_number}/locations/global/hubs/{hub_id}`
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -73,7 +70,6 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The VPC networks associated with this hub's spokes. This field is read-only. Network Connectivity Center automatically populates it based on the set of spokes attached to the hub.
-     * 
      */
     @Import(name="routingVpcs")
       private final @Nullable Output<List<RoutingVPCArgs>> routingVpcs;

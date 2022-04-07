@@ -14,76 +14,65 @@ import javax.annotation.Nullable;
 
 /**
  * Create a Service Perimeter. The longrunning operation from this RPC will have a successful status once the Service Perimeter has propagated to long-lasting storage. Service Perimeters containing errors will result in an error response for the first error encountered.
- * 
  */
 @ResourceType(type="google-native:accesscontextmanager/v1beta:ServicePerimeter")
 public class ServicePerimeter extends io.pulumi.resources.CustomResource {
     /**
      * Description of the `ServicePerimeter` and its use. Does not affect behavior.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Description of the `ServicePerimeter` and its use. Does not affect behavior.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, restricted/unrestricted service lists as well as access lists must be empty.
-     * 
      */
     @Export(name="perimeterType", type=String.class, parameters={})
     private Output<String> perimeterType;
 
     /**
      * @return Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, restricted/unrestricted service lists as well as access lists must be empty.
-     * 
      */
     public Output<String> getPerimeterType() {
         return this.perimeterType;
     }
     /**
      * Current ServicePerimeter configuration. Specifies sets of resources, restricted/unrestricted services and access levels that determine perimeter content and boundaries.
-     * 
      */
     @Export(name="status", type=ServicePerimeterConfigResponse.class, parameters={})
     private Output<ServicePerimeterConfigResponse> status;
 
     /**
      * @return Current ServicePerimeter configuration. Specifies sets of resources, restricted/unrestricted services and access levels that determine perimeter content and boundaries.
-     * 
      */
     public Output<ServicePerimeterConfigResponse> getStatus() {
         return this.status;
     }
     /**
      * Human readable title. Must be unique within the Policy.
-     * 
      */
     @Export(name="title", type=String.class, parameters={})
     private Output<String> title;
 
     /**
      * @return Human readable title. Must be unique within the Policy.
-     * 
      */
     public Output<String> getTitle() {
         return this.title;

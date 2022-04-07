@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Basic algorithm for autoscaling.
- * 
  */
 public final class BasicAutoscalingAlgorithmResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class BasicAutoscalingAlgorithmResponse extends io.pulumi.resources
 
     /**
      * Optional. Duration between scaling events. A scaling period starts after the update operation from the previous event has completed.Bounds: 2m, 1d. Default: 2m.
-     * 
      */
     @Import(name="cooldownPeriod", required=true)
       private final String cooldownPeriod;
@@ -30,7 +28,6 @@ public final class BasicAutoscalingAlgorithmResponse extends io.pulumi.resources
 
     /**
      * Optional. YARN autoscaling configuration.
-     * 
      */
     @Import(name="yarnConfig", required=true)
       private final BasicYarnAutoscalingConfigResponse yarnConfig;

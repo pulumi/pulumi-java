@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Used with unidirectional glossaries.
- * 
  */
 public final class LanguageCodePairResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class LanguageCodePairResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The BCP-47 language code of the input text, for example, "en-US". Expected to be an exact match for GlossaryTerm.language_code.
-     * 
      */
     @Import(name="sourceLanguageCode", required=true)
       private final String sourceLanguageCode;
@@ -29,7 +27,6 @@ public final class LanguageCodePairResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The BCP-47 language code for translation output, for example, "zh-CN". Expected to be an exact match for GlossaryTerm.language_code.
-     * 
      */
     @Import(name="targetLanguageCode", required=true)
       private final String targetLanguageCode;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Encapsulates numeric value that can be either absolute or relative.
- * 
  */
 public final class FixedOrPercentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class FixedOrPercentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies a fixed number of VM instances. This must be a positive integer.
-     * 
      */
     @Import(name="fixed")
       private final @Nullable Output<Integer> fixed;
@@ -31,7 +29,6 @@ public final class FixedOrPercentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies a percentage of instances between 0 to 100%, inclusive. For example, specify 80 for 80%.
-     * 
      */
     @Import(name="percent")
       private final @Nullable Output<Integer> percent;

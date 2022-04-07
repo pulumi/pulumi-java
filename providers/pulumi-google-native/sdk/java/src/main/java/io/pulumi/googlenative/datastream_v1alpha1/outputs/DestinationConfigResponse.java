@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class DestinationConfigResponse {
     /**
      * Destination connection profile identifier.
-     * 
      */
     private final String destinationConnectionProfileName;
     /**
      * GCS destination configuration.
-     * 
      */
     private final GcsDestinationConfigResponse gcsDestinationConfig;
 
@@ -31,14 +29,12 @@ public final class DestinationConfigResponse {
 
     /**
      * Destination connection profile identifier.
-     * 
     */
     public String getDestinationConnectionProfileName() {
         return this.destinationConnectionProfileName;
     }
     /**
      * GCS destination configuration.
-     * 
     */
     public GcsDestinationConfigResponse getGcsDestinationConfig() {
         return this.gcsDestinationConfig;

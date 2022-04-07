@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The project team associated with the entity, if any.
- * 
  */
 public final class ObjectAccessControlProjectTeamResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ObjectAccessControlProjectTeamResponse extends io.pulumi.reso
 
     /**
      * The project number.
-     * 
      */
     @Import(name="projectNumber", required=true)
       private final String projectNumber;
@@ -29,7 +27,6 @@ public final class ObjectAccessControlProjectTeamResponse extends io.pulumi.reso
 
     /**
      * The team.
-     * 
      */
     @Import(name="team", required=true)
       private final String team;

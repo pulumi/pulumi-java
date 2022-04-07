@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A Pub/Sub destination.
- * 
  */
 public final class PubsubDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PubsubDestinationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the Pub/Sub topic to publish job completion notification to. For example: `projects/{project}/topics/{topic}`.
-     * 
      */
     @Import(name="topic")
       private final @Nullable Output<String> topic;

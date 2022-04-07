@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Autoscale defines the autoscaling policy of a worker pool.
- * 
  */
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleRespon
 
     /**
      * The maximal number of workers. Must be equal to or greater than min_size.
-     * 
      */
     @Import(name="maxSize", required=true)
       private final String maxSize;
@@ -29,7 +27,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleRespon
 
     /**
      * The minimal number of workers. Must be greater than 0.
-     * 
      */
     @Import(name="minSize", required=true)
       private final String minSize;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A public key format and data.
- * 
  */
 public final class PublicKeyCredentialResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class PublicKeyCredentialResponse extends io.pulumi.resources.Invok
 
     /**
      * The format of the key.
-     * 
      */
     @Import(name="format", required=true)
       private final String format;
@@ -29,7 +27,6 @@ public final class PublicKeyCredentialResponse extends io.pulumi.resources.Invok
 
     /**
      * The key data.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;

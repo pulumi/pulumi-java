@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * API call volume range and the fees charged when the total number of API calls is within the range.
- * 
  */
 public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
 
     /**
      * Ending value of the range. Set to 0 or `null` for the last range of values.
-     * 
      */
     @Import(name="end")
       private final @Nullable Output<String> end;
@@ -32,7 +30,6 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
 
     /**
      * Fee to charge when total number of API calls falls within this range.
-     * 
      */
     @Import(name="fee")
       private final @Nullable Output<GoogleTypeMoneyArgs> fee;
@@ -43,7 +40,6 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
 
     /**
      * Starting value of the range. Set to 0 or `null` for the initial range of values.
-     * 
      */
     @Import(name="start")
       private final @Nullable Output<String> start;

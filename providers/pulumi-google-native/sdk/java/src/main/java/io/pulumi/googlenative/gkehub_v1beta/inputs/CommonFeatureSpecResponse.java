@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * CommonFeatureSpec contains Hub-wide configuration information
- * 
  */
 public final class CommonFeatureSpecResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class CommonFeatureSpecResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Appdevexperience specific spec.
-     * 
      */
     @Import(name="appdevexperience", required=true)
       private final AppDevExperienceFeatureSpecResponse appdevexperience;
@@ -30,7 +28,6 @@ public final class CommonFeatureSpecResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Multicluster Ingress-specific spec.
-     * 
      */
     @Import(name="multiclusteringress", required=true)
       private final MultiClusterIngressFeatureSpecResponse multiclusteringress;

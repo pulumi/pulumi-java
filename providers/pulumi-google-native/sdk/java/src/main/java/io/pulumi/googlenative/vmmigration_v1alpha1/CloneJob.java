@@ -17,90 +17,77 @@ import javax.annotation.Nullable;
  * Initiates a Clone of a specific migrating VM.
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:vmmigration/v1alpha1:CloneJob")
 public class CloneJob extends io.pulumi.resources.CustomResource {
     /**
      * Details of the target VM in Compute Engine.
-     * 
      */
     @Export(name="computeEngineTargetDetails", type=ComputeEngineTargetDetailsResponse.class, parameters={})
     private Output<ComputeEngineTargetDetailsResponse> computeEngineTargetDetails;
 
     /**
      * @return Details of the target VM in Compute Engine.
-     * 
      */
     public Output<ComputeEngineTargetDetailsResponse> getComputeEngineTargetDetails() {
         return this.computeEngineTargetDetails;
     }
     /**
      * The time the clone job was created (as an API call, not when it was actually created in the target).
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time the clone job was created (as an API call, not when it was actually created in the target).
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Provides details for the errors that led to the Clone Job's state.
-     * 
      */
     @Export(name="error", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> error;
 
     /**
      * @return Provides details for the errors that led to the Clone Job's state.
-     * 
      */
     public Output<StatusResponse> getError() {
         return this.error;
     }
     /**
      * The name of the clone.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the clone.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * State of the clone job.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return State of the clone job.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The time the state was last updated.
-     * 
      */
     @Export(name="stateTime", type=String.class, parameters={})
     private Output<String> stateTime;
 
     /**
      * @return The time the state was last updated.
-     * 
      */
     public Output<String> getStateTime() {
         return this.stateTime;

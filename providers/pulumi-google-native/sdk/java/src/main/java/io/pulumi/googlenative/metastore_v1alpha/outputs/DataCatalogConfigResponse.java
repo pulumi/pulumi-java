@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class DataCatalogConfigResponse {
     /**
      * Defines whether the metastore metadata should be synced to Data Catalog. The default value is to disable syncing metastore metadata to Data Catalog.
-     * 
      */
     private final Boolean enabled;
 
@@ -22,7 +21,6 @@ public final class DataCatalogConfigResponse {
 
     /**
      * Defines whether the metastore metadata should be synced to Data Catalog. The default value is to disable syncing metastore metadata to Data Catalog.
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;

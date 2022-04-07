@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudApigeeV1IntegrationConfigResponse {
     /**
      * Flag that specifies whether the Integration add-on is enabled.
-     * 
      */
     private final Boolean enabled;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudApigeeV1IntegrationConfigResponse {
 
     /**
      * Flag that specifies whether the Integration add-on is enabled.
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;

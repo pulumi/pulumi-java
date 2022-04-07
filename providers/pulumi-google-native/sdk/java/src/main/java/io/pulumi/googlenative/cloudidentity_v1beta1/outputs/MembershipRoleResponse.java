@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class MembershipRoleResponse {
     /**
      * The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER` `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other value.
-     * 
      */
     private final ExpiryDetailResponse expiryDetail;
     /**
      * The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.
-     * 
      */
     private final String name;
     /**
      * Evaluations of restrictions applied to parent group on this membership.
-     * 
      */
     private final RestrictionEvaluationsResponse restrictionEvaluations;
 
@@ -39,21 +36,18 @@ public final class MembershipRoleResponse {
 
     /**
      * The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER` `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other value.
-     * 
     */
     public ExpiryDetailResponse getExpiryDetail() {
         return this.expiryDetail;
     }
     /**
      * The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Evaluations of restrictions applied to parent group on this membership.
-     * 
     */
     public RestrictionEvaluationsResponse getRestrictionEvaluations() {
         return this.restrictionEvaluations;

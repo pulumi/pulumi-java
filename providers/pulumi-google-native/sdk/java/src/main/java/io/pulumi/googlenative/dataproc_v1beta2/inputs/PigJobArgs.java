@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * A Dataproc job for running Apache Pig (https://pig.apache.org/) queries on YARN.
- * 
  */
 public final class PigJobArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class PigJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
-     * 
      */
     @Import(name="continueOnFailure")
       private final @Nullable Output<Boolean> continueOnFailure;
@@ -36,7 +34,6 @@ public final class PigJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. HCFS URIs of jar files to add to the CLASSPATH of the Pig Client and Hadoop MapReduce (MR) tasks. Can contain Pig UDFs.
-     * 
      */
     @Import(name="jarFileUris")
       private final @Nullable Output<List<String>> jarFileUris;
@@ -47,7 +44,6 @@ public final class PigJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The runtime log config for job execution.
-     * 
      */
     @Import(name="loggingConfig")
       private final @Nullable Output<LoggingConfigArgs> loggingConfig;
@@ -58,7 +54,6 @@ public final class PigJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. A mapping of property names to values, used to configure Pig. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/pig/conf/pig.properties, and classes in user code.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -69,7 +64,6 @@ public final class PigJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The HCFS URI of the script that contains the Pig queries.
-     * 
      */
     @Import(name="queryFileUri")
       private final @Nullable Output<String> queryFileUri;
@@ -80,7 +74,6 @@ public final class PigJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of queries.
-     * 
      */
     @Import(name="queryList")
       private final @Nullable Output<QueryListArgs> queryList;
@@ -91,7 +84,6 @@ public final class PigJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Mapping of query variable names to values (equivalent to the Pig command: name=[value]).
-     * 
      */
     @Import(name="scriptVariables")
       private final @Nullable Output<Map<String,String>> scriptVariables;

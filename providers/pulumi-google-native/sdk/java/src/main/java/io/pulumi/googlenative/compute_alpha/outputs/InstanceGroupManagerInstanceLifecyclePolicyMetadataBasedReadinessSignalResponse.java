@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse {
     /**
      * The number of seconds to wait for a readiness signal during initialization before timing out.
-     * 
      */
     private final Integer timeoutSec;
 
@@ -22,7 +21,6 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
 
     /**
      * The number of seconds to wait for a readiness signal during initialization before timing out.
-     * 
     */
     public Integer getTimeoutSec() {
         return this.timeoutSec;

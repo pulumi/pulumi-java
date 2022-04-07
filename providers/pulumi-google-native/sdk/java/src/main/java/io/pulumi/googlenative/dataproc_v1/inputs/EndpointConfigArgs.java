@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Endpoint config for this cluster
- * 
  */
 public final class EndpointConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EndpointConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
-     * 
      */
     @Import(name="enableHttpPortAccess")
       private final @Nullable Output<Boolean> enableHttpPortAccess;

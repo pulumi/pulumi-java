@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * HttpRouteRuleMatch criteria for field values that must stay within the specified integer range.
- * 
  */
 public final class Int64RangeMatchArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class Int64RangeMatchArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The end of the range (exclusive) in signed long integer format.
-     * 
      */
     @Import(name="rangeEnd")
       private final @Nullable Output<String> rangeEnd;
@@ -31,7 +29,6 @@ public final class Int64RangeMatchArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The start of the range (inclusive) in signed long integer format.
-     * 
      */
     @Import(name="rangeStart")
       private final @Nullable Output<String> rangeStart;

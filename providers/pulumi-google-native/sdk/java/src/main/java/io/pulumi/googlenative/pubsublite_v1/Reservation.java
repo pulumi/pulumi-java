@@ -13,34 +13,29 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new reservation.
- * 
  */
 @ResourceType(type="google-native:pubsublite/v1:Reservation")
 public class Reservation extends io.pulumi.resources.CustomResource {
     /**
      * The name of the reservation. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the reservation. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The reserved throughput capacity. Every unit of throughput capacity is equivalent to 1 MiB/s of published messages or 2 MiB/s of subscribed messages. Any topics which are declared as using capacity from a Reservation will consume resources from this reservation instead of being charged individually.
-     * 
      */
     @Export(name="throughputCapacity", type=String.class, parameters={})
     private Output<String> throughputCapacity;
 
     /**
      * @return The reserved throughput capacity. Every unit of throughput capacity is equivalent to 1 MiB/s of published messages or 2 MiB/s of subscribed messages. Any topics which are declared as using capacity from a Reservation will consume resources from this reservation instead of being charged individually.
-     * 
      */
     public Output<String> getThroughputCapacity() {
         return this.throughputCapacity;

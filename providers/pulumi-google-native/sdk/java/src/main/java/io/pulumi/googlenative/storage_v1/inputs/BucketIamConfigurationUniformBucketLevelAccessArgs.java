@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The bucket's uniform bucket-level access configuration.
- * 
  */
 public final class BucketIamConfigurationUniformBucketLevelAccessArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class BucketIamConfigurationUniformBucketLevelAccessArgs extends io
 
     /**
      * If set, access is controlled only by bucket-level or above IAM policies.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -32,7 +30,6 @@ public final class BucketIamConfigurationUniformBucketLevelAccessArgs extends io
 
     /**
      * The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.
-     * 
      */
     @Import(name="lockedTime")
       private final @Nullable Output<String> lockedTime;

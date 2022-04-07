@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A service account.
- * 
  */
 public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Email address of the service account. If empty, default Compute service account will be used.
-     * 
      */
     @Import(name="email")
       private final @Nullable Output<String> email;
@@ -32,7 +30,6 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of scopes to be made available for this service account. If empty, access to all Cloud APIs will be allowed.
-     * 
      */
     @Import(name="scope")
       private final @Nullable Output<List<String>> scope;

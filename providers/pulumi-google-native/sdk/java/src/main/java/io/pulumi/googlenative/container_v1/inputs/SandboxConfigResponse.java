@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * SandboxConfig contains configurations of the sandbox to use for the node.
- * 
  */
 public final class SandboxConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SandboxConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Type of the sandbox to use for the node.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

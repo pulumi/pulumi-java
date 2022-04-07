@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A Local attached disk resource.
- * 
  */
 public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Input only. Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance. This property is mutually exclusive with the source property; you can only define one or the other, but not both.
-     * 
      */
     @Import(name="initializeParams")
       private final @Nullable Output<LocalDiskInitializeParamsArgs> initializeParams;
@@ -32,7 +30,6 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance. Valid values: * NVME * SCSI
-     * 
      */
     @Import(name="interface")
       private final @Nullable Output<String> interface_;
@@ -43,7 +40,6 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode. Valid values: * READ_ONLY * READ_WRITE
-     * 
      */
     @Import(name="mode")
       private final @Nullable Output<String> mode;
@@ -54,7 +50,6 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies a valid partial or full URL to an existing Persistent Disk resource.
-     * 
      */
     @Import(name="source")
       private final @Nullable Output<String> source;
@@ -65,7 +60,6 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT. Valid values: * PERSISTENT * SCRATCH
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

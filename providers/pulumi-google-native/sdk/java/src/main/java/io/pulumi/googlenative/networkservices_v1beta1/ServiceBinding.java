@@ -14,104 +14,89 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new ServiceBinding in a given project and location.
- * 
  */
 @ResourceType(type="google-native:networkservices/v1beta1:ServiceBinding")
 public class ServiceBinding extends io.pulumi.resources.CustomResource {
     /**
      * The timestamp when the resource was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The timestamp when the resource was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. A free-text description of the resource. Max length 1024 characters.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Optional. A free-text description of the resource. Max length 1024 characters.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
-     * 
      */
     @Export(name="endpointFilter", type=String.class, parameters={})
     private Output<String> endpointFilter;
 
     /**
      * @return Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
-     * 
      */
     public Output<String> getEndpointFilter() {
         return this.endpointFilter;
     }
     /**
      * Optional. Set of label tags associated with the ServiceBinding resource.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Optional. Set of label tags associated with the ServiceBinding resource.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name>`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name>`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
-     * 
      */
     @Export(name="service", type=String.class, parameters={})
     private Output<String> service;
 
     /**
      * @return The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
-     * 
      */
     public Output<String> getService() {
         return this.service;
     }
     /**
      * The timestamp when the resource was updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The timestamp when the resource was updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

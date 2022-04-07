@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GkeClusterResponse {
     /**
      * Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
-     * 
      */
     private final String cluster;
 
@@ -22,7 +21,6 @@ public final class GkeClusterResponse {
 
     /**
      * Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
-     * 
     */
     public String getCluster() {
         return this.cluster;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Windows Update represents the metadata about the update for the Windows operating system. The fields in this message come from the Windows Update API documented at https://docs.microsoft.com/en-us/windows/win32/api/wuapi/nn-wuapi-iupdate.
- * 
  */
 public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of categories to which the update belongs.
-     * 
      */
     @Import(name="categories")
       private final @Nullable Output<List<CategoryArgs>> categories;
@@ -34,7 +32,6 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The localized description of the update.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -45,7 +42,6 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Required - The unique identifier for the update.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
@@ -56,7 +52,6 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Microsoft Knowledge Base article IDs that are associated with the update.
-     * 
      */
     @Import(name="kbArticleIds")
       private final @Nullable Output<List<String>> kbArticleIds;
@@ -67,7 +62,6 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The last published timestamp of the update.
-     * 
      */
     @Import(name="lastPublishedTimestamp")
       private final @Nullable Output<String> lastPublishedTimestamp;
@@ -78,7 +72,6 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The hyperlink to the support information for the update.
-     * 
      */
     @Import(name="supportUrl")
       private final @Nullable Output<String> supportUrl;
@@ -89,7 +82,6 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The localized title of the update.
-     * 
      */
     @Import(name="title")
       private final @Nullable Output<String> title;

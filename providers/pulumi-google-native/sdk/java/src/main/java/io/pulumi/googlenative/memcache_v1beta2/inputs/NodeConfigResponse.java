@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration for a Memcached Node.
- * 
  */
 public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Number of cpus per Memcached node.
-     * 
      */
     @Import(name="cpuCount", required=true)
       private final Integer cpuCount;
@@ -29,7 +27,6 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Memory size in MiB for each Memcached node.
-     * 
      */
     @Import(name="memorySizeMb", required=true)
       private final Integer memorySizeMb;

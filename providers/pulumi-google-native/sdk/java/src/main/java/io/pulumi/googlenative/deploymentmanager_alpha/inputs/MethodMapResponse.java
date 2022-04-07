@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Deployment Manager will call these methods during the events of creation/deletion/update/get/setIamPolicy
- * 
  */
 public final class MethodMapResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MethodMapResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The action identifier for the create method to be used for this collection
-     * 
      */
     @Import(name="create", required=true)
       private final String create;
@@ -29,7 +27,6 @@ public final class MethodMapResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The action identifier for the delete method to be used for this collection
-     * 
      */
     @Import(name="delete", required=true)
       private final String delete;
@@ -40,7 +37,6 @@ public final class MethodMapResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The action identifier for the get method to be used for this collection
-     * 
      */
     @Import(name="get", required=true)
       private final String get;
@@ -51,7 +47,6 @@ public final class MethodMapResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The action identifier for the setIamPolicy method to be used for this collection
-     * 
      */
     @Import(name="setIamPolicy", required=true)
       private final String setIamPolicy;
@@ -62,7 +57,6 @@ public final class MethodMapResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The action identifier for the update method to be used for this collection
-     * 
      */
     @Import(name="update", required=true)
       private final String update;

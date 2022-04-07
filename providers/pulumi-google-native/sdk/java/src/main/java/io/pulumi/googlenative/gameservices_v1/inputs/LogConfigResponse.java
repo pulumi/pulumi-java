@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Specifies what kind of log the caller must write
- * 
  */
 public final class LogConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class LogConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Cloud audit options.
-     * 
      */
     @Import(name="cloudAudit", required=true)
       private final CloudAuditOptionsResponse cloudAudit;
@@ -31,7 +29,6 @@ public final class LogConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Counter options.
-     * 
      */
     @Import(name="counter", required=true)
       private final CounterOptionsResponse counter;
@@ -42,7 +39,6 @@ public final class LogConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Data access options.
-     * 
      */
     @Import(name="dataAccess", required=true)
       private final DataAccessOptionsResponse dataAccess;

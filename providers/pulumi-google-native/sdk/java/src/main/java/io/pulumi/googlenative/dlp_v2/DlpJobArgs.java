@@ -18,7 +18,6 @@ public final class DlpJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An inspection job scans a storage repository for InfoTypes.
-     * 
      */
     @Import(name="inspectJob")
       private final @Nullable Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob;
@@ -29,7 +28,6 @@ public final class DlpJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The job id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.
-     * 
      */
     @Import(name="jobId")
       private final @Nullable Output<String> jobId;
@@ -54,7 +52,6 @@ public final class DlpJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A risk analysis job calculates re-identification risk metrics for a BigQuery table.
-     * 
      */
     @Import(name="riskJob")
       private final @Nullable Output<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs> riskJob;

@@ -14,62 +14,53 @@ import javax.annotation.Nullable;
 
 /**
  * Creates an attestor, and returns a copy of the new attestor. Returns NOT_FOUND if the project does not exist, INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the attestor already exists.
- * 
  */
 @ResourceType(type="google-native:binaryauthorization/v1beta1:Attestor")
 public class Attestor extends io.pulumi.resources.CustomResource {
     /**
      * Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Time when the attestor was last updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return Time when the attestor was last updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
     /**
      * A Drydock ATTESTATION_AUTHORITY Note, created by the user.
-     * 
      */
     @Export(name="userOwnedDrydockNote", type=UserOwnedDrydockNoteResponse.class, parameters={})
     private Output<UserOwnedDrydockNoteResponse> userOwnedDrydockNote;
 
     /**
      * @return A Drydock ATTESTATION_AUTHORITY Note, created by the user.
-     * 
      */
     public Output<UserOwnedDrydockNoteResponse> getUserOwnedDrydockNote() {
         return this.userOwnedDrydockNote;

@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class TpuConfigResponse {
     /**
      * Whether Cloud TPU integration is enabled or not.
-     * 
      */
     private final Boolean enabled;
     /**
      * IPv4 CIDR block reserved for Cloud TPU in the VPC.
-     * 
      */
     private final String ipv4CidrBlock;
     /**
      * Whether to use service networking for Cloud TPU or not.
-     * 
      */
     private final Boolean useServiceNetworking;
 
@@ -38,21 +35,18 @@ public final class TpuConfigResponse {
 
     /**
      * Whether Cloud TPU integration is enabled or not.
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * IPv4 CIDR block reserved for Cloud TPU in the VPC.
-     * 
     */
     public String getIpv4CidrBlock() {
         return this.ipv4CidrBlock;
     }
     /**
      * Whether to use service networking for Cloud TPU or not.
-     * 
     */
     public Boolean getUseServiceNetworking() {
         return this.useServiceNetworking;

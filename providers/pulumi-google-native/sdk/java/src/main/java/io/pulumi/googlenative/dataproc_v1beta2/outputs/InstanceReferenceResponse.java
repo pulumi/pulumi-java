@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class InstanceReferenceResponse {
     /**
      * The unique identifier of the Compute Engine instance.
-     * 
      */
     private final String instanceId;
     /**
      * The user-friendly name of the Compute Engine instance.
-     * 
      */
     private final String instanceName;
     /**
      * The public key used for sharing data with this instance.
-     * 
      */
     private final String publicKey;
 
@@ -37,21 +34,18 @@ public final class InstanceReferenceResponse {
 
     /**
      * The unique identifier of the Compute Engine instance.
-     * 
     */
     public String getInstanceId() {
         return this.instanceId;
     }
     /**
      * The user-friendly name of the Compute Engine instance.
-     * 
     */
     public String getInstanceName() {
         return this.instanceName;
     }
     /**
      * The public key used for sharing data with this instance.
-     * 
     */
     public String getPublicKey() {
         return this.publicKey;

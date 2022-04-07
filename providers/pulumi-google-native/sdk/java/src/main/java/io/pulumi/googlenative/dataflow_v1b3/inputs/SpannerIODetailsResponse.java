@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Metadata for a Spanner connector used by the job.
- * 
  */
 public final class SpannerIODetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SpannerIODetailsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * DatabaseId accessed in the connection.
-     * 
      */
     @Import(name="databaseId", required=true)
       private final String databaseId;
@@ -29,7 +27,6 @@ public final class SpannerIODetailsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * InstanceId accessed in the connection.
-     * 
      */
     @Import(name="instanceId", required=true)
       private final String instanceId;
@@ -40,7 +37,6 @@ public final class SpannerIODetailsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * ProjectId accessed in the connection.
-     * 
      */
     @Import(name="project", required=true)
       private final String project;

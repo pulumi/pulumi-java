@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class MetadataManagementActivityResponse {
     /**
      * The latest metadata exports of the metastore service.
-     * 
      */
     private final List<MetadataExportResponse> metadataExports;
     /**
      * The latest restores of the metastore service.
-     * 
      */
     private final List<RestoreResponse> restores;
 
@@ -32,14 +30,12 @@ public final class MetadataManagementActivityResponse {
 
     /**
      * The latest metadata exports of the metastore service.
-     * 
     */
     public List<MetadataExportResponse> getMetadataExports() {
         return this.metadataExports;
     }
     /**
      * The latest restores of the metastore service.
-     * 
     */
     public List<RestoreResponse> getRestores() {
         return this.restores;

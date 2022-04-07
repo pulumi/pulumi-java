@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class DatasetReferenceResponse {
     /**
      * [Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
-     * 
      */
     private final String datasetId;
     /**
      * [Optional] The ID of the project containing this dataset.
-     * 
      */
     private final String project;
 
@@ -30,14 +28,12 @@ public final class DatasetReferenceResponse {
 
     /**
      * [Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
-     * 
     */
     public String getDatasetId() {
         return this.datasetId;
     }
     /**
      * [Optional] The ID of the project containing this dataset.
-     * 
     */
     public String getProject() {
         return this.project;

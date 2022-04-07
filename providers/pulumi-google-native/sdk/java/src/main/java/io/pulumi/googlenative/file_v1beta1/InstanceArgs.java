@@ -21,7 +21,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the instance (2048 characters or less).
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -32,7 +31,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -43,7 +41,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * File system shares on the instance. For this version, only a single file share is supported.
-     * 
      */
     @Import(name="fileShares")
       private final @Nullable Output<List<FileShareConfigArgs>> fileShares;
@@ -61,7 +58,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * KMS key name used for data encryption.
-     * 
      */
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
@@ -72,7 +68,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource labels to represent user provided metadata.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -90,7 +85,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * VPC networks to which the instance is connected. For this version, only a single network is supported.
-     * 
      */
     @Import(name="networks")
       private final @Nullable Output<List<NetworkConfigArgs>> networks;
@@ -108,7 +102,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The service tier of the instance.
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<InstanceTier> tier;

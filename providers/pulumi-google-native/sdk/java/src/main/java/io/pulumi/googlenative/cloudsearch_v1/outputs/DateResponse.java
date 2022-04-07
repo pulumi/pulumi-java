@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class DateResponse {
     /**
      * Day of month. Must be from 1 to 31 and valid for the year and month.
-     * 
      */
     private final Integer day;
     /**
      * Month of date. Must be from 1 to 12.
-     * 
      */
     private final Integer month;
     /**
      * Year of date. Must be from 1 to 9999.
-     * 
      */
     private final Integer year;
 
@@ -37,21 +34,18 @@ public final class DateResponse {
 
     /**
      * Day of month. Must be from 1 to 31 and valid for the year and month.
-     * 
     */
     public Integer getDay() {
         return this.day;
     }
     /**
      * Month of date. Must be from 1 to 12.
-     * 
     */
     public Integer getMonth() {
         return this.month;
     }
     /**
      * Year of date. Must be from 1 to 9999.
-     * 
     */
     public Integer getYear() {
         return this.year;

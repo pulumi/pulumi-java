@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the CIS benchmark version that is applicable to a given OS and os version.
- * 
  */
 public final class ComplianceVersionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ComplianceVersionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The CPE URI (https://cpe.mitre.org/specification/) this benchmark is applicable to.
-     * 
      */
     @Import(name="cpeUri")
       private final @Nullable Output<String> cpeUri;
@@ -31,7 +29,6 @@ public final class ComplianceVersionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The version of the benchmark. This is set to the version of the OS-specific CIS document the benchmark is defined in.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

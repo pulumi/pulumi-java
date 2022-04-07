@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A single device file description.
- * 
  */
 public final class DeviceFileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class DeviceFileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A reference to an opaque binary blob file.
-     * 
      */
     @Import(name="obbFile", required=true)
       private final ObbFileResponse obbFile;
@@ -30,7 +28,6 @@ public final class DeviceFileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A reference to a regular file.
-     * 
      */
     @Import(name="regularFile", required=true)
       private final RegularFileResponse regularFile;

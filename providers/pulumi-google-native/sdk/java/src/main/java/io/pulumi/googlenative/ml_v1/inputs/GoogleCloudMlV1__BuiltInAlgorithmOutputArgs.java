@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents output related to a built-in algorithm Job.
- * 
  */
 public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi
 
     /**
      * Framework on which the built-in algorithm was trained.
-     * 
      */
     @Import(name="framework")
       private final @Nullable Output<String> framework;
@@ -31,7 +29,6 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi
 
     /**
      * The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don't use hyperparameter tuning.
-     * 
      */
     @Import(name="modelPath")
       private final @Nullable Output<String> modelPath;
@@ -42,7 +39,6 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi
 
     /**
      * Python version on which the built-in algorithm was trained.
-     * 
      */
     @Import(name="pythonVersion")
       private final @Nullable Output<String> pythonVersion;
@@ -53,7 +49,6 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi
 
     /**
      * AI Platform runtime version on which the built-in algorithm was trained.
-     * 
      */
     @Import(name="runtimeVersion")
       private final @Nullable Output<String> runtimeVersion;

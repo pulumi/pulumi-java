@@ -10,33 +10,27 @@ import java.util.StringJoiner;
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @EnumType
     public enum AuthorizationLoggingOptionsPermissionType {
         /**
          * This is deprecated and has no effect. Do not use.
-         * 
          */
         AdminRead("ADMIN_READ"),
         /**
          * This is deprecated and has no effect. Do not use.
-         * 
          */
         AdminWrite("ADMIN_WRITE"),
         /**
          * This is deprecated and has no effect. Do not use.
-         * 
          */
         DataRead("DATA_READ"),
         /**
          * This is deprecated and has no effect. Do not use.
-         * 
          */
         DataWrite("DATA_WRITE"),
         /**
          * This is deprecated and has no effect. Do not use.
-         * 
          */
         PermissionTypeUnspecified("PERMISSION_TYPE_UNSPECIFIED");
 

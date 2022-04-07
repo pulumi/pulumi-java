@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * A `DeliveryPipeline` resource in the Google Cloud Deploy API. A `DeliveryPipeline` defines a pipeline through which a Skaffold configuration can progress.
- * 
  */
 public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
-     * 
      */
     @Import(name="annotations", required=true)
       private final Map<String,String> annotations;
@@ -32,7 +30,6 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Information around the state of the Delivery Pipeline.
-     * 
      */
     @Import(name="condition", required=true)
       private final PipelineConditionResponse condition;
@@ -43,7 +40,6 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Time at which the pipeline was created.
-     * 
      */
     @Import(name="createTime", required=true)
       private final String createTime;
@@ -54,7 +50,6 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Description of the `DeliveryPipeline`. Max length is 255 characters.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -65,7 +60,6 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -76,7 +70,6 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
-     * 
      */
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
@@ -87,7 +80,6 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/ locations/{location}/deliveryPipelines/a-z{0,62}.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -98,7 +90,6 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
-     * 
      */
     @Import(name="serialPipeline", required=true)
       private final SerialPipelineResponse serialPipeline;
@@ -109,7 +100,6 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Unique identifier of the `DeliveryPipeline`.
-     * 
      */
     @Import(name="uid", required=true)
       private final String uid;
@@ -120,7 +110,6 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Most recent time at which the pipeline was updated.
-     * 
      */
     @Import(name="updateTime", required=true)
       private final String updateTime;

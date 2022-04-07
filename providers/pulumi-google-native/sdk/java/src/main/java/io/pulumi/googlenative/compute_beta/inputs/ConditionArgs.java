@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * This is deprecated and has no effect. Do not use.
- * 
  */
 public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="iam")
       private final @Nullable Output<ConditionIam> iam;
@@ -35,7 +33,6 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="op")
       private final @Nullable Output<ConditionOp> op;
@@ -46,7 +43,6 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="svc")
       private final @Nullable Output<String> svc;
@@ -57,7 +53,6 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="sys")
       private final @Nullable Output<ConditionSys> sys;
@@ -68,7 +63,6 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="values")
       private final @Nullable Output<List<String>> values;

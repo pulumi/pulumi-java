@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration and status of a self-managed SSL certificate.
- * 
  */
 public final class SslCertificateSelfManagedSslCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SslCertificateSelfManagedSslCertificateArgs extends io.pulumi
 
     /**
      * A local certificate file. The certificate must be in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert.
-     * 
      */
     @Import(name="certificate")
       private final @Nullable Output<String> certificate;
@@ -31,7 +29,6 @@ public final class SslCertificateSelfManagedSslCertificateArgs extends io.pulumi
 
     /**
      * A write-only private key in PEM format. Only insert requests will include this field.
-     * 
      */
     @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;

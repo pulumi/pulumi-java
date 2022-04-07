@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Metadata for a BigQuery connector used by the job.
- * 
  */
 public final class BigQueryIODetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class BigQueryIODetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Dataset accessed in the connection.
-     * 
      */
     @Import(name="dataset", required=true)
       private final String dataset;
@@ -29,7 +27,6 @@ public final class BigQueryIODetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Project accessed in the connection.
-     * 
      */
     @Import(name="project", required=true)
       private final String project;
@@ -40,7 +37,6 @@ public final class BigQueryIODetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Query used to access data in the connection.
-     * 
      */
     @Import(name="query", required=true)
       private final String query;
@@ -51,7 +47,6 @@ public final class BigQueryIODetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Table accessed in the connection.
-     * 
      */
     @Import(name="table", required=true)
       private final String table;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * TimeSeriesQuery collects the set of supported methods for querying time series data from the Stackdriver metrics API.
- * 
  */
 public final class TimeSeriesQueryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class TimeSeriesQueryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Filter parameters to fetch time series.
-     * 
      */
     @Import(name="timeSeriesFilter", required=true)
       private final TimeSeriesFilterResponse timeSeriesFilter;
@@ -31,7 +29,6 @@ public final class TimeSeriesQueryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Parameters to fetch a ratio between two time series filters.
-     * 
      */
     @Import(name="timeSeriesFilterRatio", required=true)
       private final TimeSeriesFilterRatioResponse timeSeriesFilterRatio;
@@ -42,7 +39,6 @@ public final class TimeSeriesQueryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * A query used to fetch time series.
-     * 
      */
     @Import(name="timeSeriesQueryLanguage", required=true)
       private final String timeSeriesQueryLanguage;
@@ -53,7 +49,6 @@ public final class TimeSeriesQueryResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The unit of data contained in fetched time series. If non-empty, this unit will override any unit that accompanies fetched data. The format is the same as the unit (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors) field in MetricDescriptor.
-     * 
      */
     @Import(name="unitOverride", required=true)
       private final String unitOverride;

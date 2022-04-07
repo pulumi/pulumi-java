@@ -12,27 +12,22 @@ import java.util.Objects;
 public final class GetApicategoryResult {
     /**
      * Details of category.
-     * 
      */
     private final GoogleCloudApigeeV1ApiCategoryDataResponse data;
     /**
      * ID that can be used to find errors in the log files.
-     * 
      */
     private final String errorCode;
     /**
      * Description of the operation.
-     * 
      */
     private final String message;
     /**
      * ID that can be used to find request details in the log files.
-     * 
      */
     private final String requestId;
     /**
      * Status of the operation.
-     * 
      */
     private final String status;
 
@@ -52,35 +47,30 @@ public final class GetApicategoryResult {
 
     /**
      * Details of category.
-     * 
     */
     public GoogleCloudApigeeV1ApiCategoryDataResponse getData() {
         return this.data;
     }
     /**
      * ID that can be used to find errors in the log files.
-     * 
     */
     public String getErrorCode() {
         return this.errorCode;
     }
     /**
      * Description of the operation.
-     * 
     */
     public String getMessage() {
         return this.message;
     }
     /**
      * ID that can be used to find request details in the log files.
-     * 
     */
     public String getRequestId() {
         return this.requestId;
     }
     /**
      * Status of the operation.
-     * 
     */
     public String getStatus() {
         return this.status;

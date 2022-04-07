@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration for the legacy Attribute Based Access Control authorization mode.
- * 
  */
 public final class LegacyAbacResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class LegacyAbacResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether the ABAC authorizer is enabled for this cluster. When enabled, identities in the system, including service accounts, nodes, and controllers, will have statically granted permissions beyond those provided by the RBAC configuration or IAM.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

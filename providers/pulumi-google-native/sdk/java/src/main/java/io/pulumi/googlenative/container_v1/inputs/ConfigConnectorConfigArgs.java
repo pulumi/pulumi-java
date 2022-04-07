@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration options for the Config Connector add-on.
- * 
  */
 public final class ConfigConnectorConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ConfigConnectorConfigArgs extends io.pulumi.resources.Resourc
 
     /**
      * Whether Cloud Connector is enabled for this cluster.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;

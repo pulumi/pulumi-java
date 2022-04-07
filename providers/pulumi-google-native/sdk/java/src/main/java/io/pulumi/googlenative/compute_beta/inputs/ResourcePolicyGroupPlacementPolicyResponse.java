@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A GroupPlacementPolicy specifies resource placement configuration. It specifies the failure bucket separation as well as network locality
- * 
  */
 public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
 
     /**
      * The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
-     * 
      */
     @Import(name="availabilityDomainCount", required=true)
       private final Integer availabilityDomainCount;
@@ -30,7 +28,6 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
 
     /**
      * Specifies network collocation
-     * 
      */
     @Import(name="collocation", required=true)
       private final String collocation;
@@ -41,7 +38,6 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
 
     /**
      * Number of vms in this placement group
-     * 
      */
     @Import(name="vmCount", required=true)
       private final Integer vmCount;

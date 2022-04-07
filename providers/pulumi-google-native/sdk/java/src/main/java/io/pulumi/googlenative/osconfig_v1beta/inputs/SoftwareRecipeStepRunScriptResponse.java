@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Runs a script through an interpreter.
- * 
  */
 public final class SoftwareRecipeStepRunScriptResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SoftwareRecipeStepRunScriptResponse extends io.pulumi.resourc
 
     /**
      * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
-     * 
      */
     @Import(name="allowedExitCodes", required=true)
       private final List<Integer> allowedExitCodes;
@@ -30,8 +28,7 @@ public final class SoftwareRecipeStepRunScriptResponse extends io.pulumi.resourc
     }
 
     /**
-     * The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](<https://en.wikipedia.org/wiki/Shebang_\(Unix\)>).
-     * 
+     * The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](https://en.wikipedia.org/wiki/Shebang_\(Unix\)).
      */
     @Import(name="interpreter", required=true)
       private final String interpreter;
@@ -42,7 +39,6 @@ public final class SoftwareRecipeStepRunScriptResponse extends io.pulumi.resourc
 
     /**
      * The shell script to be executed.
-     * 
      */
     @Import(name="script", required=true)
       private final String script;

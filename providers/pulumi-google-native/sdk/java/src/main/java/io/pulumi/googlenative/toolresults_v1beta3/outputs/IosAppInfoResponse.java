@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class IosAppInfoResponse {
     /**
      * The name of the app. Required
-     * 
      */
     private final String name;
 
@@ -22,7 +21,6 @@ public final class IosAppInfoResponse {
 
     /**
      * The name of the app. Required
-     * 
     */
     public String getName() {
         return this.name;

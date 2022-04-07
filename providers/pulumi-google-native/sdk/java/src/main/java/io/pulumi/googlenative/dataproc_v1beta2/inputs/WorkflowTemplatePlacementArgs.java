@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies workflow execution target.Either managed_cluster or cluster_selector is required.
- * 
  */
 public final class WorkflowTemplatePlacementArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class WorkflowTemplatePlacementArgs extends io.pulumi.resources.Res
 
     /**
      * Optional. A selector that chooses target cluster for jobs based on metadata.The selector is evaluated at the time each job is submitted.
-     * 
      */
     @Import(name="clusterSelector")
       private final @Nullable Output<ClusterSelectorArgs> clusterSelector;
@@ -32,7 +30,6 @@ public final class WorkflowTemplatePlacementArgs extends io.pulumi.resources.Res
 
     /**
      * Optional. A cluster that is managed by the workflow.
-     * 
      */
     @Import(name="managedCluster")
       private final @Nullable Output<ManagedClusterArgs> managedCluster;

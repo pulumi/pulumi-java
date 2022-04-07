@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes authentication configuration for Identity-Aware-Proxy (IAP).
- * 
  */
 public final class IapCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class IapCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Authentication configuration when Web-Security-Scanner service account is added in Identity-Aware-Proxy (IAP) access policies.
-     * 
      */
     @Import(name="iapTestServiceAccountInfo")
       private final @Nullable Output<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo;

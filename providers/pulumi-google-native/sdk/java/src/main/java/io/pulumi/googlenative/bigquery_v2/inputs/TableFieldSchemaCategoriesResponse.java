@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * [Optional] The categories attached to this field, used for field-level access control.
- * 
  */
 public final class TableFieldSchemaCategoriesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class TableFieldSchemaCategoriesResponse extends io.pulumi.resource
 
     /**
      * A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.
-     * 
      */
     @Import(name="names", required=true)
       private final List<String> names;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The public key component of the wrapping key. For details of the type of key this public key corresponds to, see the ImportMethod.
- * 
  */
 public final class WrappingPublicKeyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class WrappingPublicKeyResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The public key, encoded in PEM format. For more information, see the [RFC 7468](https://tools.ietf.org/html/rfc7468) sections for [General Considerations](https://tools.ietf.org/html/rfc7468#section-2) and [Textual Encoding of Subject Public Key Info] (https://tools.ietf.org/html/rfc7468#section-13).
-     * 
      */
     @Import(name="pem", required=true)
       private final String pem;

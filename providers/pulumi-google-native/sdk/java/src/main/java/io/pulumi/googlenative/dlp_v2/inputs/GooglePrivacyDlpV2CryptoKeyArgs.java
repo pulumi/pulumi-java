@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * This is a data encryption key (DEK) (as opposed to a key encryption key (KEK) stored by Cloud Key Management Service (Cloud KMS). When using Cloud KMS to wrap or unwrap a DEK, be sure to set an appropriate IAM policy on the KEK to ensure an attacker cannot unwrap the DEK.
- * 
  */
 public final class GooglePrivacyDlpV2CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GooglePrivacyDlpV2CryptoKeyArgs extends io.pulumi.resources.R
 
     /**
      * Key wrapped using Cloud KMS
-     * 
      */
     @Import(name="kmsWrapped")
       private final @Nullable Output<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs> kmsWrapped;
@@ -33,7 +31,6 @@ public final class GooglePrivacyDlpV2CryptoKeyArgs extends io.pulumi.resources.R
 
     /**
      * Transient crypto key
-     * 
      */
     @Import(name="transient")
       private final @Nullable Output<GooglePrivacyDlpV2TransientCryptoKeyArgs> transient_;
@@ -44,7 +41,6 @@ public final class GooglePrivacyDlpV2CryptoKeyArgs extends io.pulumi.resources.R
 
     /**
      * Unwrapped crypto key
-     * 
      */
     @Import(name="unwrapped")
       private final @Nullable Output<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs> unwrapped;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Define a system parameter rule mapping system parameter definitions to methods.
- * 
  */
 public final class SystemParameterRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SystemParameterRuleArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Define parameters. Multiple names may be defined for a parameter. For a given method call, only one of them should be used. If multiple names are used the behavior is implementation-dependent. If none of the specified names are present the behavior is parameter-dependent.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<List<SystemParameterArgs>> parameters;
@@ -33,7 +31,6 @@ public final class SystemParameterRuleArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs. Refer to selector for syntax details.
-     * 
      */
     @Import(name="selector")
       private final @Nullable Output<String> selector;

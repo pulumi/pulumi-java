@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Volume represents a named volume in a container.
- * 
  */
 public final class GoogleCloudRunOpV2VolumeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudRunOpV2VolumeResponse extends io.pulumi.resources.
 
     /**
      * For Cloud SQL volumes, contains the specific instances that should be mounted. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run.
-     * 
      */
     @Import(name="cloudSqlInstance", required=true)
       private final GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance;
@@ -31,7 +29,6 @@ public final class GoogleCloudRunOpV2VolumeResponse extends io.pulumi.resources.
 
     /**
      * Volume's name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -42,7 +39,6 @@ public final class GoogleCloudRunOpV2VolumeResponse extends io.pulumi.resources.
 
     /**
      * Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
-     * 
      */
     @Import(name="secret", required=true)
       private final GoogleCloudRunOpV2SecretVolumeSourceResponse secret;

@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Optional. The dialect of the Cloud Spanner Database.
-     * 
      */
     @EnumType
     public enum DatabaseDatabaseDialect {
         /**
          * Default value. This value will create a database with the GOOGLE_STANDARD_SQL dialect.
-         * 
          */
         DatabaseDialectUnspecified("DATABASE_DIALECT_UNSPECIFIED"),
         /**
          * Google standard SQL.
-         * 
          */
         GoogleStandardSql("GOOGLE_STANDARD_SQL"),
         /**
          * PostgreSQL supported SQL.
-         * 
          */
         Postgresql("POSTGRESQL");
 

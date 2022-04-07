@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Condition defines a generic condition for a Resource.
- * 
  */
 public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
 
     /**
      * Optional. Last time the condition transitioned from one status to another.
-     * 
      */
     @Import(name="lastTransitionTime")
       private final @Nullable Output<String> lastTransitionTime;
@@ -31,7 +29,6 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
 
     /**
      * Optional. Human readable message indicating details about the current status.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -42,7 +39,6 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
 
     /**
      * Optional. One-word CamelCase reason for the condition's last transition.
-     * 
      */
     @Import(name="reason")
       private final @Nullable Output<String> reason;
@@ -53,7 +49,6 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
 
     /**
      * Optional. How to interpret failures of this condition, one of Error, Warning, Info
-     * 
      */
     @Import(name="severity")
       private final @Nullable Output<String> severity;
@@ -64,7 +59,6 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
 
     /**
      * Status of the condition, one of True, False, Unknown.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<String> status;
@@ -75,7 +69,6 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
 
     /**
      * type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * "Ready": True when the Resource is ready.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

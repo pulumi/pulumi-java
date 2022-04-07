@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration for the Backup for GKE Agent.
- * 
  */
 public final class GkeBackupAgentConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GkeBackupAgentConfigResponse extends io.pulumi.resources.Invo
 
     /**
      * Whether the Backup for GKE agent is enabled for this cluster.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

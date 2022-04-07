@@ -20,7 +20,6 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Which ResourceRecordSets to add?
-     * 
      */
     @Import(name="additions")
       private final @Nullable Output<List<ResourceRecordSetArgs>> additions;
@@ -38,7 +37,6 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Which ResourceRecordSets to remove? Must match existing data exactly.
-     * 
      */
     @Import(name="deletions")
       private final @Nullable Output<List<ResourceRecordSetArgs>> deletions;
@@ -49,7 +47,6 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unique identifier for the resource; defined by the server (output only).
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -60,7 +57,6 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If the DNS queries for the zone will be served.
-     * 
      */
     @Import(name="isServing")
       private final @Nullable Output<Boolean> isServing;
@@ -92,7 +88,6 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time that this operation was started by the server (output only). This is in RFC3339 text format.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
@@ -103,7 +98,6 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Status of the operation (output only). A status of "done" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<ChangeStatus> status;

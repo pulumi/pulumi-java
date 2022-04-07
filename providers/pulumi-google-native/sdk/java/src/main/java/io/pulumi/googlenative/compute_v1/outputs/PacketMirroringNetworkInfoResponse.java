@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class PacketMirroringNetworkInfoResponse {
     /**
      * Unique identifier for the network; defined by the server.
-     * 
      */
     private final String canonicalUrl;
     /**
      * URL of the network resource.
-     * 
      */
     private final String url;
 
@@ -30,14 +28,12 @@ public final class PacketMirroringNetworkInfoResponse {
 
     /**
      * Unique identifier for the network; defined by the server.
-     * 
     */
     public String getCanonicalUrl() {
         return this.canonicalUrl;
     }
     /**
      * URL of the network resource.
-     * 
     */
     public String getUrl() {
         return this.url;

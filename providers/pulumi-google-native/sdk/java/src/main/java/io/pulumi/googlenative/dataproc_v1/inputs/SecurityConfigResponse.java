@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Security related configuration, including encryption, Kerberos, etc.
- * 
  */
 public final class SecurityConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class SecurityConfigResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Optional. Identity related configuration, including service account based secure multi-tenancy user mappings.
-     * 
      */
     @Import(name="identityConfig", required=true)
       private final IdentityConfigResponse identityConfig;
@@ -30,7 +28,6 @@ public final class SecurityConfigResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Optional. Kerberos related configuration.
-     * 
      */
     @Import(name="kerberosConfig", required=true)
       private final KerberosConfigResponse kerberosConfig;

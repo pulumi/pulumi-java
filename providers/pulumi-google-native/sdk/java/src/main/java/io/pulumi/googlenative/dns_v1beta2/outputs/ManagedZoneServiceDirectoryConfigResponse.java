@@ -13,7 +13,6 @@ public final class ManagedZoneServiceDirectoryConfigResponse {
     private final String kind;
     /**
      * Contains information about the namespace associated with the zone.
-     * 
      */
     private final ManagedZoneServiceDirectoryConfigNamespaceResponse namespace;
 
@@ -30,7 +29,6 @@ public final class ManagedZoneServiceDirectoryConfigResponse {
     }
     /**
      * Contains information about the namespace associated with the zone.
-     * 
     */
     public ManagedZoneServiceDirectoryConfigNamespaceResponse getNamespace() {
         return this.namespace;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Maintenance window. This specifies when Dataproc Metastore may perform system maintenance operation to the service.
- * 
  */
 public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The day of week, when the window starts.
-     * 
      */
     @Import(name="dayOfWeek")
       private final @Nullable Output<MaintenanceWindowDayOfWeek> dayOfWeek;
@@ -32,7 +30,6 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The hour of day (0-23) when the window starts.
-     * 
      */
     @Import(name="hourOfDay")
       private final @Nullable Output<Integer> hourOfDay;

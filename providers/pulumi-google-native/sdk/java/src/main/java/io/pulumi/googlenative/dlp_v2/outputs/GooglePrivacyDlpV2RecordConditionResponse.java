@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2RecordConditionResponse {
     /**
      * An expression.
-     * 
      */
     private final GooglePrivacyDlpV2ExpressionsResponse expressions;
 
@@ -22,7 +21,6 @@ public final class GooglePrivacyDlpV2RecordConditionResponse {
 
     /**
      * An expression.
-     * 
     */
     public GooglePrivacyDlpV2ExpressionsResponse getExpressions() {
         return this.expressions;

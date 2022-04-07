@@ -11,22 +11,18 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse {
     /**
      * The confidence level used to construct the interval, i.e. there is X% chance that the true value is within this interval.
-     * 
      */
     private final Double confidenceLevel;
     /**
      * Lower bound of the interval.
-     * 
      */
     private final Double lowerBound;
     /**
      * The percent change between an experiment metric's value and the value for its control.
-     * 
      */
     private final Double ratio;
     /**
      * Upper bound of the interval.
-     * 
      */
     private final Double upperBound;
 
@@ -44,28 +40,24 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceInter
 
     /**
      * The confidence level used to construct the interval, i.e. there is X% chance that the true value is within this interval.
-     * 
     */
     public Double getConfidenceLevel() {
         return this.confidenceLevel;
     }
     /**
      * Lower bound of the interval.
-     * 
     */
     public Double getLowerBound() {
         return this.lowerBound;
     }
     /**
      * The percent change between an experiment metric's value and the value for its control.
-     * 
     */
     public Double getRatio() {
         return this.ratio;
     }
     /**
      * Upper bound of the interval.
-     * 
     */
     public Double getUpperBound() {
         return this.upperBound;

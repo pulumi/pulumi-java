@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An observed value of a metric.
- * 
  */
 public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs
 
     /**
      * The objective value at this training step.
-     * 
      */
     @Import(name="objectiveValue")
       private final @Nullable Output<Double> objectiveValue;
@@ -32,7 +30,6 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs
 
     /**
      * The global training step for this metric.
-     * 
      */
     @Import(name="trainingStep")
       private final @Nullable Output<String> trainingStep;

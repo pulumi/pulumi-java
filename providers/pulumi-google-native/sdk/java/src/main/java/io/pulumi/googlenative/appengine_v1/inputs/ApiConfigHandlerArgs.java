@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Google Cloud Endpoints (https://cloud.google.com/appengine/docs/python/endpoints/) configuration for API handlers.
- * 
  */
 public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Action to take when users access resources that require authentication. Defaults to redirect.
-     * 
      */
     @Import(name="authFailAction")
       private final @Nullable Output<ApiConfigHandlerAuthFailAction> authFailAction;
@@ -34,7 +32,6 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Level of login required to access this resource. Defaults to optional.
-     * 
      */
     @Import(name="login")
       private final @Nullable Output<ApiConfigHandlerLogin> login;
@@ -45,7 +42,6 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Path to the script from the application root directory.
-     * 
      */
     @Import(name="script")
       private final @Nullable Output<String> script;
@@ -56,7 +52,6 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Security (HTTPS) enforcement for this URL.
-     * 
      */
     @Import(name="securityLevel")
       private final @Nullable Output<ApiConfigHandlerSecurityLevel> securityLevel;
@@ -67,7 +62,6 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * URL to serve the endpoint at.
-     * 
      */
     @Import(name="url")
       private final @Nullable Output<String> url;

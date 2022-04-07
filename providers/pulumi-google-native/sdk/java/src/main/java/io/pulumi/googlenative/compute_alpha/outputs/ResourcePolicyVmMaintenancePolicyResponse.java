@@ -13,7 +13,6 @@ public final class ResourcePolicyVmMaintenancePolicyResponse {
     private final ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup;
     /**
      * Maintenance windows that are applied to VMs covered by this policy.
-     * 
      */
     private final ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow;
 
@@ -30,7 +29,6 @@ public final class ResourcePolicyVmMaintenancePolicyResponse {
     }
     /**
      * Maintenance windows that are applied to VMs covered by this policy.
-     * 
     */
     public ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse getMaintenanceWindow() {
         return this.maintenanceWindow;

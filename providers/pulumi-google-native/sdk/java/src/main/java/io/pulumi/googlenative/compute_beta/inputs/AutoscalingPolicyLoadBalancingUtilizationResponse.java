@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration parameters of autoscaling based on load balancing.
- * 
  */
 public final class AutoscalingPolicyLoadBalancingUtilizationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AutoscalingPolicyLoadBalancingUtilizationResponse extends io.
 
     /**
      * Fraction of backend capacity utilization (set in HTTP(S) load balancing configuration) that the autoscaler maintains. Must be a positive float value. If not defined, the default is 0.8.
-     * 
      */
     @Import(name="utilizationTarget", required=true)
       private final Double utilizationTarget;

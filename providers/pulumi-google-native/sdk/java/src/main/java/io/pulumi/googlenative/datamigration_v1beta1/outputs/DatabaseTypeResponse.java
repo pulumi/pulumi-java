@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class DatabaseTypeResponse {
     /**
      * The database engine.
-     * 
      */
     private final String engine;
     /**
      * The database provider.
-     * 
      */
     private final String provider;
 
@@ -30,14 +28,12 @@ public final class DatabaseTypeResponse {
 
     /**
      * The database engine.
-     * 
     */
     public String getEngine() {
         return this.engine;
     }
     /**
      * The database provider.
-     * 
     */
     public String getProvider() {
         return this.provider;

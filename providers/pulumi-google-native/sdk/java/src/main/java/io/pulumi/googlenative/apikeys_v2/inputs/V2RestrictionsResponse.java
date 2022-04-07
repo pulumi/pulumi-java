@@ -15,7 +15,6 @@ import java.util.Objects;
 
 /**
  * Describes the restrictions on the key.
- * 
  */
 public final class V2RestrictionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class V2RestrictionsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The Android apps that are allowed to use the key.
-     * 
      */
     @Import(name="androidKeyRestrictions", required=true)
       private final V2AndroidKeyRestrictionsResponse androidKeyRestrictions;
@@ -34,7 +32,6 @@ public final class V2RestrictionsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A restriction for a specific service and optionally one or more specific methods. Requests are allowed if they match any of these restrictions. If no restrictions are specified, all targets are allowed.
-     * 
      */
     @Import(name="apiTargets", required=true)
       private final List<V2ApiTargetResponse> apiTargets;
@@ -45,7 +42,6 @@ public final class V2RestrictionsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The HTTP referrers (websites) that are allowed to use the key.
-     * 
      */
     @Import(name="browserKeyRestrictions", required=true)
       private final V2BrowserKeyRestrictionsResponse browserKeyRestrictions;
@@ -56,7 +52,6 @@ public final class V2RestrictionsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The iOS apps that are allowed to use the key.
-     * 
      */
     @Import(name="iosKeyRestrictions", required=true)
       private final V2IosKeyRestrictionsResponse iosKeyRestrictions;
@@ -67,7 +62,6 @@ public final class V2RestrictionsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The IP addresses of callers that are allowed to use the key.
-     * 
      */
     @Import(name="serverKeyRestrictions", required=true)
       private final V2ServerKeyRestrictionsResponse serverKeyRestrictions;

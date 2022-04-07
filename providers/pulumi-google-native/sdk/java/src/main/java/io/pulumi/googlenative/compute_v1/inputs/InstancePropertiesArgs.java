@@ -32,7 +32,6 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Controls for advanced machine-related behavior features. Note that for MachineImage, this is not supported yet.
-     * 
      */
     @Import(name="advancedMachineFeatures")
       private final @Nullable Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures;
@@ -43,7 +42,6 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Enables instances created based on these properties to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
-     * 
      */
     @Import(name="canIpForward")
       private final @Nullable Output<Boolean> canIpForward;
@@ -54,7 +52,6 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specifies the Confidential Instance options. Note that for MachineImage, this is not supported yet.
-     * 
      */
     @Import(name="confidentialInstanceConfig")
       private final @Nullable Output<ConfidentialInstanceConfigArgs> confidentialInstanceConfig;
@@ -65,7 +62,6 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * An optional text description for the instances that are created from these properties.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -76,7 +72,6 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * An array of disks that are associated with the instances that are created from these properties.
-     * 
      */
     @Import(name="disks")
       private final @Nullable Output<List<AttachedDiskArgs>> disks;
@@ -87,7 +82,6 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * A list of guest accelerator cards' type and count to use for instances created from these properties.
-     * 
      */
     @Import(name="guestAccelerators")
       private final @Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators;
@@ -98,7 +92,6 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Labels to apply to instances that are created from these properties.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -109,7 +102,6 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The machine type to use for instances that are created from these properties.
-     * 
      */
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
@@ -120,7 +112,6 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The metadata key/value pairs to assign to instances that are created from these properties. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<MetadataArgs> metadata;
@@ -131,7 +122,6 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more information, read Specifying a Minimum CPU Platform.
-     * 
      */
     @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
@@ -142,7 +132,6 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * An array of network access configurations for this interface.
-     * 
      */
     @Import(name="networkInterfaces")
       private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
@@ -153,7 +142,6 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Note that for MachineImage, this is not supported yet.
-     * 
      */
     @Import(name="networkPerformanceConfig")
       private final @Nullable Output<NetworkPerformanceConfigArgs> networkPerformanceConfig;
@@ -164,7 +152,6 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as default. Note that for MachineImage, this is not supported yet.
-     * 
      */
     @Import(name="privateIpv6GoogleAccess")
       private final @Nullable Output<InstancePropertiesPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
@@ -175,7 +162,6 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specifies the reservations that instances can consume from. Note that for MachineImage, this is not supported yet.
-     * 
      */
     @Import(name="reservationAffinity")
       private final @Nullable Output<ReservationAffinityArgs> reservationAffinity;
@@ -186,7 +172,6 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
-     * 
      */
     @Import(name="resourceManagerTags")
       private final @Nullable Output<Map<String,String>> resourceManagerTags;
@@ -197,7 +182,6 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Resource policies (names, not URLs) applied to instances created from these properties. Note that for MachineImage, this is not supported yet.
-     * 
      */
     @Import(name="resourcePolicies")
       private final @Nullable Output<List<String>> resourcePolicies;
@@ -208,7 +192,6 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specifies the scheduling options for the instances that are created from these properties.
-     * 
      */
     @Import(name="scheduling")
       private final @Nullable Output<SchedulingArgs> scheduling;
@@ -219,7 +202,6 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from these properties. Use metadata queries to obtain the access tokens for these instances.
-     * 
      */
     @Import(name="serviceAccounts")
       private final @Nullable Output<List<ServiceAccountArgs>> serviceAccounts;
@@ -230,7 +212,6 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Note that for MachineImage, this is not supported yet.
-     * 
      */
     @Import(name="shieldedInstanceConfig")
       private final @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
@@ -241,7 +222,6 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * A list of tags to apply to the instances that are created from these properties. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<TagsArgs> tags;

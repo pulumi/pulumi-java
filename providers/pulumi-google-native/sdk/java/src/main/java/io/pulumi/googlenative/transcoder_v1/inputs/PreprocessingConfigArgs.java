@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Preprocessing configurations.
- * 
  */
 public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Audio preprocessing configuration.
-     * 
      */
     @Import(name="audio")
       private final @Nullable Output<AudioArgs> audio;
@@ -36,7 +34,6 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Color preprocessing configuration.
-     * 
      */
     @Import(name="color")
       private final @Nullable Output<ColorArgs> color;
@@ -47,7 +44,6 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Specify the video cropping configuration.
-     * 
      */
     @Import(name="crop")
       private final @Nullable Output<CropArgs> crop;
@@ -58,7 +54,6 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Deblock preprocessing configuration.
-     * 
      */
     @Import(name="deblock")
       private final @Nullable Output<DeblockArgs> deblock;
@@ -69,7 +64,6 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Denoise preprocessing configuration.
-     * 
      */
     @Import(name="denoise")
       private final @Nullable Output<DenoiseArgs> denoise;
@@ -80,7 +74,6 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Specify the video pad filter configuration.
-     * 
      */
     @Import(name="pad")
       private final @Nullable Output<PadArgs> pad;

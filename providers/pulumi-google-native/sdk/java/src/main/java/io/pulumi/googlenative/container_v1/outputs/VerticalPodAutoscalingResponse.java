@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class VerticalPodAutoscalingResponse {
     /**
      * Enables vertical pod autoscaling.
-     * 
      */
     private final Boolean enabled;
 
@@ -22,7 +21,6 @@ public final class VerticalPodAutoscalingResponse {
 
     /**
      * Enables vertical pod autoscaling.
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;

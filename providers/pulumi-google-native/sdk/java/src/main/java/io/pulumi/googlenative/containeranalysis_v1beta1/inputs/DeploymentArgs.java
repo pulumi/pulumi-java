@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The period during which some deployable was active in a runtime.
- * 
  */
 public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Address of the runtime element hosting this deployment.
-     * 
      */
     @Import(name="address")
       private final @Nullable Output<String> address;
@@ -32,7 +30,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration used to create this deployment.
-     * 
      */
     @Import(name="config")
       private final @Nullable Output<String> config;
@@ -43,7 +40,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Beginning of the lifetime of this deployment.
-     * 
      */
     @Import(name="deployTime", required=true)
       private final Output<String> deployTime;
@@ -54,7 +50,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Platform hosting this deployment.
-     * 
      */
     @Import(name="platform")
       private final @Nullable Output<DeploymentPlatform> platform;
@@ -65,7 +60,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * End of the lifetime of this deployment.
-     * 
      */
     @Import(name="undeployTime")
       private final @Nullable Output<String> undeployTime;
@@ -76,7 +70,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identity of the user that triggered this deployment.
-     * 
      */
     @Import(name="userEmail")
       private final @Nullable Output<String> userEmail;

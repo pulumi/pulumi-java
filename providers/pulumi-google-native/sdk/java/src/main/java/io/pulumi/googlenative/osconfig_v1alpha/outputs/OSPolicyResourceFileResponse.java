@@ -14,22 +14,18 @@ import java.util.Objects;
 public final class OSPolicyResourceFileResponse {
     /**
      * Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
-     * 
      */
     private final Boolean allowInsecure;
     /**
      * A Cloud Storage object.
-     * 
      */
     private final OSPolicyResourceFileGcsResponse gcs;
     /**
      * A local path within the VM to use.
-     * 
      */
     private final String localPath;
     /**
      * A generic remote file.
-     * 
      */
     private final OSPolicyResourceFileRemoteResponse remote;
 
@@ -47,28 +43,24 @@ public final class OSPolicyResourceFileResponse {
 
     /**
      * Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
-     * 
     */
     public Boolean getAllowInsecure() {
         return this.allowInsecure;
     }
     /**
      * A Cloud Storage object.
-     * 
     */
     public OSPolicyResourceFileGcsResponse getGcs() {
         return this.gcs;
     }
     /**
      * A local path within the VM to use.
-     * 
     */
     public String getLocalPath() {
         return this.localPath;
     }
     /**
      * A generic remote file.
-     * 
     */
     public OSPolicyResourceFileRemoteResponse getRemote() {
         return this.remote;

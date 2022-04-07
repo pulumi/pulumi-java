@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Metadata for a BigQuery connector used by the job.
- * 
  */
 public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Dataset accessed in the connection.
-     * 
      */
     @Import(name="dataset")
       private final @Nullable Output<String> dataset;
@@ -31,7 +29,6 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Project accessed in the connection.
-     * 
      */
     @Import(name="project")
       private final @Nullable Output<String> project;
@@ -42,7 +39,6 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Query used to access data in the connection.
-     * 
      */
     @Import(name="query")
       private final @Nullable Output<String> query;
@@ -53,7 +49,6 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Table accessed in the connection.
-     * 
      */
     @Import(name="table")
       private final @Nullable Output<String> table;

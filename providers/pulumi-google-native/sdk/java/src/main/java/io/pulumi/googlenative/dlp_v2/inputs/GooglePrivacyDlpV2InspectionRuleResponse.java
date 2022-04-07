@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A single inspection rule to be applied to infoTypes, specified in `InspectionRuleSet`.
- * 
  */
 public final class GooglePrivacyDlpV2InspectionRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GooglePrivacyDlpV2InspectionRuleResponse extends io.pulumi.re
 
     /**
      * Exclusion rule.
-     * 
      */
     @Import(name="exclusionRule", required=true)
       private final GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule;
@@ -30,7 +28,6 @@ public final class GooglePrivacyDlpV2InspectionRuleResponse extends io.pulumi.re
 
     /**
      * Hotword-based detection rule.
-     * 
      */
     @Import(name="hotwordRule", required=true)
       private final GooglePrivacyDlpV2HotwordRuleResponse hotwordRule;

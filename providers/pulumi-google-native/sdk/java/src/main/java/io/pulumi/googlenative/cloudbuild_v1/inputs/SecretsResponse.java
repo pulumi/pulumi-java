@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Secrets and secret environment variables.
- * 
  */
 public final class SecretsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SecretsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Secrets encrypted with KMS key and the associated secret environment variable.
-     * 
      */
     @Import(name="inline", required=true)
       private final List<InlineSecretResponse> inline;
@@ -31,7 +29,6 @@ public final class SecretsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Secrets in Secret Manager and associated secret environment variable.
-     * 
      */
     @Import(name="secretManager", required=true)
       private final List<SecretManagerSecretResponse> secretManager;

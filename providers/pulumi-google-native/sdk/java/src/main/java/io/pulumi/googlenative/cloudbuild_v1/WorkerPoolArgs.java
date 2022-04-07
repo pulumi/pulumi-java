@@ -18,7 +18,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
@@ -29,7 +28,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -47,7 +45,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Legacy Private Pool configuration.
-     * 
      */
     @Import(name="privatePoolV1Config")
       private final @Nullable Output<PrivatePoolV1ConfigArgs> privatePoolV1Config;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ApprovalConfigResponse {
     /**
      * Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.
-     * 
      */
     private final Boolean approvalRequired;
 
@@ -22,7 +21,6 @@ public final class ApprovalConfigResponse {
 
     /**
      * Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.
-     * 
     */
     public Boolean getApprovalRequired() {
         return this.approvalRequired;

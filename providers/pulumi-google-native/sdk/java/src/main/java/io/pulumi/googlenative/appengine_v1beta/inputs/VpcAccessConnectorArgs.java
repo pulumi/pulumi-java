@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * VPC access connector specification.
- * 
  */
 public final class VpcAccessConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class VpcAccessConnectorArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The egress setting for the connector, controlling what traffic is diverted through it.
-     * 
      */
     @Import(name="egressSetting")
       private final @Nullable Output<VpcAccessConnectorEgressSetting> egressSetting;
@@ -32,7 +30,6 @@ public final class VpcAccessConnectorArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

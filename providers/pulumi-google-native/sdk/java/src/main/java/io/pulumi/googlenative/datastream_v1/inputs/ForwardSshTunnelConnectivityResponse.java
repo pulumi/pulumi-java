@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Forward SSH Tunnel connectivity.
- * 
  */
 public final class ForwardSshTunnelConnectivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ForwardSshTunnelConnectivityResponse extends io.pulumi.resour
 
     /**
      * Hostname for the SSH tunnel.
-     * 
      */
     @Import(name="hostname", required=true)
       private final String hostname;
@@ -30,7 +28,6 @@ public final class ForwardSshTunnelConnectivityResponse extends io.pulumi.resour
 
     /**
      * Input only. SSH password.
-     * 
      */
     @Import(name="password", required=true)
       private final String password;
@@ -41,7 +38,6 @@ public final class ForwardSshTunnelConnectivityResponse extends io.pulumi.resour
 
     /**
      * Port for the SSH tunnel, default value is 22.
-     * 
      */
     @Import(name="port", required=true)
       private final Integer port;
@@ -52,7 +48,6 @@ public final class ForwardSshTunnelConnectivityResponse extends io.pulumi.resour
 
     /**
      * Input only. SSH private key.
-     * 
      */
     @Import(name="privateKey", required=true)
       private final String privateKey;
@@ -63,7 +58,6 @@ public final class ForwardSshTunnelConnectivityResponse extends io.pulumi.resour
 
     /**
      * Username for the SSH tunnel.
-     * 
      */
     @Import(name="username", required=true)
       private final String username;

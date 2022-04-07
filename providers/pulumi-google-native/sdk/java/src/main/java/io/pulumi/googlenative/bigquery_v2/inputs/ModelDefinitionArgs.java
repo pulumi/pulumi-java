@@ -18,7 +18,6 @@ public final class ModelDefinitionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * [Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.
-     * 
      */
     @Import(name="modelOptions")
       private final @Nullable Output<ModelDefinitionModelOptionsArgs> modelOptions;
@@ -29,7 +28,6 @@ public final class ModelDefinitionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * [Output-only, Beta] Information about ml training runs, each training run comprises of multiple iterations and there may be multiple training runs for the model if warm start is used or if a user decides to continue a previously cancelled query.
-     * 
      */
     @Import(name="trainingRuns")
       private final @Nullable Output<List<BqmlTrainingRunArgs>> trainingRuns;

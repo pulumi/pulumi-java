@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class BackendBucketCdnPolicyCacheKeyPolicyResponse {
     /**
      * Allows HTTP request headers (by name) to be used in the cache key.
-     * 
      */
     private final List<String> includeHttpHeaders;
     /**
      * Names of query string parameters to include in cache keys. All other parameters will be excluded. '&' and '=' will be percent encoded and not treated as delimiters.
-     * 
      */
     private final List<String> queryStringWhitelist;
 
@@ -31,14 +29,12 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyResponse {
 
     /**
      * Allows HTTP request headers (by name) to be used in the cache key.
-     * 
     */
     public List<String> getIncludeHttpHeaders() {
         return this.includeHttpHeaders;
     }
     /**
      * Names of query string parameters to include in cache keys. All other parameters will be excluded. '&' and '=' will be percent encoded and not treated as delimiters.
-     * 
     */
     public List<String> getQueryStringWhitelist() {
         return this.queryStringWhitelist;

@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class AccessUrlsResponse {
     /**
      * The URL where this CertificateAuthority's CA certificate is published. This will only be set for CAs that have been activated.
-     * 
      */
     private final String caCertificateAccessUrl;
     /**
      * The URLs where this CertificateAuthority's CRLs are published. This will only be set for CAs that have been activated.
-     * 
      */
     private final List<String> crlAccessUrls;
 
@@ -31,14 +29,12 @@ public final class AccessUrlsResponse {
 
     /**
      * The URL where this CertificateAuthority's CA certificate is published. This will only be set for CAs that have been activated.
-     * 
     */
     public String getCaCertificateAccessUrl() {
         return this.caCertificateAccessUrl;
     }
     /**
      * The URLs where this CertificateAuthority's CRLs are published. This will only be set for CAs that have been activated.
-     * 
     */
     public List<String> getCrlAccessUrls() {
         return this.crlAccessUrls;

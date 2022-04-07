@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse {
     /**
      * The configuration for the exact match rule.
-     * 
      */
     private final GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigRespon
 
     /**
      * The configuration for the exact match rule.
-     * 
     */
     public GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse getExactMatchConfig() {
         return this.exactMatchConfig;

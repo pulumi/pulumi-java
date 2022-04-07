@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * LoggingComponentConfig is cluster logging component configuration.
- * 
  */
 public final class LoggingComponentConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class LoggingComponentConfigResponse extends io.pulumi.resources.In
 
     /**
      * Select components to collect logs. An empty set would disable all logging.
-     * 
      */
     @Import(name="enableComponents", required=true)
       private final List<String> enableComponents;

@@ -17,7 +17,6 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameArgs extends io.pulumi.re
 
     /**
      * The TLS Common Name string of the certificate.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;
@@ -28,7 +27,6 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameArgs extends io.pulumi.re
 
     /**
      * Indicates whether the cert should be matched against as a wildcard cert.
-     * 
      */
     @Import(name="wildcardMatch")
       private final @Nullable Output<Boolean> wildcardMatch;

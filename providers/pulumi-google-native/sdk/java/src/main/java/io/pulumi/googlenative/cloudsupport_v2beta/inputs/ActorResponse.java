@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * An object containing information about the effective user and authenticated principal responsible for an action.
- * 
  */
 public final class ActorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ActorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name to display for the actor. If not provided, it is inferred from credentials supplied during case creation. When an email is provided, a display name must also be provided. This will be obfuscated if the user is a Google Support agent.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -30,7 +28,6 @@ public final class ActorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The email address of the actor. If not provided, it is inferred from credentials supplied during case creation. If the authenticated principal does not have an email address, one must be provided. When a name is provided, an email must also be provided. This will be obfuscated if the user is a Google Support agent.
-     * 
      */
     @Import(name="email", required=true)
       private final String email;
@@ -41,7 +38,6 @@ public final class ActorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether the actor is a Google support actor.
-     * 
      */
     @Import(name="googleSupport", required=true)
       private final Boolean googleSupport;
@@ -52,7 +48,6 @@ public final class ActorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An ID representing the user that was authenticated when the corresponding action was taken. This will be an email address, if one is available, or some other unique ID. See https://cloud.google.com/docs/authentication for more information on types of authentication.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;

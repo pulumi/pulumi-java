@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Any scheduled maintenancce for this instance.
- * 
  */
 public final class SqlScheduledMaintenanceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class SqlScheduledMaintenanceResponse extends io.pulumi.resources.I
 
     /**
      * If the scheduled maintenance can be rescheduled.
-     * 
      */
     @Import(name="canReschedule", required=true)
       private final Boolean canReschedule;
@@ -37,7 +35,6 @@ public final class SqlScheduledMaintenanceResponse extends io.pulumi.resources.I
 
     /**
      * Maintenance cannot be rescheduled to start beyond this deadline.
-     * 
      */
     @Import(name="scheduleDeadlineTime", required=true)
       private final String scheduleDeadlineTime;
@@ -48,7 +45,6 @@ public final class SqlScheduledMaintenanceResponse extends io.pulumi.resources.I
 
     /**
      * The start time of any upcoming scheduled maintenance for this instance.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;

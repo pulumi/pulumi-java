@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class SourceScoringConfigResponse {
     /**
      * Importance of the source.
-     * 
      */
     private final String sourceImportance;
 
@@ -22,7 +21,6 @@ public final class SourceScoringConfigResponse {
 
     /**
      * Importance of the source.
-     * 
     */
     public String getSourceImportance() {
         return this.sourceImportance;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Executes a script to handle the request that matches the URL pattern.
- * 
  */
 public final class ScriptHandlerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ScriptHandlerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Path to the script from the application root directory.
-     * 
      */
     @Import(name="scriptPath")
       private final @Nullable Output<String> scriptPath;

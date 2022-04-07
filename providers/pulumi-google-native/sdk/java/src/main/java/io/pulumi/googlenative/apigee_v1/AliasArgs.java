@@ -25,7 +25,6 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The HTTP Content-Type header value specifying the content type of the body.
-     * 
      */
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
@@ -36,7 +35,6 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The HTTP request/response body as raw binary.
-     * 
      */
     @Import(name="data")
       private final @Nullable Output<String> data;
@@ -54,7 +52,6 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Application specific response metadata. Must be set in the first response for streaming APIs.
-     * 
      */
     @Import(name="extensions")
       private final @Nullable Output<List<Map<String,String>>> extensions;

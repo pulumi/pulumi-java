@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Represents a Sql Server database on the Cloud SQL instance.
- * 
  */
 public final class SqlServerDatabaseDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class SqlServerDatabaseDetailsResponse extends io.pulumi.resources.
 
     /**
      * The version of SQL Server with which the database is to be made compatible
-     * 
      */
     @Import(name="compatibilityLevel", required=true)
       private final Integer compatibilityLevel;
@@ -30,7 +28,6 @@ public final class SqlServerDatabaseDetailsResponse extends io.pulumi.resources.
 
     /**
      * The recovery model of a SQL Server database
-     * 
      */
     @Import(name="recoveryModel", required=true)
       private final String recoveryModel;

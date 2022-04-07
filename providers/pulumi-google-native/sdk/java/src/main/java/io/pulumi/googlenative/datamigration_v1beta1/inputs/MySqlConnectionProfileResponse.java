@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Specifies connection parameters required specifically for MySQL databases.
- * 
  */
 public final class MySqlConnectionProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class MySqlConnectionProfileResponse extends io.pulumi.resources.In
 
     /**
      * If the source is a Cloud SQL database, use this field to provide the Cloud SQL instance ID of the source.
-     * 
      */
     @Import(name="cloudSqlId", required=true)
       private final String cloudSqlId;
@@ -32,7 +30,6 @@ public final class MySqlConnectionProfileResponse extends io.pulumi.resources.In
 
     /**
      * The IP or hostname of the source MySQL database.
-     * 
      */
     @Import(name="host", required=true)
       private final String host;
@@ -43,7 +40,6 @@ public final class MySqlConnectionProfileResponse extends io.pulumi.resources.In
 
     /**
      * Input only. The password for the user that Database Migration Service will be using to connect to the database. This field is not returned on request, and the value is encrypted when stored in Database Migration Service.
-     * 
      */
     @Import(name="password", required=true)
       private final String password;
@@ -54,7 +50,6 @@ public final class MySqlConnectionProfileResponse extends io.pulumi.resources.In
 
     /**
      * Indicates If this connection profile password is stored.
-     * 
      */
     @Import(name="passwordSet", required=true)
       private final Boolean passwordSet;
@@ -65,7 +60,6 @@ public final class MySqlConnectionProfileResponse extends io.pulumi.resources.In
 
     /**
      * The network port of the source MySQL database.
-     * 
      */
     @Import(name="port", required=true)
       private final Integer port;
@@ -76,7 +70,6 @@ public final class MySqlConnectionProfileResponse extends io.pulumi.resources.In
 
     /**
      * SSL configuration for the destination to connect to the source database.
-     * 
      */
     @Import(name="ssl", required=true)
       private final SslConfigResponse ssl;
@@ -87,7 +80,6 @@ public final class MySqlConnectionProfileResponse extends io.pulumi.resources.In
 
     /**
      * The username that Database Migration Service will use to connect to the database. The value is encrypted when stored in Database Migration Service.
-     * 
      */
     @Import(name="username", required=true)
       private final String username;

@@ -21,48 +21,41 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a HealthCheck resource in the specified project using the data included in the request.
- * 
  */
 @ResourceType(type="google-native:compute/beta:HealthCheck")
 public class HealthCheck extends io.pulumi.resources.CustomResource {
     /**
      * How often (in seconds) to send a health check. The default value is 5 seconds.
-     * 
      */
     @Export(name="checkIntervalSec", type=Integer.class, parameters={})
     private Output<Integer> checkIntervalSec;
 
     /**
      * @return How often (in seconds) to send a health check. The default value is 5 seconds.
-     * 
      */
     public Output<Integer> getCheckIntervalSec() {
         return this.checkIntervalSec;
     }
     /**
      * Creation timestamp in 3339 text format.
-     * 
      */
     @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
      * @return Creation timestamp in 3339 text format.
-     * 
      */
     public Output<String> getCreationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
@@ -75,14 +68,12 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
     }
     /**
      * A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
-     * 
      */
     @Export(name="healthyThreshold", type=Integer.class, parameters={})
     private Output<Integer> healthyThreshold;
 
     /**
      * @return A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
-     * 
      */
     public Output<Integer> getHealthyThreshold() {
         return this.healthyThreshold;
@@ -107,70 +98,60 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
     }
     /**
      * Type of the resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return Type of the resource.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Configure logging on this health check.
-     * 
      */
     @Export(name="logConfig", type=HealthCheckLogConfigResponse.class, parameters={})
     private Output<HealthCheckLogConfigResponse> logConfig;
 
     /**
      * @return Configure logging on this health check.
-     * 
      */
     public Output<HealthCheckLogConfigResponse> getLogConfig() {
         return this.logConfig;
     }
     /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. For example, a name that is 1-63 characters long, matches the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with RFC1035. This regular expression describes a name where the first character is a lowercase letter, and all following characters are a dash, lowercase letter, or digit, except the last character, which isn't a dash.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. For example, a name that is 1-63 characters long, matches the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with RFC1035. This regular expression describes a name where the first character is a lowercase letter, and all following characters are a dash, lowercase letter, or digit, except the last character, which isn't a dash.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Region where the health check resides. Not applicable to global health checks.
-     * 
      */
     @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
      * @return Region where the health check resides. Not applicable to global health checks.
-     * 
      */
     public Output<String> getRegion() {
         return this.region;
     }
     /**
      * Server-defined URL for the resource.
-     * 
      */
     @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
      * @return Server-defined URL for the resource.
-     * 
      */
     public Output<String> getSelfLink() {
         return this.selfLink;
@@ -189,42 +170,36 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
     }
     /**
      * How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have greater value than checkIntervalSec.
-     * 
      */
     @Export(name="timeoutSec", type=Integer.class, parameters={})
     private Output<Integer> timeoutSec;
 
     /**
      * @return How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have greater value than checkIntervalSec.
-     * 
      */
     public Output<Integer> getTimeoutSec() {
         return this.timeoutSec;
     }
     /**
      * Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS or HTTP2. Exactly one of the protocol-specific health check field must be specified, which must match type field.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS or HTTP2. Exactly one of the protocol-specific health check field must be specified, which must match type field.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
-     * 
      */
     @Export(name="unhealthyThreshold", type=Integer.class, parameters={})
     private Output<Integer> unhealthyThreshold;
 
     /**
      * @return A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
-     * 
      */
     public Output<Integer> getUnhealthyThreshold() {
         return this.unhealthyThreshold;

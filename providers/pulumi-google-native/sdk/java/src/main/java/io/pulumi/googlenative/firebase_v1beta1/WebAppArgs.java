@@ -17,7 +17,6 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`. This identifier should be treated as an opaque token, as the data format is not specified.
-     * 
      */
     @Import(name="appId")
       private final @Nullable Output<String> appId;
@@ -28,7 +27,6 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The URLs where the `WebApp` is hosted.
-     * 
      */
     @Import(name="appUrls")
       private final @Nullable Output<List<String>> appUrls;
@@ -39,7 +37,6 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user-assigned display name for the `WebApp`.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -50,7 +47,6 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the WebApp, in the format: projects/PROJECT_IDENTIFIER /webApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.webApps#WebApp.FIELDS.app_id)).
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -61,7 +57,6 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `WebApp`.
-     * 
      */
     @Import(name="project")
       private final @Nullable Output<String> project;

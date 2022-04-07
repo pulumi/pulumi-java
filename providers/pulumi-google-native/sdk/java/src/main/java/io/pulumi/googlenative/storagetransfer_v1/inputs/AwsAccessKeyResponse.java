@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * AWS access key (see [AWS Security Credentials](https://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html)). For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).
- * 
  */
 public final class AwsAccessKeyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AwsAccessKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * AWS access key ID.
-     * 
      */
     @Import(name="accessKeyId", required=true)
       private final String accessKeyId;
@@ -29,7 +27,6 @@ public final class AwsAccessKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * AWS secret access key. This field is not returned in RPC responses.
-     * 
      */
     @Import(name="secretAccessKey", required=true)
       private final String secretAccessKey;

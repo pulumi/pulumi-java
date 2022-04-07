@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Describes an RSA key that may be used in a Certificate issued from a CaPool.
- * 
  */
 public final class RsaKeyTypeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class RsaKeyTypeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. The maximum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.
-     * 
      */
     @Import(name="maxModulusSize", required=true)
       private final String maxModulusSize;
@@ -29,7 +27,6 @@ public final class RsaKeyTypeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. The minimum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service-level min RSA modulus size will continue to apply.
-     * 
      */
     @Import(name="minModulusSize", required=true)
       private final String minModulusSize;

@@ -17,48 +17,41 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a NodeGroup resource in the specified project using the data included in the request.
- * 
  */
 @ResourceType(type="google-native:compute/alpha:NodeGroup")
 public class NodeGroup extends io.pulumi.resources.CustomResource {
     /**
      * Specifies how autoscaling should behave.
-     * 
      */
     @Export(name="autoscalingPolicy", type=NodeGroupAutoscalingPolicyResponse.class, parameters={})
     private Output<NodeGroupAutoscalingPolicyResponse> autoscalingPolicy;
 
     /**
      * @return Specifies how autoscaling should behave.
-     * 
      */
     public Output<NodeGroupAutoscalingPolicyResponse> getAutoscalingPolicy() {
         return this.autoscalingPolicy;
     }
     /**
      * Creation timestamp in RFC3339 text format.
-     * 
      */
     @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
      * @return Creation timestamp in RFC3339 text format.
-     * 
      */
     public Output<String> getCreationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
@@ -71,42 +64,36 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
     }
     /**
      * The type of the resource. Always compute#nodeGroup for node group.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return The type of the resource. Always compute#nodeGroup for node group.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * An opaque location hint used to place the Node close to other resources. This field is for use by internal tools that use the public API. The location hint here on the NodeGroup overrides any location_hint present in the NodeTemplate.
-     * 
      */
     @Export(name="locationHint", type=String.class, parameters={})
     private Output<String> locationHint;
 
     /**
      * @return An opaque location hint used to place the Node close to other resources. This field is for use by internal tools that use the public API. The location hint here on the NodeGroup overrides any location_hint present in the NodeTemplate.
-     * 
      */
     public Output<String> getLocationHint() {
         return this.locationHint;
     }
     /**
      * Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For more information, see Maintenance policies.
-     * 
      */
     @Export(name="maintenancePolicy", type=String.class, parameters={})
     private Output<String> maintenancePolicy;
 
     /**
      * @return Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For more information, see Maintenance policies.
-     * 
      */
     public Output<String> getMaintenancePolicy() {
         return this.maintenancePolicy;
@@ -119,84 +106,72 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
     }
     /**
      * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * URL of the node template to create the node group from.
-     * 
      */
     @Export(name="nodeTemplate", type=String.class, parameters={})
     private Output<String> nodeTemplate;
 
     /**
      * @return URL of the node template to create the node group from.
-     * 
      */
     public Output<String> getNodeTemplate() {
         return this.nodeTemplate;
     }
     /**
      * Server-defined URL for the resource.
-     * 
      */
     @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
      * @return Server-defined URL for the resource.
-     * 
      */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
     /**
      * Server-defined URL for this resource with the resource id.
-     * 
      */
     @Export(name="selfLinkWithId", type=String.class, parameters={})
     private Output<String> selfLinkWithId;
 
     /**
      * @return Server-defined URL for this resource with the resource id.
-     * 
      */
     public Output<String> getSelfLinkWithId() {
         return this.selfLinkWithId;
     }
     /**
      * Share-settings for the node group
-     * 
      */
     @Export(name="shareSettings", type=ShareSettingsResponse.class, parameters={})
     private Output<ShareSettingsResponse> shareSettings;
 
     /**
      * @return Share-settings for the node group
-     * 
      */
     public Output<ShareSettingsResponse> getShareSettings() {
         return this.shareSettings;
     }
     /**
      * The total number of nodes in the node group.
-     * 
      */
     @Export(name="size", type=Integer.class, parameters={})
     private Output<Integer> size;
 
     /**
      * @return The total number of nodes in the node group.
-     * 
      */
     public Output<Integer> getSize() {
         return this.size;
@@ -209,14 +184,12 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
     }
     /**
      * The name of the zone where the node group resides, such as us-central1-a.
-     * 
      */
     @Export(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
     /**
      * @return The name of the zone where the node group resides, such as us-central1-a.
-     * 
      */
     public Output<String> getZone() {
         return this.zone;

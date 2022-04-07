@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class PubSubResponse {
     /**
      * Enable notifications for Pub/Sub.
-     * 
      */
     private final Boolean enabled;
     /**
      * Allows filtering to one or more specific event types. If no filter is specified, or if a filter is specified with no event types, all event types will be sent
-     * 
      */
     private final FilterResponse filter;
     /**
      * The desired Pub/Sub topic to which notifications will be sent by GKE. Format is `projects/{project}/topics/{topic}`.
-     * 
      */
     private final String topic;
 
@@ -39,21 +36,18 @@ public final class PubSubResponse {
 
     /**
      * Enable notifications for Pub/Sub.
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * Allows filtering to one or more specific event types. If no filter is specified, or if a filter is specified with no event types, all event types will be sent
-     * 
     */
     public FilterResponse getFilter() {
         return this.filter;
     }
     /**
      * The desired Pub/Sub topic to which notifications will be sent by GKE. Format is `projects/{project}/topics/{topic}`.
-     * 
     */
     public String getTopic() {
         return this.topic;

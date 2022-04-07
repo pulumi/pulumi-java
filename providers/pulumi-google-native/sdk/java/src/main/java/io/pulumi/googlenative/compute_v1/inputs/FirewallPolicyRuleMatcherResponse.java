@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Represents a match condition that incoming traffic is evaluated against. Exactly one field must be specified.
- * 
  */
 public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
 
     /**
      * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
-     * 
      */
     @Import(name="destIpRanges", required=true)
       private final List<String> destIpRanges;
@@ -31,7 +29,6 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
 
     /**
      * Pairs of IP protocols and ports that the rule should match.
-     * 
      */
     @Import(name="layer4Configs", required=true)
       private final List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs;
@@ -42,7 +39,6 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
 
     /**
      * CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
-     * 
      */
     @Import(name="srcIpRanges", required=true)
       private final List<String> srcIpRanges;

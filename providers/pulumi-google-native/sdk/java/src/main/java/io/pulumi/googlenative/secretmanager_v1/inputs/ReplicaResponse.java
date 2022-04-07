@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Represents a Replica for this Secret.
- * 
  */
 public final class ReplicaResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ReplicaResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. The customer-managed encryption configuration of the User-Managed Replica. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
-     * 
      */
     @Import(name="customerManagedEncryption", required=true)
       private final CustomerManagedEncryptionResponse customerManagedEncryption;
@@ -30,7 +28,6 @@ public final class ReplicaResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The canonical IDs of the location to replicate data. For example: `"us-east1"`.
-     * 
      */
     @Import(name="location", required=true)
       private final String location;

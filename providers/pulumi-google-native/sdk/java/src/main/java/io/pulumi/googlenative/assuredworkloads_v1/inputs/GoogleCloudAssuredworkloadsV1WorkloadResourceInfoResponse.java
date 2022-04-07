@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Represent the resources that are children of this Workload.
- * 
  */
 public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse ext
 
     /**
      * Resource identifier. For a project this represents project_number.
-     * 
      */
     @Import(name="resourceId", required=true)
       private final String resourceId;
@@ -29,7 +27,6 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse ext
 
     /**
      * Indicates the type of resource.
-     * 
      */
     @Import(name="resourceType", required=true)
       private final String resourceType;

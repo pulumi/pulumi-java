@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse {
     /**
      * Whether to consider case sensitivity when performing an exact match.
-     * 
      */
     private final Boolean caseSensitive;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse {
 
     /**
      * Whether to consider case sensitivity when performing an exact match.
-     * 
     */
     public Boolean getCaseSensitive() {
         return this.caseSensitive;

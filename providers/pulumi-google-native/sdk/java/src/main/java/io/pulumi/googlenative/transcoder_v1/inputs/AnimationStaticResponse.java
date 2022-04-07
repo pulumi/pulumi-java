@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Display static overlay object.
- * 
  */
 public final class AnimationStaticResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class AnimationStaticResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The time to start displaying the overlay object, in seconds. Default: 0
-     * 
      */
     @Import(name="startTimeOffset", required=true)
       private final String startTimeOffset;
@@ -30,7 +28,6 @@ public final class AnimationStaticResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.
-     * 
      */
     @Import(name="xy", required=true)
       private final NormalizedCoordinateResponse xy;

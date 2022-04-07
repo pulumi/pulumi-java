@@ -12,32 +12,26 @@ import java.util.Objects;
 public final class MasterAuthResponse {
     /**
      * [Output only] Base64-encoded public certificate used by clients to authenticate to the cluster endpoint.
-     * 
      */
     private final String clientCertificate;
     /**
      * Configuration for client certificate authentication on the cluster. For clusters before v1.12, if no configuration is specified, a client certificate is issued.
-     * 
      */
     private final ClientCertificateConfigResponse clientCertificateConfig;
     /**
      * [Output only] Base64-encoded private key used by clients to authenticate to the cluster endpoint.
-     * 
      */
     private final String clientKey;
     /**
      * [Output only] Base64-encoded public certificate that is the root of trust for the cluster.
-     * 
      */
     private final String clusterCaCertificate;
     /**
      * The password to use for HTTP basic authentication to the master endpoint. Because the master endpoint is open to the Internet, you should create a strong password. If a password is provided for cluster creation, username must be non-empty. Warning: basic authentication is deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
-     * 
      */
     private final String password;
     /**
      * The username to use for HTTP basic authentication to the master endpoint. For clusters v1.6.0 and later, basic authentication can be disabled by leaving username unspecified (or setting it to the empty string). Warning: basic authentication is deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
-     * 
      */
     private final String username;
 
@@ -59,42 +53,36 @@ public final class MasterAuthResponse {
 
     /**
      * [Output only] Base64-encoded public certificate used by clients to authenticate to the cluster endpoint.
-     * 
     */
     public String getClientCertificate() {
         return this.clientCertificate;
     }
     /**
      * Configuration for client certificate authentication on the cluster. For clusters before v1.12, if no configuration is specified, a client certificate is issued.
-     * 
     */
     public ClientCertificateConfigResponse getClientCertificateConfig() {
         return this.clientCertificateConfig;
     }
     /**
      * [Output only] Base64-encoded private key used by clients to authenticate to the cluster endpoint.
-     * 
     */
     public String getClientKey() {
         return this.clientKey;
     }
     /**
      * [Output only] Base64-encoded public certificate that is the root of trust for the cluster.
-     * 
     */
     public String getClusterCaCertificate() {
         return this.clusterCaCertificate;
     }
     /**
      * The password to use for HTTP basic authentication to the master endpoint. Because the master endpoint is open to the Internet, you should create a strong password. If a password is provided for cluster creation, username must be non-empty. Warning: basic authentication is deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
-     * 
     */
     public String getPassword() {
         return this.password;
     }
     /**
      * The username to use for HTTP basic authentication to the master endpoint. For clusters v1.6.0 and later, basic authentication can be disabled by leaving username unspecified (or setting it to the empty string). Warning: basic authentication is deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
-     * 
     */
     public String getUsername() {
         return this.username;

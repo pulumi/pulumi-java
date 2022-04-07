@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Specifies an artifact available as a Google Cloud Storage object.
- * 
  */
 public final class SoftwareRecipeArtifactGcsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SoftwareRecipeArtifactGcsResponse extends io.pulumi.resources
 
     /**
      * Bucket of the Google Cloud Storage object. Given an example URL: `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `my-bucket`.
-     * 
      */
     @Import(name="bucket", required=true)
       private final String bucket;
@@ -29,7 +27,6 @@ public final class SoftwareRecipeArtifactGcsResponse extends io.pulumi.resources
 
     /**
      * Must be provided if allow_insecure is false. Generation number of the Google Cloud Storage object. `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `1234567`.
-     * 
      */
     @Import(name="generation", required=true)
       private final String generation;
@@ -40,7 +37,6 @@ public final class SoftwareRecipeArtifactGcsResponse extends io.pulumi.resources
 
     /**
      * Name of the Google Cloud Storage object. As specified [here] (https://cloud.google.com/storage/docs/naming#objectnames) Given an example URL: `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `foo/bar`.
-     * 
      */
     @Import(name="object", required=true)
       private final String object;

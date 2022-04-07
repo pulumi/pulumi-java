@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The configuration of the stream destination.
- * 
  */
 public final class DestinationConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class DestinationConfigResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Destination connection profile resource. Format: `projects/{project}/locations/{location}/connectionProfiles/{name}`
-     * 
      */
     @Import(name="destinationConnectionProfile", required=true)
       private final String destinationConnectionProfile;
@@ -30,7 +28,6 @@ public final class DestinationConfigResponse extends io.pulumi.resources.InvokeA
 
     /**
      * A configuration for how data should be loaded to Cloud Storage.
-     * 
      */
     @Import(name="gcsDestinationConfig", required=true)
       private final GcsDestinationConfigResponse gcsDestinationConfig;

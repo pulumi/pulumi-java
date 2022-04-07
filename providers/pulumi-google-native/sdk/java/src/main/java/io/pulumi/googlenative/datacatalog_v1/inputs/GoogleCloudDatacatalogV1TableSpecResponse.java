@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Normal BigQuery table specification.
- * 
  */
 public final class GoogleCloudDatacatalogV1TableSpecResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDatacatalogV1TableSpecResponse extends io.pulumi.r
 
     /**
      * If the table is date-sharded, that is, it matches the `[prefix]YYYYMMDD` name pattern, this field is the Data Catalog resource name of the date-sharded grouped entry. For example: `projects/{PROJECT_ID}/locations/{LOCATION}/entrygroups/{ENTRY_GROUP_ID}/entries/{ENTRY_ID}`. Otherwise, `grouped_entry` is empty.
-     * 
      */
     @Import(name="groupedEntry", required=true)
       private final String groupedEntry;

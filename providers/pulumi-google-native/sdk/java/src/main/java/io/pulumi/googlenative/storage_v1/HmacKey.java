@@ -14,132 +14,113 @@ import javax.annotation.Nullable;
 /**
  * Creates a new HMAC key for the specified service account.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:storage/v1:HmacKey")
 public class HmacKey extends io.pulumi.resources.CustomResource {
     /**
      * The ID of the HMAC Key.
-     * 
      */
     @Export(name="accessId", type=String.class, parameters={})
     private Output<String> accessId;
 
     /**
      * @return The ID of the HMAC Key.
-     * 
      */
     public Output<String> getAccessId() {
         return this.accessId;
     }
     /**
      * HTTP 1.1 Entity tag for the HMAC key.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return HTTP 1.1 Entity tag for the HMAC key.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The kind of item this is. For HMAC Key metadata, this is always storage#hmacKeyMetadata.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return The kind of item this is. For HMAC Key metadata, this is always storage#hmacKeyMetadata.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Project ID owning the service account to which the key authenticates.
-     * 
      */
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
      * @return Project ID owning the service account to which the key authenticates.
-     * 
      */
     public Output<String> getProject() {
         return this.project;
     }
     /**
      * The link to this resource.
-     * 
      */
     @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
      * @return The link to this resource.
-     * 
      */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
     /**
      * The email address of the key's associated service account.
-     * 
      */
     @Export(name="serviceAccountEmail", type=String.class, parameters={})
     private Output<String> serviceAccountEmail;
 
     /**
      * @return The email address of the key's associated service account.
-     * 
      */
     public Output<String> getServiceAccountEmail() {
         return this.serviceAccountEmail;
     }
     /**
      * The state of the key. Can be one of ACTIVE, INACTIVE, or DELETED.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The state of the key. Can be one of ACTIVE, INACTIVE, or DELETED.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The creation time of the HMAC key in RFC 3339 format.
-     * 
      */
     @Export(name="timeCreated", type=String.class, parameters={})
     private Output<String> timeCreated;
 
     /**
      * @return The creation time of the HMAC key in RFC 3339 format.
-     * 
      */
     public Output<String> getTimeCreated() {
         return this.timeCreated;
     }
     /**
      * The last modification time of the HMAC key metadata in RFC 3339 format.
-     * 
      */
     @Export(name="updated", type=String.class, parameters={})
     private Output<String> updated;
 
     /**
      * @return The last modification time of the HMAC key metadata in RFC 3339 format.
-     * 
      */
     public Output<String> getUpdated() {
         return this.updated;

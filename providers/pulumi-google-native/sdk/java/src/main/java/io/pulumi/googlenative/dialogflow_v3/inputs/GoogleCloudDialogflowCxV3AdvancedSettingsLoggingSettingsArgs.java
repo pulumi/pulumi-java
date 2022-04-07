@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Define behaviors on logging.
- * 
  */
 public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs 
 
     /**
      * If true, DF Interaction logging is currently enabled.
-     * 
      */
     @Import(name="enableInteractionLogging")
       private final @Nullable Output<Boolean> enableInteractionLogging;
@@ -31,7 +29,6 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs 
 
     /**
      * If true, StackDriver logging is currently enabled.
-     * 
      */
     @Import(name="enableStackdriverLogging")
       private final @Nullable Output<Boolean> enableStackdriverLogging;

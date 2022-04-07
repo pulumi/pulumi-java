@@ -15,90 +15,77 @@ import javax.annotation.Nullable;
 /**
  * Creates an InspectTemplate for re-using frequently used configuration for inspecting content, images, and storage. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:dlp/v2:InspectTemplate")
 public class InspectTemplate extends io.pulumi.resources.CustomResource {
     /**
      * The creation timestamp of an inspectTemplate.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The creation timestamp of an inspectTemplate.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Short description (max 256 chars).
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Short description (max 256 chars).
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Display name (max 256 chars).
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return Display name (max 256 chars).
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The core content of the template. Configuration of the scanning process.
-     * 
      */
     @Export(name="inspectConfig", type=GooglePrivacyDlpV2InspectConfigResponse.class, parameters={})
     private Output<GooglePrivacyDlpV2InspectConfigResponse> inspectConfig;
 
     /**
      * @return The core content of the template. Configuration of the scanning process.
-     * 
      */
     public Output<GooglePrivacyDlpV2InspectConfigResponse> getInspectConfig() {
         return this.inspectConfig;
     }
     /**
      * The template name. The template will have one of the following formats: `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID` OR `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`;
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The template name. The template will have one of the following formats: `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID` OR `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`;
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The last update timestamp of an inspectTemplate.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The last update timestamp of an inspectTemplate.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

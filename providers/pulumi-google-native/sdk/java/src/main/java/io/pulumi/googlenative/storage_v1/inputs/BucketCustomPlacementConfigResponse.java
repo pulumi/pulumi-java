@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The bucket's custom placement configuration for Custom Dual Regions.
- * 
  */
 public final class BucketCustomPlacementConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class BucketCustomPlacementConfigResponse extends io.pulumi.resourc
 
     /**
      * The list of regional locations in which data is placed.
-     * 
      */
     @Import(name="dataLocations", required=true)
       private final List<String> dataLocations;

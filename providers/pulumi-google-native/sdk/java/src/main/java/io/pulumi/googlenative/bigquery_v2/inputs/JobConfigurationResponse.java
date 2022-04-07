@@ -20,7 +20,6 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * [Pick one] Copies a table.
-     * 
      */
     @Import(name="copy", required=true)
       private final JobConfigurationTableCopyResponse copy;
@@ -31,7 +30,6 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * [Optional] If set, don't actually run this job. A valid query will return a mostly empty response with some processing statistics, while an invalid query will return the same error it would if it wasn't a dry run. Behavior of non-query jobs is undefined.
-     * 
      */
     @Import(name="dryRun", required=true)
       private final Boolean dryRun;
@@ -42,7 +40,6 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * [Pick one] Configures an extract job.
-     * 
      */
     @Import(name="extract", required=true)
       private final JobConfigurationExtractResponse extract;
@@ -53,7 +50,6 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * [Optional] Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
-     * 
      */
     @Import(name="jobTimeoutMs", required=true)
       private final String jobTimeoutMs;
@@ -64,7 +60,6 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The type of the job. Can be QUERY, LOAD, EXTRACT, COPY or UNKNOWN.
-     * 
      */
     @Import(name="jobType", required=true)
       private final String jobType;
@@ -75,7 +70,6 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The labels associated with this job. You can use these to organize and group your jobs. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. Label values are optional. Label keys must start with a letter and each label in the list must have a different key.
-     * 
      */
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
@@ -86,7 +80,6 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * [Pick one] Configures a load job.
-     * 
      */
     @Import(name="load", required=true)
       private final JobConfigurationLoadResponse load;
@@ -97,7 +90,6 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * [Pick one] Configures a query job.
-     * 
      */
     @Import(name="query", required=true)
       private final JobConfigurationQueryResponse query;

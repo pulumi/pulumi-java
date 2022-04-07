@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration of logging on a health check. If logging is enabled, logs will be exported to Stackdriver.
- * 
  */
 public final class HealthCheckLogConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class HealthCheckLogConfigArgs extends io.pulumi.resources.Resource
 
     /**
      * Indicates whether or not to export logs. This is false by default, which means no health check logging will be done.
-     * 
      */
     @Import(name="enable")
       private final @Nullable Output<Boolean> enable;

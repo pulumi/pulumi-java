@@ -30,7 +30,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * BI Engine specific Statistics. [Output-only] BI Engine specific Statistics.
-     * 
      */
     @Import(name="biEngineStatistics", required=true)
       private final BiEngineStatisticsResponse biEngineStatistics;
@@ -41,7 +40,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * Billing tier for the job.
-     * 
      */
     @Import(name="billingTier", required=true)
       private final Integer billingTier;
@@ -52,7 +50,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * Whether the query result was fetched from the query cache.
-     * 
      */
     @Import(name="cacheHit", required=true)
       private final Boolean cacheHit;
@@ -63,7 +60,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * [Preview] The number of row access policies affected by a DDL statement. Present only for DROP ALL ROW ACCESS POLICIES queries.
-     * 
      */
     @Import(name="ddlAffectedRowAccessPolicyCount", required=true)
       private final String ddlAffectedRowAccessPolicyCount;
@@ -74,7 +70,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * The DDL destination table. Present only for ALTER TABLE RENAME TO queries. Note that ddl_target_table is used just for its type information.
-     * 
      */
     @Import(name="ddlDestinationTable", required=true)
       private final TableReferenceResponse ddlDestinationTable;
@@ -85,7 +80,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * The DDL operation performed, possibly dependent on the pre-existence of the DDL target. Possible values (new values might be added in the future): "CREATE": The query created the DDL target. "SKIP": No-op. Example cases: the query is CREATE TABLE IF NOT EXISTS while the table already exists, or the query is DROP TABLE IF EXISTS while the table does not exist. "REPLACE": The query replaced the DDL target. Example case: the query is CREATE OR REPLACE TABLE, and the table already exists. "DROP": The query deleted the DDL target.
-     * 
      */
     @Import(name="ddlOperationPerformed", required=true)
       private final String ddlOperationPerformed;
@@ -96,7 +90,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * The DDL target dataset. Present only for CREATE/ALTER/DROP SCHEMA queries.
-     * 
      */
     @Import(name="ddlTargetDataset", required=true)
       private final DatasetReferenceResponse ddlTargetDataset;
@@ -107,7 +100,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * The DDL target routine. Present only for CREATE/DROP FUNCTION/PROCEDURE queries.
-     * 
      */
     @Import(name="ddlTargetRoutine", required=true)
       private final RoutineReferenceResponse ddlTargetRoutine;
@@ -118,7 +110,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * [Preview] The DDL target row access policy. Present only for CREATE/DROP ROW ACCESS POLICY queries.
-     * 
      */
     @Import(name="ddlTargetRowAccessPolicy", required=true)
       private final RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy;
@@ -129,7 +120,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW ACCESS POLICIES queries.
-     * 
      */
     @Import(name="ddlTargetTable", required=true)
       private final TableReferenceResponse ddlTargetTable;
@@ -140,7 +130,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * Detailed statistics for DML statements Present only for DML statements INSERT, UPDATE, DELETE or TRUNCATE.
-     * 
      */
     @Import(name="dmlStats", required=true)
       private final DmlStatisticsResponse dmlStats;
@@ -151,7 +140,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * The original estimate of bytes processed for the job.
-     * 
      */
     @Import(name="estimatedBytesProcessed", required=true)
       private final String estimatedBytesProcessed;
@@ -162,7 +150,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * Statistics of a BigQuery ML training job.
-     * 
      */
     @Import(name="mlStatistics", required=true)
       private final MlStatisticsResponse mlStatistics;
@@ -173,7 +160,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * [Output-only, Beta] Information about create model query job progress.
-     * 
      */
     @Import(name="modelTraining", required=true)
       private final BigQueryModelTrainingResponse modelTraining;
@@ -184,7 +170,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * The number of rows affected by a DML statement. Present only for DML statements INSERT, UPDATE or DELETE.
-     * 
      */
     @Import(name="numDmlAffectedRows", required=true)
       private final String numDmlAffectedRows;
@@ -195,7 +180,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * Describes execution plan for the query.
-     * 
      */
     @Import(name="queryPlan", required=true)
       private final List<ExplainQueryStageResponse> queryPlan;
@@ -206,7 +190,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * Referenced routines (persistent user-defined functions and stored procedures) for the job.
-     * 
      */
     @Import(name="referencedRoutines", required=true)
       private final List<RoutineReferenceResponse> referencedRoutines;
@@ -217,7 +200,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * Referenced tables for the job. Queries that reference more than 50 tables will not have a complete list.
-     * 
      */
     @Import(name="referencedTables", required=true)
       private final List<TableReferenceResponse> referencedTables;
@@ -228,7 +210,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * Job resource usage breakdown by reservation.
-     * 
      */
     @Import(name="reservationUsage", required=true)
       private final List<JobStatistics2ReservationUsageItemResponse> reservationUsage;
@@ -239,7 +220,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * The schema of the results. Present only for successful dry run of non-legacy SQL queries.
-     * 
      */
     @Import(name="schema", required=true)
       private final TableSchemaResponse schema;
@@ -250,7 +230,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * The type of query statement, if valid. Possible values (new values might be added in the future): "SELECT": SELECT query. "INSERT": INSERT query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. "UPDATE": UPDATE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. "DELETE": DELETE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. "MERGE": MERGE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. "ALTER_TABLE": ALTER TABLE query. "ALTER_VIEW": ALTER VIEW query. "ASSERT": ASSERT condition AS 'description'. "CREATE_FUNCTION": CREATE FUNCTION query. "CREATE_MODEL": CREATE [OR REPLACE] MODEL ... AS SELECT ... . "CREATE_PROCEDURE": CREATE PROCEDURE query. "CREATE_TABLE": CREATE [OR REPLACE] TABLE without AS SELECT. "CREATE_TABLE_AS_SELECT": CREATE [OR REPLACE] TABLE ... AS SELECT ... . "CREATE_VIEW": CREATE [OR REPLACE] VIEW ... AS SELECT ... . "DROP_FUNCTION" : DROP FUNCTION query. "DROP_PROCEDURE": DROP PROCEDURE query. "DROP_TABLE": DROP TABLE query. "DROP_VIEW": DROP VIEW query.
-     * 
      */
     @Import(name="statementType", required=true)
       private final String statementType;
@@ -261,7 +240,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * [Beta] Describes a timeline of job execution.
-     * 
      */
     @Import(name="timeline", required=true)
       private final List<QueryTimelineSampleResponse> timeline;
@@ -272,7 +250,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * Total bytes billed for the job.
-     * 
      */
     @Import(name="totalBytesBilled", required=true)
       private final String totalBytesBilled;
@@ -283,7 +260,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * Total bytes processed for the job.
-     * 
      */
     @Import(name="totalBytesProcessed", required=true)
       private final String totalBytesProcessed;
@@ -294,7 +270,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the accuracy of the estimate. Possible values can be: UNKNOWN: accuracy of the estimate is unknown. PRECISE: estimate is precise. LOWER_BOUND: estimate is lower bound of what the query would cost. UPPER_BOUND: estimate is upper bound of what the query would cost.
-     * 
      */
     @Import(name="totalBytesProcessedAccuracy", required=true)
       private final String totalBytesProcessedAccuracy;
@@ -305,7 +280,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * Total number of partitions processed from all partitioned tables referenced in the job.
-     * 
      */
     @Import(name="totalPartitionsProcessed", required=true)
       private final String totalPartitionsProcessed;
@@ -316,7 +290,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * Slot-milliseconds for the job.
-     * 
      */
     @Import(name="totalSlotMs", required=true)
       private final String totalSlotMs;
@@ -327,7 +300,6 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * Standard SQL only: list of undeclared query parameters detected during a dry run validation.
-     * 
      */
     @Import(name="undeclaredQueryParameters", required=true)
       private final List<QueryParameterResponse> undeclaredQueryParameters;

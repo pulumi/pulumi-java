@@ -13,76 +13,65 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new TargetProject in a given project. NOTE: TargetProject is a global resource; hence the only supported value for location is `global`.
- * 
  */
 @ResourceType(type="google-native:vmmigration/v1alpha1:TargetProject")
 public class TargetProject extends io.pulumi.resources.CustomResource {
     /**
      * The time this target project resource was created (not related to when the Compute Engine project it points to was created).
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time this target project resource was created (not related to when the Compute Engine project it points to was created).
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The target project's description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return The target project's description.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The name of the target project.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the target project.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The target project ID (number) or project name.
-     * 
      */
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
      * @return The target project ID (number) or project name.
-     * 
      */
     public Output<String> getProject() {
         return this.project;
     }
     /**
      * The last time the target project resource was updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The last time the target project resource was updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

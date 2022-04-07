@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * A replication policy that replicates the Secret payload without any restrictions.
- * 
  */
 public final class AutomaticResponse extends io.pulumi.resources.InvokeArgs {
 

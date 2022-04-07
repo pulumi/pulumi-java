@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * **Cloud Audit Logging**: Spec for Audit Logging Allowlisting.
- * 
  */
 public final class CloudAuditLoggingFeatureSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class CloudAuditLoggingFeatureSpecArgs extends io.pulumi.resources.
 
     /**
      * Service account that should be allowlisted to send the audit logs; eg cloudauditlogging@gcp-project.iam.gserviceaccount.com. These accounts must already exist, but do not need to have any permissions granted to them. The customer's entitlements will be checked prior to allowlisting (i.e. the customer must be an Anthos customer.)
-     * 
      */
     @Import(name="allowlistedServiceAccounts")
       private final @Nullable Output<List<String>> allowlistedServiceAccounts;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A deb package file. dpkg packages only support INSTALLED state.
- * 
  */
 public final class OSPolicyResourcePackageResourceDebResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class OSPolicyResourcePackageResourceDebResponse extends io.pulumi.
 
     /**
      * Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update && apt-get -y install package.deb`
-     * 
      */
     @Import(name="pullDeps", required=true)
       private final Boolean pullDeps;
@@ -30,7 +28,6 @@ public final class OSPolicyResourcePackageResourceDebResponse extends io.pulumi.
 
     /**
      * A deb package.
-     * 
      */
     @Import(name="source", required=true)
       private final OSPolicyResourceFileResponse source;

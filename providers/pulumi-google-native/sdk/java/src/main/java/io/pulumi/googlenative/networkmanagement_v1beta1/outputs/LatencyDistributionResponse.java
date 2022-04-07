@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class LatencyDistributionResponse {
     /**
      * Representative latency percentiles.
-     * 
      */
     private final List<LatencyPercentileResponse> latencyPercentiles;
 
@@ -23,7 +22,6 @@ public final class LatencyDistributionResponse {
 
     /**
      * Representative latency percentiles.
-     * 
     */
     public List<LatencyPercentileResponse> getLatencyPercentiles() {
         return this.latencyPercentiles;

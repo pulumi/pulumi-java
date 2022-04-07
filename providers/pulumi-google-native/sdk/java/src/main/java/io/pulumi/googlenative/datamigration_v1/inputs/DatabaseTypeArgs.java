@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A message defining the database engine and provider.
- * 
  */
 public final class DatabaseTypeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DatabaseTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The database engine.
-     * 
      */
     @Import(name="engine")
       private final @Nullable Output<DatabaseTypeEngine> engine;
@@ -32,7 +30,6 @@ public final class DatabaseTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The database provider.
-     * 
      */
     @Import(name="provider")
       private final @Nullable Output<DatabaseTypeProvider> provider;

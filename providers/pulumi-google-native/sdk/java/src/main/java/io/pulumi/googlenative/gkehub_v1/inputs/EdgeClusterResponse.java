@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * EdgeCluster contains information specific to Google Edge Clusters.
- * 
  */
 public final class EdgeClusterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class EdgeClusterResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Immutable. Self-link of the GCP resource for the Edge Cluster. For example: //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
-     * 
      */
     @Import(name="resourceLink", required=true)
       private final String resourceLink;

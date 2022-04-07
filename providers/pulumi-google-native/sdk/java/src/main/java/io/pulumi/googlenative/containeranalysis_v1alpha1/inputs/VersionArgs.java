@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Version contains structured information about the version of the package. For a discussion of this in Debian/Ubuntu: http://serverfault.com/questions/604541/debian-packages-version-convention For a discussion of this in Redhat/Fedora/Centos: http://blog.jasonantman.com/2014/07/how-yum-and-rpm-compare-versions/
- * 
  */
 public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Used to correct mistakes in the version numbering scheme.
-     * 
      */
     @Import(name="epoch")
       private final @Nullable Output<Integer> epoch;
@@ -34,7 +32,6 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether this version is vulnerable, when defining the version bounds. For example, if the minimum version is 2.0, inclusive=true would say 2.0 is vulnerable, while inclusive=false would say it's not
-     * 
      */
     @Import(name="inclusive")
       private final @Nullable Output<Boolean> inclusive;
@@ -45,7 +42,6 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then the other fields are ignored.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<VersionKind> kind;
@@ -56,7 +52,6 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The main part of the version name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -67,7 +62,6 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The iteration of the package build from the above version.
-     * 
      */
     @Import(name="revision")
       private final @Nullable Output<String> revision;

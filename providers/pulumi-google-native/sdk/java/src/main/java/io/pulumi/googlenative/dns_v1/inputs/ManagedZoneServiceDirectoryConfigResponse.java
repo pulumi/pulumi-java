@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Contains information about Service Directory-backed zones.
- * 
  */
 public final class ManagedZoneServiceDirectoryConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class ManagedZoneServiceDirectoryConfigResponse extends io.pulumi.r
 
     /**
      * Contains information about the namespace associated with the zone.
-     * 
      */
     @Import(name="namespace", required=true)
       private final ManagedZoneServiceDirectoryConfigNamespaceResponse namespace;

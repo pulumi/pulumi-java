@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Represents an Amazon Web Services identity provider.
- * 
  */
 public final class AwsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AwsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The AWS account ID.
-     * 
      */
     @Import(name="accountId", required=true)
       private final String accountId;

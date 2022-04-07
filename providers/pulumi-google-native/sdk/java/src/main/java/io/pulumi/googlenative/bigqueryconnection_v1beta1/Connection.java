@@ -15,104 +15,89 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new connection.
- * 
  */
 @ResourceType(type="google-native:bigqueryconnection/v1beta1:Connection")
 public class Connection extends io.pulumi.resources.CustomResource {
     /**
      * Cloud SQL properties.
-     * 
      */
     @Export(name="cloudSql", type=CloudSqlPropertiesResponse.class, parameters={})
     private Output<CloudSqlPropertiesResponse> cloudSql;
 
     /**
      * @return Cloud SQL properties.
-     * 
      */
     public Output<CloudSqlPropertiesResponse> getCloudSql() {
         return this.cloudSql;
     }
     /**
      * The creation timestamp of the connection.
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return The creation timestamp of the connection.
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * User provided description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return User provided description.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * User provided display name for the connection.
-     * 
      */
     @Export(name="friendlyName", type=String.class, parameters={})
     private Output<String> friendlyName;
 
     /**
      * @return User provided display name for the connection.
-     * 
      */
     public Output<String> getFriendlyName() {
         return this.friendlyName;
     }
     /**
      * True, if credential is configured for this connection.
-     * 
      */
     @Export(name="hasCredential", type=Boolean.class, parameters={})
     private Output<Boolean> hasCredential;
 
     /**
      * @return True, if credential is configured for this connection.
-     * 
      */
     public Output<Boolean> getHasCredential() {
         return this.hasCredential;
     }
     /**
      * The last update timestamp of the connection.
-     * 
      */
     @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
      * @return The last update timestamp of the connection.
-     * 
      */
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The resource name of the connection in the form of: `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the connection in the form of: `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
-     * 
      */
     public Output<String> getName() {
         return this.name;

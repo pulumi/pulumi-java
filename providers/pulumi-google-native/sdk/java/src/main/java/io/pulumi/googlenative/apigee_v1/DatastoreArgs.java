@@ -17,7 +17,6 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Datastore Configurations.
-     * 
      */
     @Import(name="datastoreConfig")
       private final @Nullable Output<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig;
@@ -28,7 +27,6 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Display name in UI
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -46,7 +44,6 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Destination storage type. Supported types `gcs` or `bigquery`.
-     * 
      */
     @Import(name="targetType")
       private final @Nullable Output<String> targetType;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for a secret volume. It has the information necessary to fetch the secret value from secret manager and make it available as files mounted at the requested paths within the application container. Secret value is not a part of the configuration. Every filesystem read operation performs a lookup in secret manager to retrieve the secret value.
- * 
  */
 public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The path within the container to mount the secret volume. For example, setting the mount_path as `/etc/secrets` would mount the secret value files under the `/etc/secrets` directory. This directory will also be completely shadowed and unavailable to mount any other secrets. Recommended mount paths: /etc/secrets Restricted mount paths: /cloudsql, /dev/log, /pod, /proc, /var/log
-     * 
      */
     @Import(name="mountPath")
       private final @Nullable Output<String> mountPath;
@@ -33,7 +31,6 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function's project assuming that the secret exists in the same project as of the function.
-     * 
      */
     @Import(name="project")
       private final @Nullable Output<String> project;
@@ -44,7 +41,6 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the secret in secret manager (not the full resource name).
-     * 
      */
     @Import(name="secret")
       private final @Nullable Output<String> secret;
@@ -55,7 +51,6 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of secret versions to mount for this secret. If empty, the `latest` version of the secret will be made available in a file named after the secret under the mount point.
-     * 
      */
     @Import(name="versions")
       private final @Nullable Output<List<SecretVersionArgs>> versions;

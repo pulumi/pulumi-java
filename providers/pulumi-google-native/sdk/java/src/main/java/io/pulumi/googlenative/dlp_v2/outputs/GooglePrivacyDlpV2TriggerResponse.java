@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2TriggerResponse {
     /**
      * For use with hybrid jobs. Jobs must be manually created and finished.
-     * 
      */
     private final GooglePrivacyDlpV2ManualResponse manual;
     /**
      * Create a job on a repeating basis based on the elapse of time.
-     * 
      */
     private final GooglePrivacyDlpV2ScheduleResponse schedule;
 
@@ -31,14 +29,12 @@ public final class GooglePrivacyDlpV2TriggerResponse {
 
     /**
      * For use with hybrid jobs. Jobs must be manually created and finished.
-     * 
     */
     public GooglePrivacyDlpV2ManualResponse getManual() {
         return this.manual;
     }
     /**
      * Create a job on a repeating basis based on the elapse of time.
-     * 
     */
     public GooglePrivacyDlpV2ScheduleResponse getSchedule() {
         return this.schedule;

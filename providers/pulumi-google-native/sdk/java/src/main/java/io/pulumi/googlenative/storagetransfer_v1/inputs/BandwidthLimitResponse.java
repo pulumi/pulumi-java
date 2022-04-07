@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Specifies a bandwidth limit for an agent pool.
- * 
  */
 public final class BandwidthLimitResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class BandwidthLimitResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Bandwidth rate in megabytes per second, distributed across all the agents in the pool.
-     * 
      */
     @Import(name="limitMbps", required=true)
       private final String limitMbps;

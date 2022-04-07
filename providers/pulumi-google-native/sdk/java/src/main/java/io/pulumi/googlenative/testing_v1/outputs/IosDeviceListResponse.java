@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class IosDeviceListResponse {
     /**
      * A list of iOS devices.
-     * 
      */
     private final List<IosDeviceResponse> iosDevices;
 
@@ -23,7 +22,6 @@ public final class IosDeviceListResponse {
 
     /**
      * A list of iOS devices.
-     * 
     */
     public List<IosDeviceResponse> getIosDevices() {
         return this.iosDevices;

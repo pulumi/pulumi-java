@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Add-on configurations for the Apigee organization.
- * 
  */
 public final class GoogleCloudApigeeV1AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends io.pulumi.res
 
     /**
      * Configuration for the Advanced API Ops add-on.
-     * 
      */
     @Import(name="advancedApiOpsConfig", required=true)
       private final GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig;
@@ -32,7 +30,6 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends io.pulumi.res
 
     /**
      * Configuration for the Connectors Platform add-on.
-     * 
      */
     @Import(name="connectorsPlatformConfig", required=true)
       private final GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig;
@@ -43,7 +40,6 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends io.pulumi.res
 
     /**
      * Configuration for the Integration add-on.
-     * 
      */
     @Import(name="integrationConfig", required=true)
       private final GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig;
@@ -54,7 +50,6 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends io.pulumi.res
 
     /**
      * Configuration for the Monetization add-on.
-     * 
      */
     @Import(name="monetizationConfig", required=true)
       private final GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig;

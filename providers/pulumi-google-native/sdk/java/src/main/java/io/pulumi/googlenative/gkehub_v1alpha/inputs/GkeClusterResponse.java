@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * GkeCluster contains information specific to GKE clusters.
- * 
  */
 public final class GkeClusterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GkeClusterResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If cluster_missing is set then it denotes that the GKE cluster no longer exists in the GKE Control Plane.
-     * 
      */
     @Import(name="clusterMissing", required=true)
       private final Boolean clusterMissing;
@@ -30,7 +28,6 @@ public final class GkeClusterResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Immutable. Self-link of the GCP resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal clusters are also supported.
-     * 
      */
     @Import(name="resourceLink", required=true)
       private final String resourceLink;

@@ -16,104 +16,89 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a cluster within an instance. Note that exactly one of Cluster.serve_nodes and Cluster.cluster_config.cluster_autoscaling_config can be set. If serve_nodes is set to non-zero, then the cluster is manually scaled. If cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is enabled.
- * 
  */
 @ResourceType(type="google-native:bigtableadmin/v2:Cluster")
 public class Cluster extends io.pulumi.resources.CustomResource {
     /**
      * Configuration for this cluster.
-     * 
      */
     @Export(name="clusterConfig", type=ClusterConfigResponse.class, parameters={})
     private Output<ClusterConfigResponse> clusterConfig;
 
     /**
      * @return Configuration for this cluster.
-     * 
      */
     public Output<ClusterConfigResponse> getClusterConfig() {
         return this.clusterConfig;
     }
     /**
      * Immutable. The type of storage used by this cluster to serve its parent instance's tables, unless explicitly overridden.
-     * 
      */
     @Export(name="defaultStorageType", type=String.class, parameters={})
     private Output<String> defaultStorageType;
 
     /**
      * @return Immutable. The type of storage used by this cluster to serve its parent instance's tables, unless explicitly overridden.
-     * 
      */
     public Output<String> getDefaultStorageType() {
         return this.defaultStorageType;
     }
     /**
      * Immutable. The encryption configuration for CMEK-protected clusters.
-     * 
      */
     @Export(name="encryptionConfig", type=EncryptionConfigResponse.class, parameters={})
     private Output<EncryptionConfigResponse> encryptionConfig;
 
     /**
      * @return Immutable. The encryption configuration for CMEK-protected clusters.
-     * 
      */
     public Output<EncryptionConfigResponse> getEncryptionConfig() {
         return this.encryptionConfig;
     }
     /**
      * Immutable. The location where this cluster's nodes and storage reside. For best performance, clients should be located as close as possible to this cluster. Currently only zones are supported, so values should be of the form `projects/{project}/locations/{zone}`.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Immutable. The location where this cluster's nodes and storage reside. For best performance, clients should be located as close as possible to this cluster. Currently only zones are supported, so values should be of the form `projects/{project}/locations/{zone}`.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The unique name of the cluster. Values are of the form `projects/{project}/instances/{instance}/clusters/a-z*`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The unique name of the cluster. Values are of the form `projects/{project}/instances/{instance}/clusters/a-z*`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The number of nodes allocated to this cluster. More nodes enable higher throughput and more consistent performance.
-     * 
      */
     @Export(name="serveNodes", type=Integer.class, parameters={})
     private Output<Integer> serveNodes;
 
     /**
      * @return The number of nodes allocated to this cluster. More nodes enable higher throughput and more consistent performance.
-     * 
      */
     public Output<Integer> getServeNodes() {
         return this.serveNodes;
     }
     /**
      * The current state of the cluster.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The current state of the cluster.
-     * 
      */
     public Output<String> getState() {
         return this.state;

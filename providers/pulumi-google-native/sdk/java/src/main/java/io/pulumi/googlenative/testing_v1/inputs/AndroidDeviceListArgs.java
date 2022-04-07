@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A list of Android device configurations in which the test is to be executed.
- * 
  */
 public final class AndroidDeviceListArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AndroidDeviceListArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A list of Android devices.
-     * 
      */
     @Import(name="androidDevices", required=true)
       private final Output<List<AndroidDeviceArgs>> androidDevices;

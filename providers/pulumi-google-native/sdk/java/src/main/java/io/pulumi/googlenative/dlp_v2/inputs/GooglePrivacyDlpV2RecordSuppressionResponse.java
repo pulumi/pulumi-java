@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration to suppress records whose suppression conditions evaluate to true.
- * 
  */
 public final class GooglePrivacyDlpV2RecordSuppressionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GooglePrivacyDlpV2RecordSuppressionResponse extends io.pulumi
 
     /**
      * A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content.
-     * 
      */
     @Import(name="condition", required=true)
       private final GooglePrivacyDlpV2RecordConditionResponse condition;

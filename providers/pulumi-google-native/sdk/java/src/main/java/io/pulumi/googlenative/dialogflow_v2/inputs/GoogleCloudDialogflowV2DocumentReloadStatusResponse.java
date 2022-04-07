@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The status of a reload attempt.
- * 
  */
 public final class GoogleCloudDialogflowV2DocumentReloadStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDialogflowV2DocumentReloadStatusResponse extends i
 
     /**
      * The status of a reload attempt or the initial load.
-     * 
      */
     @Import(name="status", required=true)
       private final GoogleRpcStatusResponse status;
@@ -30,7 +28,6 @@ public final class GoogleCloudDialogflowV2DocumentReloadStatusResponse extends i
 
     /**
      * The time of a reload attempt. This reload may have been triggered automatically or manually and may not have succeeded.
-     * 
      */
     @Import(name="time", required=true)
       private final String time;

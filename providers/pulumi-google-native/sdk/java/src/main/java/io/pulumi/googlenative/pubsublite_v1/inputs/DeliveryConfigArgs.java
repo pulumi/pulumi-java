@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The settings for a subscription's message delivery.
- * 
  */
 public final class DeliveryConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DeliveryConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The DeliveryRequirement for this subscription.
-     * 
      */
     @Import(name="deliveryRequirement")
       private final @Nullable Output<DeliveryConfigDeliveryRequirement> deliveryRequirement;

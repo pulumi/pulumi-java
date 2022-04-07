@@ -11,67 +11,54 @@ import java.util.Objects;
 public final class GetInstanceResult {
     /**
      * Time the instance was created in milliseconds since epoch.
-     * 
      */
     private final String createdAt;
     /**
      * Optional. Description of the instance.
-     * 
      */
     private final String description;
     /**
      * Customer Managed Encryption Key (CMEK) used for disk and volume encryption. Required for Apigee paid subscriptions only. Use the following format: `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)`
-     * 
      */
     private final String diskEncryptionKeyName;
     /**
      * Optional. Display name for the instance.
-     * 
      */
     private final String displayName;
     /**
      * Internal hostname or IP address of the Apigee endpoint used by clients to connect to the service.
-     * 
      */
     private final String host;
     /**
      * Optional. IP range represents the customer-provided CIDR block of length 22 that will be used for the Apigee instance creation. This optional range, if provided, should be freely available as part of larger named range the customer has allocated to the Service Networking peering. If this is not provided, Apigee will automatically request for any available /22 CIDR block from Service Networking. The customer should use this CIDR block for configuring their firewall needs to allow traffic from Apigee. Input format: "a.b.c.d/22", Output format: a.b.c.d/22, e.f.g.h/28"
-     * 
      */
     private final String ipRange;
     /**
      * Time the instance was last modified in milliseconds since epoch.
-     * 
      */
     private final String lastModifiedAt;
     /**
      * Compute Engine location where the instance resides.
-     * 
      */
     private final String location;
     /**
      * Resource ID of the instance. Values must match the regular expression `^a-z{0,30}[a-z\d]$`.
-     * 
      */
     private final String name;
     /**
      * Optional. Size of the CIDR block range that will be reserved by the instance. PAID organizations support `SLASH_16` to `SLASH_20` and defaults to `SLASH_16`. Evaluation organizations support only `SLASH_23`.
-     * 
      */
     private final String peeringCidrRange;
     /**
      * Port number of the exposed Apigee endpoint.
-     * 
      */
     private final String port;
     /**
      * Version of the runtime system running in the instance. The runtime system is the set of components that serve the API Proxy traffic in your Environments.
-     * 
      */
     private final String runtimeVersion;
     /**
      * State of the instance. Values other than `ACTIVE` means the resource is not ready to use.
-     * 
      */
     private final String state;
 
@@ -107,91 +94,78 @@ public final class GetInstanceResult {
 
     /**
      * Time the instance was created in milliseconds since epoch.
-     * 
     */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Optional. Description of the instance.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * Customer Managed Encryption Key (CMEK) used for disk and volume encryption. Required for Apigee paid subscriptions only. Use the following format: `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)`
-     * 
     */
     public String getDiskEncryptionKeyName() {
         return this.diskEncryptionKeyName;
     }
     /**
      * Optional. Display name for the instance.
-     * 
     */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Internal hostname or IP address of the Apigee endpoint used by clients to connect to the service.
-     * 
     */
     public String getHost() {
         return this.host;
     }
     /**
      * Optional. IP range represents the customer-provided CIDR block of length 22 that will be used for the Apigee instance creation. This optional range, if provided, should be freely available as part of larger named range the customer has allocated to the Service Networking peering. If this is not provided, Apigee will automatically request for any available /22 CIDR block from Service Networking. The customer should use this CIDR block for configuring their firewall needs to allow traffic from Apigee. Input format: "a.b.c.d/22", Output format: a.b.c.d/22, e.f.g.h/28"
-     * 
     */
     public String getIpRange() {
         return this.ipRange;
     }
     /**
      * Time the instance was last modified in milliseconds since epoch.
-     * 
     */
     public String getLastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * Compute Engine location where the instance resides.
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource ID of the instance. Values must match the regular expression `^a-z{0,30}[a-z\d]$`.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Optional. Size of the CIDR block range that will be reserved by the instance. PAID organizations support `SLASH_16` to `SLASH_20` and defaults to `SLASH_16`. Evaluation organizations support only `SLASH_23`.
-     * 
     */
     public String getPeeringCidrRange() {
         return this.peeringCidrRange;
     }
     /**
      * Port number of the exposed Apigee endpoint.
-     * 
     */
     public String getPort() {
         return this.port;
     }
     /**
      * Version of the runtime system running in the instance. The runtime system is the set of components that serve the API Proxy traffic in your Environments.
-     * 
     */
     public String getRuntimeVersion() {
         return this.runtimeVersion;
     }
     /**
      * State of the instance. Values other than `ACTIVE` means the resource is not ready to use.
-     * 
     */
     public String getState() {
         return this.state;

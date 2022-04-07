@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Used with unidirectional glossaries.
- * 
  */
 public final class LanguageCodePairArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class LanguageCodePairArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The BCP-47 language code of the input text, for example, "en-US". Expected to be an exact match for GlossaryTerm.language_code.
-     * 
      */
     @Import(name="sourceLanguageCode", required=true)
       private final Output<String> sourceLanguageCode;
@@ -30,7 +28,6 @@ public final class LanguageCodePairArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The BCP-47 language code for translation output, for example, "zh-CN". Expected to be an exact match for GlossaryTerm.language_code.
-     * 
      */
     @Import(name="targetLanguageCode", required=true)
       private final Output<String> targetLanguageCode;

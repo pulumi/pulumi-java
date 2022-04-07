@@ -16,7 +16,6 @@ public final class TagKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. User-assigned description of the TagKey. Must not exceed 256 characters. Read-write.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -27,7 +26,6 @@ public final class TagKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Entity tag which users can pass to prevent race conditions. This field is always set in server responses. See UpdateTagKeyRequest for details.
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -38,7 +36,6 @@ public final class TagKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The resource name for a TagKey. Must be in the format `tagKeys/{tag_key_id}`, where `tag_key_id` is the generated numeric id for the TagKey.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -49,7 +46,6 @@ public final class TagKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The resource name of the new TagKey's parent. Must be of the form `organizations/{org_id}`.
-     * 
      */
     @Import(name="parent")
       private final @Nullable Output<String> parent;
@@ -60,7 +56,6 @@ public final class TagKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The user friendly name for a TagKey. The short name should be unique for TagKeys within the same tag namespace. The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
-     * 
      */
     @Import(name="shortName", required=true)
       private final Output<String> shortName;

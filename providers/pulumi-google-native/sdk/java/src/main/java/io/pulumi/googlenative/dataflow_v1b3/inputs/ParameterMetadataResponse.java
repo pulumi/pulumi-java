@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Metadata for a specific parameter.
- * 
  */
 public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. Additional metadata for describing this parameter.
-     * 
      */
     @Import(name="customMetadata", required=true)
       private final Map<String,String> customMetadata;
@@ -32,7 +30,6 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The help text to display for the parameter.
-     * 
      */
     @Import(name="helpText", required=true)
       private final String helpText;
@@ -43,7 +40,6 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. Whether the parameter is optional. Defaults to false.
-     * 
      */
     @Import(name="isOptional", required=true)
       private final Boolean isOptional;
@@ -54,7 +50,6 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The label to display for the parameter.
-     * 
      */
     @Import(name="label", required=true)
       private final String label;
@@ -65,7 +60,6 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the parameter.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -76,7 +70,6 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. The type of the parameter. Used for selecting input picker.
-     * 
      */
     @Import(name="paramType", required=true)
       private final String paramType;
@@ -87,7 +80,6 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. Regexes that the parameter must match.
-     * 
      */
     @Import(name="regexes", required=true)
       private final List<String> regexes;

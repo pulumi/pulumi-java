@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Custom information type provided by the user. Used to find domain-specific sensitive information configurable to the data in question.
- * 
  */
 public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
 
     /**
      * Set of detection rules to apply to all findings of this CustomInfoType. Rules are applied in order that they are specified. Not supported for the `surrogate_type` CustomInfoType.
-     * 
      */
     @Import(name="detectionRules")
       private final @Nullable Output<List<GooglePrivacyDlpV2DetectionRuleArgs>> detectionRules;
@@ -39,7 +37,6 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
 
     /**
      * A list of phrases to detect as a CustomInfoType.
-     * 
      */
     @Import(name="dictionary")
       private final @Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary;
@@ -50,7 +47,6 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
 
     /**
      * If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
-     * 
      */
     @Import(name="exclusionType")
       private final @Nullable Output<GooglePrivacyDlpV2CustomInfoTypeExclusionType> exclusionType;
@@ -61,7 +57,6 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
 
     /**
      * CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in `InspectContent.info_types` list then the name is treated as a custom info type.
-     * 
      */
     @Import(name="infoType")
       private final @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType;
@@ -72,7 +67,6 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
 
     /**
      * Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria specified by the rule. Defaults to `VERY_LIKELY` if not specified.
-     * 
      */
     @Import(name="likelihood")
       private final @Nullable Output<GooglePrivacyDlpV2CustomInfoTypeLikelihood> likelihood;
@@ -83,7 +77,6 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
 
     /**
      * Regular expression based CustomInfoType.
-     * 
      */
     @Import(name="regex")
       private final @Nullable Output<GooglePrivacyDlpV2RegexArgs> regex;
@@ -94,7 +87,6 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
 
     /**
      * Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently supported in `InspectContent`.
-     * 
      */
     @Import(name="storedType")
       private final @Nullable Output<GooglePrivacyDlpV2StoredTypeArgs> storedType;
@@ -105,7 +97,6 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
 
     /**
      * Message for detecting output from deidentification transformations that support reversing.
-     * 
      */
     @Import(name="surrogateType")
       private final @Nullable Output<GooglePrivacyDlpV2SurrogateTypeArgs> surrogateType;

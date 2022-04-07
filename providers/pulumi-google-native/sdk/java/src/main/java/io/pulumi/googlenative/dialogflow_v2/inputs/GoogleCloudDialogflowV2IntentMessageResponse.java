@@ -24,7 +24,6 @@ import java.util.Objects;
 
 /**
  * A rich response message. Corresponds to the intent `Response` field in the Dialogflow console. For more information, see [Rich response messages](https://cloud.google.com/dialogflow/docs/intents-rich-messages).
- * 
  */
 public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -32,7 +31,6 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
 
     /**
      * The basic card response for Actions on Google.
-     * 
      */
     @Import(name="basicCard", required=true)
       private final GoogleCloudDialogflowV2IntentMessageBasicCardResponse basicCard;
@@ -43,7 +41,6 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
 
     /**
      * Browse carousel card for Actions on Google.
-     * 
      */
     @Import(name="browseCarouselCard", required=true)
       private final GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse browseCarouselCard;
@@ -54,7 +51,6 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
 
     /**
      * The card response.
-     * 
      */
     @Import(name="card", required=true)
       private final GoogleCloudDialogflowV2IntentMessageCardResponse card;
@@ -65,7 +61,6 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
 
     /**
      * The carousel card response for Actions on Google.
-     * 
      */
     @Import(name="carouselSelect", required=true)
       private final GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse carouselSelect;
@@ -76,7 +71,6 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
 
     /**
      * The image response.
-     * 
      */
     @Import(name="image", required=true)
       private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
@@ -87,7 +81,6 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
 
     /**
      * The link out suggestion chip for Actions on Google.
-     * 
      */
     @Import(name="linkOutSuggestion", required=true)
       private final GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse linkOutSuggestion;
@@ -98,7 +91,6 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
 
     /**
      * The list card response for Actions on Google.
-     * 
      */
     @Import(name="listSelect", required=true)
       private final GoogleCloudDialogflowV2IntentMessageListSelectResponse listSelect;
@@ -109,7 +101,6 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
 
     /**
      * The media content card for Actions on Google.
-     * 
      */
     @Import(name="mediaContent", required=true)
       private final GoogleCloudDialogflowV2IntentMessageMediaContentResponse mediaContent;
@@ -120,7 +111,6 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
 
     /**
      * A custom platform-specific response.
-     * 
      */
     @Import(name="payload", required=true)
       private final Map<String,String> payload;
@@ -131,7 +121,6 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
 
     /**
      * Optional. The platform that this message is intended for.
-     * 
      */
     @Import(name="platform", required=true)
       private final String platform;
@@ -142,7 +131,6 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
 
     /**
      * The quick replies response.
-     * 
      */
     @Import(name="quickReplies", required=true)
       private final GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse quickReplies;
@@ -153,7 +141,6 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
 
     /**
      * The voice and text-only responses for Actions on Google.
-     * 
      */
     @Import(name="simpleResponses", required=true)
       private final GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse simpleResponses;
@@ -164,7 +151,6 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
 
     /**
      * The suggestion chips for Actions on Google.
-     * 
      */
     @Import(name="suggestions", required=true)
       private final GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions;
@@ -175,7 +161,6 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
 
     /**
      * Table card for Actions on Google.
-     * 
      */
     @Import(name="tableCard", required=true)
       private final GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard;
@@ -186,7 +171,6 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
 
     /**
      * The text response.
-     * 
      */
     @Import(name="text", required=true)
       private final GoogleCloudDialogflowV2IntentMessageTextResponse text;

@@ -14,77 +14,66 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
- * Create a License resource in the specified project. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
- * 
+ * Create a License resource in the specified project. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images. 
  */
 @ResourceType(type="google-native:compute/beta:License")
 public class License extends io.pulumi.resources.CustomResource {
     /**
      * Creation timestamp in RFC3339 text format.
-     * 
      */
     @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
      * @return Creation timestamp in RFC3339 text format.
-     * 
      */
     public Output<String> getCreationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * An optional textual description of the resource; provided by the client when the resource is created.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return An optional textual description of the resource; provided by the client when the resource is created.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Type of resource. Always compute#license for licenses.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return Type of resource. Always compute#license for licenses.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * The unique code used to attach this license to images, snapshots, and disks.
-     * 
      */
     @Export(name="licenseCode", type=String.class, parameters={})
     private Output<String> licenseCode;
 
     /**
      * @return The unique code used to attach this license to images, snapshots, and disks.
-     * 
      */
     public Output<String> getLicenseCode() {
         return this.licenseCode;
     }
     /**
      * Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -97,28 +86,24 @@ public class License extends io.pulumi.resources.CustomResource {
     }
     /**
      * Server-defined URL for the resource.
-     * 
      */
     @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
      * @return Server-defined URL for the resource.
-     * 
      */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
     /**
      * If false, licenses will not be copied from the source resource when creating an image from a disk, disk from snapshot, or snapshot from disk.
-     * 
      */
     @Export(name="transferable", type=Boolean.class, parameters={})
     private Output<Boolean> transferable;
 
     /**
      * @return If false, licenses will not be copied from the source resource when creating an image from a disk, disk from snapshot, or snapshot from disk.
-     * 
      */
     public Output<Boolean> getTransferable() {
         return this.transferable;

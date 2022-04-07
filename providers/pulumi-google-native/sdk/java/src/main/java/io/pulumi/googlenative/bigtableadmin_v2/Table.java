@@ -15,76 +15,65 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new table in the specified instance. The table can be created with a full set of initial column families, specified in the request.
- * 
  */
 @ResourceType(type="google-native:bigtableadmin/v2:Table")
 public class Table extends io.pulumi.resources.CustomResource {
     /**
      * Map from cluster ID to per-cluster table state. If it could not be determined whether or not the table has data in a particular cluster (for example, if its zone is unavailable), then there will be an entry for the cluster with UNKNOWN `replication_status`. Views: `REPLICATION_VIEW`, `ENCRYPTION_VIEW`, `FULL`
-     * 
      */
     @Export(name="clusterStates", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> clusterStates;
 
     /**
      * @return Map from cluster ID to per-cluster table state. If it could not be determined whether or not the table has data in a particular cluster (for example, if its zone is unavailable), then there will be an entry for the cluster with UNKNOWN `replication_status`. Views: `REPLICATION_VIEW`, `ENCRYPTION_VIEW`, `FULL`
-     * 
      */
     public Output<Map<String,String>> getClusterStates() {
         return this.clusterStates;
     }
     /**
      * The column families configured for this table, mapped by column family ID. Views: `SCHEMA_VIEW`, `FULL`
-     * 
      */
     @Export(name="columnFamilies", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> columnFamilies;
 
     /**
      * @return The column families configured for this table, mapped by column family ID. Views: `SCHEMA_VIEW`, `FULL`
-     * 
      */
     public Output<Map<String,String>> getColumnFamilies() {
         return this.columnFamilies;
     }
     /**
      * Immutable. The granularity (i.e. `MILLIS`) at which timestamps are stored in this table. Timestamps not matching the granularity will be rejected. If unspecified at creation time, the value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.
-     * 
      */
     @Export(name="granularity", type=String.class, parameters={})
     private Output<String> granularity;
 
     /**
      * @return Immutable. The granularity (i.e. `MILLIS`) at which timestamps are stored in this table. Timestamps not matching the granularity will be rejected. If unspecified at creation time, the value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.
-     * 
      */
     public Output<String> getGranularity() {
         return this.granularity;
     }
     /**
      * The unique name of the table. Values are of the form `projects/{project}/instances/{instance}/tables/_a-zA-Z0-9*`. Views: `NAME_ONLY`, `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The unique name of the table. Values are of the form `projects/{project}/instances/{instance}/tables/_a-zA-Z0-9*`. Views: `NAME_ONLY`, `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * If this table was restored from another data source (e.g. a backup), this field will be populated with information about the restore.
-     * 
      */
     @Export(name="restoreInfo", type=RestoreInfoResponse.class, parameters={})
     private Output<RestoreInfoResponse> restoreInfo;
 
     /**
      * @return If this table was restored from another data source (e.g. a backup), this field will be populated with information about the restore.
-     * 
      */
     public Output<RestoreInfoResponse> getRestoreInfo() {
         return this.restoreInfo;

@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * URL pattern and description of how the URL should be handled. App Engine can handle URLs by executing application code or by serving static files uploaded with the version, such as images, CSS, or JavaScript.
- * 
  */
 public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Uses API Endpoints to handle requests.
-     * 
      */
     @Import(name="apiEndpoint")
       private final @Nullable Output<ApiEndpointHandlerArgs> apiEndpoint;
@@ -38,7 +36,6 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Action to take when users access resources that require authentication. Defaults to redirect.
-     * 
      */
     @Import(name="authFailAction")
       private final @Nullable Output<UrlMapAuthFailAction> authFailAction;
@@ -49,7 +46,6 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Level of login required to access this resource. Not supported for Node.js in the App Engine standard environment.
-     * 
      */
     @Import(name="login")
       private final @Nullable Output<UrlMapLogin> login;
@@ -60,7 +56,6 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * 30x code to use when performing redirects for the secure field. Defaults to 302.
-     * 
      */
     @Import(name="redirectHttpResponseCode")
       private final @Nullable Output<UrlMapRedirectHttpResponseCode> redirectHttpResponseCode;
@@ -71,7 +66,6 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Executes a script to handle the requests that match this URL pattern. Only the auto value is supported for Node.js in the App Engine standard environment, for example "script": "auto".
-     * 
      */
     @Import(name="script")
       private final @Nullable Output<ScriptHandlerArgs> script;
@@ -82,7 +76,6 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Security (HTTPS) enforcement for this URL.
-     * 
      */
     @Import(name="securityLevel")
       private final @Nullable Output<UrlMapSecurityLevel> securityLevel;
@@ -93,7 +86,6 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Returns the contents of a file, such as an image, as the response.
-     * 
      */
     @Import(name="staticFiles")
       private final @Nullable Output<StaticFilesHandlerArgs> staticFiles;
@@ -104,7 +96,6 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings. All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
-     * 
      */
     @Import(name="urlRegex")
       private final @Nullable Output<String> urlRegex;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a target of an invocation over HTTP.
- * 
  */
 public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
-     * 
      */
     @Import(name="cloudRunService")
       private final @Nullable Output<CloudRunServiceArgs> cloudRunService;

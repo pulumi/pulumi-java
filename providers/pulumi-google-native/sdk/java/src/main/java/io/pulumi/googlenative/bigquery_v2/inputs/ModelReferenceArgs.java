@@ -16,7 +16,6 @@ public final class ModelReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * [Required] The ID of the dataset containing this model.
-     * 
      */
     @Import(name="datasetId")
       private final @Nullable Output<String> datasetId;
@@ -27,7 +26,6 @@ public final class ModelReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * [Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
-     * 
      */
     @Import(name="modelId")
       private final @Nullable Output<String> modelId;
@@ -38,7 +36,6 @@ public final class ModelReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * [Required] The ID of the project containing this model.
-     * 
      */
     @Import(name="project")
       private final @Nullable Output<String> project;

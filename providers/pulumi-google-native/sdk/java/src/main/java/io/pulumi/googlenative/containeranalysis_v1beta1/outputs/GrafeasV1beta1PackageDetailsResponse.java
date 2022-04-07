@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GrafeasV1beta1PackageDetailsResponse {
     /**
      * Where the package was installed.
-     * 
      */
     private final InstallationResponse installation;
 
@@ -22,7 +21,6 @@ public final class GrafeasV1beta1PackageDetailsResponse {
 
     /**
      * Where the package was installed.
-     * 
     */
     public InstallationResponse getInstallation() {
         return this.installation;

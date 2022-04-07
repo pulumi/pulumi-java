@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class DSSEHintResponse {
     /**
      * The human readable name of this attestation authority, for example "cloudbuild-prod".
-     * 
      */
     private final String humanReadableName;
 
@@ -22,7 +21,6 @@ public final class DSSEHintResponse {
 
     /**
      * The human readable name of this attestation authority, for example "cloudbuild-prod".
-     * 
     */
     public String getHumanReadableName() {
         return this.humanReadableName;

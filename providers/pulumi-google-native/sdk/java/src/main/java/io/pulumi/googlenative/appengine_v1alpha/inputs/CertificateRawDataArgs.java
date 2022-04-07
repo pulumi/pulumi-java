@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * An SSL certificate obtained from a certificate authority.
- * 
  */
 public final class CertificateRawDataArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CertificateRawDataArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Unencrypted PEM encoded RSA private key. This field is set once on certificate creation and then encrypted. The key size must be 2048 bits or fewer. Must include the header and footer. Example: -----BEGIN RSA PRIVATE KEY----- -----END RSA PRIVATE KEY----- @InputOnly
-     * 
      */
     @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
@@ -30,8 +28,7 @@ public final class CertificateRawDataArgs extends io.pulumi.resources.ResourceAr
     }
 
     /**
-     * PEM encoded x.509 public key certificate. This field is set once on certificate creation. Must include the header and footer. Example: -----BEGIN CERTIFICATE----- -----END CERTIFICATE-----
-     * 
+     * PEM encoded x.509 public key certificate. This field is set once on certificate creation. Must include the header and footer. Example: -----BEGIN CERTIFICATE----- -----END CERTIFICATE----- 
      */
     @Import(name="publicCertificate")
       private final @Nullable Output<String> publicCertificate;

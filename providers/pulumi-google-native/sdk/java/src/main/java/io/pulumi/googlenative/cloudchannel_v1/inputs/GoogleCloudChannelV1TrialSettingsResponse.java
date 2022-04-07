@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Settings for trial offers.
- * 
  */
 public final class GoogleCloudChannelV1TrialSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudChannelV1TrialSettingsResponse extends io.pulumi.r
 
     /**
      * Date when the trial ends. The value is in milliseconds using the UNIX Epoch format. See an example [Epoch converter](https://www.epochconverter.com).
-     * 
      */
     @Import(name="endTime", required=true)
       private final String endTime;
@@ -30,7 +28,6 @@ public final class GoogleCloudChannelV1TrialSettingsResponse extends io.pulumi.r
 
     /**
      * Determines if the entitlement is in a trial or not: * `true` - The entitlement is in trial. * `false` - The entitlement is not in trial.
-     * 
      */
     @Import(name="trial", required=true)
       private final Boolean trial;

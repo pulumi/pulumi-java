@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class OSPolicyResourcePackageResourceGooGetResponse {
     /**
      * Package name.
-     * 
      */
     private final String name;
 
@@ -22,7 +21,6 @@ public final class OSPolicyResourcePackageResourceGooGetResponse {
 
     /**
      * Package name.
-     * 
     */
     public String getName() {
         return this.name;

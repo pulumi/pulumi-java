@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * NetworkConfig reports the relative names of network & subnetwork.
- * 
  */
 public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
-     * 
      */
     @Import(name="datapathProvider")
       private final @Nullable Output<NetworkConfigDatapathProvider> datapathProvider;
@@ -36,7 +34,6 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when default_snat_status is disabled. When disabled is set to false, default IP masquerade rules will be applied to the nodes to prevent sNAT on cluster internal traffic.
-     * 
      */
     @Import(name="defaultSnatStatus")
       private final @Nullable Output<DefaultSnatStatusArgs> defaultSnatStatus;
@@ -47,7 +44,6 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * DNSConfig contains clusterDNS config for this cluster.
-     * 
      */
     @Import(name="dnsConfig")
       private final @Nullable Output<DNSConfigArgs> dnsConfig;
@@ -58,7 +54,6 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
-     * 
      */
     @Import(name="enableIntraNodeVisibility")
       private final @Nullable Output<Boolean> enableIntraNodeVisibility;
@@ -69,7 +64,6 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether L4ILB Subsetting is enabled for this cluster.
-     * 
      */
     @Import(name="enableL4ilbSubsetting")
       private final @Nullable Output<Boolean> enableL4ilbSubsetting;
@@ -80,7 +74,6 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4)
-     * 
      */
     @Import(name="privateIpv6GoogleAccess")
       private final @Nullable Output<NetworkConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
@@ -91,7 +84,6 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ServiceExternalIPsConfig specifies if services with externalIPs field are blocked or not.
-     * 
      */
     @Import(name="serviceExternalIpsConfig")
       private final @Nullable Output<ServiceExternalIPsConfigArgs> serviceExternalIpsConfig;

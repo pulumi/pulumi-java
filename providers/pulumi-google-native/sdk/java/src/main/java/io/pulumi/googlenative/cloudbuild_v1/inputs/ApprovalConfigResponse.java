@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * ApprovalConfig describes configuration for manual approval of a build.
- * 
  */
 public final class ApprovalConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ApprovalConfigResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.
-     * 
      */
     @Import(name="approvalRequired", required=true)
       private final Boolean approvalRequired;

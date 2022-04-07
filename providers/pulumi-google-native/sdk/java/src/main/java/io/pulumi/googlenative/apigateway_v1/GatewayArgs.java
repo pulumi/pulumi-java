@@ -17,7 +17,6 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
-     * 
      */
     @Import(name="apiConfig", required=true)
       private final Output<String> apiConfig;
@@ -28,7 +27,6 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Display name.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -46,7 +44,6 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;

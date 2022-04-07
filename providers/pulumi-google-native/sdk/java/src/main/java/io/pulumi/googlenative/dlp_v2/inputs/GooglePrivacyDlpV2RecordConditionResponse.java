@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A condition for determining whether a transformation should be applied to a field.
- * 
  */
 public final class GooglePrivacyDlpV2RecordConditionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GooglePrivacyDlpV2RecordConditionResponse extends io.pulumi.r
 
     /**
      * An expression.
-     * 
      */
     @Import(name="expressions", required=true)
       private final GooglePrivacyDlpV2ExpressionsResponse expressions;

@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * Settings for the frequency and difficulty at which this key triggers captcha challenges. This should only be specified for IntegrationTypes CHECKBOX and INVISIBLE.
-     * 
      */
     @EnumType
     public enum GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreference {
         /**
          * Default type that indicates this enum hasn't been specified.
-         * 
          */
         ChallengeSecurityPreferenceUnspecified("CHALLENGE_SECURITY_PREFERENCE_UNSPECIFIED"),
         /**
          * Key tends to show fewer and easier challenges.
-         * 
          */
         Usability("USABILITY"),
         /**
          * Key tends to show balanced (in amount and difficulty) challenges.
-         * 
          */
         Balance("BALANCE"),
         /**
          * Key tends to show more and harder challenges.
-         * 
          */
         Security("SECURITY");
 

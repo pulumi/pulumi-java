@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for a secret environment variable. It has the information necessary to fetch the secret value from secret manager and expose it as an environment variable. Secret value is not a part of the configuration. Secret values are only fetched when a new clone starts.
- * 
  */
 public final class SecretEnvVarArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SecretEnvVarArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the environment variable.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -31,7 +29,6 @@ public final class SecretEnvVarArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function's project assuming that the secret exists in the same project as of the function.
-     * 
      */
     @Import(name="project")
       private final @Nullable Output<String> project;
@@ -42,7 +39,6 @@ public final class SecretEnvVarArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the secret in secret manager (not the full resource name).
-     * 
      */
     @Import(name="secret")
       private final @Nullable Output<String> secret;
@@ -53,7 +49,6 @@ public final class SecretEnvVarArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Version of the secret (version number or the string 'latest'). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new clones start.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

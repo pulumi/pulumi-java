@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration options for Cloud Armor Adaptive Protection (CAAP).
- * 
  */
 public final class SecurityPolicyAdaptiveProtectionConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SecurityPolicyAdaptiveProtectionConfigArgs extends io.pulumi.
 
     /**
      * If set to true, enables Cloud Armor Machine Learning.
-     * 
      */
     @Import(name="layer7DdosDefenseConfig")
       private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs> layer7DdosDefenseConfig;

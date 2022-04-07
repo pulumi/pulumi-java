@@ -25,107 +25,86 @@ import java.util.Objects;
 public final class GetNoteResult {
     /**
      * A note describing an attestation role.
-     * 
      */
     private final AuthorityResponse attestationAuthority;
     /**
      * A note describing a base image.
-     * 
      */
     private final BasisResponse baseImage;
     /**
      * A note describing build provenance for a verifiable build.
-     * 
      */
     private final BuildResponse build;
     /**
      * The time this note was created. This field can be used as a filter in list requests.
-     * 
      */
     private final String createTime;
     /**
      * A note describing something that can be deployed.
-     * 
      */
     private final DeployableResponse deployable;
     /**
      * A note describing the initial analysis of a resource.
-     * 
      */
     private final DiscoveryResponse discovery;
     /**
      * Time of expiration for this note. Empty if note does not expire.
-     * 
      */
     private final String expirationTime;
     /**
      * A note describing an in-toto link.
-     * 
      */
     private final InTotoResponse intoto;
     /**
      * The type of analysis. This field can be used as a filter in list requests.
-     * 
      */
     private final String kind;
     /**
      * A detailed description of this note.
-     * 
      */
     private final String longDescription;
     /**
      * The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
-     * 
      */
     private final String name;
     /**
      * A note describing a package hosted by various package managers.
-     * 
      */
     private final PackageResponse package_;
     /**
      * Other notes related to this note.
-     * 
      */
     private final List<String> relatedNoteNames;
     /**
      * URLs associated with this note.
-     * 
      */
     private final List<RelatedUrlResponse> relatedUrl;
     /**
      * A note describing a software bill of materials.
-     * 
      */
     private final DocumentNoteResponse sbom;
     /**
      * A one sentence description of this note.
-     * 
      */
     private final String shortDescription;
     /**
      * A note describing an SPDX File.
-     * 
      */
     private final FileNoteResponse spdxFile;
     /**
      * A note describing an SPDX Package.
-     * 
      */
     private final PackageInfoNoteResponse spdxPackage;
     /**
      * A note describing an SPDX File.
-     * 
      */
     private final RelationshipNoteResponse spdxRelationship;
     /**
      * The time this note was last updated. This field can be used as a filter in list requests.
-     * 
      */
     private final String updateTime;
     /**
      * A note describing a package vulnerability.
-     * 
      */
     private final VulnerabilityResponse vulnerability;
 
@@ -177,147 +156,126 @@ public final class GetNoteResult {
 
     /**
      * A note describing an attestation role.
-     * 
     */
     public AuthorityResponse getAttestationAuthority() {
         return this.attestationAuthority;
     }
     /**
      * A note describing a base image.
-     * 
     */
     public BasisResponse getBaseImage() {
         return this.baseImage;
     }
     /**
      * A note describing build provenance for a verifiable build.
-     * 
     */
     public BuildResponse getBuild() {
         return this.build;
     }
     /**
      * The time this note was created. This field can be used as a filter in list requests.
-     * 
     */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * A note describing something that can be deployed.
-     * 
     */
     public DeployableResponse getDeployable() {
         return this.deployable;
     }
     /**
      * A note describing the initial analysis of a resource.
-     * 
     */
     public DiscoveryResponse getDiscovery() {
         return this.discovery;
     }
     /**
      * Time of expiration for this note. Empty if note does not expire.
-     * 
     */
     public String getExpirationTime() {
         return this.expirationTime;
     }
     /**
      * A note describing an in-toto link.
-     * 
     */
     public InTotoResponse getIntoto() {
         return this.intoto;
     }
     /**
      * The type of analysis. This field can be used as a filter in list requests.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * A detailed description of this note.
-     * 
     */
     public String getLongDescription() {
         return this.longDescription;
     }
     /**
      * The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * A note describing a package hosted by various package managers.
-     * 
     */
     public PackageResponse getPackage_() {
         return this.package_;
     }
     /**
      * Other notes related to this note.
-     * 
     */
     public List<String> getRelatedNoteNames() {
         return this.relatedNoteNames;
     }
     /**
      * URLs associated with this note.
-     * 
     */
     public List<RelatedUrlResponse> getRelatedUrl() {
         return this.relatedUrl;
     }
     /**
      * A note describing a software bill of materials.
-     * 
     */
     public DocumentNoteResponse getSbom() {
         return this.sbom;
     }
     /**
      * A one sentence description of this note.
-     * 
     */
     public String getShortDescription() {
         return this.shortDescription;
     }
     /**
      * A note describing an SPDX File.
-     * 
     */
     public FileNoteResponse getSpdxFile() {
         return this.spdxFile;
     }
     /**
      * A note describing an SPDX Package.
-     * 
     */
     public PackageInfoNoteResponse getSpdxPackage() {
         return this.spdxPackage;
     }
     /**
      * A note describing an SPDX File.
-     * 
     */
     public RelationshipNoteResponse getSpdxRelationship() {
         return this.spdxRelationship;
     }
     /**
      * The time this note was last updated. This field can be used as a filter in list requests.
-     * 
     */
     public String getUpdateTime() {
         return this.updateTime;
     }
     /**
      * A note describing a package vulnerability.
-     * 
     */
     public VulnerabilityResponse getVulnerability() {
         return this.vulnerability;

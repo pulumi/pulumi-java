@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration and status of a managed SSL certificate.
- * 
  */
 public final class SslCertificateManagedSslCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SslCertificateManagedSslCertificateArgs extends io.pulumi.res
 
     /**
      * The domains for which a managed SSL certificate will be generated. Each Google-managed SSL certificate supports up to the [maximum number of domains per Google-managed SSL certificate](/load-balancing/docs/quotas#ssl_certificates).
-     * 
      */
     @Import(name="domains")
       private final @Nullable Output<List<String>> domains;

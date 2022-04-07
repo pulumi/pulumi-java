@@ -20,7 +20,6 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The action to take when a rule match is found. Possible values are "ALLOW" or "DENY".
-     * 
      */
     @Import(name="action", required=true)
       private final Output<AuthorizationPolicyAction> action;
@@ -38,7 +37,6 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Optional. Free-text description of the resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -49,7 +47,6 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Optional. Set of label tags associated with the AuthorizationPolicy resource.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -67,7 +64,6 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Name of the AuthorizationPolicy resource. It matches pattern `projects/{project}/locations/{location}/authorizationPolicies/`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -85,7 +81,6 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Optional. List of rules to match. Note that at least one of the rules must match in order for the action specified in the 'action' field to be taken. A rule is a match if there is a matching source and destination. If left blank, the action specified in the `action` field will be applied on every request.
-     * 
      */
     @Import(name="rules")
       private final @Nullable Output<List<RuleArgs>> rules;

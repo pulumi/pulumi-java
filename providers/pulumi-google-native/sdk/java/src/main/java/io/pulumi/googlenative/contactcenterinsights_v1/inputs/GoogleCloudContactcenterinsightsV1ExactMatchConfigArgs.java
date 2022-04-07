@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Exact match configuration.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs extend
 
     /**
      * Whether to consider case sensitivity when performing an exact match.
-     * 
      */
     @Import(name="caseSensitive")
       private final @Nullable Output<Boolean> caseSensitive;

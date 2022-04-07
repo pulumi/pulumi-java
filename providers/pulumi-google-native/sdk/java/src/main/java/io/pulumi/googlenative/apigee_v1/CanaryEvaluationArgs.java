@@ -16,7 +16,6 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The stable version that is serving requests.
-     * 
      */
     @Import(name="control", required=true)
       private final Output<String> control;
@@ -27,7 +26,6 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * End time for the evaluation's analysis.
-     * 
      */
     @Import(name="endTime", required=true)
       private final Output<String> endTime;
@@ -45,7 +43,6 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Labels used to filter the metrics used for a canary evaluation.
-     * 
      */
     @Import(name="metricLabels", required=true)
       private final Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels;
@@ -63,7 +60,6 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Start time for the canary evaluation's analysis.
-     * 
      */
     @Import(name="startTime", required=true)
       private final Output<String> startTime;
@@ -74,7 +70,6 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The newer version that is serving requests.
-     * 
      */
     @Import(name="treatment", required=true)
       private final Output<String> treatment;

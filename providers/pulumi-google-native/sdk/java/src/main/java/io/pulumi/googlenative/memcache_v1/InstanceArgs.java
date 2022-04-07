@@ -23,7 +23,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The full name of the Google Compute Engine [network](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. If left unspecified, the `default` network will be used.
-     * 
      */
     @Import(name="authorizedNetwork")
       private final @Nullable Output<String> authorizedNetwork;
@@ -34,7 +33,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User provided name for the instance, which is only used for display purposes. Cannot be more than 80 characters.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -52,7 +50,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of messages that describe the current state of the Memcached instance.
-     * 
      */
     @Import(name="instanceMessages")
       private final @Nullable Output<List<InstanceMessageArgs>> instanceMessages;
@@ -63,7 +60,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -81,7 +77,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The major version of Memcached software. If not provided, latest supported version will be used. Currently the latest supported major version is `MEMCACHE_1_5`. The minor version will be automatically determined by our system based on the latest supported minor version.
-     * 
      */
     @Import(name="memcacheVersion")
       private final @Nullable Output<InstanceMemcacheVersion> memcacheVersion;
@@ -92,7 +87,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unique name of the resource in this scope including project and location using the form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached instances are managed and addressed at the regional level so `location_id` here refers to a Google Cloud region; however, users may choose which zones Memcached nodes should be provisioned in within an instance. Refer to zones field for more details.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -103,7 +97,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration for Memcached nodes.
-     * 
      */
     @Import(name="nodeConfig", required=true)
       private final Output<NodeConfigArgs> nodeConfig;
@@ -114,7 +107,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Number of nodes in the Memcached instance.
-     * 
      */
     @Import(name="nodeCount", required=true)
       private final Output<Integer> nodeCount;
@@ -125,7 +117,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User defined parameters to apply to the memcached process on each node.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<MemcacheParametersArgs> parameters;
@@ -143,7 +134,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Zones in which Memcached nodes should be provisioned. Memcached nodes will be equally distributed across these zones. If not provided, the service will by default create nodes in all zones in the region for the instance.
-     * 
      */
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;

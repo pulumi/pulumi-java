@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A unit of data that is returned by the DNS servers.
- * 
  */
 public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -30,7 +29,6 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * For example, www.example.com.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -41,7 +39,6 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.
-     * 
      */
     @Import(name="routingPolicy")
       private final @Nullable Output<RRSetRoutingPolicyArgs> routingPolicy;
@@ -52,7 +49,6 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
-     * 
      */
     @Import(name="rrdatas")
       private final @Nullable Output<List<String>> rrdatas;
@@ -63,7 +59,6 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * As defined in RFC 4034 (section 3.2).
-     * 
      */
     @Import(name="signatureRrdatas")
       private final @Nullable Output<List<String>> signatureRrdatas;
@@ -74,7 +69,6 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Number of seconds that this ResourceRecordSet can be cached by resolvers.
-     * 
      */
     @Import(name="ttl")
       private final @Nullable Output<Integer> ttl;
@@ -85,7 +79,6 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The identifier of a supported record type. See the list of Supported DNS record types.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

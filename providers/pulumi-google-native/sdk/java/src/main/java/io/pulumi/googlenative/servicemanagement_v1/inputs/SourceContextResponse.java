@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * `SourceContext` represents information about the source of a protobuf element, like the file in which it is defined.
- * 
  */
 public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The path-qualified name of the .proto file that contained the associated protobuf element. For example: `"google/protobuf/source_context.proto"`.
-     * 
      */
     @Import(name="fileName", required=true)
       private final String fileName;

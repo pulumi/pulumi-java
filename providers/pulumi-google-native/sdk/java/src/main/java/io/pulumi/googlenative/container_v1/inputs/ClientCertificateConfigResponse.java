@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration for client certificates on the cluster.
- * 
  */
 public final class ClientCertificateConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ClientCertificateConfigResponse extends io.pulumi.resources.I
 
     /**
      * Issue a client certificate.
-     * 
      */
     @Import(name="issueClientCertificate", required=true)
       private final Boolean issueClientCertificate;

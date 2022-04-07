@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A quasi-identifier column has a custom_tag, used to know which column in the data corresponds to which column in the statistical model.
- * 
  */
 public final class GooglePrivacyDlpV2QuasiIdentifierFieldArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldArgs extends io.pulumi.
 
     /**
      * A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary table that contains statistical information on the possible values of this column (below).
-     * 
      */
     @Import(name="customTag")
       private final @Nullable Output<String> customTag;
@@ -32,7 +30,6 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldArgs extends io.pulumi.
 
     /**
      * Identifies the column.
-     * 
      */
     @Import(name="field")
       private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;

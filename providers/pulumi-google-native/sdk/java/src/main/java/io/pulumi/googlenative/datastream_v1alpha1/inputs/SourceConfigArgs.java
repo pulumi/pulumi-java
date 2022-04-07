@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration of the stream source.
- * 
  */
 public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * MySQL data source configuration
-     * 
      */
     @Import(name="mysqlSourceConfig")
       private final @Nullable Output<MysqlSourceConfigArgs> mysqlSourceConfig;
@@ -33,7 +31,6 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Oracle data source configuration
-     * 
      */
     @Import(name="oracleSourceConfig")
       private final @Nullable Output<OracleSourceConfigArgs> oracleSourceConfig;
@@ -44,7 +41,6 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Source connection profile identifier.
-     * 
      */
     @Import(name="sourceConnectionProfileName", required=true)
       private final Output<String> sourceConnectionProfileName;

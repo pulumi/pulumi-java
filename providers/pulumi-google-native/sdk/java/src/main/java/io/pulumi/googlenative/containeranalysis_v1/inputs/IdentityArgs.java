@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The unique identifier of the update.
- * 
  */
 public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The revision number of the update.
-     * 
      */
     @Import(name="revision")
       private final @Nullable Output<Integer> revision;
@@ -32,7 +30,6 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The revision independent identifier of the update.
-     * 
      */
     @Import(name="updateId")
       private final @Nullable Output<String> updateId;

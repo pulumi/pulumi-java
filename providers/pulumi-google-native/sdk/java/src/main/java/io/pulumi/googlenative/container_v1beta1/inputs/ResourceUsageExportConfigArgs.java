@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for exporting cluster resource usages.
- * 
  */
 public final class ResourceUsageExportConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ResourceUsageExportConfigArgs extends io.pulumi.resources.Res
 
     /**
      * Configuration to use BigQuery as usage export destination.
-     * 
      */
     @Import(name="bigqueryDestination")
       private final @Nullable Output<BigQueryDestinationArgs> bigqueryDestination;
@@ -33,7 +31,6 @@ public final class ResourceUsageExportConfigArgs extends io.pulumi.resources.Res
 
     /**
      * Configuration to enable resource consumption metering.
-     * 
      */
     @Import(name="consumptionMeteringConfig")
       private final @Nullable Output<ConsumptionMeteringConfigArgs> consumptionMeteringConfig;
@@ -44,7 +41,6 @@ public final class ResourceUsageExportConfigArgs extends io.pulumi.resources.Res
 
     /**
      * Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created in the cluster to meter network egress traffic.
-     * 
      */
     @Import(name="enableNetworkEgressMetering")
       private final @Nullable Output<Boolean> enableNetworkEgressMetering;

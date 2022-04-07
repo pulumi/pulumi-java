@@ -24,7 +24,6 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the bandwidth limit details. If this field is unspecified, the default value is set as 'No Limit'.
-     * 
      */
     @Import(name="bandwidthLimit")
       private final @Nullable Output<BandwidthLimitArgs> bandwidthLimit;
@@ -35,7 +34,6 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the client-specified AgentPool description.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -46,7 +44,6 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies a unique string that identifies the agent pool. Format: `projects/{project_id}/agentPools/{agent_pool_id}`
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

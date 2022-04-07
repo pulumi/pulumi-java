@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Schedule for an instance operation.
- * 
  */
 public final class ResourcePolicyInstanceSchedulePolicyScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleResponse extends 
 
     /**
      * Specifies the frequency for the operation, using the unix-cron format.
-     * 
      */
     @Import(name="schedule", required=true)
       private final String schedule;

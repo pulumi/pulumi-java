@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse {
     /**
      * The channel of the audio that the data applies to.
-     * 
      */
     private final Integer channelTag;
     /**
      * Data specifying sentiment.
-     * 
      */
     private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData;
 
@@ -31,14 +29,12 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
 
     /**
      * The channel of the audio that the data applies to.
-     * 
     */
     public Integer getChannelTag() {
         return this.channelTag;
     }
     /**
      * Data specifying sentiment.
-     * 
     */
     public GoogleCloudContactcenterinsightsV1SentimentDataResponse getSentimentData() {
         return this.sentimentData;

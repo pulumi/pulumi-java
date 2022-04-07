@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A message describing the state of a particular execution stage.
- * 
  */
 public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The time at which the stage transitioned to this state.
-     * 
      */
     @Import(name="currentStateTime")
       private final @Nullable Output<String> currentStateTime;
@@ -32,7 +30,6 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the execution stage.
-     * 
      */
     @Import(name="executionStageName")
       private final @Nullable Output<String> executionStageName;
@@ -43,7 +40,6 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Executions stage states allow the same set of values as JobState.
-     * 
      */
     @Import(name="executionStageState")
       private final @Nullable Output<ExecutionStageStateExecutionStageState> executionStageState;

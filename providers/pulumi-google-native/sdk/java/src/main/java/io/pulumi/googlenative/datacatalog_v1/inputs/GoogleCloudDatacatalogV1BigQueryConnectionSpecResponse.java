@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Specification for the BigQuery connection.
- * 
  */
 public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
 
     /**
      * Specification for the BigQuery connection to a Cloud SQL instance.
-     * 
      */
     @Import(name="cloudSql", required=true)
       private final GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql;
@@ -31,7 +29,6 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
 
     /**
      * The type of the BigQuery connection.
-     * 
      */
     @Import(name="connectionType", required=true)
       private final String connectionType;
@@ -42,7 +39,6 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
 
     /**
      * True if there are credentials attached to the BigQuery connection; false otherwise.
-     * 
      */
     @Import(name="hasCredential", required=true)
       private final Boolean hasCredential;

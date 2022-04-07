@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A note describing an attestation
- * 
  */
 public final class DSSEAttestationNoteResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DSSEAttestationNoteResponse extends io.pulumi.resources.Invok
 
     /**
      * DSSEHint hints at the purpose of the attestation authority.
-     * 
      */
     @Import(name="hint", required=true)
       private final DSSEHintResponse hint;

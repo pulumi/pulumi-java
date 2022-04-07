@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class NormalizedVertexResponse {
     /**
      * X coordinate.
-     * 
      */
     private final Double x;
     /**
      * Y coordinate.
-     * 
      */
     private final Double y;
 
@@ -30,14 +28,12 @@ public final class NormalizedVertexResponse {
 
     /**
      * X coordinate.
-     * 
     */
     public Double getX() {
         return this.x;
     }
     /**
      * Y coordinate.
-     * 
     */
     public Double getY() {
         return this.y;

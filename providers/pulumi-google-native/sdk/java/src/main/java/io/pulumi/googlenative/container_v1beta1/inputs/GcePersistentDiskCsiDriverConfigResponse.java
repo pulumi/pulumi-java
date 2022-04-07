@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration for the Compute Engine PD CSI driver.
- * 
  */
 public final class GcePersistentDiskCsiDriverConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GcePersistentDiskCsiDriverConfigResponse extends io.pulumi.re
 
     /**
      * Whether the Compute Engine PD CSI driver is enabled for this cluster.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

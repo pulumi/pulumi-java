@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A set of Display Device options
- * 
  */
 public final class DisplayDeviceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DisplayDeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Defines whether the instance has Display enabled.
-     * 
      */
     @Import(name="enableDisplay")
       private final @Nullable Output<Boolean> enableDisplay;

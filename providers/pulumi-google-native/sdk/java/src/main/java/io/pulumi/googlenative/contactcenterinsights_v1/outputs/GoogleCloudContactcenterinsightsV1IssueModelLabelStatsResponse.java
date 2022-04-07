@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse {
     /**
      * Number of conversations the issue model has analyzed at this point in time.
-     * 
      */
     private final String analyzedConversationsCount;
     /**
      * Statistics on each issue. Key is the issue's resource name.
-     * 
      */
     private final Map<String,String> issueStats;
     /**
      * Number of analyzed conversations for which no issue was applicable at this point in time.
-     * 
      */
     private final String unclassifiedConversationsCount;
 
@@ -38,21 +35,18 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
 
     /**
      * Number of conversations the issue model has analyzed at this point in time.
-     * 
     */
     public String getAnalyzedConversationsCount() {
         return this.analyzedConversationsCount;
     }
     /**
      * Statistics on each issue. Key is the issue's resource name.
-     * 
     */
     public Map<String,String> getIssueStats() {
         return this.issueStats;
     }
     /**
      * Number of analyzed conversations for which no issue was applicable at this point in time.
-     * 
     */
     public String getUnclassifiedConversationsCount() {
         return this.unclassifiedConversationsCount;

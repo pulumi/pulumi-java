@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Volumes mounted within the app container. Only applicable in the App Engine flexible environment.
- * 
  */
 public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Unique name for the volume.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -30,7 +28,6 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Volume size in gigabytes.
-     * 
      */
     @Import(name="sizeGb", required=true)
       private final Double sizeGb;
@@ -41,7 +38,6 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Underlying volume type, e.g. 'tmpfs'.
-     * 
      */
     @Import(name="volumeType", required=true)
       private final String volumeType;

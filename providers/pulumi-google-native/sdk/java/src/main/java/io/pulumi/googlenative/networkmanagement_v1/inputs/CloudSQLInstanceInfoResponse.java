@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * For display only. Metadata associated with a Cloud SQL instance.
- * 
  */
 public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
 
     /**
      * Name of a Cloud SQL instance.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -29,7 +27,6 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
 
     /**
      * External IP address of a Cloud SQL instance.
-     * 
      */
     @Import(name="externalIp", required=true)
       private final String externalIp;
@@ -40,7 +37,6 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
 
     /**
      * Internal IP address of a Cloud SQL instance.
-     * 
      */
     @Import(name="internalIp", required=true)
       private final String internalIp;
@@ -51,7 +47,6 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
 
     /**
      * URI of a Cloud SQL instance network or empty string if the instance does not have one.
-     * 
      */
     @Import(name="networkUri", required=true)
       private final String networkUri;
@@ -62,7 +57,6 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
 
     /**
      * Region in which the Cloud SQL instance is running.
-     * 
      */
     @Import(name="region", required=true)
       private final String region;
@@ -73,7 +67,6 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
 
     /**
      * URI of a Cloud SQL instance.
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;

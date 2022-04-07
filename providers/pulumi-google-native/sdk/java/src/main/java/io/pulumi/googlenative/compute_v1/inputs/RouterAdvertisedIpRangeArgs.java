@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Description-tagged IP ranges for the router to advertise.
- * 
  */
 public final class RouterAdvertisedIpRangeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RouterAdvertisedIpRangeArgs extends io.pulumi.resources.Resou
 
     /**
      * User-specified description for the IP range.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -31,7 +29,6 @@ public final class RouterAdvertisedIpRangeArgs extends io.pulumi.resources.Resou
 
     /**
      * The IP range to advertise. The value must be a CIDR-formatted string.
-     * 
      */
     @Import(name="range")
       private final @Nullable Output<String> range;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * This encapsulates a metric property of the form sum(message_count) where name is message_count and function is sum
- * 
  */
 public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
 
     /**
      * aggregate function
-     * 
      */
     @Import(name="function")
       private final @Nullable Output<String> function;
@@ -31,7 +29,6 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
 
     /**
      * name of the metric
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * POSIX Group definition to represent a group in a POSIX compliant system.
- * 
  */
 public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * GID of the POSIX group.
-     * 
      */
     @Import(name="gid")
       private final @Nullable Output<String> gid;
@@ -31,7 +29,6 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the POSIX group.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -42,7 +39,6 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * System identifier for which group name and gid apply to. If not specified it will default to empty value.
-     * 
      */
     @Import(name="systemId")
       private final @Nullable Output<String> systemId;

@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class UserManagedResponse {
     /**
      * The list of Replicas for this Secret. Cannot be empty.
-     * 
      */
     private final List<ReplicaResponse> replicas;
 
@@ -23,7 +22,6 @@ public final class UserManagedResponse {
 
     /**
      * The list of Replicas for this Secret. Cannot be empty.
-     * 
     */
     public List<ReplicaResponse> getReplicas() {
         return this.replicas;

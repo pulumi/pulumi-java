@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * An MSI package. MSI packages only support INSTALLED state.
- * 
  */
 public final class OSPolicyResourcePackageResourceMSIArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class OSPolicyResourcePackageResourceMSIArgs extends io.pulumi.reso
 
     /**
      * Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<List<String>> properties;
@@ -33,7 +31,6 @@ public final class OSPolicyResourcePackageResourceMSIArgs extends io.pulumi.reso
 
     /**
      * The MSI package.
-     * 
      */
     @Import(name="source", required=true)
       private final Output<OSPolicyResourceFileArgs> source;

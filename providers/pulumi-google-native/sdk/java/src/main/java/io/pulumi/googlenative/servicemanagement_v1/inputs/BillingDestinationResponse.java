@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Configuration of a specific billing destination (Currently only support bill against consumer project).
- * 
  */
 public final class BillingDestinationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class BillingDestinationResponse extends io.pulumi.resources.Invoke
 
     /**
      * Names of the metrics to report to this billing destination. Each name must be defined in Service.metrics section.
-     * 
      */
     @Import(name="metrics", required=true)
       private final List<String> metrics;
@@ -30,7 +28,6 @@ public final class BillingDestinationResponse extends io.pulumi.resources.Invoke
 
     /**
      * The monitored resource type. The type must be defined in Service.monitored_resources section.
-     * 
      */
     @Import(name="monitoredResource", required=true)
       private final String monitoredResource;

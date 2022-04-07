@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class NodeInfoResponse {
     /**
      * Location of the node.
-     * 
      */
     private final String zone;
 
@@ -22,7 +21,6 @@ public final class NodeInfoResponse {
 
     /**
      * Location of the node.
-     * 
     */
     public String getZone() {
         return this.zone;

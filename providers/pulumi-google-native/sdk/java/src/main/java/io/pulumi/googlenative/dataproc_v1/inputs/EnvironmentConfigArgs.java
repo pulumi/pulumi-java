@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Environment configuration for a workload.
- * 
  */
 public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Optional. Execution configuration for a workload.
-     * 
      */
     @Import(name="executionConfig")
       private final @Nullable Output<ExecutionConfigArgs> executionConfig;
@@ -32,7 +30,6 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Optional. Peripherals configuration that workload has access to.
-     * 
      */
     @Import(name="peripheralsConfig")
       private final @Nullable Output<PeripheralsConfigArgs> peripheralsConfig;

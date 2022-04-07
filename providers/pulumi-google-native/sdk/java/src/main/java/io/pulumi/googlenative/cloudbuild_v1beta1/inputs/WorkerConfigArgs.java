@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the configuration to be used for creating workers in the pool.
- * 
  */
 public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Size of the disk attached to the worker, in GB. See [Worker pool config file](https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). Specify a value of up to 1000. If `0` is specified, Cloud Build will use a standard disk size.
-     * 
      */
     @Import(name="diskSizeGb")
       private final @Nullable Output<String> diskSizeGb;
@@ -32,7 +30,6 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Machine type of a worker, such as `n1-standard-1`. See [Worker pool config file](https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). If left blank, Cloud Build will use `n1-standard-1`.
-     * 
      */
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
@@ -43,7 +40,6 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If true, workers are created without any public address, which prevents network egress to public IPs.
-     * 
      */
     @Import(name="noExternalIp")
       private final @Nullable Output<Boolean> noExternalIp;

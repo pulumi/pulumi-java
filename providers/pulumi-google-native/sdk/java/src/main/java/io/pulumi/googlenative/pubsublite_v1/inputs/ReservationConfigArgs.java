@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The settings for this topic's Reservation usage.
- * 
  */
 public final class ReservationConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ReservationConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The Reservation to use for this topic's throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
-     * 
      */
     @Import(name="throughputReservation")
       private final @Nullable Output<String> throughputReservation;

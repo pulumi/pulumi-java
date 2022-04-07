@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class GetInstanceAttachmentResult {
     /**
      * Time the attachment was created in milliseconds since epoch.
-     * 
      */
     private final String createdAt;
     /**
      * ID of the attached environment.
-     * 
      */
     private final String environment;
     /**
      * ID of the attachment.
-     * 
      */
     private final String name;
 
@@ -37,21 +34,18 @@ public final class GetInstanceAttachmentResult {
 
     /**
      * Time the attachment was created in milliseconds since epoch.
-     * 
     */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * ID of the attached environment.
-     * 
     */
     public String getEnvironment() {
         return this.environment;
     }
     /**
      * ID of the attachment.
-     * 
     */
     public String getName() {
         return this.name;

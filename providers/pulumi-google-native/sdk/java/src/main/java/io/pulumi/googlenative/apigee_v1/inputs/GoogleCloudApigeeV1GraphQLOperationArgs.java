@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents the pairing of GraphQL operation types and the GraphQL operation name.
- * 
  */
 public final class GoogleCloudApigeeV1GraphQLOperationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudApigeeV1GraphQLOperationArgs extends io.pulumi.res
 
     /**
      * GraphQL operation name. The name and operation type will be used to apply quotas. If no name is specified, the quota will be applied to all GraphQL operations irrespective of their operation names in the payload.
-     * 
      */
     @Import(name="operation")
       private final @Nullable Output<String> operation;
@@ -32,7 +30,6 @@ public final class GoogleCloudApigeeV1GraphQLOperationArgs extends io.pulumi.res
 
     /**
      * GraphQL operation types. Valid values include `query` or `mutation`. **Note**: Apigee does not currently support `subscription` types.
-     * 
      */
     @Import(name="operationTypes", required=true)
       private final Output<List<String>> operationTypes;

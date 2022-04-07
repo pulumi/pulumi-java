@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The simple response message containing speech or text.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseRespon
 
     /**
      * Optional. The text to display.
-     * 
      */
     @Import(name="displayText", required=true)
       private final String displayText;
@@ -29,7 +27,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseRespon
 
     /**
      * One of text_to_speech or ssml must be provided. Structured spoken response to the user in the SSML format. Mutually exclusive with text_to_speech.
-     * 
      */
     @Import(name="ssml", required=true)
       private final String ssml;
@@ -40,7 +37,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseRespon
 
     /**
      * One of text_to_speech or ssml must be provided. The plain text of the speech output. Mutually exclusive with ssml.
-     * 
      */
     @Import(name="textToSpeech", required=true)
       private final String textToSpeech;

@@ -11,22 +11,18 @@ import java.util.Objects;
 public final class GKEMasterInfoResponse {
     /**
      * URI of a GKE cluster network.
-     * 
      */
     private final String clusterNetworkUri;
     /**
      * URI of a GKE cluster.
-     * 
      */
     private final String clusterUri;
     /**
      * External IP address of a GKE cluster master.
-     * 
      */
     private final String externalIp;
     /**
      * Internal IP address of a GKE cluster master.
-     * 
      */
     private final String internalIp;
 
@@ -44,28 +40,24 @@ public final class GKEMasterInfoResponse {
 
     /**
      * URI of a GKE cluster network.
-     * 
     */
     public String getClusterNetworkUri() {
         return this.clusterNetworkUri;
     }
     /**
      * URI of a GKE cluster.
-     * 
     */
     public String getClusterUri() {
         return this.clusterUri;
     }
     /**
      * External IP address of a GKE cluster master.
-     * 
     */
     public String getExternalIp() {
         return this.externalIp;
     }
     /**
      * Internal IP address of a GKE cluster master.
-     * 
     */
     public String getInternalIp() {
         return this.internalIp;

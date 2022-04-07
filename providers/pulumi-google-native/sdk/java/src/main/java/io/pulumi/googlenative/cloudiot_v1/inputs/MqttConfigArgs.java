@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration of MQTT for a device registry.
- * 
  */
 public final class MqttConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MqttConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.
-     * 
      */
     @Import(name="mqttEnabledState")
       private final @Nullable Output<MqttConfigMqttEnabledState> mqttEnabledState;

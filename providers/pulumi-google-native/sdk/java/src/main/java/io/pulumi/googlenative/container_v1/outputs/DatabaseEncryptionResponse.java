@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class DatabaseEncryptionResponse {
     /**
      * Name of CloudKMS key to use for the encryption of secrets in etcd. Ex. projects/my-project/locations/global/keyRings/my-ring/cryptoKeys/my-key
-     * 
      */
     private final String keyName;
     /**
      * Denotes the state of etcd encryption.
-     * 
      */
     private final String state;
 
@@ -30,14 +28,12 @@ public final class DatabaseEncryptionResponse {
 
     /**
      * Name of CloudKMS key to use for the encryption of secrets in etcd. Ex. projects/my-project/locations/global/keyRings/my-ring/cryptoKeys/my-key
-     * 
     */
     public String getKeyName() {
         return this.keyName;
     }
     /**
      * Denotes the state of etcd encryption.
-     * 
     */
     public String getState() {
         return this.state;

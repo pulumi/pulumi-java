@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class TargetsPresentConditionResponse {
     /**
      * The list of Target names that are missing. For example, projects/{project_id}/locations/{location_name}/targets/{target_name}.
-     * 
      */
     private final List<String> missingTargets;
     /**
      * True if there aren't any missing Targets.
-     * 
      */
     private final Boolean status;
     /**
      * Last time the condition was updated.
-     * 
      */
     private final String updateTime;
 
@@ -39,21 +36,18 @@ public final class TargetsPresentConditionResponse {
 
     /**
      * The list of Target names that are missing. For example, projects/{project_id}/locations/{location_name}/targets/{target_name}.
-     * 
     */
     public List<String> getMissingTargets() {
         return this.missingTargets;
     }
     /**
      * True if there aren't any missing Targets.
-     * 
     */
     public Boolean getStatus() {
         return this.status;
     }
     /**
      * Last time the condition was updated.
-     * 
     */
     public String getUpdateTime() {
         return this.updateTime;

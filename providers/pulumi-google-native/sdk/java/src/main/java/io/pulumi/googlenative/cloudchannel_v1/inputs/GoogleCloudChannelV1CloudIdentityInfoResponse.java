@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Cloud Identity information for the Cloud Channel Customer.
- * 
  */
 public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
 
     /**
      * URI of Customer's Admin console dashboard.
-     * 
      */
     @Import(name="adminConsoleUri", required=true)
       private final String adminConsoleUri;
@@ -31,7 +29,6 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
 
     /**
      * The alternate email.
-     * 
      */
     @Import(name="alternateEmail", required=true)
       private final String alternateEmail;
@@ -42,7 +39,6 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
 
     /**
      * CustomerType indicates verification type needed for using services.
-     * 
      */
     @Import(name="customerType", required=true)
       private final String customerType;
@@ -53,7 +49,6 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
 
     /**
      * Edu information about the customer.
-     * 
      */
     @Import(name="eduData", required=true)
       private final GoogleCloudChannelV1EduDataResponse eduData;
@@ -64,7 +59,6 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
 
     /**
      * Whether the domain is verified. This field is not returned for a Customer's cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK's Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain verification of their resolve Workspace customers.
-     * 
      */
     @Import(name="isDomainVerified", required=true)
       private final Boolean isDomainVerified;
@@ -75,7 +69,6 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
 
     /**
      * Language code.
-     * 
      */
     @Import(name="languageCode", required=true)
       private final String languageCode;
@@ -86,7 +79,6 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
 
     /**
      * Phone number associated with the Cloud Identity.
-     * 
      */
     @Import(name="phoneNumber", required=true)
       private final String phoneNumber;
@@ -97,7 +89,6 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
 
     /**
      * The primary domain name.
-     * 
      */
     @Import(name="primaryDomain", required=true)
       private final String primaryDomain;

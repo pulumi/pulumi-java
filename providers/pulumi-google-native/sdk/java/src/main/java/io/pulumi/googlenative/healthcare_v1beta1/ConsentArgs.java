@@ -20,7 +20,6 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the Consent artifact that contains proof of the end user's consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
-     * 
      */
     @Import(name="consentArtifact", required=true)
       private final Output<String> consentArtifact;
@@ -45,7 +44,6 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Timestamp in UTC of when this Consent is considered expired.
-     * 
      */
     @Import(name="expireTime")
       private final @Nullable Output<String> expireTime;
@@ -63,7 +61,6 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. User-supplied key-value pairs used to organize Consent resources. Metadata keys must: - be between 1 and 63 characters long - have a UTF-8 encoding of maximum 128 bytes - begin with a letter - consist of up to 63 characters including lowercase letters, numeric characters, underscores, and dashes Metadata values must be: - be between 1 and 63 characters long - have a UTF-8 encoding of maximum 128 bytes - consist of up to 63 characters including lowercase letters, numeric characters, underscores, and dashes No more than 64 metadata entries can be associated with a given consent.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
@@ -74,7 +71,6 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. Cannot be changed after creation.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -85,7 +81,6 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Represents a user's consent in terms of the resources that can be accessed and under what conditions.
-     * 
      */
     @Import(name="policies")
       private final @Nullable Output<List<GoogleCloudHealthcareV1beta1ConsentPolicyArgs>> policies;
@@ -103,7 +98,6 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates the current state of this Consent.
-     * 
      */
     @Import(name="state", required=true)
       private final Output<ConsentState> state;
@@ -114,7 +108,6 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Input only. The time to live for this Consent from when it is created.
-     * 
      */
     @Import(name="ttl")
       private final @Nullable Output<String> ttl;
@@ -125,7 +118,6 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User's UUID provided by the client.
-     * 
      */
     @Import(name="userId", required=true)
       private final Output<String> userId;

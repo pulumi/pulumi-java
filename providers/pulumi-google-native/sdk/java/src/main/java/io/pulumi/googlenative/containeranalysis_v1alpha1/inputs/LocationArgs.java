@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An occurrence of a particular package installation found within a system's filesystem. e.g. glibc was found in /var/lib/dpkg/status
- * 
  */
 public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The cpe_uri in [cpe format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
-     * 
      */
     @Import(name="cpeUri")
       private final @Nullable Output<String> cpeUri;
@@ -32,7 +30,6 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The path from which we gathered that this package/version is installed.
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<String> path;
@@ -43,7 +40,6 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The version installed at this location.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<VersionArgs> version;

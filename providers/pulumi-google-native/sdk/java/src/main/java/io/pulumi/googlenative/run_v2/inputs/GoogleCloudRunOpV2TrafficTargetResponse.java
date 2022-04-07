@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Holds a single traffic routing entry for the Service. Allocations can be done to a specific Revision name, or pointing to the latest Ready Revision.
- * 
  */
 public final class GoogleCloudRunOpV2TrafficTargetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse extends io.pulumi.res
 
     /**
      * Specifies percent of the traffic to this Revision. This defaults to zero if unspecified.
-     * 
      */
     @Import(name="percent", required=true)
       private final Integer percent;
@@ -30,7 +28,6 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse extends io.pulumi.res
 
     /**
      * Revision to which to send this portion of traffic, if traffic allocation is by revision.
-     * 
      */
     @Import(name="revision", required=true)
       private final String revision;
@@ -41,7 +38,6 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse extends io.pulumi.res
 
     /**
      * Indicates a string to be part of the URI to exclusively reference this target.
-     * 
      */
     @Import(name="tag", required=true)
       private final String tag;
@@ -52,7 +48,6 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse extends io.pulumi.res
 
     /**
      * The allocation type for this traffic target.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class GoogleCloudApigeeV1PropertyResponse {
     /**
      * The property key
-     * 
      */
     private final String name;
     /**
      * The property value
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class GoogleCloudApigeeV1PropertyResponse {
 
     /**
      * The property key
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The property value
-     * 
     */
     public String getValue() {
         return this.value;

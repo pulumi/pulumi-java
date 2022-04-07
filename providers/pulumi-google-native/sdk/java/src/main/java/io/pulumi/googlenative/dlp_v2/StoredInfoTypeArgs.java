@@ -17,7 +17,6 @@ public final class StoredInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration of the storedInfoType to create.
-     * 
      */
     @Import(name="config", required=true)
       private final Output<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> config;
@@ -42,7 +41,6 @@ public final class StoredInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The storedInfoType ID can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.
-     * 
      */
     @Import(name="storedInfoTypeId")
       private final @Nullable Output<String> storedInfoTypeId;

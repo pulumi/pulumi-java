@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A single property entry in the Properties message.
- * 
  */
 public final class GoogleCloudApigeeV1PropertyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudApigeeV1PropertyArgs extends io.pulumi.resources.R
 
     /**
      * The property key
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class GoogleCloudApigeeV1PropertyArgs extends io.pulumi.resources.R
 
     /**
      * The property value
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

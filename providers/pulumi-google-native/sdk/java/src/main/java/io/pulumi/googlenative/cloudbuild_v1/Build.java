@@ -29,398 +29,341 @@ import javax.annotation.Nullable;
  * Auto-naming is currently not supported for this resource.
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:cloudbuild/v1:Build")
 public class Build extends io.pulumi.resources.CustomResource {
     /**
      * Describes this build's approval configuration, status, and result.
-     * 
      */
     @Export(name="approval", type=BuildApprovalResponse.class, parameters={})
     private Output<BuildApprovalResponse> approval;
 
     /**
      * @return Describes this build's approval configuration, status, and result.
-     * 
      */
     public Output<BuildApprovalResponse> getApproval() {
         return this.approval;
     }
     /**
      * Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
-     * 
      */
     @Export(name="artifacts", type=ArtifactsResponse.class, parameters={})
     private Output<ArtifactsResponse> artifacts;
 
     /**
      * @return Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
-     * 
      */
     public Output<ArtifactsResponse> getArtifacts() {
         return this.artifacts;
     }
     /**
      * Secrets and secret environment variables.
-     * 
      */
     @Export(name="availableSecrets", type=SecretsResponse.class, parameters={})
     private Output<SecretsResponse> availableSecrets;
 
     /**
      * @return Secrets and secret environment variables.
-     * 
      */
     public Output<SecretsResponse> getAvailableSecrets() {
         return this.availableSecrets;
     }
     /**
      * The ID of the `BuildTrigger` that triggered this build, if it was triggered automatically.
-     * 
      */
     @Export(name="buildTriggerId", type=String.class, parameters={})
     private Output<String> buildTriggerId;
 
     /**
      * @return The ID of the `BuildTrigger` that triggered this build, if it was triggered automatically.
-     * 
      */
     public Output<String> getBuildTriggerId() {
         return this.buildTriggerId;
     }
     /**
      * Time at which the request to create the build was received.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return Time at which the request to create the build was received.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Contains information about the build when status=FAILURE.
-     * 
      */
     @Export(name="failureInfo", type=FailureInfoResponse.class, parameters={})
     private Output<FailureInfoResponse> failureInfo;
 
     /**
      * @return Contains information about the build when status=FAILURE.
-     * 
      */
     public Output<FailureInfoResponse> getFailureInfo() {
         return this.failureInfo;
     }
     /**
      * Time at which execution of the build was finished. The difference between finish_time and start_time is the duration of the build's execution.
-     * 
      */
     @Export(name="finishTime", type=String.class, parameters={})
     private Output<String> finishTime;
 
     /**
      * @return Time at which execution of the build was finished. The difference between finish_time and start_time is the duration of the build's execution.
-     * 
      */
     public Output<String> getFinishTime() {
         return this.finishTime;
     }
     /**
      * A list of images to be pushed upon the successful completion of all build steps. The images are pushed using the builder service account's credentials. The digests of the pushed images will be stored in the `Build` resource's results field. If any of the images fail to be pushed, the build status is marked `FAILURE`.
-     * 
      */
     @Export(name="images", type=List.class, parameters={String.class})
     private Output<List<String>> images;
 
     /**
      * @return A list of images to be pushed upon the successful completion of all build steps. The images are pushed using the builder service account's credentials. The digests of the pushed images will be stored in the `Build` resource's results field. If any of the images fail to be pushed, the build status is marked `FAILURE`.
-     * 
      */
     public Output<List<String>> getImages() {
         return this.images;
     }
     /**
      * URL to logs for this build in Google Cloud Console.
-     * 
      */
     @Export(name="logUrl", type=String.class, parameters={})
     private Output<String> logUrl;
 
     /**
      * @return URL to logs for this build in Google Cloud Console.
-     * 
      */
     public Output<String> getLogUrl() {
         return this.logUrl;
     }
     /**
      * Google Cloud Storage bucket where logs should be written (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Logs file names will be of the format `${logs_bucket}/log-${build_id}.txt`.
-     * 
      */
     @Export(name="logsBucket", type=String.class, parameters={})
     private Output<String> logsBucket;
 
     /**
      * @return Google Cloud Storage bucket where logs should be written (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Logs file names will be of the format `${logs_bucket}/log-${build_id}.txt`.
-     * 
      */
     public Output<String> getLogsBucket() {
         return this.logsBucket;
     }
     /**
      * The 'Build' name with format: `projects/{project}/locations/{location}/builds/{build}`, where {build} is a unique identifier generated by the service.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The 'Build' name with format: `projects/{project}/locations/{location}/builds/{build}`, where {build} is a unique identifier generated by the service.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Special options for this build.
-     * 
      */
     @Export(name="options", type=BuildOptionsResponse.class, parameters={})
     private Output<BuildOptionsResponse> options;
 
     /**
      * @return Special options for this build.
-     * 
      */
     public Output<BuildOptionsResponse> getOptions() {
         return this.options;
     }
     /**
      * ID of the project.
-     * 
      */
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
      * @return ID of the project.
-     * 
      */
     public Output<String> getProject() {
         return this.project;
     }
     /**
      * TTL in queue for this build. If provided and the build is enqueued longer than this value, the build will expire and the build status will be `EXPIRED`. The TTL starts ticking from create_time.
-     * 
      */
     @Export(name="queueTtl", type=String.class, parameters={})
     private Output<String> queueTtl;
 
     /**
      * @return TTL in queue for this build. If provided and the build is enqueued longer than this value, the build will expire and the build status will be `EXPIRED`. The TTL starts ticking from create_time.
-     * 
      */
     public Output<String> getQueueTtl() {
         return this.queueTtl;
     }
     /**
      * Results of the build.
-     * 
      */
     @Export(name="results", type=ResultsResponse.class, parameters={})
     private Output<ResultsResponse> results;
 
     /**
      * @return Results of the build.
-     * 
      */
     public Output<ResultsResponse> getResults() {
         return this.results;
     }
     /**
      * Secrets to decrypt using Cloud Key Management Service. Note: Secret Manager is the recommended technique for managing sensitive data with Cloud Build. Use `available_secrets` to configure builds to access secrets from Secret Manager. For instructions, see: https://cloud.google.com/cloud-build/docs/securing-builds/use-secrets
-     * 
      */
     @Export(name="secrets", type=List.class, parameters={SecretResponse.class})
     private Output<List<SecretResponse>> secrets;
 
     /**
      * @return Secrets to decrypt using Cloud Key Management Service. Note: Secret Manager is the recommended technique for managing sensitive data with Cloud Build. Use `available_secrets` to configure builds to access secrets from Secret Manager. For instructions, see: https://cloud.google.com/cloud-build/docs/securing-builds/use-secrets
-     * 
      */
     public Output<List<SecretResponse>> getSecrets() {
         return this.secrets;
     }
     /**
-     * IAM service account whose credentials will be used at build runtime. Must be of the format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. ACCOUNT can be email address or uniqueId of the service account.
-     * 
+     * IAM service account whose credentials will be used at build runtime. Must be of the format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. ACCOUNT can be email address or uniqueId of the service account. 
      */
     @Export(name="serviceAccount", type=String.class, parameters={})
     private Output<String> serviceAccount;
 
     /**
-     * @return IAM service account whose credentials will be used at build runtime. Must be of the format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. ACCOUNT can be email address or uniqueId of the service account.
-     * 
+     * @return IAM service account whose credentials will be used at build runtime. Must be of the format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. ACCOUNT can be email address or uniqueId of the service account. 
      */
     public Output<String> getServiceAccount() {
         return this.serviceAccount;
     }
     /**
      * The location of the source files to build.
-     * 
      */
     @Export(name="source", type=SourceResponse.class, parameters={})
     private Output<SourceResponse> source;
 
     /**
      * @return The location of the source files to build.
-     * 
      */
     public Output<SourceResponse> getSource() {
         return this.source;
     }
     /**
      * A permanent fixed identifier for source.
-     * 
      */
     @Export(name="sourceProvenance", type=SourceProvenanceResponse.class, parameters={})
     private Output<SourceProvenanceResponse> sourceProvenance;
 
     /**
      * @return A permanent fixed identifier for source.
-     * 
      */
     public Output<SourceProvenanceResponse> getSourceProvenance() {
         return this.sourceProvenance;
     }
     /**
      * Time at which execution of the build was started.
-     * 
      */
     @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
      * @return Time at which execution of the build was started.
-     * 
      */
     public Output<String> getStartTime() {
         return this.startTime;
     }
     /**
      * Status of the build.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return Status of the build.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * Customer-readable message about the current status.
-     * 
      */
     @Export(name="statusDetail", type=String.class, parameters={})
     private Output<String> statusDetail;
 
     /**
      * @return Customer-readable message about the current status.
-     * 
      */
     public Output<String> getStatusDetail() {
         return this.statusDetail;
     }
     /**
      * The operations to be performed on the workspace.
-     * 
      */
     @Export(name="steps", type=List.class, parameters={BuildStepResponse.class})
     private Output<List<BuildStepResponse>> steps;
 
     /**
      * @return The operations to be performed on the workspace.
-     * 
      */
     public Output<List<BuildStepResponse>> getSteps() {
         return this.steps;
     }
     /**
      * Substitutions data for `Build` resource.
-     * 
      */
     @Export(name="substitutions", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> substitutions;
 
     /**
      * @return Substitutions data for `Build` resource.
-     * 
      */
     public Output<Map<String,String>> getSubstitutions() {
         return this.substitutions;
     }
     /**
      * Tags for annotation of a `Build`. These are not docker tags.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={String.class})
     private Output<List<String>> tags;
 
     /**
      * @return Tags for annotation of a `Build`. These are not docker tags.
-     * 
      */
     public Output<List<String>> getTags() {
         return this.tags;
     }
     /**
      * Amount of time that this build should be allowed to run, to second granularity. If this amount of time elapses, work on the build will cease and the build status will be `TIMEOUT`. `timeout` starts ticking from `startTime`. Default time is ten minutes.
-     * 
      */
     @Export(name="timeout", type=String.class, parameters={})
     private Output<String> timeout;
 
     /**
      * @return Amount of time that this build should be allowed to run, to second granularity. If this amount of time elapses, work on the build will cease and the build status will be `TIMEOUT`. `timeout` starts ticking from `startTime`. Default time is ten minutes.
-     * 
      */
     public Output<String> getTimeout() {
         return this.timeout;
     }
     /**
      * Stores timing information for phases of the build. Valid keys are: * BUILD: time to execute all build steps. * PUSH: time to push all specified images. * FETCHSOURCE: time to fetch source. * SETUPBUILD: time to set up build. If the build does not specify source or images, these keys will not be included.
-     * 
      */
     @Export(name="timing", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> timing;
 
     /**
      * @return Stores timing information for phases of the build. Valid keys are: * BUILD: time to execute all build steps. * PUSH: time to push all specified images. * FETCHSOURCE: time to fetch source. * SETUPBUILD: time to set up build. If the build does not specify source or images, these keys will not be included.
-     * 
      */
     public Output<Map<String,String>> getTiming() {
         return this.timing;
     }
     /**
      * Non-fatal problems encountered during the execution of the build.
-     * 
      */
     @Export(name="warnings", type=List.class, parameters={WarningResponse.class})
     private Output<List<WarningResponse>> warnings;
 
     /**
      * @return Non-fatal problems encountered during the execution of the build.
-     * 
      */
     public Output<List<WarningResponse>> getWarnings() {
         return this.warnings;

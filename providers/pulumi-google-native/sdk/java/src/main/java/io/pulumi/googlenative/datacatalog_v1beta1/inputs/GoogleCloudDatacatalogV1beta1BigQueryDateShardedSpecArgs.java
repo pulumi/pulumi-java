@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * Spec for a group of BigQuery tables with name pattern `[prefix]YYYYMMDD`. Context: https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding
- * 
  */
 public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs extends io.pulumi.resources.ResourceArgs {
 

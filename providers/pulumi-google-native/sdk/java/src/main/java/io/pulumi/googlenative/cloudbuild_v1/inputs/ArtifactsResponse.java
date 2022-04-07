@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Artifacts produced by a build that should be uploaded upon successful completion of all build steps.
- * 
  */
 public final class ArtifactsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ArtifactsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A list of images to be pushed upon the successful completion of all build steps. The images will be pushed using the builder service account's credentials. The digests of the pushed images will be stored in the Build resource's results field. If any of the images fail to be pushed, the build is marked FAILURE.
-     * 
      */
     @Import(name="images", required=true)
       private final List<String> images;
@@ -31,7 +29,6 @@ public final class ArtifactsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps. Files in the workspace matching specified paths globs will be uploaded to the specified Cloud Storage location using the builder service account's credentials. The location and generation of the uploaded objects will be stored in the Build resource's results field. If any objects fail to be pushed, the build is marked FAILURE.
-     * 
      */
     @Import(name="objects", required=true)
       private final ArtifactObjectsResponse objects;

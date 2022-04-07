@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents the change that you want to make to the instance properties.
- * 
  */
 public final class InstancePropertiesPatchArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class InstancePropertiesPatchArgs extends io.pulumi.resources.Resou
 
     /**
      * The label key-value pairs that you want to patch onto the instance.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -32,7 +30,6 @@ public final class InstancePropertiesPatchArgs extends io.pulumi.resources.Resou
 
     /**
      * The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;

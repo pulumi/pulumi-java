@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A SourceContext referring to a Gerrit project.
- * 
  */
 public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
 
     /**
      * An alias, which may be a branch or tag.
-     * 
      */
     @Import(name="aliasContext", required=true)
       private final GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext;
@@ -30,7 +28,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
 
     /**
      * The full project name within the host. Projects may be nested, so "project/subproject" is a valid project name. The "repo name" is the hostURI/project.
-     * 
      */
     @Import(name="gerritProject", required=true)
       private final String gerritProject;
@@ -41,7 +38,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
 
     /**
      * The URI of a running Gerrit instance.
-     * 
      */
     @Import(name="hostUri", required=true)
       private final String hostUri;
@@ -52,7 +48,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
 
     /**
      * A revision (commit) ID.
-     * 
      */
     @Import(name="revisionId", required=true)
       private final String revisionId;

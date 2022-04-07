@@ -14,32 +14,26 @@ import java.util.Objects;
 public final class GoogleCloudDatacatalogV1RoutineSpecResponse {
     /**
      * Fields specific for BigQuery routines.
-     * 
      */
     private final GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec;
     /**
      * The body of the routine.
-     * 
      */
     private final String definitionBody;
     /**
      * The language the routine is written in. The exact value depends on the source system. For BigQuery routines, possible values are: * `SQL` * `JAVASCRIPT`
-     * 
      */
     private final String language;
     /**
      * Return type of the argument. The exact value depends on the source system and the language.
-     * 
      */
     private final String returnType;
     /**
      * Arguments of the routine.
-     * 
      */
     private final List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments;
     /**
      * The type of the routine.
-     * 
      */
     private final String routineType;
 
@@ -61,42 +55,36 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse {
 
     /**
      * Fields specific for BigQuery routines.
-     * 
     */
     public GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse getBigqueryRoutineSpec() {
         return this.bigqueryRoutineSpec;
     }
     /**
      * The body of the routine.
-     * 
     */
     public String getDefinitionBody() {
         return this.definitionBody;
     }
     /**
      * The language the routine is written in. The exact value depends on the source system. For BigQuery routines, possible values are: * `SQL` * `JAVASCRIPT`
-     * 
     */
     public String getLanguage() {
         return this.language;
     }
     /**
      * Return type of the argument. The exact value depends on the source system and the language.
-     * 
     */
     public String getReturnType() {
         return this.returnType;
     }
     /**
      * Arguments of the routine.
-     * 
     */
     public List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> getRoutineArguments() {
         return this.routineArguments;
     }
     /**
      * The type of the routine.
-     * 
     */
     public String getRoutineType() {
         return this.routineType;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents the Maintenance exclusion option.
- * 
  */
 public final class MaintenanceExclusionOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MaintenanceExclusionOptionsArgs extends io.pulumi.resources.R
 
     /**
      * Scope specifies the upgrade scope which upgrades are blocked by the exclusion.
-     * 
      */
     @Import(name="scope")
       private final @Nullable Output<MaintenanceExclusionOptionsScope> scope;

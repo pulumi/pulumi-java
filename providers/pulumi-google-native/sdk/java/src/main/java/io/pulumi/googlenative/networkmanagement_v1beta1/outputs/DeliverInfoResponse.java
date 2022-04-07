@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class DeliverInfoResponse {
     /**
      * URI of the resource that the packet is delivered to.
-     * 
      */
     private final String resourceUri;
     /**
      * Target type where the packet is delivered to.
-     * 
      */
     private final String target;
 
@@ -30,14 +28,12 @@ public final class DeliverInfoResponse {
 
     /**
      * URI of the resource that the packet is delivered to.
-     * 
     */
     public String getResourceUri() {
         return this.resourceUri;
     }
     /**
      * Target type where the packet is delivered to.
-     * 
     */
     public String getTarget() {
         return this.target;

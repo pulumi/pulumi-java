@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class ReusableConfigWrapperResponse {
     /**
      * A resource path to a ReusableConfig in the format `projects/*{@literal /}locations/*{@literal /}reusableConfigs/*`.
-     * 
      */
     private final String reusableConfig;
     /**
      * A user-specified inline ReusableConfigValues.
-     * 
      */
     private final ReusableConfigValuesResponse reusableConfigValues;
 
@@ -31,14 +29,12 @@ public final class ReusableConfigWrapperResponse {
 
     /**
      * A resource path to a ReusableConfig in the format `projects/*{@literal /}locations/*{@literal /}reusableConfigs/*`.
-     * 
     */
     public String getReusableConfig() {
         return this.reusableConfig;
     }
     /**
      * A user-specified inline ReusableConfigValues.
-     * 
     */
     public ReusableConfigValuesResponse getReusableConfigValues() {
         return this.reusableConfigValues;

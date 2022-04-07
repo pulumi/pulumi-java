@@ -16,7 +16,6 @@ public final class MlStatisticsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Results for all completed iterations.
-     * 
      */
     @Import(name="iterationResults", required=true)
       private final List<IterationResultResponse> iterationResults;
@@ -27,7 +26,6 @@ public final class MlStatisticsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Maximum number of iterations specified as max_iterations in the 'CREATE MODEL' query. The actual number of iterations may be less than this number due to early stop.
-     * 
      */
     @Import(name="maxIterations", required=true)
       private final String maxIterations;

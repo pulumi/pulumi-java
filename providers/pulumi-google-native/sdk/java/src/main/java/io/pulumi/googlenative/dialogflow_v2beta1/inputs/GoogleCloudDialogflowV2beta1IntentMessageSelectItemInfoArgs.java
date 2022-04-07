@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Additional info about the select item for when it is triggered in a dialog.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs e
 
     /**
      * A unique key that will be sent back to the agent if this response is given.
-     * 
      */
     @Import(name="key", required=true)
       private final Output<String> key;
@@ -32,7 +30,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs e
 
     /**
      * Optional. A list of synonyms that can also be used to trigger this item in dialog.
-     * 
      */
     @Import(name="synonyms")
       private final @Nullable Output<List<String>> synonyms;

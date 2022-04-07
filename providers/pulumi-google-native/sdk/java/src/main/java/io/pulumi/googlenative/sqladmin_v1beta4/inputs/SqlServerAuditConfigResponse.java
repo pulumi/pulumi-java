@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * SQL Server specific audit configuration.
- * 
  */
 public final class SqlServerAuditConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SqlServerAuditConfigResponse extends io.pulumi.resources.Invo
 
     /**
      * The name of the destination bucket (e.g., gs://mybucket).
-     * 
      */
     @Import(name="bucket", required=true)
       private final String bucket;
@@ -29,7 +27,6 @@ public final class SqlServerAuditConfigResponse extends io.pulumi.resources.Invo
 
     /**
      * This is always sql#sqlServerAuditConfig
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;

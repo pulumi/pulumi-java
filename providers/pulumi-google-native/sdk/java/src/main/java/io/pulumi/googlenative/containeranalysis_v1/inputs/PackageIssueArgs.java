@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A detail for a distro and package this vulnerability occurrence was found in and its associated fix (if one is available).
- * 
  */
 public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was found in.
-     * 
      */
     @Import(name="affectedCpeUri", required=true)
       private final Output<String> affectedCpeUri;
@@ -32,7 +30,6 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The package this vulnerability was found in.
-     * 
      */
     @Import(name="affectedPackage", required=true)
       private final Output<String> affectedPackage;
@@ -43,7 +40,6 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The version of the package that is installed on the resource affected by this vulnerability.
-     * 
      */
     @Import(name="affectedVersion", required=true)
       private final Output<VersionArgs> affectedVersion;
@@ -54,7 +50,6 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was fixed in. It is possible for this to be different from the affected_cpe_uri.
-     * 
      */
     @Import(name="fixedCpeUri")
       private final @Nullable Output<String> fixedCpeUri;
@@ -65,7 +60,6 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The package this vulnerability was fixed in. It is possible for this to be different from the affected_package.
-     * 
      */
     @Import(name="fixedPackage")
       private final @Nullable Output<String> fixedPackage;
@@ -76,7 +70,6 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The version of the package this vulnerability was fixed in. Setting this to VersionKind.MAXIMUM means no fix is yet available.
-     * 
      */
     @Import(name="fixedVersion", required=true)
       private final Output<VersionArgs> fixedVersion;
@@ -87,7 +80,6 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of package (e.g. OS, MAVEN, GO).
-     * 
      */
     @Import(name="packageType")
       private final @Nullable Output<String> packageType;

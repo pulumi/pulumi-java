@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Description of a transform executed as part of an execution stage.
- * 
  */
 public final class ComponentTransformArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ComponentTransformArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Dataflow service generated name for this source.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class ComponentTransformArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * User name for the original user transform with which this transform is most closely associated.
-     * 
      */
     @Import(name="originalTransform")
       private final @Nullable Output<String> originalTransform;
@@ -42,7 +39,6 @@ public final class ComponentTransformArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Human-readable name for this transform; may be user or system generated.
-     * 
      */
     @Import(name="userName")
       private final @Nullable Output<String> userName;

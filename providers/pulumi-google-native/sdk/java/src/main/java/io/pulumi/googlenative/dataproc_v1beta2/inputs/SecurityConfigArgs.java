@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Security related configuration, including encryption, Kerberos, etc.
- * 
  */
 public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Kerberos related configuration.
-     * 
      */
     @Import(name="kerberosConfig")
       private final @Nullable Output<KerberosConfigArgs> kerberosConfig;

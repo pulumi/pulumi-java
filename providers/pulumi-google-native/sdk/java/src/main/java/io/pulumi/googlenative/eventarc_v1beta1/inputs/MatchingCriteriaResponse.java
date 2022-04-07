@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Matches events based on exact matches on the CloudEvents attributes.
- * 
  */
 public final class MatchingCriteriaResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MatchingCriteriaResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of a CloudEvents attribute. Currently, only a subset of attributes can be specified. All triggers MUST provide a matching criteria for the 'type' attribute.
-     * 
      */
     @Import(name="attribute", required=true)
       private final String attribute;
@@ -29,7 +27,6 @@ public final class MatchingCriteriaResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The value for the attribute.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class CpuUtilizationResponse {
     /**
      * Period of time over which CPU utilization is calculated.
-     * 
      */
     private final String aggregationWindowLength;
     /**
      * Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
-     * 
      */
     private final Double targetUtilization;
 
@@ -31,14 +29,12 @@ public final class CpuUtilizationResponse {
 
     /**
      * Period of time over which CPU utilization is calculated.
-     * 
     */
     public String getAggregationWindowLength() {
         return this.aggregationWindowLength;
     }
     /**
      * Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
-     * 
     */
     public Double getTargetUtilization() {
         return this.targetUtilization;

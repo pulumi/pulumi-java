@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A POSIX filesystem resource.
- * 
  */
 public final class PosixFilesystemResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class PosixFilesystemResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Root directory path to the filesystem.
-     * 
      */
     @Import(name="rootDirectory", required=true)
       private final String rootDirectory;

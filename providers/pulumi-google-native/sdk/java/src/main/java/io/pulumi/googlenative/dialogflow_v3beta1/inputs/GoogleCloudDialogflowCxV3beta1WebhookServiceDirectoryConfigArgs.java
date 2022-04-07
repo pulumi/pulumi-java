@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
- * 
  */
 public final class GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigAr
 
     /**
      * Generic Service configuration of this webhook.
-     * 
      */
     @Import(name="genericWebService")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs> genericWebService;
@@ -32,7 +30,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigAr
 
     /**
      * The name of [Service Directory](https://cloud.google.com/service-directory) service. Format: `projects//locations//namespaces//services/`. `Location ID` of the service directory must be the same as the location of the agent.
-     * 
      */
     @Import(name="service", required=true)
       private final Output<String> service;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration of Shielded Nodes feature.
- * 
  */
 public final class ShieldedNodesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ShieldedNodesResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Whether Shielded Nodes features are enabled on all nodes in this cluster.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

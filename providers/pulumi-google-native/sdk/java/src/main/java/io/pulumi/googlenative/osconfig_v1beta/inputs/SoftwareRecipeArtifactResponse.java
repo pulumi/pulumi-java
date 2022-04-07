@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Specifies a resource to be used in the recipe.
- * 
  */
 public final class SoftwareRecipeArtifactResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SoftwareRecipeArtifactResponse extends io.pulumi.resources.In
 
     /**
      * Defaults to false. When false, recipes are subject to validations based on the artifact type: Remote: A checksum must be specified, and only protocols with transport-layer security are permitted. GCS: An object generation number must be specified.
-     * 
      */
     @Import(name="allowInsecure", required=true)
       private final Boolean allowInsecure;
@@ -31,7 +29,6 @@ public final class SoftwareRecipeArtifactResponse extends io.pulumi.resources.In
 
     /**
      * A Google Cloud Storage artifact.
-     * 
      */
     @Import(name="gcs", required=true)
       private final SoftwareRecipeArtifactGcsResponse gcs;
@@ -42,7 +39,6 @@ public final class SoftwareRecipeArtifactResponse extends io.pulumi.resources.In
 
     /**
      * A generic remote artifact.
-     * 
      */
     @Import(name="remote", required=true)
       private final SoftwareRecipeArtifactRemoteResponse remote;

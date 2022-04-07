@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Renewal settings for renewable Offers.
- * 
  */
 public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
 
     /**
      * If false, the plan will be completed at the end date.
-     * 
      */
     @Import(name="enableRenewal")
       private final @Nullable Output<Boolean> enableRenewal;
@@ -33,7 +31,6 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
 
     /**
      * Describes how frequently the reseller will be billed, such as once per month.
-     * 
      */
     @Import(name="paymentCycle")
       private final @Nullable Output<GoogleCloudChannelV1PeriodArgs> paymentCycle;
@@ -44,7 +41,6 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
 
     /**
      * Describes how a reseller will be billed.
-     * 
      */
     @Import(name="paymentPlan")
       private final @Nullable Output<GoogleCloudChannelV1RenewalSettingsPaymentPlan> paymentPlan;
@@ -55,7 +51,6 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
 
     /**
      * If true and enable_renewal = true, the unit (for example seats or licenses) will be set to the number of active units at renewal time.
-     * 
      */
     @Import(name="resizeUnitCount")
       private final @Nullable Output<Boolean> resizeUnitCount;

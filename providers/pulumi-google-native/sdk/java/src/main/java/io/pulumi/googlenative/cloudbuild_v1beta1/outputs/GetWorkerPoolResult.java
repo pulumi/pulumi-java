@@ -14,57 +14,46 @@ import java.util.Objects;
 public final class GetWorkerPoolResult {
     /**
      * User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
-     * 
      */
     private final Map<String,String> annotations;
     /**
      * Time at which the request to create the `WorkerPool` was received.
-     * 
      */
     private final String createTime;
     /**
      * Time at which the request to delete the `WorkerPool` was received.
-     * 
      */
     private final String deleteTime;
     /**
      * A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters.
-     * 
      */
     private final String displayName;
     /**
      * Checksum computed by the server. May be sent on update and delete requests to ensure that the client has an up-to-date value before proceeding.
-     * 
      */
     private final String etag;
     /**
      * The resource name of the `WorkerPool`, with format `projects/{project}/locations/{location}/workerPools/{worker_pool}`. The value of `{worker_pool}` is provided by `worker_pool_id` in `CreateWorkerPool` request and the value of `{location}` is determined by the endpoint accessed.
-     * 
      */
     private final String name;
     /**
      * Network configuration for the `WorkerPool`.
-     * 
      */
     private final NetworkConfigResponse networkConfig;
     /**
      * `WorkerPool` state.
-     * 
      */
     private final String state;
     /**
      * A unique identifier for the `WorkerPool`.
-     * 
      */
     private final String uid;
     /**
      * Time at which the request to update the `WorkerPool` was received.
-     * 
      */
     private final String updateTime;
     /**
      * Worker configuration for the `WorkerPool`.
-     * 
      */
     private final WorkerConfigResponse workerConfig;
 
@@ -96,77 +85,66 @@ public final class GetWorkerPoolResult {
 
     /**
      * User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
-     * 
     */
     public Map<String,String> getAnnotations() {
         return this.annotations;
     }
     /**
      * Time at which the request to create the `WorkerPool` was received.
-     * 
     */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Time at which the request to delete the `WorkerPool` was received.
-     * 
     */
     public String getDeleteTime() {
         return this.deleteTime;
     }
     /**
      * A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters.
-     * 
     */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Checksum computed by the server. May be sent on update and delete requests to ensure that the client has an up-to-date value before proceeding.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The resource name of the `WorkerPool`, with format `projects/{project}/locations/{location}/workerPools/{worker_pool}`. The value of `{worker_pool}` is provided by `worker_pool_id` in `CreateWorkerPool` request and the value of `{location}` is determined by the endpoint accessed.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Network configuration for the `WorkerPool`.
-     * 
     */
     public NetworkConfigResponse getNetworkConfig() {
         return this.networkConfig;
     }
     /**
      * `WorkerPool` state.
-     * 
     */
     public String getState() {
         return this.state;
     }
     /**
      * A unique identifier for the `WorkerPool`.
-     * 
     */
     public String getUid() {
         return this.uid;
     }
     /**
      * Time at which the request to update the `WorkerPool` was received.
-     * 
     */
     public String getUpdateTime() {
         return this.updateTime;
     }
     /**
      * Worker configuration for the `WorkerPool`.
-     * 
     */
     public WorkerConfigResponse getWorkerConfig() {
         return this.workerConfig;

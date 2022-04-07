@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2QuasiIdFieldResponse {
     /**
      * A auxiliary field.
-     * 
      */
     private final String customTag;
     /**
      * Identifies the column.
-     * 
      */
     private final GooglePrivacyDlpV2FieldIdResponse field;
 
@@ -31,14 +29,12 @@ public final class GooglePrivacyDlpV2QuasiIdFieldResponse {
 
     /**
      * A auxiliary field.
-     * 
     */
     public String getCustomTag() {
         return this.customTag;
     }
     /**
      * Identifies the column.
-     * 
     */
     public GooglePrivacyDlpV2FieldIdResponse getField() {
         return this.field;

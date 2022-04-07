@@ -14,22 +14,18 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse {
     /**
      * Whether sentiment analysis is enabled.
-     * 
      */
     private final Boolean enableSentimentAnalysis;
     /**
      * Parameters that need to be injected into the conversation during intent detection.
-     * 
      */
     private final Map<String,String> injectedParameters;
     /**
      * Supports text input, event input, dtmf input in the test case.
-     * 
      */
     private final GoogleCloudDialogflowCxV3QueryInputResponse input;
     /**
      * If webhooks should be allowed to trigger in response to the user utterance. Often if parameters are injected, webhooks should not be enabled.
-     * 
      */
     private final Boolean isWebhookEnabled;
 
@@ -47,28 +43,24 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse {
 
     /**
      * Whether sentiment analysis is enabled.
-     * 
     */
     public Boolean getEnableSentimentAnalysis() {
         return this.enableSentimentAnalysis;
     }
     /**
      * Parameters that need to be injected into the conversation during intent detection.
-     * 
     */
     public Map<String,String> getInjectedParameters() {
         return this.injectedParameters;
     }
     /**
      * Supports text input, event input, dtmf input in the test case.
-     * 
     */
     public GoogleCloudDialogflowCxV3QueryInputResponse getInput() {
         return this.input;
     }
     /**
      * If webhooks should be allowed to trigger in response to the user utterance. Often if parameters are injected, webhooks should not be enabled.
-     * 
     */
     public Boolean getIsWebhookEnabled() {
         return this.isWebhookEnabled;

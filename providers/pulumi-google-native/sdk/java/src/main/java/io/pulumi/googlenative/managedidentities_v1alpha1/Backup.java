@@ -15,104 +15,89 @@ import javax.annotation.Nullable;
 /**
  * Creates a Backup for a domain.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:managedidentities/v1alpha1:Backup")
 public class Backup extends io.pulumi.resources.CustomResource {
     /**
      * The time the backups was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time the backups was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. Resource labels to represent user provided metadata.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Optional. Resource labels to represent user provided metadata.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * The unique name of the Backup in the form of projects/{project_id}/locations/global/domains/{domain_name}/backups/{name}
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The unique name of the Backup in the form of projects/{project_id}/locations/global/domains/{domain_name}/backups/{name}
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The current state of the backup.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The current state of the backup.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Additional information about the current status of this backup, if available.
-     * 
      */
     @Export(name="statusMessage", type=String.class, parameters={})
     private Output<String> statusMessage;
 
     /**
      * @return Additional information about the current status of this backup, if available.
-     * 
      */
     public Output<String> getStatusMessage() {
         return this.statusMessage;
     }
     /**
      * Indicates whether it’s an on-demand backup or scheduled.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Indicates whether it’s an on-demand backup or scheduled.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Last update time.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return Last update time.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

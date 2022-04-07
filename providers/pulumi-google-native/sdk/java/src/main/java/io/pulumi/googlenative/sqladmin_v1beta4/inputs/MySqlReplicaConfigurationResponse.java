@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Read-replica configuration specific to MySQL databases.
- * 
  */
 public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
 
     /**
      * PEM representation of the trusted CA's x509 certificate.
-     * 
      */
     @Import(name="caCertificate", required=true)
       private final String caCertificate;
@@ -31,7 +29,6 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
 
     /**
      * PEM representation of the replica's x509 certificate.
-     * 
      */
     @Import(name="clientCertificate", required=true)
       private final String clientCertificate;
@@ -42,7 +39,6 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
 
     /**
      * PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.
-     * 
      */
     @Import(name="clientKey", required=true)
       private final String clientKey;
@@ -53,7 +49,6 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
 
     /**
      * Seconds to wait between connect retries. MySQL's default is 60 seconds.
-     * 
      */
     @Import(name="connectRetryInterval", required=true)
       private final Integer connectRetryInterval;
@@ -64,7 +59,6 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
 
     /**
      * Path to a SQL dump file in Google Cloud Storage from which the replica instance is to be created. The URI is in the form gs://bucketName/fileName. Compressed gzip files (.gz) are also supported. Dumps have the binlog co-ordinates from which replication begins. This can be accomplished by setting --master-data to 1 when using mysqldump.
-     * 
      */
     @Import(name="dumpFilePath", required=true)
       private final String dumpFilePath;
@@ -75,7 +69,6 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
 
     /**
      * This is always `sql#mysqlReplicaConfiguration`.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -86,7 +79,6 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
 
     /**
      * Interval in milliseconds between replication heartbeats.
-     * 
      */
     @Import(name="masterHeartbeatPeriod", required=true)
       private final String masterHeartbeatPeriod;
@@ -97,7 +89,6 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
 
     /**
      * The password for the replication connection.
-     * 
      */
     @Import(name="password", required=true)
       private final String password;
@@ -108,7 +99,6 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
 
     /**
      * A list of permissible ciphers to use for SSL encryption.
-     * 
      */
     @Import(name="sslCipher", required=true)
       private final String sslCipher;
@@ -119,7 +109,6 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
 
     /**
      * The username for the replication connection.
-     * 
      */
     @Import(name="username", required=true)
       private final String username;
@@ -130,7 +119,6 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
 
     /**
      * Whether or not to check the primary instance's Common Name value in the certificate that it sends during the SSL handshake.
-     * 
      */
     @Import(name="verifyServerCertificate", required=true)
       private final Boolean verifyServerCertificate;

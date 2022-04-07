@@ -25,7 +25,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional list of additional attributes to attach to each Cloud PubSub message published for this notification subscription.
-     * 
      */
     @Import(name="customAttributes")
       private final @Nullable Output<Map<String,String>> customAttributes;
@@ -36,7 +35,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * HTTP 1.1 Entity tag for this subscription notification.
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -47,7 +45,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If present, only send notifications about listed event types. If empty, sent notifications for all event types.
-     * 
      */
     @Import(name="eventTypes")
       private final @Nullable Output<List<String>> eventTypes;
@@ -58,7 +55,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the notification.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -69,7 +65,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The kind of item this is. For notifications, this is always storage#notification.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -80,7 +75,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If present, only apply this notification configuration to object names that begin with this prefix.
-     * 
      */
     @Import(name="objectNamePrefix")
       private final @Nullable Output<String> objectNamePrefix;
@@ -91,7 +85,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The desired content of the Payload.
-     * 
      */
     @Import(name="payloadFormat")
       private final @Nullable Output<String> payloadFormat;
@@ -109,7 +102,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The canonical URL of this notification.
-     * 
      */
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
@@ -120,7 +112,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Cloud PubSub topic to which this subscription publishes. Formatted as: '//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}'
-     * 
      */
     @Import(name="topic")
       private final @Nullable Output<String> topic;

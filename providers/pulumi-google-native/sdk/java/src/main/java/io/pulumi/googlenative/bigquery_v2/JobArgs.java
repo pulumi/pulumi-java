@@ -19,7 +19,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * [Required] Describes the job configuration.
-     * 
      */
     @Import(name="configuration")
       private final @Nullable Output<JobConfigurationArgs> configuration;
@@ -30,7 +29,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * [Optional] Reference describing the unique-per-user name of the job.
-     * 
      */
     @Import(name="jobReference")
       private final @Nullable Output<JobReferenceArgs> jobReference;

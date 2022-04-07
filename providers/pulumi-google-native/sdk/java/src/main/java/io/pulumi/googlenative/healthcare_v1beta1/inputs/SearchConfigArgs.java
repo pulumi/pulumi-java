@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains the configuration for FHIR search.
- * 
  */
 public final class SearchConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SearchConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of search parameters in this FHIR store that are used to configure this FHIR store.
-     * 
      */
     @Import(name="searchParameters")
       private final @Nullable Output<List<SearchParameterArgs>> searchParameters;

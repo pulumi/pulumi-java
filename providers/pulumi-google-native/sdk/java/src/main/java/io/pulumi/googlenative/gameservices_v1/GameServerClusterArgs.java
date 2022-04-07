@@ -18,7 +18,6 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The game server cluster connection information. This information is used to manage game server clusters.
-     * 
      */
     @Import(name="connectionInfo")
       private final @Nullable Output<GameServerClusterConnectionInfoArgs> connectionInfo;
@@ -29,7 +28,6 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Human readable description of the cluster.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -40,7 +38,6 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * ETag of the resource.
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -58,7 +55,6 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The labels associated with this game server cluster. Each label is a key-value pair.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -76,7 +72,6 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

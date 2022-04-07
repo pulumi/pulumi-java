@@ -20,7 +20,6 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User provided description (max 256 chars)
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -31,7 +30,6 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Display name (max 100 chars)
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -42,7 +40,6 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * For inspect jobs, a snapshot of the configuration.
-     * 
      */
     @Import(name="inspectJob")
       private final @Nullable Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob;
@@ -60,7 +57,6 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unique resource name for the triggeredJob, assigned by the service when the triggeredJob is created, for example `projects/dlp-test-project/jobTriggers/53234423`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -78,7 +74,6 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A status for this trigger.
-     * 
      */
     @Import(name="status", required=true)
       private final Output<JobTriggerStatus> status;
@@ -89,7 +84,6 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The trigger id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.
-     * 
      */
     @Import(name="triggerId")
       private final @Nullable Output<String> triggerId;
@@ -100,7 +94,6 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of triggers which will be OR'ed together. Only one in the list needs to trigger for a job to be started. The list may contain only a single Schedule trigger and must have at least one object.
-     * 
      */
     @Import(name="triggers")
       private final @Nullable Output<List<GooglePrivacyDlpV2TriggerArgs>> triggers;

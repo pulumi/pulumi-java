@@ -14,7 +14,6 @@ public final class ConfigFileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The contents of the file.
-     * 
      */
     @Import(name="content", required=true)
       private final String content;

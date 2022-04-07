@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class GoogleMonitoringV3RangeResponse {
     /**
      * Range maximum.
-     * 
      */
     private final Double max;
     /**
      * Range minimum.
-     * 
      */
     private final Double min;
 
@@ -30,14 +28,12 @@ public final class GoogleMonitoringV3RangeResponse {
 
     /**
      * Range maximum.
-     * 
     */
     public Double getMax() {
         return this.max;
     }
     /**
      * Range minimum.
-     * 
     */
     public Double getMin() {
         return this.min;

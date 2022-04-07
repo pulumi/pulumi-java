@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * Platform hosting this deployment.
-     * 
      */
     @EnumType
     public enum DeploymentPlatform {
         /**
          * Unknown
-         * 
          */
         PlatformUnspecified("PLATFORM_UNSPECIFIED"),
         /**
          * Google Container Engine
-         * 
          */
         Gke("GKE"),
         /**
          * Google App Engine: Flexible Environment
-         * 
          */
         Flex("FLEX"),
         /**
          * Custom user-defined platform
-         * 
          */
         Custom("CUSTOM");
 

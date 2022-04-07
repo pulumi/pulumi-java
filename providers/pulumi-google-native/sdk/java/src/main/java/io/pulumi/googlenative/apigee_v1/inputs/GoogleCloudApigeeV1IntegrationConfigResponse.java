@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration for the Integration add-on.
- * 
  */
 public final class GoogleCloudApigeeV1IntegrationConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudApigeeV1IntegrationConfigResponse extends io.pulum
 
     /**
      * Flag that specifies whether the Integration add-on is enabled.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

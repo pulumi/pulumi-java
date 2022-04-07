@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Image annotation.
- * 
  */
 public final class ImageAnnotationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ImageAnnotationResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The list of polygons outlining the sensitive regions in the image.
-     * 
      */
     @Import(name="boundingPolys", required=true)
       private final List<BoundingPolyResponse> boundingPolys;
@@ -31,7 +29,6 @@ public final class ImageAnnotationResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * 0-based index of the image frame. For example, an image frame in a DICOM instance.
-     * 
      */
     @Import(name="frameIndex", required=true)
       private final Integer frameIndex;

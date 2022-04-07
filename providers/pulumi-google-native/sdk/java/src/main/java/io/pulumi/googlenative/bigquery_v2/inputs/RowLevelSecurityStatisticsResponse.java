@@ -14,7 +14,6 @@ public final class RowLevelSecurityStatisticsResponse extends io.pulumi.resource
 
     /**
      * [Preview] Whether any accessed data was protected by row access policies.
-     * 
      */
     @Import(name="rowLevelSecurityApplied", required=true)
       private final Boolean rowLevelSecurityApplied;

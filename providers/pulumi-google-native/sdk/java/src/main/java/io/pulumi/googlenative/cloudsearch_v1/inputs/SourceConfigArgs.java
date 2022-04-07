@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configurations for a source while processing a Search or Suggest request.
- * 
  */
 public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The crowding configuration for the source.
-     * 
      */
     @Import(name="crowdingConfig")
       private final @Nullable Output<SourceCrowdingConfigArgs> crowdingConfig;
@@ -33,7 +31,6 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The scoring configuration for the source.
-     * 
      */
     @Import(name="scoringConfig")
       private final @Nullable Output<SourceScoringConfigArgs> scoringConfig;
@@ -44,7 +41,6 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The source for which this configuration is to be used.
-     * 
      */
     @Import(name="source")
       private final @Nullable Output<SourceArgs> source;

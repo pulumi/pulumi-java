@@ -14,7 +14,6 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse ex
 
     /**
      * The name of the header to set.
-     * 
      */
     @Import(name="headerName", required=true)
       private final String headerName;
@@ -25,7 +24,6 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse ex
 
     /**
      * The value to set the named header to.
-     * 
      */
     @Import(name="headerValue", required=true)
       private final String headerValue;

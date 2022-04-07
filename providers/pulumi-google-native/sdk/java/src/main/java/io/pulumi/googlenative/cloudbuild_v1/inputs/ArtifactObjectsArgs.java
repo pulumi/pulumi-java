@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Files in the workspace to upload to Cloud Storage upon successful completion of all build steps.
- * 
  */
 public final class ArtifactObjectsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ArtifactObjectsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/". (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -32,7 +30,6 @@ public final class ArtifactObjectsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Path globs used to match files in the build's workspace.
-     * 
      */
     @Import(name="paths")
       private final @Nullable Output<List<String>> paths;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Control over the rate of notifications sent to this alert policy's notification channels.
- * 
  */
 public final class NotificationRateLimitArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class NotificationRateLimitArgs extends io.pulumi.resources.Resourc
 
     /**
      * Not more than one notification per period.
-     * 
      */
     @Import(name="period")
       private final @Nullable Output<String> period;

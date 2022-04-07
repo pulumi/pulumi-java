@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A Symptom instance.
- * 
  */
 public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Timestamp when the Symptom is created.
-     * 
      */
     @Import(name="createTime", required=true)
       private final String createTime;
@@ -29,7 +27,6 @@ public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Detailed information of the current Symptom.
-     * 
      */
     @Import(name="details", required=true)
       private final String details;
@@ -40,7 +37,6 @@ public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Type of the Symptom.
-     * 
      */
     @Import(name="symptomType", required=true)
       private final String symptomType;
@@ -51,7 +47,6 @@ public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A string used to uniquely distinguish a worker within a TPU node.
-     * 
      */
     @Import(name="workerId", required=true)
       private final String workerId;

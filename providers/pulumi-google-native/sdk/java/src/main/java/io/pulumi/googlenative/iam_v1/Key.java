@@ -15,146 +15,125 @@ import javax.annotation.Nullable;
 /**
  * Creates a ServiceAccountKey.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:iam/v1:Key")
 public class Key extends io.pulumi.resources.CustomResource {
     /**
      * The key status.
-     * 
      */
     @Export(name="disabled", type=Boolean.class, parameters={})
     private Output<Boolean> disabled;
 
     /**
      * @return The key status.
-     * 
      */
     public Output<Boolean> getDisabled() {
         return this.disabled;
     }
     /**
      * Specifies the algorithm (and possibly key size) for the key.
-     * 
      */
     @Export(name="keyAlgorithm", type=String.class, parameters={})
     private Output<String> keyAlgorithm;
 
     /**
      * @return Specifies the algorithm (and possibly key size) for the key.
-     * 
      */
     public Output<String> getKeyAlgorithm() {
         return this.keyAlgorithm;
     }
     /**
      * The key origin.
-     * 
      */
     @Export(name="keyOrigin", type=String.class, parameters={})
     private Output<String> keyOrigin;
 
     /**
      * @return The key origin.
-     * 
      */
     public Output<String> getKeyOrigin() {
         return this.keyOrigin;
     }
     /**
      * The key type.
-     * 
      */
     @Export(name="keyType", type=String.class, parameters={})
     private Output<String> keyType;
 
     /**
      * @return The key type.
-     * 
      */
     public Output<String> getKeyType() {
         return this.keyType;
     }
     /**
      * The resource name of the service account key in the following format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the service account key in the following format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The private key data. Only provided in `CreateServiceAccountKey` responses. Make sure to keep the private key data secure because it allows for the assertion of the service account identity. When base64 decoded, the private key data can be used to authenticate with Google API client libraries and with gcloud auth activate-service-account.
-     * 
      */
     @Export(name="privateKeyData", type=String.class, parameters={})
     private Output<String> privateKeyData;
 
     /**
      * @return The private key data. Only provided in `CreateServiceAccountKey` responses. Make sure to keep the private key data secure because it allows for the assertion of the service account identity. When base64 decoded, the private key data can be used to authenticate with Google API client libraries and with gcloud auth activate-service-account.
-     * 
      */
     public Output<String> getPrivateKeyData() {
         return this.privateKeyData;
     }
     /**
      * The output format for the private key. Only provided in `CreateServiceAccountKey` responses, not in `GetServiceAccountKey` or `ListServiceAccountKey` responses. Google never exposes system-managed private keys, and never retains user-managed private keys.
-     * 
      */
     @Export(name="privateKeyType", type=String.class, parameters={})
     private Output<String> privateKeyType;
 
     /**
      * @return The output format for the private key. Only provided in `CreateServiceAccountKey` responses, not in `GetServiceAccountKey` or `ListServiceAccountKey` responses. Google never exposes system-managed private keys, and never retains user-managed private keys.
-     * 
      */
     public Output<String> getPrivateKeyType() {
         return this.privateKeyType;
     }
     /**
      * The public key data. Only provided in `GetServiceAccountKey` responses.
-     * 
      */
     @Export(name="publicKeyData", type=String.class, parameters={})
     private Output<String> publicKeyData;
 
     /**
      * @return The public key data. Only provided in `GetServiceAccountKey` responses.
-     * 
      */
     public Output<String> getPublicKeyData() {
         return this.publicKeyData;
     }
     /**
      * The key can be used after this timestamp.
-     * 
      */
     @Export(name="validAfterTime", type=String.class, parameters={})
     private Output<String> validAfterTime;
 
     /**
      * @return The key can be used after this timestamp.
-     * 
      */
     public Output<String> getValidAfterTime() {
         return this.validAfterTime;
     }
     /**
      * The key can be used before this timestamp. For system-managed key pairs, this timestamp is the end time for the private key signing operation. The public key could still be used for verification for a few hours after this time.
-     * 
      */
     @Export(name="validBeforeTime", type=String.class, parameters={})
     private Output<String> validBeforeTime;
 
     /**
      * @return The key can be used before this timestamp. For system-managed key pairs, this timestamp is the end time for the private key signing operation. The public key could still be used for verification for a few hours after this time.
-     * 
      */
     public Output<String> getValidBeforeTime() {
         return this.validBeforeTime;

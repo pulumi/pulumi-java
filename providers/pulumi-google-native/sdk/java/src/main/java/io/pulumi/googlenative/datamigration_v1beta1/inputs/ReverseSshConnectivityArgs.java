@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The details needed to configure a reverse SSH tunnel between the source and destination databases. These details will be used when calling the generateSshScript method (see https://cloud.google.com/database-migration/docs/reference/rest/v1beta1/projects.locations.migrationJobs/generateSshScript) to produce the script that will help set up the reverse SSH tunnel, and to set up the VPC peering between the Cloud SQL private network and the VPC.
- * 
  */
 public final class ReverseSshConnectivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
-     * 
      */
     @Import(name="vm")
       private final @Nullable Output<String> vm;
@@ -32,7 +30,6 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
 
     /**
      * The IP of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
-     * 
      */
     @Import(name="vmIp", required=true)
       private final Output<String> vmIp;
@@ -43,7 +40,6 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
 
     /**
      * The forwarding port of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
-     * 
      */
     @Import(name="vmPort", required=true)
       private final Output<Integer> vmPort;
@@ -54,7 +50,6 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the VPC to peer with the Cloud SQL private network.
-     * 
      */
     @Import(name="vpc")
       private final @Nullable Output<String> vpc;

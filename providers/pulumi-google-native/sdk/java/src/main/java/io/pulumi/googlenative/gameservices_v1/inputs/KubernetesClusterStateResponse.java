@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The state of the Kubernetes cluster.
- * 
  */
 public final class KubernetesClusterStateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
 
     /**
      * The version of Agones currently installed in the registered Kubernetes cluster.
-     * 
      */
     @Import(name="agonesVersionInstalled", required=true)
       private final String agonesVersionInstalled;
@@ -29,7 +27,6 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
 
     /**
      * The version of Agones that is targeted to be installed in the cluster.
-     * 
      */
     @Import(name="agonesVersionTargeted", required=true)
       private final String agonesVersionTargeted;
@@ -40,7 +37,6 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
 
     /**
      * The state for the installed versions of Agones/Kubernetes.
-     * 
      */
     @Import(name="installationState", required=true)
       private final String installationState;
@@ -51,7 +47,6 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
 
     /**
      * The version of Kubernetes that is currently used in the registered Kubernetes cluster (as detected by the Cloud Game Servers service).
-     * 
      */
     @Import(name="kubernetesVersionInstalled", required=true)
       private final String kubernetesVersionInstalled;
@@ -62,7 +57,6 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
 
     /**
      * The cloud provider type reported by the first node's providerID in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the provider type will be empty.
-     * 
      */
     @Import(name="provider", required=true)
       private final String provider;
@@ -73,7 +67,6 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
 
     /**
      * The detailed error message for the installed versions of Agones/Kubernetes.
-     * 
      */
     @Import(name="versionInstalledErrorMessage", required=true)
       private final String versionInstalledErrorMessage;

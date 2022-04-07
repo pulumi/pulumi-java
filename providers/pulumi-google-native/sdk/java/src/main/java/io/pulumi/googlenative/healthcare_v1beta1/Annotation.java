@@ -18,90 +18,77 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new Annotation record. It is valid to create Annotation objects for the same source more than once since a unique ID is assigned to each record by this service.
- * 
  */
 @ResourceType(type="google-native:healthcare/v1beta1:Annotation")
 public class Annotation extends io.pulumi.resources.CustomResource {
     /**
      * Details of the source.
-     * 
      */
     @Export(name="annotationSource", type=AnnotationSourceResponse.class, parameters={})
     private Output<AnnotationSourceResponse> annotationSource;
 
     /**
      * @return Details of the source.
-     * 
      */
     public Output<AnnotationSourceResponse> getAnnotationSource() {
         return this.annotationSource;
     }
     /**
      * Additional information for this annotation record, such as annotator and verifier information or study campaign.
-     * 
      */
     @Export(name="customData", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> customData;
 
     /**
      * @return Additional information for this annotation record, such as annotator and verifier information or study campaign.
-     * 
      */
     public Output<Map<String,String>> getCustomData() {
         return this.customData;
     }
     /**
      * Annotations for images. For example, bounding polygons.
-     * 
      */
     @Export(name="imageAnnotation", type=ImageAnnotationResponse.class, parameters={})
     private Output<ImageAnnotationResponse> imageAnnotation;
 
     /**
      * @return Annotations for images. For example, bounding polygons.
-     * 
      */
     public Output<ImageAnnotationResponse> getImageAnnotation() {
         return this.imageAnnotation;
     }
     /**
      * Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Annotations for resource. For example, classification tags.
-     * 
      */
     @Export(name="resourceAnnotation", type=ResourceAnnotationResponse.class, parameters={})
     private Output<ResourceAnnotationResponse> resourceAnnotation;
 
     /**
      * @return Annotations for resource. For example, classification tags.
-     * 
      */
     public Output<ResourceAnnotationResponse> getResourceAnnotation() {
         return this.resourceAnnotation;
     }
     /**
      * Annotations for sensitive texts. For example, a range that describes the location of sensitive text.
-     * 
      */
     @Export(name="textAnnotation", type=SensitiveTextAnnotationResponse.class, parameters={})
     private Output<SensitiveTextAnnotationResponse> textAnnotation;
 
     /**
      * @return Annotations for sensitive texts. For example, a range that describes the location of sensitive text.
-     * 
      */
     public Output<SensitiveTextAnnotationResponse> getTextAnnotation() {
         return this.textAnnotation;

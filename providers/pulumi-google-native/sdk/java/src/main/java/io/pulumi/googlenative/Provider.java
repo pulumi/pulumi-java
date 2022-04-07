@@ -13,48 +13,41 @@ import javax.annotation.Nullable;
 
 /**
  * The provider type for the Google Cloud package.
- * 
  */
 @ResourceType(type="pulumi:providers:google-native")
 public class Provider extends io.pulumi.resources.ProviderResource {
     /**
      * The default project to manage resources in. If another project is specified on a resource, it will take precedence.
-     * 
      */
     @Export(name="project", type=String.class, parameters={})
     private Output</* @Nullable */ String> project;
 
     /**
      * @return The default project to manage resources in. If another project is specified on a resource, it will take precedence.
-     * 
      */
     public Output</* @Nullable */ String> getProject() {
         return this.project;
     }
     /**
      * The default region to manage resources in. If another region is specified on a regional resource, it will take precedence.
-     * 
      */
     @Export(name="region", type=String.class, parameters={})
     private Output</* @Nullable */ String> region;
 
     /**
      * @return The default region to manage resources in. If another region is specified on a regional resource, it will take precedence.
-     * 
      */
     public Output</* @Nullable */ String> getRegion() {
         return this.region;
     }
     /**
      * The default zone to manage resources in. Generally, this zone should be within the default region you specified. If another zone is specified on a zonal resource, it will take precedence.
-     * 
      */
     @Export(name="zone", type=String.class, parameters={})
     private Output</* @Nullable */ String> zone;
 
     /**
      * @return The default zone to manage resources in. Generally, this zone should be within the default region you specified. If another zone is specified on a zonal resource, it will take precedence.
-     * 
      */
     public Output</* @Nullable */ String> getZone() {
         return this.zone;

@@ -14,7 +14,6 @@ public final class DatasetTagsItemResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * [Required] The namespaced friendly name of the tag key, e.g. "12345/environment" where 12345 is org id.
-     * 
      */
     @Import(name="tagKey", required=true)
       private final String tagKey;
@@ -25,7 +24,6 @@ public final class DatasetTagsItemResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * [Required] Friendly short name of the tag value, e.g. "production".
-     * 
      */
     @Import(name="tagValue", required=true)
       private final String tagValue;

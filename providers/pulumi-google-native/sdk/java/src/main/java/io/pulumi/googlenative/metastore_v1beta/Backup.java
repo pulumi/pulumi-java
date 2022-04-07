@@ -15,104 +15,89 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new backup in a given project and location.
- * 
  */
 @ResourceType(type="google-native:metastore/v1beta:Backup")
 public class Backup extends io.pulumi.resources.CustomResource {
     /**
      * The time when the backup was started.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time when the backup was started.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The description of the backup.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return The description of the backup.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The time when the backup finished creating.
-     * 
      */
     @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
      * @return The time when the backup finished creating.
-     * 
      */
     public Output<String> getEndTime() {
         return this.endTime;
     }
     /**
      * Immutable. The relative resource name of the backup, in the following form:projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Immutable. The relative resource name of the backup, in the following form:projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Services that are restoring from the backup.
-     * 
      */
     @Export(name="restoringServices", type=List.class, parameters={String.class})
     private Output<List<String>> restoringServices;
 
     /**
      * @return Services that are restoring from the backup.
-     * 
      */
     public Output<List<String>> getRestoringServices() {
         return this.restoringServices;
     }
     /**
      * The revision of the service at the time of backup.
-     * 
      */
     @Export(name="serviceRevision", type=ServiceResponse.class, parameters={})
     private Output<ServiceResponse> serviceRevision;
 
     /**
      * @return The revision of the service at the time of backup.
-     * 
      */
     public Output<ServiceResponse> getServiceRevision() {
         return this.serviceRevision;
     }
     /**
      * The current state of the backup.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The current state of the backup.
-     * 
      */
     public Output<String> getState() {
         return this.state;

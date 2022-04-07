@@ -17,7 +17,6 @@ import java.util.Objects;
 
 /**
  * Patch configuration specifications. Contains details on how to apply the patch(es) to a VM instance.
- * 
  */
 public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Apt update settings. Use this setting to override the default `apt` patch rules.
-     * 
      */
     @Import(name="apt", required=true)
       private final AptSettingsResponse apt;
@@ -36,7 +34,6 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Goo update settings. Use this setting to override the default `goo` patch rules.
-     * 
      */
     @Import(name="goo", required=true)
       private final GooSettingsResponse goo;
@@ -47,7 +44,6 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Allows the patch job to run on Managed instance groups (MIGs).
-     * 
      */
     @Import(name="migInstancesAllowed", required=true)
       private final Boolean migInstancesAllowed;
@@ -58,7 +54,6 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The `ExecStep` to run after the patch update.
-     * 
      */
     @Import(name="postStep", required=true)
       private final ExecStepResponse postStep;
@@ -69,7 +64,6 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The `ExecStep` to run before the patch update.
-     * 
      */
     @Import(name="preStep", required=true)
       private final ExecStepResponse preStep;
@@ -80,7 +74,6 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Post-patch reboot settings.
-     * 
      */
     @Import(name="rebootConfig", required=true)
       private final String rebootConfig;
@@ -91,7 +84,6 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Windows update settings. Use this override the default windows patch rules.
-     * 
      */
     @Import(name="windowsUpdate", required=true)
       private final WindowsUpdateSettingsResponse windowsUpdate;
@@ -102,7 +94,6 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Yum update settings. Use this setting to override the default `yum` patch rules.
-     * 
      */
     @Import(name="yum", required=true)
       private final YumSettingsResponse yum;
@@ -113,7 +104,6 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Zypper update settings. Use this setting to override the default `zypper` patch rules.
-     * 
      */
     @Import(name="zypper", required=true)
       private final ZypperSettingsResponse zypper;

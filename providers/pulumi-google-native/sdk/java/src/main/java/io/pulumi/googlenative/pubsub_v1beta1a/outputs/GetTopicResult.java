@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GetTopicResult {
     /**
      * Name of the topic.
-     * 
      */
     private final String name;
 
@@ -22,7 +21,6 @@ public final class GetTopicResult {
 
     /**
      * Name of the topic.
-     * 
     */
     public String getName() {
         return this.name;

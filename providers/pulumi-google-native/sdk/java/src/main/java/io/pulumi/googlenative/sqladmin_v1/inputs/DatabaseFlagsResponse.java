@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Database flags for Cloud SQL instances.
- * 
  */
 public final class DatabaseFlagsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DatabaseFlagsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the flag. These flags are passed at instance startup, so include both server options and system variables. Flags are specified with underscores, not hyphens. For more information, see [Configuring Database Flags](https://cloud.google.com/sql/docs/mysql/flags) in the Cloud SQL documentation.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class DatabaseFlagsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The value of the flag. Boolean flags are set to `on` for true and `off` for false. This field must be omitted if the flag doesn't take a value.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

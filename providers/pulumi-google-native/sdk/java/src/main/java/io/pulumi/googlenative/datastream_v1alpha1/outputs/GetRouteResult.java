@@ -13,37 +13,30 @@ import java.util.Objects;
 public final class GetRouteResult {
     /**
      * The create time of the resource.
-     * 
      */
     private final String createTime;
     /**
      * Destination address for connection
-     * 
      */
     private final String destinationAddress;
     /**
      * Destination port for connection
-     * 
      */
     private final Integer destinationPort;
     /**
      * Display name.
-     * 
      */
     private final String displayName;
     /**
      * Labels.
-     * 
      */
     private final Map<String,String> labels;
     /**
      * The resource's name.
-     * 
      */
     private final String name;
     /**
      * The update time of the resource.
-     * 
      */
     private final String updateTime;
 
@@ -67,49 +60,42 @@ public final class GetRouteResult {
 
     /**
      * The create time of the resource.
-     * 
     */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Destination address for connection
-     * 
     */
     public String getDestinationAddress() {
         return this.destinationAddress;
     }
     /**
      * Destination port for connection
-     * 
     */
     public Integer getDestinationPort() {
         return this.destinationPort;
     }
     /**
      * Display name.
-     * 
     */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Labels.
-     * 
     */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The resource's name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The update time of the resource.
-     * 
     */
     public String getUpdateTime() {
         return this.updateTime;

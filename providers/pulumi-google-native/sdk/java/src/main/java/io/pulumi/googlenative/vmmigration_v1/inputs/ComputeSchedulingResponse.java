@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Scheduling information for VM on maintenance/restart behaviour and node allocation in sole tenant nodes.
- * 
  */
 public final class ComputeSchedulingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ComputeSchedulingResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node. Ignored if no node_affinites are configured.
-     * 
      */
     @Import(name="minNodeCpus", required=true)
       private final Integer minNodeCpus;
@@ -32,7 +30,6 @@ public final class ComputeSchedulingResponse extends io.pulumi.resources.InvokeA
 
     /**
      * A set of node affinity and anti-affinity configurations for sole tenant nodes.
-     * 
      */
     @Import(name="nodeAffinities", required=true)
       private final List<SchedulingNodeAffinityResponse> nodeAffinities;
@@ -43,7 +40,6 @@ public final class ComputeSchedulingResponse extends io.pulumi.resources.InvokeA
 
     /**
      * How the instance should behave when the host machine undergoes maintenance that may temporarily impact instance performance.
-     * 
      */
     @Import(name="onHostMaintenance", required=true)
       private final String onHostMaintenance;
@@ -54,7 +50,6 @@ public final class ComputeSchedulingResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Whether the Instance should be automatically restarted whenever it is terminated by Compute Engine (not terminated by user). This configuration is identical to `automaticRestart` field in Compute Engine create instance under scheduling. It was changed to an enum (instead of a boolean) to match the default value in Compute Engine which is automatic restart.
-     * 
      */
     @Import(name="restartType", required=true)
       private final String restartType;

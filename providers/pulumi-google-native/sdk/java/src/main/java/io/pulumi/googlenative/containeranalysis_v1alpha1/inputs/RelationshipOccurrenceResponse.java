@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * RelationshipOccurrence represents an SPDX Relationship section: https://spdx.github.io/spdx-spec/7-relationships-between-SPDX-elements/
- * 
  */
 public final class RelationshipOccurrenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class RelationshipOccurrenceResponse extends io.pulumi.resources.In
 
     /**
      * A place for the SPDX file creator to record any general comments about the relationship
-     * 
      */
     @Import(name="comment", required=true)
       private final String comment;
@@ -29,7 +27,6 @@ public final class RelationshipOccurrenceResponse extends io.pulumi.resources.In
 
     /**
      * Also referred to as SPDXRef-A The source SPDX element (file, package, etc)
-     * 
      */
     @Import(name="source", required=true)
       private final String source;
@@ -40,7 +37,6 @@ public final class RelationshipOccurrenceResponse extends io.pulumi.resources.In
 
     /**
      * Also referred to as SPDXRef-B The target SPDC element (file, package, etc) In cases where there are "known unknowns", the use of the keyword NOASSERTION can be used The keywords NONE can be used to indicate that an SPDX element (package/file/snippet) has no other elements connected by some relationship to it
-     * 
      */
     @Import(name="target", required=true)
       private final String target;
@@ -51,7 +47,6 @@ public final class RelationshipOccurrenceResponse extends io.pulumi.resources.In
 
     /**
      * The type of relationship between the source and target SPDX elements
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for the Compute Engine PD CSI driver.
- * 
  */
 public final class GcePersistentDiskCsiDriverConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GcePersistentDiskCsiDriverConfigArgs extends io.pulumi.resour
 
     /**
      * Whether the Compute Engine PD CSI driver is enabled for this cluster.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;

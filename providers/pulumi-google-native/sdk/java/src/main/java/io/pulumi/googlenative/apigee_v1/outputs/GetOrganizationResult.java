@@ -15,107 +15,86 @@ import java.util.Objects;
 public final class GetOrganizationResult {
     /**
      * Addon configurations of the Apigee organization.
-     * 
      */
     private final GoogleCloudApigeeV1AddonsConfigResponse addonsConfig;
     /**
      * Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
-     * 
      */
     private final String analyticsRegion;
     /**
      * Not used by Apigee.
-     * 
      */
     private final List<String> attributes;
     /**
      * Compute Engine network used for Service Networking to be peered with Apigee runtime instances. See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started). Valid only when [RuntimeType](#RuntimeType) is set to `CLOUD`. The value must be set before the creation of a runtime instance and can be updated only when there are no runtime instances. For example: `default`. Apigee also supports shared VPC (that is, the host network project is not the same as the one that is peering with Apigee). See [Shared VPC overview](https://cloud.google.com/vpc/docs/shared-vpc). To use a shared VPC network, use the following format: `projects/{host-project-id}/{region}/networks/{network-name}`. For example: `projects/my-sharedvpc-host/global/networks/mynetwork` **Note:** Not supported for Apigee hybrid.
-     * 
      */
     private final String authorizedNetwork;
     /**
      * Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).
-     * 
      */
     private final String billingType;
     /**
      * Base64-encoded public certificate for the root CA of the Apigee organization. Valid only when [RuntimeType](#RuntimeType) is `CLOUD`.
-     * 
      */
     private final String caCertificate;
     /**
      * Time that the Apigee organization was created in milliseconds since epoch.
-     * 
      */
     private final String createdAt;
     /**
      * Not used by Apigee.
-     * 
      */
     private final String customerName;
     /**
      * Description of the Apigee organization.
-     * 
      */
     private final String description;
     /**
      * Display name for the Apigee organization. Unused, but reserved for future use.
-     * 
      */
     private final String displayName;
     /**
      * List of environments in the Apigee organization.
-     * 
      */
     private final List<String> environments;
     /**
      * Time that the Apigee organization is scheduled for deletion.
-     * 
      */
     private final String expiresAt;
     /**
      * Time that the Apigee organization was last modified in milliseconds since epoch.
-     * 
      */
     private final String lastModifiedAt;
     /**
      * Name of the Apigee organization.
-     * 
      */
     private final String name;
     /**
      * Configuration for the Portals settings.
-     * 
      */
     private final Boolean portalDisabled;
     /**
      * Project ID associated with the Apigee organization.
-     * 
      */
     private final String project;
     /**
      * Properties defined in the Apigee organization profile.
-     * 
      */
     private final GoogleCloudApigeeV1PropertiesResponse properties;
     /**
      * Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances. Update is not allowed after the organization is created. Required when [RuntimeType](#RuntimeType) is `CLOUD`. If not specified when [RuntimeType](#RuntimeType) is `TRIAL`, a Google-Managed encryption key will be used. For example: "projects/foo/locations/us/keyRings/bar/cryptoKeys/baz". **Note:** Not supported for Apigee hybrid.
-     * 
      */
     private final String runtimeDatabaseEncryptionKeyName;
     /**
      * Runtime type of the Apigee organization based on the Apigee subscription purchased.
-     * 
      */
     private final String runtimeType;
     /**
      * State of the organization. Values other than ACTIVE means the resource is not ready to use.
-     * 
      */
     private final String state;
     /**
      * Not used by Apigee.
-     * 
      */
     private final String type;
 
@@ -167,147 +146,126 @@ public final class GetOrganizationResult {
 
     /**
      * Addon configurations of the Apigee organization.
-     * 
     */
     public GoogleCloudApigeeV1AddonsConfigResponse getAddonsConfig() {
         return this.addonsConfig;
     }
     /**
      * Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
-     * 
     */
     public String getAnalyticsRegion() {
         return this.analyticsRegion;
     }
     /**
      * Not used by Apigee.
-     * 
     */
     public List<String> getAttributes() {
         return this.attributes;
     }
     /**
      * Compute Engine network used for Service Networking to be peered with Apigee runtime instances. See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started). Valid only when [RuntimeType](#RuntimeType) is set to `CLOUD`. The value must be set before the creation of a runtime instance and can be updated only when there are no runtime instances. For example: `default`. Apigee also supports shared VPC (that is, the host network project is not the same as the one that is peering with Apigee). See [Shared VPC overview](https://cloud.google.com/vpc/docs/shared-vpc). To use a shared VPC network, use the following format: `projects/{host-project-id}/{region}/networks/{network-name}`. For example: `projects/my-sharedvpc-host/global/networks/mynetwork` **Note:** Not supported for Apigee hybrid.
-     * 
     */
     public String getAuthorizedNetwork() {
         return this.authorizedNetwork;
     }
     /**
      * Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).
-     * 
     */
     public String getBillingType() {
         return this.billingType;
     }
     /**
      * Base64-encoded public certificate for the root CA of the Apigee organization. Valid only when [RuntimeType](#RuntimeType) is `CLOUD`.
-     * 
     */
     public String getCaCertificate() {
         return this.caCertificate;
     }
     /**
      * Time that the Apigee organization was created in milliseconds since epoch.
-     * 
     */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Not used by Apigee.
-     * 
     */
     public String getCustomerName() {
         return this.customerName;
     }
     /**
      * Description of the Apigee organization.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * Display name for the Apigee organization. Unused, but reserved for future use.
-     * 
     */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * List of environments in the Apigee organization.
-     * 
     */
     public List<String> getEnvironments() {
         return this.environments;
     }
     /**
      * Time that the Apigee organization is scheduled for deletion.
-     * 
     */
     public String getExpiresAt() {
         return this.expiresAt;
     }
     /**
      * Time that the Apigee organization was last modified in milliseconds since epoch.
-     * 
     */
     public String getLastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * Name of the Apigee organization.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Configuration for the Portals settings.
-     * 
     */
     public Boolean getPortalDisabled() {
         return this.portalDisabled;
     }
     /**
      * Project ID associated with the Apigee organization.
-     * 
     */
     public String getProject() {
         return this.project;
     }
     /**
      * Properties defined in the Apigee organization profile.
-     * 
     */
     public GoogleCloudApigeeV1PropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances. Update is not allowed after the organization is created. Required when [RuntimeType](#RuntimeType) is `CLOUD`. If not specified when [RuntimeType](#RuntimeType) is `TRIAL`, a Google-Managed encryption key will be used. For example: "projects/foo/locations/us/keyRings/bar/cryptoKeys/baz". **Note:** Not supported for Apigee hybrid.
-     * 
     */
     public String getRuntimeDatabaseEncryptionKeyName() {
         return this.runtimeDatabaseEncryptionKeyName;
     }
     /**
      * Runtime type of the Apigee organization based on the Apigee subscription purchased.
-     * 
     */
     public String getRuntimeType() {
         return this.runtimeType;
     }
     /**
      * State of the organization. Values other than ACTIVE means the resource is not ready to use.
-     * 
     */
     public String getState() {
         return this.state;
     }
     /**
      * Not used by Apigee.
-     * 
     */
     public String getType() {
         return this.type;

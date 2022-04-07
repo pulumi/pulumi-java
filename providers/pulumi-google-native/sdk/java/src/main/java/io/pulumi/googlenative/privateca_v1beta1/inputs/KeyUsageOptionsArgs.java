@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * KeyUsage.KeyUsageOptions corresponds to the key usage values described in https://tools.ietf.org/html/rfc5280#section-4.2.1.3.
- * 
  */
 public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The key may be used to sign certificates.
-     * 
      */
     @Import(name="certSign")
       private final @Nullable Output<Boolean> certSign;
@@ -31,7 +29,6 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
-     * 
      */
     @Import(name="contentCommitment")
       private final @Nullable Output<Boolean> contentCommitment;
@@ -42,7 +39,6 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The key may be used sign certificate revocation lists.
-     * 
      */
     @Import(name="crlSign")
       private final @Nullable Output<Boolean> crlSign;
@@ -53,7 +49,6 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The key may be used to encipher data.
-     * 
      */
     @Import(name="dataEncipherment")
       private final @Nullable Output<Boolean> dataEncipherment;
@@ -64,7 +59,6 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The key may be used to decipher only.
-     * 
      */
     @Import(name="decipherOnly")
       private final @Nullable Output<Boolean> decipherOnly;
@@ -75,7 +69,6 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The key may be used for digital signatures.
-     * 
      */
     @Import(name="digitalSignature")
       private final @Nullable Output<Boolean> digitalSignature;
@@ -86,7 +79,6 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The key may be used to encipher only.
-     * 
      */
     @Import(name="encipherOnly")
       private final @Nullable Output<Boolean> encipherOnly;
@@ -97,7 +89,6 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The key may be used in a key agreement protocol.
-     * 
      */
     @Import(name="keyAgreement")
       private final @Nullable Output<Boolean> keyAgreement;
@@ -108,7 +99,6 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The key may be used to encipher other keys.
-     * 
      */
     @Import(name="keyEncipherment")
       private final @Nullable Output<Boolean> keyEncipherment;

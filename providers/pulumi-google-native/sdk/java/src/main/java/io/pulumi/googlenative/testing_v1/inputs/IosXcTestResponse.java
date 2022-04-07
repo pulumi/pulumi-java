@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A test of an iOS application that uses the XCTest framework. Xcode supports the option to "build for testing", which generates an .xctestrun file that contains a test specification (arguments, test methods, etc). This test type accepts a zip file containing the .xctestrun file and the corresponding contents of the Build/Products directory that contains all the binaries needed to run the tests.
- * 
  */
 public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The bundle id for the application under test.
-     * 
      */
     @Import(name="appBundleId", required=true)
       private final String appBundleId;
@@ -31,7 +29,6 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The option to test special app entitlements. Setting this would re-sign the app having special entitlements with an explicit application-identifier. Currently supports testing aps-environment entitlement.
-     * 
      */
     @Import(name="testSpecialEntitlements", required=true)
       private final Boolean testSpecialEntitlements;
@@ -42,7 +39,6 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The .zip containing the .xctestrun file and the contents of the DerivedData/Build/Products directory. The .xctestrun file in this zip is ignored if the xctestrun field is specified.
-     * 
      */
     @Import(name="testsZip", required=true)
       private final FileReferenceResponse testsZip;
@@ -53,7 +49,6 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Xcode version that should be used for the test. Use the TestEnvironmentDiscoveryService to get supported options. Defaults to the latest Xcode version Firebase Test Lab supports.
-     * 
      */
     @Import(name="xcodeVersion", required=true)
       private final String xcodeVersion;
@@ -64,7 +59,6 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An .xctestrun file that will override the .xctestrun file in the tests zip. Because the .xctestrun file contains environment variables along with test methods to run and/or ignore, this can be useful for sharding tests. Default is taken from the tests zip.
-     * 
      */
     @Import(name="xctestrun", required=true)
       private final FileReferenceResponse xctestrun;

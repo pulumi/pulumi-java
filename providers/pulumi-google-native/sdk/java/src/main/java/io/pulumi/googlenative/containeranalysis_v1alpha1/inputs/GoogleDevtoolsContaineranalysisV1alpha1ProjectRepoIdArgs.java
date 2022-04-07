@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Selects a repo using a Google Cloud Platform project ID (e.g., winged-cargo-31) and a repo name within that project.
- * 
  */
 public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs exte
 
     /**
      * The ID of the project.
-     * 
      */
     @Import(name="project")
       private final @Nullable Output<String> project;
@@ -31,7 +29,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs exte
 
     /**
      * The name of the repo. Leave empty for the default repo.
-     * 
      */
     @Import(name="repoName")
       private final @Nullable Output<String> repoName;

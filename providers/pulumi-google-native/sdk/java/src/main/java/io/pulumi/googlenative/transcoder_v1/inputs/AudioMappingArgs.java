@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
- * 
  */
 public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The `EditAtom.key` that references the atom with audio inputs in the `Job.edit_list`.
-     * 
      */
     @Import(name="atomKey", required=true)
       private final Output<String> atomKey;
@@ -33,7 +31,6 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Audio volume control in dB. Negative values decrease volume, positive values increase. The default is 0.
-     * 
      */
     @Import(name="gainDb")
       private final @Nullable Output<Double> gainDb;
@@ -44,7 +41,6 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The zero-based index of the channel in the input audio stream.
-     * 
      */
     @Import(name="inputChannel", required=true)
       private final Output<Integer> inputChannel;
@@ -55,7 +51,6 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The `Input.key` that identifies the input file.
-     * 
      */
     @Import(name="inputKey", required=true)
       private final Output<String> inputKey;
@@ -66,7 +61,6 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The zero-based index of the track in the input file.
-     * 
      */
     @Import(name="inputTrack", required=true)
       private final Output<Integer> inputTrack;
@@ -77,7 +71,6 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The zero-based index of the channel in the output audio stream.
-     * 
      */
     @Import(name="outputChannel", required=true)
       private final Output<Integer> outputChannel;

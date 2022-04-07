@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * cluster_dns indicates which in-cluster DNS provider should be used.
-     * 
      */
     @EnumType
     public enum DNSConfigClusterDns {
         /**
          * Default value
-         * 
          */
         ProviderUnspecified("PROVIDER_UNSPECIFIED"),
         /**
          * Use GKE default DNS provider(kube-dns) for DNS resolution.
-         * 
          */
         PlatformDefault("PLATFORM_DEFAULT"),
         /**
          * Use CloudDNS for DNS resolution.
-         * 
          */
         CloudDns("CLOUD_DNS");
 

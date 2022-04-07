@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The resource submessage for group checks. It can be used instead of a monitored resource, when multiple resources are being monitored.
- * 
  */
 public final class ResourceGroupResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ResourceGroupResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The group of resources being monitored. Should be only the [GROUP_ID], and not the full-path projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID].
-     * 
      */
     @Import(name="groupId", required=true)
       private final String groupId;
@@ -29,7 +27,6 @@ public final class ResourceGroupResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The resource type of the group members.
-     * 
      */
     @Import(name="resourceType", required=true)
       private final String resourceType;

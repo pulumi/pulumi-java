@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Maintenance timing setting: `canary` (Earlier) or `stable` (Later). [Learn more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).
-     * 
      */
     @EnumType
     public enum MaintenanceWindowUpdateTrack {
         /**
          * This is an unknown maintenance timing preference.
-         * 
          */
         SqlUpdateTrackUnspecified("SQL_UPDATE_TRACK_UNSPECIFIED"),
         /**
          * For instance update that requires a restart, this update track indicates your instance prefer to restart for new version early in maintenance window.
-         * 
          */
         Canary("canary"),
         /**
          * For instance update that requires a restart, this update track indicates your instance prefer to let Cloud SQL choose the timing of restart (within its Maintenance window, if applicable).
-         * 
          */
         Stable("stable");
 

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Scoring configurations for a source while processing a Search or Suggest request.
- * 
  */
 public final class ScoringConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ScoringConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether to use freshness as a ranking signal. By default, freshness is used as a ranking signal. Note that this setting is not available in the Admin UI.
-     * 
      */
     @Import(name="disableFreshness")
       private final @Nullable Output<Boolean> disableFreshness;
@@ -31,7 +29,6 @@ public final class ScoringConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether to personalize the results. By default, personal signals will be used to boost results.
-     * 
      */
     @Import(name="disablePersonalization")
       private final @Nullable Output<Boolean> disablePersonalization;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * These values describe fields in an issued X.509 certificate such as the distinguished name, subject alternative names, serial number, and lifetime.
- * 
  */
 public final class SubjectDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
 
     /**
      * The serial number encoded in lowercase hexadecimal.
-     * 
      */
     @Import(name="hexSerialNumber", required=true)
       private final String hexSerialNumber;
@@ -31,7 +29,6 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
 
     /**
      * For convenience, the actual lifetime of an issued certificate.
-     * 
      */
     @Import(name="lifetime", required=true)
       private final String lifetime;
@@ -42,7 +39,6 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
 
     /**
      * The time after which the certificate is expired. Per RFC 5280, the validity period for a certificate is the period of time from not_before_time through not_after_time, inclusive. Corresponds to 'not_before_time' + 'lifetime' - 1 second.
-     * 
      */
     @Import(name="notAfterTime", required=true)
       private final String notAfterTime;
@@ -53,7 +49,6 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
 
     /**
      * The time at which the certificate becomes valid.
-     * 
      */
     @Import(name="notBeforeTime", required=true)
       private final String notBeforeTime;
@@ -64,7 +59,6 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
 
     /**
      * Contains distinguished name fields such as the common name, location and / organization.
-     * 
      */
     @Import(name="subject", required=true)
       private final SubjectResponse subject;
@@ -75,7 +69,6 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
 
     /**
      * The subject alternative name fields.
-     * 
      */
     @Import(name="subjectAltName", required=true)
       private final SubjectAltNamesResponse subjectAltName;

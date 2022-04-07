@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * API call volume range and the fees charged when the total number of API calls is within the range.
- * 
  */
 public final class GoogleCloudApigeeV1RateRangeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudApigeeV1RateRangeResponse extends io.pulumi.resour
 
     /**
      * Ending value of the range. Set to 0 or `null` for the last range of values.
-     * 
      */
     @Import(name="end", required=true)
       private final String end;
@@ -30,7 +28,6 @@ public final class GoogleCloudApigeeV1RateRangeResponse extends io.pulumi.resour
 
     /**
      * Fee to charge when total number of API calls falls within this range.
-     * 
      */
     @Import(name="fee", required=true)
       private final GoogleTypeMoneyResponse fee;
@@ -41,7 +38,6 @@ public final class GoogleCloudApigeeV1RateRangeResponse extends io.pulumi.resour
 
     /**
      * Starting value of the range. Set to 0 or `null` for the initial range of values.
-     * 
      */
     @Import(name="start", required=true)
       private final String start;

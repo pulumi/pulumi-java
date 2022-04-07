@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Configurations for a source while processing a Search or Suggest request.
- * 
  */
 public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The crowding configuration for the source.
-     * 
      */
     @Import(name="crowdingConfig", required=true)
       private final SourceCrowdingConfigResponse crowdingConfig;
@@ -31,7 +29,6 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The scoring configuration for the source.
-     * 
      */
     @Import(name="scoringConfig", required=true)
       private final SourceScoringConfigResponse scoringConfig;
@@ -42,7 +39,6 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The source for which this configuration is to be used.
-     * 
      */
     @Import(name="source", required=true)
       private final SourceResponse source;

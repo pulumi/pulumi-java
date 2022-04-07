@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Runtime using Virtual Machine for computing.
- * 
  */
 public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Virtual Machine configuration settings.
-     * 
      */
     @Import(name="virtualMachineConfig")
       private final @Nullable Output<VirtualMachineConfigArgs> virtualMachineConfig;

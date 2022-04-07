@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * LoggingConfig is cluster logging configuration.
- * 
  */
 public final class LoggingConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class LoggingConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Logging components configuration
-     * 
      */
     @Import(name="componentConfig", required=true)
       private final LoggingComponentConfigResponse componentConfig;

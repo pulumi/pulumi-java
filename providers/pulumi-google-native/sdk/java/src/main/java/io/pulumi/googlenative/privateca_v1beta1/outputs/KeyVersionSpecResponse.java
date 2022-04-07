@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class KeyVersionSpecResponse {
     /**
      * The algorithm to use for creating a managed Cloud KMS key for a for a simplified experience. All managed keys will be have their ProtectionLevel as `HSM`.
-     * 
      */
     private final String algorithm;
     /**
      * The resource name for an existing Cloud KMS CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`. This option enables full flexibility in the key's capabilities and properties.
-     * 
      */
     private final String cloudKmsKeyVersion;
 
@@ -30,14 +28,12 @@ public final class KeyVersionSpecResponse {
 
     /**
      * The algorithm to use for creating a managed Cloud KMS key for a for a simplified experience. All managed keys will be have their ProtectionLevel as `HSM`.
-     * 
     */
     public String getAlgorithm() {
         return this.algorithm;
     }
     /**
      * The resource name for an existing Cloud KMS CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`. This option enables full flexibility in the key's capabilities and properties.
-     * 
     */
     public String getCloudKmsKeyVersion() {
         return this.cloudKmsKeyVersion;

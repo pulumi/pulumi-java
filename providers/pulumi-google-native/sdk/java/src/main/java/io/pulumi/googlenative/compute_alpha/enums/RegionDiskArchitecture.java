@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The architecture of the disk. Valid values are ARM64 or X86_64.
-     * 
      */
     @EnumType
     public enum RegionDiskArchitecture {
         /**
          * Default value indicating Architecture is not set.
-         * 
          */
         ArchitectureUnspecified("ARCHITECTURE_UNSPECIFIED"),
         /**
          * Machines with architecture ARM64
-         * 
          */
         Arm64("ARM64"),
         /**
          * Machines with architecture X86_64
-         * 
          */
         X8664("X86_64");
 

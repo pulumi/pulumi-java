@@ -12,22 +12,18 @@ import java.util.Objects;
 public final class InitialStateConfigResponse {
     /**
      * The Key Database (db).
-     * 
      */
     private final List<FileContentBufferResponse> dbs;
     /**
      * The forbidden key database (dbx).
-     * 
      */
     private final List<FileContentBufferResponse> dbxs;
     /**
      * The Key Exchange Key (KEK).
-     * 
      */
     private final List<FileContentBufferResponse> keks;
     /**
      * The Platform Key (PK).
-     * 
      */
     private final FileContentBufferResponse pk;
 
@@ -45,28 +41,24 @@ public final class InitialStateConfigResponse {
 
     /**
      * The Key Database (db).
-     * 
     */
     public List<FileContentBufferResponse> getDbs() {
         return this.dbs;
     }
     /**
      * The forbidden key database (dbx).
-     * 
     */
     public List<FileContentBufferResponse> getDbxs() {
         return this.dbxs;
     }
     /**
      * The Key Exchange Key (KEK).
-     * 
     */
     public List<FileContentBufferResponse> getKeks() {
         return this.keks;
     }
     /**
      * The Platform Key (PK).
-     * 
     */
     public FileContentBufferResponse getPk() {
         return this.pk;

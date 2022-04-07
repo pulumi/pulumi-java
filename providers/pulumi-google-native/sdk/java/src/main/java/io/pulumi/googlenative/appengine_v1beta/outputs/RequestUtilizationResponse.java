@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class RequestUtilizationResponse {
     /**
      * Target number of concurrent requests.
-     * 
      */
     private final Integer targetConcurrentRequests;
     /**
      * Target requests per second.
-     * 
      */
     private final Integer targetRequestCountPerSecond;
 
@@ -30,14 +28,12 @@ public final class RequestUtilizationResponse {
 
     /**
      * Target number of concurrent requests.
-     * 
     */
     public Integer getTargetConcurrentRequests() {
         return this.targetConcurrentRequests;
     }
     /**
      * Target requests per second.
-     * 
     */
     public Integer getTargetRequestCountPerSecond() {
         return this.targetRequestCountPerSecond;

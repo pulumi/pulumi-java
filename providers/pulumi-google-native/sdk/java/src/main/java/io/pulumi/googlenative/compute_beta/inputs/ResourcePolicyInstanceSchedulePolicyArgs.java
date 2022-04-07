@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An InstanceSchedulePolicy specifies when and how frequent certain operations are performed on the instance.
- * 
  */
 public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
 
     /**
      * The expiration time of the schedule. The timestamp is an RFC3339 string.
-     * 
      */
     @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
@@ -32,7 +30,6 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
 
     /**
      * The start time of the schedule. The timestamp is an RFC3339 string.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
@@ -43,7 +40,6 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
 
     /**
      * Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
-     * 
      */
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
@@ -54,7 +50,6 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
 
     /**
      * Specifies the schedule for starting instances.
-     * 
      */
     @Import(name="vmStartSchedule")
       private final @Nullable Output<ResourcePolicyInstanceSchedulePolicyScheduleArgs> vmStartSchedule;
@@ -65,7 +60,6 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
 
     /**
      * Specifies the schedule for stopping instances.
-     * 
      */
     @Import(name="vmStopSchedule")
       private final @Nullable Output<ResourcePolicyInstanceSchedulePolicyScheduleArgs> vmStopSchedule;

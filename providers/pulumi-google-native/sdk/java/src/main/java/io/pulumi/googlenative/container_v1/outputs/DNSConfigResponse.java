@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class DNSConfigResponse {
     /**
      * cluster_dns indicates which in-cluster DNS provider should be used.
-     * 
      */
     private final String clusterDns;
     /**
      * cluster_dns_domain is the suffix used for all cluster service records.
-     * 
      */
     private final String clusterDnsDomain;
     /**
      * cluster_dns_scope indicates the scope of access to cluster DNS records.
-     * 
      */
     private final String clusterDnsScope;
 
@@ -37,21 +34,18 @@ public final class DNSConfigResponse {
 
     /**
      * cluster_dns indicates which in-cluster DNS provider should be used.
-     * 
     */
     public String getClusterDns() {
         return this.clusterDns;
     }
     /**
      * cluster_dns_domain is the suffix used for all cluster service records.
-     * 
     */
     public String getClusterDnsDomain() {
         return this.clusterDnsDomain;
     }
     /**
      * cluster_dns_scope indicates the scope of access to cluster DNS records.
-     * 
     */
     public String getClusterDnsScope() {
         return this.clusterDnsScope;

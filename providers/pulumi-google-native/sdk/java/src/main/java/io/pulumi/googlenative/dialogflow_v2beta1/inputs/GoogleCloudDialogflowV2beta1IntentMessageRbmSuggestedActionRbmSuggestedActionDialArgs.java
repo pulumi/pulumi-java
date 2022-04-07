@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Opens the user's default dialer app with the specified phone number but does not dial automatically.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
 
     /**
      * The phone number to fill in the default dialer app. This field should be in [E.164](https://en.wikipedia.org/wiki/E.164) format. An example of a correctly formatted phone number: +15556767888.
-     * 
      */
     @Import(name="phoneNumber", required=true)
       private final Output<String> phoneNumber;

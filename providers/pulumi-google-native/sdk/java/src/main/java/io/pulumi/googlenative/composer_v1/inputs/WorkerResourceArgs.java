@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for resources used by Airflow workers.
- * 
  */
 public final class WorkerResourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class WorkerResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. CPU request and limit for a single Airflow worker replica.
-     * 
      */
     @Import(name="cpu")
       private final @Nullable Output<Double> cpu;
@@ -32,7 +30,6 @@ public final class WorkerResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Maximum number of workers for autoscaling.
-     * 
      */
     @Import(name="maxCount")
       private final @Nullable Output<Integer> maxCount;
@@ -43,7 +40,6 @@ public final class WorkerResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Memory (GB) request and limit for a single Airflow worker replica.
-     * 
      */
     @Import(name="memoryGb")
       private final @Nullable Output<Double> memoryGb;
@@ -54,7 +50,6 @@ public final class WorkerResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Minimum number of workers for autoscaling.
-     * 
      */
     @Import(name="minCount")
       private final @Nullable Output<Integer> minCount;
@@ -65,7 +60,6 @@ public final class WorkerResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Storage (GB) request and limit for a single Airflow worker replica.
-     * 
      */
     @Import(name="storageGb")
       private final @Nullable Output<Double> storageGb;

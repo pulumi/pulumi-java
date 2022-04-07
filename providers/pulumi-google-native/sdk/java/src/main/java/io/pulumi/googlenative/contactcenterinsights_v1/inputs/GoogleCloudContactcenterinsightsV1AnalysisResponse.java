@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The analysis resource.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends io
 
     /**
      * The result of the analysis, which is populated when the analysis finishes.
-     * 
      */
     @Import(name="analysisResult", required=true)
       private final GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult;
@@ -30,7 +28,6 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends io
 
     /**
      * The time at which the analysis was created, which occurs when the long-running operation completes.
-     * 
      */
     @Import(name="createTime", required=true)
       private final String createTime;
@@ -41,7 +38,6 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends io
 
     /**
      * Immutable. The resource name of the analysis. Format: projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -52,7 +48,6 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends io
 
     /**
      * The time at which the analysis was requested.
-     * 
      */
     @Import(name="requestTime", required=true)
       private final String requestTime;

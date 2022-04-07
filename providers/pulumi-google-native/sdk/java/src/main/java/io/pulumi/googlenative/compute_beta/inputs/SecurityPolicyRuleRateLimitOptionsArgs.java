@@ -20,7 +20,6 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
 
     /**
      * Can only be specified if the action for the rule is "rate_based_ban". If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.
-     * 
      */
     @Import(name="banDurationSec")
       private final @Nullable Output<Integer> banDurationSec;
@@ -31,7 +30,6 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
 
     /**
      * Can only be specified if the action for the rule is "rate_based_ban". If specified, the key will be banned for the configured 'ban_duration_sec' when the number of requests that exceed the 'rate_limit_threshold' also exceed this 'ban_threshold'.
-     * 
      */
     @Import(name="banThreshold")
       private final @Nullable Output<SecurityPolicyRuleRateLimitOptionsThresholdArgs> banThreshold;
@@ -42,7 +40,6 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
 
     /**
      * Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.
-     * 
      */
     @Import(name="conformAction")
       private final @Nullable Output<String> conformAction;
@@ -52,8 +49,7 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
     }
 
     /**
-     * Determines the key to enforce the rate_limit_threshold on. Possible values are: - ALL: A single rate limit threshold is applied to all the requests matching this rule. This is the default value if this field 'enforce_on_key' is not configured. - IP: The source IP address of the request is the key. Each IP has this limit enforced separately. - HTTP_HEADER: The value of the HTTP header whose name is configured under "enforce_on_key_name". The key value is truncated to the first 128 bytes of the header value. If no such header is present in the request, the key type defaults to ALL. - XFF_IP: The first IP address (i.e. the originating client IP address) specified in the list of IPs under X-Forwarded-For HTTP header. If no such header is present or the value is not a valid IP, the key type defaults to ALL. - HTTP_COOKIE: The value of the HTTP cookie whose name is configured under "enforce_on_key_name". The key value is truncated to the first 128 bytes of the cookie value. If no such cookie is present in the request, the key type defaults to ALL.
-     * 
+     * Determines the key to enforce the rate_limit_threshold on. Possible values are: - ALL: A single rate limit threshold is applied to all the requests matching this rule. This is the default value if this field 'enforce_on_key' is not configured. - IP: The source IP address of the request is the key. Each IP has this limit enforced separately. - HTTP_HEADER: The value of the HTTP header whose name is configured under "enforce_on_key_name". The key value is truncated to the first 128 bytes of the header value. If no such header is present in the request, the key type defaults to ALL. - XFF_IP: The first IP address (i.e. the originating client IP address) specified in the list of IPs under X-Forwarded-For HTTP header. If no such header is present or the value is not a valid IP, the key type defaults to ALL. - HTTP_COOKIE: The value of the HTTP cookie whose name is configured under "enforce_on_key_name". The key value is truncated to the first 128 bytes of the cookie value. If no such cookie is present in the request, the key type defaults to ALL. 
      */
     @Import(name="enforceOnKey")
       private final @Nullable Output<SecurityPolicyRuleRateLimitOptionsEnforceOnKey> enforceOnKey;
@@ -64,7 +60,6 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
 
     /**
      * Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value. HTTP_COOKIE -- Name of the HTTP cookie whose value is taken as the key value.
-     * 
      */
     @Import(name="enforceOnKeyName")
       private final @Nullable Output<String> enforceOnKeyName;
@@ -75,7 +70,6 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
 
     /**
      * Action to take for requests that are above the configured rate limit threshold, to either deny with a specified HTTP response code, or redirect to a different endpoint. Valid options are "deny()" where valid values for status are 403, 404, 429, and 502, and "redirect" where the redirect parameters come from exceed_redirect_options below.
-     * 
      */
     @Import(name="exceedAction")
       private final @Nullable Output<String> exceedAction;
@@ -86,7 +80,6 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
 
     /**
      * Parameters defining the redirect action that is used as the exceed action. Cannot be specified if the exceed action is not redirect.
-     * 
      */
     @Import(name="exceedRedirectOptions")
       private final @Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> exceedRedirectOptions;
@@ -97,7 +90,6 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
 
     /**
      * Threshold at which to begin ratelimiting.
-     * 
      */
     @Import(name="rateLimitThreshold")
       private final @Nullable Output<SecurityPolicyRuleRateLimitOptionsThresholdArgs> rateLimitThreshold;

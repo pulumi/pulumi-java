@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The bucket's Autoclass configuration.
- * 
  */
 public final class BucketAutoclassArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class BucketAutoclassArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Whether or not Autoclass is enabled on this bucket
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -32,7 +30,6 @@ public final class BucketAutoclassArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A date and time in RFC 3339 format representing the instant at which "enabled" was last toggled.
-     * 
      */
     @Import(name="toggleTime")
       private final @Nullable Output<String> toggleTime;

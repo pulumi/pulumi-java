@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class InstantSnapshotResourceStatusResponse {
     /**
      * The storage size of this instant snapshot.
-     * 
      */
     private final String storageSizeBytes;
 
@@ -22,7 +21,6 @@ public final class InstantSnapshotResourceStatusResponse {
 
     /**
      * The storage size of this instant snapshot.
-     * 
     */
     public String getStorageSizeBytes() {
         return this.storageSizeBytes;

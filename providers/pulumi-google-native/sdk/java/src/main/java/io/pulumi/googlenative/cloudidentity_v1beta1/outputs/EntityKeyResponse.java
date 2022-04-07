@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class EntityKeyResponse {
     /**
      * The namespace in which the entity exists. If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a Google Group. If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must correspond to an identity source created in Admin Console and must be in the form of `identitysources/{identity_source_id}`.
-     * 
      */
     private final String namespace;
 
@@ -22,7 +21,6 @@ public final class EntityKeyResponse {
 
     /**
      * The namespace in which the entity exists. If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a Google Group. If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must correspond to an identity source created in Admin Console and must be in the form of `identitysources/{identity_source_id}`.
-     * 
     */
     public String getNamespace() {
         return this.namespace;

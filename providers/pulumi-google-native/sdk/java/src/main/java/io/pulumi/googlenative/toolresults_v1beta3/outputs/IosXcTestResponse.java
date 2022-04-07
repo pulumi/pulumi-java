@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class IosXcTestResponse {
     /**
      * Bundle ID of the app.
-     * 
      */
     private final String bundleId;
     /**
      * Xcode version that the test was run with.
-     * 
      */
     private final String xcodeVersion;
 
@@ -30,14 +28,12 @@ public final class IosXcTestResponse {
 
     /**
      * Bundle ID of the app.
-     * 
     */
     public String getBundleId() {
         return this.bundleId;
     }
     /**
      * Xcode version that the test was run with.
-     * 
     */
     public String getXcodeVersion() {
         return this.xcodeVersion;

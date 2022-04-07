@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Table card for Actions on Google.
- * 
  */
 public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends io.
 
     /**
      * Optional. List of buttons for the card.
-     * 
      */
     @Import(name="buttons")
       private final @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> buttons;
@@ -36,7 +34,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends io.
 
     /**
      * Optional. Display properties for the columns in this table.
-     * 
      */
     @Import(name="columnProperties")
       private final @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs>> columnProperties;
@@ -47,7 +44,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends io.
 
     /**
      * Optional. Image which should be displayed on the card.
-     * 
      */
     @Import(name="image")
       private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
@@ -58,7 +54,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends io.
 
     /**
      * Optional. Rows in this table of data.
-     * 
      */
     @Import(name="rows")
       private final @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageTableCardRowArgs>> rows;
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends io.
 
     /**
      * Optional. Subtitle to the title.
-     * 
      */
     @Import(name="subtitle")
       private final @Nullable Output<String> subtitle;
@@ -80,7 +74,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends io.
 
     /**
      * Title of the card.
-     * 
      */
     @Import(name="title", required=true)
       private final Output<String> title;

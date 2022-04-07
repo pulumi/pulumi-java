@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * PlacementPolicy defines the placement policy used by the node pool.
- * 
  */
 public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The type of placement.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<PlacementPolicyType> type;

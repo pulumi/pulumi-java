@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A game loop test of an iOS application.
- * 
  */
 public final class IosTestLoopResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class IosTestLoopResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Bundle ID of the app.
-     * 
      */
     @Import(name="bundleId", required=true)
       private final String bundleId;

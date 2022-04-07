@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by the load balancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the load balancer for a percentage of requests.
- * 
  */
 public final class HttpFaultInjectionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class HttpFaultInjectionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The specification for how client requests are aborted as part of fault injection.
-     * 
      */
     @Import(name="abort")
       private final @Nullable Output<HttpFaultAbortArgs> abort;
@@ -32,7 +30,6 @@ public final class HttpFaultInjectionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
-     * 
      */
     @Import(name="delay")
       private final @Nullable Output<HttpFaultDelayArgs> delay;

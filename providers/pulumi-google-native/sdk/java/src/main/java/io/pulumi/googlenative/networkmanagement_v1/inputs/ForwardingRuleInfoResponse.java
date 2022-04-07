@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * For display only. Metadata associated with a Compute Engine forwarding rule.
- * 
  */
 public final class ForwardingRuleInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
 
     /**
      * Name of a Compute Engine forwarding rule.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -29,7 +27,6 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
 
     /**
      * Port range defined in the forwarding rule that matches the test.
-     * 
      */
     @Import(name="matchedPortRange", required=true)
       private final String matchedPortRange;
@@ -40,7 +37,6 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
 
     /**
      * Protocol defined in the forwarding rule that matches the test.
-     * 
      */
     @Import(name="matchedProtocol", required=true)
       private final String matchedProtocol;
@@ -51,7 +47,6 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
 
     /**
      * Network URI. Only valid for Internal Load Balancer.
-     * 
      */
     @Import(name="networkUri", required=true)
       private final String networkUri;
@@ -62,7 +57,6 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
 
     /**
      * Target type of the forwarding rule.
-     * 
      */
     @Import(name="target", required=true)
       private final String target;
@@ -73,7 +67,6 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
 
     /**
      * URI of a Compute Engine forwarding rule.
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;
@@ -84,7 +77,6 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
 
     /**
      * VIP of the forwarding rule.
-     * 
      */
     @Import(name="vip", required=true)
       private final String vip;

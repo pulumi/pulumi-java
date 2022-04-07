@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Enum value definition.
- * 
  */
 public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Enum value name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -34,7 +32,6 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Enum value number.
-     * 
      */
     @Import(name="number")
       private final @Nullable Output<Integer> number;
@@ -45,7 +42,6 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Protocol buffer options.
-     * 
      */
     @Import(name="options")
       private final @Nullable Output<List<OptionArgs>> options;

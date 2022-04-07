@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Config for image classification human labeling task.
- * 
  */
 public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
 
     /**
      * Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one image.
-     * 
      */
     @Import(name="allowMultiLabel")
       private final @Nullable Output<Boolean> allowMultiLabel;
@@ -33,7 +31,6 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
 
     /**
      * Annotation spec set resource name.
-     * 
      */
     @Import(name="annotationSpecSet", required=true)
       private final Output<String> annotationSpecSet;
@@ -44,7 +41,6 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
 
     /**
      * Optional. The type of how to aggregate answers.
-     * 
      */
     @Import(name="answerAggregationType")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType;

@@ -16,7 +16,6 @@ public final class OrganizationMuteConfigArgs extends io.pulumi.resources.Resour
 
     /**
      * A description of the mute config.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -27,7 +26,6 @@ public final class OrganizationMuteConfigArgs extends io.pulumi.resources.Resour
 
     /**
      * The human readable name to be displayed for the mute config.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -38,7 +36,6 @@ public final class OrganizationMuteConfigArgs extends io.pulumi.resources.Resour
 
     /**
      * An expression that defines the filter to apply across create/update events of findings. While creating a filter string, be mindful of the scope in which the mute configuration is being created. E.g., If a filter contains project = X but is created under the project = Y scope, it might not match any findings. The following field and operator combinations are supported: * severity: `=`, `:` * category: `=`, `:` * resource.name: `=`, `:` * resource.project_name: `=`, `:` * resource.project_display_name: `=`, `:` * resource.folders.resource_folder: `=`, `:` * resource.parent_name: `=`, `:` * resource.parent_display_name: `=`, `:` * resource.type: `=`, `:` * finding_class: `=`, `:` * indicator.ip_addresses: `=`, `:` * indicator.domains: `=`, `:`
-     * 
      */
     @Import(name="filter", required=true)
       private final Output<String> filter;
@@ -56,7 +53,6 @@ public final class OrganizationMuteConfigArgs extends io.pulumi.resources.Resour
 
     /**
      * This field will be ignored if provided on config creation. Format "organizations/{organization}/muteConfigs/{mute_config}" "folders/{folder}/muteConfigs/{mute_config}" "projects/{project}/muteConfigs/{mute_config}"
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Catalog item thumbnail/detail image.
- * 
  */
 public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends io.pu
 
     /**
      * Optional. Height of the image in number of pixels.
-     * 
      */
     @Import(name="height")
       private final @Nullable Output<Integer> height;
@@ -32,7 +30,6 @@ public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends io.pu
 
     /**
      * URL of the image with a length limit of 5 KiB.
-     * 
      */
     @Import(name="uri", required=true)
       private final Output<String> uri;
@@ -43,7 +40,6 @@ public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends io.pu
 
     /**
      * Optional. Width of the image in number of pixels.
-     * 
      */
     @Import(name="width")
       private final @Nullable Output<Integer> width;

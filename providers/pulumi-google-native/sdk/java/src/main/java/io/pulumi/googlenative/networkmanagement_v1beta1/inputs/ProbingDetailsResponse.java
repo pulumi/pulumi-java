@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Results of active probing from the last run of the test.
- * 
  */
 public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The reason probing was aborted.
-     * 
      */
     @Import(name="abortCause", required=true)
       private final String abortCause;
@@ -33,7 +31,6 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The source and destination endpoints derived from the test input and used for active probing.
-     * 
      */
     @Import(name="endpointInfo", required=true)
       private final EndpointInfoResponse endpointInfo;
@@ -44,7 +41,6 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Details about an internal failure or the cancellation of active probing.
-     * 
      */
     @Import(name="error", required=true)
       private final StatusResponse error;
@@ -55,7 +51,6 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Latency as measured by active probing in one direction: from the source to the destination endpoint.
-     * 
      */
     @Import(name="probingLatency", required=true)
       private final LatencyDistributionResponse probingLatency;
@@ -66,7 +61,6 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The overall result of active probing.
-     * 
      */
     @Import(name="result", required=true)
       private final String result;
@@ -77,7 +71,6 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Number of probes sent.
-     * 
      */
     @Import(name="sentProbeCount", required=true)
       private final Integer sentProbeCount;
@@ -88,7 +81,6 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Number of probes that reached the destination.
-     * 
      */
     @Import(name="successfulProbeCount", required=true)
       private final Integer successfulProbeCount;
@@ -99,7 +91,6 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The time that reachability was assessed through active probing.
-     * 
      */
     @Import(name="verifyTime", required=true)
       private final String verifyTime;

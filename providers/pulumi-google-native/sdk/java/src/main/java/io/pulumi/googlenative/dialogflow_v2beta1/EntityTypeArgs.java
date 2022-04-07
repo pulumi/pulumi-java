@@ -21,7 +21,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Indicates whether the entity type can be automatically expanded.
-     * 
      */
     @Import(name="autoExpansionMode")
       private final @Nullable Output<EntityTypeAutoExpansionMode> autoExpansionMode;
@@ -32,7 +31,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the entity type.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -43,7 +41,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Enables fuzzy entity extraction during classification.
-     * 
      */
     @Import(name="enableFuzzyExtraction")
       private final @Nullable Output<Boolean> enableFuzzyExtraction;
@@ -54,7 +51,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The collection of entity entries associated with the entity type.
-     * 
      */
     @Import(name="entities")
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1EntityTypeEntityArgs>> entities;
@@ -65,7 +61,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates the kind of entity type.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<EntityTypeKind> kind;
@@ -90,7 +85,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType and EntityTypes.BatchUpdateEntityTypes methods. Supported formats: - `projects//agent/entityTypes/` - `projects//locations//agent/entityTypes/`
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class Hl7TypesConfigResponse {
     /**
      * The HL7v2 type definitions.
-     * 
      */
     private final List<TypeResponse> type;
     /**
      * The version selectors that this config applies to. A message must match ALL version sources to apply.
-     * 
      */
     private final List<VersionSourceResponse> version;
 
@@ -32,14 +30,12 @@ public final class Hl7TypesConfigResponse {
 
     /**
      * The HL7v2 type definitions.
-     * 
     */
     public List<TypeResponse> getType() {
         return this.type;
     }
     /**
      * The version selectors that this config applies to. A message must match ALL version sources to apply.
-     * 
     */
     public List<VersionSourceResponse> getVersion() {
         return this.version;

@@ -18,7 +18,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Network configuration for the `WorkerPool`.
-     * 
      */
     @Import(name="networkConfig")
       private final @Nullable Output<NetworkConfigArgs> networkConfig;
@@ -36,7 +35,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The region where the `WorkerPool` runs. Only "us-central1" is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
-     * 
      */
     @Import(name="region", required=true)
       private final Output<String> region;
@@ -47,7 +45,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Worker configuration for the `WorkerPool`.
-     * 
      */
     @Import(name="workerConfig")
       private final @Nullable Output<WorkerConfigArgs> workerConfig;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Shielded Instance Config for clusters using Compute Engine Shielded VMs (https://cloud.google.com/security/shielded-cloud/shielded-vm).
- * 
  */
 public final class ShieldedInstanceConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ShieldedInstanceConfigResponse extends io.pulumi.resources.In
 
     /**
      * Optional. Defines whether instances have integrity monitoring enabled.
-     * 
      */
     @Import(name="enableIntegrityMonitoring", required=true)
       private final Boolean enableIntegrityMonitoring;
@@ -29,7 +27,6 @@ public final class ShieldedInstanceConfigResponse extends io.pulumi.resources.In
 
     /**
      * Optional. Defines whether instances have Secure Boot enabled.
-     * 
      */
     @Import(name="enableSecureBoot", required=true)
       private final Boolean enableSecureBoot;
@@ -40,7 +37,6 @@ public final class ShieldedInstanceConfigResponse extends io.pulumi.resources.In
 
     /**
      * Optional. Defines whether instances have the vTPM enabled.
-     * 
      */
     @Import(name="enableVtpm", required=true)
       private final Boolean enableVtpm;

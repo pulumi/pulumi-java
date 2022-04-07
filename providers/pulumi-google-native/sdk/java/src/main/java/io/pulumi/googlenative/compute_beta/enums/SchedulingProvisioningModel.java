@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the provisioning model of the instance.
-     * 
      */
     @EnumType
     public enum SchedulingProvisioningModel {
         /**
          * Heavily discounted, no guaranteed runtime.
-         * 
          */
         Spot("SPOT"),
         /**
          * Standard provisioning with user controlled runtime, no discounts.
-         * 
          */
         Standard("STANDARD");
 

@@ -13,32 +13,26 @@ import java.util.Objects;
 public final class VersionResponse {
     /**
      * Used to correct mistakes in the version numbering scheme.
-     * 
      */
     private final Integer epoch;
     /**
      * Human readable version string. This string is of the form :- and is only set when kind is NORMAL.
-     * 
      */
     private final String fullName;
     /**
      * Whether this version is specifying part of an inclusive range. Grafeas does not have the capability to specify version ranges; instead we have fields that specify start version and end versions. At times this is insufficient - we also need to specify whether the version is included in the range or is excluded from the range. This boolean is expected to be set to true when the version is included in a range.
-     * 
      */
     private final Boolean inclusive;
     /**
      * Distinguishes between sentinel MIN/MAX versions and normal versions.
-     * 
      */
     private final String kind;
     /**
      * Required only when version kind is NORMAL. The main part of the version name.
-     * 
      */
     private final String name;
     /**
      * The iteration of the package build from the above version.
-     * 
      */
     private final String revision;
 
@@ -60,42 +54,36 @@ public final class VersionResponse {
 
     /**
      * Used to correct mistakes in the version numbering scheme.
-     * 
     */
     public Integer getEpoch() {
         return this.epoch;
     }
     /**
      * Human readable version string. This string is of the form :- and is only set when kind is NORMAL.
-     * 
     */
     public String getFullName() {
         return this.fullName;
     }
     /**
      * Whether this version is specifying part of an inclusive range. Grafeas does not have the capability to specify version ranges; instead we have fields that specify start version and end versions. At times this is insufficient - we also need to specify whether the version is included in the range or is excluded from the range. This boolean is expected to be set to true when the version is included in a range.
-     * 
     */
     public Boolean getInclusive() {
         return this.inclusive;
     }
     /**
      * Distinguishes between sentinel MIN/MAX versions and normal versions.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Required only when version kind is NORMAL. The main part of the version name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The iteration of the package build from the above version.
-     * 
     */
     public String getRevision() {
         return this.revision;

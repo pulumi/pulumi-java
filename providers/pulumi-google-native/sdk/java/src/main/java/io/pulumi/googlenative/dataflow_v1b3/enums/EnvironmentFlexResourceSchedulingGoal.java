@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Which Flexible Resource Scheduling mode to run in.
-     * 
      */
     @EnumType
     public enum EnvironmentFlexResourceSchedulingGoal {
         /**
          * Run in the default mode.
-         * 
          */
         FlexrsUnspecified("FLEXRS_UNSPECIFIED"),
         /**
          * Optimize for lower execution time.
-         * 
          */
         FlexrsSpeedOptimized("FLEXRS_SPEED_OPTIMIZED"),
         /**
          * Optimize for lower cost.
-         * 
          */
         FlexrsCostOptimized("FLEXRS_COST_OPTIMIZED");
 

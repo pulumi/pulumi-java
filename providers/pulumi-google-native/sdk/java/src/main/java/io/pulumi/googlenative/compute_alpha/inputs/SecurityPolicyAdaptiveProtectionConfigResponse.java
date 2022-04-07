@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration options for Cloud Armor Adaptive Protection (CAAP).
- * 
  */
 public final class SecurityPolicyAdaptiveProtectionConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SecurityPolicyAdaptiveProtectionConfigResponse extends io.pul
 
     /**
      * If set to true, enables Cloud Armor Machine Learning.
-     * 
      */
     @Import(name="layer7DdosDefenseConfig", required=true)
       private final SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig;

@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class ConnectionStatusResponse {
     /**
      * Description.
-     * 
      */
     private final String description;
     /**
      * State.
-     * 
      */
     private final String state;
     /**
      * Status provides detailed information for the state.
-     * 
      */
     private final String status;
 
@@ -37,21 +34,18 @@ public final class ConnectionStatusResponse {
 
     /**
      * Description.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * State.
-     * 
     */
     public String getState() {
         return this.state;
     }
     /**
      * Status provides detailed information for the state.
-     * 
     */
     public String getStatus() {
         return this.status;

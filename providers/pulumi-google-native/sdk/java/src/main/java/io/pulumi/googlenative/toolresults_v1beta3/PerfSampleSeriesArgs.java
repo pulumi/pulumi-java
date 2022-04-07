@@ -17,7 +17,6 @@ public final class PerfSampleSeriesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Basic series represented by a line chart
-     * 
      */
     @Import(name="basicPerfSampleSeries")
       private final @Nullable Output<BasicPerfSampleSeriesArgs> basicPerfSampleSeries;

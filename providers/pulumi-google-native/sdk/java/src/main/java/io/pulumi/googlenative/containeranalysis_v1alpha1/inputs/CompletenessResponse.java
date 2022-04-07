@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Indicates that the builder claims certain fields in this message to be complete.
- * 
  */
 public final class CompletenessResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CompletenessResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If true, the builder claims that recipe.arguments is complete, meaning that all external inputs are properly captured in the recipe.
-     * 
      */
     @Import(name="arguments", required=true)
       private final Boolean arguments;
@@ -29,7 +27,6 @@ public final class CompletenessResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If true, the builder claims that recipe.environment is claimed to be complete.
-     * 
      */
     @Import(name="environment", required=true)
       private final Boolean environment;
@@ -40,7 +37,6 @@ public final class CompletenessResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called "hermetic".
-     * 
      */
     @Import(name="materials", required=true)
       private final Boolean materials;

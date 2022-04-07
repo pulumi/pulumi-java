@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A single rollout step with specified traffic allocation.
- * 
  */
 public final class GoogleCloudDialogflowCxV3RolloutConfigRolloutStepArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigRolloutStepArgs extends
 
     /**
      * The name of the rollout step;
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -32,7 +30,6 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigRolloutStepArgs extends
 
     /**
      * The minimum time that this step should last. Should be longer than 1 hour. If not set, the default minimum duration for each step will be 1 hour.
-     * 
      */
     @Import(name="minDuration")
       private final @Nullable Output<String> minDuration;
@@ -43,7 +40,6 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigRolloutStepArgs extends
 
     /**
      * The percentage of traffic allocated to the flow version of this rollout step. (0%, 100%].
-     * 
      */
     @Import(name="trafficPercent")
       private final @Nullable Output<Integer> trafficPercent;

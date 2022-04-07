@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The device configuration. Eventually delivered to devices.
- * 
  */
 public final class DeviceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DeviceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The device configuration data.
-     * 
      */
     @Import(name="binaryData")
       private final @Nullable Output<String> binaryData;

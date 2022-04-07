@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * ClusterAutoscaling contains global, per-cluster information required by Cluster Autoscaler to automatically adjust the size of the cluster and create/delete node pools based on the current needs.
- * 
  */
 public final class ClusterAutoscalingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
 
     /**
      * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes can be created by NAP.
-     * 
      */
     @Import(name="autoprovisioningLocations", required=true)
       private final List<String> autoprovisioningLocations;
@@ -33,7 +31,6 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
 
     /**
      * AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
-     * 
      */
     @Import(name="autoprovisioningNodePoolDefaults", required=true)
       private final AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults;
@@ -44,7 +41,6 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
 
     /**
      * Defines autoscaling behaviour.
-     * 
      */
     @Import(name="autoscalingProfile", required=true)
       private final String autoscalingProfile;
@@ -55,7 +51,6 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
 
     /**
      * Enables automatic node pool creation and deletion.
-     * 
      */
     @Import(name="enableNodeAutoprovisioning", required=true)
       private final Boolean enableNodeAutoprovisioning;
@@ -66,7 +61,6 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
 
     /**
      * Contains global constraints regarding minimum and maximum amount of resources in the cluster.
-     * 
      */
     @Import(name="resourceLimits", required=true)
       private final List<ResourceLimitResponse> resourceLimits;

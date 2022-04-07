@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Layer holds metadata specific to a layer of a Docker image.
- * 
  */
 public final class LayerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class LayerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The recovered arguments to the Dockerfile directive.
-     * 
      */
     @Import(name="arguments")
       private final @Nullable Output<String> arguments;
@@ -32,7 +30,6 @@ public final class LayerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The recovered Dockerfile directive used to construct this layer.
-     * 
      */
     @Import(name="directive")
       private final @Nullable Output<LayerDirective> directive;

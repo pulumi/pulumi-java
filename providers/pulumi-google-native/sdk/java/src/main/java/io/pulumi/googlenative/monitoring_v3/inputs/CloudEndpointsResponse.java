@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Cloud Endpoints service. Learn more at https://cloud.google.com/endpoints.
- * 
  */
 public final class CloudEndpointsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CloudEndpointsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the Cloud Endpoints service underlying this service. Corresponds to the service resource label in the api monitored resource: https://cloud.google.com/monitoring/api/resources#tag_api
-     * 
      */
     @Import(name="service", required=true)
       private final String service;

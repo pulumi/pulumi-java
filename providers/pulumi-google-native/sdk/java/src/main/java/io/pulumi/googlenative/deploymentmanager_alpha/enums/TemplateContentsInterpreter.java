@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Which interpreter (python or jinja) should be used during expansion.
-     * 
      */
     @EnumType
     public enum TemplateContentsInterpreter {

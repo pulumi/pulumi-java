@@ -21,202 +21,173 @@ import javax.annotation.Nullable;
  * Auto-naming is currently not supported for this resource.
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:privateca/v1:Certificate")
 public class Certificate extends io.pulumi.resources.CustomResource {
     /**
      * A structured description of the issued X.509 certificate.
-     * 
      */
     @Export(name="certificateDescription", type=CertificateDescriptionResponse.class, parameters={})
     private Output<CertificateDescriptionResponse> certificateDescription;
 
     /**
      * @return A structured description of the issued X.509 certificate.
-     * 
      */
     public Output<CertificateDescriptionResponse> getCertificateDescription() {
         return this.certificateDescription;
     }
     /**
      * Immutable. The resource name for a CertificateTemplate used to issue this certificate, in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`. If this is specified, the caller must have the necessary permission to use this template. If this is omitted, no template will be used. This template must be in the same location as the Certificate.
-     * 
      */
     @Export(name="certificateTemplate", type=String.class, parameters={})
     private Output<String> certificateTemplate;
 
     /**
      * @return Immutable. The resource name for a CertificateTemplate used to issue this certificate, in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`. If this is specified, the caller must have the necessary permission to use this template. If this is omitted, no template will be used. This template must be in the same location as the Certificate.
-     * 
      */
     public Output<String> getCertificateTemplate() {
         return this.certificateTemplate;
     }
     /**
      * Immutable. A description of the certificate and key that does not require X.509 or ASN.1.
-     * 
      */
     @Export(name="config", type=CertificateConfigResponse.class, parameters={})
     private Output<CertificateConfigResponse> config;
 
     /**
      * @return Immutable. A description of the certificate and key that does not require X.509 or ASN.1.
-     * 
      */
     public Output<CertificateConfigResponse> getConfig() {
         return this.config;
     }
     /**
      * The time at which this Certificate was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time at which this Certificate was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The resource name of the issuing CertificateAuthority in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
-     * 
      */
     @Export(name="issuerCertificateAuthority", type=String.class, parameters={})
     private Output<String> issuerCertificateAuthority;
 
     /**
      * @return The resource name of the issuing CertificateAuthority in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
-     * 
      */
     public Output<String> getIssuerCertificateAuthority() {
         return this.issuerCertificateAuthority;
     }
     /**
      * Optional. Labels with user-defined metadata.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Optional. Labels with user-defined metadata.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * Immutable. The desired lifetime of a certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
-     * 
      */
     @Export(name="lifetime", type=String.class, parameters={})
     private Output<String> lifetime;
 
     /**
      * @return Immutable. The desired lifetime of a certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
-     * 
      */
     public Output<String> getLifetime() {
         return this.lifetime;
     }
     /**
      * The resource name for this Certificate in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificates/*`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name for this Certificate in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificates/*`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The pem-encoded, signed X.509 certificate.
-     * 
      */
     @Export(name="pemCertificate", type=String.class, parameters={})
     private Output<String> pemCertificate;
 
     /**
      * @return The pem-encoded, signed X.509 certificate.
-     * 
      */
     public Output<String> getPemCertificate() {
         return this.pemCertificate;
     }
     /**
      * The chain that may be used to verify the X.509 certificate. Expected to be in issuer-to-root order according to RFC 5246.
-     * 
      */
     @Export(name="pemCertificateChain", type=List.class, parameters={String.class})
     private Output<List<String>> pemCertificateChain;
 
     /**
      * @return The chain that may be used to verify the X.509 certificate. Expected to be in issuer-to-root order according to RFC 5246.
-     * 
      */
     public Output<List<String>> getPemCertificateChain() {
         return this.pemCertificateChain;
     }
     /**
      * Immutable. A pem-encoded X.509 certificate signing request (CSR).
-     * 
      */
     @Export(name="pemCsr", type=String.class, parameters={})
     private Output<String> pemCsr;
 
     /**
      * @return Immutable. A pem-encoded X.509 certificate signing request (CSR).
-     * 
      */
     public Output<String> getPemCsr() {
         return this.pemCsr;
     }
     /**
      * Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if this field is present.
-     * 
      */
     @Export(name="revocationDetails", type=RevocationDetailsResponse.class, parameters={})
     private Output<RevocationDetailsResponse> revocationDetails;
 
     /**
      * @return Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if this field is present.
-     * 
      */
     public Output<RevocationDetailsResponse> getRevocationDetails() {
         return this.revocationDetails;
     }
     /**
      * Immutable. Specifies how the Certificate's identity fields are to be decided. If this is omitted, the `DEFAULT` subject mode will be used.
-     * 
      */
     @Export(name="subjectMode", type=String.class, parameters={})
     private Output<String> subjectMode;
 
     /**
      * @return Immutable. Specifies how the Certificate's identity fields are to be decided. If this is omitted, the `DEFAULT` subject mode will be used.
-     * 
      */
     public Output<String> getSubjectMode() {
         return this.subjectMode;
     }
     /**
      * The time at which this Certificate was updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The time at which this Certificate was updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

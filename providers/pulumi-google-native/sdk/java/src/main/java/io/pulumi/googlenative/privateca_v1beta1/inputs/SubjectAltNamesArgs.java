@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * SubjectAltNames corresponds to a more modern way of listing what the asserted identity is in a certificate (i.e., compared to the "common name" in the distinguished name).
- * 
  */
 public final class SubjectAltNamesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SubjectAltNamesArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Contains additional subject alternative name values.
-     * 
      */
     @Import(name="customSans")
       private final @Nullable Output<List<X509ExtensionArgs>> customSans;
@@ -33,7 +31,6 @@ public final class SubjectAltNamesArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Contains only valid, fully-qualified host names.
-     * 
      */
     @Import(name="dnsNames")
       private final @Nullable Output<List<String>> dnsNames;
@@ -44,7 +41,6 @@ public final class SubjectAltNamesArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Contains only valid RFC 2822 E-mail addresses.
-     * 
      */
     @Import(name="emailAddresses")
       private final @Nullable Output<List<String>> emailAddresses;
@@ -55,7 +51,6 @@ public final class SubjectAltNamesArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
-     * 
      */
     @Import(name="ipAddresses")
       private final @Nullable Output<List<String>> ipAddresses;
@@ -66,7 +61,6 @@ public final class SubjectAltNamesArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Contains only valid RFC 3986 URIs.
-     * 
      */
     @Import(name="uris")
       private final @Nullable Output<List<String>> uris;

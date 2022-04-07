@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class LoggingConfigResponse {
     /**
      * Logging components configuration
-     * 
      */
     private final LoggingComponentConfigResponse componentConfig;
 
@@ -22,7 +21,6 @@ public final class LoggingConfigResponse {
 
     /**
      * Logging components configuration
-     * 
     */
     public LoggingComponentConfigResponse getComponentConfig() {
         return this.componentConfig;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents an expression text. Example: title: "User account presence" description: "Determines whether the request has a user account" expression: "size(request.user) > 0"
- * 
  */
 public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -31,7 +29,6 @@ public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Textual representation of an expression in Common Expression Language syntax. The application context of the containing message determines which well-known feature set of CEL is supported.
-     * 
      */
     @Import(name="expression")
       private final @Nullable Output<String> expression;
@@ -42,7 +39,6 @@ public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional string indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -53,7 +49,6 @@ public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
-     * 
      */
     @Import(name="title")
       private final @Nullable Output<String> title;

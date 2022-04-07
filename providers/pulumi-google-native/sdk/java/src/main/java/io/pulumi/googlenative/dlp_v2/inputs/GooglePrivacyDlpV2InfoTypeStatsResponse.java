@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Statistics regarding a specific InfoType.
- * 
  */
 public final class GooglePrivacyDlpV2InfoTypeStatsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse extends io.pulumi.res
 
     /**
      * Number of findings for this infoType.
-     * 
      */
     @Import(name="count", required=true)
       private final String count;
@@ -30,7 +28,6 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse extends io.pulumi.res
 
     /**
      * The type of finding this stat is for.
-     * 
      */
     @Import(name="infoType", required=true)
       private final GooglePrivacyDlpV2InfoTypeResponse infoType;

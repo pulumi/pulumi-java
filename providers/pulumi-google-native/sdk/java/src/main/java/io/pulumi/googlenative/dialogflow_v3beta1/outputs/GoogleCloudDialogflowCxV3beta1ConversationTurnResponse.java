@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowCxV3beta1ConversationTurnResponse {
     /**
      * The user input.
-     * 
      */
     private final GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse userInput;
     /**
      * The virtual agent output.
-     * 
      */
     private final GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse virtualAgentOutput;
 
@@ -31,14 +29,12 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnResponse {
 
     /**
      * The user input.
-     * 
     */
     public GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse getUserInput() {
         return this.userInput;
     }
     /**
      * The virtual agent output.
-     * 
     */
     public GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse getVirtualAgentOutput() {
         return this.virtualAgentOutput;

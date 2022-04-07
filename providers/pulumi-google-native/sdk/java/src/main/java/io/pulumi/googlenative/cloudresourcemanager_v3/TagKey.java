@@ -13,118 +13,101 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new TagKey. If another request with the same parameters is sent while the original request is in process, the second request will receive an error. A maximum of 300 TagKeys can exist under a parent at any given time.
- * 
  */
 @ResourceType(type="google-native:cloudresourcemanager/v3:TagKey")
 public class TagKey extends io.pulumi.resources.CustomResource {
     /**
      * Creation time.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return Creation time.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. User-assigned description of the TagKey. Must not exceed 256 characters. Read-write.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Optional. User-assigned description of the TagKey. Must not exceed 256 characters. Read-write.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Optional. Entity tag which users can pass to prevent race conditions. This field is always set in server responses. See UpdateTagKeyRequest for details.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return Optional. Entity tag which users can pass to prevent race conditions. This field is always set in server responses. See UpdateTagKeyRequest for details.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Immutable. The resource name for a TagKey. Must be in the format `tagKeys/{tag_key_id}`, where `tag_key_id` is the generated numeric id for the TagKey.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Immutable. The resource name for a TagKey. Must be in the format `tagKeys/{tag_key_id}`, where `tag_key_id` is the generated numeric id for the TagKey.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Immutable. Namespaced name of the TagKey.
-     * 
      */
     @Export(name="namespacedName", type=String.class, parameters={})
     private Output<String> namespacedName;
 
     /**
      * @return Immutable. Namespaced name of the TagKey.
-     * 
      */
     public Output<String> getNamespacedName() {
         return this.namespacedName;
     }
     /**
      * Immutable. The resource name of the new TagKey's parent. Must be of the form `organizations/{org_id}`.
-     * 
      */
     @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
      * @return Immutable. The resource name of the new TagKey's parent. Must be of the form `organizations/{org_id}`.
-     * 
      */
     public Output<String> getParent() {
         return this.parent;
     }
     /**
      * Immutable. The user friendly name for a TagKey. The short name should be unique for TagKeys within the same tag namespace. The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
-     * 
      */
     @Export(name="shortName", type=String.class, parameters={})
     private Output<String> shortName;
 
     /**
      * @return Immutable. The user friendly name for a TagKey. The short name should be unique for TagKeys within the same tag namespace. The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
-     * 
      */
     public Output<String> getShortName() {
         return this.shortName;
     }
     /**
      * Update time.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return Update time.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Source or destination of the Connectivity Test.
- * 
  */
 public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A [Cloud function](https://cloud.google.com/functions).
-     * 
      */
     @Import(name="cloudFunction", required=true)
       private final CloudFunctionEndpointResponse cloudFunction;
@@ -31,7 +29,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A [Cloud SQL](https://cloud.google.com/sql) instance URI.
-     * 
      */
     @Import(name="cloudSqlInstance", required=true)
       private final String cloudSqlInstance;
@@ -42,7 +39,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A cluster URI for [Google Kubernetes Engine master](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture).
-     * 
      */
     @Import(name="gkeMasterCluster", required=true)
       private final String gkeMasterCluster;
@@ -53,7 +49,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A Compute Engine instance URI.
-     * 
      */
     @Import(name="instance", required=true)
       private final String instance;
@@ -64,7 +59,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is only allowed when the test's destination is a [global load balancer VIP](https://cloud.google.com/load-balancing/docs/load-balancing-overview).
-     * 
      */
     @Import(name="ipAddress", required=true)
       private final String ipAddress;
@@ -75,7 +69,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A Compute Engine network URI.
-     * 
      */
     @Import(name="network", required=true)
       private final String network;
@@ -86,7 +79,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Type of the network where the endpoint is located. Applicable only to source endpoint, as destination network type can be inferred from the source.
-     * 
      */
     @Import(name="networkType", required=true)
       private final String networkType;
@@ -97,7 +89,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The IP protocol port of the endpoint. Only applicable when protocol is TCP or UDP.
-     * 
      */
     @Import(name="port", required=true)
       private final Integer port;
@@ -108,7 +99,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Project ID where the endpoint is located. The Project ID can be derived from the URI if you provide a VM instance or network URI. The following are two cases where you must provide the project ID: 1. Only the IP address is specified, and the IP address is within a GCP project. 2. When you are using Shared VPC and the IP address that you provide is from the service project. In this case, the network that the IP address resides in is defined in the host project.
-     * 
      */
     @Import(name="project", required=true)
       private final String project;

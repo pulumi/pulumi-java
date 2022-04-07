@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Google Cloud Endpoints (https://cloud.google.com/appengine/docs/python/endpoints/) configuration for API handlers.
- * 
  */
 public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Action to take when users access resources that require authentication. Defaults to redirect.
-     * 
      */
     @Import(name="authFailAction", required=true)
       private final String authFailAction;
@@ -29,7 +27,6 @@ public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Level of login required to access this resource. Defaults to optional.
-     * 
      */
     @Import(name="login", required=true)
       private final String login;
@@ -40,7 +37,6 @@ public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Path to the script from the application root directory.
-     * 
      */
     @Import(name="script", required=true)
       private final String script;
@@ -51,7 +47,6 @@ public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Security (HTTPS) enforcement for this URL.
-     * 
      */
     @Import(name="securityLevel", required=true)
       private final String securityLevel;
@@ -62,7 +57,6 @@ public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * URL to serve the endpoint at.
-     * 
      */
     @Import(name="url", required=true)
       private final String url;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A specification of the location of and metadata about a database dump from a relational database management system.
- * 
  */
 public final class DatabaseDumpResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DatabaseDumpResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of the database.
-     * 
      */
     @Import(name="databaseType", required=true)
       private final String databaseType;
@@ -29,7 +27,6 @@ public final class DatabaseDumpResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A Cloud Storage object or folder URI that specifies the source from which to import metadata. It must begin with gs://.
-     * 
      */
     @Import(name="gcsUri", required=true)
       private final String gcsUri;
@@ -40,7 +37,6 @@ public final class DatabaseDumpResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the source database.
-     * 
      */
     @Import(name="sourceDatabase", required=true)
       private final String sourceDatabase;
@@ -51,7 +47,6 @@ public final class DatabaseDumpResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. The type of the database dump. If unspecified, defaults to MYSQL.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

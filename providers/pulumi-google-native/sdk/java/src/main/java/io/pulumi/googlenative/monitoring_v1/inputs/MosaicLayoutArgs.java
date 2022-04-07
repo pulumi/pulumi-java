@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A mosaic layout divides the available space into a grid of blocks, and overlays the grid with tiles. Unlike GridLayout, tiles may span multiple grid blocks and can be placed at arbitrary locations in the grid.
- * 
  */
 public final class MosaicLayoutArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class MosaicLayoutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of columns in the mosaic grid. The number of columns must be between 1 and 12, inclusive.
-     * 
      */
     @Import(name="columns")
       private final @Nullable Output<Integer> columns;
@@ -33,7 +31,6 @@ public final class MosaicLayoutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tiles to display.
-     * 
      */
     @Import(name="tiles")
       private final @Nullable Output<List<TileArgs>> tiles;

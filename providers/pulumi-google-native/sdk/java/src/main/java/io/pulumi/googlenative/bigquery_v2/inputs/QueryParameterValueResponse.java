@@ -16,7 +16,6 @@ public final class QueryParameterValueResponse extends io.pulumi.resources.Invok
 
     /**
      * [Optional] The array values, if this is an array type.
-     * 
      */
     @Import(name="arrayValues", required=true)
       private final List<QueryParameterValueResponse> arrayValues;
@@ -27,7 +26,6 @@ public final class QueryParameterValueResponse extends io.pulumi.resources.Invok
 
     /**
      * [Optional] The struct field values, in order of the struct type's declaration.
-     * 
      */
     @Import(name="structValues", required=true)
       private final Map<String,String> structValues;
@@ -38,7 +36,6 @@ public final class QueryParameterValueResponse extends io.pulumi.resources.Invok
 
     /**
      * [Optional] The value of this value, if a simple scalar type.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

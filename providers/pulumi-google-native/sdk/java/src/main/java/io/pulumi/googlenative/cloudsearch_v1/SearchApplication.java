@@ -21,160 +21,137 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a search application. **Note:** This API requires an admin account to execute.
- * 
  */
 @ResourceType(type="google-native:cloudsearch/v1:SearchApplication")
 public class SearchApplication extends io.pulumi.resources.CustomResource {
     /**
      * Retrictions applied to the configurations. The maximum number of elements is 10.
-     * 
      */
     @Export(name="dataSourceRestrictions", type=List.class, parameters={DataSourceRestrictionResponse.class})
     private Output<List<DataSourceRestrictionResponse>> dataSourceRestrictions;
 
     /**
      * @return Retrictions applied to the configurations. The maximum number of elements is 10.
-     * 
      */
     public Output<List<DataSourceRestrictionResponse>> getDataSourceRestrictions() {
         return this.dataSourceRestrictions;
     }
     /**
      * The default fields for returning facet results. The sources specified here also have been included in data_source_restrictions above.
-     * 
      */
     @Export(name="defaultFacetOptions", type=List.class, parameters={FacetOptionsResponse.class})
     private Output<List<FacetOptionsResponse>> defaultFacetOptions;
 
     /**
      * @return The default fields for returning facet results. The sources specified here also have been included in data_source_restrictions above.
-     * 
      */
     public Output<List<FacetOptionsResponse>> getDefaultFacetOptions() {
         return this.defaultFacetOptions;
     }
     /**
      * The default options for sorting the search results
-     * 
      */
     @Export(name="defaultSortOptions", type=SortOptionsResponse.class, parameters={})
     private Output<SortOptionsResponse> defaultSortOptions;
 
     /**
      * @return The default options for sorting the search results
-     * 
      */
     public Output<SortOptionsResponse> getDefaultSortOptions() {
         return this.defaultSortOptions;
     }
     /**
      * Display name of the Search Application. The maximum length is 300 characters.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return Display name of the Search Application. The maximum length is 300 characters.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Indicates whether audit logging is on/off for requests made for the search application in query APIs.
-     * 
      */
     @Export(name="enableAuditLog", type=Boolean.class, parameters={})
     private Output<Boolean> enableAuditLog;
 
     /**
      * @return Indicates whether audit logging is on/off for requests made for the search application in query APIs.
-     * 
      */
     public Output<Boolean> getEnableAuditLog() {
         return this.enableAuditLog;
     }
     /**
      * Name of the Search Application. Format: searchapplications/{application_id}.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the Search Application. Format: searchapplications/{application_id}.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * IDs of the Long Running Operations (LROs) currently running for this schema. Output only field.
-     * 
      */
     @Export(name="operationIds", type=List.class, parameters={String.class})
     private Output<List<String>> operationIds;
 
     /**
      * @return IDs of the Long Running Operations (LROs) currently running for this schema. Output only field.
-     * 
      */
     public Output<List<String>> getOperationIds() {
         return this.operationIds;
     }
     /**
      * The default options for query interpretation
-     * 
      */
     @Export(name="queryInterpretationConfig", type=QueryInterpretationConfigResponse.class, parameters={})
     private Output<QueryInterpretationConfigResponse> queryInterpretationConfig;
 
     /**
      * @return The default options for query interpretation
-     * 
      */
     public Output<QueryInterpretationConfigResponse> getQueryInterpretationConfig() {
         return this.queryInterpretationConfig;
     }
     /**
      * With each result we should return the URI for its thumbnail (when applicable)
-     * 
      */
     @Export(name="returnResultThumbnailUrls", type=Boolean.class, parameters={})
     private Output<Boolean> returnResultThumbnailUrls;
 
     /**
      * @return With each result we should return the URI for its thumbnail (when applicable)
-     * 
      */
     public Output<Boolean> getReturnResultThumbnailUrls() {
         return this.returnResultThumbnailUrls;
     }
     /**
      * Configuration for ranking results.
-     * 
      */
     @Export(name="scoringConfig", type=ScoringConfigResponse.class, parameters={})
     private Output<ScoringConfigResponse> scoringConfig;
 
     /**
      * @return Configuration for ranking results.
-     * 
      */
     public Output<ScoringConfigResponse> getScoringConfig() {
         return this.scoringConfig;
     }
     /**
      * Configuration for a sources specified in data_source_restrictions.
-     * 
      */
     @Export(name="sourceConfig", type=List.class, parameters={SourceConfigResponse.class})
     private Output<List<SourceConfigResponse>> sourceConfig;
 
     /**
      * @return Configuration for a sources specified in data_source_restrictions.
-     * 
      */
     public Output<List<SourceConfigResponse>> getSourceConfig() {
         return this.sourceConfig;

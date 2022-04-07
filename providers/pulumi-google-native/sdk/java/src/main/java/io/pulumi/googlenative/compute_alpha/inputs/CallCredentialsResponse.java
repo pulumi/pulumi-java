@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * [Deprecated] gRPC call credentials to access the SDS server. gRPC call credentials to access the SDS server.
- * 
  */
 public final class CallCredentialsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class CallCredentialsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The type of call credentials to use for GRPC requests to the SDS server. This field can be set to one of the following: - GCE_VM: The local GCE VM service account credentials are used to access the SDS server. - FROM_PLUGIN: Custom authenticator credentials are used to access the SDS server.
-     * 
      */
     @Import(name="callCredentialType", required=true)
       private final String callCredentialType;
@@ -30,7 +28,6 @@ public final class CallCredentialsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Custom authenticator credentials. Valid if callCredentialType is FROM_PLUGIN.
-     * 
      */
     @Import(name="fromPlugin", required=true)
       private final MetadataCredentialsFromPluginResponse fromPlugin;

@@ -16,90 +16,77 @@ import javax.annotation.Nullable;
 /**
  * Creates a domain mapping on the specified site.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:firebasehosting/v1beta1:Domain")
 public class Domain extends io.pulumi.resources.CustomResource {
     /**
      * The domain name of the association.
-     * 
      */
     @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
      * @return The domain name of the association.
-     * 
      */
     public Output<String> getDomainName() {
         return this.domainName;
     }
     /**
      * If set, the domain should redirect with the provided parameters.
-     * 
      */
     @Export(name="domainRedirect", type=DomainRedirectResponse.class, parameters={})
     private Output<DomainRedirectResponse> domainRedirect;
 
     /**
      * @return If set, the domain should redirect with the provided parameters.
-     * 
      */
     public Output<DomainRedirectResponse> getDomainRedirect() {
         return this.domainRedirect;
     }
     /**
      * Information about the provisioning of certificates and the health of the DNS resolution for the domain.
-     * 
      */
     @Export(name="provisioning", type=DomainProvisioningResponse.class, parameters={})
     private Output<DomainProvisioningResponse> provisioning;
 
     /**
      * @return Information about the provisioning of certificates and the health of the DNS resolution for the domain.
-     * 
      */
     public Output<DomainProvisioningResponse> getProvisioning() {
         return this.provisioning;
     }
     /**
      * The site name of the association.
-     * 
      */
     @Export(name="site", type=String.class, parameters={})
     private Output<String> site;
 
     /**
      * @return The site name of the association.
-     * 
      */
     public Output<String> getSite() {
         return this.site;
     }
     /**
      * Additional status of the domain association.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return Additional status of the domain association.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * The time at which the domain was last updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The time at which the domain was last updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A set of Display Device options
- * 
  */
 public final class DisplayDeviceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DisplayDeviceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Defines whether the instance has Display enabled.
-     * 
      */
     @Import(name="enableDisplay", required=true)
       private final Boolean enableDisplay;

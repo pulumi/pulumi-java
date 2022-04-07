@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A DNS resource record.
- * 
  */
 public final class ResourceRecordArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ResourceRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Relative name of the object affected by this record. Only applicable for `CNAME` records. Example: 'www'.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -32,7 +30,6 @@ public final class ResourceRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Data for this record. Values vary by record type, as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1).
-     * 
      */
     @Import(name="rrdata")
       private final @Nullable Output<String> rrdata;
@@ -43,7 +40,6 @@ public final class ResourceRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource record type. Example: `AAAA`.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<ResourceRecordType> type;

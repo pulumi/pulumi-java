@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Key-value pair to store extra metadata.
- * 
  */
 public final class GoogleCloudApigeeV1AttributeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudApigeeV1AttributeArgs extends io.pulumi.resources.
 
     /**
      * API key of the attribute.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class GoogleCloudApigeeV1AttributeArgs extends io.pulumi.resources.
 
     /**
      * Value of the attribute.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

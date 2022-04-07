@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * BuildApproval describes a build's approval configuration, state, and result.
- * 
  */
 public final class BuildApprovalResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class BuildApprovalResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Configuration for manual approval of this build.
-     * 
      */
     @Import(name="config", required=true)
       private final ApprovalConfigResponse config;
@@ -31,7 +29,6 @@ public final class BuildApprovalResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Result of manual approval for this Build.
-     * 
      */
     @Import(name="result", required=true)
       private final ApprovalResultResponse result;
@@ -42,7 +39,6 @@ public final class BuildApprovalResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The state of this build's approval.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;

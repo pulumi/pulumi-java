@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class DomainRedirectResponse {
     /**
      * The domain name to redirect to.
-     * 
      */
     private final String domainName;
     /**
      * The redirect status code.
-     * 
      */
     private final String type;
 
@@ -30,14 +28,12 @@ public final class DomainRedirectResponse {
 
     /**
      * The domain name to redirect to.
-     * 
     */
     public String getDomainName() {
         return this.domainName;
     }
     /**
      * The redirect status code.
-     * 
     */
     public String getType() {
         return this.type;

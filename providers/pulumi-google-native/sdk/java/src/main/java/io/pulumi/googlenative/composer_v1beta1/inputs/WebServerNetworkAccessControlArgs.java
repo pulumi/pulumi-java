@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Network-level access control policy for the Airflow web server.
- * 
  */
 public final class WebServerNetworkAccessControlArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class WebServerNetworkAccessControlArgs extends io.pulumi.resources
 
     /**
      * A collection of allowed IP ranges with descriptions.
-     * 
      */
     @Import(name="allowedIpRanges")
       private final @Nullable Output<List<AllowedIpRangeArgs>> allowedIpRanges;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Specification of the MTLSPolicy.
- * 
  */
 public final class MTLSPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class MTLSPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      *  Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.
-     * 
      */
     @Import(name="clientValidationCa", required=true)
       private final List<ValidationCAResponse> clientValidationCa;

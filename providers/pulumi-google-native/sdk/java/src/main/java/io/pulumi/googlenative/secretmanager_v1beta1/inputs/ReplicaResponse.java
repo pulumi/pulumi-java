@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Represents a Replica for this Secret.
- * 
  */
 public final class ReplicaResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ReplicaResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The canonical IDs of the location to replicate data. For example: `"us-east1"`.
-     * 
      */
     @Import(name="location", required=true)
       private final String location;

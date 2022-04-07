@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for the Connectors Platform add-on.
- * 
  */
 public final class GoogleCloudApigeeV1ConnectorsPlatformConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigArgs extends io.pu
 
     /**
      * Flag that specifies whether the Connectors Platform add-on is enabled.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;

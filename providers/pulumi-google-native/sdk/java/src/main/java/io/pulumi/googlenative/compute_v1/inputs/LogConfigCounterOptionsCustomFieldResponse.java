@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * This is deprecated and has no effect. Do not use.
- * 
  */
 public final class LogConfigCounterOptionsCustomFieldResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class LogConfigCounterOptionsCustomFieldResponse extends io.pulumi.
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class LogConfigCounterOptionsCustomFieldResponse extends io.pulumi.
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

@@ -18,7 +18,6 @@ import java.util.Objects;
 
 /**
  * RevisionTemplate describes the data a revision should have when created from a template.
- * 
  */
 public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
 
     /**
      * KRM-style annotations for the resource.
-     * 
      */
     @Import(name="annotations", required=true)
       private final Map<String,String> annotations;
@@ -37,7 +35,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
 
     /**
      * Enables Confidential Cloud Run in Revisions created using this template.
-     * 
      */
     @Import(name="confidential", required=true)
       private final Boolean confidential;
@@ -48,7 +45,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
 
     /**
      * Sets the maximum number of requests that each serving instance can receive.
-     * 
      */
     @Import(name="containerConcurrency", required=true)
       private final Integer containerConcurrency;
@@ -59,7 +55,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
 
     /**
      * Holds the single container that defines the unit of execution for this Revision.
-     * 
      */
     @Import(name="containers", required=true)
       private final List<GoogleCloudRunOpV2ContainerResponse> containers;
@@ -70,7 +65,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
 
     /**
      * A reference to a customer managed encryption key (CMEK) to use to encrypt this container image. For more information, go to https://cloud.google.com/run/docs/securing/using-cmek
-     * 
      */
     @Import(name="encryptionKey", required=true)
       private final String encryptionKey;
@@ -81,7 +75,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
 
     /**
      * The sandbox environment to host this Revision.
-     * 
      */
     @Import(name="executionEnvironment", required=true)
       private final String executionEnvironment;
@@ -92,7 +85,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
 
     /**
      * KRM-style labels for the resource.
-     * 
      */
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
@@ -103,7 +95,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
 
     /**
      * The unique name for the revision. If this field is omitted, it will be automatically generated based on the Service name.
-     * 
      */
     @Import(name="revision", required=true)
       private final String revision;
@@ -114,7 +105,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
 
     /**
      * Scaling settings for this Revision.
-     * 
      */
     @Import(name="scaling", required=true)
       private final GoogleCloudRunOpV2RevisionScalingResponse scaling;
@@ -125,7 +115,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
 
     /**
      * Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project's default service account.
-     * 
      */
     @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
@@ -136,7 +125,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
 
     /**
      * Max allowed time for an instance to respond to a request.
-     * 
      */
     @Import(name="timeout", required=true)
       private final String timeout;
@@ -147,7 +135,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
 
     /**
      * A list of Volumes to make available to containers.
-     * 
      */
     @Import(name="volumes", required=true)
       private final List<GoogleCloudRunOpV2VolumeResponse> volumes;
@@ -158,7 +145,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
 
     /**
      * VPC Access configuration to use for this Revision. For more information, visit https://cloud.google.com/run/docs/configuring/connecting-vpc.
-     * 
      */
     @Import(name="vpcAccess", required=true)
       private final GoogleCloudRunOpV2VpcAccessResponse vpcAccess;

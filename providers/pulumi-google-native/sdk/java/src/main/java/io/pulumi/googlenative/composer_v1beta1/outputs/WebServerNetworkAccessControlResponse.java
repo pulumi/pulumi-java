@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class WebServerNetworkAccessControlResponse {
     /**
      * A collection of allowed IP ranges with descriptions.
-     * 
      */
     private final List<AllowedIpRangeResponse> allowedIpRanges;
 
@@ -23,7 +22,6 @@ public final class WebServerNetworkAccessControlResponse {
 
     /**
      * A collection of allowed IP ranges with descriptions.
-     * 
     */
     public List<AllowedIpRangeResponse> getAllowedIpRanges() {
         return this.allowedIpRanges;

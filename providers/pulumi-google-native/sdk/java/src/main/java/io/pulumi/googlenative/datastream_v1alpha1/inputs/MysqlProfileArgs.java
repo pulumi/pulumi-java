@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * MySQL database profile.
- * 
  */
 public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Hostname for the MySQL connection.
-     * 
      */
     @Import(name="hostname", required=true)
       private final Output<String> hostname;
@@ -33,7 +31,6 @@ public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Input only. Password for the MySQL connection.
-     * 
      */
     @Import(name="password", required=true)
       private final Output<String> password;
@@ -44,7 +41,6 @@ public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Port for the MySQL connection, default value is 3306.
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Integer> port;
@@ -55,7 +51,6 @@ public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SSL configuration for the MySQL connection.
-     * 
      */
     @Import(name="sslConfig")
       private final @Nullable Output<MysqlSslConfigArgs> sslConfig;
@@ -66,7 +61,6 @@ public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Username for the MySQL connection.
-     * 
      */
     @Import(name="username", required=true)
       private final Output<String> username;

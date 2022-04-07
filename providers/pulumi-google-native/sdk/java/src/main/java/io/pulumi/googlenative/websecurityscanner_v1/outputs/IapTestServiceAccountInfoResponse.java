@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class IapTestServiceAccountInfoResponse {
     /**
      * Describes OAuth2 client id of resources protected by Identity-Aware-Proxy (IAP).
-     * 
      */
     private final String targetAudienceClientId;
 
@@ -22,7 +21,6 @@ public final class IapTestServiceAccountInfoResponse {
 
     /**
      * Describes OAuth2 client id of resources protected by Identity-Aware-Proxy (IAP).
-     * 
     */
     public String getTargetAudienceClientId() {
         return this.targetAudienceClientId;

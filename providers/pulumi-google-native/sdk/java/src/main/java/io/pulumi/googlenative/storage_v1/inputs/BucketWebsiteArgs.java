@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The bucket's website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.
- * 
  */
 public final class BucketWebsiteArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BucketWebsiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If the requested object path is missing, the service will ensure the path has a trailing '/', append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.
-     * 
      */
     @Import(name="mainPageSuffix")
       private final @Nullable Output<String> mainPageSuffix;
@@ -31,7 +29,6 @@ public final class BucketWebsiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If the requested object path is missing, and any mainPageSuffix object is missing, if applicable, the service will return the named object from this bucket as the content for a 404 Not Found result.
-     * 
      */
     @Import(name="notFoundPage")
       private final @Nullable Output<String> notFoundPage;

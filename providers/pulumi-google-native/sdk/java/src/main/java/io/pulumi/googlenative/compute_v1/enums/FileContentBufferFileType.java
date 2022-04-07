@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The file type of source file.
-     * 
      */
     @EnumType
     public enum FileContentBufferFileType {

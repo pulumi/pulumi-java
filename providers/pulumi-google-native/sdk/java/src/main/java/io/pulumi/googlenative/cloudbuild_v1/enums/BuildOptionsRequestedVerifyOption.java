@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * Requested verifiability options.
-     * 
      */
     @EnumType
     public enum BuildOptionsRequestedVerifyOption {
         /**
          * Not a verifiable build. (default)
-         * 
          */
         NotVerified("NOT_VERIFIED"),
         /**
          * Verified build.
-         * 
          */
         Verified("VERIFIED");
 

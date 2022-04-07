@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Privacy metric to compute for reidentification risk analysis.
- * 
  */
 public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
 
     /**
      * Categorical stats
-     * 
      */
     @Import(name="categoricalStatsConfig")
       private final @Nullable Output<GooglePrivacyDlpV2CategoricalStatsConfigArgs> categoricalStatsConfig;
@@ -36,7 +34,6 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
 
     /**
      * delta-presence
-     * 
      */
     @Import(name="deltaPresenceEstimationConfig")
       private final @Nullable Output<GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs> deltaPresenceEstimationConfig;
@@ -47,7 +44,6 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
 
     /**
      * K-anonymity
-     * 
      */
     @Import(name="kAnonymityConfig")
       private final @Nullable Output<GooglePrivacyDlpV2KAnonymityConfigArgs> kAnonymityConfig;
@@ -58,7 +54,6 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
 
     /**
      * k-map
-     * 
      */
     @Import(name="kMapEstimationConfig")
       private final @Nullable Output<GooglePrivacyDlpV2KMapEstimationConfigArgs> kMapEstimationConfig;
@@ -69,7 +64,6 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
 
     /**
      * l-diversity
-     * 
      */
     @Import(name="lDiversityConfig")
       private final @Nullable Output<GooglePrivacyDlpV2LDiversityConfigArgs> lDiversityConfig;
@@ -80,7 +74,6 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
 
     /**
      * Numerical stats
-     * 
      */
     @Import(name="numericalStatsConfig")
       private final @Nullable Output<GooglePrivacyDlpV2NumericalStatsConfigArgs> numericalStatsConfig;

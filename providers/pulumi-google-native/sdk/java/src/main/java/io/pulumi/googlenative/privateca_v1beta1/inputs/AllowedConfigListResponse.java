@@ -15,7 +15,6 @@ public final class AllowedConfigListResponse extends io.pulumi.resources.InvokeA
 
     /**
      * All Certificates issued by the CertificateAuthority must match at least one listed ReusableConfigWrapper. If a ReusableConfigWrapper has an empty field, any value will be allowed for that field.
-     * 
      */
     @Import(name="allowedConfigValues", required=true)
       private final List<ReusableConfigWrapperResponse> allowedConfigValues;

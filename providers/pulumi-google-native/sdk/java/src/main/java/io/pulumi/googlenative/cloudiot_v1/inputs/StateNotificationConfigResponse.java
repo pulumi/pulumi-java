@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The configuration for notification of new states received from the device.
- * 
  */
 public final class StateNotificationConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class StateNotificationConfigResponse extends io.pulumi.resources.I
 
     /**
      * A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
-     * 
      */
     @Import(name="pubsubTopicName", required=true)
       private final String pubsubTopicName;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Represents a match condition that incoming traffic is evaluated against. Exactly one field must be specified.
- * 
  */
 public final class SecurityPolicyRuleMatcherResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SecurityPolicyRuleMatcherResponse extends io.pulumi.resources
 
     /**
      * The configuration options available when specifying versioned_expr. This field must be specified if versioned_expr is specified and cannot be specified if versioned_expr is not specified.
-     * 
      */
     @Import(name="config", required=true)
       private final SecurityPolicyRuleMatcherConfigResponse config;
@@ -31,7 +29,6 @@ public final class SecurityPolicyRuleMatcherResponse extends io.pulumi.resources
 
     /**
      * User defined CEVAL expression. A CEVAL expression is used to specify match criteria such as origin.ip, source.region_code and contents in the request header.
-     * 
      */
     @Import(name="expr", required=true)
       private final ExprResponse expr;
@@ -42,7 +39,6 @@ public final class SecurityPolicyRuleMatcherResponse extends io.pulumi.resources
 
     /**
      * Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.
-     * 
      */
     @Import(name="versionedExpr", required=true)
       private final String versionedExpr;

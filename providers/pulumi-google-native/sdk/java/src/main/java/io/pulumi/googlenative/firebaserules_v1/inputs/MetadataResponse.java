@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Metadata for a Ruleset.
- * 
  */
 public final class MetadataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class MetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Services that this ruleset has declarations for (e.g., "cloud.firestore"). There may be 0+ of these.
-     * 
      */
     @Import(name="services", required=true)
       private final List<String> services;

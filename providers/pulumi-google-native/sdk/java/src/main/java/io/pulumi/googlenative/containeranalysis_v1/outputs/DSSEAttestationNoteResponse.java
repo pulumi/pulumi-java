@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class DSSEAttestationNoteResponse {
     /**
      * DSSEHint hints at the purpose of the attestation authority.
-     * 
      */
     private final DSSEHintResponse hint;
 
@@ -22,7 +21,6 @@ public final class DSSEAttestationNoteResponse {
 
     /**
      * DSSEHint hints at the purpose of the attestation authority.
-     * 
     */
     public DSSEHintResponse getHint() {
         return this.hint;

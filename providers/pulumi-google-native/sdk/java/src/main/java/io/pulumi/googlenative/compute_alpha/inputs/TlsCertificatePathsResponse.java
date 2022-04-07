@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * [Deprecated] The paths to the mounted TLS Certificates and private key. The paths to the mounted TLS Certificates and private key.
- * 
  */
 public final class TlsCertificatePathsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class TlsCertificatePathsResponse extends io.pulumi.resources.Invok
 
     /**
      * The path to the file holding the client or server TLS certificate to use.
-     * 
      */
     @Import(name="certificatePath", required=true)
       private final String certificatePath;
@@ -29,7 +27,6 @@ public final class TlsCertificatePathsResponse extends io.pulumi.resources.Invok
 
     /**
      * The path to the file holding the client or server private key.
-     * 
      */
     @Import(name="privateKeyPath", required=true)
       private final String privateKeyPath;

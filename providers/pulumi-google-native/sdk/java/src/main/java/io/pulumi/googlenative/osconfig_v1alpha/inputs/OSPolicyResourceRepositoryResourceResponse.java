@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * A resource that manages a package repository.
- * 
  */
 public final class OSPolicyResourceRepositoryResourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class OSPolicyResourceRepositoryResourceResponse extends io.pulumi.
 
     /**
      * An Apt Repository.
-     * 
      */
     @Import(name="apt", required=true)
       private final OSPolicyResourceRepositoryResourceAptRepositoryResponse apt;
@@ -32,7 +30,6 @@ public final class OSPolicyResourceRepositoryResourceResponse extends io.pulumi.
 
     /**
      * A Goo Repository.
-     * 
      */
     @Import(name="goo", required=true)
       private final OSPolicyResourceRepositoryResourceGooRepositoryResponse goo;
@@ -43,7 +40,6 @@ public final class OSPolicyResourceRepositoryResourceResponse extends io.pulumi.
 
     /**
      * A Yum Repository.
-     * 
      */
     @Import(name="yum", required=true)
       private final OSPolicyResourceRepositoryResourceYumRepositoryResponse yum;
@@ -54,7 +50,6 @@ public final class OSPolicyResourceRepositoryResourceResponse extends io.pulumi.
 
     /**
      * A Zypper Repository.
-     * 
      */
     @Import(name="zypper", required=true)
       private final OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper;

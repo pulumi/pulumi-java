@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * A description of how to set up an iOS device prior to running the test.
- * 
  */
 public final class IosTestSetupResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class IosTestSetupResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * iOS apps to install in addition to those being directly tested.
-     * 
      */
     @Import(name="additionalIpas", required=true)
       private final List<FileReferenceResponse> additionalIpas;
@@ -32,7 +30,6 @@ public final class IosTestSetupResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
-     * 
      */
     @Import(name="networkProfile", required=true)
       private final String networkProfile;
@@ -43,7 +40,6 @@ public final class IosTestSetupResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (such as /private/var/mobile/Media) or within an accessible directory inside the app's filesystem (such as /Documents) by specifying the bundle ID.
-     * 
      */
     @Import(name="pullDirectories", required=true)
       private final List<IosDeviceFileResponse> pullDirectories;
@@ -54,7 +50,6 @@ public final class IosTestSetupResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of files to push to the device before starting the test.
-     * 
      */
     @Import(name="pushFiles", required=true)
       private final List<IosDeviceFileResponse> pushFiles;

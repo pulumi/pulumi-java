@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Maintenance window. This specifies when a Cloud SQL instance is restarted for system maintenance purposes.
- * 
  */
 public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
 
     /**
      * day of week (1-7), starting on Monday.
-     * 
      */
     @Import(name="day", required=true)
       private final Integer day;
@@ -30,7 +28,6 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
 
     /**
      * hour of day - 0 to 23.
-     * 
      */
     @Import(name="hour", required=true)
       private final Integer hour;
@@ -41,7 +38,6 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
 
     /**
      * This is always `sql#maintenanceWindow`.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -52,7 +48,6 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Maintenance timing setting: `canary` (Earlier) or `stable` (Later). [Learn more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).
-     * 
      */
     @Import(name="updateTrack", required=true)
       private final String updateTrack;

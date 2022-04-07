@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The owner of the object. This will always be the uploader of the object.
- * 
  */
 public final class BucketObjectOwnerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BucketObjectOwnerArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The entity, in the form user-userId.
-     * 
      */
     @Import(name="entity")
       private final @Nullable Output<String> entity;
@@ -31,7 +29,6 @@ public final class BucketObjectOwnerArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The ID for the entity.
-     * 
      */
     @Import(name="entityId")
       private final @Nullable Output<String> entityId;

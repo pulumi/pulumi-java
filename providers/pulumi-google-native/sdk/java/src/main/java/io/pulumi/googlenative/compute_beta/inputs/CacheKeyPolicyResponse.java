@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Message containing what to include in the cache key for a request for Cloud CDN.
- * 
  */
 public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * If true, requests to different hosts will be cached separately.
-     * 
      */
     @Import(name="includeHost", required=true)
       private final Boolean includeHost;
@@ -31,7 +29,6 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Allows HTTP request headers (by name) to be used in the cache key.
-     * 
      */
     @Import(name="includeHttpHeaders", required=true)
       private final List<String> includeHttpHeaders;
@@ -42,7 +39,6 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Allows HTTP cookies (by name) to be used in the cache key. The name=value pair will be used in the cache key Cloud CDN generates.
-     * 
      */
     @Import(name="includeNamedCookies", required=true)
       private final List<String> includeNamedCookies;
@@ -53,7 +49,6 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * If true, http and https requests will be cached separately.
-     * 
      */
     @Import(name="includeProtocol", required=true)
       private final Boolean includeProtocol;
@@ -64,7 +59,6 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * If true, include query string parameters in the cache key according to query_string_whitelist and query_string_blacklist. If neither is set, the entire query string will be included. If false, the query string will be excluded from the cache key entirely.
-     * 
      */
     @Import(name="includeQueryString", required=true)
       private final Boolean includeQueryString;
@@ -75,7 +69,6 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Names of query string parameters to exclude in cache keys. All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.
-     * 
      */
     @Import(name="queryStringBlacklist", required=true)
       private final List<String> queryStringBlacklist;
@@ -86,7 +79,6 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.
-     * 
      */
     @Import(name="queryStringWhitelist", required=true)
       private final List<String> queryStringWhitelist;

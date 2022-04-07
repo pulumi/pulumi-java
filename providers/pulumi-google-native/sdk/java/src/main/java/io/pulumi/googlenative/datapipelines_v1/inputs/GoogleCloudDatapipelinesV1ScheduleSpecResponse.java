@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Details of the schedule the pipeline runs on.
- * 
  */
 public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse extends io.pul
 
     /**
      * When the next Scheduler job is going to run.
-     * 
      */
     @Import(name="nextJobTime", required=true)
       private final String nextJobTime;
@@ -29,7 +27,6 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse extends io.pul
 
     /**
      * Unix-cron format of the schedule. This information is retrieved from the linked Cloud Scheduler.
-     * 
      */
     @Import(name="schedule", required=true)
       private final String schedule;
@@ -40,7 +37,6 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse extends io.pul
 
     /**
      * Timezone ID. This matches the timezone IDs used by the Cloud Scheduler API. If empty, UTC time is assumed.
-     * 
      */
     @Import(name="timeZone", required=true)
       private final String timeZone;

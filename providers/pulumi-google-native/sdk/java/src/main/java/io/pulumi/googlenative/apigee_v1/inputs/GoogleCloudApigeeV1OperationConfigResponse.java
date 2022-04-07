@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Binds the resources in an API proxy or remote service with the allowed REST methods and associated quota enforcement.
- * 
  */
 public final class GoogleCloudApigeeV1OperationConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudApigeeV1OperationConfigResponse extends io.pulumi.
 
     /**
      * Name of the API proxy or remote service with which the resources, methods, and quota are associated.
-     * 
      */
     @Import(name="apiSource", required=true)
       private final String apiSource;
@@ -33,7 +31,6 @@ public final class GoogleCloudApigeeV1OperationConfigResponse extends io.pulumi.
 
     /**
      * Custom attributes associated with the operation.
-     * 
      */
     @Import(name="attributes", required=true)
       private final List<GoogleCloudApigeeV1AttributeResponse> attributes;
@@ -44,7 +41,6 @@ public final class GoogleCloudApigeeV1OperationConfigResponse extends io.pulumi.
 
     /**
      * List of resource/method pairs for the API proxy or remote service to which quota will applied. **Note**: Currently, you can specify only a single resource/method pair. The call will fail if more than one resource/method pair is provided.
-     * 
      */
     @Import(name="operations", required=true)
       private final List<GoogleCloudApigeeV1OperationResponse> operations;
@@ -55,7 +51,6 @@ public final class GoogleCloudApigeeV1OperationConfigResponse extends io.pulumi.
 
     /**
      * Quota parameters to be enforced for the resources, methods, and API source combination. If none are specified, quota enforcement will not be done.
-     * 
      */
     @Import(name="quota", required=true)
       private final GoogleCloudApigeeV1QuotaResponse quota;

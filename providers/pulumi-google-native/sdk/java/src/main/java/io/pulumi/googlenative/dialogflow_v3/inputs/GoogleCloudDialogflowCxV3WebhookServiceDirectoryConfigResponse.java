@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Represents configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
- * 
  */
 public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigRespons
 
     /**
      * Generic Service configuration of this webhook.
-     * 
      */
     @Import(name="genericWebService", required=true)
       private final GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse genericWebService;
@@ -30,7 +28,6 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigRespons
 
     /**
      * The name of [Service Directory](https://cloud.google.com/service-directory) service. Format: `projects//locations//namespaces//services/`. `Location ID` of the service directory must be the same as the location of the agent.
-     * 
      */
     @Import(name="service", required=true)
       private final String service;

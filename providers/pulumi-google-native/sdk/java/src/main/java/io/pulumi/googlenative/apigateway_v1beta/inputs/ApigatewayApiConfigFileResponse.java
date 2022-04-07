@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A lightweight description of a file.
- * 
  */
 public final class ApigatewayApiConfigFileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ApigatewayApiConfigFileResponse extends io.pulumi.resources.I
 
     /**
      * The bytes that constitute the file.
-     * 
      */
     @Import(name="contents", required=true)
       private final String contents;
@@ -29,7 +27,6 @@ public final class ApigatewayApiConfigFileResponse extends io.pulumi.resources.I
 
     /**
      * The file path (full or relative path). This is typically the path of the file when it is uploaded.
-     * 
      */
     @Import(name="path", required=true)
       private final String path;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse {
     /**
      * Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels: - Agent level.
-     * 
      */
     private final GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse loggingSettings;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse {
 
     /**
      * Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels: - Agent level.
-     * 
     */
     public GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse getLoggingSettings() {
         return this.loggingSettings;

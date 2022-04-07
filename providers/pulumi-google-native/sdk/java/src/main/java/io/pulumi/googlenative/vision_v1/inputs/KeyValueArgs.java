@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A product label represented as a key-value pair.
- * 
  */
 public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The key of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -31,7 +29,6 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

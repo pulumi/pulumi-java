@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Controls whether the domain can be transferred to another registrar.
-     * 
      */
     @EnumType
     public enum ManagementSettingsTransferLockState {
         /**
          * The state is unspecified.
-         * 
          */
         TransferLockStateUnspecified("TRANSFER_LOCK_STATE_UNSPECIFIED"),
         /**
          * The domain is unlocked and can be transferred to another registrar.
-         * 
          */
         Unlocked("UNLOCKED"),
         /**
          * The domain is locked and cannot be transferred to another registrar.
-         * 
          */
         Locked("LOCKED");
 

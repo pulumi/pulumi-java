@@ -14,7 +14,6 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResp
 
     /**
      * Must be specified if type is `INTEGER`. Maximum value of the parameter.
-     * 
      */
     @Import(name="maxValue", required=true)
       private final String maxValue;
@@ -25,7 +24,6 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResp
 
     /**
      * Must be specified if type is `INTEGER`. Minimum value of the parameter.
-     * 
      */
     @Import(name="minValue", required=true)
       private final String minValue;

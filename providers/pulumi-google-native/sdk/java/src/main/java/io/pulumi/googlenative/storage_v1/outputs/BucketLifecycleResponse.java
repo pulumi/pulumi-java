@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class BucketLifecycleResponse {
     /**
      * A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.
-     * 
      */
     private final List<BucketLifecycleRuleItemResponse> rule;
 
@@ -23,7 +22,6 @@ public final class BucketLifecycleResponse {
 
     /**
      * A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.
-     * 
     */
     public List<BucketLifecycleRuleItemResponse> getRule() {
         return this.rule;

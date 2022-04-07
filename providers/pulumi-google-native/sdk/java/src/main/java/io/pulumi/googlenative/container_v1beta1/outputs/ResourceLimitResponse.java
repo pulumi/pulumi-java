@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class ResourceLimitResponse {
     /**
      * Maximum amount of the resource in the cluster.
-     * 
      */
     private final String maximum;
     /**
      * Minimum amount of the resource in the cluster.
-     * 
      */
     private final String minimum;
     /**
      * Resource name "cpu", "memory" or gpu-specific string.
-     * 
      */
     private final String resourceType;
 
@@ -37,21 +34,18 @@ public final class ResourceLimitResponse {
 
     /**
      * Maximum amount of the resource in the cluster.
-     * 
     */
     public String getMaximum() {
         return this.maximum;
     }
     /**
      * Minimum amount of the resource in the cluster.
-     * 
     */
     public String getMinimum() {
         return this.minimum;
     }
     /**
      * Resource name "cpu", "memory" or gpu-specific string.
-     * 
     */
     public String getPropResourceType() {
         return this.resourceType;

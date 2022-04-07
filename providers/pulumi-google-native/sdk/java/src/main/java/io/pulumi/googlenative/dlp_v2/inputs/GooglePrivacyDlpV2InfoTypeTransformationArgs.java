@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A transformation to apply to text that is identified as a specific info_type.
- * 
  */
 public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends io.pulum
 
     /**
      * InfoTypes to apply the transformation to. An empty list will cause this transformation to apply to all findings that correspond to infoTypes that were requested in `InspectConfig`.
-     * 
      */
     @Import(name="infoTypes")
       private final @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
@@ -33,7 +31,6 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends io.pulum
 
     /**
      * Primitive transformation to apply to the infoType.
-     * 
      */
     @Import(name="primitiveTransformation", required=true)
       private final Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation;

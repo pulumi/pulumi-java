@@ -13,22 +13,18 @@ import java.util.Objects;
 public final class LogDescriptorResponse {
     /**
      * A human-readable description of this log. This information appears in the documentation and can contain details.
-     * 
      */
     private final String description;
     /**
      * The human-readable name for this log. This information appears on the user interface and should be concise.
-     * 
      */
     private final String displayName;
     /**
      * The set of labels that are available to describe a specific log entry. Runtime requests that contain labels not specified here are considered invalid.
-     * 
      */
     private final List<LabelDescriptorResponse> labels;
     /**
      * The name of the log. It must be less than 512 characters long and can include the following characters: upper- and lower-case alphanumeric characters [A-Za-z0-9], and punctuation characters including slash, underscore, hyphen, period [/_-.].
-     * 
      */
     private final String name;
 
@@ -46,28 +42,24 @@ public final class LogDescriptorResponse {
 
     /**
      * A human-readable description of this log. This information appears in the documentation and can contain details.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * The human-readable name for this log. This information appears on the user interface and should be concise.
-     * 
     */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The set of labels that are available to describe a specific log entry. Runtime requests that contain labels not specified here are considered invalid.
-     * 
     */
     public List<LabelDescriptorResponse> getLabels() {
         return this.labels;
     }
     /**
      * The name of the log. It must be less than 512 characters long and can include the following characters: upper- and lower-case alphanumeric characters [A-Za-z0-9], and punctuation characters including slash, underscore, hyphen, period [/_-.].
-     * 
     */
     public String getName() {
         return this.name;

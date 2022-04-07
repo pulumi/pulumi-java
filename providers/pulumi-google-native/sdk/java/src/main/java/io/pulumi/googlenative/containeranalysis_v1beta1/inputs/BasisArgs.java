@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Basis describes the base image portion (Note) of the DockerImage relationship. Linked occurrences are derived from this or an equivalent image via: FROM Or an equivalent reference, e.g. a tag of the resource_url.
- * 
  */
 public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The fingerprint of the base image.
-     * 
      */
     @Import(name="fingerprint", required=true)
       private final Output<FingerprintArgs> fingerprint;
@@ -31,7 +29,6 @@ public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The resource_url for the resource representing the basis of associated occurrence images.
-     * 
      */
     @Import(name="resourceUrl", required=true)
       private final Output<String> resourceUrl;

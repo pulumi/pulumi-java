@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Files in the workspace to upload to Cloud Storage upon successful completion of all build steps.
- * 
  */
 public final class ArtifactObjectsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ArtifactObjectsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/". (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.
-     * 
      */
     @Import(name="location", required=true)
       private final String location;
@@ -31,7 +29,6 @@ public final class ArtifactObjectsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Path globs used to match files in the build's workspace.
-     * 
      */
     @Import(name="paths", required=true)
       private final List<String> paths;
@@ -42,7 +39,6 @@ public final class ArtifactObjectsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Stores timing information for pushing all artifact objects.
-     * 
      */
     @Import(name="timing", required=true)
       private final TimeSpanResponse timing;

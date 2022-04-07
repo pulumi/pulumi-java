@@ -22,7 +22,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a single parameter to optimize.
- * 
  */
 public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -30,7 +29,6 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
 
     /**
      * The value spec for a 'CATEGORICAL' parameter.
-     * 
      */
     @Import(name="categoricalValueSpec")
       private final @Nullable Output<GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecArgs> categoricalValueSpec;
@@ -41,7 +39,6 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
 
     /**
      * A child node is active if the parameter's value matches the child node's matching_parent_values. If two items in child_parameter_specs have the same name, they must have disjoint matching_parent_values.
-     * 
      */
     @Import(name="childParameterSpecs")
       private final @Nullable Output<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> childParameterSpecs;
@@ -52,7 +49,6 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
 
     /**
      * The value spec for a 'DISCRETE' parameter.
-     * 
      */
     @Import(name="discreteValueSpec")
       private final @Nullable Output<GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArgs> discreteValueSpec;
@@ -63,7 +59,6 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
 
     /**
      * The value spec for a 'DOUBLE' parameter.
-     * 
      */
     @Import(name="doubleValueSpec")
       private final @Nullable Output<GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs> doubleValueSpec;
@@ -74,7 +69,6 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
 
     /**
      * The value spec for an 'INTEGER' parameter.
-     * 
      */
     @Import(name="integerValueSpec")
       private final @Nullable Output<GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs> integerValueSpec;
@@ -85,7 +79,6 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
 
     /**
      * The parameter name must be unique amongst all ParameterSpecs.
-     * 
      */
     @Import(name="parameter", required=true)
       private final Output<String> parameter;
@@ -117,7 +110,6 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
 
     /**
      * How the parameter should be scaled. Leave unset for categorical parameters.
-     * 
      */
     @Import(name="scaleType")
       private final @Nullable Output<GoogleCloudMlV1_StudyConfig_ParameterSpecScaleType> scaleType;
@@ -128,7 +120,6 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
 
     /**
      * The type of the parameter.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<GoogleCloudMlV1_StudyConfig_ParameterSpecType> type;

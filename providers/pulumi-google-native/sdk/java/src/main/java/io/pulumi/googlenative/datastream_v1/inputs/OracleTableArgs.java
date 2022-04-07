@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Oracle table.
- * 
  */
 public final class OracleTableArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class OracleTableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
-     * 
      */
     @Import(name="oracleColumns")
       private final @Nullable Output<List<OracleColumnArgs>> oracleColumns;
@@ -33,7 +31,6 @@ public final class OracleTableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Table name.
-     * 
      */
     @Import(name="table")
       private final @Nullable Output<String> table;

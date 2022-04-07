@@ -14,7 +14,6 @@ public final class ErrorProtoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Debugging information. This property is internal to Google and should not be used.
-     * 
      */
     @Import(name="debugInfo", required=true)
       private final String debugInfo;
@@ -25,7 +24,6 @@ public final class ErrorProtoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies where the error occurred, if present.
-     * 
      */
     @Import(name="location", required=true)
       private final String location;
@@ -36,7 +34,6 @@ public final class ErrorProtoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A human-readable description of the error.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -47,7 +44,6 @@ public final class ErrorProtoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A short error code that summarizes the error.
-     * 
      */
     @Import(name="reason", required=true)
       private final String reason;

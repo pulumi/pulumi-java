@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Histogram of value frequencies in the column.
- * 
  */
 public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
 
     /**
      * Total number of values in this bucket.
-     * 
      */
     @Import(name="bucketSize", required=true)
       private final String bucketSize;
@@ -31,7 +29,6 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
 
     /**
      * Total number of distinct values in this bucket.
-     * 
      */
     @Import(name="bucketValueCount", required=true)
       private final String bucketValueCount;
@@ -42,7 +39,6 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
 
     /**
      * Sample of value frequencies in this bucket. The total number of values returned per bucket is capped at 20.
-     * 
      */
     @Import(name="bucketValues", required=true)
       private final List<GooglePrivacyDlpV2ValueFrequencyResponse> bucketValues;
@@ -53,7 +49,6 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
 
     /**
      * Lower bound on the value frequency of the values in this bucket.
-     * 
      */
     @Import(name="valueFrequencyLowerBound", required=true)
       private final String valueFrequencyLowerBound;
@@ -64,7 +59,6 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
 
     /**
      * Upper bound on the value frequency of the values in this bucket.
-     * 
      */
     @Import(name="valueFrequencyUpperBound", required=true)
       private final String valueFrequencyUpperBound;

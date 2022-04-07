@@ -20,7 +20,6 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * App Engine HTTP target. An App Engine queue is a queue that has an AppEngineHttpTarget.
-     * 
      */
     @Import(name="appEngineHttpTarget")
       private final @Nullable Output<AppEngineHttpTargetArgs> appEngineHttpTarget;
@@ -38,7 +37,6 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Caller-specified and required in CreateQueue, after which it becomes output only. The queue name. The queue name must have the following format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more information, see [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the queue's location. The list of available locations can be obtained by calling ListLocations. For more information, see https://cloud.google.com/about/locations/. * `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum length is 100 characters.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -56,7 +54,6 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Pull target. A pull queue is a queue that has a PullTarget.
-     * 
      */
     @Import(name="pullTarget")
       private final @Nullable Output<PullTargetArgs> pullTarget;
@@ -67,7 +64,6 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Rate limits for task dispatches. rate_limits and retry_config are related because they both control task attempts however they control how tasks are attempted in different ways: * rate_limits controls the total rate of dispatches from a queue (i.e. all traffic dispatched from the queue, regardless of whether the dispatch is from a first attempt or a retry). * retry_config controls what happens to particular a task after its first attempt fails. That is, retry_config controls task retries (the second attempt, third attempt, etc).
-     * 
      */
     @Import(name="rateLimits")
       private final @Nullable Output<RateLimitsArgs> rateLimits;
@@ -78,7 +74,6 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Settings that determine the retry behavior. * For tasks created using Cloud Tasks: the queue-level retry settings apply to all tasks in the queue that were created using Cloud Tasks. Retry settings cannot be set on individual tasks. * For tasks created using the App Engine SDK: the queue-level retry settings apply to all tasks in the queue which do not have retry settings explicitly set on the task and were created by the App Engine SDK. See [App Engine documentation](https://cloud.google.com/appengine/docs/standard/python/taskqueue/push/retrying-tasks).
-     * 
      */
     @Import(name="retryConfig")
       private final @Nullable Output<RetryConfigArgs> retryConfig;
@@ -89,7 +84,6 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum amount of time that a task will be retained in this queue. Queues created by Cloud Tasks have a default `task_ttl` of 31 days. After a task has lived for `task_ttl`, the task will be deleted regardless of whether it was dispatched or not. The `task_ttl` for queues created via queue.yaml/xml is equal to the maximum duration because there is a [storage quota](https://cloud.google.com/appengine/quotas#Task_Queue) for these queues. To view the maximum valid duration, see the documentation for Duration.
-     * 
      */
     @Import(name="taskTtl")
       private final @Nullable Output<String> taskTtl;
@@ -100,7 +94,6 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The task tombstone time to live (TTL). After a task is deleted or completed, the task's tombstone is retained for the length of time specified by `tombstone_ttl`. The tombstone is used by task de-duplication; another task with the same name can't be created until the tombstone has expired. For more information about task de-duplication, see the documentation for CreateTaskRequest. Queues created by Cloud Tasks have a default `tombstone_ttl` of 1 hour.
-     * 
      */
     @Import(name="tombstoneTtl")
       private final @Nullable Output<String> tombstoneTtl;

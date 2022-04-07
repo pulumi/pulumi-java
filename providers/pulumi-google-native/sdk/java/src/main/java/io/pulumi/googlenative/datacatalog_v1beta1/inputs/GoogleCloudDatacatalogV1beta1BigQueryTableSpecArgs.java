@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a BigQuery table.
- * 
  */
 public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs extends io
 
     /**
      * Spec of a BigQuery table. This field should only be populated if `table_source_type` is `BIGQUERY_TABLE`.
-     * 
      */
     @Import(name="tableSpec")
       private final @Nullable Output<GoogleCloudDatacatalogV1beta1TableSpecArgs> tableSpec;
@@ -32,7 +30,6 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs extends io
 
     /**
      * Table view specification. This field should only be populated if `table_source_type` is `BIGQUERY_VIEW`.
-     * 
      */
     @Import(name="viewSpec")
       private final @Nullable Output<GoogleCloudDatacatalogV1beta1ViewSpecArgs> viewSpec;

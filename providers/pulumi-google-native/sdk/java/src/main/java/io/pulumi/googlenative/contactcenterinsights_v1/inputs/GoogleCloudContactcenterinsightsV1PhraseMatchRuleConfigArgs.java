@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration information of a phrase match rule.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs e
 
     /**
      * The configuration for the exact match rule.
-     * 
      */
     @Import(name="exactMatchConfig")
       private final @Nullable Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration for NetworkPolicy. This only tracks whether the addon is enabled or not on the Master, it does not track whether network policy is enabled for the nodes.
- * 
  */
 public final class NetworkPolicyConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class NetworkPolicyConfigResponse extends io.pulumi.resources.Invok
 
     /**
      * Whether NetworkPolicy is enabled for this cluster.
-     * 
      */
     @Import(name="disabled", required=true)
       private final Boolean disabled;

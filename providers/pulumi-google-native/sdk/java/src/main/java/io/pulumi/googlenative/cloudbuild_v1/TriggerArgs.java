@@ -29,7 +29,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration for manual approval to start a build invocation of this BuildTrigger.
-     * 
      */
     @Import(name="approvalConfig")
       private final @Nullable Output<ApprovalConfigArgs> approvalConfig;
@@ -40,7 +39,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Autodetect build configuration. The following precedence is used (case insensitive): 1. cloudbuild.yaml 2. cloudbuild.yml 3. cloudbuild.json 4. Dockerfile Currently only available for GitHub App Triggers.
-     * 
      */
     @Import(name="autodetect")
       private final @Nullable Output<Boolean> autodetect;
@@ -51,7 +49,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * BitbucketServerTriggerConfig describes the configuration of a trigger that creates a build whenever a Bitbucket Server event is received.
-     * 
      */
     @Import(name="bitbucketServerTriggerConfig")
       private final @Nullable Output<BitbucketServerTriggerConfigArgs> bitbucketServerTriggerConfig;
@@ -62,7 +59,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Contents of the build template.
-     * 
      */
     @Import(name="build")
       private final @Nullable Output<BuildArgs> build;
@@ -73,7 +69,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Human-readable description of this trigger.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -84,7 +79,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If true, the trigger will never automatically execute a build.
-     * 
      */
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
@@ -95,7 +89,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * EventType allows the user to explicitly set the type of event to which this BuildTrigger should respond. This field will be validated against the rest of the configuration if it is set.
-     * 
      */
     @Import(name="eventType")
       private final @Nullable Output<TriggerEventType> eventType;
@@ -106,7 +99,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Path, from the source root, to the build configuration file (i.e. cloudbuild.yaml).
-     * 
      */
     @Import(name="filename")
       private final @Nullable Output<String> filename;
@@ -117,7 +109,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A Common Expression Language string.
-     * 
      */
     @Import(name="filter")
       private final @Nullable Output<String> filter;
@@ -128,7 +119,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The file source describing the local or remote Build template.
-     * 
      */
     @Import(name="gitFileSource")
       private final @Nullable Output<GitFileSourceArgs> gitFileSource;
@@ -139,7 +129,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a GitHub event is received. Mutually exclusive with `trigger_template`.
-     * 
      */
     @Import(name="github")
       private final @Nullable Output<GitHubEventsConfigArgs> github;
@@ -150,7 +139,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ignored_files and included_files are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with support for "**". If ignored_files and changed files are both empty, then they are not used to determine whether or not to trigger a build. If ignored_files is not empty, then we ignore any files that match any of the ignored_file globs. If the change has no files that are outside of the ignored_files globs, then we do not trigger a build.
-     * 
      */
     @Import(name="ignoredFiles")
       private final @Nullable Output<List<String>> ignoredFiles;
@@ -161,7 +149,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If any of the files altered in the commit pass the ignored_files filter and included_files is empty, then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the ignored_files filter and included_files is not empty, then we make sure that at least one of those files matches a included_files glob. If not, then we do not trigger a build.
-     * 
      */
     @Import(name="includedFiles")
       private final @Nullable Output<List<String>> includedFiles;
@@ -179,7 +166,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User-assigned name of the trigger. Must be unique within the project. Trigger names must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -204,7 +190,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * PubsubConfig describes the configuration of a trigger that creates a build whenever a Pub/Sub message is published.
-     * 
      */
     @Import(name="pubsubConfig")
       private final @Nullable Output<PubsubConfigArgs> pubsubConfig;
@@ -215,7 +200,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The `Trigger` name with format: `projects/{project}/locations/{location}/triggers/{trigger}`, where {trigger} is a unique identifier generated by the service.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -226,7 +210,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The service account used for all user-controlled operations including UpdateBuildTrigger, RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is set, then the standard Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead. Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
-     * 
      */
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
@@ -237,7 +220,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The repo and ref of the repository from which to build. This field is used only for those triggers that do not respond to SCM events. Triggers that respond to such events build source at whatever commit caused the event. This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.
-     * 
      */
     @Import(name="sourceToBuild")
       private final @Nullable Output<GitRepoSourceArgs> sourceToBuild;
@@ -248,7 +230,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Substitutions for Build resource. The keys must match the following regular expression: `^_[A-Z0-9_]+$`.
-     * 
      */
     @Import(name="substitutions")
       private final @Nullable Output<Map<String,String>> substitutions;
@@ -259,7 +240,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tags for annotation of a `BuildTrigger`
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
@@ -270,7 +250,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build. Mutually exclusive with `github`.
-     * 
      */
     @Import(name="triggerTemplate")
       private final @Nullable Output<RepoSourceArgs> triggerTemplate;
@@ -281,7 +260,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger's webhook URL.
-     * 
      */
     @Import(name="webhookConfig")
       private final @Nullable Output<WebhookConfigArgs> webhookConfig;

@@ -13,27 +13,22 @@ import java.util.Objects;
 public final class GetAccessLevelResult {
     /**
      * A `BasicLevel` composed of `Conditions`.
-     * 
      */
     private final BasicLevelResponse basic;
     /**
      * A `CustomLevel` written in the Common Expression Language.
-     * 
      */
     private final CustomLevelResponse custom;
     /**
      * Description of the `AccessLevel` and its use. Does not affect behavior.
-     * 
      */
     private final String description;
     /**
      * Resource name for the Access Level. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{access_policy}/accessLevels/{access_level}`. The maximum length of the `access_level` component is 50 characters.
-     * 
      */
     private final String name;
     /**
      * Human readable title. Must be unique within the Policy.
-     * 
      */
     private final String title;
 
@@ -53,35 +48,30 @@ public final class GetAccessLevelResult {
 
     /**
      * A `BasicLevel` composed of `Conditions`.
-     * 
     */
     public BasicLevelResponse getBasic() {
         return this.basic;
     }
     /**
      * A `CustomLevel` written in the Common Expression Language.
-     * 
     */
     public CustomLevelResponse getCustom() {
         return this.custom;
     }
     /**
      * Description of the `AccessLevel` and its use. Does not affect behavior.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * Resource name for the Access Level. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{access_policy}/accessLevels/{access_level}`. The maximum length of the `access_level` component is 50 characters.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Human readable title. Must be unique within the Policy.
-     * 
     */
     public String getTitle() {
         return this.title;

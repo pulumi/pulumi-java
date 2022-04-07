@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Machine resources for a version.
- * 
  */
 public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Number of CPU cores needed.
-     * 
      */
     @Import(name="cpu")
       private final @Nullable Output<Double> cpu;
@@ -34,7 +32,6 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Disk size (GB) needed.
-     * 
      */
     @Import(name="diskGb")
       private final @Nullable Output<Double> diskGb;
@@ -45,7 +42,6 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the encryption key that is stored in Google Cloud KMS. Only should be used by Cloud Composer to encrypt the vm disk
-     * 
      */
     @Import(name="kmsKeyReference")
       private final @Nullable Output<String> kmsKeyReference;
@@ -56,7 +52,6 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Memory (GB) needed.
-     * 
      */
     @Import(name="memoryGb")
       private final @Nullable Output<Double> memoryGb;
@@ -67,7 +62,6 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User specified volumes.
-     * 
      */
     @Import(name="volumes")
       private final @Nullable Output<List<VolumeArgs>> volumes;

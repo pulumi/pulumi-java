@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class TcpCheckResponse {
     /**
      * The TCP port on the server against which to run the check. Will be combined with host (specified within the monitored_resource) to construct the full URL. Required.
-     * 
      */
     private final Integer port;
 
@@ -22,7 +21,6 @@ public final class TcpCheckResponse {
 
     /**
      * The TCP port on the server against which to run the check. Will be combined with host (specified within the monitored_resource) to construct the full URL. Required.
-     * 
     */
     public Integer getPort() {
         return this.port;

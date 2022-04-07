@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class ClientInfoResponse {
     /**
      * The list of detailed information about client.
-     * 
      */
     private final List<ClientInfoDetailResponse> clientInfoDetails;
     /**
      * Client name, such as gcloud.
-     * 
      */
     private final String name;
 
@@ -32,14 +30,12 @@ public final class ClientInfoResponse {
 
     /**
      * The list of detailed information about client.
-     * 
     */
     public List<ClientInfoDetailResponse> getClientInfoDetails() {
         return this.clientInfoDetails;
     }
     /**
      * Client name, such as gcloud.
-     * 
     */
     public String getName() {
         return this.name;

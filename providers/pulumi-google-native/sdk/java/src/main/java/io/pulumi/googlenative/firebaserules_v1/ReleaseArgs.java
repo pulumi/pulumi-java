@@ -16,7 +16,6 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Format: `projects/{project_id}/releases/{release_id}`
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -34,7 +33,6 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the `Release` to be created.
-     * 
      */
     @Import(name="rulesetName")
       private final @Nullable Output<String> rulesetName;

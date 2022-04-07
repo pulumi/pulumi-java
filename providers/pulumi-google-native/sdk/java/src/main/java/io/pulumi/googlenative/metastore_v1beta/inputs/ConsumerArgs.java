@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains information of the customer's network configurations.
- * 
  */
 public final class ConsumerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ConsumerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The subnetwork of the customer project from which an IP address is reserved and used as the Dataproc Metastore service's endpoint. It is accessible to hosts in the subnet and to all hosts in a subnet in the same region and same network. There must be at least one IP address available in the subnet's primary range. The subnet is specified in the following form:`projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}
-     * 
      */
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;

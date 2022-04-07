@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration to suppress records whose suppression conditions evaluate to true.
- * 
  */
 public final class GooglePrivacyDlpV2RecordSuppressionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GooglePrivacyDlpV2RecordSuppressionArgs extends io.pulumi.res
 
     /**
      * A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content.
-     * 
      */
     @Import(name="condition")
       private final @Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition;

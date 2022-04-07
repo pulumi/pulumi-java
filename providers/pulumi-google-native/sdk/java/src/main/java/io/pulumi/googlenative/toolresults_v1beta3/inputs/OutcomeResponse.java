@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Interprets a result so that humans and machines can act on it.
- * 
  */
 public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not FAILURE. Optional
-     * 
      */
     @Import(name="failureDetail", required=true)
       private final FailureDetailResponse failureDetail;
@@ -33,7 +31,6 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * More information about an INCONCLUSIVE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not INCONCLUSIVE. Optional
-     * 
      */
     @Import(name="inconclusiveDetail", required=true)
       private final InconclusiveDetailResponse inconclusiveDetail;
@@ -44,7 +41,6 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * More information about a SKIPPED outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SKIPPED. Optional
-     * 
      */
     @Import(name="skippedDetail", required=true)
       private final SkippedDetailResponse skippedDetail;
@@ -55,7 +51,6 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * More information about a SUCCESS outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SUCCESS. Optional
-     * 
      */
     @Import(name="successDetail", required=true)
       private final SuccessDetailResponse successDetail;
@@ -66,7 +61,6 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The simplest way to interpret a result. Required
-     * 
      */
     @Import(name="summary", required=true)
       private final String summary;

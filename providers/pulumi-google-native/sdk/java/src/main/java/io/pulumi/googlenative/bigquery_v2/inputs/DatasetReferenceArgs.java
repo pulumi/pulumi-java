@@ -16,7 +16,6 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * [Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
-     * 
      */
     @Import(name="datasetId")
       private final @Nullable Output<String> datasetId;
@@ -27,7 +26,6 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * [Optional] The ID of the project containing this dataset.
-     * 
      */
     @Import(name="project")
       private final @Nullable Output<String> project;

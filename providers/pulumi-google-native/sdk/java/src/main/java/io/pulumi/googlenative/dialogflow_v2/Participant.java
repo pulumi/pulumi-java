@@ -16,62 +16,53 @@ import javax.annotation.Nullable;
  * Creates a new participant in a conversation.
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:dialogflow/v2:Participant")
 public class Participant extends io.pulumi.resources.CustomResource {
     /**
-     * Optional. Key-value filters on the metadata of documents returned by article suggestion. If specified, article suggestion only returns suggested documents that match all filters in their Document.metadata. Multiple values for a metadata key should be concatenated by comma. For example, filters to match all documents that have 'US' or 'CA' in their market metadata values and 'agent' in their user metadata values will be ```documents_metadata_filters { key: "market" value: "US,CA" } documents_metadata_filters { key: "user" value: "agent" }```
-     * 
+     * Optional. Key-value filters on the metadata of documents returned by article suggestion. If specified, article suggestion only returns suggested documents that match all filters in their Document.metadata. Multiple values for a metadata key should be concatenated by comma. For example, filters to match all documents that have 'US' or 'CA' in their market metadata values and 'agent' in their user metadata values will be ``` documents_metadata_filters { key: "market" value: "US,CA" } documents_metadata_filters { key: "user" value: "agent" } ```
      */
     @Export(name="documentsMetadataFilters", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> documentsMetadataFilters;
 
     /**
-     * @return Optional. Key-value filters on the metadata of documents returned by article suggestion. If specified, article suggestion only returns suggested documents that match all filters in their Document.metadata. Multiple values for a metadata key should be concatenated by comma. For example, filters to match all documents that have 'US' or 'CA' in their market metadata values and 'agent' in their user metadata values will be ```documents_metadata_filters { key: "market" value: "US,CA" } documents_metadata_filters { key: "user" value: "agent" }```
-     * 
+     * @return Optional. Key-value filters on the metadata of documents returned by article suggestion. If specified, article suggestion only returns suggested documents that match all filters in their Document.metadata. Multiple values for a metadata key should be concatenated by comma. For example, filters to match all documents that have 'US' or 'CA' in their market metadata values and 'agent' in their user metadata values will be ``` documents_metadata_filters { key: "market" value: "US,CA" } documents_metadata_filters { key: "user" value: "agent" } ```
      */
     public Output<Map<String,String>> getDocumentsMetadataFilters() {
         return this.documentsMetadataFilters;
     }
     /**
      * Optional. The unique identifier of this participant. Format: `projects//locations//conversations//participants/`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Optional. The unique identifier of this participant. Format: `projects//locations//conversations//participants/`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Immutable. The role this participant plays in the conversation. This field must be set during participant creation and is then immutable.
-     * 
      */
     @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**
      * @return Immutable. The role this participant plays in the conversation. This field must be set during participant creation and is then immutable.
-     * 
      */
     public Output<String> getRole() {
         return this.role;
     }
     /**
      * Optional. Label applied to streams representing this participant in SIPREC XML metadata and SDP. This is used to assign transcriptions from that media stream to this participant. This field can be updated.
-     * 
      */
     @Export(name="sipRecordingMediaLabel", type=String.class, parameters={})
     private Output<String> sipRecordingMediaLabel;
 
     /**
      * @return Optional. Label applied to streams representing this participant in SIPREC XML metadata and SDP. This is used to assign transcriptions from that media stream to this participant. This field can be updated.
-     * 
      */
     public Output<String> getSipRecordingMediaLabel() {
         return this.sipRecordingMediaLabel;

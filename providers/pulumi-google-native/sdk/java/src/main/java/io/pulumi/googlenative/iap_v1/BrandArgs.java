@@ -16,7 +16,6 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Application name displayed on OAuth consent screen.
-     * 
      */
     @Import(name="applicationTitle")
       private final @Nullable Output<String> applicationTitle;
@@ -34,7 +33,6 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Support email displayed on the OAuth consent screen.
-     * 
      */
     @Import(name="supportEmail")
       private final @Nullable Output<String> supportEmail;

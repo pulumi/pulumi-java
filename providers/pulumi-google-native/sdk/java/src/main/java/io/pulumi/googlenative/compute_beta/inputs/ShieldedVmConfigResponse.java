@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A set of Shielded VM options.
- * 
  */
 public final class ShieldedVmConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ShieldedVmConfigResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Defines whether the instance has integrity monitoring enabled.
-     * 
      */
     @Import(name="enableIntegrityMonitoring", required=true)
       private final Boolean enableIntegrityMonitoring;
@@ -29,7 +27,6 @@ public final class ShieldedVmConfigResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Defines whether the instance has Secure Boot enabled.
-     * 
      */
     @Import(name="enableSecureBoot", required=true)
       private final Boolean enableSecureBoot;
@@ -40,7 +37,6 @@ public final class ShieldedVmConfigResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Defines whether the instance has the vTPM enabled.
-     * 
      */
     @Import(name="enableVtpm", required=true)
       private final Boolean enableVtpm;

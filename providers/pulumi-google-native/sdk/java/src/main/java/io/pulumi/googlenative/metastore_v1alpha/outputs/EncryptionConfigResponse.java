@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class EncryptionConfigResponse {
     /**
      * The fully qualified customer provided Cloud KMS key name to use for customer data encryption, in the following form:projects/{project_number}/locations/{location_id}/keyRings/{key_ring_id}/cryptoKeys/{crypto_key_id}.
-     * 
      */
     private final String kmsKey;
 
@@ -22,7 +21,6 @@ public final class EncryptionConfigResponse {
 
     /**
      * The fully qualified customer provided Cloud KMS key name to use for customer data encryption, in the following form:projects/{project_number}/locations/{location_id}/keyRings/{key_ring_id}/cryptoKeys/{crypto_key_id}.
-     * 
     */
     public String getKmsKey() {
         return this.kmsKey;

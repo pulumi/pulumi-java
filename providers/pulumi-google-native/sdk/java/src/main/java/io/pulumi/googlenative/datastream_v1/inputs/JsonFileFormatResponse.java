@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * JSON file format configuration.
- * 
  */
 public final class JsonFileFormatResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class JsonFileFormatResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Compression of the loaded JSON file.
-     * 
      */
     @Import(name="compression", required=true)
       private final String compression;
@@ -29,7 +27,6 @@ public final class JsonFileFormatResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The schema file format along JSON data files.
-     * 
      */
     @Import(name="schemaFileFormat", required=true)
       private final String schemaFileFormat;

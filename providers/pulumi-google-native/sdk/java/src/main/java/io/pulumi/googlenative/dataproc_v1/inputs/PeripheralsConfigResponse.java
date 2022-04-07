@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Auxiliary services configuration for a workload.
- * 
  */
 public final class PeripheralsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class PeripheralsConfigResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[region]/services/[service_id]
-     * 
      */
     @Import(name="metastoreService", required=true)
       private final String metastoreService;
@@ -30,7 +28,6 @@ public final class PeripheralsConfigResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. The Spark History Server configuration for the workload.
-     * 
      */
     @Import(name="sparkHistoryServerConfig", required=true)
       private final SparkHistoryServerConfigResponse sparkHistoryServerConfig;

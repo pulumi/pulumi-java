@@ -17,62 +17,50 @@ import java.util.Objects;
 public final class GetConfigResult {
     /**
      * Created time.
-     * 
      */
     private final String createTime;
     /**
      * Optional. Display name.
-     * 
      */
     private final String displayName;
     /**
      * Immutable. Gateway specific configuration.
-     * 
      */
     private final ApigatewayGatewayConfigResponse gatewayConfig;
     /**
      * Immutable. The Google Cloud IAM Service Account that Gateways serving this config should use to authenticate to other services. This may either be the Service Account's email (`{ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com`) or its full resource name (`projects/{PROJECT}/accounts/{UNIQUE_ID}`). This is most often used when the service is a GCP resource such as a Cloud Run Service or an IAP-secured service.
-     * 
      */
     private final String gatewayServiceAccount;
     /**
      * Optional. gRPC service definition files. If specified, openapi_documents must not be included.
-     * 
      */
     private final List<ApigatewayApiConfigGrpcServiceDefinitionResponse> grpcServices;
     /**
      * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
-     * 
      */
     private final Map<String,String> labels;
     /**
      * Optional. Service Configuration files. At least one must be included when using gRPC service definitions. See https://cloud.google.com/endpoints/docs/grpc/grpc-service-config#service_configuration_overview for the expected file contents. If multiple files are specified, the files are merged with the following rules: * All singular scalar fields are merged using "last one wins" semantics in the order of the files uploaded. * Repeated fields are concatenated. * Singular embedded messages are merged using these rules for nested fields.
-     * 
      */
     private final List<ApigatewayApiConfigFileResponse> managedServiceConfigs;
     /**
      * Resource name of the API Config. Format: projects/{project}/locations/global/apis/{api}/configs/{api_config}
-     * 
      */
     private final String name;
     /**
      * Optional. OpenAPI specification documents. If specified, grpc_services and managed_service_configs must not be included.
-     * 
      */
     private final List<ApigatewayApiConfigOpenApiDocumentResponse> openapiDocuments;
     /**
      * The ID of the associated Service Config ( https://cloud.google.com/service-infrastructure/docs/glossary#config).
-     * 
      */
     private final String serviceConfigId;
     /**
      * State of the API Config.
-     * 
      */
     private final String state;
     /**
      * Updated time.
-     * 
      */
     private final String updateTime;
 
@@ -106,84 +94,72 @@ public final class GetConfigResult {
 
     /**
      * Created time.
-     * 
     */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. Display name.
-     * 
     */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Immutable. Gateway specific configuration.
-     * 
     */
     public ApigatewayGatewayConfigResponse getGatewayConfig() {
         return this.gatewayConfig;
     }
     /**
      * Immutable. The Google Cloud IAM Service Account that Gateways serving this config should use to authenticate to other services. This may either be the Service Account's email (`{ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com`) or its full resource name (`projects/{PROJECT}/accounts/{UNIQUE_ID}`). This is most often used when the service is a GCP resource such as a Cloud Run Service or an IAP-secured service.
-     * 
     */
     public String getGatewayServiceAccount() {
         return this.gatewayServiceAccount;
     }
     /**
      * Optional. gRPC service definition files. If specified, openapi_documents must not be included.
-     * 
     */
     public List<ApigatewayApiConfigGrpcServiceDefinitionResponse> getGrpcServices() {
         return this.grpcServices;
     }
     /**
      * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
-     * 
     */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Optional. Service Configuration files. At least one must be included when using gRPC service definitions. See https://cloud.google.com/endpoints/docs/grpc/grpc-service-config#service_configuration_overview for the expected file contents. If multiple files are specified, the files are merged with the following rules: * All singular scalar fields are merged using "last one wins" semantics in the order of the files uploaded. * Repeated fields are concatenated. * Singular embedded messages are merged using these rules for nested fields.
-     * 
     */
     public List<ApigatewayApiConfigFileResponse> getManagedServiceConfigs() {
         return this.managedServiceConfigs;
     }
     /**
      * Resource name of the API Config. Format: projects/{project}/locations/global/apis/{api}/configs/{api_config}
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Optional. OpenAPI specification documents. If specified, grpc_services and managed_service_configs must not be included.
-     * 
     */
     public List<ApigatewayApiConfigOpenApiDocumentResponse> getOpenapiDocuments() {
         return this.openapiDocuments;
     }
     /**
      * The ID of the associated Service Config ( https://cloud.google.com/service-infrastructure/docs/glossary#config).
-     * 
     */
     public String getServiceConfigId() {
         return this.serviceConfigId;
     }
     /**
      * State of the API Config.
-     * 
     */
     public String getState() {
         return this.state;
     }
     /**
      * Updated time.
-     * 
     */
     public String getUpdateTime() {
         return this.updateTime;

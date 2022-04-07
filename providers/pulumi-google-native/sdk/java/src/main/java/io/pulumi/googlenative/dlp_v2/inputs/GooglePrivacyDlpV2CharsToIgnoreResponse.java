@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Characters to skip when doing deidentification of a value. These will be left alone and skipped.
- * 
  */
 public final class GooglePrivacyDlpV2CharsToIgnoreResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse extends io.pulumi.res
 
     /**
      * Characters to not transform when masking.
-     * 
      */
     @Import(name="charactersToSkip", required=true)
       private final String charactersToSkip;
@@ -29,7 +27,6 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse extends io.pulumi.res
 
     /**
      * Common characters to not transform when masking. Useful to avoid removing punctuation.
-     * 
      */
     @Import(name="commonCharactersToIgnore", required=true)
       private final String commonCharactersToIgnore;

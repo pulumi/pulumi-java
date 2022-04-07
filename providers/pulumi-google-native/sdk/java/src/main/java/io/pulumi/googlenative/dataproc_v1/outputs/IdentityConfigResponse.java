@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class IdentityConfigResponse {
     /**
      * Map of user to service account.
-     * 
      */
     private final Map<String,String> userServiceAccountMapping;
 
@@ -23,7 +22,6 @@ public final class IdentityConfigResponse {
 
     /**
      * Map of user to service account.
-     * 
     */
     public Map<String,String> getUserServiceAccountMapping() {
         return this.userServiceAccountMapping;

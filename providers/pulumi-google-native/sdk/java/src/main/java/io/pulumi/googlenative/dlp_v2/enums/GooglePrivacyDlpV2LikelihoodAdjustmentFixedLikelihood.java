@@ -10,30 +10,25 @@ import java.util.StringJoiner;
 
     /**
      * Set the likelihood of a finding to a fixed value.
-     * 
      */
     @EnumType
     public enum GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood {
         /**
          * Default value; same as POSSIBLE.
-         * 
          */
         LikelihoodUnspecified("LIKELIHOOD_UNSPECIFIED"),
         /**
          * Few matching elements.
-         * 
          */
         VeryUnlikely("VERY_UNLIKELY"),
         Unlikely("UNLIKELY"),
         /**
          * Some matching elements.
-         * 
          */
         Possible("POSSIBLE"),
         Likely("LIKELY"),
         /**
          * Many matching elements.
-         * 
          */
         VeryLikely("VERY_LIKELY");
 

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Material is a material used in the generation of the provenance
- * 
  */
 public final class MaterialArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class MaterialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * digest is a map from a hash algorithm (e.g. sha256) to the value in the material
-     * 
      */
     @Import(name="digest")
       private final @Nullable Output<Map<String,String>> digest;
@@ -32,7 +30,6 @@ public final class MaterialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * uri is the uri of the material
-     * 
      */
     @Import(name="uri")
       private final @Nullable Output<String> uri;

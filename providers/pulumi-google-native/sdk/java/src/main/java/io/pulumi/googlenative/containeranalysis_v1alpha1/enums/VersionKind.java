@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then the other fields are ignored.
-     * 
      */
     @EnumType
     public enum VersionKind {
         /**
          * A standard package version, defined by the other fields.
-         * 
          */
         Normal("NORMAL"),
         /**
          * A special version representing negative infinity, other fields are ignored.
-         * 
          */
         Minimum("MINIMUM"),
         /**
          * A special version representing positive infinity, other fields are ignored.
-         * 
          */
         Maximum("MAXIMUM");
 

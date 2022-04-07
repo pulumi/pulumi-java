@@ -18,146 +18,125 @@ import javax.annotation.Nullable;
 /**
  * Adds a user provided trial to a study.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:ml/v1:Trial")
 public class Trial extends io.pulumi.resources.CustomResource {
     /**
      * The identifier of the client that originally requested this trial.
-     * 
      */
     @Export(name="clientId", type=String.class, parameters={})
     private Output<String> clientId;
 
     /**
      * @return The identifier of the client that originally requested this trial.
-     * 
      */
     public Output<String> getClientId() {
         return this.clientId;
     }
     /**
      * Time at which the trial's status changed to COMPLETED.
-     * 
      */
     @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
      * @return Time at which the trial's status changed to COMPLETED.
-     * 
      */
     public Output<String> getEndTime() {
         return this.endTime;
     }
     /**
      * The final measurement containing the objective value.
-     * 
      */
     @Export(name="finalMeasurement", type=GoogleCloudMlV1__MeasurementResponse.class, parameters={})
     private Output<GoogleCloudMlV1__MeasurementResponse> finalMeasurement;
 
     /**
      * @return The final measurement containing the objective value.
-     * 
      */
     public Output<GoogleCloudMlV1__MeasurementResponse> getFinalMeasurement() {
         return this.finalMeasurement;
     }
     /**
      * A human readable string describing why the trial is infeasible. This should only be set if trial_infeasible is true.
-     * 
      */
     @Export(name="infeasibleReason", type=String.class, parameters={})
     private Output<String> infeasibleReason;
 
     /**
      * @return A human readable string describing why the trial is infeasible. This should only be set if trial_infeasible is true.
-     * 
      */
     public Output<String> getInfeasibleReason() {
         return this.infeasibleReason;
     }
     /**
      * A list of measurements that are strictly lexicographically ordered by their induced tuples (steps, elapsed_time). These are used for early stopping computations.
-     * 
      */
     @Export(name="measurements", type=List.class, parameters={GoogleCloudMlV1__MeasurementResponse.class})
     private Output<List<GoogleCloudMlV1__MeasurementResponse>> measurements;
 
     /**
      * @return A list of measurements that are strictly lexicographically ordered by their induced tuples (steps, elapsed_time). These are used for early stopping computations.
-     * 
      */
     public Output<List<GoogleCloudMlV1__MeasurementResponse>> getMeasurements() {
         return this.measurements;
     }
     /**
      * Name of the trial assigned by the service.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the trial assigned by the service.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The parameters of the trial.
-     * 
      */
     @Export(name="parameters", type=List.class, parameters={GoogleCloudMlV1_Trial_ParameterResponse.class})
     private Output<List<GoogleCloudMlV1_Trial_ParameterResponse>> parameters;
 
     /**
      * @return The parameters of the trial.
-     * 
      */
     public Output<List<GoogleCloudMlV1_Trial_ParameterResponse>> getParameters() {
         return this.parameters;
     }
     /**
      * Time at which the trial was started.
-     * 
      */
     @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
      * @return Time at which the trial was started.
-     * 
      */
     public Output<String> getStartTime() {
         return this.startTime;
     }
     /**
      * The detailed state of a trial.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The detailed state of a trial.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * If true, the parameters in this trial are not attempted again.
-     * 
      */
     @Export(name="trialInfeasible", type=Boolean.class, parameters={})
     private Output<Boolean> trialInfeasible;
 
     /**
      * @return If true, the parameters in this trial are not attempted again.
-     * 
      */
     public Output<Boolean> getTrialInfeasible() {
         return this.trialInfeasible;

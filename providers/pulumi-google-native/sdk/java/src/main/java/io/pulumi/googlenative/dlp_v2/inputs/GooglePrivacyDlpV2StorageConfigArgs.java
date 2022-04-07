@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Shared message indicating Cloud storage type.
- * 
  */
 public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
 
     /**
      * BigQuery options.
-     * 
      */
     @Import(name="bigQueryOptions")
       private final @Nullable Output<GooglePrivacyDlpV2BigQueryOptionsArgs> bigQueryOptions;
@@ -35,7 +33,6 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
 
     /**
      * Google Cloud Storage options.
-     * 
      */
     @Import(name="cloudStorageOptions")
       private final @Nullable Output<GooglePrivacyDlpV2CloudStorageOptionsArgs> cloudStorageOptions;
@@ -46,7 +43,6 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
 
     /**
      * Google Cloud Datastore options.
-     * 
      */
     @Import(name="datastoreOptions")
       private final @Nullable Output<GooglePrivacyDlpV2DatastoreOptionsArgs> datastoreOptions;
@@ -57,7 +53,6 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
 
     /**
      * Hybrid inspection options.
-     * 
      */
     @Import(name="hybridOptions")
       private final @Nullable Output<GooglePrivacyDlpV2HybridOptionsArgs> hybridOptions;

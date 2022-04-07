@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Autoscaling targets for a Cluster. These determine the recommended nodes.
- * 
  */
 public final class AutoscalingTargetsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AutoscalingTargetsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80.
-     * 
      */
     @Import(name="cpuUtilizationPercent")
       private final @Nullable Output<Integer> cpuUtilizationPercent;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * This is deprecated and has no effect. Do not use.
- * 
  */
 public final class LogConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class LogConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="cloudAudit", required=true)
       private final LogConfigCloudAuditOptionsResponse cloudAudit;
@@ -31,7 +29,6 @@ public final class LogConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="counter", required=true)
       private final LogConfigCounterOptionsResponse counter;
@@ -42,7 +39,6 @@ public final class LogConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="dataAccess", required=true)
       private final LogConfigDataAccessOptionsResponse dataAccess;

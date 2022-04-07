@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Labels that can be used to filter Apigee metrics.
- * 
  */
 public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends i
 
     /**
      * The environment ID associated with the metrics.
-     * 
      */
     @Import(name="env")
       private final @Nullable Output<String> env;
@@ -31,7 +29,6 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends i
 
     /**
      * The instance ID associated with the metrics. In Apigee Hybrid, the value is configured during installation.
-     * 
      */
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
@@ -42,7 +39,6 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends i
 
     /**
      * The location associated with the metrics.
-     * 
      */
     @Import(name="location", required=true)
       private final Output<String> location;

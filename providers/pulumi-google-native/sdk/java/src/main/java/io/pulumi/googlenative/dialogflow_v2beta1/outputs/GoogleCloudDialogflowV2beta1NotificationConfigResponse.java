@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2beta1NotificationConfigResponse {
     /**
      * Format of message.
-     * 
      */
     private final String messageFormat;
     /**
      * Name of the Pub/Sub topic to publish conversation events like CONVERSATION_STARTED as serialized ConversationEvent protos. Notification works for phone calls, if this topic either is in the same project as the conversation or you grant `service-@gcp-sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic project. Format: `projects//locations//topics/`.
-     * 
      */
     private final String topic;
 
@@ -30,14 +28,12 @@ public final class GoogleCloudDialogflowV2beta1NotificationConfigResponse {
 
     /**
      * Format of message.
-     * 
     */
     public String getMessageFormat() {
         return this.messageFormat;
     }
     /**
      * Name of the Pub/Sub topic to publish conversation events like CONVERSATION_STARTED as serialized ConversationEvent protos. Notification works for phone calls, if this topic either is in the same project as the conversation or you grant `service-@gcp-sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic project. Format: `projects//locations//topics/`.
-     * 
     */
     public String getTopic() {
         return this.topic;

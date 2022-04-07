@@ -14,7 +14,6 @@ public final class ConnectionPropertyResponse extends io.pulumi.resources.Invoke
 
     /**
      * [Required] Name of the connection property to set.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -25,7 +24,6 @@ public final class ConnectionPropertyResponse extends io.pulumi.resources.Invoke
 
     /**
      * [Required] Value of the connection property.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

@@ -14,62 +14,50 @@ import java.util.Objects;
 public final class GetBackendBucketResult {
     /**
      * Cloud Storage bucket name.
-     * 
      */
     private final String bucketName;
     /**
      * Cloud CDN configuration for this BackendBucket.
-     * 
      */
     private final BackendBucketCdnPolicyResponse cdnPolicy;
     /**
      * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header.
-     * 
      */
     private final String compressionMode;
     /**
      * Creation timestamp in RFC3339 text format.
-     * 
      */
     private final String creationTimestamp;
     /**
      * Headers that the HTTP/S load balancer should add to proxied responses.
-     * 
      */
     private final List<String> customResponseHeaders;
     /**
      * An optional textual description of the resource; provided by the client when the resource is created.
-     * 
      */
     private final String description;
     /**
      * The resource URL for the edge security policy associated with this backend bucket.
-     * 
      */
     private final String edgeSecurityPolicy;
     /**
      * If true, enable Cloud CDN for this BackendBucket.
-     * 
      */
     private final Boolean enableCdn;
     /**
      * Type of the resource.
-     * 
      */
     private final String kind;
     /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     private final String name;
     /**
      * Server-defined URL for the resource.
-     * 
      */
     private final String selfLink;
     /**
      * Server-defined URL for this resource with the resource id.
-     * 
      */
     private final String selfLinkWithId;
 
@@ -103,84 +91,72 @@ public final class GetBackendBucketResult {
 
     /**
      * Cloud Storage bucket name.
-     * 
     */
     public String getBucketName() {
         return this.bucketName;
     }
     /**
      * Cloud CDN configuration for this BackendBucket.
-     * 
     */
     public BackendBucketCdnPolicyResponse getCdnPolicy() {
         return this.cdnPolicy;
     }
     /**
      * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header.
-     * 
     */
     public String getCompressionMode() {
         return this.compressionMode;
     }
     /**
      * Creation timestamp in RFC3339 text format.
-     * 
     */
     public String getCreationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * Headers that the HTTP/S load balancer should add to proxied responses.
-     * 
     */
     public List<String> getCustomResponseHeaders() {
         return this.customResponseHeaders;
     }
     /**
      * An optional textual description of the resource; provided by the client when the resource is created.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * The resource URL for the edge security policy associated with this backend bucket.
-     * 
     */
     public String getEdgeSecurityPolicy() {
         return this.edgeSecurityPolicy;
     }
     /**
      * If true, enable Cloud CDN for this BackendBucket.
-     * 
     */
     public Boolean getEnableCdn() {
         return this.enableCdn;
     }
     /**
      * Type of the resource.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Server-defined URL for the resource.
-     * 
     */
     public String getSelfLink() {
         return this.selfLink;
     }
     /**
      * Server-defined URL for this resource with the resource id.
-     * 
     */
     public String getSelfLinkWithId() {
         return this.selfLinkWithId;

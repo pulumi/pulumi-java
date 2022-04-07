@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A content string and a MIME type that describes the content string's format.
- * 
  */
 public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The text of the documentation, interpreted according to mime_type. The content may not exceed 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8 format, whichever is smaller.
-     * 
      */
     @Import(name="content")
       private final @Nullable Output<String> content;
@@ -31,7 +29,6 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The format of the content field. Presently, only the value "text/markdown" is supported. See Markdown (https://en.wikipedia.org/wiki/Markdown) for more information.
-     * 
      */
     @Import(name="mimeType")
       private final @Nullable Output<String> mimeType;

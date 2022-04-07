@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class GoogleCloudNetworksecurityV1beta1CertificateProviderResponse {
     /**
      * The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.
-     * 
      */
     private final CertificateProviderInstanceResponse certificateProviderInstance;
     /**
      * gRPC specific configuration to access the gRPC server to obtain the cert and private key.
-     * 
      */
     private final GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse grpcEndpoint;
 
@@ -31,14 +29,12 @@ public final class GoogleCloudNetworksecurityV1beta1CertificateProviderResponse 
 
     /**
      * The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.
-     * 
     */
     public CertificateProviderInstanceResponse getCertificateProviderInstance() {
         return this.certificateProviderInstance;
     }
     /**
      * gRPC specific configuration to access the gRPC server to obtain the cert and private key.
-     * 
     */
     public GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse getGrpcEndpoint() {
         return this.grpcEndpoint;

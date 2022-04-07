@@ -18,7 +18,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User-provided description of the source.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -29,7 +28,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The labels of the source.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -68,7 +66,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Vmware type source details.
-     * 
      */
     @Import(name="vmware")
       private final @Nullable Output<VmwareSourceDetailsArgs> vmware;

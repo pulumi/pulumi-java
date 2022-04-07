@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information for connecting over HTTP(s).
- * 
  */
 public final class AddressableArgs extends io.pulumi.resources.ResourceArgs {
 

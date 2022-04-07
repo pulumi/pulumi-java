@@ -14,76 +14,65 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a notification config.
- * 
  */
 @ResourceType(type="google-native:securitycenter/v1:NotificationConfig")
 public class NotificationConfig extends io.pulumi.resources.CustomResource {
     /**
      * The description of the notification config (max of 1024 characters).
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return The description of the notification config (max of 1024 characters).
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The Pub/Sub topic to send notifications to. Its format is "projects/[project_id]/topics/[topic]".
-     * 
      */
     @Export(name="pubsubTopic", type=String.class, parameters={})
     private Output<String> pubsubTopic;
 
     /**
      * @return The Pub/Sub topic to send notifications to. Its format is "projects/[project_id]/topics/[topic]".
-     * 
      */
     public Output<String> getPubsubTopic() {
         return this.pubsubTopic;
     }
     /**
      * The service account that needs "pubsub.topics.publish" permission to publish to the Pub/Sub topic.
-     * 
      */
     @Export(name="serviceAccount", type=String.class, parameters={})
     private Output<String> serviceAccount;
 
     /**
      * @return The service account that needs "pubsub.topics.publish" permission to publish to the Pub/Sub topic.
-     * 
      */
     public Output<String> getServiceAccount() {
         return this.serviceAccount;
     }
     /**
      * The config for triggering streaming-based notifications.
-     * 
      */
     @Export(name="streamingConfig", type=StreamingConfigResponse.class, parameters={})
     private Output<StreamingConfigResponse> streamingConfig;
 
     /**
      * @return The config for triggering streaming-based notifications.
-     * 
      */
     public Output<StreamingConfigResponse> getStreamingConfig() {
         return this.streamingConfig;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse {
     /**
      * The word or phrase to be excluded.
-     * 
      */
     private final String value;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse {
 
     /**
      * The word or phrase to be excluded.
-     * 
     */
     public String getValue() {
         return this.value;

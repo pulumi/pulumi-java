@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The IAM conditions context.
- * 
  */
 public final class ConditionContextResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ConditionContextResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The hypothetical access timestamp to evaluate IAM conditions. Note that this value must not be earlier than the current time; otherwise, an INVALID_ARGUMENT error will be returned.
-     * 
      */
     @Import(name="accessTime", required=true)
       private final String accessTime;

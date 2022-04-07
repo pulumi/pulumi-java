@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Metadata for a Datastore connector used by the job.
- * 
  */
 public final class DatastoreIODetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DatastoreIODetailsResponse extends io.pulumi.resources.Invoke
 
     /**
      * Namespace used in the connection.
-     * 
      */
     @Import(name="namespace", required=true)
       private final String namespace;
@@ -29,7 +27,6 @@ public final class DatastoreIODetailsResponse extends io.pulumi.resources.Invoke
 
     /**
      * ProjectId accessed in the connection.
-     * 
      */
     @Import(name="project", required=true)
       private final String project;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Specification of a port-based selector.
- * 
  */
 public final class TrafficPortSelectorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class TrafficPortSelectorResponse extends io.pulumi.resources.Invok
 
     /**
      * Optional. A list of ports. Can be port numbers or port range (example, [80-90] specifies all ports from 80 to 90, including 80 and 90) or named ports or * to specify all ports. If the list is empty, all ports are selected.
-     * 
      */
     @Import(name="ports", required=true)
       private final List<String> ports;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * An attestation wrapper that uses the Grafeas `Signature` message. This attestation must define the `serialized_payload` that the `signatures` verify and any metadata necessary to interpret that plaintext. The signatures should always be over the `serialized_payload` bytestring.
- * 
  */
 public final class GenericSignedAttestationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class GenericSignedAttestationArgs extends io.pulumi.resources.Reso
 
     /**
      * Type (for example schema) of the attestation payload that was signed. The verifier must ensure that the provided type is one that the verifier supports, and that the attestation payload is a valid instantiation of that type (for example by validating a JSON schema).
-     * 
      */
     @Import(name="contentType")
       private final @Nullable Output<GenericSignedAttestationContentType> contentType;
@@ -34,7 +32,6 @@ public final class GenericSignedAttestationArgs extends io.pulumi.resources.Reso
 
     /**
      * The serialized payload that is verified by one or more `signatures`. The encoding and semantic meaning of this payload must match what is set in `content_type`.
-     * 
      */
     @Import(name="serializedPayload")
       private final @Nullable Output<String> serializedPayload;
@@ -45,7 +42,6 @@ public final class GenericSignedAttestationArgs extends io.pulumi.resources.Reso
 
     /**
      * One or more signatures over `serialized_payload`. Verifier implementations should consider this attestation message verified if at least one `signature` verifies `serialized_payload`. See `Signature` in common.proto for more details on signature structure and verification.
-     * 
      */
     @Import(name="signatures")
       private final @Nullable Output<List<SignatureArgs>> signatures;

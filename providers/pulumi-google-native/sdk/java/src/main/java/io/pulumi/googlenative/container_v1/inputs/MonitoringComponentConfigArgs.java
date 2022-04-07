@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * MonitoringComponentConfig is cluster monitoring component configuration.
- * 
  */
 public final class MonitoringComponentConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class MonitoringComponentConfigArgs extends io.pulumi.resources.Res
 
     /**
      * Select components to collect metrics. An empty set would disable all monitoring.
-     * 
      */
     @Import(name="enableComponents")
       private final @Nullable Output<List<MonitoringComponentConfigEnableComponentsItem>> enableComponents;

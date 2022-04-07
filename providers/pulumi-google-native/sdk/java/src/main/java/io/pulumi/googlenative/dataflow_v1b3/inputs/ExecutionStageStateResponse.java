@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A message describing the state of a particular execution stage.
- * 
  */
 public final class ExecutionStageStateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ExecutionStageStateResponse extends io.pulumi.resources.Invok
 
     /**
      * The time at which the stage transitioned to this state.
-     * 
      */
     @Import(name="currentStateTime", required=true)
       private final String currentStateTime;
@@ -29,7 +27,6 @@ public final class ExecutionStageStateResponse extends io.pulumi.resources.Invok
 
     /**
      * The name of the execution stage.
-     * 
      */
     @Import(name="executionStageName", required=true)
       private final String executionStageName;
@@ -40,7 +37,6 @@ public final class ExecutionStageStateResponse extends io.pulumi.resources.Invok
 
     /**
      * Executions stage states allow the same set of values as JobState.
-     * 
      */
     @Import(name="executionStageState", required=true)
       private final String executionStageState;

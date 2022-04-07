@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Scheduler settings for standard environment.
- * 
  */
 public final class StandardSchedulerSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class StandardSchedulerSettingsArgs extends io.pulumi.resources.Res
 
     /**
      * Maximum number of instances to run for this version. Set to zero to disable max_instances configuration.
-     * 
      */
     @Import(name="maxInstances")
       private final @Nullable Output<Integer> maxInstances;
@@ -32,7 +30,6 @@ public final class StandardSchedulerSettingsArgs extends io.pulumi.resources.Res
 
     /**
      * Minimum number of instances to run for this version. Set to zero to disable min_instances configuration.
-     * 
      */
     @Import(name="minInstances")
       private final @Nullable Output<Integer> minInstances;
@@ -43,7 +40,6 @@ public final class StandardSchedulerSettingsArgs extends io.pulumi.resources.Res
 
     /**
      * Target CPU utilization ratio to maintain when scaling.
-     * 
      */
     @Import(name="targetCpuUtilization")
       private final @Nullable Output<Double> targetCpuUtilization;
@@ -54,7 +50,6 @@ public final class StandardSchedulerSettingsArgs extends io.pulumi.resources.Res
 
     /**
      * Target throughput utilization ratio to maintain when scaling
-     * 
      */
     @Import(name="targetThroughputUtilization")
       private final @Nullable Output<Double> targetThroughputUtilization;

@@ -17,146 +17,125 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a model in Firebase ML. The longrunning operation will eventually return a Model
- * 
  */
 @ResourceType(type="google-native:firebaseml/v1beta2:Model")
 public class Model extends io.pulumi.resources.CustomResource {
     /**
      * Lists operation ids associated with this model whose status is NOT done.
-     * 
      */
     @Export(name="activeOperations", type=List.class, parameters={OperationResponse.class})
     private Output<List<OperationResponse>> activeOperations;
 
     /**
      * @return Lists operation ids associated with this model whose status is NOT done.
-     * 
      */
     public Output<List<OperationResponse>> getActiveOperations() {
         return this.activeOperations;
     }
     /**
      * Timestamp when this model was created in Firebase ML.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return Timestamp when this model was created in Firebase ML.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The name of the model to create. The name can be up to 32 characters long and can consist only of ASCII Latin letters A-Z and a-z, underscores(_) and ASCII digits 0-9. It must start with a letter.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The name of the model to create. The name can be up to 32 characters long and can consist only of ASCII Latin letters A-Z and a-z, underscores(_) and ASCII digits 0-9. It must start with a letter.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * See RFC7232 https://tools.ietf.org/html/rfc7232#section-2.3
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return See RFC7232 https://tools.ietf.org/html/rfc7232#section-2.3
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The model_hash will change if a new file is available for download.
-     * 
      */
     @Export(name="modelHash", type=String.class, parameters={})
     private Output<String> modelHash;
 
     /**
      * @return The model_hash will change if a new file is available for download.
-     * 
      */
     public Output<String> getModelHash() {
         return this.modelHash;
     }
     /**
      * The resource name of the Model. Model names have the form `projects/{project_id}/models/{model_id}` The name is ignored when creating a model.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the Model. Model names have the form `projects/{project_id}/models/{model_id}` The name is ignored when creating a model.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * State common to all model types. Includes publishing and validation information.
-     * 
      */
     @Export(name="state", type=ModelStateResponse.class, parameters={})
     private Output<ModelStateResponse> state;
 
     /**
      * @return State common to all model types. Includes publishing and validation information.
-     * 
      */
     public Output<ModelStateResponse> getState() {
         return this.state;
     }
     /**
      * User defined tags which can be used to group/filter models during listing
-     * 
      */
     @Export(name="tags", type=List.class, parameters={String.class})
     private Output<List<String>> tags;
 
     /**
      * @return User defined tags which can be used to group/filter models during listing
-     * 
      */
     public Output<List<String>> getTags() {
         return this.tags;
     }
     /**
      * A TFLite Model
-     * 
      */
     @Export(name="tfliteModel", type=TfLiteModelResponse.class, parameters={})
     private Output<TfLiteModelResponse> tfliteModel;
 
     /**
      * @return A TFLite Model
-     * 
      */
     public Output<TfLiteModelResponse> getTfliteModel() {
         return this.tfliteModel;
     }
     /**
      * Timestamp when this model was updated in Firebase ML.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return Timestamp when this model was updated in Firebase ML.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

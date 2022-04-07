@@ -16,160 +16,137 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a Serverless VPC Access connector, returns an operation.
- * 
  */
 @ResourceType(type="google-native:vpcaccess/v1:Connector")
 public class Connector extends io.pulumi.resources.CustomResource {
     /**
      * List of projects using the connector.
-     * 
      */
     @Export(name="connectedProjects", type=List.class, parameters={String.class})
     private Output<List<String>> connectedProjects;
 
     /**
      * @return List of projects using the connector.
-     * 
      */
     public Output<List<String>> getConnectedProjects() {
         return this.connectedProjects;
     }
     /**
      * The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
-     * 
      */
     @Export(name="ipCidrRange", type=String.class, parameters={})
     private Output<String> ipCidrRange;
 
     /**
      * @return The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
-     * 
      */
     public Output<String> getIpCidrRange() {
         return this.ipCidrRange;
     }
     /**
      * Machine type of VM Instance underlying connector. Default is e2-micro
-     * 
      */
     @Export(name="machineType", type=String.class, parameters={})
     private Output<String> machineType;
 
     /**
      * @return Machine type of VM Instance underlying connector. Default is e2-micro
-     * 
      */
     public Output<String> getMachineType() {
         return this.machineType;
     }
     /**
      * Maximum value of instances in autoscaling group underlying the connector.
-     * 
      */
     @Export(name="maxInstances", type=Integer.class, parameters={})
     private Output<Integer> maxInstances;
 
     /**
      * @return Maximum value of instances in autoscaling group underlying the connector.
-     * 
      */
     public Output<Integer> getMaxInstances() {
         return this.maxInstances;
     }
     /**
      * Maximum throughput of the connector in Mbps. Default is 300, max is 1000.
-     * 
      */
     @Export(name="maxThroughput", type=Integer.class, parameters={})
     private Output<Integer> maxThroughput;
 
     /**
      * @return Maximum throughput of the connector in Mbps. Default is 300, max is 1000.
-     * 
      */
     public Output<Integer> getMaxThroughput() {
         return this.maxThroughput;
     }
     /**
      * Minimum value of instances in autoscaling group underlying the connector.
-     * 
      */
     @Export(name="minInstances", type=Integer.class, parameters={})
     private Output<Integer> minInstances;
 
     /**
      * @return Minimum value of instances in autoscaling group underlying the connector.
-     * 
      */
     public Output<Integer> getMinInstances() {
         return this.minInstances;
     }
     /**
      * Minimum throughput of the connector in Mbps. Default and min is 200.
-     * 
      */
     @Export(name="minThroughput", type=Integer.class, parameters={})
     private Output<Integer> minThroughput;
 
     /**
      * @return Minimum throughput of the connector in Mbps. Default and min is 200.
-     * 
      */
     public Output<Integer> getMinThroughput() {
         return this.minThroughput;
     }
     /**
      * The resource name in the format `projects/*{@literal /}locations/*{@literal /}connectors/*`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name in the format `projects/*{@literal /}locations/*{@literal /}connectors/*`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Name of a VPC network.
-     * 
      */
     @Export(name="network", type=String.class, parameters={})
     private Output<String> network;
 
     /**
      * @return Name of a VPC network.
-     * 
      */
     public Output<String> getNetwork() {
         return this.network;
     }
     /**
      * State of the VPC access connector.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return State of the VPC access connector.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The subnet in which to house the VPC Access Connector.
-     * 
      */
     @Export(name="subnet", type=SubnetResponse.class, parameters={})
     private Output<SubnetResponse> subnet;
 
     /**
      * @return The subnet in which to house the VPC Access Connector.
-     * 
      */
     public Output<SubnetResponse> getSubnet() {
         return this.subnet;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
- * 
  */
 public final class TextMappingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class TextMappingResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The `EditAtom.key` that references atom with text inputs in the `Job.edit_list`.
-     * 
      */
     @Import(name="atomKey", required=true)
       private final String atomKey;
@@ -30,7 +28,6 @@ public final class TextMappingResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The `Input.key` that identifies the input file.
-     * 
      */
     @Import(name="inputKey", required=true)
       private final String inputKey;
@@ -41,7 +38,6 @@ public final class TextMappingResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The zero-based index of the track in the input file.
-     * 
      */
     @Import(name="inputTrack", required=true)
       private final Integer inputTrack;

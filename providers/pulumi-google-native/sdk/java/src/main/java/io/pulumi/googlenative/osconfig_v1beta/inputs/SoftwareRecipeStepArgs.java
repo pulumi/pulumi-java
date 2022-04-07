@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * An action that can be taken as part of installing or updating a recipe.
- * 
  */
 public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Extracts an archive into the specified directory.
-     * 
      */
     @Import(name="archiveExtraction")
       private final @Nullable Output<SoftwareRecipeStepExtractArchiveArgs> archiveExtraction;
@@ -37,7 +35,6 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Installs a deb file via dpkg.
-     * 
      */
     @Import(name="dpkgInstallation")
       private final @Nullable Output<SoftwareRecipeStepInstallDpkgArgs> dpkgInstallation;
@@ -48,7 +45,6 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Copies a file onto the instance.
-     * 
      */
     @Import(name="fileCopy")
       private final @Nullable Output<SoftwareRecipeStepCopyFileArgs> fileCopy;
@@ -59,7 +55,6 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Executes an artifact or local file.
-     * 
      */
     @Import(name="fileExec")
       private final @Nullable Output<SoftwareRecipeStepExecFileArgs> fileExec;
@@ -70,7 +65,6 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Installs an MSI file.
-     * 
      */
     @Import(name="msiInstallation")
       private final @Nullable Output<SoftwareRecipeStepInstallMsiArgs> msiInstallation;
@@ -81,7 +75,6 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Installs an rpm file via the rpm utility.
-     * 
      */
     @Import(name="rpmInstallation")
       private final @Nullable Output<SoftwareRecipeStepInstallRpmArgs> rpmInstallation;
@@ -92,7 +85,6 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Runs commands in a shell.
-     * 
      */
     @Import(name="scriptRun")
       private final @Nullable Output<SoftwareRecipeStepRunScriptArgs> scriptRun;

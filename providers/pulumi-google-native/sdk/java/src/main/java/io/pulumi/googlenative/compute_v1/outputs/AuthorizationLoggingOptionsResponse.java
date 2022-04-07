@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class AuthorizationLoggingOptionsResponse {
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     private final String permissionType;
 
@@ -22,7 +21,6 @@ public final class AuthorizationLoggingOptionsResponse {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
     */
     public String getPermissionType() {
         return this.permissionType;

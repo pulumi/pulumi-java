@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A simplified layout that divides the available space into rows and arranges a set of widgets horizontally in each row.
- * 
  */
 public final class RowLayoutArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class RowLayoutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The rows of content to display.
-     * 
      */
     @Import(name="rows")
       private final @Nullable Output<List<RowArgs>> rows;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Output configuration for asset feed destination.
- * 
  */
 public final class FeedOutputConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class FeedOutputConfigArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Destination on Pub/Sub.
-     * 
      */
     @Import(name="pubsubDestination")
       private final @Nullable Output<PubsubDestinationArgs> pubsubDestination;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2TimePartConfigResponse {
     /**
      * The part of the time to keep.
-     * 
      */
     private final String partToExtract;
 
@@ -22,7 +21,6 @@ public final class GooglePrivacyDlpV2TimePartConfigResponse {
 
     /**
      * The part of the time to keep.
-     * 
     */
     public String getPartToExtract() {
         return this.partToExtract;

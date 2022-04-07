@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Used for time-dependent conditions. Example: Want to have rule applied for week long sale.
- * 
  */
 public final class GoogleCloudRetailV2betaConditionTimeRangeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudRetailV2betaConditionTimeRangeResponse extends io.
 
     /**
      * End of time range. Range is inclusive.
-     * 
      */
     @Import(name="endTime", required=true)
       private final String endTime;
@@ -29,7 +27,6 @@ public final class GoogleCloudRetailV2betaConditionTimeRangeResponse extends io.
 
     /**
      * Start of time range. Range is inclusive.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;

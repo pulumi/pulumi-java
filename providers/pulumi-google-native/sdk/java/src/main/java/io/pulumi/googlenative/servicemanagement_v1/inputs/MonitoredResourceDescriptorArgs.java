@@ -14,8 +14,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * An object that describes the schema of a MonitoredResource object using a type name and a set of labels. For example, the monitored resource descriptor for Google Compute Engine VM instances has a type of `"gce_instance"` and specifies the use of the labels `"instance_id"` and `"zone"` to identify particular VM instances. Different APIs can support different monitored resource types. APIs generally provide a `list` method that returns the monitored resource descriptors used by the API.
- * 
+ * An object that describes the schema of a MonitoredResource object using a type name and a set of labels. For example, the monitored resource descriptor for Google Compute Engine VM instances has a type of `"gce_instance"` and specifies the use of the labels `"instance_id"` and `"zone"` to identify particular VM instances. Different APIs can support different monitored resource types. APIs generally provide a `list` method that returns the monitored resource descriptors used by the API. 
  */
 public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
 
     /**
      * Optional. A detailed description of the monitored resource type that might be used in documentation.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -34,7 +32,6 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
 
     /**
      * Optional. A concise name for the monitored resource type that might be displayed in user interfaces. It should be a Title Cased Noun Phrase, without any article or other determiners. For example, `"Google Cloud SQL Database"`.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -45,7 +42,6 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
 
     /**
      * A set of labels used to describe instances of this monitored resource type. For example, an individual Google Cloud SQL database is identified by values for the labels `"database_id"` and `"zone"`.
-     * 
      */
     @Import(name="labels", required=true)
       private final Output<List<LabelDescriptorArgs>> labels;
@@ -56,7 +52,6 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
 
     /**
      * Optional. The launch stage of the monitored resource definition.
-     * 
      */
     @Import(name="launchStage")
       private final @Nullable Output<MonitoredResourceDescriptorLaunchStage> launchStage;
@@ -67,7 +62,6 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
 
     /**
      * Optional. The resource name of the monitored resource descriptor: `"projects/{project_id}/monitoredResourceDescriptors/{type}"` where {type} is the value of the `type` field in this object and {project_id} is a project ID that provides API-specific context for accessing the type. APIs that do not use project information can use the resource name format `"monitoredResourceDescriptors/{type}"`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -78,7 +72,6 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
 
     /**
      * The monitored resource type. For example, the type `"cloudsql_database"` represents databases in Google Cloud SQL. For a list of types, see [Monitoring resource types](https://cloud.google.com/monitoring/api/resources) and [Logging resource types](https://cloud.google.com/logging/docs/api/v2/resource-list).
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

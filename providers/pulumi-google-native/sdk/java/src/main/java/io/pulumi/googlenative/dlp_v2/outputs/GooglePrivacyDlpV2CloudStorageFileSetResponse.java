@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2CloudStorageFileSetResponse {
     /**
      * The url, in the format `gs:///`. Trailing wildcard in the path is allowed.
-     * 
      */
     private final String url;
 
@@ -22,7 +21,6 @@ public final class GooglePrivacyDlpV2CloudStorageFileSetResponse {
 
     /**
      * The url, in the format `gs:///`. Trailing wildcard in the path is allowed.
-     * 
     */
     public String getUrl() {
         return this.url;

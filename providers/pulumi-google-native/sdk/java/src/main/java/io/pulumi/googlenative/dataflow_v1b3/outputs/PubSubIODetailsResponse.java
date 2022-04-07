@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class PubSubIODetailsResponse {
     /**
      * Subscription used in the connection.
-     * 
      */
     private final String subscription;
     /**
      * Topic accessed in the connection.
-     * 
      */
     private final String topic;
 
@@ -30,14 +28,12 @@ public final class PubSubIODetailsResponse {
 
     /**
      * Subscription used in the connection.
-     * 
     */
     public String getSubscription() {
         return this.subscription;
     }
     /**
      * Topic accessed in the connection.
-     * 
     */
     public String getTopic() {
         return this.topic;

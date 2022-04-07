@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The settings for a subscription's message delivery.
- * 
  */
 public final class DeliveryConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DeliveryConfigResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The DeliveryRequirement for this subscription.
-     * 
      */
     @Import(name="deliveryRequirement", required=true)
       private final String deliveryRequirement;

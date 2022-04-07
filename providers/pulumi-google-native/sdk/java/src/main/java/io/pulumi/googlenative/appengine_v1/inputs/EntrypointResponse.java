@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The entrypoint for the application.
- * 
  */
 public final class EntrypointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class EntrypointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The format should be a shell command that can be fed to bash -c.
-     * 
      */
     @Import(name="shell", required=true)
       private final String shell;

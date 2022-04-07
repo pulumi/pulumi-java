@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class RuntimeAccessConfigResponse {
     /**
      * The type of access mode this instance.
-     * 
      */
     private final String accessType;
     /**
      * The proxy endpoint that is used to access the runtime.
-     * 
      */
     private final String proxyUri;
     /**
      * The owner of this runtime after creation. Format: `alias@example.com` Currently supports one owner only.
-     * 
      */
     private final String runtimeOwner;
 
@@ -37,21 +34,18 @@ public final class RuntimeAccessConfigResponse {
 
     /**
      * The type of access mode this instance.
-     * 
     */
     public String getAccessType() {
         return this.accessType;
     }
     /**
      * The proxy endpoint that is used to access the runtime.
-     * 
     */
     public String getProxyUri() {
         return this.proxyUri;
     }
     /**
      * The owner of this runtime after creation. Format: `alias@example.com` Currently supports one owner only.
-     * 
     */
     public String getRuntimeOwner() {
         return this.runtimeOwner;

@@ -18,7 +18,6 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The query content.
-     * 
      */
     @Import(name="content")
       private final @Nullable Output<QueryContentArgs> content;
@@ -29,7 +28,6 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of this saved query. This value should be fewer than 255 characters.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -40,7 +38,6 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Labels applied on the resource. This value should not contain more than 10 entries. The key and value of each entry must be non-empty and fewer than 64 characters.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -51,7 +48,6 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the saved query. The format must be: * projects/project_number/savedQueries/saved_query_id * folders/folder_number/savedQueries/saved_query_id * organizations/organization_number/savedQueries/saved_query_id
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

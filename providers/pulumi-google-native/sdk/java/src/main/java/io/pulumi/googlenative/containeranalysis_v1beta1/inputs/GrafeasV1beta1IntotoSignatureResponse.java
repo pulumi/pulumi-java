@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A signature object consists of the KeyID used and the signature itself.
- * 
  */
 public final class GrafeasV1beta1IntotoSignatureResponse extends io.pulumi.resources.InvokeArgs {
 

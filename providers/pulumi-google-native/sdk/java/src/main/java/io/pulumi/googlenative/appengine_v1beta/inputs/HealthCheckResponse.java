@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances. Only applicable for instances in App Engine flexible environment.
- * 
  */
 public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Interval between health checks.
-     * 
      */
     @Import(name="checkInterval", required=true)
       private final String checkInterval;
@@ -31,7 +29,6 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether to explicitly disable health checks for this instance.
-     * 
      */
     @Import(name="disableHealthCheck", required=true)
       private final Boolean disableHealthCheck;
@@ -42,7 +39,6 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Number of consecutive successful health checks required before receiving traffic.
-     * 
      */
     @Import(name="healthyThreshold", required=true)
       private final Integer healthyThreshold;
@@ -53,7 +49,6 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Host header to send when performing an HTTP health check. Example: "myapp.appspot.com"
-     * 
      */
     @Import(name="host", required=true)
       private final String host;
@@ -64,7 +59,6 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Number of consecutive failed health checks required before an instance is restarted.
-     * 
      */
     @Import(name="restartThreshold", required=true)
       private final Integer restartThreshold;
@@ -75,7 +69,6 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Time before the health check is considered failed.
-     * 
      */
     @Import(name="timeout", required=true)
       private final String timeout;
@@ -86,7 +79,6 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Number of consecutive failed health checks required before removing traffic.
-     * 
      */
     @Import(name="unhealthyThreshold", required=true)
       private final Integer unhealthyThreshold;

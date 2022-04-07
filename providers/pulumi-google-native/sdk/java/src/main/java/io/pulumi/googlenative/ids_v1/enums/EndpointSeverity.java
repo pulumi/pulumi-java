@@ -10,38 +10,31 @@ import java.util.StringJoiner;
 
     /**
      * Required. Lowest threat severity that this endpoint will alert on.
-     * 
      */
     @EnumType
     public enum EndpointSeverity {
         /**
          * Not set.
-         * 
          */
         SeverityUnspecified("SEVERITY_UNSPECIFIED"),
         /**
          * Informational alerts.
-         * 
          */
         Informational("INFORMATIONAL"),
         /**
          * Low severity alerts.
-         * 
          */
         Low("LOW"),
         /**
          * Medium severity alerts.
-         * 
          */
         Medium("MEDIUM"),
         /**
          * High severity alerts.
-         * 
          */
         High("HIGH"),
         /**
          * Critical severity alerts.
-         * 
          */
         Critical("CRITICAL");
 

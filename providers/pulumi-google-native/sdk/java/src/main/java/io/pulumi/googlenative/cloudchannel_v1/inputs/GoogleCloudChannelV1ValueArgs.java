@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Data type and value of a parameter.
- * 
  */
 public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
 
     /**
      * Represents a boolean value.
-     * 
      */
     @Import(name="boolValue")
       private final @Nullable Output<Boolean> boolValue;
@@ -34,7 +32,6 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
 
     /**
      * Represents a double value.
-     * 
      */
     @Import(name="doubleValue")
       private final @Nullable Output<Double> doubleValue;
@@ -45,7 +42,6 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
 
     /**
      * Represents an int64 value.
-     * 
      */
     @Import(name="int64Value")
       private final @Nullable Output<String> int64Value;
@@ -56,7 +52,6 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
 
     /**
      * Represents an 'Any' proto value.
-     * 
      */
     @Import(name="protoValue")
       private final @Nullable Output<Map<String,String>> protoValue;
@@ -67,7 +62,6 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
 
     /**
      * Represents a string value.
-     * 
      */
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;

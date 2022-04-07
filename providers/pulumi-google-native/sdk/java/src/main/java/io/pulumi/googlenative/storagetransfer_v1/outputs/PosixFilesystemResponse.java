@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class PosixFilesystemResponse {
     /**
      * Root directory path to the filesystem.
-     * 
      */
     private final String rootDirectory;
 
@@ -22,7 +21,6 @@ public final class PosixFilesystemResponse {
 
     /**
      * Root directory path to the filesystem.
-     * 
     */
     public String getRootDirectory() {
         return this.rootDirectory;

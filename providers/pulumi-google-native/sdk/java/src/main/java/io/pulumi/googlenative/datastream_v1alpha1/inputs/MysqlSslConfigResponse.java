@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * MySQL SSL configuration information.
- * 
  */
 public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Input only. PEM-encoded certificate of the CA that signed the source database server's certificate.
-     * 
      */
     @Import(name="caCertificate", required=true)
       private final String caCertificate;
@@ -30,7 +28,6 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Indicates whether the ca_certificate field is set.
-     * 
      */
     @Import(name="caCertificateSet", required=true)
       private final Boolean caCertificateSet;
@@ -41,7 +38,6 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Input only. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the 'client_key' and the 'ca_certificate' fields are mandatory.
-     * 
      */
     @Import(name="clientCertificate", required=true)
       private final String clientCertificate;
@@ -52,7 +48,6 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Indicates whether the client_certificate field is set.
-     * 
      */
     @Import(name="clientCertificateSet", required=true)
       private final Boolean clientCertificateSet;
@@ -63,7 +58,6 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Input only. PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.
-     * 
      */
     @Import(name="clientKey", required=true)
       private final String clientKey;
@@ -74,7 +68,6 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Indicates whether the client_key field is set.
-     * 
      */
     @Import(name="clientKeySet", required=true)
       private final Boolean clientKeySet;

@@ -25,7 +25,6 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Long form description of the use case for this AppProfile.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -36,7 +35,6 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Strongly validated etag for optimistic concurrency control. Preserve the value returned from `GetAppProfile` when calling `UpdateAppProfile` to fail the request if there has been a modification in the mean time. The `update_mask` of the request need not include `etag` for this protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more details.
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -61,7 +59,6 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Use a multi-cluster routing policy.
-     * 
      */
     @Import(name="multiClusterRoutingUseAny")
       private final @Nullable Output<MultiClusterRoutingUseAnyArgs> multiClusterRoutingUseAny;
@@ -72,7 +69,6 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique name of the app profile. Values are of the form `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -90,7 +86,6 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Use a single-cluster routing policy.
-     * 
      */
     @Import(name="singleClusterRouting")
       private final @Nullable Output<SingleClusterRoutingArgs> singleClusterRouting;

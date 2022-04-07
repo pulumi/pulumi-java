@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Entry metadata relevant only to the user and private to them.
- * 
  */
 public final class GoogleCloudDatacatalogV1PersonalDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse extends io.pu
 
     /**
      * Set if the entry is starred; unset otherwise.
-     * 
      */
     @Import(name="starTime", required=true)
       private final String starTime;
@@ -30,7 +28,6 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse extends io.pu
 
     /**
      * True if the entry is starred by the user; false otherwise.
-     * 
      */
     @Import(name="starred", required=true)
       private final Boolean starred;

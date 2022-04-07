@@ -17,48 +17,41 @@ import javax.annotation.Nullable;
 /**
  * Maps a domain to an application. A user must be authorized to administer a domain in order to map it to an application. For a list of available authorized domains, see AuthorizedDomains.ListAuthorizedDomains.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:appengine/v1:DomainMapping")
 public class DomainMapping extends io.pulumi.resources.CustomResource {
     /**
      * Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.
-     * 
      */
     @Export(name="resourceRecords", type=List.class, parameters={ResourceRecordResponse.class})
     private Output<List<ResourceRecordResponse>> resourceRecords;
 
     /**
      * @return The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.
-     * 
      */
     public Output<List<ResourceRecordResponse>> getResourceRecords() {
         return this.resourceRecords;
     }
     /**
      * SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
-     * 
      */
     @Export(name="sslSettings", type=SslSettingsResponse.class, parameters={})
     private Output<SslSettingsResponse> sslSettings;
 
     /**
      * @return SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
-     * 
      */
     public Output<SslSettingsResponse> getSslSettings() {
         return this.sslSettings;

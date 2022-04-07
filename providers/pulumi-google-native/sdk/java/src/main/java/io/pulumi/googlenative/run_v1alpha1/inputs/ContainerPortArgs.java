@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * ContainerPort represents a network port in a single container.
- * 
  */
 public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * (Optional) Port number the container listens on. This must be a valid port number, 0 < x < 65536.
-     * 
      */
     @Import(name="containerPort")
       private final @Nullable Output<Integer> containerPort;
@@ -32,7 +30,6 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * (Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -43,7 +40,6 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * (Optional) Protocol for port. Must be "TCP". Defaults to "TCP".
-     * 
      */
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The configuration of MQTT for a device registry.
- * 
  */
 public final class MqttConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MqttConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.
-     * 
      */
     @Import(name="mqttEnabledState", required=true)
       private final String mqttEnabledState;

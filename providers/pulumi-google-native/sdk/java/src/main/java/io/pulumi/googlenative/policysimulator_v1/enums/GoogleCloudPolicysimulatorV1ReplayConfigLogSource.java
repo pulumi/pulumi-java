@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * The logs to use as input for the Replay.
-     * 
      */
     @EnumType
     public enum GoogleCloudPolicysimulatorV1ReplayConfigLogSource {
         /**
          * An unspecified log source. If the log source is unspecified, the Replay defaults to using `RECENT_ACCESSES`.
-         * 
          */
         LogSourceUnspecified("LOG_SOURCE_UNSPECIFIED"),
         /**
          * All access logs from the last 90 days. These logs may not include logs from the most recent 7 days.
-         * 
          */
         RecentAccesses("RECENT_ACCESSES");
 

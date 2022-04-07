@@ -27,7 +27,6 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource policy for instances for placement configuration.
-     * 
      */
     @Import(name="groupPlacementPolicy")
       private final @Nullable Output<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy;
@@ -38,7 +37,6 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource policy for scheduling instance operations.
-     * 
      */
     @Import(name="instanceSchedulePolicy")
       private final @Nullable Output<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy;
@@ -49,7 +47,6 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -81,7 +78,6 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource policy for persistent disks for creating snapshots.
-     * 
      */
     @Import(name="snapshotSchedulePolicy")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy;
@@ -92,7 +88,6 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource policy applicable to VMs for infrastructure maintenance.
-     * 
      */
     @Import(name="vmMaintenancePolicy")
       private final @Nullable Output<ResourcePolicyVmMaintenancePolicyArgs> vmMaintenancePolicy;

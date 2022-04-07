@@ -14,132 +14,113 @@ import javax.annotation.Nullable;
 /**
  * Creates an SSL certificate and returns it along with the private key and server certificate authority. The new certificate will not be usable until the instance is restarted.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:sqladmin/v1beta4:SslCert")
 public class SslCert extends io.pulumi.resources.CustomResource {
     /**
      * PEM representation.
-     * 
      */
     @Export(name="cert", type=String.class, parameters={})
     private Output<String> cert;
 
     /**
      * @return PEM representation.
-     * 
      */
     public Output<String> getCert() {
         return this.cert;
     }
     /**
      * Serial number, as extracted from the certificate.
-     * 
      */
     @Export(name="certSerialNumber", type=String.class, parameters={})
     private Output<String> certSerialNumber;
 
     /**
      * @return Serial number, as extracted from the certificate.
-     * 
      */
     public Output<String> getCertSerialNumber() {
         return this.certSerialNumber;
     }
     /**
      * User supplied name. Constrained to [a-zA-Z.-_ ]+.
-     * 
      */
     @Export(name="commonName", type=String.class, parameters={})
     private Output<String> commonName;
 
     /**
      * @return User supplied name. Constrained to [a-zA-Z.-_ ]+.
-     * 
      */
     public Output<String> getCommonName() {
         return this.commonName;
     }
     /**
      * The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
-     * 
      */
     @Export(name="expirationTime", type=String.class, parameters={})
     private Output<String> expirationTime;
 
     /**
      * @return The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
-     * 
      */
     public Output<String> getExpirationTime() {
         return this.expirationTime;
     }
     /**
      * Name of the database instance.
-     * 
      */
     @Export(name="instance", type=String.class, parameters={})
     private Output<String> instance;
 
     /**
      * @return Name of the database instance.
-     * 
      */
     public Output<String> getInstance() {
         return this.instance;
     }
     /**
      * This is always `sql#sslCert`.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return This is always `sql#sslCert`.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * The URI of this resource.
-     * 
      */
     @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
      * @return The URI of this resource.
-     * 
      */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
     /**
      * Sha1 Fingerprint.
-     * 
      */
     @Export(name="sha1Fingerprint", type=String.class, parameters={})
     private Output<String> sha1Fingerprint;
 
     /**
      * @return Sha1 Fingerprint.
-     * 
      */
     public Output<String> getSha1Fingerprint() {
         return this.sha1Fingerprint;

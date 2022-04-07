@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Utilization metrics values for a single VM.
- * 
  */
 public final class VmUtilizationMetricsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
 
     /**
      * Average CPU usage, percent.
-     * 
      */
     @Import(name="cpuAveragePercent")
       private final @Nullable Output<Integer> cpuAveragePercent;
@@ -32,7 +30,6 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
 
     /**
      * Max CPU usage, percent.
-     * 
      */
     @Import(name="cpuMaxPercent")
       private final @Nullable Output<Integer> cpuMaxPercent;
@@ -43,7 +40,6 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
 
     /**
      * Average disk IO rate, in kilobytes per second.
-     * 
      */
     @Import(name="diskIoRateAverageKbps")
       private final @Nullable Output<String> diskIoRateAverageKbps;
@@ -54,7 +50,6 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
 
     /**
      * Max disk IO rate, in kilobytes per second.
-     * 
      */
     @Import(name="diskIoRateMaxKbps")
       private final @Nullable Output<String> diskIoRateMaxKbps;
@@ -65,7 +60,6 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
 
     /**
      * Average memory usage, percent.
-     * 
      */
     @Import(name="memoryAveragePercent")
       private final @Nullable Output<Integer> memoryAveragePercent;
@@ -76,7 +70,6 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
 
     /**
      * Max memory usage, percent.
-     * 
      */
     @Import(name="memoryMaxPercent")
       private final @Nullable Output<Integer> memoryMaxPercent;
@@ -87,7 +80,6 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
 
     /**
      * Average network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
-     * 
      */
     @Import(name="networkThroughputAverageKbps")
       private final @Nullable Output<String> networkThroughputAverageKbps;
@@ -98,7 +90,6 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
 
     /**
      * Max network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
-     * 
      */
     @Import(name="networkThroughputMaxKbps")
       private final @Nullable Output<String> networkThroughputMaxKbps;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The matrix of environments in which the test is to be executed.
- * 
  */
 public final class EnvironmentMatrixArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class EnvironmentMatrixArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A list of Android devices; the test will be run only on the specified devices.
-     * 
      */
     @Import(name="androidDeviceList")
       private final @Nullable Output<AndroidDeviceListArgs> androidDeviceList;
@@ -33,7 +31,6 @@ public final class EnvironmentMatrixArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A matrix of Android devices.
-     * 
      */
     @Import(name="androidMatrix")
       private final @Nullable Output<AndroidMatrixArgs> androidMatrix;
@@ -44,7 +41,6 @@ public final class EnvironmentMatrixArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A list of iOS devices.
-     * 
      */
     @Import(name="iosDeviceList")
       private final @Nullable Output<IosDeviceListArgs> iosDeviceList;

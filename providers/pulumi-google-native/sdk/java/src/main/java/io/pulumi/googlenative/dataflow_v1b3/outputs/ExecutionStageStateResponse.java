@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class ExecutionStageStateResponse {
     /**
      * The time at which the stage transitioned to this state.
-     * 
      */
     private final String currentStateTime;
     /**
      * The name of the execution stage.
-     * 
      */
     private final String executionStageName;
     /**
      * Executions stage states allow the same set of values as JobState.
-     * 
      */
     private final String executionStageState;
 
@@ -37,21 +34,18 @@ public final class ExecutionStageStateResponse {
 
     /**
      * The time at which the stage transitioned to this state.
-     * 
     */
     public String getCurrentStateTime() {
         return this.currentStateTime;
     }
     /**
      * The name of the execution stage.
-     * 
     */
     public String getExecutionStageName() {
         return this.executionStageName;
     }
     /**
      * Executions stage states allow the same set of values as JobState.
-     * 
     */
     public String getExecutionStageState() {
         return this.executionStageState;

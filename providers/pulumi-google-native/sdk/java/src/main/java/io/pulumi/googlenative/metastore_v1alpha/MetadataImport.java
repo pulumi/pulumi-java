@@ -16,104 +16,89 @@ import javax.annotation.Nullable;
  * Creates a new MetadataImport in a given project and location.
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:metastore/v1alpha:MetadataImport")
 public class MetadataImport extends io.pulumi.resources.CustomResource {
     /**
      * The time when the metadata import was started.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time when the metadata import was started.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Immutable. A database dump from a pre-existing metastore's database.
-     * 
      */
     @Export(name="databaseDump", type=DatabaseDumpResponse.class, parameters={})
     private Output<DatabaseDumpResponse> databaseDump;
 
     /**
      * @return Immutable. A database dump from a pre-existing metastore's database.
-     * 
      */
     public Output<DatabaseDumpResponse> getDatabaseDump() {
         return this.databaseDump;
     }
     /**
      * The description of the metadata import.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return The description of the metadata import.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The time when the metadata import finished.
-     * 
      */
     @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
      * @return The time when the metadata import finished.
-     * 
      */
     public Output<String> getEndTime() {
         return this.endTime;
     }
     /**
      * Immutable. The relative resource name of the metadata import, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Immutable. The relative resource name of the metadata import, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The current state of the metadata import.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The current state of the metadata import.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The time when the metadata import was last updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The time when the metadata import was last updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

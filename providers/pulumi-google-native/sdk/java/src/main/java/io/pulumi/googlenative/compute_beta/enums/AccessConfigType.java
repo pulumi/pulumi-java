@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of configuration. The default and only option is ONE_TO_ONE_NAT.
-     * 
      */
     @EnumType
     public enum AccessConfigType {

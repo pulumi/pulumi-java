@@ -15,7 +15,6 @@ import java.util.Objects;
 
 /**
  * AuthConfig defines details of a authentication type.
- * 
  */
 public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List containing additional auth configs.
-     * 
      */
     @Import(name="additionalVariables", required=true)
       private final List<ConfigVariableResponse> additionalVariables;
@@ -34,7 +32,6 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of authentication configured.
-     * 
      */
     @Import(name="authType", required=true)
       private final String authType;
@@ -45,7 +42,6 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Oauth2ClientCredentials.
-     * 
      */
     @Import(name="oauth2ClientCredentials", required=true)
       private final Oauth2ClientCredentialsResponse oauth2ClientCredentials;
@@ -56,7 +52,6 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Oauth2JwtBearer.
-     * 
      */
     @Import(name="oauth2JwtBearer", required=true)
       private final Oauth2JwtBearerResponse oauth2JwtBearer;
@@ -67,7 +62,6 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * UserPassword.
-     * 
      */
     @Import(name="userPassword", required=true)
       private final UserPasswordResponse userPassword;

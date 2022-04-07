@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Widget contains a single dashboard component and configuration of how to present the component in the dashboard.
- * 
  */
 public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A chart of alert policy data.
-     * 
      */
     @Import(name="alertChart")
       private final @Nullable Output<AlertChartArgs> alertChart;
@@ -38,7 +36,6 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A blank space.
-     * 
      */
     @Import(name="blank")
       private final @Nullable Output<EmptyArgs> blank;
@@ -49,7 +46,6 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A widget that shows a stream of logs.
-     * 
      */
     @Import(name="logsPanel")
       private final @Nullable Output<LogsPanelArgs> logsPanel;
@@ -60,7 +56,6 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A scorecard summarizing time series data.
-     * 
      */
     @Import(name="scorecard")
       private final @Nullable Output<ScorecardArgs> scorecard;
@@ -71,7 +66,6 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A raw string or markdown displaying textual content.
-     * 
      */
     @Import(name="text")
       private final @Nullable Output<TextArgs> text;
@@ -82,7 +76,6 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A widget that displays time series data in a tabular format.
-     * 
      */
     @Import(name="timeSeriesTable")
       private final @Nullable Output<TimeSeriesTableArgs> timeSeriesTable;
@@ -93,7 +86,6 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The title of the widget.
-     * 
      */
     @Import(name="title")
       private final @Nullable Output<String> title;
@@ -104,7 +96,6 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A chart of time series data.
-     * 
      */
     @Import(name="xyChart")
       private final @Nullable Output<XyChartArgs> xyChart;

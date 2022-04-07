@@ -16,90 +16,77 @@ import javax.annotation.Nullable;
 /**
  * Creates the specified index. A newly created index's initial state is `CREATING`. On completion of the returned google.longrunning.Operation, the state will be `READY`. If the index already exists, the call will return an `ALREADY_EXISTS` status. During index creation, the process could result in an error, in which case the index will move to the `ERROR` state. The process can be recovered by fixing the data that caused the error, removing the index with delete, then re-creating the index with create. Indexes with a single property cannot be created.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:datastore/v1:Index")
 public class Index extends io.pulumi.resources.CustomResource {
     /**
      * The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
-     * 
      */
     @Export(name="ancestor", type=String.class, parameters={})
     private Output<String> ancestor;
 
     /**
      * @return The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
-     * 
      */
     public Output<String> getAncestor() {
         return this.ancestor;
     }
     /**
      * The resource ID of the index.
-     * 
      */
     @Export(name="indexId", type=String.class, parameters={})
     private Output<String> indexId;
 
     /**
      * @return The resource ID of the index.
-     * 
      */
     public Output<String> getIndexId() {
         return this.indexId;
     }
     /**
      * The entity kind to which this index applies.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return The entity kind to which this index applies.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Project ID.
-     * 
      */
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
      * @return Project ID.
-     * 
      */
     public Output<String> getProject() {
         return this.project;
     }
     /**
      * An ordered sequence of property names and their index attributes.
-     * 
      */
     @Export(name="properties", type=List.class, parameters={GoogleDatastoreAdminV1IndexedPropertyResponse.class})
     private Output<List<GoogleDatastoreAdminV1IndexedPropertyResponse>> properties;
 
     /**
      * @return An ordered sequence of property names and their index attributes.
-     * 
      */
     public Output<List<GoogleDatastoreAdminV1IndexedPropertyResponse>> getProperties() {
         return this.properties;
     }
     /**
      * The state of the index.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The state of the index.
-     * 
      */
     public Output<String> getState() {
         return this.state;

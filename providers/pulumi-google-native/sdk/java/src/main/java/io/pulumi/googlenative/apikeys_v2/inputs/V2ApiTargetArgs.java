@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A restriction for a specific service and optionally one or multiple specific methods. Both fields are case insensitive.
- * 
  */
 public final class V2ApiTargetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class V2ApiTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. List of one or more methods that can be called. If empty, all methods for the service are allowed. A wildcard (*) can be used as the last symbol. Valid examples: `google.cloud.translate.v2.TranslateService.GetSupportedLanguage` `TranslateText` `Get*` `translate.googleapis.com.Get*`
-     * 
      */
     @Import(name="methods")
       private final @Nullable Output<List<String>> methods;
@@ -32,7 +30,6 @@ public final class V2ApiTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The service for this restriction. It should be the canonical service name, for example: `translate.googleapis.com`. You can use [`gcloud services list`](/sdk/gcloud/reference/services/list) to get a list of services that are enabled in the project.
-     * 
      */
     @Import(name="service")
       private final @Nullable Output<String> service;

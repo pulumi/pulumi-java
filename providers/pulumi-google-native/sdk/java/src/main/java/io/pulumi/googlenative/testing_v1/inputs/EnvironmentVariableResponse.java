@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A key-value pair passed as an environment variable to the test.
- * 
  */
 public final class EnvironmentVariableResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class EnvironmentVariableResponse extends io.pulumi.resources.Invok
 
     /**
      * Key for the environment variable.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -29,7 +27,6 @@ public final class EnvironmentVariableResponse extends io.pulumi.resources.Invok
 
     /**
      * Value for the environment variable.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

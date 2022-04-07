@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Subset of NodeConfig message that has defaults.
- * 
  */
 public final class NodeConfigDefaultsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class NodeConfigDefaultsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * GCFS (Google Container File System, a.k.a Riptide) options.
-     * 
      */
     @Import(name="gcfsConfig")
       private final @Nullable Output<GcfsConfigArgs> gcfsConfig;

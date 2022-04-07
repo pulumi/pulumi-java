@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Characters to skip when doing deidentification of a value. These will be left alone and skipped.
- * 
  */
 public final class GooglePrivacyDlpV2CharsToIgnoreArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GooglePrivacyDlpV2CharsToIgnoreArgs extends io.pulumi.resourc
 
     /**
      * Characters to not transform when masking.
-     * 
      */
     @Import(name="charactersToSkip")
       private final @Nullable Output<String> charactersToSkip;
@@ -32,7 +30,6 @@ public final class GooglePrivacyDlpV2CharsToIgnoreArgs extends io.pulumi.resourc
 
     /**
      * Common characters to not transform when masking. Useful to avoid removing punctuation.
-     * 
      */
     @Import(name="commonCharactersToIgnore")
       private final @Nullable Output<GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore> commonCharactersToIgnore;

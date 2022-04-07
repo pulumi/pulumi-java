@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Oracle schema.
- * 
  */
 public final class OracleSchemaArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class OracleSchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tables in the schema.
-     * 
      */
     @Import(name="oracleTables")
       private final @Nullable Output<List<OracleTableArgs>> oracleTables;
@@ -33,7 +31,6 @@ public final class OracleSchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Schema name.
-     * 
      */
     @Import(name="schemaName")
       private final @Nullable Output<String> schemaName;

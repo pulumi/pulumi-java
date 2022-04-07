@@ -25,7 +25,6 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The wrapping method to be used for incoming key material.
-     * 
      */
     @Import(name="importMethod", required=true)
       private final Output<ImportJobImportMethod> importMethod;
@@ -57,7 +56,6 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The protection level of the ImportJob. This must match the protection_level of the version_template on the CryptoKey you attempt to import into.
-     * 
      */
     @Import(name="protectionLevel", required=true)
       private final Output<ImportJobProtectionLevel> protectionLevel;

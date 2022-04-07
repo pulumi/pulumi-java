@@ -24,7 +24,6 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The number of request to be traced. Min = 1, Max = 15, Default = 10.
-     * 
      */
     @Import(name="count")
       private final @Nullable Output<Integer> count;
@@ -42,7 +41,6 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. A conditional statement which is evaluated against the request message to determine if it should be traced. Syntax matches that of on API Proxy bundle flow Condition.
-     * 
      */
     @Import(name="filter")
       private final @Nullable Output<String> filter;
@@ -53,7 +51,6 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A unique ID for this DebugSession.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -78,7 +75,6 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The time in seconds after which this DebugSession should end. This value will override the value in query param, if both are provided.
-     * 
      */
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
@@ -89,7 +85,6 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The maximum number of bytes captured from the response payload. Min = 0, Max = 5120, Default = 5120.
-     * 
      */
     @Import(name="tracesize")
       private final @Nullable Output<Integer> tracesize;
@@ -100,7 +95,6 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The length of time, in seconds, that this debug session is valid, starting from when it's received in the control plane. Min = 1, Max = 15, Default = 10.
-     * 
      */
     @Import(name="validity")
       private final @Nullable Output<Integer> validity;

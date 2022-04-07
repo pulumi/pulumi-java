@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Spark History Server configuration for the workload.
- * 
  */
 public final class SparkHistoryServerConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SparkHistoryServerConfigResponse extends io.pulumi.resources.
 
     /**
      * Optional. Resource name of an existing Dataproc Cluster to act as a Spark History Server for the workload.Example: projects/[project_id]/regions/[region]/clusters/[cluster_name]
-     * 
      */
     @Import(name="dataprocCluster", required=true)
       private final String dataprocCluster;

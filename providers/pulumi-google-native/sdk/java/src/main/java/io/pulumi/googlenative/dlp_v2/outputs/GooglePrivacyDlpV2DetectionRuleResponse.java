@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2DetectionRuleResponse {
     /**
      * Hotword-based detection rule.
-     * 
      */
     private final GooglePrivacyDlpV2HotwordRuleResponse hotwordRule;
 
@@ -22,7 +21,6 @@ public final class GooglePrivacyDlpV2DetectionRuleResponse {
 
     /**
      * Hotword-based detection rule.
-     * 
     */
     public GooglePrivacyDlpV2HotwordRuleResponse getHotwordRule() {
         return this.hotwordRule;

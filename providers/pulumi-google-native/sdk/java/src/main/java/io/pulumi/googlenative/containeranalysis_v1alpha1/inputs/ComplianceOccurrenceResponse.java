@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * An indication that the compliance checks in the associated ComplianceNote were not satisfied for particular resources or a specified reason.
- * 
  */
 public final class ComplianceOccurrenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ComplianceOccurrenceResponse extends io.pulumi.resources.Invo
 
     /**
      * The reason for non compliance of these files.
-     * 
      */
     @Import(name="nonComplianceReason", required=true)
       private final String nonComplianceReason;
@@ -31,7 +29,6 @@ public final class ComplianceOccurrenceResponse extends io.pulumi.resources.Invo
 
     /**
      * A list of files which are violating compliance checks.
-     * 
      */
     @Import(name="nonCompliantFiles", required=true)
       private final List<NonCompliantFileResponse> nonCompliantFiles;

@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * A DeltaPresenceEstimationHistogramBucket message with the following values: min_probability: 0.1 max_probability: 0.2 frequency: 42 means that there are 42 records for which δ is in [0.1, 0.2). An important particular case is when min_probability = max_probability = 1: then, every individual who shares this quasi-identifier combination is in the dataset.
- * 
  */
 public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
 
     /**
      * Number of records within these probability bounds.
-     * 
      */
     @Import(name="bucketSize", required=true)
       private final String bucketSize;
@@ -32,7 +30,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
 
     /**
      * Total number of distinct quasi-identifier tuple values in this bucket.
-     * 
      */
     @Import(name="bucketValueCount", required=true)
       private final String bucketValueCount;
@@ -43,7 +40,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
 
     /**
      * Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
-     * 
      */
     @Import(name="bucketValues", required=true)
       private final List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues;
@@ -54,7 +50,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
 
     /**
      * Always greater than or equal to min_probability.
-     * 
      */
     @Import(name="maxProbability", required=true)
       private final Double maxProbability;
@@ -65,7 +60,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
 
     /**
      * Between 0 and 1.
-     * 
      */
     @Import(name="minProbability", required=true)
       private final Double minProbability;

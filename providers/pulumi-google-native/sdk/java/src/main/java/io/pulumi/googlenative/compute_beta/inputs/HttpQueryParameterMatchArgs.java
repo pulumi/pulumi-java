@@ -13,15 +13,13 @@ import javax.annotation.Nullable;
 
 /**
  * HttpRouteRuleMatch criteria for a request's query parameter.
- * 
  */
 public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HttpQueryParameterMatchArgs Empty = new HttpQueryParameterMatchArgs();
 
     /**
-     * The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch, or regexMatch must be set.
-     * 
+     * The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch, or regexMatch must be set. 
      */
     @Import(name="exactMatch")
       private final @Nullable Output<String> exactMatch;
@@ -32,7 +30,6 @@ public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -42,8 +39,7 @@ public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.Resou
     }
 
     /**
-     * Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not. Only one of presentMatch, exactMatch, or regexMatch must be set.
-     * 
+     * Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not. Only one of presentMatch, exactMatch, or regexMatch must be set. 
      */
     @Import(name="presentMatch")
       private final @Nullable Output<Boolean> presentMatch;
@@ -53,8 +49,7 @@ public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.Resou
     }
 
     /**
-     * The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For more information about regular expression syntax, see Syntax. Only one of presentMatch, exactMatch, or regexMatch must be set. regexMatch only applies when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
-     * 
+     * The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For more information about regular expression syntax, see Syntax. Only one of presentMatch, exactMatch, or regexMatch must be set. regexMatch only applies when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED. 
      */
     @Import(name="regexMatch")
       private final @Nullable Output<String> regexMatch;

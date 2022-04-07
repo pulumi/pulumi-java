@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Determines whether or no a connection is locked. If locked, a reason must be specified.
- * 
  */
 public final class LockConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class LockConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether or not the connection is locked.
-     * 
      */
     @Import(name="locked")
       private final @Nullable Output<Boolean> locked;
@@ -32,7 +30,6 @@ public final class LockConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes why a connection is locked.
-     * 
      */
     @Import(name="reason")
       private final @Nullable Output<String> reason;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * InputMapping creates a 'virtual' property that will be injected into the properties before sending the request to the underlying API.
- * 
  */
 public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the field that is going to be injected.
-     * 
      */
     @Import(name="fieldName")
       private final @Nullable Output<String> fieldName;
@@ -32,7 +30,6 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location where this mapping applies.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<InputMappingLocation> location;
@@ -43,7 +40,6 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Regex to evaluate on method to decide if input applies.
-     * 
      */
     @Import(name="methodMatch")
       private final @Nullable Output<String> methodMatch;
@@ -54,7 +50,6 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A jsonPath expression to select an element.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

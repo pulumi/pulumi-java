@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A public key in the PkixPublicKey format (see https://tools.ietf.org/html/rfc5280#section-4.1.2.7 for details). Public keys of this type are typically textually encoded using the PEM format.
- * 
  */
 public final class PkixPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PkixPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A PEM-encoded public key, as described in https://tools.ietf.org/html/rfc7468#section-13
-     * 
      */
     @Import(name="publicKeyPem")
       private final @Nullable Output<String> publicKeyPem;
@@ -32,7 +30,6 @@ public final class PkixPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The signature algorithm used to verify a message against a signature using this key. These signature algorithm must match the structure and any object identifiers encoded in `public_key_pem` (i.e. this algorithm must match that of the public key).
-     * 
      */
     @Import(name="signatureAlgorithm")
       private final @Nullable Output<PkixPublicKeySignatureAlgorithm> signatureAlgorithm;

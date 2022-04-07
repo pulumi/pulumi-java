@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Maintenance window. This specifies when Dataproc Metastore may perform system maintenance operation to the service.
- * 
  */
 public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The day of week, when the window starts.
-     * 
      */
     @Import(name="dayOfWeek", required=true)
       private final String dayOfWeek;
@@ -30,7 +28,6 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The hour of day (0-23) when the window starts.
-     * 
      */
     @Import(name="hourOfDay", required=true)
       private final Integer hourOfDay;

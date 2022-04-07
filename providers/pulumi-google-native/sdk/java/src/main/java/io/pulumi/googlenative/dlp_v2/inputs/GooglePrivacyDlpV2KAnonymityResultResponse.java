@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Result of the k-anonymity computation.
- * 
  */
 public final class GooglePrivacyDlpV2KAnonymityResultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GooglePrivacyDlpV2KAnonymityResultResponse extends io.pulumi.
 
     /**
      * Histogram of k-anonymity equivalence classes.
-     * 
      */
     @Import(name="equivalenceClassHistogramBuckets", required=true)
       private final List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets;

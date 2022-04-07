@@ -15,76 +15,65 @@ import javax.annotation.Nullable;
 /**
  * Creates a new WorkloadIdentityPool. You cannot reuse the name of a deleted pool until 30 days after deletion.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:iam/v1:WorkloadIdentityPool")
 public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
     /**
      * A description of the pool. Cannot exceed 256 characters.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return A description of the pool. Cannot exceed 256 characters.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use existing tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
-     * 
      */
     @Export(name="disabled", type=Boolean.class, parameters={})
     private Output<Boolean> disabled;
 
     /**
      * @return Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use existing tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
-     * 
      */
     public Output<Boolean> getDisabled() {
         return this.disabled;
     }
     /**
      * A display name for the pool. Cannot exceed 32 characters.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return A display name for the pool. Cannot exceed 32 characters.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The resource name of the pool.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the pool.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The state of the pool.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The state of the pool.
-     * 
      */
     public Output<String> getState() {
         return this.state;

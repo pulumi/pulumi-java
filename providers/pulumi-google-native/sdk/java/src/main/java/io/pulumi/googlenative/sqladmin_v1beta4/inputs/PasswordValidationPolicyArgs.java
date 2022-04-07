@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Database instance local user password validation policy
- * 
  */
 public final class PasswordValidationPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
 
     /**
      * The complexity of the password.
-     * 
      */
     @Import(name="complexity")
       private final @Nullable Output<PasswordValidationPolicyComplexity> complexity;
@@ -34,7 +32,6 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
 
     /**
      * Disallow username as a part of the password.
-     * 
      */
     @Import(name="disallowUsernameSubstring")
       private final @Nullable Output<Boolean> disallowUsernameSubstring;
@@ -45,7 +42,6 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
 
     /**
      * Minimum number of characters allowed.
-     * 
      */
     @Import(name="minLength")
       private final @Nullable Output<Integer> minLength;
@@ -56,7 +52,6 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
 
     /**
      * Minimum interval after which the password can be changed. This flag is only supported for PostgresSQL.
-     * 
      */
     @Import(name="passwordChangeInterval")
       private final @Nullable Output<String> passwordChangeInterval;
@@ -67,7 +62,6 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
 
     /**
      * Number of previous passwords that cannot be reused.
-     * 
      */
     @Import(name="reuseInterval")
       private final @Nullable Output<Integer> reuseInterval;

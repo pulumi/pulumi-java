@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The available logging options for a firewall rule.
- * 
  */
 public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * This field denotes whether to enable logging for a particular firewall rule.
-     * 
      */
     @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
@@ -32,7 +30,6 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<FirewallLogConfigMetadata> metadata;

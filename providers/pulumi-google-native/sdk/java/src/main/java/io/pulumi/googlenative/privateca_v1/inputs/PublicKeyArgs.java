@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A PublicKey describes a public key.
- * 
  */
 public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The format of the public key.
-     * 
      */
     @Import(name="format", required=true)
       private final Output<PublicKeyFormat> format;
@@ -31,7 +29,6 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A public key. The padding and encoding must match with the `KeyFormat` value specified for the `format` field.
-     * 
      */
     @Import(name="key", required=true)
       private final Output<String> key;

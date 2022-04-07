@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * ResourceOptions represent options for Kubernetes resource generation.
- * 
  */
 public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. The Connect agent version to use for connect_resources. Defaults to the latest GKE Connect version. The version must be a currently supported version, obsolete versions will be rejected.
-     * 
      */
     @Import(name="connectVersion")
       private final @Nullable Output<String> connectVersion;
@@ -32,7 +30,6 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. Major version of the Kubernetes cluster. This is only used to determine which version to use for the CustomResourceDefinition resources, `apiextensions/v1beta1` or`apiextensions/v1`.
-     * 
      */
     @Import(name="k8sVersion")
       private final @Nullable Output<String> k8sVersion;
@@ -43,7 +40,6 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. Use `apiextensions/v1beta1` instead of `apiextensions/v1` for CustomResourceDefinition resources. This option should be set for clusters with Kubernetes apiserver versions <1.16.
-     * 
      */
     @Import(name="v1beta1Crd")
       private final @Nullable Output<Boolean> v1beta1Crd;

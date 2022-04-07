@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class CategoryResponse {
     /**
      * The identifier of the category.
-     * 
      */
     private final String categoryId;
     /**
      * The localized name of the category.
-     * 
      */
     private final String name;
 
@@ -30,14 +28,12 @@ public final class CategoryResponse {
 
     /**
      * The identifier of the category.
-     * 
     */
     public String getCategoryId() {
         return this.categoryId;
     }
     /**
      * The localized name of the category.
-     * 
     */
     public String getName() {
         return this.name;

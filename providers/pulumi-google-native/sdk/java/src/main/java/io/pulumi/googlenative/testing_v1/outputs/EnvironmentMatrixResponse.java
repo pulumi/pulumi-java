@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class EnvironmentMatrixResponse {
     /**
      * A list of Android devices; the test will be run only on the specified devices.
-     * 
      */
     private final AndroidDeviceListResponse androidDeviceList;
     /**
      * A matrix of Android devices.
-     * 
      */
     private final AndroidMatrixResponse androidMatrix;
     /**
      * A list of iOS devices.
-     * 
      */
     private final IosDeviceListResponse iosDeviceList;
 
@@ -39,21 +36,18 @@ public final class EnvironmentMatrixResponse {
 
     /**
      * A list of Android devices; the test will be run only on the specified devices.
-     * 
     */
     public AndroidDeviceListResponse getAndroidDeviceList() {
         return this.androidDeviceList;
     }
     /**
      * A matrix of Android devices.
-     * 
     */
     public AndroidMatrixResponse getAndroidMatrix() {
         return this.androidMatrix;
     }
     /**
      * A list of iOS devices.
-     * 
     */
     public IosDeviceListResponse getIosDeviceList() {
         return this.iosDeviceList;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Config for image bounding poly (and bounding box) human labeling task.
- * 
  */
 public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse exte
 
     /**
      * Annotation spec set resource name.
-     * 
      */
     @Import(name="annotationSpecSet", required=true)
       private final String annotationSpecSet;
@@ -29,7 +27,6 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse exte
 
     /**
      * Optional. Instruction message showed on contributors UI.
-     * 
      */
     @Import(name="instructionMessage", required=true)
       private final String instructionMessage;

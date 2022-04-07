@@ -15,27 +15,22 @@ import java.util.Objects;
 public final class InstanceGroupManagerStatusResponse {
     /**
      * A status of consistency of Instances' config applied to instances with Instances' config defined in managed instance group.
-     * 
      */
     private final InstanceGroupManagerStatusAllInstancesConfigResponse allInstancesConfig;
     /**
      * The URL of the Autoscaler that targets this instance group manager.
-     * 
      */
     private final String autoscaler;
     /**
      * A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
-     * 
      */
     private final Boolean isStable;
     /**
      * Stateful status of the given Instance Group Manager.
-     * 
      */
     private final InstanceGroupManagerStatusStatefulResponse stateful;
     /**
      * A status of consistency of Instances' versions with their target version specified by version field on Instance Group Manager.
-     * 
      */
     private final InstanceGroupManagerStatusVersionTargetResponse versionTarget;
 
@@ -55,35 +50,30 @@ public final class InstanceGroupManagerStatusResponse {
 
     /**
      * A status of consistency of Instances' config applied to instances with Instances' config defined in managed instance group.
-     * 
     */
     public InstanceGroupManagerStatusAllInstancesConfigResponse getAllInstancesConfig() {
         return this.allInstancesConfig;
     }
     /**
      * The URL of the Autoscaler that targets this instance group manager.
-     * 
     */
     public String getAutoscaler() {
         return this.autoscaler;
     }
     /**
      * A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
-     * 
     */
     public Boolean getIsStable() {
         return this.isStable;
     }
     /**
      * Stateful status of the given Instance Group Manager.
-     * 
     */
     public InstanceGroupManagerStatusStatefulResponse getStateful() {
         return this.stateful;
     }
     /**
      * A status of consistency of Instances' versions with their target version specified by version field on Instance Group Manager.
-     * 
     */
     public InstanceGroupManagerStatusVersionTargetResponse getVersionTarget() {
         return this.versionTarget;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the criteria for selecting VM Instances by OS type.
- * 
  */
 public final class AssignmentOsTypeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AssignmentOsTypeArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Targets VM instances with OS Inventory enabled and having the following OS architecture.
-     * 
      */
     @Import(name="osArchitecture")
       private final @Nullable Output<String> osArchitecture;
@@ -31,7 +29,6 @@ public final class AssignmentOsTypeArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".
-     * 
      */
     @Import(name="osShortName")
       private final @Nullable Output<String> osShortName;
@@ -42,7 +39,6 @@ public final class AssignmentOsTypeArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Targets VM instances with OS Inventory enabled and having the following following OS version.
-     * 
      */
     @Import(name="osVersion")
       private final @Nullable Output<String> osVersion;

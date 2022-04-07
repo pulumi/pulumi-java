@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class ImageNoteResponse {
     /**
      * Immutable. The fingerprint of the base image.
-     * 
      */
     private final FingerprintResponse fingerprint;
     /**
      * Immutable. The resource_url for the resource representing the basis of associated occurrence images.
-     * 
      */
     private final String resourceUrl;
 
@@ -31,14 +29,12 @@ public final class ImageNoteResponse {
 
     /**
      * Immutable. The fingerprint of the base image.
-     * 
     */
     public FingerprintResponse getFingerprint() {
         return this.fingerprint;
     }
     /**
      * Immutable. The resource_url for the resource representing the basis of associated occurrence images.
-     * 
     */
     public String getResourceUrl() {
         return this.resourceUrl;

@@ -15,146 +15,125 @@ import javax.annotation.Nullable;
 /**
  * Creates a new DatacenterConnector in a given Source.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:vmmigration/v1:DatacenterConnector")
 public class DatacenterConnector extends io.pulumi.resources.CustomResource {
     /**
      * The communication channel between the datacenter connector and GCP.
-     * 
      */
     @Export(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
     /**
      * @return The communication channel between the datacenter connector and GCP.
-     * 
      */
     public Output<String> getBucket() {
         return this.bucket;
     }
     /**
      * The time the connector was created (as an API call, not when it was actually installed).
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time the connector was created (as an API call, not when it was actually installed).
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Provides details on the state of the Datacenter Connector in case of an error.
-     * 
      */
     @Export(name="error", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> error;
 
     /**
      * @return Provides details on the state of the Datacenter Connector in case of an error.
-     * 
      */
     public Output<StatusResponse> getError() {
         return this.error;
     }
     /**
      * The connector's name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The connector's name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Immutable. A unique key for this connector. This key is internal to the OVA connector and is supplied with its creation during the registration process and can not be modified.
-     * 
      */
     @Export(name="registrationId", type=String.class, parameters={})
     private Output<String> registrationId;
 
     /**
      * @return Immutable. A unique key for this connector. This key is internal to the OVA connector and is supplied with its creation during the registration process and can not be modified.
-     * 
      */
     public Output<String> getRegistrationId() {
         return this.registrationId;
     }
     /**
      * The service account to use in the connector when communicating with the cloud.
-     * 
      */
     @Export(name="serviceAccount", type=String.class, parameters={})
     private Output<String> serviceAccount;
 
     /**
      * @return The service account to use in the connector when communicating with the cloud.
-     * 
      */
     public Output<String> getServiceAccount() {
         return this.serviceAccount;
     }
     /**
      * State of the DatacenterConnector, as determined by the health checks.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return State of the DatacenterConnector, as determined by the health checks.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The time the state was last set.
-     * 
      */
     @Export(name="stateTime", type=String.class, parameters={})
     private Output<String> stateTime;
 
     /**
      * @return The time the state was last set.
-     * 
      */
     public Output<String> getStateTime() {
         return this.stateTime;
     }
     /**
      * The last time the connector was updated with an API call.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The last time the connector was updated with an API call.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
     /**
      * The version running in the DatacenterConnector. This is supplied by the OVA connector during the registration process and can not be modified.
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
      * @return The version running in the DatacenterConnector. This is supplied by the OVA connector during the registration process and can not be modified.
-     * 
      */
     public Output<String> getVersion() {
         return this.version;

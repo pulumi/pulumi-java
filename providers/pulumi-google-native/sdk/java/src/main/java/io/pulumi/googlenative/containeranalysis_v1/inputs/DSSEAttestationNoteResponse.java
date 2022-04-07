@@ -14,7 +14,6 @@ public final class DSSEAttestationNoteResponse extends io.pulumi.resources.Invok
 
     /**
      * DSSEHint hints at the purpose of the attestation authority.
-     * 
      */
     @Import(name="hint", required=true)
       private final DSSEHintResponse hint;

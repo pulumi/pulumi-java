@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class CertDnsChallengeResponse {
     /**
      * The domain name upon which the DNS challenge must be satisfied.
-     * 
      */
     private final String domainName;
     /**
      * The value that must be present as a TXT record on the domain name to satisfy the challenge.
-     * 
      */
     private final String token;
 
@@ -30,14 +28,12 @@ public final class CertDnsChallengeResponse {
 
     /**
      * The domain name upon which the DNS challenge must be satisfied.
-     * 
     */
     public String getDomainName() {
         return this.domainName;
     }
     /**
      * The value that must be present as a TXT record on the domain name to satisfy the challenge.
-     * 
     */
     public String getToken() {
         return this.token;

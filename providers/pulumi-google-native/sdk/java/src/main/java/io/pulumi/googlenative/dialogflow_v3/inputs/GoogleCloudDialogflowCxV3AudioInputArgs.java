@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents the natural speech audio to be processed.
- * 
  */
 public final class GoogleCloudDialogflowCxV3AudioInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDialogflowCxV3AudioInputArgs extends io.pulumi.res
 
     /**
      * The natural language speech audio to be processed. A single request can contain up to 1 minute of speech audio data. The transcribed text cannot contain more than 256 bytes. For non-streaming audio detect intent, both `config` and `audio` must be provided. For streaming audio detect intent, `config` must be provided in the first request and `audio` must be provided in all following requests.
-     * 
      */
     @Import(name="audio")
       private final @Nullable Output<String> audio;
@@ -32,7 +30,6 @@ public final class GoogleCloudDialogflowCxV3AudioInputArgs extends io.pulumi.res
 
     /**
      * Instructs the speech recognizer how to process the speech audio.
-     * 
      */
     @Import(name="config", required=true)
       private final Output<GoogleCloudDialogflowCxV3InputAudioConfigArgs> config;

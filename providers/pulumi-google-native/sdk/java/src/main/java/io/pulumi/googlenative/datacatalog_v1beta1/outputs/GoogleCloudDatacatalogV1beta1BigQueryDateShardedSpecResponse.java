@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse {
     /**
      * The Data Catalog resource name of the dataset entry the current table belongs to, for example, `projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}`.
-     * 
      */
     private final String dataset;
     /**
      * Total number of shards.
-     * 
      */
     private final String shardCount;
     /**
      * The table name prefix of the shards. The name of any given shard is `[table_prefix]YYYYMMDD`, for example, for shard `MyTable20180101`, the `table_prefix` is `MyTable`.
-     * 
      */
     private final String tablePrefix;
 
@@ -37,21 +34,18 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
 
     /**
      * The Data Catalog resource name of the dataset entry the current table belongs to, for example, `projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}`.
-     * 
     */
     public String getDataset() {
         return this.dataset;
     }
     /**
      * Total number of shards.
-     * 
     */
     public String getShardCount() {
         return this.shardCount;
     }
     /**
      * The table name prefix of the shards. The name of any given shard is `[table_prefix]YYYYMMDD`, for example, for shard `MyTable20180101`, the `table_prefix` is `MyTable`.
-     * 
     */
     public String getTablePrefix() {
         return this.tablePrefix;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Active Directory configuration, relevant only for Cloud SQL for SQL Server.
- * 
  */
 public final class SqlActiveDirectoryConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SqlActiveDirectoryConfigArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the domain (e.g., mydomain.com).
-     * 
      */
     @Import(name="domain")
       private final @Nullable Output<String> domain;
@@ -31,7 +29,6 @@ public final class SqlActiveDirectoryConfigArgs extends io.pulumi.resources.Reso
 
     /**
      * This is always sql#activeDirectoryConfig.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;

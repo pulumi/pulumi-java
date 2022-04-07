@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A list of iOS device configurations in which the test is to be executed.
- * 
  */
 public final class IosDeviceListArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class IosDeviceListArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of iOS devices.
-     * 
      */
     @Import(name="iosDevices", required=true)
       private final Output<List<IosDeviceArgs>> iosDevices;

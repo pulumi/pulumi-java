@@ -19,7 +19,6 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
@@ -30,7 +29,6 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of artifacts to pass through to Skaffold command.
-     * 
      */
     @Import(name="buildArtifacts")
       private final @Nullable Output<List<BuildArtifactArgs>> buildArtifacts;
@@ -48,7 +46,6 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of the `Release`. Max length is 255 characters.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -59,7 +56,6 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -70,7 +66,6 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -88,7 +83,6 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Name of the `Release`. Format is projects/{project}/ locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/a-z{0,62}.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -120,7 +114,6 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Filepath of the Skaffold config inside of the config URI.
-     * 
      */
     @Import(name="skaffoldConfigPath")
       private final @Nullable Output<String> skaffoldConfigPath;
@@ -131,7 +124,6 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Cloud Storage URI of tar.gz archive containing Skaffold configuration.
-     * 
      */
     @Import(name="skaffoldConfigUri")
       private final @Nullable Output<String> skaffoldConfigUri;
@@ -142,7 +134,6 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Skaffold version to use when operating on this release, such as "1.20.0". Not all versions are valid; Google Cloud Deploy supports a specific set of versions. If unset, the most recent supported Skaffold version will be used.
-     * 
      */
     @Import(name="skaffoldVersion")
       private final @Nullable Output<String> skaffoldVersion;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Metadata for the text.
- * 
  */
 public final class GoogleCloudDatalabelingV1beta1TextMetadataArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataArgs extends io.pul
 
     /**
      * The language of this text, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US.
-     * 
      */
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;

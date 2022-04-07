@@ -13,7 +13,6 @@ public final class ManagedZonePeeringConfigResponse {
     private final String kind;
     /**
      * The network with which to peer.
-     * 
      */
     private final ManagedZonePeeringConfigTargetNetworkResponse targetNetwork;
 
@@ -30,7 +29,6 @@ public final class ManagedZonePeeringConfigResponse {
     }
     /**
      * The network with which to peer.
-     * 
     */
     public ManagedZonePeeringConfigTargetNetworkResponse getTargetNetwork() {
         return this.targetNetwork;

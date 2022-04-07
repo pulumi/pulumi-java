@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class HttpHeaderOptionResponse {
     /**
      * The name of the header.
-     * 
      */
     private final String headerName;
     /**
      * The value of the header to add.
-     * 
      */
     private final String headerValue;
     /**
-     * If false, headerValue is appended to any values that already exist for the header. If true, headerValue is set for the header, discarding any values that were set for that header. The default value is false.
-     * 
+     * If false, headerValue is appended to any values that already exist for the header. If true, headerValue is set for the header, discarding any values that were set for that header. The default value is false. 
      */
     private final Boolean replace;
 
@@ -38,21 +35,18 @@ public final class HttpHeaderOptionResponse {
 
     /**
      * The name of the header.
-     * 
     */
     public String getHeaderName() {
         return this.headerName;
     }
     /**
      * The value of the header to add.
-     * 
     */
     public String getHeaderValue() {
         return this.headerValue;
     }
     /**
-     * If false, headerValue is appended to any values that already exist for the header. If true, headerValue is set for the header, discarding any values that were set for that header. The default value is false.
-     * 
+     * If false, headerValue is appended to any values that already exist for the header. If true, headerValue is set for the header, discarding any values that were set for that header. The default value is false. 
     */
     public Boolean getReplace() {
         return this.replace;

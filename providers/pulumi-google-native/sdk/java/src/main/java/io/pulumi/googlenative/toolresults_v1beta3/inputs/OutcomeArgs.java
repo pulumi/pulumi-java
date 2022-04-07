@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Interprets a result so that humans and machines can act on it.
- * 
  */
 public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not FAILURE. Optional
-     * 
      */
     @Import(name="failureDetail")
       private final @Nullable Output<FailureDetailArgs> failureDetail;
@@ -35,7 +33,6 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * More information about an INCONCLUSIVE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not INCONCLUSIVE. Optional
-     * 
      */
     @Import(name="inconclusiveDetail")
       private final @Nullable Output<InconclusiveDetailArgs> inconclusiveDetail;
@@ -46,7 +43,6 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * More information about a SKIPPED outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SKIPPED. Optional
-     * 
      */
     @Import(name="skippedDetail")
       private final @Nullable Output<SkippedDetailArgs> skippedDetail;
@@ -57,7 +53,6 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * More information about a SUCCESS outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SUCCESS. Optional
-     * 
      */
     @Import(name="successDetail")
       private final @Nullable Output<SuccessDetailArgs> successDetail;
@@ -68,7 +63,6 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The simplest way to interpret a result. Required
-     * 
      */
     @Import(name="summary")
       private final @Nullable Output<OutcomeSummary> summary;

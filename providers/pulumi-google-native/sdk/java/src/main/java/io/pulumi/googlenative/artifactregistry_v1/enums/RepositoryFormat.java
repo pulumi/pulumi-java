@@ -10,43 +10,35 @@ import java.util.StringJoiner;
 
     /**
      * The format of packages that are stored in the repository.
-     * 
      */
     @EnumType
     public enum RepositoryFormat {
         /**
          * Unspecified package format.
-         * 
          */
         FormatUnspecified("FORMAT_UNSPECIFIED"),
         /**
          * Docker package format.
-         * 
          */
         Docker("DOCKER"),
         /**
          * Maven package format.
-         * 
          */
         Maven("MAVEN"),
         /**
          * NPM package format.
-         * 
          */
         Npm("NPM"),
         /**
          * APT package format.
-         * 
          */
         Apt("APT"),
         /**
          * YUM package format.
-         * 
          */
         Yum("YUM"),
         /**
          * Python package format.
-         * 
          */
         Python("PYTHON");
 

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Encryption configuration for a bucket.
- * 
  */
 public final class BucketEncryptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class BucketEncryptionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.
-     * 
      */
     @Import(name="defaultKmsKeyName", required=true)
       private final String defaultKmsKeyName;

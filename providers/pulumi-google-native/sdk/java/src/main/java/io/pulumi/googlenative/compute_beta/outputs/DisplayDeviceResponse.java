@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class DisplayDeviceResponse {
     /**
      * Defines whether the instance has Display enabled.
-     * 
      */
     private final Boolean enableDisplay;
 
@@ -22,7 +21,6 @@ public final class DisplayDeviceResponse {
 
     /**
      * Defines whether the instance has Display enabled.
-     * 
     */
     public Boolean getEnableDisplay() {
         return this.enableDisplay;

@@ -20,7 +20,6 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Administrative status of the interconnect. When this is set to true, the Interconnect is functional and can carry traffic. When set to false, no packets can be carried over the interconnect and no BGP routes are exchanged over it. By default, the status is set to true.
-     * 
      */
     @Import(name="adminEnabled")
       private final @Nullable Output<Boolean> adminEnabled;
@@ -31,7 +30,6 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Customer name, to put in the Letter of Authorization as the party authorized to request a crossconnect.
-     * 
      */
     @Import(name="customerName")
       private final @Nullable Output<String> customerName;
@@ -42,7 +40,6 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -53,7 +50,6 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of interconnect, which can take one of the following values: - PARTNER: A partner-managed interconnection shared between customers though a partner. - DEDICATED: A dedicated physical interconnection with the customer. Note that a value IT_PRIVATE has been deprecated in favor of DEDICATED.
-     * 
      */
     @Import(name="interconnectType")
       private final @Nullable Output<InterconnectInterconnectType> interconnectType;
@@ -64,7 +60,6 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of link requested, which can take one of the following values: - LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics - LINK_TYPE_ETHERNET_100G_LR: A 100G Ethernet with LR optics. Note that this field indicates the speed of each of the links in the bundle, not the speed of the entire bundle.
-     * 
      */
     @Import(name="linkType")
       private final @Nullable Output<InterconnectLinkType> linkType;
@@ -75,7 +70,6 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * URL of the InterconnectLocation object that represents where this connection is to be provisioned.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -86,7 +80,6 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -97,7 +90,6 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Email address to contact the customer NOC for operations and maintenance notifications regarding this Interconnect. If specified, this will be used for notifications in addition to all other forms described, such as Stackdriver logs alerting and Cloud Notifications.
-     * 
      */
     @Import(name="nocContactEmail")
       private final @Nullable Output<String> nocContactEmail;
@@ -122,7 +114,6 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Target number of physical links in the link bundle, as requested by the customer.
-     * 
      */
     @Import(name="requestedLinkCount")
       private final @Nullable Output<Integer> requestedLinkCount;

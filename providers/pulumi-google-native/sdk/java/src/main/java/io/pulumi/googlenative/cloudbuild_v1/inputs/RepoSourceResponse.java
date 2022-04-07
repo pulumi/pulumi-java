@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Location of the source in a Google Cloud Source Repository.
- * 
  */
 public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Regex matching branches to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
-     * 
      */
     @Import(name="branchName", required=true)
       private final String branchName;
@@ -31,7 +29,6 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Explicit commit SHA to build.
-     * 
      */
     @Import(name="commitSha", required=true)
       private final String commitSha;
@@ -42,7 +39,6 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Directory, relative to the source root, in which to run the build. This must be a relative path. If a step's `dir` is specified and is an absolute path, this value is ignored for that step's execution.
-     * 
      */
     @Import(name="dir", required=true)
       private final String dir;
@@ -53,7 +49,6 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Only trigger a build if the revision regex does NOT match the revision regex.
-     * 
      */
     @Import(name="invertRegex", required=true)
       private final Boolean invertRegex;
@@ -64,7 +59,6 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * ID of the project that owns the Cloud Source Repository. If omitted, the project ID requesting the build is assumed.
-     * 
      */
     @Import(name="project", required=true)
       private final String project;
@@ -75,7 +69,6 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the Cloud Source Repository.
-     * 
      */
     @Import(name="repoName", required=true)
       private final String repoName;
@@ -86,7 +79,6 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Substitutions to use in a triggered build. Should only be used with RunBuildTrigger
-     * 
      */
     @Import(name="substitutions", required=true)
       private final Map<String,String> substitutions;
@@ -97,7 +89,6 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Regex matching tags to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
-     * 
      */
     @Import(name="tagName", required=true)
       private final String tagName;

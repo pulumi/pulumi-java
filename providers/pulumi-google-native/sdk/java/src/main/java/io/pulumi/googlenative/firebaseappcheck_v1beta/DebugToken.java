@@ -13,48 +13,41 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new DebugToken for the specified app. For security reasons, after the creation operation completes, the `token` field cannot be updated or retrieved, but you can revoke the debug token using DeleteDebugToken. Each app can have a maximum of 20 debug tokens.
- * 
  */
 @ResourceType(type="google-native:firebaseappcheck/v1beta:DebugToken")
 public class DebugToken extends io.pulumi.resources.CustomResource {
     /**
      * A human readable display name used to identify this debug token.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return A human readable display name used to identify this debug token.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
-     * The relative resource name of the debug token, in the format: ```projects/{project_number}/apps/{app_id}/debugTokens/{debug_token_id}```
-     * 
+     * The relative resource name of the debug token, in the format: ``` projects/{project_number}/apps/{app_id}/debugTokens/{debug_token_id} ```
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The relative resource name of the debug token, in the format: ```projects/{project_number}/apps/{app_id}/debugTokens/{debug_token_id}```
-     * 
+     * @return The relative resource name of the debug token, in the format: ``` projects/{project_number}/apps/{app_id}/debugTokens/{debug_token_id} ```
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Input only. Immutable. The secret token itself. Must be provided during creation, and must be a UUID4, case insensitive. This field is immutable once set, and cannot be provided during an UpdateDebugToken request. You can, however, delete this debug token using DeleteDebugToken to revoke it. For security reasons, this field will never be populated in any response.
-     * 
      */
     @Export(name="token", type=String.class, parameters={})
     private Output<String> token;
 
     /**
      * @return Input only. Immutable. The secret token itself. Must be provided during creation, and must be a UUID4, case insensitive. This field is immutable once set, and cannot be provided during an UpdateDebugToken request. You can, however, delete this debug token using DeleteDebugToken to revoke it. For security reasons, this field will never be populated in any response.
-     * 
      */
     public Output<String> getToken() {
         return this.token;

@@ -26,7 +26,6 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.
-     * 
      */
     @Import(name="memberKey")
       private final @Nullable Output<EntityKeyArgs> memberKey;
@@ -37,7 +36,6 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.
-     * 
      */
     @Import(name="preferredMemberKey", required=true)
       private final Output<EntityKeyArgs> preferredMemberKey;
@@ -48,7 +46,6 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The `MembershipRole`s that apply to the `Membership`. If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`. Must not contain duplicate `MembershipRole`s with the same `name`.
-     * 
      */
     @Import(name="roles")
       private final @Nullable Output<List<MembershipRoleArgs>> roles;

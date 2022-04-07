@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Contact people for the entry.
- * 
  */
 public final class GoogleCloudDatacatalogV1ContactsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDatacatalogV1ContactsResponse extends io.pulumi.re
 
     /**
      * The list of contact people for the entry.
-     * 
      */
     @Import(name="people", required=true)
       private final List<GoogleCloudDatacatalogV1ContactsPersonResponse> people;

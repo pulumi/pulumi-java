@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The IP Version that will be used by this forwarding rule. Valid options are IPV4 or IPV6. This can only be specified for an external global forwarding rule.
-     * 
      */
     @EnumType
     public enum ForwardingRuleIpVersion {

@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * Required. Distinguishes between sentinel MIN/MAX versions and normal versions.
-     * 
      */
     @EnumType
     public enum VersionKind {
         /**
          * Unknown.
-         * 
          */
         VersionKindUnspecified("VERSION_KIND_UNSPECIFIED"),
         /**
          * A standard package version.
-         * 
          */
         Normal("NORMAL"),
         /**
          * A special version representing negative infinity.
-         * 
          */
         Minimum("MINIMUM"),
         /**
          * A special version representing positive infinity.
-         * 
          */
         Maximum("MAXIMUM");
 

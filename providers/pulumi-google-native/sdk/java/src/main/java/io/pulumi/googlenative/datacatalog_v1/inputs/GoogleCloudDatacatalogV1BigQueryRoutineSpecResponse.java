@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Fields specific for BigQuery routines.
- * 
  */
 public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse extends i
 
     /**
      * Paths of the imported libraries.
-     * 
      */
     @Import(name="importedLibraries", required=true)
       private final List<String> importedLibraries;

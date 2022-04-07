@@ -29,7 +29,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes an attestation of an artifact.
-     * 
      */
     @Import(name="attestation")
       private final @Nullable Output<DetailsArgs> attestation;
@@ -40,7 +39,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes a verifiable build.
-     * 
      */
     @Import(name="build")
       private final @Nullable Output<GrafeasV1beta1BuildDetailsArgs> build;
@@ -51,7 +49,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes the deployment of an artifact on a runtime.
-     * 
      */
     @Import(name="deployment")
       private final @Nullable Output<GrafeasV1beta1DeploymentDetailsArgs> deployment;
@@ -62,7 +59,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes how this resource derives from the basis in the associated note.
-     * 
      */
     @Import(name="derivedImage")
       private final @Nullable Output<GrafeasV1beta1ImageDetailsArgs> derivedImage;
@@ -73,7 +69,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes when a resource was discovered.
-     * 
      */
     @Import(name="discovered")
       private final @Nullable Output<GrafeasV1beta1DiscoveryDetailsArgs> discovered;
@@ -84,7 +79,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes the installation of a package on the linked resource.
-     * 
      */
     @Import(name="installation")
       private final @Nullable Output<GrafeasV1beta1PackageDetailsArgs> installation;
@@ -95,7 +89,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes a specific in-toto link.
-     * 
      */
     @Import(name="intoto")
       private final @Nullable Output<GrafeasV1beta1IntotoDetailsArgs> intoto;
@@ -106,7 +99,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
-     * 
      */
     @Import(name="noteName", required=true)
       private final Output<String> noteName;
@@ -124,7 +116,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description of actions that can be taken to remedy the note.
-     * 
      */
     @Import(name="remediation")
       private final @Nullable Output<String> remediation;
@@ -135,7 +126,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The resource for which the occurrence applies.
-     * 
      */
     @Import(name="resource", required=true)
       private final Output<ResourceArgs> resource;
@@ -146,7 +136,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes a specific software bill of materials document.
-     * 
      */
     @Import(name="sbom")
       private final @Nullable Output<DocumentOccurrenceArgs> sbom;
@@ -157,7 +146,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes a specific SPDX File.
-     * 
      */
     @Import(name="spdxFile")
       private final @Nullable Output<FileOccurrenceArgs> spdxFile;
@@ -168,7 +156,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes a specific SPDX Package.
-     * 
      */
     @Import(name="spdxPackage")
       private final @Nullable Output<PackageInfoOccurrenceArgs> spdxPackage;
@@ -179,7 +166,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes a specific SPDX Relationship.
-     * 
      */
     @Import(name="spdxRelationship")
       private final @Nullable Output<RelationshipOccurrenceArgs> spdxRelationship;
@@ -190,7 +176,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes a security vulnerability.
-     * 
      */
     @Import(name="vulnerability")
       private final @Nullable Output<GrafeasV1beta1VulnerabilityDetailsArgs> vulnerability;

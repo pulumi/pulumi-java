@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The Android apps that are allowed to use the key.
- * 
  */
 public final class V2AndroidKeyRestrictionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class V2AndroidKeyRestrictionsResponse extends io.pulumi.resources.
 
     /**
      * A list of Android applications that are allowed to make API calls with this key.
-     * 
      */
     @Import(name="allowedApplications", required=true)
       private final List<V2AndroidApplicationResponse> allowedApplications;

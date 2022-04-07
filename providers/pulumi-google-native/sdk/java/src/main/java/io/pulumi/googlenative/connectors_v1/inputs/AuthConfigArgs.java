@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * AuthConfig defines details of a authentication type.
- * 
  */
 public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List containing additional auth configs.
-     * 
      */
     @Import(name="additionalVariables")
       private final @Nullable Output<List<ConfigVariableArgs>> additionalVariables;
@@ -36,7 +34,6 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of authentication configured.
-     * 
      */
     @Import(name="authType")
       private final @Nullable Output<AuthConfigAuthType> authType;
@@ -47,7 +44,6 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Oauth2ClientCredentials.
-     * 
      */
     @Import(name="oauth2ClientCredentials")
       private final @Nullable Output<Oauth2ClientCredentialsArgs> oauth2ClientCredentials;
@@ -58,7 +54,6 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Oauth2JwtBearer.
-     * 
      */
     @Import(name="oauth2JwtBearer")
       private final @Nullable Output<Oauth2JwtBearerArgs> oauth2JwtBearer;
@@ -69,7 +64,6 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * UserPassword.
-     * 
      */
     @Import(name="userPassword")
       private final @Nullable Output<UserPasswordArgs> userPassword;

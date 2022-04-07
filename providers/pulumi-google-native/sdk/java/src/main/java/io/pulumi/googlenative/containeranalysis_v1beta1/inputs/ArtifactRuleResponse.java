@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Defines an object to declare an in-toto artifact rule
- * 
  */
 public final class ArtifactRuleResponse extends io.pulumi.resources.InvokeArgs {
 

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * RelationshipNote represents an SPDX Relationship section: https://spdx.github.io/spdx-spec/7-relationships-between-SPDX-elements/
- * 
  */
 public final class RelationshipNoteArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RelationshipNoteArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The type of relationship between the source and target SPDX elements
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<RelationshipNoteType> type;

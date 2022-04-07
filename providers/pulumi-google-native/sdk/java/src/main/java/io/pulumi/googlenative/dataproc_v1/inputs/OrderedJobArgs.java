@@ -23,7 +23,6 @@ import javax.annotation.Nullable;
 
 /**
  * A job executed by the workflow.
- * 
  */
 public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -31,7 +30,6 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Job is a Hadoop job.
-     * 
      */
     @Import(name="hadoopJob")
       private final @Nullable Output<HadoopJobArgs> hadoopJob;
@@ -42,7 +40,6 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Job is a Hive job.
-     * 
      */
     @Import(name="hiveJob")
       private final @Nullable Output<HiveJobArgs> hiveJob;
@@ -53,7 +50,6 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The labels to associate with this job.Label keys must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}{0,62}Label values must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}\p{N}_-{0,63}No more than 32 labels can be associated with a given job.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -64,7 +60,6 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Job is a Pig job.
-     * 
      */
     @Import(name="pigJob")
       private final @Nullable Output<PigJobArgs> pigJob;
@@ -75,7 +70,6 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.
-     * 
      */
     @Import(name="prerequisiteStepIds")
       private final @Nullable Output<List<String>> prerequisiteStepIds;
@@ -86,7 +80,6 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Job is a Presto job.
-     * 
      */
     @Import(name="prestoJob")
       private final @Nullable Output<PrestoJobArgs> prestoJob;
@@ -97,7 +90,6 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Job is a PySpark job.
-     * 
      */
     @Import(name="pysparkJob")
       private final @Nullable Output<PySparkJobArgs> pysparkJob;
@@ -108,7 +100,6 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Job scheduling configuration.
-     * 
      */
     @Import(name="scheduling")
       private final @Nullable Output<JobSchedulingArgs> scheduling;
@@ -119,7 +110,6 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Job is a Spark job.
-     * 
      */
     @Import(name="sparkJob")
       private final @Nullable Output<SparkJobArgs> sparkJob;
@@ -130,7 +120,6 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Job is a SparkR job.
-     * 
      */
     @Import(name="sparkRJob")
       private final @Nullable Output<SparkRJobArgs> sparkRJob;
@@ -141,7 +130,6 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Job is a SparkSql job.
-     * 
      */
     @Import(name="sparkSqlJob")
       private final @Nullable Output<SparkSqlJobArgs> sparkSqlJob;
@@ -152,7 +140,6 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The step id. The id must be unique among all jobs within the template.The step id is used as prefix for job id, as job goog-dataproc-workflow-step-id label, and in prerequisiteStepIds field from other steps.The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
-     * 
      */
     @Import(name="stepId", required=true)
       private final Output<String> stepId;

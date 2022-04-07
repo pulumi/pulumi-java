@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class MethodSelectorResponse {
     /**
      * Value for `method` should be a valid method name for the corresponding `service_name` in ApiOperation. If `*` used as value for `method`, then ALL methods and permissions are allowed.
-     * 
      */
     private final String method;
     /**
      * Value for `permission` should be a valid Cloud IAM permission for the corresponding `service_name` in ApiOperation.
-     * 
      */
     private final String permission;
 
@@ -30,14 +28,12 @@ public final class MethodSelectorResponse {
 
     /**
      * Value for `method` should be a valid method name for the corresponding `service_name` in ApiOperation. If `*` used as value for `method`, then ALL methods and permissions are allowed.
-     * 
     */
     public String getMethod() {
         return this.method;
     }
     /**
      * Value for `permission` should be a valid Cloud IAM permission for the corresponding `service_name` in ApiOperation.
-     * 
     */
     public String getPermission() {
         return this.permission;

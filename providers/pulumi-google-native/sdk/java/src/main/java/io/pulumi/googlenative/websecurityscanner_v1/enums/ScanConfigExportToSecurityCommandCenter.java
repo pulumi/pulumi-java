@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Controls export of scan configurations and results to Security Command Center.
-     * 
      */
     @EnumType
     public enum ScanConfigExportToSecurityCommandCenter {
         /**
          * Use default, which is ENABLED.
-         * 
          */
         ExportToSecurityCommandCenterUnspecified("EXPORT_TO_SECURITY_COMMAND_CENTER_UNSPECIFIED"),
         /**
          * Export results of this scan to Security Command Center.
-         * 
          */
         Enabled("ENABLED"),
         /**
          * Do not export results of this scan to Security Command Center.
-         * 
          */
         Disabled("DISABLED");
 

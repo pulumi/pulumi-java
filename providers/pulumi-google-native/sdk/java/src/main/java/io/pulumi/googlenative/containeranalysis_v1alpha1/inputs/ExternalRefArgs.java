@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package
- * 
  */
 public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package
-     * 
      */
     @Import(name="category")
       private final @Nullable Output<ExternalRefCategory> category;
@@ -32,7 +30,6 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Human-readable information about the purpose and target of the reference
-     * 
      */
     @Import(name="comment")
       private final @Nullable Output<String> comment;
@@ -43,7 +40,6 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique string with no spaces necessary to access the package-specific information, metadata, or content within the target location
-     * 
      */
     @Import(name="locator")
       private final @Nullable Output<String> locator;
@@ -54,7 +50,6 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of category (e.g. 'npm' for the PACKAGE_MANAGER category)
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

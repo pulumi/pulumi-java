@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2PartitionIdResponse {
     /**
      * If not empty, the ID of the namespace to which the entities belong.
-     * 
      */
     private final String namespaceId;
     /**
      * The ID of the project to which the entities belong.
-     * 
      */
     private final String project;
 
@@ -30,14 +28,12 @@ public final class GooglePrivacyDlpV2PartitionIdResponse {
 
     /**
      * If not empty, the ID of the namespace to which the entities belong.
-     * 
     */
     public String getNamespaceId() {
         return this.namespaceId;
     }
     /**
      * The ID of the project to which the entities belong.
-     * 
     */
     public String getProject() {
         return this.project;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Apt patching is completed by executing `apt-get update && apt-get upgrade`. Additional options can be set to control how this is executed.
- * 
  */
 public final class AptSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class AptSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of packages to exclude from update. These packages will be excluded
-     * 
      */
     @Import(name="excludes")
       private final @Nullable Output<List<String>> excludes;
@@ -33,7 +31,6 @@ public final class AptSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields.
-     * 
      */
     @Import(name="exclusivePackages")
       private final @Nullable Output<List<String>> exclusivePackages;
@@ -44,7 +41,6 @@ public final class AptSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<AptSettingsType> type;

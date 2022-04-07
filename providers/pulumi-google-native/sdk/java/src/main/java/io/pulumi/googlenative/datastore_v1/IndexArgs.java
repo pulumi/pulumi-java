@@ -19,7 +19,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
-     * 
      */
     @Import(name="ancestor", required=true)
       private final Output<IndexAncestor> ancestor;
@@ -30,7 +29,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The entity kind to which this index applies.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -48,7 +46,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An ordered sequence of property names and their index attributes.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties;

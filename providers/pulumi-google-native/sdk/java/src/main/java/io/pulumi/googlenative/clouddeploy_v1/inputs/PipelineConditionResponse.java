@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * PipelineCondition contains all conditions relevant to a Delivery Pipeline.
- * 
  */
 public final class PipelineConditionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class PipelineConditionResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Details around the Pipeline's overall status.
-     * 
      */
     @Import(name="pipelineReadyCondition", required=true)
       private final PipelineReadyConditionResponse pipelineReadyCondition;
@@ -30,7 +28,6 @@ public final class PipelineConditionResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Detalis around targets enumerated in the pipeline.
-     * 
      */
     @Import(name="targetsPresentCondition", required=true)
       private final TargetsPresentConditionResponse targetsPresentCondition;

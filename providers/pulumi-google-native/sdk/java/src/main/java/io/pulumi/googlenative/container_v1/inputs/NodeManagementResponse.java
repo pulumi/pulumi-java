@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * NodeManagement defines the set of node management services turned on for the node pool.
- * 
  */
 public final class NodeManagementResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class NodeManagementResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A flag that specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.
-     * 
      */
     @Import(name="autoRepair", required=true)
       private final Boolean autoRepair;
@@ -30,7 +28,6 @@ public final class NodeManagementResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A flag that specifies whether node auto-upgrade is enabled for the node pool. If enabled, node auto-upgrade helps keep the nodes in your node pool up to date with the latest release version of Kubernetes.
-     * 
      */
     @Import(name="autoUpgrade", required=true)
       private final Boolean autoUpgrade;
@@ -41,7 +38,6 @@ public final class NodeManagementResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies the Auto Upgrade knobs for the node pool.
-     * 
      */
     @Import(name="upgradeOptions", required=true)
       private final AutoUpgradeOptionsResponse upgradeOptions;

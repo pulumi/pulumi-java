@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Windows Update represents the metadata about the update for the Windows operating system. The fields in this message come from the Windows Update API documented at https://docs.microsoft.com/en-us/windows/win32/api/wuapi/nn-wuapi-iupdate.
- * 
  */
 public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The list of categories to which the update belongs.
-     * 
      */
     @Import(name="categories", required=true)
       private final List<CategoryResponse> categories;
@@ -32,7 +30,6 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The localized description of the update.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -43,7 +40,6 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Required - The unique identifier for the update.
-     * 
      */
     @Import(name="identity", required=true)
       private final IdentityResponse identity;
@@ -54,7 +50,6 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The Microsoft Knowledge Base article IDs that are associated with the update.
-     * 
      */
     @Import(name="kbArticleIds", required=true)
       private final List<String> kbArticleIds;
@@ -65,7 +60,6 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The last published timestamp of the update.
-     * 
      */
     @Import(name="lastPublishedTimestamp", required=true)
       private final String lastPublishedTimestamp;
@@ -76,7 +70,6 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The hyperlink to the support information for the update.
-     * 
      */
     @Import(name="supportUrl", required=true)
       private final String supportUrl;
@@ -87,7 +80,6 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The localized title of the update.
-     * 
      */
     @Import(name="title", required=true)
       private final String title;

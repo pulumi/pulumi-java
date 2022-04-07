@@ -24,7 +24,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Display name.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -35,7 +34,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -53,7 +51,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Immutable. The name of a Google Managed Service ( https://cloud.google.com/service-infrastructure/docs/glossary#managed). If not specified, a new Service will automatically be created in the same project as this API.
-     * 
      */
     @Import(name="managedService")
       private final @Nullable Output<String> managedService;

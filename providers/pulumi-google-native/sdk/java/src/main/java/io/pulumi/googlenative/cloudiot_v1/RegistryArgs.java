@@ -23,7 +23,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The credentials used to verify the device credentials. No more than 10 credentials can be bound to a single registry at a time. The verification process occurs at the time of device creation or update. If this field is empty, no verification is performed. Otherwise, the credentials of a newly created device or added credentials of an updated device should be signed with one of these registry credentials. Note, however, that existing devices will never be affected by modifications to this list of credentials: after a device has been successfully created in a registry, it should be able to connect even if its registry credentials are revoked, deleted, or modified.
-     * 
      */
     @Import(name="credentials")
       private final @Nullable Output<List<RegistryCredentialArgs>> credentials;
@@ -34,7 +33,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The configuration for notification of telemetry events received from the device. All telemetry events that were successfully published by the device and acknowledged by Cloud IoT Core are guaranteed to be delivered to Cloud Pub/Sub. If multiple configurations match a message, only the first matching configuration is used. If you try to publish a device telemetry event using MQTT without specifying a Cloud Pub/Sub topic for the device's registry, the connection closes automatically. If you try to do so using an HTTP connection, an error is returned. Up to 10 configurations may be provided.
-     * 
      */
     @Import(name="eventNotificationConfigs")
       private final @Nullable Output<List<EventNotificationConfigArgs>> eventNotificationConfigs;
@@ -45,7 +43,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The DeviceService (HTTP) configuration for this device registry.
-     * 
      */
     @Import(name="httpConfig")
       private final @Nullable Output<HttpConfigArgs> httpConfig;
@@ -56,7 +53,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identifier of this device registry. For example, `myRegistry`.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -74,7 +70,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * **Beta Feature** The default logging verbosity for activity from devices in this registry. The verbosity level can be overridden by Device.log_level.
-     * 
      */
     @Import(name="logLevel")
       private final @Nullable Output<RegistryLogLevel> logLevel;
@@ -85,7 +80,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The MQTT configuration for this device registry.
-     * 
      */
     @Import(name="mqttConfig")
       private final @Nullable Output<MqttConfigArgs> mqttConfig;
@@ -96,7 +90,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource path name. For example, `projects/example-project/locations/us-central1/registries/my-registry`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -114,7 +107,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The configuration for notification of new states received from the device. State updates are guaranteed to be stored in the state history, but notifications to Cloud Pub/Sub are not guaranteed. For example, if permissions are misconfigured or the specified topic doesn't exist, no notification will be published but the state will still be stored in Cloud IoT Core.
-     * 
      */
     @Import(name="stateNotificationConfig")
       private final @Nullable Output<StateNotificationConfigArgs> stateNotificationConfig;

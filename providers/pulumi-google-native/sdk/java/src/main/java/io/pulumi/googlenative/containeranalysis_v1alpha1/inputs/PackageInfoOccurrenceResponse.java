@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * PackageInfoOccurrence represents an SPDX Package Information section: https://spdx.github.io/spdx-spec/3-package-information/
- * 
  */
 public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
 
     /**
      * A place for the SPDX file creator to record any general comments about the package being described
-     * 
      */
     @Import(name="comment", required=true)
       private final String comment;
@@ -30,7 +28,6 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
 
     /**
      * Provide the actual file name of the package, or path of the directory being treated as a package
-     * 
      */
     @Import(name="filename", required=true)
       private final String filename;
@@ -41,7 +38,6 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
 
     /**
      * Provide a place for the SPDX file creator to record a web site that serves as the package's home page
-     * 
      */
     @Import(name="homePage", required=true)
       private final String homePage;
@@ -52,7 +48,6 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
 
     /**
      * package or alternative values, if the governing license cannot be determined
-     * 
      */
     @Import(name="licenseConcluded", required=true)
       private final LicenseResponse licenseConcluded;
@@ -63,7 +58,6 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
 
     /**
      * The type of package: OS, MAVEN, GO, GO_STDLIB, etc.
-     * 
      */
     @Import(name="packageType", required=true)
       private final String packageType;
@@ -74,7 +68,6 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
 
     /**
      * Provide a place for the SPDX file creator to record any relevant background information or additional comments about the origin of the package
-     * 
      */
     @Import(name="sourceInfo", required=true)
       private final String sourceInfo;
@@ -85,7 +78,6 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
 
     /**
      * A short description of the package
-     * 
      */
     @Import(name="summaryDescription", required=true)
       private final String summaryDescription;
@@ -96,7 +88,6 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
 
     /**
      * Identify the full name of the package as given by the Package Originator
-     * 
      */
     @Import(name="title", required=true)
       private final String title;
@@ -107,7 +98,6 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
 
     /**
      * Identify the version of the package
-     * 
      */
     @Import(name="version", required=true)
       private final String version;

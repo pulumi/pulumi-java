@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudDatalabelingV1beta1PdfInstructionResponse {
     /**
      * PDF file for the instruction. Only gcs path is allowed.
-     * 
      */
     private final String gcsFileUri;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionResponse {
 
     /**
      * PDF file for the instruction. Only gcs path is allowed.
-     * 
     */
     public String getGcsFileUri() {
         return this.gcsFileUri;

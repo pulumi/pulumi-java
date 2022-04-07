@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class AndroidDeviceListResponse {
     /**
      * A list of Android devices.
-     * 
      */
     private final List<AndroidDeviceResponse> androidDevices;
 
@@ -23,7 +22,6 @@ public final class AndroidDeviceListResponse {
 
     /**
      * A list of Android devices.
-     * 
     */
     public List<AndroidDeviceResponse> getAndroidDevices() {
         return this.androidDevices;

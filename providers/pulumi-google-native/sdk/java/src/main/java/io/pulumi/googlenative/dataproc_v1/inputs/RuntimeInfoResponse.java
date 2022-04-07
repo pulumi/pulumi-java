@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Runtime information about workload execution.
- * 
  */
 public final class RuntimeInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class RuntimeInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A URI pointing to the location of the diagnostics tarball.
-     * 
      */
     @Import(name="diagnosticOutputUri", required=true)
       private final String diagnosticOutputUri;
@@ -30,7 +28,6 @@ public final class RuntimeInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Map of remote access endpoints (such as web interfaces and APIs) to their URIs.
-     * 
      */
     @Import(name="endpoints", required=true)
       private final Map<String,String> endpoints;
@@ -41,7 +38,6 @@ public final class RuntimeInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A URI pointing to the location of the stdout and stderr of the workload.
-     * 
      */
     @Import(name="outputUri", required=true)
       private final String outputUri;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The settings for a topic's message retention.
- * 
  */
 public final class RetentionConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RetentionConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic's partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of `period`.
-     * 
      */
     @Import(name="perPartitionBytes")
       private final @Nullable Output<String> perPartitionBytes;
@@ -31,7 +29,6 @@ public final class RetentionConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * How long a published message is retained. If unset, messages will be retained as long as the bytes retained for each partition is below `per_partition_bytes`.
-     * 
      */
     @Import(name="period")
       private final @Nullable Output<String> period;

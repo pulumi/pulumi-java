@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A maintenance window for VMs. When set, we restrict our maintenance operations to this window.
- * 
  */
 public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse extends io.pulumi.resources.InvokeArgs {
 

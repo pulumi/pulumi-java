@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specification that applies to a data source connection. Valid only for entries with the `DATA_SOURCE_CONNECTION` type.
- * 
  */
 public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs extends 
 
     /**
      * Fields specific to BigQuery connections.
-     * 
      */
     @Import(name="bigqueryConnectionSpec")
       private final @Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec;

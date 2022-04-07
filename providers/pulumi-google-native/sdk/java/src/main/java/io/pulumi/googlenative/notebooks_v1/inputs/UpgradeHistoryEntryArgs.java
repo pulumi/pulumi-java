@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The entry of VM image upgrade history.
- * 
  */
 public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Action. Rolloback or Upgrade.
-     * 
      */
     @Import(name="action")
       private final @Nullable Output<UpgradeHistoryEntryAction> action;
@@ -33,7 +31,6 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The container image before this instance upgrade.
-     * 
      */
     @Import(name="containerImage")
       private final @Nullable Output<String> containerImage;
@@ -44,7 +41,6 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The time that this instance upgrade history entry is created.
-     * 
      */
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
@@ -55,7 +51,6 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The framework of this notebook instance.
-     * 
      */
     @Import(name="framework")
       private final @Nullable Output<String> framework;
@@ -66,7 +61,6 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The snapshot of the boot disk of this notebook instance before upgrade.
-     * 
      */
     @Import(name="snapshot")
       private final @Nullable Output<String> snapshot;
@@ -77,7 +71,6 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The state of this instance upgrade history entry.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<UpgradeHistoryEntryState> state;
@@ -88,7 +81,6 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Target VM Image. Format: ainotebooks-vm/project/image-name/name.
-     * 
      */
     @Import(name="targetImage")
       private final @Nullable Output<String> targetImage;
@@ -99,7 +91,6 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Target VM Version, like m63.
-     * 
      */
     @Import(name="targetVersion")
       private final @Nullable Output<String> targetVersion;
@@ -110,7 +101,6 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The version of the notebook instance before this upgrade.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;
@@ -121,7 +111,6 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The VM image before this instance upgrade.
-     * 
      */
     @Import(name="vmImage")
       private final @Nullable Output<String> vmImage;

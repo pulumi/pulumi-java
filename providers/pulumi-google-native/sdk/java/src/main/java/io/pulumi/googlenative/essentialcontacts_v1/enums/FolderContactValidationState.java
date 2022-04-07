@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The validity of the contact. A contact is considered valid if it is the correct recipient for notifications for a particular resource.
-     * 
      */
     @EnumType
     public enum FolderContactValidationState {
         /**
          * The validation state is unknown or unspecified.
-         * 
          */
         ValidationStateUnspecified("VALIDATION_STATE_UNSPECIFIED"),
         /**
          * The contact is marked as valid. This is usually done manually by the contact admin. All new contacts begin in the valid state.
-         * 
          */
         Valid("VALID"),
         /**
          * The contact is considered invalid. This may become the state if the contact's email is found to be unreachable.
-         * 
          */
         Invalid("INVALID");
 

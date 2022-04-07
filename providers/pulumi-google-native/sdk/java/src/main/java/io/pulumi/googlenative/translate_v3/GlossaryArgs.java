@@ -19,7 +19,6 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Provides examples to build the glossary from. Total glossary must not exceed 10M Unicode codepoints.
-     * 
      */
     @Import(name="inputConfig", required=true)
       private final Output<GlossaryInputConfigArgs> inputConfig;
@@ -30,7 +29,6 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Used with equivalent term set glossaries.
-     * 
      */
     @Import(name="languageCodesSet")
       private final @Nullable Output<LanguageCodesSetArgs> languageCodesSet;
@@ -41,7 +39,6 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Used with unidirectional glossaries.
-     * 
      */
     @Import(name="languagePair")
       private final @Nullable Output<LanguageCodePairArgs> languagePair;
@@ -59,7 +56,6 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the glossary. Glossary names have the form `projects/{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

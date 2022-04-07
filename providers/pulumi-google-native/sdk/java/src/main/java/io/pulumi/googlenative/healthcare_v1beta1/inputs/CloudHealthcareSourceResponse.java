@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Cloud Healthcare API resource.
- * 
  */
 public final class CloudHealthcareSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CloudHealthcareSourceResponse extends io.pulumi.resources.Inv
 
     /**
      * Full path of a Cloud Healthcare API resource.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

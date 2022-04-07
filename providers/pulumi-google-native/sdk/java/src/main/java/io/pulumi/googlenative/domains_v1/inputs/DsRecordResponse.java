@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Defines a Delegation Signer (DS) record, which is needed to enable DNSSEC for a domain. It contains a digest (hash) of a DNSKEY record that must be present in the domain's DNS zone.
- * 
  */
 public final class DsRecordResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class DsRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The algorithm used to generate the referenced DNSKEY.
-     * 
      */
     @Import(name="algorithm", required=true)
       private final String algorithm;
@@ -30,7 +28,6 @@ public final class DsRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The digest generated from the referenced DNSKEY.
-     * 
      */
     @Import(name="digest", required=true)
       private final String digest;
@@ -41,7 +38,6 @@ public final class DsRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The hash function used to generate the digest of the referenced DNSKEY.
-     * 
      */
     @Import(name="digestType", required=true)
       private final String digestType;
@@ -52,7 +48,6 @@ public final class DsRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The key tag of the record. Must be set in range 0 -- 65535.
-     * 
      */
     @Import(name="keyTag", required=true)
       private final Integer keyTag;

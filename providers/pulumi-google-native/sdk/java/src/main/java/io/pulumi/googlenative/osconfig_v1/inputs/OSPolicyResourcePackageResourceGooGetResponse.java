@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A package managed by GooGet. - install: `googet -noconfirm install package` - remove: `googet -noconfirm remove package`
- * 
  */
 public final class OSPolicyResourcePackageResourceGooGetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class OSPolicyResourcePackageResourceGooGetResponse extends io.pulu
 
     /**
      * Package name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

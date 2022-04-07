@@ -13,32 +13,26 @@ import java.util.Objects;
 public final class GetCloneJobResult {
     /**
      * Details of the target VM in Compute Engine.
-     * 
      */
     private final ComputeEngineTargetDetailsResponse computeEngineTargetDetails;
     /**
      * The time the clone job was created (as an API call, not when it was actually created in the target).
-     * 
      */
     private final String createTime;
     /**
      * Provides details for the errors that led to the Clone Job's state.
-     * 
      */
     private final StatusResponse error;
     /**
      * The name of the clone.
-     * 
      */
     private final String name;
     /**
      * State of the clone job.
-     * 
      */
     private final String state;
     /**
      * The time the state was last updated.
-     * 
      */
     private final String stateTime;
 
@@ -60,42 +54,36 @@ public final class GetCloneJobResult {
 
     /**
      * Details of the target VM in Compute Engine.
-     * 
     */
     public ComputeEngineTargetDetailsResponse getComputeEngineTargetDetails() {
         return this.computeEngineTargetDetails;
     }
     /**
      * The time the clone job was created (as an API call, not when it was actually created in the target).
-     * 
     */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Provides details for the errors that led to the Clone Job's state.
-     * 
     */
     public StatusResponse getError() {
         return this.error;
     }
     /**
      * The name of the clone.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * State of the clone job.
-     * 
     */
     public String getState() {
         return this.state;
     }
     /**
      * The time the state was last updated.
-     * 
     */
     public String getStateTime() {
         return this.stateTime;

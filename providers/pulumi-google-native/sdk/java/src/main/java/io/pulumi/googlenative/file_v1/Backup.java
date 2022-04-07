@@ -16,174 +16,149 @@ import javax.annotation.Nullable;
 /**
  * Creates a backup.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:file/v1:Backup")
 public class Backup extends io.pulumi.resources.CustomResource {
     /**
      * Capacity of the source file share when the backup was created.
-     * 
      */
     @Export(name="capacityGb", type=String.class, parameters={})
     private Output<String> capacityGb;
 
     /**
      * @return Capacity of the source file share when the backup was created.
-     * 
      */
     public Output<String> getCapacityGb() {
         return this.capacityGb;
     }
     /**
      * The time when the backup was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time when the backup was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * A description of the backup with 2048 characters or less. Requests with longer descriptions will be rejected.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return A description of the backup with 2048 characters or less. Requests with longer descriptions will be rejected.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Amount of bytes that will be downloaded if the backup is restored. This may be different than storage bytes, since sequential backups of the same disk will share storage.
-     * 
      */
     @Export(name="downloadBytes", type=String.class, parameters={})
     private Output<String> downloadBytes;
 
     /**
      * @return Amount of bytes that will be downloaded if the backup is restored. This may be different than storage bytes, since sequential backups of the same disk will share storage.
-     * 
      */
     public Output<String> getDownloadBytes() {
         return this.downloadBytes;
     }
     /**
      * Resource labels to represent user provided metadata.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Resource labels to represent user provided metadata.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * The resource name of the backup, in the format `projects/{project_number}/locations/{location_id}/backups/{backup_id}`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the backup, in the format `projects/{project_number}/locations/{location_id}/backups/{backup_id}`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Reserved for future use.
-     * 
      */
     @Export(name="satisfiesPzs", type=Boolean.class, parameters={})
     private Output<Boolean> satisfiesPzs;
 
     /**
      * @return Reserved for future use.
-     * 
      */
     public Output<Boolean> getSatisfiesPzs() {
         return this.satisfiesPzs;
     }
     /**
      * Name of the file share in the source Cloud Filestore instance that the backup is created from.
-     * 
      */
     @Export(name="sourceFileShare", type=String.class, parameters={})
     private Output<String> sourceFileShare;
 
     /**
      * @return Name of the file share in the source Cloud Filestore instance that the backup is created from.
-     * 
      */
     public Output<String> getSourceFileShare() {
         return this.sourceFileShare;
     }
     /**
      * The resource name of the source Cloud Filestore instance, in the format `projects/{project_number}/locations/{location_id}/instances/{instance_id}`, used to create this backup.
-     * 
      */
     @Export(name="sourceInstance", type=String.class, parameters={})
     private Output<String> sourceInstance;
 
     /**
      * @return The resource name of the source Cloud Filestore instance, in the format `projects/{project_number}/locations/{location_id}/instances/{instance_id}`, used to create this backup.
-     * 
      */
     public Output<String> getSourceInstance() {
         return this.sourceInstance;
     }
     /**
      * The service tier of the source Cloud Filestore instance that this backup is created from.
-     * 
      */
     @Export(name="sourceInstanceTier", type=String.class, parameters={})
     private Output<String> sourceInstanceTier;
 
     /**
      * @return The service tier of the source Cloud Filestore instance that this backup is created from.
-     * 
      */
     public Output<String> getSourceInstanceTier() {
         return this.sourceInstanceTier;
     }
     /**
      * The backup state.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The backup state.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The size of the storage used by the backup. As backups share storage, this number is expected to change with backup creation/deletion.
-     * 
      */
     @Export(name="storageBytes", type=String.class, parameters={})
     private Output<String> storageBytes;
 
     /**
      * @return The size of the storage used by the backup. As backups share storage, this number is expected to change with backup creation/deletion.
-     * 
      */
     public Output<String> getStorageBytes() {
         return this.storageBytes;

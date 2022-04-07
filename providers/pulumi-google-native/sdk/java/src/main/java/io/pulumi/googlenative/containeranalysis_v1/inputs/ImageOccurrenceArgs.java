@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of the derived image portion of the DockerImage relationship. This image would be produced from a Dockerfile with FROM .
- * 
  */
 public final class ImageOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ImageOccurrenceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The fingerprint of the derived image.
-     * 
      */
     @Import(name="fingerprint", required=true)
       private final Output<FingerprintArgs> fingerprint;
@@ -33,7 +31,6 @@ public final class ImageOccurrenceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * This contains layer-specific metadata, if populated it has length "distance" and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
-     * 
      */
     @Import(name="layerInfo")
       private final @Nullable Output<List<LayerArgs>> layerInfo;

@@ -13,27 +13,22 @@ import java.util.Objects;
 public final class SlsaMetadataResponse {
     /**
      * The timestamp of when the build completed.
-     * 
      */
     private final String buildFinishedOn;
     /**
      * Identifies the particular build invocation, which can be useful for finding associated logs or other ad-hoc analysis. The value SHOULD be globally unique, per in-toto Provenance spec.
-     * 
      */
     private final String buildInvocationId;
     /**
      * The timestamp of when the build started.
-     * 
      */
     private final String buildStartedOn;
     /**
      * Indicates that the builder claims certain fields in this message to be complete.
-     * 
      */
     private final SlsaCompletenessResponse completeness;
     /**
      * If true, the builder claims that running the recipe on materials will produce bit-for-bit identical output.
-     * 
      */
     private final Boolean reproducible;
 
@@ -53,35 +48,30 @@ public final class SlsaMetadataResponse {
 
     /**
      * The timestamp of when the build completed.
-     * 
     */
     public String getBuildFinishedOn() {
         return this.buildFinishedOn;
     }
     /**
      * Identifies the particular build invocation, which can be useful for finding associated logs or other ad-hoc analysis. The value SHOULD be globally unique, per in-toto Provenance spec.
-     * 
     */
     public String getBuildInvocationId() {
         return this.buildInvocationId;
     }
     /**
      * The timestamp of when the build started.
-     * 
     */
     public String getBuildStartedOn() {
         return this.buildStartedOn;
     }
     /**
      * Indicates that the builder claims certain fields in this message to be complete.
-     * 
     */
     public SlsaCompletenessResponse getCompleteness() {
         return this.completeness;
     }
     /**
      * If true, the builder claims that running the recipe on materials will produce bit-for-bit identical output.
-     * 
     */
     public Boolean getReproducible() {
         return this.reproducible;

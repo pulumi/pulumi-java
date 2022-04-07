@@ -16,7 +16,6 @@ public final class ImportFileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The contents of the file.
-     * 
      */
     @Import(name="content")
       private final @Nullable Output<String> content;
@@ -27,7 +26,6 @@ public final class ImportFileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the file.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

@@ -18,76 +18,65 @@ import javax.annotation.Nullable;
  * Updates an IAM policy for the specified bucket.
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:storage/v1:BucketIamPolicy")
 public class BucketIamPolicy extends io.pulumi.resources.CustomResource {
     /**
      * An association between a role, which comes with a set of permissions, and members who may assume that role.
-     * 
      */
     @Export(name="bindings", type=List.class, parameters={BucketIamPolicyBindingsItemResponse.class})
     private Output<List<BucketIamPolicyBindingsItemResponse>> bindings;
 
     /**
      * @return An association between a role, which comes with a set of permissions, and members who may assume that role.
-     * 
      */
     public Output<List<BucketIamPolicyBindingsItemResponse>> getBindings() {
         return this.bindings;
     }
     /**
      * HTTP 1.1  Entity tag for the policy.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return HTTP 1.1  Entity tag for the policy.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The kind of item this is. For policies, this is always storage#policy. This field is ignored on input.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return The kind of item this is. For policies, this is always storage#policy. This field is ignored on input.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * The ID of the resource to which this policy belongs. Will be of the form projects/_/buckets/bucket for buckets, and projects/_/buckets/bucket/objects/object for objects. A specific generation may be specified by appending #generationNumber to the end of the object name, e.g. projects/_/buckets/my-bucket/objects/data.txt#17. The current generation can be denoted with #0. This field is ignored on input.
-     * 
      */
     @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**
      * @return The ID of the resource to which this policy belongs. Will be of the form projects/_/buckets/bucket for buckets, and projects/_/buckets/bucket/objects/object for objects. A specific generation may be specified by appending #generationNumber to the end of the object name, e.g. projects/_/buckets/my-bucket/objects/data.txt#17. The current generation can be denoted with #0. This field is ignored on input.
-     * 
      */
     public Output<String> getResourceId() {
         return this.resourceId;
     }
     /**
      * The IAM policy format version.
-     * 
      */
     @Export(name="version", type=Integer.class, parameters={})
     private Output<Integer> version;
 
     /**
      * @return The IAM policy format version.
-     * 
      */
     public Output<Integer> getVersion() {
         return this.version;

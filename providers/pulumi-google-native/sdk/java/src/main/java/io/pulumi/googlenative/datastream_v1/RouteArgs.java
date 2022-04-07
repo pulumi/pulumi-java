@@ -18,7 +18,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Destination address for connection
-     * 
      */
     @Import(name="destinationAddress", required=true)
       private final Output<String> destinationAddress;
@@ -29,7 +28,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Destination port for connection
-     * 
      */
     @Import(name="destinationPort")
       private final @Nullable Output<Integer> destinationPort;
@@ -40,7 +38,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Display name.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -51,7 +48,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Labels.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;

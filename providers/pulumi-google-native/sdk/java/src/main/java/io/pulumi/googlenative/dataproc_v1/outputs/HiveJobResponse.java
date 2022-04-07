@@ -15,32 +15,26 @@ import java.util.Objects;
 public final class HiveJobResponse {
     /**
      * Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
-     * 
      */
     private final Boolean continueOnFailure;
     /**
      * Optional. HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.
-     * 
      */
     private final List<String> jarFileUris;
     /**
      * Optional. A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code.
-     * 
      */
     private final Map<String,String> properties;
     /**
      * The HCFS URI of the script that contains Hive queries.
-     * 
      */
     private final String queryFileUri;
     /**
      * A list of queries.
-     * 
      */
     private final QueryListResponse queryList;
     /**
      * Optional. Mapping of query variable names to values (equivalent to the Hive command: SET name="value";).
-     * 
      */
     private final Map<String,String> scriptVariables;
 
@@ -62,42 +56,36 @@ public final class HiveJobResponse {
 
     /**
      * Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
-     * 
     */
     public Boolean getContinueOnFailure() {
         return this.continueOnFailure;
     }
     /**
      * Optional. HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.
-     * 
     */
     public List<String> getJarFileUris() {
         return this.jarFileUris;
     }
     /**
      * Optional. A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code.
-     * 
     */
     public Map<String,String> getProperties() {
         return this.properties;
     }
     /**
      * The HCFS URI of the script that contains Hive queries.
-     * 
     */
     public String getQueryFileUri() {
         return this.queryFileUri;
     }
     /**
      * A list of queries.
-     * 
     */
     public QueryListResponse getQueryList() {
         return this.queryList;
     }
     /**
      * Optional. Mapping of query variable names to values (equivalent to the Hive command: SET name="value";).
-     * 
     */
     public Map<String,String> getScriptVariables() {
         return this.scriptVariables;

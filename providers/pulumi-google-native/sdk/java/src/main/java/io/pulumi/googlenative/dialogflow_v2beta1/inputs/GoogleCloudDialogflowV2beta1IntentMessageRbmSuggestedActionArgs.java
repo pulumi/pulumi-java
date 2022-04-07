@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Rich Business Messaging (RBM) suggested client-side action that the user can choose from the card.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
 
     /**
      * Suggested client side action: Dial a phone number
-     * 
      */
     @Import(name="dial")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs> dial;
@@ -34,7 +32,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
 
     /**
      * Suggested client side action: Open a URI on device
-     * 
      */
     @Import(name="openUrl")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs> openUrl;
@@ -45,7 +42,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
 
     /**
      * Opaque payload that the Dialogflow receives in a user event when the user taps the suggested action. This data will be also forwarded to webhook to allow performing custom business logic.
-     * 
      */
     @Import(name="postbackData")
       private final @Nullable Output<String> postbackData;
@@ -56,7 +52,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
 
     /**
      * Suggested client side action: Share user location
-     * 
      */
     @Import(name="shareLocation")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs> shareLocation;
@@ -67,7 +62,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
 
     /**
      * Text to display alongside the action.
-     * 
      */
     @Import(name="text")
       private final @Nullable Output<String> text;

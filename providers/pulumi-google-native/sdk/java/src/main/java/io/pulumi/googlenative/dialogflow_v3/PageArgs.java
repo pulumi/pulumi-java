@@ -28,7 +28,6 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The human-readable name of the page, unique within the agent.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -39,7 +38,6 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The fulfillment to call when the session is entering the page.
-     * 
      */
     @Import(name="entryFulfillment")
       private final @Nullable Output<GoogleCloudDialogflowCxV3FulfillmentArgs> entryFulfillment;
@@ -50,7 +48,6 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Handlers associated with the page to handle events such as webhook errors, no match or no input.
-     * 
      */
     @Import(name="eventHandlers")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> eventHandlers;
@@ -68,7 +65,6 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The form associated with the page, used for collecting parameters relevant to the page.
-     * 
      */
     @Import(name="form")
       private final @Nullable Output<GoogleCloudDialogflowCxV3FormArgs> form;
@@ -93,7 +89,6 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique identifier of the page. Required for the Pages.UpdatePage method. Pages.CreatePage populates the name automatically. Format: `projects//locations//agents//flows//pages/`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -111,7 +106,6 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Ordered list of `TransitionRouteGroups` associated with the page. Transition route groups must be unique within a page. * If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page's transition route -> page's transition route group -> flow's transition routes. * If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence. Format:`projects//locations//agents//flows//transitionRouteGroups/`.
-     * 
      */
     @Import(name="transitionRouteGroups")
       private final @Nullable Output<List<String>> transitionRouteGroups;
@@ -122,7 +116,6 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of transitions for the transition rules of this page. They route the conversation to another page in the same flow, or another flow. When we are in a certain page, the TransitionRoutes are evalauted in the following order: * TransitionRoutes defined in the page with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in flow with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in the page with only condition specified. * TransitionRoutes defined in the transition route groups with only condition specified.
-     * 
      */
     @Import(name="transitionRoutes")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> transitionRoutes;

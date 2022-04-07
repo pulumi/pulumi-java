@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Filter options to be applied on query.
- * 
  */
 public final class FilterOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class FilterOptionsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Generic filter to restrict the search, such as `lang:en`, `site:xyz`.
-     * 
      */
     @Import(name="filter", required=true)
       private final FilterResponse filter;
@@ -30,7 +28,6 @@ public final class FilterOptionsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * If object_type is set, only objects of that type are returned. This should correspond to the name of the object that was registered within the definition of schema. The maximum length is 256 characters.
-     * 
      */
     @Import(name="objectType", required=true)
       private final String objectType;

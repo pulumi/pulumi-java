@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Specifies roles and/or permissions to analyze, to determine both the identities possessing them and the resources they control. If multiple values are specified, results will include roles or permissions matching any of them. The total number of roles and permissions should be equal or less than 10.
- * 
  */
 public final class AccessSelectorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class AccessSelectorResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Optional. The permissions to appear in result.
-     * 
      */
     @Import(name="permissions", required=true)
       private final List<String> permissions;
@@ -30,7 +28,6 @@ public final class AccessSelectorResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Optional. The roles to appear in result.
-     * 
      */
     @Import(name="roles", required=true)
       private final List<String> roles;

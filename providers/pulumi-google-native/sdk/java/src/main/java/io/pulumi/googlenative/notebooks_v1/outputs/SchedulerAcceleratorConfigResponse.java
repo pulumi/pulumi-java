@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class SchedulerAcceleratorConfigResponse {
     /**
      * Count of cores of this accelerator.
-     * 
      */
     private final String coreCount;
     /**
      * Type of this accelerator.
-     * 
      */
     private final String type;
 
@@ -30,14 +28,12 @@ public final class SchedulerAcceleratorConfigResponse {
 
     /**
      * Count of cores of this accelerator.
-     * 
     */
     public String getCoreCount() {
         return this.coreCount;
     }
     /**
      * Type of this accelerator.
-     * 
     */
     public String getType() {
         return this.type;

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2CharsToIgnoreResponse {
     /**
      * Characters to not transform when masking.
-     * 
      */
     private final String charactersToSkip;
     /**
      * Common characters to not transform when masking. Useful to avoid removing punctuation.
-     * 
      */
     private final String commonCharactersToIgnore;
 
@@ -30,14 +28,12 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse {
 
     /**
      * Characters to not transform when masking.
-     * 
     */
     public String getCharactersToSkip() {
         return this.charactersToSkip;
     }
     /**
      * Common characters to not transform when masking. Useful to avoid removing punctuation.
-     * 
     */
     public String getCommonCharactersToIgnore() {
         return this.commonCharactersToIgnore;

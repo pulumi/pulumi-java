@@ -19,216 +19,185 @@ import javax.annotation.Nullable;
 
 /**
  * Creates an Experiment in the specified Environment.
- * 
  */
 @ResourceType(type="google-native:dialogflow/v3:Experiment")
 public class Experiment extends io.pulumi.resources.CustomResource {
     /**
      * Creation time of this experiment.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return Creation time of this experiment.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The definition of the experiment.
-     * 
      */
     @Export(name="definition", type=GoogleCloudDialogflowCxV3ExperimentDefinitionResponse.class, parameters={})
     private Output<GoogleCloudDialogflowCxV3ExperimentDefinitionResponse> definition;
 
     /**
      * @return The definition of the experiment.
-     * 
      */
     public Output<GoogleCloudDialogflowCxV3ExperimentDefinitionResponse> getDefinition() {
         return this.definition;
     }
     /**
      * The human-readable description of the experiment.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return The human-readable description of the experiment.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The human-readable name of the experiment (unique in an environment). Limit of 64 characters.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The human-readable name of the experiment (unique in an environment). Limit of 64 characters.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * End time of this experiment.
-     * 
      */
     @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
      * @return End time of this experiment.
-     * 
      */
     public Output<String> getEndTime() {
         return this.endTime;
     }
     /**
      * Maximum number of days to run the experiment/rollout. If auto-rollout is not enabled, default value and maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days.
-     * 
      */
     @Export(name="experimentLength", type=String.class, parameters={})
     private Output<String> experimentLength;
 
     /**
      * @return Maximum number of days to run the experiment/rollout. If auto-rollout is not enabled, default value and maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days.
-     * 
      */
     public Output<String> getExperimentLength() {
         return this.experimentLength;
     }
     /**
      * Last update time of this experiment.
-     * 
      */
     @Export(name="lastUpdateTime", type=String.class, parameters={})
     private Output<String> lastUpdateTime;
 
     /**
      * @return Last update time of this experiment.
-     * 
      */
     public Output<String> getLastUpdateTime() {
         return this.lastUpdateTime;
     }
     /**
      * The name of the experiment. Format: projects//locations//agents//environments//experiments/..
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the experiment. Format: projects//locations//agents//environments//experiments/..
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Inference result of the experiment.
-     * 
      */
     @Export(name="result", type=GoogleCloudDialogflowCxV3ExperimentResultResponse.class, parameters={})
     private Output<GoogleCloudDialogflowCxV3ExperimentResultResponse> result;
 
     /**
      * @return Inference result of the experiment.
-     * 
      */
     public Output<GoogleCloudDialogflowCxV3ExperimentResultResponse> getResult() {
         return this.result;
     }
     /**
      * The configuration for auto rollout. If set, there should be exactly two variants in the experiment (control variant being the default version of the flow), the traffic allocation for the non-control variant will gradually increase to 100% when conditions are met, and eventually replace the control variant to become the default version of the flow.
-     * 
      */
     @Export(name="rolloutConfig", type=GoogleCloudDialogflowCxV3RolloutConfigResponse.class, parameters={})
     private Output<GoogleCloudDialogflowCxV3RolloutConfigResponse> rolloutConfig;
 
     /**
      * @return The configuration for auto rollout. If set, there should be exactly two variants in the experiment (control variant being the default version of the flow), the traffic allocation for the non-control variant will gradually increase to 100% when conditions are met, and eventually replace the control variant to become the default version of the flow.
-     * 
      */
     public Output<GoogleCloudDialogflowCxV3RolloutConfigResponse> getRolloutConfig() {
         return this.rolloutConfig;
     }
     /**
      * The reason why rollout has failed. Should only be set when state is ROLLOUT_FAILED.
-     * 
      */
     @Export(name="rolloutFailureReason", type=String.class, parameters={})
     private Output<String> rolloutFailureReason;
 
     /**
      * @return The reason why rollout has failed. Should only be set when state is ROLLOUT_FAILED.
-     * 
      */
     public Output<String> getRolloutFailureReason() {
         return this.rolloutFailureReason;
     }
     /**
      * State of the auto rollout process.
-     * 
      */
     @Export(name="rolloutState", type=GoogleCloudDialogflowCxV3RolloutStateResponse.class, parameters={})
     private Output<GoogleCloudDialogflowCxV3RolloutStateResponse> rolloutState;
 
     /**
      * @return State of the auto rollout process.
-     * 
      */
     public Output<GoogleCloudDialogflowCxV3RolloutStateResponse> getRolloutState() {
         return this.rolloutState;
     }
     /**
      * Start time of this experiment.
-     * 
      */
     @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
      * @return Start time of this experiment.
-     * 
      */
     public Output<String> getStartTime() {
         return this.startTime;
     }
     /**
      * The current state of the experiment. Transition triggered by Experiments.StartExperiment: DRAFT->RUNNING. Transition triggered by Experiments.CancelExperiment: DRAFT->DONE or RUNNING->DONE.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The current state of the experiment. Transition triggered by Experiments.StartExperiment: DRAFT->RUNNING. Transition triggered by Experiments.CancelExperiment: DRAFT->DONE or RUNNING->DONE.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The history of updates to the experiment variants.
-     * 
      */
     @Export(name="variantsHistory", type=List.class, parameters={GoogleCloudDialogflowCxV3VariantsHistoryResponse.class})
     private Output<List<GoogleCloudDialogflowCxV3VariantsHistoryResponse>> variantsHistory;
 
     /**
      * @return The history of updates to the experiment variants.
-     * 
      */
     public Output<List<GoogleCloudDialogflowCxV3VariantsHistoryResponse>> getVariantsHistory() {
         return this.variantsHistory;

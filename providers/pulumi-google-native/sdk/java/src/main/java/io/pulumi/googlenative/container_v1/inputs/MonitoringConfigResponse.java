@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * MonitoringConfig is cluster monitoring configuration.
- * 
  */
 public final class MonitoringConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MonitoringConfigResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Monitoring components configuration
-     * 
      */
     @Import(name="componentConfig", required=true)
       private final MonitoringComponentConfigResponse componentConfig;

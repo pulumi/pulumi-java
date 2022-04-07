@@ -17,7 +17,6 @@ public final class BucketLifecycleRuleItemArgs extends io.pulumi.resources.Resou
 
     /**
      * The action to take.
-     * 
      */
     @Import(name="action")
       private final @Nullable Output<BucketLifecycleRuleItemActionArgs> action;
@@ -28,7 +27,6 @@ public final class BucketLifecycleRuleItemArgs extends io.pulumi.resources.Resou
 
     /**
      * The condition(s) under which the action will be taken.
-     * 
      */
     @Import(name="condition")
       private final @Nullable Output<BucketLifecycleRuleItemConditionArgs> condition;

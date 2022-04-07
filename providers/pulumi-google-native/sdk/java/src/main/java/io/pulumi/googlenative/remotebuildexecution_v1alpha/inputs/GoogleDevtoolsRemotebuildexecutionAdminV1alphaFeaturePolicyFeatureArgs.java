@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines whether a feature can be used or what values are accepted.
- * 
  */
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
 
     /**
      * A list of acceptable values. Only effective when the policy is `RESTRICTED`.
-     * 
      */
     @Import(name="allowedValues")
       private final @Nullable Output<List<String>> allowedValues;
@@ -33,7 +31,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
 
     /**
      * The policy of the feature.
-     * 
      */
     @Import(name="policy")
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy;

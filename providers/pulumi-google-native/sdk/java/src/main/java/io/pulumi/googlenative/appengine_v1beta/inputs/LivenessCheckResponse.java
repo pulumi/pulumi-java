@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
- * 
  */
 public final class LivenessCheckResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class LivenessCheckResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Interval between health checks.
-     * 
      */
     @Import(name="checkInterval", required=true)
       private final String checkInterval;
@@ -30,7 +28,6 @@ public final class LivenessCheckResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Number of consecutive failed checks required before considering the VM unhealthy.
-     * 
      */
     @Import(name="failureThreshold", required=true)
       private final Integer failureThreshold;
@@ -41,7 +38,6 @@ public final class LivenessCheckResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Host header to send when performing a HTTP Liveness check. Example: "myapp.appspot.com"
-     * 
      */
     @Import(name="host", required=true)
       private final String host;
@@ -52,7 +48,6 @@ public final class LivenessCheckResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The initial delay before starting to execute the checks.
-     * 
      */
     @Import(name="initialDelay", required=true)
       private final String initialDelay;
@@ -63,7 +58,6 @@ public final class LivenessCheckResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The request path.
-     * 
      */
     @Import(name="path", required=true)
       private final String path;
@@ -74,7 +68,6 @@ public final class LivenessCheckResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Number of consecutive successful checks required before considering the VM healthy.
-     * 
      */
     @Import(name="successThreshold", required=true)
       private final Integer successThreshold;
@@ -85,7 +78,6 @@ public final class LivenessCheckResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Time before the check is considered failed.
-     * 
      */
     @Import(name="timeout", required=true)
       private final String timeout;

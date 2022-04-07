@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class LicenseResponse {
     /**
      * Comments
-     * 
      */
     private final String comments;
     /**
      * Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
-     * 
      */
     private final String expression;
 
@@ -30,14 +28,12 @@ public final class LicenseResponse {
 
     /**
      * Comments
-     * 
     */
     public String getComments() {
         return this.comments;
     }
     /**
      * Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
-     * 
     */
     public String getExpression() {
         return this.expression;

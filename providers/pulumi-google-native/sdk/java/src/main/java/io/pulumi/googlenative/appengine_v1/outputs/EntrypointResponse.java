@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class EntrypointResponse {
     /**
      * The format should be a shell command that can be fed to bash -c.
-     * 
      */
     private final String shell;
 
@@ -22,7 +21,6 @@ public final class EntrypointResponse {
 
     /**
      * The format should be a shell command that can be fed to bash -c.
-     * 
     */
     public String getShell() {
         return this.shell;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * RouterAppliance represents a Router appliance which is specified by a VM URI and a NIC address.
- * 
  */
 public final class RouterApplianceInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
 
     /**
      * The IP address of the network interface to use for peering.
-     * 
      */
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
@@ -38,7 +36,6 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
 
     /**
      * The URI of the virtual machine resource
-     * 
      */
     @Import(name="virtualMachine")
       private final @Nullable Output<String> virtualMachine;

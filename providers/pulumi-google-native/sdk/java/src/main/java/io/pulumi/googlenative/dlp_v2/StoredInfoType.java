@@ -16,48 +16,41 @@ import javax.annotation.Nullable;
 /**
  * Creates a pre-built stored infoType to be used for inspection. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:dlp/v2:StoredInfoType")
 public class StoredInfoType extends io.pulumi.resources.CustomResource {
     /**
      * Current version of the stored info type.
-     * 
      */
     @Export(name="currentVersion", type=GooglePrivacyDlpV2StoredInfoTypeVersionResponse.class, parameters={})
     private Output<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> currentVersion;
 
     /**
      * @return Current version of the stored info type.
-     * 
      */
     public Output<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> getCurrentVersion() {
         return this.currentVersion;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Pending versions of the stored info type. Empty if no versions are pending.
-     * 
      */
     @Export(name="pendingVersions", type=List.class, parameters={GooglePrivacyDlpV2StoredInfoTypeVersionResponse.class})
     private Output<List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse>> pendingVersions;
 
     /**
      * @return Pending versions of the stored info type. Empty if no versions are pending.
-     * 
      */
     public Output<List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse>> getPendingVersions() {
         return this.pendingVersions;

@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * The source syntax of the service.
-     * 
      */
     @EnumType
     public enum ApiSyntax {
         /**
          * Syntax `proto2`.
-         * 
          */
         SyntaxProto2("SYNTAX_PROTO2"),
         /**
          * Syntax `proto3`.
-         * 
          */
         SyntaxProto3("SYNTAX_PROTO3");
 

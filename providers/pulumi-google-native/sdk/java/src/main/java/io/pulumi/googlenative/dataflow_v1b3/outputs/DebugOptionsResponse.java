@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class DebugOptionsResponse {
     /**
      * When true, enables the logging of the literal hot key to the user's Cloud Logging.
-     * 
      */
     private final Boolean enableHotKeyLogging;
 
@@ -22,7 +21,6 @@ public final class DebugOptionsResponse {
 
     /**
      * When true, enables the logging of the literal hot key to the user's Cloud Logging.
-     * 
     */
     public Boolean getEnableHotKeyLogging() {
         return this.enableHotKeyLogging;

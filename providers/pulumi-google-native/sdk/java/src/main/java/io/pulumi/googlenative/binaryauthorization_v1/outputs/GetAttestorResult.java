@@ -12,22 +12,18 @@ import java.util.Objects;
 public final class GetAttestorResult {
     /**
      * Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
-     * 
      */
     private final String description;
     /**
      * The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
-     * 
      */
     private final String name;
     /**
      * Time when the attestor was last updated.
-     * 
      */
     private final String updateTime;
     /**
      * This specifies how an attestation will be read, and how it will be used during policy enforcement.
-     * 
      */
     private final UserOwnedGrafeasNoteResponse userOwnedGrafeasNote;
 
@@ -45,28 +41,24 @@ public final class GetAttestorResult {
 
     /**
      * Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Time when the attestor was last updated.
-     * 
     */
     public String getUpdateTime() {
         return this.updateTime;
     }
     /**
      * This specifies how an attestation will be read, and how it will be used during policy enforcement.
-     * 
     */
     public UserOwnedGrafeasNoteResponse getUserOwnedGrafeasNote() {
         return this.userOwnedGrafeasNote;

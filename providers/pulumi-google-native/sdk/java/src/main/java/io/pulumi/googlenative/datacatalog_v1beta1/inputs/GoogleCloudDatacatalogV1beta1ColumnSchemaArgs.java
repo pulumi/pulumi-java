@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Representation of a column within a schema. Columns could be nested inside other columns.
- * 
  */
 public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
 
     /**
      * Name of the column.
-     * 
      */
     @Import(name="column", required=true)
       private final Output<String> column;
@@ -32,7 +30,6 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
 
     /**
      * Optional. Description of the column. Default value is an empty string.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -43,7 +40,6 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
 
     /**
      * Optional. A column's mode indicates whether the values in this column are required, nullable, etc. Only `NULLABLE`, `REQUIRED` and `REPEATED` are supported. Default mode is `NULLABLE`.
-     * 
      */
     @Import(name="mode")
       private final @Nullable Output<String> mode;
@@ -54,7 +50,6 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
 
     /**
      * Optional. Schema of sub-columns. A column can have zero or more sub-columns.
-     * 
      */
     @Import(name="subcolumns")
       private final @Nullable Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> subcolumns;
@@ -65,7 +60,6 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
 
     /**
      * Type of the column.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

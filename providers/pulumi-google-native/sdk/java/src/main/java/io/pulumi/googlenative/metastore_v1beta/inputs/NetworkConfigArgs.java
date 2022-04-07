@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Network configuration for the Dataproc Metastore service.
- * 
  */
 public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The consumer-side network configuration for the Dataproc Metastore instance.
-     * 
      */
     @Import(name="consumers")
       private final @Nullable Output<List<ConsumerArgs>> consumers;

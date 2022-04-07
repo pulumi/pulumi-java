@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * A resource that manages a system package.
- * 
  */
 public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
 
     /**
      * A package managed by Apt.
-     * 
      */
     @Import(name="apt")
       private final @Nullable Output<OSPolicyResourcePackageResourceAPTArgs> apt;
@@ -38,7 +36,6 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
 
     /**
      * A deb package file.
-     * 
      */
     @Import(name="deb")
       private final @Nullable Output<OSPolicyResourcePackageResourceDebArgs> deb;
@@ -49,7 +46,6 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
 
     /**
      * The desired state the agent should maintain for this package.
-     * 
      */
     @Import(name="desiredState", required=true)
       private final Output<OSPolicyResourcePackageResourceDesiredState> desiredState;
@@ -60,7 +56,6 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
 
     /**
      * A package managed by GooGet.
-     * 
      */
     @Import(name="googet")
       private final @Nullable Output<OSPolicyResourcePackageResourceGooGetArgs> googet;
@@ -71,7 +66,6 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
 
     /**
      * An MSI package.
-     * 
      */
     @Import(name="msi")
       private final @Nullable Output<OSPolicyResourcePackageResourceMSIArgs> msi;
@@ -82,7 +76,6 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
 
     /**
      * An rpm package file.
-     * 
      */
     @Import(name="rpm")
       private final @Nullable Output<OSPolicyResourcePackageResourceRPMArgs> rpm;
@@ -93,7 +86,6 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
 
     /**
      * A package managed by YUM.
-     * 
      */
     @Import(name="yum")
       private final @Nullable Output<OSPolicyResourcePackageResourceYUMArgs> yum;
@@ -104,7 +96,6 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
 
     /**
      * A package managed by Zypper.
-     * 
      */
     @Import(name="zypper")
       private final @Nullable Output<OSPolicyResourcePackageResourceZypperArgs> zypper;

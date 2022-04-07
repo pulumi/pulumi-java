@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * This represents a particular package that is distributed over various channels. E.g., glibc (aka libc6) is distributed by many, at various versions.
- * 
  */
 public final class PackageResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PackageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The various channels by which a package is distributed.
-     * 
      */
     @Import(name="distribution", required=true)
       private final List<DistributionResponse> distribution;
@@ -31,7 +29,6 @@ public final class PackageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Immutable. The name of the package.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

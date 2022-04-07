@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The subnet in which to house the connector
- * 
  */
 public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Project in which the subnet exists. If not set, this project is assumed to be the project for which the connector create request was issued.
-     * 
      */
     @Import(name="project", required=true)
       private final String project;

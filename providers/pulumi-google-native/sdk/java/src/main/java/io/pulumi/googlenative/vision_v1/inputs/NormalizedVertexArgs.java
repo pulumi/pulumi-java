@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A vertex represents a 2D point in the image. NOTE: the normalized vertex coordinates are relative to the original image and range from 0 to 1.
- * 
  */
 public final class NormalizedVertexArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class NormalizedVertexArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * X coordinate.
-     * 
      */
     @Import(name="x")
       private final @Nullable Output<Double> x;
@@ -31,7 +29,6 @@ public final class NormalizedVertexArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Y coordinate.
-     * 
      */
     @Import(name="y")
       private final @Nullable Output<Double> y;

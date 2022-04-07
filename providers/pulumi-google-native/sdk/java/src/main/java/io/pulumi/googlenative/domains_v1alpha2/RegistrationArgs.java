@@ -25,7 +25,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of contact notices that the caller acknowledges. The notices needed here depend on the values specified in `registration.contact_settings`.
-     * 
      */
     @Import(name="contactNotices")
       private final @Nullable Output<List<RegistrationContactNoticesItem>> contactNotices;
@@ -36,7 +35,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Settings for contact information linked to the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureContactSettings` method.
-     * 
      */
     @Import(name="contactSettings", required=true)
       private final Output<ContactSettingsArgs> contactSettings;
@@ -47,7 +45,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Settings controlling the DNS configuration of the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureDnsSettings` method.
-     * 
      */
     @Import(name="dnsSettings")
       private final @Nullable Output<DnsSettingsArgs> dnsSettings;
@@ -58,7 +55,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The domain name. Unicode domain names must be expressed in Punycode format.
-     * 
      */
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
@@ -69,7 +65,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of domain notices that you acknowledge. Call `RetrieveRegisterParameters` to see the notices that need acknowledgement.
-     * 
      */
     @Import(name="domainNotices")
       private final @Nullable Output<List<RegistrationDomainNoticesItem>> domainNotices;
@@ -80,7 +75,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Set of labels associated with the `Registration`.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -98,7 +92,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Settings for management of the `Registration`, including renewal, billing, and transfer. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureManagementSettings` method.
-     * 
      */
     @Import(name="managementSettings")
       private final @Nullable Output<ManagementSettingsArgs> managementSettings;
@@ -116,7 +109,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * When true, only validation is performed, without actually registering the domain. Follows: https://cloud.google.com/apis/design/design_patterns#request_validation
-     * 
      */
     @Import(name="validateOnly")
       private final @Nullable Output<Boolean> validateOnly;
@@ -127,7 +119,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Yearly price to register or renew the domain. The value that should be put here can be obtained from RetrieveRegisterParameters or SearchDomains calls.
-     * 
      */
     @Import(name="yearlyPrice", required=true)
       private final Output<MoneyArgs> yearlyPrice;

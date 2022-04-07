@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration for notification of new states received from the device.
- * 
  */
 public final class StateNotificationConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class StateNotificationConfigArgs extends io.pulumi.resources.Resou
 
     /**
      * A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
-     * 
      */
     @Import(name="pubsubTopicName")
       private final @Nullable Output<String> pubsubTopicName;

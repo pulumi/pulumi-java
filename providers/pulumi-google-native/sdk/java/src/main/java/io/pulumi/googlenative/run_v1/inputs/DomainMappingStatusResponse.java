@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * The current state of the Domain Mapping.
- * 
  */
 public final class DomainMappingStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
 
     /**
      * Array of observed DomainMappingConditions, indicating the current state of the DomainMapping.
-     * 
      */
     @Import(name="conditions", required=true)
       private final List<GoogleCloudRunV1ConditionResponse> conditions;
@@ -33,7 +31,6 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
 
     /**
      * The name of the route that the mapping currently points to.
-     * 
      */
     @Import(name="mappedRouteName", required=true)
       private final String mappedRouteName;
@@ -44,7 +41,6 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
 
     /**
      * ObservedGeneration is the 'Generation' of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition's status is True or False.
-     * 
      */
     @Import(name="observedGeneration", required=true)
       private final Integer observedGeneration;
@@ -55,7 +51,6 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
 
     /**
      * The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.
-     * 
      */
     @Import(name="resourceRecords", required=true)
       private final List<ResourceRecordResponse> resourceRecords;
@@ -66,7 +61,6 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
 
     /**
      * Optional. Cloud Run fully managed: not supported Cloud Run on GKE: supported Holds the URL that will serve the traffic of the DomainMapping.
-     * 
      */
     @Import(name="url", required=true)
       private final String url;

@@ -16,188 +16,161 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new company entity.
- * 
  */
 @ResourceType(type="google-native:jobs/v3:Company")
 public class Company extends io.pulumi.resources.CustomResource {
     /**
      * Optional. The URI to employer's career site or careers page on the employer's web site, for example, "https://careers.google.com".
-     * 
      */
     @Export(name="careerSiteUri", type=String.class, parameters={})
     private Output<String> careerSiteUri;
 
     /**
      * @return Optional. The URI to employer's career site or careers page on the employer's web site, for example, "https://careers.google.com".
-     * 
      */
     public Output<String> getCareerSiteUri() {
         return this.careerSiteUri;
     }
     /**
      * Derived details about the company.
-     * 
      */
     @Export(name="derivedInfo", type=CompanyDerivedInfoResponse.class, parameters={})
     private Output<CompanyDerivedInfoResponse> derivedInfo;
 
     /**
      * @return Derived details about the company.
-     * 
      */
     public Output<CompanyDerivedInfoResponse> getDerivedInfo() {
         return this.derivedInfo;
     }
     /**
      * The display name of the company, for example, "Google LLC".
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The display name of the company, for example, "Google LLC".
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Optional. Equal Employment Opportunity legal disclaimer text to be associated with all jobs, and typically to be displayed in all roles. The maximum number of allowed characters is 500.
-     * 
      */
     @Export(name="eeoText", type=String.class, parameters={})
     private Output<String> eeoText;
 
     /**
      * @return Optional. Equal Employment Opportunity legal disclaimer text to be associated with all jobs, and typically to be displayed in all roles. The maximum number of allowed characters is 500.
-     * 
      */
     public Output<String> getEeoText() {
         return this.eeoText;
     }
     /**
      * Client side company identifier, used to uniquely identify the company. The maximum number of allowed characters is 255.
-     * 
      */
     @Export(name="externalId", type=String.class, parameters={})
     private Output<String> externalId;
 
     /**
      * @return Client side company identifier, used to uniquely identify the company. The maximum number of allowed characters is 255.
-     * 
      */
     public Output<String> getExternalId() {
         return this.externalId;
     }
     /**
      * Optional. The street address of the company's main headquarters, which may be different from the job location. The service attempts to geolocate the provided address, and populates a more specific location wherever possible in DerivedInfo.headquarters_location.
-     * 
      */
     @Export(name="headquartersAddress", type=String.class, parameters={})
     private Output<String> headquartersAddress;
 
     /**
      * @return Optional. The street address of the company's main headquarters, which may be different from the job location. The service attempts to geolocate the provided address, and populates a more specific location wherever possible in DerivedInfo.headquarters_location.
-     * 
      */
     public Output<String> getHeadquartersAddress() {
         return this.headquartersAddress;
     }
     /**
      * Optional. Set to true if it is the hiring agency that post jobs for other employers. Defaults to false if not provided.
-     * 
      */
     @Export(name="hiringAgency", type=Boolean.class, parameters={})
     private Output<Boolean> hiringAgency;
 
     /**
      * @return Optional. Set to true if it is the hiring agency that post jobs for other employers. Defaults to false if not provided.
-     * 
      */
     public Output<Boolean> getHiringAgency() {
         return this.hiringAgency;
     }
     /**
      * Optional. A URI that hosts the employer's company logo.
-     * 
      */
     @Export(name="imageUri", type=String.class, parameters={})
     private Output<String> imageUri;
 
     /**
      * @return Optional. A URI that hosts the employer's company logo.
-     * 
      */
     public Output<String> getImageUri() {
         return this.imageUri;
     }
     /**
      * Optional. A list of keys of filterable Job.custom_attributes, whose corresponding `string_values` are used in keyword search. Jobs with `string_values` under these specified field keys are returned if any of the values matches the search keyword. Custom field values with parenthesis, brackets and special symbols won't be properly searchable, and those keyword queries need to be surrounded by quotes.
-     * 
      */
     @Export(name="keywordSearchableJobCustomAttributes", type=List.class, parameters={String.class})
     private Output<List<String>> keywordSearchableJobCustomAttributes;
 
     /**
      * @return Optional. A list of keys of filterable Job.custom_attributes, whose corresponding `string_values` are used in keyword search. Jobs with `string_values` under these specified field keys are returned if any of the values matches the search keyword. Custom field values with parenthesis, brackets and special symbols won't be properly searchable, and those keyword queries need to be surrounded by quotes.
-     * 
      */
     public Output<List<String>> getKeywordSearchableJobCustomAttributes() {
         return this.keywordSearchableJobCustomAttributes;
     }
     /**
      * Required during company update. The resource name for a company. This is generated by the service when a company is created. The format is "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-project/companies/foo".
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Required during company update. The resource name for a company. This is generated by the service when a company is created. The format is "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-project/companies/foo".
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Optional. The employer's company size.
-     * 
      */
     @Export(name="size", type=String.class, parameters={})
     private Output<String> size;
 
     /**
      * @return Optional. The employer's company size.
-     * 
      */
     public Output<String> getSize() {
         return this.size;
     }
     /**
      * Indicates whether a company is flagged to be suspended from public availability by the service when job content appears suspicious, abusive, or spammy.
-     * 
      */
     @Export(name="suspended", type=Boolean.class, parameters={})
     private Output<Boolean> suspended;
 
     /**
      * @return Indicates whether a company is flagged to be suspended from public availability by the service when job content appears suspicious, abusive, or spammy.
-     * 
      */
     public Output<Boolean> getSuspended() {
         return this.suspended;
     }
     /**
      * Optional. The URI representing the company's primary web site or home page, for example, "https://www.google.com". The maximum number of allowed characters is 255.
-     * 
      */
     @Export(name="websiteUri", type=String.class, parameters={})
     private Output<String> websiteUri;
 
     /**
      * @return Optional. The URI representing the company's primary web site or home page, for example, "https://www.google.com". The maximum number of allowed characters is 255.
-     * 
      */
     public Output<String> getWebsiteUri() {
         return this.websiteUri;

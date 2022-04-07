@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents intent parameters.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends io.pu
 
     /**
      * Optional. The default value to use when the `value` yields an empty result. Default values can be extracted from contexts by using the following syntax: `#context_name.parameter_name`.
-     * 
      */
     @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
@@ -33,7 +31,6 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends io.pu
 
     /**
      * The name of the parameter.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -44,7 +41,6 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends io.pu
 
     /**
      * Optional. The name of the entity type, prefixed with `@`, that describes values of the parameter. If the parameter is required, this must be provided.
-     * 
      */
     @Import(name="entityTypeDisplayName")
       private final @Nullable Output<String> entityTypeDisplayName;
@@ -55,7 +51,6 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends io.pu
 
     /**
      * Optional. Indicates whether the parameter represents a list of values.
-     * 
      */
     @Import(name="isList")
       private final @Nullable Output<Boolean> isList;
@@ -66,7 +61,6 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends io.pu
 
     /**
      * Optional. Indicates whether the parameter is required. That is, whether the intent cannot be completed without collecting the parameter value.
-     * 
      */
     @Import(name="mandatory")
       private final @Nullable Output<Boolean> mandatory;
@@ -77,7 +71,6 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends io.pu
 
     /**
      * The unique identifier of this parameter.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -88,7 +81,6 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends io.pu
 
     /**
      * Optional. The collection of prompts that the agent can present to the user in order to collect a value for the parameter.
-     * 
      */
     @Import(name="prompts")
       private final @Nullable Output<List<String>> prompts;
@@ -99,7 +91,6 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends io.pu
 
     /**
      * Optional. The definition of the parameter value. It can be: - a constant string, - a parameter value defined as `$parameter_name`, - an original parameter value defined as `$parameter_name.original`, - a parameter value from some context defined as `#context_name.parameter_name`.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

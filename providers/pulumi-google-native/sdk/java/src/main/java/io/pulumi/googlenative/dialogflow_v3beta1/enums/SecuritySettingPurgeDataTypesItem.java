@@ -12,12 +12,10 @@ import java.util.StringJoiner;
     public enum SecuritySettingPurgeDataTypesItem {
         /**
          * Unspecified. Do not use.
-         * 
          */
         PurgeDataTypeUnspecified("PURGE_DATA_TYPE_UNSPECIFIED"),
         /**
          * Dialogflow history. This does not include Cloud logging, which is owned by the user - not Dialogflow.
-         * 
          */
         DialogflowHistory("DIALOGFLOW_HISTORY");
 

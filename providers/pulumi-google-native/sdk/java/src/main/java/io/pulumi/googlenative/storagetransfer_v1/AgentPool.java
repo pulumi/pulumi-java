@@ -14,62 +14,53 @@ import javax.annotation.Nullable;
 
 /**
  * Creates an agent pool resource.
- * 
  */
 @ResourceType(type="google-native:storagetransfer/v1:AgentPool")
 public class AgentPool extends io.pulumi.resources.CustomResource {
     /**
      * Specifies the bandwidth limit details. If this field is unspecified, the default value is set as 'No Limit'.
-     * 
      */
     @Export(name="bandwidthLimit", type=BandwidthLimitResponse.class, parameters={})
     private Output<BandwidthLimitResponse> bandwidthLimit;
 
     /**
      * @return Specifies the bandwidth limit details. If this field is unspecified, the default value is set as 'No Limit'.
-     * 
      */
     public Output<BandwidthLimitResponse> getBandwidthLimit() {
         return this.bandwidthLimit;
     }
     /**
      * Specifies the client-specified AgentPool description.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return Specifies the client-specified AgentPool description.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Specifies a unique string that identifies the agent pool. Format: `projects/{project_id}/agentPools/{agent_pool_id}`
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Specifies a unique string that identifies the agent pool. Format: `projects/{project_id}/agentPools/{agent_pool_id}`
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Specifies the state of the AgentPool.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return Specifies the state of the AgentPool.
-     * 
      */
     public Output<String> getState() {
         return this.state;

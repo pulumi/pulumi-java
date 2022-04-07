@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Represents a CIDR range which can be used to assign addresses.
- * 
  */
 public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends i
 
     /**
      * The IP address range of the public delegated prefix
-     * 
      */
     @Import(name="ipRange", required=true)
       private final String ipRange;
@@ -29,7 +27,6 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends i
 
     /**
      * The name of the public delegated prefix
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -40,7 +37,6 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends i
 
     /**
      * The project number of the public delegated prefix
-     * 
      */
     @Import(name="project", required=true)
       private final String project;
@@ -51,7 +47,6 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends i
 
     /**
      * The region of the public delegated prefix if it is regional. If absent, the prefix is global.
-     * 
      */
     @Import(name="region", required=true)
       private final String region;
@@ -62,7 +57,6 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends i
 
     /**
      * The status of the public delegated prefix. Possible values are: INITIALIZING: The public delegated prefix is being initialized and addresses cannot be created yet. ANNOUNCED: The public delegated prefix is active.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

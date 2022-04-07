@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Result of an instance attempt.
- * 
  */
 public final class InstanceAttemptResultArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class InstanceAttemptResultArgs extends io.pulumi.resources.Resourc
 
     /**
      * Optional. The exit code of this attempt. This may be unset if the container was unable to exit cleanly with a code due to some other failure. See status field for possible failure details.
-     * 
      */
     @Import(name="exitCode")
       private final @Nullable Output<Integer> exitCode;
@@ -32,7 +30,6 @@ public final class InstanceAttemptResultArgs extends io.pulumi.resources.Resourc
 
     /**
      * Optional. The status of this attempt. If the status code is OK, then the attempt succeeded.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<GoogleRpcStatusArgs> status;

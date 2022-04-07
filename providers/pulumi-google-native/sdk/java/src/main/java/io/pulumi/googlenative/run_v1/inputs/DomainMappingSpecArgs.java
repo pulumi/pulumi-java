@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The desired state of the Domain Mapping.
- * 
  */
 public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The mode of the certificate.
-     * 
      */
     @Import(name="certificateMode")
       private final @Nullable Output<DomainMappingSpecCertificateMode> certificateMode;
@@ -33,7 +31,6 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * If set, the mapping will override any mapping set before this spec was set. It is recommended that the user leaves this empty to receive an error warning about a potential conflict and only set it once the respective UI has given such a warning.
-     * 
      */
     @Import(name="forceOverride")
       private final @Nullable Output<Boolean> forceOverride;
@@ -44,7 +41,6 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the Knative Route that this DomainMapping applies to. The route must exist.
-     * 
      */
     @Import(name="routeName")
       private final @Nullable Output<String> routeName;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration of a specific billing destination (Currently only support bill against consumer project).
- * 
  */
 public final class BillingDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class BillingDestinationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Names of the metrics to report to this billing destination. Each name must be defined in Service.metrics section.
-     * 
      */
     @Import(name="metrics")
       private final @Nullable Output<List<String>> metrics;
@@ -32,7 +30,6 @@ public final class BillingDestinationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The monitored resource type. The type must be defined in Service.monitored_resources section.
-     * 
      */
     @Import(name="monitoredResource")
       private final @Nullable Output<String> monitoredResource;

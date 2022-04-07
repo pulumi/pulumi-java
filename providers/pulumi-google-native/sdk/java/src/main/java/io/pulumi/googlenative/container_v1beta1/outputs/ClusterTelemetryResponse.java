@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ClusterTelemetryResponse {
     /**
      * Type of the integration.
-     * 
      */
     private final String type;
 
@@ -22,7 +21,6 @@ public final class ClusterTelemetryResponse {
 
     /**
      * Type of the integration.
-     * 
     */
     public String getType() {
         return this.type;

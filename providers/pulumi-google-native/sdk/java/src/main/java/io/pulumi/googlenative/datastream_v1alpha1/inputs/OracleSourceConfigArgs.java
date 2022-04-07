@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Oracle data source configuration
- * 
  */
 public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Oracle objects to include in the stream.
-     * 
      */
     @Import(name="allowlist")
       private final @Nullable Output<OracleRdbmsArgs> allowlist;
@@ -31,7 +29,6 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Oracle objects to exclude from the stream.
-     * 
      */
     @Import(name="rejectlist")
       private final @Nullable Output<OracleRdbmsArgs> rejectlist;

@@ -30,7 +30,6 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Environment configuration for the batch execution.
-     * 
      */
     @Import(name="environmentConfig")
       private final @Nullable Output<EnvironmentConfigArgs> environmentConfig;
@@ -41,7 +40,6 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The labels to associate with this batch. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a batch.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -66,7 +64,6 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. PySpark batch config.
-     * 
      */
     @Import(name="pysparkBatch")
       private final @Nullable Output<PySparkBatchArgs> pysparkBatch;
@@ -84,7 +81,6 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Runtime configuration for the batch execution.
-     * 
      */
     @Import(name="runtimeConfig")
       private final @Nullable Output<RuntimeConfigArgs> runtimeConfig;
@@ -95,7 +91,6 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Spark batch config.
-     * 
      */
     @Import(name="sparkBatch")
       private final @Nullable Output<SparkBatchArgs> sparkBatch;
@@ -106,7 +101,6 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. SparkR batch config.
-     * 
      */
     @Import(name="sparkRBatch")
       private final @Nullable Output<SparkRBatchArgs> sparkRBatch;
@@ -117,7 +111,6 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. SparkSql batch config.
-     * 
      */
     @Import(name="sparkSqlBatch")
       private final @Nullable Output<SparkSqlBatchArgs> sparkSqlBatch;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Deblock preprocessing configuration.
- * 
  */
 public final class DeblockArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DeblockArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Enable deblocker. The default is `false`.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -32,7 +30,6 @@ public final class DeblockArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Set strength of the deblocker. Enter a value between 0 and 1. The higher the value, the stronger the block removal. 0 is no deblocking. The default is 0.
-     * 
      */
     @Import(name="strength")
       private final @Nullable Output<Double> strength;

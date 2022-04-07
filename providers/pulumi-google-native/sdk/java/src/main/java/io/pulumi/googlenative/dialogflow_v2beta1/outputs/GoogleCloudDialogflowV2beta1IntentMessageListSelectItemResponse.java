@@ -13,22 +13,18 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse {
     /**
      * Optional. The main text describing the item.
-     * 
      */
     private final String description;
     /**
      * Optional. The image to display.
-     * 
      */
     private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
     /**
      * Additional information about this option.
-     * 
      */
     private final GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse info;
     /**
      * The title of the list item.
-     * 
      */
     private final String title;
 
@@ -46,28 +42,24 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemRespon
 
     /**
      * Optional. The main text describing the item.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * Optional. The image to display.
-     * 
     */
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getImage() {
         return this.image;
     }
     /**
      * Additional information about this option.
-     * 
     */
     public GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse getInfo() {
         return this.info;
     }
     /**
      * The title of the list item.
-     * 
     */
     public String getTitle() {
         return this.title;

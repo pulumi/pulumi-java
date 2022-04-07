@@ -16,7 +16,6 @@ import java.util.Objects;
 
 /**
  * An action that can be taken as part of installing or updating a recipe.
- * 
  */
 public final class SoftwareRecipeStepResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
 
     /**
      * Extracts an archive into the specified directory.
-     * 
      */
     @Import(name="archiveExtraction", required=true)
       private final SoftwareRecipeStepExtractArchiveResponse archiveExtraction;
@@ -35,7 +33,6 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
 
     /**
      * Installs a deb file via dpkg.
-     * 
      */
     @Import(name="dpkgInstallation", required=true)
       private final SoftwareRecipeStepInstallDpkgResponse dpkgInstallation;
@@ -46,7 +43,6 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
 
     /**
      * Copies a file onto the instance.
-     * 
      */
     @Import(name="fileCopy", required=true)
       private final SoftwareRecipeStepCopyFileResponse fileCopy;
@@ -57,7 +53,6 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
 
     /**
      * Executes an artifact or local file.
-     * 
      */
     @Import(name="fileExec", required=true)
       private final SoftwareRecipeStepExecFileResponse fileExec;
@@ -68,7 +63,6 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
 
     /**
      * Installs an MSI file.
-     * 
      */
     @Import(name="msiInstallation", required=true)
       private final SoftwareRecipeStepInstallMsiResponse msiInstallation;
@@ -79,7 +73,6 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
 
     /**
      * Installs an rpm file via the rpm utility.
-     * 
      */
     @Import(name="rpmInstallation", required=true)
       private final SoftwareRecipeStepInstallRpmResponse rpmInstallation;
@@ -90,7 +83,6 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
 
     /**
      * Runs commands in a shell.
-     * 
      */
     @Import(name="scriptRun", required=true)
       private final SoftwareRecipeStepRunScriptResponse scriptRun;

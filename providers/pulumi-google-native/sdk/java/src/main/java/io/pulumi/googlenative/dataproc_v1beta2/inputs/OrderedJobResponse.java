@@ -21,7 +21,6 @@ import java.util.Objects;
 
 /**
  * A job executed by the workflow.
- * 
  */
 public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -29,7 +28,6 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. Job is a Hadoop job.
-     * 
      */
     @Import(name="hadoopJob", required=true)
       private final HadoopJobResponse hadoopJob;
@@ -40,7 +38,6 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. Job is a Hive job.
-     * 
      */
     @Import(name="hiveJob", required=true)
       private final HiveJobResponse hiveJob;
@@ -51,7 +48,6 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. The labels to associate with this job.Label keys must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}{0,62}Label values must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}\p{N}_-{0,63}No more than 32 labels can be associated with a given job.
-     * 
      */
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
@@ -62,7 +58,6 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. Job is a Pig job.
-     * 
      */
     @Import(name="pigJob", required=true)
       private final PigJobResponse pigJob;
@@ -73,7 +68,6 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.
-     * 
      */
     @Import(name="prerequisiteStepIds", required=true)
       private final List<String> prerequisiteStepIds;
@@ -84,7 +78,6 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. Job is a Presto job.
-     * 
      */
     @Import(name="prestoJob", required=true)
       private final PrestoJobResponse prestoJob;
@@ -95,7 +88,6 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. Job is a PySpark job.
-     * 
      */
     @Import(name="pysparkJob", required=true)
       private final PySparkJobResponse pysparkJob;
@@ -106,7 +98,6 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. Job scheduling configuration.
-     * 
      */
     @Import(name="scheduling", required=true)
       private final JobSchedulingResponse scheduling;
@@ -117,7 +108,6 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. Job is a Spark job.
-     * 
      */
     @Import(name="sparkJob", required=true)
       private final SparkJobResponse sparkJob;
@@ -128,7 +118,6 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. Job is a SparkR job.
-     * 
      */
     @Import(name="sparkRJob", required=true)
       private final SparkRJobResponse sparkRJob;
@@ -139,7 +128,6 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. Job is a SparkSql job.
-     * 
      */
     @Import(name="sparkSqlJob", required=true)
       private final SparkSqlJobResponse sparkSqlJob;
@@ -150,7 +138,6 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The step id. The id must be unique among all jobs within the template.The step id is used as prefix for job id, as job goog-dataproc-workflow-step-id label, and in prerequisiteStepIds field from other steps.The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
-     * 
      */
     @Import(name="stepId", required=true)
       private final String stepId;

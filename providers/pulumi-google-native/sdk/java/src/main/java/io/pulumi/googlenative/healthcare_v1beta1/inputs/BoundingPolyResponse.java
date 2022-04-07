@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A bounding polygon for the detected image annotation.
- * 
  */
 public final class BoundingPolyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class BoundingPolyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A description of this polygon.
-     * 
      */
     @Import(name="label", required=true)
       private final String label;
@@ -31,7 +29,6 @@ public final class BoundingPolyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of the vertices of this polygon.
-     * 
      */
     @Import(name="vertices", required=true)
       private final List<VertexResponse> vertices;

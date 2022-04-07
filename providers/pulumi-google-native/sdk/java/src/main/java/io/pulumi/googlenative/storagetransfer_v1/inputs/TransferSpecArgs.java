@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for running a transfer.
- * 
  */
 public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An AWS S3 data source.
-     * 
      */
     @Import(name="awsS3DataSource")
       private final @Nullable Output<AwsS3DataArgs> awsS3DataSource;
@@ -39,7 +37,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An Azure Blob Storage data source.
-     * 
      */
     @Import(name="azureBlobStorageDataSource")
       private final @Nullable Output<AzureBlobStorageDataArgs> azureBlobStorageDataSource;
@@ -50,7 +47,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A Cloud Storage data sink.
-     * 
      */
     @Import(name="gcsDataSink")
       private final @Nullable Output<GcsDataArgs> gcsDataSink;
@@ -61,7 +57,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A Cloud Storage data source.
-     * 
      */
     @Import(name="gcsDataSource")
       private final @Nullable Output<GcsDataArgs> gcsDataSource;
@@ -72,7 +67,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Cloud Storage intermediate data location.
-     * 
      */
     @Import(name="gcsIntermediateDataLocation")
       private final @Nullable Output<GcsDataArgs> gcsIntermediateDataLocation;
@@ -83,7 +77,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An HTTP URL data source.
-     * 
      */
     @Import(name="httpDataSource")
       private final @Nullable Output<HttpDataArgs> httpDataSource;
@@ -94,7 +87,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' "last modification time" do not exclude objects in a data sink.
-     * 
      */
     @Import(name="objectConditions")
       private final @Nullable Output<ObjectConditionsArgs> objectConditions;
@@ -105,7 +97,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A POSIX Filesystem data sink.
-     * 
      */
     @Import(name="posixDataSink")
       private final @Nullable Output<PosixFilesystemArgs> posixDataSink;
@@ -116,7 +107,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A POSIX Filesystem data source.
-     * 
      */
     @Import(name="posixDataSource")
       private final @Nullable Output<PosixFilesystemArgs> posixDataSource;
@@ -127,7 +117,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the agent pool name associated with the posix data sink. When unspecified, the default name is used.
-     * 
      */
     @Import(name="sinkAgentPoolName")
       private final @Nullable Output<String> sinkAgentPoolName;
@@ -138,7 +127,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used.
-     * 
      */
     @Import(name="sourceAgentPoolName")
       private final @Nullable Output<String> sourceAgentPoolName;
@@ -149,7 +137,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A manifest file provides a list of objects to be transferred from the data source. This field points to the location of the manifest file. Otherwise, the entire source bucket is used. ObjectConditions still apply.
-     * 
      */
     @Import(name="transferManifest")
       private final @Nullable Output<TransferManifestArgs> transferManifest;
@@ -160,7 +147,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as 'last modification time' are specified, the request fails with an INVALID_ARGUMENT error.
-     * 
      */
     @Import(name="transferOptions")
       private final @Nullable Output<TransferOptionsArgs> transferOptions;

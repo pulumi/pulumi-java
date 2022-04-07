@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A filter to target VM instances for patching. The targeted VMs must meet all criteria specified. So if both labels and zones are specified, the patch job targets only VMs with those labels and in those zones.
- * 
  */
 public final class PatchInstanceFilterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class PatchInstanceFilterArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Target all VM instances in the project. If true, no other criteria is permitted.
-     * 
      */
     @Import(name="all")
       private final @Nullable Output<Boolean> all;
@@ -34,7 +32,6 @@ public final class PatchInstanceFilterArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Targets VM instances matching at least one of these label sets. This allows targeting of disparate groups, for example "env=prod or env=staging".
-     * 
      */
     @Import(name="groupLabels")
       private final @Nullable Output<List<PatchInstanceFilterGroupLabelArgs>> groupLabels;
@@ -45,7 +42,6 @@ public final class PatchInstanceFilterArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix="prod-".
-     * 
      */
     @Import(name="instanceNamePrefixes")
       private final @Nullable Output<List<String>> instanceNamePrefixes;
@@ -56,7 +52,6 @@ public final class PatchInstanceFilterArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Targets any of the VM instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`, `projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`, or `https://www.googleapis.com/compute/v1/projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`
-     * 
      */
     @Import(name="instances")
       private final @Nullable Output<List<String>> instances;
@@ -67,7 +62,6 @@ public final class PatchInstanceFilterArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
-     * 
      */
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;

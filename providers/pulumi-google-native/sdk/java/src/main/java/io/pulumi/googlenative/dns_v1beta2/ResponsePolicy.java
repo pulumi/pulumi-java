@@ -17,34 +17,29 @@ import javax.annotation.Nullable;
 /**
  * Creates a new Response Policy
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:dns/v1beta2:ResponsePolicy")
 public class ResponsePolicy extends io.pulumi.resources.CustomResource {
     /**
      * User-provided description for this Response Policy.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return User-provided description for this Response Policy.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The list of Google Kubernetes Engine clusters to which this response policy is applied.
-     * 
      */
     @Export(name="gkeClusters", type=List.class, parameters={ResponsePolicyGKEClusterResponse.class})
     private Output<List<ResponsePolicyGKEClusterResponse>> gkeClusters;
 
     /**
      * @return The list of Google Kubernetes Engine clusters to which this response policy is applied.
-     * 
      */
     public Output<List<ResponsePolicyGKEClusterResponse>> getGkeClusters() {
         return this.gkeClusters;
@@ -57,28 +52,24 @@ public class ResponsePolicy extends io.pulumi.resources.CustomResource {
     }
     /**
      * List of network names specifying networks to which this policy is applied.
-     * 
      */
     @Export(name="networks", type=List.class, parameters={ResponsePolicyNetworkResponse.class})
     private Output<List<ResponsePolicyNetworkResponse>> networks;
 
     /**
      * @return List of network names specifying networks to which this policy is applied.
-     * 
      */
     public Output<List<ResponsePolicyNetworkResponse>> getNetworks() {
         return this.networks;
     }
     /**
      * User assigned name for this Response Policy.
-     * 
      */
     @Export(name="responsePolicyName", type=String.class, parameters={})
     private Output<String> responsePolicyName;
 
     /**
      * @return User assigned name for this Response Policy.
-     * 
      */
     public Output<String> getResponsePolicyName() {
         return this.responsePolicyName;

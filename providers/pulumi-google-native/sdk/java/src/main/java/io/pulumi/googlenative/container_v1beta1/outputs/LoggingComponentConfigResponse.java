@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class LoggingComponentConfigResponse {
     /**
      * Select components to collect logs. An empty set would disable all logging.
-     * 
      */
     private final List<String> enableComponents;
 
@@ -23,7 +22,6 @@ public final class LoggingComponentConfigResponse {
 
     /**
      * Select components to collect logs. An empty set would disable all logging.
-     * 
     */
     public List<String> getEnableComponents() {
         return this.enableComponents;

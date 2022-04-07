@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Defines an object for the byproducts field in in-toto links. The suggested fields are "stderr", "stdout", and "return-value".
- * 
  */
 public final class ByProductsResponse extends io.pulumi.resources.InvokeArgs {
 

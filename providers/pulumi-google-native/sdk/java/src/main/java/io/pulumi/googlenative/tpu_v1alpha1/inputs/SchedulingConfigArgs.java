@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Sets the scheduling options for this node.
- * 
  */
 public final class SchedulingConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SchedulingConfigArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Defines whether the node is preemptible.
-     * 
      */
     @Import(name="preemptible")
       private final @Nullable Output<Boolean> preemptible;
@@ -31,7 +29,6 @@ public final class SchedulingConfigArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Whether the node is created under a reservation.
-     * 
      */
     @Import(name="reserved")
       private final @Nullable Output<Boolean> reserved;

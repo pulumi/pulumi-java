@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * Backfill strategy to disable automatic backfill for the Stream's objects.
- * 
  */
 public final class BackfillNoneStrategyResponse extends io.pulumi.resources.InvokeArgs {
 

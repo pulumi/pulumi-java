@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A replication policy that replicates the Secret payload into the locations specified in Secret.replication.user_managed.replicas
- * 
  */
 public final class UserManagedResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class UserManagedResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The list of Replicas for this Secret. Cannot be empty.
-     * 
      */
     @Import(name="replicas", required=true)
       private final List<ReplicaResponse> replicas;

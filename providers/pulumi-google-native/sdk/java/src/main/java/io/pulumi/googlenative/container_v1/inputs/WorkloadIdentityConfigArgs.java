@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.
- * 
  */
 public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
 
     /**
      * The workload pool to attach all Kubernetes service accounts to.
-     * 
      */
     @Import(name="workloadPool")
       private final @Nullable Output<String> workloadPool;

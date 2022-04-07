@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * SlsaBuilder encapsulates the identity of the builder of this provenance.
- * 
  */
 public final class SlsaBuilderResponse extends io.pulumi.resources.InvokeArgs {
 

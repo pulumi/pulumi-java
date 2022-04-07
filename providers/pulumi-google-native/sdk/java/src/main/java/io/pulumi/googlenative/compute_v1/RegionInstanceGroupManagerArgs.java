@@ -24,7 +24,6 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
 
     /**
      * The autohealing policy for this managed instance group. You can specify only one value.
-     * 
      */
     @Import(name="autoHealingPolicies")
       private final @Nullable Output<List<InstanceGroupManagerAutoHealingPolicyArgs>> autoHealingPolicies;
@@ -35,7 +34,6 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
 
     /**
      * The base instance name to use for instances in this group. The value must be 1-58 characters long. Instances are named by appending a hyphen and a random four-character string to the base instance name. The base instance name must comply with RFC1035.
-     * 
      */
     @Import(name="baseInstanceName")
       private final @Nullable Output<String> baseInstanceName;
@@ -46,7 +44,6 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
 
     /**
      * An optional description of this resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -57,7 +54,6 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
 
     /**
      * Policy specifying the intended distribution of managed instances across zones in a regional managed instance group.
-     * 
      */
     @Import(name="distributionPolicy")
       private final @Nullable Output<DistributionPolicyArgs> distributionPolicy;
@@ -68,7 +64,6 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
 
     /**
      * The URL of the instance template that is specified for this managed instance group. The group uses this template to create all new instances in the managed instance group. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE.
-     * 
      */
     @Import(name="instanceTemplate")
       private final @Nullable Output<String> instanceTemplate;
@@ -79,7 +74,6 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
 
     /**
      * The name of the managed instance group. The name must be 1-63 characters long, and comply with RFC1035.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -90,7 +84,6 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
 
     /**
      * Named ports configured for the Instance Groups complementary to this Instance Group Manager.
-     * 
      */
     @Import(name="namedPorts")
       private final @Nullable Output<List<NamedPortArgs>> namedPorts;
@@ -122,7 +115,6 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
 
     /**
      * Stateful configuration for this Instanced Group Manager
-     * 
      */
     @Import(name="statefulPolicy")
       private final @Nullable Output<StatefulPolicyArgs> statefulPolicy;
@@ -133,7 +125,6 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
 
     /**
      * The URLs for all TargetPool resources to which instances in the instanceGroup field are added. The target pools automatically apply to all of the instances in the managed instance group.
-     * 
      */
     @Import(name="targetPools")
       private final @Nullable Output<List<String>> targetPools;
@@ -144,7 +135,6 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
 
     /**
      * The target number of running instances for this managed instance group. You can reduce this number by using the instanceGroupManager deleteInstances or abandonInstances methods. Resizing the group also changes this number.
-     * 
      */
     @Import(name="targetSize")
       private final @Nullable Output<Integer> targetSize;
@@ -155,7 +145,6 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
 
     /**
      * The update policy for this managed instance group.
-     * 
      */
     @Import(name="updatePolicy")
       private final @Nullable Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy;
@@ -166,7 +155,6 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
 
     /**
      * Specifies the instance templates used by this managed instance group to create instances. Each version is defined by an instanceTemplate and a name. Every version can appear at most once per instance group. This field overrides the top-level instanceTemplate field. Read more about the relationships between these fields. Exactly one version must leave the targetSize field unset. That version will be applied to all remaining instances. For more information, read about canary updates.
-     * 
      */
     @Import(name="versions")
       private final @Nullable Output<List<InstanceGroupManagerVersionArgs>> versions;

@@ -13,27 +13,22 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse {
     /**
      * Optional. Description of the carousel item. Maximum of four lines of text.
-     * 
      */
     private final String description;
     /**
      * Optional. Text that appears at the bottom of the Browse Carousel Card. Maximum of one line of text.
-     * 
      */
     private final String footer;
     /**
      * Optional. Hero image for the carousel item.
-     * 
      */
     private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
     /**
      * Action to present to the user.
-     * 
      */
     private final GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction;
     /**
      * Title of the carousel item. Maximum of two lines of text.
-     * 
      */
     private final String title;
 
@@ -53,35 +48,30 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
 
     /**
      * Optional. Description of the carousel item. Maximum of four lines of text.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * Optional. Text that appears at the bottom of the Browse Carousel Card. Maximum of one line of text.
-     * 
     */
     public String getFooter() {
         return this.footer;
     }
     /**
      * Optional. Hero image for the carousel item.
-     * 
     */
     public GoogleCloudDialogflowV2IntentMessageImageResponse getImage() {
         return this.image;
     }
     /**
      * Action to present to the user.
-     * 
     */
     public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse getOpenUriAction() {
         return this.openUriAction;
     }
     /**
      * Title of the carousel item. Maximum of two lines of text.
-     * 
     */
     public String getTitle() {
         return this.title;

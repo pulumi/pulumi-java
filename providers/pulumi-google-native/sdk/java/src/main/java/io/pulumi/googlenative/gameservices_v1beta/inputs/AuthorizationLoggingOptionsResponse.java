@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Authorization-related information used by Cloud Audit Logging.
- * 
  */
 public final class AuthorizationLoggingOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AuthorizationLoggingOptionsResponse extends io.pulumi.resourc
 
     /**
      * The type of the permission that was checked.
-     * 
      */
     @Import(name="permissionType", required=true)
       private final String permissionType;

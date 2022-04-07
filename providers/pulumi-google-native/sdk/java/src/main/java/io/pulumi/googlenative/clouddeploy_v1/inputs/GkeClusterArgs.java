@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information specifying a GKE Cluster.
- * 
  */
 public final class GkeClusterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GkeClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
-     * 
      */
     @Import(name="cluster")
       private final @Nullable Output<String> cluster;

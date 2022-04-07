@@ -16,7 +16,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. User-provided description of the annotation specification set. The description can be up to 10000 characters long.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -27,7 +26,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The display name of the dataset. Maximum of 64 characters.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -38,7 +36,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Last time that the Dataset is migrated to AI Platform V2. If any of the AnnotatedDataset is migrated, the last_migration_time in Dataset is also updated.
-     * 
      */
     @Import(name="lastMigrateTime")
       private final @Nullable Output<String> lastMigrateTime;

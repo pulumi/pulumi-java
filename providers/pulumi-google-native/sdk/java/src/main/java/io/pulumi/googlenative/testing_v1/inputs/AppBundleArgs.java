@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * An Android App Bundle file format, containing a BundleConfig.pb file, a base module directory, zero or more dynamic feature module directories. See https://developer.android.com/guide/app-bundle/build for guidance on building App Bundles.
- * 
  */
 public final class AppBundleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AppBundleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * .aab file representing the app bundle under test.
-     * 
      */
     @Import(name="bundleLocation")
       private final @Nullable Output<FileReferenceArgs> bundleLocation;

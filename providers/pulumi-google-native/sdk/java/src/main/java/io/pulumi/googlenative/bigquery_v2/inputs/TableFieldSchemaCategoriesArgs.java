@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * [Optional] The categories attached to this field, used for field-level access control.
- * 
  */
 public final class TableFieldSchemaCategoriesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class TableFieldSchemaCategoriesArgs extends io.pulumi.resources.Re
 
     /**
      * A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.
-     * 
      */
     @Import(name="names")
       private final @Nullable Output<List<String>> names;

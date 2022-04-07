@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The configuration of the HTTP bridge for a device registry.
- * 
  */
 public final class HttpConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class HttpConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.
-     * 
      */
     @Import(name="httpEnabledState", required=true)
       private final String httpEnabledState;

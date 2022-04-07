@@ -10,43 +10,35 @@ import java.util.StringJoiner;
 
     /**
      * Required. The allowed OS type.
-     * 
      */
     @EnumType
     public enum OsConstraintOsType {
         /**
          * The operating system of the device is not specified or not known.
-         * 
          */
         OsUnspecified("OS_UNSPECIFIED"),
         /**
          * A desktop Mac operating system.
-         * 
          */
         DesktopMac("DESKTOP_MAC"),
         /**
          * A desktop Windows operating system.
-         * 
          */
         DesktopWindows("DESKTOP_WINDOWS"),
         /**
          * A desktop Linux operating system.
-         * 
          */
         DesktopLinux("DESKTOP_LINUX"),
         /**
          * A desktop ChromeOS operating system.
-         * 
          */
         DesktopChromeOs("DESKTOP_CHROME_OS"),
         /**
          * An Android operating system.
-         * 
          */
         Android("ANDROID"),
         /**
          * An iOS operating system.
-         * 
          */
         Ios("IOS");
 

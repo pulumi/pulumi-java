@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class PickTimeSeriesFilterResponse {
     /**
      * How to use the ranking to select time series that pass through the filter.
-     * 
      */
     private final String direction;
     /**
      * How many time series to allow to pass through the filter.
-     * 
      */
     private final Integer numTimeSeries;
     /**
      * ranking_method is applied to each time series independently to produce the value which will be used to compare the time series to other time series.
-     * 
      */
     private final String rankingMethod;
 
@@ -38,21 +35,18 @@ public final class PickTimeSeriesFilterResponse {
 
     /**
      * How to use the ranking to select time series that pass through the filter.
-     * 
     */
     public String getDirection() {
         return this.direction;
     }
     /**
      * How many time series to allow to pass through the filter.
-     * 
     */
     public Integer getNumTimeSeries() {
         return this.numTimeSeries;
     }
     /**
      * ranking_method is applied to each time series independently to produce the value which will be used to compare the time series to other time series.
-     * 
     */
     public String getRankingMethod() {
         return this.rankingMethod;

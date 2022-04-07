@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Opens the given URI.
- * 
  */
 public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriAct
 
     /**
      * The HTTP or HTTPS scheme URI.
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;

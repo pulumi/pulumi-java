@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The bucket's logging configuration, which defines the destination bucket and optional name prefix for the current bucket's logs.
- * 
  */
 public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The destination bucket where the current bucket's logs should be placed.
-     * 
      */
     @Import(name="logBucket")
       private final @Nullable Output<String> logBucket;
@@ -31,7 +29,6 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A prefix for log object names.
-     * 
      */
     @Import(name="logObjectPrefix")
       private final @Nullable Output<String> logObjectPrefix;

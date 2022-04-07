@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Rich Business Messaging (RBM) text response with suggestions.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs extends 
 
     /**
      * Optional. One or more suggestions to show to the user.
-     * 
      */
     @Import(name="rbmSuggestion")
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion;
@@ -33,7 +31,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs extends 
 
     /**
      * Text sent and displayed to the user.
-     * 
      */
     @Import(name="text", required=true)
       private final Output<String> text;

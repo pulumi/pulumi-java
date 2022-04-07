@@ -16,7 +16,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ID of the project that produces and owns this service.
-     * 
      */
     @Import(name="producerProjectId")
       private final @Nullable Output<String> producerProjectId;
@@ -27,7 +26,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the service. See the [overview](/service-management/overview) for naming requirements.
-     * 
      */
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;

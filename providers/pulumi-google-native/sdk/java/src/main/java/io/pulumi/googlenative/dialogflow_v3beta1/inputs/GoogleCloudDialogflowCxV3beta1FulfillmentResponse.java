@@ -15,7 +15,6 @@ import java.util.Objects;
 
 /**
  * A fulfillment can do one or more of the following actions at the same time: * Generate rich message responses. * Set parameter values. * Call the webhook. Fulfillments can be called at various stages in the Page or Form lifecycle. For example, when a DetectIntentRequest drives a session to enter a new page, the page's entry fulfillment can add a static response to the QueryResult in the returning DetectIntentResponse, call the webhook (for example, to load user data from a database), or both.
- * 
  */
 public final class GoogleCloudDialogflowCxV3beta1FulfillmentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentResponse extends io.
 
     /**
      * Conditional cases for this fulfillment.
-     * 
      */
     @Import(name="conditionalCases", required=true)
       private final List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse> conditionalCases;
@@ -34,7 +32,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentResponse extends io.
 
     /**
      * The list of rich message responses to present to the user.
-     * 
      */
     @Import(name="messages", required=true)
       private final List<GoogleCloudDialogflowCxV3beta1ResponseMessageResponse> messages;
@@ -45,7 +42,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentResponse extends io.
 
     /**
      * Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
-     * 
      */
     @Import(name="returnPartialResponses", required=true)
       private final Boolean returnPartialResponses;
@@ -56,7 +52,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentResponse extends io.
 
     /**
      * Set parameter values before executing the webhook.
-     * 
      */
     @Import(name="setParameterActions", required=true)
       private final List<GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionResponse> setParameterActions;
@@ -67,7 +62,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentResponse extends io.
 
     /**
      * The tag used by the webhook to identify which fulfillment is being called. This field is required if `webhook` is specified.
-     * 
      */
     @Import(name="tag", required=true)
       private final String tag;
@@ -78,7 +72,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentResponse extends io.
 
     /**
      * The webhook to call. Format: `projects//locations//agents//webhooks/`.
-     * 
      */
     @Import(name="webhook", required=true)
       private final String webhook;

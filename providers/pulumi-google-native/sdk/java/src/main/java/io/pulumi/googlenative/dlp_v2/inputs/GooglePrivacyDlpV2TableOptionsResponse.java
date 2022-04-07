@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Instructions regarding the table content being inspected.
- * 
  */
 public final class GooglePrivacyDlpV2TableOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GooglePrivacyDlpV2TableOptionsResponse extends io.pulumi.reso
 
     /**
      * The columns that are the primary keys for table objects included in ContentItem. A copy of this cell's value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided.
-     * 
      */
     @Import(name="identifyingFields", required=true)
       private final List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A bounding polygon for the detected image annotation.
- * 
  */
 public final class BoundingPolyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class BoundingPolyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The bounding polygon normalized vertices.
-     * 
      */
     @Import(name="normalizedVertices", required=true)
       private final List<NormalizedVertexResponse> normalizedVertices;
@@ -31,7 +29,6 @@ public final class BoundingPolyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The bounding polygon vertices.
-     * 
      */
     @Import(name="vertices", required=true)
       private final List<VertexResponse> vertices;

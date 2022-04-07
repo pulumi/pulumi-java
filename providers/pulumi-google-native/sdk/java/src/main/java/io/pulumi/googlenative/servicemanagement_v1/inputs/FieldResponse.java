@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * A single field of a message type.
- * 
  */
 public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The field cardinality.
-     * 
      */
     @Import(name="cardinality", required=true)
       private final String cardinality;
@@ -33,7 +31,6 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The string value of the default value of this field. Proto2 syntax only.
-     * 
      */
     @Import(name="defaultValue", required=true)
       private final String defaultValue;
@@ -44,7 +41,6 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The field JSON name.
-     * 
      */
     @Import(name="jsonName", required=true)
       private final String jsonName;
@@ -55,7 +51,6 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The field type.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -66,7 +61,6 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The field name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -77,7 +71,6 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The field number.
-     * 
      */
     @Import(name="number", required=true)
       private final Integer number;
@@ -88,7 +81,6 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The index of the field type in `Type.oneofs`, for message or enumeration types. The first type has index 1; zero means the type is not in the list.
-     * 
      */
     @Import(name="oneofIndex", required=true)
       private final Integer oneofIndex;
@@ -99,7 +91,6 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The protocol buffer options.
-     * 
      */
     @Import(name="options", required=true)
       private final List<OptionResponse> options;
@@ -110,7 +101,6 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether to use alternative packed wire representation.
-     * 
      */
     @Import(name="packed", required=true)
       private final Boolean packed;
@@ -121,7 +111,6 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The field type URL, without the scheme, for message or enumeration types. Example: `"type.googleapis.com/google.protobuf.Timestamp"`.
-     * 
      */
     @Import(name="typeUrl", required=true)
       private final String typeUrl;

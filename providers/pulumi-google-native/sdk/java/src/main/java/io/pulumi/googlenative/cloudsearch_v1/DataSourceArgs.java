@@ -19,7 +19,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If true, sets the datasource to read-only mode. In read-only mode, the Indexing API rejects any requests to index or delete items in this source. Enabling read-only mode does not stop the processing of previously accepted data.
-     * 
      */
     @Import(name="disableModifications")
       private final @Nullable Output<Boolean> disableModifications;
@@ -30,7 +29,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Disable serving any search or assist results.
-     * 
      */
     @Import(name="disableServing")
       private final @Nullable Output<Boolean> disableServing;
@@ -41,7 +39,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Display name of the datasource The maximum length is 300 characters.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -52,7 +49,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of service accounts that have indexing access.
-     * 
      */
     @Import(name="indexingServiceAccounts")
       private final @Nullable Output<List<String>> indexingServiceAccounts;
@@ -63,7 +59,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This field restricts visibility to items at the datasource level. Items within the datasource are restricted to the union of users and groups included in this field. Note that, this does not ensure access to a specific item, as users need to have ACL permissions on the contained items. This ensures a high level access on the entire datasource, and that the individual items are not shared outside this visibility.
-     * 
      */
     @Import(name="itemsVisibility")
       private final @Nullable Output<List<GSuitePrincipalArgs>> itemsVisibility;
@@ -74,7 +69,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when creating a datasource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -85,7 +79,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IDs of the Long Running Operations (LROs) currently running for this schema.
-     * 
      */
     @Import(name="operationIds")
       private final @Nullable Output<List<String>> operationIds;
@@ -96,7 +89,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Can a user request to get thumbnail URI for Items indexed in this data source.
-     * 
      */
     @Import(name="returnThumbnailUrls")
       private final @Nullable Output<Boolean> returnThumbnailUrls;
@@ -107,7 +99,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A short name or alias for the source. This value will be used to match the 'source' operator. For example, if the short name is *<value>* then queries like *source:<value>* will only return results for this source. The value must be unique across all datasources. The value must only contain alphanumeric characters (a-zA-Z0-9). The value cannot start with 'google' and cannot be one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep, people, teams. Its maximum length is 32 characters.
-     * 
      */
     @Import(name="shortName")
       private final @Nullable Output<String> shortName;

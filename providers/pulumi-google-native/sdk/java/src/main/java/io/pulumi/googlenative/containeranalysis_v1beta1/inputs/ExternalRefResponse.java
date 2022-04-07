@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package
- * 
  */
 public final class ExternalRefResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ExternalRefResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package
-     * 
      */
     @Import(name="category", required=true)
       private final String category;
@@ -29,7 +27,6 @@ public final class ExternalRefResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Human-readable information about the purpose and target of the reference
-     * 
      */
     @Import(name="comment", required=true)
       private final String comment;
@@ -40,7 +37,6 @@ public final class ExternalRefResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The unique string with no spaces necessary to access the package-specific information, metadata, or content within the target location
-     * 
      */
     @Import(name="locator", required=true)
       private final String locator;
@@ -51,7 +47,6 @@ public final class ExternalRefResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Type of category (e.g. 'npm' for the PACKAGE_MANAGER category)
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

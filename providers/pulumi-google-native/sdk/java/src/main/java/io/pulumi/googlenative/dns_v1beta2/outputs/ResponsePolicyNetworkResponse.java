@@ -12,7 +12,6 @@ public final class ResponsePolicyNetworkResponse {
     private final String kind;
     /**
      * The fully qualified URL of the VPC network to bind to. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
-     * 
      */
     private final String networkUrl;
 
@@ -29,7 +28,6 @@ public final class ResponsePolicyNetworkResponse {
     }
     /**
      * The fully qualified URL of the VPC network to bind to. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
-     * 
     */
     public String getNetworkUrl() {
         return this.networkUrl;

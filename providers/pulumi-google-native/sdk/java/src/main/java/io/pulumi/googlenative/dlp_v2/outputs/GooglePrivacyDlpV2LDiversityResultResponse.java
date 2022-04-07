@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2LDiversityResultResponse {
     /**
      * Histogram of l-diversity equivalence class sensitive value frequencies.
-     * 
      */
     private final List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> sensitiveValueFrequencyHistogramBuckets;
 
@@ -23,7 +22,6 @@ public final class GooglePrivacyDlpV2LDiversityResultResponse {
 
     /**
      * Histogram of l-diversity equivalence class sensitive value frequencies.
-     * 
     */
     public List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> getSensitiveValueFrequencyHistogramBuckets() {
         return this.sensitiveValueFrequencyHistogramBuckets;

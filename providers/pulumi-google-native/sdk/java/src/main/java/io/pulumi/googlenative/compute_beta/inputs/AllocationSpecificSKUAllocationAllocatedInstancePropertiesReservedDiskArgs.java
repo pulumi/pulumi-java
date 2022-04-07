@@ -17,7 +17,6 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
 
     /**
      * Specifies the size of the disk in base-2 GB.
-     * 
      */
     @Import(name="diskSizeGb")
       private final @Nullable Output<String> diskSizeGb;
@@ -28,7 +27,6 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
 
     /**
      * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
-     * 
      */
     @Import(name="interface")
       private final @Nullable Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> interface_;

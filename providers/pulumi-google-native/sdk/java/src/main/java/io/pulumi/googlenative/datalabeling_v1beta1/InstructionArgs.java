@@ -18,7 +18,6 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The data type of this instruction.
-     * 
      */
     @Import(name="dataType", required=true)
       private final Output<InstructionDataType> dataType;
@@ -29,7 +28,6 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. User-provided description of the instruction. The description can be up to 10000 characters long.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -40,7 +38,6 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The display name of the instruction. Maximum of 64 characters.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -51,7 +48,6 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Instruction from a PDF document. The PDF should be in a Cloud Storage bucket.
-     * 
      */
     @Import(name="pdfInstruction")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1PdfInstructionArgs> pdfInstruction;

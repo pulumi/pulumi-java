@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Defines the criteria for selecting VM Instances by OS type.
- * 
  */
 public final class AssignmentOsTypeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AssignmentOsTypeResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Targets VM instances with OS Inventory enabled and having the following OS architecture.
-     * 
      */
     @Import(name="osArchitecture", required=true)
       private final String osArchitecture;
@@ -29,7 +27,6 @@ public final class AssignmentOsTypeResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".
-     * 
      */
     @Import(name="osShortName", required=true)
       private final String osShortName;
@@ -40,7 +37,6 @@ public final class AssignmentOsTypeResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Targets VM instances with OS Inventory enabled and having the following following OS version.
-     * 
      */
     @Import(name="osVersion", required=true)
       private final String osVersion;

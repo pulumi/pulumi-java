@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Groups a time series query definition with charting options.
- * 
  */
 public final class DataSetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class DataSetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label's value.
-     * 
      */
     @Import(name="legendTemplate", required=true)
       private final String legendTemplate;
@@ -30,7 +28,6 @@ public final class DataSetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. The lower bound on data point frequency for this data set, implemented by specifying the minimum alignment period to use in a time series query For example, if the data is published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It would not make sense to fetch and align data at one minute intervals.
-     * 
      */
     @Import(name="minAlignmentPeriod", required=true)
       private final String minAlignmentPeriod;
@@ -41,7 +38,6 @@ public final class DataSetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * How this data should be plotted on the chart.
-     * 
      */
     @Import(name="plotType", required=true)
       private final String plotType;
@@ -52,7 +48,6 @@ public final class DataSetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. The target axis to use for plotting the metric.
-     * 
      */
     @Import(name="targetAxis", required=true)
       private final String targetAxis;
@@ -63,7 +58,6 @@ public final class DataSetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Fields for querying time series data from the Stackdriver metrics API.
-     * 
      */
     @Import(name="timeSeriesQuery", required=true)
       private final TimeSeriesQueryResponse timeSeriesQuery;

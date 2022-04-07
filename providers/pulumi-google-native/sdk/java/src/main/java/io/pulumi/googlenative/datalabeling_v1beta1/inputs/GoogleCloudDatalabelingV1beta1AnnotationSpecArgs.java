@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container of information related to one possible annotation that can be used in a labeling task. For example, an image classification task where images are labeled as `dog` or `cat` must reference an AnnotationSpec for `dog` and an AnnotationSpec for `cat`.
- * 
  */
 public final class GoogleCloudDatalabelingV1beta1AnnotationSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecArgs extends io.p
 
     /**
      * Optional. User-provided description of the annotation specification. The description can be up to 10,000 characters long.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -31,7 +29,6 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecArgs extends io.p
 
     /**
      * The display name of the AnnotationSpec. Maximum of 64 characters.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;

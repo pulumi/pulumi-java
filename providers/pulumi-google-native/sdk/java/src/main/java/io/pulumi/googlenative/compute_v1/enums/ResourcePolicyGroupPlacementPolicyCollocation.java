@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies network collocation
-     * 
      */
     @EnumType
     public enum ResourcePolicyGroupPlacementPolicyCollocation {

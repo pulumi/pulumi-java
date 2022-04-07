@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Start and end times for a build execution phase.
- * 
  */
 public final class TimeSpanResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class TimeSpanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * End of time span.
-     * 
      */
     @Import(name="endTime", required=true)
       private final String endTime;
@@ -29,7 +27,6 @@ public final class TimeSpanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Start of time span.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;

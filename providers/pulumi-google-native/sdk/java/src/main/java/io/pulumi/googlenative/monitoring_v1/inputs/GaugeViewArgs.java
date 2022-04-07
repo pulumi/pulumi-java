@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A gauge chart shows where the current value sits within a pre-defined range. The upper and lower bounds should define the possible range of values for the scorecard's query (inclusive).
- * 
  */
 public final class GaugeViewArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GaugeViewArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The lower bound for this gauge chart. The value of the chart should always be greater than or equal to this.
-     * 
      */
     @Import(name="lowerBound")
       private final @Nullable Output<Double> lowerBound;
@@ -31,7 +29,6 @@ public final class GaugeViewArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The upper bound for this gauge chart. The value of the chart should always be less than or equal to this.
-     * 
      */
     @Import(name="upperBound")
       private final @Nullable Output<Double> upperBound;

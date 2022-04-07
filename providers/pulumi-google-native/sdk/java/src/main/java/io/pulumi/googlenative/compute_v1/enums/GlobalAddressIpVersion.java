@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The IP version that will be used by this address. Valid options are IPV4 or IPV6. This can only be specified for a global address.
-     * 
      */
     @EnumType
     public enum GlobalAddressIpVersion {

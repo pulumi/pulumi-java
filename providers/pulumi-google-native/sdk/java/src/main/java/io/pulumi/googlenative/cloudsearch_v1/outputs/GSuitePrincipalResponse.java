@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class GSuitePrincipalResponse {
     /**
      * This principal represents all users of the G Suite domain of the customer.
-     * 
      */
     private final Boolean gsuiteDomain;
     /**
      * This principal references a G Suite group account
-     * 
      */
     private final String gsuiteGroupEmail;
     /**
      * This principal references a G Suite user account
-     * 
      */
     private final String gsuiteUserEmail;
 
@@ -38,21 +35,18 @@ public final class GSuitePrincipalResponse {
 
     /**
      * This principal represents all users of the G Suite domain of the customer.
-     * 
     */
     public Boolean getGsuiteDomain() {
         return this.gsuiteDomain;
     }
     /**
      * This principal references a G Suite group account
-     * 
     */
     public String getGsuiteGroupEmail() {
         return this.gsuiteGroupEmail;
     }
     /**
      * This principal references a G Suite user account
-     * 
     */
     public String getGsuiteUserEmail() {
         return this.gsuiteUserEmail;

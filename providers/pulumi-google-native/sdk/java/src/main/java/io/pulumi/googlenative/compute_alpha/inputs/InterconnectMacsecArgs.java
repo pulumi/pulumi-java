@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration information for enabling Media Access Control security (Macsec) on this Interconnect between Google and your on-premises router.
- * 
  */
 public final class InterconnectMacsecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class InterconnectMacsecArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * If set to true, the Interconnect will be configured with a should-secure MACsec security policy, that allows the Google router to fallback to cleartext traffic if the MKA session cannot be established. By default, the Interconnect will be configured with a must-secure security policy that drops all traffic if the MKA session cannot be established with your router.
-     * 
      */
     @Import(name="failOpen")
       private final @Nullable Output<Boolean> failOpen;
@@ -33,7 +31,6 @@ public final class InterconnectMacsecArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * A keychain placeholder describing a set of named key objects along with their start times. A MACsec CKN/CAK will be generated for each key in the key chain. Google router will automatically pick the key with the most recent startTime when establishing or re-establishing a MACsec secure link.
-     * 
      */
     @Import(name="preSharedKeys", required=true)
       private final Output<List<InterconnectMacsecPreSharedKeyArgs>> preSharedKeys;

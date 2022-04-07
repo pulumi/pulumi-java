@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Resource representing the Android specific attributes of a Device.
- * 
  */
 public final class GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse ext
 
     /**
      * Whether applications from unknown sources can be installed on device.
-     * 
      */
     @Import(name="enabledUnknownSources", required=true)
       private final Boolean enabledUnknownSources;
@@ -30,7 +28,6 @@ public final class GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse ext
 
     /**
      * Whether this account is on an owner/primary profile. For phones, only true for owner profiles. Android 4+ devices can have secondary or restricted user profiles.
-     * 
      */
     @Import(name="ownerProfileAccount", required=true)
       private final Boolean ownerProfileAccount;
@@ -41,7 +38,6 @@ public final class GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse ext
 
     /**
      * Ownership privileges on device.
-     * 
      */
     @Import(name="ownershipPrivilege", required=true)
       private final String ownershipPrivilege;
@@ -52,7 +48,6 @@ public final class GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse ext
 
     /**
      * Whether device supports Android work profiles. If false, this service will not block access to corp data even if an administrator turns on the "Enforce Work Profile" policy.
-     * 
      */
     @Import(name="supportsWorkProfile", required=true)
       private final Boolean supportsWorkProfile;

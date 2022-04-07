@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A step that runs an executable for a PatchJob.
- * 
  */
 public final class ExecStepResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ExecStepResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ExecStepConfig for all Linux VMs targeted by the PatchJob.
-     * 
      */
     @Import(name="linuxExecStepConfig", required=true)
       private final ExecStepConfigResponse linuxExecStepConfig;
@@ -29,7 +27,6 @@ public final class ExecStepResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ExecStepConfig for all Windows VMs targeted by the PatchJob.
-     * 
      */
     @Import(name="windowsExecStepConfig", required=true)
       private final ExecStepConfigResponse windowsExecStepConfig;

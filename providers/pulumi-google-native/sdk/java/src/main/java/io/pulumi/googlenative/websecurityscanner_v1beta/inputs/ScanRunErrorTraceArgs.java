@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Output only. Defines an error trace message for a ScanRun.
- * 
  */
 public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Indicates the error reason code.
-     * 
      */
     @Import(name="code")
       private final @Nullable Output<ScanRunErrorTraceCode> code;
@@ -33,7 +31,6 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * If the scan encounters TOO_MANY_HTTP_ERRORS, this field indicates the most common HTTP error code, if such is available. For example, if this code is 404, the scan has encountered too many NOT_FOUND responses.
-     * 
      */
     @Import(name="mostCommonHttpErrorCode")
       private final @Nullable Output<Integer> mostCommonHttpErrorCode;
@@ -44,7 +41,6 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * If the scan encounters SCAN_CONFIG_ISSUE error, this field has the error message encountered during scan configuration validation that is performed before each scan run.
-     * 
      */
     @Import(name="scanConfigError")
       private final @Nullable Output<ScanConfigErrorArgs> scanConfigError;

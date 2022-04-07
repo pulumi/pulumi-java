@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A configuration for running Apache Spark SQL (https://spark.apache.org/sql/) queries as a batch workload.
- * 
  */
 public final class SparkSqlBatchResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SparkSqlBatchResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
-     * 
      */
     @Import(name="jarFileUris", required=true)
       private final List<String> jarFileUris;
@@ -31,7 +29,6 @@ public final class SparkSqlBatchResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The HCFS URI of the script that contains Spark SQL queries to execute.
-     * 
      */
     @Import(name="queryFileUri", required=true)
       private final String queryFileUri;
@@ -42,7 +39,6 @@ public final class SparkSqlBatchResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).
-     * 
      */
     @Import(name="queryVariables", required=true)
       private final Map<String,String> queryVariables;

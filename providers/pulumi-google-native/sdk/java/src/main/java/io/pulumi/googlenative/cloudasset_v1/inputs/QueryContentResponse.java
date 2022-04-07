@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The query content.
- * 
  */
 public final class QueryContentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class QueryContentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy rpc or the AssetService.AnalyzeIamPolicyLongrunning rpc.
-     * 
      */
     @Import(name="iamPolicyAnalysisQuery", required=true)
       private final IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery;

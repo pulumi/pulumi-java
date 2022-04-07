@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Oracle schema.
- * 
  */
 public final class OracleSchemaResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class OracleSchemaResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Tables in the schema.
-     * 
      */
     @Import(name="oracleTables", required=true)
       private final List<OracleTableResponse> oracleTables;
@@ -31,7 +29,6 @@ public final class OracleSchemaResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Schema name.
-     * 
      */
     @Import(name="schemaName", required=true)
       private final String schemaName;

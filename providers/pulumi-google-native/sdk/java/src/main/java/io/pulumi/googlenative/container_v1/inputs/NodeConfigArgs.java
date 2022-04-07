@@ -27,7 +27,6 @@ import javax.annotation.Nullable;
 
 /**
  * Parameters that describe the nodes in a cluster.
- * 
  */
 public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -35,7 +34,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of hardware accelerators to be attached to each node. See https://cloud.google.com/compute/docs/gpus for more information about support for GPUs.
-     * 
      */
     @Import(name="accelerators")
       private final @Nullable Output<List<AcceleratorConfigArgs>> accelerators;
@@ -46,7 +44,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Advanced features for the Compute Engine VM.
-     * 
      */
     @Import(name="advancedMachineFeatures")
       private final @Nullable Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures;
@@ -57,7 +54,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      *  The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption
-     * 
      */
     @Import(name="bootDiskKmsKey")
       private final @Nullable Output<String> bootDiskKmsKey;
@@ -68,7 +64,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.
-     * 
      */
     @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
@@ -79,7 +74,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of the disk attached to each node (e.g. 'pd-standard', 'pd-ssd' or 'pd-balanced') If unspecified, the default disk type is 'pd-standard'
-     * 
      */
     @Import(name="diskType")
       private final @Nullable Output<String> diskType;
@@ -90,7 +84,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Google Container File System (image streaming) configs.
-     * 
      */
     @Import(name="gcfsConfig")
       private final @Nullable Output<GcfsConfigArgs> gcfsConfig;
@@ -101,7 +94,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Enable or disable gvnic in the node pool.
-     * 
      */
     @Import(name="gvnic")
       private final @Nullable Output<VirtualNICArgs> gvnic;
@@ -112,7 +104,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The image type to use for this node. Note that for a given image type, the latest version of it will be used.
-     * 
      */
     @Import(name="imageType")
       private final @Nullable Output<String> imageType;
@@ -123,7 +114,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Node kubelet configs.
-     * 
      */
     @Import(name="kubeletConfig")
       private final @Nullable Output<NodeKubeletConfigArgs> kubeletConfig;
@@ -134,7 +124,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The map of Kubernetes labels (key/value pairs) to be applied to each node. These will added in addition to any default label(s) that Kubernetes may apply to the node. In case of conflict in label keys, the applied set may differ depending on the Kubernetes version -- it's best to assume the behavior is undefined and conflicts should be avoided. For more information, including usage and the valid values, see: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -145,7 +134,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Parameters that can be configured on Linux nodes.
-     * 
      */
     @Import(name="linuxNodeConfig")
       private final @Nullable Output<LinuxNodeConfigArgs> linuxNodeConfig;
@@ -156,7 +144,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of local SSD disks to be attached to the node. The limit for this value is dependent upon the maximum number of disks available on a machine per zone. See: https://cloud.google.com/compute/docs/disks/local-ssd for more information.
-     * 
      */
     @Import(name="localSsdCount")
       private final @Nullable Output<Integer> localSsdCount;
@@ -167,7 +154,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of a Google Compute Engine [machine type](https://cloud.google.com/compute/docs/machine-types) If unspecified, the default machine type is `e2-medium`.
-     * 
      */
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
@@ -178,7 +164,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The metadata key/value pairs assigned to instances in the cluster. Keys must conform to the regexp `[a-zA-Z0-9-_]+` and be less than 128 bytes in length. These are reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project or be one of the reserved keys: - "cluster-location" - "cluster-name" - "cluster-uid" - "configure-sh" - "containerd-configure-sh" - "enable-os-login" - "gci-ensure-gke-docker" - "gci-metrics-enabled" - "gci-update-strategy" - "instance-template" - "kube-env" - "startup-script" - "user-data" - "disable-address-manager" - "windows-startup-script-ps1" - "common-psm1" - "k8s-node-setup-psm1" - "install-ssh-psm1" - "user-profile-psm1" Values are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on them is that each value's size must be less than or equal to 32 KB. The total size of all keys and values must be less than 512 KB.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
@@ -189,7 +174,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as `minCpuPlatform: "Intel Haswell"` or `minCpuPlatform: "Intel Sandy Bridge"`. For more information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
-     * 
      */
     @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
@@ -200,7 +184,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Setting this field will assign instances of this pool to run on the specified node group. This is useful for running workloads on [sole tenant nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).
-     * 
      */
     @Import(name="nodeGroup")
       private final @Nullable Output<String> nodeGroup;
@@ -211,7 +194,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The set of Google API scopes to be made available on all of the node VMs under the "default" service account. The following scopes are recommended, but not required, and by default are not included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating with **gcr.io** (the [Google Container Registry](https://cloud.google.com/container-registry/)). If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in which case their required scopes will be added.
-     * 
      */
     @Import(name="oauthScopes")
       private final @Nullable Output<List<String>> oauthScopes;
@@ -222,7 +204,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether the nodes are created as preemptible VM instances. See: https://cloud.google.com/compute/docs/instances/preemptible for more information about preemptible VM instances.
-     * 
      */
     @Import(name="preemptible")
       private final @Nullable Output<Boolean> preemptible;
@@ -233,7 +214,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The optional reservation affinity. Setting this field will apply the specified [Zonal Compute Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this node pool.
-     * 
      */
     @Import(name="reservationAffinity")
       private final @Nullable Output<ReservationAffinityArgs> reservationAffinity;
@@ -244,7 +224,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sandbox configuration for this node.
-     * 
      */
     @Import(name="sandboxConfig")
       private final @Nullable Output<SandboxConfigArgs> sandboxConfig;
@@ -255,7 +234,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Google Cloud Platform Service Account to be used by the node VMs. Specify the email address of the Service Account; otherwise, if no Service Account is specified, the "default" service account is used.
-     * 
      */
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
@@ -266,7 +244,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Shielded Instance options.
-     * 
      */
     @Import(name="shieldedInstanceConfig")
       private final @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
@@ -277,7 +254,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of instance tags applied to all nodes. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during cluster or node pool creation. Each tag within the list must comply with RFC1035.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
@@ -288,7 +264,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of kubernetes taints to be applied to each node. For more information, including usage and the valid values, see: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
-     * 
      */
     @Import(name="taints")
       private final @Nullable Output<List<NodeTaintArgs>> taints;
@@ -299,7 +274,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The workload metadata configuration for this node.
-     * 
      */
     @Import(name="workloadMetadataConfig")
       private final @Nullable Output<WorkloadMetadataConfigArgs> workloadMetadataConfig;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ToolExitCodeResponse {
     /**
      * Tool execution exit code. A value of 0 means that the execution was successful. - In response: always set - In create/update request: always set
-     * 
      */
     private final Integer number;
 
@@ -22,7 +21,6 @@ public final class ToolExitCodeResponse {
 
     /**
      * Tool execution exit code. A value of 0 means that the execution was successful. - In response: always set - In create/update request: always set
-     * 
     */
     public Integer getNumber() {
         return this.number;

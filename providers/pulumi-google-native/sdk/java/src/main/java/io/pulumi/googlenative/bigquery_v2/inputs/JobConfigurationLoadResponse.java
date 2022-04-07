@@ -26,7 +26,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [Optional] Accept rows that are missing trailing optional columns. The missing values are treated as nulls. If false, records with missing trailing columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false. Only applicable to CSV, ignored for other formats.
-     * 
      */
     @Import(name="allowJaggedRows", required=true)
       private final Boolean allowJaggedRows;
@@ -37,7 +36,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file. The default value is false.
-     * 
      */
     @Import(name="allowQuotedNewlines", required=true)
       private final Boolean allowQuotedNewlines;
@@ -48,7 +46,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [Optional] Indicates if we should automatically infer the options and schema for CSV and JSON sources.
-     * 
      */
     @Import(name="autodetect", required=true)
       private final Boolean autodetect;
@@ -59,7 +56,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [Beta] Clustering specification for the destination table. Must be specified with time-based partitioning, data in the table will be first partitioned and subsequently clustered.
-     * 
      */
     @Import(name="clustering", required=true)
       private final ClusteringResponse clustering;
@@ -70,7 +66,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [Optional] Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion.
-     * 
      */
     @Import(name="createDisposition", required=true)
       private final String createDisposition;
@@ -81,7 +76,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [Optional] Defines the list of possible SQL data types to which the source decimal values are converted. This list and the precision and the scale parameters of the decimal field determine the target type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in the specified list and if it supports the precision and the scale. STRING supports all precision and scale values. If none of the listed types supports the precision and the scale, the type supporting the widest range in the specified list is picked, and if a value exceeds the supported range when reading the data, an error will be thrown. Example: Suppose the value of this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: (38,9) -> NUMERIC; (39,9) -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); (38,10) -> BIGNUMERIC (NUMERIC cannot hold 10 fractional digits); (76,38) -> BIGNUMERIC; (77,38) -> BIGNUMERIC (error if value exeeds supported range). This field cannot contain duplicate types. The order of the types in this field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC", "BIGNUMERIC"] and NUMERIC always takes precedence over BIGNUMERIC. Defaults to ["NUMERIC", "STRING"] for ORC and ["NUMERIC"] for the other file formats.
-     * 
      */
     @Import(name="decimalTargetTypes", required=true)
       private final List<String> decimalTargetTypes;
@@ -92,7 +86,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * Custom encryption configuration (e.g., Cloud KMS keys).
-     * 
      */
     @Import(name="destinationEncryptionConfiguration", required=true)
       private final EncryptionConfigurationResponse destinationEncryptionConfiguration;
@@ -103,7 +96,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [Required] The destination table to load the data into.
-     * 
      */
     @Import(name="destinationTable", required=true)
       private final TableReferenceResponse destinationTable;
@@ -114,7 +106,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [Beta] [Optional] Properties with which to create the destination table if it is new.
-     * 
      */
     @Import(name="destinationTableProperties", required=true)
       private final DestinationTablePropertiesResponse destinationTableProperties;
@@ -125,7 +116,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [Optional] The character encoding of the data. The supported values are UTF-8 or ISO-8859-1. The default value is UTF-8. BigQuery decodes the data after the raw, binary data has been split using the values of the quote and fieldDelimiter properties.
-     * 
      */
     @Import(name="encoding", required=true)
       private final String encoding;
@@ -136,7 +126,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [Optional] The separator for fields in a CSV file. The separator can be any ISO-8859-1 single-byte character. To use a character in the range 128-255, you must encode the character as UTF8. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. BigQuery also supports the escape sequence "\t" to specify a tab separator. The default value is a comma (',').
-     * 
      */
     @Import(name="fieldDelimiter", required=true)
       private final String fieldDelimiter;
@@ -147,7 +136,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [Optional] Options to configure hive partitioning support.
-     * 
      */
     @Import(name="hivePartitioningOptions", required=true)
       private final HivePartitioningOptionsResponse hivePartitioningOptions;
@@ -158,7 +146,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [Optional] Indicates if BigQuery should allow extra values that are not represented in the table schema. If true, the extra values are ignored. If false, records with extra columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false. The sourceFormat property determines what BigQuery treats as an extra value: CSV: Trailing columns JSON: Named values that don't match any column names
-     * 
      */
     @Import(name="ignoreUnknownValues", required=true)
       private final Boolean ignoreUnknownValues;
@@ -169,7 +156,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [Optional] If sourceFormat is set to newline-delimited JSON, indicates whether it should be processed as a JSON variant such as GeoJSON. For a sourceFormat other than JSON, omit this field. If the sourceFormat is newline-delimited JSON: - for newline-delimited GeoJSON: set to GEOJSON.
-     * 
      */
     @Import(name="jsonExtension", required=true)
       private final String jsonExtension;
@@ -180,7 +166,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [Optional] The maximum number of bad records that BigQuery can ignore when running the job. If the number of bad records exceeds this value, an invalid error is returned in the job result. This is only valid for CSV and JSON. The default value is 0, which requires that all records are valid.
-     * 
      */
     @Import(name="maxBadRecords", required=true)
       private final Integer maxBadRecords;
@@ -191,7 +176,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [Optional] Specifies a string that represents a null value in a CSV file. For example, if you specify "\N", BigQuery interprets "\N" as a null value when loading a CSV file. The default value is the empty string. If you set this property to a custom value, BigQuery throws an error if an empty string is present for all data types except for STRING and BYTE. For STRING and BYTE columns, BigQuery interprets the empty string as an empty value.
-     * 
      */
     @Import(name="nullMarker", required=true)
       private final String nullMarker;
@@ -202,7 +186,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [Optional] Options to configure parquet support.
-     * 
      */
     @Import(name="parquetOptions", required=true)
       private final ParquetOptionsResponse parquetOptions;
@@ -213,7 +196,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * If sourceFormat is set to "DATASTORE_BACKUP", indicates which entity properties to load into BigQuery from a Cloud Datastore backup. Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties. If any named property isn't found in the Cloud Datastore backup, an invalid error is returned in the job result.
-     * 
      */
     @Import(name="projectionFields", required=true)
       private final List<String> projectionFields;
@@ -224,7 +206,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [Optional] The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. The default value is a double-quote ('"'). If your data does not contain quoted sections, set the property value to an empty string. If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.
-     * 
      */
     @Import(name="quote", required=true)
       private final String quote;
@@ -235,7 +216,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.
-     * 
      */
     @Import(name="rangePartitioning", required=true)
       private final RangePartitioningResponse rangePartitioning;
@@ -246,7 +226,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [Optional] The schema for the destination table. The schema can be omitted if the destination table already exists, or if you're loading data from Google Cloud Datastore.
-     * 
      */
     @Import(name="schema", required=true)
       private final TableSchemaResponse schema;
@@ -257,7 +236,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND; when writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition decorators. For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values are specified: ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema. ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
-     * 
      */
     @Import(name="schemaUpdateOptions", required=true)
       private final List<String> schemaUpdateOptions;
@@ -268,7 +246,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [Optional] The number of rows at the top of a CSV file that BigQuery will skip when loading the data. The default value is 0. This property is useful if you have header rows in the file that should be skipped.
-     * 
      */
     @Import(name="skipLeadingRows", required=true)
       private final Integer skipLeadingRows;
@@ -279,7 +256,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [Optional] The format of the data files. For CSV files, specify "CSV". For datastore backups, specify "DATASTORE_BACKUP". For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For Avro, specify "AVRO". For parquet, specify "PARQUET". For orc, specify "ORC". The default value is CSV.
-     * 
      */
     @Import(name="sourceFormat", required=true)
       private final String sourceFormat;
@@ -290,7 +266,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [Required] The fully-qualified URIs that point to your data in Google Cloud. For Google Cloud Storage URIs: Each URI can contain one '*' wildcard character and it must come after the 'bucket' name. Size limits related to load jobs apply to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table. For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the '*' wildcard character is not allowed.
-     * 
      */
     @Import(name="sourceUris", required=true)
       private final List<String> sourceUris;
@@ -301,7 +276,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * Time-based partitioning specification for the destination table. Only one of timePartitioning and rangePartitioning should be specified.
-     * 
      */
     @Import(name="timePartitioning", required=true)
       private final TimePartitioningResponse timePartitioning;
@@ -312,7 +286,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).
-     * 
      */
     @Import(name="useAvroLogicalTypes", required=true)
       private final Boolean useAvroLogicalTypes;
@@ -323,7 +296,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
 
     /**
      * [Optional] Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. The default value is WRITE_APPEND. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion.
-     * 
      */
     @Import(name="writeDisposition", required=true)
       private final String writeDisposition;

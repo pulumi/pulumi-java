@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Zypper patching is performed by running `zypper patch`. See also https://en.opensuse.org/SDB:Zypper_manual.
- * 
  */
 public final class ZypperSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ZypperSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Install only patches with these categories. Common categories include security, recommended, and feature.
-     * 
      */
     @Import(name="categories")
       private final @Nullable Output<List<String>> categories;
@@ -33,7 +31,6 @@ public final class ZypperSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of patches to exclude from update.
-     * 
      */
     @Import(name="excludes")
       private final @Nullable Output<List<String>> excludes;
@@ -44,7 +41,6 @@ public final class ZypperSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An exclusive list of patches to be updated. These are the only patches that will be installed using 'zypper patch patch:' command. This field must not be used with any other patch configuration fields.
-     * 
      */
     @Import(name="exclusivePatches")
       private final @Nullable Output<List<String>> exclusivePatches;
@@ -55,7 +51,6 @@ public final class ZypperSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Install only patches with these severities. Common severities include critical, important, moderate, and low.
-     * 
      */
     @Import(name="severities")
       private final @Nullable Output<List<String>> severities;
@@ -66,7 +61,6 @@ public final class ZypperSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Adds the `--with-optional` flag to `zypper patch`.
-     * 
      */
     @Import(name="withOptional")
       private final @Nullable Output<Boolean> withOptional;
@@ -77,7 +71,6 @@ public final class ZypperSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Adds the `--with-update` flag, to `zypper patch`.
-     * 
      */
     @Import(name="withUpdate")
       private final @Nullable Output<Boolean> withUpdate;

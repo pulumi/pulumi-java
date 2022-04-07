@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a Sql Server database on the Cloud SQL instance.
- * 
  */
 public final class SqlServerDatabaseDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SqlServerDatabaseDetailsArgs extends io.pulumi.resources.Reso
 
     /**
      * The version of SQL Server with which the database is to be made compatible
-     * 
      */
     @Import(name="compatibilityLevel")
       private final @Nullable Output<Integer> compatibilityLevel;
@@ -32,7 +30,6 @@ public final class SqlServerDatabaseDetailsArgs extends io.pulumi.resources.Reso
 
     /**
      * The recovery model of a SQL Server database
-     * 
      */
     @Import(name="recoveryModel")
       private final @Nullable Output<String> recoveryModel;

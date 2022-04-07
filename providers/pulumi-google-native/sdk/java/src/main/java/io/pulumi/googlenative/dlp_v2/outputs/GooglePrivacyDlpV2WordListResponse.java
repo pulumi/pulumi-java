@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2WordListResponse {
     /**
      * Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]
-     * 
      */
     private final List<String> words;
 
@@ -23,7 +22,6 @@ public final class GooglePrivacyDlpV2WordListResponse {
 
     /**
      * Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]
-     * 
     */
     public List<String> getWords() {
         return this.words;

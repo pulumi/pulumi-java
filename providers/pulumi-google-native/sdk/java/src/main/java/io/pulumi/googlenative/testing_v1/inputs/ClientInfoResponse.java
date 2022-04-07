@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Information about the client which invoked the test.
- * 
  */
 public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The list of detailed information about client.
-     * 
      */
     @Import(name="clientInfoDetails", required=true)
       private final List<ClientInfoDetailResponse> clientInfoDetails;
@@ -31,7 +29,6 @@ public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Client name, such as gcloud.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

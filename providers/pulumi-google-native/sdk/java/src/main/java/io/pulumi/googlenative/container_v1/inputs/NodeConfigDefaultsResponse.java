@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Subset of NodeConfig message that has defaults.
- * 
  */
 public final class NodeConfigDefaultsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class NodeConfigDefaultsResponse extends io.pulumi.resources.Invoke
 
     /**
      * GCFS (Google Container File System, a.k.a Riptide) options.
-     * 
      */
     @Import(name="gcfsConfig", required=true)
       private final GcfsConfigResponse gcfsConfig;

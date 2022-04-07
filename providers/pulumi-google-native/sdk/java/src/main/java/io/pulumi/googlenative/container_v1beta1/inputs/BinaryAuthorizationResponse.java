@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration for Binary Authorization.
- * 
  */
 public final class BinaryAuthorizationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class BinaryAuthorizationResponse extends io.pulumi.resources.Invok
 
     /**
      * Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Google Binauthz.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * EnvVarSource represents a source for the value of an EnvVar.
- * 
  */
 public final class EnvVarSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class EnvVarSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * (Optional) Not supported by Cloud Run Selects a key of a ConfigMap.
-     * 
      */
     @Import(name="configMapKeyRef", required=true)
       private final ConfigMapKeySelectorResponse configMapKeyRef;
@@ -30,7 +28,6 @@ public final class EnvVarSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * (Optional) Selects a key (version) of a secret in Secret Manager.
-     * 
      */
     @Import(name="secretKeyRef", required=true)
       private final SecretKeySelectorResponse secretKeyRef;

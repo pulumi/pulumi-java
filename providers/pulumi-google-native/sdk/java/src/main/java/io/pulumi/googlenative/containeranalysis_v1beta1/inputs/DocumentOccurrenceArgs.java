@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * DocumentOccurrence represents an SPDX Document Creation Information section: https://spdx.github.io/spdx-spec/2-document-creation-information/
- * 
  */
 public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Identify when the SPDX file was originally created. The date is to be specified according to combined date and time in UTC format as specified in ISO 8601 standard
-     * 
      */
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
@@ -32,7 +30,6 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * A field for creators of the SPDX file to provide general comments about the creation of the SPDX file or any other relevant comment not included in the other fields
-     * 
      */
     @Import(name="creatorComment")
       private final @Nullable Output<String> creatorComment;
@@ -43,7 +40,6 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person's name
-     * 
      */
     @Import(name="creators")
       private final @Nullable Output<List<String>> creators;
@@ -54,7 +50,6 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * A field for creators of the SPDX file content to provide comments to the consumers of the SPDX document
-     * 
      */
     @Import(name="documentComment")
       private final @Nullable Output<String> documentComment;
@@ -65,7 +60,6 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Identify any external SPDX documents referenced within this SPDX document
-     * 
      */
     @Import(name="externalDocumentRefs")
       private final @Nullable Output<List<String>> externalDocumentRefs;
@@ -76,7 +70,6 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Identify the current SPDX document which may be referenced in relationships by other files, packages internally and documents externally
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -87,7 +80,6 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * A field for creators of the SPDX file to provide the version of the SPDX License List used when the SPDX file was created
-     * 
      */
     @Import(name="licenseListVersion")
       private final @Nullable Output<String> licenseListVersion;
@@ -98,7 +90,6 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Provide an SPDX document specific namespace as a unique absolute Uniform Resource Identifier (URI) as specified in RFC-3986, with the exception of the ‘#’ delimiter
-     * 
      */
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
@@ -109,7 +100,6 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Identify name of this document as designated by creator
-     * 
      */
     @Import(name="title")
       private final @Nullable Output<String> title;

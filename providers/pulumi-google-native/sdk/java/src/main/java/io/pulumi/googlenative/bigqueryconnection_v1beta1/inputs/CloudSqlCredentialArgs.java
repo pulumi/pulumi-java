@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Credential info for the Cloud SQL.
- * 
  */
 public final class CloudSqlCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CloudSqlCredentialArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The password for the credential.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -31,7 +29,6 @@ public final class CloudSqlCredentialArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The username for the credential.
-     * 
      */
     @Import(name="username")
       private final @Nullable Output<String> username;

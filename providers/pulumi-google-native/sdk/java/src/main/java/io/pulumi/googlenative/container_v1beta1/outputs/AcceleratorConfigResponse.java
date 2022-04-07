@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class AcceleratorConfigResponse {
     /**
      * The number of the accelerator cards exposed to an instance.
-     * 
      */
     private final String acceleratorCount;
     /**
      * The accelerator type resource name. List of supported accelerators [here](https://cloud.google.com/compute/docs/gpus)
-     * 
      */
     private final String acceleratorType;
     /**
      * Size of partitions to create on the GPU. Valid values are described in the NVIDIA [mig user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
-     * 
      */
     private final String gpuPartitionSize;
 
@@ -37,21 +34,18 @@ public final class AcceleratorConfigResponse {
 
     /**
      * The number of the accelerator cards exposed to an instance.
-     * 
     */
     public String getAcceleratorCount() {
         return this.acceleratorCount;
     }
     /**
      * The accelerator type resource name. List of supported accelerators [here](https://cloud.google.com/compute/docs/gpus)
-     * 
     */
     public String getAcceleratorType() {
         return this.acceleratorType;
     }
     /**
      * Size of partitions to create on the GPU. Valid values are described in the NVIDIA [mig user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
-     * 
     */
     public String getGpuPartitionSize() {
         return this.gpuPartitionSize;

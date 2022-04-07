@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Represents the signal that telles the client to transfer the phone call connected to the agent to a third-party endpoint.
- * 
  */
 public final class GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall
 
     /**
      * Transfer the call to a phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
-     * 
      */
     @Import(name="phoneNumber", required=true)
       private final String phoneNumber;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * An item of the class.
- * 
  */
 public final class ClassItemResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ClassItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The class item's value.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

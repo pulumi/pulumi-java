@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Describes a query to build the numerator or denominator of a TimeSeriesFilterRatio.
- * 
  */
 public final class RatioPartResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class RatioPartResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.
-     * 
      */
     @Import(name="aggregation", required=true)
       private final AggregationResponse aggregation;
@@ -30,7 +28,6 @@ public final class RatioPartResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.
-     * 
      */
     @Import(name="filter", required=true)
       private final String filter;

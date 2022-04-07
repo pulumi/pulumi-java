@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A representation of a Datastore kind.
- * 
  */
 public final class GooglePrivacyDlpV2KindExpressionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GooglePrivacyDlpV2KindExpressionResponse extends io.pulumi.re
 
     /**
      * The name of the kind.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

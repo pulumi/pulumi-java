@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudMlV1__EncryptionConfigResponse {
     /**
      * The Cloud KMS resource identifier of the customer-managed encryption key used to protect a resource, such as a training job. It has the following format: `projects/{PROJECT_ID}/locations/{REGION}/keyRings/{KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`
-     * 
      */
     private final String kmsKeyName;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudMlV1__EncryptionConfigResponse {
 
     /**
      * The Cloud KMS resource identifier of the customer-managed encryption key used to protect a resource, such as a training job. It has the following format: `projects/{PROJECT_ID}/locations/{REGION}/keyRings/{KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`
-     * 
     */
     public String getKmsKeyName() {
         return this.kmsKeyName;

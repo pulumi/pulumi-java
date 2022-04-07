@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A Dialogflow source of conversation data.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1DialogflowSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceArgs extend
 
     /**
      * Cloud Storage URI that points to a file that contains the conversation audio.
-     * 
      */
     @Import(name="audioUri")
       private final @Nullable Output<String> audioUri;

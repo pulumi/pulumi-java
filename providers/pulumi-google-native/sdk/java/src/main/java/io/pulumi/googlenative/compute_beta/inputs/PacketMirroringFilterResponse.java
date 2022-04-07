@@ -15,7 +15,6 @@ public final class PacketMirroringFilterResponse extends io.pulumi.resources.Inv
 
     /**
      * IP CIDR ranges that apply as filter on the source (ingress) or destination (egress) IP in the IP header. Only IPv4 is supported. If no ranges are specified, all traffic that matches the specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.
-     * 
      */
     @Import(name="cidrRanges", required=true)
       private final List<String> cidrRanges;
@@ -26,7 +25,6 @@ public final class PacketMirroringFilterResponse extends io.pulumi.resources.Inv
 
     /**
      * Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The default is BOTH.
-     * 
      */
     @Import(name="direction", required=true)
       private final String direction;
@@ -37,7 +35,6 @@ public final class PacketMirroringFilterResponse extends io.pulumi.resources.Inv
 
     /**
      * Protocols that apply as filter on mirrored traffic. If no protocols are specified, all traffic that matches the specified CIDR ranges is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.
-     * 
      */
     @Import(name="ipProtocols", required=true)
       private final List<String> ipProtocols;

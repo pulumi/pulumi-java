@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class PoolOptionResponse {
     /**
      * The `WorkerPool` resource to execute the build on. You must have `cloudbuild.workerpools.use` on the project hosting the WorkerPool. Format projects/{project}/locations/{location}/workerPools/{workerPoolId}
-     * 
      */
     private final String name;
 
@@ -22,7 +21,6 @@ public final class PoolOptionResponse {
 
     /**
      * The `WorkerPool` resource to execute the build on. You must have `cloudbuild.workerpools.use` on the project hosting the WorkerPool. Format projects/{project}/locations/{location}/workerPools/{workerPoolId}
-     * 
     */
     public String getName() {
         return this.name;

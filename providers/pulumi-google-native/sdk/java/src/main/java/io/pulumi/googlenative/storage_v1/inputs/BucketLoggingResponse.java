@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The bucket's logging configuration, which defines the destination bucket and optional name prefix for the current bucket's logs.
- * 
  */
 public final class BucketLoggingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class BucketLoggingResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The destination bucket where the current bucket's logs should be placed.
-     * 
      */
     @Import(name="logBucket", required=true)
       private final String logBucket;
@@ -29,7 +27,6 @@ public final class BucketLoggingResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * A prefix for log object names.
-     * 
      */
     @Import(name="logObjectPrefix", required=true)
       private final String logObjectPrefix;

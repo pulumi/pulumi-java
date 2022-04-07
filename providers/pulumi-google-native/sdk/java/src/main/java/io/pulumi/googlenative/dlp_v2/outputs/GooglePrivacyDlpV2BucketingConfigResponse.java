@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2BucketingConfigResponse {
     /**
      * Set of buckets. Ranges must be non-overlapping.
-     * 
      */
     private final List<GooglePrivacyDlpV2BucketResponse> buckets;
 
@@ -23,7 +22,6 @@ public final class GooglePrivacyDlpV2BucketingConfigResponse {
 
     /**
      * Set of buckets. Ranges must be non-overlapping.
-     * 
     */
     public List<GooglePrivacyDlpV2BucketResponse> getBuckets() {
         return this.buckets;

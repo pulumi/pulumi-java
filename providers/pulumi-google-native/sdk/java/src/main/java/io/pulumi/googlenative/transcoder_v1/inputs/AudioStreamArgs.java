@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Audio stream resource.
- * 
  */
 public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Audio bitrate in bits per second. Must be between 1 and 10,000,000.
-     * 
      */
     @Import(name="bitrateBps", required=true)
       private final Output<Integer> bitrateBps;
@@ -34,7 +32,6 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Number of audio channels. Must be between 1 and 6. The default is 2.
-     * 
      */
     @Import(name="channelCount")
       private final @Nullable Output<Integer> channelCount;
@@ -45,7 +42,6 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of channel names specifying layout of the audio channels. This only affects the metadata embedded in the container headers, if supported by the specified format. The default is `["fl", "fr"]`. Supported channel names: - `fl` - Front left channel - `fr` - Front right channel - `sl` - Side left channel - `sr` - Side right channel - `fc` - Front center channel - `lfe` - Low frequency
-     * 
      */
     @Import(name="channelLayout")
       private final @Nullable Output<List<String>> channelLayout;
@@ -56,7 +52,6 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The codec for this audio stream. The default is `aac`. Supported audio codecs: - `aac` - `aac-he` - `aac-he-v2` - `mp3` - `ac3` - `eac3`
-     * 
      */
     @Import(name="codec")
       private final @Nullable Output<String> codec;
@@ -67,7 +62,6 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
-     * 
      */
     @Import(name="mapping")
       private final @Nullable Output<List<AudioMappingArgs>> mapping;
@@ -78,7 +72,6 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The audio sample rate in Hertz. The default is 48000 Hertz.
-     * 
      */
     @Import(name="sampleRateHertz")
       private final @Nullable Output<Integer> sampleRateHertz;

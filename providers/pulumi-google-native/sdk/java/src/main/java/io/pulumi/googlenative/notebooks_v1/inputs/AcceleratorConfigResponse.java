@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Definition of a hardware accelerator. Note that not all combinations of `type` and `core_count` are valid. Check [GPUs on Compute Engine](/compute/docs/gpus/#gpus-list) to find a valid combination. TPUs are not supported.
- * 
  */
 public final class AcceleratorConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AcceleratorConfigResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Count of cores of this accelerator.
-     * 
      */
     @Import(name="coreCount", required=true)
       private final String coreCount;
@@ -29,7 +27,6 @@ public final class AcceleratorConfigResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Type of this accelerator.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

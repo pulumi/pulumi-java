@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Metadata common to many entities in this API.
- * 
  */
 public final class GoogleCloudApigeeV1EntityMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse extends io.pulumi.r
 
     /**
      * Time at which the API proxy was created, in milliseconds since epoch.
-     * 
      */
     @Import(name="createdAt", required=true)
       private final String createdAt;
@@ -29,7 +27,6 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse extends io.pulumi.r
 
     /**
      * Time at which the API proxy was most recently modified, in milliseconds since epoch.
-     * 
      */
     @Import(name="lastModifiedAt", required=true)
       private final String lastModifiedAt;
@@ -40,7 +37,6 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse extends io.pulumi.r
 
     /**
      * The type of entity described
-     * 
      */
     @Import(name="subType", required=true)
       private final String subType;

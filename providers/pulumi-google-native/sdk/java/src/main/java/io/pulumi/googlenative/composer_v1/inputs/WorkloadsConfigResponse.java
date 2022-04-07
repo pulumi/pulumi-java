@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The Kubernetes workloads configuration for GKE cluster associated with the Cloud Composer environment. Supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
- * 
  */
 public final class WorkloadsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class WorkloadsConfigResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Optional. Resources used by Airflow schedulers.
-     * 
      */
     @Import(name="scheduler", required=true)
       private final SchedulerResourceResponse scheduler;
@@ -31,7 +29,6 @@ public final class WorkloadsConfigResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Optional. Resources used by Airflow web server.
-     * 
      */
     @Import(name="webServer", required=true)
       private final WebServerResourceResponse webServer;
@@ -42,7 +39,6 @@ public final class WorkloadsConfigResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Optional. Resources used by Airflow workers.
-     * 
      */
     @Import(name="worker", required=true)
       private final WorkerResourceResponse worker;

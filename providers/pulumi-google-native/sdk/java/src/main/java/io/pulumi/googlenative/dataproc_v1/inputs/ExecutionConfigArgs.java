@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Execution configuration for a workload.
- * 
  */
 public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. The Cloud KMS key to use for encryption.
-     * 
      */
     @Import(name="kmsKey")
       private final @Nullable Output<String> kmsKey;
@@ -32,7 +30,6 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. Tags used for network traffic control.
-     * 
      */
     @Import(name="networkTags")
       private final @Nullable Output<List<String>> networkTags;
@@ -43,7 +40,6 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. Network URI to connect workload to.
-     * 
      */
     @Import(name="networkUri")
       private final @Nullable Output<String> networkUri;
@@ -54,7 +50,6 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. Service account that used to execute workload.
-     * 
      */
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
@@ -65,7 +60,6 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. Subnetwork URI to connect workload to.
-     * 
      */
     @Import(name="subnetworkUri")
       private final @Nullable Output<String> subnetworkUri;

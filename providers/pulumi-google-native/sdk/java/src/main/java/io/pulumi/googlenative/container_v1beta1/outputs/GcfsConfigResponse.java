@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GcfsConfigResponse {
     /**
      * Whether to use GCFS.
-     * 
      */
     private final Boolean enabled;
 
@@ -22,7 +21,6 @@ public final class GcfsConfigResponse {
 
     /**
      * Whether to use GCFS.
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;

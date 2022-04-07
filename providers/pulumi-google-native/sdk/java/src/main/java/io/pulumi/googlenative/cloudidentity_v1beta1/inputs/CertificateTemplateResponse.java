@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * CertificateTemplate (v3 Extension in X.509).
- * 
  */
 public final class CertificateTemplateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CertificateTemplateResponse extends io.pulumi.resources.Invok
 
     /**
      * The Major version of the template. Example: 100.
-     * 
      */
     @Import(name="majorVersion", required=true)
       private final Integer majorVersion;
@@ -29,7 +27,6 @@ public final class CertificateTemplateResponse extends io.pulumi.resources.Invok
 
     /**
      * The minor version of the template. Example: 12.
-     * 
      */
     @Import(name="minorVersion", required=true)
       private final Integer minorVersion;

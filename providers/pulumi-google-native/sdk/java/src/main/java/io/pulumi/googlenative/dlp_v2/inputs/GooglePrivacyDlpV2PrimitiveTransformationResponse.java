@@ -21,7 +21,6 @@ import java.util.Objects;
 
 /**
  * A rule for transforming a value.
- * 
  */
 public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -29,7 +28,6 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends io.
 
     /**
      * Bucketing
-     * 
      */
     @Import(name="bucketingConfig", required=true)
       private final GooglePrivacyDlpV2BucketingConfigResponse bucketingConfig;
@@ -40,7 +38,6 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends io.
 
     /**
      * Mask
-     * 
      */
     @Import(name="characterMaskConfig", required=true)
       private final GooglePrivacyDlpV2CharacterMaskConfigResponse characterMaskConfig;
@@ -51,7 +48,6 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends io.
 
     /**
      * Deterministic Crypto
-     * 
      */
     @Import(name="cryptoDeterministicConfig", required=true)
       private final GooglePrivacyDlpV2CryptoDeterministicConfigResponse cryptoDeterministicConfig;
@@ -62,7 +58,6 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends io.
 
     /**
      * Crypto
-     * 
      */
     @Import(name="cryptoHashConfig", required=true)
       private final GooglePrivacyDlpV2CryptoHashConfigResponse cryptoHashConfig;
@@ -73,7 +68,6 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends io.
 
     /**
      * Ffx-Fpe
-     * 
      */
     @Import(name="cryptoReplaceFfxFpeConfig", required=true)
       private final GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse cryptoReplaceFfxFpeConfig;
@@ -84,7 +78,6 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends io.
 
     /**
      * Date Shift
-     * 
      */
     @Import(name="dateShiftConfig", required=true)
       private final GooglePrivacyDlpV2DateShiftConfigResponse dateShiftConfig;
@@ -95,7 +88,6 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends io.
 
     /**
      * Fixed size bucketing
-     * 
      */
     @Import(name="fixedSizeBucketingConfig", required=true)
       private final GooglePrivacyDlpV2FixedSizeBucketingConfigResponse fixedSizeBucketingConfig;
@@ -106,7 +98,6 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends io.
 
     /**
      * Redact
-     * 
      */
     @Import(name="redactConfig", required=true)
       private final GooglePrivacyDlpV2RedactConfigResponse redactConfig;
@@ -117,7 +108,6 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends io.
 
     /**
      * Replace with a specified value.
-     * 
      */
     @Import(name="replaceConfig", required=true)
       private final GooglePrivacyDlpV2ReplaceValueConfigResponse replaceConfig;
@@ -128,7 +118,6 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends io.
 
     /**
      * Replace with a value randomly drawn (with replacement) from a dictionary.
-     * 
      */
     @Import(name="replaceDictionaryConfig", required=true)
       private final GooglePrivacyDlpV2ReplaceDictionaryConfigResponse replaceDictionaryConfig;
@@ -139,7 +128,6 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends io.
 
     /**
      * Replace with infotype
-     * 
      */
     @Import(name="replaceWithInfoTypeConfig", required=true)
       private final GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse replaceWithInfoTypeConfig;
@@ -150,7 +138,6 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends io.
 
     /**
      * Time extraction
-     * 
      */
     @Import(name="timePartConfig", required=true)
       private final GooglePrivacyDlpV2TimePartConfigResponse timePartConfig;

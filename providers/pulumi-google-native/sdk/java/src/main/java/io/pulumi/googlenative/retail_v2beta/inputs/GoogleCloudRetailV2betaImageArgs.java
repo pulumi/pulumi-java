@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Product thumbnail/detail image.
- * 
  */
 public final class GoogleCloudRetailV2betaImageArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudRetailV2betaImageArgs extends io.pulumi.resources.
 
     /**
      * Height of the image in number of pixels. This field must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.
-     * 
      */
     @Import(name="height")
       private final @Nullable Output<Integer> height;
@@ -32,7 +30,6 @@ public final class GoogleCloudRetailV2betaImageArgs extends io.pulumi.resources.
 
     /**
      * URI of the image. This field must be a valid UTF-8 encoded URI with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).
-     * 
      */
     @Import(name="uri", required=true)
       private final Output<String> uri;
@@ -43,7 +40,6 @@ public final class GoogleCloudRetailV2betaImageArgs extends io.pulumi.resources.
 
     /**
      * Width of the image in number of pixels. This field must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.
-     * 
      */
     @Import(name="width")
       private final @Nullable Output<Integer> width;

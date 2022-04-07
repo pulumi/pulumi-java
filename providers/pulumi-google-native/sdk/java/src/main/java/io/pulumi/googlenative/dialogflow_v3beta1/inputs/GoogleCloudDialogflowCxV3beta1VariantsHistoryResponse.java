@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The history of variants update.
- * 
  */
 public final class GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse extends
 
     /**
      * Update time of the variants.
-     * 
      */
     @Import(name="updateTime", required=true)
       private final String updateTime;
@@ -30,7 +28,6 @@ public final class GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse extends
 
     /**
      * The flow versions as the variants.
-     * 
      */
     @Import(name="versionVariants", required=true)
       private final GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants;

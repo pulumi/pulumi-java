@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * String mnemonic specifying the DNSSEC algorithm of this key.
-     * 
      */
     @EnumType
     public enum DnsKeySpecAlgorithm {

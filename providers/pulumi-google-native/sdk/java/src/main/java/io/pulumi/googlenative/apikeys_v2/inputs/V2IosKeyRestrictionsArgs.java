@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The iOS apps that are allowed to use the key.
- * 
  */
 public final class V2IosKeyRestrictionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class V2IosKeyRestrictionsArgs extends io.pulumi.resources.Resource
 
     /**
      * A list of bundle IDs that are allowed when making API calls with this key.
-     * 
      */
     @Import(name="allowedBundleIds")
       private final @Nullable Output<List<String>> allowedBundleIds;

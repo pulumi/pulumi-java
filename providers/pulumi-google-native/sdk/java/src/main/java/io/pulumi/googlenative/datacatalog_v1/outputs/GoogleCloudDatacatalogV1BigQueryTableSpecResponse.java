@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse {
     /**
      * The table source type.
-     * 
      */
     private final String tableSourceType;
     /**
      * Specification of a BigQuery table. Populated only if the `table_source_type` is `BIGQUERY_TABLE`.
-     * 
      */
     private final GoogleCloudDatacatalogV1TableSpecResponse tableSpec;
     /**
      * Table view specification. Populated only if the `table_source_type` is `BIGQUERY_VIEW`.
-     * 
      */
     private final GoogleCloudDatacatalogV1ViewSpecResponse viewSpec;
 
@@ -39,21 +36,18 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse {
 
     /**
      * The table source type.
-     * 
     */
     public String getTableSourceType() {
         return this.tableSourceType;
     }
     /**
      * Specification of a BigQuery table. Populated only if the `table_source_type` is `BIGQUERY_TABLE`.
-     * 
     */
     public GoogleCloudDatacatalogV1TableSpecResponse getTableSpec() {
         return this.tableSpec;
     }
     /**
      * Table view specification. Populated only if the `table_source_type` is `BIGQUERY_VIEW`.
-     * 
     */
     public GoogleCloudDatacatalogV1ViewSpecResponse getViewSpec() {
         return this.viewSpec;

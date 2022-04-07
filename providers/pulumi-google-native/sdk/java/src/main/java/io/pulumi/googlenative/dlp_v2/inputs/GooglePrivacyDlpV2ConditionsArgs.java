@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A collection of conditions.
- * 
  */
 public final class GooglePrivacyDlpV2ConditionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GooglePrivacyDlpV2ConditionsArgs extends io.pulumi.resources.
 
     /**
      * A collection of conditions.
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<List<GooglePrivacyDlpV2ConditionArgs>> conditions;

@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class InstanceAttemptResultResponse {
     /**
      * Optional. The exit code of this attempt. This may be unset if the container was unable to exit cleanly with a code due to some other failure. See status field for possible failure details.
-     * 
      */
     private final Integer exitCode;
     /**
      * Optional. The status of this attempt. If the status code is OK, then the attempt succeeded.
-     * 
      */
     private final GoogleRpcStatusResponse status;
 
@@ -31,14 +29,12 @@ public final class InstanceAttemptResultResponse {
 
     /**
      * Optional. The exit code of this attempt. This may be unset if the container was unable to exit cleanly with a code due to some other failure. See status field for possible failure details.
-     * 
     */
     public Integer getExitCode() {
         return this.exitCode;
     }
     /**
      * Optional. The status of this attempt. If the status code is OK, then the attempt succeeded.
-     * 
     */
     public GoogleRpcStatusResponse getStatus() {
         return this.status;

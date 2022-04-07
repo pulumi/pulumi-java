@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * The data for a silence annotation.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1SilenceDataResponse extends io.pulumi.resources.InvokeArgs {
 

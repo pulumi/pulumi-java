@@ -20,7 +20,6 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The final measurement containing the objective value.
-     * 
      */
     @Import(name="finalMeasurement")
       private final @Nullable Output<GoogleCloudMlV1__MeasurementArgs> finalMeasurement;
@@ -38,7 +37,6 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of measurements that are strictly lexicographically ordered by their induced tuples (steps, elapsed_time). These are used for early stopping computations.
-     * 
      */
     @Import(name="measurements")
       private final @Nullable Output<List<GoogleCloudMlV1__MeasurementArgs>> measurements;
@@ -49,7 +47,6 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The parameters of the trial.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters;
@@ -67,7 +64,6 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The detailed state of a trial.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<TrialState> state;

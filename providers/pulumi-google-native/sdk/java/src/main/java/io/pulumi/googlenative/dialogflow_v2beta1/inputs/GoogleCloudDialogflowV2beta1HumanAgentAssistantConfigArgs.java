@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the Human Agent Assistant to connect to a conversation.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs ext
 
     /**
      * Configuration for agent assistance of end user participant. Currently, this feature is not general available, please contact Google to get access.
-     * 
      */
     @Import(name="endUserSuggestionConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> endUserSuggestionConfig;
@@ -33,7 +31,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs ext
 
     /**
      * Configuration for agent assistance of human agent participant.
-     * 
      */
     @Import(name="humanAgentSuggestionConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> humanAgentSuggestionConfig;
@@ -44,7 +41,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs ext
 
     /**
      * Configuration for message analysis.
-     * 
      */
     @Import(name="messageAnalysisConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs> messageAnalysisConfig;
@@ -55,7 +51,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs ext
 
     /**
      * Pub/Sub topic on which to publish new agent assistant events.
-     * 
      */
     @Import(name="notificationConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig;

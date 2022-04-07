@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class CommonFeatureSpecResponse {
     /**
      * Appdevexperience specific spec.
-     * 
      */
     private final AppDevExperienceFeatureSpecResponse appdevexperience;
     /**
      * Multicluster Ingress-specific spec.
-     * 
      */
     private final MultiClusterIngressFeatureSpecResponse multiclusteringress;
 
@@ -31,14 +29,12 @@ public final class CommonFeatureSpecResponse {
 
     /**
      * Appdevexperience specific spec.
-     * 
     */
     public AppDevExperienceFeatureSpecResponse getAppdevexperience() {
         return this.appdevexperience;
     }
     /**
      * Multicluster Ingress-specific spec.
-     * 
     */
     public MultiClusterIngressFeatureSpecResponse getMulticlusteringress() {
         return this.multiclusteringress;

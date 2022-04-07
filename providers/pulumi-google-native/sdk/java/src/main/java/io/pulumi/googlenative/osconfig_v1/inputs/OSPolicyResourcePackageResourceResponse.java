@@ -17,7 +17,6 @@ import java.util.Objects;
 
 /**
  * A resource that manages a system package.
- * 
  */
 public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
 
     /**
      * A package managed by Apt.
-     * 
      */
     @Import(name="apt", required=true)
       private final OSPolicyResourcePackageResourceAPTResponse apt;
@@ -36,7 +34,6 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
 
     /**
      * A deb package file.
-     * 
      */
     @Import(name="deb", required=true)
       private final OSPolicyResourcePackageResourceDebResponse deb;
@@ -47,7 +44,6 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
 
     /**
      * The desired state the agent should maintain for this package.
-     * 
      */
     @Import(name="desiredState", required=true)
       private final String desiredState;
@@ -58,7 +54,6 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
 
     /**
      * A package managed by GooGet.
-     * 
      */
     @Import(name="googet", required=true)
       private final OSPolicyResourcePackageResourceGooGetResponse googet;
@@ -69,7 +64,6 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
 
     /**
      * An MSI package.
-     * 
      */
     @Import(name="msi", required=true)
       private final OSPolicyResourcePackageResourceMSIResponse msi;
@@ -80,7 +74,6 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
 
     /**
      * An rpm package file.
-     * 
      */
     @Import(name="rpm", required=true)
       private final OSPolicyResourcePackageResourceRPMResponse rpm;
@@ -91,7 +84,6 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
 
     /**
      * A package managed by YUM.
-     * 
      */
     @Import(name="yum", required=true)
       private final OSPolicyResourcePackageResourceYUMResponse yum;
@@ -102,7 +94,6 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
 
     /**
      * A package managed by Zypper.
-     * 
      */
     @Import(name="zypper", required=true)
       private final OSPolicyResourcePackageResourceZypperResponse zypper;

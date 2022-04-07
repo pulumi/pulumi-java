@@ -13,47 +13,38 @@ import java.util.Objects;
 public final class EndpointResponse {
     /**
      * A [Cloud function](https://cloud.google.com/functions).
-     * 
      */
     private final CloudFunctionEndpointResponse cloudFunction;
     /**
      * A [Cloud SQL](https://cloud.google.com/sql) instance URI.
-     * 
      */
     private final String cloudSqlInstance;
     /**
      * A cluster URI for [Google Kubernetes Engine master](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture).
-     * 
      */
     private final String gkeMasterCluster;
     /**
      * A Compute Engine instance URI.
-     * 
      */
     private final String instance;
     /**
      * The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is only allowed when the test's destination is a [global load balancer VIP](https://cloud.google.com/load-balancing/docs/load-balancing-overview).
-     * 
      */
     private final String ipAddress;
     /**
      * A Compute Engine network URI.
-     * 
      */
     private final String network;
     /**
      * Type of the network where the endpoint is located. Applicable only to source endpoint, as destination network type can be inferred from the source.
-     * 
      */
     private final String networkType;
     /**
      * The IP protocol port of the endpoint. Only applicable when protocol is TCP or UDP.
-     * 
      */
     private final Integer port;
     /**
      * Project ID where the endpoint is located. The Project ID can be derived from the URI if you provide a VM instance or network URI. The following are two cases where you must provide the project ID: 1. Only the IP address is specified, and the IP address is within a GCP project. 2. When you are using Shared VPC and the IP address that you provide is from the service project. In this case, the network that the IP address resides in is defined in the host project.
-     * 
      */
     private final String project;
 
@@ -81,63 +72,54 @@ public final class EndpointResponse {
 
     /**
      * A [Cloud function](https://cloud.google.com/functions).
-     * 
     */
     public CloudFunctionEndpointResponse getCloudFunction() {
         return this.cloudFunction;
     }
     /**
      * A [Cloud SQL](https://cloud.google.com/sql) instance URI.
-     * 
     */
     public String getCloudSqlInstance() {
         return this.cloudSqlInstance;
     }
     /**
      * A cluster URI for [Google Kubernetes Engine master](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture).
-     * 
     */
     public String getGkeMasterCluster() {
         return this.gkeMasterCluster;
     }
     /**
      * A Compute Engine instance URI.
-     * 
     */
     public String getInstance() {
         return this.instance;
     }
     /**
      * The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is only allowed when the test's destination is a [global load balancer VIP](https://cloud.google.com/load-balancing/docs/load-balancing-overview).
-     * 
     */
     public String getIpAddress() {
         return this.ipAddress;
     }
     /**
      * A Compute Engine network URI.
-     * 
     */
     public String getNetwork() {
         return this.network;
     }
     /**
      * Type of the network where the endpoint is located. Applicable only to source endpoint, as destination network type can be inferred from the source.
-     * 
     */
     public String getNetworkType() {
         return this.networkType;
     }
     /**
      * The IP protocol port of the endpoint. Only applicable when protocol is TCP or UDP.
-     * 
     */
     public Integer getPort() {
         return this.port;
     }
     /**
      * Project ID where the endpoint is located. The Project ID can be derived from the URI if you provide a VM instance or network URI. The following are two cases where you must provide the project ID: 1. Only the IP address is specified, and the IP address is within a GCP project. 2. When you are using Shared VPC and the IP address that you provide is from the service project. In this case, the network that the IP address resides in is defined in the host project.
-     * 
     */
     public String getProject() {
         return this.project;

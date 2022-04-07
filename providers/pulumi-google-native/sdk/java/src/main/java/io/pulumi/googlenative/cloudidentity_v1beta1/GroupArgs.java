@@ -21,7 +21,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Additional entity key aliases for a Group.
-     * 
      */
     @Import(name="additionalGroupKeys")
       private final @Nullable Output<List<EntityKeyArgs>> additionalGroupKeys;
@@ -32,7 +31,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An extended description to help users determine the purpose of a `Group`. Must not be longer than 4,096 characters.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -43,7 +41,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The display name of the `Group`.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -54,7 +51,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Dynamic group metadata like queries and status.
-     * 
      */
     @Import(name="dynamicGroupMetadata")
       private final @Nullable Output<DynamicGroupMetadataArgs> dynamicGroupMetadata;
@@ -65,7 +61,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The `EntityKey` of the `Group`.
-     * 
      */
     @Import(name="groupKey", required=true)
       private final Output<EntityKeyArgs> groupKey;
@@ -83,7 +78,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * One or more label entries that apply to the Group. Currently supported labels contain a key with an empty value. Google Groups are the default type of group and have a label with a key of `cloudidentity.googleapis.com/groups.discussion_forum` and an empty value. Existing Google Groups can have an additional label with a key of `cloudidentity.googleapis.com/groups.security` and an empty value added to them. **This is an immutable change and the security label cannot be removed once added.** Dynamic groups have a label with a key of `cloudidentity.googleapis.com/groups.dynamic`. Identity-mapped groups for Cloud Search have a label with a key of `system/groups/external` and an empty value.
-     * 
      */
     @Import(name="labels", required=true)
       private final Output<Map<String,String>> labels;
@@ -94,7 +88,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The resource name of the entity under which this `Group` resides in the Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source_id}` for external- identity-mapped groups or `customers/{customer_id}` for Google Groups. The `customer_id` must begin with "C" (for example, 'C046psxkn').
-     * 
      */
     @Import(name="parent", required=true)
       private final Output<String> parent;
@@ -105,7 +98,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The POSIX groups associated with the `Group`.
-     * 
      */
     @Import(name="posixGroups")
       private final @Nullable Output<List<PosixGroupArgs>> posixGroups;

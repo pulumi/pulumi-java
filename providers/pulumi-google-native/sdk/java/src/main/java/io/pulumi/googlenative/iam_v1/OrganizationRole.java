@@ -15,104 +15,89 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new custom Role.
- * 
  */
 @ResourceType(type="google-native:iam/v1:OrganizationRole")
 public class OrganizationRole extends io.pulumi.resources.CustomResource {
     /**
      * The current deleted state of the role. This field is read only. It will be ignored in calls to CreateRole and UpdateRole.
-     * 
      */
     @Export(name="deleted", type=Boolean.class, parameters={})
     private Output<Boolean> deleted;
 
     /**
      * @return The current deleted state of the role. This field is read only. It will be ignored in calls to CreateRole and UpdateRole.
-     * 
      */
     public Output<Boolean> getDeleted() {
         return this.deleted;
     }
     /**
      * Optional. A human-readable description for the role.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Optional. A human-readable description for the role.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Used to perform a consistent read-modify-write.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return Used to perform a consistent read-modify-write.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The names of the permissions this role grants when bound in an IAM policy.
-     * 
      */
     @Export(name="includedPermissions", type=List.class, parameters={String.class})
     private Output<List<String>> includedPermissions;
 
     /**
      * @return The names of the permissions this role grants when bound in an IAM policy.
-     * 
      */
     public Output<List<String>> getIncludedPermissions() {
         return this.includedPermissions;
     }
     /**
      * The name of the role. When Role is used in CreateRole, the role name must not be set. When Role is used in output and other input such as UpdateRole, the role name is the complete path, e.g., roles/logging.viewer for predefined roles and organizations/{ORGANIZATION_ID}/roles/logging.viewer for custom roles.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the role. When Role is used in CreateRole, the role name must not be set. When Role is used in output and other input such as UpdateRole, the role name is the complete path, e.g., roles/logging.viewer for predefined roles and organizations/{ORGANIZATION_ID}/roles/logging.viewer for custom roles.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The current launch stage of the role. If the `ALPHA` launch stage has been selected for a role, the `stage` field will not be included in the returned definition for the role.
-     * 
      */
     @Export(name="stage", type=String.class, parameters={})
     private Output<String> stage;
 
     /**
      * @return The current launch stage of the role. If the `ALPHA` launch stage has been selected for a role, the `stage` field will not be included in the returned definition for the role.
-     * 
      */
     public Output<String> getStage() {
         return this.stage;
     }
     /**
      * Optional. A human-readable title for the role. Typically this is limited to 100 UTF-8 bytes.
-     * 
      */
     @Export(name="title", type=String.class, parameters={})
     private Output<String> title;
 
     /**
      * @return Optional. A human-readable title for the role. Typically this is limited to 100 UTF-8 bytes.
-     * 
      */
     public Output<String> getTitle() {
         return this.title;

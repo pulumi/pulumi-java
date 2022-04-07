@@ -16,32 +16,26 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2ActionResponse {
     /**
      * Enable email notification for project owners and editors on job's completion/failure.
-     * 
      */
     private final GooglePrivacyDlpV2JobNotificationEmailsResponse jobNotificationEmails;
     /**
      * Publish a notification to a pubsub topic.
-     * 
      */
     private final GooglePrivacyDlpV2PublishToPubSubResponse pubSub;
     /**
      * Publish findings to Cloud Datahub.
-     * 
      */
     private final GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse publishFindingsToCloudDataCatalog;
     /**
      * Publish summary to Cloud Security Command Center (Alpha).
-     * 
      */
     private final GooglePrivacyDlpV2PublishSummaryToCsccResponse publishSummaryToCscc;
     /**
      * Enable Stackdriver metric dlp.googleapis.com/finding_count.
-     * 
      */
     private final GooglePrivacyDlpV2PublishToStackdriverResponse publishToStackdriver;
     /**
      * Save resulting findings in a provided location.
-     * 
      */
     private final GooglePrivacyDlpV2SaveFindingsResponse saveFindings;
 
@@ -63,42 +57,36 @@ public final class GooglePrivacyDlpV2ActionResponse {
 
     /**
      * Enable email notification for project owners and editors on job's completion/failure.
-     * 
     */
     public GooglePrivacyDlpV2JobNotificationEmailsResponse getJobNotificationEmails() {
         return this.jobNotificationEmails;
     }
     /**
      * Publish a notification to a pubsub topic.
-     * 
     */
     public GooglePrivacyDlpV2PublishToPubSubResponse getPubSub() {
         return this.pubSub;
     }
     /**
      * Publish findings to Cloud Datahub.
-     * 
     */
     public GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse getPublishFindingsToCloudDataCatalog() {
         return this.publishFindingsToCloudDataCatalog;
     }
     /**
      * Publish summary to Cloud Security Command Center (Alpha).
-     * 
     */
     public GooglePrivacyDlpV2PublishSummaryToCsccResponse getPublishSummaryToCscc() {
         return this.publishSummaryToCscc;
     }
     /**
      * Enable Stackdriver metric dlp.googleapis.com/finding_count.
-     * 
     */
     public GooglePrivacyDlpV2PublishToStackdriverResponse getPublishToStackdriver() {
         return this.publishToStackdriver;
     }
     /**
      * Save resulting findings in a provided location.
-     * 
     */
     public GooglePrivacyDlpV2SaveFindingsResponse getSaveFindings() {
         return this.saveFindings;

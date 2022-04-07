@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a change made to a configuration.
- * 
  */
 public final class MutationRecordArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MutationRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * When the change occurred.
-     * 
      */
     @Import(name="mutateTime")
       private final @Nullable Output<String> mutateTime;
@@ -31,7 +29,6 @@ public final class MutationRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The email address of the user making the change.
-     * 
      */
     @Import(name="mutatedBy")
       private final @Nullable Output<String> mutatedBy;

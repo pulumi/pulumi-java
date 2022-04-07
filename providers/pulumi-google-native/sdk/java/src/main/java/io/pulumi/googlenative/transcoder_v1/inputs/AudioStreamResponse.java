@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Audio stream resource.
- * 
  */
 public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Audio bitrate in bits per second. Must be between 1 and 10,000,000.
-     * 
      */
     @Import(name="bitrateBps", required=true)
       private final Integer bitrateBps;
@@ -32,7 +30,6 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Number of audio channels. Must be between 1 and 6. The default is 2.
-     * 
      */
     @Import(name="channelCount", required=true)
       private final Integer channelCount;
@@ -43,7 +40,6 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A list of channel names specifying layout of the audio channels. This only affects the metadata embedded in the container headers, if supported by the specified format. The default is `["fl", "fr"]`. Supported channel names: - `fl` - Front left channel - `fr` - Front right channel - `sl` - Side left channel - `sr` - Side right channel - `fc` - Front center channel - `lfe` - Low frequency
-     * 
      */
     @Import(name="channelLayout", required=true)
       private final List<String> channelLayout;
@@ -54,7 +50,6 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The codec for this audio stream. The default is `aac`. Supported audio codecs: - `aac` - `aac-he` - `aac-he-v2` - `mp3` - `ac3` - `eac3`
-     * 
      */
     @Import(name="codec", required=true)
       private final String codec;
@@ -65,7 +60,6 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
-     * 
      */
     @Import(name="mapping", required=true)
       private final List<AudioMappingResponse> mapping;
@@ -76,7 +70,6 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The audio sample rate in Hertz. The default is 48000 Hertz.
-     * 
      */
     @Import(name="sampleRateHertz", required=true)
       private final Integer sampleRateHertz;

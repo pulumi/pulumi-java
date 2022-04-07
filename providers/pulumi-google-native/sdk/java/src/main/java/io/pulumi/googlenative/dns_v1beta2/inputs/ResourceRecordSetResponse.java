@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * A unit of data that is returned by the DNS servers.
- * 
  */
 public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
 
     /**
      * For example, www.example.com.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -39,7 +37,6 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.
-     * 
      */
     @Import(name="routingPolicy", required=true)
       private final RRSetRoutingPolicyResponse routingPolicy;
@@ -50,7 +47,6 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
 
     /**
      * As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
-     * 
      */
     @Import(name="rrdatas", required=true)
       private final List<String> rrdatas;
@@ -61,7 +57,6 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
 
     /**
      * As defined in RFC 4034 (section 3.2).
-     * 
      */
     @Import(name="signatureRrdatas", required=true)
       private final List<String> signatureRrdatas;
@@ -72,7 +67,6 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Number of seconds that this ResourceRecordSet can be cached by resolvers.
-     * 
      */
     @Import(name="ttl", required=true)
       private final Integer ttl;
@@ -83,7 +77,6 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The identifier of a supported record type. See the list of Supported DNS record types.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -12,27 +12,22 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse {
     /**
      * Url where the media is stored.
-     * 
      */
     private final String contentUrl;
     /**
      * Optional. Description of media card.
-     * 
      */
     private final String description;
     /**
      * Optional. Icon to display above media content.
-     * 
      */
     private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse icon;
     /**
      * Optional. Image to display above media content.
-     * 
      */
     private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse largeImage;
     /**
      * Name of media card.
-     * 
      */
     private final String name;
 
@@ -52,35 +47,30 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
 
     /**
      * Url where the media is stored.
-     * 
     */
     public String getContentUrl() {
         return this.contentUrl;
     }
     /**
      * Optional. Description of media card.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * Optional. Icon to display above media content.
-     * 
     */
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getIcon() {
         return this.icon;
     }
     /**
      * Optional. Image to display above media content.
-     * 
     */
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getLargeImage() {
         return this.largeImage;
     }
     /**
      * Name of media card.
-     * 
     */
     public String getName() {
         return this.name;

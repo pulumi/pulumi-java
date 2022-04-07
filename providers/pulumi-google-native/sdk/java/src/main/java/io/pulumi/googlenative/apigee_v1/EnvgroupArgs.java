@@ -17,7 +17,6 @@ public final class EnvgroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Host names for this environment group.
-     * 
      */
     @Import(name="hostnames", required=true)
       private final Output<List<String>> hostnames;
@@ -28,7 +27,6 @@ public final class EnvgroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ID of the environment group.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * The environment values to be set at runtime for a Flex Template.
- * 
  */
 public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
 
     /**
      * Additional experiment flags for the job.
-     * 
      */
     @Import(name="additionalExperiments", required=true)
       private final List<String> additionalExperiments;
@@ -33,7 +31,6 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
 
     /**
      * Additional user labels to be specified for the job. Keys and values must follow the restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions). An object containing a list of key/value pairs. Example: `{ "name": "wrench", "mass": "1kg", "count": "3" }`.
-     * 
      */
     @Import(name="additionalUserLabels", required=true)
       private final Map<String,String> additionalUserLabels;
@@ -44,7 +41,6 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
 
     /**
      * Whether to enable Streaming Engine for the job.
-     * 
      */
     @Import(name="enableStreamingEngine", required=true)
       private final Boolean enableStreamingEngine;
@@ -55,7 +51,6 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
 
     /**
      * Set FlexRS goal for the job. https://cloud.google.com/dataflow/docs/guides/flexrs
-     * 
      */
     @Import(name="flexrsGoal", required=true)
       private final String flexrsGoal;
@@ -66,7 +61,6 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
 
     /**
      * Configuration for VM IPs.
-     * 
      */
     @Import(name="ipConfiguration", required=true)
       private final String ipConfiguration;
@@ -77,7 +71,6 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
 
     /**
      * Name for the Cloud KMS key for the job. Key format is: projects//locations//keyRings//cryptoKeys/
-     * 
      */
     @Import(name="kmsKeyName", required=true)
       private final String kmsKeyName;
@@ -88,7 +81,6 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
 
     /**
      * The machine type to use for the job. Defaults to the value from the template if not specified.
-     * 
      */
     @Import(name="machineType", required=true)
       private final String machineType;
@@ -99,7 +91,6 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
 
     /**
      * The maximum number of Compute Engine instances to be made available to your pipeline during execution, from 1 to 1000.
-     * 
      */
     @Import(name="maxWorkers", required=true)
       private final Integer maxWorkers;
@@ -110,7 +101,6 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
 
     /**
      * Network to which VMs will be assigned. If empty or unspecified, the service will use the network "default".
-     * 
      */
     @Import(name="network", required=true)
       private final String network;
@@ -121,7 +111,6 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
 
     /**
      * The initial number of Compute Engine instances for the job.
-     * 
      */
     @Import(name="numWorkers", required=true)
       private final Integer numWorkers;
@@ -132,7 +121,6 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
 
     /**
      * The email address of the service account to run the job as.
-     * 
      */
     @Import(name="serviceAccountEmail", required=true)
       private final String serviceAccountEmail;
@@ -143,7 +131,6 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
 
     /**
      * Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork using either a complete URL or an abbreviated path. Expected to be of the form "https://www.googleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or "regions/REGION/subnetworks/SUBNETWORK". If the subnetwork is located in a Shared VPC network, you must use the complete URL.
-     * 
      */
     @Import(name="subnetwork", required=true)
       private final String subnetwork;
@@ -154,7 +141,6 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
 
     /**
      * The Cloud Storage path to use for temporary files. Must be a valid Cloud Storage URL, beginning with `gs://`.
-     * 
      */
     @Import(name="tempLocation", required=true)
       private final String tempLocation;
@@ -165,7 +151,6 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
 
     /**
      * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, defaults to the control plane region.
-     * 
      */
     @Import(name="workerRegion", required=true)
       private final String workerRegion;
@@ -176,7 +161,6 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
 
     /**
      * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane region is chosen based on available capacity. If both `worker_zone` and `zone` are set, `worker_zone` takes precedence.
-     * 
      */
     @Import(name="workerZone", required=true)
       private final String workerZone;
@@ -187,7 +171,6 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
 
     /**
      * The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones) for launching worker instances to run your pipeline. In the future, worker_zone will take precedence.
-     * 
      */
     @Import(name="zone", required=true)
       private final String zone;

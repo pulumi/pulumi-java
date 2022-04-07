@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies a resource to be used in the recipe.
- * 
  */
 public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
 
     /**
      * Defaults to false. When false, recipes are subject to validations based on the artifact type: Remote: A checksum must be specified, and only protocols with transport-layer security are permitted. GCS: An object generation number must be specified.
-     * 
      */
     @Import(name="allowInsecure")
       private final @Nullable Output<Boolean> allowInsecure;
@@ -34,7 +32,6 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
 
     /**
      * A Google Cloud Storage artifact.
-     * 
      */
     @Import(name="gcs")
       private final @Nullable Output<SoftwareRecipeArtifactGcsArgs> gcs;
@@ -45,7 +42,6 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
 
     /**
      * Id of the artifact, which the installation and update steps of this recipe can reference. Artifacts in a recipe cannot have the same id.
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;
@@ -56,7 +52,6 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
 
     /**
      * A generic remote artifact.
-     * 
      */
     @Import(name="remote")
       private final @Nullable Output<SoftwareRecipeArtifactRemoteArgs> remote;

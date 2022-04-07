@@ -12,22 +12,18 @@ import java.util.Objects;
 public final class AnimationFadeResponse {
     /**
      * The time to end the fade animation, in seconds. Default: `start_time_offset` + 1s
-     * 
      */
     private final String endTimeOffset;
     /**
      * Type of fade animation: `FADE_IN` or `FADE_OUT`.
-     * 
      */
     private final String fadeType;
     /**
      * The time to start the fade animation, in seconds. Default: 0
-     * 
      */
     private final String startTimeOffset;
     /**
      * Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.
-     * 
      */
     private final NormalizedCoordinateResponse xy;
 
@@ -45,28 +41,24 @@ public final class AnimationFadeResponse {
 
     /**
      * The time to end the fade animation, in seconds. Default: `start_time_offset` + 1s
-     * 
     */
     public String getEndTimeOffset() {
         return this.endTimeOffset;
     }
     /**
      * Type of fade animation: `FADE_IN` or `FADE_OUT`.
-     * 
     */
     public String getFadeType() {
         return this.fadeType;
     }
     /**
      * The time to start the fade animation, in seconds. Default: 0
-     * 
     */
     public String getStartTimeOffset() {
         return this.startTimeOffset;
     }
     /**
      * Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.
-     * 
     */
     public NormalizedCoordinateResponse getXy() {
         return this.xy;

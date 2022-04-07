@@ -16,7 +16,6 @@ import java.util.Objects;
 
 /**
  * A CertificateDescription describes an X.509 certificate or CSR that has been issued, as an alternative to using ASN.1 / X.509.
- * 
  */
 public final class CertificateDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
 
     /**
      * Describes lists of issuer CA certificate URLs that appear in the "Authority Information Access" extension in the certificate.
-     * 
      */
     @Import(name="aiaIssuingCertificateUrls", required=true)
       private final List<String> aiaIssuingCertificateUrls;
@@ -35,7 +33,6 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
 
     /**
      * Identifies the subject_key_id of the parent certificate, per https://tools.ietf.org/html/rfc5280#section-4.2.1.1
-     * 
      */
     @Import(name="authorityKeyId", required=true)
       private final KeyIdResponse authorityKeyId;
@@ -46,7 +43,6 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
 
     /**
      * The hash of the x.509 certificate.
-     * 
      */
     @Import(name="certFingerprint", required=true)
       private final CertificateFingerprintResponse certFingerprint;
@@ -57,7 +53,6 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
 
     /**
      * Describes a list of locations to obtain CRL information, i.e. the DistributionPoint.fullName described by https://tools.ietf.org/html/rfc5280#section-4.2.1.13
-     * 
      */
     @Import(name="crlDistributionPoints", required=true)
       private final List<String> crlDistributionPoints;
@@ -68,7 +63,6 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
 
     /**
      * The public key that corresponds to an issued certificate.
-     * 
      */
     @Import(name="publicKey", required=true)
       private final PublicKeyResponse publicKey;
@@ -79,7 +73,6 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
 
     /**
      * Describes some of the values in a certificate that are related to the subject and lifetime.
-     * 
      */
     @Import(name="subjectDescription", required=true)
       private final SubjectDescriptionResponse subjectDescription;
@@ -90,7 +83,6 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
 
     /**
      * Provides a means of identifiying certificates that contain a particular public key, per https://tools.ietf.org/html/rfc5280#section-4.2.1.2.
-     * 
      */
     @Import(name="subjectKeyId", required=true)
       private final KeyIdResponse subjectKeyId;
@@ -101,7 +93,6 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
 
     /**
      * Describes some of the technical X.509 fields in a certificate.
-     * 
      */
     @Import(name="x509Description", required=true)
       private final X509ParametersResponse x509Description;

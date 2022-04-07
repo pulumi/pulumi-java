@@ -22,7 +22,6 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The static IP address represented by this resource.
-     * 
      */
     @Import(name="address")
       private final @Nullable Output<String> address;
@@ -33,7 +32,6 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of address to reserve, either INTERNAL or EXTERNAL. If unspecified, defaults to EXTERNAL.
-     * 
      */
     @Import(name="addressType")
       private final @Nullable Output<GlobalAddressAddressType> addressType;
@@ -44,7 +42,6 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional description of this resource. Provide this field when you create the resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -55,7 +52,6 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The IP version that will be used by this address. Valid options are IPV4 or IPV6. This can only be specified for a global address.
-     * 
      */
     @Import(name="ipVersion")
       private final @Nullable Output<GlobalAddressIpVersion> ipVersion;
@@ -66,7 +62,6 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -77,7 +72,6 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -88,7 +82,6 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The URL of the network in which to reserve the address. This field can only be used with INTERNAL type with the VPC_PEERING purpose.
-     * 
      */
     @Import(name="network")
       private final @Nullable Output<String> network;
@@ -99,7 +92,6 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This signifies the networking tier used for configuring this address and can only take the following values: PREMIUM or STANDARD. Internal IP addresses are always Premium Tier; global external IP addresses are always Premium Tier; regional external IP addresses can be either Standard or Premium Tier. If this field is not specified, it is assumed to be PREMIUM.
-     * 
      */
     @Import(name="networkTier")
       private final @Nullable Output<GlobalAddressNetworkTier> networkTier;
@@ -110,7 +102,6 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The prefix length if the resource represents an IP range.
-     * 
      */
     @Import(name="prefixLength")
       private final @Nullable Output<Integer> prefixLength;
@@ -127,8 +118,7 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The purpose of this resource, which can be one of the following values: - GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, load balancers, and similar resources. - DNS_RESOLVER for a DNS resolver address in a subnetwork for a Cloud DNS inbound forwarder IP addresses (regional internal IP address in a subnet of a VPC network) - VPC_PEERING for global internal IP addresses used for private services access allocated ranges. - NAT_AUTO for the regional external IP addresses used by Cloud NAT when allocating addresses using automatic NAT IP address allocation. - IPSEC_INTERCONNECT for addresses created from a private IP range that are reserved for a VLAN attachment in an *IPsec-encrypted Cloud Interconnect* configuration. These addresses are regional resources. Not currently available publicly. - `SHARED_LOADBALANCER_VIP` for an internal IP address that is assigned to multiple internal forwarding rules. - `PRIVATE_SERVICE_CONNECT` for a private network address that is used to configure Private Service Connect. Only global internal addresses can use this purpose.
-     * 
+     * The purpose of this resource, which can be one of the following values: - GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, load balancers, and similar resources. - DNS_RESOLVER for a DNS resolver address in a subnetwork for a Cloud DNS inbound forwarder IP addresses (regional internal IP address in a subnet of a VPC network) - VPC_PEERING for global internal IP addresses used for private services access allocated ranges. - NAT_AUTO for the regional external IP addresses used by Cloud NAT when allocating addresses using automatic NAT IP address allocation. - IPSEC_INTERCONNECT for addresses created from a private IP range that are reserved for a VLAN attachment in an *IPsec-encrypted Cloud Interconnect* configuration. These addresses are regional resources. Not currently available publicly. - `SHARED_LOADBALANCER_VIP` for an internal IP address that is assigned to multiple internal forwarding rules. - `PRIVATE_SERVICE_CONNECT` for a private network address that is used to configure Private Service Connect. Only global internal addresses can use this purpose. 
      */
     @Import(name="purpose")
       private final @Nullable Output<GlobalAddressPurpose> purpose;
@@ -146,7 +136,6 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The URL of the subnetwork in which to reserve the address. If an IP address is specified, it must be within the subnetwork's IP range. This field can only be used with INTERNAL type with a GCE_ENDPOINT or DNS_RESOLVER purpose.
-     * 
      */
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;

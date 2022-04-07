@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration for the Kubernetes Dashboard.
- * 
  */
 public final class KubernetesDashboardResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class KubernetesDashboardResponse extends io.pulumi.resources.Invok
 
     /**
      * Whether the Kubernetes Dashboard is enabled for this cluster.
-     * 
      */
     @Import(name="disabled", required=true)
       private final Boolean disabled;

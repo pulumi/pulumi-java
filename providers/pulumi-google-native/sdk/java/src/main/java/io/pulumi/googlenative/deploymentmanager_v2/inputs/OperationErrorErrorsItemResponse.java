@@ -14,7 +14,6 @@ public final class OperationErrorErrorsItemResponse extends io.pulumi.resources.
 
     /**
      * The error type identifier for this error.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -25,7 +24,6 @@ public final class OperationErrorErrorsItemResponse extends io.pulumi.resources.
 
     /**
      * Indicates the field in the request that caused the error. This property is optional.
-     * 
      */
     @Import(name="location", required=true)
       private final String location;
@@ -36,7 +34,6 @@ public final class OperationErrorErrorsItemResponse extends io.pulumi.resources.
 
     /**
      * An optional, human-readable error message.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;

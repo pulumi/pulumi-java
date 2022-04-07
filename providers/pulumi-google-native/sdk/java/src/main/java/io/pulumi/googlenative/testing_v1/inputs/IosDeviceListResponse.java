@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A list of iOS device configurations in which the test is to be executed.
- * 
  */
 public final class IosDeviceListResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class IosDeviceListResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * A list of iOS devices.
-     * 
      */
     @Import(name="iosDevices", required=true)
       private final List<IosDeviceResponse> iosDevices;

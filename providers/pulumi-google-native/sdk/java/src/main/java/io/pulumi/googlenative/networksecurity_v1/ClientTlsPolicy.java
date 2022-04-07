@@ -17,118 +17,101 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new ClientTlsPolicy in a given project and location.
- * 
  */
 @ResourceType(type="google-native:networksecurity/v1:ClientTlsPolicy")
 public class ClientTlsPolicy extends io.pulumi.resources.CustomResource {
     /**
      * Optional. Defines a mechanism to provision client identity (public and private keys) for peer to peer authentication. The presence of this dictates mTLS.
-     * 
      */
     @Export(name="clientCertificate", type=GoogleCloudNetworksecurityV1CertificateProviderResponse.class, parameters={})
     private Output<GoogleCloudNetworksecurityV1CertificateProviderResponse> clientCertificate;
 
     /**
      * @return Optional. Defines a mechanism to provision client identity (public and private keys) for peer to peer authentication. The presence of this dictates mTLS.
-     * 
      */
     public Output<GoogleCloudNetworksecurityV1CertificateProviderResponse> getClientCertificate() {
         return this.clientCertificate;
     }
     /**
      * The timestamp when the resource was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The timestamp when the resource was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. Free-text description of the resource.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Optional. Free-text description of the resource.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Optional. Set of label tags associated with the resource.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Optional. Set of label tags associated with the resource.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * Name of the ClientTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/clientTlsPolicies/{client_tls_policy}`
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the ClientTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/clientTlsPolicies/{client_tls_policy}`
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Optional. Defines the mechanism to obtain the Certificate Authority certificate to validate the server certificate. If empty, client does not validate the server certificate.
-     * 
      */
     @Export(name="serverValidationCa", type=List.class, parameters={ValidationCAResponse.class})
     private Output<List<ValidationCAResponse>> serverValidationCa;
 
     /**
      * @return Optional. Defines the mechanism to obtain the Certificate Authority certificate to validate the server certificate. If empty, client does not validate the server certificate.
-     * 
      */
     public Output<List<ValidationCAResponse>> getServerValidationCa() {
         return this.serverValidationCa;
     }
     /**
      * Optional. Server Name Indication string to present to the server during TLS handshake. E.g: "secure.example.com".
-     * 
      */
     @Export(name="sni", type=String.class, parameters={})
     private Output<String> sni;
 
     /**
      * @return Optional. Server Name Indication string to present to the server during TLS handshake. E.g: "secure.example.com".
-     * 
      */
     public Output<String> getSni() {
         return this.sni;
     }
     /**
      * The timestamp when the resource was updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The timestamp when the resource was updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Records a failed evaluation job run.
- * 
  */
 public final class GoogleCloudDatalabelingV1beta1AttemptResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -27,7 +26,6 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse extends io.pulu
 
     /**
      * Details of errors that occurred.
-     * 
      */
     @Import(name="partialFailures", required=true)
       private final List<GoogleRpcStatusResponse> partialFailures;

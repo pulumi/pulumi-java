@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A bounding polygon for the detected image annotation.
- * 
  */
 public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The bounding polygon normalized vertices.
-     * 
      */
     @Import(name="normalizedVertices")
       private final @Nullable Output<List<NormalizedVertexArgs>> normalizedVertices;
@@ -33,7 +31,6 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The bounding polygon vertices.
-     * 
      */
     @Import(name="vertices")
       private final @Nullable Output<List<VertexArgs>> vertices;

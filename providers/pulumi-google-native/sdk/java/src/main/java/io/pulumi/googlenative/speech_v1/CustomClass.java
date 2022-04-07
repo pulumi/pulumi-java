@@ -15,48 +15,41 @@ import javax.annotation.Nullable;
 
 /**
  * Create a custom class.
- * 
  */
 @ResourceType(type="google-native:speech/v1:CustomClass")
 public class CustomClass extends io.pulumi.resources.CustomResource {
     /**
      * If this custom class is a resource, the custom_class_id is the resource id of the CustomClass. Case sensitive.
-     * 
      */
     @Export(name="customClassId", type=String.class, parameters={})
     private Output<String> customClassId;
 
     /**
      * @return If this custom class is a resource, the custom_class_id is the resource id of the CustomClass. Case sensitive.
-     * 
      */
     public Output<String> getCustomClassId() {
         return this.customClassId;
     }
     /**
      * A collection of class items.
-     * 
      */
     @Export(name="items", type=List.class, parameters={ClassItemResponse.class})
     private Output<List<ClassItemResponse>> items;
 
     /**
      * @return A collection of class items.
-     * 
      */
     public Output<List<ClassItemResponse>> getItems() {
         return this.items;
     }
     /**
      * The resource name of the custom class.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the custom class.
-     * 
      */
     public Output<String> getName() {
         return this.name;

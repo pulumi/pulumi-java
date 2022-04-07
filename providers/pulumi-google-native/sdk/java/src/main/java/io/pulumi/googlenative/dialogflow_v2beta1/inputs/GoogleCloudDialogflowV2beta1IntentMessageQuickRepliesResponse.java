@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The quick replies response message.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse
 
     /**
      * Optional. The collection of quick replies.
-     * 
      */
     @Import(name="quickReplies", required=true)
       private final List<String> quickReplies;
@@ -30,7 +28,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse
 
     /**
      * Optional. The title of the collection of quick replies.
-     * 
      */
     @Import(name="title", required=true)
       private final String title;

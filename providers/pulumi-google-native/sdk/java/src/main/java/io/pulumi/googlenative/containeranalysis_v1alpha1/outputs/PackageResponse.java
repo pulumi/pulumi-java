@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class PackageResponse {
     /**
      * The various channels by which a package is distributed.
-     * 
      */
     private final List<DistributionResponse> distribution;
     /**
      * The name of the package.
-     * 
      */
     private final String name;
 
@@ -32,14 +30,12 @@ public final class PackageResponse {
 
     /**
      * The various channels by which a package is distributed.
-     * 
     */
     public List<DistributionResponse> getDistribution() {
         return this.distribution;
     }
     /**
      * The name of the package.
-     * 
     */
     public String getName() {
         return this.name;

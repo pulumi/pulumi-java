@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse {
     /**
      * A unique key that will be sent back to the agent if this response is given.
-     * 
      */
     private final String key;
     /**
      * Optional. A list of synonyms that can also be used to trigger this item in dialog.
-     * 
      */
     private final List<String> synonyms;
 
@@ -31,14 +29,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoRespon
 
     /**
      * A unique key that will be sent back to the agent if this response is given.
-     * 
     */
     public String getKey() {
         return this.key;
     }
     /**
      * Optional. A list of synonyms that can also be used to trigger this item in dialog.
-     * 
     */
     public List<String> getSynonyms() {
         return this.synonyms;

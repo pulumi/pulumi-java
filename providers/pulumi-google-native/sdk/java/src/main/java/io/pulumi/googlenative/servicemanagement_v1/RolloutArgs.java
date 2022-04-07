@@ -19,7 +19,6 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Creation time of the rollout. Readonly.
-     * 
      */
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
@@ -30,7 +29,6 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The strategy associated with a rollout to delete a `ManagedService`. Readonly.
-     * 
      */
     @Import(name="deleteServiceStrategy")
       private final @Nullable Output<DeleteServiceStrategyArgs> deleteServiceStrategy;
@@ -41,7 +39,6 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Unique identifier of this Rollout. Must be no longer than 63 characters and only lower case letters, digits, '.', '_' and '-' are allowed. If not specified by client, the server will generate one. The generated id will have the form of , where "date" is the create date in ISO 8601 format. "revision number" is a monotonically increasing positive number that is reset every day for each service. An example of the generated rollout_id is '2016-02-16r1'
-     * 
      */
     @Import(name="rolloutId")
       private final @Nullable Output<String> rolloutId;
@@ -52,7 +49,6 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the service associated with this Rollout.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -63,7 +59,6 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The status of this rollout. Readonly. In case of a failed rollout, the system will automatically rollback to the current Rollout version. Readonly.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<RolloutStatus> status;
@@ -74,7 +69,6 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Google Service Control selects service configurations based on traffic percentage.
-     * 
      */
     @Import(name="trafficPercentStrategy")
       private final @Nullable Output<TrafficPercentStrategyArgs> trafficPercentStrategy;

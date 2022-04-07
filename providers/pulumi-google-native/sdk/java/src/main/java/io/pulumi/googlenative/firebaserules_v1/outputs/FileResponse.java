@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class FileResponse {
     /**
      * Textual Content.
-     * 
      */
     private final String content;
     /**
      * Fingerprint (e.g. github sha) associated with the `File`.
-     * 
      */
     private final String fingerprint;
     /**
      * File name.
-     * 
      */
     private final String name;
 
@@ -37,21 +34,18 @@ public final class FileResponse {
 
     /**
      * Textual Content.
-     * 
     */
     public String getContent() {
         return this.content;
     }
     /**
      * Fingerprint (e.g. github sha) associated with the `File`.
-     * 
     */
     public String getFingerprint() {
         return this.fingerprint;
     }
     /**
      * File name.
-     * 
     */
     public String getName() {
         return this.name;

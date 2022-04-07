@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Add-on configurations for the Apigee organization.
- * 
  */
 public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
 
     /**
      * Configuration for the Advanced API Ops add-on.
-     * 
      */
     @Import(name="advancedApiOpsConfig")
       private final @Nullable Output<GoogleCloudApigeeV1AdvancedApiOpsConfigArgs> advancedApiOpsConfig;
@@ -34,7 +32,6 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
 
     /**
      * Configuration for the Connectors Platform add-on.
-     * 
      */
     @Import(name="connectorsPlatformConfig")
       private final @Nullable Output<GoogleCloudApigeeV1ConnectorsPlatformConfigArgs> connectorsPlatformConfig;
@@ -45,7 +42,6 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
 
     /**
      * Configuration for the Integration add-on.
-     * 
      */
     @Import(name="integrationConfig")
       private final @Nullable Output<GoogleCloudApigeeV1IntegrationConfigArgs> integrationConfig;
@@ -56,7 +52,6 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
 
     /**
      * Configuration for the Monetization add-on.
-     * 
      */
     @Import(name="monetizationConfig")
       private final @Nullable Output<GoogleCloudApigeeV1MonetizationConfigArgs> monetizationConfig;

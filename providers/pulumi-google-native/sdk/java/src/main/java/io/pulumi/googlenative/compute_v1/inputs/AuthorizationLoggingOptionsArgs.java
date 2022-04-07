@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * This is deprecated and has no effect. Do not use.
- * 
  */
 public final class AuthorizationLoggingOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AuthorizationLoggingOptionsArgs extends io.pulumi.resources.R
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="permissionType")
       private final @Nullable Output<AuthorizationLoggingOptionsPermissionType> permissionType;

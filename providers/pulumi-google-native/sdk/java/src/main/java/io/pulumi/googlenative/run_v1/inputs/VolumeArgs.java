@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Volume represents a named volume in a container.
- * 
  */
 public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

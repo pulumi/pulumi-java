@@ -24,7 +24,6 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
 
     /**
      * Metadata defined as annotations on the network endpoint group.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
@@ -35,7 +34,6 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
 
     /**
      * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
-     * 
      */
     @Import(name="appEngine")
       private final @Nullable Output<NetworkEndpointGroupAppEngineArgs> appEngine;
@@ -46,7 +44,6 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
 
     /**
      * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
-     * 
      */
     @Import(name="cloudFunction")
       private final @Nullable Output<NetworkEndpointGroupCloudFunctionArgs> cloudFunction;
@@ -57,7 +54,6 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
 
     /**
      * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
-     * 
      */
     @Import(name="cloudRun")
       private final @Nullable Output<NetworkEndpointGroupCloudRunArgs> cloudRun;
@@ -68,7 +64,6 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
 
     /**
      * The default port used if the port number is not specified in the network endpoint.
-     * 
      */
     @Import(name="defaultPort")
       private final @Nullable Output<Integer> defaultPort;
@@ -79,7 +74,6 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
 
     /**
      * An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -90,7 +84,6 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
 
     /**
      * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -101,7 +94,6 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
 
     /**
      * The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified.
-     * 
      */
     @Import(name="network")
       private final @Nullable Output<String> network;
@@ -112,7 +104,6 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
 
     /**
      * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
-     * 
      */
     @Import(name="networkEndpointType")
       private final @Nullable Output<RegionNetworkEndpointGroupNetworkEndpointType> networkEndpointType;
@@ -130,7 +121,6 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
 
     /**
      * The target service url used to set up private service connection to a Google API. An example value is: "asia-northeast3-cloudkms.googleapis.com"
-     * 
      */
     @Import(name="pscTargetService")
       private final @Nullable Output<String> pscTargetService;
@@ -155,7 +145,6 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
 
     /**
      * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine, cloudFunction or serverlessDeployment may be set.
-     * 
      */
     @Import(name="serverlessDeployment")
       private final @Nullable Output<NetworkEndpointGroupServerlessDeploymentArgs> serverlessDeployment;
@@ -166,7 +155,6 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
 
     /**
      * Optional URL of the subnetwork to which all network endpoints in the NEG belong.
-     * 
      */
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
@@ -177,7 +165,6 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
 
     /**
      * Specify the type of this network endpoint group. Only LOAD_BALANCING is valid for now.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<RegionNetworkEndpointGroupType> type;

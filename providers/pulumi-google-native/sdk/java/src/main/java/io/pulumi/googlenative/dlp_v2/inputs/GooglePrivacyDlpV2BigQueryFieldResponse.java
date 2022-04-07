@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Message defining a field of a BigQuery table.
- * 
  */
 public final class GooglePrivacyDlpV2BigQueryFieldResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse extends io.pulumi.res
 
     /**
      * Designated field in the BigQuery table.
-     * 
      */
     @Import(name="field", required=true)
       private final GooglePrivacyDlpV2FieldIdResponse field;
@@ -30,7 +28,6 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse extends io.pulumi.res
 
     /**
      * Source table of the field.
-     * 
      */
     @Import(name="table", required=true)
       private final GooglePrivacyDlpV2BigQueryTableResponse table;

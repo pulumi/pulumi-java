@@ -15,76 +15,65 @@ import javax.annotation.Nullable;
 /**
  * Creates a study.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:ml/v1:Study")
 public class Study extends io.pulumi.resources.CustomResource {
     /**
      * Time at which the study was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return Time at which the study was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * A human readable reason why the Study is inactive. This should be empty if a study is ACTIVE or COMPLETED.
-     * 
      */
     @Export(name="inactiveReason", type=String.class, parameters={})
     private Output<String> inactiveReason;
 
     /**
      * @return A human readable reason why the Study is inactive. This should be empty if a study is ACTIVE or COMPLETED.
-     * 
      */
     public Output<String> getInactiveReason() {
         return this.inactiveReason;
     }
     /**
      * The name of a study.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of a study.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The detailed state of a study.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The detailed state of a study.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Configuration of the study.
-     * 
      */
     @Export(name="studyConfig", type=GoogleCloudMlV1__StudyConfigResponse.class, parameters={})
     private Output<GoogleCloudMlV1__StudyConfigResponse> studyConfig;
 
     /**
      * @return Configuration of the study.
-     * 
      */
     public Output<GoogleCloudMlV1__StudyConfigResponse> getStudyConfig() {
         return this.studyConfig;

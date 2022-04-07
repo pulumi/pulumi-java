@@ -14,62 +14,53 @@ import javax.annotation.Nullable;
 
 /**
  * Creates an analysis. The long running operation is done when the analysis has completed.
- * 
  */
 @ResourceType(type="google-native:contactcenterinsights/v1:Analysis")
 public class Analysis extends io.pulumi.resources.CustomResource {
     /**
      * The result of the analysis, which is populated when the analysis finishes.
-     * 
      */
     @Export(name="analysisResult", type=GoogleCloudContactcenterinsightsV1AnalysisResultResponse.class, parameters={})
     private Output<GoogleCloudContactcenterinsightsV1AnalysisResultResponse> analysisResult;
 
     /**
      * @return The result of the analysis, which is populated when the analysis finishes.
-     * 
      */
     public Output<GoogleCloudContactcenterinsightsV1AnalysisResultResponse> getAnalysisResult() {
         return this.analysisResult;
     }
     /**
      * The time at which the analysis was created, which occurs when the long-running operation completes.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time at which the analysis was created, which occurs when the long-running operation completes.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Immutable. The resource name of the analysis. Format: projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Immutable. The resource name of the analysis. Format: projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The time at which the analysis was requested.
-     * 
      */
     @Export(name="requestTime", type=String.class, parameters={})
     private Output<String> requestTime;
 
     /**
      * @return The time at which the analysis was requested.
-     * 
      */
     public Output<String> getRequestTime() {
         return this.requestTime;

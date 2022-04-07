@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ResourceStatusUpcomingMaintenanceResponse {
     /**
      * Indicates if the maintenance can be customer triggered. See go/sf-ctm-design for more details
-     * 
      */
     private final Boolean canReschedule;
 
@@ -22,7 +21,6 @@ public final class ResourceStatusUpcomingMaintenanceResponse {
 
     /**
      * Indicates if the maintenance can be customer triggered. See go/sf-ctm-design for more details
-     * 
     */
     public Boolean getCanReschedule() {
         return this.canReschedule;

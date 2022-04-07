@@ -14,7 +14,6 @@ public final class DistributionPolicyZoneConfigurationResponse extends io.pulumi
 
     /**
      * The URL of the zone. The zone must exist in the region where the managed instance group is located.
-     * 
      */
     @Import(name="zone", required=true)
       private final String zone;

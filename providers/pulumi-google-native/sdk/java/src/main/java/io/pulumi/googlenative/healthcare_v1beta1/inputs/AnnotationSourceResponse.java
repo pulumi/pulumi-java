@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * AnnotationSource holds the source information of the annotation.
- * 
  */
 public final class AnnotationSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AnnotationSourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Cloud Healthcare API resource.
-     * 
      */
     @Import(name="cloudHealthcareSource", required=true)
       private final CloudHealthcareSourceResponse cloudHealthcareSource;

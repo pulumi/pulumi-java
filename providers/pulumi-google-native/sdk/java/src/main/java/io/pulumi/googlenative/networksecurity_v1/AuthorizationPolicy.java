@@ -16,104 +16,89 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new AuthorizationPolicy in a given project and location.
- * 
  */
 @ResourceType(type="google-native:networksecurity/v1:AuthorizationPolicy")
 public class AuthorizationPolicy extends io.pulumi.resources.CustomResource {
     /**
      * The action to take when a rule match is found. Possible values are "ALLOW" or "DENY".
-     * 
      */
     @Export(name="action", type=String.class, parameters={})
     private Output<String> action;
 
     /**
      * @return The action to take when a rule match is found. Possible values are "ALLOW" or "DENY".
-     * 
      */
     public Output<String> getAction() {
         return this.action;
     }
     /**
      * The timestamp when the resource was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The timestamp when the resource was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. Free-text description of the resource.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Optional. Free-text description of the resource.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Optional. Set of label tags associated with the AuthorizationPolicy resource.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Optional. Set of label tags associated with the AuthorizationPolicy resource.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * Name of the AuthorizationPolicy resource. It matches pattern `projects/{project}/locations/{location}/authorizationPolicies/`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the AuthorizationPolicy resource. It matches pattern `projects/{project}/locations/{location}/authorizationPolicies/`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Optional. List of rules to match. Note that at least one of the rules must match in order for the action specified in the 'action' field to be taken. A rule is a match if there is a matching source and destination. If left blank, the action specified in the `action` field will be applied on every request.
-     * 
      */
     @Export(name="rules", type=List.class, parameters={RuleResponse.class})
     private Output<List<RuleResponse>> rules;
 
     /**
      * @return Optional. List of rules to match. Note that at least one of the rules must match in order for the action specified in the 'action' field to be taken. A rule is a match if there is a matching source and destination. If left blank, the action specified in the `action` field will be applied on every request.
-     * 
      */
     public Output<List<RuleResponse>> getRules() {
         return this.rules;
     }
     /**
      * The timestamp when the resource was updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The timestamp when the resource was updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

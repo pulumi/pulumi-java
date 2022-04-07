@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for the Integration add-on.
- * 
  */
 public final class GoogleCloudApigeeV1IntegrationConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudApigeeV1IntegrationConfigArgs extends io.pulumi.re
 
     /**
      * Flag that specifies whether the Integration add-on is enabled.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;

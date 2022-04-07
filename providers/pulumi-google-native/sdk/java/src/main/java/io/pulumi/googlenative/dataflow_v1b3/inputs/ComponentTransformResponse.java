@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Description of a transform executed as part of an execution stage.
- * 
  */
 public final class ComponentTransformResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ComponentTransformResponse extends io.pulumi.resources.Invoke
 
     /**
      * Dataflow service generated name for this source.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class ComponentTransformResponse extends io.pulumi.resources.Invoke
 
     /**
      * User name for the original user transform with which this transform is most closely associated.
-     * 
      */
     @Import(name="originalTransform", required=true)
       private final String originalTransform;
@@ -40,7 +37,6 @@ public final class ComponentTransformResponse extends io.pulumi.resources.Invoke
 
     /**
      * Human-readable name for this transform; may be user or system generated.
-     * 
      */
     @Import(name="userName", required=true)
       private final String userName;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Cloud Storage bucket profile.
- * 
  */
 public final class GcsProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GcsProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The full project and resource path for Cloud Storage bucket including the name.
-     * 
      */
     @Import(name="bucketName", required=true)
       private final String bucketName;
@@ -29,7 +27,6 @@ public final class GcsProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The root path inside the Cloud Storage bucket.
-     * 
      */
     @Import(name="rootPath", required=true)
       private final String rootPath;

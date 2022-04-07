@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class CustomLevelResponse {
     /**
      * A Cloud CEL expression evaluating to a boolean.
-     * 
      */
     private final ExprResponse expr;
 
@@ -22,7 +21,6 @@ public final class CustomLevelResponse {
 
     /**
      * A Cloud CEL expression evaluating to a boolean.
-     * 
     */
     public ExprResponse getExpr() {
         return this.expr;

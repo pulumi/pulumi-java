@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contact people for the entry.
- * 
  */
 public final class GoogleCloudDatacatalogV1ContactsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDatacatalogV1ContactsArgs extends io.pulumi.resour
 
     /**
      * The list of contact people for the entry.
-     * 
      */
     @Import(name="people")
       private final @Nullable Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people;

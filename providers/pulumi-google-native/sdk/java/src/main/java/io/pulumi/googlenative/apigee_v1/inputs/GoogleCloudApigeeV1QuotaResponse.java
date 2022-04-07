@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Quota contains the essential parameters needed that can be applied on the resources, methods, API source combination associated with this API product. While Quota is optional, setting it prevents requests from exceeding the provisioned parameters.
- * 
  */
 public final class GoogleCloudApigeeV1QuotaResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudApigeeV1QuotaResponse extends io.pulumi.resources.
 
     /**
      * Time interval over which the number of request messages is calculated.
-     * 
      */
     @Import(name="interval", required=true)
       private final String interval;
@@ -29,7 +27,6 @@ public final class GoogleCloudApigeeV1QuotaResponse extends io.pulumi.resources.
 
     /**
      * Upper limit allowed for the time interval and time unit specified. Requests exceeding this limit will be rejected.
-     * 
      */
     @Import(name="limit", required=true)
       private final String limit;
@@ -40,7 +37,6 @@ public final class GoogleCloudApigeeV1QuotaResponse extends io.pulumi.resources.
 
     /**
      * Time unit defined for the `interval`. Valid values include `minute`, `hour`, `day`, or `month`. If `limit` and `interval` are valid, the default value is `hour`; otherwise, the default is null.
-     * 
      */
     @Import(name="timeUnit", required=true)
       private final String timeUnit;

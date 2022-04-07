@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Extracts an archive of the type specified in the specified directory.
- * 
  */
 public final class SoftwareRecipeStepExtractArchiveResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SoftwareRecipeStepExtractArchiveResponse extends io.pulumi.re
 
     /**
      * The id of the relevant artifact in the recipe.
-     * 
      */
     @Import(name="artifactId", required=true)
       private final String artifactId;
@@ -29,7 +27,6 @@ public final class SoftwareRecipeStepExtractArchiveResponse extends io.pulumi.re
 
     /**
      * Directory to extract archive to. Defaults to `/` on Linux or `C:\` on Windows.
-     * 
      */
     @Import(name="destination", required=true)
       private final String destination;
@@ -40,7 +37,6 @@ public final class SoftwareRecipeStepExtractArchiveResponse extends io.pulumi.re
 
     /**
      * The type of the archive to extract.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

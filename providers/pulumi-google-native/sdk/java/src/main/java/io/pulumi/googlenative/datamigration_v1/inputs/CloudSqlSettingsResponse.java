@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Settings for creating a Cloud SQL database instance.
- * 
  */
 public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The activation policy specifies when the instance is activated; it is applicable only when the instance state is 'RUNNABLE'. Valid values: 'ALWAYS': The instance is on, and remains so even in the absence of connection requests. `NEVER`: The instance is off; it is not activated, even if a connection request arrives.
-     * 
      */
     @Import(name="activationPolicy", required=true)
       private final String activationPolicy;
@@ -32,7 +30,6 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * [default: ON] If you enable this setting, Cloud SQL checks your available storage every 30 seconds. If the available storage falls below a threshold size, Cloud SQL automatically adds additional storage capacity. If the available storage repeatedly falls below the threshold size, Cloud SQL continues to add storage until it reaches the maximum of 30 TB.
-     * 
      */
     @Import(name="autoStorageIncrease", required=true)
       private final Boolean autoStorageIncrease;
@@ -43,7 +40,6 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The KMS key name used for the csql instance.
-     * 
      */
     @Import(name="cmekKeyName", required=true)
       private final String cmekKeyName;
@@ -54,7 +50,6 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The Cloud SQL default instance level collation.
-     * 
      */
     @Import(name="collation", required=true)
       private final String collation;
@@ -65,7 +60,6 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The storage capacity available to the database, in GB. The minimum (and default) size is 10GB.
-     * 
      */
     @Import(name="dataDiskSizeGb", required=true)
       private final String dataDiskSizeGb;
@@ -76,7 +70,6 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The type of storage: `PD_SSD` (default) or `PD_HDD`.
-     * 
      */
     @Import(name="dataDiskType", required=true)
       private final String dataDiskType;
@@ -87,7 +80,6 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The database flags passed to the Cloud SQL instance at startup. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-     * 
      */
     @Import(name="databaseFlags", required=true)
       private final Map<String,String> databaseFlags;
@@ -98,7 +90,6 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The database engine type and version.
-     * 
      */
     @Import(name="databaseVersion", required=true)
       private final String databaseVersion;
@@ -109,7 +100,6 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The settings for IP Management. This allows to enable or disable the instance IP and manage which external networks can connect to the instance. The IPv4 address cannot be disabled.
-     * 
      */
     @Import(name="ipConfig", required=true)
       private final SqlIpConfigResponse ipConfig;
@@ -120,7 +110,6 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Input only. Initial root password.
-     * 
      */
     @Import(name="rootPassword", required=true)
       private final String rootPassword;
@@ -131,7 +120,6 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Indicates If this connection profile root password is stored.
-     * 
      */
     @Import(name="rootPasswordSet", required=true)
       private final Boolean rootPasswordSet;
@@ -142,7 +130,6 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The Database Migration Service source connection profile ID, in the format: `projects/my_project_name/locations/us-central1/connectionProfiles/connection_profile_ID`
-     * 
      */
     @Import(name="sourceId", required=true)
       private final String sourceId;
@@ -153,7 +140,6 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.
-     * 
      */
     @Import(name="storageAutoResizeLimit", required=true)
       private final String storageAutoResizeLimit;
@@ -164,7 +150,6 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The tier (or machine type) for this instance, for example: `db-n1-standard-1` (MySQL instances) or `db-custom-1-3840` (PostgreSQL instances). For more information, see [Cloud SQL Instance Settings](https://cloud.google.com/sql/docs/mysql/instance-settings).
-     * 
      */
     @Import(name="tier", required=true)
       private final String tier;
@@ -175,7 +160,6 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The resource labels for a Cloud SQL instance to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "18kg", "count": "3" }`.
-     * 
      */
     @Import(name="userLabels", required=true)
       private final Map<String,String> userLabels;
@@ -186,7 +170,6 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The Google Cloud Platform zone where your Cloud SQL datdabse instance is located.
-     * 
      */
     @Import(name="zone", required=true)
       private final String zone;

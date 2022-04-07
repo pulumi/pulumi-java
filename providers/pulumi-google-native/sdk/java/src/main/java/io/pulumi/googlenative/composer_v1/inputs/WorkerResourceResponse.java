@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Configuration for resources used by Airflow workers.
- * 
  */
 public final class WorkerResourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class WorkerResourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Optional. CPU request and limit for a single Airflow worker replica.
-     * 
      */
     @Import(name="cpu", required=true)
       private final Double cpu;
@@ -30,7 +28,6 @@ public final class WorkerResourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Optional. Maximum number of workers for autoscaling.
-     * 
      */
     @Import(name="maxCount", required=true)
       private final Integer maxCount;
@@ -41,7 +38,6 @@ public final class WorkerResourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Optional. Memory (GB) request and limit for a single Airflow worker replica.
-     * 
      */
     @Import(name="memoryGb", required=true)
       private final Double memoryGb;
@@ -52,7 +48,6 @@ public final class WorkerResourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Optional. Minimum number of workers for autoscaling.
-     * 
      */
     @Import(name="minCount", required=true)
       private final Integer minCount;
@@ -63,7 +58,6 @@ public final class WorkerResourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Optional. Storage (GB) request and limit for a single Airflow worker replica.
-     * 
      */
     @Import(name="storageGb", required=true)
       private final Double storageGb;

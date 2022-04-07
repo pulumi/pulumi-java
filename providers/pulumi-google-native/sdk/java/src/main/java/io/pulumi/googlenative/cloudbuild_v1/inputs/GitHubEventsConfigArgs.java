@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a GitHub event is received.
- * 
  */
 public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Optional. The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
-     * 
      */
     @Import(name="enterpriseConfigResourceName")
       private final @Nullable Output<String> enterpriseConfigResourceName;
@@ -33,7 +31,6 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The installationID that emits the GitHub event.
-     * 
      */
     @Import(name="installationId")
       private final @Nullable Output<String> installationId;
@@ -44,7 +41,6 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-builders is "cloud-builders".
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -55,7 +51,6 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
-     * 
      */
     @Import(name="owner")
       private final @Nullable Output<String> owner;
@@ -66,7 +61,6 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * filter to match changes in pull requests.
-     * 
      */
     @Import(name="pullRequest")
       private final @Nullable Output<PullRequestFilterArgs> pullRequest;
@@ -77,7 +71,6 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * filter to match changes in refs like branches, tags.
-     * 
      */
     @Import(name="push")
       private final @Nullable Output<PushFilterArgs> push;

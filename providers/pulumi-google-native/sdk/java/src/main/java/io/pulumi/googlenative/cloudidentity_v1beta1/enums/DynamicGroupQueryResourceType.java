@@ -12,12 +12,10 @@ import java.util.StringJoiner;
     public enum DynamicGroupQueryResourceType {
         /**
          * Default value (not valid)
-         * 
          */
         ResourceTypeUnspecified("RESOURCE_TYPE_UNSPECIFIED"),
         /**
          * For queries on User
-         * 
          */
         User("USER");
 

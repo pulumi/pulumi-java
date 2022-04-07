@@ -15,7 +15,6 @@ import java.util.Objects;
 
 /**
  * A task to execute on the completion of a job. See https://cloud.google.com/dlp/docs/concepts-actions to learn more.
- * 
  */
 public final class GooglePrivacyDlpV2ActionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class GooglePrivacyDlpV2ActionResponse extends io.pulumi.resources.
 
     /**
      * Enable email notification for project owners and editors on job's completion/failure.
-     * 
      */
     @Import(name="jobNotificationEmails", required=true)
       private final GooglePrivacyDlpV2JobNotificationEmailsResponse jobNotificationEmails;
@@ -34,7 +32,6 @@ public final class GooglePrivacyDlpV2ActionResponse extends io.pulumi.resources.
 
     /**
      * Publish a notification to a pubsub topic.
-     * 
      */
     @Import(name="pubSub", required=true)
       private final GooglePrivacyDlpV2PublishToPubSubResponse pubSub;
@@ -45,7 +42,6 @@ public final class GooglePrivacyDlpV2ActionResponse extends io.pulumi.resources.
 
     /**
      * Publish findings to Cloud Datahub.
-     * 
      */
     @Import(name="publishFindingsToCloudDataCatalog", required=true)
       private final GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse publishFindingsToCloudDataCatalog;
@@ -56,7 +52,6 @@ public final class GooglePrivacyDlpV2ActionResponse extends io.pulumi.resources.
 
     /**
      * Publish summary to Cloud Security Command Center (Alpha).
-     * 
      */
     @Import(name="publishSummaryToCscc", required=true)
       private final GooglePrivacyDlpV2PublishSummaryToCsccResponse publishSummaryToCscc;
@@ -67,7 +62,6 @@ public final class GooglePrivacyDlpV2ActionResponse extends io.pulumi.resources.
 
     /**
      * Enable Stackdriver metric dlp.googleapis.com/finding_count.
-     * 
      */
     @Import(name="publishToStackdriver", required=true)
       private final GooglePrivacyDlpV2PublishToStackdriverResponse publishToStackdriver;
@@ -78,7 +72,6 @@ public final class GooglePrivacyDlpV2ActionResponse extends io.pulumi.resources.
 
     /**
      * Save resulting findings in a provided location.
-     * 
      */
     @Import(name="saveFindings", required=true)
       private final GooglePrivacyDlpV2SaveFindingsResponse saveFindings;

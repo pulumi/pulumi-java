@@ -17,62 +17,53 @@ import javax.annotation.Nullable;
 /**
  * Create a snapshot schedule policy in the specified project.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:baremetalsolution/v2:SnapshotSchedulePolicy")
 public class SnapshotSchedulePolicy extends io.pulumi.resources.CustomResource {
     /**
      * The description of the snapshot schedule policy.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return The description of the snapshot schedule policy.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Labels as key value pairs.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Labels as key value pairs.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * The name of the snapshot schedule policy.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the snapshot schedule policy.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The snapshot schedules contained in this policy. You can specify a maximum of 5 schedules.
-     * 
      */
     @Export(name="schedules", type=List.class, parameters={ScheduleResponse.class})
     private Output<List<ScheduleResponse>> schedules;
 
     /**
      * @return The snapshot schedules contained in this policy. You can specify a maximum of 5 schedules.
-     * 
      */
     public Output<List<ScheduleResponse>> getSchedules() {
         return this.schedules;

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ContainerImageResponse {
     /**
      * The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`
-     * 
      */
     private final String repository;
     /**
      * The tag of the container image. If not specified, this defaults to the latest tag.
-     * 
      */
     private final String tag;
 
@@ -30,14 +28,12 @@ public final class ContainerImageResponse {
 
     /**
      * The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`
-     * 
     */
     public String getRepository() {
         return this.repository;
     }
     /**
      * The tag of the container image. If not specified, this defaults to the latest tag.
-     * 
     */
     public String getTag() {
         return this.tag;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Settings for revision-level scaling settings.
- * 
  */
 public final class GoogleCloudRunOpV2RevisionScalingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudRunOpV2RevisionScalingResponse extends io.pulumi.r
 
     /**
      * Maximum number of serving instances that this resource should have.
-     * 
      */
     @Import(name="maxInstanceCount", required=true)
       private final Integer maxInstanceCount;
@@ -29,7 +27,6 @@ public final class GoogleCloudRunOpV2RevisionScalingResponse extends io.pulumi.r
 
     /**
      * Minimum number of serving instances that this resource should have.
-     * 
      */
     @Import(name="minInstanceCount", required=true)
       private final Integer minInstanceCount;

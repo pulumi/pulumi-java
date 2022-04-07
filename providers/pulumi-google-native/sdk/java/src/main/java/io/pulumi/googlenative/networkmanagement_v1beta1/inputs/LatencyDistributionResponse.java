@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Describes measured latency distribution.
- * 
  */
 public final class LatencyDistributionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class LatencyDistributionResponse extends io.pulumi.resources.Invok
 
     /**
      * Representative latency percentiles.
-     * 
      */
     @Import(name="latencyPercentiles", required=true)
       private final List<LatencyPercentileResponse> latencyPercentiles;

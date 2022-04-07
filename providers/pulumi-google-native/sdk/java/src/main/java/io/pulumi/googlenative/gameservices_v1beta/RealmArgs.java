@@ -17,7 +17,6 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Human readable description of the realm.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -28,7 +27,6 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ETag of the resource.
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -39,7 +37,6 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The labels associated with this realm. Each label is a key-value pair.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -57,7 +54,6 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the realm, in the following form: `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-project/locations/{location}/realms/my-realm`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -82,7 +78,6 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Time zone where all policies targeting this realm are evaluated. The value of this field must be from the IANA time zone database: https://www.iana.org/time-zones.
-     * 
      */
     @Import(name="timeZone", required=true)
       private final Output<String> timeZone;

@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse {
     /**
      * Will be [deprecated = true] post migration;
-     * 
      */
     private final List<String> onewayTerms;
     /**
      * Terms from the search query. Will treat synonyms as their synonyms. Not themselves synonyms of the synonyms. Can specify up to 100 terms.
-     * 
      */
     private final List<String> queryTerms;
     /**
      * Defines a set of synonyms. Cannot contain duplicates. Can specify up to 100 synonyms.
-     * 
      */
     private final List<String> synonyms;
 
@@ -38,21 +35,18 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse {
 
     /**
      * Will be [deprecated = true] post migration;
-     * 
     */
     public List<String> getOnewayTerms() {
         return this.onewayTerms;
     }
     /**
      * Terms from the search query. Will treat synonyms as their synonyms. Not themselves synonyms of the synonyms. Can specify up to 100 terms.
-     * 
     */
     public List<String> getQueryTerms() {
         return this.queryTerms;
     }
     /**
      * Defines a set of synonyms. Cannot contain duplicates. Can specify up to 100 synonyms.
-     * 
     */
     public List<String> getSynonyms() {
         return this.synonyms;

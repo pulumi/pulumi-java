@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies how metastore metadata should be integrated with external services.
- * 
  */
 public final class MetadataIntegrationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class MetadataIntegrationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The integration config for the Data Catalog service.
-     * 
      */
     @Import(name="dataCatalogConfig")
       private final @Nullable Output<DataCatalogConfigArgs> dataCatalogConfig;
@@ -32,7 +30,6 @@ public final class MetadataIntegrationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The integration config for the Dataplex service.
-     * 
      */
     @Import(name="dataplexConfig")
       private final @Nullable Output<DataplexConfigArgs> dataplexConfig;

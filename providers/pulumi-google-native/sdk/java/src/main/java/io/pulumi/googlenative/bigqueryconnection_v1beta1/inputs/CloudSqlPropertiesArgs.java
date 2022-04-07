@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Connection properties specific to the Cloud SQL.
- * 
  */
 public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Input only. Cloud SQL credential.
-     * 
      */
     @Import(name="credential")
       private final @Nullable Output<CloudSqlCredentialArgs> credential;
@@ -33,7 +31,6 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Database name.
-     * 
      */
     @Import(name="database")
       private final @Nullable Output<String> database;
@@ -44,7 +41,6 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Cloud SQL instance ID in the form `project:location:instance`.
-     * 
      */
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
@@ -55,7 +51,6 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Type of the Cloud SQL database.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<CloudSqlPropertiesType> type;

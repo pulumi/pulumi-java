@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Configuration for a V1 `PrivatePool`.
- * 
  */
 public final class PrivatePoolV1ConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class PrivatePoolV1ConfigResponse extends io.pulumi.resources.Invok
 
     /**
      * Network configuration for the pool.
-     * 
      */
     @Import(name="networkConfig", required=true)
       private final NetworkConfigResponse networkConfig;
@@ -30,7 +28,6 @@ public final class PrivatePoolV1ConfigResponse extends io.pulumi.resources.Invok
 
     /**
      * Machine configuration for the workers in the pool.
-     * 
      */
     @Import(name="workerConfig", required=true)
       private final WorkerConfigResponse workerConfig;

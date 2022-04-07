@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Binds the resources in a proxy or remote service with the GraphQL operation and its associated quota enforcement.
- * 
  */
 public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
 
     /**
      * Name of the API proxy endpoint or remote service with which the GraphQL operation and quota are associated.
-     * 
      */
     @Import(name="apiSource", required=true)
       private final Output<String> apiSource;
@@ -35,7 +33,6 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
 
     /**
      * Custom attributes associated with the operation.
-     * 
      */
     @Import(name="attributes")
       private final @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
@@ -46,7 +43,6 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
 
     /**
      * List of GraphQL name/operation type pairs for the proxy or remote service to which quota will be applied. If only operation types are specified, the quota will be applied to all GraphQL requests irrespective of the GraphQL name. **Note**: Currently, you can specify only a single GraphQLOperation. Specifying more than one will cause the operation to fail.
-     * 
      */
     @Import(name="operations", required=true)
       private final Output<List<GoogleCloudApigeeV1GraphQLOperationArgs>> operations;
@@ -57,7 +53,6 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
 
     /**
      * Quota parameters to be enforced for the resources, methods, and API source combination. If none are specified, quota enforcement will not be done.
-     * 
      */
     @Import(name="quota")
       private final @Nullable Output<GoogleCloudApigeeV1QuotaArgs> quota;

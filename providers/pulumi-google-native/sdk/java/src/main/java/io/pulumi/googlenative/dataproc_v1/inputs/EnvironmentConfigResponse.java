@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Environment configuration for a workload.
- * 
  */
 public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. Execution configuration for a workload.
-     * 
      */
     @Import(name="executionConfig", required=true)
       private final ExecutionConfigResponse executionConfig;
@@ -30,7 +28,6 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. Peripherals configuration that workload has access to.
-     * 
      */
     @Import(name="peripheralsConfig", required=true)
       private final PeripheralsConfigResponse peripheralsConfig;

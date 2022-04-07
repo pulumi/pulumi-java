@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * LocalCopy defines how a remote file should be copied to and from the VM.
- * 
  */
 public final class LocalCopyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class LocalCopyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the disk where this parameter is located. Can be the name of one of the disks specified in the Resources field, or "boot", which represents the Docker instance's boot disk and has a mount point of `/`.
-     * 
      */
     @Import(name="disk", required=true)
       private final String disk;
@@ -29,7 +27,6 @@ public final class LocalCopyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The path within the user's docker container where this input should be localized to and from, relative to the specified disk's mount point. For example: file.txt,
-     * 
      */
     @Import(name="path", required=true)
       private final String path;

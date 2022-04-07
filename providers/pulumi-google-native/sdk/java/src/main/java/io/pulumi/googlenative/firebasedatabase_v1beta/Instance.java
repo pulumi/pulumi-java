@@ -13,76 +13,65 @@ import javax.annotation.Nullable;
 
 /**
  * Requests that a new DatabaseInstance be created. The state of a successfully created DatabaseInstance is ACTIVE. Only available for projects on the Blaze plan. Projects can be upgraded using the Cloud Billing API https://cloud.google.com/billing/reference/rest/v1/projects/updateBillingInfo. Note that it might take a few minutes for billing enablement state to propagate to Firebase systems.
- * 
  */
 @ResourceType(type="google-native:firebasedatabase/v1beta:Instance")
 public class Instance extends io.pulumi.resources.CustomResource {
     /**
      * Immutable. The globally unique hostname of the database.
-     * 
      */
     @Export(name="databaseUrl", type=String.class, parameters={})
     private Output<String> databaseUrl;
 
     /**
      * @return Immutable. The globally unique hostname of the database.
-     * 
      */
     public Output<String> getDatabaseUrl() {
         return this.databaseUrl;
     }
     /**
      * The fully qualified resource name of the database instance, in the form: `projects/{project-number}/locations/{location-id}/instances/{database-id}`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The fully qualified resource name of the database instance, in the form: `projects/{project-number}/locations/{location-id}/instances/{database-id}`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The resource name of the project this instance belongs to. For example: `projects/{project-number}`.
-     * 
      */
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
      * @return The resource name of the project this instance belongs to. For example: `projects/{project-number}`.
-     * 
      */
     public Output<String> getProject() {
         return this.project;
     }
     /**
      * The database's lifecycle state. Read-only.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The database's lifecycle state. Read-only.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The database instance type. On creation only USER_DATABASE is allowed, which is also the default when omitted.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The database instance type. On creation only USER_DATABASE is allowed, which is also the default when omitted.
-     * 
      */
     public Output<String> getType() {
         return this.type;

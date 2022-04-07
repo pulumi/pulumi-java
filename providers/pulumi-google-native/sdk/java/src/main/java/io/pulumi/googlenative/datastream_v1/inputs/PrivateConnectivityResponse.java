@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Private Connectivity
- * 
  */
 public final class PrivateConnectivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class PrivateConnectivityResponse extends io.pulumi.resources.Invok
 
     /**
      * A reference to a private connection resource. Format: `projects/{project}/locations/{location}/privateConnections/{name}`
-     * 
      */
     @Import(name="privateConnection", required=true)
       private final String privateConnection;

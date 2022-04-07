@@ -10,15 +10,13 @@ import java.util.Objects;
 
 /**
  * A chart that displays alert policy data.
- * 
  */
 public final class AlertChartResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AlertChartResponse Empty = new AlertChartResponse();
 
     /**
-     * The resource name of the alert policy. The format is: projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]
-     * 
+     * The resource name of the alert policy. The format is: projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] 
      */
     @Import(name="name", required=true)
       private final String name;

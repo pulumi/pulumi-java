@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Definition of the experiment.
- * 
  */
 public final class GoogleCloudDialogflowCxV3ExperimentDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentDefinitionResponse extends
 
     /**
      * The condition defines which subset of sessions are selected for this experiment. If not specified, all sessions are eligible. E.g. "query_input.language_code=en" See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
-     * 
      */
     @Import(name="condition", required=true)
       private final String condition;
@@ -30,7 +28,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentDefinitionResponse extends
 
     /**
      * The flow versions as the variants of this experiment.
-     * 
      */
     @Import(name="versionVariants", required=true)
       private final GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants;

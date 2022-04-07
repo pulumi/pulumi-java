@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Document source settings. Supported features: SMART_REPLY, SMART_COMPOSE.
- * 
  */
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
 
     /**
      * Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, at most 5 documents are supported.
-     * 
      */
     @Import(name="documents", required=true)
       private final List<String> documents;

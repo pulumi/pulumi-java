@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Spec for a group of BigQuery tables with name pattern `[prefix]YYYYMMDD`. Context: https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding
- * 
  */
 public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
 
     /**
      * The Data Catalog resource name of the dataset entry the current table belongs to, for example, `projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}`.
-     * 
      */
     @Import(name="dataset", required=true)
       private final String dataset;
@@ -29,7 +27,6 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
 
     /**
      * Total number of shards.
-     * 
      */
     @Import(name="shardCount", required=true)
       private final String shardCount;
@@ -40,7 +37,6 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
 
     /**
      * The table name prefix of the shards. The name of any given shard is `[table_prefix]YYYYMMDD`, for example, for shard `MyTable20180101`, the `table_prefix` is `MyTable`.
-     * 
      */
     @Import(name="tablePrefix", required=true)
       private final String tablePrefix;

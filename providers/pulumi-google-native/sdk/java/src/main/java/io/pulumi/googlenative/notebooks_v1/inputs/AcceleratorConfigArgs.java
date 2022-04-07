@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of a hardware accelerator. Note that not all combinations of `type` and `core_count` are valid. Check [GPUs on Compute Engine](/compute/docs/gpus/#gpus-list) to find a valid combination. TPUs are not supported.
- * 
  */
 public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Count of cores of this accelerator.
-     * 
      */
     @Import(name="coreCount")
       private final @Nullable Output<String> coreCount;
@@ -32,7 +30,6 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Type of this accelerator.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<AcceleratorConfigType> type;

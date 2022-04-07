@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Execution configuration for a workload.
- * 
  */
 public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Optional. The Cloud KMS key to use for encryption.
-     * 
      */
     @Import(name="kmsKey", required=true)
       private final String kmsKey;
@@ -30,7 +28,6 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Optional. Tags used for network traffic control.
-     * 
      */
     @Import(name="networkTags", required=true)
       private final List<String> networkTags;
@@ -41,7 +38,6 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Optional. Network URI to connect workload to.
-     * 
      */
     @Import(name="networkUri", required=true)
       private final String networkUri;
@@ -52,7 +48,6 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Optional. Service account that used to execute workload.
-     * 
      */
     @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
@@ -63,7 +58,6 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Optional. Subnetwork URI to connect workload to.
-     * 
      */
     @Import(name="subnetworkUri", required=true)
       private final String subnetworkUri;

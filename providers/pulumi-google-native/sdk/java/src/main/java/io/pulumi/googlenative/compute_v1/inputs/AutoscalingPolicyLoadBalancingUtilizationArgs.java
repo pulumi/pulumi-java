@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration parameters of autoscaling based on load balancing.
- * 
  */
 public final class AutoscalingPolicyLoadBalancingUtilizationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AutoscalingPolicyLoadBalancingUtilizationArgs extends io.pulu
 
     /**
      * Fraction of backend capacity utilization (set in HTTP(S) load balancing configuration) that the autoscaler maintains. Must be a positive float value. If not defined, the default is 0.8.
-     * 
      */
     @Import(name="utilizationTarget")
       private final @Nullable Output<Double> utilizationTarget;

@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * PostProcessingStep contains specific step details.
- * 
  */
 public final class PostProcessingStepResponse extends io.pulumi.resources.InvokeArgs {
 

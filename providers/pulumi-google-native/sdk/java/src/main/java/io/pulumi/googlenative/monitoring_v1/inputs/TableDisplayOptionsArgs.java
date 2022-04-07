@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Table display options that can be reused.
- * 
  */
 public final class TableDisplayOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class TableDisplayOptionsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Optional. Columns to display in the table. Leave empty to display all available columns. Note: This field is for future features and is not currently used.
-     * 
      */
     @Import(name="shownColumns")
       private final @Nullable Output<List<String>> shownColumns;

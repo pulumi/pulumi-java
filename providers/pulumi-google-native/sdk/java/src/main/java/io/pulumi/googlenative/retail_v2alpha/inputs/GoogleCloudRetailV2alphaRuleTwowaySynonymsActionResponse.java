@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Creates a set of terms that will be treated as synonyms of each other. Example: synonyms of "sneakers" and "shoes". * "sneakers" will use a synonym of "shoes". * "shoes" will use a synonym of "sneakers".
- * 
  */
 public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse exte
 
     /**
      * Defines a set of synonyms. Can specify up to 100 synonyms. Must specify at least 2 synonyms.
-     * 
      */
     @Import(name="synonyms", required=true)
       private final List<String> synonyms;

@@ -17,62 +17,53 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new DICOM store within the parent dataset.
- * 
  */
 @ResourceType(type="google-native:healthcare/v1beta1:DicomStore")
 public class DicomStore extends io.pulumi.resources.CustomResource {
     /**
      * User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * Resource name of the DICOM store, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name of the DICOM store, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Notification destination for new DICOM instances. Supplied by the client.
-     * 
      */
     @Export(name="notificationConfig", type=NotificationConfigResponse.class, parameters={})
     private Output<NotificationConfigResponse> notificationConfig;
 
     /**
      * @return Notification destination for new DICOM instances. Supplied by the client.
-     * 
      */
     public Output<NotificationConfigResponse> getNotificationConfig() {
         return this.notificationConfig;
     }
     /**
      * A list of streaming configs used to configure the destination of streaming exports for every DICOM instance insertion in this DICOM store. After a new config is added to `stream_configs`, DICOM instance insertions are streamed to the new destination. When a config is removed from `stream_configs`, the server stops streaming to that destination. Each config must contain a unique destination.
-     * 
      */
     @Export(name="streamConfigs", type=List.class, parameters={GoogleCloudHealthcareV1beta1DicomStreamConfigResponse.class})
     private Output<List<GoogleCloudHealthcareV1beta1DicomStreamConfigResponse>> streamConfigs;
 
     /**
      * @return A list of streaming configs used to configure the destination of streaming exports for every DICOM instance insertion in this DICOM store. After a new config is added to `stream_configs`, DICOM instance insertions are streamed to the new destination. When a config is removed from `stream_configs`, the server stops streaming to that destination. Each config must contain a unique destination.
-     * 
      */
     public Output<List<GoogleCloudHealthcareV1beta1DicomStreamConfigResponse>> getStreamConfigs() {
         return this.streamConfigs;

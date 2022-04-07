@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Agent Assist Article Suggestion data.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
 
     /**
      * The system's confidence score that this article is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
-     * 
      */
     @Import(name="confidenceScore", required=true)
       private final Double confidenceScore;
@@ -31,7 +29,6 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
 
     /**
      * Map that contains metadata about the Article Suggestion and the document that it originates from.
-     * 
      */
     @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
@@ -42,7 +39,6 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
 
     /**
      * Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
-     * 
      */
     @Import(name="queryRecord", required=true)
       private final String queryRecord;
@@ -53,7 +49,6 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
 
     /**
      * The knowledge document that this answer was extracted from. Format: projects/{project}/knowledgeBases/{knowledge_base}/documents/{document}
-     * 
      */
     @Import(name="source", required=true)
       private final String source;
@@ -64,7 +59,6 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
 
     /**
      * Article title.
-     * 
      */
     @Import(name="title", required=true)
       private final String title;
@@ -75,7 +69,6 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
 
     /**
      * Article URI.
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;

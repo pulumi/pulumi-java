@@ -15,90 +15,77 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new worker pool with a specified size and configuration. Returns a long running operation which contains a worker pool on completion. While the long running operation is in progress, any call to `GetWorkerPool` returns a worker pool in state `CREATING`.
- * 
  */
 @ResourceType(type="google-native:remotebuildexecution/v1alpha:WorkerPool")
 public class WorkerPool extends io.pulumi.resources.CustomResource {
     /**
      * The autoscale policy to apply on a pool.
-     * 
      */
     @Export(name="autoscale", type=GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse.class, parameters={})
     private Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse> autoscale;
 
     /**
      * @return The autoscale policy to apply on a pool.
-     * 
      */
     public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse> getAutoscale() {
         return this.autoscale;
     }
     /**
      * Channel specifies the release channel of the pool.
-     * 
      */
     @Export(name="channel", type=String.class, parameters={})
     private Output<String> channel;
 
     /**
      * @return Channel specifies the release channel of the pool.
-     * 
      */
     public Output<String> getChannel() {
         return this.channel;
     }
     /**
      * WorkerPool resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`. name should not be populated when creating a worker pool since it is provided in the `poolId` field.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return WorkerPool resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`. name should not be populated when creating a worker pool since it is provided in the `poolId` field.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * State of the worker pool.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return State of the worker pool.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Specifies the properties, such as machine type and disk size, used for creating workers in a worker pool.
-     * 
      */
     @Export(name="workerConfig", type=GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse.class, parameters={})
     private Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse> workerConfig;
 
     /**
      * @return Specifies the properties, such as machine type and disk size, used for creating workers in a worker pool.
-     * 
      */
     public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse> getWorkerConfig() {
         return this.workerConfig;
     }
     /**
      * The desired number of workers in the worker pool. Must be a value between 0 and 15000.
-     * 
      */
     @Export(name="workerCount", type=String.class, parameters={})
     private Output<String> workerCount;
 
     /**
      * @return The desired number of workers in the worker pool. Must be a value between 0 and 15000.
-     * 
      */
     public Output<String> getWorkerCount() {
         return this.workerCount;

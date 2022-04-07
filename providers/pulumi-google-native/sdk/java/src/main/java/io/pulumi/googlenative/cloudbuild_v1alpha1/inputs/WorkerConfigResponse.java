@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * WorkerConfig defines the configuration to be used for a creating workers in the pool.
- * 
  */
 public final class WorkerConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class WorkerConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/ If `0` is specified, Cloud Build will use a standard disk size. `disk_size` is overridden if you specify a different disk size in `build_options`. In this case, a VM with a disk size specified in the `build_options` will be created on demand at build time. For more information see https://cloud.google.com/cloud-build/docs/api/reference/rest/v1/projects.builds#buildoptions
-     * 
      */
     @Import(name="diskSizeGb", required=true)
       private final String diskSizeGb;
@@ -30,7 +28,6 @@ public final class WorkerConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Machine Type of the worker, such as n1-standard-1. See https://cloud.google.com/compute/docs/machine-types. If left blank, Cloud Build will use a standard unspecified machine to create the worker pool. `machine_type` is overridden if you specify a different machine type in `build_options`. In this case, the VM specified in the `build_options` will be created on demand at build time. For more information see https://cloud.google.com/cloud-build/docs/speeding-up-builds#using_custom_virtual_machine_sizes
-     * 
      */
     @Import(name="machineType", required=true)
       private final String machineType;
@@ -41,7 +38,6 @@ public final class WorkerConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The network definition used to create the worker. If this section is left empty, the workers will be created in WorkerPool.project_id on the default network.
-     * 
      */
     @Import(name="network", required=true)
       private final NetworkResponse network;
@@ -52,7 +48,6 @@ public final class WorkerConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The tag applied to the worker, and the same tag used by the firewall rule. It is used to identify the Cloud Build workers among other VMs. The default value for tag is `worker`.
-     * 
      */
     @Import(name="tag", required=true)
       private final String tag;

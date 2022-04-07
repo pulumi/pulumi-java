@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A message representing a metric in the measurement.
- * 
  */
 public final class GoogleCloudMlV1_Measurement_MetricResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudMlV1_Measurement_MetricResponse extends io.pulumi.
 
     /**
      * Metric name.
-     * 
      */
     @Import(name="metric", required=true)
       private final String metric;
@@ -30,7 +28,6 @@ public final class GoogleCloudMlV1_Measurement_MetricResponse extends io.pulumi.
 
     /**
      * The value for this metric.
-     * 
      */
     @Import(name="value", required=true)
       private final Double value;

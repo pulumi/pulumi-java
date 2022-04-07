@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class PackageOccurrenceResponse {
     /**
      * All of the places within the filesystem versions of this package have been found.
-     * 
      */
     private final List<LocationResponse> location;
     /**
      * The name of the installed package.
-     * 
      */
     private final String name;
 
@@ -32,14 +30,12 @@ public final class PackageOccurrenceResponse {
 
     /**
      * All of the places within the filesystem versions of this package have been found.
-     * 
     */
     public List<LocationResponse> getLocation() {
         return this.location;
     }
     /**
      * The name of the installed package.
-     * 
     */
     public String getName() {
         return this.name;

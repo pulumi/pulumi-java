@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * **Multi-cluster Ingress**: The configuration for the MultiClusterIngress feature.
- * 
  */
 public final class MultiClusterIngressFeatureSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MultiClusterIngressFeatureSpecArgs extends io.pulumi.resource
 
     /**
      * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
-     * 
      */
     @Import(name="configMembership")
       private final @Nullable Output<String> configMembership;

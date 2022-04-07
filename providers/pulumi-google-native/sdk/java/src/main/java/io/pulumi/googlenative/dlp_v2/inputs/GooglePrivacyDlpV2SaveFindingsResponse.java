@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * If set, the detailed findings will be persisted to the specified OutputStorageConfig. Only a single instance of this action can be specified. Compatible with: Inspect, Risk
- * 
  */
 public final class GooglePrivacyDlpV2SaveFindingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GooglePrivacyDlpV2SaveFindingsResponse extends io.pulumi.reso
 
     /**
      * Location to store findings outside of DLP.
-     * 
      */
     @Import(name="outputConfig", required=true)
       private final GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig;

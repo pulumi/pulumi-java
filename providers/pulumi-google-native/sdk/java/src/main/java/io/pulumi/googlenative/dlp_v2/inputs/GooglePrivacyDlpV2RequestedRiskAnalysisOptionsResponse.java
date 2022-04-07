@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Risk analysis options.
- * 
  */
 public final class GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse extend
 
     /**
      * The job config for the risk job.
-     * 
      */
     @Import(name="jobConfig", required=true)
       private final GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig;

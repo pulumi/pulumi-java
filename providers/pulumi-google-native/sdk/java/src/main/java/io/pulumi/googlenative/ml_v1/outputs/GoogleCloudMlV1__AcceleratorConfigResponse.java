@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class GoogleCloudMlV1__AcceleratorConfigResponse {
     /**
      * The number of accelerators to attach to each machine running the job.
-     * 
      */
     private final String count;
     /**
      * The type of accelerator to use.
-     * 
      */
     private final String type;
 
@@ -30,14 +28,12 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse {
 
     /**
      * The number of accelerators to attach to each machine running the job.
-     * 
     */
     public String getCount() {
         return this.count;
     }
     /**
      * The type of accelerator to use.
-     * 
     */
     public String getType() {
         return this.type;

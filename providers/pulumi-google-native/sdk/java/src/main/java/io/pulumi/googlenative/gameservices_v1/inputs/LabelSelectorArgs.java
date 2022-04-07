@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The label selector, used to group labels on the resources.
- * 
  */
 public final class LabelSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class LabelSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource labels for this selector.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;

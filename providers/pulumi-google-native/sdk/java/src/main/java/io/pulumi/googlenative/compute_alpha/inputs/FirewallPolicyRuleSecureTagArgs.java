@@ -16,7 +16,6 @@ public final class FirewallPolicyRuleSecureTagArgs extends io.pulumi.resources.R
 
     /**
      * Name of the secure tag, created with TagManager's TagValue API.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

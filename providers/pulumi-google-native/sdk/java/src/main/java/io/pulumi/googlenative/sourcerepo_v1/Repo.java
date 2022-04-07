@@ -15,76 +15,65 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a repo in the given project with the given name. If the named repository already exists, `CreateRepo` returns `ALREADY_EXISTS`.
- * 
  */
 @ResourceType(type="google-native:sourcerepo/v1:Repo")
 public class Repo extends io.pulumi.resources.CustomResource {
     /**
      * How this repository mirrors a repository managed by another service. Read-only field.
-     * 
      */
     @Export(name="mirrorConfig", type=MirrorConfigResponse.class, parameters={})
     private Output<MirrorConfigResponse> mirrorConfig;
 
     /**
      * @return How this repository mirrors a repository managed by another service. Read-only field.
-     * 
      */
     public Output<MirrorConfigResponse> getMirrorConfig() {
         return this.mirrorConfig;
     }
     /**
      * Resource name of the repository, of the form `projects//repos/`. The repo name may contain slashes. eg, `projects/myproject/repos/name/with/slash`
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name of the repository, of the form `projects//repos/`. The repo name may contain slashes. eg, `projects/myproject/repos/name/with/slash`
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.
-     * 
      */
     @Export(name="pubsubConfigs", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> pubsubConfigs;
 
     /**
      * @return How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.
-     * 
      */
     public Output<Map<String,String>> getPubsubConfigs() {
         return this.pubsubConfigs;
     }
     /**
      * The disk usage of the repo, in bytes. Read-only field. Size is only returned by GetRepo.
-     * 
      */
     @Export(name="size", type=String.class, parameters={})
     private Output<String> size;
 
     /**
      * @return The disk usage of the repo, in bytes. Read-only field. Size is only returned by GetRepo.
-     * 
      */
     public Output<String> getSize() {
         return this.size;
     }
     /**
      * URL to clone the repository from Google Cloud Source Repositories. Read-only field.
-     * 
      */
     @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**
      * @return URL to clone the repository from Google Cloud Source Repositories. Read-only field.
-     * 
      */
     public Output<String> getUrl() {
         return this.url;

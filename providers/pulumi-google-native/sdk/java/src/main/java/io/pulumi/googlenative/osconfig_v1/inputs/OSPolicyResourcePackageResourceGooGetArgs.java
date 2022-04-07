@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A package managed by GooGet. - install: `googet -noconfirm install package` - remove: `googet -noconfirm remove package`
- * 
  */
 public final class OSPolicyResourcePackageResourceGooGetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class OSPolicyResourcePackageResourceGooGetArgs extends io.pulumi.r
 
     /**
      * Package name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

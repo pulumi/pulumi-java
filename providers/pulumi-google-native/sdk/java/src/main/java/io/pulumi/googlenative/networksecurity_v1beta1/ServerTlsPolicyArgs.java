@@ -20,7 +20,6 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      *  Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.
-     * 
      */
     @Import(name="allowOpen")
       private final @Nullable Output<Boolean> allowOpen;
@@ -31,7 +30,6 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Free-text description of the resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -42,7 +40,6 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Set of label tags associated with the resource.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -60,7 +57,6 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      *  Defines a mechanism to provision peer validation certificates for peer to peer authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections.
-     * 
      */
     @Import(name="mtlsPolicy")
       private final @Nullable Output<MTLSPolicyArgs> mtlsPolicy;
@@ -71,7 +67,6 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the ServerTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/serverTlsPolicies/{server_tls_policy}`
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -89,7 +84,6 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      *  Defines a mechanism to provision server identity (public and private keys). Cannot be combined with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.
-     * 
      */
     @Import(name="serverCertificate")
       private final @Nullable Output<GoogleCloudNetworksecurityV1beta1CertificateProviderArgs> serverCertificate;

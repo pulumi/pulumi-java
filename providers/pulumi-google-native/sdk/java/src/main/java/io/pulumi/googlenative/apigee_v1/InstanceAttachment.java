@@ -14,48 +14,41 @@ import javax.annotation.Nullable;
 /**
  * Creates a new attachment of an environment to an instance. **Note:** Not supported for Apigee hybrid.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:apigee/v1:InstanceAttachment")
 public class InstanceAttachment extends io.pulumi.resources.CustomResource {
     /**
      * Time the attachment was created in milliseconds since epoch.
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return Time the attachment was created in milliseconds since epoch.
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * ID of the attached environment.
-     * 
      */
     @Export(name="environment", type=String.class, parameters={})
     private Output<String> environment;
 
     /**
      * @return ID of the attached environment.
-     * 
      */
     public Output<String> getEnvironment() {
         return this.environment;
     }
     /**
      * ID of the attachment.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return ID of the attachment.
-     * 
      */
     public Output<String> getName() {
         return this.name;

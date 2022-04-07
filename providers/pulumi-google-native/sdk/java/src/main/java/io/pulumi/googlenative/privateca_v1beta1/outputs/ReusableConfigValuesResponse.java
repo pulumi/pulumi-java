@@ -16,27 +16,22 @@ import java.util.Objects;
 public final class ReusableConfigValuesResponse {
     /**
      * Optional. Describes custom X.509 extensions.
-     * 
      */
     private final List<X509ExtensionResponse> additionalExtensions;
     /**
      * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.
-     * 
      */
     private final List<String> aiaOcspServers;
     /**
      * Optional. Describes options in this ReusableConfigValues that are relevant in a CA certificate.
-     * 
      */
     private final CaOptionsResponse caOptions;
     /**
      * Optional. Indicates the intended use for keys that correspond to a certificate.
-     * 
      */
     private final KeyUsageResponse keyUsage;
     /**
      * Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
-     * 
      */
     private final List<ObjectIdResponse> policyIds;
 
@@ -56,35 +51,30 @@ public final class ReusableConfigValuesResponse {
 
     /**
      * Optional. Describes custom X.509 extensions.
-     * 
     */
     public List<X509ExtensionResponse> getAdditionalExtensions() {
         return this.additionalExtensions;
     }
     /**
      * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.
-     * 
     */
     public List<String> getAiaOcspServers() {
         return this.aiaOcspServers;
     }
     /**
      * Optional. Describes options in this ReusableConfigValues that are relevant in a CA certificate.
-     * 
     */
     public CaOptionsResponse getCaOptions() {
         return this.caOptions;
     }
     /**
      * Optional. Indicates the intended use for keys that correspond to a certificate.
-     * 
     */
     public KeyUsageResponse getKeyUsage() {
         return this.keyUsage;
     }
     /**
      * Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
-     * 
     */
     public List<ObjectIdResponse> getPolicyIds() {
         return this.policyIds;

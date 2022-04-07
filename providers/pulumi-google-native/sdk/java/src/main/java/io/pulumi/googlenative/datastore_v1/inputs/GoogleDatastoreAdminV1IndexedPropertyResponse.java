@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A property of an index.
- * 
  */
 public final class GoogleDatastoreAdminV1IndexedPropertyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleDatastoreAdminV1IndexedPropertyResponse extends io.pulu
 
     /**
      * The indexed property's direction. Must not be DIRECTION_UNSPECIFIED.
-     * 
      */
     @Import(name="direction", required=true)
       private final String direction;
@@ -29,7 +27,6 @@ public final class GoogleDatastoreAdminV1IndexedPropertyResponse extends io.pulu
 
     /**
      * The property name to index.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

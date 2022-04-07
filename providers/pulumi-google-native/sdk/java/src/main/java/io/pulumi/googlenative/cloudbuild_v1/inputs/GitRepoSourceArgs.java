@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * GitRepoSource describes a repo and ref of a code repository.
- * 
  */
 public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The branch or tag to use. Must start with "refs/" (required).
-     * 
      */
     @Import(name="ref")
       private final @Nullable Output<String> ref;
@@ -32,7 +30,6 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * See RepoType below.
-     * 
      */
     @Import(name="repoType")
       private final @Nullable Output<GitRepoSourceRepoType> repoType;
@@ -43,7 +40,6 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The URI of the repo (required).
-     * 
      */
     @Import(name="uri")
       private final @Nullable Output<String> uri;

@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Optional. The type of the database dump. If unspecified, defaults to MYSQL.
-     * 
      */
     @EnumType
     public enum DatabaseDumpType {
         /**
          * The type of the database dump is unknown.
-         * 
          */
         TypeUnspecified("TYPE_UNSPECIFIED"),
         /**
          * Database dump is a MySQL dump file.
-         * 
          */
         Mysql("MYSQL"),
         /**
          * Database dump contains Avro files.
-         * 
          */
         Avro("AVRO");
 

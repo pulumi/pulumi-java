@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A Cloud Storage source of conversation data.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse extends i
 
     /**
      * Cloud Storage URI that points to a file that contains the conversation audio.
-     * 
      */
     @Import(name="audioUri", required=true)
       private final String audioUri;
@@ -29,7 +27,6 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse extends i
 
     /**
      * Immutable. Cloud Storage URI that points to a file that contains the conversation transcript.
-     * 
      */
     @Import(name="transcriptUri", required=true)
       private final String transcriptUri;

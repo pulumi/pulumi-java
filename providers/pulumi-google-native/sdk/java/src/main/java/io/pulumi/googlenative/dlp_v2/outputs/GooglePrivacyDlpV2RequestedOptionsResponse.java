@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2RequestedOptionsResponse {
     /**
      * Inspect config.
-     * 
      */
     private final GooglePrivacyDlpV2InspectJobConfigResponse jobConfig;
     /**
      * If run with an InspectTemplate, a snapshot of its state at the time of this run.
-     * 
      */
     private final GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate;
 
@@ -31,14 +29,12 @@ public final class GooglePrivacyDlpV2RequestedOptionsResponse {
 
     /**
      * Inspect config.
-     * 
     */
     public GooglePrivacyDlpV2InspectJobConfigResponse getJobConfig() {
         return this.jobConfig;
     }
     /**
      * If run with an InspectTemplate, a snapshot of its state at the time of this run.
-     * 
     */
     public GooglePrivacyDlpV2InspectTemplateResponse getSnapshotInspectTemplate() {
         return this.snapshotInspectTemplate;

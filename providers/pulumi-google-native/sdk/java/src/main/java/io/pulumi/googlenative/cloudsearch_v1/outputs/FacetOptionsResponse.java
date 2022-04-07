@@ -12,22 +12,18 @@ import java.util.Objects;
 public final class FacetOptionsResponse {
     /**
      * Maximum number of facet buckets that should be returned for this facet. Defaults to 10. Maximum value is 100.
-     * 
      */
     private final Integer numFacetBuckets;
     /**
      * If object_type is set, only those objects of that type will be used to compute facets. If empty, then all objects will be used to compute facets.
-     * 
      */
     private final String objectType;
     /**
      * Name of the operator chosen for faceting. @see cloudsearch.SchemaPropertyOptions
-     * 
      */
     private final String operatorName;
     /**
      * Source name to facet on. Format: datasources/{source_id} If empty, all data sources will be used.
-     * 
      */
     private final String sourceName;
 
@@ -45,28 +41,24 @@ public final class FacetOptionsResponse {
 
     /**
      * Maximum number of facet buckets that should be returned for this facet. Defaults to 10. Maximum value is 100.
-     * 
     */
     public Integer getNumFacetBuckets() {
         return this.numFacetBuckets;
     }
     /**
      * If object_type is set, only those objects of that type will be used to compute facets. If empty, then all objects will be used to compute facets.
-     * 
     */
     public String getObjectType() {
         return this.objectType;
     }
     /**
      * Name of the operator chosen for faceting. @see cloudsearch.SchemaPropertyOptions
-     * 
     */
     public String getOperatorName() {
         return this.operatorName;
     }
     /**
      * Source name to facet on. Format: datasources/{source_id} If empty, all data sources will be used.
-     * 
     */
     public String getSourceName() {
         return this.sourceName;

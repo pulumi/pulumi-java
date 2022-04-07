@@ -31,7 +31,6 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Display name.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -42,7 +41,6 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Forward SSH tunnel connectivity.
-     * 
      */
     @Import(name="forwardSshConnectivity")
       private final @Nullable Output<ForwardSshTunnelConnectivityArgs> forwardSshConnectivity;
@@ -53,7 +51,6 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Cloud Storage ConnectionProfile configuration.
-     * 
      */
     @Import(name="gcsProfile")
       private final @Nullable Output<GcsProfileArgs> gcsProfile;
@@ -64,7 +61,6 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Labels.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -82,7 +78,6 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * MySQL ConnectionProfile configuration.
-     * 
      */
     @Import(name="mysqlProfile")
       private final @Nullable Output<MysqlProfileArgs> mysqlProfile;
@@ -93,7 +88,6 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * No connectivity option chosen.
-     * 
      */
     @Import(name="noConnectivity")
       private final @Nullable Output<NoConnectivitySettingsArgs> noConnectivity;
@@ -104,7 +98,6 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Oracle ConnectionProfile configuration.
-     * 
      */
     @Import(name="oracleProfile")
       private final @Nullable Output<OracleProfileArgs> oracleProfile;
@@ -115,7 +108,6 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Private connectivity.
-     * 
      */
     @Import(name="privateConnectivity")
       private final @Nullable Output<PrivateConnectivityArgs> privateConnectivity;
@@ -140,7 +132,6 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Static Service IP connectivity.
-     * 
      */
     @Import(name="staticServiceIpConnectivity")
       private final @Nullable Output<StaticServiceIpConnectivityArgs> staticServiceIpConnectivity;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Input asset.
- * 
  */
 public final class InputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A unique key for this input. Must be specified when using advanced mapping and edit lists.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -32,7 +30,6 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Preprocessing configurations.
-     * 
      */
     @Import(name="preprocessingConfig")
       private final @Nullable Output<PreprocessingConfigArgs> preprocessingConfig;
@@ -43,7 +40,6 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value will be populated from `Job.input_uri`.
-     * 
      */
     @Import(name="uri")
       private final @Nullable Output<String> uri;

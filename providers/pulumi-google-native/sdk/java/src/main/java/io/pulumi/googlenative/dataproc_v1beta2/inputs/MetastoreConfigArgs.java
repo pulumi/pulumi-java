@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Specifies a Metastore configuration.
- * 
  */
 public final class MetastoreConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class MetastoreConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[dataproc_region]/services/[service-name]
-     * 
      */
     @Import(name="dataprocMetastoreService", required=true)
       private final Output<String> dataprocMetastoreService;

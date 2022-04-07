@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * A chart that displays data on a 2D (X and Y axes) plane.
- * 
  */
 public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Display options for the chart.
-     * 
      */
     @Import(name="chartOptions")
       private final @Nullable Output<ChartOptionsArgs> chartOptions;
@@ -36,7 +34,6 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The data displayed in this chart.
-     * 
      */
     @Import(name="dataSets", required=true)
       private final Output<List<DataSetArgs>> dataSets;
@@ -47,7 +44,6 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Threshold lines drawn horizontally across the chart.
-     * 
      */
     @Import(name="thresholds")
       private final @Nullable Output<List<ThresholdArgs>> thresholds;
@@ -58,7 +54,6 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The duration used to display a comparison chart. A comparison chart simultaneously shows values from two similar-length time periods (e.g., week-over-week metrics). The duration must be positive, and it can only be applied to charts with data sets of LINE plot type.
-     * 
      */
     @Import(name="timeshiftDuration")
       private final @Nullable Output<String> timeshiftDuration;
@@ -69,7 +64,6 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The properties applied to the X axis.
-     * 
      */
     @Import(name="xAxis")
       private final @Nullable Output<AxisArgs> xAxis;
@@ -80,7 +74,6 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The properties applied to the Y2 axis.
-     * 
      */
     @Import(name="y2Axis")
       private final @Nullable Output<AxisArgs> y2Axis;
@@ -91,7 +84,6 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The properties applied to the Y axis.
-     * 
      */
     @Import(name="yAxis")
       private final @Nullable Output<AxisArgs> yAxis;

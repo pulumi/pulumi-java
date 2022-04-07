@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Not supported by Cloud Run HTTPGetAction describes an action based on HTTP Get requests.
- * 
  */
 public final class HTTPGetActionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class HTTPGetActionResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * (Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.
-     * 
      */
     @Import(name="host", required=true)
       private final String host;
@@ -31,7 +29,6 @@ public final class HTTPGetActionResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * (Optional) Custom headers to set in the request. HTTP allows repeated headers.
-     * 
      */
     @Import(name="httpHeaders", required=true)
       private final List<HTTPHeaderResponse> httpHeaders;
@@ -42,7 +39,6 @@ public final class HTTPGetActionResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * (Optional) Path to access on the HTTP server.
-     * 
      */
     @Import(name="path", required=true)
       private final String path;
@@ -53,7 +49,6 @@ public final class HTTPGetActionResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
-     * 
      */
     @Import(name="scheme", required=true)
       private final String scheme;

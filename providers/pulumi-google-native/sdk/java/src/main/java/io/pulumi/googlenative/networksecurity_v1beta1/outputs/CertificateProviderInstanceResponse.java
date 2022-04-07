@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class CertificateProviderInstanceResponse {
     /**
      * Plugin instance name, used to locate and load CertificateProvider instance configuration. Set to "google_cloud_private_spiffe" to use Certificate Authority Service certificate provider instance.
-     * 
      */
     private final String pluginInstance;
 
@@ -22,7 +21,6 @@ public final class CertificateProviderInstanceResponse {
 
     /**
      * Plugin instance name, used to locate and load CertificateProvider instance configuration. Set to "google_cloud_private_spiffe" to use Certificate Authority Service certificate provider instance.
-     * 
     */
     public String getPluginInstance() {
         return this.pluginInstance;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The content of an HL7v2 message in a structured format.
- * 
  */
 public final class ParsedDataResponse extends io.pulumi.resources.InvokeArgs {
 

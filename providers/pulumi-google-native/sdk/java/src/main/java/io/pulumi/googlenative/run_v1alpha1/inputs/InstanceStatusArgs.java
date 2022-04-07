@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Instance represents the status of an instance of a Job.
- * 
  */
 public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Represents time when the instance was completed. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
-     * 
      */
     @Import(name="completionTime")
       private final @Nullable Output<String> completionTime;
@@ -33,7 +31,6 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The number of times this instance exited with code > 0; +optional
-     * 
      */
     @Import(name="failed")
       private final @Nullable Output<Integer> failed;
@@ -44,7 +41,6 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Index of the instance, unique per Job, and beginning at 0.
-     * 
      */
     @Import(name="index", required=true)
       private final Output<Integer> index;
@@ -55,7 +51,6 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Result of the last attempt of this instance. +optional
-     * 
      */
     @Import(name="lastAttemptResult")
       private final @Nullable Output<InstanceAttemptResultArgs> lastAttemptResult;
@@ -66,7 +61,6 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Last exit code seen for this instance. +optional
-     * 
      */
     @Import(name="lastExitCode")
       private final @Nullable Output<Integer> lastExitCode;
@@ -77,7 +71,6 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The number of times this instance was restarted. Instances are restarted according the restartPolicy configured in the Job template. +optional
-     * 
      */
     @Import(name="restarted")
       private final @Nullable Output<Integer> restarted;
@@ -88,7 +81,6 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Represents time when the instance was created by the job controller. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
@@ -99,7 +91,6 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The number of times this instance exited with code == 0. +optional
-     * 
      */
     @Import(name="succeeded")
       private final @Nullable Output<Integer> succeeded;

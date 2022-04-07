@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A reference to a file, used for user inputs.
- * 
  */
 public final class FileReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class FileReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A path to a file in Google Cloud Storage. Example: gs://build-app-1414623860166/app%40debug-unaligned.apk These paths are expected to be url encoded (percent encoding)
-     * 
      */
     @Import(name="gcsPath")
       private final @Nullable Output<String> gcsPath;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The game server cluster connection information.
- * 
  */
 public final class GameServerClusterConnectionInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GameServerClusterConnectionInfoResponse extends io.pulumi.res
 
     /**
      * Reference to the GKE cluster where the game servers are installed.
-     * 
      */
     @Import(name="gkeClusterReference", required=true)
       private final GkeClusterReferenceResponse gkeClusterReference;
@@ -30,7 +28,6 @@ public final class GameServerClusterConnectionInfoResponse extends io.pulumi.res
 
     /**
      * Namespace designated on the game server cluster where the Agones game server instances will be created. Existence of the namespace will be validated during creation.
-     * 
      */
     @Import(name="namespace", required=true)
       private final String namespace;

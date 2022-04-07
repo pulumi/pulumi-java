@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the auto-registration of the Forwarding Rule to Service Directory. The region and project of the Service Directory resource generated from this registration will be the same as this Forwarding Rule.
- * 
  */
 public final class ForwardingRuleServiceDirectoryRegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends io.pul
 
     /**
      * Service Directory namespace to register the forwarding rule under.
-     * 
      */
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
@@ -31,7 +29,6 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends io.pul
 
     /**
      * Service Directory service to register the forwarding rule under.
-     * 
      */
     @Import(name="service")
       private final @Nullable Output<String> service;
@@ -42,7 +39,6 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends io.pul
 
     /**
      * [Optional] Service Directory region to register this global forwarding rule under. Default to "us-central1". Only used for PSC for Google APIs. All PSC for Google APIs Forwarding Rules on the same network should use the same Service Directory region.
-     * 
      */
     @Import(name="serviceDirectoryRegion")
       private final @Nullable Output<String> serviceDirectoryRegion;

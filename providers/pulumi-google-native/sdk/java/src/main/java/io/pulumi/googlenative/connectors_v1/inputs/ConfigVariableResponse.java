@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * ConfigVariable represents a configuration variable present in a Connection. or AuthConfig.
- * 
  */
 public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Value is a bool.
-     * 
      */
     @Import(name="boolValue", required=true)
       private final Boolean boolValue;
@@ -31,7 +29,6 @@ public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Value is an integer
-     * 
      */
     @Import(name="intValue", required=true)
       private final String intValue;
@@ -42,7 +39,6 @@ public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Key of the config variable.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -53,7 +49,6 @@ public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Value is a secret.
-     * 
      */
     @Import(name="secretValue", required=true)
       private final SecretResponse secretValue;
@@ -64,7 +59,6 @@ public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Value is a string.
-     * 
      */
     @Import(name="stringValue", required=true)
       private final String stringValue;

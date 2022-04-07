@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * This is deprecated and has no effect. Do not use.
- * 
  */
 public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="action", required=true)
       private final String action;
@@ -32,7 +30,6 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="conditions", required=true)
       private final List<ConditionResponse> conditions;
@@ -43,7 +40,6 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -54,7 +50,6 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="ins", required=true)
       private final List<String> ins;
@@ -65,7 +60,6 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="logConfigs", required=true)
       private final List<LogConfigResponse> logConfigs;
@@ -76,7 +70,6 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="notIns", required=true)
       private final List<String> notIns;
@@ -87,7 +80,6 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="permissions", required=true)
       private final List<String> permissions;

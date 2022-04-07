@@ -24,7 +24,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of accelerators enabled for this CDF instance.
-     * 
      */
     @Import(name="accelerators")
       private final @Nullable Output<List<AcceleratorArgs>> accelerators;
@@ -35,7 +34,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Available versions that the instance can be upgraded to using UpdateInstanceRequest.
-     * 
      */
     @Import(name="availableVersion")
       private final @Nullable Output<List<VersionArgs>> availableVersion;
@@ -46,7 +44,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The crypto key configuration. This field is used by the Customer-Managed Encryption Keys (CMEK) feature.
-     * 
      */
     @Import(name="cryptoKeyConfig")
       private final @Nullable Output<CryptoKeyConfigArgs> cryptoKeyConfig;
@@ -57,7 +54,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines. This allows users to have fine-grained access control on Dataproc's accesses to cloud resources.
-     * 
      */
     @Import(name="dataprocServiceAccount")
       private final @Nullable Output<String> dataprocServiceAccount;
@@ -68,7 +64,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description of this instance.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -79,7 +74,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Display name for an instance.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -90,7 +84,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Option to enable granular role-based access control.
-     * 
      */
     @Import(name="enableRbac")
       private final @Nullable Output<Boolean> enableRbac;
@@ -101,7 +94,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Option to enable Stackdriver Logging.
-     * 
      */
     @Import(name="enableStackdriverLogging")
       private final @Nullable Output<Boolean> enableStackdriverLogging;
@@ -112,7 +104,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Option to enable Stackdriver Monitoring.
-     * 
      */
     @Import(name="enableStackdriverMonitoring")
       private final @Nullable Output<Boolean> enableStackdriverMonitoring;
@@ -130,7 +121,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource labels for instance to use to annotate any related underlying resources such as Compute Engine VMs. The character '=' is not allowed to be used within the labels.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -148,7 +138,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Network configuration options. These are required when a private Data Fusion instance is to be created.
-     * 
      */
     @Import(name="networkConfig")
       private final @Nullable Output<NetworkConfigArgs> networkConfig;
@@ -159,7 +148,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Map of additional options used to configure the behavior of Data Fusion instance.
-     * 
      */
     @Import(name="options")
       private final @Nullable Output<Map<String,String>> options;
@@ -170,7 +158,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP addresses and will not be able to access the public internet.
-     * 
      */
     @Import(name="privateInstance")
       private final @Nullable Output<Boolean> privateInstance;
@@ -188,7 +175,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Instance type.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<InstanceType> type;
@@ -199,7 +185,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Current version of the Data Fusion. Only specifiable in Update.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;
@@ -210,7 +195,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the zone in which the Data Fusion instance will be created. Only DEVELOPER instances use this field.
-     * 
      */
     @Import(name="zone")
       private final @Nullable Output<String> zone;

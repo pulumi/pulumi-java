@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse {
     /**
      * Paths of the imported libraries.
-     * 
      */
     private final List<String> importedLibraries;
 
@@ -23,7 +22,6 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse {
 
     /**
      * Paths of the imported libraries.
-     * 
     */
     public List<String> getImportedLibraries() {
         return this.importedLibraries;

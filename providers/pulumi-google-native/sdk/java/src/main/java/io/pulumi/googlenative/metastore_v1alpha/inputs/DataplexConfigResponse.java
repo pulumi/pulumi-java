@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Specifies how metastore metadata should be integrated with the Dataplex service.
- * 
  */
 public final class DataplexConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class DataplexConfigResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A reference to the Lake resources that this metastore service is attached to. The key is the lake resource name. Example: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
-     * 
      */
     @Import(name="lakeResources", required=true)
       private final Map<String,String> lakeResources;

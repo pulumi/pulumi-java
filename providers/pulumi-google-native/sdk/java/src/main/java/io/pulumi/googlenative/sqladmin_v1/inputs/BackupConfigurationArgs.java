@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Database instance backup configuration.
- * 
  */
 public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Backup retention settings.
-     * 
      */
     @Import(name="backupRetentionSettings")
       private final @Nullable Output<BackupRetentionSettingsArgs> backupRetentionSettings;
@@ -34,7 +32,6 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * (MySQL only) Whether binary log is enabled. If backup configuration is disabled, binarylog must be disabled as well.
-     * 
      */
     @Import(name="binaryLogEnabled")
       private final @Nullable Output<Boolean> binaryLogEnabled;
@@ -45,7 +42,6 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Whether this configuration is enabled.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -56,7 +52,6 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * This is always `sql#backupConfiguration`.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -67,7 +62,6 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Location of the backup
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -78,7 +72,6 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * (Postgres only) Whether point in time recovery is enabled.
-     * 
      */
     @Import(name="pointInTimeRecoveryEnabled")
       private final @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
@@ -89,7 +82,6 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Reserved for future use.
-     * 
      */
     @Import(name="replicationLogArchivingEnabled")
       private final @Nullable Output<Boolean> replicationLogArchivingEnabled;
@@ -100,7 +92,6 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Start time for the daily backup configuration in UTC timezone in the 24 hour format - `HH:MM`.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
@@ -111,7 +102,6 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The number of days of transaction logs we retain for point in time restore, from 1-7.
-     * 
      */
     @Import(name="transactionLogRetentionDays")
       private final @Nullable Output<Integer> transactionLogRetentionDays;

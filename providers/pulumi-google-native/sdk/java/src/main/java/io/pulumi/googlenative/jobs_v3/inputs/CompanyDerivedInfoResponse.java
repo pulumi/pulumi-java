@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Derived details about the company.
- * 
  */
 public final class CompanyDerivedInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CompanyDerivedInfoResponse extends io.pulumi.resources.Invoke
 
     /**
      * A structured headquarters location of the company, resolved from Company.hq_location if provided.
-     * 
      */
     @Import(name="headquartersLocation", required=true)
       private final LocationResponse headquartersLocation;

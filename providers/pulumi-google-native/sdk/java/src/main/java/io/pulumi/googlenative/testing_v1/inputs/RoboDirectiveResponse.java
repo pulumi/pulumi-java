@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Directs Robo to interact with a specific UI element if it is encountered during the crawl. Currently, Robo can perform text entry or element click.
- * 
  */
 public final class RoboDirectiveResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class RoboDirectiveResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The type of action that Robo should perform on the specified element.
-     * 
      */
     @Import(name="actionType", required=true)
       private final String actionType;
@@ -29,7 +27,6 @@ public final class RoboDirectiveResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The text that Robo is directed to set. If left empty, the directive will be treated as a CLICK on the element matching the resource_name.
-     * 
      */
     @Import(name="inputText", required=true)
       private final String inputText;
@@ -40,7 +37,6 @@ public final class RoboDirectiveResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The android resource name of the target UI element. For example, in Java: R.string.foo in xml: @string/foo Only the "foo" part is needed. Reference doc: https://developer.android.com/guide/topics/resources/accessing-resources.html
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

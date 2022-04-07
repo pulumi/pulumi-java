@@ -18,7 +18,6 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional textual description of the resource; provided by the client when the resource is created.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -29,7 +28,6 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -61,7 +59,6 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If false, licenses will not be copied from the source resource when creating an image from a disk, disk from snapshot, or snapshot from disk.
-     * 
      */
     @Import(name="transferable")
       private final @Nullable Output<Boolean> transferable;

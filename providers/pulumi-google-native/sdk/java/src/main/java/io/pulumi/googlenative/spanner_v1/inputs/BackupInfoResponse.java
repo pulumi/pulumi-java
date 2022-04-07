@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Information about a backup.
- * 
  */
 public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the backup.
-     * 
      */
     @Import(name="backup", required=true)
       private final String backup;
@@ -29,7 +27,6 @@ public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The time the CreateBackup request was received.
-     * 
      */
     @Import(name="createTime", required=true)
       private final String createTime;
@@ -40,7 +37,6 @@ public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the database the backup was created from.
-     * 
      */
     @Import(name="sourceDatabase", required=true)
       private final String sourceDatabase;
@@ -51,7 +47,6 @@ public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The backup contains an externally consistent copy of `source_database` at the timestamp specified by `version_time`. If the CreateBackup request did not specify `version_time`, the `version_time` of the backup is equivalent to the `create_time`.
-     * 
      */
     @Import(name="versionTime", required=true)
       private final String versionTime;

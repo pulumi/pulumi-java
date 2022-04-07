@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A ServiceResolver represents an EKM replica that can be reached within an EkmConnection.
- * 
  */
 public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. The filter applied to the endpoints of the resolved service. If no filter is specified, all endpoints will be considered. An endpoint will be chosen arbitrarily from the filtered list for each request. For endpoint filter syntax and examples, see https://cloud.google.com/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#resolveservicerequest.
-     * 
      */
     @Import(name="endpointFilter")
       private final @Nullable Output<String> endpointFilter;
@@ -33,7 +31,6 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The hostname of the EKM replica used at TLS and HTTP layers.
-     * 
      */
     @Import(name="hostname", required=true)
       private final Output<String> hostname;
@@ -44,7 +41,6 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica.
-     * 
      */
     @Import(name="serverCertificates", required=true)
       private final Output<List<CertificateArgs>> serverCertificates;
@@ -55,7 +51,6 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The resource name of the Service Directory service pointing to an EKM replica, in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*`.
-     * 
      */
     @Import(name="serviceDirectoryService", required=true)
       private final Output<String> serviceDirectoryService;

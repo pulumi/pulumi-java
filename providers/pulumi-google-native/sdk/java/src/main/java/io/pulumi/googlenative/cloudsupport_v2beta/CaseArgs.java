@@ -21,7 +21,6 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The issue classification applicable to this case.
-     * 
      */
     @Import(name="classification")
       private final @Nullable Output<CaseClassificationArgs> classification;
@@ -32,7 +31,6 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user who created the case. Note: The name and email will be obfuscated if the case was created by Google Support.
-     * 
      */
     @Import(name="creator")
       private final @Nullable Output<ActorArgs> creator;
@@ -43,7 +41,6 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A broad description of the issue.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -54,7 +51,6 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The short summary of the issue reported in this case.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -65,7 +61,6 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether the case is currently escalated.
-     * 
      */
     @Import(name="escalated")
       private final @Nullable Output<Boolean> escalated;
@@ -76,7 +71,6 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name for the case.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -87,7 +81,6 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The priority of this case. If this is set, do not set severity.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Output<CasePriority> priority;
@@ -98,7 +91,6 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The email addresses to receive updates on this case.
-     * 
      */
     @Import(name="subscriberEmailAddresses")
       private final @Nullable Output<List<String>> subscriberEmailAddresses;
@@ -109,7 +101,6 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether this case was created for internal API testing and should not be acted on by the support team.
-     * 
      */
     @Import(name="testCase")
       private final @Nullable Output<Boolean> testCase;
@@ -120,7 +111,6 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The timezone of the user who created the support case. It should be in a format IANA recognizes: https://www.iana.org/time-zones. There is no additional validation done by the API.
-     * 
      */
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;

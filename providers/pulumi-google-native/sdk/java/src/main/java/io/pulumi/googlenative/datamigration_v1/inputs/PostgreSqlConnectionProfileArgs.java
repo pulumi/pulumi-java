@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies connection parameters required specifically for PostgreSQL databases.
- * 
  */
 public final class PostgreSqlConnectionProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class PostgreSqlConnectionProfileArgs extends io.pulumi.resources.R
 
     /**
      * If the source is a Cloud SQL database, use this field to provide the Cloud SQL instance ID of the source.
-     * 
      */
     @Import(name="cloudSqlId")
       private final @Nullable Output<String> cloudSqlId;
@@ -33,7 +31,6 @@ public final class PostgreSqlConnectionProfileArgs extends io.pulumi.resources.R
 
     /**
      * The IP or hostname of the source PostgreSQL database.
-     * 
      */
     @Import(name="host", required=true)
       private final Output<String> host;
@@ -44,7 +41,6 @@ public final class PostgreSqlConnectionProfileArgs extends io.pulumi.resources.R
 
     /**
      * Input only. The password for the user that Database Migration Service will be using to connect to the database. This field is not returned on request, and the value is encrypted when stored in Database Migration Service.
-     * 
      */
     @Import(name="password", required=true)
       private final Output<String> password;
@@ -55,7 +51,6 @@ public final class PostgreSqlConnectionProfileArgs extends io.pulumi.resources.R
 
     /**
      * The network port of the source PostgreSQL database.
-     * 
      */
     @Import(name="port", required=true)
       private final Output<Integer> port;
@@ -66,7 +61,6 @@ public final class PostgreSqlConnectionProfileArgs extends io.pulumi.resources.R
 
     /**
      * SSL configuration for the destination to connect to the source database.
-     * 
      */
     @Import(name="ssl")
       private final @Nullable Output<SslConfigArgs> ssl;
@@ -77,7 +71,6 @@ public final class PostgreSqlConnectionProfileArgs extends io.pulumi.resources.R
 
     /**
      * The username that Database Migration Service will use to connect to the database. The value is encrypted when stored in Database Migration Service.
-     * 
      */
     @Import(name="username", required=true)
       private final Output<String> username;

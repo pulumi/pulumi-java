@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A vertex represents a 2D point in the image. NOTE: the vertex coordinates are in the same scale as the original image.
- * 
  */
 public final class VertexResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class VertexResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * X coordinate.
-     * 
      */
     @Import(name="x", required=true)
       private final Integer x;
@@ -29,7 +27,6 @@ public final class VertexResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Y coordinate.
-     * 
      */
     @Import(name="y", required=true)
       private final Integer y;

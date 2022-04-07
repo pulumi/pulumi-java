@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ChartOptionsResponse {
     /**
      * The chart mode.
-     * 
      */
     private final String mode;
 
@@ -22,7 +21,6 @@ public final class ChartOptionsResponse {
 
     /**
      * The chart mode.
-     * 
     */
     public String getMode() {
         return this.mode;

@@ -15,104 +15,89 @@ import javax.annotation.Nullable;
 /**
  * Create a Datastore for an org
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:apigee/v1:Datastore")
 public class Datastore extends io.pulumi.resources.CustomResource {
     /**
      * Datastore create time, in milliseconds since the epoch of 1970-01-01T00:00:00Z
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return Datastore create time, in milliseconds since the epoch of 1970-01-01T00:00:00Z
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Datastore Configurations.
-     * 
      */
     @Export(name="datastoreConfig", type=GoogleCloudApigeeV1DatastoreConfigResponse.class, parameters={})
     private Output<GoogleCloudApigeeV1DatastoreConfigResponse> datastoreConfig;
 
     /**
      * @return Datastore Configurations.
-     * 
      */
     public Output<GoogleCloudApigeeV1DatastoreConfigResponse> getDatastoreConfig() {
         return this.datastoreConfig;
     }
     /**
      * Display name in UI
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return Display name in UI
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Datastore last update time, in milliseconds since the epoch of 1970-01-01T00:00:00Z
-     * 
      */
     @Export(name="lastUpdateTime", type=String.class, parameters={})
     private Output<String> lastUpdateTime;
 
     /**
      * @return Datastore last update time, in milliseconds since the epoch of 1970-01-01T00:00:00Z
-     * 
      */
     public Output<String> getLastUpdateTime() {
         return this.lastUpdateTime;
     }
     /**
      * Organization that the datastore belongs to
-     * 
      */
     @Export(name="org", type=String.class, parameters={})
     private Output<String> org;
 
     /**
      * @return Organization that the datastore belongs to
-     * 
      */
     public Output<String> getOrg() {
         return this.org;
     }
     /**
      * Resource link of Datastore. Example: `/organizations/{org}/analytics/datastores/{uuid}`
-     * 
      */
     @Export(name="self", type=String.class, parameters={})
     private Output<String> self;
 
     /**
      * @return Resource link of Datastore. Example: `/organizations/{org}/analytics/datastores/{uuid}`
-     * 
      */
     public Output<String> getSelf() {
         return this.self;
     }
     /**
      * Destination storage type. Supported types `gcs` or `bigquery`.
-     * 
      */
     @Export(name="targetType", type=String.class, parameters={})
     private Output<String> targetType;
 
     /**
      * @return Destination storage type. Supported types `gcs` or `bigquery`.
-     * 
      */
     public Output<String> getTargetType() {
         return this.targetType;

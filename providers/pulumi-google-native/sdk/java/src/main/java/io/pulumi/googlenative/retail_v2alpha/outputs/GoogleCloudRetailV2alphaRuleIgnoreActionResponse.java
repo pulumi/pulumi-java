@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class GoogleCloudRetailV2alphaRuleIgnoreActionResponse {
     /**
      * Terms to ignore in the search query.
-     * 
      */
     private final List<String> ignoreTerms;
 
@@ -23,7 +22,6 @@ public final class GoogleCloudRetailV2alphaRuleIgnoreActionResponse {
 
     /**
      * Terms to ignore in the search query.
-     * 
     */
     public List<String> getIgnoreTerms() {
         return this.ignoreTerms;

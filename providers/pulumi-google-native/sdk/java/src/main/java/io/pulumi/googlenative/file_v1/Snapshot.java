@@ -15,90 +15,77 @@ import javax.annotation.Nullable;
 /**
  * Creates a snapshot.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:file/v1:Snapshot")
 public class Snapshot extends io.pulumi.resources.CustomResource {
     /**
      * The time when the snapshot was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time when the snapshot was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * A description of the snapshot with 2048 characters or less. Requests with longer descriptions will be rejected.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return A description of the snapshot with 2048 characters or less. Requests with longer descriptions will be rejected.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The amount of bytes needed to allocate a full copy of the snapshot content
-     * 
      */
     @Export(name="filesystemUsedBytes", type=String.class, parameters={})
     private Output<String> filesystemUsedBytes;
 
     /**
      * @return The amount of bytes needed to allocate a full copy of the snapshot content
-     * 
      */
     public Output<String> getFilesystemUsedBytes() {
         return this.filesystemUsedBytes;
     }
     /**
      * Resource labels to represent user provided metadata.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Resource labels to represent user provided metadata.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * The resource name of the snapshot, in the format `projects/{project_id}/locations/{location_id}/instances/{instance_id}/snapshots/{snapshot_id}`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the snapshot, in the format `projects/{project_id}/locations/{location_id}/instances/{instance_id}/snapshots/{snapshot_id}`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The snapshot state.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The snapshot state.
-     * 
      */
     public Output<String> getState() {
         return this.state;

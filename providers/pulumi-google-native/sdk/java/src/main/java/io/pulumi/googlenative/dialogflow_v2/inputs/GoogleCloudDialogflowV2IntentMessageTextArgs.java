@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The text response message.
- * 
  */
 public final class GoogleCloudDialogflowV2IntentMessageTextArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTextArgs extends io.pulum
 
     /**
      * Optional. The collection of the agent's responses.
-     * 
      */
     @Import(name="text")
       private final @Nullable Output<List<String>> text;

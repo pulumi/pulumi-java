@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A custom pattern is used for defining custom HTTP verb.
- * 
  */
 public final class CustomHttpPatternArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CustomHttpPatternArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of this custom HTTP verb.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -31,7 +29,6 @@ public final class CustomHttpPatternArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The path matched by this custom verb.
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<String> path;

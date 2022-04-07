@@ -38,7 +38,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of API interfaces exported by this service. Only the `name` field of the google.protobuf.Api needs to be provided by the configuration author, as the remaining fields will be derived from the IDL during the normalization process. It is an error to specify an API interface here which cannot be resolved against the associated IDL files.
-     * 
      */
     @Import(name="apis")
       private final @Nullable Output<List<ApiArgs>> apis;
@@ -49,7 +48,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Auth configuration.
-     * 
      */
     @Import(name="authentication")
       private final @Nullable Output<AuthenticationArgs> authentication;
@@ -60,7 +58,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * API backend configuration.
-     * 
      */
     @Import(name="backend")
       private final @Nullable Output<BackendArgs> backend;
@@ -71,7 +68,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Billing configuration.
-     * 
      */
     @Import(name="billing")
       private final @Nullable Output<BillingArgs> billing;
@@ -82,7 +78,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Obsolete. Do not use. This field has no semantic meaning. The service config compiler always sets this field to `3`.
-     * 
      */
     @Import(name="configVersion")
       private final @Nullable Output<Integer> configVersion;
@@ -93,7 +88,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Context configuration.
-     * 
      */
     @Import(name="context")
       private final @Nullable Output<ContextArgs> context;
@@ -104,7 +98,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration for the service control plane.
-     * 
      */
     @Import(name="control")
       private final @Nullable Output<ControlArgs> control;
@@ -115,7 +108,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Custom error configuration.
-     * 
      */
     @Import(name="customError")
       private final @Nullable Output<CustomErrorArgs> customError;
@@ -126,7 +118,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Additional API documentation.
-     * 
      */
     @Import(name="documentation")
       private final @Nullable Output<DocumentationArgs> documentation;
@@ -137,7 +128,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration for network endpoints. If this is empty, then an endpoint with the same name as the service is automatically generated to service all defined APIs.
-     * 
      */
     @Import(name="endpoints")
       private final @Nullable Output<List<EndpointArgs>> endpoints;
@@ -148,7 +138,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of all enum types included in this API service. Enums referenced directly or indirectly by the `apis` are automatically included. Enums which are not referenced but shall be included should be listed here by name by the configuration author. Example: enums: - name: google.someapi.v1.SomeEnum
-     * 
      */
     @Import(name="enums")
       private final @Nullable Output<List<EnumArgs>> enums;
@@ -159,7 +148,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * HTTP configuration.
-     * 
      */
     @Import(name="http")
       private final @Nullable Output<HttpArgs> http;
@@ -170,7 +158,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A unique ID for a specific instance of this message, typically assigned by the client for tracking purpose. Must be no longer than 63 characters and only lower case letters, digits, '.', '_' and '-' are allowed. If empty, the server may choose to generate one instead.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -181,7 +168,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Logging configuration.
-     * 
      */
     @Import(name="logging")
       private final @Nullable Output<LoggingArgs> logging;
@@ -192,7 +178,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Defines the logs used by this service.
-     * 
      */
     @Import(name="logs")
       private final @Nullable Output<List<LogDescriptorArgs>> logs;
@@ -203,7 +188,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Defines the metrics used by this service.
-     * 
      */
     @Import(name="metrics")
       private final @Nullable Output<List<MetricDescriptorArgs>> metrics;
@@ -214,7 +198,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Defines the monitored resources used by this service. This is required by the Service.monitoring and Service.logging configurations.
-     * 
      */
     @Import(name="monitoredResources")
       private final @Nullable Output<List<MonitoredResourceDescriptorArgs>> monitoredResources;
@@ -225,7 +208,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Monitoring configuration.
-     * 
      */
     @Import(name="monitoring")
       private final @Nullable Output<MonitoringArgs> monitoring;
@@ -236,7 +218,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The service name, which is a DNS-like logical identifier for the service, such as `calendar.googleapis.com`. The service name typically goes through DNS verification to make sure the owner of the service also owns the DNS name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -247,7 +228,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Google project that owns this service.
-     * 
      */
     @Import(name="producerProjectId")
       private final @Nullable Output<String> producerProjectId;
@@ -258,7 +238,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Quota configuration.
-     * 
      */
     @Import(name="quota")
       private final @Nullable Output<QuotaArgs> quota;
@@ -276,7 +255,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * System parameter configuration.
-     * 
      */
     @Import(name="systemParameters")
       private final @Nullable Output<SystemParametersArgs> systemParameters;
@@ -287,7 +265,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of all proto message types included in this API service. It serves similar purpose as [google.api.Service.types], except that these types are not needed by user-defined APIs. Therefore, they will not show up in the generated discovery doc. This field should only be used to define system APIs in ESF.
-     * 
      */
     @Import(name="systemTypes")
       private final @Nullable Output<List<TypeArgs>> systemTypes;
@@ -298,7 +275,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The product title for this service, it is the name displayed in Google Cloud Console.
-     * 
      */
     @Import(name="title")
       private final @Nullable Output<String> title;
@@ -309,7 +285,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of all proto message types included in this API service. Types referenced directly or indirectly by the `apis` are automatically included. Messages which are not referenced but shall be included, such as types used by the `google.protobuf.Any` type, should be listed here by name by the configuration author. Example: types: - name: google.protobuf.Int32
-     * 
      */
     @Import(name="types")
       private final @Nullable Output<List<TypeArgs>> types;
@@ -320,7 +295,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration controlling usage of this service.
-     * 
      */
     @Import(name="usage")
       private final @Nullable Output<UsageArgs> usage;

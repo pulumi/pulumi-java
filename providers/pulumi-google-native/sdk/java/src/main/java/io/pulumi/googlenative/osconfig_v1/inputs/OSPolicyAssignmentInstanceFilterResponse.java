@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Filters to select target VMs for an assignment. If more than one filter criteria is specified below, a VM will be selected if and only if it satisfies all of them.
- * 
  */
 public final class OSPolicyAssignmentInstanceFilterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class OSPolicyAssignmentInstanceFilterResponse extends io.pulumi.re
 
     /**
      * Target all VMs in the project. If true, no other criteria is permitted.
-     * 
      */
     @Import(name="all", required=true)
       private final Boolean all;
@@ -32,7 +30,6 @@ public final class OSPolicyAssignmentInstanceFilterResponse extends io.pulumi.re
 
     /**
      * List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM.
-     * 
      */
     @Import(name="exclusionLabels", required=true)
       private final List<OSPolicyAssignmentLabelSetResponse> exclusionLabels;
@@ -43,7 +40,6 @@ public final class OSPolicyAssignmentInstanceFilterResponse extends io.pulumi.re
 
     /**
      * List of label sets used for VM inclusion. If the list has more than one `LabelSet`, the VM is included if any of the label sets are applicable for the VM.
-     * 
      */
     @Import(name="inclusionLabels", required=true)
       private final List<OSPolicyAssignmentLabelSetResponse> inclusionLabels;
@@ -54,7 +50,6 @@ public final class OSPolicyAssignmentInstanceFilterResponse extends io.pulumi.re
 
     /**
      * List of inventories to select VMs. A VM is selected if its inventory data matches at least one of the following inventories.
-     * 
      */
     @Import(name="inventories", required=true)
       private final List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories;

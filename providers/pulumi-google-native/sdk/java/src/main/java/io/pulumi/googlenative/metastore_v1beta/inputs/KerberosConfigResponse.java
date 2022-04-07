@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Configuration information for a Kerberos principal.
- * 
  */
 public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).
-     * 
      */
     @Import(name="keytab", required=true)
       private final SecretResponse keytab;
@@ -30,7 +28,6 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf explicitly.
-     * 
      */
     @Import(name="krb5ConfigGcsUri", required=true)
       private final String krb5ConfigGcsUri;
@@ -41,7 +38,6 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form primary/instance@REALM, but there is no exact format.
-     * 
      */
     @Import(name="principal", required=true)
       private final String principal;

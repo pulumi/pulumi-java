@@ -17,160 +17,137 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a spoke in the specified project and location.
- * 
  */
 @ResourceType(type="google-native:networkconnectivity/v1:Spoke")
 public class Spoke extends io.pulumi.resources.CustomResource {
     /**
      * The time the spoke was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time the spoke was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * An optional description of the spoke.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return An optional description of the spoke.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Immutable. The name of the hub that this spoke is attached to.
-     * 
      */
     @Export(name="hub", type=String.class, parameters={})
     private Output<String> hub;
 
     /**
      * @return Immutable. The name of the hub that this spoke is attached to.
-     * 
      */
     public Output<String> getHub() {
         return this.hub;
     }
     /**
      * Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * VLAN attachments that are associated with the spoke.
-     * 
      */
     @Export(name="linkedInterconnectAttachments", type=LinkedInterconnectAttachmentsResponse.class, parameters={})
     private Output<LinkedInterconnectAttachmentsResponse> linkedInterconnectAttachments;
 
     /**
      * @return VLAN attachments that are associated with the spoke.
-     * 
      */
     public Output<LinkedInterconnectAttachmentsResponse> getLinkedInterconnectAttachments() {
         return this.linkedInterconnectAttachments;
     }
     /**
      * Router appliance instances that are associated with the spoke.
-     * 
      */
     @Export(name="linkedRouterApplianceInstances", type=LinkedRouterApplianceInstancesResponse.class, parameters={})
     private Output<LinkedRouterApplianceInstancesResponse> linkedRouterApplianceInstances;
 
     /**
      * @return Router appliance instances that are associated with the spoke.
-     * 
      */
     public Output<LinkedRouterApplianceInstancesResponse> getLinkedRouterApplianceInstances() {
         return this.linkedRouterApplianceInstances;
     }
     /**
      * VPN tunnels that are associated with the spoke.
-     * 
      */
     @Export(name="linkedVpnTunnels", type=LinkedVpnTunnelsResponse.class, parameters={})
     private Output<LinkedVpnTunnelsResponse> linkedVpnTunnels;
 
     /**
      * @return VPN tunnels that are associated with the spoke.
-     * 
      */
     public Output<LinkedVpnTunnelsResponse> getLinkedVpnTunnels() {
         return this.linkedVpnTunnels;
     }
     /**
      * Immutable. The name of the spoke. Spoke names must be unique. They use the following form: `projects/{project_number}/locations/{region}/spokes/{spoke_id}`
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Immutable. The name of the spoke. Spoke names must be unique. They use the following form: `projects/{project_number}/locations/{region}/spokes/{spoke_id}`
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The current lifecycle state of this spoke.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The current lifecycle state of this spoke.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The Google-generated UUID for the spoke. This value is unique across all spoke resources. If a spoke is deleted and another with the same name is created, the new spoke is assigned a different unique_id.
-     * 
      */
     @Export(name="uniqueId", type=String.class, parameters={})
     private Output<String> uniqueId;
 
     /**
      * @return The Google-generated UUID for the spoke. This value is unique across all spoke resources. If a spoke is deleted and another with the same name is created, the new spoke is assigned a different unique_id.
-     * 
      */
     public Output<String> getUniqueId() {
         return this.uniqueId;
     }
     /**
      * The time the spoke was last updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The time the spoke was last updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

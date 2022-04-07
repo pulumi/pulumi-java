@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The data for a sentiment annotation.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse exten
 
     /**
      * A non-negative number from 0 to infinity which represents the abolute magnitude of sentiment regardless of score.
-     * 
      */
     @Import(name="magnitude", required=true)
       private final Double magnitude;
@@ -29,7 +27,6 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse exten
 
     /**
      * The sentiment score between -1.0 (negative) and 1.0 (positive).
-     * 
      */
     @Import(name="score", required=true)
       private final Double score;

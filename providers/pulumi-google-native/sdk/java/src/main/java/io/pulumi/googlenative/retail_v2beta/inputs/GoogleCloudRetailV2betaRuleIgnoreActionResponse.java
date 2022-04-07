@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Prevents a term in the query from being used in search. Example: Don't search for "shoddy".
- * 
  */
 public final class GoogleCloudRetailV2betaRuleIgnoreActionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudRetailV2betaRuleIgnoreActionResponse extends io.pu
 
     /**
      * Terms to ignore in the search query.
-     * 
      */
     @Import(name="ignoreTerms", required=true)
       private final List<String> ignoreTerms;

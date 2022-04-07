@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class MultiStepResponse {
     /**
      * Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
-     * 
      */
     private final Integer multistepNumber;
     /**
      * Present if it is a primary (original) step.
-     * 
      */
     private final PrimaryStepResponse primaryStep;
     /**
      * Step Id of the primary (original) step, which might be this step.
-     * 
      */
     private final String primaryStepId;
 
@@ -39,21 +36,18 @@ public final class MultiStepResponse {
 
     /**
      * Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
-     * 
     */
     public Integer getMultistepNumber() {
         return this.multistepNumber;
     }
     /**
      * Present if it is a primary (original) step.
-     * 
     */
     public PrimaryStepResponse getPrimaryStep() {
         return this.primaryStep;
     }
     /**
      * Step Id of the primary (original) step, which might be this step.
-     * 
     */
     public String getPrimaryStepId() {
         return this.primaryStepId;

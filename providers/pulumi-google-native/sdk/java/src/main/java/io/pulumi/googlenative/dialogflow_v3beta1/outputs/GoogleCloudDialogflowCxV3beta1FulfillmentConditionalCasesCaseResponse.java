@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseResponse {
     /**
      * A list of case content.
-     * 
      */
     private final List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentResponse> caseContent;
     /**
      * The condition to activate and select this case. Empty means the condition is always true. The condition is evaluated against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
-     * 
      */
     private final String condition;
 
@@ -32,14 +30,12 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
 
     /**
      * A list of case content.
-     * 
     */
     public List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentResponse> getCaseContent() {
         return this.caseContent;
     }
     /**
      * The condition to activate and select this case. Empty means the condition is always true. The condition is evaluated against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
-     * 
     */
     public String getCondition() {
         return this.condition;

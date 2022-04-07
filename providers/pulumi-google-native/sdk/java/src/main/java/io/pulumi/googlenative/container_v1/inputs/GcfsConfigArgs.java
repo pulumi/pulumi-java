@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * GcfsConfig contains configurations of Google Container File System (image streaming).
- * 
  */
 public final class GcfsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GcfsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether to use GCFS.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;

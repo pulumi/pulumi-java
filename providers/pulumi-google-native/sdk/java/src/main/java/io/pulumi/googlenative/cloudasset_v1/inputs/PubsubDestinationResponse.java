@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A Pub/Sub destination.
- * 
  */
 public final class PubsubDestinationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class PubsubDestinationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the Pub/Sub topic to publish to. Example: `projects/PROJECT_ID/topics/TOPIC_ID`.
-     * 
      */
     @Import(name="topic", required=true)
       private final String topic;

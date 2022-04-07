@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Specifies operators to return facet results for. There will be one FacetResult for every source_name/object_type/operator_name combination.
- * 
  */
 public final class FacetOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class FacetOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Maximum number of facet buckets that should be returned for this facet. Defaults to 10. Maximum value is 100.
-     * 
      */
     @Import(name="numFacetBuckets", required=true)
       private final Integer numFacetBuckets;
@@ -30,7 +28,6 @@ public final class FacetOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If object_type is set, only those objects of that type will be used to compute facets. If empty, then all objects will be used to compute facets.
-     * 
      */
     @Import(name="objectType", required=true)
       private final String objectType;
@@ -41,7 +38,6 @@ public final class FacetOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the operator chosen for faceting. @see cloudsearch.SchemaPropertyOptions
-     * 
      */
     @Import(name="operatorName", required=true)
       private final String operatorName;
@@ -52,7 +48,6 @@ public final class FacetOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Source name to facet on. Format: datasources/{source_id} If empty, all data sources will be used.
-     * 
      */
     @Import(name="sourceName", required=true)
       private final String sourceName;

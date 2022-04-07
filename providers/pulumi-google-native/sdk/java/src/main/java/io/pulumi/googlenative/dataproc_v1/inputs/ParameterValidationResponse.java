@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Configuration for parameter validation.
- * 
  */
 public final class ParameterValidationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ParameterValidationResponse extends io.pulumi.resources.Invok
 
     /**
      * Validation based on regular expressions.
-     * 
      */
     @Import(name="regex", required=true)
       private final RegexValidationResponse regex;
@@ -30,7 +28,6 @@ public final class ParameterValidationResponse extends io.pulumi.resources.Invok
 
     /**
      * Validation based on a list of allowed values.
-     * 
      */
     @Import(name="values", required=true)
       private final ValueValidationResponse values;

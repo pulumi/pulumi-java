@@ -18,7 +18,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The cluster name. Cluster names within a project must be unique. Names of deleted clusters can be reused.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -29,7 +28,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The cluster config. Note that Dataproc may set default values, and values may change when clusters are updated.
-     * 
      */
     @Import(name="config", required=true)
       private final Output<ClusterConfigArgs> config;
@@ -40,7 +38,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The labels to associate with this cluster. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a cluster.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -51,7 +48,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Google Cloud Platform project ID that the cluster belongs to.
-     * 
      */
     @Import(name="project")
       private final @Nullable Output<String> project;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The card for presenting a carousel of options to select from.
- * 
  */
 public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs extend
 
     /**
      * Carousel items.
-     * 
      */
     @Import(name="items", required=true)
       private final Output<List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemArgs>> items;

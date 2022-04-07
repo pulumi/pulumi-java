@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * This is deprecated and has no effect. Do not use.
- * 
  */
 public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="iam", required=true)
       private final String iam;
@@ -30,7 +28,6 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="op", required=true)
       private final String op;
@@ -41,7 +38,6 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="svc", required=true)
       private final String svc;
@@ -52,7 +48,6 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="sys", required=true)
       private final String sys;
@@ -63,7 +58,6 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="values", required=true)
       private final List<String> values;

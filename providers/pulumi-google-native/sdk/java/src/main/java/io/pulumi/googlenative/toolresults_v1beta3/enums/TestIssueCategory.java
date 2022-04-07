@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Category of issue. Required.
-     * 
      */
     @EnumType
     public enum TestIssueCategory {
         /**
          * Default unspecified category. Do not use. For versioning only.
-         * 
          */
         UnspecifiedCategory("unspecifiedCategory"),
         /**
          * Issue is not specific to a particular test kind (e.g., a native crash).
-         * 
          */
         Common("common"),
         /**
          * Issue is specific to Robo run.
-         * 
          */
         Robo("robo");
 

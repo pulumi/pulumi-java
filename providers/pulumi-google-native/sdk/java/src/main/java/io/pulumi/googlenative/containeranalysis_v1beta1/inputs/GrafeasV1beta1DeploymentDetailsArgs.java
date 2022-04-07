@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Details of a deployment occurrence.
- * 
  */
 public final class GrafeasV1beta1DeploymentDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class GrafeasV1beta1DeploymentDetailsArgs extends io.pulumi.resourc
 
     /**
      * Deployment history for the resource.
-     * 
      */
     @Import(name="deployment", required=true)
       private final Output<DeploymentArgs> deployment;

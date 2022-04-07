@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * MembershipState describes the state of a Membership resource.
- * 
  */
 public final class MembershipStateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MembershipStateResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The current state of the Membership resource.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;

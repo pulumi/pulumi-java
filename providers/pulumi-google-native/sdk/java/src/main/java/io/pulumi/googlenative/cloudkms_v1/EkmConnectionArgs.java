@@ -25,7 +25,6 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This checksum is computed by the server based on the value of other fields, and may be sent on update requests to ensure the client has an up-to-date value before proceeding.
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -50,7 +49,6 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of ServiceResolvers where the EKM can be reached. There should be one ServiceResolver per EKM replica. Currently, only a single ServiceResolver is supported.
-     * 
      */
     @Import(name="serviceResolvers")
       private final @Nullable Output<List<ServiceResolverArgs>> serviceResolvers;

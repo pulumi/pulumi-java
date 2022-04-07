@@ -14,104 +14,89 @@ import javax.annotation.Nullable;
 /**
  * Creates a mute config.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:securitycenter/v1:MuteConfig")
 public class MuteConfig extends io.pulumi.resources.CustomResource {
     /**
      * The time at which the mute config was created. This field is set by the server and will be ignored if provided on config creation.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time at which the mute config was created. This field is set by the server and will be ignored if provided on config creation.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * A description of the mute config.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return A description of the mute config.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The human readable name to be displayed for the mute config.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The human readable name to be displayed for the mute config.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * An expression that defines the filter to apply across create/update events of findings. While creating a filter string, be mindful of the scope in which the mute configuration is being created. E.g., If a filter contains project = X but is created under the project = Y scope, it might not match any findings. The following field and operator combinations are supported: * severity: `=`, `:` * category: `=`, `:` * resource.name: `=`, `:` * resource.project_name: `=`, `:` * resource.project_display_name: `=`, `:` * resource.folders.resource_folder: `=`, `:` * resource.parent_name: `=`, `:` * resource.parent_display_name: `=`, `:` * resource.type: `=`, `:` * finding_class: `=`, `:` * indicator.ip_addresses: `=`, `:` * indicator.domains: `=`, `:`
-     * 
      */
     @Export(name="filter", type=String.class, parameters={})
     private Output<String> filter;
 
     /**
      * @return An expression that defines the filter to apply across create/update events of findings. While creating a filter string, be mindful of the scope in which the mute configuration is being created. E.g., If a filter contains project = X but is created under the project = Y scope, it might not match any findings. The following field and operator combinations are supported: * severity: `=`, `:` * category: `=`, `:` * resource.name: `=`, `:` * resource.project_name: `=`, `:` * resource.project_display_name: `=`, `:` * resource.folders.resource_folder: `=`, `:` * resource.parent_name: `=`, `:` * resource.parent_display_name: `=`, `:` * resource.type: `=`, `:` * finding_class: `=`, `:` * indicator.ip_addresses: `=`, `:` * indicator.domains: `=`, `:`
-     * 
      */
     public Output<String> getFilter() {
         return this.filter;
     }
     /**
      * Email address of the user who last edited the mute config. This field is set by the server and will be ignored if provided on config creation or update.
-     * 
      */
     @Export(name="mostRecentEditor", type=String.class, parameters={})
     private Output<String> mostRecentEditor;
 
     /**
      * @return Email address of the user who last edited the mute config. This field is set by the server and will be ignored if provided on config creation or update.
-     * 
      */
     public Output<String> getMostRecentEditor() {
         return this.mostRecentEditor;
     }
     /**
      * This field will be ignored if provided on config creation. Format "organizations/{organization}/muteConfigs/{mute_config}" "folders/{folder}/muteConfigs/{mute_config}" "projects/{project}/muteConfigs/{mute_config}"
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return This field will be ignored if provided on config creation. Format "organizations/{organization}/muteConfigs/{mute_config}" "folders/{folder}/muteConfigs/{mute_config}" "projects/{project}/muteConfigs/{mute_config}"
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The most recent time at which the mute config was updated. This field is set by the server and will be ignored if provided on config creation or update.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The most recent time at which the mute config was updated. This field is set by the server and will be ignored if provided on config creation or update.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

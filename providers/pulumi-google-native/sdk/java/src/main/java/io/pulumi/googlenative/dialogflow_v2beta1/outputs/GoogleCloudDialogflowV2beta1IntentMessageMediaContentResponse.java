@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse {
     /**
      * List of media objects.
-     * 
      */
     private final List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects;
     /**
      * Optional. What type of media is the content (ie "audio").
-     * 
      */
     private final String mediaType;
 
@@ -32,14 +30,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
 
     /**
      * List of media objects.
-     * 
     */
     public List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> getMediaObjects() {
         return this.mediaObjects;
     }
     /**
      * Optional. What type of media is the content (ie "audio").
-     * 
     */
     public String getMediaType() {
         return this.mediaType;

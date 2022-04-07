@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse {
     /**
      * Label name presented as key in xDS Node Metadata.
-     * 
      */
     private final String labelName;
     /**
      * Label value presented as value corresponding to the above key, in xDS Node Metadata.
-     * 
      */
     private final String labelValue;
 
@@ -30,14 +28,12 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse {
 
     /**
      * Label name presented as key in xDS Node Metadata.
-     * 
     */
     public String getLabelName() {
         return this.labelName;
     }
     /**
      * Label value presented as value corresponding to the above key, in xDS Node Metadata.
-     * 
     */
     public String getLabelValue() {
         return this.labelValue;

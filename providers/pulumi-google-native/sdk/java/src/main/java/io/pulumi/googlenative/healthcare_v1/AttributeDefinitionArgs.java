@@ -18,7 +18,6 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Possible values for the attribute. The number of allowed values must not exceed 500. An empty list is invalid. The list can only be expanded after creation.
-     * 
      */
     @Import(name="allowedValues", required=true)
       private final Output<List<String>> allowedValues;
@@ -36,7 +35,6 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The category of the attribute. The value of this field cannot be changed after creation.
-     * 
      */
     @Import(name="category", required=true)
       private final Output<AttributeDefinitionCategory> category;
@@ -47,7 +45,6 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Optional. Default values of the attribute in Consents. If no default values are specified, it defaults to an empty value.
-     * 
      */
     @Import(name="consentDefaultValues")
       private final @Nullable Output<List<String>> consentDefaultValues;
@@ -65,7 +62,6 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Optional. Default value of the attribute in User data mappings. If no default value is specified, it defaults to an empty value. This field is only applicable to attributes of the category `RESOURCE`.
-     * 
      */
     @Import(name="dataMappingDefaultValue")
       private final @Nullable Output<String> dataMappingDefaultValue;
@@ -83,7 +79,6 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Optional. A description of the attribute.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -101,7 +96,6 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_definition_id}`. Cannot be changed after creation.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

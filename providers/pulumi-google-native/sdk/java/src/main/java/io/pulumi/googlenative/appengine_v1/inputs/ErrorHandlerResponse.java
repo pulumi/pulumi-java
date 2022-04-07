@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Custom static error page to be served when an error occurs.
- * 
  */
 public final class ErrorHandlerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ErrorHandlerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Error condition this handler applies to.
-     * 
      */
     @Import(name="errorCode", required=true)
       private final String errorCode;
@@ -29,7 +27,6 @@ public final class ErrorHandlerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * MIME type of file. Defaults to text/html.
-     * 
      */
     @Import(name="mimeType", required=true)
       private final String mimeType;
@@ -40,7 +37,6 @@ public final class ErrorHandlerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Static file content to be served for this error.
-     * 
      */
     @Import(name="staticFile", required=true)
       private final String staticFile;

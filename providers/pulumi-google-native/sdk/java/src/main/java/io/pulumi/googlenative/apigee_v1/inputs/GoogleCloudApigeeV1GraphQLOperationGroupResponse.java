@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * List of graphQL operation configuration details associated with Apigee API proxies or remote services. Remote services are non-Apigee proxies, such as Istio-Envoy.
- * 
  */
 public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse extends io.p
 
     /**
      * Flag that specifies whether the configuration is for Apigee API proxy or a remote service. Valid values include `proxy` or `remoteservice`. Defaults to `proxy`. Set to `proxy` when Apigee API proxies are associated with the API product. Set to `remoteservice` when non-Apigee proxies like Istio-Envoy are associated with the API product.
-     * 
      */
     @Import(name="operationConfigType", required=true)
       private final String operationConfigType;
@@ -31,7 +29,6 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse extends io.p
 
     /**
      * List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.
-     * 
      */
     @Import(name="operationConfigs", required=true)
       private final List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs;

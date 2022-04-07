@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ConfigFileResponse {
     /**
      * The contents of the file.
-     * 
      */
     private final String content;
 
@@ -22,7 +21,6 @@ public final class ConfigFileResponse {
 
     /**
      * The contents of the file.
-     * 
     */
     public String getContent() {
         return this.content;

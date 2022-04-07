@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ScanRunWarningTraceResponse {
     /**
      * Indicates the warning code.
-     * 
      */
     private final String code;
 
@@ -22,7 +21,6 @@ public final class ScanRunWarningTraceResponse {
 
     /**
      * Indicates the warning code.
-     * 
     */
     public String getCode() {
         return this.code;

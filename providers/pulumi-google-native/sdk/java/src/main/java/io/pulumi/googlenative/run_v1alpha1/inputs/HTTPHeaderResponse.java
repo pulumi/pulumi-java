@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Not supported by Cloud Run HTTPHeader describes a custom header to be used in HTTP probes
- * 
  */
 public final class HTTPHeaderResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class HTTPHeaderResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The header field name
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class HTTPHeaderResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The header field value
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

@@ -24,7 +24,6 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
 
     /**
      * The SSL certificate serving the AuthorizedCertificate resource. This must be obtained independently from a certificate authority.
-     * 
      */
     @Import(name="certificateRawData")
       private final @Nullable Output<CertificateRawDataArgs> certificateRawData;
@@ -35,7 +34,6 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
 
     /**
      * The user-specified display name of the certificate. This is not guaranteed to be unique. Example: My Certificate.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;

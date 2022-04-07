@@ -22,7 +22,6 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
@@ -33,7 +32,6 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Information specifying an Anthos Cluster.
-     * 
      */
     @Import(name="anthosCluster")
       private final @Nullable Output<AnthosClusterArgs> anthosCluster;
@@ -44,7 +42,6 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Description of the `Target`. Max length is 255 characters.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -55,7 +52,6 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -66,7 +62,6 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configurations for all execution that relates to this `Target`. Each `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same value multiple times is an error. When one or more configurations are specified, they must include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations are specified, execution will use the default specified in `DefaultPool`.
-     * 
      */
     @Import(name="executionConfigs")
       private final @Nullable Output<List<ExecutionConfigArgs>> executionConfigs;
@@ -77,7 +72,6 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Information specifying a GKE Cluster.
-     * 
      */
     @Import(name="gke")
       private final @Nullable Output<GkeClusterArgs> gke;
@@ -88,7 +82,6 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -106,7 +99,6 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/targets/a-z{0,62}.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -131,7 +123,6 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Whether or not the `Target` requires approval.
-     * 
      */
     @Import(name="requireApproval")
       private final @Nullable Output<Boolean> requireApproval;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cloud Endpoints service. Learn more at https://cloud.google.com/endpoints.
- * 
  */
 public final class CloudEndpointsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CloudEndpointsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Cloud Endpoints service underlying this service. Corresponds to the service resource label in the api monitored resource: https://cloud.google.com/monitoring/api/resources#tag_api
-     * 
      */
     @Import(name="service")
       private final @Nullable Output<String> service;

@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The security level for the function.
-     * 
      */
     @EnumType
     public enum HttpsTriggerSecurityLevel {
         /**
          * Unspecified.
-         * 
          */
         SecurityLevelUnspecified("SECURITY_LEVEL_UNSPECIFIED"),
         /**
          * Requests for a URL that match this handler that do not use HTTPS are automatically redirected to the HTTPS URL with the same path. Query parameters are reserved for the redirect.
-         * 
          */
         SecureAlways("SECURE_ALWAYS"),
         /**
          * Both HTTP and HTTPS requests with URLs that match the handler succeed without redirects. The application can examine the request to determine which protocol was used and respond accordingly.
-         * 
          */
         SecureOptional("SECURE_OPTIONAL");
 

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * A rule to be applied in a Policy.
- * 
  */
 public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Required
-     * 
      */
     @Import(name="action")
       private final @Nullable Output<RuleAction> action;
@@ -35,7 +33,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Additional restrictions that must be met. All conditions must pass for the rule to match.
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<List<ConditionArgs>> conditions;
@@ -46,7 +43,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Human-readable description of the rule.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -57,7 +53,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If one or more 'in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in at least one of these entries.
-     * 
      */
     @Import(name="in")
       private final @Nullable Output<List<String>> in;
@@ -68,7 +63,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The config returned to callers of CheckPolicy for any entries that match the LOG action.
-     * 
      */
     @Import(name="logConfig")
       private final @Nullable Output<List<LogConfigArgs>> logConfig;
@@ -79,7 +73,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If one or more 'not_in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in none of the entries. The format for in and not_in entries can be found at in the Local IAM documentation (see go/local-iam#features).
-     * 
      */
     @Import(name="notIn")
       private final @Nullable Output<List<String>> notIn;
@@ -90,7 +83,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A permission is a string of form '..' (e.g., 'storage.buckets.list'). A value of '*' matches all permissions, and a verb part of '*' (e.g., 'storage.buckets.*') matches all verbs.
-     * 
      */
     @Import(name="permissions")
       private final @Nullable Output<List<String>> permissions;

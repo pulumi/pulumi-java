@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class UrlMapTestHeaderResponse {
     /**
      * Header name.
-     * 
      */
     private final String name;
     /**
      * Header value.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class UrlMapTestHeaderResponse {
 
     /**
      * Header name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Header value.
-     * 
     */
     public String getValue() {
         return this.value;

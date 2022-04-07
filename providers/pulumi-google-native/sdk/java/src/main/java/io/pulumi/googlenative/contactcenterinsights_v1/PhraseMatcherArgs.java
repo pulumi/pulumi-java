@@ -21,7 +21,6 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Applies the phrase matcher only when it is active.
-     * 
      */
     @Import(name="active")
       private final @Nullable Output<Boolean> active;
@@ -32,7 +31,6 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The human-readable name of the phrase matcher.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -50,7 +48,6 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the phrase matcher. Format: projects/{project}/locations/{location}/phraseMatchers/{phrase_matcher}
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -61,7 +58,6 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of phase match rule groups that are included in this matcher.
-     * 
      */
     @Import(name="phraseMatchRuleGroups")
       private final @Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups;
@@ -79,7 +75,6 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The role whose utterances the phrase matcher should be matched against. If the role is ROLE_UNSPECIFIED it will be matched against any utterances in the transcript.
-     * 
      */
     @Import(name="roleMatch")
       private final @Nullable Output<PhraseMatcherRoleMatch> roleMatch;
@@ -90,7 +85,6 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of this phrase matcher.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<PhraseMatcherType> type;
@@ -101,7 +95,6 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The customized version tag to use for the phrase matcher. If not specified, it will default to `revision_id`.
-     * 
      */
     @Import(name="versionTag")
       private final @Nullable Output<String> versionTag;

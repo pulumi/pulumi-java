@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The bucket's retention policy. The retention policy enforces a minimum retention time for all objects contained in the bucket, based on their creation time. Any attempt to overwrite or delete objects younger than the retention period will result in a PERMISSION_DENIED error. An unlocked retention policy can be modified or removed from the bucket via a storage.buckets.update operation. A locked retention policy cannot be removed or shortened in duration for the lifetime of the bucket. Attempting to remove or decrease period of a locked retention policy will result in a PERMISSION_DENIED error.
- * 
  */
 public final class BucketRetentionPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class BucketRetentionPolicyResponse extends io.pulumi.resources.Inv
 
     /**
      * Server-determined value that indicates the time from which policy was enforced and effective. This value is in RFC 3339 format.
-     * 
      */
     @Import(name="effectiveTime", required=true)
       private final String effectiveTime;
@@ -30,7 +28,6 @@ public final class BucketRetentionPolicyResponse extends io.pulumi.resources.Inv
 
     /**
      * Once locked, an object retention policy cannot be modified.
-     * 
      */
     @Import(name="isLocked", required=true)
       private final Boolean isLocked;
@@ -41,7 +38,6 @@ public final class BucketRetentionPolicyResponse extends io.pulumi.resources.Inv
 
     /**
      * The duration in seconds that objects need to be retained. Retention duration must be greater than zero and less than 100 years. Note that enforcement of retention periods less than a day is not guaranteed. Such periods should only be used for testing purposes.
-     * 
      */
     @Import(name="retentionPeriod", required=true)
       private final String retentionPeriod;

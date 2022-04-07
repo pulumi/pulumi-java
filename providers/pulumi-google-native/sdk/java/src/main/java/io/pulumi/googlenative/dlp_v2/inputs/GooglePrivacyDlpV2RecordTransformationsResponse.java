@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A type of transformation that is applied over structured data such as a table.
- * 
  */
 public final class GooglePrivacyDlpV2RecordTransformationsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GooglePrivacyDlpV2RecordTransformationsResponse extends io.pu
 
     /**
      * Transform the record by applying various field transformations.
-     * 
      */
     @Import(name="fieldTransformations", required=true)
       private final List<GooglePrivacyDlpV2FieldTransformationResponse> fieldTransformations;
@@ -31,7 +29,6 @@ public final class GooglePrivacyDlpV2RecordTransformationsResponse extends io.pu
 
     /**
      * Configuration defining which records get suppressed entirely. Records that match any suppression rule are omitted from the output.
-     * 
      */
     @Import(name="recordSuppressions", required=true)
       private final List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions;

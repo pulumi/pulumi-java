@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Description of an a image to use during Skaffold rendering.
- * 
  */
 public final class BuildArtifactResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class BuildArtifactResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Image name in Skaffold configuration.
-     * 
      */
     @Import(name="image", required=true)
       private final String image;
@@ -29,7 +27,6 @@ public final class BuildArtifactResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Image tag to use. This will generally be the full path to an image, such as "gcr.io/my-project/busybox:1.2.3" or "gcr.io/my-project/busybox@sha256:abc123".
-     * 
      */
     @Import(name="tag", required=true)
       private final String tag;

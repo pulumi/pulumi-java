@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Represents a DNS certificate challenge.
- * 
  */
 public final class CertDnsChallengeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CertDnsChallengeResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The domain name upon which the DNS challenge must be satisfied.
-     * 
      */
     @Import(name="domainName", required=true)
       private final String domainName;
@@ -29,7 +27,6 @@ public final class CertDnsChallengeResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The value that must be present as a TXT record on the domain name to satisfy the challenge.
-     * 
      */
     @Import(name="token", required=true)
       private final String token;

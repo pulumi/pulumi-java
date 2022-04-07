@@ -12,22 +12,18 @@ import java.util.StringJoiner;
     public enum FilterEventTypeItem {
         /**
          * Not set, will be ignored.
-         * 
          */
         EventTypeUnspecified("EVENT_TYPE_UNSPECIFIED"),
         /**
          * Corresponds with UpgradeAvailableEvent.
-         * 
          */
         UpgradeAvailableEvent("UPGRADE_AVAILABLE_EVENT"),
         /**
          * Corresponds with UpgradeEvent.
-         * 
          */
         UpgradeEvent("UPGRADE_EVENT"),
         /**
          * Corresponds with SecurityBulletinEvent.
-         * 
          */
         SecurityBulletinEvent("SECURITY_BULLETIN_EVENT");
 

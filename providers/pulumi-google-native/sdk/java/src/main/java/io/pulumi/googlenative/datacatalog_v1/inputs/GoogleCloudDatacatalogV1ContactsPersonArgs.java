@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A contact person for the entry.
- * 
  */
 public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends io.pulumi.
 
     /**
      * Designation of the person, for example, Data Steward.
-     * 
      */
     @Import(name="designation")
       private final @Nullable Output<String> designation;
@@ -31,7 +29,6 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends io.pulumi.
 
     /**
      * Email of the person in the format of `john.doe@xyz`, ``, or `John Doe`.
-     * 
      */
     @Import(name="email")
       private final @Nullable Output<String> email;

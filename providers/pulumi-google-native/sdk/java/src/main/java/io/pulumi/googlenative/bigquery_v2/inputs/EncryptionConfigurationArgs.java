@@ -16,7 +16,6 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * [Optional] Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.
-     * 
      */
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;

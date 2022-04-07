@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * License information: https://spdx.github.io/spdx-spec/3-package-information/#315-declared-license
- * 
  */
 public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Comments
-     * 
      */
     @Import(name="comments")
       private final @Nullable Output<String> comments;
@@ -31,7 +29,6 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
-     * 
      */
     @Import(name="expression")
       private final @Nullable Output<String> expression;

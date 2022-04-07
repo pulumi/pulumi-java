@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Frequency at which the customer will be billed.
-     * 
      */
     @EnumType
     public enum RatePlanBillingPeriod {
         /**
          * Billing period not specified.
-         * 
          */
         BillingPeriodUnspecified("BILLING_PERIOD_UNSPECIFIED"),
         /**
          * Weekly billing period. **Note**: Not supported by Apigee at this time.
-         * 
          */
         Weekly("WEEKLY"),
         /**
          * Monthly billing period.
-         * 
          */
         Monthly("MONTHLY");
 

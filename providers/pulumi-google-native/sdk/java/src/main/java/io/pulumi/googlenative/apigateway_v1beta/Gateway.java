@@ -15,118 +15,101 @@ import javax.annotation.Nullable;
 /**
  * Creates a new Gateway in a given project and location.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:apigateway/v1beta:Gateway")
 public class Gateway extends io.pulumi.resources.CustomResource {
     /**
      * Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
-     * 
      */
     @Export(name="apiConfig", type=String.class, parameters={})
     private Output<String> apiConfig;
 
     /**
      * @return Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
-     * 
      */
     public Output<String> getApiConfig() {
         return this.apiConfig;
     }
     /**
      * Created time.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return Created time.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The default API Gateway host name of the form `{gateway_id}-{hash}.{region_code}.gateway.dev`.
-     * 
      */
     @Export(name="defaultHostname", type=String.class, parameters={})
     private Output<String> defaultHostname;
 
     /**
      * @return The default API Gateway host name of the form `{gateway_id}-{hash}.{region_code}.gateway.dev`.
-     * 
      */
     public Output<String> getDefaultHostname() {
         return this.defaultHostname;
     }
     /**
      * Optional. Display name.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return Optional. Display name.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * Resource name of the Gateway. Format: projects/{project}/locations/{location}/gateways/{gateway}
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name of the Gateway. Format: projects/{project}/locations/{location}/gateways/{gateway}
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The current state of the Gateway.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The current state of the Gateway.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Updated time.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return Updated time.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

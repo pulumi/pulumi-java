@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specification that applies to a routine. Valid only for entries with the `ROUTINE` type.
- * 
  */
 public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
 
     /**
      * Fields specific for BigQuery routines.
-     * 
      */
     @Import(name="bigqueryRoutineSpec")
       private final @Nullable Output<GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs> bigqueryRoutineSpec;
@@ -35,7 +33,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
 
     /**
      * The body of the routine.
-     * 
      */
     @Import(name="definitionBody")
       private final @Nullable Output<String> definitionBody;
@@ -46,7 +43,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
 
     /**
      * The language the routine is written in. The exact value depends on the source system. For BigQuery routines, possible values are: * `SQL` * `JAVASCRIPT`
-     * 
      */
     @Import(name="language")
       private final @Nullable Output<String> language;
@@ -57,7 +53,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
 
     /**
      * Return type of the argument. The exact value depends on the source system and the language.
-     * 
      */
     @Import(name="returnType")
       private final @Nullable Output<String> returnType;
@@ -68,7 +63,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
 
     /**
      * Arguments of the routine.
-     * 
      */
     @Import(name="routineArguments")
       private final @Nullable Output<List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs>> routineArguments;
@@ -79,7 +73,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
 
     /**
      * The type of the routine.
-     * 
      */
     @Import(name="routineType")
       private final @Nullable Output<GoogleCloudDatacatalogV1RoutineSpecRoutineType> routineType;

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class BucketLifecycleRuleItemActionResponse {
     /**
      * Target storage class. Required iff the type of the action is SetStorageClass.
-     * 
      */
     private final String storageClass;
     /**
      * Type of the action. Currently, only Delete and SetStorageClass are supported.
-     * 
      */
     private final String type;
 
@@ -30,14 +28,12 @@ public final class BucketLifecycleRuleItemActionResponse {
 
     /**
      * Target storage class. Required iff the type of the action is SetStorageClass.
-     * 
     */
     public String getStorageClass() {
         return this.storageClass;
     }
     /**
      * Type of the action. Currently, only Delete and SetStorageClass are supported.
-     * 
     */
     public String getType() {
         return this.type;

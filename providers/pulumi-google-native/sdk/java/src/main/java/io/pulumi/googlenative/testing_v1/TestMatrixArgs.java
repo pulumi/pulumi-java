@@ -22,7 +22,6 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Information about the client which invoked the test.
-     * 
      */
     @Import(name="clientInfo")
       private final @Nullable Output<ClientInfoArgs> clientInfo;
@@ -33,7 +32,6 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The devices the tests are being executed on.
-     * 
      */
     @Import(name="environmentMatrix", required=true)
       private final Output<EnvironmentMatrixArgs> environmentMatrix;
@@ -44,7 +42,6 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If true, only a single attempt at most will be made to run each execution/shard in the matrix. Flaky test attempts are not affected. Normally, 2 or more attempts are made if a potential infrastructure issue is detected. This feature is for latency sensitive workloads. The incidence of execution failures may be significantly greater for fail-fast matrices and support is more limited because of that expectation.
-     * 
      */
     @Import(name="failFast")
       private final @Nullable Output<Boolean> failFast;
@@ -55,7 +52,6 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of times a TestExecution should be re-attempted if one or more of its test cases fail for any reason. The maximum number of reruns allowed is 10. Default is 0, which implies no reruns.
-     * 
      */
     @Import(name="flakyTestAttempts")
       private final @Nullable Output<Integer> flakyTestAttempts;
@@ -66,7 +62,6 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The cloud project that owns the test matrix.
-     * 
      */
     @Import(name="project")
       private final @Nullable Output<String> project;
@@ -84,7 +79,6 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Where the results for the matrix are written.
-     * 
      */
     @Import(name="resultStorage", required=true)
       private final Output<ResultStorageArgs> resultStorage;
@@ -95,7 +89,6 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * How to run the test.
-     * 
      */
     @Import(name="testSpecification", required=true)
       private final Output<TestSpecificationArgs> testSpecification;

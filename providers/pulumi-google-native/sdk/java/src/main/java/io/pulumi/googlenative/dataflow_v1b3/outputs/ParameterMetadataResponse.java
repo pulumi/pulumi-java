@@ -14,37 +14,30 @@ import java.util.Objects;
 public final class ParameterMetadataResponse {
     /**
      * Optional. Additional metadata for describing this parameter.
-     * 
      */
     private final Map<String,String> customMetadata;
     /**
      * The help text to display for the parameter.
-     * 
      */
     private final String helpText;
     /**
      * Optional. Whether the parameter is optional. Defaults to false.
-     * 
      */
     private final Boolean isOptional;
     /**
      * The label to display for the parameter.
-     * 
      */
     private final String label;
     /**
      * The name of the parameter.
-     * 
      */
     private final String name;
     /**
      * Optional. The type of the parameter. Used for selecting input picker.
-     * 
      */
     private final String paramType;
     /**
      * Optional. Regexes that the parameter must match.
-     * 
      */
     private final List<String> regexes;
 
@@ -68,49 +61,42 @@ public final class ParameterMetadataResponse {
 
     /**
      * Optional. Additional metadata for describing this parameter.
-     * 
     */
     public Map<String,String> getCustomMetadata() {
         return this.customMetadata;
     }
     /**
      * The help text to display for the parameter.
-     * 
     */
     public String getHelpText() {
         return this.helpText;
     }
     /**
      * Optional. Whether the parameter is optional. Defaults to false.
-     * 
     */
     public Boolean getIsOptional() {
         return this.isOptional;
     }
     /**
      * The label to display for the parameter.
-     * 
     */
     public String getLabel() {
         return this.label;
     }
     /**
      * The name of the parameter.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Optional. The type of the parameter. Used for selecting input picker.
-     * 
     */
     public String getParamType() {
         return this.paramType;
     }
     /**
      * Optional. Regexes that the parameter must match.
-     * 
     */
     public List<String> getRegexes() {
         return this.regexes;

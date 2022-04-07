@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration to control the number of findings returned for inspection. This is not used for de-identification or data profiling.
- * 
  */
 public final class GooglePrivacyDlpV2FindingLimitsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GooglePrivacyDlpV2FindingLimitsArgs extends io.pulumi.resourc
 
     /**
      * Configuration of findings limit given for specified infoTypes.
-     * 
      */
     @Import(name="maxFindingsPerInfoType")
       private final @Nullable Output<List<GooglePrivacyDlpV2InfoTypeLimitArgs>> maxFindingsPerInfoType;
@@ -33,7 +31,6 @@ public final class GooglePrivacyDlpV2FindingLimitsArgs extends io.pulumi.resourc
 
     /**
      * Max number of findings that will be returned for each item scanned. When set within `InspectJobConfig`, the maximum returned is 2000 regardless if this is set higher. When set within `InspectContentRequest`, this field is ignored.
-     * 
      */
     @Import(name="maxFindingsPerItem")
       private final @Nullable Output<Integer> maxFindingsPerItem;
@@ -44,7 +41,6 @@ public final class GooglePrivacyDlpV2FindingLimitsArgs extends io.pulumi.resourc
 
     /**
      * Max number of findings that will be returned per request/job. When set within `InspectContentRequest`, the maximum returned is 2000 regardless if this is set higher.
-     * 
      */
     @Import(name="maxFindingsPerRequest")
       private final @Nullable Output<Integer> maxFindingsPerRequest;

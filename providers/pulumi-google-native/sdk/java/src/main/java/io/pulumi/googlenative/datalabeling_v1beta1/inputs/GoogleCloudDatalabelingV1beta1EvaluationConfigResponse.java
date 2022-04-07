@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration details used for calculating evaluation metrics and creating an Evaluation.
- * 
  */
 public final class GoogleCloudDatalabelingV1beta1EvaluationConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigResponse extend
 
     /**
      * Only specify this field if the related model performs image object detection (`IMAGE_BOUNDING_BOX_ANNOTATION`). Describes how to evaluate bounding boxes.
-     * 
      */
     @Import(name="boundingBoxEvaluationOptions", required=true)
       private final GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse boundingBoxEvaluationOptions;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes SourceRepository, used to represent parameters related to source repository where a function is hosted.
- * 
  */
 public final class SourceRepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SourceRepositoryArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats: To refer to a specific commit: `https://source.developers.google.com/projects/*{@literal /}repos/*{@literal /}revisions/*{@literal /}paths/*` To refer to a moveable alias (branch): `https://source.developers.google.com/projects/*{@literal /}repos/*{@literal /}moveable-aliases/*{@literal /}paths/*` In particular, to refer to HEAD use `master` moveable alias. To refer to a specific fixed alias (tag): `https://source.developers.google.com/projects/*{@literal /}repos/*{@literal /}fixed-aliases/*{@literal /}paths/*` You may omit `paths/*` if you want to use the main directory.
-     * 
      */
     @Import(name="url")
       private final @Nullable Output<String> url;

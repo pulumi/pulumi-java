@@ -16,104 +16,89 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a TargetServer in the specified environment.
- * 
  */
 @ResourceType(type="google-native:apigee/v1:TargetServer")
 public class TargetServer extends io.pulumi.resources.CustomResource {
     /**
      * Optional. A human-readable description of this TargetServer.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Optional. A human-readable description of this TargetServer.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The host name this target connects to. Value must be a valid hostname as described by RFC-1123.
-     * 
      */
     @Export(name="host", type=String.class, parameters={})
     private Output<String> host;
 
     /**
      * @return The host name this target connects to. Value must be a valid hostname as described by RFC-1123.
-     * 
      */
     public Output<String> getHost() {
         return this.host;
     }
     /**
      * Optional. Enabling/disabling a TargetServer is useful when TargetServers are used in load balancing configurations, and one or more TargetServers need to taken out of rotation periodically. Defaults to true.
-     * 
      */
     @Export(name="isEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> isEnabled;
 
     /**
      * @return Optional. Enabling/disabling a TargetServer is useful when TargetServers are used in load balancing configurations, and one or more TargetServers need to taken out of rotation periodically. Defaults to true.
-     * 
      */
     public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
     /**
-     * The resource id of this target server. Values must match the regular expression
-     * 
+     * The resource id of this target server. Values must match the regular expression 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource id of this target server. Values must match the regular expression
-     * 
+     * @return The resource id of this target server. Values must match the regular expression 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The port number this target connects to on the given host. Value must be between 1 and 65535, inclusive.
-     * 
      */
     @Export(name="port", type=Integer.class, parameters={})
     private Output<Integer> port;
 
     /**
      * @return The port number this target connects to on the given host. Value must be between 1 and 65535, inclusive.
-     * 
      */
     public Output<Integer> getPort() {
         return this.port;
     }
     /**
      * Immutable. The protocol used by this TargetServer.
-     * 
      */
     @Export(name="protocol", type=String.class, parameters={})
     private Output<String> protocol;
 
     /**
      * @return Immutable. The protocol used by this TargetServer.
-     * 
      */
     public Output<String> getProtocol() {
         return this.protocol;
     }
     /**
      * Optional. Specifies TLS configuration info for this TargetServer. The JSON name is `sSLInfo` for legacy/backwards compatibility reasons -- Edge originally supported SSL, and the name is still used for TLS configuration.
-     * 
      */
     @Export(name="sSLInfo", type=GoogleCloudApigeeV1TlsInfoResponse.class, parameters={})
     private Output<GoogleCloudApigeeV1TlsInfoResponse> sSLInfo;
 
     /**
      * @return Optional. Specifies TLS configuration info for this TargetServer. The JSON name is `sSLInfo` for legacy/backwards compatibility reasons -- Edge originally supported SSL, and the name is still used for TLS configuration.
-     * 
      */
     public Output<GoogleCloudApigeeV1TlsInfoResponse> getSSLInfo() {
         return this.sSLInfo;

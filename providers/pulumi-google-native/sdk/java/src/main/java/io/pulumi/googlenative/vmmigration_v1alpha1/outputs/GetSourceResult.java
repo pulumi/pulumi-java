@@ -14,37 +14,30 @@ import java.util.Objects;
 public final class GetSourceResult {
     /**
      * The create time timestamp.
-     * 
      */
     private final String createTime;
     /**
      * User-provided description of the source.
-     * 
      */
     private final String description;
     /**
      * Provides details on the state of the Source in case of an error.
-     * 
      */
     private final StatusResponse error;
     /**
      * The labels of the source.
-     * 
      */
     private final Map<String,String> labels;
     /**
      * The Source name.
-     * 
      */
     private final String name;
     /**
      * The update time timestamp.
-     * 
      */
     private final String updateTime;
     /**
      * Vmware type source details.
-     * 
      */
     private final VmwareSourceDetailsResponse vmware;
 
@@ -68,49 +61,42 @@ public final class GetSourceResult {
 
     /**
      * The create time timestamp.
-     * 
     */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * User-provided description of the source.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * Provides details on the state of the Source in case of an error.
-     * 
     */
     public StatusResponse getError() {
         return this.error;
     }
     /**
      * The labels of the source.
-     * 
     */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The Source name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The update time timestamp.
-     * 
     */
     public String getUpdateTime() {
         return this.updateTime;
     }
     /**
      * Vmware type source details.
-     * 
     */
     public VmwareSourceDetailsResponse getVmware() {
         return this.vmware;

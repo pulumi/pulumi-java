@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * GitHubEnterpriseSecrets represents the names of all necessary secrets in Secret Manager for a GitHub Enterprise server. Format is: projects//secrets/.
- * 
  */
 public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
 
     /**
      * The resource name for the OAuth client ID secret in Secret Manager.
-     * 
      */
     @Import(name="oauthClientIdName")
       private final @Nullable Output<String> oauthClientIdName;
@@ -31,7 +29,6 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
 
     /**
      * The resource name for the OAuth client ID secret version in Secret Manager.
-     * 
      */
     @Import(name="oauthClientIdVersionName")
       private final @Nullable Output<String> oauthClientIdVersionName;
@@ -42,7 +39,6 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
 
     /**
      * The resource name for the OAuth secret in Secret Manager.
-     * 
      */
     @Import(name="oauthSecretName")
       private final @Nullable Output<String> oauthSecretName;
@@ -53,7 +49,6 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
 
     /**
      * The resource name for the OAuth secret secret version in Secret Manager.
-     * 
      */
     @Import(name="oauthSecretVersionName")
       private final @Nullable Output<String> oauthSecretVersionName;
@@ -64,7 +59,6 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
 
     /**
      * The resource name for the private key secret.
-     * 
      */
     @Import(name="privateKeyName")
       private final @Nullable Output<String> privateKeyName;
@@ -75,7 +69,6 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
 
     /**
      * The resource name for the private key secret version.
-     * 
      */
     @Import(name="privateKeyVersionName")
       private final @Nullable Output<String> privateKeyVersionName;
@@ -86,7 +79,6 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
 
     /**
      * The resource name for the webhook secret in Secret Manager.
-     * 
      */
     @Import(name="webhookSecretName")
       private final @Nullable Output<String> webhookSecretName;
@@ -97,7 +89,6 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
 
     /**
      * The resource name for the webhook secret secret version in Secret Manager.
-     * 
      */
     @Import(name="webhookSecretVersionName")
       private final @Nullable Output<String> webhookSecretVersionName;

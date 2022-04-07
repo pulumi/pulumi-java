@@ -16,7 +16,6 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. A human-readable description of this reference.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -34,7 +33,6 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource id of this reference. Values must match the regular expression [\w\s\-.]+.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -52,7 +50,6 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The id of the resource to which this reference refers. Must be the id of a resource that exists in the parent environment and is of the given resource_type.
-     * 
      */
     @Import(name="refers", required=true)
       private final Output<String> refers;
@@ -63,7 +60,6 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of resource referred to by this reference. Valid values are 'KeyStore' or 'TrustStore'.
-     * 
      */
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;

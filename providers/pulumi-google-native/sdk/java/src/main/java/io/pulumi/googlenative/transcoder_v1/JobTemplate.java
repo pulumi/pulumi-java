@@ -14,34 +14,29 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a job template in the specified region.
- * 
  */
 @ResourceType(type="google-native:transcoder/v1:JobTemplate")
 public class JobTemplate extends io.pulumi.resources.CustomResource {
     /**
      * The configuration for this template.
-     * 
      */
     @Export(name="config", type=JobConfigResponse.class, parameters={})
     private Output<JobConfigResponse> config;
 
     /**
      * @return The configuration for this template.
-     * 
      */
     public Output<JobConfigResponse> getConfig() {
         return this.config;
     }
     /**
      * The resource name of the job template. Format: `projects/{project_number}/locations/{location}/jobTemplates/{job_template}`
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the job template. Format: `projects/{project_number}/locations/{location}/jobTemplates/{job_template}`
-     * 
      */
     public Output<String> getName() {
         return this.name;

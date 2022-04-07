@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels.
- * 
  */
 public final class ExternalProtectionLevelOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ExternalProtectionLevelOptionsResponse extends io.pulumi.reso
 
     /**
      * The path to the external key material on the EKM when using EkmConnection e.g., "v0/my/key". Set this field instead of external_key_uri when using an EkmConnection.
-     * 
      */
     @Import(name="ekmConnectionKeyPath", required=true)
       private final String ekmConnectionKeyPath;
@@ -29,7 +27,6 @@ public final class ExternalProtectionLevelOptionsResponse extends io.pulumi.reso
 
     /**
      * The URI for an external resource that this CryptoKeyVersion represents.
-     * 
      */
     @Import(name="externalKeyUri", required=true)
       private final String externalKeyUri;

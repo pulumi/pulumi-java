@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A securely stored value.
- * 
  */
 public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The relative resource name of a Secret Manager secret version, in the following form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.
-     * 
      */
     @Import(name="cloudSecret")
       private final @Nullable Output<String> cloudSecret;

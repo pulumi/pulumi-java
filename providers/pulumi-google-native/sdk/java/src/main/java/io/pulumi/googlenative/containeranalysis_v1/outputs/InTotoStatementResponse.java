@@ -15,7 +15,6 @@ import java.util.Objects;
 public final class InTotoStatementResponse {
     /**
      * "https://slsa.dev/provenance/v0.1" for SlsaProvenance.
-     * 
      */
     private final String predicateType;
     private final InTotoProvenanceResponse provenance;
@@ -23,7 +22,6 @@ public final class InTotoStatementResponse {
     private final List<SubjectResponse> subject;
     /**
      * Always "https://in-toto.io/Statement/v0.1".
-     * 
      */
     private final String type;
 
@@ -43,7 +41,6 @@ public final class InTotoStatementResponse {
 
     /**
      * "https://slsa.dev/provenance/v0.1" for SlsaProvenance.
-     * 
     */
     public String getPredicateType() {
         return this.predicateType;
@@ -59,7 +56,6 @@ public final class InTotoStatementResponse {
     }
     /**
      * Always "https://in-toto.io/Statement/v0.1".
-     * 
     */
     public String getType() {
         return this.type;

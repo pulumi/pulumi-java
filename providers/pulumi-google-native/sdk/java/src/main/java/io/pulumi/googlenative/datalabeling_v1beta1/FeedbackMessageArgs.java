@@ -25,7 +25,6 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * String content of the feedback. Maximum of 10000 characters.
-     * 
      */
     @Import(name="body")
       private final @Nullable Output<String> body;
@@ -36,7 +35,6 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Create time.
-     * 
      */
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
@@ -61,7 +59,6 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The image storing this feedback if the feedback is an image representing operator's comments.
-     * 
      */
     @Import(name="image")
       private final @Nullable Output<String> image;
@@ -72,7 +69,6 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the feedback message in a feedback thread. Format: 'project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}'
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

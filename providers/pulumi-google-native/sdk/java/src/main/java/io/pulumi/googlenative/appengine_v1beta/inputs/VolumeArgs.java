@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Volumes mounted within the app container. Only applicable in the App Engine flexible environment.
- * 
  */
 public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unique name for the volume.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -32,7 +30,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Volume size in gigabytes.
-     * 
      */
     @Import(name="sizeGb")
       private final @Nullable Output<Double> sizeGb;
@@ -43,7 +40,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Underlying volume type, e.g. 'tmpfs'.
-     * 
      */
     @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;

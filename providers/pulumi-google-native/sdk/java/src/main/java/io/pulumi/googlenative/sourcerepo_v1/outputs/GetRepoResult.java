@@ -13,27 +13,22 @@ import java.util.Objects;
 public final class GetRepoResult {
     /**
      * How this repository mirrors a repository managed by another service. Read-only field.
-     * 
      */
     private final MirrorConfigResponse mirrorConfig;
     /**
      * Resource name of the repository, of the form `projects//repos/`. The repo name may contain slashes. eg, `projects/myproject/repos/name/with/slash`
-     * 
      */
     private final String name;
     /**
      * How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.
-     * 
      */
     private final Map<String,String> pubsubConfigs;
     /**
      * The disk usage of the repo, in bytes. Read-only field. Size is only returned by GetRepo.
-     * 
      */
     private final String size;
     /**
      * URL to clone the repository from Google Cloud Source Repositories. Read-only field.
-     * 
      */
     private final String url;
 
@@ -53,35 +48,30 @@ public final class GetRepoResult {
 
     /**
      * How this repository mirrors a repository managed by another service. Read-only field.
-     * 
     */
     public MirrorConfigResponse getMirrorConfig() {
         return this.mirrorConfig;
     }
     /**
      * Resource name of the repository, of the form `projects//repos/`. The repo name may contain slashes. eg, `projects/myproject/repos/name/with/slash`
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.
-     * 
     */
     public Map<String,String> getPubsubConfigs() {
         return this.pubsubConfigs;
     }
     /**
      * The disk usage of the repo, in bytes. Read-only field. Size is only returned by GetRepo.
-     * 
     */
     public String getSize() {
         return this.size;
     }
     /**
      * URL to clone the repository from Google Cloud Source Repositories. Read-only field.
-     * 
     */
     public String getUrl() {
         return this.url;

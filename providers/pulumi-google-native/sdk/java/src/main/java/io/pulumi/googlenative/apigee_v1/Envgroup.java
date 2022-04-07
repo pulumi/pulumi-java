@@ -14,76 +14,65 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new environment group.
- * 
  */
 @ResourceType(type="google-native:apigee/v1:Envgroup")
 public class Envgroup extends io.pulumi.resources.CustomResource {
     /**
      * The time at which the environment group was created as milliseconds since epoch.
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return The time at which the environment group was created as milliseconds since epoch.
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Host names for this environment group.
-     * 
      */
     @Export(name="hostnames", type=List.class, parameters={String.class})
     private Output<List<String>> hostnames;
 
     /**
      * @return Host names for this environment group.
-     * 
      */
     public Output<List<String>> getHostnames() {
         return this.hostnames;
     }
     /**
      * The time at which the environment group was last updated as milliseconds since epoch.
-     * 
      */
     @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output<String> lastModifiedAt;
 
     /**
      * @return The time at which the environment group was last updated as milliseconds since epoch.
-     * 
      */
     public Output<String> getLastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * ID of the environment group.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return ID of the environment group.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * State of the environment group. Values other than ACTIVE means the resource is not ready to use.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return State of the environment group. Values other than ACTIVE means the resource is not ready to use.
-     * 
      */
     public Output<String> getState() {
         return this.state;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Not supported by Cloud Run Selects a key from a ConfigMap.
- * 
  */
 public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
 
     /**
      * The key to select.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -33,7 +31,6 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
 
     /**
      * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
-     * 
      */
     @Import(name="localObjectReference")
       private final @Nullable Output<LocalObjectReferenceArgs> localObjectReference;
@@ -44,7 +41,6 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
 
     /**
      * The ConfigMap to select from.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -55,7 +51,6 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
 
     /**
      * (Optional) Specify whether the ConfigMap or its key must be defined
-     * 
      */
     @Import(name="optional")
       private final @Nullable Output<Boolean> optional;

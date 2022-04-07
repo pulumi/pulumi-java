@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A condition for determining whether a transformation should be applied to a field.
- * 
  */
 public final class GooglePrivacyDlpV2RecordConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GooglePrivacyDlpV2RecordConditionArgs extends io.pulumi.resou
 
     /**
      * An expression.
-     * 
      */
     @Import(name="expressions")
       private final @Nullable Output<GooglePrivacyDlpV2ExpressionsArgs> expressions;

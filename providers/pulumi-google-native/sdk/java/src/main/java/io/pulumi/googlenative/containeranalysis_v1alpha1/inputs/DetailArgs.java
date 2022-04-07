@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Identifies all occurrences of this vulnerability in the package for a specific distro/location For example: glibc in cpe:/o:debian:debian_linux:8 for versions 2.1 - 2.2
- * 
  */
 public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/) in which the vulnerability manifests. Examples include distro or storage location for vulnerable jar. This field can be used as a filter in list requests.
-     * 
      */
     @Import(name="cpeUri")
       private final @Nullable Output<String> cpeUri;
@@ -34,7 +32,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A vendor-specific description of this note.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -45,7 +42,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The fix for this specific package version.
-     * 
      */
     @Import(name="fixedLocation")
       private final @Nullable Output<VulnerabilityLocationArgs> fixedLocation;
@@ -56,7 +52,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether this Detail is obsolete. Occurrences are expected not to point to obsolete details.
-     * 
      */
     @Import(name="isObsolete")
       private final @Nullable Output<Boolean> isObsolete;
@@ -67,7 +62,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The max version of the package in which the vulnerability exists.
-     * 
      */
     @Import(name="maxAffectedVersion")
       private final @Nullable Output<VersionArgs> maxAffectedVersion;
@@ -78,7 +72,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The min version of the package in which the vulnerability exists.
-     * 
      */
     @Import(name="minAffectedVersion")
       private final @Nullable Output<VersionArgs> minAffectedVersion;
@@ -89,7 +82,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the package where the vulnerability was found. This field can be used as a filter in list requests.
-     * 
      */
     @Import(name="package")
       private final @Nullable Output<String> package_;
@@ -100,7 +92,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of package; whether native or non native(ruby gems, node.js packages etc)
-     * 
      */
     @Import(name="packageType")
       private final @Nullable Output<String> packageType;
@@ -111,7 +102,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The severity (eg: distro assigned severity) for this vulnerability.
-     * 
      */
     @Import(name="severityName")
       private final @Nullable Output<String> severityName;
@@ -122,7 +112,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The source from which the information in this Detail was obtained.
-     * 
      */
     @Import(name="source")
       private final @Nullable Output<String> source;
@@ -133,7 +122,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The vendor of the product. e.g. "google"
-     * 
      */
     @Import(name="vendor")
       private final @Nullable Output<String> vendor;

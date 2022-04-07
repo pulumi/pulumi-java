@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2NumericalStatsResultResponse {
     /**
      * Maximum value appearing in the column.
-     * 
      */
     private final GooglePrivacyDlpV2ValueResponse maxValue;
     /**
      * Minimum value appearing in the column.
-     * 
      */
     private final GooglePrivacyDlpV2ValueResponse minValue;
     /**
      * List of 99 values that partition the set of field values into 100 equal sized buckets.
-     * 
      */
     private final List<GooglePrivacyDlpV2ValueResponse> quantileValues;
 
@@ -38,21 +35,18 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse {
 
     /**
      * Maximum value appearing in the column.
-     * 
     */
     public GooglePrivacyDlpV2ValueResponse getMaxValue() {
         return this.maxValue;
     }
     /**
      * Minimum value appearing in the column.
-     * 
     */
     public GooglePrivacyDlpV2ValueResponse getMinValue() {
         return this.minValue;
     }
     /**
      * List of 99 values that partition the set of field values into 100 equal sized buckets.
-     * 
     */
     public List<GooglePrivacyDlpV2ValueResponse> getQuantileValues() {
         return this.quantileValues;

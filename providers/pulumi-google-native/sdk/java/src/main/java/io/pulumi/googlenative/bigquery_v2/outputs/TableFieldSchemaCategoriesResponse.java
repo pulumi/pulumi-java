@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class TableFieldSchemaCategoriesResponse {
     /**
      * A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.
-     * 
      */
     private final List<String> names;
 
@@ -23,7 +22,6 @@ public final class TableFieldSchemaCategoriesResponse {
 
     /**
      * A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.
-     * 
     */
     public List<String> getNames() {
         return this.names;

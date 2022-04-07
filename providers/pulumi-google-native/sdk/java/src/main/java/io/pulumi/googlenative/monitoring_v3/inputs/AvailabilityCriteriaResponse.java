@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * Future parameters for the availability SLI.
- * 
  */
 public final class AvailabilityCriteriaResponse extends io.pulumi.resources.InvokeArgs {
 

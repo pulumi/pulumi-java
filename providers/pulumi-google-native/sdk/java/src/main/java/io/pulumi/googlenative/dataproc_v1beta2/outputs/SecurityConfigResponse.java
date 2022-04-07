@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class SecurityConfigResponse {
     /**
      * Optional. Kerberos related configuration.
-     * 
      */
     private final KerberosConfigResponse kerberosConfig;
 
@@ -22,7 +21,6 @@ public final class SecurityConfigResponse {
 
     /**
      * Optional. Kerberos related configuration.
-     * 
     */
     public KerberosConfigResponse getKerberosConfig() {
         return this.kerberosConfig;

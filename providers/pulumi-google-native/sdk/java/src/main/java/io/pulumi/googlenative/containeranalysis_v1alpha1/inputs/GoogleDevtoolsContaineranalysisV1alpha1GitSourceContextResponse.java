@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A GitSourceContext denotes a particular revision in a third party Git repository (e.g., GitHub).
- * 
  */
 public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextRespon
 
     /**
      * Git commit hash.
-     * 
      */
     @Import(name="revisionId", required=true)
       private final String revisionId;
@@ -29,7 +27,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextRespon
 
     /**
      * Git repository URL.
-     * 
      */
     @Import(name="url", required=true)
       private final String url;

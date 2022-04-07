@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration for a cluster.
- * 
  */
 public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Autoscaling configuration for this cluster.
-     * 
      */
     @Import(name="clusterAutoscalingConfig", required=true)
       private final ClusterAutoscalingConfigResponse clusterAutoscalingConfig;

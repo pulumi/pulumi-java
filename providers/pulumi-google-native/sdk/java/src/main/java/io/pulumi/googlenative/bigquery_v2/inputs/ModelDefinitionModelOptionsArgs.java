@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * [Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.
- * 
  */
 public final class ModelDefinitionModelOptionsArgs extends io.pulumi.resources.ResourceArgs {
 

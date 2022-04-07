@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A snapshot schedule.
- * 
  */
 public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A crontab-like specification that the schedule uses to take snapshots.
-     * 
      */
     @Import(name="crontabSpec")
       private final @Nullable Output<String> crontabSpec;
@@ -32,7 +30,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of snapshot names created in this schedule.
-     * 
      */
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
@@ -43,7 +40,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum number of snapshots to retain in this schedule.
-     * 
      */
     @Import(name="retentionCount")
       private final @Nullable Output<Integer> retentionCount;

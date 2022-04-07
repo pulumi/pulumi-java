@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Promotion information.
- * 
  */
 public final class GoogleCloudRetailV2alphaPromotionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudRetailV2alphaPromotionArgs extends io.pulumi.resou
 
     /**
      * ID of the promotion. For example, "free gift". The value must be a UTF-8 encoded string with a length limit of 128 characters, and match the pattern: `a-zA-Z*`. For example, id0LikeThis or ID_1_LIKE_THIS. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [promotion](https://support.google.com/merchants/answer/7050148).
-     * 
      */
     @Import(name="promotionId")
       private final @Nullable Output<String> promotionId;

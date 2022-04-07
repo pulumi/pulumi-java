@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class ApigatewayAuditConfigResponse {
     /**
      * The configuration for logging of each type of permission.
-     * 
      */
     private final List<ApigatewayAuditLogConfigResponse> auditLogConfigs;
     /**
      * Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
-     * 
      */
     private final String service;
 
@@ -32,14 +30,12 @@ public final class ApigatewayAuditConfigResponse {
 
     /**
      * The configuration for logging of each type of permission.
-     * 
     */
     public List<ApigatewayAuditLogConfigResponse> getAuditLogConfigs() {
         return this.auditLogConfigs;
     }
     /**
      * Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
-     * 
     */
     public String getService() {
         return this.service;

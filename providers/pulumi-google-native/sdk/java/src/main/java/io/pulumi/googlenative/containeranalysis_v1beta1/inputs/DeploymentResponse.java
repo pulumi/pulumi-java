@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The period during which some deployable was active in a runtime.
- * 
  */
 public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Address of the runtime element hosting this deployment.
-     * 
      */
     @Import(name="address", required=true)
       private final String address;
@@ -30,7 +28,6 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Configuration used to create this deployment.
-     * 
      */
     @Import(name="config", required=true)
       private final String config;
@@ -41,7 +38,6 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Beginning of the lifetime of this deployment.
-     * 
      */
     @Import(name="deployTime", required=true)
       private final String deployTime;
@@ -52,7 +48,6 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Platform hosting this deployment.
-     * 
      */
     @Import(name="platform", required=true)
       private final String platform;
@@ -63,7 +58,6 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource URI for the artifact being deployed taken from the deployable field with the same name.
-     * 
      */
     @Import(name="resourceUri", required=true)
       private final List<String> resourceUri;
@@ -74,7 +68,6 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * End of the lifetime of this deployment.
-     * 
      */
     @Import(name="undeployTime", required=true)
       private final String undeployTime;
@@ -85,7 +78,6 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Identity of the user that triggered this deployment.
-     * 
      */
     @Import(name="userEmail", required=true)
       private final String userEmail;

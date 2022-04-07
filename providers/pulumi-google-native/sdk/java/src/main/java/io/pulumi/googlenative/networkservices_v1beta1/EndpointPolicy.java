@@ -16,160 +16,137 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new EndpointPolicy in a given project and location.
- * 
  */
 @ResourceType(type="google-native:networkservices/v1beta1:EndpointPolicy")
 public class EndpointPolicy extends io.pulumi.resources.CustomResource {
     /**
      * Optional. This field specifies the URL of AuthorizationPolicy resource that applies authorization policies to the inbound traffic at the matched endpoints. Refer to Authorization. If this field is not specified, authorization is disabled(no authz checks) for this endpoint.
-     * 
      */
     @Export(name="authorizationPolicy", type=String.class, parameters={})
     private Output<String> authorizationPolicy;
 
     /**
      * @return Optional. This field specifies the URL of AuthorizationPolicy resource that applies authorization policies to the inbound traffic at the matched endpoints. Refer to Authorization. If this field is not specified, authorization is disabled(no authz checks) for this endpoint.
-     * 
      */
     public Output<String> getAuthorizationPolicy() {
         return this.authorizationPolicy;
     }
     /**
      * Optional. A URL referring to a ClientTlsPolicy resource. ClientTlsPolicy can be set to specify the authentication for traffic from the proxy to the actual endpoints. More specifically, it is applied to the outgoing traffic from the proxy to the endpoint. This is typically used for sidecar model where the proxy identifies itself as endpoint to the control plane, with the connection between sidecar and endpoint requiring authentication. If this field is not set, authentication is disabled(open). Applicable only when EndpointPolicyType is SIDECAR_PROXY.
-     * 
      */
     @Export(name="clientTlsPolicy", type=String.class, parameters={})
     private Output<String> clientTlsPolicy;
 
     /**
      * @return Optional. A URL referring to a ClientTlsPolicy resource. ClientTlsPolicy can be set to specify the authentication for traffic from the proxy to the actual endpoints. More specifically, it is applied to the outgoing traffic from the proxy to the endpoint. This is typically used for sidecar model where the proxy identifies itself as endpoint to the control plane, with the connection between sidecar and endpoint requiring authentication. If this field is not set, authentication is disabled(open). Applicable only when EndpointPolicyType is SIDECAR_PROXY.
-     * 
      */
     public Output<String> getClientTlsPolicy() {
         return this.clientTlsPolicy;
     }
     /**
      * The timestamp when the resource was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The timestamp when the resource was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. A free-text description of the resource. Max length 1024 characters.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Optional. A free-text description of the resource. Max length 1024 characters.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * A matcher that selects endpoints to which the policies should be applied.
-     * 
      */
     @Export(name="endpointMatcher", type=EndpointMatcherResponse.class, parameters={})
     private Output<EndpointMatcherResponse> endpointMatcher;
 
     /**
      * @return A matcher that selects endpoints to which the policies should be applied.
-     * 
      */
     public Output<EndpointMatcherResponse> getEndpointMatcher() {
         return this.endpointMatcher;
     }
     /**
      * Optional. Set of label tags associated with the EndpointPolicy resource.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Optional. Set of label tags associated with the EndpointPolicy resource.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * Name of the EndpointPolicy resource. It matches pattern `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the EndpointPolicy resource. It matches pattern `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Optional. A URL referring to ServerTlsPolicy resource. ServerTlsPolicy is used to determine the authentication policy to be applied to terminate the inbound traffic at the identified backends. If this field is not set, authentication is disabled(open) for this endpoint.
-     * 
      */
     @Export(name="serverTlsPolicy", type=String.class, parameters={})
     private Output<String> serverTlsPolicy;
 
     /**
      * @return Optional. A URL referring to ServerTlsPolicy resource. ServerTlsPolicy is used to determine the authentication policy to be applied to terminate the inbound traffic at the identified backends. If this field is not set, authentication is disabled(open) for this endpoint.
-     * 
      */
     public Output<String> getServerTlsPolicy() {
         return this.serverTlsPolicy;
     }
     /**
      * Optional. Port selector for the (matched) endpoints. If no port selector is provided, the matched config is applied to all ports.
-     * 
      */
     @Export(name="trafficPortSelector", type=TrafficPortSelectorResponse.class, parameters={})
     private Output<TrafficPortSelectorResponse> trafficPortSelector;
 
     /**
      * @return Optional. Port selector for the (matched) endpoints. If no port selector is provided, the matched config is applied to all ports.
-     * 
      */
     public Output<TrafficPortSelectorResponse> getTrafficPortSelector() {
         return this.trafficPortSelector;
     }
     /**
      * The type of endpoint policy. This is primarily used to validate the configuration.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of endpoint policy. This is primarily used to validate the configuration.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The timestamp when the resource was updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The timestamp when the resource was updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

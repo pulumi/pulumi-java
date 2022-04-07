@@ -14,7 +14,6 @@ public final class AvroOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * [Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).
-     * 
      */
     @Import(name="useAvroLogicalTypes", required=true)
       private final Boolean useAvroLogicalTypes;

@@ -13,188 +13,161 @@ import javax.annotation.Nullable;
 
 /**
  * Creates an Apigee runtime instance. The instance is accessible from the authorized network configured on the organization. **Note:** Not supported for Apigee hybrid.
- * 
  */
 @ResourceType(type="google-native:apigee/v1:Instance")
 public class Instance extends io.pulumi.resources.CustomResource {
     /**
      * Time the instance was created in milliseconds since epoch.
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return Time the instance was created in milliseconds since epoch.
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Optional. Description of the instance.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Optional. Description of the instance.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Customer Managed Encryption Key (CMEK) used for disk and volume encryption. Required for Apigee paid subscriptions only. Use the following format: `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)`
-     * 
      */
     @Export(name="diskEncryptionKeyName", type=String.class, parameters={})
     private Output<String> diskEncryptionKeyName;
 
     /**
      * @return Customer Managed Encryption Key (CMEK) used for disk and volume encryption. Required for Apigee paid subscriptions only. Use the following format: `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)`
-     * 
      */
     public Output<String> getDiskEncryptionKeyName() {
         return this.diskEncryptionKeyName;
     }
     /**
      * Optional. Display name for the instance.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return Optional. Display name for the instance.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Internal hostname or IP address of the Apigee endpoint used by clients to connect to the service.
-     * 
      */
     @Export(name="host", type=String.class, parameters={})
     private Output<String> host;
 
     /**
      * @return Internal hostname or IP address of the Apigee endpoint used by clients to connect to the service.
-     * 
      */
     public Output<String> getHost() {
         return this.host;
     }
     /**
      * Optional. IP range represents the customer-provided CIDR block of length 22 that will be used for the Apigee instance creation. This optional range, if provided, should be freely available as part of larger named range the customer has allocated to the Service Networking peering. If this is not provided, Apigee will automatically request for any available /22 CIDR block from Service Networking. The customer should use this CIDR block for configuring their firewall needs to allow traffic from Apigee. Input format: "a.b.c.d/22", Output format: a.b.c.d/22, e.f.g.h/28"
-     * 
      */
     @Export(name="ipRange", type=String.class, parameters={})
     private Output<String> ipRange;
 
     /**
      * @return Optional. IP range represents the customer-provided CIDR block of length 22 that will be used for the Apigee instance creation. This optional range, if provided, should be freely available as part of larger named range the customer has allocated to the Service Networking peering. If this is not provided, Apigee will automatically request for any available /22 CIDR block from Service Networking. The customer should use this CIDR block for configuring their firewall needs to allow traffic from Apigee. Input format: "a.b.c.d/22", Output format: a.b.c.d/22, e.f.g.h/28"
-     * 
      */
     public Output<String> getIpRange() {
         return this.ipRange;
     }
     /**
      * Time the instance was last modified in milliseconds since epoch.
-     * 
      */
     @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output<String> lastModifiedAt;
 
     /**
      * @return Time the instance was last modified in milliseconds since epoch.
-     * 
      */
     public Output<String> getLastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * Compute Engine location where the instance resides.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Compute Engine location where the instance resides.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource ID of the instance. Values must match the regular expression `^a-z{0,30}[a-z\d]$`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource ID of the instance. Values must match the regular expression `^a-z{0,30}[a-z\d]$`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Optional. Size of the CIDR block range that will be reserved by the instance. PAID organizations support `SLASH_16` to `SLASH_20` and defaults to `SLASH_16`. Evaluation organizations support only `SLASH_23`.
-     * 
      */
     @Export(name="peeringCidrRange", type=String.class, parameters={})
     private Output<String> peeringCidrRange;
 
     /**
      * @return Optional. Size of the CIDR block range that will be reserved by the instance. PAID organizations support `SLASH_16` to `SLASH_20` and defaults to `SLASH_16`. Evaluation organizations support only `SLASH_23`.
-     * 
      */
     public Output<String> getPeeringCidrRange() {
         return this.peeringCidrRange;
     }
     /**
      * Port number of the exposed Apigee endpoint.
-     * 
      */
     @Export(name="port", type=String.class, parameters={})
     private Output<String> port;
 
     /**
      * @return Port number of the exposed Apigee endpoint.
-     * 
      */
     public Output<String> getPort() {
         return this.port;
     }
     /**
      * Version of the runtime system running in the instance. The runtime system is the set of components that serve the API Proxy traffic in your Environments.
-     * 
      */
     @Export(name="runtimeVersion", type=String.class, parameters={})
     private Output<String> runtimeVersion;
 
     /**
      * @return Version of the runtime system running in the instance. The runtime system is the set of components that serve the API Proxy traffic in your Environments.
-     * 
      */
     public Output<String> getRuntimeVersion() {
         return this.runtimeVersion;
     }
     /**
      * State of the instance. Values other than `ACTIVE` means the resource is not ready to use.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return State of the instance. Values other than `ACTIVE` means the resource is not ready to use.
-     * 
      */
     public Output<String> getState() {
         return this.state;

@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class SerialPipelineResponse {
     /**
      * Each stage specifies configuration for a `Target`. The ordering of this list defines the promotion flow.
-     * 
      */
     private final List<StageResponse> stages;
 
@@ -23,7 +22,6 @@ public final class SerialPipelineResponse {
 
     /**
      * Each stage specifies configuration for a `Target`. The ordering of this list defines the promotion flow.
-     * 
     */
     public List<StageResponse> getStages() {
         return this.stages;

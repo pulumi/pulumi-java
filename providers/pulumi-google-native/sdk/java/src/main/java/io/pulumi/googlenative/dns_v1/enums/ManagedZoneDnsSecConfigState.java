@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Specifies whether DNSSEC is enabled, and what mode it is in.
-     * 
      */
     @EnumType
     public enum ManagedZoneDnsSecConfigState {
         /**
          * DNSSEC is disabled; the zone is not signed.
-         * 
          */
         Off("off"),
         /**
          * DNSSEC is enabled; the zone is signed and fully managed.
-         * 
          */
         On("on"),
         /**
          * DNSSEC is enabled, but in a "transfer" mode.
-         * 
          */
         Transfer("transfer");
 

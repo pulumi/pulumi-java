@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class QueryParameterValueResponse {
     /**
      * [Optional] The array values, if this is an array type.
-     * 
      */
     private final List<QueryParameterValueResponse> arrayValues;
     /**
      * [Optional] The struct field values, in order of the struct type's declaration.
-     * 
      */
     private final Map<String,String> structValues;
     /**
      * [Optional] The value of this value, if a simple scalar type.
-     * 
      */
     private final String value;
 
@@ -39,21 +36,18 @@ public final class QueryParameterValueResponse {
 
     /**
      * [Optional] The array values, if this is an array type.
-     * 
     */
     public List<QueryParameterValueResponse> getArrayValues() {
         return this.arrayValues;
     }
     /**
      * [Optional] The struct field values, in order of the struct type's declaration.
-     * 
     */
     public Map<String,String> getStructValues() {
         return this.structValues;
     }
     /**
      * [Optional] The value of this value, if a simple scalar type.
-     * 
     */
     public String getValue() {
         return this.value;

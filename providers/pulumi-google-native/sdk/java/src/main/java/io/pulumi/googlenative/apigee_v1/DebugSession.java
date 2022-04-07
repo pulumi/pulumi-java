@@ -16,90 +16,77 @@ import javax.annotation.Nullable;
  * Creates a debug session for a deployed API Proxy revision.
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:apigee/v1:DebugSession")
 public class DebugSession extends io.pulumi.resources.CustomResource {
     /**
      * Optional. The number of request to be traced. Min = 1, Max = 15, Default = 10.
-     * 
      */
     @Export(name="count", type=Integer.class, parameters={})
     private Output<Integer> count;
 
     /**
      * @return Optional. The number of request to be traced. Min = 1, Max = 15, Default = 10.
-     * 
      */
     public Output<Integer> getCount() {
         return this.count;
     }
     /**
      * Optional. A conditional statement which is evaluated against the request message to determine if it should be traced. Syntax matches that of on API Proxy bundle flow Condition.
-     * 
      */
     @Export(name="filter", type=String.class, parameters={})
     private Output<String> filter;
 
     /**
      * @return Optional. A conditional statement which is evaluated against the request message to determine if it should be traced. Syntax matches that of on API Proxy bundle flow Condition.
-     * 
      */
     public Output<String> getFilter() {
         return this.filter;
     }
     /**
      * A unique ID for this DebugSession.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return A unique ID for this DebugSession.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Optional. The time in seconds after which this DebugSession should end. This value will override the value in query param, if both are provided.
-     * 
      */
     @Export(name="timeout", type=String.class, parameters={})
     private Output<String> timeout;
 
     /**
      * @return Optional. The time in seconds after which this DebugSession should end. This value will override the value in query param, if both are provided.
-     * 
      */
     public Output<String> getTimeout() {
         return this.timeout;
     }
     /**
      * Optional. The maximum number of bytes captured from the response payload. Min = 0, Max = 5120, Default = 5120.
-     * 
      */
     @Export(name="tracesize", type=Integer.class, parameters={})
     private Output<Integer> tracesize;
 
     /**
      * @return Optional. The maximum number of bytes captured from the response payload. Min = 0, Max = 5120, Default = 5120.
-     * 
      */
     public Output<Integer> getTracesize() {
         return this.tracesize;
     }
     /**
      * Optional. The length of time, in seconds, that this debug session is valid, starting from when it's received in the control plane. Min = 1, Max = 15, Default = 10.
-     * 
      */
     @Export(name="validity", type=Integer.class, parameters={})
     private Output<Integer> validity;
 
     /**
      * @return Optional. The length of time, in seconds, that this debug session is valid, starting from when it's received in the control plane. Min = 1, Max = 15, Default = 10.
-     * 
      */
     public Output<Integer> getValidity() {
         return this.validity;

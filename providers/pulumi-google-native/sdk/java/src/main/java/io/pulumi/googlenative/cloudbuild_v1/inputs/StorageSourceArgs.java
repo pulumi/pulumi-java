@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Location of the source in an archive file in Google Cloud Storage.
- * 
  */
 public final class StorageSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class StorageSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Google Cloud Storage bucket containing the source (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
-     * 
      */
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
@@ -31,7 +29,6 @@ public final class StorageSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.
-     * 
      */
     @Import(name="generation")
       private final @Nullable Output<String> generation;
@@ -42,7 +39,6 @@ public final class StorageSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Google Cloud Storage object containing the source. This object must be a zipped (`.zip`) or gzipped archive file (`.tar.gz`) containing source to build.
-     * 
      */
     @Import(name="object")
       private final @Nullable Output<String> object;

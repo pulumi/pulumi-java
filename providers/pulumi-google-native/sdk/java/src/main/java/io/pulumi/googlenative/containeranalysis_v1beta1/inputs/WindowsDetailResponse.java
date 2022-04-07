@@ -16,7 +16,6 @@ public final class WindowsDetailResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The CPE URI in [cpe format](https://cpe.mitre.org/specification/) in which the vulnerability manifests. Examples include distro or storage location for vulnerable jar.
-     * 
      */
     @Import(name="cpeUri", required=true)
       private final String cpeUri;
@@ -27,7 +26,6 @@ public final class WindowsDetailResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The description of the vulnerability.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -38,7 +36,6 @@ public final class WindowsDetailResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The names of the KBs which have hotfixes to mitigate this vulnerability. Note that there may be multiple hotfixes (and thus multiple KBs) that mitigate a given vulnerability. Currently any listed kb's presence is considered a fix.
-     * 
      */
     @Import(name="fixingKbs", required=true)
       private final List<KnowledgeBaseResponse> fixingKbs;
@@ -49,7 +46,6 @@ public final class WindowsDetailResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the vulnerability.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

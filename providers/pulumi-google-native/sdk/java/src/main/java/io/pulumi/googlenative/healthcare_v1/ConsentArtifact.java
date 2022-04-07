@@ -17,118 +17,101 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new Consent artifact in the parent consent store.
- * 
  */
 @ResourceType(type="google-native:healthcare/v1:ConsentArtifact")
 public class ConsentArtifact extends io.pulumi.resources.CustomResource {
     /**
      * Optional. Screenshots, PDFs, or other binary information documenting the user's consent.
-     * 
      */
     @Export(name="consentContentScreenshots", type=List.class, parameters={ImageResponse.class})
     private Output<List<ImageResponse>> consentContentScreenshots;
 
     /**
      * @return Optional. Screenshots, PDFs, or other binary information documenting the user's consent.
-     * 
      */
     public Output<List<ImageResponse>> getConsentContentScreenshots() {
         return this.consentContentScreenshots;
     }
     /**
      * Optional. An string indicating the version of the consent information shown to the user.
-     * 
      */
     @Export(name="consentContentVersion", type=String.class, parameters={})
     private Output<String> consentContentVersion;
 
     /**
      * @return Optional. An string indicating the version of the consent information shown to the user.
-     * 
      */
     public Output<String> getConsentContentVersion() {
         return this.consentContentVersion;
     }
     /**
      * Optional. A signature from a guardian.
-     * 
      */
     @Export(name="guardianSignature", type=SignatureResponse.class, parameters={})
     private Output<SignatureResponse> guardianSignature;
 
     /**
      * @return Optional. A signature from a guardian.
-     * 
      */
     public Output<SignatureResponse> getGuardianSignature() {
         return this.guardianSignature;
     }
     /**
      * Optional. Metadata associated with the Consent artifact. For example, the consent locale or user agent version.
-     * 
      */
     @Export(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> metadata;
 
     /**
      * @return Optional. Metadata associated with the Consent artifact. For example, the consent locale or user agent version.
-     * 
      */
     public Output<Map<String,String>> getMetadata() {
         return this.metadata;
     }
     /**
      * Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. Cannot be changed after creation.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. Cannot be changed after creation.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * User's UUID provided by the client.
-     * 
      */
     @Export(name="userId", type=String.class, parameters={})
     private Output<String> userId;
 
     /**
      * @return User's UUID provided by the client.
-     * 
      */
     public Output<String> getUserId() {
         return this.userId;
     }
     /**
      * Optional. User's signature.
-     * 
      */
     @Export(name="userSignature", type=SignatureResponse.class, parameters={})
     private Output<SignatureResponse> userSignature;
 
     /**
      * @return Optional. User's signature.
-     * 
      */
     public Output<SignatureResponse> getUserSignature() {
         return this.userSignature;
     }
     /**
      * Optional. A signature from a witness.
-     * 
      */
     @Export(name="witnessSignature", type=SignatureResponse.class, parameters={})
     private Output<SignatureResponse> witnessSignature;
 
     /**
      * @return Optional. A signature from a witness.
-     * 
      */
     public Output<SignatureResponse> getWitnessSignature() {
         return this.witnessSignature;

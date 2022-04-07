@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * An allowed method or permission of a service specified in ApiOperation.
- * 
  */
 public final class MethodSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MethodSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value for `method` should be a valid method name for the corresponding `service_name` in ApiOperation. If `*` used as value for `method`, then ALL methods and permissions are allowed.
-     * 
      */
     @Import(name="method")
       private final @Nullable Output<String> method;
@@ -31,7 +29,6 @@ public final class MethodSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value for `permission` should be a valid Cloud IAM permission for the corresponding `service_name` in ApiOperation.
-     * 
      */
     @Import(name="permission")
       private final @Nullable Output<String> permission;

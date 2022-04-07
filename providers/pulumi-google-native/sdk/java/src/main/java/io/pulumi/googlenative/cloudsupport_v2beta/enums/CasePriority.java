@@ -10,38 +10,31 @@ import java.util.StringJoiner;
 
     /**
      * The priority of this case. If this is set, do not set severity.
-     * 
      */
     @EnumType
     public enum CasePriority {
         /**
          * Severity is undefined or has not been set yet.
-         * 
          */
         PriorityUnspecified("PRIORITY_UNSPECIFIED"),
         /**
          * Extreme impact on a production service. Service is hard down.
-         * 
          */
         P0("P0"),
         /**
          * Critical impact on a production service. Service is currently unusable.
-         * 
          */
         P1("P1"),
         /**
          * Severe impact on a production service. Service is usable but greatly impaired.
-         * 
          */
         P2("P2"),
         /**
          * Medium impact on a production service. Service is available, but moderately impaired.
-         * 
          */
         P3("P3"),
         /**
          * General questions or minor issues. Production service is fully available.
-         * 
          */
         P4("P4");
 

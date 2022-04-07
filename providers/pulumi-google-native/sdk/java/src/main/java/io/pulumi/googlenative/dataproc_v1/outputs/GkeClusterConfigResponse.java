@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GkeClusterConfigResponse {
     /**
      * Optional. A target for the deployment.
-     * 
      */
     private final NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget;
 
@@ -22,7 +21,6 @@ public final class GkeClusterConfigResponse {
 
     /**
      * Optional. A target for the deployment.
-     * 
     */
     public NamespacedGkeDeploymentTargetResponse getNamespacedGkeDeploymentTarget() {
         return this.namespacedGkeDeploymentTarget;

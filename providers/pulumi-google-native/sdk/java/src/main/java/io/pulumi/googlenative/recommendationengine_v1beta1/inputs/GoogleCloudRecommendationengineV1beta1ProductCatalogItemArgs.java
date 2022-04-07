@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * ProductCatalogItem captures item metadata specific to retail products.
- * 
  */
 public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
 
     /**
      * Optional. The available quantity of the item.
-     * 
      */
     @Import(name="availableQuantity")
       private final @Nullable Output<String> availableQuantity;
@@ -37,7 +35,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
 
     /**
      * Optional. Canonical URL directly linking to the item detail page with a length limit of 5 KiB..
-     * 
      */
     @Import(name="canonicalProductUri")
       private final @Nullable Output<String> canonicalProductUri;
@@ -48,7 +45,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
 
     /**
      * Optional. A map to pass the costs associated with the product. For example: {"manufacturing": 45.5} The profit of selling this item is computed like so: * If 'exactPrice' is provided, profit = displayPrice - sum(costs) * If 'priceRange' is provided, profit = minPrice - sum(costs)
-     * 
      */
     @Import(name="costs")
       private final @Nullable Output<Map<String,String>> costs;
@@ -59,7 +55,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
 
     /**
      * Optional. Only required if the price is set. Currency code for price/costs. Use three-character ISO-4217 code.
-     * 
      */
     @Import(name="currencyCode")
       private final @Nullable Output<String> currencyCode;
@@ -70,7 +65,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
 
     /**
      * Optional. The exact product price.
-     * 
      */
     @Import(name="exactPrice")
       private final @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs> exactPrice;
@@ -81,7 +75,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
 
     /**
      * Optional. Product images for the catalog item.
-     * 
      */
     @Import(name="images")
       private final @Nullable Output<List<GoogleCloudRecommendationengineV1beta1ImageArgs>> images;
@@ -92,7 +85,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
 
     /**
      * Optional. The product price range.
-     * 
      */
     @Import(name="priceRange")
       private final @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs> priceRange;
@@ -103,7 +95,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
 
     /**
      * Optional. Online stock state of the catalog item. Default is `IN_STOCK`.
-     * 
      */
     @Import(name="stockState")
       private final @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockState> stockState;

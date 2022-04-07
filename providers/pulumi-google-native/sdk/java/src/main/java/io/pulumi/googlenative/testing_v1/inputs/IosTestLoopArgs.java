@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A test of an iOS application that implements one or more game loop scenarios. This test type accepts an archived application (.ipa file) and a list of integer scenarios that will be executed on the app sequentially.
- * 
  */
 public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The .ipa of the application to test.
-     * 
      */
     @Import(name="appIpa", required=true)
       private final Output<FileReferenceArgs> appIpa;
@@ -33,7 +31,6 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of scenarios that should be run during the test. Defaults to the single scenario 0 if unspecified.
-     * 
      */
     @Import(name="scenarios")
       private final @Nullable Output<List<Integer>> scenarios;

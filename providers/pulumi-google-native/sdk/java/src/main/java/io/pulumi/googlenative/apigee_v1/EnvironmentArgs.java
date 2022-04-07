@@ -19,7 +19,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. API Proxy type supported by the environment. The type can be set when creating the Environment and cannot be changed.
-     * 
      */
     @Import(name="apiProxyType")
       private final @Nullable Output<EnvironmentApiProxyType> apiProxyType;
@@ -30,7 +29,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Deployment type supported by the environment. The deployment type can be set when creating the environment and cannot be changed. When you enable archive deployment, you will be **prevented from performing** a [subset of actions](/apigee/docs/api-platform/local-development/overview#prevented-actions) within the environment, including: * Managing the deployment of API proxy or shared flow revisions * Creating, updating, or deleting resource files * Creating, updating, or deleting target servers
-     * 
      */
     @Import(name="deploymentType")
       private final @Nullable Output<EnvironmentDeploymentType> deploymentType;
@@ -41,7 +39,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Description of the environment.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -52,7 +49,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Display name for this environment.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -63,7 +59,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the environment. Values must match the regular expression `^[.\\p{Alnum}-_]{1,255}$`
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -81,7 +76,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Key-value pairs that may be used for customizing the environment.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<GoogleCloudApigeeV1PropertiesArgs> properties;

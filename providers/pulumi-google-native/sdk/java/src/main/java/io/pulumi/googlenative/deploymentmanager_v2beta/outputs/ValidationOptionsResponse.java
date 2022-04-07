@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ValidationOptionsResponse {
     /**
      * Customize how deployment manager will validate the resource against schema errors.
-     * 
      */
     private final String schemaValidation;
     /**
      * Specify what to do with extra properties when executing a request.
-     * 
      */
     private final String undeclaredProperties;
 
@@ -30,14 +28,12 @@ public final class ValidationOptionsResponse {
 
     /**
      * Customize how deployment manager will validate the resource against schema errors.
-     * 
     */
     public String getSchemaValidation() {
         return this.schemaValidation;
     }
     /**
      * Specify what to do with extra properties when executing a request.
-     * 
     */
     public String getUndeclaredProperties() {
         return this.undeclaredProperties;

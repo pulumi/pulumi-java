@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Certificate chains needed to verify the attestation. Certificates in chains are PEM-encoded and are ordered based on https://tools.ietf.org/html/rfc5246#section-7.4.2.
- * 
  */
 public final class CertificateChainsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class CertificateChainsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Cavium certificate chain corresponding to the attestation.
-     * 
      */
     @Import(name="caviumCerts", required=true)
       private final List<String> caviumCerts;
@@ -30,7 +28,6 @@ public final class CertificateChainsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Google card certificate chain corresponding to the attestation.
-     * 
      */
     @Import(name="googleCardCerts", required=true)
       private final List<String> googleCardCerts;
@@ -41,7 +38,6 @@ public final class CertificateChainsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Google partition certificate chain corresponding to the attestation.
-     * 
      */
     @Import(name="googlePartitionCerts", required=true)
       private final List<String> googlePartitionCerts;

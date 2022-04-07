@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class AppliedLicenseResponse {
     /**
      * The OS license returned from the adaptation module's report.
-     * 
      */
     private final String osLicense;
     /**
      * The license type that was used in OS adaptation.
-     * 
      */
     private final String type;
 
@@ -30,14 +28,12 @@ public final class AppliedLicenseResponse {
 
     /**
      * The OS license returned from the adaptation module's report.
-     * 
     */
     public String getOsLicense() {
         return this.osLicense;
     }
     /**
      * The license type that was used in OS adaptation.
-     * 
     */
     public String getType() {
         return this.type;

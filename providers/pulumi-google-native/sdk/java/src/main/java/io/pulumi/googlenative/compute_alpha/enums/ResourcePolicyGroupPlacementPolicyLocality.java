@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies network locality
-     * 
      */
     @EnumType
     public enum ResourcePolicyGroupPlacementPolicyLocality {

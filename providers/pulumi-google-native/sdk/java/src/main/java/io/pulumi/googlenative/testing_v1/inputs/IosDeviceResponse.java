@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A single iOS device.
- * 
  */
 public final class IosDeviceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class IosDeviceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The id of the iOS device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
-     * 
      */
     @Import(name="iosModelId", required=true)
       private final String iosModelId;
@@ -29,7 +27,6 @@ public final class IosDeviceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The id of the iOS major software version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
-     * 
      */
     @Import(name="iosVersionId", required=true)
       private final String iosVersionId;
@@ -40,7 +37,6 @@ public final class IosDeviceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The locale the test device used for testing. Use the TestEnvironmentDiscoveryService to get supported options.
-     * 
      */
     @Import(name="locale", required=true)
       private final String locale;
@@ -51,7 +47,6 @@ public final class IosDeviceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * How the device is oriented during the test. Use the TestEnvironmentDiscoveryService to get supported options.
-     * 
      */
     @Import(name="orientation", required=true)
       private final String orientation;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Specification that applies to a data source connection. Valid only for entries with the `DATA_SOURCE_CONNECTION` type.
- * 
  */
 public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse exte
 
     /**
      * Fields specific to BigQuery connections.
-     * 
      */
     @Import(name="bigqueryConnectionSpec", required=true)
       private final GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse bigqueryConnectionSpec;

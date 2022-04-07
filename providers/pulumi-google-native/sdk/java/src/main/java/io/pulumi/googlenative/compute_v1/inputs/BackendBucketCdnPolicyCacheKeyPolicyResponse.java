@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Message containing what to include in the cache key for a request for Cloud CDN.
- * 
  */
 public final class BackendBucketCdnPolicyCacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyResponse extends io.pulum
 
     /**
      * Allows HTTP request headers (by name) to be used in the cache key.
-     * 
      */
     @Import(name="includeHttpHeaders", required=true)
       private final List<String> includeHttpHeaders;
@@ -30,7 +28,6 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyResponse extends io.pulum
 
     /**
      * Names of query string parameters to include in cache keys. All other parameters will be excluded. '&' and '=' will be percent encoded and not treated as delimiters.
-     * 
      */
     @Import(name="queryStringWhitelist", required=true)
       private final List<String> queryStringWhitelist;

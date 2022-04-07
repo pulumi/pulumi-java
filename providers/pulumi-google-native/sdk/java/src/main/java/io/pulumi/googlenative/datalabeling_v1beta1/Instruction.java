@@ -16,118 +16,101 @@ import javax.annotation.Nullable;
 /**
  * Creates an instruction for how data should be labeled.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:datalabeling/v1beta1:Instruction")
 public class Instruction extends io.pulumi.resources.CustomResource {
     /**
      * The names of any related resources that are blocking changes to the instruction.
-     * 
      */
     @Export(name="blockingResources", type=List.class, parameters={String.class})
     private Output<List<String>> blockingResources;
 
     /**
      * @return The names of any related resources that are blocking changes to the instruction.
-     * 
      */
     public Output<List<String>> getBlockingResources() {
         return this.blockingResources;
     }
     /**
      * Creation time of instruction.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return Creation time of instruction.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The data type of this instruction.
-     * 
      */
     @Export(name="dataType", type=String.class, parameters={})
     private Output<String> dataType;
 
     /**
      * @return The data type of this instruction.
-     * 
      */
     public Output<String> getDataType() {
         return this.dataType;
     }
     /**
      * Optional. User-provided description of the instruction. The description can be up to 10000 characters long.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Optional. User-provided description of the instruction. The description can be up to 10000 characters long.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The display name of the instruction. Maximum of 64 characters.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The display name of the instruction. Maximum of 64 characters.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Instruction resource name, format: projects/{project_id}/instructions/{instruction_id}
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Instruction resource name, format: projects/{project_id}/instructions/{instruction_id}
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Instruction from a PDF document. The PDF should be in a Cloud Storage bucket.
-     * 
      */
     @Export(name="pdfInstruction", type=GoogleCloudDatalabelingV1beta1PdfInstructionResponse.class, parameters={})
     private Output<GoogleCloudDatalabelingV1beta1PdfInstructionResponse> pdfInstruction;
 
     /**
      * @return Instruction from a PDF document. The PDF should be in a Cloud Storage bucket.
-     * 
      */
     public Output<GoogleCloudDatalabelingV1beta1PdfInstructionResponse> getPdfInstruction() {
         return this.pdfInstruction;
     }
     /**
      * Last update time of instruction.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return Last update time of instruction.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

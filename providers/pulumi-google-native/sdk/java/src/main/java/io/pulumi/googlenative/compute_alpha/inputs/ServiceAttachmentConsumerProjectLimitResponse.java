@@ -15,7 +15,6 @@ public final class ServiceAttachmentConsumerProjectLimitResponse extends io.pulu
 
     /**
      * The value of the limit to set.
-     * 
      */
     @Import(name="connectionLimit", required=true)
       private final Integer connectionLimit;
@@ -26,7 +25,6 @@ public final class ServiceAttachmentConsumerProjectLimitResponse extends io.pulu
 
     /**
      * The project id or number for the project to set the limit for.
-     * 
      */
     @Import(name="projectIdOrNum", required=true)
       private final String projectIdOrNum;

@@ -18,72 +18,58 @@ import java.util.Objects;
 public final class GetWorkloadResult {
     /**
      * Optional. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.
-     * 
      */
     private final String billingAccount;
     /**
      * Immutable. Compliance Regime associated with this workload.
-     * 
      */
     private final String complianceRegime;
     /**
      * Immutable. The Workload creation timestamp.
-     * 
      */
     private final String createTime;
     /**
      * The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload
-     * 
      */
     private final String displayName;
     /**
      * Optional. Indicates the sovereignty status of the given workload. Currently meant to be used by Europe/Canada customers.
-     * 
      */
     private final Boolean enableSovereignControls;
     /**
      * Optional. ETag of the workload, it is calculated on the basis of the Workload contents. It will be used in Update & Delete operations.
-     * 
      */
     private final String etag;
     /**
      * Represents the KAJ enrollment state of the given workload.
-     * 
      */
     private final String kajEnrollmentState;
     /**
      * Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key is provisioned. This field is mandatory for a subset of Compliance Regimes.
-     * 
      */
     private final GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse kmsSettings;
     /**
      * Optional. Labels applied to the workload.
-     * 
      */
     private final Map<String,String> labels;
     /**
      * Optional. The resource name of the workload. Format: organizations/{organization}/locations/{location}/workloads/{workload} Read-only.
-     * 
      */
     private final String name;
     /**
      * Input only. The parent resource for the resources managed by this Assured Workload. May be either empty or a folder resource which is a child of the Workload parent. If not specified all resources are created under the parent organization. Format: folders/{folder_id}
-     * 
      */
     private final String provisionedResourcesParent;
     /**
      * Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional.
-     * 
      */
     private final List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse> resourceSettings;
     /**
      * The resources associated with this workload. These resources will be created when creating the workload. If any of the projects already exist, the workload creation will fail. Always read only.
-     * 
      */
     private final List<GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse> resources;
     /**
      * Represents the SAA enrollment response of the given workload. SAA enrollment response is queried during GetWorkload call. In failure cases, user friendly error message is shown in SAA details page.
-     * 
      */
     private final GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse saaEnrollmentResponse;
 
@@ -121,98 +107,84 @@ public final class GetWorkloadResult {
 
     /**
      * Optional. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.
-     * 
     */
     public String getBillingAccount() {
         return this.billingAccount;
     }
     /**
      * Immutable. Compliance Regime associated with this workload.
-     * 
     */
     public String getComplianceRegime() {
         return this.complianceRegime;
     }
     /**
      * Immutable. The Workload creation timestamp.
-     * 
     */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload
-     * 
     */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Optional. Indicates the sovereignty status of the given workload. Currently meant to be used by Europe/Canada customers.
-     * 
     */
     public Boolean getEnableSovereignControls() {
         return this.enableSovereignControls;
     }
     /**
      * Optional. ETag of the workload, it is calculated on the basis of the Workload contents. It will be used in Update & Delete operations.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Represents the KAJ enrollment state of the given workload.
-     * 
     */
     public String getKajEnrollmentState() {
         return this.kajEnrollmentState;
     }
     /**
      * Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key is provisioned. This field is mandatory for a subset of Compliance Regimes.
-     * 
     */
     public GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse getKmsSettings() {
         return this.kmsSettings;
     }
     /**
      * Optional. Labels applied to the workload.
-     * 
     */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Optional. The resource name of the workload. Format: organizations/{organization}/locations/{location}/workloads/{workload} Read-only.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Input only. The parent resource for the resources managed by this Assured Workload. May be either empty or a folder resource which is a child of the Workload parent. If not specified all resources are created under the parent organization. Format: folders/{folder_id}
-     * 
     */
     public String getProvisionedResourcesParent() {
         return this.provisionedResourcesParent;
     }
     /**
      * Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional.
-     * 
     */
     public List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse> getResourceSettings() {
         return this.resourceSettings;
     }
     /**
      * The resources associated with this workload. These resources will be created when creating the workload. If any of the projects already exist, the workload creation will fail. Always read only.
-     * 
     */
     public List<GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse> getResources() {
         return this.resources;
     }
     /**
      * Represents the SAA enrollment response of the given workload. SAA enrollment response is queried during GetWorkload call. In failure cases, user friendly error message is shown in SAA details page.
-     * 
     */
     public GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse getSaaEnrollmentResponse() {
         return this.saaEnrollmentResponse;

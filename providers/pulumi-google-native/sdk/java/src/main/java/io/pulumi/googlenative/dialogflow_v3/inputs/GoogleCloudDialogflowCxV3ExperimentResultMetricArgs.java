@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Metric and corresponding confidence intervals.
- * 
  */
 public final class GoogleCloudDialogflowCxV3ExperimentResultMetricArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricArgs extends i
 
     /**
      * The probability that the treatment is better than all other treatments in the experiment
-     * 
      */
     @Import(name="confidenceInterval")
       private final @Nullable Output<GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalArgs> confidenceInterval;
@@ -34,7 +32,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricArgs extends i
 
     /**
      * Count value of a metric.
-     * 
      */
     @Import(name="count")
       private final @Nullable Output<Double> count;
@@ -45,7 +42,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricArgs extends i
 
     /**
      * Count-based metric type. Only one of type or count_type is specified in each Metric.
-     * 
      */
     @Import(name="countType")
       private final @Nullable Output<GoogleCloudDialogflowCxV3ExperimentResultMetricCountType> countType;
@@ -56,7 +52,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricArgs extends i
 
     /**
      * Ratio value of a metric.
-     * 
      */
     @Import(name="ratio")
       private final @Nullable Output<Double> ratio;
@@ -67,7 +62,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricArgs extends i
 
     /**
      * Ratio-based metric type. Only one of type or count_type is specified in each Metric.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<GoogleCloudDialogflowCxV3ExperimentResultMetricType> type;

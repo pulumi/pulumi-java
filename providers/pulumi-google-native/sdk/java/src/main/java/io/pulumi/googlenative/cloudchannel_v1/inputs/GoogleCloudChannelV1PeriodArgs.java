@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents period in days/months/years.
- * 
  */
 public final class GoogleCloudChannelV1PeriodArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudChannelV1PeriodArgs extends io.pulumi.resources.Re
 
     /**
      * Total duration of Period Type defined.
-     * 
      */
     @Import(name="duration")
       private final @Nullable Output<Integer> duration;
@@ -32,7 +30,6 @@ public final class GoogleCloudChannelV1PeriodArgs extends io.pulumi.resources.Re
 
     /**
      * Period Type.
-     * 
      */
     @Import(name="periodType")
       private final @Nullable Output<GoogleCloudChannelV1PeriodPeriodType> periodType;

@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * Required. A status for this trigger.
-     * 
      */
     @EnumType
     public enum JobTriggerStatus {
         /**
          * Unused.
-         * 
          */
         StatusUnspecified("STATUS_UNSPECIFIED"),
         /**
          * Trigger is healthy.
-         * 
          */
         Healthy("HEALTHY"),
         /**
          * Trigger is temporarily paused.
-         * 
          */
         Paused("PAUSED"),
         /**
          * Trigger is cancelled and can not be resumed.
-         * 
          */
         Cancelled("CANCELLED");
 

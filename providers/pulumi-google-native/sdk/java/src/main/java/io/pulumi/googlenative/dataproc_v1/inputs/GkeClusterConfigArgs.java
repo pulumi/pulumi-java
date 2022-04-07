@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The cluster's GKE config.
- * 
  */
 public final class GkeClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GkeClusterConfigArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Optional. A target for the deployment.
-     * 
      */
     @Import(name="namespacedGkeDeploymentTarget")
       private final @Nullable Output<NamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget;

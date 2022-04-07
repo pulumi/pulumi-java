@@ -14,22 +14,18 @@ import java.util.Objects;
 public final class OSPolicyResourceResponse {
     /**
      * Exec resource
-     * 
      */
     private final OSPolicyResourceExecResourceResponse exec;
     /**
      * File resource
-     * 
      */
     private final OSPolicyResourceFileResourceResponse file;
     /**
      * Package resource
-     * 
      */
     private final OSPolicyResourcePackageResourceResponse pkg;
     /**
      * Package repository resource
-     * 
      */
     private final OSPolicyResourceRepositoryResourceResponse repository;
 
@@ -47,28 +43,24 @@ public final class OSPolicyResourceResponse {
 
     /**
      * Exec resource
-     * 
     */
     public OSPolicyResourceExecResourceResponse getExec() {
         return this.exec;
     }
     /**
      * File resource
-     * 
     */
     public OSPolicyResourceFileResourceResponse getFile() {
         return this.file;
     }
     /**
      * Package resource
-     * 
     */
     public OSPolicyResourcePackageResourceResponse getPkg() {
         return this.pkg;
     }
     /**
      * Package repository resource
-     * 
     */
     public OSPolicyResourceRepositoryResourceResponse getRepository() {
         return this.repository;

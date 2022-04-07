@@ -15,104 +15,89 @@ import javax.annotation.Nullable;
 
 /**
  * Creates an issue model.
- * 
  */
 @ResourceType(type="google-native:contactcenterinsights/v1:IssueModel")
 public class IssueModel extends io.pulumi.resources.CustomResource {
     /**
      * The time at which this issue model was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time at which this issue model was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The representative name for the issue model.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The representative name for the issue model.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Configs for the input data that used to create the issue model.
-     * 
      */
     @Export(name="inputDataConfig", type=GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse.class, parameters={})
     private Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse> inputDataConfig;
 
     /**
      * @return Configs for the input data that used to create the issue model.
-     * 
      */
     public Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse> getInputDataConfig() {
         return this.inputDataConfig;
     }
     /**
      * Immutable. The resource name of the issue model. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Immutable. The resource name of the issue model. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * State of the model.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return State of the model.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Immutable. The issue model's label statistics on its training data.
-     * 
      */
     @Export(name="trainingStats", type=GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse.class, parameters={})
     private Output<GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse> trainingStats;
 
     /**
      * @return Immutable. The issue model's label statistics on its training data.
-     * 
      */
     public Output<GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse> getTrainingStats() {
         return this.trainingStats;
     }
     /**
      * The most recent time at which the issue model was updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The most recent time at which the issue model was updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

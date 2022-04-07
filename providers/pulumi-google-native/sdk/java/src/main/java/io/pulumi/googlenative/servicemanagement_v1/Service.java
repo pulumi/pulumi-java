@@ -14,34 +14,29 @@ import javax.annotation.Nullable;
 /**
  * Creates a new managed service. A managed service is immutable, and is subject to mandatory 30-day data retention. You cannot move a service or recreate it within 30 days after deletion. One producer project can own no more than 500 services. For security and reliability purposes, a production service should be hosted in a dedicated producer project. Operation
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:servicemanagement/v1:Service")
 public class Service extends io.pulumi.resources.CustomResource {
     /**
      * ID of the project that produces and owns this service.
-     * 
      */
     @Export(name="producerProjectId", type=String.class, parameters={})
     private Output<String> producerProjectId;
 
     /**
      * @return ID of the project that produces and owns this service.
-     * 
      */
     public Output<String> getProducerProjectId() {
         return this.producerProjectId;
     }
     /**
      * The name of the service. See the [overview](/service-management/overview) for naming requirements.
-     * 
      */
     @Export(name="serviceName", type=String.class, parameters={})
     private Output<String> serviceName;
 
     /**
      * @return The name of the service. See the [overview](/service-management/overview) for naming requirements.
-     * 
      */
     public Output<String> getServiceName() {
         return this.serviceName;

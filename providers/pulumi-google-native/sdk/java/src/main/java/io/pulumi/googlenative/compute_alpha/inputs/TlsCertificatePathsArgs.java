@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * [Deprecated] The paths to the mounted TLS Certificates and private key. The paths to the mounted TLS Certificates and private key.
- * 
  */
 public final class TlsCertificatePathsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class TlsCertificatePathsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The path to the file holding the client or server TLS certificate to use.
-     * 
      */
     @Import(name="certificatePath")
       private final @Nullable Output<String> certificatePath;
@@ -31,7 +29,6 @@ public final class TlsCertificatePathsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The path to the file holding the client or server private key.
-     * 
      */
     @Import(name="privateKeyPath")
       private final @Nullable Output<String> privateKeyPath;

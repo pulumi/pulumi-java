@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Call-specific metadata.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
 
     /**
      * The audio channel that contains the agent.
-     * 
      */
     @Import(name="agentChannel", required=true)
       private final Integer agentChannel;
@@ -29,7 +27,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
 
     /**
      * The audio channel that contains the customer.
-     * 
      */
     @Import(name="customerChannel", required=true)
       private final Integer customerChannel;

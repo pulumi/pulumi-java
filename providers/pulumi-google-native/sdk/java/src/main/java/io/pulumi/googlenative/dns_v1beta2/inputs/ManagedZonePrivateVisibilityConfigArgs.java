@@ -19,7 +19,6 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.reso
 
     /**
      * The list of Google Kubernetes Engine clusters that can see this zone.
-     * 
      */
     @Import(name="gkeClusters")
       private final @Nullable Output<List<ManagedZonePrivateVisibilityConfigGKEClusterArgs>> gkeClusters;
@@ -37,7 +36,6 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.reso
 
     /**
      * The list of VPC networks that can see this zone.
-     * 
      */
     @Import(name="networks")
       private final @Nullable Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks;

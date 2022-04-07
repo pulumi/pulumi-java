@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Files that make up the template contents of a template type.
- * 
  */
 public final class TemplateContentsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Import files referenced by the main template.
-     * 
      */
     @Import(name="imports", required=true)
       private final List<ImportFileResponse> imports;
@@ -31,7 +29,6 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Which interpreter (python or jinja) should be used during expansion.
-     * 
      */
     @Import(name="interpreter", required=true)
       private final String interpreter;
@@ -42,7 +39,6 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The filename of the mainTemplate
-     * 
      */
     @Import(name="mainTemplate", required=true)
       private final String mainTemplate;
@@ -53,7 +49,6 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The contents of the template schema.
-     * 
      */
     @Import(name="schema", required=true)
       private final String schema;
@@ -64,7 +59,6 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The contents of the main template file.
-     * 
      */
     @Import(name="template", required=true)
       private final String template;

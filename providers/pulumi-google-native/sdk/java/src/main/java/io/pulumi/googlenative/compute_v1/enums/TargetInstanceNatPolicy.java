@@ -10,13 +10,11 @@ import java.util.StringJoiner;
 
     /**
      * NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.
-     * 
      */
     @EnumType
     public enum TargetInstanceNatPolicy {
         /**
          * No NAT performed.
-         * 
          */
         NoNat("NO_NAT");
 

@@ -16,7 +16,6 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The human-readable display name of the view.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -34,7 +33,6 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The resource name of the view. Format: projects/{project}/locations/{location}/views/{view}
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -52,7 +50,6 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * String with specific view properties.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

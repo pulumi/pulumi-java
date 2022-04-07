@@ -17,132 +17,113 @@ import javax.annotation.Nullable;
 /**
  * Creates a Group.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:cloudidentity/v1:Group")
 public class Group extends io.pulumi.resources.CustomResource {
     /**
      * The time when the `Group` was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time when the `Group` was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * An extended description to help users determine the purpose of a `Group`. Must not be longer than 4,096 characters.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return An extended description to help users determine the purpose of a `Group`. Must not be longer than 4,096 characters.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The display name of the `Group`.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The display name of the `Group`.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Optional. Dynamic group metadata like queries and status.
-     * 
      */
     @Export(name="dynamicGroupMetadata", type=DynamicGroupMetadataResponse.class, parameters={})
     private Output<DynamicGroupMetadataResponse> dynamicGroupMetadata;
 
     /**
      * @return Optional. Dynamic group metadata like queries and status.
-     * 
      */
     public Output<DynamicGroupMetadataResponse> getDynamicGroupMetadata() {
         return this.dynamicGroupMetadata;
     }
     /**
      * The `EntityKey` of the `Group`.
-     * 
      */
     @Export(name="groupKey", type=EntityKeyResponse.class, parameters={})
     private Output<EntityKeyResponse> groupKey;
 
     /**
      * @return The `EntityKey` of the `Group`.
-     * 
      */
     public Output<EntityKeyResponse> getGroupKey() {
         return this.groupKey;
     }
     /**
      * One or more label entries that apply to the Group. Currently supported labels contain a key with an empty value. Google Groups are the default type of group and have a label with a key of `cloudidentity.googleapis.com/groups.discussion_forum` and an empty value. Existing Google Groups can have an additional label with a key of `cloudidentity.googleapis.com/groups.security` and an empty value added to them. **This is an immutable change and the security label cannot be removed once added.** Dynamic groups have a label with a key of `cloudidentity.googleapis.com/groups.dynamic`. Identity-mapped groups for Cloud Search have a label with a key of `system/groups/external` and an empty value.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return One or more label entries that apply to the Group. Currently supported labels contain a key with an empty value. Google Groups are the default type of group and have a label with a key of `cloudidentity.googleapis.com/groups.discussion_forum` and an empty value. Existing Google Groups can have an additional label with a key of `cloudidentity.googleapis.com/groups.security` and an empty value added to them. **This is an immutable change and the security label cannot be removed once added.** Dynamic groups have a label with a key of `cloudidentity.googleapis.com/groups.dynamic`. Identity-mapped groups for Cloud Search have a label with a key of `system/groups/external` and an empty value.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group`. Shall be of the form `groups/{group}`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group`. Shall be of the form `groups/{group}`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Immutable. The resource name of the entity under which this `Group` resides in the Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source}` for external- identity-mapped groups or `customers/{customer}` for Google Groups. The `customer` must begin with "C" (for example, 'C046psxkn').
-     * 
      */
     @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
      * @return Immutable. The resource name of the entity under which this `Group` resides in the Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source}` for external- identity-mapped groups or `customers/{customer}` for Google Groups. The `customer` must begin with "C" (for example, 'C046psxkn').
-     * 
      */
     public Output<String> getParent() {
         return this.parent;
     }
     /**
      * The time when the `Group` was last updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The time when the `Group` was last updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class GoogleCloudApigeeV1GraphQLOperationResponse {
     /**
      * GraphQL operation name. The name and operation type will be used to apply quotas. If no name is specified, the quota will be applied to all GraphQL operations irrespective of their operation names in the payload.
-     * 
      */
     private final String operation;
     /**
      * GraphQL operation types. Valid values include `query` or `mutation`. **Note**: Apigee does not currently support `subscription` types.
-     * 
      */
     private final List<String> operationTypes;
 
@@ -31,14 +29,12 @@ public final class GoogleCloudApigeeV1GraphQLOperationResponse {
 
     /**
      * GraphQL operation name. The name and operation type will be used to apply quotas. If no name is specified, the quota will be applied to all GraphQL operations irrespective of their operation names in the payload.
-     * 
     */
     public String getOperation() {
         return this.operation;
     }
     /**
      * GraphQL operation types. Valid values include `query` or `mutation`. **Note**: Apigee does not currently support `subscription` types.
-     * 
     */
     public List<String> getOperationTypes() {
         return this.operationTypes;

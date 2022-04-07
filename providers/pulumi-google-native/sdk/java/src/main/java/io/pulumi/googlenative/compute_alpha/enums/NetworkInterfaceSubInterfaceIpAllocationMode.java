@@ -12,12 +12,10 @@ import java.util.StringJoiner;
     public enum NetworkInterfaceSubInterfaceIpAllocationMode {
         /**
          * Allocates an internal IPv4 IP address from subnets secondary IP Range.
-         * 
          */
         AllocateIp("ALLOCATE_IP"),
         /**
          * No IP allocation is done for the subinterface.
-         * 
          */
         DoNotAllocateIp("DO_NOT_ALLOCATE_IP"),
         Unspecified("UNSPECIFIED");

@@ -15,7 +15,6 @@ import java.util.Objects;
 
 /**
  * Provenance of a build. Contains all information needed to verify the full details about the build from source to completion.
- * 
  */
 public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Special options applied to this build. This is a catch-all field where build providers can enter any desired additional details.
-     * 
      */
     @Import(name="buildOptions", required=true)
       private final Map<String,String> buildOptions;
@@ -34,7 +32,6 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Version string of the builder at the time this build was executed.
-     * 
      */
     @Import(name="builderVersion", required=true)
       private final String builderVersion;
@@ -45,7 +42,6 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Output of the build.
-     * 
      */
     @Import(name="builtArtifacts", required=true)
       private final List<ArtifactResponse> builtArtifacts;
@@ -56,7 +52,6 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Commands requested by the build.
-     * 
      */
     @Import(name="commands", required=true)
       private final List<CommandResponse> commands;
@@ -67,7 +62,6 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Time at which the build was created.
-     * 
      */
     @Import(name="createTime", required=true)
       private final String createTime;
@@ -78,7 +72,6 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * E-mail address of the user who initiated this build. Note that this was the user's e-mail address at the time the build was initiated; this address may not represent the same end-user for all time.
-     * 
      */
     @Import(name="creator", required=true)
       private final String creator;
@@ -89,7 +82,6 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Time at which execution of the build was finished.
-     * 
      */
     @Import(name="endTime", required=true)
       private final String endTime;
@@ -100,7 +92,6 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * URI where any logs for this provenance were written.
-     * 
      */
     @Import(name="logsUri", required=true)
       private final String logsUri;
@@ -111,7 +102,6 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * ID of the project.
-     * 
      */
     @Import(name="project", required=true)
       private final String project;
@@ -122,7 +112,6 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Details of the Source input to the build.
-     * 
      */
     @Import(name="sourceProvenance", required=true)
       private final SourceResponse sourceProvenance;
@@ -133,7 +122,6 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Time at which execution of the build was started.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;
@@ -144,7 +132,6 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Trigger identifier if the build was triggered automatically; empty if not.
-     * 
      */
     @Import(name="triggerId", required=true)
       private final String triggerId;

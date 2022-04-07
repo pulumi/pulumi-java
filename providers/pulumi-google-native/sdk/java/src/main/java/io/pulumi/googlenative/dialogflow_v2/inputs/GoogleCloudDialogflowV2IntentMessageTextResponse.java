@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The text response message.
- * 
  */
 public final class GoogleCloudDialogflowV2IntentMessageTextResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTextResponse extends io.p
 
     /**
      * Optional. The collection of the agent's responses.
-     * 
      */
     @Import(name="text", required=true)
       private final List<String> text;

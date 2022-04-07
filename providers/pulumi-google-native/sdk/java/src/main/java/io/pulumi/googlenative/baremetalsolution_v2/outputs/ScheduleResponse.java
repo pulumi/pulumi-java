@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class ScheduleResponse {
     /**
      * A crontab-like specification that the schedule uses to take snapshots.
-     * 
      */
     private final String crontabSpec;
     /**
      * A list of snapshot names created in this schedule.
-     * 
      */
     private final String prefix;
     /**
      * The maximum number of snapshots to retain in this schedule.
-     * 
      */
     private final Integer retentionCount;
 
@@ -38,21 +35,18 @@ public final class ScheduleResponse {
 
     /**
      * A crontab-like specification that the schedule uses to take snapshots.
-     * 
     */
     public String getCrontabSpec() {
         return this.crontabSpec;
     }
     /**
      * A list of snapshot names created in this schedule.
-     * 
     */
     public String getPrefix() {
         return this.prefix;
     }
     /**
      * The maximum number of snapshots to retain in this schedule.
-     * 
     */
     public Integer getRetentionCount() {
         return this.retentionCount;

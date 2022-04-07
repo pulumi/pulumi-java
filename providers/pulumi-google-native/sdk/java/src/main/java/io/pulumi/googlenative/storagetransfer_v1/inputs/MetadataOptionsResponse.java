@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Specifies the metadata options for running a transfer.
- * 
  */
 public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Specifies how each object's ACLs should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as ACL_DESTINATION_BUCKET_DEFAULT.
-     * 
      */
     @Import(name="acl", required=true)
       private final String acl;
@@ -29,7 +27,6 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Specifies how each file's GID attribute should be handled by the transfer. If unspecified, the default behavior is the same as GID_SKIP when the source is a POSIX file system.
-     * 
      */
     @Import(name="gid", required=true)
       private final String gid;
@@ -40,7 +37,6 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Specifies how each object's Cloud KMS customer-managed encryption key (CMEK) is preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as KMS_KEY_DESTINATION_BUCKET_DEFAULT.
-     * 
      */
     @Import(name="kmsKey", required=true)
       private final String kmsKey;
@@ -51,7 +47,6 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Specifies how each file's mode attribute should be handled by the transfer. If unspecified, the default behavior is the same as MODE_SKIP when the source is a POSIX file system.
-     * 
      */
     @Import(name="mode", required=true)
       private final String mode;
@@ -62,7 +57,6 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Specifies the storage class to set on objects being transferred to Google Cloud Storage buckets. If unspecified, the default behavior is the same as STORAGE_CLASS_DESTINATION_BUCKET_DEFAULT.
-     * 
      */
     @Import(name="storageClass", required=true)
       private final String storageClass;
@@ -73,7 +67,6 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Specifies how symlinks should be handled by the transfer. If unspecified, the default behavior is the same as SYMLINK_SKIP when the source is a POSIX file system.
-     * 
      */
     @Import(name="symlink", required=true)
       private final String symlink;
@@ -84,7 +77,6 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Specifies how each object's temporary hold status should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as TEMPORARY_HOLD_PRESERVE.
-     * 
      */
     @Import(name="temporaryHold", required=true)
       private final String temporaryHold;
@@ -95,7 +87,6 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Specifies how each file's UID attribute should be handled by the transfer. If unspecified, the default behavior is the same as UID_SKIP when the source is a POSIX file system.
-     * 
      */
     @Import(name="uid", required=true)
       private final String uid;

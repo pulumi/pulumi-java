@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Specifies the selection and configuration of software inside the runtime. The properties to set on runtime. Properties keys are specified in `key:value` format, for example: * `idle_shutdown: true` * `idle_shutdown_timeout: 180` * `enable_health_monitoring: true`
- * 
  */
 public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
 
     /**
      * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers.
-     * 
      */
     @Import(name="customGpuDriverPath", required=true)
       private final String customGpuDriverPath;
@@ -33,7 +31,6 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
 
     /**
      * Verifies core internal services are running. Default: True
-     * 
      */
     @Import(name="enableHealthMonitoring", required=true)
       private final Boolean enableHealthMonitoring;
@@ -44,7 +41,6 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
 
     /**
      * Runtime will automatically shutdown after idle_shutdown_time. Default: True
-     * 
      */
     @Import(name="idleShutdown", required=true)
       private final Boolean idleShutdown;
@@ -55,7 +51,6 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
 
     /**
      * Time in minutes to wait before shutting down runtime. Default: 180 minutes
-     * 
      */
     @Import(name="idleShutdownTimeout", required=true)
       private final Integer idleShutdownTimeout;
@@ -66,7 +61,6 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
 
     /**
      * Install Nvidia Driver automatically.
-     * 
      */
     @Import(name="installGpuDriver", required=true)
       private final Boolean installGpuDriver;
@@ -77,7 +71,6 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
 
     /**
      * Optional. Use a list of container images to use as Kernels in the notebook instance.
-     * 
      */
     @Import(name="kernels", required=true)
       private final List<ContainerImageResponse> kernels;
@@ -88,7 +81,6 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
 
     /**
      * Cron expression in UTC timezone, used to schedule instance auto upgrade. Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
-     * 
      */
     @Import(name="notebookUpgradeSchedule", required=true)
       private final String notebookUpgradeSchedule;
@@ -99,7 +91,6 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
 
     /**
      * Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
-     * 
      */
     @Import(name="postStartupScript", required=true)
       private final String postStartupScript;

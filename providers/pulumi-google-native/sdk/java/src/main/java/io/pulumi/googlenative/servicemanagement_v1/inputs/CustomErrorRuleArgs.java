@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A custom error rule.
- * 
  */
 public final class CustomErrorRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class CustomErrorRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Mark this message as possible payload in error response. Otherwise, objects of this type will be filtered when they appear in error payload.
-     * 
      */
     @Import(name="isErrorType")
       private final @Nullable Output<Boolean> isErrorType;
@@ -32,7 +30,6 @@ public final class CustomErrorRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Selects messages to which this rule applies. Refer to selector for syntax details.
-     * 
      */
     @Import(name="selector")
       private final @Nullable Output<String> selector;

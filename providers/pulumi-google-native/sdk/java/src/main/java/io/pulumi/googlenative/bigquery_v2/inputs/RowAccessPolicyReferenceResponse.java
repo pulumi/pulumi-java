@@ -14,7 +14,6 @@ public final class RowAccessPolicyReferenceResponse extends io.pulumi.resources.
 
     /**
      * [Required] The ID of the dataset containing this row access policy.
-     * 
      */
     @Import(name="datasetId", required=true)
       private final String datasetId;
@@ -25,7 +24,6 @@ public final class RowAccessPolicyReferenceResponse extends io.pulumi.resources.
 
     /**
      * [Required] The ID of the row access policy. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
-     * 
      */
     @Import(name="policyId", required=true)
       private final String policyId;
@@ -36,7 +34,6 @@ public final class RowAccessPolicyReferenceResponse extends io.pulumi.resources.
 
     /**
      * [Required] The ID of the project containing this row access policy.
-     * 
      */
     @Import(name="project", required=true)
       private final String project;
@@ -47,7 +44,6 @@ public final class RowAccessPolicyReferenceResponse extends io.pulumi.resources.
 
     /**
      * [Required] The ID of the table containing this row access policy.
-     * 
      */
     @Import(name="tableId", required=true)
       private final String tableId;

@@ -18,7 +18,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Use a container image to start the notebook instance.
-     * 
      */
     @Import(name="containerImage")
       private final @Nullable Output<ContainerImageArgs> containerImage;
@@ -29,7 +28,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A brief description of this environment.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -40,7 +38,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Display name of this environment for the UI.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -65,7 +62,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `"gs://path-to-file/file-name"`
-     * 
      */
     @Import(name="postStartupScript")
       private final @Nullable Output<String> postStartupScript;
@@ -83,7 +79,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Use a Compute Engine VM image to start the notebook instance.
-     * 
      */
     @Import(name="vmImage")
       private final @Nullable Output<VmImageArgs> vmImage;

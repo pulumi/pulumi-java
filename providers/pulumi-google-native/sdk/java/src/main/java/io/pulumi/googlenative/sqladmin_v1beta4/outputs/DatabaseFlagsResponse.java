@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class DatabaseFlagsResponse {
     /**
      * The name of the flag. These flags are passed at instance startup, so include both server options and system variables. Flags are specified with underscores, not hyphens. For more information, see [Configuring Database Flags](https://cloud.google.com/sql/docs/mysql/flags) in the Cloud SQL documentation.
-     * 
      */
     private final String name;
     /**
      * The value of the flag. Boolean flags are set to `on` for true and `off` for false. This field must be omitted if the flag doesn't take a value.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class DatabaseFlagsResponse {
 
     /**
      * The name of the flag. These flags are passed at instance startup, so include both server options and system variables. Flags are specified with underscores, not hyphens. For more information, see [Configuring Database Flags](https://cloud.google.com/sql/docs/mysql/flags) in the Cloud SQL documentation.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The value of the flag. Boolean flags are set to `on` for true and `off` for false. This field must be omitted if the flag doesn't take a value.
-     * 
     */
     public String getValue() {
         return this.value;

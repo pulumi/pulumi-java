@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * SDK Information.
- * 
  */
 public final class SDKInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SDKInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The SDK Language.
-     * 
      */
     @Import(name="language", required=true)
       private final String language;
@@ -29,7 +27,6 @@ public final class SDKInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. The SDK version.
-     * 
      */
     @Import(name="version", required=true)
       private final String version;

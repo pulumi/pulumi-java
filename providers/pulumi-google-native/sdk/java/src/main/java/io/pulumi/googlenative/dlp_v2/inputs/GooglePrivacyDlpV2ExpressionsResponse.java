@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * An expression, consisting or an operator and conditions.
- * 
  */
 public final class GooglePrivacyDlpV2ExpressionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GooglePrivacyDlpV2ExpressionsResponse extends io.pulumi.resou
 
     /**
      * Conditions to apply to the expression.
-     * 
      */
     @Import(name="conditions", required=true)
       private final GooglePrivacyDlpV2ConditionsResponse conditions;
@@ -30,7 +28,6 @@ public final class GooglePrivacyDlpV2ExpressionsResponse extends io.pulumi.resou
 
     /**
      * The operator to apply to the result of conditions. Default and currently only supported value is `AND`.
-     * 
      */
     @Import(name="logicalOperator", required=true)
       private final String logicalOperator;

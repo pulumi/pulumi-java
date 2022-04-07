@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Execution using the default Cloud Build pool.
- * 
  */
 public final class DefaultPoolArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DefaultPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket ("gs://my-bucket") or a path within a bucket ("gs://my-bucket/my-dir"). If unspecified, a default bucket located in the same region will be used.
-     * 
      */
     @Import(name="artifactStorage")
       private final @Nullable Output<String> artifactStorage;
@@ -31,7 +29,6 @@ public final class DefaultPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
-     * 
      */
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;

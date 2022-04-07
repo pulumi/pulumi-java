@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration for forwarding telemetry events.
- * 
  */
 public final class EventNotificationConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EventNotificationConfigArgs extends io.pulumi.resources.Resou
 
     /**
      * A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
-     * 
      */
     @Import(name="pubsubTopicName")
       private final @Nullable Output<String> pubsubTopicName;
@@ -31,7 +29,6 @@ public final class EventNotificationConfigArgs extends io.pulumi.resources.Resou
 
     /**
      * If the subfolder name matches this string exactly, this configuration will be used. The string must not include the leading '/' character. If empty, all strings are matched. This field is used only for telemetry events; subfolders are not supported for state changes.
-     * 
      */
     @Import(name="subfolderMatches")
       private final @Nullable Output<String> subfolderMatches;

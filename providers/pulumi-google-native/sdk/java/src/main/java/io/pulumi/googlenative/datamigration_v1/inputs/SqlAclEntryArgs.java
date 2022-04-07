@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * An entry for an Access Control list.
- * 
  */
 public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example: `2012-11-15T16:19:00.094Z`.
-     * 
      */
     @Import(name="expireTime")
       private final @Nullable Output<String> expireTime;
@@ -31,7 +29,6 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A label to identify this entry.
-     * 
      */
     @Import(name="label")
       private final @Nullable Output<String> label;
@@ -42,7 +39,6 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Input only. The time-to-leave of this access control entry.
-     * 
      */
     @Import(name="ttl")
       private final @Nullable Output<String> ttl;
@@ -53,7 +49,6 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The allowlisted value for the access control list.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

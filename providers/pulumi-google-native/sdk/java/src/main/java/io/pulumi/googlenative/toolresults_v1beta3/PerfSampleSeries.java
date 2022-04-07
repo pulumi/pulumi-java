@@ -17,90 +17,77 @@ import javax.annotation.Nullable;
  * Auto-naming is currently not supported for this resource.
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:toolresults/v1beta3:PerfSampleSeries")
 public class PerfSampleSeries extends io.pulumi.resources.CustomResource {
     /**
      * Basic series represented by a line chart
-     * 
      */
     @Export(name="basicPerfSampleSeries", type=BasicPerfSampleSeriesResponse.class, parameters={})
     private Output<BasicPerfSampleSeriesResponse> basicPerfSampleSeries;
 
     /**
      * @return Basic series represented by a line chart
-     * 
      */
     public Output<BasicPerfSampleSeriesResponse> getBasicPerfSampleSeries() {
         return this.basicPerfSampleSeries;
     }
     /**
-     * A tool results execution ID.
-     * 
+     * A tool results execution ID. 
      */
     @Export(name="executionId", type=String.class, parameters={})
     private Output<String> executionId;
 
     /**
-     * @return A tool results execution ID.
-     * 
+     * @return A tool results execution ID. 
      */
     public Output<String> getExecutionId() {
         return this.executionId;
     }
     /**
-     * A tool results history ID.
-     * 
+     * A tool results history ID. 
      */
     @Export(name="historyId", type=String.class, parameters={})
     private Output<String> historyId;
 
     /**
-     * @return A tool results history ID.
-     * 
+     * @return A tool results history ID. 
      */
     public Output<String> getHistoryId() {
         return this.historyId;
     }
     /**
-     * The cloud project
-     * 
+     * The cloud project 
      */
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
-     * @return The cloud project
-     * 
+     * @return The cloud project 
      */
     public Output<String> getProject() {
         return this.project;
     }
     /**
-     * A sample series id
-     * 
+     * A sample series id 
      */
     @Export(name="sampleSeriesId", type=String.class, parameters={})
     private Output<String> sampleSeriesId;
 
     /**
-     * @return A sample series id
-     * 
+     * @return A sample series id 
      */
     public Output<String> getSampleSeriesId() {
         return this.sampleSeriesId;
     }
     /**
-     * A tool results step ID.
-     * 
+     * A tool results step ID. 
      */
     @Export(name="stepId", type=String.class, parameters={})
     private Output<String> stepId;
 
     /**
-     * @return A tool results step ID.
-     * 
+     * @return A tool results step ID. 
      */
     public Output<String> getStepId() {
         return this.stepId;

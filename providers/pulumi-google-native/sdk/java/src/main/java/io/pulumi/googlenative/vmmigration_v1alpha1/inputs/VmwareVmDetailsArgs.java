@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * VmwareVmDetails describes a VM in vCenter.
- * 
  */
 public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The total size of the storage allocated to the VM in MB.
-     * 
      */
     @Import(name="committedStorage")
       private final @Nullable Output<String> committedStorage;
@@ -33,7 +31,6 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The total size of the storage allocated to the VM in MB.
-     * 
      */
     @Import(name="committedStorageMb")
       private final @Nullable Output<String> committedStorageMb;
@@ -44,7 +41,6 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The number of cpus in the VM.
-     * 
      */
     @Import(name="cpuCount")
       private final @Nullable Output<Integer> cpuCount;
@@ -55,7 +51,6 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The descriptive name of the vCenter's datacenter this VM is contained in.
-     * 
      */
     @Import(name="datacenterDescription")
       private final @Nullable Output<String> datacenterDescription;
@@ -66,7 +61,6 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The id of the vCenter's datacenter this VM is contained in.
-     * 
      */
     @Import(name="datacenterId")
       private final @Nullable Output<String> datacenterId;
@@ -77,7 +71,6 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The number of disks the VM has.
-     * 
      */
     @Import(name="diskCount")
       private final @Nullable Output<Integer> diskCount;
@@ -88,7 +81,6 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The display name of the VM. Note that this is not necessarily unique.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -99,7 +91,6 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The VM's OS. See for example https://pubs.vmware.com/vi-sdk/visdk250/ReferenceGuide/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
-     * 
      */
     @Import(name="guestDescription")
       private final @Nullable Output<String> guestDescription;
@@ -110,7 +101,6 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The size of the memory of the VM in MB.
-     * 
      */
     @Import(name="memoryMb")
       private final @Nullable Output<Integer> memoryMb;
@@ -121,7 +111,6 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The power state of the VM at the moment list was taken.
-     * 
      */
     @Import(name="powerState")
       private final @Nullable Output<VmwareVmDetailsPowerState> powerState;
@@ -132,7 +121,6 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The unique identifier of the VM in vCenter.
-     * 
      */
     @Import(name="uuid")
       private final @Nullable Output<String> uuid;
@@ -143,7 +131,6 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The VM's id in the source (note that this is not the MigratingVm's id). This is the moref id of the VM.
-     * 
      */
     @Import(name="vmId")
       private final @Nullable Output<String> vmId;

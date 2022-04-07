@@ -11,22 +11,18 @@ import java.util.Objects;
 public final class ReplicatingStepResponse {
     /**
      * The source disks replication rate for the last 30 minutes in bytes per second.
-     * 
      */
     private final String lastThirtyMinutesAverageBytesPerSecond;
     /**
      * The source disks replication rate for the last 2 minutes in bytes per second.
-     * 
      */
     private final String lastTwoMinutesAverageBytesPerSecond;
     /**
      * Replicated bytes in the step.
-     * 
      */
     private final String replicatedBytes;
     /**
      * Total bytes to be handled in the step.
-     * 
      */
     private final String totalBytes;
 
@@ -44,28 +40,24 @@ public final class ReplicatingStepResponse {
 
     /**
      * The source disks replication rate for the last 30 minutes in bytes per second.
-     * 
     */
     public String getLastThirtyMinutesAverageBytesPerSecond() {
         return this.lastThirtyMinutesAverageBytesPerSecond;
     }
     /**
      * The source disks replication rate for the last 2 minutes in bytes per second.
-     * 
     */
     public String getLastTwoMinutesAverageBytesPerSecond() {
         return this.lastTwoMinutesAverageBytesPerSecond;
     }
     /**
      * Replicated bytes in the step.
-     * 
     */
     public String getReplicatedBytes() {
         return this.replicatedBytes;
     }
     /**
      * Total bytes to be handled in the step.
-     * 
     */
     public String getTotalBytes() {
         return this.totalBytes;

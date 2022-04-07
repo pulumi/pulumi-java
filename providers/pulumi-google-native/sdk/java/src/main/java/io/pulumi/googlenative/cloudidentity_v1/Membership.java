@@ -17,90 +17,77 @@ import javax.annotation.Nullable;
 /**
  * Creates a `Membership`.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:cloudidentity/v1:Membership")
 public class Membership extends io.pulumi.resources.CustomResource {
     /**
      * The time when the `Membership` was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time when the `Membership` was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Membership`. Shall be of the form `groups/{group}/memberships/{membership}`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Membership`. Shall be of the form `groups/{group}/memberships/{membership}`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Immutable. The `EntityKey` of the member.
-     * 
      */
     @Export(name="preferredMemberKey", type=EntityKeyResponse.class, parameters={})
     private Output<EntityKeyResponse> preferredMemberKey;
 
     /**
      * @return Immutable. The `EntityKey` of the member.
-     * 
      */
     public Output<EntityKeyResponse> getPreferredMemberKey() {
         return this.preferredMemberKey;
     }
     /**
      * The `MembershipRole`s that apply to the `Membership`. If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`. Must not contain duplicate `MembershipRole`s with the same `name`.
-     * 
      */
     @Export(name="roles", type=List.class, parameters={MembershipRoleResponse.class})
     private Output<List<MembershipRoleResponse>> roles;
 
     /**
      * @return The `MembershipRole`s that apply to the `Membership`. If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`. Must not contain duplicate `MembershipRole`s with the same `name`.
-     * 
      */
     public Output<List<MembershipRoleResponse>> getRoles() {
         return this.roles;
     }
     /**
      * The type of the membership.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the membership.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The time when the `Membership` was last updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The time when the `Membership` was last updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

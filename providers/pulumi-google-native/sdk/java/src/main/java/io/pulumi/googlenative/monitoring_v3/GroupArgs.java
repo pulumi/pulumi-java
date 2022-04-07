@@ -17,7 +17,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A user-assigned name for this group, used only for display purposes.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -28,7 +27,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The filter used to determine which monitored resources belong to this group.
-     * 
      */
     @Import(name="filter")
       private final @Nullable Output<String> filter;
@@ -39,7 +37,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If true, the members of this group are considered to be a cluster. The system can perform additional analysis on groups that are clusters.
-     * 
      */
     @Import(name="isCluster")
       private final @Nullable Output<Boolean> isCluster;
@@ -50,7 +47,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the group's parent, if it has one. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] For groups with no parent, parent_name is the empty string, "".
-     * 
      */
     @Import(name="parentName")
       private final @Nullable Output<String> parentName;

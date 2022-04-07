@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Key-value pair to store extra metadata.
- * 
  */
 public final class GoogleCloudApigeeV1AttributeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudApigeeV1AttributeResponse extends io.pulumi.resour
 
     /**
      * API key of the attribute.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class GoogleCloudApigeeV1AttributeResponse extends io.pulumi.resour
 
     /**
      * Value of the attribute.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

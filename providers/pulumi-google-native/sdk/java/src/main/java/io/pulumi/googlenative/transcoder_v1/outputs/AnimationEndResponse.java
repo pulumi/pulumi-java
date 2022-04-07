@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class AnimationEndResponse {
     /**
      * The time to end overlay object, in seconds. Default: 0
-     * 
      */
     private final String startTimeOffset;
 
@@ -22,7 +21,6 @@ public final class AnimationEndResponse {
 
     /**
      * The time to end overlay object, in seconds. Default: 0
-     * 
     */
     public String getStartTimeOffset() {
         return this.startTimeOffset;

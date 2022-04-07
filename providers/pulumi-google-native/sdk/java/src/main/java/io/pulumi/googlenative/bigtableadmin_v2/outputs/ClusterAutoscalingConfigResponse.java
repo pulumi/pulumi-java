@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class ClusterAutoscalingConfigResponse {
     /**
      * Autoscaling limits for this cluster.
-     * 
      */
     private final AutoscalingLimitsResponse autoscalingLimits;
     /**
      * Autoscaling targets for this cluster.
-     * 
      */
     private final AutoscalingTargetsResponse autoscalingTargets;
 
@@ -31,14 +29,12 @@ public final class ClusterAutoscalingConfigResponse {
 
     /**
      * Autoscaling limits for this cluster.
-     * 
     */
     public AutoscalingLimitsResponse getAutoscalingLimits() {
         return this.autoscalingLimits;
     }
     /**
      * Autoscaling targets for this cluster.
-     * 
     */
     public AutoscalingTargetsResponse getAutoscalingTargets() {
         return this.autoscalingTargets;

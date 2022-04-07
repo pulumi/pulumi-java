@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A type of transformation that will scan unstructured text and apply various `PrimitiveTransformation`s to each finding, where the transformation is applied to only values that were identified as a specific info_type.
- * 
  */
 public final class GooglePrivacyDlpV2InfoTypeTransformationsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsArgs extends io.pulu
 
     /**
      * Transformation for each infoType. Cannot specify more than one for a given infoType.
-     * 
      */
     @Import(name="transformations", required=true)
       private final Output<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations;

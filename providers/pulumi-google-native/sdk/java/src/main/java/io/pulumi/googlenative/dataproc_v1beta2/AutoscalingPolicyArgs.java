@@ -25,7 +25,6 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The policy id.The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;
@@ -50,7 +49,6 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Optional. Describes how the autoscaler will operate for secondary workers.
-     * 
      */
     @Import(name="secondaryWorkerConfig")
       private final @Nullable Output<InstanceGroupAutoscalingPolicyConfigArgs> secondaryWorkerConfig;
@@ -61,7 +59,6 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Describes how the autoscaler will operate for primary workers.
-     * 
      */
     @Import(name="workerConfig", required=true)
       private final Output<InstanceGroupAutoscalingPolicyConfigArgs> workerConfig;

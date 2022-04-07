@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse {
     /**
      * Catalog item categories. Each category should be a UTF-8 encoded string with a length limit of 2 KiB. Note that the order in the list denotes the specificity (from least to most specific).
-     * 
      */
     private final List<String> categories;
 
@@ -23,7 +22,6 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
 
     /**
      * Catalog item categories. Each category should be a UTF-8 encoded string with a length limit of 2 KiB. Note that the order in the list denotes the specificity (from least to most specific).
-     * 
     */
     public List<String> getCategories() {
         return this.categories;

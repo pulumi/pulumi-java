@@ -20,7 +20,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
-     * 
      */
     @Import(name="alternativeNameServerConfig")
       private final @Nullable Output<PolicyAlternativeNameServerConfigArgs> alternativeNameServerConfig;
@@ -38,7 +37,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the policy's function.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -49,7 +47,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When enabled, a virtual IP address is allocated from each of the subnetworks that are bound to this policy.
-     * 
      */
     @Import(name="enableInboundForwarding")
       private final @Nullable Output<Boolean> enableInboundForwarding;
@@ -60,7 +57,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
-     * 
      */
     @Import(name="enableLogging")
       private final @Nullable Output<Boolean> enableLogging;
@@ -71,7 +67,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unique identifier for the resource; defined by the server (output only).
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -89,7 +84,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User-assigned name for this policy.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -100,7 +94,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of network names specifying networks to which this policy is applied.
-     * 
      */
     @Import(name="networks")
       private final @Nullable Output<List<PolicyNetworkArgs>> networks;

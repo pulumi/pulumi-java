@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A test of an iOS application that uses the XCTest framework.
- * 
  */
 public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Bundle ID of the app.
-     * 
      */
     @Import(name="bundleId", required=true)
       private final String bundleId;
@@ -29,7 +27,6 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Xcode version that the test was run with.
-     * 
      */
     @Import(name="xcodeVersion", required=true)
       private final String xcodeVersion;

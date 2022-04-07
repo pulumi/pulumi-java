@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Write a Cloud Audit log
- * 
  */
 public final class CloudAuditOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class CloudAuditOptionsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Information used by the Cloud Audit Logging pipeline.
-     * 
      */
     @Import(name="authorizationLoggingOptions")
       private final @Nullable Output<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions;
@@ -32,7 +30,6 @@ public final class CloudAuditOptionsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The log_name to populate in the Cloud Audit Record.
-     * 
      */
     @Import(name="logName")
       private final @Nullable Output<CloudAuditOptionsLogName> logName;

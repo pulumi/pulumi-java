@@ -10,13 +10,11 @@ import java.util.StringJoiner;
 
     /**
      * Specifies network collocation
-     * 
      */
     @EnumType
     public enum ResourcePolicyGroupPlacementPolicyCollocation {
         /**
          * Specifies collocation option that provides tight collocation with minimum network latency.
-         * 
          */
         Clustered("CLUSTERED"),
         Collocated("COLLOCATED"),

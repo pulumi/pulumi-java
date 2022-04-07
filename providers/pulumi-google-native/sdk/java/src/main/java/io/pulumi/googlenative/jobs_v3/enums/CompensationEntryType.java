@@ -10,53 +10,43 @@ import java.util.StringJoiner;
 
     /**
      * Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.
-     * 
      */
     @EnumType
     public enum CompensationEntryType {
         /**
          * Default value.
-         * 
          */
         CompensationTypeUnspecified("COMPENSATION_TYPE_UNSPECIFIED"),
         /**
          * Base compensation: Refers to the fixed amount of money paid to an employee by an employer in return for work performed. Base compensation does not include benefits, bonuses or any other potential compensation from an employer.
-         * 
          */
         Base("BASE"),
         /**
          * Bonus.
-         * 
          */
         Bonus("BONUS"),
         /**
          * Signing bonus.
-         * 
          */
         SigningBonus("SIGNING_BONUS"),
         /**
          * Equity.
-         * 
          */
         Equity("EQUITY"),
         /**
          * Profit sharing.
-         * 
          */
         ProfitSharing("PROFIT_SHARING"),
         /**
          * Commission.
-         * 
          */
         Commissions("COMMISSIONS"),
         /**
          * Tips.
-         * 
          */
         Tips("TIPS"),
         /**
          * Other compensation type.
-         * 
          */
         OtherCompensationType("OTHER_COMPENSATION_TYPE");
 

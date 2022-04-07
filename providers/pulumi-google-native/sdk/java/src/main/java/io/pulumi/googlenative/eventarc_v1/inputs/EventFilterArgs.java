@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Filters events based on exact matches on the CloudEvents attributes.
- * 
  */
 public final class EventFilterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class EventFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the 'type' attribute.
-     * 
      */
     @Import(name="attribute", required=true)
       private final Output<String> attribute;
@@ -30,7 +28,6 @@ public final class EventFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value for the attribute.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Contains runtime daemon metrics, such as OS and kernels and sessions stats.
- * 
  */
 public final class RuntimeMetricsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class RuntimeMetricsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The system metrics.
-     * 
      */
     @Import(name="systemMetrics", required=true)
       private final Map<String,String> systemMetrics;

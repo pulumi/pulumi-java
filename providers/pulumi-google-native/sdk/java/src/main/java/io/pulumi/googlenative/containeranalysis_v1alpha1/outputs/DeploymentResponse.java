@@ -12,37 +12,30 @@ import java.util.Objects;
 public final class DeploymentResponse {
     /**
      * Address of the runtime element hosting this deployment.
-     * 
      */
     private final String address;
     /**
      * Configuration used to create this deployment.
-     * 
      */
     private final String config;
     /**
      * Beginning of the lifetime of this deployment.
-     * 
      */
     private final String deployTime;
     /**
      * Platform hosting this deployment.
-     * 
      */
     private final String platform;
     /**
      * Resource URI for the artifact being deployed taken from the deployable field with the same name.
-     * 
      */
     private final List<String> resourceUri;
     /**
      * End of the lifetime of this deployment.
-     * 
      */
     private final String undeployTime;
     /**
      * Identity of the user that triggered this deployment.
-     * 
      */
     private final String userEmail;
 
@@ -66,49 +59,42 @@ public final class DeploymentResponse {
 
     /**
      * Address of the runtime element hosting this deployment.
-     * 
     */
     public String getAddress() {
         return this.address;
     }
     /**
      * Configuration used to create this deployment.
-     * 
     */
     public String getConfig() {
         return this.config;
     }
     /**
      * Beginning of the lifetime of this deployment.
-     * 
     */
     public String getDeployTime() {
         return this.deployTime;
     }
     /**
      * Platform hosting this deployment.
-     * 
     */
     public String getPlatform() {
         return this.platform;
     }
     /**
      * Resource URI for the artifact being deployed taken from the deployable field with the same name.
-     * 
     */
     public List<String> getResourceUri() {
         return this.resourceUri;
     }
     /**
      * End of the lifetime of this deployment.
-     * 
     */
     public String getUndeployTime() {
         return this.undeployTime;
     }
     /**
      * Identity of the user that triggered this deployment.
-     * 
     */
     public String getUserEmail() {
         return this.userEmail;

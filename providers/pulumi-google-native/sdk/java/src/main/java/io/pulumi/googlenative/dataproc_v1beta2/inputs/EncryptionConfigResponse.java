@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Encryption settings for the cluster.
- * 
  */
 public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
-     * 
      */
     @Import(name="gcePdKmsKeyName", required=true)
       private final String gcePdKmsKeyName;

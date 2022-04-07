@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * [ReservationAffinity](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) is the configuration of desired reservation which instances could take capacity from.
- * 
  */
 public final class ReservationAffinityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ReservationAffinityResponse extends io.pulumi.resources.Invok
 
     /**
      * Corresponds to the type of reservation consumption.
-     * 
      */
     @Import(name="consumeReservationType", required=true)
       private final String consumeReservationType;
@@ -30,7 +28,6 @@ public final class ReservationAffinityResponse extends io.pulumi.resources.Invok
 
     /**
      * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify "googleapis.com/reservation-name" as the key and specify the name of your reservation as its value.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -41,7 +38,6 @@ public final class ReservationAffinityResponse extends io.pulumi.resources.Invok
 
     /**
      * Corresponds to the label value(s) of reservation resource(s).
-     * 
      */
     @Import(name="values", required=true)
       private final List<String> values;

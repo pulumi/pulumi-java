@@ -17,7 +17,6 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Time when the Hub was created.
-     * 
      */
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
@@ -28,7 +27,6 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Short description of the hub resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -46,7 +44,6 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User-defined labels.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -57,7 +54,6 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The name of a Hub resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -82,7 +78,6 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Time when the Hub was updated.
-     * 
      */
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;

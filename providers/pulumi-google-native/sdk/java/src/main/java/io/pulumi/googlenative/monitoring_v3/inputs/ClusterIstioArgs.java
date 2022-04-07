@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Istio service scoped to a single Kubernetes cluster. Learn more at https://istio.io. Clusters running OSS Istio will have their services ingested as this type.
- * 
  */
 public final class ClusterIstioArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ClusterIstioArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Kubernetes cluster in which this Istio service is defined. Corresponds to the cluster_name resource label in k8s_cluster resources.
-     * 
      */
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
@@ -31,7 +29,6 @@ public final class ClusterIstioArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the Kubernetes cluster in which this Istio service is defined. Corresponds to the location resource label in k8s_cluster resources.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -42,7 +39,6 @@ public final class ClusterIstioArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.
-     * 
      */
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
@@ -53,7 +49,6 @@ public final class ClusterIstioArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.
-     * 
      */
     @Import(name="serviceNamespace")
       private final @Nullable Output<String> serviceNamespace;

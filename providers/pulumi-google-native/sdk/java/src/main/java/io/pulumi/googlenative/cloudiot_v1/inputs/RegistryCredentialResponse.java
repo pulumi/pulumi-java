@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A server-stored registry credential used to validate device credentials.
- * 
  */
 public final class RegistryCredentialResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class RegistryCredentialResponse extends io.pulumi.resources.Invoke
 
     /**
      * A public key certificate used to verify the device credentials.
-     * 
      */
     @Import(name="publicKeyCertificate", required=true)
       private final PublicKeyCertificateResponse publicKeyCertificate;

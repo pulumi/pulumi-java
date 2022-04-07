@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * MultiCloudCluster contains information specific to GKE Multi-Cloud clusters.
- * 
  */
 public final class MultiCloudClusterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MultiCloudClusterArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example: //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster
-     * 
      */
     @Import(name="resourceLink")
       private final @Nullable Output<String> resourceLink;

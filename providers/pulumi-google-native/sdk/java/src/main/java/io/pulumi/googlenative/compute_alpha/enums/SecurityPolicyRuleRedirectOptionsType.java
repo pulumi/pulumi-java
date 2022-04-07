@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of the redirect action.
-     * 
      */
     @EnumType
     public enum SecurityPolicyRuleRedirectOptionsType {

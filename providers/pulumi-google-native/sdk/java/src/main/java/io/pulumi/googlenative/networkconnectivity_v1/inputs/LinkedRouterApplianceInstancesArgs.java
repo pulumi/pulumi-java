@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A collection of router appliance instances. If you have multiple router appliance instances connected to the same site, they should all be attached to the same spoke.
- * 
  */
 public final class LinkedRouterApplianceInstancesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class LinkedRouterApplianceInstancesArgs extends io.pulumi.resource
 
     /**
      * The list of router appliance instances.
-     * 
      */
     @Import(name="instances")
       private final @Nullable Output<List<RouterApplianceInstanceArgs>> instances;
@@ -33,7 +31,6 @@ public final class LinkedRouterApplianceInstancesArgs extends io.pulumi.resource
 
     /**
      * A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
-     * 
      */
     @Import(name="siteToSiteDataTransfer")
       private final @Nullable Output<Boolean> siteToSiteDataTransfer;

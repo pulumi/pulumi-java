@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Preferred location. This specifies where a Cloud SQL instance is located. Note that if the preferred location is not available, the instance will be located as close as possible within the region. Only one location may be specified.
- * 
  */
 public final class LocationPreferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class LocationPreferenceResponse extends io.pulumi.resources.Invoke
 
     /**
      * The App Engine application to follow, it must be in the same region as the Cloud SQL instance. WARNING: Changing this might restart the instance.
-     * 
      */
     @Import(name="followGaeApplication", required=true)
       private final String followGaeApplication;
@@ -29,7 +27,6 @@ public final class LocationPreferenceResponse extends io.pulumi.resources.Invoke
 
     /**
      * This is always `sql#locationPreference`.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -40,7 +37,6 @@ public final class LocationPreferenceResponse extends io.pulumi.resources.Invoke
 
     /**
      * The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.
-     * 
      */
     @Import(name="secondaryZone", required=true)
       private final String secondaryZone;
@@ -51,7 +47,6 @@ public final class LocationPreferenceResponse extends io.pulumi.resources.Invoke
 
     /**
      * The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.). WARNING: Changing this might restart the instance.
-     * 
      */
     @Import(name="zone", required=true)
       private final String zone;

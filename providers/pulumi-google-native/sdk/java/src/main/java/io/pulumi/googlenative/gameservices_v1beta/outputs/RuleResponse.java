@@ -14,37 +14,30 @@ import java.util.Objects;
 public final class RuleResponse {
     /**
      * Required
-     * 
      */
     private final String action;
     /**
      * Additional restrictions that must be met. All conditions must pass for the rule to match.
-     * 
      */
     private final List<ConditionResponse> conditions;
     /**
      * Human-readable description of the rule.
-     * 
      */
     private final String description;
     /**
      * If one or more 'in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in at least one of these entries.
-     * 
      */
     private final List<String> in;
     /**
      * The config returned to callers of CheckPolicy for any entries that match the LOG action.
-     * 
      */
     private final List<LogConfigResponse> logConfig;
     /**
      * If one or more 'not_in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in none of the entries. The format for in and not_in entries can be found at in the Local IAM documentation (see go/local-iam#features).
-     * 
      */
     private final List<String> notIn;
     /**
      * A permission is a string of form '..' (e.g., 'storage.buckets.list'). A value of '*' matches all permissions, and a verb part of '*' (e.g., 'storage.buckets.*') matches all verbs.
-     * 
      */
     private final List<String> permissions;
 
@@ -68,49 +61,42 @@ public final class RuleResponse {
 
     /**
      * Required
-     * 
     */
     public String getAction() {
         return this.action;
     }
     /**
      * Additional restrictions that must be met. All conditions must pass for the rule to match.
-     * 
     */
     public List<ConditionResponse> getConditions() {
         return this.conditions;
     }
     /**
      * Human-readable description of the rule.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * If one or more 'in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in at least one of these entries.
-     * 
     */
     public List<String> getIn() {
         return this.in;
     }
     /**
      * The config returned to callers of CheckPolicy for any entries that match the LOG action.
-     * 
     */
     public List<LogConfigResponse> getLogConfig() {
         return this.logConfig;
     }
     /**
      * If one or more 'not_in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in none of the entries. The format for in and not_in entries can be found at in the Local IAM documentation (see go/local-iam#features).
-     * 
     */
     public List<String> getNotIn() {
         return this.notIn;
     }
     /**
      * A permission is a string of form '..' (e.g., 'storage.buckets.list'). A value of '*' matches all permissions, and a verb part of '*' (e.g., 'storage.buckets.*') matches all verbs.
-     * 
     */
     public List<String> getPermissions() {
         return this.permissions;

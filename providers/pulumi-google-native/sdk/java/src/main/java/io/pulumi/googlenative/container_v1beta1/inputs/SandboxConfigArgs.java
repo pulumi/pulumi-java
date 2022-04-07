@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * SandboxConfig contains configurations of the sandbox to use for the node.
- * 
  */
 public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of the sandbox to use for the node (e.g. 'gvisor')
-     * 
      */
     @Import(name="sandboxType")
       private final @Nullable Output<String> sandboxType;
@@ -32,7 +30,6 @@ public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of the sandbox to use for the node.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<SandboxConfigType> type;

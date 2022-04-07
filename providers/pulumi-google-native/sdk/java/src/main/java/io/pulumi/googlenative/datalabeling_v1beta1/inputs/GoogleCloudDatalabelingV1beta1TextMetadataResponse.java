@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Metadata for the text.
- * 
  */
 public final class GoogleCloudDatalabelingV1beta1TextMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataResponse extends io
 
     /**
      * The language of this text, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US.
-     * 
      */
     @Import(name="languageCode", required=true)
       private final String languageCode;

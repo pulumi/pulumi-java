@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Carousel Rich Business Messaging (RBM) rich card. Rich cards allow you to respond to users with more vivid content, e.g. with media and suggestions. If you want to show a single card with more control over the layout, please use RbmStandaloneCard instead.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs 
 
     /**
      * The cards in the carousel. A carousel must have at least 2 cards and at most 10.
-     * 
      */
     @Import(name="cardContents", required=true)
       private final Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs>> cardContents;
@@ -32,7 +30,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs 
 
     /**
      * The width of the cards in the carousel.
-     * 
      */
     @Import(name="cardWidth", required=true)
       private final Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth> cardWidth;

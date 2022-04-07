@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Informational metadata about Partner attachments from Partners to display to customers. These fields are propagated from PARTNER_PROVIDER attachments to their corresponding PARTNER attachments.
- * 
  */
 public final class InterconnectAttachmentPartnerMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class InterconnectAttachmentPartnerMetadataResponse extends io.pulu
 
     /**
      * Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner's portal. For instance "Chicago 1". This value may be validated to match approved Partner values.
-     * 
      */
     @Import(name="interconnectName", required=true)
       private final String interconnectName;
@@ -29,7 +27,6 @@ public final class InterconnectAttachmentPartnerMetadataResponse extends io.pulu
 
     /**
      * Plain text name of the Partner providing this attachment. This value may be validated to match approved Partner values.
-     * 
      */
     @Import(name="partnerName", required=true)
       private final String partnerName;
@@ -40,7 +37,6 @@ public final class InterconnectAttachmentPartnerMetadataResponse extends io.pulu
 
     /**
      * URL of the Partner's portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.
-     * 
      */
     @Import(name="portalUrl", required=true)
       private final String portalUrl;

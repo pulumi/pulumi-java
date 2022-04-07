@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowCxV3beta1EventInputResponse {
     /**
      * Name of the event.
-     * 
      */
     private final String event;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventInputResponse {
 
     /**
      * Name of the event.
-     * 
     */
     public String getEvent() {
         return this.event;

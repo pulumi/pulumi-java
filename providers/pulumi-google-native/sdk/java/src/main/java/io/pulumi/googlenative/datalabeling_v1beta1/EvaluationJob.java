@@ -18,146 +18,125 @@ import javax.annotation.Nullable;
 /**
  * Creates an evaluation job.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:datalabeling/v1beta1:EvaluationJob")
 public class EvaluationJob extends io.pulumi.resources.CustomResource {
     /**
      * Name of the AnnotationSpecSet describing all the labels that your machine learning model outputs. You must create this resource before you create an evaluation job and provide its name in the following format: "projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}"
-     * 
      */
     @Export(name="annotationSpecSet", type=String.class, parameters={})
     private Output<String> annotationSpecSet;
 
     /**
      * @return Name of the AnnotationSpecSet describing all the labels that your machine learning model outputs. You must create this resource before you create an evaluation job and provide its name in the following format: "projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}"
-     * 
      */
     public Output<String> getAnnotationSpecSet() {
         return this.annotationSpecSet;
     }
     /**
      * Every time the evaluation job runs and an error occurs, the failed attempt is appended to this array.
-     * 
      */
     @Export(name="attempts", type=List.class, parameters={GoogleCloudDatalabelingV1beta1AttemptResponse.class})
     private Output<List<GoogleCloudDatalabelingV1beta1AttemptResponse>> attempts;
 
     /**
      * @return Every time the evaluation job runs and an error occurs, the failed attempt is appended to this array.
-     * 
      */
     public Output<List<GoogleCloudDatalabelingV1beta1AttemptResponse>> getAttempts() {
         return this.attempts;
     }
     /**
      * Timestamp of when this evaluation job was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return Timestamp of when this evaluation job was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Description of the job. The description can be up to 25,000 characters long.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Description of the job. The description can be up to 25,000 characters long.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Configuration details for the evaluation job.
-     * 
      */
     @Export(name="evaluationJobConfig", type=GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse.class, parameters={})
     private Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse> evaluationJobConfig;
 
     /**
      * @return Configuration details for the evaluation job.
-     * 
      */
     public Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse> getEvaluationJobConfig() {
         return this.evaluationJobConfig;
     }
     /**
      * Whether you want Data Labeling Service to provide ground truth labels for prediction input. If you want the service to assign human labelers to annotate your data, set this to `true`. If you want to provide your own ground truth labels in the evaluation job's BigQuery table, set this to `false`.
-     * 
      */
     @Export(name="labelMissingGroundTruth", type=Boolean.class, parameters={})
     private Output<Boolean> labelMissingGroundTruth;
 
     /**
      * @return Whether you want Data Labeling Service to provide ground truth labels for prediction input. If you want the service to assign human labelers to annotate your data, set this to `true`. If you want to provide your own ground truth labels in the evaluation job's BigQuery table, set this to `false`.
-     * 
      */
     public Output<Boolean> getLabelMissingGroundTruth() {
         return this.labelMissingGroundTruth;
     }
     /**
      * The [AI Platform Prediction model version](/ml-engine/docs/prediction-overview) to be evaluated. Prediction input and output is sampled from this model version. When creating an evaluation job, specify the model version in the following format: "projects/{project_id}/models/{model_name}/versions/{version_name}" There can only be one evaluation job per model version.
-     * 
      */
     @Export(name="modelVersion", type=String.class, parameters={})
     private Output<String> modelVersion;
 
     /**
      * @return The [AI Platform Prediction model version](/ml-engine/docs/prediction-overview) to be evaluated. Prediction input and output is sampled from this model version. When creating an evaluation job, specify the model version in the following format: "projects/{project_id}/models/{model_name}/versions/{version_name}" There can only be one evaluation job per model version.
-     * 
      */
     public Output<String> getModelVersion() {
         return this.modelVersion;
     }
     /**
      * After you create a job, Data Labeling Service assigns a name to the job with the following format: "projects/{project_id}/evaluationJobs/ {evaluation_job_id}"
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return After you create a job, Data Labeling Service assigns a name to the job with the following format: "projects/{project_id}/evaluationJobs/ {evaluation_job_id}"
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Describes the interval at which the job runs. This interval must be at least 1 day, and it is rounded to the nearest day. For example, if you specify a 50-hour interval, the job runs every 2 days. You can provide the schedule in [crontab format](/scheduler/docs/configuring/cron-job-schedules) or in an [English-like format](/appengine/docs/standard/python/config/cronref#schedule_format). Regardless of what you specify, the job will run at 10:00 AM UTC. Only the interval from this schedule is used, not the specific time of day.
-     * 
      */
     @Export(name="schedule", type=String.class, parameters={})
     private Output<String> schedule;
 
     /**
      * @return Describes the interval at which the job runs. This interval must be at least 1 day, and it is rounded to the nearest day. For example, if you specify a 50-hour interval, the job runs every 2 days. You can provide the schedule in [crontab format](/scheduler/docs/configuring/cron-job-schedules) or in an [English-like format](/appengine/docs/standard/python/config/cronref#schedule_format). Regardless of what you specify, the job will run at 10:00 AM UTC. Only the interval from this schedule is used, not the specific time of day.
-     * 
      */
     public Output<String> getSchedule() {
         return this.schedule;
     }
     /**
      * Describes the current state of the job.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return Describes the current state of the job.
-     * 
      */
     public Output<String> getState() {
         return this.state;

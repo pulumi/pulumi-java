@@ -13,13 +13,11 @@ import java.util.Objects;
 public final class IndividualOutcomeResponse {
     /**
      * Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
-     * 
      */
     private final Integer multistepNumber;
     private final String outcomeSummary;
     /**
      * How long it took for this step to run.
-     * 
      */
     private final DurationResponse runDuration;
     private final String stepId;
@@ -38,7 +36,6 @@ public final class IndividualOutcomeResponse {
 
     /**
      * Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
-     * 
     */
     public Integer getMultistepNumber() {
         return this.multistepNumber;
@@ -48,7 +45,6 @@ public final class IndividualOutcomeResponse {
     }
     /**
      * How long it took for this step to run.
-     * 
     */
     public DurationResponse getRunDuration() {
         return this.runDuration;

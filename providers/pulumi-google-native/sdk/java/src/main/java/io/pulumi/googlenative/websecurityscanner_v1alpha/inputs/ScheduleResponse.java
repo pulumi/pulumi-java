@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Scan schedule configuration.
- * 
  */
 public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The duration of time between executions in days.
-     * 
      */
     @Import(name="intervalDurationDays", required=true)
       private final Integer intervalDurationDays;
@@ -30,7 +28,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A timestamp indicates when the next run will be scheduled. The value is refreshed by the server after each run. If unspecified, it will default to current server time, which means the scan will be scheduled to start immediately.
-     * 
      */
     @Import(name="scheduleTime", required=true)
       private final String scheduleTime;

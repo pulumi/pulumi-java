@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2FindingLimitsResponse {
     /**
      * Configuration of findings limit given for specified infoTypes.
-     * 
      */
     private final List<GooglePrivacyDlpV2InfoTypeLimitResponse> maxFindingsPerInfoType;
     /**
      * Max number of findings that will be returned for each item scanned. When set within `InspectJobConfig`, the maximum returned is 2000 regardless if this is set higher. When set within `InspectContentRequest`, this field is ignored.
-     * 
      */
     private final Integer maxFindingsPerItem;
     /**
      * Max number of findings that will be returned per request/job. When set within `InspectContentRequest`, the maximum returned is 2000 regardless if this is set higher.
-     * 
      */
     private final Integer maxFindingsPerRequest;
 
@@ -39,21 +36,18 @@ public final class GooglePrivacyDlpV2FindingLimitsResponse {
 
     /**
      * Configuration of findings limit given for specified infoTypes.
-     * 
     */
     public List<GooglePrivacyDlpV2InfoTypeLimitResponse> getMaxFindingsPerInfoType() {
         return this.maxFindingsPerInfoType;
     }
     /**
      * Max number of findings that will be returned for each item scanned. When set within `InspectJobConfig`, the maximum returned is 2000 regardless if this is set higher. When set within `InspectContentRequest`, this field is ignored.
-     * 
     */
     public Integer getMaxFindingsPerItem() {
         return this.maxFindingsPerItem;
     }
     /**
      * Max number of findings that will be returned per request/job. When set within `InspectContentRequest`, the maximum returned is 2000 regardless if this is set higher.
-     * 
     */
     public Integer getMaxFindingsPerRequest() {
         return this.maxFindingsPerRequest;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Not supported by Cloud Run HTTPHeader describes a custom header to be used in HTTP probes
- * 
  */
 public final class HTTPHeaderArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class HTTPHeaderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The header field name
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class HTTPHeaderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The header field value
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

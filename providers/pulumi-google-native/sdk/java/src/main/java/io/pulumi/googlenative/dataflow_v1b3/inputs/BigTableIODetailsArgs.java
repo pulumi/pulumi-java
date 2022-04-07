@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Metadata for a Cloud Bigtable connector used by the job.
- * 
  */
 public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * InstanceId accessed in the connection.
-     * 
      */
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
@@ -31,7 +29,6 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * ProjectId accessed in the connection.
-     * 
      */
     @Import(name="project")
       private final @Nullable Output<String> project;
@@ -42,7 +39,6 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * TableId accessed in the connection.
-     * 
      */
     @Import(name="tableId")
       private final @Nullable Output<String> tableId;

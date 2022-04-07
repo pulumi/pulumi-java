@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Write a Cloud Audit log
- * 
  */
 public final class CloudAuditOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class CloudAuditOptionsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Information used by the Cloud Audit Logging pipeline.
-     * 
      */
     @Import(name="authorizationLoggingOptions", required=true)
       private final AuthorizationLoggingOptionsResponse authorizationLoggingOptions;
@@ -30,7 +28,6 @@ public final class CloudAuditOptionsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The log_name to populate in the Cloud Audit Record.
-     * 
      */
     @Import(name="logName", required=true)
       private final String logName;

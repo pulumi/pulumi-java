@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the behavior to apply to scheduled snapshots when the source disk is deleted.
-     * 
      */
     @EnumType
     public enum ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete {

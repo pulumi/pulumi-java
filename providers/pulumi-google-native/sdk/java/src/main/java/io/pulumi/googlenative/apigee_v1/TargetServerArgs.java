@@ -20,7 +20,6 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. A human-readable description of this TargetServer.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -38,7 +37,6 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The host name this target connects to. Value must be a valid hostname as described by RFC-1123.
-     * 
      */
     @Import(name="host", required=true)
       private final Output<String> host;
@@ -49,7 +47,6 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Enabling/disabling a TargetServer is useful when TargetServers are used in load balancing configurations, and one or more TargetServers need to taken out of rotation periodically. Defaults to true.
-     * 
      */
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
@@ -59,8 +56,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The resource id of this target server. Values must match the regular expression
-     * 
+     * The resource id of this target server. Values must match the regular expression 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -78,7 +74,6 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The port number this target connects to on the given host. Value must be between 1 and 65535, inclusive.
-     * 
      */
     @Import(name="port", required=true)
       private final Output<Integer> port;
@@ -89,7 +84,6 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The protocol used by this TargetServer.
-     * 
      */
     @Import(name="protocol")
       private final @Nullable Output<TargetServerProtocol> protocol;
@@ -100,7 +94,6 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Specifies TLS configuration info for this TargetServer. The JSON name is `sSLInfo` for legacy/backwards compatibility reasons -- Edge originally supported SSL, and the name is still used for TLS configuration.
-     * 
      */
     @Import(name="sSLInfo")
       private final @Nullable Output<GoogleCloudApigeeV1TlsInfoArgs> sSLInfo;

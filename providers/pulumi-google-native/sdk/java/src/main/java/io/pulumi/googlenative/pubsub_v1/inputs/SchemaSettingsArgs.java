@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings for validating messages published against a schema.
- * 
  */
 public final class SchemaSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SchemaSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The encoding of messages validated against `schema`.
-     * 
      */
     @Import(name="encoding")
       private final @Nullable Output<SchemaSettingsEncoding> encoding;
@@ -32,7 +30,6 @@ public final class SchemaSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the schema that messages published should be validated against. Format is `projects/{project}/schemas/{schema}`. The value of this field will be `_deleted-schema_` if the schema has been deleted.
-     * 
      */
     @Import(name="schema", required=true)
       private final Output<String> schema;

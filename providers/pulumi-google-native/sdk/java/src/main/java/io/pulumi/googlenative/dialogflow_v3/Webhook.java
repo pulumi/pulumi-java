@@ -16,90 +16,77 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a webhook in the specified agent.
- * 
  */
 @ResourceType(type="google-native:dialogflow/v3:Webhook")
 public class Webhook extends io.pulumi.resources.CustomResource {
     /**
      * Indicates whether the webhook is disabled.
-     * 
      */
     @Export(name="disabled", type=Boolean.class, parameters={})
     private Output<Boolean> disabled;
 
     /**
      * @return Indicates whether the webhook is disabled.
-     * 
      */
     public Output<Boolean> getDisabled() {
         return this.disabled;
     }
     /**
      * The human-readable name of the webhook, unique within the agent.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The human-readable name of the webhook, unique within the agent.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Configuration for a generic web service.
-     * 
      */
     @Export(name="genericWebService", type=GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse.class, parameters={})
     private Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse> genericWebService;
 
     /**
      * @return Configuration for a generic web service.
-     * 
      */
     public Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse> getGenericWebService() {
         return this.genericWebService;
     }
     /**
      * The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method. Webhooks.CreateWebhook populates the name automatically. Format: `projects//locations//agents//webhooks/`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method. Webhooks.CreateWebhook populates the name automatically. Format: `projects//locations//agents//webhooks/`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
-     * 
      */
     @Export(name="serviceDirectory", type=GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigResponse.class, parameters={})
     private Output<GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigResponse> serviceDirectory;
 
     /**
      * @return Configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
-     * 
      */
     public Output<GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigResponse> getServiceDirectory() {
         return this.serviceDirectory;
     }
     /**
      * Webhook execution timeout. Execution is considered failed if Dialogflow doesn't receive a response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
-     * 
      */
     @Export(name="timeout", type=String.class, parameters={})
     private Output<String> timeout;
 
     /**
      * @return Webhook execution timeout. Execution is considered failed if Dialogflow doesn't receive a response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
-     * 
      */
     public Output<String> getTimeout() {
         return this.timeout;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Compute numerical stats over an individual column, including number of distinct values and value count distribution.
- * 
  */
 public final class GooglePrivacyDlpV2CategoricalStatsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GooglePrivacyDlpV2CategoricalStatsConfigArgs extends io.pulum
 
     /**
      * Field to compute categorical stats on. All column types are supported except for arrays and structs. However, it may be more informative to use NumericalStats when the field type is supported, depending on the data.
-     * 
      */
     @Import(name="field")
       private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;

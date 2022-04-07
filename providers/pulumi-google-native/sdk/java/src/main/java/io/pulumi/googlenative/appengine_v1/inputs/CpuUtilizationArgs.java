@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Target scaling by CPU usage.
- * 
  */
 public final class CpuUtilizationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class CpuUtilizationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Period of time over which CPU utilization is calculated.
-     * 
      */
     @Import(name="aggregationWindowLength")
       private final @Nullable Output<String> aggregationWindowLength;
@@ -32,7 +30,6 @@ public final class CpuUtilizationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
-     * 
      */
     @Import(name="targetUtilization")
       private final @Nullable Output<Double> targetUtilization;

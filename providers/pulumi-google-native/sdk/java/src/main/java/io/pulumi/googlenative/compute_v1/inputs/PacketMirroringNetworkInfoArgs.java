@@ -16,7 +16,6 @@ public final class PacketMirroringNetworkInfoArgs extends io.pulumi.resources.Re
 
     /**
      * URL of the network resource.
-     * 
      */
     @Import(name="url")
       private final @Nullable Output<String> url;

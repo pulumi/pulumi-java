@@ -17,7 +17,6 @@ import java.util.Objects;
 
 /**
  * The output from the virtual agent.
- * 
  */
 public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
 
     /**
      * The Page on which the utterance was spoken. Only name and displayName will be set.
-     * 
      */
     @Import(name="currentPage", required=true)
       private final GoogleCloudDialogflowCxV3PageResponse currentPage;
@@ -36,7 +34,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
 
     /**
      * Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.
-     * 
      */
     @Import(name="diagnosticInfo", required=true)
       private final Map<String,String> diagnosticInfo;
@@ -47,7 +44,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
 
     /**
      * If this is part of a result conversation turn, the list of differences between the original run and the replay for this output, if any.
-     * 
      */
     @Import(name="differences", required=true)
       private final List<GoogleCloudDialogflowCxV3TestRunDifferenceResponse> differences;
@@ -58,7 +54,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
 
     /**
      * The session parameters available to the bot at this point.
-     * 
      */
     @Import(name="sessionParameters", required=true)
       private final Map<String,String> sessionParameters;
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
 
     /**
      * Response error from the agent in the test result. If set, other output is empty.
-     * 
      */
     @Import(name="status", required=true)
       private final GoogleRpcStatusResponse status;
@@ -80,7 +74,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
 
     /**
      * The text responses from the agent for the turn.
-     * 
      */
     @Import(name="textResponses", required=true)
       private final List<GoogleCloudDialogflowCxV3ResponseMessageTextResponse> textResponses;
@@ -91,7 +84,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
 
     /**
      * The Intent that triggered the response. Only name and displayName will be set.
-     * 
      */
     @Import(name="triggeredIntent", required=true)
       private final GoogleCloudDialogflowCxV3IntentResponse triggeredIntent;

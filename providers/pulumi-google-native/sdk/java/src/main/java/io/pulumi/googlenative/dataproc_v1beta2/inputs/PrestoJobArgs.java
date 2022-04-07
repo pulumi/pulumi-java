@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * A Dataproc job for running Presto (https://prestosql.io/) queries. IMPORTANT: The Dataproc Presto Optional Component (https://cloud.google.com/dataproc/docs/concepts/components/presto) must be enabled when the cluster is created to submit a Presto job to the cluster.
- * 
  */
 public final class PrestoJobArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class PrestoJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Presto client tags to attach to this query
-     * 
      */
     @Import(name="clientTags")
       private final @Nullable Output<List<String>> clientTags;
@@ -36,7 +34,6 @@ public final class PrestoJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
-     * 
      */
     @Import(name="continueOnFailure")
       private final @Nullable Output<Boolean> continueOnFailure;
@@ -47,7 +44,6 @@ public final class PrestoJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The runtime log config for job execution.
-     * 
      */
     @Import(name="loggingConfig")
       private final @Nullable Output<LoggingConfigArgs> loggingConfig;
@@ -58,7 +54,6 @@ public final class PrestoJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The format in which query output will be displayed. See the Presto documentation for supported output formats
-     * 
      */
     @Import(name="outputFormat")
       private final @Nullable Output<String> outputFormat;
@@ -69,7 +64,6 @@ public final class PrestoJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. A mapping of property names to values. Used to set Presto session properties (https://prestodb.io/docs/current/sql/set-session.html) Equivalent to using the --session flag in the Presto CLI
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -80,7 +74,6 @@ public final class PrestoJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The HCFS URI of the script that contains SQL queries.
-     * 
      */
     @Import(name="queryFileUri")
       private final @Nullable Output<String> queryFileUri;
@@ -91,7 +84,6 @@ public final class PrestoJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of queries.
-     * 
      */
     @Import(name="queryList")
       private final @Nullable Output<QueryListArgs> queryList;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class AnnotationSourceResponse {
     /**
      * Cloud Healthcare API resource.
-     * 
      */
     private final CloudHealthcareSourceResponse cloudHealthcareSource;
 
@@ -22,7 +21,6 @@ public final class AnnotationSourceResponse {
 
     /**
      * Cloud Healthcare API resource.
-     * 
     */
     public CloudHealthcareSourceResponse getCloudHealthcareSource() {
         return this.cloudHealthcareSource;

@@ -23,7 +23,6 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name (URI) of the destination connection profile.
-     * 
      */
     @Import(name="destination", required=true)
       private final Output<String> destination;
@@ -34,7 +33,6 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The database engine type and provider of the destination.
-     * 
      */
     @Import(name="destinationDatabase")
       private final @Nullable Output<DatabaseTypeArgs> destinationDatabase;
@@ -45,7 +43,6 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The migration job display name.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -56,7 +53,6 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
-     * 
      */
     @Import(name="dumpPath")
       private final @Nullable Output<String> dumpPath;
@@ -67,7 +63,6 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource labels for migration job to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -92,7 +87,6 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name (URI) of this migration job resource, in the form of: projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -117,7 +111,6 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The details needed to communicate to the source over Reverse SSH tunnel connectivity.
-     * 
      */
     @Import(name="reverseSshConnectivity")
       private final @Nullable Output<ReverseSshConnectivityArgs> reverseSshConnectivity;
@@ -128,7 +121,6 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name (URI) of the source connection profile.
-     * 
      */
     @Import(name="source", required=true)
       private final Output<String> source;
@@ -139,7 +131,6 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The database engine type and provider of the source.
-     * 
      */
     @Import(name="sourceDatabase")
       private final @Nullable Output<DatabaseTypeArgs> sourceDatabase;
@@ -150,7 +141,6 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The current migration job state.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<MigrationJobState> state;
@@ -161,7 +151,6 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * static ip connectivity data (default, no additional details needed).
-     * 
      */
     @Import(name="staticIpConnectivity")
       private final @Nullable Output<StaticIpConnectivityArgs> staticIpConnectivity;
@@ -172,7 +161,6 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The migration job type.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<MigrationJobType> type;
@@ -183,7 +171,6 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The details of the VPC network that the source database is located in.
-     * 
      */
     @Import(name="vpcPeeringConnectivity")
       private final @Nullable Output<VpcPeeringConnectivityArgs> vpcPeeringConnectivity;

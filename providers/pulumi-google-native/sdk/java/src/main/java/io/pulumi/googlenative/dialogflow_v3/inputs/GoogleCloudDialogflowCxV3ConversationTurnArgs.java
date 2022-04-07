@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * One interaction between a human and virtual agent. The human provides some input and the virtual agent provides a response.
- * 
  */
 public final class GoogleCloudDialogflowCxV3ConversationTurnArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnArgs extends io.pulu
 
     /**
      * The user input.
-     * 
      */
     @Import(name="userInput")
       private final @Nullable Output<GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs> userInput;
@@ -32,7 +30,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnArgs extends io.pulu
 
     /**
      * The virtual agent output.
-     * 
      */
     @Import(name="virtualAgentOutput")
       private final @Nullable Output<GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs> virtualAgentOutput;

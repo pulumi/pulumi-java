@@ -17,244 +17,209 @@ import javax.annotation.Nullable;
  * Auto-naming is currently not supported for this resource.
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:clouddeploy/v1:Rollout")
 public class Rollout extends io.pulumi.resources.CustomResource {
     /**
      * User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
-     * 
      */
     @Export(name="annotations", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> annotations;
 
     /**
      * @return User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
-     * 
      */
     public Output<Map<String,String>> getAnnotations() {
         return this.annotations;
     }
     /**
      * Approval state of the `Rollout`.
-     * 
      */
     @Export(name="approvalState", type=String.class, parameters={})
     private Output<String> approvalState;
 
     /**
      * @return Approval state of the `Rollout`.
-     * 
      */
     public Output<String> getApprovalState() {
         return this.approvalState;
     }
     /**
      * Time at which the `Rollout` was approved.
-     * 
      */
     @Export(name="approveTime", type=String.class, parameters={})
     private Output<String> approveTime;
 
     /**
      * @return Time at which the `Rollout` was approved.
-     * 
      */
     public Output<String> getApproveTime() {
         return this.approveTime;
     }
     /**
      * Time at which the `Rollout` was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return Time at which the `Rollout` was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Time at which the `Rollout` finished deploying.
-     * 
      */
     @Export(name="deployEndTime", type=String.class, parameters={})
     private Output<String> deployEndTime;
 
     /**
      * @return Time at which the `Rollout` finished deploying.
-     * 
      */
     public Output<String> getDeployEndTime() {
         return this.deployEndTime;
     }
     /**
      * The reason this deploy failed. This will always be unspecified while the deploy in progress.
-     * 
      */
     @Export(name="deployFailureCause", type=String.class, parameters={})
     private Output<String> deployFailureCause;
 
     /**
      * @return The reason this deploy failed. This will always be unspecified while the deploy in progress.
-     * 
      */
     public Output<String> getDeployFailureCause() {
         return this.deployFailureCause;
     }
     /**
      * Time at which the `Rollout` started deploying.
-     * 
      */
     @Export(name="deployStartTime", type=String.class, parameters={})
     private Output<String> deployStartTime;
 
     /**
      * @return Time at which the `Rollout` started deploying.
-     * 
      */
     public Output<String> getDeployStartTime() {
         return this.deployStartTime;
     }
     /**
      * The resource name of the Cloud Build `Build` object that is used to deploy the Rollout. Format is `projects/{project}/locations/{location}/builds/{build}`.
-     * 
      */
     @Export(name="deployingBuild", type=String.class, parameters={})
     private Output<String> deployingBuild;
 
     /**
      * @return The resource name of the Cloud Build `Build` object that is used to deploy the Rollout. Format is `projects/{project}/locations/{location}/builds/{build}`.
-     * 
      */
     public Output<String> getDeployingBuild() {
         return this.deployingBuild;
     }
     /**
      * Description of the `Rollout` for user purposes. Max length is 255 characters.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Description of the `Rollout` for user purposes. Max length is 255 characters.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Time at which the `Rollout` was enqueued.
-     * 
      */
     @Export(name="enqueueTime", type=String.class, parameters={})
     private Output<String> enqueueTime;
 
     /**
      * @return Time at which the `Rollout` was enqueued.
-     * 
      */
     public Output<String> getEnqueueTime() {
         return this.enqueueTime;
     }
     /**
      * This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Reason the build failed. Empty if the build succeeded.
-     * 
      */
     @Export(name="failureReason", type=String.class, parameters={})
     private Output<String> failureReason;
 
     /**
      * @return Reason the build failed. Empty if the build succeeded.
-     * 
      */
     public Output<String> getFailureReason() {
         return this.failureReason;
     }
     /**
      * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * Optional. Name of the `Rollout`. Format is projects/{project}/ locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/{release}/rollouts/a-z{0,62}.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Optional. Name of the `Rollout`. Format is projects/{project}/ locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/{release}/rollouts/a-z{0,62}.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Current state of the `Rollout`.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return Current state of the `Rollout`.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The ID of Target to which this `Rollout` is deploying.
-     * 
      */
     @Export(name="targetId", type=String.class, parameters={})
     private Output<String> targetId;
 
     /**
      * @return The ID of Target to which this `Rollout` is deploying.
-     * 
      */
     public Output<String> getTargetId() {
         return this.targetId;
     }
     /**
      * Unique identifier of the `Rollout`.
-     * 
      */
     @Export(name="uid", type=String.class, parameters={})
     private Output<String> uid;
 
     /**
      * @return Unique identifier of the `Rollout`.
-     * 
      */
     public Output<String> getUid() {
         return this.uid;

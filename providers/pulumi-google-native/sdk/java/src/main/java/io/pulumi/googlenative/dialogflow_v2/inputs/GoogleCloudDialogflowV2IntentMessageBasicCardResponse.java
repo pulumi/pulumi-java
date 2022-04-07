@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * The basic card message. Useful for displaying information.
- * 
  */
 public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
 
     /**
      * Optional. The collection of card buttons.
-     * 
      */
     @Import(name="buttons", required=true)
       private final List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons;
@@ -32,7 +30,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
 
     /**
      * Required, unless image is present. The body text of the card.
-     * 
      */
     @Import(name="formattedText", required=true)
       private final String formattedText;
@@ -43,7 +40,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
 
     /**
      * Optional. The image for the card.
-     * 
      */
     @Import(name="image", required=true)
       private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
@@ -54,7 +50,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
 
     /**
      * Optional. The subtitle of the card.
-     * 
      */
     @Import(name="subtitle", required=true)
       private final String subtitle;
@@ -65,7 +60,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
 
     /**
      * Optional. The title of the card.
-     * 
      */
     @Import(name="title", required=true)
       private final String title;

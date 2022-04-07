@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Parameters for using BigQuery as the destination of resource usage export.
- * 
  */
 public final class BigQueryDestinationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class BigQueryDestinationResponse extends io.pulumi.resources.Invok
 
     /**
      * The ID of a BigQuery Dataset.
-     * 
      */
     @Import(name="datasetId", required=true)
       private final String datasetId;

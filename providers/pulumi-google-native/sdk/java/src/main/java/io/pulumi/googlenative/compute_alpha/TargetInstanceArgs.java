@@ -17,7 +17,6 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -27,8 +26,7 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A URL to the virtual machine instance that handles traffic for this target instance. When creating a target instance, you can provide the fully-qualified URL or a valid partial URL to the desired virtual machine. For example, the following are all valid URLs: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance - projects/project/zones/zone/instances/instance - zones/zone/instances/instance
-     * 
+     * A URL to the virtual machine instance that handles traffic for this target instance. When creating a target instance, you can provide the fully-qualified URL or a valid partial URL to the desired virtual machine. For example, the following are all valid URLs: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance - projects/project/zones/zone/instances/instance - zones/zone/instances/instance 
      */
     @Import(name="instance")
       private final @Nullable Output<String> instance;
@@ -39,7 +37,6 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -50,7 +47,6 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.
-     * 
      */
     @Import(name="natPolicy")
       private final @Nullable Output<TargetInstanceNatPolicy> natPolicy;
@@ -61,7 +57,6 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The URL of the network this target instance uses to forward traffic. If not specified, the traffic will be forwarded to the network that the default network interface belongs to.
-     * 
      */
     @Import(name="network")
       private final @Nullable Output<String> network;

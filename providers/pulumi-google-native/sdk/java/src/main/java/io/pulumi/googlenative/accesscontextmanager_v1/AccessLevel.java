@@ -15,76 +15,65 @@ import javax.annotation.Nullable;
 
 /**
  * Creates an access level. The long-running operation from this RPC has a successful status after the access level propagates to long-lasting storage. If access levels contain errors, an error response is returned for the first error encountered.
- * 
  */
 @ResourceType(type="google-native:accesscontextmanager/v1:AccessLevel")
 public class AccessLevel extends io.pulumi.resources.CustomResource {
     /**
      * A `BasicLevel` composed of `Conditions`.
-     * 
      */
     @Export(name="basic", type=BasicLevelResponse.class, parameters={})
     private Output<BasicLevelResponse> basic;
 
     /**
      * @return A `BasicLevel` composed of `Conditions`.
-     * 
      */
     public Output<BasicLevelResponse> getBasic() {
         return this.basic;
     }
     /**
      * A `CustomLevel` written in the Common Expression Language.
-     * 
      */
     @Export(name="custom", type=CustomLevelResponse.class, parameters={})
     private Output<CustomLevelResponse> custom;
 
     /**
      * @return A `CustomLevel` written in the Common Expression Language.
-     * 
      */
     public Output<CustomLevelResponse> getCustom() {
         return this.custom;
     }
     /**
      * Description of the `AccessLevel` and its use. Does not affect behavior.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Description of the `AccessLevel` and its use. Does not affect behavior.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Resource name for the Access Level. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{access_policy}/accessLevels/{access_level}`. The maximum length of the `access_level` component is 50 characters.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name for the Access Level. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{access_policy}/accessLevels/{access_level}`. The maximum length of the `access_level` component is 50 characters.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Human readable title. Must be unique within the Policy.
-     * 
      */
     @Export(name="title", type=String.class, parameters={})
     private Output<String> title;
 
     /**
      * @return Human readable title. Must be unique within the Policy.
-     * 
      */
     public Output<String> getTitle() {
         return this.title;

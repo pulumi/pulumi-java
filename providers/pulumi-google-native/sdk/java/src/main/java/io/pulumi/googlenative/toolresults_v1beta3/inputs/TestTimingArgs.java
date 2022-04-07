@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Testing timing break down to know phases.
- * 
  */
 public final class TestTimingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class TestTimingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * How long it took to run the test process. - In response: present if previously set. - In create/update request: optional
-     * 
      */
     @Import(name="testProcessDuration")
       private final @Nullable Output<DurationArgs> testProcessDuration;

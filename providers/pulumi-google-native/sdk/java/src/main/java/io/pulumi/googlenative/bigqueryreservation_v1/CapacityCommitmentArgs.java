@@ -39,7 +39,6 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Capacity commitment commitment plan.
-     * 
      */
     @Import(name="plan")
       private final @Nullable Output<CapacityCommitmentPlan> plan;
@@ -57,7 +56,6 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The plan this capacity commitment is converted to after commitment_end_time passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL and TRIAL commitments.
-     * 
      */
     @Import(name="renewalPlan")
       private final @Nullable Output<CapacityCommitmentRenewalPlan> renewalPlan;
@@ -68,7 +66,6 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Number of slots in this commitment.
-     * 
      */
     @Import(name="slotCount")
       private final @Nullable Output<String> slotCount;

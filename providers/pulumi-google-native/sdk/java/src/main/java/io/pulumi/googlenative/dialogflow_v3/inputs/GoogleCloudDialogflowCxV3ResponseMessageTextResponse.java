@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The text response message.
- * 
  */
 public final class GoogleCloudDialogflowCxV3ResponseMessageTextResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextResponse extends 
 
     /**
      * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
-     * 
      */
     @Import(name="allowPlaybackInterruption", required=true)
       private final Boolean allowPlaybackInterruption;
@@ -31,7 +29,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextResponse extends 
 
     /**
      * A collection of text responses.
-     * 
      */
     @Import(name="text", required=true)
       private final List<String> text;

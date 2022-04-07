@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class AuthorizationLoggingOptionsResponse {
     /**
      * The type of the permission that was checked.
-     * 
      */
     private final String permissionType;
 
@@ -22,7 +21,6 @@ public final class AuthorizationLoggingOptionsResponse {
 
     /**
      * The type of the permission that was checked.
-     * 
     */
     public String getPermissionType() {
         return this.permissionType;

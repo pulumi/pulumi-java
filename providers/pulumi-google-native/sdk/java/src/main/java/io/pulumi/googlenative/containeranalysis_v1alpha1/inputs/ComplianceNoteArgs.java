@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * ComplianceNote encapsulates all information about a specific compliance check.
- * 
  */
 public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Right now we only have one compliance type, but we may add additional types in the future.
-     * 
      */
     @Import(name="cisBenchmark")
       private final @Nullable Output<CisBenchmarkArgs> cisBenchmark;
@@ -34,7 +32,6 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description about this compliance check.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -45,7 +42,6 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A rationale for the existence of this compliance check.
-     * 
      */
     @Import(name="rationale")
       private final @Nullable Output<String> rationale;
@@ -56,7 +52,6 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description of remediation steps if the compliance check fails.
-     * 
      */
     @Import(name="remediation")
       private final @Nullable Output<String> remediation;
@@ -67,7 +62,6 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Serialized scan instructions with a predefined format.
-     * 
      */
     @Import(name="scanInstructions")
       private final @Nullable Output<String> scanInstructions;
@@ -78,7 +72,6 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The title that identifies this compliance check.
-     * 
      */
     @Import(name="title")
       private final @Nullable Output<String> title;
@@ -89,7 +82,6 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The OS and config versions the benchmark applies to.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<List<ComplianceVersionArgs>> version;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Label object for Deployments
- * 
  */
 public final class DeploymentLabelEntryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DeploymentLabelEntryArgs extends io.pulumi.resources.Resource
 
     /**
      * Key of the label
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -31,7 +29,6 @@ public final class DeploymentLabelEntryArgs extends io.pulumi.resources.Resource
 
     /**
      * Value of the label
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

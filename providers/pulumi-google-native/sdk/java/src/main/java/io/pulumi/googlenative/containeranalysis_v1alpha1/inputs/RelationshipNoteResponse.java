@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * RelationshipNote represents an SPDX Relationship section: https://spdx.github.io/spdx-spec/7-relationships-between-SPDX-elements/
- * 
  */
 public final class RelationshipNoteResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class RelationshipNoteResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The type of relationship between the source and target SPDX elements
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

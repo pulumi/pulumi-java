@@ -17,7 +17,6 @@ import java.util.Objects;
 
 /**
  * Widget contains a single dashboard component and configuration of how to present the component in the dashboard.
- * 
  */
 public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A chart of alert policy data.
-     * 
      */
     @Import(name="alertChart", required=true)
       private final AlertChartResponse alertChart;
@@ -36,7 +34,6 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A blank space.
-     * 
      */
     @Import(name="blank", required=true)
       private final EmptyResponse blank;
@@ -47,7 +44,6 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A widget that shows a stream of logs.
-     * 
      */
     @Import(name="logsPanel", required=true)
       private final LogsPanelResponse logsPanel;
@@ -58,7 +54,6 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A scorecard summarizing time series data.
-     * 
      */
     @Import(name="scorecard", required=true)
       private final ScorecardResponse scorecard;
@@ -69,7 +64,6 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A raw string or markdown displaying textual content.
-     * 
      */
     @Import(name="text", required=true)
       private final TextResponse text;
@@ -80,7 +74,6 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A widget that displays time series data in a tabular format.
-     * 
      */
     @Import(name="timeSeriesTable", required=true)
       private final TimeSeriesTableResponse timeSeriesTable;
@@ -91,7 +84,6 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. The title of the widget.
-     * 
      */
     @Import(name="title", required=true)
       private final String title;
@@ -102,7 +94,6 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A chart of time series data.
-     * 
      */
     @Import(name="xyChart", required=true)
       private final XyChartResponse xyChart;

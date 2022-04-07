@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudMlV1__SampledShapleyAttributionResponse {
     /**
      * The number of feature permutations to consider when approximating the Shapley values.
-     * 
      */
     private final Integer numPaths;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionResponse {
 
     /**
      * The number of feature permutations to consider when approximating the Shapley values.
-     * 
     */
     public Integer getNumPaths() {
         return this.numPaths;

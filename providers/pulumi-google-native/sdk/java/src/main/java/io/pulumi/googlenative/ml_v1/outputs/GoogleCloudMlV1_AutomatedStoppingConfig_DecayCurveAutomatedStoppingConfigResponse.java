@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse {
     /**
      * If true, measurement.elapsed_time is used as the x-axis of each Trials Decay Curve. Otherwise, Measurement.steps will be used as the x-axis.
-     * 
      */
     private final Boolean useElapsedTime;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedSt
 
     /**
      * If true, measurement.elapsed_time is used as the x-axis of each Trials Decay Curve. Otherwise, Measurement.steps will be used as the x-axis.
-     * 
     */
     public Boolean getUseElapsedTime() {
         return this.useElapsedTime;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * the Api category resource.
- * 
  */
 public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends io.pulumi.
 
     /**
      * Name of the category.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends io.pulumi.
 
     /**
      * Name of the portal.
-     * 
      */
     @Import(name="siteId", required=true)
       private final String siteId;
@@ -40,7 +37,6 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends io.pulumi.
 
     /**
      * Time the category was last modified in milliseconds since epoch.
-     * 
      */
     @Import(name="updateTime", required=true)
       private final String updateTime;

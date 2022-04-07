@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class CustomHttpPatternResponse {
     /**
      * The name of this custom HTTP verb.
-     * 
      */
     private final String kind;
     /**
      * The path matched by this custom verb.
-     * 
      */
     private final String path;
 
@@ -30,14 +28,12 @@ public final class CustomHttpPatternResponse {
 
     /**
      * The name of this custom HTTP verb.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * The path matched by this custom verb.
-     * 
     */
     public String getPath() {
         return this.path;

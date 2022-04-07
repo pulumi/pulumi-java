@@ -14,7 +14,6 @@ public final class InstanceMessageResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * A code that correspond to one type of user-facing message.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -25,7 +24,6 @@ public final class InstanceMessageResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Message on memcached instance which will be exposed to users.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;

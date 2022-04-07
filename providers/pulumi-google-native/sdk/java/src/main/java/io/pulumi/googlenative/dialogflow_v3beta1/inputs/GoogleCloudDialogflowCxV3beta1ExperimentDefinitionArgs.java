@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of the experiment.
- * 
  */
 public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs extend
 
     /**
      * The condition defines which subset of sessions are selected for this experiment. If not specified, all sessions are eligible. E.g. "query_input.language_code=en" See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
-     * 
      */
     @Import(name="condition")
       private final @Nullable Output<String> condition;
@@ -32,7 +30,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs extend
 
     /**
      * The flow versions as the variants of this experiment.
-     * 
      */
     @Import(name="versionVariants")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1VersionVariantsArgs> versionVariants;

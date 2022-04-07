@@ -16,104 +16,89 @@ import javax.annotation.Nullable;
 /**
  * Use this method to create a route for a private connectivity configuration in a project and location.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:datastream/v1:Route")
 public class Route extends io.pulumi.resources.CustomResource {
     /**
      * The create time of the resource.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The create time of the resource.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Destination address for connection
-     * 
      */
     @Export(name="destinationAddress", type=String.class, parameters={})
     private Output<String> destinationAddress;
 
     /**
      * @return Destination address for connection
-     * 
      */
     public Output<String> getDestinationAddress() {
         return this.destinationAddress;
     }
     /**
      * Destination port for connection
-     * 
      */
     @Export(name="destinationPort", type=Integer.class, parameters={})
     private Output<Integer> destinationPort;
 
     /**
      * @return Destination port for connection
-     * 
      */
     public Output<Integer> getDestinationPort() {
         return this.destinationPort;
     }
     /**
      * Display name.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return Display name.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Labels.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Labels.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * The resource's name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource's name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The update time of the resource.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The update time of the resource.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

@@ -17,7 +17,6 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. A free-text description of the resource. Max length 1024 characters.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -28,7 +27,6 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
-     * 
      */
     @Import(name="endpointFilter")
       private final @Nullable Output<String> endpointFilter;
@@ -39,7 +37,6 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Set of label tags associated with the ServiceBinding resource.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -57,7 +54,6 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name>`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -75,7 +71,6 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
-     * 
      */
     @Import(name="service", required=true)
       private final Output<String> service;

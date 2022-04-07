@@ -14,22 +14,18 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2ResultResponse {
     /**
      * Statistics related to the processing of hybrid inspect.
-     * 
      */
     private final GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats;
     /**
      * Statistics of how many instances of each info type were found during inspect job.
-     * 
      */
     private final List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats;
     /**
      * Total size in bytes that were processed.
-     * 
      */
     private final String processedBytes;
     /**
      * Estimate of the number of bytes to process.
-     * 
      */
     private final String totalEstimatedBytes;
 
@@ -47,28 +43,24 @@ public final class GooglePrivacyDlpV2ResultResponse {
 
     /**
      * Statistics related to the processing of hybrid inspect.
-     * 
     */
     public GooglePrivacyDlpV2HybridInspectStatisticsResponse getHybridStats() {
         return this.hybridStats;
     }
     /**
      * Statistics of how many instances of each info type were found during inspect job.
-     * 
     */
     public List<GooglePrivacyDlpV2InfoTypeStatsResponse> getInfoTypeStats() {
         return this.infoTypeStats;
     }
     /**
      * Total size in bytes that were processed.
-     * 
     */
     public String getProcessedBytes() {
         return this.processedBytes;
     }
     /**
      * Estimate of the number of bytes to process.
-     * 
     */
     public String getTotalEstimatedBytes() {
         return this.totalEstimatedBytes;

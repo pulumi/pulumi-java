@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * ClusterAutoscaling contains global, per-cluster information required by Cluster Autoscaler to automatically adjust the size of the cluster and create/delete node pools based on the current needs.
- * 
  */
 public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes can be created by NAP.
-     * 
      */
     @Import(name="autoprovisioningLocations")
       private final @Nullable Output<List<String>> autoprovisioningLocations;
@@ -36,7 +34,6 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
-     * 
      */
     @Import(name="autoprovisioningNodePoolDefaults")
       private final @Nullable Output<AutoprovisioningNodePoolDefaultsArgs> autoprovisioningNodePoolDefaults;
@@ -47,7 +44,6 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Defines autoscaling behaviour.
-     * 
      */
     @Import(name="autoscalingProfile")
       private final @Nullable Output<ClusterAutoscalingAutoscalingProfile> autoscalingProfile;
@@ -58,7 +54,6 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Enables automatic node pool creation and deletion.
-     * 
      */
     @Import(name="enableNodeAutoprovisioning")
       private final @Nullable Output<Boolean> enableNodeAutoprovisioning;
@@ -69,7 +64,6 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Contains global constraints regarding minimum and maximum amount of resources in the cluster.
-     * 
      */
     @Import(name="resourceLimits")
       private final @Nullable Output<List<ResourceLimitArgs>> resourceLimits;

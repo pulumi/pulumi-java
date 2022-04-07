@@ -10,19 +10,16 @@ import java.util.StringJoiner;
 
     /**
      * The action to take on matched requests.
-     * 
      */
     @EnumType
     public enum IngressRuleAction {
         UnspecifiedAction("UNSPECIFIED_ACTION"),
         /**
          * Matching requests are allowed.
-         * 
          */
         Allow("ALLOW"),
         /**
          * Matching requests are denied.
-         * 
          */
         Deny("DENY");
 

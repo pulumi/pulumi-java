@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Specifies where the manifest is located.
- * 
  */
 public final class TransferManifestResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class TransferManifestResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Specifies the path to the manifest in Cloud Storage. The Google-managed service account for the transfer must have `storage.objects.get` permission for this object. An example path is `gs://bucket_name/path/manifest.csv`.
-     * 
      */
     @Import(name="location", required=true)
       private final String location;

@@ -24,7 +24,6 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Input only. The Google Cloud Storage signed URL returned from GenerateUploadUrl and used to upload the Archive zip file.
-     * 
      */
     @Import(name="gcsUri")
       private final @Nullable Output<String> gcsUri;
@@ -35,7 +34,6 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * User-supplied key-value pairs used to organize ArchiveDeployments. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -46,7 +44,6 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Name of the Archive Deployment in the following format: `organizations/{org}/environments/{env}/archiveDeployments/{id}`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class TextResponse {
     /**
      * The text content to be displayed.
-     * 
      */
     private final String content;
     /**
      * How the text content is formatted.
-     * 
      */
     private final String format;
 
@@ -30,14 +28,12 @@ public final class TextResponse {
 
     /**
      * The text content to be displayed.
-     * 
     */
     public String getContent() {
         return this.content;
     }
     /**
      * How the text content is formatted.
-     * 
     */
     public String getFormat() {
         return this.format;

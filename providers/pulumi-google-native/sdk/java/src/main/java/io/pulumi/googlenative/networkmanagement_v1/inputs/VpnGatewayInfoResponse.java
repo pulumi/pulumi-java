@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * For display only. Metadata associated with a Compute Engine VPN gateway.
- * 
  */
 public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Name of a VPN gateway.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -29,7 +27,6 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * IP address of the VPN gateway.
-     * 
      */
     @Import(name="ipAddress", required=true)
       private final String ipAddress;
@@ -40,7 +37,6 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * URI of a Compute Engine network where the VPN gateway is configured.
-     * 
      */
     @Import(name="networkUri", required=true)
       private final String networkUri;
@@ -51,7 +47,6 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Name of a Google Cloud region where this VPN gateway is configured.
-     * 
      */
     @Import(name="region", required=true)
       private final String region;
@@ -62,7 +57,6 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * URI of a VPN gateway.
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;
@@ -73,7 +67,6 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A VPN tunnel that is associated with this VPN gateway. There may be multiple VPN tunnels configured on a VPN gateway, and only the one relevant to the test is displayed.
-     * 
      */
     @Import(name="vpnTunnelUri", required=true)
       private final String vpnTunnelUri;

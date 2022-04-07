@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for a custom dictionary created from a data source of any size up to the maximum size defined in the [limits](https://cloud.google.com/dlp/limits) page. The artifacts of dictionary creation are stored in the specified Google Cloud Storage location. Consider using `CustomInfoType.Dictionary` for smaller dictionaries that satisfy the size requirements.
- * 
  */
 public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs extends io.
 
     /**
      * Field in a BigQuery table where each cell represents a dictionary phrase.
-     * 
      */
     @Import(name="bigQueryField")
       private final @Nullable Output<GooglePrivacyDlpV2BigQueryFieldArgs> bigQueryField;
@@ -33,7 +31,6 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs extends io.
 
     /**
      * Set of files containing newline-delimited lists of dictionary phrases.
-     * 
      */
     @Import(name="cloudStorageFileSet")
       private final @Nullable Output<GooglePrivacyDlpV2CloudStorageFileSetArgs> cloudStorageFileSet;
@@ -44,7 +41,6 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs extends io.
 
     /**
      * Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API. If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
-     * 
      */
     @Import(name="outputPath")
       private final @Nullable Output<GooglePrivacyDlpV2CloudStoragePathArgs> outputPath;

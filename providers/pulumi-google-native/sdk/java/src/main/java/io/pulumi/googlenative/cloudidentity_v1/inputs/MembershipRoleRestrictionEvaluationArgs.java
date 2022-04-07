@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * The evaluated state of this restriction.
- * 
  */
 public final class MembershipRoleRestrictionEvaluationArgs extends io.pulumi.resources.ResourceArgs {
 

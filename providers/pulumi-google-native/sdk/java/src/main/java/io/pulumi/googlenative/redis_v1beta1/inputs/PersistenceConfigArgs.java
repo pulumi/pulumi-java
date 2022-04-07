@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration of the persistence functionality.
- * 
  */
 public final class PersistenceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class PersistenceConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Optional. Controls whether Persistence features are enabled. If not provided, the existing value will be used.
-     * 
      */
     @Import(name="persistenceMode")
       private final @Nullable Output<PersistenceConfigPersistenceMode> persistenceMode;
@@ -33,7 +31,6 @@ public final class PersistenceConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Optional. Period between RDB snapshots. Snapshots will be attempted every period starting from the provided snapshot start time. For example, a start time of 01/01/2033 06:45 and SIX_HOURS snapshot period will do nothing until 01/01/2033, and then trigger snapshots every day at 06:45, 12:45, 18:45, and 00:45 the next day, and so on. If not provided, TWENTY_FOUR_HOURS will be used as default.
-     * 
      */
     @Import(name="rdbSnapshotPeriod")
       private final @Nullable Output<PersistenceConfigRdbSnapshotPeriod> rdbSnapshotPeriod;
@@ -44,7 +41,6 @@ public final class PersistenceConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Optional. Date and time that the first snapshot was/will be attempted, and to which future snapshots will be aligned. If not provided, the current time will be used.
-     * 
      */
     @Import(name="rdbSnapshotStartTime")
       private final @Nullable Output<String> rdbSnapshotStartTime;

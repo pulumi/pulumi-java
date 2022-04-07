@@ -15,7 +15,6 @@ public final class SnapshotDefinitionResponse extends io.pulumi.resources.Invoke
 
     /**
      * [Required] Reference describing the ID of the table that was snapshot.
-     * 
      */
     @Import(name="baseTableReference", required=true)
       private final TableReferenceResponse baseTableReference;
@@ -26,7 +25,6 @@ public final class SnapshotDefinitionResponse extends io.pulumi.resources.Invoke
 
     /**
      * [Required] The time at which the base table was snapshot. This value is reported in the JSON response using RFC3339 format.
-     * 
      */
     @Import(name="snapshotTime", required=true)
       private final String snapshotTime;

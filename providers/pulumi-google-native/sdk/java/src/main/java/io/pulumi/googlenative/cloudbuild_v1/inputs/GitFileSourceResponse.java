@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * GitFileSource describes a file within a (possibly remote) code repository.
- * 
  */
 public final class GitFileSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GitFileSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The path of the file, with the repo root as the root of the path.
-     * 
      */
     @Import(name="path", required=true)
       private final String path;
@@ -29,7 +27,6 @@ public final class GitFileSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * See RepoType above.
-     * 
      */
     @Import(name="repoType", required=true)
       private final String repoType;
@@ -40,7 +37,6 @@ public final class GitFileSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.
-     * 
      */
     @Import(name="revision", required=true)
       private final String revision;
@@ -51,7 +47,6 @@ public final class GitFileSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The `MembershipRole` expiry details.
- * 
  */
 public final class ExpiryDetailArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ExpiryDetailArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time at which the `MembershipRole` will expire.
-     * 
      */
     @Import(name="expireTime")
       private final @Nullable Output<String> expireTime;

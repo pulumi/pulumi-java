@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * EnvVarSource represents a source for the value of an EnvVar.
- * 
  */
 public final class GoogleCloudRunOpV2EnvVarSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudRunOpV2EnvVarSourceResponse extends io.pulumi.reso
 
     /**
      * Selects a secret and a specific version from Cloud Secret Manager.
-     * 
      */
     @Import(name="secretKeyRef", required=true)
       private final GoogleCloudRunOpV2SecretKeySelectorResponse secretKeyRef;

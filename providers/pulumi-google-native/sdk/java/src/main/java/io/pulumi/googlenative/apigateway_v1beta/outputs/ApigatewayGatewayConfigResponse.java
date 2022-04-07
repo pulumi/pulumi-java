@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ApigatewayGatewayConfigResponse {
     /**
      * Backend settings that are applied to all backends of the Gateway.
-     * 
      */
     private final ApigatewayBackendConfigResponse backendConfig;
 
@@ -22,7 +21,6 @@ public final class ApigatewayGatewayConfigResponse {
 
     /**
      * Backend settings that are applied to all backends of the Gateway.
-     * 
     */
     public ApigatewayBackendConfigResponse getBackendConfig() {
         return this.backendConfig;

@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * Period Type.
-     * 
      */
     @EnumType
     public enum GoogleCloudChannelV1PeriodPeriodType {
         /**
          * Not used.
-         * 
          */
         PeriodTypeUnspecified("PERIOD_TYPE_UNSPECIFIED"),
         /**
          * Day.
-         * 
          */
         Day("DAY"),
         /**
          * Month.
-         * 
          */
         Month("MONTH"),
         /**
          * Year.
-         * 
          */
         Year("YEAR");
 

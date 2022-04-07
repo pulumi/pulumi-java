@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Defines the Human Agent Assistant to connect to a conversation.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
 
     /**
      * Configuration for agent assistance of end user participant. Currently, this feature is not general available, please contact Google to get access.
-     * 
      */
     @Import(name="endUserSuggestionConfig", required=true)
       private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig;
@@ -31,7 +29,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
 
     /**
      * Configuration for agent assistance of human agent participant.
-     * 
      */
     @Import(name="humanAgentSuggestionConfig", required=true)
       private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig;
@@ -42,7 +39,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
 
     /**
      * Configuration for message analysis.
-     * 
      */
     @Import(name="messageAnalysisConfig", required=true)
       private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig;
@@ -53,7 +49,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
 
     /**
      * Pub/Sub topic on which to publish new agent assistant events.
-     * 
      */
     @Import(name="notificationConfig", required=true)
       private final GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig;

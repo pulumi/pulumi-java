@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2InspectionRuleResponse {
     /**
      * Exclusion rule.
-     * 
      */
     private final GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule;
     /**
      * Hotword-based detection rule.
-     * 
      */
     private final GooglePrivacyDlpV2HotwordRuleResponse hotwordRule;
 
@@ -31,14 +29,12 @@ public final class GooglePrivacyDlpV2InspectionRuleResponse {
 
     /**
      * Exclusion rule.
-     * 
     */
     public GooglePrivacyDlpV2ExclusionRuleResponse getExclusionRule() {
         return this.exclusionRule;
     }
     /**
      * Hotword-based detection rule.
-     * 
     */
     public GooglePrivacyDlpV2HotwordRuleResponse getHotwordRule() {
         return this.hotwordRule;

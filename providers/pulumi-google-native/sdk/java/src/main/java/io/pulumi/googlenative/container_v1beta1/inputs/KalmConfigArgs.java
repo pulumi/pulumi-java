@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration options for the KALM addon.
- * 
  */
 public final class KalmConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class KalmConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether KALM is enabled for this cluster.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;

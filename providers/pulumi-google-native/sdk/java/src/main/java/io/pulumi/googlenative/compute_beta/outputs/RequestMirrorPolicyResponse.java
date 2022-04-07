@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class RequestMirrorPolicyResponse {
     /**
      * The full or partial URL to the BackendService resource being mirrored to.
-     * 
      */
     private final String backendService;
 
@@ -22,7 +21,6 @@ public final class RequestMirrorPolicyResponse {
 
     /**
      * The full or partial URL to the BackendService resource being mirrored to.
-     * 
     */
     public String getBackendService() {
         return this.backendService;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings for revision-level scaling settings.
- * 
  */
 public final class GoogleCloudRunOpV2RevisionScalingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudRunOpV2RevisionScalingArgs extends io.pulumi.resou
 
     /**
      * Maximum number of serving instances that this resource should have.
-     * 
      */
     @Import(name="maxInstanceCount")
       private final @Nullable Output<Integer> maxInstanceCount;
@@ -31,7 +29,6 @@ public final class GoogleCloudRunOpV2RevisionScalingArgs extends io.pulumi.resou
 
     /**
      * Minimum number of serving instances that this resource should have.
-     * 
      */
     @Import(name="minInstanceCount")
       private final @Nullable Output<Integer> minInstanceCount;

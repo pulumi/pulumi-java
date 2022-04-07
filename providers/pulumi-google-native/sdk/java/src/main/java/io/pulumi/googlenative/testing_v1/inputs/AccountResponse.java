@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Identifies an account and how to log into it.
- * 
  */
 public final class AccountResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AccountResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An automatic google login account.
-     * 
      */
     @Import(name="googleAuto", required=true)
       private final GoogleAutoResponse googleAuto;

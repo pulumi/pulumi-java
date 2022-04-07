@@ -14,7 +14,6 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse extends i
 
     /**
      * Number of HTTP(S) requests for calculating the threshold.
-     * 
      */
     @Import(name="count", required=true)
       private final Integer count;
@@ -25,7 +24,6 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse extends i
 
     /**
      * Interval over which the threshold is computed.
-     * 
      */
     @Import(name="intervalSec", required=true)
       private final Integer intervalSec;

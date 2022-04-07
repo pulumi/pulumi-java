@@ -13,12 +13,10 @@ import java.util.StringJoiner;
         SampleMethodUnspecified("SAMPLE_METHOD_UNSPECIFIED"),
         /**
          * Scan from the top (default).
-         * 
          */
         Top("TOP"),
         /**
          * For each file larger than bytes_limit_per_file, randomly pick the offset to start scanning. The scanned bytes are contiguous.
-         * 
          */
         RandomStart("RANDOM_START");
 

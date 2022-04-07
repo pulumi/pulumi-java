@@ -17,7 +17,6 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. Caller needs to make sure that CIDR subnets do not overlap between networks, else peering creation will fail.
-     * 
      */
     @Import(name="authorizedNetwork", required=true)
       private final Output<String> authorizedNetwork;
@@ -28,7 +27,6 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Full domain resource path for the Managed AD Domain involved in peering. The resource path should be in the form: `projects/{project_id}/locations/global/domains/{domain_name}`
-     * 
      */
     @Import(name="domainResource", required=true)
       private final Output<String> domainResource;
@@ -39,7 +37,6 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Resource labels to represent user-provided metadata.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;

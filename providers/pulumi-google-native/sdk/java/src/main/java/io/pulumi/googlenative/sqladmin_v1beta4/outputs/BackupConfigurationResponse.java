@@ -14,47 +14,38 @@ import java.util.Objects;
 public final class BackupConfigurationResponse {
     /**
      * Backup retention settings.
-     * 
      */
     private final BackupRetentionSettingsResponse backupRetentionSettings;
     /**
      * (MySQL only) Whether binary log is enabled. If backup configuration is disabled, binarylog must be disabled as well.
-     * 
      */
     private final Boolean binaryLogEnabled;
     /**
      * Whether this configuration is enabled.
-     * 
      */
     private final Boolean enabled;
     /**
      * This is always `sql#backupConfiguration`.
-     * 
      */
     private final String kind;
     /**
      * Location of the backup
-     * 
      */
     private final String location;
     /**
      * (Postgres only) Whether point in time recovery is enabled.
-     * 
      */
     private final Boolean pointInTimeRecoveryEnabled;
     /**
      * Reserved for future use.
-     * 
      */
     private final Boolean replicationLogArchivingEnabled;
     /**
      * Start time for the daily backup configuration in UTC timezone in the 24 hour format - `HH:MM`.
-     * 
      */
     private final String startTime;
     /**
      * The number of days of transaction logs we retain for point in time restore, from 1-7.
-     * 
      */
     private final Integer transactionLogRetentionDays;
 
@@ -82,63 +73,54 @@ public final class BackupConfigurationResponse {
 
     /**
      * Backup retention settings.
-     * 
     */
     public BackupRetentionSettingsResponse getBackupRetentionSettings() {
         return this.backupRetentionSettings;
     }
     /**
      * (MySQL only) Whether binary log is enabled. If backup configuration is disabled, binarylog must be disabled as well.
-     * 
     */
     public Boolean getBinaryLogEnabled() {
         return this.binaryLogEnabled;
     }
     /**
      * Whether this configuration is enabled.
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * This is always `sql#backupConfiguration`.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Location of the backup
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * (Postgres only) Whether point in time recovery is enabled.
-     * 
     */
     public Boolean getPointInTimeRecoveryEnabled() {
         return this.pointInTimeRecoveryEnabled;
     }
     /**
      * Reserved for future use.
-     * 
     */
     public Boolean getReplicationLogArchivingEnabled() {
         return this.replicationLogArchivingEnabled;
     }
     /**
      * Start time for the daily backup configuration in UTC timezone in the 24 hour format - `HH:MM`.
-     * 
     */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * The number of days of transaction logs we retain for point in time restore, from 1-7.
-     * 
     */
     public Integer getTransactionLogRetentionDays() {
         return this.transactionLogRetentionDays;

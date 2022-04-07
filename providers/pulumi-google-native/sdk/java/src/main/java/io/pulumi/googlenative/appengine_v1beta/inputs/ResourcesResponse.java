@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Machine resources for a version.
- * 
  */
 public final class ResourcesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ResourcesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Number of CPU cores needed.
-     * 
      */
     @Import(name="cpu", required=true)
       private final Double cpu;
@@ -32,7 +30,6 @@ public final class ResourcesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Disk size (GB) needed.
-     * 
      */
     @Import(name="diskGb", required=true)
       private final Double diskGb;
@@ -43,7 +40,6 @@ public final class ResourcesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the encryption key that is stored in Google Cloud KMS. Only should be used by Cloud Composer to encrypt the vm disk
-     * 
      */
     @Import(name="kmsKeyReference", required=true)
       private final String kmsKeyReference;
@@ -54,7 +50,6 @@ public final class ResourcesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Memory (GB) needed.
-     * 
      */
     @Import(name="memoryGb", required=true)
       private final Double memoryGb;
@@ -65,7 +60,6 @@ public final class ResourcesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * User specified volumes.
-     * 
      */
     @Import(name="volumes", required=true)
       private final List<VolumeResponse> volumes;

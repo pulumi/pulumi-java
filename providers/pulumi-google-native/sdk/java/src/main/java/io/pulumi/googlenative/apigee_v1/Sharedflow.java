@@ -15,62 +15,53 @@ import javax.annotation.Nullable;
 
 /**
  * Uploads a ZIP-formatted shared flow configuration bundle to an organization. If the shared flow already exists, this creates a new revision of it. If the shared flow does not exist, this creates it. Once imported, the shared flow revision must be deployed before it can be accessed at runtime. The size limit of a shared flow bundle is 15 MB.
- * 
  */
 @ResourceType(type="google-native:apigee/v1:Sharedflow")
 public class Sharedflow extends io.pulumi.resources.CustomResource {
     /**
      * The id of the most recently created revision for this shared flow.
-     * 
      */
     @Export(name="latestRevisionId", type=String.class, parameters={})
     private Output<String> latestRevisionId;
 
     /**
      * @return The id of the most recently created revision for this shared flow.
-     * 
      */
     public Output<String> getLatestRevisionId() {
         return this.latestRevisionId;
     }
     /**
      * Metadata describing the shared flow.
-     * 
      */
     @Export(name="metaData", type=GoogleCloudApigeeV1EntityMetadataResponse.class, parameters={})
     private Output<GoogleCloudApigeeV1EntityMetadataResponse> metaData;
 
     /**
      * @return Metadata describing the shared flow.
-     * 
      */
     public Output<GoogleCloudApigeeV1EntityMetadataResponse> getMetaData() {
         return this.metaData;
     }
     /**
      * The ID of the shared flow.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The ID of the shared flow.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * A list of revisions of this shared flow.
-     * 
      */
     @Export(name="revision", type=List.class, parameters={String.class})
     private Output<List<String>> revision;
 
     /**
      * @return A list of revisions of this shared flow.
-     * 
      */
     public Output<List<String>> getRevision() {
         return this.revision;

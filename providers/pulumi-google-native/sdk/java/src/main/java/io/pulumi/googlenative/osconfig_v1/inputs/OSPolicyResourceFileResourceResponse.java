@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A resource that manages the state of a file.
- * 
  */
 public final class OSPolicyResourceFileResourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class OSPolicyResourceFileResourceResponse extends io.pulumi.resour
 
     /**
      * A a file with this content. The size of the content is limited to 1024 characters.
-     * 
      */
     @Import(name="content", required=true)
       private final String content;
@@ -30,7 +28,6 @@ public final class OSPolicyResourceFileResourceResponse extends io.pulumi.resour
 
     /**
      * A remote or local source.
-     * 
      */
     @Import(name="file", required=true)
       private final OSPolicyResourceFileResponse file;
@@ -41,7 +38,6 @@ public final class OSPolicyResourceFileResourceResponse extends io.pulumi.resour
 
     /**
      * The absolute path of the file within the VM.
-     * 
      */
     @Import(name="path", required=true)
       private final String path;
@@ -52,7 +48,6 @@ public final class OSPolicyResourceFileResourceResponse extends io.pulumi.resour
 
     /**
      * Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit number with the 4 bit corresponding to the read permissions, the 2 bit corresponds to the write bit, and the one bit corresponds to the execute permission. Default behavior is 755. Below are some examples of permissions and their associated values: read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
-     * 
      */
     @Import(name="permissions", required=true)
       private final String permissions;
@@ -63,7 +58,6 @@ public final class OSPolicyResourceFileResourceResponse extends io.pulumi.resour
 
     /**
      * Desired state of the file.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;

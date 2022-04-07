@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Image annotation.
- * 
  */
 public final class ImageAnnotationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ImageAnnotationArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The list of polygons outlining the sensitive regions in the image.
-     * 
      */
     @Import(name="boundingPolys")
       private final @Nullable Output<List<BoundingPolyArgs>> boundingPolys;
@@ -33,7 +31,6 @@ public final class ImageAnnotationArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * 0-based index of the image frame. For example, an image frame in a DICOM instance.
-     * 
      */
     @Import(name="frameIndex")
       private final @Nullable Output<Integer> frameIndex;

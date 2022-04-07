@@ -25,7 +25,6 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A `BasicLevel` composed of `Conditions`.
-     * 
      */
     @Import(name="basic")
       private final @Nullable Output<BasicLevelArgs> basic;
@@ -36,7 +35,6 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A `CustomLevel` written in the Common Expression Language.
-     * 
      */
     @Import(name="custom")
       private final @Nullable Output<CustomLevelArgs> custom;
@@ -47,7 +45,6 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of the `AccessLevel` and its use. Does not affect behavior.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -58,7 +55,6 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource name for the Access Level. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{access_policy}/accessLevels/{access_level}`. The maximum length of the `access_level` component is 50 characters.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -69,7 +65,6 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Human readable title. Must be unique within the Policy.
-     * 
      */
     @Import(name="title")
       private final @Nullable Output<String> title;

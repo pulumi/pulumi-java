@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents the spec to match integer values from parent parameter.
- * 
  */
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntVal
 
     /**
      * Matches values of the parent parameter with type 'INTEGER'. All values must lie in `integer_value_spec` of parent parameter.
-     * 
      */
     @Import(name="values")
       private final @Nullable Output<List<String>> values;

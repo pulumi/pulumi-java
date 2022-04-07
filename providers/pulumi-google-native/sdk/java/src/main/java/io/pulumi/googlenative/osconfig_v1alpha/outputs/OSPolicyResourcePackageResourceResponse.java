@@ -18,42 +18,34 @@ import java.util.Objects;
 public final class OSPolicyResourcePackageResourceResponse {
     /**
      * A package managed by Apt.
-     * 
      */
     private final OSPolicyResourcePackageResourceAPTResponse apt;
     /**
      * A deb package file.
-     * 
      */
     private final OSPolicyResourcePackageResourceDebResponse deb;
     /**
      * The desired state the agent should maintain for this package.
-     * 
      */
     private final String desiredState;
     /**
      * A package managed by GooGet.
-     * 
      */
     private final OSPolicyResourcePackageResourceGooGetResponse googet;
     /**
      * An MSI package.
-     * 
      */
     private final OSPolicyResourcePackageResourceMSIResponse msi;
     /**
      * An rpm package file.
-     * 
      */
     private final OSPolicyResourcePackageResourceRPMResponse rpm;
     /**
      * A package managed by YUM.
-     * 
      */
     private final OSPolicyResourcePackageResourceYUMResponse yum;
     /**
      * A package managed by Zypper.
-     * 
      */
     private final OSPolicyResourcePackageResourceZypperResponse zypper;
 
@@ -79,56 +71,48 @@ public final class OSPolicyResourcePackageResourceResponse {
 
     /**
      * A package managed by Apt.
-     * 
     */
     public OSPolicyResourcePackageResourceAPTResponse getApt() {
         return this.apt;
     }
     /**
      * A deb package file.
-     * 
     */
     public OSPolicyResourcePackageResourceDebResponse getDeb() {
         return this.deb;
     }
     /**
      * The desired state the agent should maintain for this package.
-     * 
     */
     public String getDesiredState() {
         return this.desiredState;
     }
     /**
      * A package managed by GooGet.
-     * 
     */
     public OSPolicyResourcePackageResourceGooGetResponse getGooget() {
         return this.googet;
     }
     /**
      * An MSI package.
-     * 
     */
     public OSPolicyResourcePackageResourceMSIResponse getMsi() {
         return this.msi;
     }
     /**
      * An rpm package file.
-     * 
     */
     public OSPolicyResourcePackageResourceRPMResponse getRpm() {
         return this.rpm;
     }
     /**
      * A package managed by YUM.
-     * 
     */
     public OSPolicyResourcePackageResourceYUMResponse getYum() {
         return this.yum;
     }
     /**
      * A package managed by Zypper.
-     * 
     */
     public OSPolicyResourcePackageResourceZypperResponse getZypper() {
         return this.zypper;

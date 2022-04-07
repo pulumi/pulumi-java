@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Custom conversation models used in agent assist feature. Supported feature: ARTICLE_SUGGESTION, SMART_COMPOSE, SMART_REPLY.
- * 
  */
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationM
 
     /**
      * Conversation model resource name. Format: `projects//conversationModels/`.
-     * 
      */
     @Import(name="model")
       private final @Nullable Output<String> model;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * This defines the format used to record keys used in the software supply chain. An in-toto link is attested using one or more keys defined in the in-toto layout. An example of this is: { "key_id": "776a00e29f3559e0141b3b096f696abc6cfb0c657ab40f441132b345b0...", "key_type": "rsa", "public_key_value": "-----BEGIN PUBLIC KEY-----\nMIIBojANBgkqhkiG9w0B...", "key_scheme": "rsassa-pss-sha256" } The format for in-toto's key definition can be found in section 4.2 of the in-toto specification.
- * 
  */
 public final class SigningKeyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SigningKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * key_id is an identifier for the signing key.
-     * 
      */
     @Import(name="keyId", required=true)
       private final String keyId;
@@ -29,7 +27,6 @@ public final class SigningKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This field contains the corresponding signature scheme. Eg: "rsassa-pss-sha256".
-     * 
      */
     @Import(name="keyScheme", required=true)
       private final String keyScheme;
@@ -40,7 +37,6 @@ public final class SigningKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This field identifies the specific signing method. Eg: "rsa", "ed25519", and "ecdsa".
-     * 
      */
     @Import(name="keyType", required=true)
       private final String keyType;
@@ -51,7 +47,6 @@ public final class SigningKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This field contains the actual public key.
-     * 
      */
     @Import(name="publicKeyValue", required=true)
       private final String publicKeyValue;

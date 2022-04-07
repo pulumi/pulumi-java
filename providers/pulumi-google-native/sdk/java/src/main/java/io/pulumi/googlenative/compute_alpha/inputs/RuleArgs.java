@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * This is deprecated and has no effect. Do not use.
- * 
  */
 public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="action")
       private final @Nullable Output<RuleAction> action;
@@ -35,7 +33,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<List<ConditionArgs>> conditions;
@@ -46,7 +43,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -57,7 +53,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="ins")
       private final @Nullable Output<List<String>> ins;
@@ -68,7 +63,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="logConfigs")
       private final @Nullable Output<List<LogConfigArgs>> logConfigs;
@@ -79,7 +73,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="notIns")
       private final @Nullable Output<List<String>> notIns;
@@ -90,7 +83,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="permissions")
       private final @Nullable Output<List<String>> permissions;

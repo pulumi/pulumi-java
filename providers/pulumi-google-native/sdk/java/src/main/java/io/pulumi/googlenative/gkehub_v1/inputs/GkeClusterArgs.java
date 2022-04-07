@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * GkeCluster contains information specific to GKE clusters.
- * 
  */
 public final class GkeClusterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GkeClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. Self-link of the GCP resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal clusters are also supported.
-     * 
      */
     @Import(name="resourceLink")
       private final @Nullable Output<String> resourceLink;

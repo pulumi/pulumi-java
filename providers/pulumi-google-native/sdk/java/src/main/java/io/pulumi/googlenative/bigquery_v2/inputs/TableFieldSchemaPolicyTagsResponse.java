@@ -15,7 +15,6 @@ public final class TableFieldSchemaPolicyTagsResponse extends io.pulumi.resource
 
     /**
      * A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.
-     * 
      */
     @Import(name="names", required=true)
       private final List<String> names;

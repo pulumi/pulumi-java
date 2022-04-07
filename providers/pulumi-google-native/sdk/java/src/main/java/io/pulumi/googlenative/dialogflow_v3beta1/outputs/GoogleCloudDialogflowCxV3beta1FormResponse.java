@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowCxV3beta1FormResponse {
     /**
      * Parameters to collect from the user.
-     * 
      */
     private final List<GoogleCloudDialogflowCxV3beta1FormParameterResponse> parameters;
 
@@ -23,7 +22,6 @@ public final class GoogleCloudDialogflowCxV3beta1FormResponse {
 
     /**
      * Parameters to collect from the user.
-     * 
     */
     public List<GoogleCloudDialogflowCxV3beta1FormParameterResponse> getParameters() {
         return this.parameters;

@@ -14,7 +14,6 @@ public final class RoutineReferenceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * [Required] The ID of the dataset containing this routine.
-     * 
      */
     @Import(name="datasetId", required=true)
       private final String datasetId;
@@ -25,7 +24,6 @@ public final class RoutineReferenceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * [Required] The ID of the project containing this routine.
-     * 
      */
     @Import(name="project", required=true)
       private final String project;
@@ -36,7 +34,6 @@ public final class RoutineReferenceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * [Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
-     * 
      */
     @Import(name="routineId", required=true)
       private final String routineId;

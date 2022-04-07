@@ -12,7 +12,6 @@ import java.util.StringJoiner;
     public enum RouterBgpPeerAdvertisedGroupsItem {
         /**
          * Advertise all available subnets (including peer VPC subnets).
-         * 
          */
         AllSubnets("ALL_SUBNETS");
 

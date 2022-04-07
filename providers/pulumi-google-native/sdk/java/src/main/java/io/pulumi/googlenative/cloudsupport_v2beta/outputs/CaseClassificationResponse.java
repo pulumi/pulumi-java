@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class CaseClassificationResponse {
     /**
      * The display name of the classification.
-     * 
      */
     private final String displayName;
 
@@ -22,7 +21,6 @@ public final class CaseClassificationResponse {
 
     /**
      * The display name of the classification.
-     * 
     */
     public String getDisplayName() {
         return this.displayName;

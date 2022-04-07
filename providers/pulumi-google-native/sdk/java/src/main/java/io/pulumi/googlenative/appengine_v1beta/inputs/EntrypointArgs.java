@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The entrypoint for the application.
- * 
  */
 public final class EntrypointArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EntrypointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The format should be a shell command that can be fed to bash -c.
-     * 
      */
     @Import(name="shell")
       private final @Nullable Output<String> shell;

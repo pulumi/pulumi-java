@@ -14,7 +14,6 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
 
     /**
      * The total number of instances in the managed instance group that are scheduled to be abandoned. Abandoning an instance removes it from the managed instance group without deleting it.
-     * 
      */
     @Import(name="abandoning", required=true)
       private final Integer abandoning;
@@ -25,7 +24,6 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
 
     /**
      * The number of instances in the managed instance group that are scheduled to be created or are currently being created. If the group fails to create any of these instances, it tries again until it creates the instance successfully. If you have disabled creation retries, this field will not be populated; instead, the creatingWithoutRetries field will be populated.
-     * 
      */
     @Import(name="creating", required=true)
       private final Integer creating;
@@ -36,7 +34,6 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
 
     /**
      * The number of instances that the managed instance group will attempt to create. The group attempts to create each instance only once. If the group fails to create any of these instances, it decreases the group's targetSize value accordingly.
-     * 
      */
     @Import(name="creatingWithoutRetries", required=true)
       private final Integer creatingWithoutRetries;
@@ -47,7 +44,6 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
 
     /**
      * The number of instances in the managed instance group that are scheduled to be deleted or are currently being deleted.
-     * 
      */
     @Import(name="deleting", required=true)
       private final Integer deleting;
@@ -58,7 +54,6 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
 
     /**
      * The number of instances in the managed instance group that are running and have no scheduled actions.
-     * 
      */
     @Import(name="none", required=true)
       private final Integer none;
@@ -69,7 +64,6 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
 
     /**
      * The number of instances in the managed instance group that are scheduled to be recreated or are currently being being recreated. Recreating an instance deletes the existing root persistent disk and creates a new disk from the image that is defined in the instance template.
-     * 
      */
     @Import(name="recreating", required=true)
       private final Integer recreating;
@@ -80,7 +74,6 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
 
     /**
      * The number of instances in the managed instance group that are being reconfigured with properties that do not require a restart or a recreate action. For example, setting or removing target pools for the instance.
-     * 
      */
     @Import(name="refreshing", required=true)
       private final Integer refreshing;
@@ -91,7 +84,6 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
 
     /**
      * The number of instances in the managed instance group that are scheduled to be restarted or are currently being restarted.
-     * 
      */
     @Import(name="restarting", required=true)
       private final Integer restarting;
@@ -102,7 +94,6 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
 
     /**
      * The number of instances in the managed instance group that are scheduled to be resumed or are currently being resumed.
-     * 
      */
     @Import(name="resuming", required=true)
       private final Integer resuming;
@@ -113,7 +104,6 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
 
     /**
      * The number of instances in the managed instance group that are scheduled to be started or are currently being started.
-     * 
      */
     @Import(name="starting", required=true)
       private final Integer starting;
@@ -124,7 +114,6 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
 
     /**
      * The number of instances in the managed instance group that are scheduled to be stopped or are currently being stopped.
-     * 
      */
     @Import(name="stopping", required=true)
       private final Integer stopping;
@@ -135,7 +124,6 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
 
     /**
      * The number of instances in the managed instance group that are scheduled to be suspended or are currently being suspended.
-     * 
      */
     @Import(name="suspending", required=true)
       private final Integer suspending;
@@ -146,7 +134,6 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
 
     /**
      * The number of instances in the managed instance group that are being verified. See the managedInstances[].currentAction property in the listManagedInstances method documentation.
-     * 
      */
     @Import(name="verifying", required=true)
       private final Integer verifying;

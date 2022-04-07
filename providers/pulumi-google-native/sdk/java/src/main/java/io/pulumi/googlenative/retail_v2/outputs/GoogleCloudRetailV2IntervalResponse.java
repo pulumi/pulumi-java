@@ -11,22 +11,18 @@ import java.util.Objects;
 public final class GoogleCloudRetailV2IntervalResponse {
     /**
      * Exclusive upper bound.
-     * 
      */
     private final Double exclusiveMaximum;
     /**
      * Exclusive lower bound.
-     * 
      */
     private final Double exclusiveMinimum;
     /**
      * Inclusive upper bound.
-     * 
      */
     private final Double maximum;
     /**
      * Inclusive lower bound.
-     * 
      */
     private final Double minimum;
 
@@ -44,28 +40,24 @@ public final class GoogleCloudRetailV2IntervalResponse {
 
     /**
      * Exclusive upper bound.
-     * 
     */
     public Double getExclusiveMaximum() {
         return this.exclusiveMaximum;
     }
     /**
      * Exclusive lower bound.
-     * 
     */
     public Double getExclusiveMinimum() {
         return this.exclusiveMinimum;
     }
     /**
      * Inclusive upper bound.
-     * 
     */
     public Double getMaximum() {
         return this.maximum;
     }
     /**
      * Inclusive lower bound.
-     * 
     */
     public Double getMinimum() {
         return this.minimum;

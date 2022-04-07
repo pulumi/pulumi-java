@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Contact information for a customer account.
- * 
  */
 public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
 
     /**
      * The customer account contact's display name, formatted as a combination of the customer's first and last name.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -29,7 +27,6 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
 
     /**
      * The customer account's contact email. Required for entitlements that create admin.google.com accounts, and serves as the customer's username for those accounts. Use this email to invite Team customers.
-     * 
      */
     @Import(name="email", required=true)
       private final String email;
@@ -40,7 +37,6 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
 
     /**
      * The customer account contact's first name. Optional for Team customers.
-     * 
      */
     @Import(name="firstName", required=true)
       private final String firstName;
@@ -51,7 +47,6 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
 
     /**
      * The customer account contact's last name. Optional for Team customers.
-     * 
      */
     @Import(name="lastName", required=true)
       private final String lastName;
@@ -62,7 +57,6 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
 
     /**
      * The customer account's contact phone number.
-     * 
      */
     @Import(name="phone", required=true)
       private final String phone;
@@ -73,7 +67,6 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
 
     /**
      * Optional. The customer account contact's job title.
-     * 
      */
     @Import(name="title", required=true)
       private final String title;

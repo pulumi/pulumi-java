@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The data for a matched phrase matcher. Represents information identifying a phrase matcher for a given match.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse ext
 
     /**
      * The human-readable name of the phrase matcher.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -29,7 +27,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse ext
 
     /**
      * The unique identifier (the resource name) of the phrase matcher.
-     * 
      */
     @Import(name="phraseMatcher", required=true)
       private final String phraseMatcher;

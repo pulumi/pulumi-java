@@ -14,90 +14,77 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new exclusion in the _Default sink in a specified parent resource. Only log entries belonging to that resource can be excluded. You can have up to 10 exclusions in a resource.
- * 
  */
 @ResourceType(type="google-native:logging/v2:BillingAccountExclusion")
 public class BillingAccountExclusion extends io.pulumi.resources.CustomResource {
     /**
      * The creation timestamp of the exclusion.This field may not be present for older exclusions.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The creation timestamp of the exclusion.This field may not be present for older exclusions.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. A description of this exclusion.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Optional. A description of this exclusion.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Optional. If set to True, then this exclusion is disabled and it does not exclude any log entries. You can update an exclusion to change the value of this field.
-     * 
      */
     @Export(name="disabled", type=Boolean.class, parameters={})
     private Output<Boolean> disabled;
 
     /**
      * @return Optional. If set to True, then this exclusion is disabled and it does not exclude any log entries. You can update an exclusion to change the value of this field.
-     * 
      */
     public Output<Boolean> getDisabled() {
         return this.disabled;
     }
     /**
      * An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-queries) that matches the log entries to be excluded. By using the sample function (https://cloud.google.com/logging/docs/view/advanced-queries#sample), you can exclude less than 100% of the matching log entries.For example, the following query matches 99% of low-severity log entries from Google Cloud Storage buckets:resource.type=gcs_bucket severity<ERROR sample(insertId, 0.99)
-     * 
      */
     @Export(name="filter", type=String.class, parameters={})
     private Output<String> filter;
 
     /**
      * @return An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-queries) that matches the log entries to be excluded. By using the sample function (https://cloud.google.com/logging/docs/view/advanced-queries#sample), you can exclude less than 100% of the matching log entries.For example, the following query matches 99% of low-severity log entries from Google Cloud Storage buckets:resource.type=gcs_bucket severity<ERROR sample(insertId, 0.99)
-     * 
      */
     public Output<String> getFilter() {
         return this.filter;
     }
     /**
      * A client-assigned identifier, such as "load-balancer-exclusion". Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return A client-assigned identifier, such as "load-balancer-exclusion". Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The last update timestamp of the exclusion.This field may not be present for older exclusions.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The last update timestamp of the exclusion.This field may not be present for older exclusions.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

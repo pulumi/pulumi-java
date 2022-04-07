@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The sandbox environment to host this Revision.
-     * 
      */
     @EnumType
     public enum GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment {
         /**
          * Unspecified
-         * 
          */
         ExecutionEnvironmentUnspecified("EXECUTION_ENVIRONMENT_UNSPECIFIED"),
         /**
          * Uses the Google-default environment.
-         * 
          */
         ExecutionEnvironmentDefault("EXECUTION_ENVIRONMENT_DEFAULT"),
         /**
          * Uses Second Generation environment.
-         * 
          */
         ExecutionEnvironmentGen2("EXECUTION_ENVIRONMENT_GEN2");
 

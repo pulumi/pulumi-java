@@ -16,7 +16,6 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The display name of the knowledge base. The name must be 1024 bytes or less; otherwise, the creation request fails.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -27,7 +26,6 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Language which represents the KnowledgeBase. When the KnowledgeBase is created/updated, expect this to be present for non en-us languages. When unspecified, the default language code en-us applies.
-     * 
      */
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
@@ -45,7 +43,6 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The knowledge base resource name. The name must be empty when creating a knowledge base. Format: `projects//locations//knowledgeBases/`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

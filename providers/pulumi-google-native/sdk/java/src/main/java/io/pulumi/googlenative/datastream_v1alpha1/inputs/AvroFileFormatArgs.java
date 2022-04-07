@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * AVRO file format configuration.
- * 
  */
 public final class AvroFileFormatArgs extends io.pulumi.resources.ResourceArgs {
 

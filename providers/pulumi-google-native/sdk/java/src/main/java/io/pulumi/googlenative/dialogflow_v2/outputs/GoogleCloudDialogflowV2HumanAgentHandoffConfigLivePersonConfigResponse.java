@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse {
     /**
      * Account number of the LivePerson account to connect. This is the account number you input at the login page.
-     * 
      */
     private final String accountNumber;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfi
 
     /**
      * Account number of the LivePerson account to connect. This is the account number you input at the login page.
-     * 
     */
     public String getAccountNumber() {
         return this.accountNumber;

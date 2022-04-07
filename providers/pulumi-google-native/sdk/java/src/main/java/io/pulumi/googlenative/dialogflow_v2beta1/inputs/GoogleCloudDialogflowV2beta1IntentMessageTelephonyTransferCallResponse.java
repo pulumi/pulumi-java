@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Transfers the call in Telephony Gateway.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCal
 
     /**
      * The phone number to transfer the call to in [E.164 format](https://en.wikipedia.org/wiki/E.164). We currently only allow transferring to US numbers (+1xxxyyyzzzz).
-     * 
      */
     @Import(name="phoneNumber", required=true)
       private final String phoneNumber;

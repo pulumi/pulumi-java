@@ -13,27 +13,22 @@ import java.util.Objects;
 public final class TransformSummaryResponse {
     /**
      * Transform-specific display data.
-     * 
      */
     private final List<DisplayDataResponse> displayData;
     /**
      * User names for all collection inputs to this transform.
-     * 
      */
     private final List<String> inputCollectionName;
     /**
      * Type of transform.
-     * 
      */
     private final String kind;
     /**
      * User provided name for this transform instance.
-     * 
      */
     private final String name;
     /**
      * User names for all collection outputs to this transform.
-     * 
      */
     private final List<String> outputCollectionName;
 
@@ -53,35 +48,30 @@ public final class TransformSummaryResponse {
 
     /**
      * Transform-specific display data.
-     * 
     */
     public List<DisplayDataResponse> getDisplayData() {
         return this.displayData;
     }
     /**
      * User names for all collection inputs to this transform.
-     * 
     */
     public List<String> getInputCollectionName() {
         return this.inputCollectionName;
     }
     /**
      * Type of transform.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * User provided name for this transform instance.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * User names for all collection outputs to this transform.
-     * 
     */
     public List<String> getOutputCollectionName() {
         return this.outputCollectionName;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * `Source` is one or more `File` messages comprising a logical set of rules.
- * 
  */
 public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * `File` set constituting the `Source` bundle.
-     * 
      */
     @Import(name="files", required=true)
       private final List<FileResponse> files;

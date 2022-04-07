@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * ManagedPrometheusConfig defines the configuration for Google Cloud Managed Service for Prometheus.
- * 
  */
 public final class ManagedPrometheusConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ManagedPrometheusConfigArgs extends io.pulumi.resources.Resou
 
     /**
      * Enable Managed Collection.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;

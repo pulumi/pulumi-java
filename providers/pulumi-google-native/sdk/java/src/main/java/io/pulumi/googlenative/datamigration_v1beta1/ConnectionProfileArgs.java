@@ -21,7 +21,6 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A CloudSQL database connection profile.
-     * 
      */
     @Import(name="cloudsql")
       private final @Nullable Output<CloudSqlConnectionProfileArgs> cloudsql;
@@ -39,7 +38,6 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The connection profile display name.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -50,7 +48,6 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The resource labels for connection profile to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -68,7 +65,6 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A MySQL database connection profile.
-     * 
      */
     @Import(name="mysql")
       private final @Nullable Output<MySqlConnectionProfileArgs> mysql;
@@ -79,7 +75,6 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of this connection profile resource in the form of projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -97,7 +92,6 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The database provider.
-     * 
      */
     @Import(name="provider")
       private final @Nullable Output<ConnectionProfileProvider> provider;
@@ -115,7 +109,6 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The current connection profile state (e.g. DRAFT, READY, or FAILED).
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<ConnectionProfileState> state;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Metadata for a Datastore connector used by the job.
- * 
  */
 public final class DatastoreIODetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DatastoreIODetailsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Namespace used in the connection.
-     * 
      */
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
@@ -31,7 +29,6 @@ public final class DatastoreIODetailsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * ProjectId accessed in the connection.
-     * 
      */
     @Import(name="project")
       private final @Nullable Output<String> project;

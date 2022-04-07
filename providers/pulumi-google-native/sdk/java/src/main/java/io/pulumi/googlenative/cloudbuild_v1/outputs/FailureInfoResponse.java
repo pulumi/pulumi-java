@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class FailureInfoResponse {
     /**
      * Explains the failure issue in more detail using hard-coded text.
-     * 
      */
     private final String detail;
     /**
      * The name of the failure.
-     * 
      */
     private final String type;
 
@@ -30,14 +28,12 @@ public final class FailureInfoResponse {
 
     /**
      * Explains the failure issue in more detail using hard-coded text.
-     * 
     */
     public String getDetail() {
         return this.detail;
     }
     /**
      * The name of the failure.
-     * 
     */
     public String getType() {
         return this.type;

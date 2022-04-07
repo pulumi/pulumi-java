@@ -12,94 +12,81 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
- * Creates a subscription to an API product.
+ * Creates a subscription to an API product. 
  * Auto-naming is currently not supported for this resource.
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:apigee/v1:Subscription")
 public class Subscription extends io.pulumi.resources.CustomResource {
     /**
      * Name of the API product for which the developer is purchasing a subscription.
-     * 
      */
     @Export(name="apiproduct", type=String.class, parameters={})
     private Output<String> apiproduct;
 
     /**
      * @return Name of the API product for which the developer is purchasing a subscription.
-     * 
      */
     public Output<String> getApiproduct() {
         return this.apiproduct;
     }
     /**
      * Time when the API product subscription was created in milliseconds since epoch.
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return Time when the API product subscription was created in milliseconds since epoch.
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Time when the API product subscription ends in milliseconds since epoch.
-     * 
      */
     @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
      * @return Time when the API product subscription ends in milliseconds since epoch.
-     * 
      */
     public Output<String> getEndTime() {
         return this.endTime;
     }
     /**
      * Time when the API product subscription was last modified in milliseconds since epoch.
-     * 
      */
     @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output<String> lastModifiedAt;
 
     /**
      * @return Time when the API product subscription was last modified in milliseconds since epoch.
-     * 
      */
     public Output<String> getLastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * Name of the API product subscription.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the API product subscription.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Time when the API product subscription starts in milliseconds since epoch.
-     * 
      */
     @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
      * @return Time when the API product subscription starts in milliseconds since epoch.
-     * 
      */
     public Output<String> getStartTime() {
         return this.startTime;

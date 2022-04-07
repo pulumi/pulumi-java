@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Options to control visual rendering of a chart.
- * 
  */
 public final class ChartOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ChartOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The chart mode.
-     * 
      */
     @Import(name="mode")
       private final @Nullable Output<ChartOptionsMode> mode;

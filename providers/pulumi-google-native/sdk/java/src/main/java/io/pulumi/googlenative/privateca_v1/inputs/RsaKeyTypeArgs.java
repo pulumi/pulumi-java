@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes an RSA key that may be used in a Certificate issued from a CaPool.
- * 
  */
 public final class RsaKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RsaKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The maximum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.
-     * 
      */
     @Import(name="maxModulusSize")
       private final @Nullable Output<String> maxModulusSize;
@@ -31,7 +29,6 @@ public final class RsaKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The minimum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service-level min RSA modulus size will continue to apply.
-     * 
      */
     @Import(name="minModulusSize")
       private final @Nullable Output<String> minModulusSize;

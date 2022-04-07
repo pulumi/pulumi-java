@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Details information about an error encountered during job execution or the results of an unsuccessful activation of the JobTrigger.
- * 
  */
 public final class GooglePrivacyDlpV2ErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GooglePrivacyDlpV2ErrorResponse extends io.pulumi.resources.I
 
     /**
      * Detailed error codes and messages.
-     * 
      */
     @Import(name="details", required=true)
       private final GoogleRpcStatusResponse details;
@@ -31,7 +29,6 @@ public final class GooglePrivacyDlpV2ErrorResponse extends io.pulumi.resources.I
 
     /**
      * The times the error occurred.
-     * 
      */
     @Import(name="timestamps", required=true)
       private final List<String> timestamps;

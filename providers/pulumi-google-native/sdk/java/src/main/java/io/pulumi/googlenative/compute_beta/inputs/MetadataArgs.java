@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A metadata key/value entry.
- * 
  */
 public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Array of key/value pairs. The total size of all keys and values must be less than 512 KB.
-     * 
      */
     @Import(name="items")
       private final @Nullable Output<List<MetadataItemsItemArgs>> items;

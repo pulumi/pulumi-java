@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class JsonFileFormatResponse {
     /**
      * Compression of the loaded JSON file.
-     * 
      */
     private final String compression;
     /**
      * The schema file format along JSON data files.
-     * 
      */
     private final String schemaFileFormat;
 
@@ -30,14 +28,12 @@ public final class JsonFileFormatResponse {
 
     /**
      * Compression of the loaded JSON file.
-     * 
     */
     public String getCompression() {
         return this.compression;
     }
     /**
      * The schema file format along JSON data files.
-     * 
     */
     public String getSchemaFileFormat() {
         return this.schemaFileFormat;

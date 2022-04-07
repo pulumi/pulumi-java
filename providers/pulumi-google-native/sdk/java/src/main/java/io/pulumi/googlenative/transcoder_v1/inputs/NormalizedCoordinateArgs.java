@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * 2D normalized coordinates. Default: `{0.0, 0.0}`
- * 
  */
 public final class NormalizedCoordinateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class NormalizedCoordinateArgs extends io.pulumi.resources.Resource
 
     /**
      * Normalized x coordinate.
-     * 
      */
     @Import(name="x")
       private final @Nullable Output<Double> x;
@@ -31,7 +29,6 @@ public final class NormalizedCoordinateArgs extends io.pulumi.resources.Resource
 
     /**
      * Normalized y coordinate.
-     * 
      */
     @Import(name="y")
       private final @Nullable Output<Double> y;

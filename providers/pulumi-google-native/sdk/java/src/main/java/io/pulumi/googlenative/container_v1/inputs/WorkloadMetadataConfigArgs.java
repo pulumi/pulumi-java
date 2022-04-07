@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * WorkloadMetadataConfig defines the metadata configuration to expose to workloads on the node pool.
- * 
  */
 public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
 
     /**
      * Mode is the configuration for how to expose metadata to workloads running on the node pool.
-     * 
      */
     @Import(name="mode")
       private final @Nullable Output<WorkloadMetadataConfigMode> mode;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * [Deprecated] gRPC channel credentials to access the SDS server. gRPC channel credentials to access the SDS server.
- * 
  */
 public final class ChannelCredentialsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ChannelCredentialsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The call credentials to access the SDS server.
-     * 
      */
     @Import(name="certificates")
       private final @Nullable Output<TlsCertificatePathsArgs> certificates;
@@ -32,7 +30,6 @@ public final class ChannelCredentialsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The channel credentials to access the SDS server. This field can be set to one of the following: CERTIFICATES: Use TLS certificates to access the SDS server. GCE_VM: Use local GCE VM credentials to access the SDS server.
-     * 
      */
     @Import(name="channelCredentialType")
       private final @Nullable Output<ChannelCredentialsChannelCredentialType> channelCredentialType;

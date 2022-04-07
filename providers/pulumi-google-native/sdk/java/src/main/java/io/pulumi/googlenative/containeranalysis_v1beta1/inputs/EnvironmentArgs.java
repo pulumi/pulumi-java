@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines an object for the environment field in in-toto links. The suggested fields are "variables", "filesystem", and "workdir".
- * 
  */
 public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 

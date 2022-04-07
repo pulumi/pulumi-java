@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Defines a custom error message used by CreateScanConfig and UpdateScanConfig APIs when scan configuration validation fails. It is also reported as part of a ScanRunErrorTrace message if scan validation fails due to a scan configuration error.
- * 
  */
 public final class ScanConfigErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ScanConfigErrorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Indicates the reason code for a configuration failure.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -29,7 +27,6 @@ public final class ScanConfigErrorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Indicates the full name of the ScanConfig field that triggers this error, for example "scan_config.max_qps". This field is provided for troubleshooting purposes only and its actual value can change in the future.
-     * 
      */
     @Import(name="fieldName", required=true)
       private final String fieldName;

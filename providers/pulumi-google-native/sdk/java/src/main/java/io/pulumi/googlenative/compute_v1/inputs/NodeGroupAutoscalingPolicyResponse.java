@@ -15,7 +15,6 @@ public final class NodeGroupAutoscalingPolicyResponse extends io.pulumi.resource
 
     /**
      * The maximum number of nodes that the group should have. Must be set if autoscaling is enabled. Maximum value allowed is 100.
-     * 
      */
     @Import(name="maxNodes", required=true)
       private final Integer maxNodes;
@@ -26,7 +25,6 @@ public final class NodeGroupAutoscalingPolicyResponse extends io.pulumi.resource
 
     /**
      * The minimum number of nodes that the group should have.
-     * 
      */
     @Import(name="minNodes", required=true)
       private final Integer minNodes;
@@ -37,7 +35,6 @@ public final class NodeGroupAutoscalingPolicyResponse extends io.pulumi.resource
 
     /**
      * The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see Autoscaler modes.
-     * 
      */
     @Import(name="mode", required=true)
       private final String mode;

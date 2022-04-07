@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Parameters used in Dataproc JobType executions.
- * 
  */
 public final class DataprocParametersResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DataprocParametersResponse extends io.pulumi.resources.Invoke
 
     /**
      * URI for cluster used to run Dataproc execution. Format: `projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}`
-     * 
      */
     @Import(name="cluster", required=true)
       private final String cluster;

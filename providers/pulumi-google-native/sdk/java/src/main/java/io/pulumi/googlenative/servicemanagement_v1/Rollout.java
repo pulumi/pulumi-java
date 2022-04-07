@@ -18,90 +18,77 @@ import javax.annotation.Nullable;
  * Auto-naming is currently not supported for this resource.
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:servicemanagement/v1:Rollout")
 public class Rollout extends io.pulumi.resources.CustomResource {
     /**
      * Creation time of the rollout. Readonly.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return Creation time of the rollout. Readonly.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The strategy associated with a rollout to delete a `ManagedService`. Readonly.
-     * 
      */
     @Export(name="deleteServiceStrategy", type=DeleteServiceStrategyResponse.class, parameters={})
     private Output<DeleteServiceStrategyResponse> deleteServiceStrategy;
 
     /**
      * @return The strategy associated with a rollout to delete a `ManagedService`. Readonly.
-     * 
      */
     public Output<DeleteServiceStrategyResponse> getDeleteServiceStrategy() {
         return this.deleteServiceStrategy;
     }
     /**
      * Optional. Unique identifier of this Rollout. Must be no longer than 63 characters and only lower case letters, digits, '.', '_' and '-' are allowed. If not specified by client, the server will generate one. The generated id will have the form of , where "date" is the create date in ISO 8601 format. "revision number" is a monotonically increasing positive number that is reset every day for each service. An example of the generated rollout_id is '2016-02-16r1'
-     * 
      */
     @Export(name="rolloutId", type=String.class, parameters={})
     private Output<String> rolloutId;
 
     /**
      * @return Optional. Unique identifier of this Rollout. Must be no longer than 63 characters and only lower case letters, digits, '.', '_' and '-' are allowed. If not specified by client, the server will generate one. The generated id will have the form of , where "date" is the create date in ISO 8601 format. "revision number" is a monotonically increasing positive number that is reset every day for each service. An example of the generated rollout_id is '2016-02-16r1'
-     * 
      */
     public Output<String> getRolloutId() {
         return this.rolloutId;
     }
     /**
      * The name of the service associated with this Rollout.
-     * 
      */
     @Export(name="serviceName", type=String.class, parameters={})
     private Output<String> serviceName;
 
     /**
      * @return The name of the service associated with this Rollout.
-     * 
      */
     public Output<String> getServiceName() {
         return this.serviceName;
     }
     /**
      * The status of this rollout. Readonly. In case of a failed rollout, the system will automatically rollback to the current Rollout version. Readonly.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return The status of this rollout. Readonly. In case of a failed rollout, the system will automatically rollback to the current Rollout version. Readonly.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * Google Service Control selects service configurations based on traffic percentage.
-     * 
      */
     @Export(name="trafficPercentStrategy", type=TrafficPercentStrategyResponse.class, parameters={})
     private Output<TrafficPercentStrategyResponse> trafficPercentStrategy;
 
     /**
      * @return Google Service Control selects service configurations based on traffic percentage.
-     * 
      */
     public Output<TrafficPercentStrategyResponse> getTrafficPercentStrategy() {
         return this.trafficPercentStrategy;

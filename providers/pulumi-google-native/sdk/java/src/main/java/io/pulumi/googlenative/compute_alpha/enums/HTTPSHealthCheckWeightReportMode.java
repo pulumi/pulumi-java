@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Weight report mode. used for weighted Load Balancing.
-     * 
      */
     @EnumType
     public enum HTTPSHealthCheckWeightReportMode {
         /**
          * Health Checker will not parse the header field.
-         * 
          */
         Disable("DISABLE"),
         /**
          * Health Checker will parse and report the weight in the header field, but load balancing will not be based on the weights and will use equal weights.
-         * 
          */
         DryRun("DRY_RUN"),
         /**
          * Health Checker will try to parse and report the weight in the header field, and load balancing will be based on the weights as long as all backends have a valid weight or only a subset of backends has the UNAVAILABLE_WEIGHT WeightError. The latter case is to continue the weighted load balancing while some backends are in TIMEOUT or UNKNOWN health status.
-         * 
          */
         Enable("ENABLE");
 

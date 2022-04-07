@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The bucket's Autoclass configuration.
- * 
  */
 public final class BucketAutoclassResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class BucketAutoclassResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Whether or not Autoclass is enabled on this bucket
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;
@@ -30,7 +28,6 @@ public final class BucketAutoclassResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * A date and time in RFC 3339 format representing the instant at which "enabled" was last toggled.
-     * 
      */
     @Import(name="toggleTime", required=true)
       private final String toggleTime;

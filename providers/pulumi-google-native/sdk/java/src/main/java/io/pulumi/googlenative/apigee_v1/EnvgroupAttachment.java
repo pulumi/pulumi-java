@@ -13,48 +13,41 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new attachment of an environment to an environment group.
- * 
  */
 @ResourceType(type="google-native:apigee/v1:EnvgroupAttachment")
 public class EnvgroupAttachment extends io.pulumi.resources.CustomResource {
     /**
      * The time at which the environment group attachment was created as milliseconds since epoch.
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return The time at which the environment group attachment was created as milliseconds since epoch.
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * ID of the attached environment.
-     * 
      */
     @Export(name="environment", type=String.class, parameters={})
     private Output<String> environment;
 
     /**
      * @return ID of the attached environment.
-     * 
      */
     public Output<String> getEnvironment() {
         return this.environment;
     }
     /**
      * ID of the environment group attachment.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return ID of the environment group attachment.
-     * 
      */
     public Output<String> getName() {
         return this.name;

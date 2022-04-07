@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class ToolResultsExecutionResponse {
     /**
      * A tool results execution ID.
-     * 
      */
     private final String executionId;
     /**
      * A tool results history ID.
-     * 
      */
     private final String historyId;
     /**
      * The cloud project that owns the tool results execution.
-     * 
      */
     private final String project;
 
@@ -37,21 +34,18 @@ public final class ToolResultsExecutionResponse {
 
     /**
      * A tool results execution ID.
-     * 
     */
     public String getExecutionId() {
         return this.executionId;
     }
     /**
      * A tool results history ID.
-     * 
     */
     public String getHistoryId() {
         return this.historyId;
     }
     /**
      * The cloud project that owns the tool results execution.
-     * 
     */
     public String getProject() {
         return this.project;

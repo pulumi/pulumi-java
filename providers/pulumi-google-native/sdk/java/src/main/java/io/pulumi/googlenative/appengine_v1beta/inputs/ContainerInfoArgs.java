@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Docker image that is used to create a container and start a VM instance for the version that you deploy. Only applicable for instances running in the App Engine flexible environment.
- * 
  */
 public final class ContainerInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ContainerInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * URI to the hosted container image in Google Container Registry. The URI must be fully qualified and include a tag or digest. Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
-     * 
      */
     @Import(name="image")
       private final @Nullable Output<String> image;

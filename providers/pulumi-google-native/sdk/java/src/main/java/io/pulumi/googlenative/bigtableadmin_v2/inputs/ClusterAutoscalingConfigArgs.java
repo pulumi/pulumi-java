@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Autoscaling config for a cluster.
- * 
  */
 public final class ClusterAutoscalingConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ClusterAutoscalingConfigArgs extends io.pulumi.resources.Reso
 
     /**
      * Autoscaling limits for this cluster.
-     * 
      */
     @Import(name="autoscalingLimits", required=true)
       private final Output<AutoscalingLimitsArgs> autoscalingLimits;
@@ -31,7 +29,6 @@ public final class ClusterAutoscalingConfigArgs extends io.pulumi.resources.Reso
 
     /**
      * Autoscaling targets for this cluster.
-     * 
      */
     @Import(name="autoscalingTargets", required=true)
       private final Output<AutoscalingTargetsArgs> autoscalingTargets;

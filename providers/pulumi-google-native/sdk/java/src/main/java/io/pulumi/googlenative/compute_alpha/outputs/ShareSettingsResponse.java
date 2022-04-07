@@ -13,22 +13,18 @@ import java.util.Objects;
 public final class ShareSettingsResponse {
     /**
      * A map of folder id and folder config to specify consumer projects for this shared-reservation. This is only valid when share_type's value is DIRECT_PROJECTS_UNDER_SPECIFIC_FOLDERS. Folder id should be a string of number, and without "folders/" prefix.
-     * 
      */
     private final Map<String,String> folderMap;
     /**
      * A map of project id and project config. This is only valid when share_type's value is SPECIFIC_PROJECTS.
-     * 
      */
     private final Map<String,String> projectMap;
     /**
      * A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.
-     * 
      */
     private final List<String> projects;
     /**
      * Type of sharing for this shared-reservation
-     * 
      */
     private final String shareType;
 
@@ -46,28 +42,24 @@ public final class ShareSettingsResponse {
 
     /**
      * A map of folder id and folder config to specify consumer projects for this shared-reservation. This is only valid when share_type's value is DIRECT_PROJECTS_UNDER_SPECIFIC_FOLDERS. Folder id should be a string of number, and without "folders/" prefix.
-     * 
     */
     public Map<String,String> getFolderMap() {
         return this.folderMap;
     }
     /**
      * A map of project id and project config. This is only valid when share_type's value is SPECIFIC_PROJECTS.
-     * 
     */
     public Map<String,String> getProjectMap() {
         return this.projectMap;
     }
     /**
      * A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.
-     * 
     */
     public List<String> getProjects() {
         return this.projects;
     }
     /**
      * Type of sharing for this shared-reservation
-     * 
     */
     public String getShareType() {
         return this.shareType;

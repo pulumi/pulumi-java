@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Defines a name-pair value for a single label.
- * 
  */
 public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs extends
 
     /**
      * Label name presented as key in xDS Node Metadata.
-     * 
      */
     @Import(name="labelName", required=true)
       private final Output<String> labelName;
@@ -30,7 +28,6 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs extends
 
     /**
      * Label value presented as value corresponding to the above key, in xDS Node Metadata.
-     * 
      */
     @Import(name="labelValue", required=true)
       private final Output<String> labelValue;

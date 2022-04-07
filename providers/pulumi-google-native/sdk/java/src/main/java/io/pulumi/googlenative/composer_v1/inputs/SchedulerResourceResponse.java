@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Configuration for resources used by Airflow schedulers.
- * 
  */
 public final class SchedulerResourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class SchedulerResourceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. The number of schedulers.
-     * 
      */
     @Import(name="count", required=true)
       private final Integer count;
@@ -30,7 +28,6 @@ public final class SchedulerResourceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. CPU request and limit for a single Airflow scheduler replica.
-     * 
      */
     @Import(name="cpu", required=true)
       private final Double cpu;
@@ -41,7 +38,6 @@ public final class SchedulerResourceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. Memory (GB) request and limit for a single Airflow scheduler replica.
-     * 
      */
     @Import(name="memoryGb", required=true)
       private final Double memoryGb;
@@ -52,7 +48,6 @@ public final class SchedulerResourceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. Storage (GB) request and limit for a single Airflow scheduler replica.
-     * 
      */
     @Import(name="storageGb", required=true)
       private final Double storageGb;

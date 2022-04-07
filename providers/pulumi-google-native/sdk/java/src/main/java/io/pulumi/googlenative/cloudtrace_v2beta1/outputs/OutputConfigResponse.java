@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class OutputConfigResponse {
     /**
      * The destination for writing trace data. Currently only BigQuery is supported. E.g.: "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
-     * 
      */
     private final String destination;
 
@@ -22,7 +21,6 @@ public final class OutputConfigResponse {
 
     /**
      * The destination for writing trace data. Currently only BigQuery is supported. E.g.: "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
-     * 
     */
     public String getDestination() {
         return this.destination;

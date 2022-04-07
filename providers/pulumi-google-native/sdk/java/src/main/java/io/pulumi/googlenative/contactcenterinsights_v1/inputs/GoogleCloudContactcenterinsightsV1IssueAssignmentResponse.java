@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Information about the issue.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse ext
 
     /**
      * Immutable. Display name of the assigned issue. This field is set at time of analyis and immutable since then.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -30,7 +28,6 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse ext
 
     /**
      * Resource name of the assigned issue.
-     * 
      */
     @Import(name="issue", required=true)
       private final String issue;
@@ -41,7 +38,6 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse ext
 
     /**
      * Score indicating the likelihood of the issue assignment. currently bounded on [0,1].
-     * 
      */
     @Import(name="score", required=true)
       private final Double score;

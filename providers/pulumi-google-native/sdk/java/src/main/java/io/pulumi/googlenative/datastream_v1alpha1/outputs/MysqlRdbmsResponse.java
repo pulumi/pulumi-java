@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class MysqlRdbmsResponse {
     /**
      * Mysql databases on the server
-     * 
      */
     private final List<MysqlDatabaseResponse> mysqlDatabases;
 
@@ -23,7 +22,6 @@ public final class MysqlRdbmsResponse {
 
     /**
      * Mysql databases on the server
-     * 
     */
     public List<MysqlDatabaseResponse> getMysqlDatabases() {
         return this.mysqlDatabases;

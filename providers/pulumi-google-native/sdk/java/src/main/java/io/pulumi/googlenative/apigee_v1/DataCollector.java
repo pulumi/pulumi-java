@@ -13,76 +13,65 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new data collector.
- * 
  */
 @ResourceType(type="google-native:apigee/v1:DataCollector")
 public class DataCollector extends io.pulumi.resources.CustomResource {
     /**
      * The time at which the data collector was created in milliseconds since the epoch.
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return The time at which the data collector was created in milliseconds since the epoch.
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * A description of the data collector.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return A description of the data collector.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The time at which the Data Collector was last updated in milliseconds since the epoch.
-     * 
      */
     @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output<String> lastModifiedAt;
 
     /**
      * @return The time at which the Data Collector was last updated in milliseconds since the epoch.
-     * 
      */
     public Output<String> getLastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * ID of the data collector. Must begin with `dc_`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return ID of the data collector. Must begin with `dc_`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Immutable. The type of data this data collector will collect.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Immutable. The type of data this data collector will collect.
-     * 
      */
     public Output<String> getType() {
         return this.type;

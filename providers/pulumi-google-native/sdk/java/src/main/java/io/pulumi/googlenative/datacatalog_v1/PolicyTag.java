@@ -15,76 +15,65 @@ import javax.annotation.Nullable;
 /**
  * Creates a policy tag in a taxonomy.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:datacatalog/v1:PolicyTag")
 public class PolicyTag extends io.pulumi.resources.CustomResource {
     /**
      * Resource names of child policy tags of this policy tag.
-     * 
      */
     @Export(name="childPolicyTags", type=List.class, parameters={String.class})
     private Output<List<String>> childPolicyTags;
 
     /**
      * @return Resource names of child policy tags of this policy tag.
-     * 
      */
     public Output<List<String>> getChildPolicyTags() {
         return this.childPolicyTags;
     }
     /**
      * Description of this policy tag. If not set, defaults to empty. The description must contain only Unicode characters, tabs, newlines, carriage returns and page breaks, and be at most 2000 bytes long when encoded in UTF-8.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Description of this policy tag. If not set, defaults to empty. The description must contain only Unicode characters, tabs, newlines, carriage returns and page breaks, and be at most 2000 bytes long when encoded in UTF-8.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * User-defined name of this policy tag. The name can't start or end with spaces and must be unique within the parent taxonomy, contain only Unicode letters, numbers, underscores, dashes and spaces, and be at most 200 bytes long when encoded in UTF-8.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return User-defined name of this policy tag. The name can't start or end with spaces and must be unique within the parent taxonomy, contain only Unicode letters, numbers, underscores, dashes and spaces, and be at most 200 bytes long when encoded in UTF-8.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Resource name of this policy tag in the URL format. The policy tag manager generates unique taxonomy IDs and policy tag IDs.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name of this policy tag in the URL format. The policy tag manager generates unique taxonomy IDs and policy tag IDs.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource name of this policy tag's parent policy tag. If empty, this is a top level tag. If not set, defaults to an empty string. For example, for the "LatLong" policy tag in the example above, this field contains the resource name of the "Geolocation" policy tag, and, for "Geolocation", this field is empty.
-     * 
      */
     @Export(name="parentPolicyTag", type=String.class, parameters={})
     private Output<String> parentPolicyTag;
 
     /**
      * @return Resource name of this policy tag's parent policy tag. If empty, this is a top level tag. If not set, defaults to an empty string. For example, for the "LatLong" policy tag in the example above, this field contains the resource name of the "Geolocation" policy tag, and, for "Geolocation", this field is empty.
-     * 
      */
     public Output<String> getParentPolicyTag() {
         return this.parentPolicyTag;

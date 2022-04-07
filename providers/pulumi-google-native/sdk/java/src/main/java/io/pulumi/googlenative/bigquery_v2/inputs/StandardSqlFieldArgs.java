@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A field or a column.
- * 
  */
 public final class StandardSqlFieldArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class StandardSqlFieldArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Optional. The name of this field. Can be absent for struct fields.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -32,7 +30,6 @@ public final class StandardSqlFieldArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this "type" field).
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<StandardSqlDataTypeArgs> type;

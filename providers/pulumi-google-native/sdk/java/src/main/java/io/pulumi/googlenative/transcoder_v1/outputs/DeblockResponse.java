@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class DeblockResponse {
     /**
      * Enable deblocker. The default is `false`.
-     * 
      */
     private final Boolean enabled;
     /**
      * Set strength of the deblocker. Enter a value between 0 and 1. The higher the value, the stronger the block removal. 0 is no deblocking. The default is 0.
-     * 
      */
     private final Double strength;
 
@@ -31,14 +29,12 @@ public final class DeblockResponse {
 
     /**
      * Enable deblocker. The default is `false`.
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * Set strength of the deblocker. Enter a value between 0 and 1. The higher the value, the stronger the block removal. 0 is no deblocking. The default is 0.
-     * 
     */
     public Double getStrength() {
         return this.strength;

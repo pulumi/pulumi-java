@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * MySQL Column.
- * 
  */
 public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Column collation.
-     * 
      */
     @Import(name="collation", required=true)
       private final String collation;
@@ -31,7 +29,6 @@ public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Column name.
-     * 
      */
     @Import(name="columnName", required=true)
       private final String columnName;
@@ -42,7 +39,6 @@ public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html
-     * 
      */
     @Import(name="dataType", required=true)
       private final String dataType;
@@ -53,7 +49,6 @@ public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Column length.
-     * 
      */
     @Import(name="length", required=true)
       private final Integer length;
@@ -64,7 +59,6 @@ public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether or not the column can accept a null value.
-     * 
      */
     @Import(name="nullable", required=true)
       private final Boolean nullable;
@@ -75,7 +69,6 @@ public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ordinal position of the column in the table.
-     * 
      */
     @Import(name="ordinalPosition", required=true)
       private final Integer ordinalPosition;
@@ -86,7 +79,6 @@ public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether or not the column represents a primary key.
-     * 
      */
     @Import(name="primaryKey", required=true)
       private final Boolean primaryKey;

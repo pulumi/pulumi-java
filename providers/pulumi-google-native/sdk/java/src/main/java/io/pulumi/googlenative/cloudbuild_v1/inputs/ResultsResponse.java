@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Artifacts created by the build pipeline.
- * 
  */
 public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Path to the artifact manifest. Only populated when artifacts are uploaded.
-     * 
      */
     @Import(name="artifactManifest", required=true)
       private final String artifactManifest;
@@ -32,7 +30,6 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Time to push all non-container artifacts.
-     * 
      */
     @Import(name="artifactTiming", required=true)
       private final TimeSpanResponse artifactTiming;
@@ -43,7 +40,6 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of build step digests, in the order corresponding to build step indices.
-     * 
      */
     @Import(name="buildStepImages", required=true)
       private final List<String> buildStepImages;
@@ -54,7 +50,6 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of build step outputs, produced by builder images, in the order corresponding to build step indices. [Cloud Builders](https://cloud.google.com/cloud-build/docs/cloud-builders) can produce this output by writing to `$BUILDER_OUTPUT/output`. Only the first 4KB of data is stored.
-     * 
      */
     @Import(name="buildStepOutputs", required=true)
       private final List<String> buildStepOutputs;
@@ -65,7 +60,6 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Container images that were built as a part of the build.
-     * 
      */
     @Import(name="images", required=true)
       private final List<BuiltImageResponse> images;
@@ -76,7 +70,6 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Number of artifacts uploaded. Only populated when artifacts are uploaded.
-     * 
      */
     @Import(name="numArtifacts", required=true)
       private final String numArtifacts;

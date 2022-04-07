@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Not supported by Cloud Run LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
- * 
  */
 public final class LocalObjectReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class LocalObjectReferenceResponse extends io.pulumi.resources.Invo
 
     /**
      * (Optional) Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

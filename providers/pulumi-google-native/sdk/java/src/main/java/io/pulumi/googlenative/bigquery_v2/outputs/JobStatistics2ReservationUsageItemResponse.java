@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class JobStatistics2ReservationUsageItemResponse {
     /**
      * Reservation name or "unreserved" for on-demand resources usage.
-     * 
      */
     private final String name;
     /**
      * Slot-milliseconds the job spent in the given reservation.
-     * 
      */
     private final String slotMs;
 
@@ -30,14 +28,12 @@ public final class JobStatistics2ReservationUsageItemResponse {
 
     /**
      * Reservation name or "unreserved" for on-demand resources usage.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Slot-milliseconds the job spent in the given reservation.
-     * 
     */
     public String getSlotMs() {
         return this.slotMs;

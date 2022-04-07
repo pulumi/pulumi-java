@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * This is deprecated and has no effect. Do not use.
- * 
  */
 public final class LogConfigCloudAuditOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class LogConfigCloudAuditOptionsArgs extends io.pulumi.resources.Re
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="authorizationLoggingOptions")
       private final @Nullable Output<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions;
@@ -32,7 +30,6 @@ public final class LogConfigCloudAuditOptionsArgs extends io.pulumi.resources.Re
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="logName")
       private final @Nullable Output<LogConfigCloudAuditOptionsLogName> logName;

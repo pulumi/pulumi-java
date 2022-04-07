@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Not supported by Cloud Run HTTPGetAction describes an action based on HTTP Get requests.
- * 
  */
 public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * (Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.
-     * 
      */
     @Import(name="host")
       private final @Nullable Output<String> host;
@@ -33,7 +31,6 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * (Optional) Custom headers to set in the request. HTTP allows repeated headers.
-     * 
      */
     @Import(name="httpHeaders")
       private final @Nullable Output<List<HTTPHeaderArgs>> httpHeaders;
@@ -44,7 +41,6 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * (Optional) Path to access on the HTTP server.
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<String> path;
@@ -55,7 +51,6 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
-     * 
      */
     @Import(name="scheme")
       private final @Nullable Output<String> scheme;

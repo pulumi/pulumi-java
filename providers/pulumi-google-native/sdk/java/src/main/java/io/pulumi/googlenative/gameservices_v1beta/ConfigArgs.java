@@ -27,7 +27,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the game server config.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -38,7 +37,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * FleetConfig contains a list of Agones fleet specs. Only one FleetConfig is allowed.
-     * 
      */
     @Import(name="fleetConfigs")
       private final @Nullable Output<List<FleetConfigArgs>> fleetConfigs;
@@ -56,7 +54,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The labels associated with this game server config. Each label is a key-value pair.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -74,7 +71,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the game server config, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -92,7 +88,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The autoscaling settings.
-     * 
      */
     @Import(name="scalingConfigs")
       private final @Nullable Output<List<ScalingConfigArgs>> scalingConfigs;

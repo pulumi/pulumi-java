@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class LicenseResourceRequirementsResponse {
     /**
      * Minimum number of guest cpus required to use the Instance. Enforced at Instance creation and Instance start.
-     * 
      */
     private final Integer minGuestCpuCount;
     /**
      * Minimum memory required to use the Instance. Enforced at Instance creation and Instance start.
-     * 
      */
     private final Integer minMemoryMb;
 
@@ -30,14 +28,12 @@ public final class LicenseResourceRequirementsResponse {
 
     /**
      * Minimum number of guest cpus required to use the Instance. Enforced at Instance creation and Instance start.
-     * 
     */
     public Integer getMinGuestCpuCount() {
         return this.minGuestCpuCount;
     }
     /**
      * Minimum memory required to use the Instance. Enforced at Instance creation and Instance start.
-     * 
     */
     public Integer getMinMemoryMb() {
         return this.minMemoryMb;

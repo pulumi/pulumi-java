@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * This represents how a particular software package may be installed on a system.
- * 
  */
 public final class InstallationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class InstallationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * All of the places within the filesystem versions of this package have been found.
-     * 
      */
     @Import(name="location", required=true)
       private final List<LocationResponse> location;
@@ -31,7 +29,6 @@ public final class InstallationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the installed package.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

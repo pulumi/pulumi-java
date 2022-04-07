@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class MetadataResponse {
     /**
      * Services that this ruleset has declarations for (e.g., "cloud.firestore"). There may be 0+ of these.
-     * 
      */
     private final List<String> services;
 
@@ -23,7 +22,6 @@ public final class MetadataResponse {
 
     /**
      * Services that this ruleset has declarations for (e.g., "cloud.firestore"). There may be 0+ of these.
-     * 
     */
     public List<String> getServices() {
         return this.services;

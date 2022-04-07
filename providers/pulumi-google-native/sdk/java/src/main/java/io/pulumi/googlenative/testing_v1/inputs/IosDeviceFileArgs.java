@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A file or directory to install on the device before the test starts.
- * 
  */
 public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The bundle id of the app where this file lives. iOS apps sandbox their own filesystem, so app files must specify which app installed on the device.
-     * 
      */
     @Import(name="bundleId")
       private final @Nullable Output<String> bundleId;
@@ -32,7 +30,6 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The source file
-     * 
      */
     @Import(name="content")
       private final @Nullable Output<FileReferenceArgs> content;
@@ -43,7 +40,6 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Location of the file on the device, inside the app's sandboxed filesystem
-     * 
      */
     @Import(name="devicePath")
       private final @Nullable Output<String> devicePath;

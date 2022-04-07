@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * TrafficTarget holds a single entry of the routing table for a Route.
- * 
  */
 public final class TrafficTargetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class TrafficTargetResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * ConfigurationName of a configuration to whose latest revision we will send this portion of traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes, we will automatically migrate traffic from the prior "latest ready" revision to the new one. This field is never set in Route's status, only its spec. This is mutually exclusive with RevisionName. Cloud Run currently supports a single ConfigurationName.
-     * 
      */
     @Import(name="configurationName", required=true)
       private final String configurationName;
@@ -31,7 +29,6 @@ public final class TrafficTargetResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Optional. LatestRevision may be provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty.
-     * 
      */
     @Import(name="latestRevision", required=true)
       private final Boolean latestRevision;
@@ -42,7 +39,6 @@ public final class TrafficTargetResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Percent specifies percent of the traffic to this Revision or Configuration. This defaults to zero if unspecified.
-     * 
      */
     @Import(name="percent", required=true)
       private final Integer percent;
@@ -53,7 +49,6 @@ public final class TrafficTargetResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * RevisionName of a specific revision to which to send this portion of traffic. This is mutually exclusive with ConfigurationName.
-     * 
      */
     @Import(name="revisionName", required=true)
       private final String revisionName;
@@ -64,7 +59,6 @@ public final class TrafficTargetResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Optional. Tag is used to expose a dedicated url for referencing this target exclusively.
-     * 
      */
     @Import(name="tag", required=true)
       private final String tag;
@@ -75,7 +69,6 @@ public final class TrafficTargetResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * URL displays the URL for accessing tagged traffic targets. URL is displayed in status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but may not contain anything else (e.g. basic auth, url path, etc.)
-     * 
      */
     @Import(name="url", required=true)
       private final String url;

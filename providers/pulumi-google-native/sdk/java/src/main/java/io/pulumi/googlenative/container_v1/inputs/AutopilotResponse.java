@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Autopilot is the configuration for Autopilot settings on the cluster.
- * 
  */
 public final class AutopilotResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AutopilotResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Enable Autopilot
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

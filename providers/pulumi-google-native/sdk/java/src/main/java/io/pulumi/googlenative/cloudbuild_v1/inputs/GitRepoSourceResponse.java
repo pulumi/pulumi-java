@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * GitRepoSource describes a repo and ref of a code repository.
- * 
  */
 public final class GitRepoSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GitRepoSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The branch or tag to use. Must start with "refs/" (required).
-     * 
      */
     @Import(name="ref", required=true)
       private final String ref;
@@ -29,7 +27,6 @@ public final class GitRepoSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * See RepoType below.
-     * 
      */
     @Import(name="repoType", required=true)
       private final String repoType;
@@ -40,7 +37,6 @@ public final class GitRepoSourceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The URI of the repo (required).
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;

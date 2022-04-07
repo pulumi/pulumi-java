@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Target scaling by request utilization. Only applicable in the App Engine flexible environment.
- * 
  */
 public final class RequestUtilizationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class RequestUtilizationResponse extends io.pulumi.resources.Invoke
 
     /**
      * Target number of concurrent requests.
-     * 
      */
     @Import(name="targetConcurrentRequests", required=true)
       private final Integer targetConcurrentRequests;
@@ -29,7 +27,6 @@ public final class RequestUtilizationResponse extends io.pulumi.resources.Invoke
 
     /**
      * Target requests per second.
-     * 
      */
     @Import(name="targetRequestCountPerSecond", required=true)
       private final Integer targetRequestCountPerSecond;

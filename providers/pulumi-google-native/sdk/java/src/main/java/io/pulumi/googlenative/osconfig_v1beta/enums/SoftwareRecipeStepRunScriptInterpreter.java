@@ -9,24 +9,20 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](<https://en.wikipedia.org/wiki/Shebang_\(Unix\)>).
-     * 
+     * The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](https://en.wikipedia.org/wiki/Shebang_\(Unix\)).
      */
     @EnumType
     public enum SoftwareRecipeStepRunScriptInterpreter {
         /**
          * Default value for ScriptType.
-         * 
          */
         InterpreterUnspecified("INTERPRETER_UNSPECIFIED"),
         /**
          * Indicates that the script is run with `/bin/sh` on Linux and `cmd` on windows.
-         * 
          */
         Shell("SHELL"),
         /**
          * Indicates that the script is run with powershell.
-         * 
          */
         Powershell("POWERSHELL");
 

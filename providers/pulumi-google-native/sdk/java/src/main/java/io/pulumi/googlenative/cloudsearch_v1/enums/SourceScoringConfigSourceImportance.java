@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Importance of the source.
-     * 
      */
     @EnumType
     public enum SourceScoringConfigSourceImportance {

@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * Normal BigQuery table spec.
- * 
  */
 public final class GoogleCloudDatacatalogV1beta1TableSpecArgs extends io.pulumi.resources.ResourceArgs {
 

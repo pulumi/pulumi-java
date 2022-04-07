@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A rollout policy configuration.
- * 
  */
 public final class RolloutPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class RolloutPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.
-     * 
      */
     @Import(name="defaultRolloutTime")
       private final @Nullable Output<String> defaultRolloutTime;
@@ -32,7 +30,6 @@ public final class RolloutPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Location based rollout policies to apply to the resource. Currently only zone names are supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects an RFC3339 timestamp on or after which the update is considered rolled out to the specified location.
-     * 
      */
     @Import(name="locationRolloutPolicies")
       private final @Nullable Output<Map<String,String>> locationRolloutPolicies;

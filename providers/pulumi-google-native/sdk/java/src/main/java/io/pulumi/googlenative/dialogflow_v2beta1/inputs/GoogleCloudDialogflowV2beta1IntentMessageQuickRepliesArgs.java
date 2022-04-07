@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The quick replies response message.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs ext
 
     /**
      * Optional. The collection of quick replies.
-     * 
      */
     @Import(name="quickReplies")
       private final @Nullable Output<List<String>> quickReplies;
@@ -32,7 +30,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs ext
 
     /**
      * Optional. The title of the collection of quick replies.
-     * 
      */
     @Import(name="title")
       private final @Nullable Output<String> title;

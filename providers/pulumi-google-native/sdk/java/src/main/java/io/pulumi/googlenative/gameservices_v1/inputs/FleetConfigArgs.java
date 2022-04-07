@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Fleet configs for Agones.
- * 
  */
 public final class FleetConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class FleetConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
-     * 
      */
     @Import(name="fleetSpec")
       private final @Nullable Output<String> fleetSpec;
@@ -31,7 +29,6 @@ public final class FleetConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the FleetConfig.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

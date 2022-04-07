@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for an arbitrary DNS provider.
- * 
  */
 public final class CustomDnsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class CustomDnsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of DS records for this domain, which are used to enable DNSSEC. The domain's DNS provider can provide the values to set here. If this field is empty, DNSSEC is disabled.
-     * 
      */
     @Import(name="dsRecords")
       private final @Nullable Output<List<DsRecordArgs>> dsRecords;
@@ -33,7 +31,6 @@ public final class CustomDnsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format.
-     * 
      */
     @Import(name="nameServers", required=true)
       private final Output<List<String>> nameServers;

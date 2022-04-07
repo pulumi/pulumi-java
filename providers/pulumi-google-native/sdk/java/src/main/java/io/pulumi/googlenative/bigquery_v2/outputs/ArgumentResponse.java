@@ -12,22 +12,18 @@ import java.util.Objects;
 public final class ArgumentResponse {
     /**
      * Optional. Defaults to FIXED_TYPE.
-     * 
      */
     private final String argumentKind;
     /**
      * Required unless argument_kind = ANY_TYPE.
-     * 
      */
     private final StandardSqlDataTypeResponse dataType;
     /**
      * Optional. Specifies whether the argument is input or output. Can be set for procedures only.
-     * 
      */
     private final String mode;
     /**
      * Optional. The name of this argument. Can be absent for function return argument.
-     * 
      */
     private final String name;
 
@@ -45,28 +41,24 @@ public final class ArgumentResponse {
 
     /**
      * Optional. Defaults to FIXED_TYPE.
-     * 
     */
     public String getArgumentKind() {
         return this.argumentKind;
     }
     /**
      * Required unless argument_kind = ANY_TYPE.
-     * 
     */
     public StandardSqlDataTypeResponse getDataType() {
         return this.dataType;
     }
     /**
      * Optional. Specifies whether the argument is input or output. Can be set for procedures only.
-     * 
     */
     public String getMode() {
         return this.mode;
     }
     /**
      * Optional. The name of this argument. Can be absent for function return argument.
-     * 
     */
     public String getName() {
         return this.name;

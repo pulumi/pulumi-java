@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * HTTP headers used in UrlMapTests.
- * 
  */
 public final class UrlMapTestHeaderArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class UrlMapTestHeaderArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Header name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class UrlMapTestHeaderArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Header value.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

@@ -19,7 +19,6 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
 
     /**
      * An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -30,7 +29,6 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
 
     /**
      * The IPv4 address range, in CIDR format, represented by this public delegated prefix.
-     * 
      */
     @Import(name="ipCidrRange")
       private final @Nullable Output<String> ipCidrRange;
@@ -41,7 +39,6 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
 
     /**
      * If true, the prefix will be live migrated.
-     * 
      */
     @Import(name="isLiveMigration")
       private final @Nullable Output<Boolean> isLiveMigration;
@@ -52,7 +49,6 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
 
     /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -63,7 +59,6 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
 
     /**
      * The URL of parent prefix. Either PublicAdvertisedPrefix or PublicDelegatedPrefix.
-     * 
      */
     @Import(name="parentPrefix")
       private final @Nullable Output<String> parentPrefix;
@@ -81,7 +76,6 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
 
     /**
      * The list of sub public delegated prefixes that exist for this public delegated prefix.
-     * 
      */
     @Import(name="publicDelegatedSubPrefixs")
       private final @Nullable Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs;

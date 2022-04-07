@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a hardware accelerator request config. Note that the AcceleratorConfig can be used in both Jobs and Versions. Learn more about [accelerators for training](/ml-engine/docs/using-gpus) and [accelerators for online prediction](/ml-engine/docs/machine-types-online-prediction#gpus).
- * 
  */
 public final class GoogleCloudMlV1__AcceleratorConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudMlV1__AcceleratorConfigArgs extends io.pulumi.reso
 
     /**
      * The number of accelerators to attach to each machine running the job.
-     * 
      */
     @Import(name="count")
       private final @Nullable Output<String> count;
@@ -32,7 +30,6 @@ public final class GoogleCloudMlV1__AcceleratorConfigArgs extends io.pulumi.reso
 
     /**
      * The type of accelerator to use.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<GoogleCloudMlV1__AcceleratorConfigType> type;

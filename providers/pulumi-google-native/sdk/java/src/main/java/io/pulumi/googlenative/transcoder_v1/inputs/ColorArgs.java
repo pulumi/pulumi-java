@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Color preprocessing configuration.
- * 
  */
 public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Control brightness of the video. Enter a value between -1 and 1, where -1 is minimum brightness and 1 is maximum brightness. 0 is no change. The default is 0.
-     * 
      */
     @Import(name="brightness")
       private final @Nullable Output<Double> brightness;
@@ -31,7 +29,6 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Control black and white contrast of the video. Enter a value between -1 and 1, where -1 is minimum contrast and 1 is maximum contrast. 0 is no change. The default is 0.
-     * 
      */
     @Import(name="contrast")
       private final @Nullable Output<Double> contrast;
@@ -42,7 +39,6 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Control color saturation of the video. Enter a value between -1 and 1, where -1 is fully desaturated and 1 is maximum saturation. 0 is no change. The default is 0.
-     * 
      */
     @Import(name="saturation")
       private final @Nullable Output<Double> saturation;

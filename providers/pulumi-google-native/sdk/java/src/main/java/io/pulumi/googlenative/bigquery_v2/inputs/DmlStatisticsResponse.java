@@ -14,7 +14,6 @@ public final class DmlStatisticsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Number of deleted Rows. populated by DML DELETE, MERGE and TRUNCATE statements.
-     * 
      */
     @Import(name="deletedRowCount", required=true)
       private final String deletedRowCount;
@@ -25,7 +24,6 @@ public final class DmlStatisticsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Number of inserted Rows. Populated by DML INSERT and MERGE statements.
-     * 
      */
     @Import(name="insertedRowCount", required=true)
       private final String insertedRowCount;
@@ -36,7 +34,6 @@ public final class DmlStatisticsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Number of updated Rows. Populated by DML UPDATE and MERGE statements.
-     * 
      */
     @Import(name="updatedRowCount", required=true)
       private final String updatedRowCount;

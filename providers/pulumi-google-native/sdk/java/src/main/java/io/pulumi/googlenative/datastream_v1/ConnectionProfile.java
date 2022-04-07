@@ -21,160 +21,137 @@ import javax.annotation.Nullable;
 /**
  * Use this method to create a connection profile in a project and location.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:datastream/v1:ConnectionProfile")
 public class ConnectionProfile extends io.pulumi.resources.CustomResource {
     /**
      * The create time of the resource.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The create time of the resource.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Display name.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return Display name.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Forward SSH tunnel connectivity.
-     * 
      */
     @Export(name="forwardSshConnectivity", type=ForwardSshTunnelConnectivityResponse.class, parameters={})
     private Output<ForwardSshTunnelConnectivityResponse> forwardSshConnectivity;
 
     /**
      * @return Forward SSH tunnel connectivity.
-     * 
      */
     public Output<ForwardSshTunnelConnectivityResponse> getForwardSshConnectivity() {
         return this.forwardSshConnectivity;
     }
     /**
      * Cloud Storage ConnectionProfile configuration.
-     * 
      */
     @Export(name="gcsProfile", type=GcsProfileResponse.class, parameters={})
     private Output<GcsProfileResponse> gcsProfile;
 
     /**
      * @return Cloud Storage ConnectionProfile configuration.
-     * 
      */
     public Output<GcsProfileResponse> getGcsProfile() {
         return this.gcsProfile;
     }
     /**
      * Labels.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Labels.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * MySQL ConnectionProfile configuration.
-     * 
      */
     @Export(name="mysqlProfile", type=MysqlProfileResponse.class, parameters={})
     private Output<MysqlProfileResponse> mysqlProfile;
 
     /**
      * @return MySQL ConnectionProfile configuration.
-     * 
      */
     public Output<MysqlProfileResponse> getMysqlProfile() {
         return this.mysqlProfile;
     }
     /**
      * The resource's name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource's name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Oracle ConnectionProfile configuration.
-     * 
      */
     @Export(name="oracleProfile", type=OracleProfileResponse.class, parameters={})
     private Output<OracleProfileResponse> oracleProfile;
 
     /**
      * @return Oracle ConnectionProfile configuration.
-     * 
      */
     public Output<OracleProfileResponse> getOracleProfile() {
         return this.oracleProfile;
     }
     /**
      * Private connectivity.
-     * 
      */
     @Export(name="privateConnectivity", type=PrivateConnectivityResponse.class, parameters={})
     private Output<PrivateConnectivityResponse> privateConnectivity;
 
     /**
      * @return Private connectivity.
-     * 
      */
     public Output<PrivateConnectivityResponse> getPrivateConnectivity() {
         return this.privateConnectivity;
     }
     /**
      * Static Service IP connectivity.
-     * 
      */
     @Export(name="staticServiceIpConnectivity", type=StaticServiceIpConnectivityResponse.class, parameters={})
     private Output<StaticServiceIpConnectivityResponse> staticServiceIpConnectivity;
 
     /**
      * @return Static Service IP connectivity.
-     * 
      */
     public Output<StaticServiceIpConnectivityResponse> getStaticServiceIpConnectivity() {
         return this.staticServiceIpConnectivity;
     }
     /**
      * The update time of the resource.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The update time of the resource.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

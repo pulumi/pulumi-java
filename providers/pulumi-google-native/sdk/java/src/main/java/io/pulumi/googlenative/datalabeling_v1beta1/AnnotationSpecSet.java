@@ -16,76 +16,65 @@ import javax.annotation.Nullable;
 /**
  * Creates an annotation spec set by providing a set of labels.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:datalabeling/v1beta1:AnnotationSpecSet")
 public class AnnotationSpecSet extends io.pulumi.resources.CustomResource {
     /**
      * The array of AnnotationSpecs that you define when you create the AnnotationSpecSet. These are the possible labels for the labeling task.
-     * 
      */
     @Export(name="annotationSpecs", type=List.class, parameters={GoogleCloudDatalabelingV1beta1AnnotationSpecResponse.class})
     private Output<List<GoogleCloudDatalabelingV1beta1AnnotationSpecResponse>> annotationSpecs;
 
     /**
      * @return The array of AnnotationSpecs that you define when you create the AnnotationSpecSet. These are the possible labels for the labeling task.
-     * 
      */
     public Output<List<GoogleCloudDatalabelingV1beta1AnnotationSpecResponse>> getAnnotationSpecs() {
         return this.annotationSpecs;
     }
     /**
      * The names of any related resources that are blocking changes to the annotation spec set.
-     * 
      */
     @Export(name="blockingResources", type=List.class, parameters={String.class})
     private Output<List<String>> blockingResources;
 
     /**
      * @return The names of any related resources that are blocking changes to the annotation spec set.
-     * 
      */
     public Output<List<String>> getBlockingResources() {
         return this.blockingResources;
     }
     /**
      * Optional. User-provided description of the annotation specification set. The description can be up to 10,000 characters long.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Optional. User-provided description of the annotation specification set. The description can be up to 10,000 characters long.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The display name for AnnotationSpecSet that you define when you create it. Maximum of 64 characters.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The display name for AnnotationSpecSet that you define when you create it. Maximum of 64 characters.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The AnnotationSpecSet resource name in the following format: "projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}"
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The AnnotationSpecSet resource name in the following format: "projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}"
-     * 
      */
     public Output<String> getName() {
         return this.name;

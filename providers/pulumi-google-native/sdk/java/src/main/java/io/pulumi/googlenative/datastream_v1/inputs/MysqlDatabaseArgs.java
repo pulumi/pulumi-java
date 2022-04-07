@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * MySQL database.
- * 
  */
 public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Database name.
-     * 
      */
     @Import(name="database")
       private final @Nullable Output<String> database;
@@ -33,7 +31,6 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tables in the database.
-     * 
      */
     @Import(name="mysqlTables")
       private final @Nullable Output<List<MysqlTableArgs>> mysqlTables;

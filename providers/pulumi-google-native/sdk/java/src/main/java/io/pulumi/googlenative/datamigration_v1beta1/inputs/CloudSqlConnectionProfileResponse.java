@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Specifies required connection parameters, and, optionally, the parameters required to create a Cloud SQL destination database instance.
- * 
  */
 public final class CloudSqlConnectionProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class CloudSqlConnectionProfileResponse extends io.pulumi.resources
 
     /**
      * The Cloud SQL instance ID that this connection profile is associated with.
-     * 
      */
     @Import(name="cloudSqlId", required=true)
       private final String cloudSqlId;
@@ -30,7 +28,6 @@ public final class CloudSqlConnectionProfileResponse extends io.pulumi.resources
 
     /**
      * The Cloud SQL database instance's private IP.
-     * 
      */
     @Import(name="privateIp", required=true)
       private final String privateIp;
@@ -41,7 +38,6 @@ public final class CloudSqlConnectionProfileResponse extends io.pulumi.resources
 
     /**
      * The Cloud SQL database instance's public IP.
-     * 
      */
     @Import(name="publicIp", required=true)
       private final String publicIp;
@@ -52,7 +48,6 @@ public final class CloudSqlConnectionProfileResponse extends io.pulumi.resources
 
     /**
      * Immutable. Metadata used to create the destination Cloud SQL database.
-     * 
      */
     @Import(name="settings", required=true)
       private final CloudSqlSettingsResponse settings;

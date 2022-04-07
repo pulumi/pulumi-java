@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The type of Human Agent Assistant API suggestion to perform, and the maximum number of results to return for that type. Multiple `Feature` objects can be specified in the `features` list.
- * 
  */
 public final class GoogleCloudDialogflowV2SuggestionFeatureArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowV2SuggestionFeatureArgs extends io.pulum
 
     /**
      * Type of Human Agent Assistant API feature to request.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<GoogleCloudDialogflowV2SuggestionFeatureType> type;

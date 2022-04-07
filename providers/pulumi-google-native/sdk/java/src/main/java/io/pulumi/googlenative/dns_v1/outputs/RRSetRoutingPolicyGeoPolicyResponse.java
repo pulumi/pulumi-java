@@ -13,7 +13,6 @@ import java.util.Objects;
 public final class RRSetRoutingPolicyGeoPolicyResponse {
     /**
      * The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.
-     * 
      */
     private final List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items;
     private final String kind;
@@ -28,7 +27,6 @@ public final class RRSetRoutingPolicyGeoPolicyResponse {
 
     /**
      * The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.
-     * 
     */
     public List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> getItems() {
         return this.items;

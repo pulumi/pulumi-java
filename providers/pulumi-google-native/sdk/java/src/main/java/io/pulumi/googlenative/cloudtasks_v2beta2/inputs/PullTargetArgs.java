@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * Pull target.
- * 
  */
 public final class PullTargetArgs extends io.pulumi.resources.ResourceArgs {
 

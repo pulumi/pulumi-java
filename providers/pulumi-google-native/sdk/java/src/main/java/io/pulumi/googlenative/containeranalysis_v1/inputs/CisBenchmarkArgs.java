@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A compliance check that is a CIS benchmark.
- * 
  */
 public final class CisBenchmarkArgs extends io.pulumi.resources.ResourceArgs {
 

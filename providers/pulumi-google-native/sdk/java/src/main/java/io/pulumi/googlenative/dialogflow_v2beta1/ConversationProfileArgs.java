@@ -22,7 +22,6 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Configuration for an automated agent to use with this profile.
-     * 
      */
     @Import(name="automatedAgentConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs> automatedAgentConfig;
@@ -33,7 +32,6 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Human readable name for this profile. Max length 1024 bytes.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -44,7 +42,6 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Configuration for agent assistance to use with this profile.
-     * 
      */
     @Import(name="humanAgentAssistantConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs> humanAgentAssistantConfig;
@@ -55,7 +52,6 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Configuration for connecting to a live agent. Currently, this feature is not general available, please contact Google to get access.
-     * 
      */
     @Import(name="humanAgentHandoffConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigArgs> humanAgentHandoffConfig;
@@ -66,7 +62,6 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-us languages. This should be a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
-     * 
      */
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
@@ -84,7 +79,6 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Configuration for logging conversation lifecycle events.
-     * 
      */
     @Import(name="loggingConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1LoggingConfigArgs> loggingConfig;
@@ -95,7 +89,6 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The unique identifier of this conversation profile. Format: `projects//locations//conversationProfiles/`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -106,7 +99,6 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Configuration for publishing new message events. Event will be sent in format of ConversationEvent
-     * 
      */
     @Import(name="newMessageEventNotificationConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> newMessageEventNotificationConfig;
@@ -117,7 +109,6 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Configuration for publishing conversation lifecycle events.
-     * 
      */
     @Import(name="notificationConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig;
@@ -135,7 +126,6 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Name of the CX SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.
-     * 
      */
     @Import(name="securitySettings")
       private final @Nullable Output<String> securitySettings;
@@ -146,7 +136,6 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Settings for speech transcription.
-     * 
      */
     @Import(name="sttConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs> sttConfig;
@@ -157,7 +146,6 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The time zone of this conversational profile from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. Defaults to America/New_York.
-     * 
      */
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;

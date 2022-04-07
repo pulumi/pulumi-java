@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ClusterConfigResponse {
     /**
      * Autoscaling configuration for this cluster.
-     * 
      */
     private final ClusterAutoscalingConfigResponse clusterAutoscalingConfig;
 
@@ -22,7 +21,6 @@ public final class ClusterConfigResponse {
 
     /**
      * Autoscaling configuration for this cluster.
-     * 
     */
     public ClusterAutoscalingConfigResponse getClusterAutoscalingConfig() {
         return this.clusterAutoscalingConfig;

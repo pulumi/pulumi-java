@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A request to launch a template.
- * 
  */
 public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
 
     /**
      * A Cloud Storage path to the template from which to create the job. Must be a valid Cloud Storage URL, beginning with 'gs://'.
-     * 
      */
     @Import(name="gcsPath")
       private final @Nullable Output<String> gcsPath;
@@ -33,7 +31,6 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
 
     /**
      * The parameters of the template to launch. This should be part of the body of the POST request.
-     * 
      */
     @Import(name="launchParameters")
       private final @Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs> launchParameters;
@@ -44,7 +41,6 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
 
     /**
      * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -55,7 +51,6 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
 
     /**
      * The ID of the Cloud Platform project that the job belongs to.
-     * 
      */
     @Import(name="project", required=true)
       private final Output<String> project;
@@ -66,7 +61,6 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
 
     /**
      * If true, the request is validated but not actually executed. Defaults to false.
-     * 
      */
     @Import(name="validateOnly")
       private final @Nullable Output<Boolean> validateOnly;

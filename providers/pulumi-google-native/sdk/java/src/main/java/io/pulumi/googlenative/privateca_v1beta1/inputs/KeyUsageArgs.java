@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A KeyUsage describes key usage values that may appear in an X.509 certificate.
- * 
  */
 public final class KeyUsageArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class KeyUsageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes high-level ways in which a key may be used.
-     * 
      */
     @Import(name="baseKeyUsage")
       private final @Nullable Output<KeyUsageOptionsArgs> baseKeyUsage;
@@ -34,7 +32,6 @@ public final class KeyUsageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Detailed scenarios in which a key may be used.
-     * 
      */
     @Import(name="extendedKeyUsage")
       private final @Nullable Output<ExtendedKeyUsageOptionsArgs> extendedKeyUsage;
@@ -45,7 +42,6 @@ public final class KeyUsageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
-     * 
      */
     @Import(name="unknownExtendedKeyUsages")
       private final @Nullable Output<List<ObjectIdArgs>> unknownExtendedKeyUsages;

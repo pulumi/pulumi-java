@@ -17,7 +17,6 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Delimiter used in the CSV file, if `outputFormat` is set to `csv`. Defaults to the `,` (comma) character. Supported delimiter characters include comma (`,`), pipe (`|`), and tab (`\t`).
-     * 
      */
     @Import(name="csvDelimiter")
       private final @Nullable Output<String> csvDelimiter;
@@ -28,7 +27,6 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the preconfigured datastore.
-     * 
      */
     @Import(name="datastoreName", required=true)
       private final Output<String> datastoreName;
@@ -39,7 +37,6 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Date range of the data to export.
-     * 
      */
     @Import(name="dateRange", required=true)
       private final Output<GoogleCloudApigeeV1DateRangeArgs> dateRange;
@@ -50,7 +47,6 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Description of the export job.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -68,7 +64,6 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Display name of the export job.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -86,7 +81,6 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Output format of the export. Valid values include: `csv` or `json`. Defaults to `json`. Note: Configure the delimiter for CSV output using the `csvDelimiter` property.
-     * 
      */
     @Import(name="outputFormat")
       private final @Nullable Output<String> outputFormat;

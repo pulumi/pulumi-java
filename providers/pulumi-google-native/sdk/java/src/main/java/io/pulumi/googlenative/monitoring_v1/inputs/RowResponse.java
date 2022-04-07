@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Defines the layout properties and content for a row.
- * 
  */
 public final class RowResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RowResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The relative weight of this row. The row weight is used to adjust the height of rows on the screen (relative to peers). Greater the weight, greater the height of the row on the screen. If omitted, a value of 1 is used while rendering.
-     * 
      */
     @Import(name="weight", required=true)
       private final String weight;
@@ -31,7 +29,6 @@ public final class RowResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The display widgets arranged horizontally in this row.
-     * 
      */
     @Import(name="widgets", required=true)
       private final List<WidgetResponse> widgets;

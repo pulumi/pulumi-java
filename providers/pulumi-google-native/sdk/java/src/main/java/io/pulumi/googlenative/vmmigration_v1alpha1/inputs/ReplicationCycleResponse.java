@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * ReplicationCycle contains information about the current replication cycle status.
- * 
  */
 public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The time the replication cycle has ended.
-     * 
      */
     @Import(name="endTime", required=true)
       private final String endTime;
@@ -32,7 +30,6 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The current progress in percentage of this cycle.
-     * 
      */
     @Import(name="progress", required=true)
       private final Integer progress;
@@ -43,7 +40,6 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The current progress in percentage of this cycle.
-     * 
      */
     @Import(name="progressPercent", required=true)
       private final Integer progressPercent;
@@ -54,7 +50,6 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The time the replication cycle has started.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;
@@ -65,7 +60,6 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The cycle's steps list reflecting its progress.
-     * 
      */
     @Import(name="steps", required=true)
       private final List<CycleStepResponse> steps;
@@ -76,7 +70,6 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The accumulated duration the replication cycle was paused.
-     * 
      */
     @Import(name="totalPauseDuration", required=true)
       private final String totalPauseDuration;

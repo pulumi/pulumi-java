@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of a build occurrence.
- * 
  */
 public final class BuildOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class BuildOccurrenceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * In-toto Statement representation as defined in spec. The intoto_statement can contain any type of provenance. The serialized payload of the statement can be stored and signed in the Occurrence's envelope.
-     * 
      */
     @Import(name="intotoStatement")
       private final @Nullable Output<InTotoStatementArgs> intotoStatement;
@@ -33,7 +31,6 @@ public final class BuildOccurrenceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The actual provenance for the build.
-     * 
      */
     @Import(name="provenance")
       private final @Nullable Output<BuildProvenanceArgs> provenance;
@@ -44,7 +41,6 @@ public final class BuildOccurrenceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Serialized JSON representation of the provenance, used in generating the build signature in the corresponding build note. After verifying the signature, `provenance_bytes` can be unmarshalled and compared to the provenance to confirm that it is unchanged. A base64-encoded string representation of the provenance bytes is used for the signature in order to interoperate with openssl which expects this format for signature verification. The serialized form is captured both to avoid ambiguity in how the provenance is marshalled to json as well to prevent incompatibilities with future changes.
-     * 
      */
     @Import(name="provenanceBytes")
       private final @Nullable Output<String> provenanceBytes;

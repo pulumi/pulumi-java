@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The log_name to populate in the Cloud Audit Record.
-     * 
      */
     @EnumType
     public enum CloudAuditOptionsLogName {
         /**
          * Default. Should not be used.
-         * 
          */
         UnspecifiedLogName("UNSPECIFIED_LOG_NAME"),
         /**
          * Corresponds to "cloudaudit.googleapis.com/activity"
-         * 
          */
         AdminActivity("ADMIN_ACTIVITY"),
         /**
          * Corresponds to "cloudaudit.googleapis.com/data_access"
-         * 
          */
         DataAccess("DATA_ACCESS");
 

@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * Table view specification.
- * 
  */
 public final class GoogleCloudDatacatalogV1beta1ViewSpecArgs extends io.pulumi.resources.ResourceArgs {
 

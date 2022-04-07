@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * AnalysisMessage is a single message produced by an analyzer, and it used to communicate to the end user about the state of their Service Mesh configuration.
- * 
  */
 public final class ServiceMeshAnalysisMessageResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ServiceMeshAnalysisMessageResponse extends io.pulumi.resource
 
     /**
      * A UI can combine these args with a template (based on message_base.type) to produce an internationalized message.
-     * 
      */
     @Import(name="args", required=true)
       private final Map<String,String> args;
@@ -32,7 +30,6 @@ public final class ServiceMeshAnalysisMessageResponse extends io.pulumi.resource
 
     /**
      * A human readable description of what the error means. It is suitable for non-internationalize display purposes.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -43,7 +40,6 @@ public final class ServiceMeshAnalysisMessageResponse extends io.pulumi.resource
 
     /**
      * Details common to all types of Istio and ServiceMesh analysis messages.
-     * 
      */
     @Import(name="messageBase", required=true)
       private final ServiceMeshAnalysisMessageBaseResponse messageBase;
@@ -54,7 +50,6 @@ public final class ServiceMeshAnalysisMessageResponse extends io.pulumi.resource
 
     /**
      * A list of strings specifying the resource identifiers that were the cause of message generation. A "path" here may be: * MEMBERSHIP_ID if the cause is a specific member cluster * MEMBERSHIP_ID/(NAMESPACE\/)?RESOURCETYPE/NAME if the cause is a resource in a cluster
-     * 
      */
     @Import(name="resourcePaths", required=true)
       private final List<String> resourcePaths;

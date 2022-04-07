@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
- * 
  */
 public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Interval between health checks.
-     * 
      */
     @Import(name="checkInterval")
       private final @Nullable Output<String> checkInterval;
@@ -32,7 +30,6 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Number of consecutive failed checks required before considering the VM unhealthy.
-     * 
      */
     @Import(name="failureThreshold")
       private final @Nullable Output<Integer> failureThreshold;
@@ -43,7 +40,6 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Host header to send when performing a HTTP Liveness check. Example: "myapp.appspot.com"
-     * 
      */
     @Import(name="host")
       private final @Nullable Output<String> host;
@@ -54,7 +50,6 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The initial delay before starting to execute the checks.
-     * 
      */
     @Import(name="initialDelay")
       private final @Nullable Output<String> initialDelay;
@@ -65,7 +60,6 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The request path.
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<String> path;
@@ -76,7 +70,6 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Number of consecutive successful checks required before considering the VM healthy.
-     * 
      */
     @Import(name="successThreshold")
       private final @Nullable Output<Integer> successThreshold;
@@ -87,7 +80,6 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Time before the check is considered failed.
-     * 
      */
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;

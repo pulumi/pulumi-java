@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2SaveFindingsResponse {
     /**
      * Location to store findings outside of DLP.
-     * 
      */
     private final GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig;
 
@@ -22,7 +21,6 @@ public final class GooglePrivacyDlpV2SaveFindingsResponse {
 
     /**
      * Location to store findings outside of DLP.
-     * 
     */
     public GooglePrivacyDlpV2OutputStorageConfigResponse getOutputConfig() {
         return this.outputConfig;

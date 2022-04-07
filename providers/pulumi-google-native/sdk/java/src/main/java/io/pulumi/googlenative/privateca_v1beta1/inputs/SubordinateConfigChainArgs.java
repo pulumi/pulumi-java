@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * This message describes a subordinate CA's issuer certificate chain. This wrapper exists for compatibility reasons.
- * 
  */
 public final class SubordinateConfigChainArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SubordinateConfigChainArgs extends io.pulumi.resources.Resour
 
     /**
      * Expected to be in leaf-to-root order according to RFC 5246.
-     * 
      */
     @Import(name="pemCertificates", required=true)
       private final Output<List<String>> pemCertificates;

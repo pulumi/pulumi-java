@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Resource level annotation.
- * 
  */
 public final class ResourceAnnotationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ResourceAnnotationResponse extends io.pulumi.resources.Invoke
 
     /**
      * A description of the annotation record.
-     * 
      */
     @Import(name="label", required=true)
       private final String label;

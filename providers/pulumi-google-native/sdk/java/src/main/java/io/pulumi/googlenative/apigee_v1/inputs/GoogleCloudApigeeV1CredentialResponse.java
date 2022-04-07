@@ -17,7 +17,6 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
 
     /**
      * List of API products this credential can be used for.
-     * 
      */
     @Import(name="apiProducts", required=true)
       private final List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts;
@@ -28,7 +27,6 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
 
     /**
      * List of attributes associated with this credential.
-     * 
      */
     @Import(name="attributes", required=true)
       private final List<GoogleCloudApigeeV1AttributeResponse> attributes;
@@ -39,7 +37,6 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
 
     /**
      * Consumer key.
-     * 
      */
     @Import(name="consumerKey", required=true)
       private final String consumerKey;
@@ -50,7 +47,6 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
 
     /**
      * Secret key.
-     * 
      */
     @Import(name="consumerSecret", required=true)
       private final String consumerSecret;
@@ -61,7 +57,6 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
 
     /**
      * Time the credential will expire in milliseconds since epoch.
-     * 
      */
     @Import(name="expiresAt", required=true)
       private final String expiresAt;
@@ -72,7 +67,6 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
 
     /**
      * Time the credential was issued in milliseconds since epoch.
-     * 
      */
     @Import(name="issuedAt", required=true)
       private final String issuedAt;
@@ -83,7 +77,6 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
 
     /**
      * List of scopes to apply to the app. Specified scopes must already exist on the API product that you associate with the app.
-     * 
      */
     @Import(name="scopes", required=true)
       private final List<String> scopes;
@@ -94,7 +87,6 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
 
     /**
      * Status of the credential. Valid values include `approved` or `revoked`.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Specifies how metastore metadata should be integrated with the Data Catalog service.
- * 
  */
 public final class DataCatalogConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DataCatalogConfigResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Defines whether the metastore metadata should be synced to Data Catalog. The default value is to disable syncing metastore metadata to Data Catalog.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

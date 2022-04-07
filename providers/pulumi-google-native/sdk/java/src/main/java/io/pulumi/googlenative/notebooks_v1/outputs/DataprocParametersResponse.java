@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class DataprocParametersResponse {
     /**
      * URI for cluster used to run Dataproc execution. Format: `projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}`
-     * 
      */
     private final String cluster;
 
@@ -22,7 +21,6 @@ public final class DataprocParametersResponse {
 
     /**
      * URI for cluster used to run Dataproc execution. Format: `projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}`
-     * 
     */
     public String getCluster() {
         return this.cluster;

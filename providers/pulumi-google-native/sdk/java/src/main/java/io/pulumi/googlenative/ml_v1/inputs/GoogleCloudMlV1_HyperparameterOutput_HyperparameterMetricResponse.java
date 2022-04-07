@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * An observed value of a metric.
- * 
  */
 public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResp
 
     /**
      * The objective value at this training step.
-     * 
      */
     @Import(name="objectiveValue", required=true)
       private final Double objectiveValue;
@@ -30,7 +28,6 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResp
 
     /**
      * The global training step for this metric.
-     * 
      */
     @Import(name="trainingStep", required=true)
       private final String trainingStep;

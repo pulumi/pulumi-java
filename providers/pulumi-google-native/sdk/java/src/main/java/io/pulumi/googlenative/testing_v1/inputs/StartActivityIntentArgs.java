@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A starting intent specified by an action, uri, and categories.
- * 
  */
 public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Action name. Required for START_ACTIVITY.
-     * 
      */
     @Import(name="action")
       private final @Nullable Output<String> action;
@@ -32,7 +30,6 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Intent categories to set on the intent.
-     * 
      */
     @Import(name="categories")
       private final @Nullable Output<List<String>> categories;
@@ -43,7 +40,6 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
 
     /**
      * URI for the action.
-     * 
      */
     @Import(name="uri")
       private final @Nullable Output<String> uri;

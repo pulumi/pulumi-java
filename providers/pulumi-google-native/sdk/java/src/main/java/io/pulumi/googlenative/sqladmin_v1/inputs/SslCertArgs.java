@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * SslCerts Resource
- * 
  */
 public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * PEM representation.
-     * 
      */
     @Import(name="cert")
       private final @Nullable Output<String> cert;
@@ -31,7 +29,6 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Serial number, as extracted from the certificate.
-     * 
      */
     @Import(name="certSerialNumber")
       private final @Nullable Output<String> certSerialNumber;
@@ -42,7 +39,6 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User supplied name. Constrained to [a-zA-Z.-_ ]+.
-     * 
      */
     @Import(name="commonName")
       private final @Nullable Output<String> commonName;
@@ -53,7 +49,6 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`
-     * 
      */
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
@@ -64,7 +59,6 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
-     * 
      */
     @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
@@ -75,7 +69,6 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the database instance.
-     * 
      */
     @Import(name="instance")
       private final @Nullable Output<String> instance;
@@ -86,7 +79,6 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This is always `sql#sslCert`.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -97,7 +89,6 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The URI of this resource.
-     * 
      */
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
@@ -108,7 +99,6 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sha1 Fingerprint.
-     * 
      */
     @Import(name="sha1Fingerprint")
       private final @Nullable Output<String> sha1Fingerprint;

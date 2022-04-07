@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class NormalizedCoordinateResponse {
     /**
      * Normalized x coordinate.
-     * 
      */
     private final Double x;
     /**
      * Normalized y coordinate.
-     * 
      */
     private final Double y;
 
@@ -30,14 +28,12 @@ public final class NormalizedCoordinateResponse {
 
     /**
      * Normalized x coordinate.
-     * 
     */
     public Double getX() {
         return this.x;
     }
     /**
      * Normalized y coordinate.
-     * 
     */
     public Double getY() {
         return this.y;

@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class DSSEAttestationOccurrenceResponse {
     /**
      * If doing something security critical, make sure to verify the signatures in this metadata.
-     * 
      */
     private final EnvelopeResponse envelope;
     private final InTotoStatementResponse statement;
@@ -27,7 +26,6 @@ public final class DSSEAttestationOccurrenceResponse {
 
     /**
      * If doing something security critical, make sure to verify the signatures in this metadata.
-     * 
     */
     public EnvelopeResponse getEnvelope() {
         return this.envelope;

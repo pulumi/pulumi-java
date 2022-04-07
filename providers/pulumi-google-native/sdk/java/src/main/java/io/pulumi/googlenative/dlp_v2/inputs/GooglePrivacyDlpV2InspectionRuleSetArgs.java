@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Rule set for modifying a set of infoTypes to alter behavior under certain circumstances, depending on the specific details of the rules within the set.
- * 
  */
 public final class GooglePrivacyDlpV2InspectionRuleSetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GooglePrivacyDlpV2InspectionRuleSetArgs extends io.pulumi.res
 
     /**
      * List of infoTypes this rule set is applied to.
-     * 
      */
     @Import(name="infoTypes")
       private final @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
@@ -33,7 +31,6 @@ public final class GooglePrivacyDlpV2InspectionRuleSetArgs extends io.pulumi.res
 
     /**
      * Set of rules to be applied to infoTypes. The rules are applied in order.
-     * 
      */
     @Import(name="rules")
       private final @Nullable Output<List<GooglePrivacyDlpV2InspectionRuleArgs>> rules;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Parameters to support Oauth 2.0 Client Credentials Grant Authentication. See https://tools.ietf.org/html/rfc6749#section-1.3.4 for more details.
- * 
  */
 public final class Oauth2ClientCredentialsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class Oauth2ClientCredentialsResponse extends io.pulumi.resources.I
 
     /**
      * The client identifier.
-     * 
      */
     @Import(name="clientId", required=true)
       private final String clientId;
@@ -30,7 +28,6 @@ public final class Oauth2ClientCredentialsResponse extends io.pulumi.resources.I
 
     /**
      * Secret version reference containing the client secret.
-     * 
      */
     @Import(name="clientSecret", required=true)
       private final SecretResponse clientSecret;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Dialogflow interaction data.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
 
     /**
      * The confidence of the match ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
-     * 
      */
     @Import(name="confidence", required=true)
       private final Double confidence;
@@ -30,7 +28,6 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
 
     /**
      * The Dialogflow intent resource path. Format: projects/{project}/agent/{agent}/intents/{intent}
-     * 
      */
     @Import(name="dialogflowIntentId", required=true)
       private final String dialogflowIntentId;

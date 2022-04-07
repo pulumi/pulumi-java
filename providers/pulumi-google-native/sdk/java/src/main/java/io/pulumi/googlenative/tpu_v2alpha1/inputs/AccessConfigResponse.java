@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * An access config attached to the TPU worker.
- * 
  */
 public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An external IP address associated with the TPU worker.
-     * 
      */
     @Import(name="externalIp", required=true)
       private final String externalIp;

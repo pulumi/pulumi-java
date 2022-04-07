@@ -17,7 +17,6 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * JsonPath expression on the resource that if non empty, indicates that this field needs to be extracted as a diagnostic.
-     * 
      */
     @Import(name="field")
       private final @Nullable Output<String> field;
@@ -28,7 +27,6 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Level to record this diagnostic.
-     * 
      */
     @Import(name="level")
       private final @Nullable Output<DiagnosticLevel> level;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class QueryContentResponse {
     /**
      * An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy rpc or the AssetService.AnalyzeIamPolicyLongrunning rpc.
-     * 
      */
     private final IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery;
 
@@ -22,7 +21,6 @@ public final class QueryContentResponse {
 
     /**
      * An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy rpc or the AssetService.AnalyzeIamPolicyLongrunning rpc.
-     * 
     */
     public IamPolicyAnalysisQueryResponse getIamPolicyAnalysisQuery() {
         return this.iamPolicyAnalysisQuery;

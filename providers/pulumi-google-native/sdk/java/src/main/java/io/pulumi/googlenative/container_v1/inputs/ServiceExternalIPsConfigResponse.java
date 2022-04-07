@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Config to block services with externalIPs field.
- * 
  */
 public final class ServiceExternalIPsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ServiceExternalIPsConfigResponse extends io.pulumi.resources.
 
     /**
      * Whether Services with ExternalIPs field are allowed or not.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

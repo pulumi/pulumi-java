@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration specific to Salesforce Live Agent.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
 
     /**
      * Live Agent chat button ID.
-     * 
      */
     @Import(name="buttonId", required=true)
       private final String buttonId;
@@ -29,7 +27,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
 
     /**
      * Live Agent deployment ID.
-     * 
      */
     @Import(name="deploymentId", required=true)
       private final String deploymentId;
@@ -40,7 +37,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
 
     /**
      * Domain of the Live Agent endpoint for this agent. You can find the endpoint URL in the `Live Agent settings` page. For example if URL has the form https://d.la4-c2-phx.salesforceliveagent.com/..., you should fill in d.la4-c2-phx.salesforceliveagent.com.
-     * 
      */
     @Import(name="endpointDomain", required=true)
       private final String endpointDomain;
@@ -51,7 +47,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
 
     /**
      * The organization ID of the Salesforce account.
-     * 
      */
     @Import(name="organizationId", required=true)
       private final String organizationId;

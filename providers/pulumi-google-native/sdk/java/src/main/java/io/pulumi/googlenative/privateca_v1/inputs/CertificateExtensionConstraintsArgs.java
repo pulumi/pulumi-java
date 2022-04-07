@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a set of X.509 extensions that may be part of some certificate issuance controls.
- * 
  */
 public final class CertificateExtensionConstraintsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class CertificateExtensionConstraintsArgs extends io.pulumi.resourc
 
     /**
      * Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions.
-     * 
      */
     @Import(name="additionalExtensions")
       private final @Nullable Output<List<ObjectIdArgs>> additionalExtensions;
@@ -33,7 +31,6 @@ public final class CertificateExtensionConstraintsArgs extends io.pulumi.resourc
 
     /**
      * Optional. A set of named X.509 extensions. Will be combined with additional_extensions to determine the full set of X.509 extensions.
-     * 
      */
     @Import(name="knownExtensions")
       private final @Nullable Output<List<CertificateExtensionConstraintsKnownExtensionsItem>> knownExtensions;

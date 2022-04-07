@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster.
- * 
  */
 public final class DefaultSnatStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DefaultSnatStatusResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Disables cluster default sNAT rules.
-     * 
      */
     @Import(name="disabled", required=true)
       private final Boolean disabled;

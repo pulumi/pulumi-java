@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A test of an android application that explores the application on a virtual or physical Android device, finding culprits and crashes as it goes.
- * 
  */
 public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The initial activity that should be used to start the app. Optional
-     * 
      */
     @Import(name="appInitialActivity")
       private final @Nullable Output<String> appInitialActivity;
@@ -32,7 +30,6 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The java package for the bootstrap. Optional
-     * 
      */
     @Import(name="bootstrapPackageId")
       private final @Nullable Output<String> bootstrapPackageId;
@@ -43,7 +40,6 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The runner class for the bootstrap. Optional
-     * 
      */
     @Import(name="bootstrapRunnerClass")
       private final @Nullable Output<String> bootstrapRunnerClass;
@@ -54,7 +50,6 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The max depth of the traversal stack Robo can explore. Optional
-     * 
      */
     @Import(name="maxDepth")
       private final @Nullable Output<Integer> maxDepth;
@@ -65,7 +60,6 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The max number of steps/actions Robo can execute. Default is no limit (0). Optional
-     * 
      */
     @Import(name="maxSteps")
       private final @Nullable Output<Integer> maxSteps;

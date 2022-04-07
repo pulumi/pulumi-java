@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class LinkedInterconnectAttachmentsResponse {
     /**
      * A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
-     * 
      */
     private final Boolean siteToSiteDataTransfer;
     /**
      * The URIs of linked interconnect attachment resources
-     * 
      */
     private final List<String> uris;
 
@@ -32,14 +30,12 @@ public final class LinkedInterconnectAttachmentsResponse {
 
     /**
      * A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
-     * 
     */
     public Boolean getSiteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
     }
     /**
      * The URIs of linked interconnect attachment resources
-     * 
     */
     public List<String> getUris() {
         return this.uris;

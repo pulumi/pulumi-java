@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies an artifact available via some URI.
- * 
  */
 public final class SoftwareRecipeArtifactRemoteArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SoftwareRecipeArtifactRemoteArgs extends io.pulumi.resources.
 
     /**
      * Must be provided if `allow_insecure` is `false`. SHA256 checksum in hex format, to compare to the checksum of the artifact. If the checksum is not empty and it doesn't match the artifact then the recipe installation fails before running any of the steps.
-     * 
      */
     @Import(name="checksum")
       private final @Nullable Output<String> checksum;
@@ -31,7 +29,6 @@ public final class SoftwareRecipeArtifactRemoteArgs extends io.pulumi.resources.
 
     /**
      * URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
-     * 
      */
     @Import(name="uri")
       private final @Nullable Output<String> uri;

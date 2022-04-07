@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The Google Cloud Storage location for the input content.
- * 
  */
 public final class GcsSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GcsSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Source data URI. For example, `gs://my_bucket/my_object`.
-     * 
      */
     @Import(name="inputUri", required=true)
       private final String inputUri;

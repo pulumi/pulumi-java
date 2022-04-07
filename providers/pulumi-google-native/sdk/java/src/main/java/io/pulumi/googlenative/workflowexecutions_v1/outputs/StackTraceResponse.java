@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class StackTraceResponse {
     /**
      * An array of stack elements.
-     * 
      */
     private final List<StackTraceElementResponse> elements;
 
@@ -23,7 +22,6 @@ public final class StackTraceResponse {
 
     /**
      * An array of stack elements.
-     * 
     */
     public List<StackTraceElementResponse> getElements() {
         return this.elements;

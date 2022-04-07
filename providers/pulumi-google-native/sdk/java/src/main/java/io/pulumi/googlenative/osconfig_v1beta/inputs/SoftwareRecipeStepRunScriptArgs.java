@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Runs a script through an interpreter.
- * 
  */
 public final class SoftwareRecipeStepRunScriptArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class SoftwareRecipeStepRunScriptArgs extends io.pulumi.resources.R
 
     /**
      * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
-     * 
      */
     @Import(name="allowedExitCodes")
       private final @Nullable Output<List<Integer>> allowedExitCodes;
@@ -33,8 +31,7 @@ public final class SoftwareRecipeStepRunScriptArgs extends io.pulumi.resources.R
     }
 
     /**
-     * The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](<https://en.wikipedia.org/wiki/Shebang_\(Unix\)>).
-     * 
+     * The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](https://en.wikipedia.org/wiki/Shebang_\(Unix\)).
      */
     @Import(name="interpreter")
       private final @Nullable Output<SoftwareRecipeStepRunScriptInterpreter> interpreter;
@@ -45,7 +42,6 @@ public final class SoftwareRecipeStepRunScriptArgs extends io.pulumi.resources.R
 
     /**
      * The shell script to be executed.
-     * 
      */
     @Import(name="script", required=true)
       private final Output<String> script;

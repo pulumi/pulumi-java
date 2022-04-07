@@ -16,34 +16,29 @@ import javax.annotation.Nullable;
  * Auto-naming is currently not supported for this resource.
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:cloudkms/v1:KeyRing")
 public class KeyRing extends io.pulumi.resources.CustomResource {
     /**
      * The time at which this KeyRing was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time at which this KeyRing was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The resource name for the KeyRing in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name for the KeyRing in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*`.
-     * 
      */
     public Output<String> getName() {
         return this.name;

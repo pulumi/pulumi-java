@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * `Backend` defines the backend configuration for a service.
- * 
  */
 public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of API backend rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
-     * 
      */
     @Import(name="rules")
       private final @Nullable Output<List<BackendRuleArgs>> rules;

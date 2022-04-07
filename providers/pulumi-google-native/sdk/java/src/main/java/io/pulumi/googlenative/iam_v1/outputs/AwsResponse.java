@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class AwsResponse {
     /**
      * The AWS account ID.
-     * 
      */
     private final String accountId;
 
@@ -22,7 +21,6 @@ public final class AwsResponse {
 
     /**
      * The AWS account ID.
-     * 
     */
     public String getAccountId() {
         return this.accountId;

@@ -17,118 +17,101 @@ import javax.annotation.Nullable;
 /**
  * Use this method to create a private connectivity configuration.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:datastream/v1alpha1:PrivateConnection")
 public class PrivateConnection extends io.pulumi.resources.CustomResource {
     /**
      * The create time of the resource.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The create time of the resource.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Display name.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return Display name.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * In case of error, the details of the error in a user-friendly format.
-     * 
      */
     @Export(name="error", type=ErrorResponse.class, parameters={})
     private Output<ErrorResponse> error;
 
     /**
      * @return In case of error, the details of the error in a user-friendly format.
-     * 
      */
     public Output<ErrorResponse> getError() {
         return this.error;
     }
     /**
      * Labels.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Labels.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * The resource's name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource's name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The state of the Private Connection.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The state of the Private Connection.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The update time of the resource.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The update time of the resource.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
     /**
      * VPC Peering Config
-     * 
      */
     @Export(name="vpcPeeringConfig", type=VpcPeeringConfigResponse.class, parameters={})
     private Output<VpcPeeringConfigResponse> vpcPeeringConfig;
 
     /**
      * @return VPC Peering Config
-     * 
      */
     public Output<VpcPeeringConfigResponse> getVpcPeeringConfig() {
         return this.vpcPeeringConfig;

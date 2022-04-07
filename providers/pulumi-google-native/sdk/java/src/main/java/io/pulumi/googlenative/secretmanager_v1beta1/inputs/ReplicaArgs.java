@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a Replica for this Secret.
- * 
  */
 public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The canonical IDs of the location to replicate data. For example: `"us-east1"`.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;

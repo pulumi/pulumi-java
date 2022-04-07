@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Required. The state of DS records for this domain. Used to enable or disable automatic DNSSEC.
-     * 
      */
     @EnumType
     public enum GoogleDomainsDnsDsState {
         /**
          * DS state is unspecified.
-         * 
          */
         DsStateUnspecified("DS_STATE_UNSPECIFIED"),
         /**
          * DNSSEC is disabled for this domain. No DS records for this domain are published in the parent DNS zone.
-         * 
          */
         DsRecordsUnpublished("DS_RECORDS_UNPUBLISHED"),
         /**
          * DNSSEC is enabled for this domain. Appropriate DS records for this domain are published in the parent DNS zone. This option is valid only if the DNS zone referenced in the `Registration`'s `dns_provider` field is already DNSSEC-signed.
-         * 
          */
         DsRecordsPublished("DS_RECORDS_PUBLISHED");
 

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * ConnectionStatus indicates the state of the connection.
- * 
  */
 public final class ConnectionStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ConnectionStatusResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Description.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -29,7 +27,6 @@ public final class ConnectionStatusResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * State.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -40,7 +37,6 @@ public final class ConnectionStatusResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Status provides detailed information for the state.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

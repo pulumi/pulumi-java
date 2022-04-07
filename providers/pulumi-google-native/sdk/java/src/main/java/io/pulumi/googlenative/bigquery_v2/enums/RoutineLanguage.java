@@ -10,19 +10,16 @@ import java.util.StringJoiner;
 
     /**
      * Optional. Defaults to "SQL".
-     * 
      */
     @EnumType
     public enum RoutineLanguage {
         LanguageUnspecified("LANGUAGE_UNSPECIFIED"),
         /**
          * SQL language.
-         * 
          */
         Sql("SQL"),
         /**
          * JavaScript language.
-         * 
          */
         Javascript("JAVASCRIPT");
 

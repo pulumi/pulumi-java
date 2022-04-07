@@ -19,7 +19,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The current deleted state of the role. This field is read only. It will be ignored in calls to CreateRole and UpdateRole.
-     * 
      */
     @Import(name="deleted")
       private final @Nullable Output<Boolean> deleted;
@@ -30,7 +29,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. A human-readable description for the role.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -41,7 +39,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Used to perform a consistent read-modify-write.
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -52,7 +49,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The names of the permissions this role grants when bound in an IAM policy.
-     * 
      */
     @Import(name="includedPermissions")
       private final @Nullable Output<List<String>> includedPermissions;
@@ -63,7 +59,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the role. When Role is used in CreateRole, the role name must not be set. When Role is used in output and other input such as UpdateRole, the role name is the complete path, e.g., roles/logging.viewer for predefined roles and organizations/{ORGANIZATION_ID}/roles/logging.viewer for custom roles.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -81,7 +76,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The role ID to use for this role. A role ID may contain alphanumeric characters, underscores (`_`), and periods (`.`). It must contain a minimum of 3 characters and a maximum of 64 characters.
-     * 
      */
     @Import(name="roleId")
       private final @Nullable Output<String> roleId;
@@ -92,7 +86,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The current launch stage of the role. If the `ALPHA` launch stage has been selected for a role, the `stage` field will not be included in the returned definition for the role.
-     * 
      */
     @Import(name="stage")
       private final @Nullable Output<RoleStage> stage;
@@ -103,7 +96,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. A human-readable title for the role. Typically this is limited to 100 UTF-8 bytes.
-     * 
      */
     @Import(name="title")
       private final @Nullable Output<String> title;

@@ -19,7 +19,6 @@ public final class OrganizationContactArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The email address to send notifications to. This does not need to be a Google account.
-     * 
      */
     @Import(name="email", required=true)
       private final Output<String> email;
@@ -30,7 +29,6 @@ public final class OrganizationContactArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The preferred language for notifications, as a ISO 639-1 language code. See [Supported languages](https://cloud.google.com/resource-manager/docs/managing-notification-contacts#supported-languages) for a list of supported languages.
-     * 
      */
     @Import(name="languageTag")
       private final @Nullable Output<String> languageTag;
@@ -41,7 +39,6 @@ public final class OrganizationContactArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -52,7 +49,6 @@ public final class OrganizationContactArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The categories of notifications that the contact will receive communications for.
-     * 
      */
     @Import(name="notificationCategorySubscriptions")
       private final @Nullable Output<List<OrganizationContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions;
@@ -70,7 +66,6 @@ public final class OrganizationContactArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The last time the validation_state was updated, either manually or automatically. A contact is considered stale if its validation state was updated more than 1 year ago.
-     * 
      */
     @Import(name="validateTime")
       private final @Nullable Output<String> validateTime;
@@ -81,7 +76,6 @@ public final class OrganizationContactArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The validity of the contact. A contact is considered valid if it is the correct recipient for notifications for a particular resource.
-     * 
      */
     @Import(name="validationState")
       private final @Nullable Output<OrganizationContactValidationState> validationState;

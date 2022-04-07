@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The configuration for forwarding telemetry events.
- * 
  */
 public final class EventNotificationConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class EventNotificationConfigResponse extends io.pulumi.resources.I
 
     /**
      * A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
-     * 
      */
     @Import(name="pubsubTopicName", required=true)
       private final String pubsubTopicName;
@@ -29,7 +27,6 @@ public final class EventNotificationConfigResponse extends io.pulumi.resources.I
 
     /**
      * If the subfolder name matches this string exactly, this configuration will be used. The string must not include the leading '/' character. If empty, all strings are matched. This field is used only for telemetry events; subfolders are not supported for state changes.
-     * 
      */
     @Import(name="subfolderMatches", required=true)
       private final String subfolderMatches;

@@ -14,7 +14,6 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
 
     /**
      * The number of seconds to wait for a readiness signal during initialization before timing out.
-     * 
      */
     @Import(name="timeoutSec", required=true)
       private final Integer timeoutSec;

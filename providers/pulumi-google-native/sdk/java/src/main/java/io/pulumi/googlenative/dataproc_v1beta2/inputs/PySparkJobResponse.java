@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * A Dataproc job for running Apache PySpark (https://spark.apache.org/docs/0.9.0/python-programming-guide.html) applications on YARN.
- * 
  */
 public final class PySparkJobResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class PySparkJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
-     * 
      */
     @Import(name="archiveUris", required=true)
       private final List<String> archiveUris;
@@ -32,7 +30,6 @@ public final class PySparkJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
-     * 
      */
     @Import(name="args", required=true)
       private final List<String> args;
@@ -43,7 +40,6 @@ public final class PySparkJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
-     * 
      */
     @Import(name="fileUris", required=true)
       private final List<String> fileUris;
@@ -54,7 +50,6 @@ public final class PySparkJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. HCFS URIs of jar files to add to the CLASSPATHs of the Python driver and tasks.
-     * 
      */
     @Import(name="jarFileUris", required=true)
       private final List<String> jarFileUris;
@@ -65,7 +60,6 @@ public final class PySparkJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. The runtime log config for job execution.
-     * 
      */
     @Import(name="loggingConfig", required=true)
       private final LoggingConfigResponse loggingConfig;
@@ -76,7 +70,6 @@ public final class PySparkJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The HCFS URI of the main Python file to use as the driver. Must be a .py file.
-     * 
      */
     @Import(name="mainPythonFileUri", required=true)
       private final String mainPythonFileUri;
@@ -87,7 +80,6 @@ public final class PySparkJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. A mapping of property names to values, used to configure PySpark. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
-     * 
      */
     @Import(name="properties", required=true)
       private final Map<String,String> properties;
@@ -98,7 +90,6 @@ public final class PySparkJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
-     * 
      */
     @Import(name="pythonFileUris", required=true)
       private final List<String> pythonFileUris;

@@ -15,7 +15,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The parent of this `AccessPolicy` in the Cloud Resource Hierarchy. Currently immutable once created. Format: `organizations/{organization_id}`
-     * 
      */
     @Import(name="parent", required=true)
       private final Output<String> parent;
@@ -26,7 +25,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Human readable title. Does not affect behavior.
-     * 
      */
     @Import(name="title", required=true)
       private final Output<String> title;

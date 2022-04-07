@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Exact product price.
- * 
  */
 public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
 
     /**
      * Optional. Display price of the product.
-     * 
      */
     @Import(name="displayPrice", required=true)
       private final Double displayPrice;
@@ -29,7 +27,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
 
     /**
      * Optional. Price of the product without any discount. If zero, by default set to be the 'displayPrice'.
-     * 
      */
     @Import(name="originalPrice", required=true)
       private final Double originalPrice;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Schedule for an instance operation.
- * 
  */
 public final class ResourcePolicyInstanceSchedulePolicyScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleArgs extends io.p
 
     /**
      * Specifies the frequency for the operation, using the unix-cron format.
-     * 
      */
     @Import(name="schedule")
       private final @Nullable Output<String> schedule;

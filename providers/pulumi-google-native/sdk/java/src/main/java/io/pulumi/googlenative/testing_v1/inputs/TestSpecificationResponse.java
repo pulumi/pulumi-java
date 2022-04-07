@@ -18,7 +18,6 @@ import java.util.Objects;
 
 /**
  * A description of how to run the test.
- * 
  */
 public final class TestSpecificationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * An Android instrumentation test.
-     * 
      */
     @Import(name="androidInstrumentationTest", required=true)
       private final AndroidInstrumentationTestResponse androidInstrumentationTest;
@@ -37,7 +35,6 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * An Android robo test.
-     * 
      */
     @Import(name="androidRoboTest", required=true)
       private final AndroidRoboTestResponse androidRoboTest;
@@ -48,7 +45,6 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * An Android Application with a Test Loop.
-     * 
      */
     @Import(name="androidTestLoop", required=true)
       private final AndroidTestLoopResponse androidTestLoop;
@@ -59,7 +55,6 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Disables performance metrics recording. May reduce test latency.
-     * 
      */
     @Import(name="disablePerformanceMetrics", required=true)
       private final Boolean disablePerformanceMetrics;
@@ -70,7 +65,6 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Disables video recording. May reduce test latency.
-     * 
      */
     @Import(name="disableVideoRecording", required=true)
       private final Boolean disableVideoRecording;
@@ -81,7 +75,6 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * An iOS application with a test loop.
-     * 
      */
     @Import(name="iosTestLoop", required=true)
       private final IosTestLoopResponse iosTestLoop;
@@ -92,7 +85,6 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Test setup requirements for iOS.
-     * 
      */
     @Import(name="iosTestSetup", required=true)
       private final IosTestSetupResponse iosTestSetup;
@@ -103,7 +95,6 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * An iOS XCTest, via an .xctestrun file.
-     * 
      */
     @Import(name="iosXcTest", required=true)
       private final IosXcTestResponse iosXcTest;
@@ -114,7 +105,6 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Test setup requirements for Android e.g. files to install, bootstrap scripts.
-     * 
      */
     @Import(name="testSetup", required=true)
       private final TestSetupResponse testSetup;
@@ -125,7 +115,6 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Max time a test execution is allowed to run before it is automatically cancelled. The default value is 5 min.
-     * 
      */
     @Import(name="testTimeout", required=true)
       private final String testTimeout;

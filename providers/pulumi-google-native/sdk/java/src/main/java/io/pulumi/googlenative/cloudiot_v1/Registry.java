@@ -19,104 +19,89 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a device registry that contains devices.
- * 
  */
 @ResourceType(type="google-native:cloudiot/v1:Registry")
 public class Registry extends io.pulumi.resources.CustomResource {
     /**
      * The credentials used to verify the device credentials. No more than 10 credentials can be bound to a single registry at a time. The verification process occurs at the time of device creation or update. If this field is empty, no verification is performed. Otherwise, the credentials of a newly created device or added credentials of an updated device should be signed with one of these registry credentials. Note, however, that existing devices will never be affected by modifications to this list of credentials: after a device has been successfully created in a registry, it should be able to connect even if its registry credentials are revoked, deleted, or modified.
-     * 
      */
     @Export(name="credentials", type=List.class, parameters={RegistryCredentialResponse.class})
     private Output<List<RegistryCredentialResponse>> credentials;
 
     /**
      * @return The credentials used to verify the device credentials. No more than 10 credentials can be bound to a single registry at a time. The verification process occurs at the time of device creation or update. If this field is empty, no verification is performed. Otherwise, the credentials of a newly created device or added credentials of an updated device should be signed with one of these registry credentials. Note, however, that existing devices will never be affected by modifications to this list of credentials: after a device has been successfully created in a registry, it should be able to connect even if its registry credentials are revoked, deleted, or modified.
-     * 
      */
     public Output<List<RegistryCredentialResponse>> getCredentials() {
         return this.credentials;
     }
     /**
      * The configuration for notification of telemetry events received from the device. All telemetry events that were successfully published by the device and acknowledged by Cloud IoT Core are guaranteed to be delivered to Cloud Pub/Sub. If multiple configurations match a message, only the first matching configuration is used. If you try to publish a device telemetry event using MQTT without specifying a Cloud Pub/Sub topic for the device's registry, the connection closes automatically. If you try to do so using an HTTP connection, an error is returned. Up to 10 configurations may be provided.
-     * 
      */
     @Export(name="eventNotificationConfigs", type=List.class, parameters={EventNotificationConfigResponse.class})
     private Output<List<EventNotificationConfigResponse>> eventNotificationConfigs;
 
     /**
      * @return The configuration for notification of telemetry events received from the device. All telemetry events that were successfully published by the device and acknowledged by Cloud IoT Core are guaranteed to be delivered to Cloud Pub/Sub. If multiple configurations match a message, only the first matching configuration is used. If you try to publish a device telemetry event using MQTT without specifying a Cloud Pub/Sub topic for the device's registry, the connection closes automatically. If you try to do so using an HTTP connection, an error is returned. Up to 10 configurations may be provided.
-     * 
      */
     public Output<List<EventNotificationConfigResponse>> getEventNotificationConfigs() {
         return this.eventNotificationConfigs;
     }
     /**
      * The DeviceService (HTTP) configuration for this device registry.
-     * 
      */
     @Export(name="httpConfig", type=HttpConfigResponse.class, parameters={})
     private Output<HttpConfigResponse> httpConfig;
 
     /**
      * @return The DeviceService (HTTP) configuration for this device registry.
-     * 
      */
     public Output<HttpConfigResponse> getHttpConfig() {
         return this.httpConfig;
     }
     /**
      * **Beta Feature** The default logging verbosity for activity from devices in this registry. The verbosity level can be overridden by Device.log_level.
-     * 
      */
     @Export(name="logLevel", type=String.class, parameters={})
     private Output<String> logLevel;
 
     /**
      * @return **Beta Feature** The default logging verbosity for activity from devices in this registry. The verbosity level can be overridden by Device.log_level.
-     * 
      */
     public Output<String> getLogLevel() {
         return this.logLevel;
     }
     /**
      * The MQTT configuration for this device registry.
-     * 
      */
     @Export(name="mqttConfig", type=MqttConfigResponse.class, parameters={})
     private Output<MqttConfigResponse> mqttConfig;
 
     /**
      * @return The MQTT configuration for this device registry.
-     * 
      */
     public Output<MqttConfigResponse> getMqttConfig() {
         return this.mqttConfig;
     }
     /**
      * The resource path name. For example, `projects/example-project/locations/us-central1/registries/my-registry`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource path name. For example, `projects/example-project/locations/us-central1/registries/my-registry`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The configuration for notification of new states received from the device. State updates are guaranteed to be stored in the state history, but notifications to Cloud Pub/Sub are not guaranteed. For example, if permissions are misconfigured or the specified topic doesn't exist, no notification will be published but the state will still be stored in Cloud IoT Core.
-     * 
      */
     @Export(name="stateNotificationConfig", type=StateNotificationConfigResponse.class, parameters={})
     private Output<StateNotificationConfigResponse> stateNotificationConfig;
 
     /**
      * @return The configuration for notification of new states received from the device. State updates are guaranteed to be stored in the state history, but notifications to Cloud Pub/Sub are not guaranteed. For example, if permissions are misconfigured or the specified topic doesn't exist, no notification will be published but the state will still be stored in Cloud IoT Core.
-     * 
      */
     public Output<StateNotificationConfigResponse> getStateNotificationConfig() {
         return this.stateNotificationConfig;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * SslCerts Resource
- * 
  */
 public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * PEM representation.
-     * 
      */
     @Import(name="cert", required=true)
       private final String cert;
@@ -29,7 +27,6 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Serial number, as extracted from the certificate.
-     * 
      */
     @Import(name="certSerialNumber", required=true)
       private final String certSerialNumber;
@@ -40,7 +37,6 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * User supplied name. Constrained to [a-zA-Z.-_ ]+.
-     * 
      */
     @Import(name="commonName", required=true)
       private final String commonName;
@@ -51,7 +47,6 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`
-     * 
      */
     @Import(name="createTime", required=true)
       private final String createTime;
@@ -62,7 +57,6 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
-     * 
      */
     @Import(name="expirationTime", required=true)
       private final String expirationTime;
@@ -73,7 +67,6 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the database instance.
-     * 
      */
     @Import(name="instance", required=true)
       private final String instance;
@@ -84,7 +77,6 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This is always `sql#sslCert`.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -95,7 +87,6 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The URI of this resource.
-     * 
      */
     @Import(name="selfLink", required=true)
       private final String selfLink;
@@ -106,7 +97,6 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Sha1 Fingerprint.
-     * 
      */
     @Import(name="sha1Fingerprint", required=true)
       private final String sha1Fingerprint;

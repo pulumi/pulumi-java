@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * EphemeralStorageConfig contains configuration for the ephemeral storage filesystem.
- * 
  */
 public final class EphemeralStorageConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class EphemeralStorageConfigResponse extends io.pulumi.resources.In
 
     /**
      * Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
-     * 
      */
     @Import(name="localSsdCount", required=true)
       private final Integer localSsdCount;

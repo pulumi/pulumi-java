@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Description-tagged IP ranges for the router to advertise.
- * 
  */
 public final class RouterAdvertisedIpRangeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class RouterAdvertisedIpRangeResponse extends io.pulumi.resources.I
 
     /**
      * User-specified description for the IP range.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -29,7 +27,6 @@ public final class RouterAdvertisedIpRangeResponse extends io.pulumi.resources.I
 
     /**
      * The IP range to advertise. The value must be a CIDR-formatted string.
-     * 
      */
     @Import(name="range", required=true)
       private final String range;

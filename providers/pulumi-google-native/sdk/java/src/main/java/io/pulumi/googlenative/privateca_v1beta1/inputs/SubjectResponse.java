@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Subject describes parts of a distinguished name that, in turn, describes the subject of the certificate.
- * 
  */
 public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The country code of the subject.
-     * 
      */
     @Import(name="countryCode", required=true)
       private final String countryCode;
@@ -29,7 +27,6 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The locality or city of the subject.
-     * 
      */
     @Import(name="locality", required=true)
       private final String locality;
@@ -40,7 +37,6 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The organization of the subject.
-     * 
      */
     @Import(name="organization", required=true)
       private final String organization;
@@ -51,7 +47,6 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The organizational_unit of the subject.
-     * 
      */
     @Import(name="organizationalUnit", required=true)
       private final String organizationalUnit;
@@ -62,7 +57,6 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The postal code of the subject.
-     * 
      */
     @Import(name="postalCode", required=true)
       private final String postalCode;
@@ -73,7 +67,6 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The province, territory, or regional state of the subject.
-     * 
      */
     @Import(name="province", required=true)
       private final String province;
@@ -84,7 +77,6 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The street address of the subject.
-     * 
      */
     @Import(name="streetAddress", required=true)
       private final String streetAddress;

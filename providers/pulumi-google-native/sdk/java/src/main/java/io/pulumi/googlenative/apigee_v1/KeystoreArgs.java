@@ -23,7 +23,6 @@ public final class KeystoreArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID for this keystore. Values must match the regular expression `[\w[:space:]-.]{1,255}`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

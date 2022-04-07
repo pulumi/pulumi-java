@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A context rule provides information about the context for an individual API element.
- * 
  */
 public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of full type names or extension IDs of extensions allowed in grpc side channel from client to backend.
-     * 
      */
     @Import(name="allowedRequestExtensions")
       private final @Nullable Output<List<String>> allowedRequestExtensions;
@@ -32,7 +30,6 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of full type names or extension IDs of extensions allowed in grpc side channel from backend to client.
-     * 
      */
     @Import(name="allowedResponseExtensions")
       private final @Nullable Output<List<String>> allowedResponseExtensions;
@@ -43,7 +40,6 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of full type names of provided contexts.
-     * 
      */
     @Import(name="provided")
       private final @Nullable Output<List<String>> provided;
@@ -54,7 +50,6 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of full type names of requested contexts.
-     * 
      */
     @Import(name="requested")
       private final @Nullable Output<List<String>> requested;
@@ -65,7 +60,6 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Selects the methods to which this rule applies. Refer to selector for syntax details.
-     * 
      */
     @Import(name="selector")
       private final @Nullable Output<String> selector;

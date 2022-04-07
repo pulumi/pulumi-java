@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A public key format and data.
- * 
  */
 public final class PublicKeyCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PublicKeyCredentialArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The format of the key.
-     * 
      */
     @Import(name="format")
       private final @Nullable Output<PublicKeyCredentialFormat> format;
@@ -32,7 +30,6 @@ public final class PublicKeyCredentialArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The key data.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;

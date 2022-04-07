@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Actions on Google action to open a given url.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
 
     /**
      * URL
-     * 
      */
     @Import(name="url", required=true)
       private final String url;
@@ -29,7 +27,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
 
     /**
      * Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening via web browser.
-     * 
      */
     @Import(name="urlTypeHint", required=true)
       private final String urlTypeHint;

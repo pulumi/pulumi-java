@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Provides information about the analysis status of a discovered resource.
- * 
  */
 public final class DiscoveryOccurrenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class DiscoveryOccurrenceResponse extends io.pulumi.resources.Invok
 
     /**
      * The status of discovery for the resource.
-     * 
      */
     @Import(name="analysisStatus", required=true)
       private final String analysisStatus;
@@ -30,7 +28,6 @@ public final class DiscoveryOccurrenceResponse extends io.pulumi.resources.Invok
 
     /**
      * When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage is output only and populated by the API.
-     * 
      */
     @Import(name="analysisStatusError", required=true)
       private final StatusResponse analysisStatusError;
@@ -41,7 +38,6 @@ public final class DiscoveryOccurrenceResponse extends io.pulumi.resources.Invok
 
     /**
      * Whether the resource is continuously analyzed.
-     * 
      */
     @Import(name="continuousAnalysis", required=true)
       private final String continuousAnalysis;
@@ -52,7 +48,6 @@ public final class DiscoveryOccurrenceResponse extends io.pulumi.resources.Invok
 
     /**
      * The CPE of the resource being scanned.
-     * 
      */
     @Import(name="cpe", required=true)
       private final String cpe;
@@ -63,7 +58,6 @@ public final class DiscoveryOccurrenceResponse extends io.pulumi.resources.Invok
 
     /**
      * The last time this resource was scanned.
-     * 
      */
     @Import(name="lastScanTime", required=true)
       private final String lastScanTime;

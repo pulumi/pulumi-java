@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2DictionaryResponse {
     /**
      * Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
-     * 
      */
     private final GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath;
     /**
      * List of words or phrases to search for.
-     * 
      */
     private final GooglePrivacyDlpV2WordListResponse wordList;
 
@@ -31,14 +29,12 @@ public final class GooglePrivacyDlpV2DictionaryResponse {
 
     /**
      * Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
-     * 
     */
     public GooglePrivacyDlpV2CloudStoragePathResponse getCloudStoragePath() {
         return this.cloudStoragePath;
     }
     /**
      * List of words or phrases to search for.
-     * 
     */
     public GooglePrivacyDlpV2WordListResponse getWordList() {
         return this.wordList;

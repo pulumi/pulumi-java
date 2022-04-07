@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ServiceAccountResponse {
     /**
      * The IAM service account email address like test@myproject.iam.gserviceaccount.com
-     * 
      */
     private final String email;
 
@@ -22,7 +21,6 @@ public final class ServiceAccountResponse {
 
     /**
      * The IAM service account email address like test@myproject.iam.gserviceaccount.com
-     * 
     */
     public String getEmail() {
         return this.email;

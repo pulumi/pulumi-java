@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Compute numerical stats over an individual column, including min, max, and quantiles.
- * 
  */
 public final class GooglePrivacyDlpV2NumericalStatsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GooglePrivacyDlpV2NumericalStatsConfigResponse extends io.pul
 
     /**
      * Field to compute numerical stats on. Supported types are integer, float, date, datetime, timestamp, time.
-     * 
      */
     @Import(name="field", required=true)
       private final GooglePrivacyDlpV2FieldIdResponse field;

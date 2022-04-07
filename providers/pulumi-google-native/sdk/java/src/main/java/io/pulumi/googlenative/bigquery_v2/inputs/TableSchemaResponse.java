@@ -15,7 +15,6 @@ public final class TableSchemaResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Describes the fields in a table.
-     * 
      */
     @Import(name="fields", required=true)
       private final List<TableFieldSchemaResponse> fields;

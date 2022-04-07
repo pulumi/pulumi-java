@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Output only. Defines a warning trace message for ScanRun. Warning traces provide customers with useful information that helps make the scanning process more effective.
- * 
  */
 public final class ScanRunWarningTraceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ScanRunWarningTraceResponse extends io.pulumi.resources.Invok
 
     /**
      * Indicates the warning code.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;

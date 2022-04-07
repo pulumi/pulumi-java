@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Controls what and how to inspect for findings.
- * 
  */
 public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
 
     /**
      * Actions to execute at the completion of the job.
-     * 
      */
     @Import(name="actions")
       private final @Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions;
@@ -35,7 +33,6 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
 
     /**
      * How and what to scan for.
-     * 
      */
     @Import(name="inspectConfig")
       private final @Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
@@ -46,7 +43,6 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
 
     /**
      * If provided, will be used as the default for all values in InspectConfig. `inspect_config` will be merged into the values persisted as part of the template.
-     * 
      */
     @Import(name="inspectTemplateName")
       private final @Nullable Output<String> inspectTemplateName;
@@ -57,7 +53,6 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
 
     /**
      * The data to scan.
-     * 
      */
     @Import(name="storageConfig")
       private final @Nullable Output<GooglePrivacyDlpV2StorageConfigArgs> storageConfig;

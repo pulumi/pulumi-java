@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Holds a single traffic routing entry for the Service. Allocations can be done to a specific Revision name, or pointing to the latest Ready Revision.
- * 
  */
 public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
 
     /**
      * Specifies percent of the traffic to this Revision. This defaults to zero if unspecified.
-     * 
      */
     @Import(name="percent")
       private final @Nullable Output<Integer> percent;
@@ -33,7 +31,6 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
 
     /**
      * Revision to which to send this portion of traffic, if traffic allocation is by revision.
-     * 
      */
     @Import(name="revision")
       private final @Nullable Output<String> revision;
@@ -44,7 +41,6 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
 
     /**
      * Indicates a string to be part of the URI to exclusively reference this target.
-     * 
      */
     @Import(name="tag")
       private final @Nullable Output<String> tag;
@@ -55,7 +51,6 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
 
     /**
      * The allocation type for this traffic target.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<GoogleCloudRunOpV2TrafficTargetType> type;

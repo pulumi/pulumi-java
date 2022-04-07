@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Information about a table restore.
- * 
  */
 public final class RestoreInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class RestoreInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Information about the backup used to restore the table. The backup may no longer exist.
-     * 
      */
     @Import(name="backupInfo", required=true)
       private final BackupInfoResponse backupInfo;
@@ -30,7 +28,6 @@ public final class RestoreInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of the restore source.
-     * 
      */
     @Import(name="sourceType", required=true)
       private final String sourceType;

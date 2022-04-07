@@ -15,48 +15,41 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a resource file. Specify the `Content-Type` as `application/octet-stream` or `multipart/form-data`. For more information about resource files, see [Resource files](https://cloud.google.com/apigee/docs/api-platform/develop/resource-files).
- * 
  */
 @ResourceType(type="google-native:apigee/v1:Resourcefile")
 public class Resourcefile extends io.pulumi.resources.CustomResource {
     /**
      * The HTTP Content-Type header value specifying the content type of the body.
-     * 
      */
     @Export(name="contentType", type=String.class, parameters={})
     private Output<String> contentType;
 
     /**
      * @return The HTTP Content-Type header value specifying the content type of the body.
-     * 
      */
     public Output<String> getContentType() {
         return this.contentType;
     }
     /**
      * The HTTP request/response body as raw binary.
-     * 
      */
     @Export(name="data", type=String.class, parameters={})
     private Output<String> data;
 
     /**
      * @return The HTTP request/response body as raw binary.
-     * 
      */
     public Output<String> getData() {
         return this.data;
     }
     /**
      * Application specific response metadata. Must be set in the first response for streaming APIs.
-     * 
      */
     @Export(name="extensions", type=List.class, parameters={Map.class})
     private Output<List<Map<String,String>>> extensions;
 
     /**
      * @return Application specific response metadata. Must be set in the first response for streaming APIs.
-     * 
      */
     public Output<List<Map<String,String>>> getExtensions() {
         return this.extensions;

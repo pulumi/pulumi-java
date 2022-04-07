@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The throughput capacity configuration for each partition.
- * 
  */
 public final class CapacityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CapacityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
-     * 
      */
     @Import(name="publishMibPerSec")
       private final @Nullable Output<Integer> publishMibPerSec;
@@ -31,7 +29,6 @@ public final class CapacityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 32.
-     * 
      */
     @Import(name="subscribeMibPerSec")
       private final @Nullable Output<Integer> subscribeMibPerSec;

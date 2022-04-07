@@ -14,7 +14,6 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
 
     /**
      * Forwarding path for this TargetNameServer. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.
-     * 
      */
     @Import(name="forwardingPath", required=true)
       private final String forwardingPath;
@@ -25,7 +24,6 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
 
     /**
      * IPv4 address to forward to.
-     * 
      */
     @Import(name="ipv4Address", required=true)
       private final String ipv4Address;
@@ -36,7 +34,6 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
 
     /**
      * IPv6 address to forward to. Does not accept both fields (ipv4 & ipv6) being populated.
-     * 
      */
     @Import(name="ipv6Address", required=true)
       private final String ipv6Address;

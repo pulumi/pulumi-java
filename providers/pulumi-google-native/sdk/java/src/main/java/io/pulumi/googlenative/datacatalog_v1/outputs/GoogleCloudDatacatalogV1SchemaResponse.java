@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class GoogleCloudDatacatalogV1SchemaResponse {
     /**
      * The unified GoogleSQL-like schema of columns. The overall maximum number of columns and nested columns is 10,000. The maximum nested depth is 15 levels.
-     * 
      */
     private final List<GoogleCloudDatacatalogV1ColumnSchemaResponse> columns;
 
@@ -23,7 +22,6 @@ public final class GoogleCloudDatacatalogV1SchemaResponse {
 
     /**
      * The unified GoogleSQL-like schema of columns. The overall maximum number of columns and nested columns is 10,000. The maximum nested depth is 15 levels.
-     * 
     */
     public List<GoogleCloudDatacatalogV1ColumnSchemaResponse> getColumns() {
         return this.columns;

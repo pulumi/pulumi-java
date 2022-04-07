@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents results of a prediction job.
- * 
  */
 public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
 
     /**
      * The number of data instances which resulted in errors.
-     * 
      */
     @Import(name="errorCount")
       private final @Nullable Output<String> errorCount;
@@ -32,7 +30,6 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
 
     /**
      * Node hours used by the batch prediction job.
-     * 
      */
     @Import(name="nodeHours")
       private final @Nullable Output<Double> nodeHours;
@@ -43,7 +40,6 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
 
     /**
      * The output Google Cloud Storage location provided at the job creation time.
-     * 
      */
     @Import(name="outputPath")
       private final @Nullable Output<String> outputPath;
@@ -54,7 +50,6 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
 
     /**
      * The number of generated predictions.
-     * 
      */
     @Import(name="predictionCount")
       private final @Nullable Output<String> predictionCount;

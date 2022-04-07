@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for the Monetization add-on.
- * 
  */
 public final class GoogleCloudApigeeV1MonetizationConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudApigeeV1MonetizationConfigArgs extends io.pulumi.r
 
     /**
      * Flag that specifies whether the Monetization add-on is enabled.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;

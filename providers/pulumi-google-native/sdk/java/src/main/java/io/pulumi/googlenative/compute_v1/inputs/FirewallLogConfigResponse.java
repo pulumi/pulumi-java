@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The available logging options for a firewall rule.
- * 
  */
 public final class FirewallLogConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class FirewallLogConfigResponse extends io.pulumi.resources.InvokeA
 
     /**
      * This field denotes whether to enable logging for a particular firewall rule.
-     * 
      */
     @Import(name="enable", required=true)
       private final Boolean enable;
@@ -30,7 +28,6 @@ public final class FirewallLogConfigResponse extends io.pulumi.resources.InvokeA
 
     /**
      * This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.
-     * 
      */
     @Import(name="metadata", required=true)
       private final String metadata;

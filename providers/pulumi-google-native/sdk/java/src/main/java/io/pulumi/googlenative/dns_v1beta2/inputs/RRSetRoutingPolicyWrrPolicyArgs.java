@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configures a RRSetRoutingPolicy that routes in a weighted round robin fashion.
- * 
  */
 public final class RRSetRoutingPolicyWrrPolicyArgs extends io.pulumi.resources.ResourceArgs {
 

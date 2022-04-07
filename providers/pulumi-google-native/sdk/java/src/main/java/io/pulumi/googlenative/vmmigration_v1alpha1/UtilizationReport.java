@@ -18,160 +18,137 @@ import javax.annotation.Nullable;
 /**
  * Creates a new UtilizationReport.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:vmmigration/v1alpha1:UtilizationReport")
 public class UtilizationReport extends io.pulumi.resources.CustomResource {
     /**
      * The time the report was created (this refers to the time of the request, not the time the report creation completed).
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time the report was created (this refers to the time of the request, not the time the report creation completed).
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The report display name, as assigned by the user.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The report display name, as assigned by the user.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Provides details on the state of the report in case of an error.
-     * 
      */
     @Export(name="error", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> error;
 
     /**
      * @return Provides details on the state of the report in case of an error.
-     * 
      */
     public Output<StatusResponse> getError() {
         return this.error;
     }
     /**
      * The point in time when the time frame ends. Notice that the time frame is counted backwards. For instance if the "frame_end_time" value is 2021/01/20 and the time frame is WEEK then the report covers the week between 2021/01/20 and 2021/01/14.
-     * 
      */
     @Export(name="frameEndTime", type=String.class, parameters={})
     private Output<String> frameEndTime;
 
     /**
      * @return The point in time when the time frame ends. Notice that the time frame is counted backwards. For instance if the "frame_end_time" value is 2021/01/20 and the time frame is WEEK then the report covers the week between 2021/01/20 and 2021/01/14.
-     * 
      */
     public Output<String> getFrameEndTime() {
         return this.frameEndTime;
     }
     /**
      * The report unique name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The report unique name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Current state of the report.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return Current state of the report.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The time the state was last set.
-     * 
      */
     @Export(name="stateTime", type=String.class, parameters={})
     private Output<String> stateTime;
 
     /**
      * @return The time the state was last set.
-     * 
      */
     public Output<String> getStateTime() {
         return this.stateTime;
     }
     /**
      * Time frame of the report.
-     * 
      */
     @Export(name="timeFrame", type=String.class, parameters={})
     private Output<String> timeFrame;
 
     /**
      * @return Time frame of the report.
-     * 
      */
     public Output<String> getTimeFrame() {
         return this.timeFrame;
     }
     /**
      * Total number of VMs included in the report.
-     * 
      */
     @Export(name="vmCount", type=Integer.class, parameters={})
     private Output<Integer> vmCount;
 
     /**
      * @return Total number of VMs included in the report.
-     * 
      */
     public Output<Integer> getVmCount() {
         return this.vmCount;
     }
     /**
      * List of utilization information per VM. When sent as part of the request, the "vm_id" field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
-     * 
      */
     @Export(name="vms", type=List.class, parameters={VmUtilizationInfoResponse.class})
     private Output<List<VmUtilizationInfoResponse>> vms;
 
     /**
      * @return List of utilization information per VM. When sent as part of the request, the "vm_id" field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
-     * 
      */
     public Output<List<VmUtilizationInfoResponse>> getVms() {
         return this.vms;
     }
     /**
      * Total number of VMs included in the report.
-     * 
      */
     @Export(name="vmsCount", type=Integer.class, parameters={})
     private Output<Integer> vmsCount;
 
     /**
      * @return Total number of VMs included in the report.
-     * 
      */
     public Output<Integer> getVmsCount() {
         return this.vmsCount;

@@ -17,7 +17,6 @@ public final class DeploymentUpdateResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The user-provided default credential to use when deploying this preview.
-     * 
      */
     @Import(name="credential", required=true)
       private final CredentialResponse credential;
@@ -28,7 +27,6 @@ public final class DeploymentUpdateResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * An optional user-provided description of the deployment after the current update has been applied.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -39,7 +37,6 @@ public final class DeploymentUpdateResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
-     * 
      */
     @Import(name="labels", required=true)
       private final List<DeploymentUpdateLabelEntryResponse> labels;
@@ -50,7 +47,6 @@ public final class DeploymentUpdateResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * URL of the manifest representing the update configuration of this deployment.
-     * 
      */
     @Import(name="manifest", required=true)
       private final String manifest;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Network related configurations.
- * 
  */
 public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Allows the TPU node to send and receive packets with non-matching destination or source IPs. This is required if you plan to use the TPU workers to forward routes.
-     * 
      */
     @Import(name="canIpForward", required=true)
       private final Boolean canIpForward;
@@ -30,7 +28,6 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Indicates that external IP addresses would be associated with the TPU workers. If set to false, the specified subnetwork or network should have Private Google Access enabled.
-     * 
      */
     @Import(name="enableExternalIps", required=true)
       private final Boolean enableExternalIps;
@@ -41,7 +38,6 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the network for the TPU node. It must be a preexisting Google Compute Engine network. If none is provided, "default" will be used.
-     * 
      */
     @Import(name="network", required=true)
       private final String network;
@@ -52,7 +48,6 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the subnetwork for the TPU node. It must be a preexisting Google Compute Engine subnetwork. If none is provided, "default" will be used.
-     * 
      */
     @Import(name="subnetwork", required=true)
       private final String subnetwork;

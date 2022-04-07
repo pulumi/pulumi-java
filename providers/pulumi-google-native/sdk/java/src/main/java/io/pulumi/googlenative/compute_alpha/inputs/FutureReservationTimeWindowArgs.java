@@ -31,7 +31,6 @@ public final class FutureReservationTimeWindowArgs extends io.pulumi.resources.R
 
     /**
      * Start time of the Future Reservation. The start_time is an RFC3339 string.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;

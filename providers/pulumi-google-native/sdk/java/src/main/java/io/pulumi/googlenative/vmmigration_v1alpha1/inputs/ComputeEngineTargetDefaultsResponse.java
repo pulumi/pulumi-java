@@ -16,7 +16,6 @@ import java.util.Objects;
 
 /**
  * ComputeEngineTargetDefaults is a collection of details for creating a VM in a target Compute Engine project.
- * 
  */
 public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
 
     /**
      * Additional licenses to assign to the VM.
-     * 
      */
     @Import(name="additionalLicenses", required=true)
       private final List<String> additionalLicenses;
@@ -35,7 +33,6 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
 
     /**
      * The OS license returned from the adaptation module report.
-     * 
      */
     @Import(name="appliedLicense", required=true)
       private final AppliedLicenseResponse appliedLicense;
@@ -46,7 +43,6 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
 
     /**
      * The VM Boot Option, as set in the source vm.
-     * 
      */
     @Import(name="bootOption", required=true)
       private final String bootOption;
@@ -57,7 +53,6 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
 
     /**
      * Compute instance scheduling information (if empty default is used).
-     * 
      */
     @Import(name="computeScheduling", required=true)
       private final ComputeSchedulingResponse computeScheduling;
@@ -68,7 +63,6 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
 
     /**
      * The disk type to use in the VM.
-     * 
      */
     @Import(name="diskType", required=true)
       private final String diskType;
@@ -79,7 +73,6 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
 
     /**
      * A map of labels to associate with the VM.
-     * 
      */
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
@@ -90,7 +83,6 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
 
     /**
      * The license type to use in OS adaptation.
-     * 
      */
     @Import(name="licenseType", required=true)
       private final String licenseType;
@@ -101,7 +93,6 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
 
     /**
      * The machine type to create the VM with.
-     * 
      */
     @Import(name="machineType", required=true)
       private final String machineType;
@@ -112,7 +103,6 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
 
     /**
      * The machine type series to create the VM with.
-     * 
      */
     @Import(name="machineTypeSeries", required=true)
       private final String machineTypeSeries;
@@ -123,7 +113,6 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
 
     /**
      * The metadata key/value pairs to assign to the VM.
-     * 
      */
     @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
@@ -134,7 +123,6 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
 
     /**
      * List of NICs connected to this VM.
-     * 
      */
     @Import(name="networkInterfaces", required=true)
       private final List<NetworkInterfaceResponse> networkInterfaces;
@@ -145,7 +133,6 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
 
     /**
      * A map of network tags to associate with the VM.
-     * 
      */
     @Import(name="networkTags", required=true)
       private final List<String> networkTags;
@@ -156,7 +143,6 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
 
     /**
      * Defines whether the instance has Secure Boot enabled. This can be set to true only if the vm boot option is EFI.
-     * 
      */
     @Import(name="secureBoot", required=true)
       private final Boolean secureBoot;
@@ -167,7 +153,6 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
 
     /**
      * The service account to associate the VM with.
-     * 
      */
     @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
@@ -178,7 +163,6 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
 
     /**
      * The full path of the resource of type TargetProject which represents the Compute Engine project in which to create this VM.
-     * 
      */
     @Import(name="targetProject", required=true)
       private final String targetProject;
@@ -189,7 +173,6 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
 
     /**
      * The name of the VM to create.
-     * 
      */
     @Import(name="vmName", required=true)
       private final String vmName;
@@ -200,7 +183,6 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
 
     /**
      * The zone in which to create the VM.
-     * 
      */
     @Import(name="zone", required=true)
       private final String zone;

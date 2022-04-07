@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * MonitoringComponentConfig is cluster monitoring component configuration.
- * 
  */
 public final class MonitoringComponentConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class MonitoringComponentConfigResponse extends io.pulumi.resources
 
     /**
      * Select components to collect metrics. An empty set would disable all monitoring.
-     * 
      */
     @Import(name="enableComponents", required=true)
       private final List<String> enableComponents;

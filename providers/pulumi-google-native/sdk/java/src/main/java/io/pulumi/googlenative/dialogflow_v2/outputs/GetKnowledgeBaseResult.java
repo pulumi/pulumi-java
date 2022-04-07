@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class GetKnowledgeBaseResult {
     /**
      * The display name of the knowledge base. The name must be 1024 bytes or less; otherwise, the creation request fails.
-     * 
      */
     private final String displayName;
     /**
      * Language which represents the KnowledgeBase. When the KnowledgeBase is created/updated, expect this to be present for non en-us languages. When unspecified, the default language code en-us applies.
-     * 
      */
     private final String languageCode;
     /**
      * The knowledge base resource name. The name must be empty when creating a knowledge base. Format: `projects//locations//knowledgeBases/`.
-     * 
      */
     private final String name;
 
@@ -37,21 +34,18 @@ public final class GetKnowledgeBaseResult {
 
     /**
      * The display name of the knowledge base. The name must be 1024 bytes or less; otherwise, the creation request fails.
-     * 
     */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Language which represents the KnowledgeBase. When the KnowledgeBase is created/updated, expect this to be present for non en-us languages. When unspecified, the default language code en-us applies.
-     * 
     */
     public String getLanguageCode() {
         return this.languageCode;
     }
     /**
      * The knowledge base resource name. The name must be empty when creating a knowledge base. Format: `projects//locations//knowledgeBases/`.
-     * 
     */
     public String getName() {
         return this.name;

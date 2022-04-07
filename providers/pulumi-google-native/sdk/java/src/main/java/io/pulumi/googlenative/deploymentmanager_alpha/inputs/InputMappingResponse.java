@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * InputMapping creates a 'virtual' property that will be injected into the properties before sending the request to the underlying API.
- * 
  */
 public final class InputMappingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class InputMappingResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the field that is going to be injected.
-     * 
      */
     @Import(name="fieldName", required=true)
       private final String fieldName;
@@ -29,7 +27,6 @@ public final class InputMappingResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The location where this mapping applies.
-     * 
      */
     @Import(name="location", required=true)
       private final String location;
@@ -40,7 +37,6 @@ public final class InputMappingResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Regex to evaluate on method to decide if input applies.
-     * 
      */
     @Import(name="methodMatch", required=true)
       private final String methodMatch;
@@ -51,7 +47,6 @@ public final class InputMappingResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A jsonPath expression to select an element.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

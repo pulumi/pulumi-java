@@ -26,7 +26,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether the webhook is disabled.
-     * 
      */
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
@@ -37,7 +36,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The human-readable name of the webhook, unique within the agent.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -48,7 +46,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration for a generic web service.
-     * 
      */
     @Import(name="genericWebService")
       private final @Nullable Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService;
@@ -66,7 +63,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method. Webhooks.CreateWebhook populates the name automatically. Format: `projects//locations//agents//webhooks/`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -84,7 +80,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
-     * 
      */
     @Import(name="serviceDirectory")
       private final @Nullable Output<GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs> serviceDirectory;
@@ -95,7 +90,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Webhook execution timeout. Execution is considered failed if Dialogflow doesn't receive a response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
-     * 
      */
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;

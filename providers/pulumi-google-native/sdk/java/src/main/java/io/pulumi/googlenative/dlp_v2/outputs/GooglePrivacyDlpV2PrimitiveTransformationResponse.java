@@ -22,62 +22,50 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2PrimitiveTransformationResponse {
     /**
      * Bucketing
-     * 
      */
     private final GooglePrivacyDlpV2BucketingConfigResponse bucketingConfig;
     /**
      * Mask
-     * 
      */
     private final GooglePrivacyDlpV2CharacterMaskConfigResponse characterMaskConfig;
     /**
      * Deterministic Crypto
-     * 
      */
     private final GooglePrivacyDlpV2CryptoDeterministicConfigResponse cryptoDeterministicConfig;
     /**
      * Crypto
-     * 
      */
     private final GooglePrivacyDlpV2CryptoHashConfigResponse cryptoHashConfig;
     /**
      * Ffx-Fpe
-     * 
      */
     private final GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse cryptoReplaceFfxFpeConfig;
     /**
      * Date Shift
-     * 
      */
     private final GooglePrivacyDlpV2DateShiftConfigResponse dateShiftConfig;
     /**
      * Fixed size bucketing
-     * 
      */
     private final GooglePrivacyDlpV2FixedSizeBucketingConfigResponse fixedSizeBucketingConfig;
     /**
      * Redact
-     * 
      */
     private final GooglePrivacyDlpV2RedactConfigResponse redactConfig;
     /**
      * Replace with a specified value.
-     * 
      */
     private final GooglePrivacyDlpV2ReplaceValueConfigResponse replaceConfig;
     /**
      * Replace with a value randomly drawn (with replacement) from a dictionary.
-     * 
      */
     private final GooglePrivacyDlpV2ReplaceDictionaryConfigResponse replaceDictionaryConfig;
     /**
      * Replace with infotype
-     * 
      */
     private final GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse replaceWithInfoTypeConfig;
     /**
      * Time extraction
-     * 
      */
     private final GooglePrivacyDlpV2TimePartConfigResponse timePartConfig;
 
@@ -111,84 +99,72 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse {
 
     /**
      * Bucketing
-     * 
     */
     public GooglePrivacyDlpV2BucketingConfigResponse getBucketingConfig() {
         return this.bucketingConfig;
     }
     /**
      * Mask
-     * 
     */
     public GooglePrivacyDlpV2CharacterMaskConfigResponse getCharacterMaskConfig() {
         return this.characterMaskConfig;
     }
     /**
      * Deterministic Crypto
-     * 
     */
     public GooglePrivacyDlpV2CryptoDeterministicConfigResponse getCryptoDeterministicConfig() {
         return this.cryptoDeterministicConfig;
     }
     /**
      * Crypto
-     * 
     */
     public GooglePrivacyDlpV2CryptoHashConfigResponse getCryptoHashConfig() {
         return this.cryptoHashConfig;
     }
     /**
      * Ffx-Fpe
-     * 
     */
     public GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse getCryptoReplaceFfxFpeConfig() {
         return this.cryptoReplaceFfxFpeConfig;
     }
     /**
      * Date Shift
-     * 
     */
     public GooglePrivacyDlpV2DateShiftConfigResponse getDateShiftConfig() {
         return this.dateShiftConfig;
     }
     /**
      * Fixed size bucketing
-     * 
     */
     public GooglePrivacyDlpV2FixedSizeBucketingConfigResponse getFixedSizeBucketingConfig() {
         return this.fixedSizeBucketingConfig;
     }
     /**
      * Redact
-     * 
     */
     public GooglePrivacyDlpV2RedactConfigResponse getRedactConfig() {
         return this.redactConfig;
     }
     /**
      * Replace with a specified value.
-     * 
     */
     public GooglePrivacyDlpV2ReplaceValueConfigResponse getReplaceConfig() {
         return this.replaceConfig;
     }
     /**
      * Replace with a value randomly drawn (with replacement) from a dictionary.
-     * 
     */
     public GooglePrivacyDlpV2ReplaceDictionaryConfigResponse getReplaceDictionaryConfig() {
         return this.replaceDictionaryConfig;
     }
     /**
      * Replace with infotype
-     * 
     */
     public GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse getReplaceWithInfoTypeConfig() {
         return this.replaceWithInfoTypeConfig;
     }
     /**
      * Time extraction
-     * 
     */
     public GooglePrivacyDlpV2TimePartConfigResponse getTimePartConfig() {
         return this.timePartConfig;

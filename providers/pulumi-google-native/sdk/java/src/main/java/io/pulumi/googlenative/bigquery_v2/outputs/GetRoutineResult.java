@@ -17,72 +17,58 @@ import java.util.Objects;
 public final class GetRoutineResult {
     /**
      * Optional.
-     * 
      */
     private final List<ArgumentResponse> arguments;
     /**
      * The time when this routine was created, in milliseconds since the epoch.
-     * 
      */
     private final String creationTime;
     /**
      * The body of the routine. For functions, this is the expression in the AS clause. If language=SQL, it is the substring inside (but excluding) the parentheses. For example, for the function created with the following statement: `CREATE FUNCTION JoinLines(x string, y string) as (concat(x, "\n", y))` The definition_body is `concat(x, "\n", y)` (\n is not replaced with linebreak). If language=JAVASCRIPT, it is the evaluated string in the AS clause. For example, for the function created with the following statement: `CREATE FUNCTION f() RETURNS STRING LANGUAGE js AS 'return "\n";\n'` The definition_body is `return "\n";\n` Note that both \n are replaced with linebreaks.
-     * 
      */
     private final String definitionBody;
     /**
      * Optional. The description of the routine, if defined.
-     * 
      */
     private final String description;
     /**
      * Optional. The determinism level of the JavaScript UDF, if defined.
-     * 
      */
     private final String determinismLevel;
     /**
      * A hash of this resource.
-     * 
      */
     private final String etag;
     /**
      * Optional. If language = "JAVASCRIPT", this field stores the path of the imported JAVASCRIPT libraries.
-     * 
      */
     private final List<String> importedLibraries;
     /**
      * Optional. Defaults to "SQL".
-     * 
      */
     private final String language;
     /**
      * The time when this routine was last modified, in milliseconds since the epoch.
-     * 
      */
     private final String lastModifiedTime;
     /**
      * Optional. Can be set only if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return table type is inferred from definition_body at query time in each query that references this routine. If present, then the columns in the evaluated table result will be cast to match the column types specificed in return table type, at query time.
-     * 
      */
     private final StandardSqlTableTypeResponse returnTableType;
     /**
      * Optional if language = "SQL"; required otherwise. Cannot be set if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return type is inferred from definition_body at query time in each query that references this routine. If present, then the evaluated result will be cast to the specified returned type at query time. For example, for the functions created with the following statements: * `CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);` * `CREATE FUNCTION Increment(x FLOAT64) AS (Add(x, 1));` * `CREATE FUNCTION Decrement(x FLOAT64) RETURNS FLOAT64 AS (Add(x, -1));` The return_type is `{type_kind: "FLOAT64"}` for `Add` and `Decrement`, and is absent for `Increment` (inferred as FLOAT64 at query time). Suppose the function `Add` is replaced by `CREATE OR REPLACE FUNCTION Add(x INT64, y INT64) AS (x + y);` Then the inferred return type of `Increment` is automatically changed to INT64 at query time, while the return type of `Decrement` remains FLOAT64.
-     * 
      */
     private final StandardSqlDataTypeResponse returnType;
     /**
      * Reference describing the ID of this routine.
-     * 
      */
     private final RoutineReferenceResponse routineReference;
     /**
      * The type of routine.
-     * 
      */
     private final String routineType;
     /**
      * Optional. Can be set for procedures only. If true (default), the definition body will be validated in the creation and the updates of the procedure. For procedures with an argument of ANY TYPE, the definition body validtion is not supported at creation/update time, and thus this field must be set to false explicitly.
-     * 
      */
     private final Boolean strictMode;
 
@@ -120,98 +106,84 @@ public final class GetRoutineResult {
 
     /**
      * Optional.
-     * 
     */
     public List<ArgumentResponse> getArguments() {
         return this.arguments;
     }
     /**
      * The time when this routine was created, in milliseconds since the epoch.
-     * 
     */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * The body of the routine. For functions, this is the expression in the AS clause. If language=SQL, it is the substring inside (but excluding) the parentheses. For example, for the function created with the following statement: `CREATE FUNCTION JoinLines(x string, y string) as (concat(x, "\n", y))` The definition_body is `concat(x, "\n", y)` (\n is not replaced with linebreak). If language=JAVASCRIPT, it is the evaluated string in the AS clause. For example, for the function created with the following statement: `CREATE FUNCTION f() RETURNS STRING LANGUAGE js AS 'return "\n";\n'` The definition_body is `return "\n";\n` Note that both \n are replaced with linebreaks.
-     * 
     */
     public String getDefinitionBody() {
         return this.definitionBody;
     }
     /**
      * Optional. The description of the routine, if defined.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * Optional. The determinism level of the JavaScript UDF, if defined.
-     * 
     */
     public String getDeterminismLevel() {
         return this.determinismLevel;
     }
     /**
      * A hash of this resource.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Optional. If language = "JAVASCRIPT", this field stores the path of the imported JAVASCRIPT libraries.
-     * 
     */
     public List<String> getImportedLibraries() {
         return this.importedLibraries;
     }
     /**
      * Optional. Defaults to "SQL".
-     * 
     */
     public String getLanguage() {
         return this.language;
     }
     /**
      * The time when this routine was last modified, in milliseconds since the epoch.
-     * 
     */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * Optional. Can be set only if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return table type is inferred from definition_body at query time in each query that references this routine. If present, then the columns in the evaluated table result will be cast to match the column types specificed in return table type, at query time.
-     * 
     */
     public StandardSqlTableTypeResponse getReturnTableType() {
         return this.returnTableType;
     }
     /**
      * Optional if language = "SQL"; required otherwise. Cannot be set if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return type is inferred from definition_body at query time in each query that references this routine. If present, then the evaluated result will be cast to the specified returned type at query time. For example, for the functions created with the following statements: * `CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);` * `CREATE FUNCTION Increment(x FLOAT64) AS (Add(x, 1));` * `CREATE FUNCTION Decrement(x FLOAT64) RETURNS FLOAT64 AS (Add(x, -1));` The return_type is `{type_kind: "FLOAT64"}` for `Add` and `Decrement`, and is absent for `Increment` (inferred as FLOAT64 at query time). Suppose the function `Add` is replaced by `CREATE OR REPLACE FUNCTION Add(x INT64, y INT64) AS (x + y);` Then the inferred return type of `Increment` is automatically changed to INT64 at query time, while the return type of `Decrement` remains FLOAT64.
-     * 
     */
     public StandardSqlDataTypeResponse getReturnType() {
         return this.returnType;
     }
     /**
      * Reference describing the ID of this routine.
-     * 
     */
     public RoutineReferenceResponse getRoutineReference() {
         return this.routineReference;
     }
     /**
      * The type of routine.
-     * 
     */
     public String getRoutineType() {
         return this.routineType;
     }
     /**
      * Optional. Can be set for procedures only. If true (default), the definition body will be validated in the creation and the updates of the procedure. For procedures with an argument of ANY TYPE, the definition body validtion is not supported at creation/update time, and thus this field must be set to false explicitly.
-     * 
     */
     public Boolean getStrictMode() {
         return this.strictMode;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Message holding configuration options for explaining model predictions. There are three feature attribution methods supported for TensorFlow models: integrated gradients, sampled Shapley, and XRAI. [Learn more about feature attributions.](/ai-platform/prediction/docs/ai-explanations/overview)
- * 
  */
 public final class GoogleCloudMlV1__ExplanationConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudMlV1__ExplanationConfigArgs extends io.pulumi.reso
 
     /**
      * Attributes credit by computing the Aumann-Shapley value taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365
-     * 
      */
     @Import(name="integratedGradientsAttribution")
       private final @Nullable Output<GoogleCloudMlV1__IntegratedGradientsAttributionArgs> integratedGradientsAttribution;
@@ -33,7 +31,6 @@ public final class GoogleCloudMlV1__ExplanationConfigArgs extends io.pulumi.reso
 
     /**
      * An attribution method that approximates Shapley values for features that contribute to the label being predicted. A sampling strategy is used to approximate the value rather than considering all subsets of features.
-     * 
      */
     @Import(name="sampledShapleyAttribution")
       private final @Nullable Output<GoogleCloudMlV1__SampledShapleyAttributionArgs> sampledShapleyAttribution;
@@ -44,7 +41,6 @@ public final class GoogleCloudMlV1__ExplanationConfigArgs extends io.pulumi.reso
 
     /**
      * Attributes credit by computing the XRAI taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1906.02825 Currently only implemented for models with natural image inputs.
-     * 
      */
     @Import(name="xraiAttribution")
       private final @Nullable Output<GoogleCloudMlV1__XraiAttributionArgs> xraiAttribution;

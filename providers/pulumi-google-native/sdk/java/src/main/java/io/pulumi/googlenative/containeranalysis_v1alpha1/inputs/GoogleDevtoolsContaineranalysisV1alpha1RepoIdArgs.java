@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A unique identifier for a Cloud Repo.
- * 
  */
 public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs extends io.
 
     /**
      * A combination of a project ID and a repo name.
-     * 
      */
     @Import(name="projectRepoId")
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId;
@@ -32,7 +30,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs extends io.
 
     /**
      * A server-assigned, globally unique identifier.
-     * 
      */
     @Import(name="uid")
       private final @Nullable Output<String> uid;

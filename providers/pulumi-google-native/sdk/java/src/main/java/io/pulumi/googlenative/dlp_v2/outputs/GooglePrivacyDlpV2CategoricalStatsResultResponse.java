@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2CategoricalStatsResultResponse {
     /**
      * Histogram of value frequencies in the column.
-     * 
      */
     private final List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets;
 
@@ -23,7 +22,6 @@ public final class GooglePrivacyDlpV2CategoricalStatsResultResponse {
 
     /**
      * Histogram of value frequencies in the column.
-     * 
     */
     public List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> getValueFrequencyHistogramBuckets() {
         return this.valueFrequencyHistogramBuckets;

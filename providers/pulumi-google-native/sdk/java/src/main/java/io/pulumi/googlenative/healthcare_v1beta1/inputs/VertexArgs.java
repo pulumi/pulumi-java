@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A 2D coordinate in an image. The origin is the top-left.
- * 
  */
 public final class VertexArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class VertexArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * X coordinate.
-     * 
      */
     @Import(name="x")
       private final @Nullable Output<Double> x;
@@ -31,7 +29,6 @@ public final class VertexArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Y coordinate.
-     * 
      */
     @Import(name="y")
       private final @Nullable Output<Double> y;

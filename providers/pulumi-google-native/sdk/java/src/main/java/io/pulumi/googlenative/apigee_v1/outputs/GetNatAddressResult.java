@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class GetNatAddressResult {
     /**
      * The static IPV4 address.
-     * 
      */
     private final String ipAddress;
     /**
      * Resource ID of the NAT address.
-     * 
      */
     private final String name;
     /**
      * State of the nat address.
-     * 
      */
     private final String state;
 
@@ -37,21 +34,18 @@ public final class GetNatAddressResult {
 
     /**
      * The static IPV4 address.
-     * 
     */
     public String getIpAddress() {
         return this.ipAddress;
     }
     /**
      * Resource ID of the NAT address.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * State of the nat address.
-     * 
     */
     public String getState() {
         return this.state;

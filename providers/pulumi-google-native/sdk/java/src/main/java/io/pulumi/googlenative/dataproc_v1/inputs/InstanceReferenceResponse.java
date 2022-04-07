@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A reference to a Compute Engine instance.
- * 
  */
 public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The unique identifier of the Compute Engine instance.
-     * 
      */
     @Import(name="instanceId", required=true)
       private final String instanceId;
@@ -29,7 +27,6 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The user-friendly name of the Compute Engine instance.
-     * 
      */
     @Import(name="instanceName", required=true)
       private final String instanceName;
@@ -40,7 +37,6 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The public ECIES key used for sharing data with this instance.
-     * 
      */
     @Import(name="publicEciesKey", required=true)
       private final String publicEciesKey;
@@ -51,7 +47,6 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The public RSA key used for sharing data with this instance.
-     * 
      */
     @Import(name="publicKey", required=true)
       private final String publicKey;

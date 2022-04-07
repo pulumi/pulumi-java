@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * An instance-attached disk resource.
- * 
  */
 public final class SavedDiskResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SavedDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Type of the resource. Always compute#savedDisk for attached disks.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -29,7 +27,6 @@ public final class SavedDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies a URL of the disk attached to the source instance.
-     * 
      */
     @Import(name="sourceDisk", required=true)
       private final String sourceDisk;
@@ -40,7 +37,6 @@ public final class SavedDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Size of the individual disk snapshot used by this machine image.
-     * 
      */
     @Import(name="storageBytes", required=true)
       private final String storageBytes;
@@ -51,7 +47,6 @@ public final class SavedDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An indicator whether storageBytes is in a stable state or it is being adjusted as a result of shared storage reallocation. This status can either be UPDATING, meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-date.
-     * 
      */
     @Import(name="storageBytesStatus", required=true)
       private final String storageBytesStatus;

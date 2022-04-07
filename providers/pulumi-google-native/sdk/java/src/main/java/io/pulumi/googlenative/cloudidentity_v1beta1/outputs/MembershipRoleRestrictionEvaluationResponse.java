@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class MembershipRoleRestrictionEvaluationResponse {
     /**
      * The current state of the restriction
-     * 
      */
     private final String state;
 
@@ -22,7 +21,6 @@ public final class MembershipRoleRestrictionEvaluationResponse {
 
     /**
      * The current state of the restriction
-     * 
     */
     public String getState() {
         return this.state;

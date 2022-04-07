@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The packages that must be installed in order for a worker to run the steps of the Cloud Dataflow job that will be assigned to its worker pool. This is the mechanism by which the Cloud Dataflow SDK causes code to be loaded onto the workers. For example, the Cloud Dataflow Java SDK might use this to install jars containing the user's code and all of the various dependencies (libraries, data files, etc.) required in order for that code to run.
- * 
  */
 public final class PackageResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class PackageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource to read the package from. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket} bucket.storage.googleapis.com/
-     * 
      */
     @Import(name="location", required=true)
       private final String location;
@@ -29,7 +27,6 @@ public final class PackageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the package.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

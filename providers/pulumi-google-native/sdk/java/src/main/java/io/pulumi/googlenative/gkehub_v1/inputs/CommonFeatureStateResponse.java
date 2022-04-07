@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * CommonFeatureState contains Hub-wide Feature status information.
- * 
  */
 public final class CommonFeatureStateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class CommonFeatureStateResponse extends io.pulumi.resources.Invoke
 
     /**
      * Appdevexperience specific state.
-     * 
      */
     @Import(name="appdevexperience", required=true)
       private final AppDevExperienceFeatureStateResponse appdevexperience;
@@ -30,7 +28,6 @@ public final class CommonFeatureStateResponse extends io.pulumi.resources.Invoke
 
     /**
      * The "running state" of the Feature in this Hub.
-     * 
      */
     @Import(name="state", required=true)
       private final FeatureStateResponse state;

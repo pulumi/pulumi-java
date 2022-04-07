@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class SandboxConfigResponse {
     /**
      * Type of the sandbox to use for the node.
-     * 
      */
     private final String type;
 
@@ -22,7 +21,6 @@ public final class SandboxConfigResponse {
 
     /**
      * Type of the sandbox to use for the node.
-     * 
     */
     public String getType() {
         return this.type;

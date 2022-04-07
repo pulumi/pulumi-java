@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class UserPasswordResponse {
     /**
      * Secret version reference containing the password.
-     * 
      */
     private final SecretResponse password;
     /**
      * Username.
-     * 
      */
     private final String username;
 
@@ -31,14 +29,12 @@ public final class UserPasswordResponse {
 
     /**
      * Secret version reference containing the password.
-     * 
     */
     public SecretResponse getPassword() {
         return this.password;
     }
     /**
      * Username.
-     * 
     */
     public String getUsername() {
         return this.username;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Config for image classification human labeling task.
- * 
  */
 public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
 
     /**
      * Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one image.
-     * 
      */
     @Import(name="allowMultiLabel", required=true)
       private final Boolean allowMultiLabel;
@@ -30,7 +28,6 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
 
     /**
      * Annotation spec set resource name.
-     * 
      */
     @Import(name="annotationSpecSet", required=true)
       private final String annotationSpecSet;
@@ -41,7 +38,6 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
 
     /**
      * Optional. The type of how to aggregate answers.
-     * 
      */
     @Import(name="answerAggregationType", required=true)
       private final String answerAggregationType;

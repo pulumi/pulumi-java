@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Can only be specified if VPC flow logs for this subnetwork is enabled. Configures whether all, none or a subset of metadata fields should be added to the reported VPC flow logs. Default is EXCLUDE_ALL_METADATA.
-     * 
      */
     @EnumType
     public enum SubnetworkLogConfigMetadata {

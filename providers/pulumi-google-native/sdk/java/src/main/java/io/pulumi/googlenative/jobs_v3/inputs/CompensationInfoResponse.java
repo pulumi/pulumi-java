@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Job compensation details.
- * 
  */
 public final class CompensationInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class CompensationInfoResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Annualized base compensation range. Computed as base compensation entry's CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
-     * 
      */
     @Import(name="annualizedBaseCompensationRange", required=true)
       private final CompensationRangeResponse annualizedBaseCompensationRange;
@@ -31,7 +29,6 @@ public final class CompensationInfoResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Annualized total compensation range. Computed as all compensation entries' CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
-     * 
      */
     @Import(name="annualizedTotalCompensationRange", required=true)
       private final CompensationRangeResponse annualizedTotalCompensationRange;
@@ -42,7 +39,6 @@ public final class CompensationInfoResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Optional. Job compensation information. At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as ** base compensation entry ** for the job.
-     * 
      */
     @Import(name="entries", required=true)
       private final List<CompensationEntryResponse> entries;

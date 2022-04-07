@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The simple response message containing speech or text.
- * 
  */
 public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
 
     /**
      * Optional. The text to display.
-     * 
      */
     @Import(name="displayText")
       private final @Nullable Output<String> displayText;
@@ -31,7 +29,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
 
     /**
      * One of text_to_speech or ssml must be provided. Structured spoken response to the user in the SSML format. Mutually exclusive with text_to_speech.
-     * 
      */
     @Import(name="ssml")
       private final @Nullable Output<String> ssml;
@@ -42,7 +39,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
 
     /**
      * One of text_to_speech or ssml must be provided. The plain text of the speech output. Mutually exclusive with ssml.
-     * 
      */
     @Import(name="textToSpeech")
       private final @Nullable Output<String> textToSpeech;

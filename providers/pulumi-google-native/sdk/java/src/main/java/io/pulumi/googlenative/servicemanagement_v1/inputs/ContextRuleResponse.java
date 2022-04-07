@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A context rule provides information about the context for an individual API element.
- * 
  */
 public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A list of full type names or extension IDs of extensions allowed in grpc side channel from client to backend.
-     * 
      */
     @Import(name="allowedRequestExtensions", required=true)
       private final List<String> allowedRequestExtensions;
@@ -30,7 +28,6 @@ public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A list of full type names or extension IDs of extensions allowed in grpc side channel from backend to client.
-     * 
      */
     @Import(name="allowedResponseExtensions", required=true)
       private final List<String> allowedResponseExtensions;
@@ -41,7 +38,6 @@ public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A list of full type names of provided contexts.
-     * 
      */
     @Import(name="provided", required=true)
       private final List<String> provided;
@@ -52,7 +48,6 @@ public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A list of full type names of requested contexts.
-     * 
      */
     @Import(name="requested", required=true)
       private final List<String> requested;
@@ -63,7 +58,6 @@ public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Selects the methods to which this rule applies. Refer to selector for syntax details.
-     * 
      */
     @Import(name="selector", required=true)
       private final String selector;

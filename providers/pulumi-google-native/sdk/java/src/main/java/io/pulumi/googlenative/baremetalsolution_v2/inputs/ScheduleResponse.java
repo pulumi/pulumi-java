@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A snapshot schedule.
- * 
  */
 public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A crontab-like specification that the schedule uses to take snapshots.
-     * 
      */
     @Import(name="crontabSpec", required=true)
       private final String crontabSpec;
@@ -30,7 +28,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A list of snapshot names created in this schedule.
-     * 
      */
     @Import(name="prefix", required=true)
       private final String prefix;
@@ -41,7 +38,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The maximum number of snapshots to retain in this schedule.
-     * 
      */
     @Import(name="retentionCount", required=true)
       private final Integer retentionCount;

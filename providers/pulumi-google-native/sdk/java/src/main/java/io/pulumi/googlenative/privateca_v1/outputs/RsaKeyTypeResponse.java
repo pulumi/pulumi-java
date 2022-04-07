@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class RsaKeyTypeResponse {
     /**
      * Optional. The maximum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.
-     * 
      */
     private final String maxModulusSize;
     /**
      * Optional. The minimum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service-level min RSA modulus size will continue to apply.
-     * 
      */
     private final String minModulusSize;
 
@@ -30,14 +28,12 @@ public final class RsaKeyTypeResponse {
 
     /**
      * Optional. The maximum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.
-     * 
     */
     public String getMaxModulusSize() {
         return this.maxModulusSize;
     }
     /**
      * Optional. The minimum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service-level min RSA modulus size will continue to apply.
-     * 
     */
     public String getMinModulusSize() {
         return this.minModulusSize;

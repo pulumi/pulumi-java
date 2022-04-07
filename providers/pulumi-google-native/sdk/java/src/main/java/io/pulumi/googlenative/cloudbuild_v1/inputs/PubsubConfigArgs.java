@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * PubsubConfig describes the configuration of a trigger that creates a build whenever a Pub/Sub message is published.
- * 
  */
 public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Service account that will make the push request.
-     * 
      */
     @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
@@ -32,7 +30,6 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<PubsubConfigState> state;
@@ -43,7 +40,6 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`.
-     * 
      */
     @Import(name="topic")
       private final @Nullable Output<String> topic;

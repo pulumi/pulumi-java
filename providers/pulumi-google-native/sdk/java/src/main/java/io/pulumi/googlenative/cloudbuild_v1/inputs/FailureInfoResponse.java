@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A fatal problem encountered during the execution of the build.
- * 
  */
 public final class FailureInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class FailureInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Explains the failure issue in more detail using hard-coded text.
-     * 
      */
     @Import(name="detail", required=true)
       private final String detail;
@@ -29,7 +27,6 @@ public final class FailureInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the failure.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

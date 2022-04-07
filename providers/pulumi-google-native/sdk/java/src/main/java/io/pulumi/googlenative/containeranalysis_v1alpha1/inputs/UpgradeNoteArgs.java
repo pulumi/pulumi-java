@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * An Upgrade Note represents a potential upgrade of a package to a given version. For each package version combination (i.e. bash 4.0, bash 4.1, bash 4.1.2), there will be a Upgrade Note.
- * 
  */
 public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Metadata about the upgrade for each specific operating system.
-     * 
      */
     @Import(name="distributions")
       private final @Nullable Output<List<UpgradeDistributionArgs>> distributions;
@@ -34,7 +32,6 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Required - The package this Upgrade is for.
-     * 
      */
     @Import(name="package")
       private final @Nullable Output<String> package_;
@@ -45,7 +42,6 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Required - The version of the package in machine + human readable form.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<VersionArgs> version;

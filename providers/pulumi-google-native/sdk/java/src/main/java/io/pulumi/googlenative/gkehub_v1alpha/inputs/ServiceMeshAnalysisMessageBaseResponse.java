@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * AnalysisMessageBase describes some common information that is needed for all messages.
- * 
  */
 public final class ServiceMeshAnalysisMessageBaseResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ServiceMeshAnalysisMessageBaseResponse extends io.pulumi.reso
 
     /**
      * A url pointing to the Service Mesh or Istio documentation for this specific error type.
-     * 
      */
     @Import(name="documentationUrl", required=true)
       private final String documentationUrl;
@@ -30,7 +28,6 @@ public final class ServiceMeshAnalysisMessageBaseResponse extends io.pulumi.reso
 
     /**
      * Represents how severe a message is.
-     * 
      */
     @Import(name="level", required=true)
       private final String level;
@@ -41,7 +38,6 @@ public final class ServiceMeshAnalysisMessageBaseResponse extends io.pulumi.reso
 
     /**
      * Represents the specific type of a message.
-     * 
      */
     @Import(name="type", required=true)
       private final ServiceMeshTypeResponse type;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Autoscaling Policy config associated with the cluster.
- * 
  */
 public final class AutoscalingConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AutoscalingConfigResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. The autoscaling policy used by the cluster.Only resource names including projectid and location (region) are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id] projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]Note that the policy must be in the same project and Dataproc region.
-     * 
      */
     @Import(name="policyUri", required=true)
       private final String policyUri;

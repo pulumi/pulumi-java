@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * What event needs to occur for a new job to be started.
- * 
  */
 public final class GooglePrivacyDlpV2TriggerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GooglePrivacyDlpV2TriggerResponse extends io.pulumi.resources
 
     /**
      * For use with hybrid jobs. Jobs must be manually created and finished.
-     * 
      */
     @Import(name="manual", required=true)
       private final GooglePrivacyDlpV2ManualResponse manual;
@@ -30,7 +28,6 @@ public final class GooglePrivacyDlpV2TriggerResponse extends io.pulumi.resources
 
     /**
      * Create a job on a repeating basis based on the elapse of time.
-     * 
      */
     @Import(name="schedule", required=true)
       private final GooglePrivacyDlpV2ScheduleResponse schedule;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Replace each input value with a given `Value`.
- * 
  */
 public final class GooglePrivacyDlpV2ReplaceValueConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigArgs extends io.pulumi.re
 
     /**
      * Value to replace it with.
-     * 
      */
     @Import(name="newValue")
       private final @Nullable Output<GooglePrivacyDlpV2ValueArgs> newValue;

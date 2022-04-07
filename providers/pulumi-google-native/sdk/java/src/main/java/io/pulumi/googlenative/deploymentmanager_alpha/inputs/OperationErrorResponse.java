@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * [Output Only] If errors are generated during processing of the operation, this field will be populated.
- * 
  */
 public final class OperationErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class OperationErrorResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The array of errors encountered while processing this operation.
-     * 
      */
     @Import(name="errors", required=true)
       private final List<OperationErrorErrorsItemResponse> errors;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A simplified layout that divides the available space into rows and arranges a set of widgets horizontally in each row.
- * 
  */
 public final class RowLayoutResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class RowLayoutResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The rows of content to display.
-     * 
      */
     @Import(name="rows", required=true)
       private final List<RowResponse> rows;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The bucket's lifecycle configuration. See lifecycle management for more information.
- * 
  */
 public final class BucketLifecycleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class BucketLifecycleResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.
-     * 
      */
     @Import(name="rule", required=true)
       private final List<BucketLifecycleRuleItemResponse> rule;

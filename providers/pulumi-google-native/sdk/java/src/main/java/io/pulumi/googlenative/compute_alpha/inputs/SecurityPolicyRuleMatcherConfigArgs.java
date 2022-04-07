@@ -19,7 +19,6 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
 
     /**
      * CIDR IP address range. This field may only be specified when versioned_expr is set to FIREWALL.
-     * 
      */
     @Import(name="destIpRanges")
       private final @Nullable Output<List<String>> destIpRanges;
@@ -30,7 +29,6 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
 
     /**
      * Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
-     * 
      */
     @Import(name="destPorts")
       private final @Nullable Output<List<SecurityPolicyRuleMatcherConfigDestinationPortArgs>> destPorts;
@@ -41,7 +39,6 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
 
     /**
      * Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
-     * 
      */
     @Import(name="layer4Configs")
       private final @Nullable Output<List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs>> layer4Configs;
@@ -52,7 +49,6 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
 
     /**
      * CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
-     * 
      */
     @Import(name="srcIpRanges")
       private final @Nullable Output<List<String>> srcIpRanges;

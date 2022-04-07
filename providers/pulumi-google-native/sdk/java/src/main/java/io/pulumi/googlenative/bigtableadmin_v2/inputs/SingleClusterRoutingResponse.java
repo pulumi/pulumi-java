@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Unconditionally routes all read/write requests to a specific cluster. This option preserves read-your-writes consistency but does not improve availability.
- * 
  */
 public final class SingleClusterRoutingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class SingleClusterRoutingResponse extends io.pulumi.resources.Invo
 
     /**
      * Whether or not `CheckAndMutateRow` and `ReadModifyWriteRow` requests are allowed by this app profile. It is unsafe to send these requests to the same table/row/column in multiple clusters.
-     * 
      */
     @Import(name="allowTransactionalWrites", required=true)
       private final Boolean allowTransactionalWrites;
@@ -30,7 +28,6 @@ public final class SingleClusterRoutingResponse extends io.pulumi.resources.Invo
 
     /**
      * The cluster to which read/write requests should be routed.
-     * 
      */
     @Import(name="clusterId", required=true)
       private final String clusterId;

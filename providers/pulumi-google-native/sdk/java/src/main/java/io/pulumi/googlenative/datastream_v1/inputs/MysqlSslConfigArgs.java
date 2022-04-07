@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * MySQL SSL configuration information.
- * 
  */
 public final class MysqlSslConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MysqlSslConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Input only. PEM-encoded certificate of the CA that signed the source database server's certificate.
-     * 
      */
     @Import(name="caCertificate")
       private final @Nullable Output<String> caCertificate;
@@ -31,7 +29,6 @@ public final class MysqlSslConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Input only. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the 'client_key' and the 'ca_certificate' fields are mandatory.
-     * 
      */
     @Import(name="clientCertificate")
       private final @Nullable Output<String> clientCertificate;
@@ -42,7 +39,6 @@ public final class MysqlSslConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Input only. PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.
-     * 
      */
     @Import(name="clientKey")
       private final @Nullable Output<String> clientKey;

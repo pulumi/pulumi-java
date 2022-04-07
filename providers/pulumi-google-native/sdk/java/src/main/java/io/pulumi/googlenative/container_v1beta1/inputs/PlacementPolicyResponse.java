@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * PlacementPolicy defines the placement policy used by the node pool.
- * 
  */
 public final class PlacementPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class PlacementPolicyResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The type of placement.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

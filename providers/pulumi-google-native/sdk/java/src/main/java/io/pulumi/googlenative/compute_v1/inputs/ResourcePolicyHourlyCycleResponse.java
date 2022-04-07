@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Time window specified for hourly operations.
- * 
  */
 public final class ResourcePolicyHourlyCycleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ResourcePolicyHourlyCycleResponse extends io.pulumi.resources
 
     /**
      * [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
-     * 
      */
     @Import(name="duration", required=true)
       private final String duration;
@@ -30,7 +28,6 @@ public final class ResourcePolicyHourlyCycleResponse extends io.pulumi.resources
 
     /**
      * Defines a schedule with units measured in hours. The value determines how many hours pass between the start of each cycle.
-     * 
      */
     @Import(name="hoursInCycle", required=true)
       private final Integer hoursInCycle;
@@ -41,7 +38,6 @@ public final class ResourcePolicyHourlyCycleResponse extends io.pulumi.resources
 
     /**
      * Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;

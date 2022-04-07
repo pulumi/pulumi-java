@@ -12,22 +12,18 @@ import java.util.Objects;
 public final class NodePoolAutoscalingResponse {
     /**
      * Can this node pool be deleted automatically.
-     * 
      */
     private final Boolean autoprovisioned;
     /**
      * Is autoscaling enabled for this node pool.
-     * 
      */
     private final Boolean enabled;
     /**
      * Maximum number of nodes for one location in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.
-     * 
      */
     private final Integer maxNodeCount;
     /**
      * Minimum number of nodes for one location in the NodePool. Must be >= 1 and <= max_node_count.
-     * 
      */
     private final Integer minNodeCount;
 
@@ -45,28 +41,24 @@ public final class NodePoolAutoscalingResponse {
 
     /**
      * Can this node pool be deleted automatically.
-     * 
     */
     public Boolean getAutoprovisioned() {
         return this.autoprovisioned;
     }
     /**
      * Is autoscaling enabled for this node pool.
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * Maximum number of nodes for one location in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.
-     * 
     */
     public Integer getMaxNodeCount() {
         return this.maxNodeCount;
     }
     /**
      * Minimum number of nodes for one location in the NodePool. Must be >= 1 and <= max_node_count.
-     * 
     */
     public Integer getMinNodeCount() {
         return this.minNodeCount;

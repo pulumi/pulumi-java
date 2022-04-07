@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Authentication rules for the service. By default, if a method has any authentication requirements, every request must include a valid credential matching one of the requirements. It's an error to include more than one kind of credential in a single request. If a method doesn't have any auth requirements, request credentials will be ignored.
- * 
  */
 public final class AuthenticationRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class AuthenticationRuleResponse extends io.pulumi.resources.Invoke
 
     /**
      * If true, the service accepts API keys without any other credential. This flag only applies to HTTP and gRPC requests.
-     * 
      */
     @Import(name="allowWithoutCredential", required=true)
       private final Boolean allowWithoutCredential;
@@ -33,7 +31,6 @@ public final class AuthenticationRuleResponse extends io.pulumi.resources.Invoke
 
     /**
      * The requirements for OAuth credentials.
-     * 
      */
     @Import(name="oauth", required=true)
       private final OAuthRequirementsResponse oauth;
@@ -44,7 +41,6 @@ public final class AuthenticationRuleResponse extends io.pulumi.resources.Invoke
 
     /**
      * Requirements for additional authentication providers.
-     * 
      */
     @Import(name="requirements", required=true)
       private final List<AuthRequirementResponse> requirements;
@@ -55,7 +51,6 @@ public final class AuthenticationRuleResponse extends io.pulumi.resources.Invoke
 
     /**
      * Selects the methods to which this rule applies. Refer to selector for syntax details.
-     * 
      */
     @Import(name="selector", required=true)
       private final String selector;

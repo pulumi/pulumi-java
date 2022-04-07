@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class NetworkEndpointResponse {
     /**
      * The IP address of this network endpoint.
-     * 
      */
     private final String ipAddress;
     /**
      * The port of this network endpoint.
-     * 
      */
     private final Integer port;
 
@@ -31,14 +29,12 @@ public final class NetworkEndpointResponse {
 
     /**
      * The IP address of this network endpoint.
-     * 
     */
     public String getIpAddress() {
         return this.ipAddress;
     }
     /**
      * The port of this network endpoint.
-     * 
     */
     public Integer getPort() {
         return this.port;

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Common configurations for an ExecStep.
- * 
  */
 public final class ExecStepConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ExecStepConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
-     * 
      */
     @Import(name="allowedSuccessCodes")
       private final @Nullable Output<List<Integer>> allowedSuccessCodes;
@@ -35,7 +33,6 @@ public final class ExecStepConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A Google Cloud Storage object containing the executable.
-     * 
      */
     @Import(name="gcsObject")
       private final @Nullable Output<GcsObjectArgs> gcsObject;
@@ -46,7 +43,6 @@ public final class ExecStepConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with [shebang lines] (https://en.wikipedia.org/wiki/Shebang_\(Unix\)).
-     * 
      */
     @Import(name="interpreter")
       private final @Nullable Output<ExecStepConfigInterpreter> interpreter;
@@ -57,7 +53,6 @@ public final class ExecStepConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An absolute path to the executable on the VM.
-     * 
      */
     @Import(name="localPath")
       private final @Nullable Output<String> localPath;

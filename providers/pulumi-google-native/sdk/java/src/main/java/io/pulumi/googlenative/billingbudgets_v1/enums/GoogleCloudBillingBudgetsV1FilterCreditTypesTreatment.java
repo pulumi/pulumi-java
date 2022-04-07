@@ -10,24 +10,20 @@ import java.util.StringJoiner;
 
     /**
      * Optional. If not set, default behavior is `INCLUDE_ALL_CREDITS`.
-     * 
      */
     @EnumType
     public enum GoogleCloudBillingBudgetsV1FilterCreditTypesTreatment {
         CreditTypesTreatmentUnspecified("CREDIT_TYPES_TREATMENT_UNSPECIFIED"),
         /**
          * All types of credit are subtracted from the gross cost to determine the spend for threshold calculations.
-         * 
          */
         IncludeAllCredits("INCLUDE_ALL_CREDITS"),
         /**
          * All types of credit are added to the net cost to determine the spend for threshold calculations.
-         * 
          */
         ExcludeAllCredits("EXCLUDE_ALL_CREDITS"),
         /**
          * [Credit types](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type) specified in the credit_types field are subtracted from the gross cost to determine the spend for threshold calculations.
-         * 
          */
         IncludeSpecifiedCredits("INCLUDE_SPECIFIED_CREDITS");
 

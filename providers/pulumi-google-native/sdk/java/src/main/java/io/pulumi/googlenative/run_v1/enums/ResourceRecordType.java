@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * Resource record type. Example: `AAAA`.
-     * 
      */
     @EnumType
     public enum ResourceRecordType {
         /**
          * An unknown resource record.
-         * 
          */
         RecordTypeUnspecified("RECORD_TYPE_UNSPECIFIED"),
         /**
          * An A resource record. Data is an IPv4 address.
-         * 
          */
         A("A"),
         /**
          * An AAAA resource record. Data is an IPv6 address.
-         * 
          */
         Aaaa("AAAA"),
         /**
          * A CNAME resource record. Data is a domain name to be aliased.
-         * 
          */
         Cname("CNAME");
 

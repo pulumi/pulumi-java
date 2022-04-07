@@ -16,7 +16,6 @@ public final class QueryParameterTypeResponse extends io.pulumi.resources.Invoke
 
     /**
      * [Optional] The type of the array's elements, if this is an array.
-     * 
      */
     @Import(name="arrayType", required=true)
       private final QueryParameterTypeResponse arrayType;
@@ -27,7 +26,6 @@ public final class QueryParameterTypeResponse extends io.pulumi.resources.Invoke
 
     /**
      * [Optional] The types of the fields of this struct, in order, if this is a struct.
-     * 
      */
     @Import(name="structTypes", required=true)
       private final List<QueryParameterTypeStructTypesItemResponse> structTypes;
@@ -38,7 +36,6 @@ public final class QueryParameterTypeResponse extends io.pulumi.resources.Invoke
 
     /**
      * [Required] The top level type of this field.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

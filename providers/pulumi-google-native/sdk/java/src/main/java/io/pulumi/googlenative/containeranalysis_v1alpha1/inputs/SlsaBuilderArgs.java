@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * SlsaBuilder encapsulates the identity of the builder of this provenance.
- * 
  */
 public final class SlsaBuilderArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SlsaBuilderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * id is the id of the slsa provenance builder
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;

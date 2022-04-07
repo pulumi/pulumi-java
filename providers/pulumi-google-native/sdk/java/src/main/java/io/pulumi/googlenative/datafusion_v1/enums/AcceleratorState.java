@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * The state of the accelerator
-     * 
      */
     @EnumType
     public enum AcceleratorState {
         /**
          * Default value, do not use
-         * 
          */
         StateUnspecified("STATE_UNSPECIFIED"),
         /**
          * Indicates that the accelerator is enabled and available to use
-         * 
          */
         Enabled("ENABLED"),
         /**
          * Indicates that the accelerator is disabled and not available to use
-         * 
          */
         Disabled("DISABLED"),
         /**
          * Indicates that accelerator state is currently unknown. Requests for enable, disable could be retried while in this state
-         * 
          */
         Unknown("UNKNOWN");
 
