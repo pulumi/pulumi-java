@@ -539,8 +539,6 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
           cache: 'gradle'
-      - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
       - name: Set up Go 1.17.x
         uses: actions/setup-go@v2
         with:
@@ -558,19 +556,8 @@ jobs:
               ${{ steps.go-cache-paths.outputs.go-build }}
               ${{ steps.go-cache-paths.outputs.go-mod }}
           key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Ensure dependencies
-        run: make ensure
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        timeout-minutes: 2
-        run: make install_sdk
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
-      - name: Build Java language provider
-        run: make bin/pulumi-language-jvm
-      - name: Build AWS provider
-        run: make provider.aws.install
-      - name: Build EKS provider
-        run: make provider.eks.install
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
