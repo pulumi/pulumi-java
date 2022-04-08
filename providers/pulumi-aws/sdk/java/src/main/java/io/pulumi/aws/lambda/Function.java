@@ -3,6 +3,7 @@
 
 package io.pulumi.aws.lambda;
 
+import io.pulumi.asset.Archive;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.lambda.FunctionArgs;
 import io.pulumi.aws.lambda.inputs.FunctionState;
@@ -12,7 +13,6 @@ import io.pulumi.aws.lambda.outputs.FunctionFileSystemConfig;
 import io.pulumi.aws.lambda.outputs.FunctionImageConfig;
 import io.pulumi.aws.lambda.outputs.FunctionTracingConfig;
 import io.pulumi.aws.lambda.outputs.FunctionVpcConfig;
-import io.pulumi.core.Archive;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
