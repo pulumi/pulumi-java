@@ -122,19 +122,6 @@ public interface Output<T> extends Copyable<Output<T>> {
     // Static section -----
 
     /**
-     * Returns an empty {@code Output<T>} instance. No value is present for this
-     * {@code Output<T>}.
-     * <p/>
-     * Equivalent of {@code Output.ofNullable((T) null)}
-     *
-     * @param <T> The type of the non-existent value
-     * @return an empty {@code Output<T>}
-     */
-    static <T> Output<T> of() {
-        return Output.empty();
-    }
-
-    /**
      * Returns an {@code Output<T>} describing the given non-{@code null} value.
      *
      * @param value the value to describe, which must be non-{@code null}
