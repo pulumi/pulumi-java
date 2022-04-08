@@ -37,10 +37,10 @@ class InputTests {
         assertThat(map).containsKey("material");
         assertThat(map).containsKey("size");
 
-        assertThat(waitForValue((Output) map.get("brightness").get())).isNull();
-        assertThat(waitForValue((Output) map.get("color").get())).isNull();
-        assertThat(waitForValue((Output) map.get("material").get())).isNull();
-        assertThat(waitForValue((Output) map.get("size").get())).isNull();
+        assertThat(waitForValue((Output) map.get("brightness"))).isNull();
+        assertThat(waitForValue((Output) map.get("color"))).isNull();
+        assertThat(waitForValue((Output) map.get("material"))).isNull();
+        assertThat(waitForValue((Output) map.get("size"))).isNull();
     }
 
     @Test

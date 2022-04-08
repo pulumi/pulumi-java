@@ -19,11 +19,11 @@ public final class Codegen {
     }
 
     public static <T> Output<T> empty() {
-        return new OutputInternal<>(OutputData.of((T)null));
+        return Output.ofNullable((T)null);
     }
 
     public static <T> Output<T> ofNullable(@Nullable T value) {
-        return value == null ? Codegen.empty() : Output.of(value);
+        return value == null ? Codegen.empty() : Output.ofNullable(value);
     }
 
     public static <T, O extends Output<T>> Output<T> ofNullable(@Nullable O value) {
