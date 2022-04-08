@@ -78,22 +78,6 @@ func testCases() []test.SDKTest {
 	return ts
 }
 
-var myTests []test.SDKTest = []test.SDKTest{
-	{
-		Directory:   "aws-full",
-		Description: "Testing aws",
-	},
-}
-
-func adaptTestCases() []test.SDKTest {
-	var ts []test.SDKTest
-	ts = append(ts, javaSpecificTests...)
-	for _, t := range myTests {
-		ts = append(ts, adaptTest(t))
-	}
-	return ts
-}
-
 func compileGeneratedPackage(t *testing.T, pwd string) {
 	test.RunCommand(t, "gradle build", pwd, "gradle", "build", "-x", "test")
 }
@@ -107,18 +91,6 @@ func TestGeneratePackage(t *testing.T) {
 		GenPackage: GeneratePackage,
 		Language:   "jvm",
 		TestCases:  testCases(),
-		Checks: map[string]test.CodegenCheck{
-			"jvm/compile": compileGeneratedPackage,
-			"jvm/test":    testGeneratedPackage,
-		},
-	})
-}
-
-func TestGeneratePackage2(t *testing.T) {
-	test.TestSDKCodegen(t, &test.SDKCodegenOptions{
-		GenPackage: GeneratePackage,
-		Language:   "jvm",
-		TestCases:  adaptTestCases(),
 		Checks: map[string]test.CodegenCheck{
 			"jvm/compile": compileGeneratedPackage,
 			"jvm/test":    testGeneratedPackage,
