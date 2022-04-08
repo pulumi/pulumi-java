@@ -172,9 +172,6 @@ public interface Output<T> extends Copyable<Output<T>> {
             return Output.empty();
         }
         return Output.of(value);
-
-    static <T> Output<T> unknown() {
-        return new OutputInternal<>(OutputData.unknown());
     }
 
     /**
