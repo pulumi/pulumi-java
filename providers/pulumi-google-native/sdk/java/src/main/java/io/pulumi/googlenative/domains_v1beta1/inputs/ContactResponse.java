@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Details required for a contact associated with a `Registration`.
- * 
  */
 public final class ContactResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ContactResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Email address of the contact.
-     * 
      */
     @Import(name="email", required=true)
       private final String email;
@@ -30,7 +28,6 @@ public final class ContactResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Fax number of the contact in international format. For example, `"+1-800-555-0123"`.
-     * 
      */
     @Import(name="faxNumber", required=true)
       private final String faxNumber;
@@ -41,7 +38,6 @@ public final class ContactResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Phone number of the contact in international format. For example, `"+1-800-555-0123"`.
-     * 
      */
     @Import(name="phoneNumber", required=true)
       private final String phoneNumber;
@@ -52,7 +48,6 @@ public final class ContactResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Postal address of the contact.
-     * 
      */
     @Import(name="postalAddress", required=true)
       private final PostalAddressResponse postalAddress;

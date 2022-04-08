@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Setting a parameter value.
- * 
  */
 public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionRe
 
     /**
      * Display name of the parameter.
-     * 
      */
     @Import(name="parameter", required=true)
       private final String parameter;
@@ -30,7 +28,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionRe
 
     /**
      * The new value of the parameter. A null value clears the parameter.
-     * 
      */
     @Import(name="value", required=true)
       private final Object value;

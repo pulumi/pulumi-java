@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class EnvVarSourceResponse {
     /**
      * (Optional) Not supported by Cloud Run Selects a key of a ConfigMap.
-     * 
      */
     private final ConfigMapKeySelectorResponse configMapKeyRef;
     /**
      * (Optional) Selects a key (version) of a secret in Secret Manager.
-     * 
      */
     private final SecretKeySelectorResponse secretKeyRef;
 
@@ -31,14 +29,12 @@ public final class EnvVarSourceResponse {
 
     /**
      * (Optional) Not supported by Cloud Run Selects a key of a ConfigMap.
-     * 
     */
     public ConfigMapKeySelectorResponse getConfigMapKeyRef() {
         return this.configMapKeyRef;
     }
     /**
      * (Optional) Selects a key (version) of a secret in Secret Manager.
-     * 
     */
     public SecretKeySelectorResponse getSecretKeyRef() {
         return this.secretKeyRef;

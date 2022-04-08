@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Bypass the cache when the specified request headers are present, e.g. Pragma or Authorization headers. Values are case insensitive. The presence of such a header overrides the cache_mode setting.
- * 
  */
 public final class BackendServiceCdnPolicyBypassCacheOnRequestHeaderResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class BackendServiceCdnPolicyBypassCacheOnRequestHeaderResponse ext
 
     /**
      * The header field name to match on when bypassing cache. Values are case-insensitive.
-     * 
      */
     @Import(name="headerName", required=true)
       private final String headerName;

@@ -15,7 +15,6 @@ public final class RangePartitioningResponse extends io.pulumi.resources.InvokeA
 
     /**
      * [TrustedTester] [Required] The table is partitioned by this field. The field must be a top-level NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.
-     * 
      */
     @Import(name="field", required=true)
       private final String field;
@@ -26,7 +25,6 @@ public final class RangePartitioningResponse extends io.pulumi.resources.InvokeA
 
     /**
      * [TrustedTester] [Required] Defines the ranges for range partitioning.
-     * 
      */
     @Import(name="range", required=true)
       private final RangePartitioningRangeResponse range;

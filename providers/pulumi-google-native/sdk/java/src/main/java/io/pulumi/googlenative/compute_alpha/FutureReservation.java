@@ -17,34 +17,29 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new Future Reservation.
- * 
  */
 @ResourceType(type="google-native:compute/alpha:FutureReservation")
 public class FutureReservation extends io.pulumi.resources.CustomResource {
     /**
      * The creation timestamp for this future reservation in RFC3339 text format.
-     * 
      */
     @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
      * @return The creation timestamp for this future reservation in RFC3339 text format.
-     * 
      */
     public Output<String> getCreationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * An optional description of this resource. Provide this property when you create the future reservation.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return An optional description of this resource. Provide this property when you create the future reservation.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
@@ -57,126 +52,108 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
     }
     /**
      * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Name prefix for the reservations to be created at the time of delivery. The name prefix must comply with RFC1035. Maximum allowed length for name prefix is 20. Automatically created reservations name format will be -date-####.
-     * 
      */
     @Export(name="namePrefix", type=String.class, parameters={})
     private Output<String> namePrefix;
 
     /**
      * @return Name prefix for the reservations to be created at the time of delivery. The name prefix must comply with RFC1035. Maximum allowed length for name prefix is 20. Automatically created reservations name format will be -date-####.
-     * 
      */
     public Output<String> getNamePrefix() {
         return this.namePrefix;
     }
     /**
      * Server-defined fully-qualified URL for this resource.
-     * 
      */
     @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
      * @return Server-defined fully-qualified URL for this resource.
-     * 
      */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
     /**
      * Server-defined URL for this resource with the resource id.
-     * 
      */
     @Export(name="selfLinkWithId", type=String.class, parameters={})
     private Output<String> selfLinkWithId;
 
     /**
      * @return Server-defined URL for this resource with the resource id.
-     * 
      */
     public Output<String> getSelfLinkWithId() {
         return this.selfLinkWithId;
     }
     /**
      * List of Projects/Folders to share with.
-     * 
      */
     @Export(name="shareSettings", type=ShareSettingsResponse.class, parameters={})
     private Output<ShareSettingsResponse> shareSettings;
 
     /**
      * @return List of Projects/Folders to share with.
-     * 
      */
     public Output<ShareSettingsResponse> getShareSettings() {
         return this.shareSettings;
     }
     /**
      * Future Reservation configuration to indicate instance properties and total count.
-     * 
      */
     @Export(name="specificSkuProperties", type=FutureReservationSpecificSKUPropertiesResponse.class, parameters={})
     private Output<FutureReservationSpecificSKUPropertiesResponse> specificSkuProperties;
 
     /**
      * @return Future Reservation configuration to indicate instance properties and total count.
-     * 
      */
     public Output<FutureReservationSpecificSKUPropertiesResponse> getSpecificSkuProperties() {
         return this.specificSkuProperties;
     }
     /**
      * [Output only] Status of the Future Reservation
-     * 
      */
     @Export(name="status", type=FutureReservationStatusResponse.class, parameters={})
     private Output<FutureReservationStatusResponse> status;
 
     /**
      * @return [Output only] Status of the Future Reservation
-     * 
      */
     public Output<FutureReservationStatusResponse> getStatus() {
         return this.status;
     }
     /**
      * Time window for this Future Reservation.
-     * 
      */
     @Export(name="timeWindow", type=FutureReservationTimeWindowResponse.class, parameters={})
     private Output<FutureReservationTimeWindowResponse> timeWindow;
 
     /**
      * @return Time window for this Future Reservation.
-     * 
      */
     public Output<FutureReservationTimeWindowResponse> getTimeWindow() {
         return this.timeWindow;
     }
     /**
      * URL of the Zone where this future reservation resides.
-     * 
      */
     @Export(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
     /**
      * @return URL of the Zone where this future reservation resides.
-     * 
      */
     public Output<String> getZone() {
         return this.zone;

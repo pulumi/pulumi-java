@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them.
- * 
  */
 public final class StaticFilesHandlerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
 
     /**
      * Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged against both your code and static data storage resource quotas.
-     * 
      */
     @Import(name="applicationReadable", required=true)
       private final Boolean applicationReadable;
@@ -31,7 +29,6 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
 
     /**
      * Time a static file served by this handler should be cached by web proxies and browsers.
-     * 
      */
     @Import(name="expiration", required=true)
       private final String expiration;
@@ -42,7 +39,6 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
 
     /**
      * HTTP headers to use for all responses from these URLs.
-     * 
      */
     @Import(name="httpHeaders", required=true)
       private final Map<String,String> httpHeaders;
@@ -53,7 +49,6 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
 
     /**
      * MIME type used to serve all files served by this handler.Defaults to file-specific MIME types, which are derived from each file's filename extension.
-     * 
      */
     @Import(name="mimeType", required=true)
       private final String mimeType;
@@ -64,7 +59,6 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
 
     /**
      * Path to the static files matched by the URL pattern, from the application root directory. The path can refer to text matched in groupings in the URL pattern.
-     * 
      */
     @Import(name="path", required=true)
       private final String path;
@@ -75,7 +69,6 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
 
     /**
      * Whether this handler should match the request if the file referenced by the handler does not exist.
-     * 
      */
     @Import(name="requireMatchingFile", required=true)
       private final Boolean requireMatchingFile;
@@ -86,7 +79,6 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
 
     /**
      * Regular expression that matches the file paths for all files that should be referenced by this handler.
-     * 
      */
     @Import(name="uploadPathRegex", required=true)
       private final String uploadPathRegex;

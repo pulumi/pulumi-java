@@ -25,7 +25,6 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Secondary contact email. You need to provide an alternate email to create different domains if a primary contact email already exists. Users will receive a notification with credentials when you create an admin.google.com account. Secondary emails are also recovery email addresses. Alternate emails are optional when you create Team customers.
-     * 
      */
     @Import(name="alternateEmail")
       private final @Nullable Output<String> alternateEmail;
@@ -36,7 +35,6 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Cloud Identity ID of the customer's channel partner. Populated only if a channel partner exists for this customer.
-     * 
      */
     @Import(name="channelPartnerId")
       private final @Nullable Output<String> channelPartnerId;
@@ -54,7 +52,6 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The customer's primary domain. Must match the primary contact email's domain.
-     * 
      */
     @Import(name="domain", required=true)
       private final Output<String> domain;
@@ -65,7 +62,6 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
-     * 
      */
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
@@ -76,7 +72,6 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the organization that the customer entity represents.
-     * 
      */
     @Import(name="orgDisplayName", required=true)
       private final Output<String> orgDisplayName;
@@ -87,7 +82,6 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer's language, use the Customer-level language code.
-     * 
      */
     @Import(name="orgPostalAddress", required=true)
       private final Output<GoogleTypePostalAddressArgs> orgPostalAddress;
@@ -98,7 +92,6 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Primary contact info.
-     * 
      */
     @Import(name="primaryContactInfo")
       private final @Nullable Output<GoogleCloudChannelV1ContactInfoArgs> primaryContactInfo;

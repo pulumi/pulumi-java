@@ -19,188 +19,161 @@ import javax.annotation.Nullable;
  * Create a new case and associate it with the given Cloud resource.
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:cloudsupport/v2beta:Case")
 public class Case extends io.pulumi.resources.CustomResource {
     /**
      * The issue classification applicable to this case.
-     * 
      */
     @Export(name="classification", type=CaseClassificationResponse.class, parameters={})
     private Output<CaseClassificationResponse> classification;
 
     /**
      * @return The issue classification applicable to this case.
-     * 
      */
     public Output<CaseClassificationResponse> getClassification() {
         return this.classification;
     }
     /**
      * The time this case was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time this case was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The user who created the case. Note: The name and email will be obfuscated if the case was created by Google Support.
-     * 
      */
     @Export(name="creator", type=ActorResponse.class, parameters={})
     private Output<ActorResponse> creator;
 
     /**
      * @return The user who created the case. Note: The name and email will be obfuscated if the case was created by Google Support.
-     * 
      */
     public Output<ActorResponse> getCreator() {
         return this.creator;
     }
     /**
      * A broad description of the issue.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return A broad description of the issue.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The short summary of the issue reported in this case.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The short summary of the issue reported in this case.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Whether the case is currently escalated.
-     * 
      */
     @Export(name="escalated", type=Boolean.class, parameters={})
     private Output<Boolean> escalated;
 
     /**
      * @return Whether the case is currently escalated.
-     * 
      */
     public Output<Boolean> getEscalated() {
         return this.escalated;
     }
     /**
      * The resource name for the case.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name for the case.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The priority of this case. If this is set, do not set severity.
-     * 
      */
     @Export(name="priority", type=String.class, parameters={})
     private Output<String> priority;
 
     /**
      * @return The priority of this case. If this is set, do not set severity.
-     * 
      */
     public Output<String> getPriority() {
         return this.priority;
     }
     /**
      * The current status of the support case.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The current status of the support case.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The email addresses to receive updates on this case.
-     * 
      */
     @Export(name="subscriberEmailAddresses", type=List.class, parameters={String.class})
     private Output<List<String>> subscriberEmailAddresses;
 
     /**
      * @return The email addresses to receive updates on this case.
-     * 
      */
     public Output<List<String>> getSubscriberEmailAddresses() {
         return this.subscriberEmailAddresses;
     }
     /**
      * Whether this case was created for internal API testing and should not be acted on by the support team.
-     * 
      */
     @Export(name="testCase", type=Boolean.class, parameters={})
     private Output<Boolean> testCase;
 
     /**
      * @return Whether this case was created for internal API testing and should not be acted on by the support team.
-     * 
      */
     public Output<Boolean> getTestCase() {
         return this.testCase;
     }
     /**
      * The timezone of the user who created the support case. It should be in a format IANA recognizes: https://www.iana.org/time-zones. There is no additional validation done by the API.
-     * 
      */
     @Export(name="timeZone", type=String.class, parameters={})
     private Output<String> timeZone;
 
     /**
      * @return The timezone of the user who created the support case. It should be in a format IANA recognizes: https://www.iana.org/time-zones. There is no additional validation done by the API.
-     * 
      */
     public Output<String> getTimeZone() {
         return this.timeZone;
     }
     /**
      * The time this case was last updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The time this case was last updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

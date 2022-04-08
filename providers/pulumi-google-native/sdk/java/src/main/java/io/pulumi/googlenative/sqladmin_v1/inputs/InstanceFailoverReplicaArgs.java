@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The name and status of the failover replica.
- * 
  */
 public final class InstanceFailoverReplicaArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class InstanceFailoverReplicaArgs extends io.pulumi.resources.Resou
 
     /**
      * The availability status of the failover replica. A false status indicates that the failover replica is out of sync. The primary instance can only failover to the failover replica when the status is true.
-     * 
      */
     @Import(name="available")
       private final @Nullable Output<Boolean> available;
@@ -32,7 +30,6 @@ public final class InstanceFailoverReplicaArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

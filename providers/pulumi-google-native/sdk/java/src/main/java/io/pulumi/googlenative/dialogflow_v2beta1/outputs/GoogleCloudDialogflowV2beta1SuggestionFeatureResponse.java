@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2beta1SuggestionFeatureResponse {
     /**
      * Type of Human Agent Assistant API feature to request.
-     * 
      */
     private final String type;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionFeatureResponse {
 
     /**
      * Type of Human Agent Assistant API feature to request.
-     * 
     */
     public String getType() {
         return this.type;

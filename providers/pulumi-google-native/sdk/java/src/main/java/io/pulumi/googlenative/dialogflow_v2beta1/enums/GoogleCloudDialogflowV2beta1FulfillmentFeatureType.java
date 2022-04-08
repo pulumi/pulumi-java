@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * The type of the feature that enabled for fulfillment.
-     * 
      */
     @EnumType
     public enum GoogleCloudDialogflowV2beta1FulfillmentFeatureType {
         /**
          * Feature type not specified.
-         * 
          */
         TypeUnspecified("TYPE_UNSPECIFIED"),
         /**
          * Fulfillment is enabled for SmallTalk.
-         * 
          */
         Smalltalk("SMALLTALK");
 

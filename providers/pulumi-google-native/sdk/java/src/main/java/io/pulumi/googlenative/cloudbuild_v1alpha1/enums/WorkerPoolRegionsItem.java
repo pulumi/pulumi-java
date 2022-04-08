@@ -12,27 +12,22 @@ import java.util.StringJoiner;
     public enum WorkerPoolRegionsItem {
         /**
          * no region
-         * 
          */
         RegionUnspecified("REGION_UNSPECIFIED"),
         /**
          * us-central1 region
-         * 
          */
         UsCentral1("us-central1"),
         /**
          * us-west1 region
-         * 
          */
         UsWest1("us-west1"),
         /**
          * us-east1 region
-         * 
          */
         UsEast1("us-east1"),
         /**
          * us-east4 region
-         * 
          */
         UsEast4("us-east4");
 

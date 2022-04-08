@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Represents a single hyperparameter to optimize.
- * 
  */
 public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
 
     /**
      * Required if type is `CATEGORICAL`. The list of possible categories.
-     * 
      */
     @Import(name="categoricalValues", required=true)
       private final List<String> categoricalValues;
@@ -31,7 +29,6 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
 
     /**
      * Required if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.
-     * 
      */
     @Import(name="discreteValues", required=true)
       private final List<Double> discreteValues;
@@ -42,7 +39,6 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
 
     /**
      * Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is `INTEGER`.
-     * 
      */
     @Import(name="maxValue", required=true)
       private final Double maxValue;
@@ -53,7 +49,6 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
 
     /**
      * Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is INTEGER.
-     * 
      */
     @Import(name="minValue", required=true)
       private final Double minValue;
@@ -64,7 +59,6 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
 
     /**
      * The parameter name must be unique amongst all ParameterConfigs in a HyperparameterSpec message. E.g., "learning_rate".
-     * 
      */
     @Import(name="parameterName", required=true)
       private final String parameterName;
@@ -75,7 +69,6 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
 
     /**
      * Optional. How the parameter should be scaled to the hypercube. Leave unset for categorical parameters. Some kind of scaling is strongly recommended for real or integral parameters (e.g., `UNIT_LINEAR_SCALE`).
-     * 
      */
     @Import(name="scaleType", required=true)
       private final String scaleType;
@@ -86,7 +79,6 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
 
     /**
      * The type of the parameter.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Message for specifying a window around a finding to apply a detection rule.
- * 
  */
 public final class GooglePrivacyDlpV2ProximityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GooglePrivacyDlpV2ProximityResponse extends io.pulumi.resourc
 
     /**
      * Number of characters after the finding to consider.
-     * 
      */
     @Import(name="windowAfter", required=true)
       private final Integer windowAfter;
@@ -29,7 +27,6 @@ public final class GooglePrivacyDlpV2ProximityResponse extends io.pulumi.resourc
 
     /**
      * Number of characters before the finding to consider.
-     * 
      */
     @Import(name="windowBefore", required=true)
       private final Integer windowBefore;

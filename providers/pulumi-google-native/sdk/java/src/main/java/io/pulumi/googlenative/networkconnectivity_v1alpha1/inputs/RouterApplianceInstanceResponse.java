@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * RouterAppliance represents a Router appliance which is specified by a VM URI and a NIC address.
- * 
  */
 public final class RouterApplianceInstanceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class RouterApplianceInstanceResponse extends io.pulumi.resources.I
 
     /**
      * The IP address of the network interface to use for peering.
-     * 
      */
     @Import(name="ipAddress", required=true)
       private final String ipAddress;
@@ -36,7 +34,6 @@ public final class RouterApplianceInstanceResponse extends io.pulumi.resources.I
 
     /**
      * The URI of the virtual machine resource
-     * 
      */
     @Import(name="virtualMachine", required=true)
       private final String virtualMachine;

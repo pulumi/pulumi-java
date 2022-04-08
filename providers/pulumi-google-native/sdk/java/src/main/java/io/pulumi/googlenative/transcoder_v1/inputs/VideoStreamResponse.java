@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Video stream resource.
- * 
  */
 public final class VideoStreamResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class VideoStreamResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * H264 codec settings.
-     * 
      */
     @Import(name="h264", required=true)
       private final H264CodecSettingsResponse h264;
@@ -31,7 +29,6 @@ public final class VideoStreamResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * H265 codec settings.
-     * 
      */
     @Import(name="h265", required=true)
       private final H265CodecSettingsResponse h265;
@@ -42,7 +39,6 @@ public final class VideoStreamResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * VP9 codec settings.
-     * 
      */
     @Import(name="vp9", required=true)
       private final Vp9CodecSettingsResponse vp9;

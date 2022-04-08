@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Options allows customized resource handling by Deployment Manager.
- * 
  */
 public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Options regarding how to thread async requests.
-     * 
      */
     @Import(name="asyncOptions")
       private final @Nullable Output<List<AsyncOptionsArgs>> asyncOptions;
@@ -35,7 +33,6 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The mappings that apply for requests.
-     * 
      */
     @Import(name="inputMappings")
       private final @Nullable Output<List<InputMappingArgs>> inputMappings;
@@ -46,7 +43,6 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The json path to the field in the resource JSON body into which the resource name should be mapped. Leaving this empty indicates that there should be no mapping performed.
-     * 
      */
     @Import(name="nameProperty")
       private final @Nullable Output<String> nameProperty;
@@ -57,7 +53,6 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Options for how to validate and process properties on a resource.
-     * 
      */
     @Import(name="validationOptions")
       private final @Nullable Output<ValidationOptionsArgs> validationOptions;

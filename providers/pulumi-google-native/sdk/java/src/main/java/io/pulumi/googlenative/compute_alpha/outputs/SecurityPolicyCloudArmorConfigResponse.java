@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class SecurityPolicyCloudArmorConfigResponse {
     /**
      * If set to true, enables Cloud Armor Machine Learning.
-     * 
      */
     private final Boolean enableMl;
 
@@ -22,7 +21,6 @@ public final class SecurityPolicyCloudArmorConfigResponse {
 
     /**
      * If set to true, enables Cloud Armor Machine Learning.
-     * 
     */
     public Boolean getEnableMl() {
         return this.enableMl;

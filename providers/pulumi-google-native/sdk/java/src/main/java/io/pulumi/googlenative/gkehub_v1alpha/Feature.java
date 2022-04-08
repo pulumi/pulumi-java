@@ -18,146 +18,125 @@ import javax.annotation.Nullable;
 /**
  * Adds a new Feature.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:gkehub/v1alpha:Feature")
 public class Feature extends io.pulumi.resources.CustomResource {
     /**
      * When the Feature resource was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return When the Feature resource was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * When the Feature resource was deleted.
-     * 
      */
     @Export(name="deleteTime", type=String.class, parameters={})
     private Output<String> deleteTime;
 
     /**
      * @return When the Feature resource was deleted.
-     * 
      */
     public Output<String> getDeleteTime() {
         return this.deleteTime;
     }
     /**
      * GCP labels for this Feature.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return GCP labels for this Feature.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} WILL match the Feature's project. {p} will always be returned as the project number, but the project ID is also accepted during input. If the same Membership is specified in the map twice (using the project ID form, and the project number form), exactly ONE of the entries will be saved, with no guarantees as to which. For this reason, it is recommended the same format be used for all entries when mutating a Feature.
-     * 
      */
     @Export(name="membershipSpecs", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> membershipSpecs;
 
     /**
      * @return Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} WILL match the Feature's project. {p} will always be returned as the project number, but the project ID is also accepted during input. If the same Membership is specified in the map twice (using the project ID form, and the project number form), exactly ONE of the entries will be saved, with no guarantees as to which. For this reason, it is recommended the same format be used for all entries when mutating a Feature.
-     * 
      */
     public Output<Map<String,String>> getMembershipSpecs() {
         return this.membershipSpecs;
     }
     /**
      * Membership-specific Feature status. If this Feature does report any per-Membership status, this field may be unused. The keys indicate which Membership the state is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project number, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} MUST match the Feature's project number.
-     * 
      */
     @Export(name="membershipStates", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> membershipStates;
 
     /**
      * @return Membership-specific Feature status. If this Feature does report any per-Membership status, this field may be unused. The keys indicate which Membership the state is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project number, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} MUST match the Feature's project number.
-     * 
      */
     public Output<Map<String,String>> getMembershipStates() {
         return this.membershipStates;
     }
     /**
      * The full, unique name of this Feature resource in the format `projects/*{@literal /}locations/*{@literal /}features/*`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The full, unique name of this Feature resource in the format `projects/*{@literal /}locations/*{@literal /}features/*`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * State of the Feature resource itself.
-     * 
      */
     @Export(name="resourceState", type=FeatureResourceStateResponse.class, parameters={})
     private Output<FeatureResourceStateResponse> resourceState;
 
     /**
      * @return State of the Feature resource itself.
-     * 
      */
     public Output<FeatureResourceStateResponse> getResourceState() {
         return this.resourceState;
     }
     /**
      * Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
-     * 
      */
     @Export(name="spec", type=CommonFeatureSpecResponse.class, parameters={})
     private Output<CommonFeatureSpecResponse> spec;
 
     /**
      * @return Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
-     * 
      */
     public Output<CommonFeatureSpecResponse> getSpec() {
         return this.spec;
     }
     /**
      * The Hub-wide Feature state.
-     * 
      */
     @Export(name="state", type=CommonFeatureStateResponse.class, parameters={})
     private Output<CommonFeatureStateResponse> state;
 
     /**
      * @return The Hub-wide Feature state.
-     * 
      */
     public Output<CommonFeatureStateResponse> getState() {
         return this.state;
     }
     /**
      * When the Feature resource was last updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return When the Feature resource was last updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

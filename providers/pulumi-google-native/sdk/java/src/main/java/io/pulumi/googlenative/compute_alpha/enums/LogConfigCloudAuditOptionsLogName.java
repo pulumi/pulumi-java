@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @EnumType
     public enum LogConfigCloudAuditOptionsLogName {
         /**
          * This is deprecated and has no effect. Do not use.
-         * 
          */
         AdminActivity("ADMIN_ACTIVITY"),
         /**
          * This is deprecated and has no effect. Do not use.
-         * 
          */
         DataAccess("DATA_ACCESS"),
         /**
          * This is deprecated and has no effect. Do not use.
-         * 
          */
         UnspecifiedLogName("UNSPECIFIED_LOG_NAME");
 

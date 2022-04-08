@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class SqlServerDatabaseDetailsResponse {
     /**
      * The version of SQL Server with which the database is to be made compatible
-     * 
      */
     private final Integer compatibilityLevel;
     /**
      * The recovery model of a SQL Server database
-     * 
      */
     private final String recoveryModel;
 
@@ -31,14 +29,12 @@ public final class SqlServerDatabaseDetailsResponse {
 
     /**
      * The version of SQL Server with which the database is to be made compatible
-     * 
     */
     public Integer getCompatibilityLevel() {
         return this.compatibilityLevel;
     }
     /**
      * The recovery model of a SQL Server database
-     * 
     */
     public String getRecoveryModel() {
         return this.recoveryModel;

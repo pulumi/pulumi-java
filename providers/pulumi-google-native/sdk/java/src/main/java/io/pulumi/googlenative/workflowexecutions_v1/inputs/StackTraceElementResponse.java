@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A single stack element (frame) where an error occurred.
- * 
  */
 public final class StackTraceElementResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class StackTraceElementResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The source position information of the stack trace element.
-     * 
      */
     @Import(name="position", required=true)
       private final PositionResponse position;
@@ -30,7 +28,6 @@ public final class StackTraceElementResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The routine where the error occurred.
-     * 
      */
     @Import(name="routine", required=true)
       private final String routine;
@@ -41,7 +38,6 @@ public final class StackTraceElementResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The step the error occurred at.
-     * 
      */
     @Import(name="step", required=true)
       private final String step;

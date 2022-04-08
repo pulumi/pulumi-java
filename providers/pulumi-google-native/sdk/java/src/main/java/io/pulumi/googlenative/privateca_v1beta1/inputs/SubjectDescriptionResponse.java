@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * These values describe fields in an issued X.509 certificate such as the distinguished name, subject alternative names, serial number, and lifetime.
- * 
  */
 public final class SubjectDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
 
     /**
      * The "common name" of the distinguished name.
-     * 
      */
     @Import(name="commonName", required=true)
       private final String commonName;
@@ -31,7 +29,6 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
 
     /**
      * The serial number encoded in lowercase hexadecimal.
-     * 
      */
     @Import(name="hexSerialNumber", required=true)
       private final String hexSerialNumber;
@@ -42,7 +39,6 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
 
     /**
      * For convenience, the actual lifetime of an issued certificate. Corresponds to 'not_after_time' - 'not_before_time'.
-     * 
      */
     @Import(name="lifetime", required=true)
       private final String lifetime;
@@ -53,7 +49,6 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
 
     /**
      * The time at which the certificate expires.
-     * 
      */
     @Import(name="notAfterTime", required=true)
       private final String notAfterTime;
@@ -64,7 +59,6 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
 
     /**
      * The time at which the certificate becomes valid.
-     * 
      */
     @Import(name="notBeforeTime", required=true)
       private final String notBeforeTime;
@@ -75,7 +69,6 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
 
     /**
      * Contains distinguished name fields such as the location and organization.
-     * 
      */
     @Import(name="subject", required=true)
       private final SubjectResponse subject;
@@ -86,7 +79,6 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
 
     /**
      * The subject alternative name fields.
-     * 
      */
     @Import(name="subjectAltName", required=true)
       private final SubjectAltNamesResponse subjectAltName;

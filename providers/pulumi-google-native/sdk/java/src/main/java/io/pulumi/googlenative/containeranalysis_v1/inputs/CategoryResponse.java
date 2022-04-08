@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The category to which the update belongs.
- * 
  */
 public final class CategoryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CategoryResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The identifier of the category.
-     * 
      */
     @Import(name="categoryId", required=true)
       private final String categoryId;
@@ -29,7 +27,6 @@ public final class CategoryResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The localized name of the category.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

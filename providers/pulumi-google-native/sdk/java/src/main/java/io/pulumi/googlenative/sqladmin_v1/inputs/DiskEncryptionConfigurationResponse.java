@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Disk encryption configuration for an instance.
- * 
  */
 public final class DiskEncryptionConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DiskEncryptionConfigurationResponse extends io.pulumi.resourc
 
     /**
      * This is always `sql#diskEncryptionConfiguration`.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -29,7 +27,6 @@ public final class DiskEncryptionConfigurationResponse extends io.pulumi.resourc
 
     /**
      * Resource name of KMS key for disk encryption
-     * 
      */
     @Import(name="kmsKeyName", required=true)
       private final String kmsKeyName;

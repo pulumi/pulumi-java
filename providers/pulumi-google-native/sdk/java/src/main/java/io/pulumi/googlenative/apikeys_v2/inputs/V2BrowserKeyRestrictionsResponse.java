@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The HTTP referrers (websites) that are allowed to use the key.
- * 
  */
 public final class V2BrowserKeyRestrictionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class V2BrowserKeyRestrictionsResponse extends io.pulumi.resources.
 
     /**
      * A list of regular expressions for the referrer URLs that are allowed to make API calls with this key.
-     * 
      */
     @Import(name="allowedReferrers", required=true)
       private final List<String> allowedReferrers;

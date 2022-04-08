@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Azure credentials For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).
- * 
  */
 public final class AzureCredentialsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AzureCredentialsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Azure shared access signature (SAS). For more information about SAS, see [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
-     * 
      */
     @Import(name="sasToken", required=true)
       private final String sasToken;

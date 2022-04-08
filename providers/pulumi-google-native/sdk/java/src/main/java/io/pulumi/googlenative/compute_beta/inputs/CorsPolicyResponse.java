@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * The specification for allowing client-side cross-origin requests. For more information about the W3C recommendation for cross-origin resource sharing (CORS), see Fetch API Living Standard.
- * 
  */
 public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This field translates to the Access-Control-Allow-Credentials header. Default is false.
-     * 
      */
     @Import(name="allowCredentials", required=true)
       private final Boolean allowCredentials;
@@ -32,7 +30,6 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the content for the Access-Control-Allow-Headers header.
-     * 
      */
     @Import(name="allowHeaders", required=true)
       private final List<String> allowHeaders;
@@ -43,7 +40,6 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the content for the Access-Control-Allow-Methods header.
-     * 
      */
     @Import(name="allowMethods", required=true)
       private final List<String> allowMethods;
@@ -54,7 +50,6 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies a regular expression that matches allowed origins. For more information about the regular expression syntax, see Syntax. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-     * 
      */
     @Import(name="allowOriginRegexes", required=true)
       private final List<String> allowOriginRegexes;
@@ -65,7 +60,6 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the list of origins that is allowed to do CORS requests. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-     * 
      */
     @Import(name="allowOrigins", required=true)
       private final List<String> allowOrigins;
@@ -76,7 +70,6 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If true, the setting specifies the CORS policy is disabled. The default value of false, which indicates that the CORS policy is in effect.
-     * 
      */
     @Import(name="disabled", required=true)
       private final Boolean disabled;
@@ -87,7 +80,6 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the content for the Access-Control-Expose-Headers header.
-     * 
      */
     @Import(name="exposeHeaders", required=true)
       private final List<String> exposeHeaders;
@@ -98,7 +90,6 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies how long results of a preflight request can be cached in seconds. This field translates to the Access-Control-Max-Age header.
-     * 
      */
     @Import(name="maxAge", required=true)
       private final Integer maxAge;

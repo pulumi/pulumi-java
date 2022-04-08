@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * A CryptoKeyVersion represents an individual cryptographic key, and the associated key material. An ENABLED version can be used for cryptographic operations. For security reasons, the raw cryptographic key material represented by a CryptoKeyVersion can never be viewed or exported. It can only be used to encrypt, decrypt, or sign data when an authorized user or application invokes Cloud KMS.
- * 
  */
 public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
-     * 
      */
     @Import(name="algorithm", required=true)
       private final String algorithm;
@@ -32,7 +30,6 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Statement that was generated and signed by the HSM at key creation time. Use this statement to verify attributes of the key as stored on the HSM, independently of Google. Only provided for key versions with protection_level HSM.
-     * 
      */
     @Import(name="attestation", required=true)
       private final KeyOperationAttestationResponse attestation;
@@ -43,7 +40,6 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The time at which this CryptoKeyVersion was created.
-     * 
      */
     @Import(name="createTime", required=true)
       private final String createTime;
@@ -54,7 +50,6 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The time this CryptoKeyVersion's key material was destroyed. Only present if state is DESTROYED.
-     * 
      */
     @Import(name="destroyEventTime", required=true)
       private final String destroyEventTime;
@@ -65,7 +60,6 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The time this CryptoKeyVersion's key material is scheduled for destruction. Only present if state is DESTROY_SCHEDULED.
-     * 
      */
     @Import(name="destroyTime", required=true)
       private final String destroyTime;
@@ -76,7 +70,6 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels.
-     * 
      */
     @Import(name="externalProtectionLevelOptions", required=true)
       private final ExternalProtectionLevelOptionsResponse externalProtectionLevelOptions;
@@ -87,7 +80,6 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The time this CryptoKeyVersion's key material was generated.
-     * 
      */
     @Import(name="generateTime", required=true)
       private final String generateTime;
@@ -98,7 +90,6 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The root cause of the most recent import failure. Only present if state is IMPORT_FAILED.
-     * 
      */
     @Import(name="importFailureReason", required=true)
       private final String importFailureReason;
@@ -109,7 +100,6 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the ImportJob used in the most recent import of this CryptoKeyVersion. Only present if the underlying key material was imported.
-     * 
      */
     @Import(name="importJob", required=true)
       private final String importJob;
@@ -120,7 +110,6 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The time at which this CryptoKeyVersion's key material was most recently imported.
-     * 
      */
     @Import(name="importTime", required=true)
       private final String importTime;
@@ -131,7 +120,6 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The resource name for this CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -142,7 +130,6 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.
-     * 
      */
     @Import(name="protectionLevel", required=true)
       private final String protectionLevel;
@@ -153,7 +140,6 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Whether or not this key version is eligible for reimport, by being specified as a target in ImportCryptoKeyVersionRequest.crypto_key_version.
-     * 
      */
     @Import(name="reimportEligible", required=true)
       private final Boolean reimportEligible;
@@ -164,7 +150,6 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The current state of the CryptoKeyVersion.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;

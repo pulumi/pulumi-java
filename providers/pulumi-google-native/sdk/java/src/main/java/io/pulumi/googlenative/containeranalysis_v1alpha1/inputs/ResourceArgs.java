@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  *  Resource is an entity that can have metadata. E.g., a Docker image.
- * 
  */
 public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The hash of the resource content. E.g., the Docker digest.
-     * 
      */
     @Import(name="contentHash")
       private final @Nullable Output<HashArgs> contentHash;
@@ -32,7 +30,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource. E.g., the name of a Docker image - "Debian".
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -43,7 +40,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique URI of the resource. E.g., "https://gcr.io/project/image@sha256:foo" for a Docker image.
-     * 
      */
     @Import(name="uri")
       private final @Nullable Output<String> uri;

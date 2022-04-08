@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Type represents the release availability of the version
-     * 
      */
     @EnumType
     public enum VersionType {
         /**
          * Version does not have availability yet
-         * 
          */
         TypeUnspecified("TYPE_UNSPECIFIED"),
         /**
          * Version is under development and not considered stable
-         * 
          */
         TypePreview("TYPE_PREVIEW"),
         /**
          * Version is available for public use
-         * 
          */
         TypeGeneralAvailability("TYPE_GENERAL_AVAILABILITY");
 

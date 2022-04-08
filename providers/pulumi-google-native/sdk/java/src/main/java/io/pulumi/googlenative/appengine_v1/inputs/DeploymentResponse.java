@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Code and application artifacts used to deploy a version to App Engine.
- * 
  */
 public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Options for any Google Cloud Build builds created as a part of this deployment.These options will only be used if a new build is created, such as when deploying to the App Engine flexible environment using files or zip.
-     * 
      */
     @Import(name="cloudBuildOptions", required=true)
       private final CloudBuildOptionsResponse cloudBuildOptions;
@@ -33,7 +31,6 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Docker image for the container that runs the version. Only applicable for instances running in the App Engine flexible environment.
-     * 
      */
     @Import(name="container", required=true)
       private final ContainerInfoResponse container;
@@ -44,7 +41,6 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Manifest of the files stored in Google Cloud Storage that are included as part of this version. All files must be readable using the credentials supplied with this call.
-     * 
      */
     @Import(name="files", required=true)
       private final Map<String,String> files;
@@ -55,7 +51,6 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The zip file for this deployment, if this is a zip deployment.
-     * 
      */
     @Import(name="zip", required=true)
       private final ZipInfoResponse zip;

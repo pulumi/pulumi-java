@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Note holding the version of the provider's builder and the signature of the provenance message in the build details occurrence.
- * 
  */
 public final class BuildNoteArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class BuildNoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. Version of the builder which produced this build.
-     * 
      */
     @Import(name="builderVersion", required=true)
       private final Output<String> builderVersion;

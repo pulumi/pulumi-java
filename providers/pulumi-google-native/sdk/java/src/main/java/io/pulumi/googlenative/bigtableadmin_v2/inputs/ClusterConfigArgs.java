@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for a cluster.
- * 
  */
 public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Autoscaling configuration for this cluster.
-     * 
      */
     @Import(name="clusterAutoscalingConfig")
       private final @Nullable Output<ClusterAutoscalingConfigArgs> clusterAutoscalingConfig;

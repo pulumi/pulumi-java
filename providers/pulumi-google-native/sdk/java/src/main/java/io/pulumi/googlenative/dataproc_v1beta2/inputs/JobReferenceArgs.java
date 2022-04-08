@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Encapsulates the full scoping used to reference a job.
- * 
  */
 public final class JobReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class JobReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The job ID, which must be unique within the project. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or hyphens (-). The maximum length is 100 characters.If not specified by the caller, the job ID will be provided by the server.
-     * 
      */
     @Import(name="jobId")
       private final @Nullable Output<String> jobId;
@@ -31,7 +29,6 @@ public final class JobReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The ID of the Google Cloud Platform project that the job belongs to. If specified, must match the request project ID.
-     * 
      */
     @Import(name="project")
       private final @Nullable Output<String> project;

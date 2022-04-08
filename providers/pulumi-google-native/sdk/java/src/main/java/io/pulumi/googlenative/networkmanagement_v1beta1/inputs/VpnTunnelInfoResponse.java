@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * For display only. Metadata associated with a Compute Engine VPN tunnel.
- * 
  */
 public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Name of a VPN tunnel.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -29,7 +27,6 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * URI of a Compute Engine network where the VPN tunnel is configured.
-     * 
      */
     @Import(name="networkUri", required=true)
       private final String networkUri;
@@ -40,7 +37,6 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Name of a Google Cloud region where this VPN tunnel is configured.
-     * 
      */
     @Import(name="region", required=true)
       private final String region;
@@ -51,7 +47,6 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * URI of a VPN gateway at remote end of the tunnel.
-     * 
      */
     @Import(name="remoteGateway", required=true)
       private final String remoteGateway;
@@ -62,7 +57,6 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Remote VPN gateway's IP address.
-     * 
      */
     @Import(name="remoteGatewayIp", required=true)
       private final String remoteGatewayIp;
@@ -73,7 +67,6 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Type of the routing policy.
-     * 
      */
     @Import(name="routingType", required=true)
       private final String routingType;
@@ -84,7 +77,6 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * URI of the VPN gateway at local end of the tunnel.
-     * 
      */
     @Import(name="sourceGateway", required=true)
       private final String sourceGateway;
@@ -95,7 +87,6 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Local VPN gateway's IP address.
-     * 
      */
     @Import(name="sourceGatewayIp", required=true)
       private final String sourceGatewayIp;
@@ -106,7 +97,6 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * URI of a VPN tunnel.
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;

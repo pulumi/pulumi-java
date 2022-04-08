@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains information about amount of some resource in the cluster. For memory, value should be in GB.
- * 
  */
 public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum amount of the resource in the cluster.
-     * 
      */
     @Import(name="maximum")
       private final @Nullable Output<String> maximum;
@@ -31,7 +29,6 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Minimum amount of the resource in the cluster.
-     * 
      */
     @Import(name="minimum")
       private final @Nullable Output<String> minimum;
@@ -42,7 +39,6 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource name "cpu", "memory" or gpu-specific string.
-     * 
      */
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;

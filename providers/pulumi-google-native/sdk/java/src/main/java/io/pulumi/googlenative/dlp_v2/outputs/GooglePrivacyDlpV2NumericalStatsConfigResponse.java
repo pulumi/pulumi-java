@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2NumericalStatsConfigResponse {
     /**
      * Field to compute numerical stats on. Supported types are integer, float, date, datetime, timestamp, time.
-     * 
      */
     private final GooglePrivacyDlpV2FieldIdResponse field;
 
@@ -22,7 +21,6 @@ public final class GooglePrivacyDlpV2NumericalStatsConfigResponse {
 
     /**
      * Field to compute numerical stats on. Supported types are integer, float, date, datetime, timestamp, time.
-     * 
     */
     public GooglePrivacyDlpV2FieldIdResponse getField() {
         return this.field;

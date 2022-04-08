@@ -13,22 +13,18 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse {
     /**
      * Configuration for agent assistance of end user participant. Currently, this feature is not general available, please contact Google to get access.
-     * 
      */
     private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig;
     /**
      * Configuration for agent assistance of human agent participant.
-     * 
      */
     private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig;
     /**
      * Configuration for message analysis.
-     * 
      */
     private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig;
     /**
      * Pub/Sub topic on which to publish new agent assistant events.
-     * 
      */
     private final GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig;
 
@@ -46,28 +42,24 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
 
     /**
      * Configuration for agent assistance of end user participant. Currently, this feature is not general available, please contact Google to get access.
-     * 
     */
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse getEndUserSuggestionConfig() {
         return this.endUserSuggestionConfig;
     }
     /**
      * Configuration for agent assistance of human agent participant.
-     * 
     */
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse getHumanAgentSuggestionConfig() {
         return this.humanAgentSuggestionConfig;
     }
     /**
      * Configuration for message analysis.
-     * 
     */
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse getMessageAnalysisConfig() {
         return this.messageAnalysisConfig;
     }
     /**
      * Pub/Sub topic on which to publish new agent assistant events.
-     * 
     */
     public GoogleCloudDialogflowV2beta1NotificationConfigResponse getNotificationConfig() {
         return this.notificationConfig;

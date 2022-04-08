@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A securely stored value.
- * 
  */
 public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The relative resource name of a Secret Manager secret version, in the following form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.
-     * 
      */
     @Import(name="cloudSecret", required=true)
       private final String cloudSecret;

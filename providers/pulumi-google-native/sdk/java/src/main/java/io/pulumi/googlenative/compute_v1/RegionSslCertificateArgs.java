@@ -19,7 +19,6 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
 
     /**
      * A value read into memory from a certificate file. The certificate file must be in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert.
-     * 
      */
     @Import(name="certificate")
       private final @Nullable Output<String> certificate;
@@ -30,7 +29,6 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
 
     /**
      * An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -41,7 +39,6 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
 
     /**
      * Configuration and status of a managed SSL certificate.
-     * 
      */
     @Import(name="managed")
       private final @Nullable Output<SslCertificateManagedSslCertificateArgs> managed;
@@ -52,7 +49,6 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -63,7 +59,6 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
 
     /**
      * A value read into memory from a write-only private key file. The private key file must be in PEM format. For security, only insert requests include this field.
-     * 
      */
     @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
@@ -95,7 +90,6 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
 
     /**
      * Configuration and status of a self-managed SSL certificate.
-     * 
      */
     @Import(name="selfManaged")
       private final @Nullable Output<SslCertificateSelfManagedSslCertificateArgs> selfManaged;
@@ -106,7 +100,6 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
 
     /**
      * (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not specified, the certificate is self-managed and the fields certificate and private_key are used.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<RegionSslCertificateType> type;

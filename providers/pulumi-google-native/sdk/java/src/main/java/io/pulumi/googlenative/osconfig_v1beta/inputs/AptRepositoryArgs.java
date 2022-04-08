@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a single Apt package repository. This repository is added to a repo file that is stored at `/etc/apt/sources.list.d/google_osconfig.list`.
- * 
  */
 public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of archive files in this repository. The default behavior is DEB.
-     * 
      */
     @Import(name="archiveType")
       private final @Nullable Output<AptRepositoryArchiveType> archiveType;
@@ -33,7 +31,6 @@ public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of components for this repository. Must contain at least one item.
-     * 
      */
     @Import(name="components", required=true)
       private final Output<List<String>> components;
@@ -44,7 +41,6 @@ public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Distribution of this repository.
-     * 
      */
     @Import(name="distribution", required=true)
       private final Output<String> distribution;
@@ -55,7 +51,6 @@ public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg` containing all the keys in any applied guest policy.
-     * 
      */
     @Import(name="gpgKey")
       private final @Nullable Output<String> gpgKey;
@@ -66,7 +61,6 @@ public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * URI for this repository.
-     * 
      */
     @Import(name="uri", required=true)
       private final Output<String> uri;

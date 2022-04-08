@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A form is a data model that groups related parameters that can be collected from the user. The process in which the agent prompts the user and collects parameter values from the user is called form filling. A form can be added to a page. When form filling is done, the filled parameters will be written to the session.
- * 
  */
 public final class GoogleCloudDialogflowCxV3FormResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDialogflowCxV3FormResponse extends io.pulumi.resou
 
     /**
      * Parameters to collect from the user.
-     * 
      */
     @Import(name="parameters", required=true)
       private final List<GoogleCloudDialogflowCxV3FormParameterResponse> parameters;

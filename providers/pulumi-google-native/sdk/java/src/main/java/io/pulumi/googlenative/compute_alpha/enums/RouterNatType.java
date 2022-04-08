@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * Indicates whether this NAT is used for public or private IP translation. If unspecified, it defaults to PUBLIC.
-     * 
      */
     @EnumType
     public enum RouterNatType {
         /**
          * NAT used for private IP translation.
-         * 
          */
         Private("PRIVATE"),
         /**
          * NAT used for public IP translation. This is the default.
-         * 
          */
         Public("PUBLIC");
 

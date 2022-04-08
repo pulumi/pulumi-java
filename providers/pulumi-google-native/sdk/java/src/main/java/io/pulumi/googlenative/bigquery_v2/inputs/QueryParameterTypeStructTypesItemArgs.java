@@ -17,7 +17,6 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
 
     /**
      * [Optional] Human-oriented description of the field.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -28,7 +27,6 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
 
     /**
      * [Optional] The name of this field.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -39,7 +37,6 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
 
     /**
      * [Required] The type of this field.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<QueryParameterTypeArgs> type;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A single rollout step with specified traffic allocation.
- * 
  */
 public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepRespons
 
     /**
      * The name of the rollout step;
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -30,7 +28,6 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepRespons
 
     /**
      * The minimum time that this step should last. Should be longer than 1 hour. If not set, the default minimum duration for each step will be 1 hour.
-     * 
      */
     @Import(name="minDuration", required=true)
       private final String minDuration;
@@ -41,7 +38,6 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepRespons
 
     /**
      * The percentage of traffic allocated to the flow version of this rollout step. (0%, 100%].
-     * 
      */
     @Import(name="trafficPercent", required=true)
       private final Integer trafficPercent;

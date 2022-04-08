@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Metadata for a File connector used by the job.
- * 
  */
 public final class FileIODetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class FileIODetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * File Pattern used to access files by the connector.
-     * 
      */
     @Import(name="filePattern")
       private final @Nullable Output<String> filePattern;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies how many time series must fail a predicate to trigger a condition. If not specified, then a {count: 1} trigger is used.
- * 
  */
 public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The absolute number of time series that must fail the predicate for the condition to be triggered.
-     * 
      */
     @Import(name="count")
       private final @Nullable Output<Integer> count;
@@ -32,7 +30,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The percentage of time series that must fail the predicate for the condition to be triggered.
-     * 
      */
     @Import(name="percent")
       private final @Nullable Output<Double> percent;

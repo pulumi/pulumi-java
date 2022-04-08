@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * Count-based metric type. Only one of type or count_type is specified in each Metric.
-     * 
      */
     @EnumType
     public enum GoogleCloudDialogflowCxV3ExperimentResultMetricCountType {
         /**
          * Count type unspecified.
-         * 
          */
         CountTypeUnspecified("COUNT_TYPE_UNSPECIFIED"),
         /**
          * Total number of occurrences of a 'NO_MATCH'.
-         * 
          */
         TotalNoMatchCount("TOTAL_NO_MATCH_COUNT"),
         /**
          * Total number of turn counts.
-         * 
          */
         TotalTurnCount("TOTAL_TURN_COUNT"),
         /**
          * Average turn count in a session.
-         * 
          */
         AverageTurnCount("AVERAGE_TURN_COUNT");
 

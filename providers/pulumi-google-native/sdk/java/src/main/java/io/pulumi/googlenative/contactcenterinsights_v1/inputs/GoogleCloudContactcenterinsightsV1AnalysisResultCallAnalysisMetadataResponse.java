@@ -15,7 +15,6 @@ import java.util.Objects;
 
 /**
  * Call-specific metadata created during analysis.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
 
     /**
      * A list of call annotations that apply to this call.
-     * 
      */
     @Import(name="annotations", required=true)
       private final List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations;
@@ -34,7 +32,6 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
 
     /**
      * All the entities in the call.
-     * 
      */
     @Import(name="entities", required=true)
       private final Map<String,String> entities;
@@ -45,7 +42,6 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
 
     /**
      * All the matched intents in the call.
-     * 
      */
     @Import(name="intents", required=true)
       private final Map<String,String> intents;
@@ -56,7 +52,6 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
 
     /**
      * Overall conversation-level issue modeling result.
-     * 
      */
     @Import(name="issueModelResult", required=true)
       private final GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult;
@@ -67,7 +62,6 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
 
     /**
      * All the matched phrase matchers in the call.
-     * 
      */
     @Import(name="phraseMatchers", required=true)
       private final Map<String,String> phraseMatchers;
@@ -78,7 +72,6 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
 
     /**
      * Overall conversation-level sentiment for each channel of the call.
-     * 
      */
     @Import(name="sentiments", required=true)
       private final List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments;

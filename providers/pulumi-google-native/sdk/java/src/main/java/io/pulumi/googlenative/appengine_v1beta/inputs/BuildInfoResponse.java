@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Google Cloud Build information.
- * 
  */
 public final class BuildInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class BuildInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Google Cloud Build id. Example: "f966068f-08b2-42c8-bdfe-74137dff2bf9"
-     * 
      */
     @Import(name="cloudBuildId", required=true)
       private final String cloudBuildId;

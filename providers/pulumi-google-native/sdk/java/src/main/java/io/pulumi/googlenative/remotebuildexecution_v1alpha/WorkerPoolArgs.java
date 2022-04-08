@@ -18,7 +18,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The autoscale policy to apply on a pool.
-     * 
      */
     @Import(name="autoscale")
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale;
@@ -29,7 +28,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Channel specifies the release channel of the pool.
-     * 
      */
     @Import(name="channel")
       private final @Nullable Output<String> channel;
@@ -47,7 +45,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * WorkerPool resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`. name should not be populated when creating a worker pool since it is provided in the `poolId` field.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -58,7 +55,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource name of the instance in which to create the new worker pool. Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
-     * 
      */
     @Import(name="parent")
       private final @Nullable Output<String> parent;
@@ -69,7 +65,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ID of the created worker pool. A valid pool ID must: be 6-50 characters long, contain only lowercase letters, digits, hyphens and underscores, start with a lowercase letter, and end with a lowercase letter or a digit.
-     * 
      */
     @Import(name="poolId")
       private final @Nullable Output<String> poolId;
@@ -87,7 +82,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the properties, such as machine type and disk size, used for creating workers in a worker pool.
-     * 
      */
     @Import(name="workerConfig")
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig;
@@ -98,7 +92,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The desired number of workers in the worker pool. Must be a value between 0 and 15000.
-     * 
      */
     @Import(name="workerCount")
       private final @Nullable Output<String> workerCount;

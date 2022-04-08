@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class SchematizedDataResponse {
     /**
      * JSON output of the parser.
-     * 
      */
     private final String data;
     /**
      * The error output of the parser.
-     * 
      */
     private final String error;
 
@@ -30,14 +28,12 @@ public final class SchematizedDataResponse {
 
     /**
      * JSON output of the parser.
-     * 
     */
     public String getData() {
         return this.data;
     }
     /**
      * The error output of the parser.
-     * 
     */
     public String getError() {
         return this.error;

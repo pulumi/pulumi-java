@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class IosTestLoopResponse {
     /**
      * Bundle ID of the app.
-     * 
      */
     private final String bundleId;
 
@@ -22,7 +21,6 @@ public final class IosTestLoopResponse {
 
     /**
      * Bundle ID of the app.
-     * 
     */
     public String getBundleId() {
         return this.bundleId;

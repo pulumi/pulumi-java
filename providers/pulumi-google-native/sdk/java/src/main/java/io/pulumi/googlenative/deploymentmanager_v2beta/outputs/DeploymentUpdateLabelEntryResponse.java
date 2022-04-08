@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class DeploymentUpdateLabelEntryResponse {
     /**
      * Key of the label
-     * 
      */
     private final String key;
     /**
      * Value of the label
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class DeploymentUpdateLabelEntryResponse {
 
     /**
      * Key of the label
-     * 
     */
     public String getKey() {
         return this.key;
     }
     /**
      * Value of the label
-     * 
     */
     public String getValue() {
         return this.value;

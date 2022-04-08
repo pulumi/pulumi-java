@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse {
     /**
      * The name of the app or site this chip is linking to.
-     * 
      */
     private final String destinationName;
     /**
      * The URI of the app or site to open when the user taps the suggestion chip.
-     * 
      */
     private final String uri;
 
@@ -30,14 +28,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionRes
 
     /**
      * The name of the app or site this chip is linking to.
-     * 
     */
     public String getDestinationName() {
         return this.destinationName;
     }
     /**
      * The URI of the app or site to open when the user taps the suggestion chip.
-     * 
     */
     public String getUri() {
         return this.uri;

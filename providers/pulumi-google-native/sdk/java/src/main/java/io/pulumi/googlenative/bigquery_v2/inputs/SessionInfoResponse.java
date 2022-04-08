@@ -14,7 +14,6 @@ public final class SessionInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * // [Preview] Id of the session.
-     * 
      */
     @Import(name="sessionId", required=true)
       private final String sessionId;

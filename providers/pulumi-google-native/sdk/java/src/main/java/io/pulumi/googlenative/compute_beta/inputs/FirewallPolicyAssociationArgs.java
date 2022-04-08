@@ -16,7 +16,6 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
 
     /**
      * The target that the firewall policy is attached to.
-     * 
      */
     @Import(name="attachmentTarget")
       private final @Nullable Output<String> attachmentTarget;
@@ -27,7 +26,6 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
 
     /**
      * The name for an association.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

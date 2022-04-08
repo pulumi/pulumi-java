@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Source of the Cloud Storage file to be imported.
- * 
  */
 public final class GoogleCloudDatalabelingV1beta1GcsSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceArgs extends io.pulumi
 
     /**
      * The input URI of source file. This must be a Cloud Storage path (`gs://...`).
-     * 
      */
     @Import(name="inputUri", required=true)
       private final Output<String> inputUri;
@@ -30,7 +28,6 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceArgs extends io.pulumi
 
     /**
      * The format of the source file. Only "text/csv" is supported.
-     * 
      */
     @Import(name="mimeType", required=true)
       private final Output<String> mimeType;

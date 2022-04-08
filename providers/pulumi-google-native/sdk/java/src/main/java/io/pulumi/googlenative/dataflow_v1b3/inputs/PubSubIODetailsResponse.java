@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Metadata for a Pub/Sub connector used by the job.
- * 
  */
 public final class PubSubIODetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class PubSubIODetailsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Subscription used in the connection.
-     * 
      */
     @Import(name="subscription", required=true)
       private final String subscription;
@@ -29,7 +27,6 @@ public final class PubSubIODetailsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Topic accessed in the connection.
-     * 
      */
     @Import(name="topic", required=true)
       private final String topic;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A patient identifier and associated type.
- * 
  */
 public final class PatientIdResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class PatientIdResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * ID type. For example, MRN or NHS.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -29,7 +27,6 @@ public final class PatientIdResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The patient's unique identifier.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

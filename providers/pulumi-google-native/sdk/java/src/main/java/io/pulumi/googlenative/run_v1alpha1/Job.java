@@ -17,76 +17,65 @@ import javax.annotation.Nullable;
 /**
  * Create a job.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:run/v1alpha1:Job")
 public class Job extends io.pulumi.resources.CustomResource {
     /**
      * Optional. APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources +optional
-     * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
     private Output<String> apiVersion;
 
     /**
      * @return Optional. APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources +optional
-     * 
      */
     public Output<String> getApiVersion() {
         return this.apiVersion;
     }
     /**
      * Optional. Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds +optional
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return Optional. Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds +optional
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Optional. Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
-     * 
      */
     @Export(name="metadata", type=ObjectMetaResponse.class, parameters={})
     private Output<ObjectMetaResponse> metadata;
 
     /**
      * @return Optional. Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
-     * 
      */
     public Output<ObjectMetaResponse> getMetadata() {
         return this.metadata;
     }
     /**
      * Optional. Specification of the desired behavior of a job. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
-     * 
      */
     @Export(name="spec", type=JobSpecResponse.class, parameters={})
     private Output<JobSpecResponse> spec;
 
     /**
      * @return Optional. Specification of the desired behavior of a job. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
-     * 
      */
     public Output<JobSpecResponse> getSpec() {
         return this.spec;
     }
     /**
      * Optional. Current status of a job. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
-     * 
      */
     @Export(name="status", type=JobStatusResponse.class, parameters={})
     private Output<JobStatusResponse> status;
 
     /**
      * @return Optional. Current status of a job. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
-     * 
      */
     public Output<JobStatusResponse> getStatus() {
         return this.status;

@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class SoftwareRecipeStepExtractArchiveResponse {
     /**
      * The id of the relevant artifact in the recipe.
-     * 
      */
     private final String artifactId;
     /**
      * Directory to extract archive to. Defaults to `/` on Linux or `C:\` on Windows.
-     * 
      */
     private final String destination;
     /**
      * The type of the archive to extract.
-     * 
      */
     private final String type;
 
@@ -37,21 +34,18 @@ public final class SoftwareRecipeStepExtractArchiveResponse {
 
     /**
      * The id of the relevant artifact in the recipe.
-     * 
     */
     public String getArtifactId() {
         return this.artifactId;
     }
     /**
      * Directory to extract archive to. Defaults to `/` on Linux or `C:\` on Windows.
-     * 
     */
     public String getDestination() {
         return this.destination;
     }
     /**
      * The type of the archive to extract.
-     * 
     */
     public String getType() {
         return this.type;

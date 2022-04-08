@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class RuntimeMetricsResponse {
     /**
      * The system metrics.
-     * 
      */
     private final Map<String,String> systemMetrics;
 
@@ -23,7 +22,6 @@ public final class RuntimeMetricsResponse {
 
     /**
      * The system metrics.
-     * 
     */
     public Map<String,String> getSystemMetrics() {
         return this.systemMetrics;

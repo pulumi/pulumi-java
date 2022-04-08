@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * MySQL source configuration
- * 
  */
 public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * MySQL objects to exclude from the stream.
-     * 
      */
     @Import(name="excludeObjects")
       private final @Nullable Output<MysqlRdbmsArgs> excludeObjects;
@@ -31,7 +29,6 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * MySQL objects to retrieve from the source.
-     * 
      */
     @Import(name="includeObjects")
       private final @Nullable Output<MysqlRdbmsArgs> includeObjects;

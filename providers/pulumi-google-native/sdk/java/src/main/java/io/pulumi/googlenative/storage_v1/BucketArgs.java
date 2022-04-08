@@ -33,7 +33,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Access controls on the bucket.
-     * 
      */
     @Import(name="acl")
       private final @Nullable Output<List<BucketAccessControlArgs>> acl;
@@ -44,7 +43,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The bucket's Autoclass configuration.
-     * 
      */
     @Import(name="autoclass")
       private final @Nullable Output<BucketAutoclassArgs> autoclass;
@@ -55,7 +53,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The bucket's billing configuration.
-     * 
      */
     @Import(name="billing")
       private final @Nullable Output<BucketBillingArgs> billing;
@@ -66,7 +63,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The bucket's Cross-Origin Resource Sharing (CORS) configuration.
-     * 
      */
     @Import(name="cors")
       private final @Nullable Output<List<BucketCorsItemArgs>> cors;
@@ -77,7 +73,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The bucket's custom placement configuration for Custom Dual Regions.
-     * 
      */
     @Import(name="customPlacementConfig")
       private final @Nullable Output<BucketCustomPlacementConfigArgs> customPlacementConfig;
@@ -88,7 +83,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The default value for event-based hold on newly created objects in this bucket. Event-based hold is a way to retain objects indefinitely until an event occurs, signified by the hold's release. After being released, such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false. Objects under event-based hold cannot be deleted, overwritten or archived until the hold is removed.
-     * 
      */
     @Import(name="defaultEventBasedHold")
       private final @Nullable Output<Boolean> defaultEventBasedHold;
@@ -99,7 +93,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Default access controls to apply to new objects when no ACL is provided.
-     * 
      */
     @Import(name="defaultObjectAcl")
       private final @Nullable Output<List<ObjectAccessControlArgs>> defaultObjectAcl;
@@ -110,7 +103,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Encryption configuration for a bucket.
-     * 
      */
     @Import(name="encryption")
       private final @Nullable Output<BucketEncryptionArgs> encryption;
@@ -121,7 +113,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * HTTP 1.1 Entity tag for the bucket.
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -132,7 +123,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The bucket's IAM configuration.
-     * 
      */
     @Import(name="iamConfiguration")
       private final @Nullable Output<BucketIamConfigurationArgs> iamConfiguration;
@@ -143,7 +133,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the bucket. For buckets, the id and name properties are the same.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -154,7 +143,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The kind of item this is. For buckets, this is always storage#bucket.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -165,7 +153,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User-provided labels, in key/value pairs.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -176,7 +163,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The bucket's lifecycle configuration. See lifecycle management for more information.
-     * 
      */
     @Import(name="lifecycle")
       private final @Nullable Output<BucketLifecycleArgs> lifecycle;
@@ -187,7 +173,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the bucket. Object data for objects in the bucket resides in physical storage within this region. Defaults to US. See the developer's guide for the authoritative list.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -198,7 +183,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of the bucket location.
-     * 
      */
     @Import(name="locationType")
       private final @Nullable Output<String> locationType;
@@ -209,7 +193,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The bucket's logging configuration, which defines the destination bucket and optional name prefix for the current bucket's logs.
-     * 
      */
     @Import(name="logging")
       private final @Nullable Output<BucketLoggingArgs> logging;
@@ -220,7 +203,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The metadata generation of this bucket.
-     * 
      */
     @Import(name="metageneration")
       private final @Nullable Output<String> metageneration;
@@ -231,7 +213,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the bucket.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -242,7 +223,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The owner of the bucket. This is always the project team's owner group.
-     * 
      */
     @Import(name="owner")
       private final @Nullable Output<BucketOwnerArgs> owner;
@@ -274,7 +254,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The project number of the project the bucket belongs to.
-     * 
      */
     @Import(name="projectNumber")
       private final @Nullable Output<String> projectNumber;
@@ -299,7 +278,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The bucket's retention policy. The retention policy enforces a minimum retention time for all objects contained in the bucket, based on their creation time. Any attempt to overwrite or delete objects younger than the retention period will result in a PERMISSION_DENIED error. An unlocked retention policy can be modified or removed from the bucket via a storage.buckets.update operation. A locked retention policy cannot be removed or shortened in duration for the lifetime of the bucket. Attempting to remove or decrease period of a locked retention policy will result in a PERMISSION_DENIED error.
-     * 
      */
     @Import(name="retentionPolicy")
       private final @Nullable Output<BucketRetentionPolicyArgs> retentionPolicy;
@@ -310,7 +288,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Recovery Point Objective (RPO) of this bucket. Set to ASYNC_TURBO to turn on Turbo Replication on a bucket.
-     * 
      */
     @Import(name="rpo")
       private final @Nullable Output<String> rpo;
@@ -321,7 +298,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Reserved for future use.
-     * 
      */
     @Import(name="satisfiesPZS")
       private final @Nullable Output<Boolean> satisfiesPZS;
@@ -332,7 +308,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The URI of this bucket.
-     * 
      */
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
@@ -343,7 +318,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The bucket's default storage class, used whenever no storageClass is specified for a newly-created object. This defines how objects in the bucket are stored and determines the SLA and the cost of storage. Values include MULTI_REGIONAL, REGIONAL, STANDARD, NEARLINE, COLDLINE, ARCHIVE, and DURABLE_REDUCED_AVAILABILITY. If this value is not specified when the bucket is created, it will default to STANDARD. For more information, see storage classes.
-     * 
      */
     @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
@@ -354,7 +328,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The creation time of the bucket in RFC 3339 format.
-     * 
      */
     @Import(name="timeCreated")
       private final @Nullable Output<String> timeCreated;
@@ -365,7 +338,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The modification time of the bucket in RFC 3339 format.
-     * 
      */
     @Import(name="updated")
       private final @Nullable Output<String> updated;
@@ -383,7 +355,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The bucket's versioning configuration.
-     * 
      */
     @Import(name="versioning")
       private final @Nullable Output<BucketVersioningArgs> versioning;
@@ -394,7 +365,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The bucket's website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.
-     * 
      */
     @Import(name="website")
       private final @Nullable Output<BucketWebsiteArgs> website;

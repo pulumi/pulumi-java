@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration of preserved resources.
- * 
  */
 public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
 
     /**
      * Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
-     * 
      */
     @Import(name="disks")
       private final @Nullable Output<Map<String,String>> disks;

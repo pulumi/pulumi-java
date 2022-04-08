@@ -13,17 +13,14 @@ public final class SqlScheduledMaintenanceResponse {
     private final Boolean canDefer;
     /**
      * If the scheduled maintenance can be rescheduled.
-     * 
      */
     private final Boolean canReschedule;
     /**
      * Maintenance cannot be rescheduled to start beyond this deadline.
-     * 
      */
     private final String scheduleDeadlineTime;
     /**
      * The start time of any upcoming scheduled maintenance for this instance.
-     * 
      */
     private final String startTime;
 
@@ -44,21 +41,18 @@ public final class SqlScheduledMaintenanceResponse {
     }
     /**
      * If the scheduled maintenance can be rescheduled.
-     * 
     */
     public Boolean getCanReschedule() {
         return this.canReschedule;
     }
     /**
      * Maintenance cannot be rescheduled to start beyond this deadline.
-     * 
     */
     public String getScheduleDeadlineTime() {
         return this.scheduleDeadlineTime;
     }
     /**
      * The start time of any upcoming scheduled maintenance for this instance.
-     * 
     */
     public String getStartTime() {
         return this.startTime;

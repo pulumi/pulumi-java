@@ -14,48 +14,41 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new subscription.
- * 
  */
 @ResourceType(type="google-native:pubsublite/v1:Subscription")
 public class Subscription extends io.pulumi.resources.CustomResource {
     /**
      * The settings for this subscription's message delivery.
-     * 
      */
     @Export(name="deliveryConfig", type=DeliveryConfigResponse.class, parameters={})
     private Output<DeliveryConfigResponse> deliveryConfig;
 
     /**
      * @return The settings for this subscription's message delivery.
-     * 
      */
     public Output<DeliveryConfigResponse> getDeliveryConfig() {
         return this.deliveryConfig;
     }
     /**
      * The name of the subscription. Structured like: projects/{project_number}/locations/{location}/subscriptions/{subscription_id}
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the subscription. Structured like: projects/{project_number}/locations/{location}/subscriptions/{subscription_id}
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The name of the topic this subscription is attached to. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
-     * 
      */
     @Export(name="topic", type=String.class, parameters={})
     private Output<String> topic;
 
     /**
      * @return The name of the topic this subscription is attached to. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
-     * 
      */
     public Output<String> getTopic() {
         return this.topic;

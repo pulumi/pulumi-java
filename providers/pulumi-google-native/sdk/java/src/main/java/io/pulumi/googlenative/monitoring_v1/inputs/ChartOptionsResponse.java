@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Options to control visual rendering of a chart.
- * 
  */
 public final class ChartOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ChartOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The chart mode.
-     * 
      */
     @Import(name="mode", required=true)
       private final String mode;

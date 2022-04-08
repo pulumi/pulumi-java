@@ -17,104 +17,89 @@ import javax.annotation.Nullable;
 /**
  * Creates a feed in a parent project/folder/organization to listen to its asset updates.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:cloudasset/v1:Feed")
 public class Feed extends io.pulumi.resources.CustomResource {
     /**
      * A list of the full names of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more info.
-     * 
      */
     @Export(name="assetNames", type=List.class, parameters={String.class})
     private Output<List<String>> assetNames;
 
     /**
      * @return A list of the full names of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more info.
-     * 
      */
     public Output<List<String>> getAssetNames() {
         return this.assetNames;
     }
     /**
      * A list of types of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `"compute.googleapis.com/Disk"` See [this topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for a list of all supported asset types.
-     * 
      */
     @Export(name="assetTypes", type=List.class, parameters={String.class})
     private Output<List<String>> assetTypes;
 
     /**
      * @return A list of types of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `"compute.googleapis.com/Disk"` See [this topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for a list of all supported asset types.
-     * 
      */
     public Output<List<String>> getAssetTypes() {
         return this.assetTypes;
     }
     /**
      * A condition which determines whether an asset update should be published. If specified, an asset will be returned only when the expression evaluates to true. When set, `expression` field in the `Expr` must be a valid [CEL expression] (https://github.com/google/cel-spec) on a TemporalAsset with name `temporal_asset`. Example: a Feed with expression ("temporal_asset.deleted == true") will only publish Asset deletions. Other fields of `Expr` are optional. See our [user guide](https://cloud.google.com/asset-inventory/docs/monitoring-asset-changes-with-condition) for detailed instructions.
-     * 
      */
     @Export(name="condition", type=ExprResponse.class, parameters={})
     private Output<ExprResponse> condition;
 
     /**
      * @return A condition which determines whether an asset update should be published. If specified, an asset will be returned only when the expression evaluates to true. When set, `expression` field in the `Expr` must be a valid [CEL expression] (https://github.com/google/cel-spec) on a TemporalAsset with name `temporal_asset`. Example: a Feed with expression ("temporal_asset.deleted == true") will only publish Asset deletions. Other fields of `Expr` are optional. See our [user guide](https://cloud.google.com/asset-inventory/docs/monitoring-asset-changes-with-condition) for detailed instructions.
-     * 
      */
     public Output<ExprResponse> getCondition() {
         return this.condition;
     }
     /**
      * Asset content type. If not specified, no content but the asset name and type will be returned.
-     * 
      */
     @Export(name="contentType", type=String.class, parameters={})
     private Output<String> contentType;
 
     /**
      * @return Asset content type. If not specified, no content but the asset name and type will be returned.
-     * 
      */
     public Output<String> getContentType() {
         return this.contentType;
     }
     /**
      * Feed output configuration defining where the asset updates are published to.
-     * 
      */
     @Export(name="feedOutputConfig", type=FeedOutputConfigResponse.class, parameters={})
     private Output<FeedOutputConfigResponse> feedOutputConfig;
 
     /**
      * @return Feed output configuration defining where the asset updates are published to.
-     * 
      */
     public Output<FeedOutputConfigResponse> getFeedOutputConfig() {
         return this.feedOutputConfig;
     }
     /**
      * The format will be projects/{project_number}/feeds/{client-assigned_feed_identifier} or folders/{folder_number}/feeds/{client-assigned_feed_identifier} or organizations/{organization_number}/feeds/{client-assigned_feed_identifier} The client-assigned feed identifier must be unique within the parent project/folder/organization.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The format will be projects/{project_number}/feeds/{client-assigned_feed_identifier} or folders/{folder_number}/feeds/{client-assigned_feed_identifier} or organizations/{organization_number}/feeds/{client-assigned_feed_identifier} The client-assigned feed identifier must be unique within the parent project/folder/organization.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * A list of relationship types to output, for example: `INSTANCE_TO_INSTANCEGROUP`. This field should only be specified if content_type=RELATIONSHIP. * If specified: it outputs specified relationship updates on the [asset_names] or the [asset_types]. It returns an error if any of the [relationship_types] doesn't belong to the supported relationship types of the [asset_names] or [asset_types], or any of the [asset_names] or the [asset_types] doesn't belong to the source types of the [relationship_types]. * Otherwise: it outputs the supported relationships of the types of [asset_names] and [asset_types] or returns an error if any of the [asset_names] or the [asset_types] has no replationship support. See [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-inventory/docs/overview) for all supported asset types and relationship types.
-     * 
      */
     @Export(name="relationshipTypes", type=List.class, parameters={String.class})
     private Output<List<String>> relationshipTypes;
 
     /**
      * @return A list of relationship types to output, for example: `INSTANCE_TO_INSTANCEGROUP`. This field should only be specified if content_type=RELATIONSHIP. * If specified: it outputs specified relationship updates on the [asset_names] or the [asset_types]. It returns an error if any of the [relationship_types] doesn't belong to the supported relationship types of the [asset_names] or [asset_types], or any of the [asset_names] or the [asset_types] doesn't belong to the source types of the [relationship_types]. * Otherwise: it outputs the supported relationships of the types of [asset_names] and [asset_types] or returns an error if any of the [asset_names] or the [asset_types] has no replationship support. See [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-inventory/docs/overview) for all supported asset types and relationship types.
-     * 
      */
     public Output<List<String>> getRelationshipTypes() {
         return this.relationshipTypes;

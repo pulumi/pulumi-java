@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Identity-Aware Proxy
- * 
  */
 public final class IdentityAwareProxyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class IdentityAwareProxyArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Whether the serving infrastructure will authenticate and authorize all incoming requests.If true, the oauth2_client_id and oauth2_client_secret fields must be non-empty.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -32,7 +30,6 @@ public final class IdentityAwareProxyArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * OAuth2 client ID to use for the authentication flow.
-     * 
      */
     @Import(name="oauth2ClientId")
       private final @Nullable Output<String> oauth2ClientId;
@@ -43,7 +40,6 @@ public final class IdentityAwareProxyArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * OAuth2 client secret to use for the authentication flow.For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2_client_secret_sha256 field.@InputOnly
-     * 
      */
     @Import(name="oauth2ClientSecret")
       private final @Nullable Output<String> oauth2ClientSecret;

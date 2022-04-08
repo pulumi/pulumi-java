@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new ResourceRecordSet.
- * 
  */
 @ResourceType(type="google-native:dns/v1:ResourceRecordSet")
 public class ResourceRecordSet extends io.pulumi.resources.CustomResource {
@@ -28,84 +27,72 @@ public class ResourceRecordSet extends io.pulumi.resources.CustomResource {
     }
     /**
      * For example, www.example.com.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return For example, www.example.com.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.
-     * 
      */
     @Export(name="routingPolicy", type=RRSetRoutingPolicyResponse.class, parameters={})
     private Output<RRSetRoutingPolicyResponse> routingPolicy;
 
     /**
      * @return Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.
-     * 
      */
     public Output<RRSetRoutingPolicyResponse> getRoutingPolicy() {
         return this.routingPolicy;
     }
     /**
      * As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
-     * 
      */
     @Export(name="rrdatas", type=List.class, parameters={String.class})
     private Output<List<String>> rrdatas;
 
     /**
      * @return As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
-     * 
      */
     public Output<List<String>> getRrdatas() {
         return this.rrdatas;
     }
     /**
      * As defined in RFC 4034 (section 3.2).
-     * 
      */
     @Export(name="signatureRrdatas", type=List.class, parameters={String.class})
     private Output<List<String>> signatureRrdatas;
 
     /**
      * @return As defined in RFC 4034 (section 3.2).
-     * 
      */
     public Output<List<String>> getSignatureRrdatas() {
         return this.signatureRrdatas;
     }
     /**
      * Number of seconds that this ResourceRecordSet can be cached by resolvers.
-     * 
      */
     @Export(name="ttl", type=Integer.class, parameters={})
     private Output<Integer> ttl;
 
     /**
      * @return Number of seconds that this ResourceRecordSet can be cached by resolvers.
-     * 
      */
     public Output<Integer> getTtl() {
         return this.ttl;
     }
     /**
      * The identifier of a supported record type. See the list of Supported DNS record types.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The identifier of a supported record type. See the list of Supported DNS record types.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -23,7 +23,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If a device is blocked, connections or requests from this device will fail. Can be used to temporarily prevent the device from connecting if, for example, the sensor is generating bad data and needs maintenance.
-     * 
      */
     @Import(name="blocked")
       private final @Nullable Output<Boolean> blocked;
@@ -34,7 +33,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The most recent device configuration, which is eventually sent from Cloud IoT Core to the device. If not present on creation, the configuration will be initialized with an empty payload and version value of `1`. To update this field after creation, use the `DeviceManager.ModifyCloudToDeviceConfig` method.
-     * 
      */
     @Import(name="config")
       private final @Nullable Output<DeviceConfigArgs> config;
@@ -45,7 +43,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The credentials used to authenticate this device. To allow credential rotation without interruption, multiple device credentials can be bound to this device. No more than 3 credentials can be bound to a single device at a time. When new credentials are added to a device, they are verified against the registry credentials. For details, see the description of the `DeviceRegistry.credentials` field.
-     * 
      */
     @Import(name="credentials")
       private final @Nullable Output<List<DeviceCredentialArgs>> credentials;
@@ -56,7 +53,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gateway-related configuration and state.
-     * 
      */
     @Import(name="gatewayConfig")
       private final @Nullable Output<GatewayConfigArgs> gatewayConfig;
@@ -67,7 +63,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user-defined device identifier. The device ID must be unique within a device registry.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -85,7 +80,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * **Beta Feature** The logging verbosity for device activity. If unspecified, DeviceRegistry.log_level will be used.
-     * 
      */
     @Import(name="logLevel")
       private final @Nullable Output<DeviceLogLevel> logLevel;
@@ -96,7 +90,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The metadata key-value pairs assigned to the device. This metadata is not interpreted or indexed by Cloud IoT Core. It can be used to add contextual information for the device. Keys must conform to the regular expression a-zA-Z+ and be less than 128 bytes in length. Values are free-form strings. Each value must be less than or equal to 32 KB in size. The total size of all keys and values must be less than 256 KB, and the maximum number of key-value pairs is 500.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
@@ -107,7 +100,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource path name. For example, `projects/p1/locations/us-central1/registries/registry0/devices/dev0` or `projects/p1/locations/us-central1/registries/registry0/devices/{num_id}`. When `name` is populated as a response from the service, it always ends in the device numeric ID.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

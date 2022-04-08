@@ -17,7 +17,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description of the snapshot with 2048 characters or less. Requests with longer descriptions will be rejected.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -35,7 +34,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource labels to represent user provided metadata.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;

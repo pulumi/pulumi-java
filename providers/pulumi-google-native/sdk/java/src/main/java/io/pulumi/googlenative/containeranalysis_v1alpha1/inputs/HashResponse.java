@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Container message for hash values.
- * 
  */
 public final class HashResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class HashResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of hash that was performed.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -29,7 +27,6 @@ public final class HashResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The hash value.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

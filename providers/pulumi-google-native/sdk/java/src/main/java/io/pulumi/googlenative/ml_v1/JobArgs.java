@@ -21,7 +21,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a job from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform job updates in order to avoid race conditions: An `etag` is returned in the response to `GetJob`, and systems are expected to put that etag in the request to `UpdateJob` to ensure that their change will be applied to the same version of the job.
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -32,7 +31,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user-specified id of the job.
-     * 
      */
     @Import(name="jobId", required=true)
       private final Output<String> jobId;
@@ -43,7 +41,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. One or more labels that you can add, to organize your jobs. Each label is a key-value pair, where both the key and the value are arbitrary strings that you supply. For more information, see the documentation on using labels.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -54,7 +51,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Input parameters to create a prediction job.
-     * 
      */
     @Import(name="predictionInput")
       private final @Nullable Output<GoogleCloudMlV1__PredictionInputArgs> predictionInput;
@@ -65,7 +61,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The current prediction job result.
-     * 
      */
     @Import(name="predictionOutput")
       private final @Nullable Output<GoogleCloudMlV1__PredictionOutputArgs> predictionOutput;
@@ -83,7 +78,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Input parameters to create a training job.
-     * 
      */
     @Import(name="trainingInput")
       private final @Nullable Output<GoogleCloudMlV1__TrainingInputArgs> trainingInput;
@@ -94,7 +88,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The current training job result.
-     * 
      */
     @Import(name="trainingOutput")
       private final @Nullable Output<GoogleCloudMlV1__TrainingOutputArgs> trainingOutput;

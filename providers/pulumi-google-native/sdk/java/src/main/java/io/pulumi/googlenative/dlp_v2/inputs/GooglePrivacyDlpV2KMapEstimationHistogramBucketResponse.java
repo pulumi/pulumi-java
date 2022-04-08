@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A KMapEstimationHistogramBucket message with the following values: min_anonymity: 3 max_anonymity: 5 frequency: 42 means that there are 42 records whose quasi-identifier values correspond to 3, 4 or 5 people in the overlying population. An important particular case is when min_anonymity = max_anonymity = 1: the frequency field then corresponds to the number of uniquely identifiable records.
- * 
  */
 public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
 
     /**
      * Number of records within these anonymity bounds.
-     * 
      */
     @Import(name="bucketSize", required=true)
       private final String bucketSize;
@@ -31,7 +29,6 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
 
     /**
      * Total number of distinct quasi-identifier tuple values in this bucket.
-     * 
      */
     @Import(name="bucketValueCount", required=true)
       private final String bucketValueCount;
@@ -42,7 +39,6 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
 
     /**
      * Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
-     * 
      */
     @Import(name="bucketValues", required=true)
       private final List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues;
@@ -53,7 +49,6 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
 
     /**
      * Always greater than or equal to min_anonymity.
-     * 
      */
     @Import(name="maxAnonymity", required=true)
       private final String maxAnonymity;
@@ -64,7 +59,6 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
 
     /**
      * Always positive.
-     * 
      */
     @Import(name="minAnonymity", required=true)
       private final String minAnonymity;

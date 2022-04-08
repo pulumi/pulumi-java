@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class BuildResponse {
     /**
      * Immutable. Version of the builder which produced this build.
-     * 
      */
     private final String builderVersion;
     /**
      * Signature of the build in occurrences pointing to this build note containing build details.
-     * 
      */
     private final BuildSignatureResponse signature;
 
@@ -31,14 +29,12 @@ public final class BuildResponse {
 
     /**
      * Immutable. Version of the builder which produced this build.
-     * 
     */
     public String getBuilderVersion() {
         return this.builderVersion;
     }
     /**
      * Signature of the build in occurrences pointing to this build note containing build details.
-     * 
     */
     public BuildSignatureResponse getSignature() {
         return this.signature;

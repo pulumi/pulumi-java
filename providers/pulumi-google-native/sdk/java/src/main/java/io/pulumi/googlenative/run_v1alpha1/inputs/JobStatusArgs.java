@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * JobStatus represents the current state of a Job.
- * 
  */
 public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The number of actively running instances. +optional
-     * 
      */
     @Import(name="active")
       private final @Nullable Output<Integer> active;
@@ -35,7 +33,6 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Represents time when the job was completed. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
-     * 
      */
     @Import(name="completionTime")
       private final @Nullable Output<String> completionTime;
@@ -46,7 +43,6 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The latest available observations of a job's current state. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<List<JobConditionArgs>> conditions;
@@ -57,7 +53,6 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The number of instances which reached phase Failed. +optional
-     * 
      */
     @Import(name="failed")
       private final @Nullable Output<Integer> failed;
@@ -68,7 +63,6 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. ImageDigest holds the resolved digest for the image specified within .Spec.Template.Spec.Container.Image. The digest is resolved during the creation of the Job. This field holds the digest value regardless of whether a tag or digest was originally specified in the Container object.
-     * 
      */
     @Import(name="imageDigest")
       private final @Nullable Output<String> imageDigest;
@@ -79,7 +73,6 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Status of completed, failed, and running instances. +optional
-     * 
      */
     @Import(name="instances")
       private final @Nullable Output<List<InstanceStatusArgs>> instances;
@@ -90,7 +83,6 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The 'generation' of the job that was last processed by the controller.
-     * 
      */
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
@@ -101,7 +93,6 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Represents time when the job was acknowledged by the job controller. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
@@ -112,7 +103,6 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The number of instances which reached phase Succeeded. +optional
-     * 
      */
     @Import(name="succeeded")
       private final @Nullable Output<Integer> succeeded;

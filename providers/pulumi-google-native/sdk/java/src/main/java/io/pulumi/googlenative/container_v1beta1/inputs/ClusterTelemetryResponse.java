@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Telemetry integration for the cluster.
- * 
  */
 public final class ClusterTelemetryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ClusterTelemetryResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Type of the integration.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

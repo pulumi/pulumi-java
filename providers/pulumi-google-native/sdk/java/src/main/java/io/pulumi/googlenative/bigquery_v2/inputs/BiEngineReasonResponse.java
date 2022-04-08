@@ -14,7 +14,6 @@ public final class BiEngineReasonResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * High-level BI Engine reason for partial or disabled acceleration.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -25,7 +24,6 @@ public final class BiEngineReasonResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Free form human-readable reason for partial or disabled acceleration.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;

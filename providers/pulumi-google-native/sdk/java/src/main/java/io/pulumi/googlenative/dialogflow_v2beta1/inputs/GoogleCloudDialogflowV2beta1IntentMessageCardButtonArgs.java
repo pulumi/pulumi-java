@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Optional. Contains information about a button.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs exten
 
     /**
      * Optional. The text to send back to the Dialogflow API or a URI to open.
-     * 
      */
     @Import(name="postback")
       private final @Nullable Output<String> postback;
@@ -31,7 +29,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs exten
 
     /**
      * Optional. The text to show on the button.
-     * 
      */
     @Import(name="text")
       private final @Nullable Output<String> text;

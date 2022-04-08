@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class EnvFromSourceResponse {
     /**
      * (Optional) The ConfigMap to select from
-     * 
      */
     private final ConfigMapEnvSourceResponse configMapRef;
     /**
      * (Optional) An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
-     * 
      */
     private final String prefix;
     /**
      * (Optional) The Secret to select from
-     * 
      */
     private final SecretEnvSourceResponse secretRef;
 
@@ -39,21 +36,18 @@ public final class EnvFromSourceResponse {
 
     /**
      * (Optional) The ConfigMap to select from
-     * 
     */
     public ConfigMapEnvSourceResponse getConfigMapRef() {
         return this.configMapRef;
     }
     /**
      * (Optional) An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
-     * 
     */
     public String getPrefix() {
         return this.prefix;
     }
     /**
      * (Optional) The Secret to select from
-     * 
     */
     public SecretEnvSourceResponse getSecretRef() {
         return this.secretRef;

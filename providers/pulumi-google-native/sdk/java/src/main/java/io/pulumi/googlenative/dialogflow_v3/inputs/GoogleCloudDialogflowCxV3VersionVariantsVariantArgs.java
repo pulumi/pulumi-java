@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A single flow version with specified traffic allocation.
- * 
  */
 public final class GoogleCloudDialogflowCxV3VersionVariantsVariantArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantArgs extends i
 
     /**
      * Whether the variant is for the control group.
-     * 
      */
     @Import(name="isControlGroup")
       private final @Nullable Output<Boolean> isControlGroup;
@@ -33,7 +31,6 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantArgs extends i
 
     /**
      * Percentage of the traffic which should be routed to this version of flow. Traffic allocation for a single flow must sum up to 1.0.
-     * 
      */
     @Import(name="trafficAllocation")
       private final @Nullable Output<Double> trafficAllocation;
@@ -44,7 +41,6 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantArgs extends i
 
     /**
      * The name of the flow version. Format: `projects//locations//agents//flows//versions/`.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

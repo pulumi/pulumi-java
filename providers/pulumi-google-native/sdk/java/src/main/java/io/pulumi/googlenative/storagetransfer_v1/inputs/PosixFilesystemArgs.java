@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A POSIX filesystem resource.
- * 
  */
 public final class PosixFilesystemArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PosixFilesystemArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Root directory path to the filesystem.
-     * 
      */
     @Import(name="rootDirectory")
       private final @Nullable Output<String> rootDirectory;

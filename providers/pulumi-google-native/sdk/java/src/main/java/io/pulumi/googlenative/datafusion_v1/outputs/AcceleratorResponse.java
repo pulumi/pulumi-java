@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class AcceleratorResponse {
     /**
      * The type of an accelator for a CDF instance.
-     * 
      */
     private final String acceleratorType;
     /**
      * The state of the accelerator
-     * 
      */
     private final String state;
 
@@ -30,14 +28,12 @@ public final class AcceleratorResponse {
 
     /**
      * The type of an accelator for a CDF instance.
-     * 
     */
     public String getAcceleratorType() {
         return this.acceleratorType;
     }
     /**
      * The state of the accelerator
-     * 
     */
     public String getState() {
         return this.state;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Association links that an entitlement has to other entitlements.
- * 
  */
 public final class GoogleCloudChannelV1AssociationInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudChannelV1AssociationInfoResponse extends io.pulumi
 
     /**
      * The name of the base entitlement, for which this entitlement is an add-on.
-     * 
      */
     @Import(name="baseEntitlement", required=true)
       private final String baseEntitlement;

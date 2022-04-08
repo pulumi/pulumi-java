@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a sub PublicDelegatedPrefix.
- * 
  */
 public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
 
     /**
      * Name of the project scoping this PublicDelegatedSubPrefix.
-     * 
      */
     @Import(name="delegateeProject")
       private final @Nullable Output<String> delegateeProject;
@@ -32,7 +30,6 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
 
     /**
      * An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -43,7 +40,6 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
 
     /**
      * The IPv4 address range, in CIDR format, represented by this sub public delegated prefix.
-     * 
      */
     @Import(name="ipCidrRange")
       private final @Nullable Output<String> ipCidrRange;
@@ -54,7 +50,6 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
 
     /**
      * Whether the sub prefix is delegated to create Address resources in the delegatee project.
-     * 
      */
     @Import(name="isAddress")
       private final @Nullable Output<Boolean> isAddress;
@@ -65,7 +60,6 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
 
     /**
      * The name of the sub public delegated prefix.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

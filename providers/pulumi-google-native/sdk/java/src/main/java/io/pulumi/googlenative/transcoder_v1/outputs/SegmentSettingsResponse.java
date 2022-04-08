@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class SegmentSettingsResponse {
     /**
      * Create an individual segment file. The default is `false`.
-     * 
      */
     private final Boolean individualSegments;
     /**
      * Duration of the segments in seconds. The default is `6.0s`. Note that `segmentDuration` must be greater than or equal to [`gopDuration`](#videostream), and `segmentDuration` must be divisible by [`gopDuration`](#videostream).
-     * 
      */
     private final String segmentDuration;
 
@@ -31,14 +29,12 @@ public final class SegmentSettingsResponse {
 
     /**
      * Create an individual segment file. The default is `false`.
-     * 
     */
     public Boolean getIndividualSegments() {
         return this.individualSegments;
     }
     /**
      * Duration of the segments in seconds. The default is `6.0s`. Note that `segmentDuration` must be greater than or equal to [`gopDuration`](#videostream), and `segmentDuration` must be divisible by [`gopDuration`](#videostream).
-     * 
     */
     public String getSegmentDuration() {
         return this.segmentDuration;

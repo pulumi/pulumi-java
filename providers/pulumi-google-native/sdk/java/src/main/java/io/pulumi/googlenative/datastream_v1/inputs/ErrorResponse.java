@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Represent a user-facing Error.
- * 
  */
 public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Additional information about the error.
-     * 
      */
     @Import(name="details", required=true)
       private final Map<String,String> details;
@@ -30,7 +28,6 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The time when the error occurred.
-     * 
      */
     @Import(name="errorTime", required=true)
       private final String errorTime;
@@ -41,7 +38,6 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A unique identifier for this specific error, allowing it to be traced throughout the system in logs and API responses.
-     * 
      */
     @Import(name="errorUuid", required=true)
       private final String errorUuid;
@@ -52,7 +48,6 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A message containing more information about the error that occurred.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -63,7 +58,6 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A title that explains the reason for the error.
-     * 
      */
     @Import(name="reason", required=true)
       private final String reason;

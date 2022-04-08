@@ -18,7 +18,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Additional user-agent string to append to the default one (<prod_name>/<ver>).
-     * 
      */
     @Import(name="appendUserAgent")
       private final @Nullable Output<String> appendUserAgent;
@@ -29,7 +28,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This will disable the Pulumi Partner Name which is used if a custom `partnerName` isn't specified.
-     * 
      */
     @Import(name="disablePartnerName", json=true)
       private final @Nullable Output<Boolean> disablePartnerName;
@@ -40,7 +38,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A Google Partner Name to facilitate partner resource usage attribution.
-     * 
      */
     @Import(name="partnerName")
       private final @Nullable Output<String> partnerName;
@@ -51,7 +48,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The default project to manage resources in. If another project is specified on a resource, it will take precedence.
-     * 
      */
     @Import(name="project")
       private final @Nullable Output<String> project;
@@ -62,7 +58,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The default region to manage resources in. If another region is specified on a regional resource, it will take precedence.
-     * 
      */
     @Import(name="region")
       private final @Nullable Output<String> region;
@@ -73,7 +68,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The default zone to manage resources in. Generally, this zone should be within the default region you specified. If another zone is specified on a zonal resource, it will take precedence.
-     * 
      */
     @Import(name="zone")
       private final @Nullable Output<String> zone;

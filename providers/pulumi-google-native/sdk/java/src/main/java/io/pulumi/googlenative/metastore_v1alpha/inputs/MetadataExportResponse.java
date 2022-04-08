@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The details of a metadata export operation.
- * 
  */
 public final class MetadataExportResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MetadataExportResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The type of the database dump.
-     * 
      */
     @Import(name="databaseDumpType", required=true)
       private final String databaseDumpType;
@@ -29,7 +27,6 @@ public final class MetadataExportResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A Cloud Storage URI of a folder that metadata are exported to, in the form of gs:////, where is automatically generated.
-     * 
      */
     @Import(name="destinationGcsUri", required=true)
       private final String destinationGcsUri;
@@ -40,7 +37,6 @@ public final class MetadataExportResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The time when the export ended.
-     * 
      */
     @Import(name="endTime", required=true)
       private final String endTime;
@@ -51,7 +47,6 @@ public final class MetadataExportResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The time when the export started.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;
@@ -62,7 +57,6 @@ public final class MetadataExportResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The current state of the export.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;

@@ -17,7 +17,6 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The core content of the template.
-     * 
      */
     @Import(name="deidentifyConfig")
       private final @Nullable Output<GooglePrivacyDlpV2DeidentifyConfigArgs> deidentifyConfig;
@@ -28,7 +27,6 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Short description (max 256 chars).
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -39,7 +37,6 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Display name (max 256 chars).
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -64,7 +61,6 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The template id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.
-     * 
      */
     @Import(name="templateId")
       private final @Nullable Output<String> templateId;

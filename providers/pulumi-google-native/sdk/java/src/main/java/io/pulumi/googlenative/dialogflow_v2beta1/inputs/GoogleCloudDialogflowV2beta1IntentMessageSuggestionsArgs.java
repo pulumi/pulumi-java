@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The collection of suggestions.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs exte
 
     /**
      * The list of suggested replies.
-     * 
      */
     @Import(name="suggestions", required=true)
       private final Output<List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs>> suggestions;

@@ -23,7 +23,6 @@ public final class ChannelPartnerLinkArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * State of the channel partner link.
-     * 
      */
     @Import(name="linkState", required=true)
       private final Output<ChannelPartnerLinkLinkState> linkState;
@@ -34,7 +33,6 @@ public final class ChannelPartnerLinkArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Cloud Identity ID of the linked reseller.
-     * 
      */
     @Import(name="resellerCloudIdentityId", required=true)
       private final Output<String> resellerCloudIdentityId;

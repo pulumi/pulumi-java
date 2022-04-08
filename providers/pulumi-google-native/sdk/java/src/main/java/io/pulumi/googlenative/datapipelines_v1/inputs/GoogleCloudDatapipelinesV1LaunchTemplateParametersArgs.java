@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Parameters to provide to the template being launched.
- * 
  */
 public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
 
     /**
      * The runtime environment for the job.
-     * 
      */
     @Import(name="environment")
       private final @Nullable Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs> environment;
@@ -34,7 +32,6 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
 
     /**
      * The job name to use for the created job.
-     * 
      */
     @Import(name="jobName", required=true)
       private final Output<String> jobName;
@@ -45,7 +42,6 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
 
     /**
      * The runtime parameters to pass to the job.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
@@ -56,7 +52,6 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
 
     /**
      * Map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job. Only applicable when updating a pipeline.
-     * 
      */
     @Import(name="transformNameMapping")
       private final @Nullable Output<Map<String,String>> transformNameMapping;
@@ -67,7 +62,6 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
 
     /**
      * If set, replace the existing pipeline with the name specified by jobName with this pipeline, preserving state.
-     * 
      */
     @Import(name="update")
       private final @Nullable Output<Boolean> update;

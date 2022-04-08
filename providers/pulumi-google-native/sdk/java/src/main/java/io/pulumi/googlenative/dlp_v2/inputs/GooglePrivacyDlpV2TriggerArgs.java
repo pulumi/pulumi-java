@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * What event needs to occur for a new job to be started.
- * 
  */
 public final class GooglePrivacyDlpV2TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GooglePrivacyDlpV2TriggerArgs extends io.pulumi.resources.Res
 
     /**
      * For use with hybrid jobs. Jobs must be manually created and finished.
-     * 
      */
     @Import(name="manual")
       private final @Nullable Output<GooglePrivacyDlpV2ManualArgs> manual;
@@ -32,7 +30,6 @@ public final class GooglePrivacyDlpV2TriggerArgs extends io.pulumi.resources.Res
 
     /**
      * Create a job on a repeating basis based on the elapse of time.
-     * 
      */
     @Import(name="schedule")
       private final @Nullable Output<GooglePrivacyDlpV2ScheduleArgs> schedule;

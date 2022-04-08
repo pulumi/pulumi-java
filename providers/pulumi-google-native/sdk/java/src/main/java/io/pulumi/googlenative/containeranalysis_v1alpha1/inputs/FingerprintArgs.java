@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A set of properties that uniquely identify a given Docker image.
- * 
  */
 public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The layer-id of the final layer in the Docker image's v1 representation. This field can be used as a filter in list requests.
-     * 
      */
     @Import(name="v1Name")
       private final @Nullable Output<String> v1Name;
@@ -32,7 +30,6 @@ public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ordered list of v2 blobs that represent a given image.
-     * 
      */
     @Import(name="v2Blob")
       private final @Nullable Output<List<String>> v2Blob;

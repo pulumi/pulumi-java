@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The action to take.
- * 
  */
 public final class BucketLifecycleRuleItemActionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class BucketLifecycleRuleItemActionResponse extends io.pulumi.resou
 
     /**
      * Target storage class. Required iff the type of the action is SetStorageClass.
-     * 
      */
     @Import(name="storageClass", required=true)
       private final String storageClass;
@@ -29,7 +27,6 @@ public final class BucketLifecycleRuleItemActionResponse extends io.pulumi.resou
 
     /**
      * Type of the action. Currently, only Delete and SetStorageClass are supported.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

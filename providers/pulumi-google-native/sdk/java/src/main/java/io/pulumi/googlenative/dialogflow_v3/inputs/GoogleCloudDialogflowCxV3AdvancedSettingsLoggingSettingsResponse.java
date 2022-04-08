@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Define behaviors on logging.
- * 
  */
 public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsRespo
 
     /**
      * If true, DF Interaction logging is currently enabled.
-     * 
      */
     @Import(name="enableInteractionLogging", required=true)
       private final Boolean enableInteractionLogging;
@@ -29,7 +27,6 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsRespo
 
     /**
      * If true, StackDriver logging is currently enabled.
-     * 
      */
     @Import(name="enableStackdriverLogging", required=true)
       private final Boolean enableStackdriverLogging;

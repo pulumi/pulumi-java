@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Range of numerical values within min and max.
- * 
  */
 public final class GoogleMonitoringV3RangeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleMonitoringV3RangeResponse extends io.pulumi.resources.I
 
     /**
      * Range maximum.
-     * 
      */
     @Import(name="max", required=true)
       private final Double max;
@@ -29,7 +27,6 @@ public final class GoogleMonitoringV3RangeResponse extends io.pulumi.resources.I
 
     /**
      * Range minimum.
-     * 
      */
     @Import(name="min", required=true)
       private final Double min;

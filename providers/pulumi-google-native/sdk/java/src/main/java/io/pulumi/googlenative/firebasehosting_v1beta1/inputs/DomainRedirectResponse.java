@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Defines the behavior of a domain-level redirect. Domain redirects preserve the path of the redirect but replace the requested domain with the one specified in the redirect configuration.
- * 
  */
 public final class DomainRedirectResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DomainRedirectResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The domain name to redirect to.
-     * 
      */
     @Import(name="domainName", required=true)
       private final String domainName;
@@ -29,7 +27,6 @@ public final class DomainRedirectResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The redirect status code.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

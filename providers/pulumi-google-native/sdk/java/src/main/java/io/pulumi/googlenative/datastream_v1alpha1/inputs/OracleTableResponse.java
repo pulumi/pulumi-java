@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Oracle table.
- * 
  */
 public final class OracleTableResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class OracleTableResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
-     * 
      */
     @Import(name="oracleColumns", required=true)
       private final List<OracleColumnResponse> oracleColumns;
@@ -31,7 +29,6 @@ public final class OracleTableResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Table name.
-     * 
      */
     @Import(name="tableName", required=true)
       private final String tableName;

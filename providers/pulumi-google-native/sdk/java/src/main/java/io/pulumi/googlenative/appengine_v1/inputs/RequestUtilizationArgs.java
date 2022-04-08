@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Target scaling by request utilization. Only applicable in the App Engine flexible environment.
- * 
  */
 public final class RequestUtilizationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RequestUtilizationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Target number of concurrent requests.
-     * 
      */
     @Import(name="targetConcurrentRequests")
       private final @Nullable Output<Integer> targetConcurrentRequests;
@@ -31,7 +29,6 @@ public final class RequestUtilizationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Target requests per second.
-     * 
      */
     @Import(name="targetRequestCountPerSecond")
       private final @Nullable Output<Integer> targetRequestCountPerSecond;

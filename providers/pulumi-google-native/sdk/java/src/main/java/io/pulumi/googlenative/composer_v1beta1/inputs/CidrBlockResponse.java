@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * CidrBlock contains an optional name and one CIDR block.
- * 
  */
 public final class CidrBlockResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CidrBlockResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * cidr_block must be specified in CIDR notation.
-     * 
      */
     @Import(name="cidrBlock", required=true)
       private final String cidrBlock;
@@ -29,7 +27,6 @@ public final class CidrBlockResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * display_name is a field for users to identify CIDR blocks.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;

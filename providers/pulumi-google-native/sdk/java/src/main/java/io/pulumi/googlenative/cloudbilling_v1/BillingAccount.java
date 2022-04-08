@@ -17,62 +17,53 @@ import javax.annotation.Nullable;
  * Auto-naming is currently not supported for this resource.
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:cloudbilling/v1:BillingAccount")
 public class BillingAccount extends io.pulumi.resources.CustomResource {
     /**
      * The display name given to the billing account, such as `My Billing Account`. This name is displayed in the Google Cloud Console.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The display name given to the billing account, such as `My Billing Account`. This name is displayed in the Google Cloud Console.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * If this account is a [subaccount](https://cloud.google.com/billing/docs/concepts), then this will be the resource name of the parent billing account that it is being resold through. Otherwise this will be empty.
-     * 
      */
     @Export(name="masterBillingAccount", type=String.class, parameters={})
     private Output<String> masterBillingAccount;
 
     /**
      * @return If this account is a [subaccount](https://cloud.google.com/billing/docs/concepts), then this will be the resource name of the parent billing account that it is being resold through. Otherwise this will be empty.
-     * 
      */
     public Output<String> getMasterBillingAccount() {
         return this.masterBillingAccount;
     }
     /**
      * The resource name of the billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF` would be the resource name for billing account `012345-567890-ABCDEF`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF` would be the resource name for billing account `012345-567890-ABCDEF`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * True if the billing account is open, and will therefore be charged for any usage on associated projects. False if the billing account is closed, and therefore projects associated with it will be unable to use paid services.
-     * 
      */
     @Export(name="open", type=Boolean.class, parameters={})
     private Output<Boolean> open;
 
     /**
      * @return True if the billing account is open, and will therefore be charged for any usage on associated projects. False if the billing account is closed, and therefore projects associated with it will be unable to use paid services.
-     * 
      */
     public Output<Boolean> getOpen() {
         return this.open;

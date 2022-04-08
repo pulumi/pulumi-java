@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Disk encryption configuration for an instance.
- * 
  */
 public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * This is always `sql#diskEncryptionConfiguration`.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -31,7 +29,6 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * Resource name of KMS key for disk encryption
-     * 
      */
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;

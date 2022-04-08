@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A condition to be met.
- * 
  */
 public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Trusted attributes supplied by the IAM system.
-     * 
      */
     @Import(name="iam", required=true)
       private final String iam;
@@ -30,7 +28,6 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An operator to apply the subject with.
-     * 
      */
     @Import(name="op", required=true)
       private final String op;
@@ -41,7 +38,6 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Trusted attributes discharged by the service.
-     * 
      */
     @Import(name="svc", required=true)
       private final String svc;
@@ -52,7 +48,6 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.
-     * 
      */
     @Import(name="sys", required=true)
       private final String sys;
@@ -63,7 +58,6 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The objects of the condition.
-     * 
      */
     @Import(name="values", required=true)
       private final List<String> values;

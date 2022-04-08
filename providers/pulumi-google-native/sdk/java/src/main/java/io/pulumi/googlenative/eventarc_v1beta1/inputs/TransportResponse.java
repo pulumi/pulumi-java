@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Represents the transport intermediaries created for the trigger in order to deliver events.
- * 
  */
 public final class TransportResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class TransportResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
-     * 
      */
     @Import(name="pubsub", required=true)
       private final PubsubResponse pubsub;

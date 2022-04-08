@@ -19,7 +19,6 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The API version for this call such as "domains.cloudrun.com/v1".
-     * 
      */
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
@@ -37,7 +36,6 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The kind of resource, in this case "DomainMapping".
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -55,7 +53,6 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Metadata associated with this BuildTemplate.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
@@ -73,7 +70,6 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The spec for this DomainMapping.
-     * 
      */
     @Import(name="spec")
       private final @Nullable Output<DomainMappingSpecArgs> spec;
@@ -84,7 +80,6 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The current status of the DomainMapping.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<DomainMappingStatusArgs> status;

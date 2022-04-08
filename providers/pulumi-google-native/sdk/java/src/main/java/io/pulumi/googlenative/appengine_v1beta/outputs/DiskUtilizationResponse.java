@@ -11,22 +11,18 @@ import java.util.Objects;
 public final class DiskUtilizationResponse {
     /**
      * Target bytes read per second.
-     * 
      */
     private final Integer targetReadBytesPerSecond;
     /**
      * Target ops read per seconds.
-     * 
      */
     private final Integer targetReadOpsPerSecond;
     /**
      * Target bytes written per second.
-     * 
      */
     private final Integer targetWriteBytesPerSecond;
     /**
      * Target ops written per second.
-     * 
      */
     private final Integer targetWriteOpsPerSecond;
 
@@ -44,28 +40,24 @@ public final class DiskUtilizationResponse {
 
     /**
      * Target bytes read per second.
-     * 
     */
     public Integer getTargetReadBytesPerSecond() {
         return this.targetReadBytesPerSecond;
     }
     /**
      * Target ops read per seconds.
-     * 
     */
     public Integer getTargetReadOpsPerSecond() {
         return this.targetReadOpsPerSecond;
     }
     /**
      * Target bytes written per second.
-     * 
     */
     public Integer getTargetWriteBytesPerSecond() {
         return this.targetWriteBytesPerSecond;
     }
     /**
      * Target ops written per second.
-     * 
     */
     public Integer getTargetWriteOpsPerSecond() {
         return this.targetWriteOpsPerSecond;

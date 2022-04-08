@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Parameters for controlling consumption metering.
- * 
  */
 public final class ConsumptionMeteringConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ConsumptionMeteringConfigArgs extends io.pulumi.resources.Res
 
     /**
      * Whether to enable consumption metering for this cluster. If enabled, a second BigQuery table will be created to hold resource consumption records.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;

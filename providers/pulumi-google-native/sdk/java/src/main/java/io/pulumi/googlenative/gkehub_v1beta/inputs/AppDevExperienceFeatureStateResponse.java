@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * State for App Dev Exp Feature.
- * 
  */
 public final class AppDevExperienceFeatureStateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AppDevExperienceFeatureStateResponse extends io.pulumi.resour
 
     /**
      * Status of subcomponent that detects configured Service Mesh resources.
-     * 
      */
     @Import(name="networkingInstallSucceeded", required=true)
       private final StatusResponse networkingInstallSucceeded;

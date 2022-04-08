@@ -26,7 +26,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The database type that the Metastore service stores its data.
-     * 
      */
     @Import(name="databaseType")
       private final @Nullable Output<ServiceDatabaseType> databaseType;
@@ -37,7 +36,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. Information used to configure the Dataproc Metastore service to encrypt customer data at rest. Cannot be updated.
-     * 
      */
     @Import(name="encryptionConfig")
       private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
@@ -48,7 +46,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration information specific to running Hive metastore software as the metastore service.
-     * 
      */
     @Import(name="hiveMetastoreConfig")
       private final @Nullable Output<HiveMetastoreConfigArgs> hiveMetastoreConfig;
@@ -59,7 +56,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User-defined labels for the metastore service.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -77,7 +73,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed for services with the SPANNER database type.
-     * 
      */
     @Import(name="maintenanceWindow")
       private final @Nullable Output<MaintenanceWindowArgs> maintenanceWindow;
@@ -88,7 +83,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The setting that defines how metastore metadata should be integrated with external services and systems.
-     * 
      */
     @Import(name="metadataIntegration")
       private final @Nullable Output<MetadataIntegrationArgs> metadataIntegration;
@@ -99,7 +93,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The relative resource name of the metastore service, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -110,7 +103,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:projects/{project_number}/global/networks/{network_id}.
-     * 
      */
     @Import(name="network")
       private final @Nullable Output<String> network;
@@ -121,7 +113,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The configuration specifying the network settings for the Dataproc Metastore service.
-     * 
      */
     @Import(name="networkConfig")
       private final @Nullable Output<NetworkConfigArgs> networkConfig;
@@ -132,7 +123,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The TCP port at which the metastore service is reached. Default: 9083.
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Integer> port;
@@ -150,7 +140,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The release channel of the service. If unspecified, defaults to STABLE.
-     * 
      */
     @Import(name="releaseChannel")
       private final @Nullable Output<ServiceReleaseChannel> releaseChannel;
@@ -175,7 +164,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tier of the service.
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<ServiceTier> tier;

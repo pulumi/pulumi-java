@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Represents the Maintenance exclusion option.
- * 
  */
 public final class MaintenanceExclusionOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MaintenanceExclusionOptionsResponse extends io.pulumi.resourc
 
     /**
      * Scope specifies the upgrade scope which upgrades are blocked by the exclusion.
-     * 
      */
     @Import(name="scope", required=true)
       private final String scope;

@@ -14,22 +14,18 @@ import java.util.Objects;
 public final class OSPolicyResourceRepositoryResourceResponse {
     /**
      * An Apt Repository.
-     * 
      */
     private final OSPolicyResourceRepositoryResourceAptRepositoryResponse apt;
     /**
      * A Goo Repository.
-     * 
      */
     private final OSPolicyResourceRepositoryResourceGooRepositoryResponse goo;
     /**
      * A Yum Repository.
-     * 
      */
     private final OSPolicyResourceRepositoryResourceYumRepositoryResponse yum;
     /**
      * A Zypper Repository.
-     * 
      */
     private final OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper;
 
@@ -47,28 +43,24 @@ public final class OSPolicyResourceRepositoryResourceResponse {
 
     /**
      * An Apt Repository.
-     * 
     */
     public OSPolicyResourceRepositoryResourceAptRepositoryResponse getApt() {
         return this.apt;
     }
     /**
      * A Goo Repository.
-     * 
     */
     public OSPolicyResourceRepositoryResourceGooRepositoryResponse getGoo() {
         return this.goo;
     }
     /**
      * A Yum Repository.
-     * 
     */
     public OSPolicyResourceRepositoryResourceYumRepositoryResponse getYum() {
         return this.yum;
     }
     /**
      * A Zypper Repository.
-     * 
     */
     public OSPolicyResourceRepositoryResourceZypperRepositoryResponse getZypper() {
         return this.zypper;

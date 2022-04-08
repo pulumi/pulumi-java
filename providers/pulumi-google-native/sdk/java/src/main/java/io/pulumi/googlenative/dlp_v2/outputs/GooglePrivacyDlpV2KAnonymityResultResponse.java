@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2KAnonymityResultResponse {
     /**
      * Histogram of k-anonymity equivalence classes.
-     * 
      */
     private final List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets;
 
@@ -23,7 +22,6 @@ public final class GooglePrivacyDlpV2KAnonymityResultResponse {
 
     /**
      * Histogram of k-anonymity equivalence classes.
-     * 
     */
     public List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> getEquivalenceClassHistogramBuckets() {
         return this.equivalenceClassHistogramBuckets;

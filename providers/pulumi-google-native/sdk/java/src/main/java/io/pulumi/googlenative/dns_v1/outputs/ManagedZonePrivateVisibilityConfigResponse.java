@@ -14,7 +14,6 @@ public final class ManagedZonePrivateVisibilityConfigResponse {
     private final String kind;
     /**
      * The list of VPC networks that can see this zone.
-     * 
      */
     private final List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
 
@@ -31,7 +30,6 @@ public final class ManagedZonePrivateVisibilityConfigResponse {
     }
     /**
      * The list of VPC networks that can see this zone.
-     * 
     */
     public List<ManagedZonePrivateVisibilityConfigNetworkResponse> getNetworks() {
         return this.networks;

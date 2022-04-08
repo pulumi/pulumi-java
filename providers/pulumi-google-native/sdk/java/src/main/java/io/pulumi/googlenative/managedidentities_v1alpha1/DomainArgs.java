@@ -19,7 +19,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Configuration for audit logs. True if audit logs are enabled, else false. Default is audit logs disabled.
-     * 
      */
     @Import(name="auditLogsEnabled")
       private final @Nullable Output<Boolean> auditLogsEnabled;
@@ -30,7 +29,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. Network can be added using UpdateDomain later. Domain is only available on network part of authorized_networks. Caller needs to make sure that CIDR subnets do not overlap between networks, else domain creation will fail.
-     * 
      */
     @Import(name="authorizedNetworks")
       private final @Nullable Output<List<String>> authorizedNetworks;
@@ -48,7 +46,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Resource labels to represent user provided metadata
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -59,7 +56,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Locations where domain needs to be provisioned. regions e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
-     * 
      */
     @Import(name="locations", required=true)
       private final Output<List<String>> locations;
@@ -70,7 +66,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Name of customer-visible admin used to perform Active Directory operations. If not specified `setupadmin` would be used.
-     * 
      */
     @Import(name="managedIdentitiesAdminName")
       private final @Nullable Output<String> managedIdentitiesAdminName;
@@ -88,7 +83,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger. Ranges must be unique and non-overlapping with existing subnets in [Domain].[authorized_networks].
-     * 
      */
     @Import(name="reservedIpRange", required=true)
       private final Output<String> reservedIpRange;

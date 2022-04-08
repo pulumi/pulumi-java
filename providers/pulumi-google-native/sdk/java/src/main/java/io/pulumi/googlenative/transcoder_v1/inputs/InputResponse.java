@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Input asset.
- * 
  */
 public final class InputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A unique key for this input. Must be specified when using advanced mapping and edit lists.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -30,7 +28,6 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Preprocessing configurations.
-     * 
      */
     @Import(name="preprocessingConfig", required=true)
       private final PreprocessingConfigResponse preprocessingConfig;
@@ -41,7 +38,6 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value will be populated from `Job.input_uri`.
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;

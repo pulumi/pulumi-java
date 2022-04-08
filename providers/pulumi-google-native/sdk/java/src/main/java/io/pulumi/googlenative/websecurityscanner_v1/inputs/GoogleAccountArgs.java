@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Describes authentication configuration that uses a Google account.
- * 
  */
 public final class GoogleAccountArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Input only. The password of the Google account. The credential is stored encrypted and not returned in any response nor included in audit logs.
-     * 
      */
     @Import(name="password", required=true)
       private final Output<String> password;
@@ -30,7 +28,6 @@ public final class GoogleAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user name of the Google account.
-     * 
      */
     @Import(name="username", required=true)
       private final Output<String> username;

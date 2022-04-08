@@ -18,412 +18,353 @@ import javax.annotation.Nullable;
 /**
  * Creates a device. Only company-owned device may be created. **Note**: This method is available only to customers who have one of the following SKUs: Enterprise Standard, Enterprise Plus, Enterprise for Education, and Cloud Identity Premium
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:cloudidentity/v1beta1:Device")
 public class Device extends io.pulumi.resources.CustomResource {
     /**
      * Attributes specific to Android devices.
-     * 
      */
     @Export(name="androidSpecificAttributes", type=AndroidAttributesResponse.class, parameters={})
     private Output<AndroidAttributesResponse> androidSpecificAttributes;
 
     /**
      * @return Attributes specific to Android devices.
-     * 
      */
     public Output<AndroidAttributesResponse> getAndroidSpecificAttributes() {
         return this.androidSpecificAttributes;
     }
     /**
      * Asset tag of the device.
-     * 
      */
     @Export(name="assetTag", type=String.class, parameters={})
     private Output<String> assetTag;
 
     /**
      * @return Asset tag of the device.
-     * 
      */
     public Output<String> getAssetTag() {
         return this.assetTag;
     }
     /**
      * Baseband version of the device.
-     * 
      */
     @Export(name="basebandVersion", type=String.class, parameters={})
     private Output<String> basebandVersion;
 
     /**
      * @return Baseband version of the device.
-     * 
      */
     public Output<String> getBasebandVersion() {
         return this.basebandVersion;
     }
     /**
      * Device bootloader version. Example: 0.6.7.
-     * 
      */
     @Export(name="bootloaderVersion", type=String.class, parameters={})
     private Output<String> bootloaderVersion;
 
     /**
      * @return Device bootloader version. Example: 0.6.7.
-     * 
      */
     public Output<String> getBootloaderVersion() {
         return this.bootloaderVersion;
     }
     /**
      * Device brand. Example: Samsung.
-     * 
      */
     @Export(name="brand", type=String.class, parameters={})
     private Output<String> brand;
 
     /**
      * @return Device brand. Example: Samsung.
-     * 
      */
     public Output<String> getBrand() {
         return this.brand;
     }
     /**
      * Build number of the device.
-     * 
      */
     @Export(name="buildNumber", type=String.class, parameters={})
     private Output<String> buildNumber;
 
     /**
      * @return Build number of the device.
-     * 
      */
     public Output<String> getBuildNumber() {
         return this.buildNumber;
     }
     /**
      * Represents whether the Device is compromised.
-     * 
      */
     @Export(name="compromisedState", type=String.class, parameters={})
     private Output<String> compromisedState;
 
     /**
      * @return Represents whether the Device is compromised.
-     * 
      */
     public Output<String> getCompromisedState() {
         return this.compromisedState;
     }
     /**
      * When the Company-Owned device was imported. This field is empty for BYOD devices.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return When the Company-Owned device was imported. This field is empty for BYOD devices.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Type of device.
-     * 
      */
     @Export(name="deviceType", type=String.class, parameters={})
     private Output<String> deviceType;
 
     /**
      * @return Type of device.
-     * 
      */
     public Output<String> getDeviceType() {
         return this.deviceType;
     }
     /**
      * Whether developer options is enabled on device.
-     * 
      */
     @Export(name="enabledDeveloperOptions", type=Boolean.class, parameters={})
     private Output<Boolean> enabledDeveloperOptions;
 
     /**
      * @return Whether developer options is enabled on device.
-     * 
      */
     public Output<Boolean> getEnabledDeveloperOptions() {
         return this.enabledDeveloperOptions;
     }
     /**
      * Whether USB debugging is enabled on device.
-     * 
      */
     @Export(name="enabledUsbDebugging", type=Boolean.class, parameters={})
     private Output<Boolean> enabledUsbDebugging;
 
     /**
      * @return Whether USB debugging is enabled on device.
-     * 
      */
     public Output<Boolean> getEnabledUsbDebugging() {
         return this.enabledUsbDebugging;
     }
     /**
      * Device encryption state.
-     * 
      */
     @Export(name="encryptionState", type=String.class, parameters={})
     private Output<String> encryptionState;
 
     /**
      * @return Device encryption state.
-     * 
      */
     public Output<String> getEncryptionState() {
         return this.encryptionState;
     }
     /**
      * Attributes specific to Endpoint Verification devices.
-     * 
      */
     @Export(name="endpointVerificationSpecificAttributes", type=EndpointVerificationSpecificAttributesResponse.class, parameters={})
     private Output<EndpointVerificationSpecificAttributesResponse> endpointVerificationSpecificAttributes;
 
     /**
      * @return Attributes specific to Endpoint Verification devices.
-     * 
      */
     public Output<EndpointVerificationSpecificAttributesResponse> getEndpointVerificationSpecificAttributes() {
         return this.endpointVerificationSpecificAttributes;
     }
     /**
      * IMEI number of device if GSM device; empty otherwise.
-     * 
      */
     @Export(name="imei", type=String.class, parameters={})
     private Output<String> imei;
 
     /**
      * @return IMEI number of device if GSM device; empty otherwise.
-     * 
      */
     public Output<String> getImei() {
         return this.imei;
     }
     /**
      * Kernel version of the device.
-     * 
      */
     @Export(name="kernelVersion", type=String.class, parameters={})
     private Output<String> kernelVersion;
 
     /**
      * @return Kernel version of the device.
-     * 
      */
     public Output<String> getKernelVersion() {
         return this.kernelVersion;
     }
     /**
      * Most recent time when device synced with this service.
-     * 
      */
     @Export(name="lastSyncTime", type=String.class, parameters={})
     private Output<String> lastSyncTime;
 
     /**
      * @return Most recent time when device synced with this service.
-     * 
      */
     public Output<String> getLastSyncTime() {
         return this.lastSyncTime;
     }
     /**
      * Management state of the device
-     * 
      */
     @Export(name="managementState", type=String.class, parameters={})
     private Output<String> managementState;
 
     /**
      * @return Management state of the device
-     * 
      */
     public Output<String> getManagementState() {
         return this.managementState;
     }
     /**
      * Device manufacturer. Example: Motorola.
-     * 
      */
     @Export(name="manufacturer", type=String.class, parameters={})
     private Output<String> manufacturer;
 
     /**
      * @return Device manufacturer. Example: Motorola.
-     * 
      */
     public Output<String> getManufacturer() {
         return this.manufacturer;
     }
     /**
      * MEID number of device if CDMA device; empty otherwise.
-     * 
      */
     @Export(name="meid", type=String.class, parameters={})
     private Output<String> meid;
 
     /**
      * @return MEID number of device if CDMA device; empty otherwise.
-     * 
      */
     public Output<String> getMeid() {
         return this.meid;
     }
     /**
      * Model name of device. Example: Pixel 3.
-     * 
      */
     @Export(name="model", type=String.class, parameters={})
     private Output<String> model;
 
     /**
      * @return Model name of device. Example: Pixel 3.
-     * 
      */
     public Output<String> getModel() {
         return this.model;
     }
     /**
      * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device_id}`, where device_id is the unique id assigned to the Device.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device_id}`, where device_id is the unique id assigned to the Device.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Mobile or network operator of device, if available.
-     * 
      */
     @Export(name="networkOperator", type=String.class, parameters={})
     private Output<String> networkOperator;
 
     /**
      * @return Mobile or network operator of device, if available.
-     * 
      */
     public Output<String> getNetworkOperator() {
         return this.networkOperator;
     }
     /**
      * OS version of the device. Example: Android 8.1.0.
-     * 
      */
     @Export(name="osVersion", type=String.class, parameters={})
     private Output<String> osVersion;
 
     /**
      * @return OS version of the device. Example: Android 8.1.0.
-     * 
      */
     public Output<String> getOsVersion() {
         return this.osVersion;
     }
     /**
      * Domain name for Google accounts on device. Type for other accounts on device. On Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|. Does not include the account signed in to the device policy app if that account's domain has only one account. Examples: "com.example", "xyz.com".
-     * 
      */
     @Export(name="otherAccounts", type=List.class, parameters={String.class})
     private Output<List<String>> otherAccounts;
 
     /**
      * @return Domain name for Google accounts on device. Type for other accounts on device. On Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|. Does not include the account signed in to the device policy app if that account's domain has only one account. Examples: "com.example", "xyz.com".
-     * 
      */
     public Output<List<String>> getOtherAccounts() {
         return this.otherAccounts;
     }
     /**
      * Whether the device is owned by the company or an individual
-     * 
      */
     @Export(name="ownerType", type=String.class, parameters={})
     private Output<String> ownerType;
 
     /**
      * @return Whether the device is owned by the company or an individual
-     * 
      */
     public Output<String> getOwnerType() {
         return this.ownerType;
     }
     /**
      * OS release version. Example: 6.0.
-     * 
      */
     @Export(name="releaseVersion", type=String.class, parameters={})
     private Output<String> releaseVersion;
 
     /**
      * @return OS release version. Example: 6.0.
-     * 
      */
     public Output<String> getReleaseVersion() {
         return this.releaseVersion;
     }
     /**
      * OS security patch update time on device.
-     * 
      */
     @Export(name="securityPatchTime", type=String.class, parameters={})
     private Output<String> securityPatchTime;
 
     /**
      * @return OS security patch update time on device.
-     * 
      */
     public Output<String> getSecurityPatchTime() {
         return this.securityPatchTime;
     }
     /**
      * Serial Number of device. Example: HT82V1A01076.
-     * 
      */
     @Export(name="serialNumber", type=String.class, parameters={})
     private Output<String> serialNumber;
 
     /**
      * @return Serial Number of device. Example: HT82V1A01076.
-     * 
      */
     public Output<String> getSerialNumber() {
         return this.serialNumber;
     }
     /**
      * WiFi MAC addresses of device.
-     * 
      */
     @Export(name="wifiMacAddresses", type=List.class, parameters={String.class})
     private Output<List<String>> wifiMacAddresses;
 
     /**
      * @return WiFi MAC addresses of device.
-     * 
      */
     public Output<List<String>> getWifiMacAddresses() {
         return this.wifiMacAddresses;

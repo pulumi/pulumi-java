@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration options for the KALM addon.
- * 
  */
 public final class KalmConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class KalmConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether KALM is enabled for this cluster.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

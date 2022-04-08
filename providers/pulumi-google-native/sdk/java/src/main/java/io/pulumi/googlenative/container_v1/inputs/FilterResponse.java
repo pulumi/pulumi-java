@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Allows filtering to one or more specific event types. If event types are present, those and only those event types will be transmitted to the cluster. Other types will be skipped. If no filter is specified, or no event types are present, all event types will be sent
- * 
  */
 public final class FilterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class FilterResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Event types to allowlist.
-     * 
      */
     @Import(name="eventType", required=true)
       private final List<String> eventType;

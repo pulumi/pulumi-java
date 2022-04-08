@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Encoding of an input file such as an audio, video, or text track. Elementary streams must be packaged before mapping and sharing between different output formats.
- * 
  */
 public final class ElementaryStreamResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ElementaryStreamResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Encoding of an audio stream.
-     * 
      */
     @Import(name="audioStream", required=true)
       private final AudioStreamResponse audioStream;
@@ -32,7 +30,6 @@ public final class ElementaryStreamResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * A unique key for this elementary stream.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -43,7 +40,6 @@ public final class ElementaryStreamResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Encoding of a text stream. For example, closed captions or subtitles.
-     * 
      */
     @Import(name="textStream", required=true)
       private final TextStreamResponse textStream;
@@ -54,7 +50,6 @@ public final class ElementaryStreamResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Encoding of a video stream.
-     * 
      */
     @Import(name="videoStream", required=true)
       private final VideoStreamResponse videoStream;

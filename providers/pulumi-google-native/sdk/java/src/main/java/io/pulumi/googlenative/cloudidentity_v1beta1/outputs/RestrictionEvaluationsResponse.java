@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class RestrictionEvaluationsResponse {
     /**
      * Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.
-     * 
      */
     private final MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation;
 
@@ -22,7 +21,6 @@ public final class RestrictionEvaluationsResponse {
 
     /**
      * Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.
-     * 
     */
     public MembershipRoleRestrictionEvaluationResponse getMemberRestrictionEvaluation() {
         return this.memberRestrictionEvaluation;

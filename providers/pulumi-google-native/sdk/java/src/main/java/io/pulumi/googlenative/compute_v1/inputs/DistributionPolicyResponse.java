@@ -16,7 +16,6 @@ public final class DistributionPolicyResponse extends io.pulumi.resources.Invoke
 
     /**
      * The distribution shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).
-     * 
      */
     @Import(name="targetShape", required=true)
       private final String targetShape;
@@ -27,7 +26,6 @@ public final class DistributionPolicyResponse extends io.pulumi.resources.Invoke
 
     /**
      * Zones where the regional managed instance group will create and manage its instances.
-     * 
      */
     @Import(name="zones", required=true)
       private final List<DistributionPolicyZoneConfigurationResponse> zones;

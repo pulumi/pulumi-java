@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse {
     /**
      * Carousel items.
-     * 
      */
     private final List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse> items;
 
@@ -23,7 +22,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse {
 
     /**
      * Carousel items.
-     * 
     */
     public List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse> getItems() {
         return this.items;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A set of instance tags.
- * 
  */
 public final class TagsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class TagsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of tags. Each tag must be 1-63 characters long, and comply with RFC1035.
-     * 
      */
     @Import(name="items")
       private final @Nullable Output<List<String>> items;

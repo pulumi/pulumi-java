@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A point in a conversation that marks the start or the end of an annotation.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
 
     /**
      * The index in the sequence of transcribed pieces of the conversation where the boundary is located. This index starts at zero.
-     * 
      */
     @Import(name="transcriptIndex", required=true)
       private final Integer transcriptIndex;
@@ -29,7 +27,6 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
 
     /**
      * The word index of this boundary with respect to the first word in the transcript piece. This index starts at zero.
-     * 
      */
     @Import(name="wordIndex", required=true)
       private final Integer wordIndex;

@@ -12,72 +12,58 @@ import java.util.StringJoiner;
     public enum SoftwareConfigOptionalComponentsItem {
         /**
          * Unspecified component. Specifying this will cause Cluster creation to fail.
-         * 
          */
         ComponentUnspecified("COMPONENT_UNSPECIFIED"),
         /**
          * The Anaconda python distribution. The Anaconda component is not supported in the Dataproc 2.0 image. The 2.0 image is pre-installed with Miniconda.
-         * 
          */
         Anaconda("ANACONDA"),
         /**
          * Docker
-         * 
          */
         Docker("DOCKER"),
         /**
          * The Druid query engine.
-         * 
          */
         Druid("DRUID"),
         /**
          * Flink
-         * 
          */
         Flink("FLINK"),
         /**
          * HBase.
-         * 
          */
         Hbase("HBASE"),
         /**
          * The Hive Web HCatalog (the REST service for accessing HCatalog).
-         * 
          */
         HiveWebhcat("HIVE_WEBHCAT"),
         /**
          * The Jupyter Notebook.
-         * 
          */
         Jupyter("JUPYTER"),
         /**
          * The Kerberos security feature.
-         * 
          */
         Kerberos("KERBEROS"),
         /**
          * The Presto query engine.
-         * 
          */
         Presto("PRESTO"),
         /**
          * The Ranger service.
-         * 
          */
         Ranger("RANGER"),
         /**
          * The Solr service.
-         * 
          */
         Solr("SOLR"),
         /**
          * The Zeppelin notebook.
-         * 
          */
         Zeppelin("ZEPPELIN"),
         /**
          * The Zookeeper service.
-         * 
          */
         Zookeeper("ZOOKEEPER");
 

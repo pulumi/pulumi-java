@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * SQL Server specific audit configuration.
- * 
  */
 public final class SqlServerAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SqlServerAuditConfigArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the destination bucket (e.g., gs://mybucket).
-     * 
      */
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
@@ -31,7 +29,6 @@ public final class SqlServerAuditConfigArgs extends io.pulumi.resources.Resource
 
     /**
      * This is always sql#sqlServerAuditConfig
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;

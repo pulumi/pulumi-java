@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Represents a single apt package repository. These will be added to a repo file that will be managed at `/etc/apt/sources.list.d/google_osconfig.list`.
- * 
  */
 public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse exten
 
     /**
      * Type of archive files in this repository.
-     * 
      */
     @Import(name="archiveType", required=true)
       private final String archiveType;
@@ -30,7 +28,6 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse exten
 
     /**
      * List of components for this repository. Must contain at least one item.
-     * 
      */
     @Import(name="components", required=true)
       private final List<String> components;
@@ -41,7 +38,6 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse exten
 
     /**
      * Distribution of this repository.
-     * 
      */
     @Import(name="distribution", required=true)
       private final String distribution;
@@ -52,7 +48,6 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse exten
 
     /**
      * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
-     * 
      */
     @Import(name="gpgKey", required=true)
       private final String gpgKey;
@@ -63,7 +58,6 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse exten
 
     /**
      * URI for this repository.
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;

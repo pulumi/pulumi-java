@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The data for a phrase match rule.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends
 
     /**
      * Provides additional information about the rule that specifies how to apply the rule.
-     * 
      */
     @Import(name="config")
       private final @Nullable Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> config;
@@ -33,7 +31,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends
 
     /**
      * Specifies whether the phrase must be missing from the transcript segment or present in the transcript segment.
-     * 
      */
     @Import(name="negated")
       private final @Nullable Output<Boolean> negated;
@@ -44,7 +41,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends
 
     /**
      * The phrase to be matched.
-     * 
      */
     @Import(name="query", required=true)
       private final Output<String> query;

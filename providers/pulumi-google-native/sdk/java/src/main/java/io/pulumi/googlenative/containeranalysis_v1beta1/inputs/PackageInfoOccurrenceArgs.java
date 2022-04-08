@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * PackageInfoOccurrence represents an SPDX Package Information section: https://spdx.github.io/spdx-spec/3-package-information/
- * 
  */
 public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
 
     /**
      * A place for the SPDX file creator to record any general comments about the package being described
-     * 
      */
     @Import(name="comment")
       private final @Nullable Output<String> comment;
@@ -32,7 +30,6 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
 
     /**
      * Provide the actual file name of the package, or path of the directory being treated as a package
-     * 
      */
     @Import(name="filename")
       private final @Nullable Output<String> filename;
@@ -43,7 +40,6 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
 
     /**
      * Uniquely identify any element in an SPDX document which may be referenced by other elements
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -54,7 +50,6 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
 
     /**
      * package or alternative values, if the governing license cannot be determined
-     * 
      */
     @Import(name="licenseConcluded")
       private final @Nullable Output<LicenseArgs> licenseConcluded;
@@ -65,7 +60,6 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
 
     /**
      * Provide a place for the SPDX file creator to record any relevant background information or additional comments about the origin of the package
-     * 
      */
     @Import(name="sourceInfo")
       private final @Nullable Output<String> sourceInfo;

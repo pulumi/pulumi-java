@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.
-     * 
      */
     @EnumType
     public enum AttachedDiskType {

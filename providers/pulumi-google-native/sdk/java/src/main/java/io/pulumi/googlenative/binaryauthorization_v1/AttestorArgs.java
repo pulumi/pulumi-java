@@ -24,7 +24,6 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -35,7 +34,6 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -53,7 +51,6 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This specifies how an attestation will be read, and how it will be used during policy enforcement.
-     * 
      */
     @Import(name="userOwnedGrafeasNote")
       private final @Nullable Output<UserOwnedGrafeasNoteArgs> userOwnedGrafeasNote;

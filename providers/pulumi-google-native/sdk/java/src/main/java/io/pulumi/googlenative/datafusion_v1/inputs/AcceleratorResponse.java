@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Identifies Data Fusion accelerators for an instance.
- * 
  */
 public final class AcceleratorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AcceleratorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of an accelator for a CDF instance.
-     * 
      */
     @Import(name="acceleratorType", required=true)
       private final String acceleratorType;
@@ -29,7 +27,6 @@ public final class AcceleratorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The state of the accelerator
-     * 
      */
     @Import(name="state", required=true)
       private final String state;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource level annotation.
- * 
  */
 public final class ResourceAnnotationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ResourceAnnotationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * A description of the annotation record.
-     * 
      */
     @Import(name="label")
       private final @Nullable Output<String> label;

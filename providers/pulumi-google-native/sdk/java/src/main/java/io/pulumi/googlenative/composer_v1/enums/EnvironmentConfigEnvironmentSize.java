@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * Optional. The size of the Cloud Composer environment. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
-     * 
      */
     @EnumType
     public enum EnvironmentConfigEnvironmentSize {
         /**
          * The size of the environment is unspecified.
-         * 
          */
         EnvironmentSizeUnspecified("ENVIRONMENT_SIZE_UNSPECIFIED"),
         /**
          * The environment size is small.
-         * 
          */
         EnvironmentSizeSmall("ENVIRONMENT_SIZE_SMALL"),
         /**
          * The environment size is medium.
-         * 
          */
         EnvironmentSizeMedium("ENVIRONMENT_SIZE_MEDIUM"),
         /**
          * The environment size is large.
-         * 
          */
         EnvironmentSizeLarge("ENVIRONMENT_SIZE_LARGE");
 

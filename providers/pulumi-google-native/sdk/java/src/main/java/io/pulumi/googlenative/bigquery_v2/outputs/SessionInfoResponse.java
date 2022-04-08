@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class SessionInfoResponse {
     /**
      * // [Preview] Id of the session.
-     * 
      */
     private final String sessionId;
 
@@ -22,7 +21,6 @@ public final class SessionInfoResponse {
 
     /**
      * // [Preview] Id of the session.
-     * 
     */
     public String getSessionId() {
         return this.sessionId;

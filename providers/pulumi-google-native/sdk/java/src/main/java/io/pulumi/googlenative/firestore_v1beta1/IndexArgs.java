@@ -19,7 +19,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The collection ID to which this index applies. Required.
-     * 
      */
     @Import(name="collectionId")
       private final @Nullable Output<String> collectionId;
@@ -37,7 +36,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The fields to index.
-     * 
      */
     @Import(name="fields")
       private final @Nullable Output<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> fields;
@@ -48,7 +46,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the index. Output only.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -66,7 +63,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The state of the index. Output only.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<IndexState> state;

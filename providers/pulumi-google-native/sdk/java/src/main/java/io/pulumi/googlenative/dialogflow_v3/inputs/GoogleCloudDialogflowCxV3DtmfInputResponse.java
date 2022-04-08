@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Represents the input for dtmf event.
- * 
  */
 public final class GoogleCloudDialogflowCxV3DtmfInputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDialogflowCxV3DtmfInputResponse extends io.pulumi.
 
     /**
      * The dtmf digits.
-     * 
      */
     @Import(name="digits", required=true)
       private final String digits;
@@ -29,7 +27,6 @@ public final class GoogleCloudDialogflowCxV3DtmfInputResponse extends io.pulumi.
 
     /**
      * The finish digit (if any).
-     * 
      */
     @Import(name="finishDigit", required=true)
       private final String finishDigit;

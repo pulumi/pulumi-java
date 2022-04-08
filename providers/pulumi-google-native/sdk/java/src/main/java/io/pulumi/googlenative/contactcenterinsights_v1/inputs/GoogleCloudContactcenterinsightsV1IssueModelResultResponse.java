@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Issue Modeling result on a conversation.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse ex
 
     /**
      * Issue model that generates the result. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
-     * 
      */
     @Import(name="issueModel", required=true)
       private final String issueModel;
@@ -31,7 +29,6 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse ex
 
     /**
      * All the matched issues.
-     * 
      */
     @Import(name="issues", required=true)
       private final List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues;

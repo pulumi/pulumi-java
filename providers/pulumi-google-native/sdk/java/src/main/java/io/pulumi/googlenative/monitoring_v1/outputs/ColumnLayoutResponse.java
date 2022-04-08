@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class ColumnLayoutResponse {
     /**
      * The columns of content to display.
-     * 
      */
     private final List<ColumnResponse> columns;
 
@@ -23,7 +22,6 @@ public final class ColumnLayoutResponse {
 
     /**
      * The columns of content to display.
-     * 
     */
     public List<ColumnResponse> getColumns() {
         return this.columns;

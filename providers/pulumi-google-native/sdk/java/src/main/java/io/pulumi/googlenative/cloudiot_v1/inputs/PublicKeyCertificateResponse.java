@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A public key certificate format and data.
- * 
  */
 public final class PublicKeyCertificateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class PublicKeyCertificateResponse extends io.pulumi.resources.Invo
 
     /**
      * The certificate data.
-     * 
      */
     @Import(name="certificate", required=true)
       private final String certificate;
@@ -30,7 +28,6 @@ public final class PublicKeyCertificateResponse extends io.pulumi.resources.Invo
 
     /**
      * The certificate format.
-     * 
      */
     @Import(name="format", required=true)
       private final String format;
@@ -41,7 +38,6 @@ public final class PublicKeyCertificateResponse extends io.pulumi.resources.Invo
 
     /**
      * [Output only] The certificate details. Used only for X.509 certificates.
-     * 
      */
     @Import(name="x509Details", required=true)
       private final X509CertificateDetailsResponse x509Details;

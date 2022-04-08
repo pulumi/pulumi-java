@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ReleaseChannelResponse {
     /**
      * channel specifies which release channel the cluster is subscribed to.
-     * 
      */
     private final String channel;
 
@@ -22,7 +21,6 @@ public final class ReleaseChannelResponse {
 
     /**
      * channel specifies which release channel the cluster is subscribed to.
-     * 
     */
     public String getChannel() {
         return this.channel;

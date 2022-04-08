@@ -13,43 +13,35 @@ import java.util.Objects;
 public final class GetLicenseResult {
     /**
      * Creation timestamp in RFC3339 text format.
-     * 
      */
     private final String creationTimestamp;
     /**
      * An optional textual description of the resource; provided by the client when the resource is created.
-     * 
      */
     private final String description;
     /**
      * Type of resource. Always compute#license for licenses.
-     * 
      */
     private final String kind;
     /**
      * The unique code used to attach this license to images, snapshots, and disks.
-     * 
      */
     private final String licenseCode;
     /**
      * Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
-     * 
      */
     private final String name;
     private final LicenseResourceRequirementsResponse resourceRequirements;
     /**
      * Server-defined URL for the resource.
-     * 
      */
     private final String selfLink;
     /**
      * Server-defined URL for this resource with the resource id.
-     * 
      */
     private final String selfLinkWithId;
     /**
      * If false, licenses will not be copied from the source resource when creating an image from a disk, disk from snapshot, or snapshot from disk.
-     * 
      */
     private final Boolean transferable;
 
@@ -77,35 +69,30 @@ public final class GetLicenseResult {
 
     /**
      * Creation timestamp in RFC3339 text format.
-     * 
     */
     public String getCreationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * An optional textual description of the resource; provided by the client when the resource is created.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * Type of resource. Always compute#license for licenses.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * The unique code used to attach this license to images, snapshots, and disks.
-     * 
     */
     public String getLicenseCode() {
         return this.licenseCode;
     }
     /**
      * Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
-     * 
     */
     public String getName() {
         return this.name;
@@ -115,21 +102,18 @@ public final class GetLicenseResult {
     }
     /**
      * Server-defined URL for the resource.
-     * 
     */
     public String getSelfLink() {
         return this.selfLink;
     }
     /**
      * Server-defined URL for this resource with the resource id.
-     * 
     */
     public String getSelfLinkWithId() {
         return this.selfLinkWithId;
     }
     /**
      * If false, licenses will not be copied from the source resource when creating an image from a disk, disk from snapshot, or snapshot from disk.
-     * 
     */
     public Boolean getTransferable() {
         return this.transferable;

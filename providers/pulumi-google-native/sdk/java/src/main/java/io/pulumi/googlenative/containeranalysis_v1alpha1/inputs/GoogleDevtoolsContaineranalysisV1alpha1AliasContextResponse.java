@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * An alias to a repo revision.
- * 
  */
 public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse e
 
     /**
      * The alias kind.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -29,7 +27,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse e
 
     /**
      * The alias name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

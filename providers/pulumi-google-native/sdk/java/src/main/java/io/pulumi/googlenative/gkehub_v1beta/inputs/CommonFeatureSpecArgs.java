@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * CommonFeatureSpec contains Hub-wide configuration information
- * 
  */
 public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Appdevexperience specific spec.
-     * 
      */
     @Import(name="appdevexperience")
       private final @Nullable Output<AppDevExperienceFeatureSpecArgs> appdevexperience;
@@ -32,7 +30,6 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Multicluster Ingress-specific spec.
-     * 
      */
     @Import(name="multiclusteringress")
       private final @Nullable Output<MultiClusterIngressFeatureSpecArgs> multiclusteringress;

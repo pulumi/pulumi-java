@@ -14,7 +14,6 @@ public final class ImportFileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The contents of the file.
-     * 
      */
     @Import(name="content", required=true)
       private final String content;
@@ -25,7 +24,6 @@ public final class ImportFileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the file.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

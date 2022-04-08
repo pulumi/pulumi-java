@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * [Deprecated] Custom authenticator credentials. Custom authenticator credentials.
- * 
  */
 public final class MetadataCredentialsFromPluginArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MetadataCredentialsFromPluginArgs extends io.pulumi.resources
 
     /**
      * Plugin name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class MetadataCredentialsFromPluginArgs extends io.pulumi.resources
 
     /**
      * A text proto that conforms to a Struct type definition interpreted by the plugin.
-     * 
      */
     @Import(name="structConfig")
       private final @Nullable Output<String> structConfig;

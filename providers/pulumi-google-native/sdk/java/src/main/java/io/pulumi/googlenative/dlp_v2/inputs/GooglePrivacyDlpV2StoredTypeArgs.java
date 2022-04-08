@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A reference to a StoredInfoType to use with scanning.
- * 
  */
 public final class GooglePrivacyDlpV2StoredTypeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GooglePrivacyDlpV2StoredTypeArgs extends io.pulumi.resources.
 
     /**
      * Timestamp indicating when the version of the `StoredInfoType` used for inspection was created. Output-only field, populated by the system.
-     * 
      */
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
@@ -31,7 +29,6 @@ public final class GooglePrivacyDlpV2StoredTypeArgs extends io.pulumi.resources.
 
     /**
      * Resource name of the requested `StoredInfoType`, for example `organizations/433245324/storedInfoTypes/432452342` or `projects/project-id/storedInfoTypes/432452342`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

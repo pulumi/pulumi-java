@@ -16,62 +16,53 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new topic.
- * 
  */
 @ResourceType(type="google-native:pubsublite/v1:Topic")
 public class Topic extends io.pulumi.resources.CustomResource {
     /**
      * The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The settings for this topic's partitions.
-     * 
      */
     @Export(name="partitionConfig", type=PartitionConfigResponse.class, parameters={})
     private Output<PartitionConfigResponse> partitionConfig;
 
     /**
      * @return The settings for this topic's partitions.
-     * 
      */
     public Output<PartitionConfigResponse> getPartitionConfig() {
         return this.partitionConfig;
     }
     /**
      * The settings for this topic's Reservation usage.
-     * 
      */
     @Export(name="reservationConfig", type=ReservationConfigResponse.class, parameters={})
     private Output<ReservationConfigResponse> reservationConfig;
 
     /**
      * @return The settings for this topic's Reservation usage.
-     * 
      */
     public Output<ReservationConfigResponse> getReservationConfig() {
         return this.reservationConfig;
     }
     /**
      * The settings for this topic's message retention.
-     * 
      */
     @Export(name="retentionConfig", type=RetentionConfigResponse.class, parameters={})
     private Output<RetentionConfigResponse> retentionConfig;
 
     /**
      * @return The settings for this topic's message retention.
-     * 
      */
     public Output<RetentionConfigResponse> getRetentionConfig() {
         return this.retentionConfig;

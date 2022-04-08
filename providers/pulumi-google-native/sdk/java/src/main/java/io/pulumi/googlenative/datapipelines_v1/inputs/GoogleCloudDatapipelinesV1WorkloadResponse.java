@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Workload details for creating the pipeline jobs.
- * 
  */
 public final class GoogleCloudDatapipelinesV1WorkloadResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse extends io.pulumi.
 
     /**
      * Template information and additional parameters needed to launch a Dataflow job using the flex launch API.
-     * 
      */
     @Import(name="dataflowFlexTemplateRequest", required=true)
       private final GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest;
@@ -30,7 +28,6 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse extends io.pulumi.
 
     /**
      * Template information and additional parameters needed to launch a Dataflow job using the standard launch API.
-     * 
      */
     @Import(name="dataflowLaunchTemplateRequest", required=true)
       private final GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest;

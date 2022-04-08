@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Custom conversation models used in agent assist feature. Supported feature: ARTICLE_SUGGESTION, SMART_COMPOSE, SMART_REPLY.
- * 
  */
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationM
 
     /**
      * Conversation model resource name. Format: `projects//conversationModels/`.
-     * 
      */
     @Import(name="model", required=true)
       private final String model;

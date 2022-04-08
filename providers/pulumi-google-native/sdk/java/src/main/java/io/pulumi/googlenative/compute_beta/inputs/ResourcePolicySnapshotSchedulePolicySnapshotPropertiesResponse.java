@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Specified snapshot properties for scheduled snapshots created by this policy.
- * 
  */
 public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
 
     /**
      * Chain name that the snapshot is created in.
-     * 
      */
     @Import(name="chainName", required=true)
       private final String chainName;
@@ -32,7 +30,6 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
 
     /**
      * Indication to perform a 'guest aware' snapshot.
-     * 
      */
     @Import(name="guestFlush", required=true)
       private final Boolean guestFlush;
@@ -43,7 +40,6 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
 
     /**
      * Labels to apply to scheduled snapshots. These can be later modified by the setLabels method. Label values may be empty.
-     * 
      */
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
@@ -54,7 +50,6 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
 
     /**
      * Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).
-     * 
      */
     @Import(name="storageLocations", required=true)
       private final List<String> storageLocations;

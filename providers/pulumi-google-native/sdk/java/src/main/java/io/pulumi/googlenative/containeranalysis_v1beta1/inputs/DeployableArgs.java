@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * An artifact that can be deployed in some runtime.
- * 
  */
 public final class DeployableArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DeployableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource URI for the artifact being deployed.
-     * 
      */
     @Import(name="resourceUri", required=true)
       private final Output<List<String>> resourceUri;

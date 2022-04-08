@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Information specifying a GKE Cluster.
- * 
  */
 public final class GkeClusterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GkeClusterResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
-     * 
      */
     @Import(name="cluster", required=true)
       private final String cluster;

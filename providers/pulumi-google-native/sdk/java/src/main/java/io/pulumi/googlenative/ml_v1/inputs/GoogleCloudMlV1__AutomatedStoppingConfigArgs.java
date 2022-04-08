@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for Automated Early Stopping of Trials. If no implementation_config is set, automated early stopping will not be run.
- * 
  */
 public final class GoogleCloudMlV1__AutomatedStoppingConfigArgs extends io.pulumi.resources.ResourceArgs {
 

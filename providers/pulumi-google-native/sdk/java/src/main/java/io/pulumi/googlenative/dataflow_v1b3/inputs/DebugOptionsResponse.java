@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Describes any options that have an effect on the debugging of pipelines.
- * 
  */
 public final class DebugOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DebugOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * When true, enables the logging of the literal hot key to the user's Cloud Logging.
-     * 
      */
     @Import(name="enableHotKeyLogging", required=true)
       private final Boolean enableHotKeyLogging;

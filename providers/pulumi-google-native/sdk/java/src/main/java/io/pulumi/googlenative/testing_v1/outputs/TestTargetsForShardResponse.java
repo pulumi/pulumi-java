@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class TestTargetsForShardResponse {
     /**
      * Group of packages, classes, and/or test methods to be run for each shard. The targets need to be specified in AndroidJUnitRunner argument format. For example, "package com.my.packages" "class com.my.package.MyClass". The number of shard_test_targets must be greater than 0.
-     * 
      */
     private final List<String> testTargets;
 
@@ -23,7 +22,6 @@ public final class TestTargetsForShardResponse {
 
     /**
      * Group of packages, classes, and/or test methods to be run for each shard. The targets need to be specified in AndroidJUnitRunner argument format. For example, "package com.my.packages" "class com.my.package.MyClass". The number of shard_test_targets must be greater than 0.
-     * 
     */
     public List<String> getTestTargets() {
         return this.testTargets;

@@ -17,7 +17,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Asset tag of the device.
-     * 
      */
     @Import(name="assetTag")
       private final @Nullable Output<String> assetTag;
@@ -28,7 +27,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Most recent time when device synced with this service.
-     * 
      */
     @Import(name="lastSyncTime")
       private final @Nullable Output<String> lastSyncTime;
@@ -39,7 +37,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Serial Number of device. Example: HT82V1A01076.
-     * 
      */
     @Import(name="serialNumber")
       private final @Nullable Output<String> serialNumber;
@@ -50,7 +47,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * WiFi MAC addresses of device.
-     * 
      */
     @Import(name="wifiMacAddresses")
       private final @Nullable Output<List<String>> wifiMacAddresses;

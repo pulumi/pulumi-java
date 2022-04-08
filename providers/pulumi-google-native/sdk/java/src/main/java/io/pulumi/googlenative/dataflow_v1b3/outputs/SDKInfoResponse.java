@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class SDKInfoResponse {
     /**
      * The SDK Language.
-     * 
      */
     private final String language;
     /**
      * Optional. The SDK version.
-     * 
      */
     private final String version;
 
@@ -30,14 +28,12 @@ public final class SDKInfoResponse {
 
     /**
      * The SDK Language.
-     * 
     */
     public String getLanguage() {
         return this.language;
     }
     /**
      * Optional. The SDK version.
-     * 
     */
     public String getVersion() {
         return this.version;

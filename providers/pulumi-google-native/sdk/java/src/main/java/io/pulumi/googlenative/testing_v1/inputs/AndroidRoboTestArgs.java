@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * A test of an android application that explores the application on a virtual or physical Android Device, finding culprits and crashes as it goes.
- * 
  */
 public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The APK for the application under test.
-     * 
      */
     @Import(name="appApk")
       private final @Nullable Output<FileReferenceArgs> appApk;
@@ -37,7 +35,6 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A multi-apk app bundle for the application under test.
-     * 
      */
     @Import(name="appBundle")
       private final @Nullable Output<AppBundleArgs> appBundle;
@@ -48,7 +45,6 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The initial activity that should be used to start the app.
-     * 
      */
     @Import(name="appInitialActivity")
       private final @Nullable Output<String> appInitialActivity;
@@ -59,7 +55,6 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The java package for the application under test. The default value is determined by examining the application's manifest.
-     * 
      */
     @Import(name="appPackageId")
       private final @Nullable Output<String> appPackageId;
@@ -70,7 +65,6 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A set of directives Robo should apply during the crawl. This allows users to customize the crawl. For example, the username and password for a test account can be provided.
-     * 
      */
     @Import(name="roboDirectives")
       private final @Nullable Output<List<RoboDirectiveArgs>> roboDirectives;
@@ -81,7 +75,6 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The mode in which Robo should run. Most clients should allow the server to populate this field automatically.
-     * 
      */
     @Import(name="roboMode")
       private final @Nullable Output<AndroidRoboTestRoboMode> roboMode;
@@ -92,7 +85,6 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A JSON file with a sequence of actions Robo should perform as a prologue for the crawl.
-     * 
      */
     @Import(name="roboScript")
       private final @Nullable Output<FileReferenceArgs> roboScript;
@@ -103,7 +95,6 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The intents used to launch the app for the crawl. If none are provided, then the main launcher activity is launched. If some are provided, then only those provided are launched (the main launcher activity must be provided explicitly).
-     * 
      */
     @Import(name="startingIntents")
       private final @Nullable Output<List<RoboStartingIntentArgs>> startingIntents;

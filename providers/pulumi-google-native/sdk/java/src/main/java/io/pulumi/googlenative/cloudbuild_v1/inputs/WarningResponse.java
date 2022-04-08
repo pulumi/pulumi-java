@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A non-fatal problem encountered during the execution of the build.
- * 
  */
 public final class WarningResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class WarningResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The priority for this warning.
-     * 
      */
     @Import(name="priority", required=true)
       private final String priority;
@@ -29,7 +27,6 @@ public final class WarningResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Explanation of the warning generated.
-     * 
      */
     @Import(name="text", required=true)
       private final String text;

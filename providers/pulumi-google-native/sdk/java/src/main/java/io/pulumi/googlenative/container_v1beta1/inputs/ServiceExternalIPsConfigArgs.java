@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Config to block services with externalIPs field.
- * 
  */
 public final class ServiceExternalIPsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ServiceExternalIPsConfigArgs extends io.pulumi.resources.Reso
 
     /**
      * Whether Services with ExternalIPs field are allowed or not.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;

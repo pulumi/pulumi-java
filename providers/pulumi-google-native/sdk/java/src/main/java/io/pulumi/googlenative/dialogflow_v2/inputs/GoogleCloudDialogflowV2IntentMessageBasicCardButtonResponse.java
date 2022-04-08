@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The button object that appears at the bottom of a card.
- * 
  */
 public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse e
 
     /**
      * Action to take when a user taps on the button.
-     * 
      */
     @Import(name="openUriAction", required=true)
       private final GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse openUriAction;
@@ -30,7 +28,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse e
 
     /**
      * The title of the button.
-     * 
      */
     @Import(name="title", required=true)
       private final String title;

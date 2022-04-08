@@ -16,118 +16,101 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new game server cluster in a given project and location.
- * 
  */
 @ResourceType(type="google-native:gameservices/v1beta:GameServerCluster")
 public class GameServerCluster extends io.pulumi.resources.CustomResource {
     /**
      * The state of the Kubernetes cluster, this will be available if 'view' is set to `FULL` in the relevant List/Get/Preview request.
-     * 
      */
     @Export(name="clusterState", type=KubernetesClusterStateResponse.class, parameters={})
     private Output<KubernetesClusterStateResponse> clusterState;
 
     /**
      * @return The state of the Kubernetes cluster, this will be available if 'view' is set to `FULL` in the relevant List/Get/Preview request.
-     * 
      */
     public Output<KubernetesClusterStateResponse> getClusterState() {
         return this.clusterState;
     }
     /**
      * The game server cluster connection information. This information is used to manage game server clusters.
-     * 
      */
     @Export(name="connectionInfo", type=GameServerClusterConnectionInfoResponse.class, parameters={})
     private Output<GameServerClusterConnectionInfoResponse> connectionInfo;
 
     /**
      * @return The game server cluster connection information. This information is used to manage game server clusters.
-     * 
      */
     public Output<GameServerClusterConnectionInfoResponse> getConnectionInfo() {
         return this.connectionInfo;
     }
     /**
      * The creation time.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The creation time.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Human readable description of the cluster.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Human readable description of the cluster.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * ETag of the resource.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return ETag of the resource.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The labels associated with this game server cluster. Each label is a key-value pair.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return The labels associated with this game server cluster. Each label is a key-value pair.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The last-modified time.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The last-modified time.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

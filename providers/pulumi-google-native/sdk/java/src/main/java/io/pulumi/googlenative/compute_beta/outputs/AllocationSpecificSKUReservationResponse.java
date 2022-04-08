@@ -12,22 +12,18 @@ import java.util.Objects;
 public final class AllocationSpecificSKUReservationResponse {
     /**
      * Indicates how many instances are actually usable currently.
-     * 
      */
     private final String assuredCount;
     /**
      * Specifies the number of resources that are allocated.
-     * 
      */
     private final String count;
     /**
      * Indicates how many instances are in use.
-     * 
      */
     private final String inUseCount;
     /**
      * The instance properties for the reservation.
-     * 
      */
     private final AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
 
@@ -45,28 +41,24 @@ public final class AllocationSpecificSKUReservationResponse {
 
     /**
      * Indicates how many instances are actually usable currently.
-     * 
     */
     public String getAssuredCount() {
         return this.assuredCount;
     }
     /**
      * Specifies the number of resources that are allocated.
-     * 
     */
     public String getCount() {
         return this.count;
     }
     /**
      * Indicates how many instances are in use.
-     * 
     */
     public String getInUseCount() {
         return this.inUseCount;
     }
     /**
      * The instance properties for the reservation.
-     * 
     */
     public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse getInstanceProperties() {
         return this.instanceProperties;

@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * The config settings for Compute Engine resources in an instance group, such as a master or worker group.
- * 
  */
 public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Optional. The Compute Engine accelerator configuration for these instances.
-     * 
      */
     @Import(name="accelerators")
       private final @Nullable Output<List<AcceleratorConfigArgs>> accelerators;
@@ -36,7 +34,6 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Optional. Disk option config settings.
-     * 
      */
     @Import(name="diskConfig")
       private final @Nullable Output<DiskConfigArgs> diskConfig;
@@ -47,7 +44,6 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Optional. The Compute Engine image resource used for cluster instances.The URI can represent an image or image family.Image examples: https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id] projects/[project_id]/global/images/[image-id] image-idImage family examples. Dataproc will use the most recent image from the family: https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name] projects/[project_id]/global/images/family/[custom-image-family-name]If the URI is unspecified, it will be inferred from SoftwareConfig.image_version or the system default.
-     * 
      */
     @Import(name="imageUri")
       private final @Nullable Output<String> imageUri;
@@ -58,7 +54,6 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Optional. The Compute Engine machine type used for cluster instances.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2 projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2 n1-standard-2Auto Zone Exception: If you are using the Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, n1-standard-2.
-     * 
      */
     @Import(name="machineTypeUri")
       private final @Nullable Output<String> machineTypeUri;
@@ -69,7 +64,6 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Optional. Specifies the minimum cpu platform for the Instance Group. See Dataproc -> Minimum CPU Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
-     * 
      */
     @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
@@ -80,7 +74,6 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Optional. The number of VM instances in the instance group. For HA cluster master_config groups, must be set to 3. For standard cluster master_config groups, must be set to 1.
-     * 
      */
     @Import(name="numInstances")
       private final @Nullable Output<Integer> numInstances;
@@ -91,7 +84,6 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Optional. Specifies the preemptibility of the instance group.The default value for master and worker groups is NON_PREEMPTIBLE. This default cannot be changed.The default value for secondary instances is PREEMPTIBLE.
-     * 
      */
     @Import(name="preemptibility")
       private final @Nullable Output<InstanceGroupConfigPreemptibility> preemptibility;

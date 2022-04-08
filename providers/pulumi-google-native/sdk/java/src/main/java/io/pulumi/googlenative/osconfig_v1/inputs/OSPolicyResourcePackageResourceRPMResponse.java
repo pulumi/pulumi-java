@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * An RPM package file. RPM packages only support INSTALLED state.
- * 
  */
 public final class OSPolicyResourcePackageResourceRPMResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class OSPolicyResourcePackageResourceRPMResponse extends io.pulumi.
 
     /**
      * Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
-     * 
      */
     @Import(name="pullDeps", required=true)
       private final Boolean pullDeps;
@@ -30,7 +28,6 @@ public final class OSPolicyResourcePackageResourceRPMResponse extends io.pulumi.
 
     /**
      * An rpm package.
-     * 
      */
     @Import(name="source", required=true)
       private final OSPolicyResourceFileResponse source;

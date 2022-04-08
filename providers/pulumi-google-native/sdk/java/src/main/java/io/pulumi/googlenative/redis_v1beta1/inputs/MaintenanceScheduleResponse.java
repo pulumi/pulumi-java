@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Upcoming maintenance schedule. If no maintenance is scheduled, fields are not populated.
- * 
  */
 public final class MaintenanceScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class MaintenanceScheduleResponse extends io.pulumi.resources.Invok
 
     /**
      * If the scheduled maintenance can be rescheduled, default is true.
-     * 
      */
     @Import(name="canReschedule", required=true)
       private final Boolean canReschedule;
@@ -30,7 +28,6 @@ public final class MaintenanceScheduleResponse extends io.pulumi.resources.Invok
 
     /**
      * The end time of any upcoming scheduled maintenance for this instance.
-     * 
      */
     @Import(name="endTime", required=true)
       private final String endTime;
@@ -41,7 +38,6 @@ public final class MaintenanceScheduleResponse extends io.pulumi.resources.Invok
 
     /**
      * The deadline that the maintenance schedule start time can not go beyond, including reschedule.
-     * 
      */
     @Import(name="scheduleDeadlineTime", required=true)
       private final String scheduleDeadlineTime;
@@ -52,7 +48,6 @@ public final class MaintenanceScheduleResponse extends io.pulumi.resources.Invok
 
     /**
      * The start time of any upcoming scheduled maintenance for this instance.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;

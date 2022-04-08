@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Endpoints rollout strategy. If FIXED, config_id must be specified. If MANAGED, config_id must be omitted.
-     * 
      */
     @EnumType
     public enum EndpointsApiServiceRolloutStrategy {
         /**
          * Not specified. Defaults to FIXED.
-         * 
          */
         UnspecifiedRolloutStrategy("UNSPECIFIED_ROLLOUT_STRATEGY"),
         /**
          * Endpoints service configuration ID will be fixed to the configuration ID specified by config_id.
-         * 
          */
         Fixed("FIXED"),
         /**
          * Endpoints service configuration ID will be updated with each rollout.
-         * 
          */
         Managed("MANAGED");
 

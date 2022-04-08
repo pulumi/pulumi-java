@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Method represents a method of an API interface.
- * 
  */
 public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The simple name of this method.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -32,7 +30,6 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Any metadata attached to the method.
-     * 
      */
     @Import(name="options", required=true)
       private final List<OptionResponse> options;
@@ -43,7 +40,6 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If true, the request is streamed.
-     * 
      */
     @Import(name="requestStreaming", required=true)
       private final Boolean requestStreaming;
@@ -54,7 +50,6 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A URL of the input message type.
-     * 
      */
     @Import(name="requestTypeUrl", required=true)
       private final String requestTypeUrl;
@@ -65,7 +60,6 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If true, the response is streamed.
-     * 
      */
     @Import(name="responseStreaming", required=true)
       private final Boolean responseStreaming;
@@ -76,7 +70,6 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The URL of the output message type.
-     * 
      */
     @Import(name="responseTypeUrl", required=true)
       private final String responseTypeUrl;
@@ -87,7 +80,6 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The source syntax of this method.
-     * 
      */
     @Import(name="syntax", required=true)
       private final String syntax;

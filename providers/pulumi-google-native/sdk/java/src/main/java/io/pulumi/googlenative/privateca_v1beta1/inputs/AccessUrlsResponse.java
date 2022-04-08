@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * URLs where a CertificateAuthority will publish content.
- * 
  */
 public final class AccessUrlsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AccessUrlsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The URL where this CertificateAuthority's CA certificate is published. This will only be set for CAs that have been activated.
-     * 
      */
     @Import(name="caCertificateAccessUrl", required=true)
       private final String caCertificateAccessUrl;
@@ -29,7 +27,6 @@ public final class AccessUrlsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The URL where this CertificateAuthority's CRLs are published. This will only be set for CAs that have been activated.
-     * 
      */
     @Import(name="crlAccessUrl", required=true)
       private final String crlAccessUrl;

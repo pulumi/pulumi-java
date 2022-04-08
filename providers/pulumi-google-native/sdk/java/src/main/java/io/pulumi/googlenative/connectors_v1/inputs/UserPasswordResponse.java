@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Parameters to support Username and Password Authentication.
- * 
  */
 public final class UserPasswordResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class UserPasswordResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Secret version reference containing the password.
-     * 
      */
     @Import(name="password", required=true)
       private final SecretResponse password;
@@ -30,7 +28,6 @@ public final class UserPasswordResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Username.
-     * 
      */
     @Import(name="username", required=true)
       private final String username;

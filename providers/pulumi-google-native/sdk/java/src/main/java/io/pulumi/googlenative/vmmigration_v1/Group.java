@@ -13,76 +13,65 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new Group in a given project and location.
- * 
  */
 @ResourceType(type="google-native:vmmigration/v1:Group")
 public class Group extends io.pulumi.resources.CustomResource {
     /**
      * The create time timestamp.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The create time timestamp.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * User-provided description of the group.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return User-provided description of the group.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Display name is a user defined name for this group which can be updated.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return Display name is a user defined name for this group which can be updated.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The Group name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The Group name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The update time timestamp.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The update time timestamp.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

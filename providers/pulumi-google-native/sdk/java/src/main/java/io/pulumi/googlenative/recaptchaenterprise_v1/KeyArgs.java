@@ -22,7 +22,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Settings for keys that can be used by Android apps.
-     * 
      */
     @Import(name="androidSettings")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> androidSettings;
@@ -33,7 +32,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The timestamp corresponding to the creation of this Key.
-     * 
      */
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
@@ -44,7 +42,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Human-readable display name of this key. Modifiable by user.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -55,7 +52,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Settings for keys that can be used by iOS apps.
-     * 
      */
     @Import(name="iosSettings")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> iosSettings;
@@ -66,7 +62,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * See Creating and managing labels.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -77,7 +72,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name for the Key in the format "projects/{project}/keys/{key}".
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -95,7 +89,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Options for user acceptance testing.
-     * 
      */
     @Import(name="testingOptions")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> testingOptions;
@@ -106,7 +99,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Settings for WAF
-     * 
      */
     @Import(name="wafSettings")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> wafSettings;
@@ -117,7 +109,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Settings for keys that can be used by websites.
-     * 
      */
     @Import(name="webSettings")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> webSettings;

@@ -14,7 +14,6 @@ public final class UpgradeSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The maximum number of nodes that can be created beyond the current size of the node pool during the upgrade process.
-     * 
      */
     @Import(name="maxSurge", required=true)
       private final Integer maxSurge;
@@ -25,7 +24,6 @@ public final class UpgradeSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The maximum number of nodes that can be simultaneously unavailable during the upgrade process. A node is considered available if its status is Ready.
-     * 
      */
     @Import(name="maxUnavailable", required=true)
       private final Integer maxUnavailable;

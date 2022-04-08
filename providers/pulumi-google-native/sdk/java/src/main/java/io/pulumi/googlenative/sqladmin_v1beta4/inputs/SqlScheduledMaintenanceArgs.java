@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Any scheduled maintenancce for this instance.
- * 
  */
 public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.Resou
 
     /**
      * If the scheduled maintenance can be rescheduled.
-     * 
      */
     @Import(name="canReschedule")
       private final @Nullable Output<Boolean> canReschedule;
@@ -39,7 +37,6 @@ public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.Resou
 
     /**
      * Maintenance cannot be rescheduled to start beyond this deadline.
-     * 
      */
     @Import(name="scheduleDeadlineTime")
       private final @Nullable Output<String> scheduleDeadlineTime;
@@ -50,7 +47,6 @@ public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.Resou
 
     /**
      * The start time of any upcoming scheduled maintenance for this instance.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;

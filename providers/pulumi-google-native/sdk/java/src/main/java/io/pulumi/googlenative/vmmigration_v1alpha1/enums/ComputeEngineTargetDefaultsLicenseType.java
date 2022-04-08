@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The license type to use in OS adaptation.
-     * 
      */
     @EnumType
     public enum ComputeEngineTargetDefaultsLicenseType {
         /**
          * The license type is the default for the OS.
-         * 
          */
         ComputeEngineLicenseTypeDefault("COMPUTE_ENGINE_LICENSE_TYPE_DEFAULT"),
         /**
          * The license type is Pay As You Go license type.
-         * 
          */
         ComputeEngineLicenseTypePayg("COMPUTE_ENGINE_LICENSE_TYPE_PAYG"),
         /**
          * The license type is Bring Your Own License type.
-         * 
          */
         ComputeEngineLicenseTypeByol("COMPUTE_ENGINE_LICENSE_TYPE_BYOL");
 

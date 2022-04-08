@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents configuration for a generic web service. Dialogflow supports two mechanisms for authentications: - Basic authentication with username and password. - Authentication with additional authentication headers. More information could be found at: https://cloud.google.com/dialogflow/docs/fulfillment-configure.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceArgs 
 
     /**
      * Optional. Indicates if generic web service is created through Cloud Functions integration. Defaults to false. is_cloud_function is deprecated. Cloud functions can be configured by its uri as a regular web service now.
-     * 
      */
     @Import(name="isCloudFunction")
       private final @Nullable Output<Boolean> isCloudFunction;
@@ -33,7 +31,6 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceArgs 
 
     /**
      * The password for HTTP Basic authentication.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -44,7 +41,6 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceArgs 
 
     /**
      * The HTTP request headers to send together with fulfillment requests.
-     * 
      */
     @Import(name="requestHeaders")
       private final @Nullable Output<Map<String,String>> requestHeaders;
@@ -55,7 +51,6 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceArgs 
 
     /**
      * The fulfillment URI for receiving POST requests. It must use https protocol.
-     * 
      */
     @Import(name="uri", required=true)
       private final Output<String> uri;
@@ -66,7 +61,6 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceArgs 
 
     /**
      * The user name for HTTP Basic authentication.
-     * 
      */
     @Import(name="username")
       private final @Nullable Output<String> username;

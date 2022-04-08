@@ -23,7 +23,6 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * ID of the attached environment.
-     * 
      */
     @Import(name="environment", required=true)
       private final Output<String> environment;
@@ -34,7 +33,6 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * ID of the environment group attachment.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

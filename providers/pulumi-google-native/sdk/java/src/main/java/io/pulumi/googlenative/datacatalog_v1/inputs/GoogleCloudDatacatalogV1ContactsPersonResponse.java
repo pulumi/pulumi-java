@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A contact person for the entry.
- * 
  */
 public final class GoogleCloudDatacatalogV1ContactsPersonResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDatacatalogV1ContactsPersonResponse extends io.pul
 
     /**
      * Designation of the person, for example, Data Steward.
-     * 
      */
     @Import(name="designation", required=true)
       private final String designation;
@@ -29,7 +27,6 @@ public final class GoogleCloudDatacatalogV1ContactsPersonResponse extends io.pul
 
     /**
      * Email of the person in the format of `john.doe@xyz`, ``, or `John Doe`.
-     * 
      */
     @Import(name="email", required=true)
       private final String email;

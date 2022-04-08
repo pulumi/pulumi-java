@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class MembershipStateResponse {
     /**
      * The current state of the Membership resource.
-     * 
      */
     private final String code;
 
@@ -22,7 +21,6 @@ public final class MembershipStateResponse {
 
     /**
      * The current state of the Membership resource.
-     * 
     */
     public String getCode() {
         return this.code;

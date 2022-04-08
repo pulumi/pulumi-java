@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Automatic scaling is based on request rate, response latencies, and other application metrics.
- * 
  */
 public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The time period that the Autoscaler (https://cloud.google.com/compute/docs/autoscaler/) should wait before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. Only applicable in the App Engine flexible environment.
-     * 
      */
     @Import(name="coolDownPeriod")
       private final @Nullable Output<String> coolDownPeriod;
@@ -39,7 +37,6 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Target scaling by CPU usage.
-     * 
      */
     @Import(name="cpuUtilization")
       private final @Nullable Output<CpuUtilizationArgs> cpuUtilization;
@@ -50,7 +47,6 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Target scaling by user-provided metrics. Only applicable in the App Engine flexible environment.
-     * 
      */
     @Import(name="customMetrics")
       private final @Nullable Output<List<CustomMetricArgs>> customMetrics;
@@ -61,7 +57,6 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Target scaling by disk usage.
-     * 
      */
     @Import(name="diskUtilization")
       private final @Nullable Output<DiskUtilizationArgs> diskUtilization;
@@ -72,7 +67,6 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.Defaults to a runtime-specific value.
-     * 
      */
     @Import(name="maxConcurrentRequests")
       private final @Nullable Output<Integer> maxConcurrentRequests;
@@ -83,7 +77,6 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Maximum number of idle instances that should be maintained for this version.
-     * 
      */
     @Import(name="maxIdleInstances")
       private final @Nullable Output<Integer> maxIdleInstances;
@@ -94,7 +87,6 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
-     * 
      */
     @Import(name="maxPendingLatency")
       private final @Nullable Output<String> maxPendingLatency;
@@ -105,7 +97,6 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Maximum number of instances that should be started to handle requests for this version.
-     * 
      */
     @Import(name="maxTotalInstances")
       private final @Nullable Output<Integer> maxTotalInstances;
@@ -116,7 +107,6 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
-     * 
      */
     @Import(name="minIdleInstances")
       private final @Nullable Output<Integer> minIdleInstances;
@@ -127,7 +117,6 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
-     * 
      */
     @Import(name="minPendingLatency")
       private final @Nullable Output<String> minPendingLatency;
@@ -138,7 +127,6 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Minimum number of running instances that should be maintained for this version.
-     * 
      */
     @Import(name="minTotalInstances")
       private final @Nullable Output<Integer> minTotalInstances;
@@ -149,7 +137,6 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Target scaling by network usage.
-     * 
      */
     @Import(name="networkUtilization")
       private final @Nullable Output<NetworkUtilizationArgs> networkUtilization;
@@ -160,7 +147,6 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Target scaling by request utilization.
-     * 
      */
     @Import(name="requestUtilization")
       private final @Nullable Output<RequestUtilizationArgs> requestUtilization;
@@ -171,7 +157,6 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Scheduler settings for standard environment.
-     * 
      */
     @Import(name="standardSchedulerSettings")
       private final @Nullable Output<StandardSchedulerSettingsArgs> standardSchedulerSettings;

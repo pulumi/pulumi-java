@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Reference to another Cloud SQL instance.
- * 
  */
 public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the Cloud SQL instance being referenced. This does not include the project ID.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The project ID of the Cloud SQL instance being referenced. The default is the same project ID as the instance references it.
-     * 
      */
     @Import(name="project", required=true)
       private final String project;
@@ -40,7 +37,6 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The region of the Cloud SQL instance being referenced.
-     * 
      */
     @Import(name="region", required=true)
       private final String region;

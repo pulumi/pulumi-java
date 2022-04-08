@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Provides information about the analysis status of a discovered resource.
- * 
  */
 public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The status of discovery for the resource.
-     * 
      */
     @Import(name="analysisStatus")
       private final @Nullable Output<DiscoveredAnalysisStatus> analysisStatus;
@@ -33,7 +31,6 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage is output only and populated by the API.
-     * 
      */
     @Import(name="analysisStatusError")
       private final @Nullable Output<StatusArgs> analysisStatusError;
@@ -44,7 +41,6 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether the resource is continuously analyzed.
-     * 
      */
     @Import(name="continuousAnalysis")
       private final @Nullable Output<DiscoveredContinuousAnalysis> continuousAnalysis;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Output object for Deployments
- * 
  */
 public final class DeploymentOutputEntryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DeploymentOutputEntryResponse extends io.pulumi.resources.Inv
 
     /**
      * Key of the output
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -29,7 +27,6 @@ public final class DeploymentOutputEntryResponse extends io.pulumi.resources.Inv
 
     /**
      * Value of the label
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

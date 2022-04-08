@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for parameter validation.
- * 
  */
 public final class ParameterValidationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Validation based on regular expressions.
-     * 
      */
     @Import(name="regex")
       private final @Nullable Output<RegexValidationArgs> regex;
@@ -32,7 +30,6 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Validation based on a list of allowed values.
-     * 
      */
     @Import(name="values")
       private final @Nullable Output<ValueValidationArgs> values;

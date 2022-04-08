@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Options for job processing.
- * 
  */
 public final class ProcessingOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ProcessingOptionsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * If set to `true`, the service does not attempt to resolve a more precise address for the job.
-     * 
      */
     @Import(name="disableStreetAddressResolution")
       private final @Nullable Output<Boolean> disableStreetAddressResolution;
@@ -32,7 +30,6 @@ public final class ProcessingOptionsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Option for job HTML content sanitization. Applied fields are: * description * applicationInfo.instruction * incentives * qualifications * responsibilities HTML tags in these fields may be stripped if sanitiazation isn't disabled. Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.
-     * 
      */
     @Import(name="htmlSanitization")
       private final @Nullable Output<ProcessingOptionsHtmlSanitization> htmlSanitization;

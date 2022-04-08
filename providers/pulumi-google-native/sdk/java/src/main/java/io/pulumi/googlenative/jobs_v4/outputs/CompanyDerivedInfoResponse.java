@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class CompanyDerivedInfoResponse {
     /**
      * A structured headquarters location of the company, resolved from Company.headquarters_address if provided.
-     * 
      */
     private final LocationResponse headquartersLocation;
 
@@ -22,7 +21,6 @@ public final class CompanyDerivedInfoResponse {
 
     /**
      * A structured headquarters location of the company, resolved from Company.headquarters_address if provided.
-     * 
     */
     public LocationResponse getHeadquartersLocation() {
         return this.headquartersLocation;

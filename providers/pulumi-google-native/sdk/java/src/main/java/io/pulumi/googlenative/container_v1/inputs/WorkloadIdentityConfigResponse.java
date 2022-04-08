@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.
- * 
  */
 public final class WorkloadIdentityConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class WorkloadIdentityConfigResponse extends io.pulumi.resources.In
 
     /**
      * The workload pool to attach all Kubernetes service accounts to.
-     * 
      */
     @Import(name="workloadPool", required=true)
       private final String workloadPool;

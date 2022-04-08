@@ -14,62 +14,53 @@ import javax.annotation.Nullable;
 
 /**
  * A maximum of 10,000 entry groups may be created per organization across all locations. Users should enable the Data Catalog API in the project identified by the `parent` parameter (see [Data Catalog Resource Project] (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more information).
- * 
  */
 @ResourceType(type="google-native:datacatalog/v1beta1:EntryGroup")
 public class EntryGroup extends io.pulumi.resources.CustomResource {
     /**
      * Timestamps about this EntryGroup. Default value is empty timestamps.
-     * 
      */
     @Export(name="dataCatalogTimestamps", type=GoogleCloudDatacatalogV1beta1SystemTimestampsResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1beta1SystemTimestampsResponse> dataCatalogTimestamps;
 
     /**
      * @return Timestamps about this EntryGroup. Default value is empty timestamps.
-     * 
      */
     public Output<GoogleCloudDatacatalogV1beta1SystemTimestampsResponse> getDataCatalogTimestamps() {
         return this.dataCatalogTimestamps;
     }
     /**
      * Entry group description, which can consist of several sentences or paragraphs that describe entry group contents. Default value is an empty string.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Entry group description, which can consist of several sentences or paragraphs that describe entry group contents. Default value is an empty string.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * A short name to identify the entry group, for example, "analytics data - jan 2011". Default value is an empty string.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return A short name to identify the entry group, for example, "analytics data - jan 2011". Default value is an empty string.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The resource name of the entry group in URL format. Example: * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id} Note that this EntryGroup and its child resources may not actually be stored in the location in this name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the entry group in URL format. Example: * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id} Note that this EntryGroup and its child resources may not actually be stored in the location in this name.
-     * 
      */
     public Output<String> getName() {
         return this.name;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A floating point interval.
- * 
  */
 public final class GoogleCloudRetailV2betaIntervalArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudRetailV2betaIntervalArgs extends io.pulumi.resourc
 
     /**
      * Exclusive upper bound.
-     * 
      */
     @Import(name="exclusiveMaximum")
       private final @Nullable Output<Double> exclusiveMaximum;
@@ -31,7 +29,6 @@ public final class GoogleCloudRetailV2betaIntervalArgs extends io.pulumi.resourc
 
     /**
      * Exclusive lower bound.
-     * 
      */
     @Import(name="exclusiveMinimum")
       private final @Nullable Output<Double> exclusiveMinimum;
@@ -42,7 +39,6 @@ public final class GoogleCloudRetailV2betaIntervalArgs extends io.pulumi.resourc
 
     /**
      * Inclusive upper bound.
-     * 
      */
     @Import(name="maximum")
       private final @Nullable Output<Double> maximum;
@@ -53,7 +49,6 @@ public final class GoogleCloudRetailV2betaIntervalArgs extends io.pulumi.resourc
 
     /**
      * Inclusive lower bound.
-     * 
      */
     @Import(name="minimum")
       private final @Nullable Output<Double> minimum;

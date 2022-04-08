@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2QuasiIdentifierFieldResponse {
     /**
      * A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary table that contains statistical information on the possible values of this column (below).
-     * 
      */
     private final String customTag;
     /**
      * Identifies the column.
-     * 
      */
     private final GooglePrivacyDlpV2FieldIdResponse field;
 
@@ -31,14 +29,12 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldResponse {
 
     /**
      * A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary table that contains statistical information on the possible values of this column (below).
-     * 
     */
     public String getCustomTag() {
         return this.customTag;
     }
     /**
      * Identifies the column.
-     * 
     */
     public GooglePrivacyDlpV2FieldIdResponse getField() {
         return this.field;

@@ -20,132 +20,113 @@ import javax.annotation.Nullable;
  * Auto-naming is currently not supported for this resource.
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:appengine/v1:App")
 public class App extends io.pulumi.resources.CustomResource {
     /**
      * Google Apps authentication domain that controls which users can access this application.Defaults to open access for any Google Account.
-     * 
      */
     @Export(name="authDomain", type=String.class, parameters={})
     private Output<String> authDomain;
 
     /**
      * @return Google Apps authentication domain that controls which users can access this application.Defaults to open access for any Google Account.
-     * 
      */
     public Output<String> getAuthDomain() {
         return this.authDomain;
     }
     /**
      * Google Cloud Storage bucket that can be used for storing files associated with this application. This bucket is associated with the application and can be used by the gcloud deployment commands.
-     * 
      */
     @Export(name="codeBucket", type=String.class, parameters={})
     private Output<String> codeBucket;
 
     /**
      * @return Google Cloud Storage bucket that can be used for storing files associated with this application. This bucket is associated with the application and can be used by the gcloud deployment commands.
-     * 
      */
     public Output<String> getCodeBucket() {
         return this.codeBucket;
     }
     /**
      * The type of the Cloud Firestore or Cloud Datastore database associated with this application.
-     * 
      */
     @Export(name="databaseType", type=String.class, parameters={})
     private Output<String> databaseType;
 
     /**
      * @return The type of the Cloud Firestore or Cloud Datastore database associated with this application.
-     * 
      */
     public Output<String> getDatabaseType() {
         return this.databaseType;
     }
     /**
      * Google Cloud Storage bucket that can be used by this application to store content.
-     * 
      */
     @Export(name="defaultBucket", type=String.class, parameters={})
     private Output<String> defaultBucket;
 
     /**
      * @return Google Cloud Storage bucket that can be used by this application to store content.
-     * 
      */
     public Output<String> getDefaultBucket() {
         return this.defaultBucket;
     }
     /**
      * Cookie expiration policy for this application.
-     * 
      */
     @Export(name="defaultCookieExpiration", type=String.class, parameters={})
     private Output<String> defaultCookieExpiration;
 
     /**
      * @return Cookie expiration policy for this application.
-     * 
      */
     public Output<String> getDefaultCookieExpiration() {
         return this.defaultCookieExpiration;
     }
     /**
      * Hostname used to reach this application, as resolved by App Engine.
-     * 
      */
     @Export(name="defaultHostname", type=String.class, parameters={})
     private Output<String> defaultHostname;
 
     /**
      * @return Hostname used to reach this application, as resolved by App Engine.
-     * 
      */
     public Output<String> getDefaultHostname() {
         return this.defaultHostname;
     }
     /**
      * HTTP path dispatch rules for requests to the application that do not explicitly target a service or version. Rules are order-dependent. Up to 20 dispatch rules can be supported.
-     * 
      */
     @Export(name="dispatchRules", type=List.class, parameters={UrlDispatchRuleResponse.class})
     private Output<List<UrlDispatchRuleResponse>> dispatchRules;
 
     /**
      * @return HTTP path dispatch rules for requests to the application that do not explicitly target a service or version. Rules are order-dependent. Up to 20 dispatch rules can be supported.
-     * 
      */
     public Output<List<UrlDispatchRuleResponse>> getDispatchRules() {
         return this.dispatchRules;
     }
     /**
      * The feature specific settings to be used in the application.
-     * 
      */
     @Export(name="featureSettings", type=FeatureSettingsResponse.class, parameters={})
     private Output<FeatureSettingsResponse> featureSettings;
 
     /**
      * @return The feature specific settings to be used in the application.
-     * 
      */
     public Output<FeatureSettingsResponse> getFeatureSettings() {
         return this.featureSettings;
     }
     /**
      * The Google Container Registry domain used for storing managed build docker images for this application.
-     * 
      */
     @Export(name="gcrDomain", type=String.class, parameters={})
     private Output<String> gcrDomain;
 
     /**
      * @return The Google Container Registry domain used for storing managed build docker images for this application.
-     * 
      */
     public Output<String> getGcrDomain() {
         return this.gcrDomain;
@@ -158,56 +139,48 @@ public class App extends io.pulumi.resources.CustomResource {
     }
     /**
      * Location from which this application runs. Application instances run out of the data centers in the specified location, which is also where all of the application's end user content is stored.Defaults to us-central.View the list of supported locations (https://cloud.google.com/appengine/docs/locations).
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Location from which this application runs. Application instances run out of the data centers in the specified location, which is also where all of the application's end user content is stored.Defaults to us-central.View the list of supported locations (https://cloud.google.com/appengine/docs/locations).
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Full path to the Application resource in the API. Example: apps/myapp.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Full path to the Application resource in the API. Example: apps/myapp.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The service account associated with the application. This is the app-level default identity. If no identity provided during create version, Admin API will fallback to this one.
-     * 
      */
     @Export(name="serviceAccount", type=String.class, parameters={})
     private Output<String> serviceAccount;
 
     /**
      * @return The service account associated with the application. This is the app-level default identity. If no identity provided during create version, Admin API will fallback to this one.
-     * 
      */
     public Output<String> getServiceAccount() {
         return this.serviceAccount;
     }
     /**
      * Serving status of this application.
-     * 
      */
     @Export(name="servingStatus", type=String.class, parameters={})
     private Output<String> servingStatus;
 
     /**
      * @return Serving status of this application.
-     * 
      */
     public Output<String> getServingStatus() {
         return this.servingStatus;

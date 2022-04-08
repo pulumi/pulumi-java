@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Private Connectivity
- * 
  */
 public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceArgs {
 

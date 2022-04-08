@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The condition that a Waiter resource is waiting for.
- * 
  */
 public final class EndConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EndConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The cardinality of the `EndCondition`.
-     * 
      */
     @Import(name="cardinality")
       private final @Nullable Output<CardinalityArgs> cardinality;

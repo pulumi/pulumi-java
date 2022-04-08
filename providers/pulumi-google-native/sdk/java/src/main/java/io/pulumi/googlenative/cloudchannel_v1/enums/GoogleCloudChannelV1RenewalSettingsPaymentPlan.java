@@ -10,38 +10,31 @@ import java.util.StringJoiner;
 
     /**
      * Describes how a reseller will be billed.
-     * 
      */
     @EnumType
     public enum GoogleCloudChannelV1RenewalSettingsPaymentPlan {
         /**
          * Not used.
-         * 
          */
         PaymentPlanUnspecified("PAYMENT_PLAN_UNSPECIFIED"),
         /**
          * Commitment.
-         * 
          */
         Commitment("COMMITMENT"),
         /**
          * No commitment.
-         * 
          */
         Flexible("FLEXIBLE"),
         /**
          * Free.
-         * 
          */
         Free("FREE"),
         /**
          * Trial.
-         * 
          */
         Trial("TRIAL"),
         /**
          * Price and ordering not available through API.
-         * 
          */
         Offline("OFFLINE");
 

@@ -13,7 +13,6 @@ public final class AttestationResponse {
     private final GenericSignedAttestationResponse genericSignedAttestation;
     /**
      * A PGP signed attestation.
-     * 
      */
     private final PgpSignedAttestationResponse pgpSignedAttestation;
 
@@ -30,7 +29,6 @@ public final class AttestationResponse {
     }
     /**
      * A PGP signed attestation.
-     * 
     */
     public PgpSignedAttestationResponse getPgpSignedAttestation() {
         return this.pgpSignedAttestation;

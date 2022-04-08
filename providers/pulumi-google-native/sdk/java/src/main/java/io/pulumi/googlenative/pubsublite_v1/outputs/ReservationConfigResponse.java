@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ReservationConfigResponse {
     /**
      * The Reservation to use for this topic's throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
-     * 
      */
     private final String throughputReservation;
 
@@ -22,7 +21,6 @@ public final class ReservationConfigResponse {
 
     /**
      * The Reservation to use for this topic's throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
-     * 
     */
     public String getThroughputReservation() {
         return this.throughputReservation;

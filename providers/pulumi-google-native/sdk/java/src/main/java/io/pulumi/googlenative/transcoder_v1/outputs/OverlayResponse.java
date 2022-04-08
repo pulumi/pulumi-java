@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class OverlayResponse {
     /**
      * List of Animations. The list should be chronological, without any time overlap.
-     * 
      */
     private final List<AnimationResponse> animations;
     /**
      * Image overlay.
-     * 
      */
     private final ImageResponse image;
 
@@ -32,14 +30,12 @@ public final class OverlayResponse {
 
     /**
      * List of Animations. The list should be chronological, without any time overlap.
-     * 
     */
     public List<AnimationResponse> getAnimations() {
         return this.animations;
     }
     /**
      * Image overlay.
-     * 
     */
     public ImageResponse getImage() {
         return this.image;

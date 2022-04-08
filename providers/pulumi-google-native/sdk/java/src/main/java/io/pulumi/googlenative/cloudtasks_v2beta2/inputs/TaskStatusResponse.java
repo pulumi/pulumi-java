@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Status of the task.
- * 
  */
 public final class TaskStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class TaskStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The number of attempts dispatched. This count includes attempts which have been dispatched but haven't received a response.
-     * 
      */
     @Import(name="attemptDispatchCount", required=true)
       private final Integer attemptDispatchCount;
@@ -30,7 +28,6 @@ public final class TaskStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The number of attempts which have received a response. This field is not calculated for pull tasks.
-     * 
      */
     @Import(name="attemptResponseCount", required=true)
       private final Integer attemptResponseCount;
@@ -41,7 +38,6 @@ public final class TaskStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The status of the task's first attempt. Only dispatch_time will be set. The other AttemptStatus information is not retained by Cloud Tasks. This field is not calculated for pull tasks.
-     * 
      */
     @Import(name="firstAttemptStatus", required=true)
       private final AttemptStatusResponse firstAttemptStatus;
@@ -52,7 +48,6 @@ public final class TaskStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The status of the task's last attempt. This field is not calculated for pull tasks.
-     * 
      */
     @Import(name="lastAttemptStatus", required=true)
       private final AttemptStatusResponse lastAttemptStatus;

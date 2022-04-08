@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class JwtClaimsResponse {
     /**
      * Value for the "aud" claim.
-     * 
      */
     private final String audience;
     /**
      * Value for the "iss" claim.
-     * 
      */
     private final String issuer;
     /**
      * Value for the "sub" claim.
-     * 
      */
     private final String subject;
 
@@ -37,21 +34,18 @@ public final class JwtClaimsResponse {
 
     /**
      * Value for the "aud" claim.
-     * 
     */
     public String getAudience() {
         return this.audience;
     }
     /**
      * Value for the "iss" claim.
-     * 
     */
     public String getIssuer() {
         return this.issuer;
     }
     /**
      * Value for the "sub" claim.
-     * 
     */
     public String getSubject() {
         return this.subject;

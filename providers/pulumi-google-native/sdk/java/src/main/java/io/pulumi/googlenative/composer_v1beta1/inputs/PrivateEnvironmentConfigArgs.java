@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration information for configuring a Private IP Cloud Composer environment.
- * 
  */
 public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
 
     /**
      * Optional. When specified, the environment will use Private Service Connect instead of VPC peerings to connect to Cloud SQL in the Tenant Project, and the PSC endpoint in the Customer Project will use an IP address from this subnetwork.
-     * 
      */
     @Import(name="cloudComposerConnectionSubnetwork")
       private final @Nullable Output<String> cloudComposerConnectionSubnetwork;
@@ -33,7 +31,6 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
 
     /**
      * Optional. The CIDR block from which IP range for Cloud Composer Network in tenant project will be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
-     * 
      */
     @Import(name="cloudComposerNetworkIpv4CidrBlock")
       private final @Nullable Output<String> cloudComposerNetworkIpv4CidrBlock;
@@ -44,7 +41,6 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
 
     /**
      * Optional. The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from web_server_ipv4_cidr_block
-     * 
      */
     @Import(name="cloudSqlIpv4CidrBlock")
       private final @Nullable Output<String> cloudSqlIpv4CidrBlock;
@@ -55,7 +51,6 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
 
     /**
      * Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set to true, `IPAllocationPolicy.use_ip_aliases` must be set to true for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
-     * 
      */
     @Import(name="enablePrivateEnvironment")
       private final @Nullable Output<Boolean> enablePrivateEnvironment;
@@ -66,7 +61,6 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
 
     /**
      * Optional. When enabled, IPs from public (non-RFC1918) ranges can be used for `IPAllocationPolicy.cluster_ipv4_cidr_block` and `IPAllocationPolicy.service_ipv4_cidr_block`.
-     * 
      */
     @Import(name="enablePrivatelyUsedPublicIps")
       private final @Nullable Output<Boolean> enablePrivatelyUsedPublicIps;
@@ -77,7 +71,6 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
 
     /**
      * Optional. Configuration for the private GKE cluster for a Private IP Cloud Composer environment.
-     * 
      */
     @Import(name="privateClusterConfig")
       private final @Nullable Output<PrivateClusterConfigArgs> privateClusterConfig;
@@ -88,7 +81,6 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
 
     /**
      * Optional. The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
-     * 
      */
     @Import(name="webServerIpv4CidrBlock")
       private final @Nullable Output<String> webServerIpv4CidrBlock;

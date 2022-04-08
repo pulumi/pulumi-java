@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies a file available via some URI.
- * 
  */
 public final class OSPolicyResourceFileRemoteArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class OSPolicyResourceFileRemoteArgs extends io.pulumi.resources.Re
 
     /**
      * SHA256 checksum of the remote file.
-     * 
      */
     @Import(name="sha256Checksum")
       private final @Nullable Output<String> sha256Checksum;
@@ -31,7 +29,6 @@ public final class OSPolicyResourceFileRemoteArgs extends io.pulumi.resources.Re
 
     /**
      * URI from which to fetch the object. It should contain both the protocol and path following the format `{protocol}://{location}`.
-     * 
      */
     @Import(name="uri", required=true)
       private final Output<String> uri;

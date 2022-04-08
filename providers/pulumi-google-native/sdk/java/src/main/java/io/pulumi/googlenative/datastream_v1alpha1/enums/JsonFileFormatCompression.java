@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Compression of the loaded JSON file.
-     * 
      */
     @EnumType
     public enum JsonFileFormatCompression {
         /**
          * Unspecified json file compression.
-         * 
          */
         JsonCompressionUnspecified("JSON_COMPRESSION_UNSPECIFIED"),
         /**
          * Do not compress JSON file.
-         * 
          */
         NoCompression("NO_COMPRESSION"),
         /**
          * Gzip compression.
-         * 
          */
         Gzip("GZIP");
 

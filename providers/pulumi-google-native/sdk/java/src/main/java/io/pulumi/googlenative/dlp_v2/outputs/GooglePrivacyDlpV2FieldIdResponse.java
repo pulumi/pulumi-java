@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2FieldIdResponse {
     /**
      * Name describing the field.
-     * 
      */
     private final String name;
 
@@ -22,7 +21,6 @@ public final class GooglePrivacyDlpV2FieldIdResponse {
 
     /**
      * Name describing the field.
-     * 
     */
     public String getName() {
         return this.name;

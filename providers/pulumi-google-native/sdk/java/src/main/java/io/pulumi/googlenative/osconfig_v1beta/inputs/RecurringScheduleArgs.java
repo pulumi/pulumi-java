@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Sets the time for recurring patch deployments.
- * 
  */
 public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Optional. The end time at which a recurring patch deployment schedule is no longer active.
-     * 
      */
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
@@ -36,7 +34,6 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The frequency unit of this recurring schedule.
-     * 
      */
     @Import(name="frequency", required=true)
       private final Output<RecurringScheduleFrequency> frequency;
@@ -47,7 +44,6 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Schedule with monthly executions.
-     * 
      */
     @Import(name="monthly", required=true)
       private final Output<MonthlyScheduleArgs> monthly;
@@ -58,7 +54,6 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Optional. The time that the recurring schedule becomes effective. Defaults to `create_time` of the patch deployment.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
@@ -69,7 +64,6 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Time of the day to run a recurring deployment.
-     * 
      */
     @Import(name="timeOfDay", required=true)
       private final Output<TimeOfDayArgs> timeOfDay;
@@ -80,7 +74,6 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Defines the time zone that `time_of_day` is relative to. The rules for daylight saving time are determined by the chosen time zone.
-     * 
      */
     @Import(name="timeZone", required=true)
       private final Output<TimeZoneArgs> timeZone;
@@ -91,7 +84,6 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Schedule with weekly executions.
-     * 
      */
     @Import(name="weekly", required=true)
       private final Output<WeeklyScheduleArgs> weekly;

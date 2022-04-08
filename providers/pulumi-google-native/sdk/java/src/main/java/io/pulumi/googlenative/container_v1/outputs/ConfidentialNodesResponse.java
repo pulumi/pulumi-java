@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ConfidentialNodesResponse {
     /**
      * Whether Confidential Nodes feature is enabled for all nodes in this cluster.
-     * 
      */
     private final Boolean enabled;
 
@@ -22,7 +21,6 @@ public final class ConfidentialNodesResponse {
 
     /**
      * Whether Confidential Nodes feature is enabled for all nodes in this cluster.
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;

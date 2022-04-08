@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
- * 
  */
 public final class MeshCertificatesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MeshCertificatesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * enable_certificates controls issuance of workload mTLS certificates. If set, the GKE Workload Identity Certificates controller and node agent will be deployed in the cluster, which can then be configured by creating a WorkloadCertificateConfig Custom Resource. Requires Workload Identity (workload_pool must be non-empty).
-     * 
      */
     @Import(name="enableCertificates")
       private final @Nullable Output<Boolean> enableCertificates;

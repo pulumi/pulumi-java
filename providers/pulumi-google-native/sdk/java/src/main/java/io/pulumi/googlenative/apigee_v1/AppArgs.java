@@ -18,7 +18,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of API products associated with the developer app.
-     * 
      */
     @Import(name="apiProducts")
       private final @Nullable Output<List<String>> apiProducts;
@@ -29,7 +28,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Developer app family.
-     * 
      */
     @Import(name="appFamily")
       private final @Nullable Output<String> appFamily;
@@ -40,7 +38,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ID of the developer app.
-     * 
      */
     @Import(name="appId")
       private final @Nullable Output<String> appId;
@@ -51,7 +48,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of attributes for the developer app.
-     * 
      */
     @Import(name="attributes")
       private final @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
@@ -62,7 +58,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Callback URL used by OAuth 2.0 authorization servers to communicate authorization codes back to developer apps.
-     * 
      */
     @Import(name="callbackUrl")
       private final @Nullable Output<String> callbackUrl;
@@ -73,7 +68,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ID of the developer.
-     * 
      */
     @Import(name="developerId", required=true)
       private final Output<String> developerId;
@@ -84,7 +78,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Expiration time, in milliseconds, for the consumer key that is generated for the developer app. If not set or left to the default value of `-1`, the API key never expires. The expiration time can't be updated after it is set.
-     * 
      */
     @Import(name="keyExpiresIn")
       private final @Nullable Output<String> keyExpiresIn;
@@ -95,7 +88,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the developer app.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -113,7 +105,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Scopes to apply to the developer app. The specified scopes must already exist for the API product that you associate with the developer app.
-     * 
      */
     @Import(name="scopes")
       private final @Nullable Output<List<String>> scopes;
@@ -124,7 +115,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Status of the credential. Valid values include `approved` or `revoked`.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<String> status;

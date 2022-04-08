@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GcpFilestoreCsiDriverConfigResponse {
     /**
      * Whether the GCP Filestore CSI driver is enabled for this cluster.
-     * 
      */
     private final Boolean enabled;
 
@@ -22,7 +21,6 @@ public final class GcpFilestoreCsiDriverConfigResponse {
 
     /**
      * Whether the GCP Filestore CSI driver is enabled for this cluster.
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;

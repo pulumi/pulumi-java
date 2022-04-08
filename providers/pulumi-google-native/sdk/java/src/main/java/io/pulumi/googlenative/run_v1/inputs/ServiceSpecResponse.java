@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * ServiceSpec holds the desired state of the Route (from the client), which is used to manipulate the underlying Route and Configuration(s).
- * 
  */
 public final class ServiceSpecResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ServiceSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Template holds the latest specification for the Revision to be stamped out.
-     * 
      */
     @Import(name="template", required=true)
       private final RevisionTemplateResponse template;
@@ -31,7 +29,6 @@ public final class ServiceSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations.
-     * 
      */
     @Import(name="traffic", required=true)
       private final List<TrafficTargetResponse> traffic;

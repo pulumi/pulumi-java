@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A collection of conditions.
- * 
  */
 public final class GooglePrivacyDlpV2ConditionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GooglePrivacyDlpV2ConditionsResponse extends io.pulumi.resour
 
     /**
      * A collection of conditions.
-     * 
      */
     @Import(name="conditions", required=true)
       private final List<GooglePrivacyDlpV2ConditionResponse> conditions;

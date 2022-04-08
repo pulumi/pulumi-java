@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Backfill strategy to automatically backfill the Stream's objects. Specific objects can be excluded.
- * 
  */
 public final class BackfillAllStrategyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class BackfillAllStrategyResponse extends io.pulumi.resources.Invok
 
     /**
      * MySQL data source objects to avoid backfilling.
-     * 
      */
     @Import(name="mysqlExcludedObjects", required=true)
       private final MysqlRdbmsResponse mysqlExcludedObjects;
@@ -30,7 +28,6 @@ public final class BackfillAllStrategyResponse extends io.pulumi.resources.Invok
 
     /**
      * Oracle data source objects to avoid backfilling.
-     * 
      */
     @Import(name="oracleExcludedObjects", required=true)
       private final OracleRdbmsResponse oracleExcludedObjects;

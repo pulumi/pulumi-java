@@ -13,47 +13,38 @@ import java.util.Objects;
 public final class RouteInfoResponse {
     /**
      * Destination IP range of the route.
-     * 
      */
     private final String destIpRange;
     /**
      * Name of a Compute Engine route.
-     * 
      */
     private final String displayName;
     /**
      * Instance tags of the route.
-     * 
      */
     private final List<String> instanceTags;
     /**
      * URI of a Compute Engine network.
-     * 
      */
     private final String networkUri;
     /**
      * Next hop of the route.
-     * 
      */
     private final String nextHop;
     /**
      * Type of next hop.
-     * 
      */
     private final String nextHopType;
     /**
      * Priority of the route.
-     * 
      */
     private final Integer priority;
     /**
      * Type of route.
-     * 
      */
     private final String routeType;
     /**
      * URI of a Compute Engine route. Dynamic route from cloud router does not have a URI. Advertised route from Google Cloud VPC to on-premises network also does not have a URI.
-     * 
      */
     private final String uri;
 
@@ -81,63 +72,54 @@ public final class RouteInfoResponse {
 
     /**
      * Destination IP range of the route.
-     * 
     */
     public String getDestIpRange() {
         return this.destIpRange;
     }
     /**
      * Name of a Compute Engine route.
-     * 
     */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Instance tags of the route.
-     * 
     */
     public List<String> getInstanceTags() {
         return this.instanceTags;
     }
     /**
      * URI of a Compute Engine network.
-     * 
     */
     public String getNetworkUri() {
         return this.networkUri;
     }
     /**
      * Next hop of the route.
-     * 
     */
     public String getNextHop() {
         return this.nextHop;
     }
     /**
      * Type of next hop.
-     * 
     */
     public String getNextHopType() {
         return this.nextHopType;
     }
     /**
      * Priority of the route.
-     * 
     */
     public Integer getPriority() {
         return this.priority;
     }
     /**
      * Type of route.
-     * 
     */
     public String getRouteType() {
         return this.routeType;
     }
     /**
      * URI of a Compute Engine route. Dynamic route from cloud router does not have a URI. Advertised route from Google Cloud VPC to on-premises network also does not have a URI.
-     * 
     */
     public String getUri() {
         return this.uri;

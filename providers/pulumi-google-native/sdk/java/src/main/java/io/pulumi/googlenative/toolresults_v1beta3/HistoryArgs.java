@@ -17,7 +17,6 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A short human-readable (plain text) name to display in the UI. Maximum of 100 characters. - In response: present if set during create. - In create request: optional
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -28,7 +27,6 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A unique identifier within a project for this History. Returns INVALID_ARGUMENT if this field is set or overwritten by the caller. - In response always set - In create request: never set
-     * 
      */
     @Import(name="historyId")
       private final @Nullable Output<String> historyId;
@@ -39,7 +37,6 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A name to uniquely identify a history within a project. Maximum of 200 characters. - In response always set - In create request: always set
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -64,7 +61,6 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The platform of the test history. - In response: always set. Returns the platform of the last execution if unknown.
-     * 
      */
     @Import(name="testPlatform")
       private final @Nullable Output<HistoryTestPlatform> testPlatform;

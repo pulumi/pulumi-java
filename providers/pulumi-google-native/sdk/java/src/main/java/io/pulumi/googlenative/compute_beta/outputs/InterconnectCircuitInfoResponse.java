@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class InterconnectCircuitInfoResponse {
     /**
      * Customer-side demarc ID for this circuit.
-     * 
      */
     private final String customerDemarcId;
     /**
      * Google-assigned unique ID for this circuit. Assigned at circuit turn-up.
-     * 
      */
     private final String googleCircuitId;
     /**
      * Google-side demarc ID for this circuit. Assigned at circuit turn-up and provided by Google to the customer in the LOA.
-     * 
      */
     private final String googleDemarcId;
 
@@ -37,21 +34,18 @@ public final class InterconnectCircuitInfoResponse {
 
     /**
      * Customer-side demarc ID for this circuit.
-     * 
     */
     public String getCustomerDemarcId() {
         return this.customerDemarcId;
     }
     /**
      * Google-assigned unique ID for this circuit. Assigned at circuit turn-up.
-     * 
     */
     public String getGoogleCircuitId() {
         return this.googleCircuitId;
     }
     /**
      * Google-side demarc ID for this circuit. Assigned at circuit turn-up and provided by Google to the customer in the LOA.
-     * 
     */
     public String getGoogleDemarcId() {
         return this.googleDemarcId;

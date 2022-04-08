@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines an object to declare an in-toto artifact rule
- * 
  */
 public final class ArtifactRuleArgs extends io.pulumi.resources.ResourceArgs {
 

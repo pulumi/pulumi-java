@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A list of Android device configurations in which the test is to be executed.
- * 
  */
 public final class AndroidDeviceListResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class AndroidDeviceListResponse extends io.pulumi.resources.InvokeA
 
     /**
      * A list of Android devices.
-     * 
      */
     @Import(name="androidDevices", required=true)
       private final List<AndroidDeviceResponse> androidDevices;

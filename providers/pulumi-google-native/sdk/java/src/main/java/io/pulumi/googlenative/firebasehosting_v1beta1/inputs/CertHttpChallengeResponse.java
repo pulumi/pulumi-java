@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Represents an HTTP certificate challenge.
- * 
  */
 public final class CertHttpChallengeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CertHttpChallengeResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The URL path on which to serve the specified token to satisfy the certificate challenge.
-     * 
      */
     @Import(name="path", required=true)
       private final String path;
@@ -29,7 +27,6 @@ public final class CertHttpChallengeResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The token to serve at the specified URL path to satisfy the certificate challenge.
-     * 
      */
     @Import(name="token", required=true)
       private final String token;

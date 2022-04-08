@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * FileOccurrence represents an SPDX File Information section: https://spdx.github.io/spdx-spec/4-file-information/
- * 
  */
 public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * This field provides a place for the SPDX data creator to record, at the file level, acknowledgements that may be needed to be communicated in some contexts
-     * 
      */
     @Import(name="attributions", required=true)
       private final List<String> attributions;
@@ -31,7 +29,6 @@ public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * This field provides a place for the SPDX file creator to record any general comments about the file
-     * 
      */
     @Import(name="comment", required=true)
       private final String comment;
@@ -42,7 +39,6 @@ public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * This field provides a place for the SPDX file creator to record file contributors
-     * 
      */
     @Import(name="contributors", required=true)
       private final List<String> contributors;
@@ -53,7 +49,6 @@ public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Identify the copyright holder of the file, as well as any dates present
-     * 
      */
     @Import(name="copyright", required=true)
       private final String copyright;
@@ -64,7 +59,6 @@ public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * This field contains the license information actually found in the file, if any
-     * 
      */
     @Import(name="filesLicenseInfo", required=true)
       private final List<String> filesLicenseInfo;
@@ -75,7 +69,6 @@ public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * This field contains the license the SPDX file creator has concluded as governing the file or alternative values if the governing license cannot be determined
-     * 
      */
     @Import(name="licenseConcluded", required=true)
       private final LicenseResponse licenseConcluded;
@@ -86,7 +79,6 @@ public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * This field provides a place for the SPDX file creator to record license notices or other such related notices found in the file
-     * 
      */
     @Import(name="notice", required=true)
       private final String notice;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ManagedPrometheusConfigResponse {
     /**
      * Enable Managed Collection.
-     * 
      */
     private final Boolean enabled;
 
@@ -22,7 +21,6 @@ public final class ManagedPrometheusConfigResponse {
 
     /**
      * Enable Managed Collection.
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Kubernetes workloads configuration for GKE cluster associated with the Cloud Composer environment. Supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
- * 
  */
 public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. Resources used by Airflow schedulers.
-     * 
      */
     @Import(name="scheduler")
       private final @Nullable Output<SchedulerResourceArgs> scheduler;
@@ -33,7 +31,6 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. Resources used by Airflow web server.
-     * 
      */
     @Import(name="webServer")
       private final @Nullable Output<WebServerResourceArgs> webServer;
@@ -44,7 +41,6 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. Resources used by Airflow workers.
-     * 
      */
     @Import(name="worker")
       private final @Nullable Output<WorkerResourceArgs> worker;

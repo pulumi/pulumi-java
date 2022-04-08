@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * One dimension of the matrix of different runs of a step.
- * 
  */
 public final class MatrixDimensionDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 

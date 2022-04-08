@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The VPC Peering configuration is used to create VPC peering between Datastream and the consumer's VPC.
- * 
  */
 public final class VpcPeeringConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class VpcPeeringConfigArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A free subnet for peering. (CIDR of /29) TODO(b/172995841) add validators.
-     * 
      */
     @Import(name="subnet", required=true)
       private final Output<String> subnet;
@@ -30,7 +28,6 @@ public final class VpcPeeringConfigArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * fully qualified name of the VPC Datastream will peer to.
-     * 
      */
     @Import(name="vpcName", required=true)
       private final Output<String> vpcName;

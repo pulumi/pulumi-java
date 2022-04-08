@@ -12,17 +12,14 @@ import java.util.StringJoiner;
     public enum ServingConfigSolutionTypesItem {
         /**
          * Default value.
-         * 
          */
         SolutionTypeUnspecified("SOLUTION_TYPE_UNSPECIFIED"),
         /**
          * Used for Recommendations AI.
-         * 
          */
         SolutionTypeRecommendation("SOLUTION_TYPE_RECOMMENDATION"),
         /**
          * Used for Retail Search.
-         * 
          */
         SolutionTypeSearch("SOLUTION_TYPE_SEARCH");
 

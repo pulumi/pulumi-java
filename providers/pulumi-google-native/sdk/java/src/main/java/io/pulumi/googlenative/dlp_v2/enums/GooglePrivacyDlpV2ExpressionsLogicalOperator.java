@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * The operator to apply to the result of conditions. Default and currently only supported value is `AND`.
-     * 
      */
     @EnumType
     public enum GooglePrivacyDlpV2ExpressionsLogicalOperator {
         /**
          * Unused
-         * 
          */
         LogicalOperatorUnspecified("LOGICAL_OPERATOR_UNSPECIFIED"),
         /**
          * Conditional AND
-         * 
          */
         And("AND");
 

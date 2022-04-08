@@ -19,7 +19,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User-provided description of the endpoint
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -37,7 +36,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The labels of the endpoint.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -55,7 +53,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The fully qualified URL of the network to which the IDS Endpoint is attached.
-     * 
      */
     @Import(name="network", required=true)
       private final Output<String> network;
@@ -80,7 +77,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Lowest threat severity that this endpoint will alert on.
-     * 
      */
     @Import(name="severity", required=true)
       private final Output<EndpointSeverity> severity;
@@ -91,7 +87,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether the endpoint should report traffic logs in addition to threat logs.
-     * 
      */
     @Import(name="trafficLogs")
       private final @Nullable Output<Boolean> trafficLogs;

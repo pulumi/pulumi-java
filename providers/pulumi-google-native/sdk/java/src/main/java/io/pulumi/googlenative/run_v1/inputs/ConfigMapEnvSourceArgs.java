@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Not supported by Cloud Run ConfigMapEnvSource selects a ConfigMap to populate the environment variables with. The contents of the target ConfigMap's Data field will represent the key-value pairs as environment variables.
- * 
  */
 public final class ConfigMapEnvSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ConfigMapEnvSourceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
-     * 
      */
     @Import(name="localObjectReference")
       private final @Nullable Output<LocalObjectReferenceArgs> localObjectReference;
@@ -33,7 +31,6 @@ public final class ConfigMapEnvSourceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The ConfigMap to select from.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -44,7 +41,6 @@ public final class ConfigMapEnvSourceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * (Optional) Specify whether the ConfigMap must be defined
-     * 
      */
     @Import(name="optional")
       private final @Nullable Output<Boolean> optional;

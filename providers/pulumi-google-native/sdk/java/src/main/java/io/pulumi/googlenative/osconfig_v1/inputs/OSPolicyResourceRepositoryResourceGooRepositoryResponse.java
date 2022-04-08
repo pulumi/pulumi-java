@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Represents a Goo package repository. These are added to a repo file that is managed at `C:/ProgramData/GooGet/repos/google_osconfig.repo`.
- * 
  */
 public final class OSPolicyResourceRepositoryResourceGooRepositoryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class OSPolicyResourceRepositoryResourceGooRepositoryResponse exten
 
     /**
      * The name of the repository.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class OSPolicyResourceRepositoryResourceGooRepositoryResponse exten
 
     /**
      * The url of the repository.
-     * 
      */
     @Import(name="url", required=true)
       private final String url;

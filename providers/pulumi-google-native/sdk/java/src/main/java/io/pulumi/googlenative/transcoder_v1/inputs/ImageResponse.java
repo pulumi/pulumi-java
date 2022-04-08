@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Overlaid jpeg image.
- * 
  */
 public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Target image opacity. Valid values are from `1.0` (solid, default) to `0.0` (transparent), exclusive. Set this to a value greater than `0.0`.
-     * 
      */
     @Import(name="alpha", required=true)
       private final Double alpha;
@@ -31,7 +29,6 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Normalized image resolution, based on output video resolution. Valid values: `0.0`–`1.0`. To respect the original image aspect ratio, set either `x` or `y` to `0.0`. To use the original image resolution, set both `x` and `y` to `0.0`.
-     * 
      */
     @Import(name="resolution", required=true)
       private final NormalizedCoordinateResponse resolution;
@@ -42,7 +39,6 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * URI of the JPEG image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`. JPEG is the only supported image type.
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;

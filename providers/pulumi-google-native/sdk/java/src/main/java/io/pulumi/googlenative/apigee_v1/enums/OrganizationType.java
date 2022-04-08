@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * Not used by Apigee.
-     * 
      */
     @EnumType
     public enum OrganizationType {
         /**
          * Subscription type not specified.
-         * 
          */
         TypeUnspecified("TYPE_UNSPECIFIED"),
         /**
          * Subscription to Apigee is free, limited, and used for evaluation purposes only.
-         * 
          */
         TypeTrial("TYPE_TRIAL"),
         /**
          * Full subscription to Apigee has been purchased. See [Apigee pricing](https://cloud.google.com/apigee/pricing/).
-         * 
          */
         TypePaid("TYPE_PAID"),
         /**
          * For internal users only.
-         * 
          */
         TypeInternal("TYPE_INTERNAL");
 

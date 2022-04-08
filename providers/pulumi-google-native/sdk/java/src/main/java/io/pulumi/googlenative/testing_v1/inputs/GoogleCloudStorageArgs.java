@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A storage location within Google cloud storage (GCS).
- * 
  */
 public final class GoogleCloudStorageArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudStorageArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The path to a directory in GCS that will eventually contain the results for this test. The requesting user must have write access on the bucket in the supplied path.
-     * 
      */
     @Import(name="gcsPath", required=true)
       private final Output<String> gcsPath;

@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Optional. The search algorithm specified for the hyperparameter tuning job. Uses the default AI Platform hyperparameter tuning algorithm if unspecified.
-     * 
      */
     @EnumType
     public enum GoogleCloudMlV1__HyperparameterSpecAlgorithm {
         /**
          * The default algorithm used by the hyperparameter tuning service. This is a Bayesian optimization algorithm.
-         * 
          */
         AlgorithmUnspecified("ALGORITHM_UNSPECIFIED"),
         /**
          * Simple grid search within the feasible space. To use grid search, all parameters must be `INTEGER`, `CATEGORICAL`, or `DISCRETE`.
-         * 
          */
         GridSearch("GRID_SEARCH"),
         /**
          * Simple random search within the feasible space.
-         * 
          */
         RandomSearch("RANDOM_SEARCH");
 

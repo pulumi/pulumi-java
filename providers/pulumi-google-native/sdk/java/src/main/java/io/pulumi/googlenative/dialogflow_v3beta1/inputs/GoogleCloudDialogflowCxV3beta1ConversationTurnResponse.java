@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * One interaction between a human and virtual agent. The human provides some input and the virtual agent provides a response.
- * 
  */
 public final class GoogleCloudDialogflowCxV3beta1ConversationTurnResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnResponse extend
 
     /**
      * The user input.
-     * 
      */
     @Import(name="userInput", required=true)
       private final GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse userInput;
@@ -30,7 +28,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnResponse extend
 
     /**
      * The virtual agent output.
-     * 
      */
     @Import(name="virtualAgentOutput", required=true)
       private final GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse virtualAgentOutput;

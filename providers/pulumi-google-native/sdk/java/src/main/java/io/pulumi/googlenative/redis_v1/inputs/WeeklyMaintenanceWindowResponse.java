@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Time window in which disruptive maintenance updates occur. Non-disruptive updates can occur inside or outside this window.
- * 
  */
 public final class WeeklyMaintenanceWindowResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class WeeklyMaintenanceWindowResponse extends io.pulumi.resources.I
 
     /**
      * The day of week that maintenance updates occur.
-     * 
      */
     @Import(name="day", required=true)
       private final String day;
@@ -30,7 +28,6 @@ public final class WeeklyMaintenanceWindowResponse extends io.pulumi.resources.I
 
     /**
      * Duration of the maintenance window. The current window is fixed at 1 hour.
-     * 
      */
     @Import(name="duration", required=true)
       private final String duration;
@@ -41,7 +38,6 @@ public final class WeeklyMaintenanceWindowResponse extends io.pulumi.resources.I
 
     /**
      * Start time of the window in UTC time.
-     * 
      */
     @Import(name="startTime", required=true)
       private final TimeOfDayResponse startTime;

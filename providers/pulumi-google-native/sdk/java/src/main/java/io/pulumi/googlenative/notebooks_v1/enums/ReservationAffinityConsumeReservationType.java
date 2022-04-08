@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * Optional. Type of reservation to consume
-     * 
      */
     @EnumType
     public enum ReservationAffinityConsumeReservationType {
         /**
          * Default type.
-         * 
          */
         TypeUnspecified("TYPE_UNSPECIFIED"),
         /**
          * Do not consume from any allocated capacity.
-         * 
          */
         NoReservation("NO_RESERVATION"),
         /**
          * Consume any reservation available.
-         * 
          */
         AnyReservation("ANY_RESERVATION"),
         /**
          * Must consume from a specific reservation. Must specify key value fields for specifying the reservations.
-         * 
          */
         SpecificReservation("SPECIFIC_RESERVATION");
 

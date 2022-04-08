@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Represents a weekly schedule.
- * 
  */
 public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Day of the week.
-     * 
      */
     @Import(name="dayOfWeek", required=true)
       private final Output<WeeklyScheduleDayOfWeek> dayOfWeek;

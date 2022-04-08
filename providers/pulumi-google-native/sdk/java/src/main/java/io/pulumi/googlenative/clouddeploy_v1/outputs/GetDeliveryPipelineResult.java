@@ -14,52 +14,42 @@ import java.util.Objects;
 public final class GetDeliveryPipelineResult {
     /**
      * User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
-     * 
      */
     private final Map<String,String> annotations;
     /**
      * Information around the state of the Delivery Pipeline.
-     * 
      */
     private final PipelineConditionResponse condition;
     /**
      * Time at which the pipeline was created.
-     * 
      */
     private final String createTime;
     /**
      * Description of the `DeliveryPipeline`. Max length is 255 characters.
-     * 
      */
     private final String description;
     /**
      * This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
-     * 
      */
     private final String etag;
     /**
      * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
-     * 
      */
     private final Map<String,String> labels;
     /**
      * Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/ locations/{location}/deliveryPipelines/a-z{0,62}.
-     * 
      */
     private final String name;
     /**
      * SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
-     * 
      */
     private final SerialPipelineResponse serialPipeline;
     /**
      * Unique identifier of the `DeliveryPipeline`.
-     * 
      */
     private final String uid;
     /**
      * Most recent time at which the pipeline was updated.
-     * 
      */
     private final String updateTime;
 
@@ -89,70 +79,60 @@ public final class GetDeliveryPipelineResult {
 
     /**
      * User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
-     * 
     */
     public Map<String,String> getAnnotations() {
         return this.annotations;
     }
     /**
      * Information around the state of the Delivery Pipeline.
-     * 
     */
     public PipelineConditionResponse getCondition() {
         return this.condition;
     }
     /**
      * Time at which the pipeline was created.
-     * 
     */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Description of the `DeliveryPipeline`. Max length is 255 characters.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
-     * 
     */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/ locations/{location}/deliveryPipelines/a-z{0,62}.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
-     * 
     */
     public SerialPipelineResponse getSerialPipeline() {
         return this.serialPipeline;
     }
     /**
      * Unique identifier of the `DeliveryPipeline`.
-     * 
     */
     public String getUid() {
         return this.uid;
     }
     /**
      * Most recent time at which the pipeline was updated.
-     * 
     */
     public String getUpdateTime() {
         return this.updateTime;

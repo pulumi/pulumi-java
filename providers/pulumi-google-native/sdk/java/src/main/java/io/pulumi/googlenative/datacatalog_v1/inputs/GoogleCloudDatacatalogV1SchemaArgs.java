@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a schema, for example, a BigQuery, GoogleSQL, or Avro schema.
- * 
  */
 public final class GoogleCloudDatacatalogV1SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDatacatalogV1SchemaArgs extends io.pulumi.resource
 
     /**
      * The unified GoogleSQL-like schema of columns. The overall maximum number of columns and nested columns is 10,000. The maximum nested depth is 15 levels.
-     * 
      */
     @Import(name="columns")
       private final @Nullable Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> columns;

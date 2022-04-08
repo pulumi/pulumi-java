@@ -18,7 +18,6 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Display name.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -29,7 +28,6 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Labels.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -68,7 +66,6 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * VPC Peering Config.
-     * 
      */
     @Import(name="vpcPeeringConfig")
       private final @Nullable Output<VpcPeeringConfigArgs> vpcPeeringConfig;

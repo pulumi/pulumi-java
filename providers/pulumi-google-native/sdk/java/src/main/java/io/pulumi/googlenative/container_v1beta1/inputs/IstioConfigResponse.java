@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Configuration options for Istio addon.
- * 
  */
 public final class IstioConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class IstioConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The specified Istio auth mode, either none, or mutual TLS.
-     * 
      */
     @Import(name="auth", required=true)
       private final String auth;
@@ -30,7 +28,6 @@ public final class IstioConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether Istio is enabled for this cluster.
-     * 
      */
     @Import(name="disabled", required=true)
       private final Boolean disabled;

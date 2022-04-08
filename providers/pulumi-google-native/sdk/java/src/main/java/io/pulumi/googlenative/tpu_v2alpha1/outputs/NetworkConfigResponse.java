@@ -12,22 +12,18 @@ import java.util.Objects;
 public final class NetworkConfigResponse {
     /**
      * Allows the TPU node to send and receive packets with non-matching destination or source IPs. This is required if you plan to use the TPU workers to forward routes.
-     * 
      */
     private final Boolean canIpForward;
     /**
      * Indicates that external IP addresses would be associated with the TPU workers. If set to false, the specified subnetwork or network should have Private Google Access enabled.
-     * 
      */
     private final Boolean enableExternalIps;
     /**
      * The name of the network for the TPU node. It must be a preexisting Google Compute Engine network. If none is provided, "default" will be used.
-     * 
      */
     private final String network;
     /**
      * The name of the subnetwork for the TPU node. It must be a preexisting Google Compute Engine subnetwork. If none is provided, "default" will be used.
-     * 
      */
     private final String subnetwork;
 
@@ -45,28 +41,24 @@ public final class NetworkConfigResponse {
 
     /**
      * Allows the TPU node to send and receive packets with non-matching destination or source IPs. This is required if you plan to use the TPU workers to forward routes.
-     * 
     */
     public Boolean getCanIpForward() {
         return this.canIpForward;
     }
     /**
      * Indicates that external IP addresses would be associated with the TPU workers. If set to false, the specified subnetwork or network should have Private Google Access enabled.
-     * 
     */
     public Boolean getEnableExternalIps() {
         return this.enableExternalIps;
     }
     /**
      * The name of the network for the TPU node. It must be a preexisting Google Compute Engine network. If none is provided, "default" will be used.
-     * 
     */
     public String getNetwork() {
         return this.network;
     }
     /**
      * The name of the subnetwork for the TPU node. It must be a preexisting Google Compute Engine subnetwork. If none is provided, "default" will be used.
-     * 
     */
     public String getSubnetwork() {
         return this.subnetwork;

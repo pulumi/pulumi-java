@@ -19,7 +19,6 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The config settings for accessing runtime.
-     * 
      */
     @Import(name="accessConfig")
       private final @Nullable Output<RuntimeAccessConfigArgs> accessConfig;
@@ -51,7 +50,6 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The config settings for software inside the runtime.
-     * 
      */
     @Import(name="softwareConfig")
       private final @Nullable Output<RuntimeSoftwareConfigArgs> softwareConfig;
@@ -62,7 +60,6 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Use a Compute Engine VM image to start the managed notebook instance.
-     * 
      */
     @Import(name="virtualMachine")
       private final @Nullable Output<VirtualMachineArgs> virtualMachine;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * MySQL database profile.
- * 
  */
 public final class MysqlProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class MysqlProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Hostname for the MySQL connection.
-     * 
      */
     @Import(name="hostname", required=true)
       private final String hostname;
@@ -31,7 +29,6 @@ public final class MysqlProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Input only. Password for the MySQL connection.
-     * 
      */
     @Import(name="password", required=true)
       private final String password;
@@ -42,7 +39,6 @@ public final class MysqlProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Port for the MySQL connection, default value is 3306.
-     * 
      */
     @Import(name="port", required=true)
       private final Integer port;
@@ -53,7 +49,6 @@ public final class MysqlProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * SSL configuration for the MySQL connection.
-     * 
      */
     @Import(name="sslConfig", required=true)
       private final MysqlSslConfigResponse sslConfig;
@@ -64,7 +59,6 @@ public final class MysqlProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Username for the MySQL connection.
-     * 
      */
     @Import(name="username", required=true)
       private final String username;

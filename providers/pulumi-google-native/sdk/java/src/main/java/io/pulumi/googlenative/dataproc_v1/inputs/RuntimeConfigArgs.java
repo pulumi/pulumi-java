@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Runtime configuration for a workload.
- * 
  */
 public final class RuntimeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class RuntimeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Optional custom container image for the job runtime environment. If not specified, a default container image will be used.
-     * 
      */
     @Import(name="containerImage")
       private final @Nullable Output<String> containerImage;
@@ -32,7 +30,6 @@ public final class RuntimeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. A mapping of property names to values, which are used to configure workload execution.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -43,7 +40,6 @@ public final class RuntimeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Version of the batch runtime.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

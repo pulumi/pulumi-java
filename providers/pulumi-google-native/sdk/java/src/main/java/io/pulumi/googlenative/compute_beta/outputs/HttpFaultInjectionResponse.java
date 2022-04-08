@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class HttpFaultInjectionResponse {
     /**
      * The specification for how client requests are aborted as part of fault injection.
-     * 
      */
     private final HttpFaultAbortResponse abort;
     /**
      * The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
-     * 
      */
     private final HttpFaultDelayResponse delay;
 
@@ -31,14 +29,12 @@ public final class HttpFaultInjectionResponse {
 
     /**
      * The specification for how client requests are aborted as part of fault injection.
-     * 
     */
     public HttpFaultAbortResponse getAbort() {
         return this.abort;
     }
     /**
      * The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
-     * 
     */
     public HttpFaultDelayResponse getDelay() {
         return this.delay;

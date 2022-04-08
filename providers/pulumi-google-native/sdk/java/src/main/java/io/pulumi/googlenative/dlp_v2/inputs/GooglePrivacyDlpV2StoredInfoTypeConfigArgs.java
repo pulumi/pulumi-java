@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for stored infoTypes. All fields and subfield are provided by the user. For more information, see https://cloud.google.com/dlp/docs/creating-custom-infotypes.
- * 
  */
 public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
 
     /**
      * Description of the StoredInfoType (max 256 characters).
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -34,7 +32,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
 
     /**
      * Store dictionary-based CustomInfoType.
-     * 
      */
     @Import(name="dictionary")
       private final @Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary;
@@ -45,7 +42,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
 
     /**
      * Display name of the StoredInfoType (max 256 characters).
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -56,7 +52,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
 
     /**
      * StoredInfoType where findings are defined by a dictionary of phrases.
-     * 
      */
     @Import(name="largeCustomDictionary")
       private final @Nullable Output<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> largeCustomDictionary;
@@ -67,7 +62,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
 
     /**
      * Store regular expression-based StoredInfoType.
-     * 
      */
     @Import(name="regex")
       private final @Nullable Output<GooglePrivacyDlpV2RegexArgs> regex;

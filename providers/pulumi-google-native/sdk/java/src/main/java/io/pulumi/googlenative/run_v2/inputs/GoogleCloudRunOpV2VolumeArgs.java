@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Volume represents a named volume in a container.
- * 
  */
 public final class GoogleCloudRunOpV2VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudRunOpV2VolumeArgs extends io.pulumi.resources.Reso
 
     /**
      * For Cloud SQL volumes, contains the specific instances that should be mounted. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run.
-     * 
      */
     @Import(name="cloudSqlInstance")
       private final @Nullable Output<GoogleCloudRunOpV2CloudSqlInstanceArgs> cloudSqlInstance;
@@ -33,7 +31,6 @@ public final class GoogleCloudRunOpV2VolumeArgs extends io.pulumi.resources.Reso
 
     /**
      * Volume's name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -44,7 +41,6 @@ public final class GoogleCloudRunOpV2VolumeArgs extends io.pulumi.resources.Reso
 
     /**
      * Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
-     * 
      */
     @Import(name="secret")
       private final @Nullable Output<GoogleCloudRunOpV2SecretVolumeSourceArgs> secret;

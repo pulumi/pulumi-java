@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * Determines if existing data in the destination dataset is overwritten, appended to, or not written if the tables contain data. If a write_disposition is specified, the `force` parameter is ignored.
-     * 
      */
     @EnumType
     public enum GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition {
         /**
          * Default behavior is the same as WRITE_EMPTY.
-         * 
          */
         WriteDispositionUnspecified("WRITE_DISPOSITION_UNSPECIFIED"),
         /**
          * Only export data if the destination tables are empty.
-         * 
          */
         WriteEmpty("WRITE_EMPTY"),
         /**
          * Erase all existing data in the tables before writing the instances.
-         * 
          */
         WriteTruncate("WRITE_TRUNCATE"),
         /**
          * Append data to the existing tables.
-         * 
          */
         WriteAppend("WRITE_APPEND");
 

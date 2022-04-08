@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Output only. A resource that represents a location with full geographic information.
- * 
  */
 public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An object representing a latitude/longitude pair.
-     * 
      */
     @Import(name="latLng", required=true)
       private final LatLngResponse latLng;
@@ -32,7 +30,6 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of a location, which corresponds to the address lines field of PostalAddress. For example, "Downtown, Atlanta, GA, USA" has a type of LocationType#NEIGHBORHOOD, and "Kansas City, KS, USA" has a type of LocationType#LOCALITY.
-     * 
      */
     @Import(name="locationType", required=true)
       private final String locationType;
@@ -43,7 +40,6 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Postal address of the location that includes human readable information, such as postal delivery and payments addresses. Given a postal address, a postal service can deliver items to a premises, P.O. Box, or other delivery location.
-     * 
      */
     @Import(name="postalAddress", required=true)
       private final PostalAddressResponse postalAddress;
@@ -54,7 +50,6 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Radius in miles of the job location. This value is derived from the location bounding box in which a circle with the specified radius centered from LatLng covers the area associated with the job location. For example, currently, "Mountain View, CA, USA" has a radius of 6.17 miles.
-     * 
      */
     @Import(name="radiusInMiles", required=true)
       private final Double radiusInMiles;

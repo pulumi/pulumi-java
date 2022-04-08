@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Secrets and secret environment variables.
- * 
  */
 public final class SecretsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SecretsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Secrets encrypted with KMS key and the associated secret environment variable.
-     * 
      */
     @Import(name="inline")
       private final @Nullable Output<List<InlineSecretArgs>> inline;
@@ -33,7 +31,6 @@ public final class SecretsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Secrets in Secret Manager and associated secret environment variable.
-     * 
      */
     @Import(name="secretManager")
       private final @Nullable Output<List<SecretManagerSecretArgs>> secretManager;

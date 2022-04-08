@@ -12,22 +12,18 @@ import java.util.Objects;
 public final class ContactResponse {
     /**
      * Email address of the contact.
-     * 
      */
     private final String email;
     /**
      * Fax number of the contact in international format. For example, `"+1-800-555-0123"`.
-     * 
      */
     private final String faxNumber;
     /**
      * Phone number of the contact in international format. For example, `"+1-800-555-0123"`.
-     * 
      */
     private final String phoneNumber;
     /**
      * Postal address of the contact.
-     * 
      */
     private final PostalAddressResponse postalAddress;
 
@@ -45,28 +41,24 @@ public final class ContactResponse {
 
     /**
      * Email address of the contact.
-     * 
     */
     public String getEmail() {
         return this.email;
     }
     /**
      * Fax number of the contact in international format. For example, `"+1-800-555-0123"`.
-     * 
     */
     public String getFaxNumber() {
         return this.faxNumber;
     }
     /**
      * Phone number of the contact in international format. For example, `"+1-800-555-0123"`.
-     * 
     */
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
     /**
      * Postal address of the contact.
-     * 
     */
     public PostalAddressResponse getPostalAddress() {
         return this.postalAddress;

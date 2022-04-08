@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class GetIdentityAwareProxyClientResult {
     /**
      * Human-friendly name given to the OAuth client.
-     * 
      */
     private final String displayName;
     /**
      * Unique identifier of the OAuth client.
-     * 
      */
     private final String name;
     /**
      * Client secret of the OAuth client.
-     * 
      */
     private final String secret;
 
@@ -37,21 +34,18 @@ public final class GetIdentityAwareProxyClientResult {
 
     /**
      * Human-friendly name given to the OAuth client.
-     * 
     */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Unique identifier of the OAuth client.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Client secret of the OAuth client.
-     * 
     */
     public String getSecret() {
         return this.secret;

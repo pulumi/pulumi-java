@@ -22,272 +22,233 @@ import javax.annotation.Nullable;
 /**
  * Creates a node.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:tpu/v2alpha1:Node")
 public class Node extends io.pulumi.resources.CustomResource {
     /**
      * The type of hardware accelerators associated with this node.
-     * 
      */
     @Export(name="acceleratorType", type=String.class, parameters={})
     private Output<String> acceleratorType;
 
     /**
      * @return The type of hardware accelerators associated with this node.
-     * 
      */
     public Output<String> getAcceleratorType() {
         return this.acceleratorType;
     }
     /**
      * The API version that created this Node.
-     * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
     private Output<String> apiVersion;
 
     /**
      * @return The API version that created this Node.
-     * 
      */
     public Output<String> getApiVersion() {
         return this.apiVersion;
     }
     /**
      * The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network that is using that CIDR block.
-     * 
      */
     @Export(name="cidrBlock", type=String.class, parameters={})
     private Output<String> cidrBlock;
 
     /**
      * @return The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network that is using that CIDR block.
-     * 
      */
     public Output<String> getCidrBlock() {
         return this.cidrBlock;
     }
     /**
      * The time when the node was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time when the node was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The additional data disks for the Node.
-     * 
      */
     @Export(name="dataDisks", type=List.class, parameters={AttachedDiskResponse.class})
     private Output<List<AttachedDiskResponse>> dataDisks;
 
     /**
      * @return The additional data disks for the Node.
-     * 
      */
     public Output<List<AttachedDiskResponse>> getDataDisks() {
         return this.dataDisks;
     }
     /**
      * The user-supplied description of the TPU. Maximum of 512 characters.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return The user-supplied description of the TPU. Maximum of 512 characters.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The health status of the TPU node.
-     * 
      */
     @Export(name="health", type=String.class, parameters={})
     private Output<String> health;
 
     /**
      * @return The health status of the TPU node.
-     * 
      */
     public Output<String> getHealth() {
         return this.health;
     }
     /**
      * If this field is populated, it contains a description of why the TPU Node is unhealthy.
-     * 
      */
     @Export(name="healthDescription", type=String.class, parameters={})
     private Output<String> healthDescription;
 
     /**
      * @return If this field is populated, it contains a description of why the TPU Node is unhealthy.
-     * 
      */
     public Output<String> getHealthDescription() {
         return this.healthDescription;
     }
     /**
      * Resource labels to represent user-provided metadata.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Resource labels to represent user-provided metadata.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * Custom metadata to apply to the TPU Node. Can set startup-script and shutdown-script
-     * 
      */
     @Export(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> metadata;
 
     /**
      * @return Custom metadata to apply to the TPU Node. Can set startup-script and shutdown-script
-     * 
      */
     public Output<Map<String,String>> getMetadata() {
         return this.metadata;
     }
     /**
      * Immutable. The name of the TPU.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Immutable. The name of the TPU.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Network configurations for the TPU node.
-     * 
      */
     @Export(name="networkConfig", type=NetworkConfigResponse.class, parameters={})
     private Output<NetworkConfigResponse> networkConfig;
 
     /**
      * @return Network configurations for the TPU node.
-     * 
      */
     public Output<NetworkConfigResponse> getNetworkConfig() {
         return this.networkConfig;
     }
     /**
      * The network endpoints where TPU workers can be accessed and sent work. It is recommended that runtime clients of the node reach out to the 0th entry in this map first.
-     * 
      */
     @Export(name="networkEndpoints", type=List.class, parameters={NetworkEndpointResponse.class})
     private Output<List<NetworkEndpointResponse>> networkEndpoints;
 
     /**
      * @return The network endpoints where TPU workers can be accessed and sent work. It is recommended that runtime clients of the node reach out to the 0th entry in this map first.
-     * 
      */
     public Output<List<NetworkEndpointResponse>> getNetworkEndpoints() {
         return this.networkEndpoints;
     }
     /**
      * The runtime version running in the Node.
-     * 
      */
     @Export(name="runtimeVersion", type=String.class, parameters={})
     private Output<String> runtimeVersion;
 
     /**
      * @return The runtime version running in the Node.
-     * 
      */
     public Output<String> getRuntimeVersion() {
         return this.runtimeVersion;
     }
     /**
      * The scheduling options for this node.
-     * 
      */
     @Export(name="schedulingConfig", type=SchedulingConfigResponse.class, parameters={})
     private Output<SchedulingConfigResponse> schedulingConfig;
 
     /**
      * @return The scheduling options for this node.
-     * 
      */
     public Output<SchedulingConfigResponse> getSchedulingConfig() {
         return this.schedulingConfig;
     }
     /**
      * The Google Cloud Platform Service Account to be used by the TPU node VMs. If None is specified, the default compute service account will be used.
-     * 
      */
     @Export(name="serviceAccount", type=ServiceAccountResponse.class, parameters={})
     private Output<ServiceAccountResponse> serviceAccount;
 
     /**
      * @return The Google Cloud Platform Service Account to be used by the TPU node VMs. If None is specified, the default compute service account will be used.
-     * 
      */
     public Output<ServiceAccountResponse> getServiceAccount() {
         return this.serviceAccount;
     }
     /**
      * The current state for the TPU Node.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The current state for the TPU Node.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The Symptoms that have occurred to the TPU Node.
-     * 
      */
     @Export(name="symptoms", type=List.class, parameters={SymptomResponse.class})
     private Output<List<SymptomResponse>> symptoms;
 
     /**
      * @return The Symptoms that have occurred to the TPU Node.
-     * 
      */
     public Output<List<SymptomResponse>> getSymptoms() {
         return this.symptoms;
     }
     /**
      * Tags to apply to the TPU Node. Tags are used to identify valid sources or targets for network firewalls.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={String.class})
     private Output<List<String>> tags;
 
     /**
      * @return Tags to apply to the TPU Node. Tags are used to identify valid sources or targets for network firewalls.
-     * 
      */
     public Output<List<String>> getTags() {
         return this.tags;

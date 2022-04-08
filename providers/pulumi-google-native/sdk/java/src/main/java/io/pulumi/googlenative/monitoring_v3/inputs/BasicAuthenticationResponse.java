@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The authentication parameters to provide to the specified resource or URL that requires a username and password. Currently, only Basic HTTP authentication (https://tools.ietf.org/html/rfc7617) is supported in Uptime checks.
- * 
  */
 public final class BasicAuthenticationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class BasicAuthenticationResponse extends io.pulumi.resources.Invok
 
     /**
      * The password to use when authenticating with the HTTP server.
-     * 
      */
     @Import(name="password", required=true)
       private final String password;
@@ -29,7 +27,6 @@ public final class BasicAuthenticationResponse extends io.pulumi.resources.Invok
 
     /**
      * The username to use when authenticating with the HTTP server.
-     * 
      */
     @Import(name="username", required=true)
       private final String username;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * User signature.
- * 
  */
 public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. An image of the user's signature.
-     * 
      */
     @Import(name="image")
       private final @Nullable Output<ImageArgs> image;
@@ -33,7 +31,6 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Metadata associated with the user's signature. For example, the user's name or the user's title.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
@@ -44,7 +41,6 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Timestamp of the signature.
-     * 
      */
     @Import(name="signatureTime")
       private final @Nullable Output<String> signatureTime;
@@ -55,7 +51,6 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User's UUID provided by the client.
-     * 
      */
     @Import(name="userId", required=true)
       private final Output<String> userId;

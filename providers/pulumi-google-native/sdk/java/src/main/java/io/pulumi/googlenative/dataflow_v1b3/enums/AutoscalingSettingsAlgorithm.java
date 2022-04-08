@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The algorithm to use for autoscaling.
-     * 
      */
     @EnumType
     public enum AutoscalingSettingsAlgorithm {
         /**
          * The algorithm is unknown, or unspecified.
-         * 
          */
         AutoscalingAlgorithmUnknown("AUTOSCALING_ALGORITHM_UNKNOWN"),
         /**
          * Disable autoscaling.
-         * 
          */
         AutoscalingAlgorithmNone("AUTOSCALING_ALGORITHM_NONE"),
         /**
          * Increase worker count over time to reduce job execution time.
-         * 
          */
         AutoscalingAlgorithmBasic("AUTOSCALING_ALGORITHM_BASIC");
 

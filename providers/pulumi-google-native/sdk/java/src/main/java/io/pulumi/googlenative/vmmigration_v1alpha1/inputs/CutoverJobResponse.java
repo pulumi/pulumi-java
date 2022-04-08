@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * CutoverJob message describes a cutover of a migrating VM. The CutoverJob is the operation of shutting down the VM, creating a snapshot and clonning the VM using the replicated snapshot.
- * 
  */
 public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Details of the target VM in Compute Engine.
-     * 
      */
     @Import(name="computeEngineTargetDetails", required=true)
       private final ComputeEngineTargetDetailsResponse computeEngineTargetDetails;
@@ -32,7 +30,6 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The time the cutover job was created (as an API call, not when it was actually created in the target).
-     * 
      */
     @Import(name="createTime", required=true)
       private final String createTime;
@@ -43,7 +40,6 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Provides details for the errors that led to the Cutover Job's state.
-     * 
      */
     @Import(name="error", required=true)
       private final StatusResponse error;
@@ -54,7 +50,6 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the cutover job.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -65,7 +60,6 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The current progress in percentage of the cutover job.
-     * 
      */
     @Import(name="progress", required=true)
       private final Integer progress;
@@ -76,7 +70,6 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The current progress in percentage of the cutover job.
-     * 
      */
     @Import(name="progressPercent", required=true)
       private final Integer progressPercent;
@@ -87,7 +80,6 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * State of the cutover job.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -98,7 +90,6 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A message providing possible extra details about the current state.
-     * 
      */
     @Import(name="stateMessage", required=true)
       private final String stateMessage;
@@ -109,7 +100,6 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The time the state was last updated.
-     * 
      */
     @Import(name="stateTime", required=true)
       private final String stateTime;

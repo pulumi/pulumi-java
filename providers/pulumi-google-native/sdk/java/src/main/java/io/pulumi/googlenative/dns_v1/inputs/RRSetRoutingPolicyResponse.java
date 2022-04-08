@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A RRSetRoutingPolicy represents ResourceRecordSet data that is returned dynamically with the response varying based on configured properties such as geolocation or by weighted random selection.
- * 
  */
 public final class RRSetRoutingPolicyResponse extends io.pulumi.resources.InvokeArgs {
 

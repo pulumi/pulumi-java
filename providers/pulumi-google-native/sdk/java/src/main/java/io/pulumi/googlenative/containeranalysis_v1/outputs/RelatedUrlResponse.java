@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class RelatedUrlResponse {
     /**
      * Label to describe usage of the URL.
-     * 
      */
     private final String label;
     /**
      * Specific URL associated with the resource.
-     * 
      */
     private final String url;
 
@@ -30,14 +28,12 @@ public final class RelatedUrlResponse {
 
     /**
      * Label to describe usage of the URL.
-     * 
     */
     public String getLabel() {
         return this.label;
     }
     /**
      * Specific URL associated with the resource.
-     * 
     */
     public String getUrl() {
         return this.url;

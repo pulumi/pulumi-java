@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A rollout policy configuration.
- * 
  */
 public final class RolloutPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class RolloutPolicyResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.
-     * 
      */
     @Import(name="defaultRolloutTime", required=true)
       private final String defaultRolloutTime;
@@ -30,7 +28,6 @@ public final class RolloutPolicyResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Location based rollout policies to apply to the resource. Currently only zone names are supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects an RFC3339 timestamp on or after which the update is considered rolled out to the specified location.
-     * 
      */
     @Import(name="locationRolloutPolicies", required=true)
       private final Map<String,String> locationRolloutPolicies;

@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Version variant and associated metrics.
- * 
  */
 public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsRespon
 
     /**
      * The metrics and corresponding confidence intervals in the inference result.
-     * 
      */
     @Import(name="metrics", required=true)
       private final List<GoogleCloudDialogflowCxV3ExperimentResultMetricResponse> metrics;
@@ -32,7 +30,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsRespon
 
     /**
      * Number of sessions that were allocated to this version.
-     * 
      */
     @Import(name="sessionCount", required=true)
       private final Integer sessionCount;
@@ -43,7 +40,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsRespon
 
     /**
      * The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.
-     * 
      */
     @Import(name="version", required=true)
       private final String version;

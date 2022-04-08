@@ -15,37 +15,30 @@ import java.util.Objects;
 public final class ExecutionStageSummaryResponse {
     /**
      * Collections produced and consumed by component transforms of this stage.
-     * 
      */
     private final List<ComponentSourceResponse> componentSource;
     /**
      * Transforms that comprise this execution stage.
-     * 
      */
     private final List<ComponentTransformResponse> componentTransform;
     /**
      * Input sources for this stage.
-     * 
      */
     private final List<StageSourceResponse> inputSource;
     /**
      * Type of transform this stage is executing.
-     * 
      */
     private final String kind;
     /**
      * Dataflow service generated name for this stage.
-     * 
      */
     private final String name;
     /**
      * Output sources for this stage.
-     * 
      */
     private final List<StageSourceResponse> outputSource;
     /**
      * Other stages that must complete before this stage can run.
-     * 
      */
     private final List<String> prerequisiteStage;
 
@@ -69,49 +62,42 @@ public final class ExecutionStageSummaryResponse {
 
     /**
      * Collections produced and consumed by component transforms of this stage.
-     * 
     */
     public List<ComponentSourceResponse> getComponentSource() {
         return this.componentSource;
     }
     /**
      * Transforms that comprise this execution stage.
-     * 
     */
     public List<ComponentTransformResponse> getComponentTransform() {
         return this.componentTransform;
     }
     /**
      * Input sources for this stage.
-     * 
     */
     public List<StageSourceResponse> getInputSource() {
         return this.inputSource;
     }
     /**
      * Type of transform this stage is executing.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Dataflow service generated name for this stage.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Output sources for this stage.
-     * 
     */
     public List<StageSourceResponse> getOutputSource() {
         return this.outputSource;
     }
     /**
      * Other stages that must complete before this stage can run.
-     * 
     */
     public List<String> getPrerequisiteStage() {
         return this.prerequisiteStage;

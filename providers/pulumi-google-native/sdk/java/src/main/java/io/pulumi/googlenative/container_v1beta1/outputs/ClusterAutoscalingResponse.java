@@ -15,27 +15,22 @@ import java.util.Objects;
 public final class ClusterAutoscalingResponse {
     /**
      * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes can be created by NAP.
-     * 
      */
     private final List<String> autoprovisioningLocations;
     /**
      * AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
-     * 
      */
     private final AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults;
     /**
      * Defines autoscaling behaviour.
-     * 
      */
     private final String autoscalingProfile;
     /**
      * Enables automatic node pool creation and deletion.
-     * 
      */
     private final Boolean enableNodeAutoprovisioning;
     /**
      * Contains global constraints regarding minimum and maximum amount of resources in the cluster.
-     * 
      */
     private final List<ResourceLimitResponse> resourceLimits;
 
@@ -55,35 +50,30 @@ public final class ClusterAutoscalingResponse {
 
     /**
      * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes can be created by NAP.
-     * 
     */
     public List<String> getAutoprovisioningLocations() {
         return this.autoprovisioningLocations;
     }
     /**
      * AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
-     * 
     */
     public AutoprovisioningNodePoolDefaultsResponse getAutoprovisioningNodePoolDefaults() {
         return this.autoprovisioningNodePoolDefaults;
     }
     /**
      * Defines autoscaling behaviour.
-     * 
     */
     public String getAutoscalingProfile() {
         return this.autoscalingProfile;
     }
     /**
      * Enables automatic node pool creation and deletion.
-     * 
     */
     public Boolean getEnableNodeAutoprovisioning() {
         return this.enableNodeAutoprovisioning;
     }
     /**
      * Contains global constraints regarding minimum and maximum amount of resources in the cluster.
-     * 
     */
     public List<ResourceLimitResponse> getResourceLimits() {
         return this.resourceLimits;

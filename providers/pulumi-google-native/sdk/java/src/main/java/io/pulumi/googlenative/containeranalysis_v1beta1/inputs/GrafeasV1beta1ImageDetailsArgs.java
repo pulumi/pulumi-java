@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Details of an image occurrence.
- * 
  */
 public final class GrafeasV1beta1ImageDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class GrafeasV1beta1ImageDetailsArgs extends io.pulumi.resources.Re
 
     /**
      * Immutable. The child image derived from the base image.
-     * 
      */
     @Import(name="derivedImage", required=true)
       private final Output<DerivedArgs> derivedImage;

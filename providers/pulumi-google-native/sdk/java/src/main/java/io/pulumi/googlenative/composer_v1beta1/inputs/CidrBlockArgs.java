@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * CidrBlock contains an optional name and one CIDR block.
- * 
  */
 public final class CidrBlockArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CidrBlockArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * cidr_block must be specified in CIDR notation.
-     * 
      */
     @Import(name="cidrBlock")
       private final @Nullable Output<String> cidrBlock;
@@ -31,7 +29,6 @@ public final class CidrBlockArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * display_name is a field for users to identify CIDR blocks.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;

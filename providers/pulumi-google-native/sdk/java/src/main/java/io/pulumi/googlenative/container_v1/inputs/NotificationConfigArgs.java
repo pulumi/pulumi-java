@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * NotificationConfig is the configuration of notifications.
- * 
  */
 public final class NotificationConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Notification config for Pub/Sub.
-     * 
      */
     @Import(name="pubsub")
       private final @Nullable Output<PubSubArgs> pubsub;

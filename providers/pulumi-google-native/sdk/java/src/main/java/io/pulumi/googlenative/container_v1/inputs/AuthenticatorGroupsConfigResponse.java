@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Configuration for returning group information from authenticators.
- * 
  */
 public final class AuthenticatorGroupsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class AuthenticatorGroupsConfigResponse extends io.pulumi.resources
 
     /**
      * Whether this cluster should return group membership lookups during authentication using a group of security groups.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;
@@ -30,7 +28,6 @@ public final class AuthenticatorGroupsConfigResponse extends io.pulumi.resources
 
     /**
      * The name of the security group-of-groups to be used. Only relevant if enabled = true.
-     * 
      */
     @Import(name="securityGroup", required=true)
       private final String securityGroup;

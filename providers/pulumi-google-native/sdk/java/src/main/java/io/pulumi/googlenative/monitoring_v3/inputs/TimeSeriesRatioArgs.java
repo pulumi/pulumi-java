@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A TimeSeriesRatio specifies two TimeSeries to use for computing the good_service / total_service ratio. The specified TimeSeries must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE. The TimeSeriesRatio must specify exactly two of good, bad, and total, and the relationship good_service + bad_service = total_service will be assumed.
- * 
  */
 public final class TimeSeriesRatioArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class TimeSeriesRatioArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying bad service, either demanded service that was not provided or demanded service that was of inadequate quality. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-     * 
      */
     @Import(name="badServiceFilter")
       private final @Nullable Output<String> badServiceFilter;
@@ -31,7 +29,6 @@ public final class TimeSeriesRatioArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying good service provided. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-     * 
      */
     @Import(name="goodServiceFilter")
       private final @Nullable Output<String> goodServiceFilter;
@@ -42,7 +39,6 @@ public final class TimeSeriesRatioArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying total demanded service. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-     * 
      */
     @Import(name="totalServiceFilter")
       private final @Nullable Output<String> totalServiceFilter;

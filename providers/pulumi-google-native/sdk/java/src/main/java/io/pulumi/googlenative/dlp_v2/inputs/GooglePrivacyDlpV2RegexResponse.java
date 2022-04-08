@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Message defining a custom regular expression.
- * 
  */
 public final class GooglePrivacyDlpV2RegexResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GooglePrivacyDlpV2RegexResponse extends io.pulumi.resources.I
 
     /**
      * The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
-     * 
      */
     @Import(name="groupIndexes", required=true)
       private final List<Integer> groupIndexes;
@@ -31,7 +29,6 @@ public final class GooglePrivacyDlpV2RegexResponse extends io.pulumi.resources.I
 
     /**
      * Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
-     * 
      */
     @Import(name="pattern", required=true)
       private final String pattern;

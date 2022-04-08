@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A message representing a measurement.
- * 
  */
 public final class GoogleCloudMlV1__MeasurementArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudMlV1__MeasurementArgs extends io.pulumi.resources.
 
     /**
      * Provides a list of metrics that act as inputs into the objective function.
-     * 
      */
     @Import(name="metrics")
       private final @Nullable Output<List<GoogleCloudMlV1_Measurement_MetricArgs>> metrics;
@@ -33,7 +31,6 @@ public final class GoogleCloudMlV1__MeasurementArgs extends io.pulumi.resources.
 
     /**
      * The number of steps a machine learning model has been trained for. Must be non-negative.
-     * 
      */
     @Import(name="stepCount")
       private final @Nullable Output<String> stepCount;

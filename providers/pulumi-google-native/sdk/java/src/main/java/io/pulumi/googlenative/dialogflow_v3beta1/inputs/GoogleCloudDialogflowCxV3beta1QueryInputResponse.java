@@ -14,8 +14,7 @@ import java.util.Objects;
 
 
 /**
- * Represents the query input. It can contain one of: 1. A conversational query in the form of text. 2. An intent query that specifies which intent to trigger. 3. Natural language speech audio to be processed. 4. An event to be triggered.
- * 
+ * Represents the query input. It can contain one of: 1. A conversational query in the form of text. 2. An intent query that specifies which intent to trigger. 3. Natural language speech audio to be processed. 4. An event to be triggered. 
  */
 public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
 
     /**
      * The natural language speech audio to be processed.
-     * 
      */
     @Import(name="audio", required=true)
       private final GoogleCloudDialogflowCxV3beta1AudioInputResponse audio;
@@ -34,7 +32,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
 
     /**
      * The DTMF event to be handled.
-     * 
      */
     @Import(name="dtmf", required=true)
       private final GoogleCloudDialogflowCxV3beta1DtmfInputResponse dtmf;
@@ -45,7 +42,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
 
     /**
      * The event to be triggered.
-     * 
      */
     @Import(name="event", required=true)
       private final GoogleCloudDialogflowCxV3beta1EventInputResponse event;
@@ -56,7 +52,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
 
     /**
      * The intent to be triggered.
-     * 
      */
     @Import(name="intent", required=true)
       private final GoogleCloudDialogflowCxV3beta1IntentInputResponse intent;
@@ -67,7 +62,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
 
     /**
      * The language of the input. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. Note that queries in the same session do not necessarily need to specify the same language.
-     * 
      */
     @Import(name="languageCode", required=true)
       private final String languageCode;
@@ -78,7 +72,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
 
     /**
      * The natural language text to be processed.
-     * 
      */
     @Import(name="text", required=true)
       private final GoogleCloudDialogflowCxV3beta1TextInputResponse text;

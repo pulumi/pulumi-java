@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition for extended entitlement parameters.
- * 
  */
 public final class GoogleCloudChannelV1ParameterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudChannelV1ParameterArgs extends io.pulumi.resources
 
     /**
      * Name of the parameter.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -32,7 +30,6 @@ public final class GoogleCloudChannelV1ParameterArgs extends io.pulumi.resources
 
     /**
      * Value of the parameter.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<GoogleCloudChannelV1ValueArgs> value;

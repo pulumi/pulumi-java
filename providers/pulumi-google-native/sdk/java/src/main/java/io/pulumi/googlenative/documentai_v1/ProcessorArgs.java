@@ -16,7 +16,6 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time the processor was created.
-     * 
      */
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
@@ -27,7 +26,6 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The default processor version.
-     * 
      */
     @Import(name="defaultProcessorVersion")
       private final @Nullable Output<String> defaultProcessorVersion;
@@ -38,7 +36,6 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The display name of the processor.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -49,7 +46,6 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management.
-     * 
      */
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
@@ -74,7 +70,6 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

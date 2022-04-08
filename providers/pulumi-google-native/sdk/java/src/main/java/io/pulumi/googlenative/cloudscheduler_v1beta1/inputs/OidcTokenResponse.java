@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Contains information needed for generating an [OpenID Connect token](https://developers.google.com/identity/protocols/OpenIDConnect). This type of authorization can be used for many scenarios, including calling Cloud Run, or endpoints where you intend to validate the token yourself.
- * 
  */
 public final class OidcTokenResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class OidcTokenResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used.
-     * 
      */
     @Import(name="audience", required=true)
       private final String audience;
@@ -29,7 +27,6 @@ public final class OidcTokenResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OIDC token. The service account must be within the same project as the job. The caller must have iam.serviceAccounts.actAs permission for the service account.
-     * 
      */
     @Import(name="serviceAccountEmail", required=true)
       private final String serviceAccountEmail;

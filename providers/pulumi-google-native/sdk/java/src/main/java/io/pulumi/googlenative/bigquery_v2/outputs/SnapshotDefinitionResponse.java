@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class SnapshotDefinitionResponse {
     /**
      * [Required] Reference describing the ID of the table that was snapshot.
-     * 
      */
     private final TableReferenceResponse baseTableReference;
     /**
      * [Required] The time at which the base table was snapshot. This value is reported in the JSON response using RFC3339 format.
-     * 
      */
     private final String snapshotTime;
 
@@ -31,14 +29,12 @@ public final class SnapshotDefinitionResponse {
 
     /**
      * [Required] Reference describing the ID of the table that was snapshot.
-     * 
     */
     public TableReferenceResponse getBaseTableReference() {
         return this.baseTableReference;
     }
     /**
      * [Required] The time at which the base table was snapshot. This value is reported in the JSON response using RFC3339 format.
-     * 
     */
     public String getSnapshotTime() {
         return this.snapshotTime;

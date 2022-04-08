@@ -16,160 +16,137 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new Spoke in a given project and location.
- * 
  */
 @ResourceType(type="google-native:networkconnectivity/v1alpha1:Spoke")
 public class Spoke extends io.pulumi.resources.CustomResource {
     /**
      * The time when the Spoke was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time when the Spoke was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Short description of the spoke resource
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Short description of the spoke resource
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The resource URL of the hub resource that the spoke is attached to
-     * 
      */
     @Export(name="hub", type=String.class, parameters={})
     private Output<String> hub;
 
     /**
      * @return The resource URL of the hub resource that the spoke is attached to
-     * 
      */
     public Output<String> getHub() {
         return this.hub;
     }
     /**
      * User-defined labels.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return User-defined labels.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * The URIs of linked interconnect attachment resources
-     * 
      */
     @Export(name="linkedInterconnectAttachments", type=List.class, parameters={String.class})
     private Output<List<String>> linkedInterconnectAttachments;
 
     /**
      * @return The URIs of linked interconnect attachment resources
-     * 
      */
     public Output<List<String>> getLinkedInterconnectAttachments() {
         return this.linkedInterconnectAttachments;
     }
     /**
      * The URIs of linked Router appliance resources
-     * 
      */
     @Export(name="linkedRouterApplianceInstances", type=List.class, parameters={RouterApplianceInstanceResponse.class})
     private Output<List<RouterApplianceInstanceResponse>> linkedRouterApplianceInstances;
 
     /**
      * @return The URIs of linked Router appliance resources
-     * 
      */
     public Output<List<RouterApplianceInstanceResponse>> getLinkedRouterApplianceInstances() {
         return this.linkedRouterApplianceInstances;
     }
     /**
      * The URIs of linked VPN tunnel resources
-     * 
      */
     @Export(name="linkedVpnTunnels", type=List.class, parameters={String.class})
     private Output<List<String>> linkedVpnTunnels;
 
     /**
      * @return The URIs of linked VPN tunnel resources
-     * 
      */
     public Output<List<String>> getLinkedVpnTunnels() {
         return this.linkedVpnTunnels;
     }
     /**
      * Immutable. The name of a Spoke resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Immutable. The name of a Spoke resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The current lifecycle state of this Hub.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The current lifecycle state of this Hub.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Google-generated UUID for this resource. This is unique across all Spoke resources. If a Spoke resource is deleted and another with the same name is created, it gets a different unique_id.
-     * 
      */
     @Export(name="uniqueId", type=String.class, parameters={})
     private Output<String> uniqueId;
 
     /**
      * @return Google-generated UUID for this resource. This is unique across all Spoke resources. If a Spoke resource is deleted and another with the same name is created, it gets a different unique_id.
-     * 
      */
     public Output<String> getUniqueId() {
         return this.uniqueId;
     }
     /**
      * The time when the Spoke was updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The time when the Spoke was updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

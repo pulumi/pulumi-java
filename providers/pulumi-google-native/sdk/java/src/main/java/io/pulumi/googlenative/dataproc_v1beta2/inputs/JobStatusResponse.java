@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Dataproc job status.
- * 
  */
 public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional Job state details, such as an error description if the state is ERROR.
-     * 
      */
     @Import(name="details", required=true)
       private final String details;
@@ -29,7 +27,6 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A state message specifying the overall job state.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -40,7 +37,6 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The time when this state was entered.
-     * 
      */
     @Import(name="stateStartTime", required=true)
       private final String stateStartTime;
@@ -51,7 +47,6 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Additional state information, which includes status reported by the agent.
-     * 
      */
     @Import(name="substate", required=true)
       private final String substate;

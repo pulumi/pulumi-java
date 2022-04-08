@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The crypto key configuration. This field is used by the Customer-managed encryption keys (CMEK) feature.
- * 
  */
 public final class CryptoKeyConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CryptoKeyConfigResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the key which is used to encrypt/decrypt customer data. For key in Cloud KMS, the key should be in the format of `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
-     * 
      */
     @Import(name="keyReference", required=true)
       private final String keyReference;

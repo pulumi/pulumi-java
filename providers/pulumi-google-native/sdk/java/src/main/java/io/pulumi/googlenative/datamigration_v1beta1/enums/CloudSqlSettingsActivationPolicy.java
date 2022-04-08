@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The activation policy specifies when the instance is activated; it is applicable only when the instance state is 'RUNNABLE'. Valid values: 'ALWAYS': The instance is on, and remains so even in the absence of connection requests. `NEVER`: The instance is off; it is not activated, even if a connection request arrives.
-     * 
      */
     @EnumType
     public enum CloudSqlSettingsActivationPolicy {
         /**
          * unspecified policy.
-         * 
          */
         SqlActivationPolicyUnspecified("SQL_ACTIVATION_POLICY_UNSPECIFIED"),
         /**
          * The instance is always up and running.
-         * 
          */
         Always("ALWAYS"),
         /**
          * The instance should never spin up.
-         * 
          */
         Never("NEVER");
 

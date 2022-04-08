@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * Type of Human Agent Assistant API feature to request.
-     * 
      */
     @EnumType
     public enum GoogleCloudDialogflowV2beta1SuggestionFeatureType {
         /**
          * Unspecified feature type.
-         * 
          */
         TypeUnspecified("TYPE_UNSPECIFIED"),
         /**
          * Run article suggestion model.
-         * 
          */
         ArticleSuggestion("ARTICLE_SUGGESTION"),
         /**
          * Run FAQ model.
-         * 
          */
         Faq("FAQ"),
         /**
          * Run smart reply model.
-         * 
          */
         SmartReply("SMART_REPLY");
 

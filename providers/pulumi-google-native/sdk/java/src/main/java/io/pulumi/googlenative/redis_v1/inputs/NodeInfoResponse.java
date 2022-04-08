@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Node specific properties.
- * 
  */
 public final class NodeInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class NodeInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Location of the node.
-     * 
      */
     @Import(name="zone", required=true)
       private final String zone;

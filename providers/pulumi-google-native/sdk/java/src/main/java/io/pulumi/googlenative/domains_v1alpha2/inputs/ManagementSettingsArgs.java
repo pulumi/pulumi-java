@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines renewal, billing, and transfer settings for a `Registration`.
- * 
  */
 public final class ManagementSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ManagementSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Controls whether the domain can be transferred to another registrar.
-     * 
      */
     @Import(name="transferLockState")
       private final @Nullable Output<ManagementSettingsTransferLockState> transferLockState;

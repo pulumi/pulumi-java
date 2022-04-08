@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A floating point interval.
- * 
  */
 public final class GoogleCloudRetailV2alphaIntervalResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudRetailV2alphaIntervalResponse extends io.pulumi.re
 
     /**
      * Exclusive upper bound.
-     * 
      */
     @Import(name="exclusiveMaximum", required=true)
       private final Double exclusiveMaximum;
@@ -29,7 +27,6 @@ public final class GoogleCloudRetailV2alphaIntervalResponse extends io.pulumi.re
 
     /**
      * Exclusive lower bound.
-     * 
      */
     @Import(name="exclusiveMinimum", required=true)
       private final Double exclusiveMinimum;
@@ -40,7 +37,6 @@ public final class GoogleCloudRetailV2alphaIntervalResponse extends io.pulumi.re
 
     /**
      * Inclusive upper bound.
-     * 
      */
     @Import(name="maximum", required=true)
       private final Double maximum;
@@ -51,7 +47,6 @@ public final class GoogleCloudRetailV2alphaIntervalResponse extends io.pulumi.re
 
     /**
      * Inclusive lower bound.
-     * 
      */
     @Import(name="minimum", required=true)
       private final Double minimum;

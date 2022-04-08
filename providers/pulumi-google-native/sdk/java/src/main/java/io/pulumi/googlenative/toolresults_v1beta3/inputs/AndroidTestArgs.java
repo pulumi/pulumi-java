@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * An Android mobile test specification.
- * 
  */
 public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Information about the application under test.
-     * 
      */
     @Import(name="androidAppInfo")
       private final @Nullable Output<AndroidAppInfoArgs> androidAppInfo;
@@ -35,7 +33,6 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An Android instrumentation test.
-     * 
      */
     @Import(name="androidInstrumentationTest")
       private final @Nullable Output<AndroidInstrumentationTestArgs> androidInstrumentationTest;
@@ -46,7 +43,6 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An Android robo test.
-     * 
      */
     @Import(name="androidRoboTest")
       private final @Nullable Output<AndroidRoboTestArgs> androidRoboTest;
@@ -57,7 +53,6 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An Android test loop.
-     * 
      */
     @Import(name="androidTestLoop")
       private final @Nullable Output<AndroidTestLoopArgs> androidTestLoop;
@@ -68,7 +63,6 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Max time a test is allowed to run before it is automatically cancelled.
-     * 
      */
     @Import(name="testTimeout")
       private final @Nullable Output<DurationArgs> testTimeout;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * POSIX Group definition to represent a group in a POSIX compliant system.
- * 
  */
 public final class PosixGroupResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class PosixGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * GID of the POSIX group.
-     * 
      */
     @Import(name="gid", required=true)
       private final String gid;
@@ -29,7 +27,6 @@ public final class PosixGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the POSIX group.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -40,7 +37,6 @@ public final class PosixGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * System identifier for which group name and gid apply to. If not specified it will default to empty value.
-     * 
      */
     @Import(name="systemId", required=true)
       private final String systemId;

@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class ContextResponse {
     /**
      * A list of RPC context rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
-     * 
      */
     private final List<ContextRuleResponse> rules;
 
@@ -23,7 +22,6 @@ public final class ContextResponse {
 
     /**
      * A list of RPC context rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
-     * 
     */
     public List<ContextRuleResponse> getRules() {
         return this.rules;

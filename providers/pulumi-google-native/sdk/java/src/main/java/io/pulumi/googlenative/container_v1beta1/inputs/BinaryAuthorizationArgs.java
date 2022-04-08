@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for Binary Authorization.
- * 
  */
 public final class BinaryAuthorizationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BinaryAuthorizationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Google Binauthz.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;

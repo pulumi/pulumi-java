@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Specification that applies to a table resource. Valid only for entries with the `TABLE` type.
- * 
  */
 public final class GoogleCloudDatacatalogV1DatabaseTableSpecResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecResponse extends io.
 
     /**
      * Type of this table.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

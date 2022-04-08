@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class CloudFunctionEndpointResponse {
     /**
      * A [Cloud function](https://cloud.google.com/functions) name.
-     * 
      */
     private final String uri;
 
@@ -22,7 +21,6 @@ public final class CloudFunctionEndpointResponse {
 
     /**
      * A [Cloud function](https://cloud.google.com/functions) name.
-     * 
     */
     public String getUri() {
         return this.uri;

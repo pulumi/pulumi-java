@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2beta1IntentMessageTextResponse {
     /**
      * Optional. The collection of the agent's responses.
-     * 
      */
     private final List<String> text;
 
@@ -23,7 +22,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTextResponse {
 
     /**
      * Optional. The collection of the agent's responses.
-     * 
     */
     public List<String> getText() {
         return this.text;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A policy for scheduling replications.
- * 
  */
 public final class SchedulePolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class SchedulePolicyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The idle duration between replication stages.
-     * 
      */
     @Import(name="idleDuration", required=true)
       private final String idleDuration;
@@ -30,7 +28,6 @@ public final class SchedulePolicyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A flag to indicate whether to skip OS adaptation during the replication sync. OS adaptation is a process where the VM's operating system undergoes changes and adaptations to fully function on Compute Engine.
-     * 
      */
     @Import(name="skipOsAdaptation", required=true)
       private final Boolean skipOsAdaptation;

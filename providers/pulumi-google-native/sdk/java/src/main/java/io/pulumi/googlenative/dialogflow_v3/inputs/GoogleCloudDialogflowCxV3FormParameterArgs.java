@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a form parameter.
- * 
  */
 public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
 
     /**
      * The default value of an optional parameter. If the parameter is required, the default value will be ignored.
-     * 
      */
     @Import(name="defaultValue")
       private final @Nullable Output<Object> defaultValue;
@@ -34,7 +32,6 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
 
     /**
      * The human-readable name of the parameter, unique within the form.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -45,7 +42,6 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
 
     /**
      * The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.
-     * 
      */
     @Import(name="entityType", required=true)
       private final Output<String> entityType;
@@ -56,7 +52,6 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
 
     /**
      * Defines fill behavior for the parameter.
-     * 
      */
     @Import(name="fillBehavior", required=true)
       private final Output<GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs> fillBehavior;
@@ -67,7 +62,6 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
 
     /**
      * Indicates whether the parameter represents a list of values.
-     * 
      */
     @Import(name="isList")
       private final @Nullable Output<Boolean> isList;
@@ -78,7 +72,6 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
 
     /**
      * Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
-     * 
      */
     @Import(name="redact")
       private final @Nullable Output<Boolean> redact;
@@ -89,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
 
     /**
      * Indicates whether the parameter is required. Optional parameters will not trigger prompts; however, they are filled if the user specifies them. Required parameters must be filled before form filling concludes.
-     * 
      */
     @Import(name="required")
       private final @Nullable Output<Boolean> required;

@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Denotes the state of etcd encryption.
-     * 
      */
     @EnumType
     public enum DatabaseEncryptionState {
         /**
          * Should never be set
-         * 
          */
         Unknown("UNKNOWN"),
         /**
          * Secrets in etcd are encrypted.
-         * 
          */
         Encrypted("ENCRYPTED"),
         /**
          * Secrets in etcd are stored in plain text (at etcd level) - this is unrelated to Compute Engine level full disk encryption.
-         * 
          */
         Decrypted("DECRYPTED");
 

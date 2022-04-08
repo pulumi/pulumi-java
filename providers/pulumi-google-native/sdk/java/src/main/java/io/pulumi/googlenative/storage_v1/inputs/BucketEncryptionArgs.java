@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Encryption configuration for a bucket.
- * 
  */
 public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.
-     * 
      */
     @Import(name="defaultKmsKeyName")
       private final @Nullable Output<String> defaultKmsKeyName;

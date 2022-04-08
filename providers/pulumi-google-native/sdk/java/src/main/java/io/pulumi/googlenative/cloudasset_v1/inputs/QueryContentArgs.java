@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The query content.
- * 
  */
 public final class QueryContentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class QueryContentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy rpc or the AssetService.AnalyzeIamPolicyLongrunning rpc.
-     * 
      */
     @Import(name="iamPolicyAnalysisQuery")
       private final @Nullable Output<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery;

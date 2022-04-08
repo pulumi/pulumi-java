@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Represents configuration for a generic web service.
- * 
  */
 public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse ext
 
     /**
      * Optional. Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification. This overrides the default SSL trust store. If this is empty or unspecified, Dialogflow will use Google's default trust store to verify certificates. N.B. Make sure the HTTPS server certificates are signed with "subject alt name". For instance a certificate can be self-signed using the following command, openssl x509 -req -days 200 -in example.com.csr \ -signkey example.com.key \ -out example.com.crt \ -extfile <(printf "\nsubjectAltName='DNS:www.example.com'")
-     * 
      */
     @Import(name="allowedCaCerts", required=true)
       private final List<String> allowedCaCerts;
@@ -31,7 +29,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse ext
 
     /**
      * The password for HTTP Basic authentication.
-     * 
      */
     @Import(name="password", required=true)
       private final String password;
@@ -42,7 +39,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse ext
 
     /**
      * The HTTP request headers to send together with webhook requests.
-     * 
      */
     @Import(name="requestHeaders", required=true)
       private final Map<String,String> requestHeaders;
@@ -53,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse ext
 
     /**
      * The webhook URI for receiving POST requests. It must use https protocol.
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;
@@ -64,7 +59,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse ext
 
     /**
      * The user name for HTTP Basic authentication.
-     * 
      */
     @Import(name="username", required=true)
       private final String username;

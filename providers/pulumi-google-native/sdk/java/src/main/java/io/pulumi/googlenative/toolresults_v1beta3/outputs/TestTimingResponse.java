@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class TestTimingResponse {
     /**
      * How long it took to run the test process. - In response: present if previously set. - In create/update request: optional
-     * 
      */
     private final DurationResponse testProcessDuration;
 
@@ -22,7 +21,6 @@ public final class TestTimingResponse {
 
     /**
      * How long it took to run the test process. - In response: present if previously set. - In create/update request: optional
-     * 
     */
     public DurationResponse getTestProcessDuration() {
         return this.testProcessDuration;

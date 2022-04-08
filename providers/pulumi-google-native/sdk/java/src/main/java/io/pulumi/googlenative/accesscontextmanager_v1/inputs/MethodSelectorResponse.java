@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * An allowed method or permission of a service specified in ApiOperation.
- * 
  */
 public final class MethodSelectorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MethodSelectorResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Value for `method` should be a valid method name for the corresponding `service_name` in ApiOperation. If `*` used as value for `method`, then ALL methods and permissions are allowed.
-     * 
      */
     @Import(name="method", required=true)
       private final String method;
@@ -29,7 +27,6 @@ public final class MethodSelectorResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Value for `permission` should be a valid Cloud IAM permission for the corresponding `service_name` in ApiOperation.
-     * 
      */
     @Import(name="permission", required=true)
       private final String permission;

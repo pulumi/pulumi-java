@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class CommonFeatureSpecResponse {
     /**
      * Appdevexperience specific spec.
-     * 
      */
     private final AppDevExperienceFeatureSpecResponse appdevexperience;
     /**
      * Cloud Audit Logging-specific spec.
-     * 
      */
     private final CloudAuditLoggingFeatureSpecResponse cloudauditlogging;
     /**
      * Multicluster Ingress-specific spec.
-     * 
      */
     private final MultiClusterIngressFeatureSpecResponse multiclusteringress;
 
@@ -39,21 +36,18 @@ public final class CommonFeatureSpecResponse {
 
     /**
      * Appdevexperience specific spec.
-     * 
     */
     public AppDevExperienceFeatureSpecResponse getAppdevexperience() {
         return this.appdevexperience;
     }
     /**
      * Cloud Audit Logging-specific spec.
-     * 
     */
     public CloudAuditLoggingFeatureSpecResponse getCloudauditlogging() {
         return this.cloudauditlogging;
     }
     /**
      * Multicluster Ingress-specific spec.
-     * 
     */
     public MultiClusterIngressFeatureSpecResponse getMulticlusteringress() {
         return this.multiclusteringress;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contact information for a customer account.
- * 
  */
 public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
 
     /**
      * The customer account's contact email. Required for entitlements that create admin.google.com accounts, and serves as the customer's username for those accounts. Use this email to invite Team customers.
-     * 
      */
     @Import(name="email")
       private final @Nullable Output<String> email;
@@ -31,7 +29,6 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
 
     /**
      * The customer account contact's first name. Optional for Team customers.
-     * 
      */
     @Import(name="firstName")
       private final @Nullable Output<String> firstName;
@@ -42,7 +39,6 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
 
     /**
      * The customer account contact's last name. Optional for Team customers.
-     * 
      */
     @Import(name="lastName")
       private final @Nullable Output<String> lastName;
@@ -53,7 +49,6 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
 
     /**
      * The customer account's contact phone number.
-     * 
      */
     @Import(name="phone")
       private final @Nullable Output<String> phone;
@@ -64,7 +59,6 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
 
     /**
      * Optional. The customer account contact's job title.
-     * 
      */
     @Import(name="title")
       private final @Nullable Output<String> title;

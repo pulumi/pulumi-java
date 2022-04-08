@@ -14,17 +14,14 @@ import java.util.Objects;
 public final class StatusResponse {
     /**
      * The status code, which should be an enum value of google.rpc.Code.
-     * 
      */
     private final Integer code;
     /**
      * A list of messages that carry the error details. There is a common set of message types for APIs to use.
-     * 
      */
     private final List<Map<String,String>> details;
     /**
      * A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.
-     * 
      */
     private final String message;
 
@@ -40,21 +37,18 @@ public final class StatusResponse {
 
     /**
      * The status code, which should be an enum value of google.rpc.Code.
-     * 
     */
     public Integer getCode() {
         return this.code;
     }
     /**
      * A list of messages that carry the error details. There is a common set of message types for APIs to use.
-     * 
     */
     public List<Map<String,String>> getDetails() {
         return this.details;
     }
     /**
      * A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.
-     * 
     */
     public String getMessage() {
         return this.message;

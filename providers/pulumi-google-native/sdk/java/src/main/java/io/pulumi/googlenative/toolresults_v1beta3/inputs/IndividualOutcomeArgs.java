@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Step Id and outcome of each individual step that was run as a group with other steps with the same configuration.
- * 
  */
 public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
-     * 
      */
     @Import(name="multistepNumber")
       private final @Nullable Output<Integer> multistepNumber;
@@ -41,7 +39,6 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * How long it took for this step to run.
-     * 
      */
     @Import(name="runDuration")
       private final @Nullable Output<DurationArgs> runDuration;

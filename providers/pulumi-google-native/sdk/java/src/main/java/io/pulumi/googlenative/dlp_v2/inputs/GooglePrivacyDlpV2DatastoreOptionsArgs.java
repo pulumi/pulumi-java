@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Options defining a data set within Google Cloud Datastore.
- * 
  */
 public final class GooglePrivacyDlpV2DatastoreOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GooglePrivacyDlpV2DatastoreOptionsArgs extends io.pulumi.reso
 
     /**
      * The kind to process.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<GooglePrivacyDlpV2KindExpressionArgs> kind;
@@ -32,7 +30,6 @@ public final class GooglePrivacyDlpV2DatastoreOptionsArgs extends io.pulumi.reso
 
     /**
      * A partition ID identifies a grouping of entities. The grouping is always by project and namespace, however the namespace ID may be empty.
-     * 
      */
     @Import(name="partitionId")
       private final @Nullable Output<GooglePrivacyDlpV2PartitionIdArgs> partitionId;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Instruction from a PDF file.
- * 
  */
 public final class GoogleCloudDatalabelingV1beta1PdfInstructionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionArgs extends io.p
 
     /**
      * PDF file for the instruction. Only gcs path is allowed.
-     * 
      */
     @Import(name="gcsFileUri")
       private final @Nullable Output<String> gcsFileUri;

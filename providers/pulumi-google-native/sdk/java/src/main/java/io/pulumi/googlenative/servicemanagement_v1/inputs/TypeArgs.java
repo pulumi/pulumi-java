@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * A protocol buffer message type.
- * 
  */
 public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of fields.
-     * 
      */
     @Import(name="fields")
       private final @Nullable Output<List<FieldArgs>> fields;
@@ -36,7 +34,6 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The fully qualified message name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -47,7 +44,6 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of types appearing in `oneof` definitions in this type.
-     * 
      */
     @Import(name="oneofs")
       private final @Nullable Output<List<String>> oneofs;
@@ -58,7 +54,6 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The protocol buffer options.
-     * 
      */
     @Import(name="options")
       private final @Nullable Output<List<OptionArgs>> options;
@@ -69,7 +64,6 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The source context.
-     * 
      */
     @Import(name="sourceContext")
       private final @Nullable Output<SourceContextArgs> sourceContext;
@@ -80,7 +74,6 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The source syntax.
-     * 
      */
     @Import(name="syntax")
       private final @Nullable Output<TypeSyntax> syntax;

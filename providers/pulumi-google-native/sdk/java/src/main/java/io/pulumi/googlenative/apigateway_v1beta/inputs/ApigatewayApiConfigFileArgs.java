@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A lightweight description of a file.
- * 
  */
 public final class ApigatewayApiConfigFileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ApigatewayApiConfigFileArgs extends io.pulumi.resources.Resou
 
     /**
      * The bytes that constitute the file.
-     * 
      */
     @Import(name="contents")
       private final @Nullable Output<String> contents;
@@ -31,7 +29,6 @@ public final class ApigatewayApiConfigFileArgs extends io.pulumi.resources.Resou
 
     /**
      * The file path (full or relative path). This is typically the path of the file when it is uploaded.
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<String> path;

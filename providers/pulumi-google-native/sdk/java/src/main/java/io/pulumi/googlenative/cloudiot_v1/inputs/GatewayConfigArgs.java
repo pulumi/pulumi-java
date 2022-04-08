@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Gateway-related configuration and state.
- * 
  */
 public final class GatewayConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GatewayConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates how to authorize and/or authenticate devices to access the gateway.
-     * 
      */
     @Import(name="gatewayAuthMethod")
       private final @Nullable Output<GatewayConfigGatewayAuthMethod> gatewayAuthMethod;
@@ -32,7 +30,6 @@ public final class GatewayConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether the device is a gateway.
-     * 
      */
     @Import(name="gatewayType")
       private final @Nullable Output<GatewayConfigGatewayType> gatewayType;

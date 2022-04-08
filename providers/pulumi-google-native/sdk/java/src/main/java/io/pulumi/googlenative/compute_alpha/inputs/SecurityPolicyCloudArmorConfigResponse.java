@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration options for Cloud Armor.
- * 
  */
 public final class SecurityPolicyCloudArmorConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SecurityPolicyCloudArmorConfigResponse extends io.pulumi.reso
 
     /**
      * If set to true, enables Cloud Armor Machine Learning.
-     * 
      */
     @Import(name="enableMl", required=true)
       private final Boolean enableMl;

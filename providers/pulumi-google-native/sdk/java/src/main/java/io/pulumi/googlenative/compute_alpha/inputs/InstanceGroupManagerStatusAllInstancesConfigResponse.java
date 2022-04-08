@@ -15,7 +15,6 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse extends 
 
     /**
      * Current instances' config revision. This value is in RFC3339 text format.
-     * 
      */
     @Import(name="currentRevision", required=true)
       private final String currentRevision;
@@ -26,7 +25,6 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse extends 
 
     /**
      * A bit indicating whether instances' config has been applied to all managed instances in managed instance group.
-     * 
      */
     @Import(name="effective", required=true)
       private final Boolean effective;

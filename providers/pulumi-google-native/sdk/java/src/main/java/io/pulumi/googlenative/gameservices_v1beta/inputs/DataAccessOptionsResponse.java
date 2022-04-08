@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Write a Data Access (Gin) log
- * 
  */
 public final class DataAccessOptionsResponse extends io.pulumi.resources.InvokeArgs {
 

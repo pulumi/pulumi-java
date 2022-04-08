@@ -17,7 +17,6 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The configuration for this template.
-     * 
      */
     @Import(name="config")
       private final @Nullable Output<JobConfigArgs> config;
@@ -42,7 +41,6 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the job template. Format: `projects/{project_number}/locations/{location}/jobTemplates/{job_template}`
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

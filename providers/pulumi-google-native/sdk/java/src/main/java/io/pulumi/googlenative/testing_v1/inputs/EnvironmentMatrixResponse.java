@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The matrix of environments in which the test is to be executed.
- * 
  */
 public final class EnvironmentMatrixResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EnvironmentMatrixResponse extends io.pulumi.resources.InvokeA
 
     /**
      * A list of Android devices; the test will be run only on the specified devices.
-     * 
      */
     @Import(name="androidDeviceList", required=true)
       private final AndroidDeviceListResponse androidDeviceList;
@@ -31,7 +29,6 @@ public final class EnvironmentMatrixResponse extends io.pulumi.resources.InvokeA
 
     /**
      * A matrix of Android devices.
-     * 
      */
     @Import(name="androidMatrix", required=true)
       private final AndroidMatrixResponse androidMatrix;
@@ -42,7 +39,6 @@ public final class EnvironmentMatrixResponse extends io.pulumi.resources.InvokeA
 
     /**
      * A list of iOS devices.
-     * 
      */
     @Import(name="iosDeviceList", required=true)
       private final IosDeviceListResponse iosDeviceList;

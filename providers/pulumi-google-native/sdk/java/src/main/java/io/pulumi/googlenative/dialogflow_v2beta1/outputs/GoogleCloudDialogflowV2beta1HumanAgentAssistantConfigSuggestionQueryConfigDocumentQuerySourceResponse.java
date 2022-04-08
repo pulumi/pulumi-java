@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse {
     /**
      * Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, only one document is supported.
-     * 
      */
     private final List<String> documents;
 
@@ -23,7 +22,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
 
     /**
      * Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, only one document is supported.
-     * 
     */
     public List<String> getDocuments() {
         return this.documents;

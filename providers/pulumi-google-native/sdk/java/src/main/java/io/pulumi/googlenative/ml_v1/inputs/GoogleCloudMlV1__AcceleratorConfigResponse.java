@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Represents a hardware accelerator request config. Note that the AcceleratorConfig can be used in both Jobs and Versions. Learn more about [accelerators for training](/ml-engine/docs/using-gpus) and [accelerators for online prediction](/ml-engine/docs/machine-types-online-prediction#gpus).
- * 
  */
 public final class GoogleCloudMlV1__AcceleratorConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse extends io.pulumi.
 
     /**
      * The number of accelerators to attach to each machine running the job.
-     * 
      */
     @Import(name="count", required=true)
       private final String count;
@@ -29,7 +27,6 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse extends io.pulumi.
 
     /**
      * The type of accelerator to use.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

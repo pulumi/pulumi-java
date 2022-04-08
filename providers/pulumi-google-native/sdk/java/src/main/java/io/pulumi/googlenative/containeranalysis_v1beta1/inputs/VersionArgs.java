@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Version contains structured information about the version of a package.
- * 
  */
 public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Used to correct mistakes in the version numbering scheme.
-     * 
      */
     @Import(name="epoch")
       private final @Nullable Output<Integer> epoch;
@@ -34,7 +32,6 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether this version is specifying part of an inclusive range. Grafeas does not have the capability to specify version ranges; instead we have fields that specify start version and end versions. At times this is insufficient - we also need to specify whether the version is included in the range or is excluded from the range. This boolean is expected to be set to true when the version is included in a range.
-     * 
      */
     @Import(name="inclusive")
       private final @Nullable Output<Boolean> inclusive;
@@ -45,7 +42,6 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Distinguishes between sentinel MIN/MAX versions and normal versions.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<VersionKind> kind;
@@ -56,7 +52,6 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Required only when version kind is NORMAL. The main part of the version name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -67,7 +62,6 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The iteration of the package build from the above version.
-     * 
      */
     @Import(name="revision")
       private final @Nullable Output<String> revision;

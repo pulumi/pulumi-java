@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Disk encryption status for an instance.
- * 
  */
 public final class DiskEncryptionStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DiskEncryptionStatusArgs extends io.pulumi.resources.Resource
 
     /**
      * This is always `sql#diskEncryptionStatus`.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -31,7 +29,6 @@ public final class DiskEncryptionStatusArgs extends io.pulumi.resources.Resource
 
     /**
      * KMS key version used to encrypt the Cloud SQL instance resource
-     * 
      */
     @Import(name="kmsKeyVersionName")
       private final @Nullable Output<String> kmsKeyVersionName;

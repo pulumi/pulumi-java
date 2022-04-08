@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class EndConditionResponse {
     /**
      * The cardinality of the `EndCondition`.
-     * 
      */
     private final CardinalityResponse cardinality;
 
@@ -22,7 +21,6 @@ public final class EndConditionResponse {
 
     /**
      * The cardinality of the `EndCondition`.
-     * 
     */
     public CardinalityResponse getCardinality() {
         return this.cardinality;

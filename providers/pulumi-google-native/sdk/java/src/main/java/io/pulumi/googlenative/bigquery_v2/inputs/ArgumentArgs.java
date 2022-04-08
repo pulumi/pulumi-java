@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Input/output argument of a function or a stored procedure.
- * 
  */
 public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Defaults to FIXED_TYPE.
-     * 
      */
     @Import(name="argumentKind")
       private final @Nullable Output<ArgumentArgumentKind> argumentKind;
@@ -34,7 +32,6 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Required unless argument_kind = ANY_TYPE.
-     * 
      */
     @Import(name="dataType")
       private final @Nullable Output<StandardSqlDataTypeArgs> dataType;
@@ -45,7 +42,6 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Specifies whether the argument is input or output. Can be set for procedures only.
-     * 
      */
     @Import(name="mode")
       private final @Nullable Output<ArgumentMode> mode;
@@ -56,7 +52,6 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The name of this argument. Can be absent for function return argument.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Encryption settings for the service.
- * 
  */
 public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The fully qualified customer provided Cloud KMS key name to use for customer data encryption, in the following form:projects/{project_number}/locations/{location_id}/keyRings/{key_ring_id}/cryptoKeys/{crypto_key_id}.
-     * 
      */
     @Import(name="kmsKey", required=true)
       private final String kmsKey;

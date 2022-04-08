@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * JSON file format configuration.
- * 
  */
 public final class JsonFileFormatArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class JsonFileFormatArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Compression of the loaded JSON file.
-     * 
      */
     @Import(name="compression")
       private final @Nullable Output<JsonFileFormatCompression> compression;
@@ -32,7 +30,6 @@ public final class JsonFileFormatArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The schema file format along JSON data files.
-     * 
      */
     @Import(name="schemaFileFormat")
       private final @Nullable Output<JsonFileFormatSchemaFileFormat> schemaFileFormat;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings related to speech recognition.
- * 
  */
 public final class GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs extends io.
 
     /**
      * Whether to use speech adaptation for speech recognition.
-     * 
      */
     @Import(name="enableSpeechAdaptation")
       private final @Nullable Output<Boolean> enableSpeechAdaptation;

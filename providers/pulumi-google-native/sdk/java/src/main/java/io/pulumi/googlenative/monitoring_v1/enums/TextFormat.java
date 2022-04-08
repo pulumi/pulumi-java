@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * How the text content is formatted.
-     * 
      */
     @EnumType
     public enum TextFormat {
         /**
          * Format is unspecified. Defaults to MARKDOWN.
-         * 
          */
         FormatUnspecified("FORMAT_UNSPECIFIED"),
         /**
          * The text contains Markdown formatting.
-         * 
          */
         Markdown("MARKDOWN"),
         /**
          * The text contains no special formatting.
-         * 
          */
         Raw("RAW");
 

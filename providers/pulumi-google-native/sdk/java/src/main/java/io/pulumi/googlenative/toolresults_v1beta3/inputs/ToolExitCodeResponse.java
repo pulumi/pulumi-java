@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Exit code from a tool execution.
- * 
  */
 public final class ToolExitCodeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ToolExitCodeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Tool execution exit code. A value of 0 means that the execution was successful. - In response: always set - In create/update request: always set
-     * 
      */
     @Import(name="number", required=true)
       private final Integer number;

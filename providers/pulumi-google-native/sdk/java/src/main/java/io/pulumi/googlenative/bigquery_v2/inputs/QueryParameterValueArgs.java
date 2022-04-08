@@ -18,7 +18,6 @@ public final class QueryParameterValueArgs extends io.pulumi.resources.ResourceA
 
     /**
      * [Optional] The array values, if this is an array type.
-     * 
      */
     @Import(name="arrayValues")
       private final @Nullable Output<List<QueryParameterValueArgs>> arrayValues;
@@ -29,7 +28,6 @@ public final class QueryParameterValueArgs extends io.pulumi.resources.ResourceA
 
     /**
      * [Optional] The struct field values, in order of the struct type's declaration.
-     * 
      */
     @Import(name="structValues")
       private final @Nullable Output<Map<String,String>> structValues;
@@ -40,7 +38,6 @@ public final class QueryParameterValueArgs extends io.pulumi.resources.ResourceA
 
     /**
      * [Optional] The value of this value, if a simple scalar type.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

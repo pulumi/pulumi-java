@@ -20,7 +20,6 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. This field specifies the URL of AuthorizationPolicy resource that applies authorization policies to the inbound traffic at the matched endpoints. Refer to Authorization. If this field is not specified, authorization is disabled(no authz checks) for this endpoint.
-     * 
      */
     @Import(name="authorizationPolicy")
       private final @Nullable Output<String> authorizationPolicy;
@@ -31,7 +30,6 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. A URL referring to a ClientTlsPolicy resource. ClientTlsPolicy can be set to specify the authentication for traffic from the proxy to the actual endpoints. More specifically, it is applied to the outgoing traffic from the proxy to the endpoint. This is typically used for sidecar model where the proxy identifies itself as endpoint to the control plane, with the connection between sidecar and endpoint requiring authentication. If this field is not set, authentication is disabled(open). Applicable only when EndpointPolicyType is SIDECAR_PROXY.
-     * 
      */
     @Import(name="clientTlsPolicy")
       private final @Nullable Output<String> clientTlsPolicy;
@@ -42,7 +40,6 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. A free-text description of the resource. Max length 1024 characters.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -53,7 +50,6 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A matcher that selects endpoints to which the policies should be applied.
-     * 
      */
     @Import(name="endpointMatcher", required=true)
       private final Output<EndpointMatcherArgs> endpointMatcher;
@@ -71,7 +67,6 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Set of label tags associated with the EndpointPolicy resource.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -89,7 +84,6 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the EndpointPolicy resource. It matches pattern `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -107,7 +101,6 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. A URL referring to ServerTlsPolicy resource. ServerTlsPolicy is used to determine the authentication policy to be applied to terminate the inbound traffic at the identified backends. If this field is not set, authentication is disabled(open) for this endpoint.
-     * 
      */
     @Import(name="serverTlsPolicy")
       private final @Nullable Output<String> serverTlsPolicy;
@@ -118,7 +111,6 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Port selector for the (matched) endpoints. If no port selector is provided, the matched config is applied to all ports.
-     * 
      */
     @Import(name="trafficPortSelector")
       private final @Nullable Output<TrafficPortSelectorArgs> trafficPortSelector;
@@ -129,7 +121,6 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of endpoint policy. This is primarily used to validate the configuration.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<EndpointPolicyType> type;

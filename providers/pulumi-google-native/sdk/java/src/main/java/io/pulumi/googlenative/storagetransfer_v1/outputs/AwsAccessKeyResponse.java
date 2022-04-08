@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class AwsAccessKeyResponse {
     /**
      * AWS access key ID.
-     * 
      */
     private final String accessKeyId;
     /**
      * AWS secret access key. This field is not returned in RPC responses.
-     * 
      */
     private final String secretAccessKey;
 
@@ -30,14 +28,12 @@ public final class AwsAccessKeyResponse {
 
     /**
      * AWS access key ID.
-     * 
     */
     public String getAccessKeyId() {
         return this.accessKeyId;
     }
     /**
      * AWS secret access key. This field is not returned in RPC responses.
-     * 
     */
     public String getSecretAccessKey() {
         return this.secretAccessKey;

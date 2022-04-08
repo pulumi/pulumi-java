@@ -16,7 +16,6 @@ import java.util.Objects;
 
 /**
  * The configuration for how incoming requests to a site should be routed and processed before serving content. The URL request paths are matched against the specified URL patterns in the configuration, then Hosting applies the applicable configuration according to a specific [priority order](https://firebase.google.com/docs/hosting/full-config#hosting_priority_order).
- * 
  */
 public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * How to handle well known App Association files.
-     * 
      */
     @Import(name="appAssociation", required=true)
       private final String appAssociation;
@@ -35,7 +33,6 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Defines whether to drop the file extension from uploaded files.
-     * 
      */
     @Import(name="cleanUrls", required=true)
       private final Boolean cleanUrls;
@@ -46,7 +43,6 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * An array of objects, where each object specifies a URL pattern that, if matched to the request URL path, triggers Hosting to apply the specified custom response headers.
-     * 
      */
     @Import(name="headers", required=true)
       private final List<HeaderResponse> headers;
@@ -57,7 +53,6 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Optional. Defines i18n rewrite behavior.
-     * 
      */
     @Import(name="i18n", required=true)
       private final I18nConfigResponse i18n;
@@ -68,7 +63,6 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * An array of objects (called redirect rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond with a redirect to the specified destination path.
-     * 
      */
     @Import(name="redirects", required=true)
       private final List<RedirectResponse> redirects;
@@ -79,7 +73,6 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * An array of objects (called rewrite rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond as if the service were given the specified destination URL.
-     * 
      */
     @Import(name="rewrites", required=true)
       private final List<RewriteResponse> rewrites;
@@ -90,7 +83,6 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Defines how to handle a trailing slash in the URL path.
-     * 
      */
     @Import(name="trailingSlashBehavior", required=true)
       private final String trailingSlashBehavior;

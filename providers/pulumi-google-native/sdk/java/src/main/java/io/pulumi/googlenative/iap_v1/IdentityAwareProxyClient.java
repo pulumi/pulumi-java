@@ -14,48 +14,41 @@ import javax.annotation.Nullable;
 /**
  * Creates an Identity Aware Proxy (IAP) OAuth client. The client is owned by IAP. Requires that the brand for the project exists and that it is set for internal-only use.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:iap/v1:IdentityAwareProxyClient")
 public class IdentityAwareProxyClient extends io.pulumi.resources.CustomResource {
     /**
      * Human-friendly name given to the OAuth client.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return Human-friendly name given to the OAuth client.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Unique identifier of the OAuth client.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Unique identifier of the OAuth client.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Client secret of the OAuth client.
-     * 
      */
     @Export(name="secret", type=String.class, parameters={})
     private Output<String> secret;
 
     /**
      * @return Client secret of the OAuth client.
-     * 
      */
     public Output<String> getSecret() {
         return this.secret;

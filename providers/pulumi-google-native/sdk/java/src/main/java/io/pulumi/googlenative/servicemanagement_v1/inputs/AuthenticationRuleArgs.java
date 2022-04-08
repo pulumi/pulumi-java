@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Authentication rules for the service. By default, if a method has any authentication requirements, every request must include a valid credential matching one of the requirements. It's an error to include more than one kind of credential in a single request. If a method doesn't have any auth requirements, request credentials will be ignored.
- * 
  */
 public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * If true, the service accepts API keys without any other credential. This flag only applies to HTTP and gRPC requests.
-     * 
      */
     @Import(name="allowWithoutCredential")
       private final @Nullable Output<Boolean> allowWithoutCredential;
@@ -35,7 +33,6 @@ public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The requirements for OAuth credentials.
-     * 
      */
     @Import(name="oauth")
       private final @Nullable Output<OAuthRequirementsArgs> oauth;
@@ -46,7 +43,6 @@ public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Requirements for additional authentication providers.
-     * 
      */
     @Import(name="requirements")
       private final @Nullable Output<List<AuthRequirementArgs>> requirements;
@@ -57,7 +53,6 @@ public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Selects the methods to which this rule applies. Refer to selector for syntax details.
-     * 
      */
     @Import(name="selector")
       private final @Nullable Output<String> selector;

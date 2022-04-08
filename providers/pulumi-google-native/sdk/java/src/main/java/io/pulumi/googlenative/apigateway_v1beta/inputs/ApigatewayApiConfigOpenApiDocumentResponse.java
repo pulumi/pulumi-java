@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * An OpenAPI Specification Document describing an API.
- * 
  */
 public final class ApigatewayApiConfigOpenApiDocumentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ApigatewayApiConfigOpenApiDocumentResponse extends io.pulumi.
 
     /**
      * The OpenAPI Specification document file.
-     * 
      */
     @Import(name="document", required=true)
       private final ApigatewayApiConfigFileResponse document;

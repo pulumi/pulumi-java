@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Time window specified for weekly operations.
- * 
  */
 public final class ResourcePolicyWeeklyCycleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ResourcePolicyWeeklyCycleArgs extends io.pulumi.resources.Res
 
     /**
      * Up to 7 intervals/windows, one for each day of the week.
-     * 
      */
     @Import(name="dayOfWeeks")
       private final @Nullable Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks;

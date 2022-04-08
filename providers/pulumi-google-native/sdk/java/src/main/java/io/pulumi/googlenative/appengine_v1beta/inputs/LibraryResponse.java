@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Third-party Python runtime library that is required by the application.
- * 
  */
 public final class LibraryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class LibraryResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the library. Example: "django".
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class LibraryResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Version of the library to select, or "latest".
-     * 
      */
     @Import(name="version", required=true)
       private final String version;

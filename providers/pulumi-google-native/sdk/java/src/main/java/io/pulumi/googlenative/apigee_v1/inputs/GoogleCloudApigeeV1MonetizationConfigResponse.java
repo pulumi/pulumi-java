@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration for the Monetization add-on.
- * 
  */
 public final class GoogleCloudApigeeV1MonetizationConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudApigeeV1MonetizationConfigResponse extends io.pulu
 
     /**
      * Flag that specifies whether the Monetization add-on is enabled.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

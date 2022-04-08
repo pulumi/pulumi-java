@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * Throw an error and fail the request when a transformation error occurs.
- * 
  */
 public final class GooglePrivacyDlpV2ThrowErrorArgs extends io.pulumi.resources.ResourceArgs {
 

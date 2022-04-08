@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Required. The migration job type.
-     * 
      */
     @EnumType
     public enum MigrationJobType {
         /**
          * The type of the migration job is unknown.
-         * 
          */
         TypeUnspecified("TYPE_UNSPECIFIED"),
         /**
          * The migration job is a one time migration.
-         * 
          */
         OneTime("ONE_TIME"),
         /**
          * The migration job is a continuous migration.
-         * 
          */
         Continuous("CONTINUOUS");
 

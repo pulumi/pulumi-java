@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Data type and value of a parameter.
- * 
  */
 public final class GoogleCloudChannelV1ValueResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudChannelV1ValueResponse extends io.pulumi.resources
 
     /**
      * Represents a boolean value.
-     * 
      */
     @Import(name="boolValue", required=true)
       private final Boolean boolValue;
@@ -32,7 +30,6 @@ public final class GoogleCloudChannelV1ValueResponse extends io.pulumi.resources
 
     /**
      * Represents a double value.
-     * 
      */
     @Import(name="doubleValue", required=true)
       private final Double doubleValue;
@@ -43,7 +40,6 @@ public final class GoogleCloudChannelV1ValueResponse extends io.pulumi.resources
 
     /**
      * Represents an int64 value.
-     * 
      */
     @Import(name="int64Value", required=true)
       private final String int64Value;
@@ -54,7 +50,6 @@ public final class GoogleCloudChannelV1ValueResponse extends io.pulumi.resources
 
     /**
      * Represents an 'Any' proto value.
-     * 
      */
     @Import(name="protoValue", required=true)
       private final Map<String,String> protoValue;
@@ -65,7 +60,6 @@ public final class GoogleCloudChannelV1ValueResponse extends io.pulumi.resources
 
     /**
      * Represents a string value.
-     * 
      */
     @Import(name="stringValue", required=true)
       private final String stringValue;

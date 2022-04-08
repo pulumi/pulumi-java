@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class PublicKeyCredentialResponse {
     /**
      * The format of the key.
-     * 
      */
     private final String format;
     /**
      * The key data.
-     * 
      */
     private final String key;
 
@@ -30,14 +28,12 @@ public final class PublicKeyCredentialResponse {
 
     /**
      * The format of the key.
-     * 
     */
     public String getFormat() {
         return this.format;
     }
     /**
      * The key data.
-     * 
     */
     public String getKey() {
         return this.key;

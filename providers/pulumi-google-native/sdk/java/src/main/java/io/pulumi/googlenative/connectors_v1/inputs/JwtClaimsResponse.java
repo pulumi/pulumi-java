@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * JWT claims used for the jwt-bearer authorization grant.
- * 
  */
 public final class JwtClaimsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class JwtClaimsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Value for the "aud" claim.
-     * 
      */
     @Import(name="audience", required=true)
       private final String audience;
@@ -29,7 +27,6 @@ public final class JwtClaimsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Value for the "iss" claim.
-     * 
      */
     @Import(name="issuer", required=true)
       private final String issuer;
@@ -40,7 +37,6 @@ public final class JwtClaimsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Value for the "sub" claim.
-     * 
      */
     @Import(name="subject", required=true)
       private final String subject;

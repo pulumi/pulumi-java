@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class DiskConfigResponse {
     /**
      * Optional. Size in GB of the boot disk (default is 500GB).
-     * 
      */
     private final Integer bootDiskSizeGb;
     /**
      * Optional. Type of the boot disk (default is "pd-standard"). Valid values: "pd-balanced" (Persistent Disk Balanced Solid State Drive), "pd-ssd" (Persistent Disk Solid State Drive), or "pd-standard" (Persistent Disk Hard Disk Drive). See Disk types (https://cloud.google.com/compute/docs/disks#disk-types).
-     * 
      */
     private final String bootDiskType;
     /**
      * Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and HDFS (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
-     * 
      */
     private final Integer numLocalSsds;
 
@@ -38,21 +35,18 @@ public final class DiskConfigResponse {
 
     /**
      * Optional. Size in GB of the boot disk (default is 500GB).
-     * 
     */
     public Integer getBootDiskSizeGb() {
         return this.bootDiskSizeGb;
     }
     /**
      * Optional. Type of the boot disk (default is "pd-standard"). Valid values: "pd-balanced" (Persistent Disk Balanced Solid State Drive), "pd-ssd" (Persistent Disk Solid State Drive), or "pd-standard" (Persistent Disk Hard Disk Drive). See Disk types (https://cloud.google.com/compute/docs/disks#disk-types).
-     * 
     */
     public String getBootDiskType() {
         return this.bootDiskType;
     }
     /**
      * Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and HDFS (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
-     * 
     */
     public Integer getNumLocalSsds() {
         return this.numLocalSsds;

@@ -18,7 +18,6 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of diagnostics to be collected by Deployment Manager, these diagnostics will be displayed to the user.
-     * 
      */
     @Import(name="diagnostics")
       private final @Nullable Output<List<DiagnosticArgs>> diagnostics;
@@ -29,7 +28,6 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * JsonPath expression that determines if the request failed.
-     * 
      */
     @Import(name="failCondition")
       private final @Nullable Output<String> failCondition;
@@ -40,7 +38,6 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * JsonPath expression that determines if the request is completed.
-     * 
      */
     @Import(name="finishCondition")
       private final @Nullable Output<String> finishCondition;
@@ -51,7 +48,6 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * JsonPath expression that evaluates to string, it indicates where to poll.
-     * 
      */
     @Import(name="pollingLink")
       private final @Nullable Output<String> pollingLink;
@@ -62,7 +58,6 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * JsonPath expression, after polling is completed, indicates where to fetch the resource.
-     * 
      */
     @Import(name="targetLink")
       private final @Nullable Output<String> targetLink;

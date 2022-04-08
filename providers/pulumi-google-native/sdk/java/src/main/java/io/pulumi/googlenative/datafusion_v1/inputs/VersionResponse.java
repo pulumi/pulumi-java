@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The Data Fusion version. This proto message stores information about certain Data Fusion version, which is used for Data Fusion version upgrade.
- * 
  */
 public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Represents a list of available feature names for a given version.
-     * 
      */
     @Import(name="availableFeatures", required=true)
       private final List<String> availableFeatures;
@@ -31,7 +29,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether this is currently the default version for Cloud Data Fusion
-     * 
      */
     @Import(name="defaultVersion", required=true)
       private final Boolean defaultVersion;
@@ -42,7 +39,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Type represents the release availability of the version
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -53,7 +49,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The version number of the Data Fusion instance, such as '6.0.1.0'.
-     * 
      */
     @Import(name="versionNumber", required=true)
       private final String versionNumber;

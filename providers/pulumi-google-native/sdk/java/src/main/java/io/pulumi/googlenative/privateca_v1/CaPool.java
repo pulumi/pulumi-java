@@ -17,76 +17,65 @@ import javax.annotation.Nullable;
 /**
  * Create a CaPool.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:privateca/v1:CaPool")
 public class CaPool extends io.pulumi.resources.CustomResource {
     /**
      * Optional. The IssuancePolicy to control how Certificates will be issued from this CaPool.
-     * 
      */
     @Export(name="issuancePolicy", type=IssuancePolicyResponse.class, parameters={})
     private Output<IssuancePolicyResponse> issuancePolicy;
 
     /**
      * @return Optional. The IssuancePolicy to control how Certificates will be issued from this CaPool.
-     * 
      */
     public Output<IssuancePolicyResponse> getIssuancePolicy() {
         return this.issuancePolicy;
     }
     /**
      * Optional. Labels with user-defined metadata.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Optional. Labels with user-defined metadata.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * The resource name for this CaPool in the format `projects/*{@literal /}locations/*{@literal /}caPools/*`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name for this CaPool in the format `projects/*{@literal /}locations/*{@literal /}caPools/*`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Optional. The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.
-     * 
      */
     @Export(name="publishingOptions", type=PublishingOptionsResponse.class, parameters={})
     private Output<PublishingOptionsResponse> publishingOptions;
 
     /**
      * @return Optional. The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.
-     * 
      */
     public Output<PublishingOptionsResponse> getPublishingOptions() {
         return this.publishingOptions;
     }
     /**
      * Immutable. The Tier of this CaPool.
-     * 
      */
     @Export(name="tier", type=String.class, parameters={})
     private Output<String> tier;
 
     /**
      * @return Immutable. The Tier of this CaPool.
-     * 
      */
     public Output<String> getTier() {
         return this.tier;

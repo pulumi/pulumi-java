@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Message defining a field of a BigQuery table.
- * 
  */
 public final class GooglePrivacyDlpV2BigQueryFieldArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GooglePrivacyDlpV2BigQueryFieldArgs extends io.pulumi.resourc
 
     /**
      * Designated field in the BigQuery table.
-     * 
      */
     @Import(name="field")
       private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
@@ -32,7 +30,6 @@ public final class GooglePrivacyDlpV2BigQueryFieldArgs extends io.pulumi.resourc
 
     /**
      * Source table of the field.
-     * 
      */
     @Import(name="table")
       private final @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> table;

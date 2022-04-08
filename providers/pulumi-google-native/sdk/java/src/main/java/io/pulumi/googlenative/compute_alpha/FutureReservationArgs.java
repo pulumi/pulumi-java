@@ -19,7 +19,6 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * An optional description of this resource. Provide this property when you create the future reservation.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -37,7 +36,6 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -48,7 +46,6 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Name prefix for the reservations to be created at the time of delivery. The name prefix must comply with RFC1035. Maximum allowed length for name prefix is 20. Automatically created reservations name format will be -date-####.
-     * 
      */
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
@@ -73,7 +70,6 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * List of Projects/Folders to share with.
-     * 
      */
     @Import(name="shareSettings")
       private final @Nullable Output<ShareSettingsArgs> shareSettings;
@@ -84,7 +80,6 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Future Reservation configuration to indicate instance properties and total count.
-     * 
      */
     @Import(name="specificSkuProperties")
       private final @Nullable Output<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties;
@@ -95,7 +90,6 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Time window for this Future Reservation.
-     * 
      */
     @Import(name="timeWindow")
       private final @Nullable Output<FutureReservationTimeWindowArgs> timeWindow;

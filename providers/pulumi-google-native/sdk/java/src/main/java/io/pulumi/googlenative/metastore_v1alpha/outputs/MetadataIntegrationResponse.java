@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class MetadataIntegrationResponse {
     /**
      * The integration config for the Data Catalog service.
-     * 
      */
     private final DataCatalogConfigResponse dataCatalogConfig;
     /**
      * The integration config for the Dataplex service.
-     * 
      */
     private final DataplexConfigResponse dataplexConfig;
 
@@ -31,14 +29,12 @@ public final class MetadataIntegrationResponse {
 
     /**
      * The integration config for the Data Catalog service.
-     * 
     */
     public DataCatalogConfigResponse getDataCatalogConfig() {
         return this.dataCatalogConfig;
     }
     /**
      * The integration config for the Dataplex service.
-     * 
     */
     public DataplexConfigResponse getDataplexConfig() {
         return this.dataplexConfig;

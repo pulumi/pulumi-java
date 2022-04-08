@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class AccountResponse {
     /**
      * An automatic google login account.
-     * 
      */
     private final GoogleAutoResponse googleAuto;
 
@@ -22,7 +21,6 @@ public final class AccountResponse {
 
     /**
      * An automatic google login account.
-     * 
     */
     public GoogleAutoResponse getGoogleAuto() {
         return this.googleAuto;

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse {
     /**
      * If true, DF Interaction logging is currently enabled.
-     * 
      */
     private final Boolean enableInteractionLogging;
     /**
      * If true, StackDriver logging is currently enabled.
-     * 
      */
     private final Boolean enableStackdriverLogging;
 
@@ -30,14 +28,12 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsRespo
 
     /**
      * If true, DF Interaction logging is currently enabled.
-     * 
     */
     public Boolean getEnableInteractionLogging() {
         return this.enableInteractionLogging;
     }
     /**
      * If true, StackDriver logging is currently enabled.
-     * 
     */
     public Boolean getEnableStackdriverLogging() {
         return this.enableStackdriverLogging;

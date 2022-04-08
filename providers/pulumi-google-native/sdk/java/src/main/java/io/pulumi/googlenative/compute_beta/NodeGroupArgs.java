@@ -20,7 +20,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies how autoscaling should behave.
-     * 
      */
     @Import(name="autoscalingPolicy")
       private final @Nullable Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy;
@@ -31,7 +30,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -49,7 +47,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An opaque location hint used to place the Node close to other resources. This field is for use by internal tools that use the public API. The location hint here on the NodeGroup overrides any location_hint present in the NodeTemplate.
-     * 
      */
     @Import(name="locationHint")
       private final @Nullable Output<String> locationHint;
@@ -60,7 +57,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For more information, see Maintenance policies.
-     * 
      */
     @Import(name="maintenancePolicy")
       private final @Nullable Output<NodeGroupMaintenancePolicy> maintenancePolicy;
@@ -78,7 +74,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -89,7 +84,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * URL of the node template to create the node group from.
-     * 
      */
     @Import(name="nodeTemplate")
       private final @Nullable Output<String> nodeTemplate;

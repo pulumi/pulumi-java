@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Settings of suggestion trigger.
- * 
  */
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
 
     /**
      * Do not trigger if last utterance is small talk.
-     * 
      */
     @Import(name="noSmalltalk", required=true)
       private final Boolean noSmalltalk;
@@ -29,7 +27,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
 
     /**
      * Only trigger suggestion if participant role of last utterance is END_USER.
-     * 
      */
     @Import(name="onlyEndUser", required=true)
       private final Boolean onlyEndUser;

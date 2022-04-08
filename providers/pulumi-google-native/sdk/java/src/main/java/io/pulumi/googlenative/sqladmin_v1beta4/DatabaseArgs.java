@@ -17,7 +17,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Cloud SQL charset value.
-     * 
      */
     @Import(name="charset")
       private final @Nullable Output<String> charset;
@@ -28,7 +27,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Cloud SQL collation value.
-     * 
      */
     @Import(name="collation")
       private final @Nullable Output<String> collation;
@@ -39,7 +37,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Cloud SQL instance. This does not include the project ID.
-     * 
      */
     @Import(name="instance", required=true)
       private final Output<String> instance;
@@ -50,7 +47,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This is always `sql#database`.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -61,7 +57,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -72,7 +67,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The project ID of the project containing the Cloud SQL database. The Google apps domain is prefixed if applicable.
-     * 
      */
     @Import(name="project")
       private final @Nullable Output<String> project;
@@ -83,7 +77,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The URI of this resource.
-     * 
      */
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;

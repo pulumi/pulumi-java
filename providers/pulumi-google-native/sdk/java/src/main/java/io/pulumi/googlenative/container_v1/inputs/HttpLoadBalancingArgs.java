@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration options for the HTTP (L7) load balancing controller addon, which makes it easy to set up HTTP load balancers for services in a cluster.
- * 
  */
 public final class HttpLoadBalancingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class HttpLoadBalancingArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Whether the HTTP Load Balancing controller is enabled in the cluster. When enabled, it runs a small pod in the cluster that manages the load balancers.
-     * 
      */
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;

@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Set of primitive values supported by the system. Note that for the purposes of inspection or transformation, the number of bytes considered to comprise a 'Value' is based on its representation as a UTF-8 encoded string. For example, if 'integer_value' is set to 123456789, the number of bytes would be counted as 9, even though an int64 only holds up to 8 bytes of data.
- * 
  */
 public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
 
     /**
      * boolean
-     * 
      */
     @Import(name="booleanValue")
       private final @Nullable Output<Boolean> booleanValue;
@@ -36,7 +34,6 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
 
     /**
      * date
-     * 
      */
     @Import(name="dateValue")
       private final @Nullable Output<GoogleTypeDateArgs> dateValue;
@@ -47,7 +44,6 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
 
     /**
      * day of week
-     * 
      */
     @Import(name="dayOfWeekValue")
       private final @Nullable Output<GooglePrivacyDlpV2ValueDayOfWeekValue> dayOfWeekValue;
@@ -58,7 +54,6 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
 
     /**
      * float
-     * 
      */
     @Import(name="floatValue")
       private final @Nullable Output<Double> floatValue;
@@ -69,7 +64,6 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
 
     /**
      * integer
-     * 
      */
     @Import(name="integerValue")
       private final @Nullable Output<String> integerValue;
@@ -80,7 +74,6 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
 
     /**
      * string
-     * 
      */
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
@@ -91,7 +84,6 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
 
     /**
      * time of day
-     * 
      */
     @Import(name="timeValue")
       private final @Nullable Output<GoogleTypeTimeOfDayArgs> timeValue;
@@ -102,7 +94,6 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
 
     /**
      * timestamp
-     * 
      */
     @Import(name="timestampValue")
       private final @Nullable Output<String> timestampValue;

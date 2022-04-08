@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2IntentMessageSuggestionsResponse {
     /**
      * The list of suggested replies.
-     * 
      */
     private final List<GoogleCloudDialogflowV2IntentMessageSuggestionResponse> suggestions;
 
@@ -23,7 +22,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionsResponse {
 
     /**
      * The list of suggested replies.
-     * 
     */
     public List<GoogleCloudDialogflowV2IntentMessageSuggestionResponse> getSuggestions() {
         return this.suggestions;

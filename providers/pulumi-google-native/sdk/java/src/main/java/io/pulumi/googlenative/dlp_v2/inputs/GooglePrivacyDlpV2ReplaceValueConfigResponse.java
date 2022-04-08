@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Replace each input value with a given `Value`.
- * 
  */
 public final class GooglePrivacyDlpV2ReplaceValueConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigResponse extends io.pulum
 
     /**
      * Value to replace it with.
-     * 
      */
     @Import(name="newValue", required=true)
       private final GooglePrivacyDlpV2ValueResponse newValue;

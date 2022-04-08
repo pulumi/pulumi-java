@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The details of a metadata restore operation.
- * 
  */
 public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The relative resource name of the metastore service backup to restore from, in the following form:projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}.
-     * 
      */
     @Import(name="backup", required=true)
       private final String backup;
@@ -29,7 +27,6 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The restore details containing the revision of the service to be restored to, in format of JSON.
-     * 
      */
     @Import(name="details", required=true)
       private final String details;
@@ -40,7 +37,6 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The time when the restore ended.
-     * 
      */
     @Import(name="endTime", required=true)
       private final String endTime;
@@ -51,7 +47,6 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The time when the restore started.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;
@@ -62,7 +57,6 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The current state of the restore.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -73,7 +67,6 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of restore.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

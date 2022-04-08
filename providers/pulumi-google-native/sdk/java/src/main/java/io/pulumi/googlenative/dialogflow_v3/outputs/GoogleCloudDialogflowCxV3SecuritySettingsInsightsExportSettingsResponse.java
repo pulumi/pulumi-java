@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse {
     /**
      * If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.
-     * 
      */
     private final Boolean enableInsightsExport;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettin
 
     /**
      * If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.
-     * 
     */
     public Boolean getEnableInsightsExport() {
         return this.enableInsightsExport;

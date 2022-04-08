@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * IP Management configuration.
- * 
  */
 public final class SqlIpConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class SqlIpConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as 'slash' notation (e.g. `192.168.100.0/24`).
-     * 
      */
     @Import(name="authorizedNetworks")
       private final @Nullable Output<List<SqlAclEntryArgs>> authorizedNetworks;
@@ -34,7 +32,6 @@ public final class SqlIpConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether the instance should be assigned an IPv4 address or not.
-     * 
      */
     @Import(name="enableIpv4")
       private final @Nullable Output<Boolean> enableIpv4;
@@ -45,7 +42,6 @@ public final class SqlIpConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, `projects/myProject/global/networks/default`. This setting can be updated, but it cannot be removed after it is set.
-     * 
      */
     @Import(name="privateNetwork")
       private final @Nullable Output<String> privateNetwork;
@@ -56,7 +52,6 @@ public final class SqlIpConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether SSL connections over IP should be enforced or not.
-     * 
      */
     @Import(name="requireSsl")
       private final @Nullable Output<Boolean> requireSsl;

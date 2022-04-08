@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The pricing plan for this instance. This can be either `PER_USE` or `PACKAGE`. Only `PER_USE` is supported for Second Generation instances.
-     * 
      */
     @EnumType
     public enum SettingsPricingPlan {
         /**
          * This is an unknown pricing plan for this instance.
-         * 
          */
         SqlPricingPlanUnspecified("SQL_PRICING_PLAN_UNSPECIFIED"),
         /**
          * The instance is billed at a monthly flat rate.
-         * 
          */
         Package("PACKAGE"),
         /**
          * The instance is billed per usage.
-         * 
          */
         PerUse("PER_USE");
 

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Encryption information for a given resource. If this resource is protected with customer managed encryption, the in-use Cloud Key Management Service (Cloud KMS) key version is specified along with its status.
- * 
  */
 public final class EncryptionInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class EncryptionInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The status of encrypt/decrypt calls on underlying data for this resource. Regardless of status, the existing data is always encrypted at rest.
-     * 
      */
     @Import(name="encryptionStatus", required=true)
       private final StatusResponse encryptionStatus;
@@ -30,7 +28,6 @@ public final class EncryptionInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The type of encryption used to protect this resource.
-     * 
      */
     @Import(name="encryptionType", required=true)
       private final String encryptionType;
@@ -41,7 +38,6 @@ public final class EncryptionInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The version of the Cloud KMS key specified in the parent cluster that is in use for the data underlying this table.
-     * 
      */
     @Import(name="kmsKeyVersion", required=true)
       private final String kmsKeyVersion;

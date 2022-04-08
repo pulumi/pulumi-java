@@ -12,17 +12,14 @@ import java.util.StringJoiner;
     public enum RouterNatSubnetworkToNatSourceIpRangesToNatItem {
         /**
          * The primary and all the secondary ranges are allowed to Nat.
-         * 
          */
         AllIpRanges("ALL_IP_RANGES"),
         /**
          * A list of secondary ranges are allowed to Nat.
-         * 
          */
         ListOfSecondaryIpRanges("LIST_OF_SECONDARY_IP_RANGES"),
         /**
          * The primary range is allowed to Nat.
-         * 
          */
         PrimaryIpRange("PRIMARY_IP_RANGE");
 

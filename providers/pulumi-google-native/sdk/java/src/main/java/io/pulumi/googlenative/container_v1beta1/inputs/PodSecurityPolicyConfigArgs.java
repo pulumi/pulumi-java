@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for the PodSecurityPolicy feature.
- * 
  */
 public final class PodSecurityPolicyConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PodSecurityPolicyConfigArgs extends io.pulumi.resources.Resou
 
     /**
      * Enable the PodSecurityPolicy controller for this cluster. If enabled, pods must be valid under a PodSecurityPolicy to be created.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;

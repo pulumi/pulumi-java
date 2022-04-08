@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * The search algorithm specified for the study.
-     * 
      */
     @EnumType
     public enum GoogleCloudMlV1__StudyConfigAlgorithm {
         /**
          * The default algorithm used by the Cloud AI Platform Vizier service.
-         * 
          */
         AlgorithmUnspecified("ALGORITHM_UNSPECIFIED"),
         /**
          * Gaussian Process Bandit.
-         * 
          */
         GaussianProcessBandit("GAUSSIAN_PROCESS_BANDIT"),
         /**
          * Simple grid search within the feasible space. To use grid search, all parameters must be `INTEGER`, `CATEGORICAL`, or `DISCRETE`.
-         * 
          */
         GridSearch("GRID_SEARCH"),
         /**
          * Simple random search within the feasible space.
-         * 
          */
         RandomSearch("RANDOM_SEARCH");
 

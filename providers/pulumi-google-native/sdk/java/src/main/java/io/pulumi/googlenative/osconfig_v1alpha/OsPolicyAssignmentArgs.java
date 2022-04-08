@@ -20,7 +20,6 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * OS policy assignment description. Length of the description is limited to 1024 characters.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -31,7 +30,6 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The etag for this OS policy assignment. If this is provided on update, it must match the server's etag.
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -42,7 +40,6 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Filter to select VMs.
-     * 
      */
     @Import(name="instanceFilter", required=true)
       private final Output<OSPolicyAssignmentInstanceFilterArgs> instanceFilter;
@@ -60,7 +57,6 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Resource name. Format: `projects/{project_number}/locations/{location}/osPolicyAssignments/{os_policy_assignment_id}` This field is ignored when you create an OS policy assignment.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -71,7 +67,6 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * List of OS policies to be applied to the VMs.
-     * 
      */
     @Import(name="osPolicies", required=true)
       private final Output<List<OSPolicyArgs>> osPolicies;
@@ -96,7 +91,6 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
-     * 
      */
     @Import(name="rollout", required=true)
       private final Output<OSPolicyAssignmentRolloutArgs> rollout;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The crypto key configuration. This field is used by the Customer-managed encryption keys (CMEK) feature.
- * 
  */
 public final class CryptoKeyConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CryptoKeyConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the key which is used to encrypt/decrypt customer data. For key in Cloud KMS, the key should be in the format of `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
-     * 
      */
     @Import(name="keyReference")
       private final @Nullable Output<String> keyReference;

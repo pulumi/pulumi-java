@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Instruction from a PDF file.
- * 
  */
 public final class GoogleCloudDatalabelingV1beta1PdfInstructionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionResponse extends 
 
     /**
      * PDF file for the instruction. Only gcs path is allowed.
-     * 
      */
     @Import(name="gcsFileUri", required=true)
       private final String gcsFileUri;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration that allows for slower scale in so that even if Autoscaler recommends an abrupt scale in of a MIG, it will be throttled as specified by the parameters below.
- * 
  */
 public final class AutoscalingPolicyScaleInControlArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AutoscalingPolicyScaleInControlArgs extends io.pulumi.resourc
 
     /**
      * Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step.
-     * 
      */
     @Import(name="maxScaledInReplicas")
       private final @Nullable Output<FixedOrPercentArgs> maxScaledInReplicas;
@@ -32,7 +30,6 @@ public final class AutoscalingPolicyScaleInControlArgs extends io.pulumi.resourc
 
     /**
      * How far back autoscaling looks when computing recommendations to include directives regarding slower scale in, as described above.
-     * 
      */
     @Import(name="timeWindowSec")
       private final @Nullable Output<Integer> timeWindowSec;

@@ -10,48 +10,39 @@ import java.util.StringJoiner;
 
     /**
      * The current connection profile state (e.g. DRAFT, READY, or FAILED).
-     * 
      */
     @EnumType
     public enum ConnectionProfileState {
         /**
          * The state of the connection profile is unknown.
-         * 
          */
         StateUnspecified("STATE_UNSPECIFIED"),
         /**
          * The connection profile is in draft mode and fully editable.
-         * 
          */
         Draft("DRAFT"),
         /**
          * The connection profile is being created.
-         * 
          */
         Creating("CREATING"),
         /**
          * The connection profile is ready.
-         * 
          */
         Ready("READY"),
         /**
          * The connection profile is being updated.
-         * 
          */
         Updating("UPDATING"),
         /**
          * The connection profile is being deleted.
-         * 
          */
         Deleting("DELETING"),
         /**
          * The connection profile has been deleted.
-         * 
          */
         Deleted("DELETED"),
         /**
          * The last action on the connection profile failed.
-         * 
          */
         Failed("FAILED");
 

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Shielded Instance Config for clusters using Compute Engine Shielded VMs (https://cloud.google.com/security/shielded-cloud/shielded-vm).
- * 
  */
 public final class ShieldedInstanceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ShieldedInstanceConfigArgs extends io.pulumi.resources.Resour
 
     /**
      * Optional. Defines whether instances have integrity monitoring enabled.
-     * 
      */
     @Import(name="enableIntegrityMonitoring")
       private final @Nullable Output<Boolean> enableIntegrityMonitoring;
@@ -31,7 +29,6 @@ public final class ShieldedInstanceConfigArgs extends io.pulumi.resources.Resour
 
     /**
      * Optional. Defines whether instances have Secure Boot enabled.
-     * 
      */
     @Import(name="enableSecureBoot")
       private final @Nullable Output<Boolean> enableSecureBoot;
@@ -42,7 +39,6 @@ public final class ShieldedInstanceConfigArgs extends io.pulumi.resources.Resour
 
     /**
      * Optional. Defines whether instances have the vTPM enabled.
-     * 
      */
     @Import(name="enableVtpm")
       private final @Nullable Output<Boolean> enableVtpm;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class DefaultSnatStatusResponse {
     /**
      * Disables cluster default sNAT rules.
-     * 
      */
     private final Boolean disabled;
 
@@ -22,7 +21,6 @@ public final class DefaultSnatStatusResponse {
 
     /**
      * Disables cluster default sNAT rules.
-     * 
     */
     public Boolean getDisabled() {
         return this.disabled;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Describes the policy in case of function's execution failure. If empty, then defaults to ignoring failures (i.e. not retrying them).
- * 
  */
 public final class FailurePolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class FailurePolicyResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * If specified, then the function will be retried in case of a failure.
-     * 
      */
     @Import(name="retry", required=true)
       private final RetryResponse retry;

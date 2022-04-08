@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The status of a cluster and its instances.
- * 
  */
 public final class ClusterStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ClusterStatusResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Optional details of cluster's state.
-     * 
      */
     @Import(name="detail", required=true)
       private final String detail;
@@ -29,7 +27,6 @@ public final class ClusterStatusResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The cluster's state.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -40,7 +37,6 @@ public final class ClusterStatusResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Time when this state was entered (see JSON representation of Timestamp (https://developers.google.com/protocol-buffers/docs/proto3#json)).
-     * 
      */
     @Import(name="stateStartTime", required=true)
       private final String stateStartTime;
@@ -51,7 +47,6 @@ public final class ClusterStatusResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Additional state information that includes status reported by the agent.
-     * 
      */
     @Import(name="substate", required=true)
       private final String substate;

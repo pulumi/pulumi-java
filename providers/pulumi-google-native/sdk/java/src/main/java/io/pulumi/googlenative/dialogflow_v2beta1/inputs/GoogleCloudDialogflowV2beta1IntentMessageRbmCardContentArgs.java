@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Rich Business Messaging (RBM) Card content
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
 
     /**
      * Optional. Description of the card (at most 2000 bytes). At least one of the title, description or media must be set.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -34,7 +32,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
 
     /**
      * Optional. However at least one of the title, description or media must be set. Media (image, GIF or a video) to include in the card.
-     * 
      */
     @Import(name="media")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs> media;
@@ -45,7 +42,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
 
     /**
      * Optional. List of suggestions to include in the card.
-     * 
      */
     @Import(name="suggestions")
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> suggestions;
@@ -56,7 +52,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
 
     /**
      * Optional. Title of the card (at most 200 bytes). At least one of the title, description or media must be set.
-     * 
      */
     @Import(name="title")
       private final @Nullable Output<String> title;

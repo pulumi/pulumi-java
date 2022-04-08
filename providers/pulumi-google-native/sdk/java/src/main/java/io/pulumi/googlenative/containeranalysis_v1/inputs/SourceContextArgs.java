@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * A SourceContext is a reference to a tree of files. A SourceContext together with a path point to a unique revision of a single file or directory.
- * 
  */
 public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A SourceContext referring to a revision in a Google Cloud Source Repo.
-     * 
      */
     @Import(name="cloudRepo")
       private final @Nullable Output<CloudRepoSourceContextArgs> cloudRepo;
@@ -35,7 +33,6 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A SourceContext referring to a Gerrit project.
-     * 
      */
     @Import(name="gerrit")
       private final @Nullable Output<GerritSourceContextArgs> gerrit;
@@ -46,7 +43,6 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A SourceContext referring to any third party Git repo (e.g., GitHub).
-     * 
      */
     @Import(name="git")
       private final @Nullable Output<GitSourceContextArgs> git;
@@ -57,7 +53,6 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Labels with user defined metadata.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A definition of a matcher that selects endpoints to which the policies should be applied.
- * 
  */
 public final class EndpointMatcherArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EndpointMatcherArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The matcher is based on node metadata presented by xDS clients.
-     * 
      */
     @Import(name="metadataLabelMatcher")
       private final @Nullable Output<EndpointMatcherMetadataLabelMatcherArgs> metadataLabelMatcher;

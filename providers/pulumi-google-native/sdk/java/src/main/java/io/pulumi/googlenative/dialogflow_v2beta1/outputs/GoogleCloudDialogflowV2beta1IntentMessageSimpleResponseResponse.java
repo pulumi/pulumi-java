@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse {
     /**
      * Optional. The text to display.
-     * 
      */
     private final String displayText;
     /**
      * One of text_to_speech or ssml must be provided. Structured spoken response to the user in the SSML format. Mutually exclusive with text_to_speech.
-     * 
      */
     private final String ssml;
     /**
      * One of text_to_speech or ssml must be provided. The plain text of the speech output. Mutually exclusive with ssml.
-     * 
      */
     private final String textToSpeech;
 
@@ -37,21 +34,18 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseRespon
 
     /**
      * Optional. The text to display.
-     * 
     */
     public String getDisplayText() {
         return this.displayText;
     }
     /**
      * One of text_to_speech or ssml must be provided. Structured spoken response to the user in the SSML format. Mutually exclusive with text_to_speech.
-     * 
     */
     public String getSsml() {
         return this.ssml;
     }
     /**
      * One of text_to_speech or ssml must be provided. The plain text of the speech output. Mutually exclusive with ssml.
-     * 
     */
     public String getTextToSpeech() {
         return this.textToSpeech;

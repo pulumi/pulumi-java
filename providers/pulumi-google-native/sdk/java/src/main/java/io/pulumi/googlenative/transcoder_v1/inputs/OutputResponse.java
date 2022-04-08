@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Location of output file(s) in a Cloud Storage bucket.
- * 
  */
 public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;

@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet cannot enable direct path.
-     * 
      */
     @EnumType
     public enum SubnetworkIpv6AccessType {
         /**
          * VMs on this subnet will be assigned IPv6 addresses that are accesible via the Internet, as well as the VPC network.
-         * 
          */
         External("EXTERNAL"),
         /**
          * IPv6 access type not set. Means this subnet hasn't been turned on IPv6 yet.
-         * 
          */
         UnspecifiedIpv6AccessType("UNSPECIFIED_IPV6_ACCESS_TYPE");
 

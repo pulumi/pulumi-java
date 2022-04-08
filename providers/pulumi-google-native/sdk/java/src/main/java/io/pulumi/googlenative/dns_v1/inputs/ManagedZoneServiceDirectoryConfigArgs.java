@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains information about Service Directory-backed zones.
- * 
  */
 public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
 
     /**
      * Contains information about the namespace associated with the zone.
-     * 
      */
     @Import(name="namespace")
       private final @Nullable Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace;

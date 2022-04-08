@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of the image used to create this disk. The default and only value is RAW
-     * 
      */
     @EnumType
     public enum ImageSourceType {

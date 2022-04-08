@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * The environment values to set at runtime.
- * 
  */
 public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
 
     /**
      * Additional experiment flags for the job.
-     * 
      */
     @Import(name="additionalExperiments")
       private final @Nullable Output<List<String>> additionalExperiments;
@@ -36,7 +34,6 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
 
     /**
      * Additional user labels to be specified for the job. Keys and values should follow the restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page. An object containing a list of key/value pairs. Example: { "name": "wrench", "mass": "1kg", "count": "3" }.
-     * 
      */
     @Import(name="additionalUserLabels")
       private final @Nullable Output<Map<String,String>> additionalUserLabels;
@@ -47,7 +44,6 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
 
     /**
      * Whether to bypass the safety checks for the job's temporary directory. Use with caution.
-     * 
      */
     @Import(name="bypassTempDirValidation")
       private final @Nullable Output<Boolean> bypassTempDirValidation;
@@ -58,7 +54,6 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
 
     /**
      * Whether to enable Streaming Engine for the job.
-     * 
      */
     @Import(name="enableStreamingEngine")
       private final @Nullable Output<Boolean> enableStreamingEngine;
@@ -69,7 +64,6 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
 
     /**
      * Configuration for VM IPs.
-     * 
      */
     @Import(name="ipConfiguration")
       private final @Nullable Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfiguration> ipConfiguration;
@@ -80,7 +74,6 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
 
     /**
      * Name for the Cloud KMS key for the job. The key format is: projects//locations//keyRings//cryptoKeys/
-     * 
      */
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
@@ -91,7 +84,6 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
 
     /**
      * The machine type to use for the job. Defaults to the value from the template if not specified.
-     * 
      */
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
@@ -102,7 +94,6 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
 
     /**
      * The maximum number of Compute Engine instances to be made available to your pipeline during execution, from 1 to 1000.
-     * 
      */
     @Import(name="maxWorkers")
       private final @Nullable Output<Integer> maxWorkers;
@@ -113,7 +104,6 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
 
     /**
      * Network to which VMs will be assigned. If empty or unspecified, the service will use the network "default".
-     * 
      */
     @Import(name="network")
       private final @Nullable Output<String> network;
@@ -124,7 +114,6 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
 
     /**
      * The initial number of Compute Engine instances for the job.
-     * 
      */
     @Import(name="numWorkers")
       private final @Nullable Output<Integer> numWorkers;
@@ -135,7 +124,6 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
 
     /**
      * The email address of the service account to run the job as.
-     * 
      */
     @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
@@ -146,7 +134,6 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
 
     /**
      * Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork using either a complete URL or an abbreviated path. Expected to be of the form "https://www.googleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or "regions/REGION/subnetworks/SUBNETWORK". If the subnetwork is located in a Shared VPC network, you must use the complete URL.
-     * 
      */
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
@@ -157,7 +144,6 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
 
     /**
      * The Cloud Storage path to use for temporary files. Must be a valid Cloud Storage URL, beginning with `gs://`.
-     * 
      */
     @Import(name="tempLocation")
       private final @Nullable Output<String> tempLocation;
@@ -168,7 +154,6 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
 
     /**
      * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, default to the control plane's region.
-     * 
      */
     @Import(name="workerRegion")
       private final @Nullable Output<String> workerRegion;
@@ -179,7 +164,6 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
 
     /**
      * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane's region is chosen based on available capacity. If both `worker_zone` and `zone` are set, `worker_zone` takes precedence.
-     * 
      */
     @Import(name="workerZone")
       private final @Nullable Output<String> workerZone;
@@ -190,7 +174,6 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
 
     /**
      * The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones) for launching worker instances to run your pipeline. In the future, worker_zone will take precedence.
-     * 
      */
     @Import(name="zone")
       private final @Nullable Output<String> zone;

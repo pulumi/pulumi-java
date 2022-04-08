@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration of the environment to use when calling Skaffold.
- * 
  */
 public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket ("gs://my-bucket") or a path within a bucket ("gs://my-bucket/my-dir"). If unspecified, a default bucket located in the same region will be used.
-     * 
      */
     @Import(name="artifactStorage")
       private final @Nullable Output<String> artifactStorage;
@@ -35,7 +33,6 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. Use default Cloud Build pool.
-     * 
      */
     @Import(name="defaultPool")
       private final @Nullable Output<DefaultPoolArgs> defaultPool;
@@ -46,7 +43,6 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. Use private Cloud Build pool.
-     * 
      */
     @Import(name="privatePool")
       private final @Nullable Output<PrivatePoolArgs> privatePool;
@@ -57,7 +53,6 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
-     * 
      */
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
@@ -68,7 +63,6 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Usages when this configuration should be applied.
-     * 
      */
     @Import(name="usages", required=true)
       private final Output<List<ExecutionConfigUsagesItem>> usages;
@@ -79,7 +73,6 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. The resource name of the `WorkerPool`, with the format `projects/{project}/locations/{location}/workerPools/{worker_pool}`. If this optional field is unspecified, the default Cloud Build pool will be used.
-     * 
      */
     @Import(name="workerPool")
       private final @Nullable Output<String> workerPool;

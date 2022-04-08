@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Version contains structured information about the version of a package.
- * 
  */
 public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Used to correct mistakes in the version numbering scheme.
-     * 
      */
     @Import(name="epoch", required=true)
       private final Integer epoch;
@@ -31,7 +29,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Human readable version string. This string is of the form :- and is only set when kind is NORMAL.
-     * 
      */
     @Import(name="fullName", required=true)
       private final String fullName;
@@ -42,7 +39,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether this version is specifying part of an inclusive range. Grafeas does not have the capability to specify version ranges; instead we have fields that specify start version and end versions. At times this is insufficient - we also need to specify whether the version is included in the range or is excluded from the range. This boolean is expected to be set to true when the version is included in a range.
-     * 
      */
     @Import(name="inclusive", required=true)
       private final Boolean inclusive;
@@ -53,7 +49,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Distinguishes between sentinel MIN/MAX versions and normal versions.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -64,7 +59,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Required only when version kind is NORMAL. The main part of the version name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -75,7 +69,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The iteration of the package build from the above version.
-     * 
      */
     @Import(name="revision", required=true)
       private final String revision;

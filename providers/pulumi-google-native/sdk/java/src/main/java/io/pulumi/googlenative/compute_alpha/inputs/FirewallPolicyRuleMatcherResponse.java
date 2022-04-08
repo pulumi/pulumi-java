@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Represents a match condition that incoming traffic is evaluated against. Exactly one field must be specified.
- * 
  */
 public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
 
     /**
      * Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10.
-     * 
      */
     @Import(name="destAddressGroups", required=true)
       private final List<String> destAddressGroups;
@@ -32,7 +30,6 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
 
     /**
      * Fully Qualified Domain Name (FQDN) which should be matched against traffic destination. Maximum number of destination fqdn allowed is 1000.
-     * 
      */
     @Import(name="destFqdns", required=true)
       private final List<String> destFqdns;
@@ -43,7 +40,6 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
 
     /**
      * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
-     * 
      */
     @Import(name="destIpRanges", required=true)
       private final List<String> destIpRanges;
@@ -54,7 +50,6 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
 
     /**
      * Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US" Maximum number of dest region codes allowed is 5000.
-     * 
      */
     @Import(name="destRegionCodes", required=true)
       private final List<String> destRegionCodes;
@@ -65,7 +60,6 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
 
     /**
      * Pairs of IP protocols and ports that the rule should match.
-     * 
      */
     @Import(name="layer4Configs", required=true)
       private final List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs;
@@ -76,7 +70,6 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
 
     /**
      * Address groups which should be matched against the traffic source. Maximum number of source address groups is 10.
-     * 
      */
     @Import(name="srcAddressGroups", required=true)
       private final List<String> srcAddressGroups;
@@ -87,7 +80,6 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
 
     /**
      * Fully Qualified Domain Name (FQDN) which should be matched against traffic source. Maximum number of source fqdn allowed is 1000.
-     * 
      */
     @Import(name="srcFqdns", required=true)
       private final List<String> srcFqdns;
@@ -98,7 +90,6 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
 
     /**
      * CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
-     * 
      */
     @Import(name="srcIpRanges", required=true)
       private final List<String> srcIpRanges;
@@ -109,7 +100,6 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
 
     /**
      * Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US" Maximum number of source region codes allowed is 5000.
-     * 
      */
     @Import(name="srcRegionCodes", required=true)
       private final List<String> srcRegionCodes;
@@ -120,7 +110,6 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
 
     /**
      * List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.
-     * 
      */
     @Import(name="srcSecureTags", required=true)
       private final List<FirewallPolicyRuleSecureTagResponse> srcSecureTags;

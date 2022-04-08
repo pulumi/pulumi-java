@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A note that indicates a type of analysis a provider would perform. This note exists in a provider's project. A `Discovery` occurrence is created in a consumer's project at the start of analysis.
- * 
  */
 public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The kind of analysis that is handled by this discovery.
-     * 
      */
     @Import(name="analysisKind", required=true)
       private final Output<DiscoveryAnalysisKind> analysisKind;

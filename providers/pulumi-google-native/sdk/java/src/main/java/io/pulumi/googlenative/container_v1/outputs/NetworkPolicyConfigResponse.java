@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class NetworkPolicyConfigResponse {
     /**
      * Whether NetworkPolicy is enabled for this cluster.
-     * 
      */
     private final Boolean disabled;
 
@@ -22,7 +21,6 @@ public final class NetworkPolicyConfigResponse {
 
     /**
      * Whether NetworkPolicy is enabled for this cluster.
-     * 
     */
     public Boolean getDisabled() {
         return this.disabled;

@@ -16,118 +16,101 @@ import javax.annotation.Nullable;
 /**
  * Creates dataset. If success return a Dataset resource.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:datalabeling/v1beta1:Dataset")
 public class Dataset extends io.pulumi.resources.CustomResource {
     /**
      * The names of any related resources that are blocking changes to the dataset.
-     * 
      */
     @Export(name="blockingResources", type=List.class, parameters={String.class})
     private Output<List<String>> blockingResources;
 
     /**
      * @return The names of any related resources that are blocking changes to the dataset.
-     * 
      */
     public Output<List<String>> getBlockingResources() {
         return this.blockingResources;
     }
     /**
      * Time the dataset is created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return Time the dataset is created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The number of data items in the dataset.
-     * 
      */
     @Export(name="dataItemCount", type=String.class, parameters={})
     private Output<String> dataItemCount;
 
     /**
      * @return The number of data items in the dataset.
-     * 
      */
     public Output<String> getDataItemCount() {
         return this.dataItemCount;
     }
     /**
      * Optional. User-provided description of the annotation specification set. The description can be up to 10000 characters long.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Optional. User-provided description of the annotation specification set. The description can be up to 10000 characters long.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The display name of the dataset. Maximum of 64 characters.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The display name of the dataset. Maximum of 64 characters.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * This is populated with the original input configs where ImportData is called. It is available only after the clients import data to this dataset.
-     * 
      */
     @Export(name="inputConfigs", type=List.class, parameters={GoogleCloudDatalabelingV1beta1InputConfigResponse.class})
     private Output<List<GoogleCloudDatalabelingV1beta1InputConfigResponse>> inputConfigs;
 
     /**
      * @return This is populated with the original input configs where ImportData is called. It is available only after the clients import data to this dataset.
-     * 
      */
     public Output<List<GoogleCloudDatalabelingV1beta1InputConfigResponse>> getInputConfigs() {
         return this.inputConfigs;
     }
     /**
      * Last time that the Dataset is migrated to AI Platform V2. If any of the AnnotatedDataset is migrated, the last_migration_time in Dataset is also updated.
-     * 
      */
     @Export(name="lastMigrateTime", type=String.class, parameters={})
     private Output<String> lastMigrateTime;
 
     /**
      * @return Last time that the Dataset is migrated to AI Platform V2. If any of the AnnotatedDataset is migrated, the last_migration_time in Dataset is also updated.
-     * 
      */
     public Output<String> getLastMigrateTime() {
         return this.lastMigrateTime;
     }
     /**
      * Dataset resource name, format is: projects/{project_id}/datasets/{dataset_id}
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Dataset resource name, format is: projects/{project_id}/datasets/{dataset_id}
-     * 
      */
     public Output<String> getName() {
         return this.name;

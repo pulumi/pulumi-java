@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * A Dataproc job for running Apache Spark SQL (http://spark.apache.org/sql/) queries.
- * 
  */
 public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
-     * 
      */
     @Import(name="jarFileUris")
       private final @Nullable Output<List<String>> jarFileUris;
@@ -35,7 +33,6 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The runtime log config for job execution.
-     * 
      */
     @Import(name="loggingConfig")
       private final @Nullable Output<LoggingConfigArgs> loggingConfig;
@@ -46,7 +43,6 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -57,7 +53,6 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The HCFS URI of the script that contains SQL queries.
-     * 
      */
     @Import(name="queryFileUri")
       private final @Nullable Output<String> queryFileUri;
@@ -68,7 +63,6 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of queries.
-     * 
      */
     @Import(name="queryList")
       private final @Nullable Output<QueryListArgs> queryList;
@@ -79,7 +73,6 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).
-     * 
      */
     @Import(name="scriptVariables")
       private final @Nullable Output<Map<String,String>> scriptVariables;

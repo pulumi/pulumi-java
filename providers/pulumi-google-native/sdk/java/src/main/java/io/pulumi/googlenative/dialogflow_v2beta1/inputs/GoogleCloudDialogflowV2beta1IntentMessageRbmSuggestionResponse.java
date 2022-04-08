@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Rich Business Messaging (RBM) suggestion. Suggestions allow user to easily select/click a predefined response or perform an action (like opening a web uri).
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionRespons
 
     /**
      * Predefined client side actions that user can choose
-     * 
      */
     @Import(name="action", required=true)
       private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse action;
@@ -30,7 +28,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionRespons
 
     /**
      * Predefined replies for user to select instead of typing
-     * 
      */
     @Import(name="reply", required=true)
       private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply;

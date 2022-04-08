@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cloud Healthcare API resource.
- * 
  */
 public final class CloudHealthcareSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CloudHealthcareSourceArgs extends io.pulumi.resources.Resourc
 
     /**
      * Full path of a Cloud Healthcare API resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

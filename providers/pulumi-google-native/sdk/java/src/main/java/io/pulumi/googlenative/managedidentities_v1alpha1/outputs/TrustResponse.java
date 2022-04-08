@@ -13,57 +13,46 @@ import java.util.Objects;
 public final class TrustResponse {
     /**
      * The time the instance was created.
-     * 
      */
     private final String createTime;
     /**
      * The last heartbeat time when the trust was known to be connected.
-     * 
      */
     private final String lastKnownTrustConnectedHeartbeatTime;
     /**
      * The trust authentication type which decides whether the trusted side has forest/domain wide access or selective access to approved set of resources.
-     * 
      */
     private final Boolean selectiveAuthentication;
     /**
      * The current state of this trust.
-     * 
      */
     private final String state;
     /**
      * Additional information about the current state of this trust, if available.
-     * 
      */
     private final String stateDescription;
     /**
      * The target dns server ip addresses which can resolve the remote domain involved in trust.
-     * 
      */
     private final List<String> targetDnsIpAddresses;
     /**
      * The fully qualified target domain name which will be in trust with current domain.
-     * 
      */
     private final String targetDomainName;
     /**
      * The trust direction decides the current domain is trusted, trusting or both.
-     * 
      */
     private final String trustDirection;
     /**
      * Input only, and will not be stored. The trust secret used for handshake with target domain.
-     * 
      */
     private final String trustHandshakeSecret;
     /**
      * The type of trust represented by the trust resource.
-     * 
      */
     private final String trustType;
     /**
      * Last update time.
-     * 
      */
     private final String updateTime;
 
@@ -95,77 +84,66 @@ public final class TrustResponse {
 
     /**
      * The time the instance was created.
-     * 
     */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The last heartbeat time when the trust was known to be connected.
-     * 
     */
     public String getLastKnownTrustConnectedHeartbeatTime() {
         return this.lastKnownTrustConnectedHeartbeatTime;
     }
     /**
      * The trust authentication type which decides whether the trusted side has forest/domain wide access or selective access to approved set of resources.
-     * 
     */
     public Boolean getSelectiveAuthentication() {
         return this.selectiveAuthentication;
     }
     /**
      * The current state of this trust.
-     * 
     */
     public String getState() {
         return this.state;
     }
     /**
      * Additional information about the current state of this trust, if available.
-     * 
     */
     public String getStateDescription() {
         return this.stateDescription;
     }
     /**
      * The target dns server ip addresses which can resolve the remote domain involved in trust.
-     * 
     */
     public List<String> getTargetDnsIpAddresses() {
         return this.targetDnsIpAddresses;
     }
     /**
      * The fully qualified target domain name which will be in trust with current domain.
-     * 
     */
     public String getTargetDomainName() {
         return this.targetDomainName;
     }
     /**
      * The trust direction decides the current domain is trusted, trusting or both.
-     * 
     */
     public String getTrustDirection() {
         return this.trustDirection;
     }
     /**
      * Input only, and will not be stored. The trust secret used for handshake with target domain.
-     * 
     */
     public String getTrustHandshakeSecret() {
         return this.trustHandshakeSecret;
     }
     /**
      * The type of trust represented by the trust resource.
-     * 
     */
     public String getTrustType() {
         return this.trustType;
     }
     /**
      * Last update time.
-     * 
     */
     public String getUpdateTime() {
         return this.updateTime;

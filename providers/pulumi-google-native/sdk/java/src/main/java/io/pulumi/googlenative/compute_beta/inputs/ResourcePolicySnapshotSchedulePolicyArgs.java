@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A snapshot schedule policy specifies when and how frequently snapshots are to be created for the target disk. Also specifies how many and how long these scheduled snapshots should be retained.
- * 
  */
 public final class ResourcePolicySnapshotSchedulePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ResourcePolicySnapshotSchedulePolicyArgs extends io.pulumi.re
 
     /**
      * Retention policy applied to snapshots created by this resource policy.
-     * 
      */
     @Import(name="retentionPolicy")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs> retentionPolicy;
@@ -33,7 +31,6 @@ public final class ResourcePolicySnapshotSchedulePolicyArgs extends io.pulumi.re
 
     /**
      * A Vm Maintenance Policy specifies what kind of infrastructure maintenance we are allowed to perform on this VM and when. Schedule that is applied to disks covered by this policy.
-     * 
      */
     @Import(name="schedule")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleArgs> schedule;
@@ -44,7 +41,6 @@ public final class ResourcePolicySnapshotSchedulePolicyArgs extends io.pulumi.re
 
     /**
      * Properties with which snapshots are created such as labels, encryption keys.
-     * 
      */
     @Import(name="snapshotProperties")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs> snapshotProperties;

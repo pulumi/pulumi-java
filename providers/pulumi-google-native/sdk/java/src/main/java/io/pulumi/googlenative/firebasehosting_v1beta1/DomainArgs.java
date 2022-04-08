@@ -17,7 +17,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The domain name of the association.
-     * 
      */
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
@@ -28,7 +27,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If set, the domain should redirect with the provided parameters.
-     * 
      */
     @Import(name="domainRedirect")
       private final @Nullable Output<DomainRedirectArgs> domainRedirect;
@@ -46,7 +44,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The site name of the association.
-     * 
      */
     @Import(name="site", required=true)
       private final Output<String> site;

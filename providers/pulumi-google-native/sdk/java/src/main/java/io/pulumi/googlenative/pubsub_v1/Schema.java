@@ -13,48 +13,41 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a schema.
- * 
  */
 @ResourceType(type="google-native:pubsub/v1:Schema")
 public class Schema extends io.pulumi.resources.CustomResource {
     /**
      * The definition of the schema. This should contain a string representing the full definition of the schema that is a valid schema definition of the type specified in `type`.
-     * 
      */
     @Export(name="definition", type=String.class, parameters={})
     private Output<String> definition;
 
     /**
      * @return The definition of the schema. This should contain a string representing the full definition of the schema that is a valid schema definition of the type specified in `type`.
-     * 
      */
     public Output<String> getDefinition() {
         return this.definition;
     }
     /**
      * Name of the schema. Format is `projects/{project}/schemas/{schema}`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the schema. Format is `projects/{project}/schemas/{schema}`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The type of the schema definition.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the schema definition.
-     * 
      */
     public Output<String> getType() {
         return this.type;

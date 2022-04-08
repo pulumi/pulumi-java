@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * OutputConfig contains a destination for writing trace data.
- * 
  */
 public final class OutputConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class OutputConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The destination for writing trace data. Currently only BigQuery is supported. E.g.: "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
-     * 
      */
     @Import(name="destination")
       private final @Nullable Output<String> destination;

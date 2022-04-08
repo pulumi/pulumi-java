@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Volume represents a named volume in a container.
- * 
  */
 public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -27,7 +26,6 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

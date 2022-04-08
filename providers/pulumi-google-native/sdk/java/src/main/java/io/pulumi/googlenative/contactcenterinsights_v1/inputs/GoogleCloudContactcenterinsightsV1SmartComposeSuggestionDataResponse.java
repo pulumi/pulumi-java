@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Agent Assist Smart Compose suggestion data.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataR
 
     /**
      * The system's confidence score that this suggestion is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
-     * 
      */
     @Import(name="confidenceScore", required=true)
       private final Double confidenceScore;
@@ -31,7 +29,6 @@ public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataR
 
     /**
      * Map that contains metadata about the Smart Compose suggestion and the document from which it originates.
-     * 
      */
     @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
@@ -42,7 +39,6 @@ public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataR
 
     /**
      * Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
-     * 
      */
     @Import(name="queryRecord", required=true)
       private final String queryRecord;
@@ -53,7 +49,6 @@ public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataR
 
     /**
      * The content of the suggestion.
-     * 
      */
     @Import(name="suggestion", required=true)
       private final String suggestion;

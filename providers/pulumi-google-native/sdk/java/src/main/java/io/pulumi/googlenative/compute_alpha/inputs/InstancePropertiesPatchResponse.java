@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Represents the change that you want to make to the instance properties.
- * 
  */
 public final class InstancePropertiesPatchResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class InstancePropertiesPatchResponse extends io.pulumi.resources.I
 
     /**
      * The label key-value pairs that you want to patch onto the instance.
-     * 
      */
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
@@ -30,7 +28,6 @@ public final class InstancePropertiesPatchResponse extends io.pulumi.resources.I
 
     /**
      * The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.
-     * 
      */
     @Import(name="metadata", required=true)
       private final Map<String,String> metadata;

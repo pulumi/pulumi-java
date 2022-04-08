@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a reservation resource. A reservation ensures that capacity is held in a specific zone even if the reserved VMs are not running. For more information, read Reserving zonal resources.
- * 
  */
 public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -34,7 +32,6 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -45,7 +42,6 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Share-settings for shared-reservation
-     * 
      */
     @Import(name="shareSettings")
       private final @Nullable Output<ShareSettingsArgs> shareSettings;
@@ -56,7 +52,6 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Reservation for instances with specific machine shapes.
-     * 
      */
     @Import(name="specificReservation")
       private final @Nullable Output<AllocationSpecificSKUReservationArgs> specificReservation;
@@ -67,7 +62,6 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
-     * 
      */
     @Import(name="specificReservationRequired")
       private final @Nullable Output<Boolean> specificReservationRequired;
@@ -78,7 +72,6 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.
-     * 
      */
     @Import(name="zone")
       private final @Nullable Output<String> zone;

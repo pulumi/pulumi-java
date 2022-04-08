@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The IP mode for instances. Only applicable in the App Engine flexible environment.
-     * 
      */
     @EnumType
     public enum NetworkInstanceIpMode {
         /**
          * Unspecified should be treated as EXTERNAL
-         * 
          */
         InstanceIpModeUnspecified("INSTANCE_IP_MODE_UNSPECIFIED"),
         /**
          * VMs should be created with external and internal IPs
-         * 
          */
         External("EXTERNAL"),
         /**
          * VMs should be created with internal IPs only
-         * 
          */
         Internal("INTERNAL");
 

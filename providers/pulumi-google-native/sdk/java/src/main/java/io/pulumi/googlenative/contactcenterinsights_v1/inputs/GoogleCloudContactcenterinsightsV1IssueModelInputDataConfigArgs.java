@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configs for the input data used to create the issue model.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigAr
 
     /**
      * A filter to reduce the conversations used for training the model to a specific subset.
-     * 
      */
     @Import(name="filter")
       private final @Nullable Output<String> filter;
@@ -32,7 +30,6 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigAr
 
     /**
      * Medium of conversations used in training data. This field is being deprecated. To specify the medium to be used in training a new issue model, set the `medium` field on `filter`.
-     * 
      */
     @Import(name="medium")
       private final @Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium;

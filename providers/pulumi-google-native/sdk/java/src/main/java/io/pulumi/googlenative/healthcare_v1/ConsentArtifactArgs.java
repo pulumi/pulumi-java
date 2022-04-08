@@ -20,7 +20,6 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. Screenshots, PDFs, or other binary information documenting the user's consent.
-     * 
      */
     @Import(name="consentContentScreenshots")
       private final @Nullable Output<List<ImageArgs>> consentContentScreenshots;
@@ -31,7 +30,6 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. An string indicating the version of the consent information shown to the user.
-     * 
      */
     @Import(name="consentContentVersion")
       private final @Nullable Output<String> consentContentVersion;
@@ -56,7 +54,6 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. A signature from a guardian.
-     * 
      */
     @Import(name="guardianSignature")
       private final @Nullable Output<SignatureArgs> guardianSignature;
@@ -74,7 +71,6 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. Metadata associated with the Consent artifact. For example, the consent locale or user agent version.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
@@ -85,7 +81,6 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. Cannot be changed after creation.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -103,7 +98,6 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * User's UUID provided by the client.
-     * 
      */
     @Import(name="userId", required=true)
       private final Output<String> userId;
@@ -114,7 +108,6 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. User's signature.
-     * 
      */
     @Import(name="userSignature")
       private final @Nullable Output<SignatureArgs> userSignature;
@@ -125,7 +118,6 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. A signature from a witness.
-     * 
      */
     @Import(name="witnessSignature")
       private final @Nullable Output<SignatureArgs> witnessSignature;

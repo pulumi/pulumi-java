@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Immutable. The database type that the Metastore service stores its data.
-     * 
      */
     @EnumType
     public enum ServiceDatabaseType {
         /**
          * The DATABASE_TYPE is not set.
-         * 
          */
         DatabaseTypeUnspecified("DATABASE_TYPE_UNSPECIFIED"),
         /**
          * MySQL is used to persist the metastore data.
-         * 
          */
         Mysql("MYSQL"),
         /**
          * Spanner is used to persist the metastore data.
-         * 
          */
         Spanner("SPANNER");
 

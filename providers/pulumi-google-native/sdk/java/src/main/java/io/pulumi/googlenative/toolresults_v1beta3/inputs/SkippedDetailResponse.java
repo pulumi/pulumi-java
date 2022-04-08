@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Details for an outcome with a SKIPPED outcome summary.
- * 
  */
 public final class SkippedDetailResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SkippedDetailResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * If the App doesn't support the specific API level.
-     * 
      */
     @Import(name="incompatibleAppVersion", required=true)
       private final Boolean incompatibleAppVersion;
@@ -29,7 +27,6 @@ public final class SkippedDetailResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * If the App doesn't run on the specific architecture, for example, x86.
-     * 
      */
     @Import(name="incompatibleArchitecture", required=true)
       private final Boolean incompatibleArchitecture;
@@ -40,7 +37,6 @@ public final class SkippedDetailResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * If the requested OS version doesn't run on the specific device model.
-     * 
      */
     @Import(name="incompatibleDevice", required=true)
       private final Boolean incompatibleDevice;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Wrapper for cloud function attributes.
- * 
  */
 public final class CloudFunctionEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CloudFunctionEndpointArgs extends io.pulumi.resources.Resourc
 
     /**
      * A [Cloud function](https://cloud.google.com/functions) name.
-     * 
      */
     @Import(name="uri")
       private final @Nullable Output<String> uri;

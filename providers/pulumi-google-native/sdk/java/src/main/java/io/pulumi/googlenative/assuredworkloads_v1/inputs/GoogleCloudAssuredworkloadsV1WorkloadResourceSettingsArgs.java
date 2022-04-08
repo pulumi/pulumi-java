@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represent the custom settings for the resources to be created.
- * 
  */
 public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
 
     /**
      * User-assigned resource display name. If not empty it will be used to create a resource with the specified name.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -32,7 +30,6 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
 
     /**
      * Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
@@ -43,7 +40,6 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
 
     /**
      * Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT)
-     * 
      */
     @Import(name="resourceType")
       private final @Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> resourceType;

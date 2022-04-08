@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class MultiClusterIngressFeatureSpecResponse {
     /**
      * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
-     * 
      */
     private final String configMembership;
 
@@ -22,7 +21,6 @@ public final class MultiClusterIngressFeatureSpecResponse {
 
     /**
      * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
-     * 
     */
     public String getConfigMembership() {
         return this.configMembership;

@@ -19,7 +19,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time when the Spoke was created.
-     * 
      */
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
@@ -30,7 +29,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Short description of the spoke resource
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -41,7 +39,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource URL of the hub resource that the spoke is attached to
-     * 
      */
     @Import(name="hub")
       private final @Nullable Output<String> hub;
@@ -52,7 +49,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User-defined labels.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -63,7 +59,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The URIs of linked interconnect attachment resources
-     * 
      */
     @Import(name="linkedInterconnectAttachments")
       private final @Nullable Output<List<String>> linkedInterconnectAttachments;
@@ -74,7 +69,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The URIs of linked Router appliance resources
-     * 
      */
     @Import(name="linkedRouterApplianceInstances")
       private final @Nullable Output<List<RouterApplianceInstanceArgs>> linkedRouterApplianceInstances;
@@ -85,7 +79,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The URIs of linked VPN tunnel resources
-     * 
      */
     @Import(name="linkedVpnTunnels")
       private final @Nullable Output<List<String>> linkedVpnTunnels;
@@ -103,7 +96,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The name of a Spoke resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -135,7 +127,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time when the Spoke was updated.
-     * 
      */
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;

@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a rule that describes one or more match conditions along with the action to be taken when traffic matches this condition (allow or deny).
- * 
  */
 public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The Action to perform when the client connection triggers the rule. Can currently be either "allow" or "deny()" where valid values for status are 403, 404, and 502.
-     * 
      */
     @Import(name="action")
       private final @Nullable Output<String> action;
@@ -37,7 +35,6 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * An optional description for this resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -48,7 +45,6 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The direction in which this rule applies.
-     * 
      */
     @Import(name="direction")
       private final @Nullable Output<FirewallPolicyRuleDirection> direction;
@@ -59,7 +55,6 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the firewall policy rule will be enabled.
-     * 
      */
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
@@ -70,7 +65,6 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
-     * 
      */
     @Import(name="enableLogging")
       private final @Nullable Output<Boolean> enableLogging;
@@ -81,7 +75,6 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
-     * 
      */
     @Import(name="match")
       private final @Nullable Output<FirewallPolicyRuleMatcherArgs> match;
@@ -92,7 +85,6 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
@@ -103,7 +95,6 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
-     * 
      */
     @Import(name="targetResources")
       private final @Nullable Output<List<String>> targetResources;
@@ -114,7 +105,6 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * A list of secure tags that controls which instances the firewall rule applies to. If targetSecureTag are specified, then the firewall rule applies only to instances in the VPC network that have one of those EFFECTIVE secure tags, if all the target_secure_tag are in INEFFECTIVE state, then this rule will be ignored. targetSecureTag may not be set at the same time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureTag are specified, the firewall rule applies to all instances on the specified network. Maximum number of target label tags allowed is 256.
-     * 
      */
     @Import(name="targetSecureTags")
       private final @Nullable Output<List<FirewallPolicyRuleSecureTagArgs>> targetSecureTags;
@@ -125,7 +115,6 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * A list of service accounts indicating the sets of instances that are applied with this rule.
-     * 
      */
     @Import(name="targetServiceAccounts")
       private final @Nullable Output<List<String>> targetServiceAccounts;

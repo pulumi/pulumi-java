@@ -15,7 +15,6 @@ import java.util.Objects;
 
 /**
  * Privacy metric to compute for reidentification risk analysis.
- * 
  */
 public final class GooglePrivacyDlpV2PrivacyMetricResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends io.pulumi.res
 
     /**
      * Categorical stats
-     * 
      */
     @Import(name="categoricalStatsConfig", required=true)
       private final GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig;
@@ -34,7 +32,6 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends io.pulumi.res
 
     /**
      * delta-presence
-     * 
      */
     @Import(name="deltaPresenceEstimationConfig", required=true)
       private final GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig;
@@ -45,7 +42,6 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends io.pulumi.res
 
     /**
      * K-anonymity
-     * 
      */
     @Import(name="kAnonymityConfig", required=true)
       private final GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig;
@@ -56,7 +52,6 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends io.pulumi.res
 
     /**
      * k-map
-     * 
      */
     @Import(name="kMapEstimationConfig", required=true)
       private final GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig;
@@ -67,7 +62,6 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends io.pulumi.res
 
     /**
      * l-diversity
-     * 
      */
     @Import(name="lDiversityConfig", required=true)
       private final GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig;
@@ -78,7 +72,6 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends io.pulumi.res
 
     /**
      * Numerical stats
-     * 
      */
     @Import(name="numericalStatsConfig", required=true)
       private final GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig;

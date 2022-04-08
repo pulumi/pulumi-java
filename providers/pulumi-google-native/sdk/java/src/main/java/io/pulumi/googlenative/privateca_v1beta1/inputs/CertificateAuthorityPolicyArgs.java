@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * The issuing policy for a CertificateAuthority. Certificates will not be successfully issued from this CertificateAuthority if they violate the policy.
- * 
  */
 public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
 
     /**
      * Optional. If any value is specified here, then all Certificates issued by the CertificateAuthority must match at least one listed value. If no value is specified, all values will be allowed for this fied. Glob patterns are also supported.
-     * 
      */
     @Import(name="allowedCommonNames")
       private final @Nullable Output<List<String>> allowedCommonNames;
@@ -37,7 +35,6 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
 
     /**
      * Optional. All Certificates issued by the CertificateAuthority must match at least one listed ReusableConfigWrapper in the list.
-     * 
      */
     @Import(name="allowedConfigList")
       private final @Nullable Output<AllowedConfigListArgs> allowedConfigList;
@@ -48,7 +45,6 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
 
     /**
      * Optional. If specified, then only methods allowed in the IssuanceModes may be used to issue Certificates.
-     * 
      */
     @Import(name="allowedIssuanceModes")
       private final @Nullable Output<IssuanceModesArgs> allowedIssuanceModes;
@@ -59,7 +55,6 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
 
     /**
      * Optional. If any Subject is specified here, then all Certificates issued by the CertificateAuthority must match at least one listed Subject. If a Subject has an empty field, any value will be allowed for that field.
-     * 
      */
     @Import(name="allowedLocationsAndOrganizations")
       private final @Nullable Output<List<SubjectArgs>> allowedLocationsAndOrganizations;
@@ -70,7 +65,6 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
 
     /**
      * Optional. If a AllowedSubjectAltNames is specified here, then all Certificates issued by the CertificateAuthority must match AllowedSubjectAltNames. If no value or an empty value is specified, any value will be allowed for the SubjectAltNames field.
-     * 
      */
     @Import(name="allowedSans")
       private final @Nullable Output<AllowedSubjectAltNamesArgs> allowedSans;
@@ -81,7 +75,6 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
 
     /**
      * Optional. The maximum lifetime allowed by the CertificateAuthority. Note that if the any part if the issuing chain expires before a Certificate's requested maximum_lifetime, the effective lifetime will be explicitly truncated.
-     * 
      */
     @Import(name="maximumLifetime")
       private final @Nullable Output<String> maximumLifetime;
@@ -92,7 +85,6 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
 
     /**
      * Optional. All Certificates issued by the CertificateAuthority will use the provided configuration values, overwriting any requested configuration values.
-     * 
      */
     @Import(name="overwriteConfigValues")
       private final @Nullable Output<ReusableConfigWrapperArgs> overwriteConfigValues;

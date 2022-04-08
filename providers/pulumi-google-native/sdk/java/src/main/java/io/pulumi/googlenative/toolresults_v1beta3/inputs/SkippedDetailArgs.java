@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details for an outcome with a SKIPPED outcome summary.
- * 
  */
 public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If the App doesn't support the specific API level.
-     * 
      */
     @Import(name="incompatibleAppVersion")
       private final @Nullable Output<Boolean> incompatibleAppVersion;
@@ -31,7 +29,6 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If the App doesn't run on the specific architecture, for example, x86.
-     * 
      */
     @Import(name="incompatibleArchitecture")
       private final @Nullable Output<Boolean> incompatibleArchitecture;
@@ -42,7 +39,6 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If the requested OS version doesn't run on the specific device model.
-     * 
      */
     @Import(name="incompatibleDevice")
       private final @Nullable Output<Boolean> incompatibleDevice;

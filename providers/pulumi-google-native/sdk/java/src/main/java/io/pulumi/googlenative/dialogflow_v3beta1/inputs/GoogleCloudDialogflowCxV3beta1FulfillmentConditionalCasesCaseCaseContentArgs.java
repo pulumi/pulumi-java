@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The list of messages or conditional cases to activate for this case.
- * 
  */
 public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
 
     /**
      * Additional cases to be evaluated.
-     * 
      */
     @Import(name="additionalCases")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs> additionalCases;
@@ -32,7 +30,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
 
     /**
      * Returned message.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs> message;

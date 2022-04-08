@@ -16,7 +16,6 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. User-assigned description of the TagValue. Must not exceed 256 characters. Read-write.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -27,7 +26,6 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Entity tag which users can pass to prevent race conditions. This field is always set in server responses. See UpdateTagValueRequest for details.
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -38,7 +36,6 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. Resource name for TagValue in the format `tagValues/456`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -49,7 +46,6 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The resource name of the new TagValue's parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
-     * 
      */
     @Import(name="parent")
       private final @Nullable Output<String> parent;
@@ -60,7 +56,6 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey. The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
-     * 
      */
     @Import(name="shortName", required=true)
       private final Output<String> shortName;

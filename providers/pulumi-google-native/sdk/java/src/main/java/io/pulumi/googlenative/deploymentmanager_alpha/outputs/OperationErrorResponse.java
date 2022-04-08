@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class OperationErrorResponse {
     /**
      * The array of errors encountered while processing this operation.
-     * 
      */
     private final List<OperationErrorErrorsItemResponse> errors;
 
@@ -23,7 +22,6 @@ public final class OperationErrorResponse {
 
     /**
      * The array of errors encountered while processing this operation.
-     * 
     */
     public List<OperationErrorErrorsItemResponse> getErrors() {
         return this.errors;

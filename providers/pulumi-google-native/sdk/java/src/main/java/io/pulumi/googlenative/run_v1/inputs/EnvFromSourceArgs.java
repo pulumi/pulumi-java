@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Not supported by Cloud Run EnvFromSource represents the source of a set of ConfigMaps
- * 
  */
 public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * (Optional) The ConfigMap to select from
-     * 
      */
     @Import(name="configMapRef")
       private final @Nullable Output<ConfigMapEnvSourceArgs> configMapRef;
@@ -33,7 +31,6 @@ public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * (Optional) An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
-     * 
      */
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
@@ -44,7 +41,6 @@ public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * (Optional) The Secret to select from
-     * 
      */
     @Import(name="secretRef")
       private final @Nullable Output<SecretEnvSourceArgs> secretRef;

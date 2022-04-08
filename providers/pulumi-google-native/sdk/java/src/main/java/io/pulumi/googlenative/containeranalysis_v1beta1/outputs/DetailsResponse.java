@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class DetailsResponse {
     /**
      * Attestation for the resource.
-     * 
      */
     private final AttestationResponse attestation;
 
@@ -22,7 +21,6 @@ public final class DetailsResponse {
 
     /**
      * Attestation for the resource.
-     * 
     */
     public AttestationResponse getAttestation() {
         return this.attestation;

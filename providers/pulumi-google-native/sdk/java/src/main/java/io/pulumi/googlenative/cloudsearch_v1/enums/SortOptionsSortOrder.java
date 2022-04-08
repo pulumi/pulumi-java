@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Ascending is the default sort order
-     * 
      */
     @EnumType
     public enum SortOptionsSortOrder {

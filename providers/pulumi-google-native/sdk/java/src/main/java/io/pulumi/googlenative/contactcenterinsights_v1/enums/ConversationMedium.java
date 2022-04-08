@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
-     * 
      */
     @EnumType
     public enum ConversationMedium {
         /**
          * Default value, if unspecified will default to PHONE_CALL.
-         * 
          */
         MediumUnspecified("MEDIUM_UNSPECIFIED"),
         /**
          * The format for conversations that took place over the phone.
-         * 
          */
         PhoneCall("PHONE_CALL"),
         /**
          * The format for conversations that took place over chat.
-         * 
          */
         Chat("CHAT");
 

@@ -13,22 +13,18 @@ import java.util.Objects;
 public final class HTTPGetActionResponse {
     /**
      * (Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.
-     * 
      */
     private final String host;
     /**
      * (Optional) Custom headers to set in the request. HTTP allows repeated headers.
-     * 
      */
     private final List<HTTPHeaderResponse> httpHeaders;
     /**
      * (Optional) Path to access on the HTTP server.
-     * 
      */
     private final String path;
     /**
      * (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
-     * 
      */
     private final String scheme;
 
@@ -46,28 +42,24 @@ public final class HTTPGetActionResponse {
 
     /**
      * (Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.
-     * 
     */
     public String getHost() {
         return this.host;
     }
     /**
      * (Optional) Custom headers to set in the request. HTTP allows repeated headers.
-     * 
     */
     public List<HTTPHeaderResponse> getHttpHeaders() {
         return this.httpHeaders;
     }
     /**
      * (Optional) Path to access on the HTTP server.
-     * 
     */
     public String getPath() {
         return this.path;
     }
     /**
      * (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
-     * 
     */
     public String getScheme() {
         return this.scheme;

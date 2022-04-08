@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Result of the categorical stats computation.
- * 
  */
 public final class GooglePrivacyDlpV2CategoricalStatsResultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GooglePrivacyDlpV2CategoricalStatsResultResponse extends io.p
 
     /**
      * Histogram of value frequencies in the column.
-     * 
      */
     @Import(name="valueFrequencyHistogramBuckets", required=true)
       private final List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets;

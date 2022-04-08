@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A compliance check that is a CIS benchmark.
- * 
  */
 public final class CisBenchmarkResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class CisBenchmarkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The profile level of this CIS benchmark check.
-     * 
      */
     @Import(name="profileLevel", required=true)
       private final Integer profileLevel;
@@ -30,7 +28,6 @@ public final class CisBenchmarkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The severity level of this CIS benchmark check.
-     * 
      */
     @Import(name="severity", required=true)
       private final String severity;

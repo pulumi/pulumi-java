@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings specific to keys that can be used by websites.
- * 
  */
 public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends io
 
     /**
      * If set to true, it means allowed_domains will not be enforced.
-     * 
      */
     @Import(name="allowAllDomains")
       private final @Nullable Output<Boolean> allowAllDomains;
@@ -35,7 +33,6 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends io
 
     /**
      * If set to true, the key can be used on AMP (Accelerated Mobile Pages) websites. This is supported only for the SCORE integration type.
-     * 
      */
     @Import(name="allowAmpTraffic")
       private final @Nullable Output<Boolean> allowAmpTraffic;
@@ -46,7 +43,6 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends io
 
     /**
      * Domains or subdomains of websites allowed to use the key. All subdomains of an allowed domain are automatically allowed. A valid domain requires a host and must not include any path, port, query or fragment. Examples: 'example.com' or 'subdomain.example.com'
-     * 
      */
     @Import(name="allowedDomains")
       private final @Nullable Output<List<String>> allowedDomains;
@@ -57,7 +53,6 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends io
 
     /**
      * Settings for the frequency and difficulty at which this key triggers captcha challenges. This should only be specified for IntegrationTypes CHECKBOX and INVISIBLE.
-     * 
      */
     @Import(name="challengeSecurityPreference")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreference> challengeSecurityPreference;
@@ -68,7 +63,6 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends io
 
     /**
      * Describes how this key is integrated with the website.
-     * 
      */
     @Import(name="integrationType", required=true)
       private final Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationType> integrationType;

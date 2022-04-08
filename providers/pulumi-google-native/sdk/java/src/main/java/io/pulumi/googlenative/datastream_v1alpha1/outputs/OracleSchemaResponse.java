@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class OracleSchemaResponse {
     /**
      * Tables in the schema.
-     * 
      */
     private final List<OracleTableResponse> oracleTables;
     /**
      * Schema name.
-     * 
      */
     private final String schemaName;
 
@@ -32,14 +30,12 @@ public final class OracleSchemaResponse {
 
     /**
      * Tables in the schema.
-     * 
     */
     public List<OracleTableResponse> getOracleTables() {
         return this.oracleTables;
     }
     /**
      * Schema name.
-     * 
     */
     public String getSchemaName() {
         return this.schemaName;

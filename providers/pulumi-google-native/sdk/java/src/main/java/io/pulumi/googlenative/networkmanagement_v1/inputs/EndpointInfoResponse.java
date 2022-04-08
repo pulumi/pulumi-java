@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * For display only. The specification of the endpoints for the test. EndpointInfo is derived from source and destination Endpoint and validated by the backend data plane model.
- * 
  */
 public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Destination IP address.
-     * 
      */
     @Import(name="destinationIp", required=true)
       private final String destinationIp;
@@ -30,7 +28,6 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * URI of the network where this packet is sent to.
-     * 
      */
     @Import(name="destinationNetworkUri", required=true)
       private final String destinationNetworkUri;
@@ -41,7 +38,6 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Destination port. Only valid when protocol is TCP or UDP.
-     * 
      */
     @Import(name="destinationPort", required=true)
       private final Integer destinationPort;
@@ -52,7 +48,6 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * IP protocol in string format, for example: "TCP", "UDP", "ICMP".
-     * 
      */
     @Import(name="protocol", required=true)
       private final String protocol;
@@ -63,7 +58,6 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Source IP address.
-     * 
      */
     @Import(name="sourceIp", required=true)
       private final String sourceIp;
@@ -74,7 +68,6 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * URI of the network where this packet originates from.
-     * 
      */
     @Import(name="sourceNetworkUri", required=true)
       private final String sourceNetworkUri;
@@ -85,7 +78,6 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Source port. Only valid when protocol is TCP or UDP.
-     * 
      */
     @Import(name="sourcePort", required=true)
       private final Integer sourcePort;

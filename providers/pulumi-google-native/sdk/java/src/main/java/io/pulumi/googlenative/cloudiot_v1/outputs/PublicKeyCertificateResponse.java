@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class PublicKeyCertificateResponse {
     /**
      * The certificate data.
-     * 
      */
     private final String certificate;
     /**
      * The certificate format.
-     * 
      */
     private final String format;
     /**
      * [Output only] The certificate details. Used only for X.509 certificates.
-     * 
      */
     private final X509CertificateDetailsResponse x509Details;
 
@@ -38,21 +35,18 @@ public final class PublicKeyCertificateResponse {
 
     /**
      * The certificate data.
-     * 
     */
     public String getCertificate() {
         return this.certificate;
     }
     /**
      * The certificate format.
-     * 
     */
     public String getFormat() {
         return this.format;
     }
     /**
      * [Output only] The certificate details. Used only for X.509 certificates.
-     * 
     */
     public X509CertificateDetailsResponse getX509Details() {
         return this.x509Details;

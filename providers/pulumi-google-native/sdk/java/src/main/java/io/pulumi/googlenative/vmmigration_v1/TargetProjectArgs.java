@@ -16,7 +16,6 @@ public final class TargetProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The target project's description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -34,7 +33,6 @@ public final class TargetProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the target project.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -45,7 +43,6 @@ public final class TargetProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The target project ID (number) or project name.
-     * 
      */
     @Import(name="project")
       private final @Nullable Output<String> project;

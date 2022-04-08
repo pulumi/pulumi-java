@@ -19,7 +19,6 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Details of the target VM in Compute Engine.
-     * 
      */
     @Import(name="computeEngineTargetDefaults")
       private final @Nullable Output<ComputeEngineTargetDefaultsArgs> computeEngineTargetDefaults;
@@ -30,7 +29,6 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description attached to the migrating VM by the user.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -41,7 +39,6 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The display name attached to the MigratingVm by the user.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -52,7 +49,6 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The labels of the migrating VM.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -77,7 +73,6 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The replication schedule policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable Output<SchedulePolicyArgs> policy;
@@ -109,7 +104,6 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique ID of the VM in the source. The VM's name in vSphere can be changed, so this is not the VM's name but rather its moRef id. This id is of the form vm-.
-     * 
      */
     @Import(name="sourceVmId")
       private final @Nullable Output<String> sourceVmId;

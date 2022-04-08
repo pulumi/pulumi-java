@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Android app information.
- * 
  */
 public final class AndroidAppInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AndroidAppInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the app. Optional
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class AndroidAppInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The package name of the app. Required.
-     * 
      */
     @Import(name="packageName", required=true)
       private final String packageName;
@@ -40,7 +37,6 @@ public final class AndroidAppInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The internal version code of the app. Optional.
-     * 
      */
     @Import(name="versionCode", required=true)
       private final String versionCode;
@@ -51,7 +47,6 @@ public final class AndroidAppInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The version name of the app. Optional.
-     * 
      */
     @Import(name="versionName", required=true)
       private final String versionName;

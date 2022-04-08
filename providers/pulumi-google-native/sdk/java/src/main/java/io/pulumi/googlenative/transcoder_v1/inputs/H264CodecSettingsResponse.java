@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * H264 codec settings.
- * 
  */
 public final class H264CodecSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class H264CodecSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Specifies whether an open Group of Pictures (GOP) structure should be allowed or not. The default is `false`.
-     * 
      */
     @Import(name="allowOpenGop", required=true)
       private final Boolean allowOpenGop;
@@ -32,7 +30,6 @@ public final class H264CodecSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Specify the intensity of the adaptive quantizer (AQ). Must be between 0 and 1, where 0 disables the quantizer and 1 maximizes the quantizer. A higher value equals a lower bitrate but smoother image. The default is 0.
-     * 
      */
     @Import(name="aqStrength", required=true)
       private final Double aqStrength;
@@ -43,7 +40,6 @@ public final class H264CodecSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The number of consecutive B-frames. Must be greater than or equal to zero. Must be less than `VideoStream.gop_frame_count` if set. The default is 0.
-     * 
      */
     @Import(name="bFrameCount", required=true)
       private final Integer bFrameCount;
@@ -54,7 +50,6 @@ public final class H264CodecSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Allow B-pyramid for reference frame selection. This may not be supported on all decoders. The default is `false`.
-     * 
      */
     @Import(name="bPyramid", required=true)
       private final Boolean bPyramid;
@@ -65,7 +60,6 @@ public final class H264CodecSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The video bitrate in bits per second. The minimum value is 1,000. The maximum value is 800,000,000.
-     * 
      */
     @Import(name="bitrateBps", required=true)
       private final Integer bitrateBps;
@@ -76,7 +70,6 @@ public final class H264CodecSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21.
-     * 
      */
     @Import(name="crfLevel", required=true)
       private final Integer crfLevel;
@@ -87,7 +80,6 @@ public final class H264CodecSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Use two-pass encoding strategy to achieve better video quality. `VideoStream.rate_control_mode` must be `vbr`. The default is `false`.
-     * 
      */
     @Import(name="enableTwoPass", required=true)
       private final Boolean enableTwoPass;
@@ -98,7 +90,6 @@ public final class H264CodecSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The entropy coder to use. The default is `cabac`. Supported entropy coders: - `cavlc` - `cabac`
-     * 
      */
     @Import(name="entropyCoder", required=true)
       private final String entropyCoder;
@@ -109,7 +100,6 @@ public final class H264CodecSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. See [Calculating frame rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for more information.
-     * 
      */
     @Import(name="frameRate", required=true)
       private final Double frameRate;
@@ -120,7 +110,6 @@ public final class H264CodecSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Select the GOP size based on the specified duration. The default is `3s`. Note that `gopDuration` must be less than or equal to [`segmentDuration`](#SegmentSettings), and [`segmentDuration`](#SegmentSettings) must be divisible by `gopDuration`.
-     * 
      */
     @Import(name="gopDuration", required=true)
       private final String gopDuration;
@@ -131,7 +120,6 @@ public final class H264CodecSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Select the GOP size based on the specified frame count. Must be greater than zero.
-     * 
      */
     @Import(name="gopFrameCount", required=true)
       private final Integer gopFrameCount;
@@ -142,7 +130,6 @@ public final class H264CodecSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The height of the video in pixels. Must be an even integer. When not specified, the height is adjusted to match the specified width and input aspect ratio. If both are omitted, the input height is used.
-     * 
      */
     @Import(name="heightPixels", required=true)
       private final Integer heightPixels;
@@ -153,7 +140,6 @@ public final class H264CodecSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Pixel format to use. The default is `yuv420p`. Supported pixel formats: - `yuv420p` pixel format - `yuv422p` pixel format - `yuv444p` pixel format - `yuv420p10` 10-bit HDR pixel format - `yuv422p10` 10-bit HDR pixel format - `yuv444p10` 10-bit HDR pixel format - `yuv420p12` 12-bit HDR pixel format - `yuv422p12` 12-bit HDR pixel format - `yuv444p12` 12-bit HDR pixel format
-     * 
      */
     @Import(name="pixelFormat", required=true)
       private final String pixelFormat;
@@ -164,7 +150,6 @@ public final class H264CodecSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Enforces the specified codec preset. The default is `veryfast`. The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Preset). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
-     * 
      */
     @Import(name="preset", required=true)
       private final String preset;
@@ -175,7 +160,6 @@ public final class H264CodecSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Enforces the specified codec profile. The following profiles are supported: * `baseline` * `main` * `high` (default) The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
-     * 
      */
     @Import(name="profile", required=true)
       private final String profile;
@@ -186,7 +170,6 @@ public final class H264CodecSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Specify the `rate_control_mode`. The default is `vbr`. Supported rate control modes: - `vbr` - variable bitrate - `crf` - constant rate factor
-     * 
      */
     @Import(name="rateControlMode", required=true)
       private final String rateControlMode;
@@ -197,7 +180,6 @@ public final class H264CodecSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Enforces the specified codec tune. The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
-     * 
      */
     @Import(name="tune", required=true)
       private final String tune;
@@ -208,7 +190,6 @@ public final class H264CodecSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Initial fullness of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to 90% of `VideoStream.vbv_size_bits`.
-     * 
      */
     @Import(name="vbvFullnessBits", required=true)
       private final Integer vbvFullnessBits;
@@ -219,7 +200,6 @@ public final class H264CodecSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Size of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to `VideoStream.bitrate_bps`.
-     * 
      */
     @Import(name="vbvSizeBits", required=true)
       private final Integer vbvSizeBits;
@@ -230,7 +210,6 @@ public final class H264CodecSettingsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The width of the video in pixels. Must be an even integer. When not specified, the width is adjusted to match the specified height and input aspect ratio. If both are omitted, the input width is used.
-     * 
      */
     @Import(name="widthPixels", required=true)
       private final Integer widthPixels;

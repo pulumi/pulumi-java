@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * Required. Instance type.
-     * 
      */
     @EnumType
     public enum InstanceType {
         /**
          * No type specified. The instance creation will fail.
-         * 
          */
         TypeUnspecified("TYPE_UNSPECIFIED"),
         /**
          * Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for streaming pipelines, etc.
-         * 
          */
         Basic("BASIC"),
         /**
          * Enterprise Data Fusion instance. In Enterprise type, the user will have all features available, such as support for streaming pipelines, unlimited number of concurrent pipelines, etc.
-         * 
          */
         Enterprise("ENTERPRISE"),
         /**
          * Developer Data Fusion instance. In Developer type, the user will have all features available but with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration pipelines at low cost.
-         * 
          */
         Developer("DEVELOPER");
 

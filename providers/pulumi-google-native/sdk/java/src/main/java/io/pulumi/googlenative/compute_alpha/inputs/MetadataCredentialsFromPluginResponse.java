@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * [Deprecated] Custom authenticator credentials. Custom authenticator credentials.
- * 
  */
 public final class MetadataCredentialsFromPluginResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MetadataCredentialsFromPluginResponse extends io.pulumi.resou
 
     /**
      * Plugin name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class MetadataCredentialsFromPluginResponse extends io.pulumi.resou
 
     /**
      * A text proto that conforms to a Struct type definition interpreted by the plugin.
-     * 
      */
     @Import(name="structConfig", required=true)
       private final String structConfig;

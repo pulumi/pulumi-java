@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The version of the SDK used to run the job.
- * 
  */
 public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The support status for this SDK version.
-     * 
      */
     @Import(name="sdkSupportStatus")
       private final @Nullable Output<SdkVersionSdkSupportStatus> sdkSupportStatus;
@@ -32,7 +30,6 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The version of the SDK used to run the job.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;
@@ -43,7 +40,6 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A readable string describing the version of the SDK.
-     * 
      */
     @Import(name="versionDisplayName")
       private final @Nullable Output<String> versionDisplayName;

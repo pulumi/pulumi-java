@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class LabelSelectorResponse {
     /**
      * Resource labels for this selector.
-     * 
      */
     private final Map<String,String> labels;
 
@@ -23,7 +22,6 @@ public final class LabelSelectorResponse {
 
     /**
      * Resource labels for this selector.
-     * 
     */
     public Map<String,String> getLabels() {
         return this.labels;

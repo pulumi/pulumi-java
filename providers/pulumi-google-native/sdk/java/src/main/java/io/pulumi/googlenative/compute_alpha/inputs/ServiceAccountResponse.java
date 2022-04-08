@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A service account.
- * 
  */
 public final class ServiceAccountResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ServiceAccountResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Email address of the service account.
-     * 
      */
     @Import(name="email", required=true)
       private final String email;
@@ -30,7 +28,6 @@ public final class ServiceAccountResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The list of scopes to be made available for this service account.
-     * 
      */
     @Import(name="scopes", required=true)
       private final List<String> scopes;

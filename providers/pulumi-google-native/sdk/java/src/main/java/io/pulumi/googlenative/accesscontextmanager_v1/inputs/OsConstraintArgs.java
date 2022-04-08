@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A restriction on the OS type and version of devices making requests.
- * 
  */
 public final class OsConstraintArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class OsConstraintArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: `"major.minor.patch"`. Examples: `"10.5.301"`, `"9.2.1"`.
-     * 
      */
     @Import(name="minimumVersion")
       private final @Nullable Output<String> minimumVersion;
@@ -33,7 +31,6 @@ public final class OsConstraintArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The allowed OS type.
-     * 
      */
     @Import(name="osType", required=true)
       private final Output<OsConstraintOsType> osType;
@@ -44,7 +41,6 @@ public final class OsConstraintArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Only allows requests from devices with a verified Chrome OS. Verifications includes requirements that the device is enterprise-managed, conformant to domain policies, and the caller has permission to call the API targeted by the request.
-     * 
      */
     @Import(name="requireVerifiedChromeOs")
       private final @Nullable Output<Boolean> requireVerifiedChromeOs;

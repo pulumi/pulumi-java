@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Browse Carousel Card for Actions on Google. https://developers.google.com/actions/assistant/responses#browsing_carousel
- * 
  */
 public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs ex
 
     /**
      * Optional. Settings for displaying the image. Applies to every image in items.
-     * 
      */
     @Import(name="imageDisplayOptions")
       private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions;
@@ -33,7 +31,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs ex
 
     /**
      * List of items in the Browse Carousel Card. Minimum of two items, maximum of ten.
-     * 
      */
     @Import(name="items", required=true)
       private final Output<List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items;

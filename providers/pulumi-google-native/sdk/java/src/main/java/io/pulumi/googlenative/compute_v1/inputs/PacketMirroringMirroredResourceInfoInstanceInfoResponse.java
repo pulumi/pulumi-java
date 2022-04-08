@@ -14,7 +14,6 @@ public final class PacketMirroringMirroredResourceInfoInstanceInfoResponse exten
 
     /**
      * Unique identifier for the instance; defined by the server.
-     * 
      */
     @Import(name="canonicalUrl", required=true)
       private final String canonicalUrl;
@@ -25,7 +24,6 @@ public final class PacketMirroringMirroredResourceInfoInstanceInfoResponse exten
 
     /**
      * Resource URL to the virtual machine instance which is being mirrored.
-     * 
      */
     @Import(name="url", required=true)
       private final String url;

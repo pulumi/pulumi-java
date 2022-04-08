@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The result of an analysis.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse exte
 
     /**
      * Call-specific metadata created by the analysis.
-     * 
      */
     @Import(name="callAnalysisMetadata", required=true)
       private final GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata;
@@ -30,7 +28,6 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse exte
 
     /**
      * The time at which the analysis ended.
-     * 
      */
     @Import(name="endTime", required=true)
       private final String endTime;

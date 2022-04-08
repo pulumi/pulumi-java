@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A basic layout divides the available space into vertical columns of equal width and arranges a list of widgets using a row-first strategy.
- * 
  */
 public final class GridLayoutArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GridLayoutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of columns into which the view's width is divided. If omitted or set to zero, a system default will be used while rendering.
-     * 
      */
     @Import(name="columns")
       private final @Nullable Output<String> columns;
@@ -33,7 +31,6 @@ public final class GridLayoutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The informational elements that are arranged into the columns row-first.
-     * 
      */
     @Import(name="widgets")
       private final @Nullable Output<List<WidgetArgs>> widgets;

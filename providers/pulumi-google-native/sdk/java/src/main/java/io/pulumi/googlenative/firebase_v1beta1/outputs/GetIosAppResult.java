@@ -11,37 +11,30 @@ import java.util.Objects;
 public final class GetIosAppResult {
     /**
      * Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier should be treated as an opaque token, as the data format is not specified.
-     * 
      */
     private final String appId;
     /**
      * The automatically generated Apple ID assigned to the iOS app by Apple in the iOS App Store.
-     * 
      */
     private final String appStoreId;
     /**
      * Immutable. The canonical bundle ID of the iOS app as it would appear in the iOS AppStore.
-     * 
      */
     private final String bundleId;
     /**
      * The user-assigned display name for the `IosApp`.
-     * 
      */
     private final String displayName;
     /**
      * The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER /iosApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.iosApps#IosApp.FIELDS.app_id)).
-     * 
      */
     private final String name;
     /**
      * Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `IosApp`.
-     * 
      */
     private final String project;
     /**
      * The Apple Developer Team ID associated with the App in the App Store.
-     * 
      */
     private final String teamId;
 
@@ -65,49 +58,42 @@ public final class GetIosAppResult {
 
     /**
      * Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier should be treated as an opaque token, as the data format is not specified.
-     * 
     */
     public String getAppId() {
         return this.appId;
     }
     /**
      * The automatically generated Apple ID assigned to the iOS app by Apple in the iOS App Store.
-     * 
     */
     public String getAppStoreId() {
         return this.appStoreId;
     }
     /**
      * Immutable. The canonical bundle ID of the iOS app as it would appear in the iOS AppStore.
-     * 
     */
     public String getBundleId() {
         return this.bundleId;
     }
     /**
      * The user-assigned display name for the `IosApp`.
-     * 
     */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER /iosApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.iosApps#IosApp.FIELDS.app_id)).
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `IosApp`.
-     * 
     */
     public String getProject() {
         return this.project;
     }
     /**
      * The Apple Developer Team ID associated with the App in the App Store.
-     * 
     */
     public String getTeamId() {
         return this.teamId;

@@ -11,22 +11,18 @@ import java.util.Objects;
 public final class InputMappingResponse {
     /**
      * The name of the field that is going to be injected.
-     * 
      */
     private final String fieldName;
     /**
      * The location where this mapping applies.
-     * 
      */
     private final String location;
     /**
      * Regex to evaluate on method to decide if input applies.
-     * 
      */
     private final String methodMatch;
     /**
      * A jsonPath expression to select an element.
-     * 
      */
     private final String value;
 
@@ -44,28 +40,24 @@ public final class InputMappingResponse {
 
     /**
      * The name of the field that is going to be injected.
-     * 
     */
     public String getFieldName() {
         return this.fieldName;
     }
     /**
      * The location where this mapping applies.
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * Regex to evaluate on method to decide if input applies.
-     * 
     */
     public String getMethodMatch() {
         return this.methodMatch;
     }
     /**
      * A jsonPath expression to select an element.
-     * 
     */
     public String getValue() {
         return this.value;

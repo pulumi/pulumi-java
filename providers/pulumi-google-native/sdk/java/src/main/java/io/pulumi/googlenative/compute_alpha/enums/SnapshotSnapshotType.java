@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates the type of the snapshot.
-     * 
      */
     @EnumType
     public enum SnapshotSnapshotType {

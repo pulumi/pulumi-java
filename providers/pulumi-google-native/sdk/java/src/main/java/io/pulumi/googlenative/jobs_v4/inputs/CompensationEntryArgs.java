@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * A compensation entry that represents one component of compensation, such as base pay, bonus, or other compensation type. Annualization: One compensation entry can be annualized if - it contains valid amount or range. - and its expected_units_per_year is set or can be derived. Its annualized range is determined as (amount or range) times expected_units_per_year.
- * 
  */
 public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Compensation amount.
-     * 
      */
     @Import(name="amount")
       private final @Nullable Output<MoneyArgs> amount;
@@ -36,7 +34,6 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Compensation description. For example, could indicate equity terms or provide additional context to an estimated bonus.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -47,7 +44,6 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Expected number of units paid each year. If not specified, when Job.employment_types is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY: 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1
-     * 
      */
     @Import(name="expectedUnitsPerYear")
       private final @Nullable Output<Double> expectedUnitsPerYear;
@@ -58,7 +54,6 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Compensation range.
-     * 
      */
     @Import(name="range")
       private final @Nullable Output<CompensationRangeArgs> range;
@@ -69,7 +64,6 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Compensation type. Default is CompensationType.COMPENSATION_TYPE_UNSPECIFIED.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<CompensationEntryType> type;
@@ -80,7 +74,6 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
-     * 
      */
     @Import(name="unit")
       private final @Nullable Output<CompensationEntryUnit> unit;

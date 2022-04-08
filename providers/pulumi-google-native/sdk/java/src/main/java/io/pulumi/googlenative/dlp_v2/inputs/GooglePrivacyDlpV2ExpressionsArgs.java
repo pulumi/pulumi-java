@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An expression, consisting or an operator and conditions.
- * 
  */
 public final class GooglePrivacyDlpV2ExpressionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GooglePrivacyDlpV2ExpressionsArgs extends io.pulumi.resources
 
     /**
      * Conditions to apply to the expression.
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<GooglePrivacyDlpV2ConditionsArgs> conditions;
@@ -32,7 +30,6 @@ public final class GooglePrivacyDlpV2ExpressionsArgs extends io.pulumi.resources
 
     /**
      * The operator to apply to the result of conditions. Default and currently only supported value is `AND`.
-     * 
      */
     @Import(name="logicalOperator")
       private final @Nullable Output<GooglePrivacyDlpV2ExpressionsLogicalOperator> logicalOperator;

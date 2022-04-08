@@ -16,7 +16,6 @@ public final class QueryParameterResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * [Optional] If unset, this is a positional parameter. Otherwise, should be unique within a query.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -27,7 +26,6 @@ public final class QueryParameterResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * [Required] The type of this parameter.
-     * 
      */
     @Import(name="parameterType", required=true)
       private final QueryParameterTypeResponse parameterType;
@@ -38,7 +36,6 @@ public final class QueryParameterResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * [Required] The value of this parameter.
-     * 
      */
     @Import(name="parameterValue", required=true)
       private final QueryParameterValueResponse parameterValue;

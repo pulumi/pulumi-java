@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class DeliveryConfigResponse {
     /**
      * The DeliveryRequirement for this subscription.
-     * 
      */
     private final String deliveryRequirement;
 
@@ -22,7 +21,6 @@ public final class DeliveryConfigResponse {
 
     /**
      * The DeliveryRequirement for this subscription.
-     * 
     */
     public String getDeliveryRequirement() {
         return this.deliveryRequirement;

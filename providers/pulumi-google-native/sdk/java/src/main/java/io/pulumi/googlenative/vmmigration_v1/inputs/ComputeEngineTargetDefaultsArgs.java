@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * ComputeEngineTargetDefaults is a collection of details for creating a VM in a target Compute Engine project.
- * 
  */
 public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
 
     /**
      * Additional licenses to assign to the VM.
-     * 
      */
     @Import(name="additionalLicenses")
       private final @Nullable Output<List<String>> additionalLicenses;
@@ -38,7 +36,6 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
 
     /**
      * Compute instance scheduling information (if empty default is used).
-     * 
      */
     @Import(name="computeScheduling")
       private final @Nullable Output<ComputeSchedulingArgs> computeScheduling;
@@ -49,7 +46,6 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
 
     /**
      * The disk type to use in the VM.
-     * 
      */
     @Import(name="diskType")
       private final @Nullable Output<ComputeEngineTargetDefaultsDiskType> diskType;
@@ -60,7 +56,6 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
 
     /**
      * A map of labels to associate with the VM.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -71,7 +66,6 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
 
     /**
      * The license type to use in OS adaptation.
-     * 
      */
     @Import(name="licenseType")
       private final @Nullable Output<ComputeEngineTargetDefaultsLicenseType> licenseType;
@@ -82,7 +76,6 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
 
     /**
      * The machine type to create the VM with.
-     * 
      */
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
@@ -93,7 +86,6 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
 
     /**
      * The machine type series to create the VM with.
-     * 
      */
     @Import(name="machineTypeSeries")
       private final @Nullable Output<String> machineTypeSeries;
@@ -104,7 +96,6 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
 
     /**
      * The metadata key/value pairs to assign to the VM.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
@@ -115,7 +106,6 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
 
     /**
      * List of NICs connected to this VM.
-     * 
      */
     @Import(name="networkInterfaces")
       private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
@@ -126,7 +116,6 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
 
     /**
      * A map of network tags to associate with the VM.
-     * 
      */
     @Import(name="networkTags")
       private final @Nullable Output<List<String>> networkTags;
@@ -137,7 +126,6 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
 
     /**
      * Defines whether the instance has Secure Boot enabled. This can be set to true only if the vm boot option is EFI.
-     * 
      */
     @Import(name="secureBoot")
       private final @Nullable Output<Boolean> secureBoot;
@@ -148,7 +136,6 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
 
     /**
      * The service account to associate the VM with.
-     * 
      */
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
@@ -159,7 +146,6 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
 
     /**
      * The full path of the resource of type TargetProject which represents the Compute Engine project in which to create this VM.
-     * 
      */
     @Import(name="targetProject")
       private final @Nullable Output<String> targetProject;
@@ -170,7 +156,6 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
 
     /**
      * The name of the VM to create.
-     * 
      */
     @Import(name="vmName")
       private final @Nullable Output<String> vmName;
@@ -181,7 +166,6 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
 
     /**
      * The zone in which to create the VM.
-     * 
      */
     @Import(name="zone")
       private final @Nullable Output<String> zone;

@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * cluster_dns_scope indicates the scope of access to cluster DNS records.
-     * 
      */
     @EnumType
     public enum DNSConfigClusterDnsScope {
         /**
          * Default value, will be inferred as cluster scope.
-         * 
          */
         DnsScopeUnspecified("DNS_SCOPE_UNSPECIFIED"),
         /**
          * DNS records are accessible from within the cluster.
-         * 
          */
         ClusterScope("CLUSTER_SCOPE"),
         /**
          * DNS records are accessible from within the VPC.
-         * 
          */
         VpcScope("VPC_SCOPE");
 

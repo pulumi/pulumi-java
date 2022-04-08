@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Encapsulates the metadata for basic sample series represented by a line chart
- * 
  */
 public final class BasicPerfSampleSeriesResponse extends io.pulumi.resources.InvokeArgs {
 

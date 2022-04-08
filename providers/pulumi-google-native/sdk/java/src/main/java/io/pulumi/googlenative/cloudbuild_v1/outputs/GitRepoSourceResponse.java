@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class GitRepoSourceResponse {
     /**
      * The branch or tag to use. Must start with "refs/" (required).
-     * 
      */
     private final String ref;
     /**
      * See RepoType below.
-     * 
      */
     private final String repoType;
     /**
      * The URI of the repo (required).
-     * 
      */
     private final String uri;
 
@@ -37,21 +34,18 @@ public final class GitRepoSourceResponse {
 
     /**
      * The branch or tag to use. Must start with "refs/" (required).
-     * 
     */
     public String getRef() {
         return this.ref;
     }
     /**
      * See RepoType below.
-     * 
     */
     public String getRepoType() {
         return this.repoType;
     }
     /**
      * The URI of the repo (required).
-     * 
     */
     public String getUri() {
         return this.uri;

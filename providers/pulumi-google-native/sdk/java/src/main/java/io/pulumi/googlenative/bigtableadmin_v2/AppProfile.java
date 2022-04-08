@@ -15,76 +15,65 @@ import javax.annotation.Nullable;
 
 /**
  * Creates an app profile within an instance.
- * 
  */
 @ResourceType(type="google-native:bigtableadmin/v2:AppProfile")
 public class AppProfile extends io.pulumi.resources.CustomResource {
     /**
      * Long form description of the use case for this AppProfile.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Long form description of the use case for this AppProfile.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Strongly validated etag for optimistic concurrency control. Preserve the value returned from `GetAppProfile` when calling `UpdateAppProfile` to fail the request if there has been a modification in the mean time. The `update_mask` of the request need not include `etag` for this protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more details.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return Strongly validated etag for optimistic concurrency control. Preserve the value returned from `GetAppProfile` when calling `UpdateAppProfile` to fail the request if there has been a modification in the mean time. The `update_mask` of the request need not include `etag` for this protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more details.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Use a multi-cluster routing policy.
-     * 
      */
     @Export(name="multiClusterRoutingUseAny", type=MultiClusterRoutingUseAnyResponse.class, parameters={})
     private Output<MultiClusterRoutingUseAnyResponse> multiClusterRoutingUseAny;
 
     /**
      * @return Use a multi-cluster routing policy.
-     * 
      */
     public Output<MultiClusterRoutingUseAnyResponse> getMultiClusterRoutingUseAny() {
         return this.multiClusterRoutingUseAny;
     }
     /**
      * The unique name of the app profile. Values are of the form `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The unique name of the app profile. Values are of the form `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Use a single-cluster routing policy.
-     * 
      */
     @Export(name="singleClusterRouting", type=SingleClusterRoutingResponse.class, parameters={})
     private Output<SingleClusterRoutingResponse> singleClusterRouting;
 
     /**
      * @return Use a single-cluster routing policy.
-     * 
      */
     public Output<SingleClusterRoutingResponse> getSingleClusterRouting() {
         return this.singleClusterRouting;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Installs a deb via dpkg.
- * 
  */
 public final class SoftwareRecipeStepInstallDpkgArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class SoftwareRecipeStepInstallDpkgArgs extends io.pulumi.resources
 
     /**
      * The id of the relevant artifact in the recipe.
-     * 
      */
     @Import(name="artifactId", required=true)
       private final Output<String> artifactId;

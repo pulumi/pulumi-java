@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An internal checker allows Uptime checks to run on private/internal GCP resources.
- * 
  */
 public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The checker's human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -32,7 +30,6 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The GCP zone the Uptime check should egress from. Only respected for internal Uptime checks, where internal_network is specified.
-     * 
      */
     @Import(name="gcpZone")
       private final @Nullable Output<String> gcpZone;
@@ -43,7 +40,6 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A unique resource name for this InternalChecker. The format is: projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID] [PROJECT_ID_OR_NUMBER] is the Stackdriver Workspace project for the Uptime check config associated with the internal checker.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -54,7 +50,6 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: "default").
-     * 
      */
     @Import(name="network")
       private final @Nullable Output<String> network;
@@ -65,7 +60,6 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The GCP project ID where the internal checker lives. Not necessary the same as the Workspace project.
-     * 
      */
     @Import(name="peerProjectId")
       private final @Nullable Output<String> peerProjectId;
@@ -76,7 +70,6 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The current operational state of the internal checker.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<InternalCheckerState> state;

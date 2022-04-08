@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A single device file description.
- * 
  */
 public final class DeviceFileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DeviceFileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A reference to an opaque binary blob file.
-     * 
      */
     @Import(name="obbFile")
       private final @Nullable Output<ObbFileArgs> obbFile;
@@ -32,7 +30,6 @@ public final class DeviceFileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A reference to a regular file.
-     * 
      */
     @Import(name="regularFile")
       private final @Nullable Output<RegularFileArgs> regularFile;

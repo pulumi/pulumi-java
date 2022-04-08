@@ -16,7 +16,6 @@ public final class DatasetAccessEntryResponse extends io.pulumi.resources.Invoke
 
     /**
      * [Required] The dataset this entry applies to.
-     * 
      */
     @Import(name="dataset", required=true)
       private final DatasetReferenceResponse dataset;

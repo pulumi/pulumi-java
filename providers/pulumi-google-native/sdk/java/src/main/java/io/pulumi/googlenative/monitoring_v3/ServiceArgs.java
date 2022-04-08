@@ -24,7 +24,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type used for App Engine services.
-     * 
      */
     @Import(name="appEngine")
       private final @Nullable Output<AppEngineArgs> appEngine;
@@ -35,7 +34,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type used for Cloud Endpoints services.
-     * 
      */
     @Import(name="cloudEndpoints")
       private final @Nullable Output<CloudEndpointsArgs> cloudEndpoints;
@@ -46,7 +44,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type used for Istio services that live in a Kubernetes cluster.
-     * 
      */
     @Import(name="clusterIstio")
       private final @Nullable Output<ClusterIstioArgs> clusterIstio;
@@ -57,7 +54,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Custom service type.
-     * 
      */
     @Import(name="custom")
       private final @Nullable Output<CustomArgs> custom;
@@ -68,7 +64,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name used for UI elements listing this Service.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -79,7 +74,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type used for canonical services scoped to an Istio mesh. Metrics for Istio are documented here (https://istio.io/latest/docs/reference/config/metrics/)
-     * 
      */
     @Import(name="istioCanonicalService")
       private final @Nullable Output<IstioCanonicalServiceArgs> istioCanonicalService;
@@ -90,7 +84,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type used for Istio services scoped to an Istio mesh.
-     * 
      */
     @Import(name="meshIstio")
       private final @Nullable Output<MeshIstioArgs> meshIstio;
@@ -100,8 +93,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Resource name for this Service. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
-     * 
+     * Resource name for this Service. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID] 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -119,7 +111,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration for how to query telemetry on a Service.
-     * 
      */
     @Import(name="telemetry")
       private final @Nullable Output<TelemetryArgs> telemetry;
@@ -130,7 +121,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Labels which have been used to annotate the service. Label keys must start with a letter. Label keys and values may contain lowercase letters, numbers, underscores, and dashes. Label keys and values have a maximum length of 63 characters, and must be less than 128 bytes in size. Up to 64 label entries may be stored. For labels which do not have a semantic value, the empty string may be supplied for the label value.
-     * 
      */
     @Import(name="userLabels")
       private final @Nullable Output<Map<String,String>> userLabels;

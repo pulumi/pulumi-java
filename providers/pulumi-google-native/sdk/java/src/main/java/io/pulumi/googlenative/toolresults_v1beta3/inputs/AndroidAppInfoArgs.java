@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Android app information.
- * 
  */
 public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the app. Optional
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The package name of the app. Required.
-     * 
      */
     @Import(name="packageName")
       private final @Nullable Output<String> packageName;
@@ -42,7 +39,6 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The internal version code of the app. Optional.
-     * 
      */
     @Import(name="versionCode")
       private final @Nullable Output<String> versionCode;
@@ -53,7 +49,6 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The version name of the app. Optional.
-     * 
      */
     @Import(name="versionName")
       private final @Nullable Output<String> versionName;

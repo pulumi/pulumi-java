@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Options defining BigQuery table and row identifiers.
- * 
  */
 public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends io.pulumi.resou
 
     /**
      * References to fields excluded from scanning. This allows you to skip inspection of entire columns which you know have no findings.
-     * 
      */
     @Import(name="excludedFields")
       private final @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> excludedFields;
@@ -36,7 +34,6 @@ public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends io.pulumi.resou
 
     /**
      * Table fields that may uniquely identify a row within the table. When `actions.saveFindings.outputConfig.table` is specified, the values of columns specified here are available in the output table under `location.content_locations.record_location.record_key.id_values`. Nested fields such as `person.birthdate.year` are allowed.
-     * 
      */
     @Import(name="identifyingFields")
       private final @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields;
@@ -47,7 +44,6 @@ public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends io.pulumi.resou
 
     /**
      * Limit scanning only to these fields.
-     * 
      */
     @Import(name="includedFields")
       private final @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> includedFields;
@@ -58,7 +54,6 @@ public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends io.pulumi.resou
 
     /**
      * Max number of rows to scan. If the table has more rows than this value, the rest of the rows are omitted. If not set, or if set to 0, all rows will be scanned. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.
-     * 
      */
     @Import(name="rowsLimit")
       private final @Nullable Output<String> rowsLimit;
@@ -69,7 +64,6 @@ public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends io.pulumi.resou
 
     /**
      * Max percentage of rows to scan. The rest are omitted. The number of rows scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.
-     * 
      */
     @Import(name="rowsLimitPercent")
       private final @Nullable Output<Integer> rowsLimitPercent;
@@ -87,7 +81,6 @@ public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends io.pulumi.resou
 
     /**
      * Complete BigQuery table reference.
-     * 
      */
     @Import(name="tableReference")
       private final @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> tableReference;

@@ -13,48 +13,41 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a knowledge base. Note: The `projects.agent.knowledgeBases` resource is deprecated; only use `projects.knowledgeBases`.
- * 
  */
 @ResourceType(type="google-native:dialogflow/v2beta1:KnowledgeBase")
 public class KnowledgeBase extends io.pulumi.resources.CustomResource {
     /**
      * The display name of the knowledge base. The name must be 1024 bytes or less; otherwise, the creation request fails.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The display name of the knowledge base. The name must be 1024 bytes or less; otherwise, the creation request fails.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Language which represents the KnowledgeBase. When the KnowledgeBase is created/updated, this is populated for all non en-us languages. If not populated, the default language en-us applies.
-     * 
      */
     @Export(name="languageCode", type=String.class, parameters={})
     private Output<String> languageCode;
 
     /**
      * @return Language which represents the KnowledgeBase. When the KnowledgeBase is created/updated, this is populated for all non en-us languages. If not populated, the default language en-us applies.
-     * 
      */
     public Output<String> getLanguageCode() {
         return this.languageCode;
     }
     /**
      * The knowledge base resource name. The name must be empty when creating a knowledge base. Format: `projects//locations//knowledgeBases/`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The knowledge base resource name. The name must be empty when creating a knowledge base. Format: `projects//locations//knowledgeBases/`.
-     * 
      */
     public Output<String> getName() {
         return this.name;

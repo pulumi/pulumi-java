@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Type of archive files in this repository. The default behavior is DEB.
-     * 
      */
     @EnumType
     public enum AptRepositoryArchiveType {
         /**
          * Unspecified.
-         * 
          */
         ArchiveTypeUnspecified("ARCHIVE_TYPE_UNSPECIFIED"),
         /**
          * DEB indicates that the archive contains binary files.
-         * 
          */
         Deb("DEB"),
         /**
          * DEB_SRC indicates that the archive contains source files.
-         * 
          */
         DebSrc("DEB_SRC");
 

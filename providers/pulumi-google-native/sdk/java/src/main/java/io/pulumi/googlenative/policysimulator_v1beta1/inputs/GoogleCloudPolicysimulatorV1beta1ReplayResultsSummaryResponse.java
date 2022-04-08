@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Summary statistics about the replayed log entries.
- * 
  */
 public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
 
     /**
      * The number of replayed log entries with a difference between baseline and simulated policies.
-     * 
      */
     @Import(name="differenceCount", required=true)
       private final Integer differenceCount;
@@ -30,7 +28,6 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
 
     /**
      * The number of log entries that could not be replayed.
-     * 
      */
     @Import(name="errorCount", required=true)
       private final Integer errorCount;
@@ -41,7 +38,6 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
 
     /**
      * The total number of log entries replayed.
-     * 
      */
     @Import(name="logCount", required=true)
       private final Integer logCount;
@@ -52,7 +48,6 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
 
     /**
      * The date of the newest log entry replayed.
-     * 
      */
     @Import(name="newestDate", required=true)
       private final GoogleTypeDateResponse newestDate;
@@ -63,7 +58,6 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
 
     /**
      * The date of the oldest log entry replayed.
-     * 
      */
     @Import(name="oldestDate", required=true)
       private final GoogleTypeDateResponse oldestDate;
@@ -74,7 +68,6 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
 
     /**
      * The number of replayed log entries with no difference between baseline and simulated policies.
-     * 
      */
     @Import(name="unchangedCount", required=true)
       private final Integer unchangedCount;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A widget that displays textual content.
- * 
  */
 public final class TextResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class TextResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The text content to be displayed.
-     * 
      */
     @Import(name="content", required=true)
       private final String content;
@@ -29,7 +27,6 @@ public final class TextResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * How the text content is formatted.
-     * 
      */
     @Import(name="format", required=true)
       private final String format;

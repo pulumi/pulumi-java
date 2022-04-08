@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class ServiceMeshFeatureStateResponse {
     /**
      * Results of running Service Mesh analyzers.
-     * 
      */
     private final List<ServiceMeshAnalysisMessageResponse> analysisMessages;
 
@@ -23,7 +22,6 @@ public final class ServiceMeshFeatureStateResponse {
 
     /**
      * Results of running Service Mesh analyzers.
-     * 
     */
     public List<ServiceMeshAnalysisMessageResponse> getAnalysisMessages() {
         return this.analysisMessages;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A text or ssml response that is preferentially used for TTS output audio synthesis, as described in the comment on the ResponseMessage message.
- * 
  */
 public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextRespon
 
     /**
      * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
-     * 
      */
     @Import(name="allowPlaybackInterruption", required=true)
       private final Boolean allowPlaybackInterruption;
@@ -30,7 +28,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextRespon
 
     /**
      * The SSML text to be synthesized. For more information, see [SSML](/speech/text-to-speech/docs/ssml).
-     * 
      */
     @Import(name="ssml", required=true)
       private final String ssml;
@@ -41,7 +38,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextRespon
 
     /**
      * The raw text to be synthesized.
-     * 
      */
     @Import(name="text", required=true)
       private final String text;

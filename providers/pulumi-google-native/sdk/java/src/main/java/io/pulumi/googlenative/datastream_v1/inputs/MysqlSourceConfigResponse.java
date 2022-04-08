@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * MySQL source configuration
- * 
  */
 public final class MysqlSourceConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MysqlSourceConfigResponse extends io.pulumi.resources.InvokeA
 
     /**
      * MySQL objects to exclude from the stream.
-     * 
      */
     @Import(name="excludeObjects", required=true)
       private final MysqlRdbmsResponse excludeObjects;
@@ -29,7 +27,6 @@ public final class MysqlSourceConfigResponse extends io.pulumi.resources.InvokeA
 
     /**
      * MySQL objects to retrieve from the source.
-     * 
      */
     @Import(name="includeObjects", required=true)
       private final MysqlRdbmsResponse includeObjects;

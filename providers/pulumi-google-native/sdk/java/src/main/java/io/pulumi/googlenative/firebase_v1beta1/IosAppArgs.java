@@ -16,7 +16,6 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier should be treated as an opaque token, as the data format is not specified.
-     * 
      */
     @Import(name="appId")
       private final @Nullable Output<String> appId;
@@ -27,7 +26,6 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The automatically generated Apple ID assigned to the iOS app by Apple in the iOS App Store.
-     * 
      */
     @Import(name="appStoreId")
       private final @Nullable Output<String> appStoreId;
@@ -38,7 +36,6 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The canonical bundle ID of the iOS app as it would appear in the iOS AppStore.
-     * 
      */
     @Import(name="bundleId")
       private final @Nullable Output<String> bundleId;
@@ -49,7 +46,6 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user-assigned display name for the `IosApp`.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -60,7 +56,6 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER /iosApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.iosApps#IosApp.FIELDS.app_id)).
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -71,7 +66,6 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `IosApp`.
-     * 
      */
     @Import(name="project")
       private final @Nullable Output<String> project;
@@ -82,7 +76,6 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Apple Developer Team ID associated with the App in the App Store.
-     * 
      */
     @Import(name="teamId")
       private final @Nullable Output<String> teamId;

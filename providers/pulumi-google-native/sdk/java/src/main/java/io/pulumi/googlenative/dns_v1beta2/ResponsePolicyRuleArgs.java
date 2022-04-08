@@ -18,7 +18,6 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Answer this query with a behavior rather than DNS data.
-     * 
      */
     @Import(name="behavior")
       private final @Nullable Output<ResponsePolicyRuleBehavior> behavior;
@@ -36,7 +35,6 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The DNS name (wildcard or exact) to apply this rule to. Must be unique within the Response Policy Rule.
-     * 
      */
     @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
@@ -54,7 +52,6 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Answer this query directly with DNS data. These ResourceRecordSets override any other DNS behavior for the matched name; in particular they override private zones, the public internet, and GCP internal DNS. No SOA nor NS types are allowed.
-     * 
      */
     @Import(name="localData")
       private final @Nullable Output<ResponsePolicyRuleLocalDataArgs> localData;
@@ -79,7 +76,6 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * An identifier for this rule. Must be unique with the ResponsePolicy.
-     * 
      */
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;

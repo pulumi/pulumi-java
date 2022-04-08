@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * VolumeMount describes a mounting of a Volume within a container.
- * 
  */
 public final class VolumeMountResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class VolumeMountResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Path within the container at which the volume should be mounted. Must not contain ':'.
-     * 
      */
     @Import(name="mountPath", required=true)
       private final String mountPath;
@@ -30,7 +28,6 @@ public final class VolumeMountResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the volume. There must be a corresponding Volume with the same name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -41,7 +38,6 @@ public final class VolumeMountResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * (Optional) Only true is accepted. Defaults to true.
-     * 
      */
     @Import(name="readOnly", required=true)
       private final Boolean readOnly;
@@ -52,7 +48,6 @@ public final class VolumeMountResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * (Optional) Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).
-     * 
      */
     @Import(name="subPath", required=true)
       private final String subPath;

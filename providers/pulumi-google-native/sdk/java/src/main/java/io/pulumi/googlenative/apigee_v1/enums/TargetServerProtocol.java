@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Immutable. The protocol used by this TargetServer.
-     * 
      */
     @EnumType
     public enum TargetServerProtocol {
         /**
          * UNSPECIFIED defaults to HTTP for backwards compatibility.
-         * 
          */
         ProtocolUnspecified("PROTOCOL_UNSPECIFIED"),
         /**
          * The TargetServer uses HTTP.
-         * 
          */
         Http("HTTP"),
         /**
          * The TargetServer uses GRPC.
-         * 
          */
         Grpc("GRPC");
 

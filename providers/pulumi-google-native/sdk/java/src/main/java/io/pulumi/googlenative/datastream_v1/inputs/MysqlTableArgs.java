@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * MySQL table.
- * 
  */
 public final class MysqlTableArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class MysqlTableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
-     * 
      */
     @Import(name="mysqlColumns")
       private final @Nullable Output<List<MysqlColumnArgs>> mysqlColumns;
@@ -33,7 +31,6 @@ public final class MysqlTableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Table name.
-     * 
      */
     @Import(name="table")
       private final @Nullable Output<String> table;

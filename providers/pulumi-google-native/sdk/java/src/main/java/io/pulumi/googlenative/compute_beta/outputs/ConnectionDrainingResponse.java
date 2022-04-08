@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ConnectionDrainingResponse {
     /**
      * Configures a duration timeout for existing requests on a removed backend instance. For supported load balancers and protocols, as described in Enabling connection draining.
-     * 
      */
     private final Integer drainingTimeoutSec;
 
@@ -22,7 +21,6 @@ public final class ConnectionDrainingResponse {
 
     /**
      * Configures a duration timeout for existing requests on a removed backend instance. For supported load balancers and protocols, as described in Enabling connection draining.
-     * 
     */
     public Integer getDrainingTimeoutSec() {
         return this.drainingTimeoutSec;

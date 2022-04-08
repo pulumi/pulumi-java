@@ -13,7 +13,6 @@ import java.util.StringJoiner;
         SampleSeriesTypeUnspecified("sampleSeriesTypeUnspecified"),
         /**
          * Memory sample series
-         * 
          */
         MemoryRssPrivate("memoryRssPrivate"),
         MemoryRssShared("memoryRssShared"),
@@ -21,14 +20,12 @@ import java.util.StringJoiner;
         MemoryTotal("memoryTotal"),
         /**
          * CPU sample series
-         * 
          */
         CpuUser("cpuUser"),
         CpuKernel("cpuKernel"),
         CpuTotal("cpuTotal"),
         /**
          * Network sample series
-         * 
          */
         NtBytesTransferred("ntBytesTransferred"),
         NtBytesReceived("ntBytesReceived"),
@@ -36,7 +33,6 @@ import java.util.StringJoiner;
         NetworkReceived("networkReceived"),
         /**
          * Graphics sample series
-         * 
          */
         GraphicsFrameRate("graphicsFrameRate");
 

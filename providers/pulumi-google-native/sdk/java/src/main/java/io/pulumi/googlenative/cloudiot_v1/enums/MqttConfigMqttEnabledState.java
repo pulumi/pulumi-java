@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.
-     * 
      */
     @EnumType
     public enum MqttConfigMqttEnabledState {
         /**
          * No MQTT state specified. If not specified, MQTT will be enabled by default.
-         * 
          */
         MqttStateUnspecified("MQTT_STATE_UNSPECIFIED"),
         /**
          * Enables a MQTT connection.
-         * 
          */
         MqttEnabled("MQTT_ENABLED"),
         /**
          * Disables a MQTT connection.
-         * 
          */
         MqttDisabled("MQTT_DISABLED");
 

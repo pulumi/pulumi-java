@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Initial State for shielded instance, these are public keys which are safe to store in public
- * 
  */
 public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The Key Database (db).
-     * 
      */
     @Import(name="dbs")
       private final @Nullable Output<List<FileContentBufferArgs>> dbs;
@@ -32,7 +30,6 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The forbidden key database (dbx).
-     * 
      */
     @Import(name="dbxs")
       private final @Nullable Output<List<FileContentBufferArgs>> dbxs;
@@ -43,7 +40,6 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The Key Exchange Key (KEK).
-     * 
      */
     @Import(name="keks")
       private final @Nullable Output<List<FileContentBufferArgs>> keks;
@@ -54,7 +50,6 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The Platform Key (PK).
-     * 
      */
     @Import(name="pk")
       private final @Nullable Output<FileContentBufferArgs> pk;

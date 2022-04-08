@@ -16,48 +16,41 @@ import javax.annotation.Nullable;
 
 /**
  * Create a set of phrase hints. Each item in the set can be a single word or a multi-word phrase. The items in the PhraseSet are favored by the recognition model when you send a call that includes the PhraseSet.
- * 
  */
 @ResourceType(type="google-native:speech/v1:PhraseSet")
 public class PhraseSet extends io.pulumi.resources.CustomResource {
     /**
      * Hint Boost. Positive value will increase the probability that a specific phrase will be recognized over other similar sounding phrases. The higher the boost, the higher the chance of false positive recognition as well. Negative boost values would correspond to anti-biasing. Anti-biasing is not enabled, so negative boost will simply be ignored. Though `boost` can accept a wide range of positive values, most use cases are best served with values between 0 (exclusive) and 20. We recommend using a binary search approach to finding the optimal value for your use case. Speech recognition will skip PhraseSets with a boost value of 0.
-     * 
      */
     @Export(name="boost", type=Double.class, parameters={})
     private Output<Double> boost;
 
     /**
      * @return Hint Boost. Positive value will increase the probability that a specific phrase will be recognized over other similar sounding phrases. The higher the boost, the higher the chance of false positive recognition as well. Negative boost values would correspond to anti-biasing. Anti-biasing is not enabled, so negative boost will simply be ignored. Though `boost` can accept a wide range of positive values, most use cases are best served with values between 0 (exclusive) and 20. We recommend using a binary search approach to finding the optimal value for your use case. Speech recognition will skip PhraseSets with a boost value of 0.
-     * 
      */
     public Output<Double> getBoost() {
         return this.boost;
     }
     /**
      * The resource name of the phrase set.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the phrase set.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * A list of word and phrases.
-     * 
      */
     @Export(name="phrases", type=List.class, parameters={PhraseResponse.class})
     private Output<List<PhraseResponse>> phrases;
 
     /**
      * @return A list of word and phrases.
-     * 
      */
     public Output<List<PhraseResponse>> getPhrases() {
         return this.phrases;

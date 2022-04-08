@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * A GroupPlacementPolicy specifies resource placement configuration. It specifies the failure bucket separation as well as network locality
- * 
  */
 public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
 
     /**
      * The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
-     * 
      */
     @Import(name="availabilityDomainCount")
       private final @Nullable Output<Integer> availabilityDomainCount;
@@ -35,7 +33,6 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
 
     /**
      * Specifies network collocation
-     * 
      */
     @Import(name="collocation")
       private final @Nullable Output<ResourcePolicyGroupPlacementPolicyCollocation> collocation;
@@ -46,7 +43,6 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
 
     /**
      * Specifies network locality
-     * 
      */
     @Import(name="locality")
       private final @Nullable Output<ResourcePolicyGroupPlacementPolicyLocality> locality;
@@ -57,7 +53,6 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
 
     /**
      * Scope specifies the availability domain to which the VMs should be spread.
-     * 
      */
     @Import(name="scope")
       private final @Nullable Output<ResourcePolicyGroupPlacementPolicyScope> scope;
@@ -68,7 +63,6 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
 
     /**
      * Specifies instances to hosts placement relationship
-     * 
      */
     @Import(name="style")
       private final @Nullable Output<ResourcePolicyGroupPlacementPolicyStyle> style;
@@ -79,7 +73,6 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
 
     /**
      * Number of vms in this placement group
-     * 
      */
     @Import(name="vmCount")
       private final @Nullable Output<Integer> vmCount;

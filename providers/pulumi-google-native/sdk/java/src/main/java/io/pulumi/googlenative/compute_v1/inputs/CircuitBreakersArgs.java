@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings controlling the volume of requests, connections and retries to this backend service.
- * 
  */
 public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
-     * 
      */
     @Import(name="maxConnections")
       private final @Nullable Output<Integer> maxConnections;
@@ -31,7 +29,6 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
-     * 
      */
     @Import(name="maxPendingRequests")
       private final @Nullable Output<Integer> maxPendingRequests;
@@ -42,7 +39,6 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The maximum number of parallel requests that allowed to the backend service. If not specified, there is no limit.
-     * 
      */
     @Import(name="maxRequests")
       private final @Nullable Output<Integer> maxRequests;
@@ -53,7 +49,6 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
-     * 
      */
     @Import(name="maxRequestsPerConnection")
       private final @Nullable Output<Integer> maxRequestsPerConnection;
@@ -64,7 +59,6 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
-     * 
      */
     @Import(name="maxRetries")
       private final @Nullable Output<Integer> maxRetries;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The bucket's billing configuration.
- * 
  */
 public final class BucketBillingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class BucketBillingResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * When set to true, Requester Pays is enabled for this bucket.
-     * 
      */
     @Import(name="requesterPays", required=true)
       private final Boolean requesterPays;

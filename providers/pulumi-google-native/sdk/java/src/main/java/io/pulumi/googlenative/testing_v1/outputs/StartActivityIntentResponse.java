@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class StartActivityIntentResponse {
     /**
      * Action name. Required for START_ACTIVITY.
-     * 
      */
     private final String action;
     /**
      * Intent categories to set on the intent.
-     * 
      */
     private final List<String> categories;
     /**
      * URI for the action.
-     * 
      */
     private final String uri;
 
@@ -38,21 +35,18 @@ public final class StartActivityIntentResponse {
 
     /**
      * Action name. Required for START_ACTIVITY.
-     * 
     */
     public String getAction() {
         return this.action;
     }
     /**
      * Intent categories to set on the intent.
-     * 
     */
     public List<String> getCategories() {
         return this.categories;
     }
     /**
      * URI for the action.
-     * 
     */
     public String getUri() {
         return this.uri;

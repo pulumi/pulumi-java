@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a single yum package repository. These are added to a repo file that is managed at `/etc/yum.repos.d/google_osconfig.repo`.
- * 
  */
 public final class OSPolicyResourceRepositoryResourceYumRepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryArgs extends i
 
     /**
      * The location of the repository directory.
-     * 
      */
     @Import(name="baseUrl", required=true)
       private final Output<String> baseUrl;
@@ -32,7 +30,6 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryArgs extends i
 
     /**
      * The display name of the repository.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -43,7 +40,6 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryArgs extends i
 
     /**
      * URIs of GPG keys.
-     * 
      */
     @Import(name="gpgKeys")
       private final @Nullable Output<List<String>> gpgKeys;
@@ -54,7 +50,6 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryArgs extends i
 
     /**
      * A one word, unique name for this repository. This is the `repo id` in the yum config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for resource conflicts.
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;

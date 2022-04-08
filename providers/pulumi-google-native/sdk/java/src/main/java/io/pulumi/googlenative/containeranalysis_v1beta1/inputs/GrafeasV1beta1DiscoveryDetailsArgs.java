@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Details of a discovery occurrence.
- * 
  */
 public final class GrafeasV1beta1DiscoveryDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class GrafeasV1beta1DiscoveryDetailsArgs extends io.pulumi.resource
 
     /**
      * Analysis status for the discovered resource.
-     * 
      */
     @Import(name="discovered", required=true)
       private final Output<DiscoveredArgs> discovered;

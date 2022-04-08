@@ -17,7 +17,6 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends io.pulumi.
 
     /**
      * Properties of the SKU instances being reserved.
-     * 
      */
     @Import(name="instanceProperties")
       private final @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
@@ -28,7 +27,6 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends io.pulumi.
 
     /**
      * Total number of instances for which capacity assurance is requested at a future time period.
-     * 
      */
     @Import(name="totalCount")
       private final @Nullable Output<String> totalCount;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * LoggingComponentConfig is cluster logging component configuration.
- * 
  */
 public final class LoggingComponentConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class LoggingComponentConfigArgs extends io.pulumi.resources.Resour
 
     /**
      * Select components to collect logs. An empty set would disable all logging.
-     * 
      */
     @Import(name="enableComponents")
       private final @Nullable Output<List<LoggingComponentConfigEnableComponentsItem>> enableComponents;

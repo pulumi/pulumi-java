@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The suggestion chip message that the user can tap to quickly post a reply to the conversation.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs exten
 
     /**
      * The text shown the in the suggestion chip.
-     * 
      */
     @Import(name="title", required=true)
       private final Output<String> title;

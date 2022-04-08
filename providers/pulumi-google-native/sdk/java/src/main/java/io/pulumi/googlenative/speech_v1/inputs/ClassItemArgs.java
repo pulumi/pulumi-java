@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * An item of the class.
- * 
  */
 public final class ClassItemArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ClassItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The class item's value.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

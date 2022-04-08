@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Details for an outcome with a FAILURE outcome summary.
- * 
  */
 public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * If the failure was severe because the system (app) under test crashed.
-     * 
      */
     @Import(name="crashed", required=true)
       private final Boolean crashed;
@@ -29,7 +27,6 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * If the device ran out of memory during a test, causing the test to crash.
-     * 
      */
     @Import(name="deviceOutOfMemory", required=true)
       private final Boolean deviceOutOfMemory;
@@ -40,7 +37,6 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * If the Roboscript failed to complete successfully, e.g., because a Roboscript action or assertion failed or a Roboscript action could not be matched during the entire crawl.
-     * 
      */
     @Import(name="failedRoboscript", required=true)
       private final Boolean failedRoboscript;
@@ -51,7 +47,6 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * If an app is not installed and thus no test can be run with the app. This might be caused by trying to run a test on an unsupported platform.
-     * 
      */
     @Import(name="notInstalled", required=true)
       private final Boolean notInstalled;
@@ -62,7 +57,6 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * If a native process (including any other than the app) crashed.
-     * 
      */
     @Import(name="otherNativeCrash", required=true)
       private final Boolean otherNativeCrash;
@@ -73,7 +67,6 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * If the test overran some time limit, and that is why it failed.
-     * 
      */
     @Import(name="timedOut", required=true)
       private final Boolean timedOut;
@@ -84,7 +77,6 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * If the robo was unable to crawl the app; perhaps because the app did not start.
-     * 
      */
     @Import(name="unableToCrawl", required=true)
       private final Boolean unableToCrawl;

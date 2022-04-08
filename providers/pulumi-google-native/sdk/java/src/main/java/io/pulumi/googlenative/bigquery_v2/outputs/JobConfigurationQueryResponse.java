@@ -24,117 +24,94 @@ import java.util.Objects;
 public final class JobConfigurationQueryResponse {
     /**
      * [Optional] If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance. Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed. However, you must still set destinationTable when result size exceeds the allowed maximum response size.
-     * 
      */
     private final Boolean allowLargeResults;
     /**
      * [Beta] Clustering specification for the destination table. Must be specified with time-based partitioning, data in the table will be first partitioned and subsequently clustered.
-     * 
      */
     private final ClusteringResponse clustering;
     /**
      * Connection properties.
-     * 
      */
     private final List<ConnectionPropertyResponse> connectionProperties;
     /**
      * [Optional] Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion.
-     * 
      */
     private final String createDisposition;
     /**
      * If true, creates a new session, where session id will be a server generated random id. If false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs query in non-session mode.
-     * 
      */
     private final Boolean createSession;
     /**
      * [Optional] Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.
-     * 
      */
     private final DatasetReferenceResponse defaultDataset;
     /**
      * Custom encryption configuration (e.g., Cloud KMS keys).
-     * 
      */
     private final EncryptionConfigurationResponse destinationEncryptionConfiguration;
     /**
      * [Optional] Describes the table where the query results should be stored. If not present, a new table will be created to store the results. This property must be set for large results that exceed the maximum response size.
-     * 
      */
     private final TableReferenceResponse destinationTable;
     /**
      * [Optional] If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results. allowLargeResults must be true if this is set to false. For standard SQL queries, this flag is ignored and results are never flattened.
-     * 
      */
     private final Boolean flattenResults;
     /**
      * [Optional] Limits the billing tier for this job. Queries that have resource usage beyond this tier will fail (without incurring a charge). If unspecified, this will be set to your project default.
-     * 
      */
     private final Integer maximumBillingTier;
     /**
      * [Optional] Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge). If unspecified, this will be set to your project default.
-     * 
      */
     private final String maximumBytesBilled;
     /**
      * Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.
-     * 
      */
     private final String parameterMode;
     /**
      * [Optional] Specifies a priority for the query. Possible values include INTERACTIVE and BATCH. The default value is INTERACTIVE.
-     * 
      */
     private final String priority;
     /**
      * [Required] SQL query text to execute. The useLegacySql field can be used to indicate whether the query uses legacy SQL or standard SQL.
-     * 
      */
     private final String query;
     /**
      * Query parameters for standard SQL queries.
-     * 
      */
     private final List<QueryParameterResponse> queryParameters;
     /**
      * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.
-     * 
      */
     private final RangePartitioningResponse rangePartitioning;
     /**
      * Allows the schema of the destination table to be updated as a side effect of the query job. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND; when writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition decorators. For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values are specified: ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema. ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
-     * 
      */
     private final List<String> schemaUpdateOptions;
     /**
      * [Optional] If querying an external data source outside of BigQuery, describes the data format, location and other properties of the data source. By defining these properties, the data source can then be queried as if it were a standard BigQuery table.
-     * 
      */
     private final Map<String,String> tableDefinitions;
     /**
      * Time-based partitioning specification for the destination table. Only one of timePartitioning and rangePartitioning should be specified.
-     * 
      */
     private final TimePartitioningResponse timePartitioning;
     /**
      * Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value is true. If set to false, the query will use BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-reference/ When useLegacySql is set to false, the value of flattenResults is ignored; query will be run as if flattenResults is false.
-     * 
      */
     private final Boolean useLegacySql;
     /**
      * [Optional] Whether to look for the result in the query cache. The query cache is a best-effort cache that will be flushed whenever tables in the query are modified. Moreover, the query cache is only available when a query does not have a destination table specified. The default value is true.
-     * 
      */
     private final Boolean useQueryCache;
     /**
      * Describes user-defined function resources used in the query.
-     * 
      */
     private final List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources;
     /**
      * [Optional] Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion.
-     * 
      */
     private final String writeDisposition;
 
@@ -190,161 +167,138 @@ public final class JobConfigurationQueryResponse {
 
     /**
      * [Optional] If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance. Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed. However, you must still set destinationTable when result size exceeds the allowed maximum response size.
-     * 
     */
     public Boolean getAllowLargeResults() {
         return this.allowLargeResults;
     }
     /**
      * [Beta] Clustering specification for the destination table. Must be specified with time-based partitioning, data in the table will be first partitioned and subsequently clustered.
-     * 
     */
     public ClusteringResponse getClustering() {
         return this.clustering;
     }
     /**
      * Connection properties.
-     * 
     */
     public List<ConnectionPropertyResponse> getConnectionProperties() {
         return this.connectionProperties;
     }
     /**
      * [Optional] Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion.
-     * 
     */
     public String getCreateDisposition() {
         return this.createDisposition;
     }
     /**
      * If true, creates a new session, where session id will be a server generated random id. If false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs query in non-session mode.
-     * 
     */
     public Boolean getCreateSession() {
         return this.createSession;
     }
     /**
      * [Optional] Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.
-     * 
     */
     public DatasetReferenceResponse getDefaultDataset() {
         return this.defaultDataset;
     }
     /**
      * Custom encryption configuration (e.g., Cloud KMS keys).
-     * 
     */
     public EncryptionConfigurationResponse getDestinationEncryptionConfiguration() {
         return this.destinationEncryptionConfiguration;
     }
     /**
      * [Optional] Describes the table where the query results should be stored. If not present, a new table will be created to store the results. This property must be set for large results that exceed the maximum response size.
-     * 
     */
     public TableReferenceResponse getDestinationTable() {
         return this.destinationTable;
     }
     /**
      * [Optional] If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results. allowLargeResults must be true if this is set to false. For standard SQL queries, this flag is ignored and results are never flattened.
-     * 
     */
     public Boolean getFlattenResults() {
         return this.flattenResults;
     }
     /**
      * [Optional] Limits the billing tier for this job. Queries that have resource usage beyond this tier will fail (without incurring a charge). If unspecified, this will be set to your project default.
-     * 
     */
     public Integer getMaximumBillingTier() {
         return this.maximumBillingTier;
     }
     /**
      * [Optional] Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge). If unspecified, this will be set to your project default.
-     * 
     */
     public String getMaximumBytesBilled() {
         return this.maximumBytesBilled;
     }
     /**
      * Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.
-     * 
     */
     public String getParameterMode() {
         return this.parameterMode;
     }
     /**
      * [Optional] Specifies a priority for the query. Possible values include INTERACTIVE and BATCH. The default value is INTERACTIVE.
-     * 
     */
     public String getPriority() {
         return this.priority;
     }
     /**
      * [Required] SQL query text to execute. The useLegacySql field can be used to indicate whether the query uses legacy SQL or standard SQL.
-     * 
     */
     public String getQuery() {
         return this.query;
     }
     /**
      * Query parameters for standard SQL queries.
-     * 
     */
     public List<QueryParameterResponse> getQueryParameters() {
         return this.queryParameters;
     }
     /**
      * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.
-     * 
     */
     public RangePartitioningResponse getRangePartitioning() {
         return this.rangePartitioning;
     }
     /**
      * Allows the schema of the destination table to be updated as a side effect of the query job. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND; when writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition decorators. For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values are specified: ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema. ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
-     * 
     */
     public List<String> getSchemaUpdateOptions() {
         return this.schemaUpdateOptions;
     }
     /**
      * [Optional] If querying an external data source outside of BigQuery, describes the data format, location and other properties of the data source. By defining these properties, the data source can then be queried as if it were a standard BigQuery table.
-     * 
     */
     public Map<String,String> getTableDefinitions() {
         return this.tableDefinitions;
     }
     /**
      * Time-based partitioning specification for the destination table. Only one of timePartitioning and rangePartitioning should be specified.
-     * 
     */
     public TimePartitioningResponse getTimePartitioning() {
         return this.timePartitioning;
     }
     /**
      * Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value is true. If set to false, the query will use BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-reference/ When useLegacySql is set to false, the value of flattenResults is ignored; query will be run as if flattenResults is false.
-     * 
     */
     public Boolean getUseLegacySql() {
         return this.useLegacySql;
     }
     /**
      * [Optional] Whether to look for the result in the query cache. The query cache is a best-effort cache that will be flushed whenever tables in the query are modified. Moreover, the query cache is only available when a query does not have a destination table specified. The default value is true.
-     * 
     */
     public Boolean getUseQueryCache() {
         return this.useQueryCache;
     }
     /**
      * Describes user-defined function resources used in the query.
-     * 
     */
     public List<UserDefinedFunctionResourceResponse> getUserDefinedFunctionResources() {
         return this.userDefinedFunctionResources;
     }
     /**
      * [Optional] Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion.
-     * 
     */
     public String getWriteDisposition() {
         return this.writeDisposition;

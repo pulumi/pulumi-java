@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Oracle database structure.
- * 
  */
 public final class OracleRdbmsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class OracleRdbmsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Oracle schemas/databases in the database server.
-     * 
      */
     @Import(name="oracleSchemas")
       private final @Nullable Output<List<OracleSchemaArgs>> oracleSchemas;

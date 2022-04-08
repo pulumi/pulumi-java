@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for the GCP Filestore CSI driver.
- * 
  */
 public final class GcpFilestoreCsiDriverConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GcpFilestoreCsiDriverConfigArgs extends io.pulumi.resources.R
 
     /**
      * Whether the GCP Filestore CSI driver is enabled for this cluster.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;

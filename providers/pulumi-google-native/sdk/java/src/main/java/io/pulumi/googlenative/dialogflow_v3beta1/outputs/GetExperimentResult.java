@@ -17,77 +17,62 @@ import java.util.Objects;
 public final class GetExperimentResult {
     /**
      * Creation time of this experiment.
-     * 
      */
     private final String createTime;
     /**
      * The definition of the experiment.
-     * 
      */
     private final GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse definition;
     /**
      * The human-readable description of the experiment.
-     * 
      */
     private final String description;
     /**
      * The human-readable name of the experiment (unique in an environment). Limit of 64 characters.
-     * 
      */
     private final String displayName;
     /**
      * End time of this experiment.
-     * 
      */
     private final String endTime;
     /**
      * Maximum number of days to run the experiment. If auto-rollout is not enabled, default value and maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days.
-     * 
      */
     private final String experimentLength;
     /**
      * Last update time of this experiment.
-     * 
      */
     private final String lastUpdateTime;
     /**
      * The name of the experiment. Format: projects//locations//agents//environments//experiments/..
-     * 
      */
     private final String name;
     /**
      * Inference result of the experiment.
-     * 
      */
     private final GoogleCloudDialogflowCxV3beta1ExperimentResultResponse result;
     /**
      * The configuration for auto rollout. If set, there should be exactly two variants in the experiment (control variant being the default version of the flow), the traffic allocation for the non-control variant will gradually increase to 100% when conditions are met, and eventually replace the control variant to become the default version of the flow.
-     * 
      */
     private final GoogleCloudDialogflowCxV3beta1RolloutConfigResponse rolloutConfig;
     /**
      * The reason why rollout has failed. Should only be set when state is ROLLOUT_FAILED.
-     * 
      */
     private final String rolloutFailureReason;
     /**
      * State of the auto rollout process.
-     * 
      */
     private final GoogleCloudDialogflowCxV3beta1RolloutStateResponse rolloutState;
     /**
      * Start time of this experiment.
-     * 
      */
     private final String startTime;
     /**
      * The current state of the experiment. Transition triggered by Experiments.StartExperiment: DRAFT->RUNNING. Transition triggered by Experiments.CancelExperiment: DRAFT->DONE or RUNNING->DONE.
-     * 
      */
     private final String state;
     /**
      * The history of updates to the experiment variants.
-     * 
      */
     private final List<GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse> variantsHistory;
 
@@ -127,105 +112,90 @@ public final class GetExperimentResult {
 
     /**
      * Creation time of this experiment.
-     * 
     */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The definition of the experiment.
-     * 
     */
     public GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse getDefinition() {
         return this.definition;
     }
     /**
      * The human-readable description of the experiment.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * The human-readable name of the experiment (unique in an environment). Limit of 64 characters.
-     * 
     */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * End time of this experiment.
-     * 
     */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * Maximum number of days to run the experiment. If auto-rollout is not enabled, default value and maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days.
-     * 
     */
     public String getExperimentLength() {
         return this.experimentLength;
     }
     /**
      * Last update time of this experiment.
-     * 
     */
     public String getLastUpdateTime() {
         return this.lastUpdateTime;
     }
     /**
      * The name of the experiment. Format: projects//locations//agents//environments//experiments/..
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Inference result of the experiment.
-     * 
     */
     public GoogleCloudDialogflowCxV3beta1ExperimentResultResponse getResult() {
         return this.result;
     }
     /**
      * The configuration for auto rollout. If set, there should be exactly two variants in the experiment (control variant being the default version of the flow), the traffic allocation for the non-control variant will gradually increase to 100% when conditions are met, and eventually replace the control variant to become the default version of the flow.
-     * 
     */
     public GoogleCloudDialogflowCxV3beta1RolloutConfigResponse getRolloutConfig() {
         return this.rolloutConfig;
     }
     /**
      * The reason why rollout has failed. Should only be set when state is ROLLOUT_FAILED.
-     * 
     */
     public String getRolloutFailureReason() {
         return this.rolloutFailureReason;
     }
     /**
      * State of the auto rollout process.
-     * 
     */
     public GoogleCloudDialogflowCxV3beta1RolloutStateResponse getRolloutState() {
         return this.rolloutState;
     }
     /**
      * Start time of this experiment.
-     * 
     */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * The current state of the experiment. Transition triggered by Experiments.StartExperiment: DRAFT->RUNNING. Transition triggered by Experiments.CancelExperiment: DRAFT->DONE or RUNNING->DONE.
-     * 
     */
     public String getState() {
         return this.state;
     }
     /**
      * The history of updates to the experiment variants.
-     * 
     */
     public List<GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse> getVariantsHistory() {
         return this.variantsHistory;

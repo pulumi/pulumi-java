@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The type of the routine.
-     * 
      */
     @EnumType
     public enum GoogleCloudDatacatalogV1RoutineSpecRoutineType {
         /**
          * Unspecified type.
-         * 
          */
         RoutineTypeUnspecified("ROUTINE_TYPE_UNSPECIFIED"),
         /**
          * Non-builtin permanent scalar function.
-         * 
          */
         ScalarFunction("SCALAR_FUNCTION"),
         /**
          * Stored procedure.
-         * 
          */
         Procedure("PROCEDURE");
 

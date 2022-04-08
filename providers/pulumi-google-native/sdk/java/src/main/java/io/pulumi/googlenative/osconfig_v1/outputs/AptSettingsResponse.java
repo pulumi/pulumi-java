@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class AptSettingsResponse {
     /**
      * List of packages to exclude from update. These packages will be excluded
-     * 
      */
     private final List<String> excludes;
     /**
      * An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields.
-     * 
      */
     private final List<String> exclusivePackages;
     /**
      * By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.
-     * 
      */
     private final String type;
 
@@ -38,21 +35,18 @@ public final class AptSettingsResponse {
 
     /**
      * List of packages to exclude from update. These packages will be excluded
-     * 
     */
     public List<String> getExcludes() {
         return this.excludes;
     }
     /**
      * An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields.
-     * 
     */
     public List<String> getExclusivePackages() {
         return this.exclusivePackages;
     }
     /**
      * By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.
-     * 
     */
     public String getType() {
         return this.type;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A 2D coordinate in an image. The origin is the top-left.
- * 
  */
 public final class VertexResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class VertexResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * X coordinate.
-     * 
      */
     @Import(name="x", required=true)
       private final Double x;
@@ -29,7 +27,6 @@ public final class VertexResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Y coordinate.
-     * 
      */
     @Import(name="y", required=true)
       private final Double y;

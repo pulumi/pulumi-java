@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Label object for CompositeTypes
- * 
  */
 public final class CompositeTypeLabelEntryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CompositeTypeLabelEntryArgs extends io.pulumi.resources.Resou
 
     /**
      * Key of the label
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -31,7 +29,6 @@ public final class CompositeTypeLabelEntryArgs extends io.pulumi.resources.Resou
 
     /**
      * Value of the label
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

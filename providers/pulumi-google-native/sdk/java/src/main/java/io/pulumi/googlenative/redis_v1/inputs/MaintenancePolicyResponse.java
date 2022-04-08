@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Maintenance policy for an instance.
- * 
  */
 public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The time when the policy was created.
-     * 
      */
     @Import(name="createTime", required=true)
       private final String createTime;
@@ -31,7 +29,6 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. Description of what this policy is for. Create/Update methods return INVALID_ARGUMENT if the length is greater than 512.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -42,7 +39,6 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The time when the policy was last updated.
-     * 
      */
     @Import(name="updateTime", required=true)
       private final String updateTime;
@@ -53,7 +49,6 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. Maintenance window that is applied to resources covered by this policy. Minimum 1. For the current version, the maximum number of weekly_window is expected to be one.
-     * 
      */
     @Import(name="weeklyMaintenanceWindow", required=true)
       private final List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow;

@@ -13,27 +13,22 @@ import java.util.Objects;
 public final class BackendServiceIAPResponse {
     /**
      * Whether the serving infrastructure will authenticate and authorize all incoming requests. If true, the oauth2ClientId and oauth2ClientSecret fields must be non-empty.
-     * 
      */
     private final Boolean enabled;
     /**
      * OAuth2 client ID to use for the authentication flow.
-     * 
      */
     private final String oauth2ClientId;
     /**
      * [Input Only] OAuth client info required to generate client id to be used for IAP.
-     * 
      */
     private final BackendServiceIAPOAuth2ClientInfoResponse oauth2ClientInfo;
     /**
      * OAuth2 client secret to use for the authentication flow. For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field. @InputOnly
-     * 
      */
     private final String oauth2ClientSecret;
     /**
      * SHA256 hash value for the field oauth2_client_secret above.
-     * 
      */
     private final String oauth2ClientSecretSha256;
 
@@ -53,35 +48,30 @@ public final class BackendServiceIAPResponse {
 
     /**
      * Whether the serving infrastructure will authenticate and authorize all incoming requests. If true, the oauth2ClientId and oauth2ClientSecret fields must be non-empty.
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * OAuth2 client ID to use for the authentication flow.
-     * 
     */
     public String getOauth2ClientId() {
         return this.oauth2ClientId;
     }
     /**
      * [Input Only] OAuth client info required to generate client id to be used for IAP.
-     * 
     */
     public BackendServiceIAPOAuth2ClientInfoResponse getOauth2ClientInfo() {
         return this.oauth2ClientInfo;
     }
     /**
      * OAuth2 client secret to use for the authentication flow. For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field. @InputOnly
-     * 
     */
     public String getOauth2ClientSecret() {
         return this.oauth2ClientSecret;
     }
     /**
      * SHA256 hash value for the field oauth2_client_secret above.
-     * 
     */
     public String getOauth2ClientSecretSha256() {
         return this.oauth2ClientSecretSha256;

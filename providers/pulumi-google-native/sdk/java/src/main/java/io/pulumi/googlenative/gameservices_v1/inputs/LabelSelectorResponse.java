@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The label selector, used to group labels on the resources.
- * 
  */
 public final class LabelSelectorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class LabelSelectorResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Resource labels for this selector.
-     * 
      */
     @Import(name="labels", required=true)
       private final Map<String,String> labels;

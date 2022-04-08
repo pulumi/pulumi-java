@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The bucket's versioning configuration.
- * 
  */
 public final class BucketVersioningArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BucketVersioningArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * While set to true, versioning is fully enabled for this bucket.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;

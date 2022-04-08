@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Subject describes parts of a distinguished name that, in turn, describes the subject of the certificate.
- * 
  */
 public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The country code of the subject.
-     * 
      */
     @Import(name="countryCode")
       private final @Nullable Output<String> countryCode;
@@ -31,7 +29,6 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The locality or city of the subject.
-     * 
      */
     @Import(name="locality")
       private final @Nullable Output<String> locality;
@@ -42,7 +39,6 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The organization of the subject.
-     * 
      */
     @Import(name="organization")
       private final @Nullable Output<String> organization;
@@ -53,7 +49,6 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The organizational_unit of the subject.
-     * 
      */
     @Import(name="organizationalUnit")
       private final @Nullable Output<String> organizationalUnit;
@@ -64,7 +59,6 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The postal code of the subject.
-     * 
      */
     @Import(name="postalCode")
       private final @Nullable Output<String> postalCode;
@@ -75,7 +69,6 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The province, territory, or regional state of the subject.
-     * 
      */
     @Import(name="province")
       private final @Nullable Output<String> province;
@@ -86,7 +79,6 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The street address of the subject.
-     * 
      */
     @Import(name="streetAddress")
       private final @Nullable Output<String> streetAddress;

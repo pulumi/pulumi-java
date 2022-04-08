@@ -18,7 +18,6 @@ public final class GoogleCloudApigeeV1ReportPropertyArgs extends io.pulumi.resou
 
     /**
      * name of the property
-     * 
      */
     @Import(name="property")
       private final @Nullable Output<String> property;
@@ -29,7 +28,6 @@ public final class GoogleCloudApigeeV1ReportPropertyArgs extends io.pulumi.resou
 
     /**
      * property values
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> value;

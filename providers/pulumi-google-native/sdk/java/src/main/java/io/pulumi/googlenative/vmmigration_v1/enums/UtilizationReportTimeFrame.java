@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * Time frame of the report.
-     * 
      */
     @EnumType
     public enum UtilizationReportTimeFrame {
         /**
          * The time frame was not specified and will default to WEEK.
-         * 
          */
         TimeFrameUnspecified("TIME_FRAME_UNSPECIFIED"),
         /**
          * One week.
-         * 
          */
         Week("WEEK"),
         /**
          * One month.
-         * 
          */
         Month("MONTH"),
         /**
          * One year.
-         * 
          */
         Year("YEAR");
 

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents the input for dtmf event.
- * 
  */
 public final class GoogleCloudDialogflowCxV3DtmfInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowCxV3DtmfInputArgs extends io.pulumi.reso
 
     /**
      * The dtmf digits.
-     * 
      */
     @Import(name="digits")
       private final @Nullable Output<String> digits;
@@ -31,7 +29,6 @@ public final class GoogleCloudDialogflowCxV3DtmfInputArgs extends io.pulumi.reso
 
     /**
      * The finish digit (if any).
-     * 
      */
     @Import(name="finishDigit")
       private final @Nullable Output<String> finishDigit;

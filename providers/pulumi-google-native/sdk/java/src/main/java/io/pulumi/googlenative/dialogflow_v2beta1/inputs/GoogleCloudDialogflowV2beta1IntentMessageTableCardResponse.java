@@ -15,7 +15,6 @@ import java.util.Objects;
 
 /**
  * Table card for Actions on Google.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
 
     /**
      * Optional. List of buttons for the card.
-     * 
      */
     @Import(name="buttons", required=true)
       private final List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons;
@@ -34,7 +32,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
 
     /**
      * Optional. Display properties for the columns in this table.
-     * 
      */
     @Import(name="columnProperties", required=true)
       private final List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse> columnProperties;
@@ -45,7 +42,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
 
     /**
      * Optional. Image which should be displayed on the card.
-     * 
      */
     @Import(name="image", required=true)
       private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
@@ -56,7 +52,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
 
     /**
      * Optional. Rows in this table of data.
-     * 
      */
     @Import(name="rows", required=true)
       private final List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse> rows;
@@ -67,7 +62,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
 
     /**
      * Optional. Subtitle to the title.
-     * 
      */
     @Import(name="subtitle", required=true)
       private final String subtitle;
@@ -78,7 +72,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
 
     /**
      * Title of the card.
-     * 
      */
     @Import(name="title", required=true)
       private final String title;

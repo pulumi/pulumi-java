@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Deprecated; use `InspectionRuleSet` instead. Rule for modifying a `CustomInfoType` to alter behavior under certain circumstances, depending on the specific details of the rule. Not supported for the `surrogate_type` custom infoType.
- * 
  */
 public final class GooglePrivacyDlpV2DetectionRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GooglePrivacyDlpV2DetectionRuleArgs extends io.pulumi.resourc
 
     /**
      * Hotword-based detection rule.
-     * 
      */
     @Import(name="hotwordRule")
       private final @Nullable Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule;

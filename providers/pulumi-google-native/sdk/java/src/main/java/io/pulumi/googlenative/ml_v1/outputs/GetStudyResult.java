@@ -12,27 +12,22 @@ import java.util.Objects;
 public final class GetStudyResult {
     /**
      * Time at which the study was created.
-     * 
      */
     private final String createTime;
     /**
      * A human readable reason why the Study is inactive. This should be empty if a study is ACTIVE or COMPLETED.
-     * 
      */
     private final String inactiveReason;
     /**
      * The name of a study.
-     * 
      */
     private final String name;
     /**
      * The detailed state of a study.
-     * 
      */
     private final String state;
     /**
      * Configuration of the study.
-     * 
      */
     private final GoogleCloudMlV1__StudyConfigResponse studyConfig;
 
@@ -52,35 +47,30 @@ public final class GetStudyResult {
 
     /**
      * Time at which the study was created.
-     * 
     */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * A human readable reason why the Study is inactive. This should be empty if a study is ACTIVE or COMPLETED.
-     * 
     */
     public String getInactiveReason() {
         return this.inactiveReason;
     }
     /**
      * The name of a study.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The detailed state of a study.
-     * 
     */
     public String getState() {
         return this.state;
     }
     /**
      * Configuration of the study.
-     * 
     */
     public GoogleCloudMlV1__StudyConfigResponse getStudyConfig() {
         return this.studyConfig;

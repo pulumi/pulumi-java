@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An event handler specifies an event that can be handled during a session. When the specified event happens, the following actions are taken in order: * If there is a `trigger_fulfillment` associated with the event, it will be called. * If there is a `target_page` associated with the event, the session will transition into the specified page. * If there is a `target_flow` associated with the event, the session will transition into the specified flow.
- * 
  */
 public final class GoogleCloudDialogflowCxV3beta1EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerArgs extends io.pul
 
     /**
      * The name of the event to handle.
-     * 
      */
     @Import(name="event", required=true)
       private final Output<String> event;
@@ -32,7 +30,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerArgs extends io.pul
 
     /**
      * The target flow to transition to. Format: `projects//locations//agents//flows/`.
-     * 
      */
     @Import(name="targetFlow")
       private final @Nullable Output<String> targetFlow;
@@ -43,7 +40,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerArgs extends io.pul
 
     /**
      * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
-     * 
      */
     @Import(name="targetPage")
       private final @Nullable Output<String> targetPage;
@@ -54,7 +50,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerArgs extends io.pul
 
     /**
      * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
-     * 
      */
     @Import(name="triggerFulfillment")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment;

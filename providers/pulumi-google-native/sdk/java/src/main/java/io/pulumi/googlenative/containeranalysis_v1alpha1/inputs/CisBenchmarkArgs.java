@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A compliance check that is a CIS benchmark.
- * 
  */
 public final class CisBenchmarkArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class CisBenchmarkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The profile level of this CIS benchmark check.
-     * 
      */
     @Import(name="profileLevel")
       private final @Nullable Output<Integer> profileLevel;
@@ -32,7 +30,6 @@ public final class CisBenchmarkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The severity level of this CIS benchmark check.
-     * 
      */
     @Import(name="severity")
       private final @Nullable Output<CisBenchmarkSeverity> severity;

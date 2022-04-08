@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Dataproc job config.
- * 
  */
 public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Cluster labels to identify a cluster where the job will be submitted.
-     * 
      */
     @Import(name="clusterLabels")
       private final @Nullable Output<Map<String,String>> clusterLabels;
@@ -32,7 +30,6 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the cluster where the job will be submitted.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;

@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * The stack type for this VPN gateway to identify the IP protocols that are enabled. If not specified, IPV4_ONLY will be used.
-     * 
      */
     @EnumType
     public enum VpnGatewayStackType {
         /**
          * Enable VPN gateway with both IPv4 and IPv6 protocols.
-         * 
          */
         Ipv4Ipv6("IPV4_IPV6"),
         /**
          * Enable VPN gateway with only IPv4 protocol.
-         * 
          */
         Ipv4Only("IPV4_ONLY");
 

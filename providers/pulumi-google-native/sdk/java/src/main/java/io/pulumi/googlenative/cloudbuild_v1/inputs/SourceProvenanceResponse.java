@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Provenance of the source. Ways to find the original source, or verify that some source was used for this build.
- * 
  */
 public final class SourceProvenanceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class SourceProvenanceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Hash(es) of the build source, which can be used to verify that the original source integrity was maintained in the build. Note that `FileHashes` will only be populated if `BuildOptions` has requested a `SourceProvenanceHash`. The keys to this map are file paths used as build source and the values contain the hash values for those files. If the build source came in a single package such as a gzipped tarfile (`.tar.gz`), the `FileHash` will be for the single path to that file.
-     * 
      */
     @Import(name="fileHashes", required=true)
       private final Map<String,String> fileHashes;
@@ -33,7 +31,6 @@ public final class SourceProvenanceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * A copy of the build's `source.repo_source`, if exists, with any revisions resolved.
-     * 
      */
     @Import(name="resolvedRepoSource", required=true)
       private final RepoSourceResponse resolvedRepoSource;
@@ -44,7 +41,6 @@ public final class SourceProvenanceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * A copy of the build's `source.storage_source`, if exists, with any generations resolved.
-     * 
      */
     @Import(name="resolvedStorageSource", required=true)
       private final StorageSourceResponse resolvedStorageSource;
@@ -55,7 +51,6 @@ public final class SourceProvenanceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * A copy of the build's `source.storage_source_manifest`, if exists, with any revisions resolved. This feature is in Preview.
-     * 
      */
     @Import(name="resolvedStorageSourceManifest", required=true)
       private final StorageSourceManifestResponse resolvedStorageSourceManifest;

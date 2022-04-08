@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse {
     /**
      * A description of the diff, showing the actual output vs expected output.
-     * 
      */
     private final String description;
     /**
      * The type of diff.
-     * 
      */
     private final String type;
 
@@ -30,14 +28,12 @@ public final class GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse {
 
     /**
      * A description of the diff, showing the actual output vs expected output.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * The type of diff.
-     * 
     */
     public String getType() {
         return this.type;

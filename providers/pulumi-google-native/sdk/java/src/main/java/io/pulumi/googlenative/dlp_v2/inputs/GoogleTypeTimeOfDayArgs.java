@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a time of day. The date and time zone are either not significant or are specified elsewhere. An API may choose to allow leap seconds. Related types are google.type.Date and `google.protobuf.Timestamp`.
- * 
  */
 public final class GoogleTypeTimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleTypeTimeOfDayArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.
-     * 
      */
     @Import(name="hours")
       private final @Nullable Output<Integer> hours;
@@ -31,7 +29,6 @@ public final class GoogleTypeTimeOfDayArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Minutes of hour of day. Must be from 0 to 59.
-     * 
      */
     @Import(name="minutes")
       private final @Nullable Output<Integer> minutes;
@@ -42,7 +39,6 @@ public final class GoogleTypeTimeOfDayArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
-     * 
      */
     @Import(name="nanos")
       private final @Nullable Output<Integer> nanos;
@@ -53,7 +49,6 @@ public final class GoogleTypeTimeOfDayArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
-     * 
      */
     @Import(name="seconds")
       private final @Nullable Output<Integer> seconds;

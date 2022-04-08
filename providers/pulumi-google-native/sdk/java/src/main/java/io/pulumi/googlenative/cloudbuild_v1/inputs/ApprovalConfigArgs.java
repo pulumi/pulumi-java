@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * ApprovalConfig describes configuration for manual approval of a build.
- * 
  */
 public final class ApprovalConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ApprovalConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.
-     * 
      */
     @Import(name="approvalRequired")
       private final @Nullable Output<Boolean> approvalRequired;

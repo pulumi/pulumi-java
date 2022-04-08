@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on IP address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.
-     * 
      */
     @EnumType
     public enum ManagedZoneForwardingConfigNameServerTargetForwardingPath {
         /**
          * Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses forward to the target through the VPC and non-RFC1918 addresses forward to the target through the internet
-         * 
          */
         Default("default"),
         /**
          * Cloud DNS always forwards to this target through the VPC.
-         * 
          */
         Private("private");
 

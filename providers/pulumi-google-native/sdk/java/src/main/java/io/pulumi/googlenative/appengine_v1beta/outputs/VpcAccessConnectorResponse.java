@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class VpcAccessConnectorResponse {
     /**
      * The egress setting for the connector, controlling what traffic is diverted through it.
-     * 
      */
     private final String egressSetting;
     /**
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
-     * 
      */
     private final String name;
 
@@ -30,14 +28,12 @@ public final class VpcAccessConnectorResponse {
 
     /**
      * The egress setting for the connector, controlling what traffic is diverted through it.
-     * 
     */
     public String getEgressSetting() {
         return this.egressSetting;
     }
     /**
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
-     * 
     */
     public String getName() {
         return this.name;

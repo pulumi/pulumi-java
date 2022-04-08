@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * X.509 certificate as defined in RFC 5280.
- * 
  */
 public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
 
     /**
      * X.509 basic constraints extension.
-     * 
      */
     @Import(name="basicConstraints", required=true)
       private final String basicConstraints;
@@ -31,7 +29,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
 
     /**
      * X.509 `notAfter` validity period in milliseconds since epoch.
-     * 
      */
     @Import(name="expiryDate", required=true)
       private final String expiryDate;
@@ -42,7 +39,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
 
     /**
      * Flag that specifies whether the certificate is valid. Flag is set to `Yes` if the certificate is valid, `No` if expired, or `Not yet` if not yet valid.
-     * 
      */
     @Import(name="isValid", required=true)
       private final String isValid;
@@ -53,7 +49,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
 
     /**
      * X.509 issuer.
-     * 
      */
     @Import(name="issuer", required=true)
       private final String issuer;
@@ -64,7 +59,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
 
     /**
      * Public key component of the X.509 subject public key info.
-     * 
      */
     @Import(name="publicKey", required=true)
       private final String publicKey;
@@ -75,7 +69,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
 
     /**
      * X.509 serial number.
-     * 
      */
     @Import(name="serialNumber", required=true)
       private final String serialNumber;
@@ -86,7 +79,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
 
     /**
      * X.509 signatureAlgorithm.
-     * 
      */
     @Import(name="sigAlgName", required=true)
       private final String sigAlgName;
@@ -97,7 +89,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
 
     /**
      * X.509 subject.
-     * 
      */
     @Import(name="subject", required=true)
       private final String subject;
@@ -108,7 +99,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
 
     /**
      * X.509 subject alternative names (SANs) extension.
-     * 
      */
     @Import(name="subjectAlternativeNames", required=true)
       private final List<String> subjectAlternativeNames;
@@ -119,7 +109,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
 
     /**
      * X.509 `notBefore` validity period in milliseconds since epoch.
-     * 
      */
     @Import(name="validFrom", required=true)
       private final String validFrom;
@@ -130,7 +119,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
 
     /**
      * X.509 version.
-     * 
      */
     @Import(name="version", required=true)
       private final Integer version;

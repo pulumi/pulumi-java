@@ -17,7 +17,6 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * "": "" Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
-     * 
      */
     @Import(name="digest")
       private final @Nullable Output<Map<String,String>> digest;

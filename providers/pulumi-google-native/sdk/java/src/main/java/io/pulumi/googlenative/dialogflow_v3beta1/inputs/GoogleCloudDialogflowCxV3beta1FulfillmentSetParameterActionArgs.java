@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Setting a parameter value.
- * 
  */
 public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionAr
 
     /**
      * Display name of the parameter.
-     * 
      */
     @Import(name="parameter")
       private final @Nullable Output<String> parameter;
@@ -32,7 +30,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionAr
 
     /**
      * The new value of the parameter. A null value clears the parameter.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<Object> value;

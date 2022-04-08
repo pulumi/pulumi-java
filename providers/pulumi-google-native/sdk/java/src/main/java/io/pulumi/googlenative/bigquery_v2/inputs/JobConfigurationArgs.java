@@ -22,7 +22,6 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * [Pick one] Copies a table.
-     * 
      */
     @Import(name="copy")
       private final @Nullable Output<JobConfigurationTableCopyArgs> copy;
@@ -33,7 +32,6 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * [Optional] If set, don't actually run this job. A valid query will return a mostly empty response with some processing statistics, while an invalid query will return the same error it would if it wasn't a dry run. Behavior of non-query jobs is undefined.
-     * 
      */
     @Import(name="dryRun")
       private final @Nullable Output<Boolean> dryRun;
@@ -44,7 +42,6 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * [Pick one] Configures an extract job.
-     * 
      */
     @Import(name="extract")
       private final @Nullable Output<JobConfigurationExtractArgs> extract;
@@ -55,7 +52,6 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * [Optional] Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
-     * 
      */
     @Import(name="jobTimeoutMs")
       private final @Nullable Output<String> jobTimeoutMs;
@@ -66,7 +62,6 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The labels associated with this job. You can use these to organize and group your jobs. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. Label values are optional. Label keys must start with a letter and each label in the list must have a different key.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -77,7 +72,6 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * [Pick one] Configures a load job.
-     * 
      */
     @Import(name="load")
       private final @Nullable Output<JobConfigurationLoadArgs> load;
@@ -88,7 +82,6 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * [Pick one] Configures a query job.
-     * 
      */
     @Import(name="query")
       private final @Nullable Output<JobConfigurationQueryArgs> query;

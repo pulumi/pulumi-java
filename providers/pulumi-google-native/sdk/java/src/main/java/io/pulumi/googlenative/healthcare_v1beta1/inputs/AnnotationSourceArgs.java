@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * AnnotationSource holds the source information of the annotation.
- * 
  */
 public final class AnnotationSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AnnotationSourceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Cloud Healthcare API resource.
-     * 
      */
     @Import(name="cloudHealthcareSource")
       private final @Nullable Output<CloudHealthcareSourceArgs> cloudHealthcareSource;

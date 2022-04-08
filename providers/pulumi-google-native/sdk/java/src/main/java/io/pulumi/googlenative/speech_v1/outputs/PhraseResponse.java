@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class PhraseResponse {
     /**
      * Hint Boost. Overrides the boost set at the phrase set level. Positive value will increase the probability that a specific phrase will be recognized over other similar sounding phrases. The higher the boost, the higher the chance of false positive recognition as well. Negative boost will simply be ignored. Though `boost` can accept a wide range of positive values, most use cases are best served with values between 0 and 20. We recommend using a binary search approach to finding the optimal value for your use case. Speech recognition will skip PhraseSets with a boost value of 0.
-     * 
      */
     private final Double boost;
     /**
      * The phrase itself.
-     * 
      */
     private final String value;
 
@@ -31,14 +29,12 @@ public final class PhraseResponse {
 
     /**
      * Hint Boost. Overrides the boost set at the phrase set level. Positive value will increase the probability that a specific phrase will be recognized over other similar sounding phrases. The higher the boost, the higher the chance of false positive recognition as well. Negative boost will simply be ignored. Though `boost` can accept a wide range of positive values, most use cases are best served with values between 0 and 20. We recommend using a binary search approach to finding the optimal value for your use case. Speech recognition will skip PhraseSets with a boost value of 0.
-     * 
     */
     public Double getBoost() {
         return this.boost;
     }
     /**
      * The phrase itself.
-     * 
     */
     public String getValue() {
         return this.value;

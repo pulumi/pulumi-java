@@ -16,7 +16,6 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends io.pu
 
     /**
      * Number of HTTP(S) requests for calculating the threshold.
-     * 
      */
     @Import(name="count")
       private final @Nullable Output<Integer> count;
@@ -27,7 +26,6 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends io.pu
 
     /**
      * Interval over which the threshold is computed.
-     * 
      */
     @Import(name="intervalSec")
       private final @Nullable Output<Integer> intervalSec;

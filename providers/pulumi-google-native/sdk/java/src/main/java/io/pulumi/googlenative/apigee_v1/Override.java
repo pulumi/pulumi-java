@@ -14,48 +14,41 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a trace configuration override. The response contains a system-generated UUID, that can be used to view, update, or delete the configuration override. Use the List API to view the existing trace configuration overrides.
- * 
  */
 @ResourceType(type="google-native:apigee/v1:Override")
 public class Override extends io.pulumi.resources.CustomResource {
     /**
      * ID of the API proxy that will have its trace configuration overridden.
-     * 
      */
     @Export(name="apiProxy", type=String.class, parameters={})
     private Output<String> apiProxy;
 
     /**
      * @return ID of the API proxy that will have its trace configuration overridden.
-     * 
      */
     public Output<String> getApiProxy() {
         return this.apiProxy;
     }
     /**
      * ID of the trace configuration override specified as a system-generated UUID.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return ID of the trace configuration override specified as a system-generated UUID.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Trace configuration to override.
-     * 
      */
     @Export(name="samplingConfig", type=GoogleCloudApigeeV1TraceSamplingConfigResponse.class, parameters={})
     private Output<GoogleCloudApigeeV1TraceSamplingConfigResponse> samplingConfig;
 
     /**
      * @return Trace configuration to override.
-     * 
      */
     public Output<GoogleCloudApigeeV1TraceSamplingConfigResponse> getSamplingConfig() {
         return this.samplingConfig;

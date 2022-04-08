@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A single tile in the mosaic. The placement and size of the tile are configurable.
- * 
  */
 public final class TileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class TileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.
-     * 
      */
     @Import(name="height", required=true)
       private final Integer height;
@@ -30,7 +28,6 @@ public final class TileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The informational widget contained in the tile. For example an XyChart.
-     * 
      */
     @Import(name="widget", required=true)
       private final WidgetResponse widget;
@@ -41,7 +38,6 @@ public final class TileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.
-     * 
      */
     @Import(name="width", required=true)
       private final Integer width;
@@ -52,7 +48,6 @@ public final class TileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The zero-indexed position of the tile in grid blocks relative to the left edge of the grid. Tiles must be contained within the specified number of columns. x_pos cannot be negative.
-     * 
      */
     @Import(name="xPos", required=true)
       private final Integer xPos;
@@ -63,7 +58,6 @@ public final class TileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The zero-indexed position of the tile in grid blocks relative to the top edge of the grid. y_pos cannot be negative.
-     * 
      */
     @Import(name="yPos", required=true)
       private final Integer yPos;

@@ -16,7 +16,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the topic.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

@@ -19,62 +19,53 @@ import javax.annotation.Nullable;
  * Auto-naming is currently not supported for this resource.
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:dataflow/v1b3:Template")
 public class Template extends io.pulumi.resources.CustomResource {
     /**
      * The template metadata describing the template name, available parameters, etc.
-     * 
      */
     @Export(name="metadata", type=TemplateMetadataResponse.class, parameters={})
     private Output<TemplateMetadataResponse> metadata;
 
     /**
      * @return The template metadata describing the template name, available parameters, etc.
-     * 
      */
     public Output<TemplateMetadataResponse> getMetadata() {
         return this.metadata;
     }
     /**
      * Describes the runtime metadata with SDKInfo and available parameters.
-     * 
      */
     @Export(name="runtimeMetadata", type=RuntimeMetadataResponse.class, parameters={})
     private Output<RuntimeMetadataResponse> runtimeMetadata;
 
     /**
      * @return Describes the runtime metadata with SDKInfo and available parameters.
-     * 
      */
     public Output<RuntimeMetadataResponse> getRuntimeMetadata() {
         return this.runtimeMetadata;
     }
     /**
      * The status of the get template request. Any problems with the request will be indicated in the error_details.
-     * 
      */
     @Export(name="status", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> status;
 
     /**
      * @return The status of the get template request. Any problems with the request will be indicated in the error_details.
-     * 
      */
     public Output<StatusResponse> getStatus() {
         return this.status;
     }
     /**
      * Template Type.
-     * 
      */
     @Export(name="templateType", type=String.class, parameters={})
     private Output<String> templateType;
 
     /**
      * @return Template Type.
-     * 
      */
     public Output<String> getTemplateType() {
         return this.templateType;

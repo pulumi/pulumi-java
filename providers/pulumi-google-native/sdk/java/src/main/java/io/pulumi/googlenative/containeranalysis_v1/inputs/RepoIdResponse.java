@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A unique identifier for a Cloud Repo.
- * 
  */
 public final class RepoIdResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class RepoIdResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A combination of a project ID and a repo name.
-     * 
      */
     @Import(name="projectRepoId", required=true)
       private final ProjectRepoIdResponse projectRepoId;
@@ -30,7 +28,6 @@ public final class RepoIdResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A server-assigned, globally unique identifier.
-     * 
      */
     @Import(name="uid", required=true)
       private final String uid;

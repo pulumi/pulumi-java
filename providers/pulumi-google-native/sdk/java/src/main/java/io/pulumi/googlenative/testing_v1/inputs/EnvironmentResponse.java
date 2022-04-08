@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The environment in which the test is run.
- * 
  */
 public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An Android device which must be used with an Android test.
-     * 
      */
     @Import(name="androidDevice", required=true)
       private final AndroidDeviceResponse androidDevice;
@@ -30,7 +28,6 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An iOS device which must be used with an iOS test.
-     * 
      */
     @Import(name="iosDevice", required=true)
       private final IosDeviceResponse iosDevice;

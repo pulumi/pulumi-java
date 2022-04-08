@@ -17,7 +17,6 @@ public final class IssueModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The representative name for the issue model.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -28,7 +27,6 @@ public final class IssueModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configs for the input data that used to create the issue model.
-     * 
      */
     @Import(name="inputDataConfig")
       private final @Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs> inputDataConfig;
@@ -46,7 +44,6 @@ public final class IssueModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The resource name of the issue model. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

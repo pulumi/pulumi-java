@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Prevents a term in the query from being used in search. Example: Don't search for "shoddy".
- * 
  */
 public final class GoogleCloudRetailV2alphaRuleIgnoreActionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudRetailV2alphaRuleIgnoreActionArgs extends io.pulum
 
     /**
      * Terms to ignore in the search query.
-     * 
      */
     @Import(name="ignoreTerms")
       private final @Nullable Output<List<String>> ignoreTerms;

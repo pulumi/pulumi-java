@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for resources used by Airflow schedulers.
- * 
  */
 public final class SchedulerResourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SchedulerResourceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Optional. The number of schedulers.
-     * 
      */
     @Import(name="count")
       private final @Nullable Output<Integer> count;
@@ -32,7 +30,6 @@ public final class SchedulerResourceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Optional. CPU request and limit for a single Airflow scheduler replica.
-     * 
      */
     @Import(name="cpu")
       private final @Nullable Output<Double> cpu;
@@ -43,7 +40,6 @@ public final class SchedulerResourceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Optional. Memory (GB) request and limit for a single Airflow scheduler replica.
-     * 
      */
     @Import(name="memoryGb")
       private final @Nullable Output<Double> memoryGb;
@@ -54,7 +50,6 @@ public final class SchedulerResourceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Optional. Storage (GB) request and limit for a single Airflow scheduler replica.
-     * 
      */
     @Import(name="storageGb")
       private final @Nullable Output<Double> storageGb;

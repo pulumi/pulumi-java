@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Metadata
- * 
  */
 public final class MetadataItemsItemArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MetadataItemsItemArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -31,7 +29,6 @@ public final class MetadataItemsItemArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

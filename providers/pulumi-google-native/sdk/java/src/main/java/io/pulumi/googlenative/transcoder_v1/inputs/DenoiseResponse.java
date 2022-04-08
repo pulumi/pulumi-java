@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Denoise preprocessing configuration.
- * 
  */
 public final class DenoiseResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class DenoiseResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Set strength of the denoise. Enter a value between 0 and 1. The higher the value, the smoother the image. 0 is no denoising. The default is 0.
-     * 
      */
     @Import(name="strength", required=true)
       private final Double strength;
@@ -30,7 +28,6 @@ public final class DenoiseResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Set the denoiser mode. The default is `standard`. Supported denoiser modes: - `standard` - `grain`
-     * 
      */
     @Import(name="tune", required=true)
       private final String tune;

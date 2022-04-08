@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Location of output file(s) in a Cloud Storage bucket.
- * 
  */
 public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.
-     * 
      */
     @Import(name="uri")
       private final @Nullable Output<String> uri;

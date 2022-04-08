@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Browse Carousel Card for Actions on Google. https://developers.google.com/actions/assistant/responses#browsing_carousel
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardRe
 
     /**
      * Optional. Settings for displaying the image. Applies to every image in items.
-     * 
      */
     @Import(name="imageDisplayOptions", required=true)
       private final String imageDisplayOptions;
@@ -31,7 +29,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardRe
 
     /**
      * List of items in the Browse Carousel Card. Minimum of two items, maximum of ten.
-     * 
      */
     @Import(name="items", required=true)
       private final List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items;

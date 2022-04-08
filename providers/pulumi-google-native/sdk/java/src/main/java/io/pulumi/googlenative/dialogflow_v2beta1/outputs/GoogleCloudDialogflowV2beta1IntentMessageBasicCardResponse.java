@@ -14,27 +14,22 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse {
     /**
      * Optional. The collection of card buttons.
-     * 
      */
     private final List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons;
     /**
      * Required, unless image is present. The body text of the card.
-     * 
      */
     private final String formattedText;
     /**
      * Optional. The image for the card.
-     * 
      */
     private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
     /**
      * Optional. The subtitle of the card.
-     * 
      */
     private final String subtitle;
     /**
      * Optional. The title of the card.
-     * 
      */
     private final String title;
 
@@ -54,35 +49,30 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse {
 
     /**
      * Optional. The collection of card buttons.
-     * 
     */
     public List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> getButtons() {
         return this.buttons;
     }
     /**
      * Required, unless image is present. The body text of the card.
-     * 
     */
     public String getFormattedText() {
         return this.formattedText;
     }
     /**
      * Optional. The image for the card.
-     * 
     */
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getImage() {
         return this.image;
     }
     /**
      * Optional. The subtitle of the card.
-     * 
     */
     public String getSubtitle() {
         return this.subtitle;
     }
     /**
      * Optional. The title of the card.
-     * 
     */
     public String getTitle() {
         return this.title;

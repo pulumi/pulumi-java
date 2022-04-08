@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * A task to execute on the completion of a job. See https://cloud.google.com/dlp/docs/concepts-actions to learn more.
- * 
  */
 public final class GooglePrivacyDlpV2ActionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class GooglePrivacyDlpV2ActionArgs extends io.pulumi.resources.Reso
 
     /**
      * Enable email notification for project owners and editors on job's completion/failure.
-     * 
      */
     @Import(name="jobNotificationEmails")
       private final @Nullable Output<GooglePrivacyDlpV2JobNotificationEmailsArgs> jobNotificationEmails;
@@ -36,7 +34,6 @@ public final class GooglePrivacyDlpV2ActionArgs extends io.pulumi.resources.Reso
 
     /**
      * Publish a notification to a pubsub topic.
-     * 
      */
     @Import(name="pubSub")
       private final @Nullable Output<GooglePrivacyDlpV2PublishToPubSubArgs> pubSub;
@@ -47,7 +44,6 @@ public final class GooglePrivacyDlpV2ActionArgs extends io.pulumi.resources.Reso
 
     /**
      * Publish findings to Cloud Datahub.
-     * 
      */
     @Import(name="publishFindingsToCloudDataCatalog")
       private final @Nullable Output<GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs> publishFindingsToCloudDataCatalog;
@@ -58,7 +54,6 @@ public final class GooglePrivacyDlpV2ActionArgs extends io.pulumi.resources.Reso
 
     /**
      * Publish summary to Cloud Security Command Center (Alpha).
-     * 
      */
     @Import(name="publishSummaryToCscc")
       private final @Nullable Output<GooglePrivacyDlpV2PublishSummaryToCsccArgs> publishSummaryToCscc;
@@ -69,7 +64,6 @@ public final class GooglePrivacyDlpV2ActionArgs extends io.pulumi.resources.Reso
 
     /**
      * Enable Stackdriver metric dlp.googleapis.com/finding_count.
-     * 
      */
     @Import(name="publishToStackdriver")
       private final @Nullable Output<GooglePrivacyDlpV2PublishToStackdriverArgs> publishToStackdriver;
@@ -80,7 +74,6 @@ public final class GooglePrivacyDlpV2ActionArgs extends io.pulumi.resources.Reso
 
     /**
      * Save resulting findings in a provided location.
-     * 
      */
     @Import(name="saveFindings")
       private final @Nullable Output<GooglePrivacyDlpV2SaveFindingsArgs> saveFindings;

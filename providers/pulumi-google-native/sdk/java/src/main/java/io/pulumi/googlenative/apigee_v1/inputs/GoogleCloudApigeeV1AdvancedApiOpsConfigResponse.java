@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration for the Advanced API Ops add-on.
- * 
  */
 public final class GoogleCloudApigeeV1AdvancedApiOpsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudApigeeV1AdvancedApiOpsConfigResponse extends io.pu
 
     /**
      * Flag that specifies whether the Advanced API Ops add-on is enabled.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

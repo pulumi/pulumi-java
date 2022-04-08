@@ -12,27 +12,22 @@ import java.util.Objects;
 public final class GoogleCloudRunOpV2TrafficTargetStatusResponse {
     /**
      * Specifies percent of the traffic to this Revision.
-     * 
      */
     private final Integer percent;
     /**
      * Revision to which this traffic is sent.
-     * 
      */
     private final String revision;
     /**
      * Indicates the string used in the URI to exclusively reference this target.
-     * 
      */
     private final String tag;
     /**
      * The allocation type for this traffic target.
-     * 
      */
     private final String type;
     /**
      * Displays the target URI.
-     * 
      */
     private final String uri;
 
@@ -52,35 +47,30 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse {
 
     /**
      * Specifies percent of the traffic to this Revision.
-     * 
     */
     public Integer getPercent() {
         return this.percent;
     }
     /**
      * Revision to which this traffic is sent.
-     * 
     */
     public String getRevision() {
         return this.revision;
     }
     /**
      * Indicates the string used in the URI to exclusively reference this target.
-     * 
     */
     public String getTag() {
         return this.tag;
     }
     /**
      * The allocation type for this traffic target.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Displays the target URI.
-     * 
     */
     public String getUri() {
         return this.uri;

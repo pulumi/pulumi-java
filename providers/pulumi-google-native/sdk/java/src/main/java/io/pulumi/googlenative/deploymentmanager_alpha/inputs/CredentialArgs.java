@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The credential used by Deployment Manager and TypeProvider. Only one of the options is permitted.
- * 
  */
 public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Basic Auth Credential, only used by TypeProvider.
-     * 
      */
     @Import(name="basicAuth")
       private final @Nullable Output<BasicAuthArgs> basicAuth;
@@ -33,7 +31,6 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Service Account Credential, only used by Deployment.
-     * 
      */
     @Import(name="serviceAccount")
       private final @Nullable Output<ServiceAccountArgs> serviceAccount;
@@ -44,7 +41,6 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specify to use the project default credential, only supported by Deployment.
-     * 
      */
     @Import(name="useProjectDefault")
       private final @Nullable Output<Boolean> useProjectDefault;

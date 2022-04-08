@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents an arbitrary window of time.
- * 
  */
 public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time that the window ends. The end time should take place after the start time.
-     * 
      */
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
@@ -32,7 +30,6 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * MaintenanceExclusionOptions provides maintenance exclusion related options.
-     * 
      */
     @Import(name="maintenanceExclusionOptions")
       private final @Nullable Output<MaintenanceExclusionOptionsArgs> maintenanceExclusionOptions;
@@ -43,7 +40,6 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time that the window first starts.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;

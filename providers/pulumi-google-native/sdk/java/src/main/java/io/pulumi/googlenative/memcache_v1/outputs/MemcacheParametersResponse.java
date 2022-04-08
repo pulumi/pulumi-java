@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class MemcacheParametersResponse {
     /**
      * User defined set of parameters to use in the memcached process.
-     * 
      */
     private final Map<String,String> params;
 
@@ -23,7 +22,6 @@ public final class MemcacheParametersResponse {
 
     /**
      * User defined set of parameters to use in the memcached process.
-     * 
     */
     public Map<String,String> getParams() {
         return this.params;

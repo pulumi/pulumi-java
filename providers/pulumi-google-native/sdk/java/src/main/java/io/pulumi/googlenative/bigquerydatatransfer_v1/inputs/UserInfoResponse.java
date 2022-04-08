@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Information about a user.
- * 
  */
 public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * E-mail address of the user.
-     * 
      */
     @Import(name="email", required=true)
       private final String email;

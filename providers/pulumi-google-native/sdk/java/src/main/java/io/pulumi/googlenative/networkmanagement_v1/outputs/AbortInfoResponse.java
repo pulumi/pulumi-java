@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class AbortInfoResponse {
     /**
      * Causes that the analysis is aborted.
-     * 
      */
     private final String cause;
     /**
      * URI of the resource that caused the abort.
-     * 
      */
     private final String resourceUri;
 
@@ -30,14 +28,12 @@ public final class AbortInfoResponse {
 
     /**
      * Causes that the analysis is aborted.
-     * 
     */
     public String getCause() {
         return this.cause;
     }
     /**
      * URI of the resource that caused the abort.
-     * 
     */
     public String getResourceUri() {
         return this.resourceUri;

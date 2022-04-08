@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a target of an invocation over HTTP.
- * 
  */
 public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
-     * 
      */
     @Import(name="cloudFunction")
       private final @Nullable Output<String> cloudFunction;
@@ -33,7 +31,6 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Cloud Run fully-managed resource that receives the events. The resource should be in the same project as the trigger.
-     * 
      */
     @Import(name="cloudRun")
       private final @Nullable Output<CloudRunArgs> cloudRun;
@@ -44,7 +41,6 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A GKE service capable of receiving events. The service should be running in the same project as the trigger.
-     * 
      */
     @Import(name="gke")
       private final @Nullable Output<GKEArgs> gke;

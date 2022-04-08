@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration for auto rollout.
- * 
  */
 public final class GoogleCloudDialogflowCxV3RolloutConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigArgs extends io.pulumi.
 
     /**
      * The conditions that are used to evaluate the failure of a rollout step. If not specified, no rollout steps will fail. E.g. "containment_rate < 10% OR average_turn_count < 3". See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
-     * 
      */
     @Import(name="failureCondition")
       private final @Nullable Output<String> failureCondition;
@@ -33,7 +31,6 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigArgs extends io.pulumi.
 
     /**
      * The conditions that are used to evaluate the success of a rollout step. If not specified, all rollout steps will proceed to the next one unless failure conditions are met. E.g. "containment_rate > 60% AND callback_rate < 20%". See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
-     * 
      */
     @Import(name="rolloutCondition")
       private final @Nullable Output<String> rolloutCondition;
@@ -44,7 +41,6 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigArgs extends io.pulumi.
 
     /**
      * Steps to roll out a flow version. Steps should be sorted by percentage in ascending order.
-     * 
      */
     @Import(name="rolloutSteps")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepArgs>> rolloutSteps;

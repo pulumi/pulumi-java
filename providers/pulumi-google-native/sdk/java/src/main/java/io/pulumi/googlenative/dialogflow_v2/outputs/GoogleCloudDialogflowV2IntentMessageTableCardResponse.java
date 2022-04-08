@@ -16,32 +16,26 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse {
     /**
      * Optional. List of buttons for the card.
-     * 
      */
     private final List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons;
     /**
      * Optional. Display properties for the columns in this table.
-     * 
      */
     private final List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse> columnProperties;
     /**
      * Optional. Image which should be displayed on the card.
-     * 
      */
     private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
     /**
      * Optional. Rows in this table of data.
-     * 
      */
     private final List<GoogleCloudDialogflowV2IntentMessageTableCardRowResponse> rows;
     /**
      * Optional. Subtitle to the title.
-     * 
      */
     private final String subtitle;
     /**
      * Title of the card.
-     * 
      */
     private final String title;
 
@@ -63,42 +57,36 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse {
 
     /**
      * Optional. List of buttons for the card.
-     * 
     */
     public List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> getButtons() {
         return this.buttons;
     }
     /**
      * Optional. Display properties for the columns in this table.
-     * 
     */
     public List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse> getColumnProperties() {
         return this.columnProperties;
     }
     /**
      * Optional. Image which should be displayed on the card.
-     * 
     */
     public GoogleCloudDialogflowV2IntentMessageImageResponse getImage() {
         return this.image;
     }
     /**
      * Optional. Rows in this table of data.
-     * 
     */
     public List<GoogleCloudDialogflowV2IntentMessageTableCardRowResponse> getRows() {
         return this.rows;
     }
     /**
      * Optional. Subtitle to the title.
-     * 
     */
     public String getSubtitle() {
         return this.subtitle;
     }
     /**
      * Title of the card.
-     * 
     */
     public String getTitle() {
         return this.title;

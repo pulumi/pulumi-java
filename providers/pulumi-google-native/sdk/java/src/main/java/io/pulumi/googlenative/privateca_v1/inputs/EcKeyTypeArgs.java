@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes an Elliptic Curve key that may be used in a Certificate issued from a CaPool.
- * 
  */
 public final class EcKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EcKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. A signature algorithm that must be used. If this is omitted, any EC-based signature algorithm will be allowed.
-     * 
      */
     @Import(name="signatureAlgorithm")
       private final @Nullable Output<EcKeyTypeSignatureAlgorithm> signatureAlgorithm;

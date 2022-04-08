@@ -16,90 +16,77 @@ import javax.annotation.Nullable;
 
 /**
  * Creates an Environment in the specified Agent. This method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) - `response`: Environment
- * 
  */
 @ResourceType(type="google-native:dialogflow/v3beta1:Environment")
 public class Environment extends io.pulumi.resources.CustomResource {
     /**
      * The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The human-readable name of the environment (unique in an agent). Limit of 64 characters.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The human-readable name of the environment (unique in an agent). Limit of 64 characters.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The name of the environment. Format: `projects//locations//agents//environments/`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the environment. Format: `projects//locations//agents//environments/`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The test cases config for continuous tests of this environment.
-     * 
      */
     @Export(name="testCasesConfig", type=GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse.class, parameters={})
     private Output<GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse> testCasesConfig;
 
     /**
      * @return The test cases config for continuous tests of this environment.
-     * 
      */
     public Output<GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse> getTestCasesConfig() {
         return this.testCasesConfig;
     }
     /**
      * Update time of this environment.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return Update time of this environment.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
     /**
      * A list of configurations for flow versions. You should include version configs for all flows that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
-     * 
      */
     @Export(name="versionConfigs", type=List.class, parameters={GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse.class})
     private Output<List<GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse>> versionConfigs;
 
     /**
      * @return A list of configurations for flow versions. You should include version configs for all flows that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
-     * 
      */
     public Output<List<GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse>> getVersionConfigs() {
         return this.versionConfigs;

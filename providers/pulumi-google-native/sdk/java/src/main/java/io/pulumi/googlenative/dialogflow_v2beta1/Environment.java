@@ -16,104 +16,89 @@ import javax.annotation.Nullable;
 /**
  * Creates an agent environment.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:dialogflow/v2beta1:Environment")
 public class Environment extends io.pulumi.resources.CustomResource {
     /**
      * Optional. The agent version loaded into this environment. Supported formats: - `projects//agent/versions/` - `projects//locations//agent/versions/`
-     * 
      */
     @Export(name="agentVersion", type=String.class, parameters={})
     private Output<String> agentVersion;
 
     /**
      * @return Optional. The agent version loaded into this environment. Supported formats: - `projects//agent/versions/` - `projects//locations//agent/versions/`
-     * 
      */
     public Output<String> getAgentVersion() {
         return this.agentVersion;
     }
     /**
      * Optional. The developer-provided description for this environment. The maximum length is 500 characters. If exceeded, the request is rejected.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Optional. The developer-provided description for this environment. The maximum length is 500 characters. If exceeded, the request is rejected.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Optional. The fulfillment settings to use for this environment.
-     * 
      */
     @Export(name="fulfillment", type=GoogleCloudDialogflowV2beta1FulfillmentResponse.class, parameters={})
     private Output<GoogleCloudDialogflowV2beta1FulfillmentResponse> fulfillment;
 
     /**
      * @return Optional. The fulfillment settings to use for this environment.
-     * 
      */
     public Output<GoogleCloudDialogflowV2beta1FulfillmentResponse> getFulfillment() {
         return this.fulfillment;
     }
     /**
      * The unique identifier of this agent environment. Supported formats: - `projects//agent/environments/` - `projects//locations//agent/environments/`
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The unique identifier of this agent environment. Supported formats: - `projects//agent/environments/` - `projects//locations//agent/environments/`
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The state of this environment. This field is read-only, i.e., it cannot be set by create and update methods.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The state of this environment. This field is read-only, i.e., it cannot be set by create and update methods.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Optional. Text to speech settings for this environment.
-     * 
      */
     @Export(name="textToSpeechSettings", type=GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse.class, parameters={})
     private Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse> textToSpeechSettings;
 
     /**
      * @return Optional. Text to speech settings for this environment.
-     * 
      */
     public Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse> getTextToSpeechSettings() {
         return this.textToSpeechSettings;
     }
     /**
      * The last update time of this environment. This field is read-only, i.e., it cannot be set by create and update methods.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The last update time of this environment. This field is read-only, i.e., it cannot be set by create and update methods.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

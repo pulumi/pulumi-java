@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Settings for WorkerPool autoscaling.
- * 
  */
 public final class AutoscalingSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class AutoscalingSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The algorithm to use for autoscaling.
-     * 
      */
     @Import(name="algorithm", required=true)
       private final String algorithm;
@@ -30,7 +28,6 @@ public final class AutoscalingSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The maximum number of workers to cap scaling at.
-     * 
      */
     @Import(name="maxNumWorkers", required=true)
       private final Integer maxNumWorkers;

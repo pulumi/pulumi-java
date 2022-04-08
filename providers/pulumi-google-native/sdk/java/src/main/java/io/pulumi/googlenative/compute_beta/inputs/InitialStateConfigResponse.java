@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Initial State for shielded instance, these are public keys which are safe to store in public
- * 
  */
 public final class InitialStateConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class InitialStateConfigResponse extends io.pulumi.resources.Invoke
 
     /**
      * The Key Database (db).
-     * 
      */
     @Import(name="dbs", required=true)
       private final List<FileContentBufferResponse> dbs;
@@ -30,7 +28,6 @@ public final class InitialStateConfigResponse extends io.pulumi.resources.Invoke
 
     /**
      * The forbidden key database (dbx).
-     * 
      */
     @Import(name="dbxs", required=true)
       private final List<FileContentBufferResponse> dbxs;
@@ -41,7 +38,6 @@ public final class InitialStateConfigResponse extends io.pulumi.resources.Invoke
 
     /**
      * The Key Exchange Key (KEK).
-     * 
      */
     @Import(name="keks", required=true)
       private final List<FileContentBufferResponse> keks;
@@ -52,7 +48,6 @@ public final class InitialStateConfigResponse extends io.pulumi.resources.Invoke
 
     /**
      * The Platform Key (PK).
-     * 
      */
     @Import(name="pk", required=true)
       private final FileContentBufferResponse pk;

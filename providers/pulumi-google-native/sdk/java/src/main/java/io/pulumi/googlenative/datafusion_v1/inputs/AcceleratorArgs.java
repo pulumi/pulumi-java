@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Identifies Data Fusion accelerators for an instance.
- * 
  */
 public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of an accelator for a CDF instance.
-     * 
      */
     @Import(name="acceleratorType")
       private final @Nullable Output<AcceleratorAcceleratorType> acceleratorType;
@@ -32,7 +30,6 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The state of the accelerator
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<AcceleratorState> state;

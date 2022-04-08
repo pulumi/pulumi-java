@@ -16,118 +16,101 @@ import javax.annotation.Nullable;
 /**
  * Creates a `WorkerPool` to run the builds, and returns the new worker pool.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:cloudbuild/v1alpha2:WorkerPool")
 public class WorkerPool extends io.pulumi.resources.CustomResource {
     /**
      * Time at which the request to create the `WorkerPool` was received.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return Time at which the request to create the `WorkerPool` was received.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Time at which the request to delete the `WorkerPool` was received.
-     * 
      */
     @Export(name="deleteTime", type=String.class, parameters={})
     private Output<String> deleteTime;
 
     /**
      * @return Time at which the request to delete the `WorkerPool` was received.
-     * 
      */
     public Output<String> getDeleteTime() {
         return this.deleteTime;
     }
     /**
      * The resource name of the `WorkerPool`. Format of the name is `projects/{project_id}/workerPools/{worker_pool_id}`, where the value of {worker_pool_id} is provided in the CreateWorkerPool request.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the `WorkerPool`. Format of the name is `projects/{project_id}/workerPools/{worker_pool_id}`, where the value of {worker_pool_id} is provided in the CreateWorkerPool request.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Network configuration for the `WorkerPool`.
-     * 
      */
     @Export(name="networkConfig", type=NetworkConfigResponse.class, parameters={})
     private Output<NetworkConfigResponse> networkConfig;
 
     /**
      * @return Network configuration for the `WorkerPool`.
-     * 
      */
     public Output<NetworkConfigResponse> getNetworkConfig() {
         return this.networkConfig;
     }
     /**
      * Immutable. The region where the `WorkerPool` runs. Only "us-central1" is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
-     * 
      */
     @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
      * @return Immutable. The region where the `WorkerPool` runs. Only "us-central1" is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
-     * 
      */
     public Output<String> getRegion() {
         return this.region;
     }
     /**
      * WorkerPool state.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return WorkerPool state.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Time at which the request to update the `WorkerPool` was received.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return Time at which the request to update the `WorkerPool` was received.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
     /**
      * Worker configuration for the `WorkerPool`.
-     * 
      */
     @Export(name="workerConfig", type=WorkerConfigResponse.class, parameters={})
     private Output<WorkerConfigResponse> workerConfig;
 
     /**
      * @return Worker configuration for the `WorkerPool`.
-     * 
      */
     public Output<WorkerConfigResponse> getWorkerConfig() {
         return this.workerConfig;

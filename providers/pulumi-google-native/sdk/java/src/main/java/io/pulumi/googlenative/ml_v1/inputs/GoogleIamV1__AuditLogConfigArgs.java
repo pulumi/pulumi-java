@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Provides the configuration for logging a type of permissions. Example: { "audit_log_configs": [ { "log_type": "DATA_READ", "exempted_members": [ "user:jose@example.com" ] }, { "log_type": "DATA_WRITE" } ] } This enables 'DATA_READ' and 'DATA_WRITE' logging, while exempting jose@example.com from DATA_READ logging.
- * 
  */
 public final class GoogleIamV1__AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleIamV1__AuditLogConfigArgs extends io.pulumi.resources.R
 
     /**
      * Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
-     * 
      */
     @Import(name="exemptedMembers")
       private final @Nullable Output<List<String>> exemptedMembers;
@@ -33,7 +31,6 @@ public final class GoogleIamV1__AuditLogConfigArgs extends io.pulumi.resources.R
 
     /**
      * The log type that this config enables.
-     * 
      */
     @Import(name="logType")
       private final @Nullable Output<GoogleIamV1__AuditLogConfigLogType> logType;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A policy that defines the replication and encryption configuration of data.
- * 
  */
 public final class ReplicationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ReplicationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Secret will automatically be replicated without any restrictions.
-     * 
      */
     @Import(name="automatic", required=true)
       private final AutomaticResponse automatic;
@@ -30,7 +28,6 @@ public final class ReplicationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Secret will only be replicated into the locations specified.
-     * 
      */
     @Import(name="userManaged", required=true)
       private final UserManagedResponse userManaged;

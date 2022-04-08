@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * An item in the list.
- * 
  */
 public final class GoogleCloudDialogflowV2IntentMessageListSelectItemResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemResponse ex
 
     /**
      * Optional. The main text describing the item.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -31,7 +29,6 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemResponse ex
 
     /**
      * Optional. The image to display.
-     * 
      */
     @Import(name="image", required=true)
       private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
@@ -42,7 +39,6 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemResponse ex
 
     /**
      * Additional information about this option.
-     * 
      */
     @Import(name="info", required=true)
       private final GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info;
@@ -53,7 +49,6 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemResponse ex
 
     /**
      * The title of the list item.
-     * 
      */
     @Import(name="title", required=true)
       private final String title;

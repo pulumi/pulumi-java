@@ -15,7 +15,6 @@ import java.util.Objects;
 
 /**
  * Preprocessing configurations.
- * 
  */
 public final class PreprocessingConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
 
     /**
      * Audio preprocessing configuration.
-     * 
      */
     @Import(name="audio", required=true)
       private final AudioResponse audio;
@@ -34,7 +32,6 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
 
     /**
      * Color preprocessing configuration.
-     * 
      */
     @Import(name="color", required=true)
       private final ColorResponse color;
@@ -45,7 +42,6 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
 
     /**
      * Specify the video cropping configuration.
-     * 
      */
     @Import(name="crop", required=true)
       private final CropResponse crop;
@@ -56,7 +52,6 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
 
     /**
      * Deblock preprocessing configuration.
-     * 
      */
     @Import(name="deblock", required=true)
       private final DeblockResponse deblock;
@@ -67,7 +62,6 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
 
     /**
      * Denoise preprocessing configuration.
-     * 
      */
     @Import(name="denoise", required=true)
       private final DenoiseResponse denoise;
@@ -78,7 +72,6 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
 
     /**
      * Specify the video pad filter configuration.
-     * 
      */
     @Import(name="pad", required=true)
       private final PadResponse pad;

@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class ConfigMapEnvSourceResponse {
     /**
      * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
-     * 
      */
     private final LocalObjectReferenceResponse localObjectReference;
     /**
      * The ConfigMap to select from.
-     * 
      */
     private final String name;
     /**
      * (Optional) Specify whether the ConfigMap must be defined
-     * 
      */
     private final Boolean optional;
 
@@ -39,21 +36,18 @@ public final class ConfigMapEnvSourceResponse {
 
     /**
      * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
-     * 
     */
     public LocalObjectReferenceResponse getLocalObjectReference() {
         return this.localObjectReference;
     }
     /**
      * The ConfigMap to select from.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * (Optional) Specify whether the ConfigMap must be defined
-     * 
     */
     public Boolean getOptional() {
         return this.optional;

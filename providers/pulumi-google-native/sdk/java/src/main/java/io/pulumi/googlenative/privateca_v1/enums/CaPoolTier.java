@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Required. Immutable. The Tier of this CaPool.
-     * 
      */
     @EnumType
     public enum CaPoolTier {
         /**
          * Not specified.
-         * 
          */
         TierUnspecified("TIER_UNSPECIFIED"),
         /**
          * Enterprise tier.
-         * 
          */
         Enterprise("ENTERPRISE"),
         /**
          * DevOps tier.
-         * 
          */
         Devops("DEVOPS");
 

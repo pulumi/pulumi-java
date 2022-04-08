@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.
-     * 
      */
     @EnumType
     public enum ManagedZoneDnsSecConfigNonExistence {

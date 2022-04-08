@@ -12,17 +12,14 @@ import java.util.StringJoiner;
     public enum ExecutionConfigUsagesItem {
         /**
          * Default value. This value is unused.
-         * 
          */
         ExecutionEnvironmentUsageUnspecified("EXECUTION_ENVIRONMENT_USAGE_UNSPECIFIED"),
         /**
          * Use for rendering.
-         * 
          */
         Render("RENDER"),
         /**
          * Use for deploying and deployment hooks.
-         * 
          */
         Deploy("DEPLOY");
 

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A representation of a Datastore kind.
- * 
  */
 public final class GooglePrivacyDlpV2KindExpressionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GooglePrivacyDlpV2KindExpressionArgs extends io.pulumi.resour
 
     /**
      * The name of the kind.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

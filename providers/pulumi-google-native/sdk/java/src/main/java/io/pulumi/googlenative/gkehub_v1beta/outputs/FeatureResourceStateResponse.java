@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class FeatureResourceStateResponse {
     /**
      * The current state of the Feature resource in the Hub API.
-     * 
      */
     private final String state;
 
@@ -22,7 +21,6 @@ public final class FeatureResourceStateResponse {
 
     /**
      * The current state of the Feature resource in the Hub API.
-     * 
     */
     public String getState() {
         return this.state;

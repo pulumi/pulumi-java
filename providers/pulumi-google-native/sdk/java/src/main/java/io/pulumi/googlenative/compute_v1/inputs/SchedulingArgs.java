@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Sets the scheduling options for an Instance. NextID: 21
- * 
  */
 public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the automatic restart option for standard instances. Preemptible instances cannot be automatically restarted. By default, this is set to true so an instance is automatically restarted if it is terminated by Compute Engine.
-     * 
      */
     @Import(name="automaticRestart")
       private final @Nullable Output<Boolean> automaticRestart;
@@ -38,7 +36,6 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the termination action for the instance.
-     * 
      */
     @Import(name="instanceTerminationAction")
       private final @Nullable Output<SchedulingInstanceTerminationAction> instanceTerminationAction;
@@ -49,7 +46,6 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An opaque location hint used to place the instance close to other resources. This field is for use by internal tools that use the public API.
-     * 
      */
     @Import(name="locationHint")
       private final @Nullable Output<String> locationHint;
@@ -60,7 +56,6 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
-     * 
      */
     @Import(name="minNodeCpus")
       private final @Nullable Output<Integer> minNodeCpus;
@@ -71,7 +66,6 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.
-     * 
      */
     @Import(name="nodeAffinities")
       private final @Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities;
@@ -82,7 +76,6 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Set VM availability policies.
-     * 
      */
     @Import(name="onHostMaintenance")
       private final @Nullable Output<SchedulingOnHostMaintenance> onHostMaintenance;
@@ -93,7 +86,6 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Defines whether the instance is preemptible. This can only be set during instance creation or while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
-     * 
      */
     @Import(name="preemptible")
       private final @Nullable Output<Boolean> preemptible;
@@ -104,7 +96,6 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the provisioning model of the instance.
-     * 
      */
     @Import(name="provisioningModel")
       private final @Nullable Output<SchedulingProvisioningModel> provisioningModel;

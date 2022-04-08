@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioResponse {
     /**
      * Segments this audio response is composed of.
-     * 
      */
     private final List<GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse> segments;
 
@@ -23,7 +22,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioResponse {
 
     /**
      * Segments this audio response is composed of.
-     * 
     */
     public List<GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse> getSegments() {
         return this.segments;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A chart axis.
- * 
  */
 public final class AxisResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AxisResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The label of the axis.
-     * 
      */
     @Import(name="label", required=true)
       private final String label;
@@ -29,7 +27,6 @@ public final class AxisResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The axis scale. By default, a linear scale is used.
-     * 
      */
     @Import(name="scale", required=true)
       private final String scale;

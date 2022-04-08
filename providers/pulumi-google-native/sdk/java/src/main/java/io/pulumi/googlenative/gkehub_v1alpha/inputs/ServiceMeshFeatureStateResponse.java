@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * **Service Mesh**: State for the whole Hub, as analyzed by the Service Mesh Hub Controller.
- * 
  */
 public final class ServiceMeshFeatureStateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ServiceMeshFeatureStateResponse extends io.pulumi.resources.I
 
     /**
      * Results of running Service Mesh analyzers.
-     * 
      */
     @Import(name="analysisMessages", required=true)
       private final List<ServiceMeshAnalysisMessageResponse> analysisMessages;

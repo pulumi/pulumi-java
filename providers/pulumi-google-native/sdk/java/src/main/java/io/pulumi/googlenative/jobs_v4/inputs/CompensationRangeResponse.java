@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Compensation range.
- * 
  */
 public final class CompensationRangeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CompensationRangeResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The maximum amount of compensation. If left empty, the value is set to a maximal compensation value and the currency code is set to match the currency code of min_compensation.
-     * 
      */
     @Import(name="maxCompensation", required=true)
       private final MoneyResponse maxCompensation;
@@ -29,7 +27,6 @@ public final class CompensationRangeResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The minimum amount of compensation. If left empty, the value is set to zero and the currency code is set to match the currency code of max_compensation.
-     * 
      */
     @Import(name="minCompensation", required=true)
       private final MoneyResponse minCompensation;

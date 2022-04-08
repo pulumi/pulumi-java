@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class VpcPeeringConfigResponse {
     /**
      * A free subnet for peering. (CIDR of /29) TODO(b/172995841) add validators.
-     * 
      */
     private final String subnet;
     /**
      * fully qualified name of the VPC Datastream will peer to.
-     * 
      */
     private final String vpcName;
 
@@ -30,14 +28,12 @@ public final class VpcPeeringConfigResponse {
 
     /**
      * A free subnet for peering. (CIDR of /29) TODO(b/172995841) add validators.
-     * 
     */
     public String getSubnet() {
         return this.subnet;
     }
     /**
      * fully qualified name of the VPC Datastream will peer to.
-     * 
     */
     public String getVpcName() {
         return this.vpcName;

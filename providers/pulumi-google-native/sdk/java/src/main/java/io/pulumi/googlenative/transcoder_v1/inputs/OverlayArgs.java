@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Overlay configuration.
- * 
  */
 public final class OverlayArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class OverlayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of Animations. The list should be chronological, without any time overlap.
-     * 
      */
     @Import(name="animations")
       private final @Nullable Output<List<AnimationArgs>> animations;
@@ -33,7 +31,6 @@ public final class OverlayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Image overlay.
-     * 
      */
     @Import(name="image")
       private final @Nullable Output<ImageArgs> image;

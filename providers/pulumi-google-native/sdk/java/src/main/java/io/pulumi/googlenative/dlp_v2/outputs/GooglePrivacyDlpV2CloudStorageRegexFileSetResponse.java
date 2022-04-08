@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2CloudStorageRegexFileSetResponse {
     /**
      * The name of a Cloud Storage bucket. Required.
-     * 
      */
     private final String bucketName;
     /**
      * A list of regular expressions matching file paths to exclude. All files in the bucket that match at least one of these regular expressions will be excluded from the scan. Regular expressions use RE2 [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be found under the google/re2 repository on GitHub.
-     * 
      */
     private final List<String> excludeRegex;
     /**
      * A list of regular expressions matching file paths to include. All files in the bucket that match at least one of these regular expressions will be included in the set of files, except for those that also match an item in `exclude_regex`. Leaving this field empty will match all files by default (this is equivalent to including `.*` in the list). Regular expressions use RE2 [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be found under the google/re2 repository on GitHub.
-     * 
      */
     private final List<String> includeRegex;
 
@@ -38,21 +35,18 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetResponse {
 
     /**
      * The name of a Cloud Storage bucket. Required.
-     * 
     */
     public String getBucketName() {
         return this.bucketName;
     }
     /**
      * A list of regular expressions matching file paths to exclude. All files in the bucket that match at least one of these regular expressions will be excluded from the scan. Regular expressions use RE2 [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be found under the google/re2 repository on GitHub.
-     * 
     */
     public List<String> getExcludeRegex() {
         return this.excludeRegex;
     }
     /**
      * A list of regular expressions matching file paths to include. All files in the bucket that match at least one of these regular expressions will be included in the set of files, except for those that also match an item in `exclude_regex`. Leaving this field empty will match all files by default (this is equivalent to including `.*` in the list). Regular expressions use RE2 [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be found under the google/re2 repository on GitHub.
-     * 
     */
     public List<String> getIncludeRegex() {
         return this.includeRegex;

@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * A ReusableConfigValues is used to describe certain fields of an X.509 certificate, such as the key usage fields, fields specific to CA certificates, certificate policy extensions and custom extensions.
- * 
  */
 public final class ReusableConfigValuesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
 
     /**
      * Optional. Describes custom X.509 extensions.
-     * 
      */
     @Import(name="additionalExtensions")
       private final @Nullable Output<List<X509ExtensionArgs>> additionalExtensions;
@@ -36,7 +34,6 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
 
     /**
      * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.
-     * 
      */
     @Import(name="aiaOcspServers")
       private final @Nullable Output<List<String>> aiaOcspServers;
@@ -47,7 +44,6 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
 
     /**
      * Optional. Describes options in this ReusableConfigValues that are relevant in a CA certificate.
-     * 
      */
     @Import(name="caOptions")
       private final @Nullable Output<CaOptionsArgs> caOptions;
@@ -58,7 +54,6 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
 
     /**
      * Optional. Indicates the intended use for keys that correspond to a certificate.
-     * 
      */
     @Import(name="keyUsage")
       private final @Nullable Output<KeyUsageArgs> keyUsage;
@@ -69,7 +64,6 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
 
     /**
      * Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
-     * 
      */
     @Import(name="policyIds")
       private final @Nullable Output<List<ObjectIdArgs>> policyIds;

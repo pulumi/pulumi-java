@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A public key certificate format and data.
- * 
  */
 public final class PublicKeyCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PublicKeyCertificateArgs extends io.pulumi.resources.Resource
 
     /**
      * The certificate data.
-     * 
      */
     @Import(name="certificate")
       private final @Nullable Output<String> certificate;
@@ -32,7 +30,6 @@ public final class PublicKeyCertificateArgs extends io.pulumi.resources.Resource
 
     /**
      * The certificate format.
-     * 
      */
     @Import(name="format")
       private final @Nullable Output<PublicKeyCertificateFormat> format;

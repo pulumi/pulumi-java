@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A package managed by APT. - install: `apt-get update && apt-get -y install [name]` - remove: `apt-get -y remove [name]`
- * 
  */
 public final class OSPolicyResourcePackageResourceAPTArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class OSPolicyResourcePackageResourceAPTArgs extends io.pulumi.reso
 
     /**
      * Package name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

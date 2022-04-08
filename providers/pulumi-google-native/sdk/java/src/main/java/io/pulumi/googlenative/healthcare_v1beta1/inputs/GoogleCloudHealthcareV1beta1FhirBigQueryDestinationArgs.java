@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration for exporting to BigQuery.
- * 
  */
 public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs exten
 
     /**
      * BigQuery URI to an existing dataset, up to 2000 characters long, in the format `bq://projectId.bqDatasetId`.
-     * 
      */
     @Import(name="datasetUri")
       private final @Nullable Output<String> datasetUri;
@@ -34,7 +32,6 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs exten
 
     /**
      * Use `write_disposition` instead. If `write_disposition` is specified, this parameter is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is equivalent to write_disposition=WRITE_TRUNCATE.
-     * 
      */
     @Import(name="force")
       private final @Nullable Output<Boolean> force;
@@ -45,7 +42,6 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs exten
 
     /**
      * The configuration for the exported BigQuery schema.
-     * 
      */
     @Import(name="schemaConfig")
       private final @Nullable Output<SchemaConfigArgs> schemaConfig;
@@ -56,7 +52,6 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs exten
 
     /**
      * Determines if existing data in the destination dataset is overwritten, appended to, or not written if the tables contain data. If a write_disposition is specified, the `force` parameter is ignored.
-     * 
      */
     @Import(name="writeDisposition")
       private final @Nullable Output<GoogleCloudHealthcareV1beta1FhirBigQueryDestinationWriteDisposition> writeDisposition;

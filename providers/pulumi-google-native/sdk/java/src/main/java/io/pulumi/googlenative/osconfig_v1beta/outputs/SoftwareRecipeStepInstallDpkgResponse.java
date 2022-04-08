@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class SoftwareRecipeStepInstallDpkgResponse {
     /**
      * The id of the relevant artifact in the recipe.
-     * 
      */
     private final String artifactId;
 
@@ -22,7 +21,6 @@ public final class SoftwareRecipeStepInstallDpkgResponse {
 
     /**
      * The id of the relevant artifact in the recipe.
-     * 
     */
     public String getArtifactId() {
         return this.artifactId;

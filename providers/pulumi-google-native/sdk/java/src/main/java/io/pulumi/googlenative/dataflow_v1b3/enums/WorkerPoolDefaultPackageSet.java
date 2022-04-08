@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * The default package set to install. This allows the service to select a default set of packages which are useful to worker harnesses written in a particular language.
-     * 
      */
     @EnumType
     public enum WorkerPoolDefaultPackageSet {
         /**
          * The default set of packages to stage is unknown, or unspecified.
-         * 
          */
         DefaultPackageSetUnknown("DEFAULT_PACKAGE_SET_UNKNOWN"),
         /**
          * Indicates that no packages should be staged at the worker unless explicitly specified by the job.
-         * 
          */
         DefaultPackageSetNone("DEFAULT_PACKAGE_SET_NONE"),
         /**
          * Stage packages typically useful to workers written in Java.
-         * 
          */
         DefaultPackageSetJava("DEFAULT_PACKAGE_SET_JAVA"),
         /**
          * Stage packages typically useful to workers written in Python.
-         * 
          */
         DefaultPackageSetPython("DEFAULT_PACKAGE_SET_PYTHON");
 

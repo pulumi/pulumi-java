@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration that controls how the data will change.
- * 
  */
 public final class GooglePrivacyDlpV2DeidentifyConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GooglePrivacyDlpV2DeidentifyConfigArgs extends io.pulumi.reso
 
     /**
      * Treat the dataset as free-form text and apply the same free text transformation everywhere.
-     * 
      */
     @Import(name="infoTypeTransformations")
       private final @Nullable Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations;
@@ -33,7 +31,6 @@ public final class GooglePrivacyDlpV2DeidentifyConfigArgs extends io.pulumi.reso
 
     /**
      * Treat the dataset as structured. Transformations can be applied to specific locations within structured datasets, such as transforming a column within a table.
-     * 
      */
     @Import(name="recordTransformations")
       private final @Nullable Output<GooglePrivacyDlpV2RecordTransformationsArgs> recordTransformations;
@@ -44,7 +41,6 @@ public final class GooglePrivacyDlpV2DeidentifyConfigArgs extends io.pulumi.reso
 
     /**
      * Mode for handling transformation errors. If left unspecified, the default mode is `TransformationErrorHandling.ThrowError`.
-     * 
      */
     @Import(name="transformationErrorHandling")
       private final @Nullable Output<GooglePrivacyDlpV2TransformationErrorHandlingArgs> transformationErrorHandling;

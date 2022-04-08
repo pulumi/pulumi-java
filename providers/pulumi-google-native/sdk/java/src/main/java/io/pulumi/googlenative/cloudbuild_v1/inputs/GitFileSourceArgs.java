@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * GitFileSource describes a file within a (possibly remote) code repository.
- * 
  */
 public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The path of the file, with the repo root as the root of the path.
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<String> path;
@@ -32,7 +30,6 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * See RepoType above.
-     * 
      */
     @Import(name="repoType")
       private final @Nullable Output<GitFileSourceRepoType> repoType;
@@ -43,7 +40,6 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.
-     * 
      */
     @Import(name="revision")
       private final @Nullable Output<String> revision;
@@ -54,7 +50,6 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.
-     * 
      */
     @Import(name="uri")
       private final @Nullable Output<String> uri;

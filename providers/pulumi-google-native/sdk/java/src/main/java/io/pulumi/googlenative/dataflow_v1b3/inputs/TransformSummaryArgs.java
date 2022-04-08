@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Description of the type, names/ids, and input/outputs for a transform.
- * 
  */
 public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Transform-specific display data.
-     * 
      */
     @Import(name="displayData")
       private final @Nullable Output<List<DisplayDataArgs>> displayData;
@@ -34,7 +32,6 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * SDK generated id of this transform instance.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -45,7 +42,6 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * User names for all collection inputs to this transform.
-     * 
      */
     @Import(name="inputCollectionName")
       private final @Nullable Output<List<String>> inputCollectionName;
@@ -56,7 +52,6 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Type of transform.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<TransformSummaryKind> kind;
@@ -67,7 +62,6 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * User provided name for this transform instance.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -78,7 +72,6 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * User names for all collection outputs to this transform.
-     * 
      */
     @Import(name="outputCollectionName")
       private final @Nullable Output<List<String>> outputCollectionName;

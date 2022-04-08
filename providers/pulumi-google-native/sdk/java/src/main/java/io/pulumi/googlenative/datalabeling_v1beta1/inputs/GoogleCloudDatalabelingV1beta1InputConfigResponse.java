@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * The configuration of input data, including data type, location, etc.
- * 
  */
 public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
 
     /**
      * Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.
-     * 
      */
     @Import(name="annotationType", required=true)
       private final String annotationType;
@@ -33,7 +31,6 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
 
     /**
      * Source located in BigQuery. You must specify this field if you are using this InputConfig in an EvaluationJob.
-     * 
      */
     @Import(name="bigquerySource", required=true)
       private final GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource;
@@ -44,7 +41,6 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
 
     /**
      * Optional. Metadata about annotations for the input. You must specify this field if you are using this InputConfig in an EvaluationJob for a model version that performs classification.
-     * 
      */
     @Import(name="classificationMetadata", required=true)
       private final GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata;
@@ -55,7 +51,6 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
 
     /**
      * Data type must be specifed when user tries to import data.
-     * 
      */
     @Import(name="dataType", required=true)
       private final String dataType;
@@ -66,7 +61,6 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
 
     /**
      * Source located in Cloud Storage.
-     * 
      */
     @Import(name="gcsSource", required=true)
       private final GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource;
@@ -77,7 +71,6 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
 
     /**
      * Required for text import, as language code must be specified.
-     * 
      */
     @Import(name="textMetadata", required=true)
       private final GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata;

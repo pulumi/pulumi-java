@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Represents an Amazon Web Services identity provider.
- * 
  */
 public final class AwsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class AwsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The AWS account ID.
-     * 
      */
     @Import(name="accountId", required=true)
       private final Output<String> accountId;

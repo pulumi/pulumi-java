@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Redirects a shopper to a specific page. * Rule Condition: - Must specify Condition. * Action Input: Request Query * Action Result: Redirects shopper to provided uri.
- * 
  */
 public final class GoogleCloudRetailV2alphaRuleRedirectActionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudRetailV2alphaRuleRedirectActionArgs extends io.pul
 
     /**
      * URL must have length equal or less than 2000 characters.
-     * 
      */
     @Import(name="redirectUri")
       private final @Nullable Output<String> redirectUri;

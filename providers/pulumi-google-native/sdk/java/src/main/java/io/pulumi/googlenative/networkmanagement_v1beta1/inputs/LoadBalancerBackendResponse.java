@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * For display only. Metadata associated with a specific load balancer backend.
- * 
  */
 public final class LoadBalancerBackendResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
 
     /**
      * Name of a Compute Engine instance or network endpoint.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -30,7 +28,6 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
 
     /**
      * A list of firewall rule URIs allowing probes from health check IP ranges.
-     * 
      */
     @Import(name="healthCheckAllowingFirewallRules", required=true)
       private final List<String> healthCheckAllowingFirewallRules;
@@ -41,7 +38,6 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
 
     /**
      * A list of firewall rule URIs blocking probes from health check IP ranges.
-     * 
      */
     @Import(name="healthCheckBlockingFirewallRules", required=true)
       private final List<String> healthCheckBlockingFirewallRules;
@@ -52,7 +48,6 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
 
     /**
      * State of the health check firewall configuration.
-     * 
      */
     @Import(name="healthCheckFirewallState", required=true)
       private final String healthCheckFirewallState;
@@ -63,7 +58,6 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
 
     /**
      * URI of a Compute Engine instance or network endpoint.
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;

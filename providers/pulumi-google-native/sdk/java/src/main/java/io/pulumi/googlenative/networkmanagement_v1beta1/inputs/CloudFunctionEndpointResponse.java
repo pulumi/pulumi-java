@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Wrapper for cloud function attributes.
- * 
  */
 public final class CloudFunctionEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CloudFunctionEndpointResponse extends io.pulumi.resources.Inv
 
     /**
      * A [Cloud function](https://cloud.google.com/functions) name.
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;

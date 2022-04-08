@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * MavenRepositoryConfig is maven related repository details. Provides additional configuration details for repositories of the maven format type.
- * 
  */
 public final class MavenRepositoryConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class MavenRepositoryConfigResponse extends io.pulumi.resources.Inv
 
     /**
      * The repository with this flag will allow publishing the same snapshot versions.
-     * 
      */
     @Import(name="allowSnapshotOverwrites", required=true)
       private final Boolean allowSnapshotOverwrites;
@@ -30,7 +28,6 @@ public final class MavenRepositoryConfigResponse extends io.pulumi.resources.Inv
 
     /**
      * Version policy defines the versions that the registry will accept.
-     * 
      */
     @Import(name="versionPolicy", required=true)
       private final String versionPolicy;

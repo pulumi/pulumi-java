@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Defines renewal, billing, and transfer settings for a `Registration`.
- * 
  */
 public final class ManagementSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ManagementSettingsResponse extends io.pulumi.resources.Invoke
 
     /**
      * The renewal method for this `Registration`.
-     * 
      */
     @Import(name="renewalMethod", required=true)
       private final String renewalMethod;
@@ -29,7 +27,6 @@ public final class ManagementSettingsResponse extends io.pulumi.resources.Invoke
 
     /**
      * Controls whether the domain can be transferred to another registrar.
-     * 
      */
     @Import(name="transferLockState", required=true)
       private final String transferLockState;

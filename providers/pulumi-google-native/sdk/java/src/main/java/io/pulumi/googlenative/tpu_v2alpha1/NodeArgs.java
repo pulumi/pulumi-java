@@ -23,7 +23,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of hardware accelerators associated with this node.
-     * 
      */
     @Import(name="acceleratorType", required=true)
       private final Output<String> acceleratorType;
@@ -34,7 +33,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network that is using that CIDR block.
-     * 
      */
     @Import(name="cidrBlock")
       private final @Nullable Output<String> cidrBlock;
@@ -45,7 +43,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The additional data disks for the Node.
-     * 
      */
     @Import(name="dataDisks")
       private final @Nullable Output<List<AttachedDiskArgs>> dataDisks;
@@ -56,7 +53,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user-supplied description of the TPU. Maximum of 512 characters.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -67,7 +63,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The health status of the TPU node.
-     * 
      */
     @Import(name="health")
       private final @Nullable Output<NodeHealth> health;
@@ -78,7 +73,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource labels to represent user-provided metadata.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -96,7 +90,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Custom metadata to apply to the TPU Node. Can set startup-script and shutdown-script
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
@@ -107,7 +100,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Network configurations for the TPU node.
-     * 
      */
     @Import(name="networkConfig")
       private final @Nullable Output<NetworkConfigArgs> networkConfig;
@@ -132,7 +124,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The runtime version running in the Node.
-     * 
      */
     @Import(name="runtimeVersion", required=true)
       private final Output<String> runtimeVersion;
@@ -143,7 +134,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The scheduling options for this node.
-     * 
      */
     @Import(name="schedulingConfig")
       private final @Nullable Output<SchedulingConfigArgs> schedulingConfig;
@@ -154,7 +144,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Google Cloud Platform Service Account to be used by the TPU node VMs. If None is specified, the default compute service account will be used.
-     * 
      */
     @Import(name="serviceAccount")
       private final @Nullable Output<ServiceAccountArgs> serviceAccount;
@@ -165,7 +154,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tags to apply to the TPU Node. Tags are used to identify valid sources or targets for network firewalls.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;

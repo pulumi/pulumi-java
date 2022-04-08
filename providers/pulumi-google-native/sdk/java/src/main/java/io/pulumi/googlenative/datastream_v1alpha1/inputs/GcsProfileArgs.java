@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cloud Storage bucket profile.
- * 
  */
 public final class GcsProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GcsProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The full project and resource path for Cloud Storage bucket including the name.
-     * 
      */
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
@@ -31,7 +29,6 @@ public final class GcsProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The root path inside the Cloud Storage bucket.
-     * 
      */
     @Import(name="rootPath")
       private final @Nullable Output<String> rootPath;

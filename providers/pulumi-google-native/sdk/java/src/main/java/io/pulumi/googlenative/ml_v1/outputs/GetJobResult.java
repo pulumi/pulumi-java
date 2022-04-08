@@ -16,67 +16,54 @@ import java.util.Objects;
 public final class GetJobResult {
     /**
      * When the job was created.
-     * 
      */
     private final String createTime;
     /**
      * When the job processing was completed.
-     * 
      */
     private final String endTime;
     /**
      * The details of a failure or a cancellation.
-     * 
      */
     private final String errorMessage;
     /**
      * `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a job from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform job updates in order to avoid race conditions: An `etag` is returned in the response to `GetJob`, and systems are expected to put that etag in the request to `UpdateJob` to ensure that their change will be applied to the same version of the job.
-     * 
      */
     private final String etag;
     /**
      * The user-specified id of the job.
-     * 
      */
     private final String jobId;
     /**
      * It's only effect when the job is in QUEUED state. If it's positive, it indicates the job's position in the job scheduler. It's 0 when the job is already scheduled.
-     * 
      */
     private final String jobPosition;
     /**
      * Optional. One or more labels that you can add, to organize your jobs. Each label is a key-value pair, where both the key and the value are arbitrary strings that you supply. For more information, see the documentation on using labels.
-     * 
      */
     private final Map<String,String> labels;
     /**
      * Input parameters to create a prediction job.
-     * 
      */
     private final GoogleCloudMlV1__PredictionInputResponse predictionInput;
     /**
      * The current prediction job result.
-     * 
      */
     private final GoogleCloudMlV1__PredictionOutputResponse predictionOutput;
     /**
      * When the job processing was started.
-     * 
      */
     private final String startTime;
     /**
      * The detailed state of a job.
-     * 
      */
     private final String state;
     /**
      * Input parameters to create a training job.
-     * 
      */
     private final GoogleCloudMlV1__TrainingInputResponse trainingInput;
     /**
      * The current training job result.
-     * 
      */
     private final GoogleCloudMlV1__TrainingOutputResponse trainingOutput;
 
@@ -112,91 +99,78 @@ public final class GetJobResult {
 
     /**
      * When the job was created.
-     * 
     */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * When the job processing was completed.
-     * 
     */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * The details of a failure or a cancellation.
-     * 
     */
     public String getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a job from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform job updates in order to avoid race conditions: An `etag` is returned in the response to `GetJob`, and systems are expected to put that etag in the request to `UpdateJob` to ensure that their change will be applied to the same version of the job.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The user-specified id of the job.
-     * 
     */
     public String getJobId() {
         return this.jobId;
     }
     /**
      * It's only effect when the job is in QUEUED state. If it's positive, it indicates the job's position in the job scheduler. It's 0 when the job is already scheduled.
-     * 
     */
     public String getJobPosition() {
         return this.jobPosition;
     }
     /**
      * Optional. One or more labels that you can add, to organize your jobs. Each label is a key-value pair, where both the key and the value are arbitrary strings that you supply. For more information, see the documentation on using labels.
-     * 
     */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Input parameters to create a prediction job.
-     * 
     */
     public GoogleCloudMlV1__PredictionInputResponse getPredictionInput() {
         return this.predictionInput;
     }
     /**
      * The current prediction job result.
-     * 
     */
     public GoogleCloudMlV1__PredictionOutputResponse getPredictionOutput() {
         return this.predictionOutput;
     }
     /**
      * When the job processing was started.
-     * 
     */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * The detailed state of a job.
-     * 
     */
     public String getState() {
         return this.state;
     }
     /**
      * Input parameters to create a training job.
-     * 
     */
     public GoogleCloudMlV1__TrainingInputResponse getTrainingInput() {
         return this.trainingInput;
     }
     /**
      * The current training job result.
-     * 
     */
     public GoogleCloudMlV1__TrainingOutputResponse getTrainingOutput() {
         return this.trainingOutput;

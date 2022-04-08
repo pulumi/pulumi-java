@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class TimeSpanResponse {
     /**
      * End of time span.
-     * 
      */
     private final String endTime;
     /**
      * Start of time span.
-     * 
      */
     private final String startTime;
 
@@ -30,14 +28,12 @@ public final class TimeSpanResponse {
 
     /**
      * End of time span.
-     * 
     */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * Start of time span.
-     * 
     */
     public String getStartTime() {
         return this.startTime;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of a custom Compute Engine virtual machine image for starting a notebook instance with the environment installed directly on the VM.
- * 
  */
 public final class VmImageArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class VmImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Use this VM image family to find the image; the newest image in this family will be used.
-     * 
      */
     @Import(name="imageFamily")
       private final @Nullable Output<String> imageFamily;
@@ -31,7 +29,6 @@ public final class VmImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Use VM image name to find the image.
-     * 
      */
     @Import(name="imageName")
       private final @Nullable Output<String> imageName;
@@ -42,7 +39,6 @@ public final class VmImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Google Cloud project that this VM image belongs to. Format: `projects/{project_id}`
-     * 
      */
     @Import(name="project", required=true)
       private final Output<String> project;

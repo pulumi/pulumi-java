@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * [TrustedTester] [Required] Defines the ranges for range partitioning.
- * 
  */
 public final class RangePartitioningRangeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
 
     /**
      * [TrustedTester] [Required] The end of range partitioning, exclusive.
-     * 
      */
     @Import(name="end")
       private final @Nullable Output<String> end;
@@ -31,7 +29,6 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
 
     /**
      * [TrustedTester] [Required] The width of each interval.
-     * 
      */
     @Import(name="interval")
       private final @Nullable Output<String> interval;
@@ -42,7 +39,6 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
 
     /**
      * [TrustedTester] [Required] The start of range partitioning, inclusive.
-     * 
      */
     @Import(name="start")
       private final @Nullable Output<String> start;

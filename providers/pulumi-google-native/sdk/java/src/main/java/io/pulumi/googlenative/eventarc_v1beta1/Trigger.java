@@ -18,132 +18,113 @@ import javax.annotation.Nullable;
 
 /**
  * Create a new trigger in a particular project and location.
- * 
  */
 @ResourceType(type="google-native:eventarc/v1beta1:Trigger")
 public class Trigger extends io.pulumi.resources.CustomResource {
     /**
      * The creation time.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The creation time.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Destination specifies where the events should be sent to.
-     * 
      */
     @Export(name="destination", type=DestinationResponse.class, parameters={})
     private Output<DestinationResponse> destination;
 
     /**
      * @return Destination specifies where the events should be sent to.
-     * 
      */
     public Output<DestinationResponse> getDestination() {
         return this.destination;
     }
     /**
      * This checksum is computed by the server based on the value of other fields, and may be sent only on create requests to ensure the client has an up-to-date value before proceeding.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return This checksum is computed by the server based on the value of other fields, and may be sent only on create requests to ensure the client has an up-to-date value before proceeding.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Optional. User labels attached to the triggers that can be used to group resources.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Optional. User labels attached to the triggers that can be used to group resources.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * null The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
-     * 
      */
     @Export(name="matchingCriteria", type=List.class, parameters={MatchingCriteriaResponse.class})
     private Output<List<MatchingCriteriaResponse>> matchingCriteria;
 
     /**
      * @return null The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
-     * 
      */
     public Output<List<MatchingCriteriaResponse>> getMatchingCriteria() {
         return this.matchingCriteria;
     }
     /**
      * The resource name of the trigger. Must be unique within the location on the project and must in `projects/{project}/locations/{location}/triggers/{trigger}` format.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the trigger. Must be unique within the location on the project and must in `projects/{project}/locations/{location}/triggers/{trigger}` format.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. In order to create Audit Log triggers, the service account should also have 'eventarc.events.receiveAuditLogV1Written' permission.
-     * 
      */
     @Export(name="serviceAccount", type=String.class, parameters={})
     private Output<String> serviceAccount;
 
     /**
      * @return Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. In order to create Audit Log triggers, the service account should also have 'eventarc.events.receiveAuditLogV1Written' permission.
-     * 
      */
     public Output<String> getServiceAccount() {
         return this.serviceAccount;
     }
     /**
      * In order to deliver messages, Eventarc may use other GCP products as transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.
-     * 
      */
     @Export(name="transport", type=TransportResponse.class, parameters={})
     private Output<TransportResponse> transport;
 
     /**
      * @return In order to deliver messages, Eventarc may use other GCP products as transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.
-     * 
      */
     public Output<TransportResponse> getTransport() {
         return this.transport;
     }
     /**
      * The last-modified time.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The last-modified time.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

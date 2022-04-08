@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Response media object for media content card.
- * 
  */
 public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
 
     /**
      * Url where the media is stored.
-     * 
      */
     @Import(name="contentUrl", required=true)
       private final Output<String> contentUrl;
@@ -32,7 +30,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
 
     /**
      * Optional. Description of media card.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -43,7 +40,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
 
     /**
      * Optional. Icon to display above media content.
-     * 
      */
     @Import(name="icon")
       private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> icon;
@@ -54,7 +50,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
 
     /**
      * Optional. Image to display above media content.
-     * 
      */
     @Import(name="largeImage")
       private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> largeImage;
@@ -65,7 +60,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
 
     /**
      * Name of media card.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

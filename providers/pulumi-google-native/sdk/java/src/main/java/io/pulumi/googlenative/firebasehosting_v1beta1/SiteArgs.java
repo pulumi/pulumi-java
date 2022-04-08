@@ -17,7 +17,6 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The [ID of a Web App](https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects.webApps#WebApp.FIELDS.app_id) associated with the Hosting site.
-     * 
      */
     @Import(name="appId")
       private final @Nullable Output<String> appId;
@@ -28,7 +27,6 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. User-specified labels for the Hosting site.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;

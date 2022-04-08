@@ -16,7 +16,6 @@ public final class LicenseResourceRequirementsArgs extends io.pulumi.resources.R
 
     /**
      * Minimum number of guest cpus required to use the Instance. Enforced at Instance creation and Instance start.
-     * 
      */
     @Import(name="minGuestCpuCount")
       private final @Nullable Output<Integer> minGuestCpuCount;
@@ -27,7 +26,6 @@ public final class LicenseResourceRequirementsArgs extends io.pulumi.resources.R
 
     /**
      * Minimum memory required to use the Instance. Enforced at Instance creation and Instance start.
-     * 
      */
     @Import(name="minMemoryMb")
       private final @Nullable Output<Integer> minMemoryMb;

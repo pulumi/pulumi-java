@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Configuration for stored infoTypes. All fields and subfield are provided by the user. For more information, see https://cloud.google.com/dlp/docs/creating-custom-infotypes.
- * 
  */
 public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
 
     /**
      * Description of the StoredInfoType (max 256 characters).
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -32,7 +30,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
 
     /**
      * Store dictionary-based CustomInfoType.
-     * 
      */
     @Import(name="dictionary", required=true)
       private final GooglePrivacyDlpV2DictionaryResponse dictionary;
@@ -43,7 +40,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
 
     /**
      * Display name of the StoredInfoType (max 256 characters).
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -54,7 +50,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
 
     /**
      * StoredInfoType where findings are defined by a dictionary of phrases.
-     * 
      */
     @Import(name="largeCustomDictionary", required=true)
       private final GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary;
@@ -65,7 +60,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
 
     /**
      * Store regular expression-based StoredInfoType.
-     * 
      */
     @Import(name="regex", required=true)
       private final GooglePrivacyDlpV2RegexResponse regex;

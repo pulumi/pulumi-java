@@ -17,7 +17,6 @@ public final class InstanceMessageArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A code that correspond to one type of user-facing message.
-     * 
      */
     @Import(name="code")
       private final @Nullable Output<InstanceMessageCode> code;
@@ -28,7 +27,6 @@ public final class InstanceMessageArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Message on memcached instance which will be exposed to users.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;

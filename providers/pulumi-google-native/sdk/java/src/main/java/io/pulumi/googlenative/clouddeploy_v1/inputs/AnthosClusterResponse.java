@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Information specifying an Anthos Cluster.
- * 
  */
 public final class AnthosClusterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AnthosClusterResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Membership of the GKE Hub registered cluster that the Skaffold configuration should be applied to. Format is `projects/{project}/locations/{location}/memberships/{membership_name}`.
-     * 
      */
     @Import(name="membership", required=true)
       private final String membership;

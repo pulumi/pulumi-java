@@ -12,22 +12,18 @@ import java.util.Objects;
 public final class DestinationTablePropertiesResponse {
     /**
      * [Optional] The description for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current description is provided, the job will fail.
-     * 
      */
     private final String description;
     /**
      * [Internal] This field is for Google internal use only.
-     * 
      */
     private final String expirationTime;
     /**
      * [Optional] The friendly name for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current friendly name is provided, the job will fail.
-     * 
      */
     private final String friendlyName;
     /**
      * [Optional] The labels associated with this table. You can use these to organize and group your tables. This will only be used if the destination table is newly created. If the table already exists and labels are different than the current labels are provided, the job will fail.
-     * 
      */
     private final Map<String,String> labels;
 
@@ -45,28 +41,24 @@ public final class DestinationTablePropertiesResponse {
 
     /**
      * [Optional] The description for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current description is provided, the job will fail.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * [Internal] This field is for Google internal use only.
-     * 
     */
     public String getExpirationTime() {
         return this.expirationTime;
     }
     /**
      * [Optional] The friendly name for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current friendly name is provided, the job will fail.
-     * 
     */
     public String getFriendlyName() {
         return this.friendlyName;
     }
     /**
      * [Optional] The labels associated with this table. You can use these to organize and group your tables. This will only be used if the destination table is newly created. If the table already exists and labels are different than the current labels are provided, the job will fail.
-     * 
     */
     public Map<String,String> getLabels() {
         return this.labels;

@@ -21,7 +21,6 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Budgeted amount.
-     * 
      */
     @Import(name="amount", required=true)
       private final Output<GoogleCloudBillingBudgetsV1BudgetAmountArgs> amount;
@@ -39,7 +38,6 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.
-     * 
      */
     @Import(name="budgetFilter")
       private final @Nullable Output<GoogleCloudBillingBudgetsV1FilterArgs> budgetFilter;
@@ -50,7 +48,6 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User data for display name in UI. The name must be less than or equal to 60 characters.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -61,7 +58,6 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Etag to validate that the object is unchanged for a read-modify-write operation. An empty etag causes an update to overwrite other changes.
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -72,7 +68,6 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Rules to apply to notifications sent based on budget spend and thresholds.
-     * 
      */
     @Import(name="notificationsRule")
       private final @Nullable Output<GoogleCloudBillingBudgetsV1NotificationsRuleArgs> notificationsRule;
@@ -83,7 +78,6 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of the budget. Optional for `pubsubTopic` notifications. Required if using email notifications.
-     * 
      */
     @Import(name="thresholdRules")
       private final @Nullable Output<List<GoogleCloudBillingBudgetsV1ThresholdRuleArgs>> thresholdRules;

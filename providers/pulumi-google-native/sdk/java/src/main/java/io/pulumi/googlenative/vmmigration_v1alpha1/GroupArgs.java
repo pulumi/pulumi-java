@@ -16,7 +16,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User-provided description of the group.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -27,7 +26,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Display name is a user defined name for this group which can be updated.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -52,7 +50,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Group name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

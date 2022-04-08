@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A simplified layout that divides the available space into vertical columns and arranges a set of widgets vertically in each column.
- * 
  */
 public final class ColumnLayoutArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ColumnLayoutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The columns of content to display.
-     * 
      */
     @Import(name="columns")
       private final @Nullable Output<List<ColumnArgs>> columns;

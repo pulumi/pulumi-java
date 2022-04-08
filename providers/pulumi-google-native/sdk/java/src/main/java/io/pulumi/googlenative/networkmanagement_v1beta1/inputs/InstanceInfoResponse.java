@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * For display only. Metadata associated with a Compute Engine instance.
- * 
  */
 public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of a Compute Engine instance.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -30,7 +28,6 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * External IP address of the network interface.
-     * 
      */
     @Import(name="externalIp", required=true)
       private final String externalIp;
@@ -41,7 +38,6 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the network interface of a Compute Engine instance.
-     * 
      */
     @Import(name="interface", required=true)
       private final String interface_;
@@ -52,7 +48,6 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Internal IP address of the network interface.
-     * 
      */
     @Import(name="internalIp", required=true)
       private final String internalIp;
@@ -63,7 +58,6 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Network tags configured on the instance.
-     * 
      */
     @Import(name="networkTags", required=true)
       private final List<String> networkTags;
@@ -74,7 +68,6 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * URI of a Compute Engine network.
-     * 
      */
     @Import(name="networkUri", required=true)
       private final String networkUri;
@@ -85,7 +78,6 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Service account authorized for the instance.
-     * 
      */
     @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
@@ -96,7 +88,6 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * URI of a Compute Engine instance.
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;

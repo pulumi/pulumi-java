@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * The content type header to use for the check. The following configurations result in errors: 1. Content type is specified in both the headers field and the content_type field. 2. Request method is GET and content_type is not TYPE_UNSPECIFIED 3. Request method is POST and content_type is TYPE_UNSPECIFIED. 4. Request method is POST and a "Content-Type" header is provided via headers field. The content_type field should be used instead.
-     * 
      */
     @EnumType
     public enum HttpCheckContentType {
         /**
          * No content type specified.
-         * 
          */
         TypeUnspecified("TYPE_UNSPECIFIED"),
         /**
          * body is in URL-encoded form. Equivalent to setting the Content-Type to application/x-www-form-urlencoded in the HTTP request.
-         * 
          */
         UrlEncoded("URL_ENCODED");
 

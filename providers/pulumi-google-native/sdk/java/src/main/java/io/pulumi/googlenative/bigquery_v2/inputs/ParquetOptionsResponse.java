@@ -14,7 +14,6 @@ public final class ParquetOptionsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * [Optional] Indicates whether to use schema inference specifically for Parquet LIST logical type.
-     * 
      */
     @Import(name="enableListInference", required=true)
       private final Boolean enableListInference;
@@ -25,7 +24,6 @@ public final class ParquetOptionsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * [Optional] Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default.
-     * 
      */
     @Import(name="enumAsString", required=true)
       private final Boolean enumAsString;

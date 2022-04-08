@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Specifies workflow execution target.Either managed_cluster or cluster_selector is required.
- * 
  */
 public final class WorkflowTemplatePlacementResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class WorkflowTemplatePlacementResponse extends io.pulumi.resources
 
     /**
      * Optional. A selector that chooses target cluster for jobs based on metadata.The selector is evaluated at the time each job is submitted.
-     * 
      */
     @Import(name="clusterSelector", required=true)
       private final ClusterSelectorResponse clusterSelector;
@@ -30,7 +28,6 @@ public final class WorkflowTemplatePlacementResponse extends io.pulumi.resources
 
     /**
      * Optional. A cluster that is managed by the workflow.
-     * 
      */
     @Import(name="managedCluster", required=true)
       private final ManagedClusterResponse managedCluster;

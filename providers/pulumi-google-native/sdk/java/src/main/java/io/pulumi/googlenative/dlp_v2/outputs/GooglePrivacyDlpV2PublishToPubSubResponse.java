@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2PublishToPubSubResponse {
     /**
      * Cloud Pub/Sub topic to send notifications to. The topic must have given publishing access rights to the DLP API service account executing the long running DlpJob sending the notifications. Format is projects/{project}/topics/{topic}.
-     * 
      */
     private final String topic;
 
@@ -22,7 +21,6 @@ public final class GooglePrivacyDlpV2PublishToPubSubResponse {
 
     /**
      * Cloud Pub/Sub topic to send notifications to. The topic must have given publishing access rights to the DLP API service account executing the long running DlpJob sending the notifications. Format is projects/{project}/topics/{topic}.
-     * 
     */
     public String getTopic() {
         return this.topic;

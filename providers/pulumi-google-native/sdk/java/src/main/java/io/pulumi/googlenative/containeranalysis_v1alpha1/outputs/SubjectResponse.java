@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class SubjectResponse {
     /**
      * "": "" Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
-     * 
      */
     private final Map<String,String> digest;
     /**
      * name is the name of the Subject used here
-     * 
      */
     private final String name;
 
@@ -31,14 +29,12 @@ public final class SubjectResponse {
 
     /**
      * "": "" Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
-     * 
     */
     public Map<String,String> getDigest() {
         return this.digest;
     }
     /**
      * name is the name of the Subject used here
-     * 
     */
     public String getName() {
         return this.name;

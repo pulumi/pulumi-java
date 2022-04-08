@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ApiEndpointHandlerResponse {
     /**
      * Path to the script from the application root directory.
-     * 
      */
     private final String scriptPath;
 
@@ -22,7 +21,6 @@ public final class ApiEndpointHandlerResponse {
 
     /**
      * Path to the script from the application root directory.
-     * 
     */
     public String getScriptPath() {
         return this.scriptPath;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A package managed by Zypper. - install: `zypper -y install package` - remove: `zypper -y rm package`
- * 
  */
 public final class OSPolicyResourcePackageResourceZypperArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class OSPolicyResourcePackageResourceZypperArgs extends io.pulumi.r
 
     /**
      * Package name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

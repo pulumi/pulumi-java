@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Specification of certificate provider. Defines the mechanism to obtain the certificate and private key for peer to peer authentication.
- * 
  */
 public final class GoogleCloudNetworksecurityV1CertificateProviderResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudNetworksecurityV1CertificateProviderResponse exten
 
     /**
      * The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.
-     * 
      */
     @Import(name="certificateProviderInstance", required=true)
       private final CertificateProviderInstanceResponse certificateProviderInstance;
@@ -30,7 +28,6 @@ public final class GoogleCloudNetworksecurityV1CertificateProviderResponse exten
 
     /**
      * gRPC specific configuration to access the gRPC server to obtain the cert and private key.
-     * 
      */
     @Import(name="grpcEndpoint", required=true)
       private final GoogleCloudNetworksecurityV1GrpcEndpointResponse grpcEndpoint;

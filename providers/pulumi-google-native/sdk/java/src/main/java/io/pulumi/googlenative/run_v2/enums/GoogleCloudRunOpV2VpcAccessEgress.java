@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Traffic VPC egress settings.
-     * 
      */
     @EnumType
     public enum GoogleCloudRunOpV2VpcAccessEgress {
         /**
          * Unspecified
-         * 
          */
         VpcEgressUnspecified("VPC_EGRESS_UNSPECIFIED"),
         /**
          * All outbound traffic is routed through the VPC connector.
-         * 
          */
         AllTraffic("ALL_TRAFFIC"),
         /**
          * Only private IP ranges are routed through the VPC connector.
-         * 
          */
         PrivateRangesOnly("PRIVATE_RANGES_ONLY");
 

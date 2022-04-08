@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Commitment for a particular resource (a Commitment is composed of one or more of these).
- * 
  */
 public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.
-     * 
      */
     @Import(name="acceleratorType")
       private final @Nullable Output<String> acceleratorType;
@@ -32,7 +30,6 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The amount of the resource purchased (in a type-dependent unit, such as bytes). For vCPUs, this can just be an integer. For memory, this must be provided in MB. Memory must be a multiple of 256 MB, with up to 6.5GB of memory per every vCPU.
-     * 
      */
     @Import(name="amount")
       private final @Nullable Output<String> amount;
@@ -43,7 +40,6 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Type of resource for which this commitment applies. Possible values are VCPU and MEMORY
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<ResourceCommitmentType> type;

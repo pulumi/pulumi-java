@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * Static IP address connectivity.
- * 
  */
 public final class StaticServiceIpConnectivityArgs extends io.pulumi.resources.ResourceArgs {
 

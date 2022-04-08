@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * An indication that the compliance checks in the associated ComplianceNote were not satisfied for particular resources or a specified reason.
- * 
  */
 public final class ComplianceOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 

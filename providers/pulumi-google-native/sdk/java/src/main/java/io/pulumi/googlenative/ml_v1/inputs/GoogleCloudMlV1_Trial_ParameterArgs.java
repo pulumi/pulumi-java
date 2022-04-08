@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A message representing a parameter to be tuned. Contains the name of the parameter and the suggested value to use for this trial.
- * 
  */
 public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
 
     /**
      * Must be set if ParameterType is DOUBLE or DISCRETE.
-     * 
      */
     @Import(name="floatValue")
       private final @Nullable Output<Double> floatValue;
@@ -32,7 +30,6 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
 
     /**
      * Must be set if ParameterType is INTEGER
-     * 
      */
     @Import(name="intValue")
       private final @Nullable Output<String> intValue;
@@ -43,7 +40,6 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
 
     /**
      * The name of the parameter.
-     * 
      */
     @Import(name="parameter")
       private final @Nullable Output<String> parameter;
@@ -54,7 +50,6 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
 
     /**
      * Must be set if ParameterTypeis CATEGORICAL
-     * 
      */
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;

@@ -18,7 +18,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The agent version loaded into this environment. Supported formats: - `projects//agent/versions/` - `projects//locations//agent/versions/`
-     * 
      */
     @Import(name="agentVersion")
       private final @Nullable Output<String> agentVersion;
@@ -29,7 +28,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The developer-provided description for this environment. The maximum length is 500 characters. If exceeded, the request is rejected.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -47,7 +45,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The fulfillment settings to use for this environment.
-     * 
      */
     @Import(name="fulfillment")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1FulfillmentArgs> fulfillment;
@@ -72,7 +69,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Text to speech settings for this environment.
-     * 
      */
     @Import(name="textToSpeechSettings")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs> textToSpeechSettings;

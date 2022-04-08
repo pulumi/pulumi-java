@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Private Connectivity
- * 
  */
 public final class PrivateConnectivityResponse extends io.pulumi.resources.InvokeArgs {
 

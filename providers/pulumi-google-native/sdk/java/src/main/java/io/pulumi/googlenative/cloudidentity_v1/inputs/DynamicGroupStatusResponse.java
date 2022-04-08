@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The current status of a dynamic group along with timestamp.
- * 
  */
 public final class DynamicGroupStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DynamicGroupStatusResponse extends io.pulumi.resources.Invoke
 
     /**
      * Status of the dynamic group.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -29,7 +27,6 @@ public final class DynamicGroupStatusResponse extends io.pulumi.resources.Invoke
 
     /**
      * The latest time at which the dynamic group is guaranteed to be in the given status. If status is `UP_TO_DATE`, the latest time at which the dynamic group was confirmed to be up-to-date. If status is `UPDATING_MEMBERSHIPS`, the time at which dynamic group was created.
-     * 
      */
     @Import(name="statusTime", required=true)
       private final String statusTime;

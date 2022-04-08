@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Details for an outcome with a SUCCESS outcome summary. LINT.IfChange
- * 
  */
 public final class SuccessDetailResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SuccessDetailResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * If a native process other than the app crashed.
-     * 
      */
     @Import(name="otherNativeCrash", required=true)
       private final Boolean otherNativeCrash;

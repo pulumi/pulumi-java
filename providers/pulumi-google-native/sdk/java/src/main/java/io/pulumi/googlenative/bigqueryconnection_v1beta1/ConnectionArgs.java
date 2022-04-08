@@ -17,7 +17,6 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Cloud SQL properties.
-     * 
      */
     @Import(name="cloudSql")
       private final @Nullable Output<CloudSqlPropertiesArgs> cloudSql;
@@ -35,7 +34,6 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User provided description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -46,7 +44,6 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User provided display name for the connection.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -64,7 +61,6 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the connection in the form of: `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

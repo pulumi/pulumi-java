@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Options for how to validate and process properties on a resource.
- * 
  */
 public final class ValidationOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ValidationOptionsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Customize how deployment manager will validate the resource against schema errors.
-     * 
      */
     @Import(name="schemaValidation")
       private final @Nullable Output<ValidationOptionsSchemaValidation> schemaValidation;
@@ -32,7 +30,6 @@ public final class ValidationOptionsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Specify what to do with extra properties when executing a request.
-     * 
      */
     @Import(name="undeclaredProperties")
       private final @Nullable Output<ValidationOptionsUndeclaredProperties> undeclaredProperties;

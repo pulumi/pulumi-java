@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The details about how to run the execution.
- * 
  */
 public final class SpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An Android mobile test execution specification.
-     * 
      */
     @Import(name="androidTest")
       private final @Nullable Output<AndroidTestArgs> androidTest;
@@ -32,7 +30,6 @@ public final class SpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An iOS mobile test execution specification.
-     * 
      */
     @Import(name="iosTest")
       private final @Nullable Output<IosTestArgs> iosTest;

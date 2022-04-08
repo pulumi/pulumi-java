@@ -16,132 +16,113 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new channel in the specified site.
- * 
  */
 @ResourceType(type="google-native:firebasehosting/v1beta1:Channel")
 public class Channel extends io.pulumi.resources.CustomResource {
     /**
      * The time at which the channel was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time at which the channel was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it's set directly or via the `ttl` field.
-     * 
      */
     @Export(name="expireTime", type=String.class, parameters={})
     private Output<String> expireTime;
 
     /**
      * @return The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it's set directly or via the `ttl` field.
-     * 
      */
     public Output<String> getExpireTime() {
         return this.expireTime;
     }
     /**
      * Text labels used for extra metadata and/or filtering.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Text labels used for extra metadata and/or filtering.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The current release for the channel, if any.
-     * 
      */
     @Export(name="release", type=ReleaseResponse.class, parameters={})
     private Output<ReleaseResponse> release;
 
     /**
      * @return The current release for the channel, if any.
-     * 
      */
     public Output<ReleaseResponse> getRelease() {
         return this.release;
     }
     /**
      * The number of previous releases to retain on the channel for rollback or other purposes. Must be a number between 1-100. Defaults to 10 for new channels.
-     * 
      */
     @Export(name="retainedReleaseCount", type=Integer.class, parameters={})
     private Output<Integer> retainedReleaseCount;
 
     /**
      * @return The number of previous releases to retain on the channel for rollback or other purposes. Must be a number between 1-100. Defaults to 10 for new channels.
-     * 
      */
     public Output<Integer> getRetainedReleaseCount() {
         return this.retainedReleaseCount;
     }
     /**
      * Input only. A time-to-live for this channel. Sets `expire_time` to the provided duration past the time of the request.
-     * 
      */
     @Export(name="ttl", type=String.class, parameters={})
     private Output<String> ttl;
 
     /**
      * @return Input only. A time-to-live for this channel. Sets `expire_time` to the provided duration past the time of the request.
-     * 
      */
     public Output<String> getTtl() {
         return this.ttl;
     }
     /**
      * The time at which the channel was last updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The time at which the channel was last updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
     /**
      * The URL at which the content of this channel's current release can be viewed. This URL is a Firebase-provided subdomain of `web.app`. The content of this channel's current release can also be viewed at the Firebase-provided subdomain of `firebaseapp.com`. If this channel is the `live` channel for the Hosting site, then the content of this channel's current release can also be viewed at any connected custom domains.
-     * 
      */
     @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**
      * @return The URL at which the content of this channel's current release can be viewed. This URL is a Firebase-provided subdomain of `web.app`. The content of this channel's current release can also be viewed at the Firebase-provided subdomain of `firebaseapp.com`. If this channel is the `live` channel for the Hosting site, then the content of this channel's current release can also be viewed at any connected custom domains.
-     * 
      */
     public Output<String> getUrl() {
         return this.url;

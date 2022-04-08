@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the forwarding rule type. For more information about forwarding rules, refer to Forwarding rule concepts.
-     * 
      */
     @EnumType
     public enum GlobalForwardingRuleLoadBalancingScheme {

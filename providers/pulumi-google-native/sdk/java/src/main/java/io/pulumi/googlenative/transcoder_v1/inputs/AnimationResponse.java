@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Animation types.
- * 
  */
 public final class AnimationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AnimationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * End previous animation.
-     * 
      */
     @Import(name="animationEnd", required=true)
       private final AnimationEndResponse animationEnd;
@@ -31,7 +29,6 @@ public final class AnimationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Display overlay object with fade animation.
-     * 
      */
     @Import(name="animationFade", required=true)
       private final AnimationFadeResponse animationFade;
@@ -42,7 +39,6 @@ public final class AnimationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Display static overlay object.
-     * 
      */
     @Import(name="animationStatic", required=true)
       private final AnimationStaticResponse animationStatic;

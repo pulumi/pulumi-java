@@ -23,7 +23,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration information for an environment.
- * 
  */
 public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -31,7 +30,6 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
-     * 
      */
     @Import(name="databaseConfig")
       private final @Nullable Output<DatabaseConfigArgs> databaseConfig;
@@ -42,7 +40,6 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Optional. The encryption options for the Cloud Composer environment and its dependencies. Cannot be updated.
-     * 
      */
     @Import(name="encryptionConfig")
       private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
@@ -53,7 +50,6 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Optional. The size of the Cloud Composer environment. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
-     * 
      */
     @Import(name="environmentSize")
       private final @Nullable Output<EnvironmentConfigEnvironmentSize> environmentSize;
@@ -64,7 +60,6 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Optional. The maintenance window is the period when Cloud Composer components may undergo maintenance. It is defined so that maintenance is not executed during peak hours or critical time periods. The system will not be under maintenance for every occurrence of this window, but when maintenance is planned, it will be scheduled during the window. The maintenance window period must encompass at least 12 hours per week. This may be split into multiple chunks, each with a size of at least 4 hours. If this value is omitted, Cloud Composer components may be subject to maintenance at any time.
-     * 
      */
     @Import(name="maintenanceWindow")
       private final @Nullable Output<MaintenanceWindowArgs> maintenanceWindow;
@@ -75,7 +70,6 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Optional. The configuration options for GKE clusters master authorized networks. By default master authorized networks feature is: - in case of private environment: enabled with no external networks allowlisted. - in case of public environment: disabled.
-     * 
      */
     @Import(name="masterAuthorizedNetworksConfig")
       private final @Nullable Output<MasterAuthorizedNetworksConfigArgs> masterAuthorizedNetworksConfig;
@@ -86,7 +80,6 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The configuration used for the Kubernetes Engine cluster.
-     * 
      */
     @Import(name="nodeConfig")
       private final @Nullable Output<NodeConfigArgs> nodeConfig;
@@ -97,7 +90,6 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The number of nodes in the Kubernetes Engine cluster that will be used to run this environment. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
-     * 
      */
     @Import(name="nodeCount")
       private final @Nullable Output<Integer> nodeCount;
@@ -108,7 +100,6 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The configuration used for the Private IP Cloud Composer environment.
-     * 
      */
     @Import(name="privateEnvironmentConfig")
       private final @Nullable Output<PrivateEnvironmentConfigArgs> privateEnvironmentConfig;
@@ -119,7 +110,6 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The configuration settings for software inside the environment.
-     * 
      */
     @Import(name="softwareConfig")
       private final @Nullable Output<SoftwareConfigArgs> softwareConfig;
@@ -130,7 +120,6 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Optional. The configuration settings for the Airflow web server App Engine instance. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
-     * 
      */
     @Import(name="webServerConfig")
       private final @Nullable Output<WebServerConfigArgs> webServerConfig;
@@ -141,7 +130,6 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Optional. The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
-     * 
      */
     @Import(name="webServerNetworkAccessControl")
       private final @Nullable Output<WebServerNetworkAccessControlArgs> webServerNetworkAccessControl;
@@ -152,7 +140,6 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Optional. The workloads configuration settings for the GKE cluster associated with the Cloud Composer environment. The GKE cluster runs Airflow scheduler, web server and workers workloads. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
-     * 
      */
     @Import(name="workloadsConfig")
       private final @Nullable Output<WorkloadsConfigArgs> workloadsConfig;

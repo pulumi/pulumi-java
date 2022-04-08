@@ -18,118 +18,101 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new custom dashboard. For examples on how you can use this API to create dashboards, see Managing dashboards by API (https://cloud.google.com/monitoring/dashboards/api-dashboard). This method requires the monitoring.dashboards.create permission on the specified project. For more information about permissions, see Cloud Identity and Access Management (https://cloud.google.com/iam).
- * 
  */
 @ResourceType(type="google-native:monitoring/v1:Dashboard")
 public class Dashboard extends io.pulumi.resources.CustomResource {
     /**
      * The content is divided into equally spaced columns and the widgets are arranged vertically.
-     * 
      */
     @Export(name="columnLayout", type=ColumnLayoutResponse.class, parameters={})
     private Output<ColumnLayoutResponse> columnLayout;
 
     /**
      * @return The content is divided into equally spaced columns and the widgets are arranged vertically.
-     * 
      */
     public Output<ColumnLayoutResponse> getColumnLayout() {
         return this.columnLayout;
     }
     /**
      * The mutable, human-readable name.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The mutable, human-readable name.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * etag is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. An etag is returned in the response to GetDashboard, and users are expected to put that etag in the request to UpdateDashboard to ensure that their change will be applied to the same version of the Dashboard configuration. The field should not be passed during dashboard creation.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return etag is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. An etag is returned in the response to GetDashboard, and users are expected to put that etag in the request to UpdateDashboard to ensure that their change will be applied to the same version of the Dashboard configuration. The field should not be passed during dashboard creation.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Content is arranged with a basic layout that re-flows a simple list of informational elements like widgets or tiles.
-     * 
      */
     @Export(name="gridLayout", type=GridLayoutResponse.class, parameters={})
     private Output<GridLayoutResponse> gridLayout;
 
     /**
      * @return Content is arranged with a basic layout that re-flows a simple list of informational elements like widgets or tiles.
-     * 
      */
     public Output<GridLayoutResponse> getGridLayout() {
         return this.gridLayout;
     }
     /**
      * Labels applied to the dashboard
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Labels applied to the dashboard
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * The content is arranged as a grid of tiles, with each content widget occupying one or more grid blocks.
-     * 
      */
     @Export(name="mosaicLayout", type=MosaicLayoutResponse.class, parameters={})
     private Output<MosaicLayoutResponse> mosaicLayout;
 
     /**
      * @return The content is arranged as a grid of tiles, with each content widget occupying one or more grid blocks.
-     * 
      */
     public Output<MosaicLayoutResponse> getMosaicLayout() {
         return this.mosaicLayout;
     }
     /**
      * Immutable. The resource name of the dashboard.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Immutable. The resource name of the dashboard.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The content is divided into equally spaced rows and the widgets are arranged horizontally.
-     * 
      */
     @Export(name="rowLayout", type=RowLayoutResponse.class, parameters={})
     private Output<RowLayoutResponse> rowLayout;
 
     /**
      * @return The content is divided into equally spaced rows and the widgets are arranged horizontally.
-     * 
      */
     public Output<RowLayoutResponse> getRowLayout() {
         return this.rowLayout;

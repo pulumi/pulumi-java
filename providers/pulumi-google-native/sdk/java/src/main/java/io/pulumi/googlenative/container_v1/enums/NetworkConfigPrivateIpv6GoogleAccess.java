@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4)
-     * 
      */
     @EnumType
     public enum NetworkConfigPrivateIpv6GoogleAccess {
         /**
          * Default value. Same as DISABLED
-         * 
          */
         PrivateIpv6GoogleAccessUnspecified("PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED"),
         /**
          * No private access to or from Google Services
-         * 
          */
         PrivateIpv6GoogleAccessDisabled("PRIVATE_IPV6_GOOGLE_ACCESS_DISABLED"),
         /**
          * Enables private IPv6 access to Google Services from GKE
-         * 
          */
         PrivateIpv6GoogleAccessToGoogle("PRIVATE_IPV6_GOOGLE_ACCESS_TO_GOOGLE"),
         /**
          * Enables priate IPv6 access to and from Google Services
-         * 
          */
         PrivateIpv6GoogleAccessBidirectional("PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL");
 

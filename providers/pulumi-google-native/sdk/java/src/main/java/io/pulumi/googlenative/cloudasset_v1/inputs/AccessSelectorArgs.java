@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies roles and/or permissions to analyze, to determine both the identities possessing them and the resources they control. If multiple values are specified, results will include roles or permissions matching any of them. The total number of roles and permissions should be equal or less than 10.
- * 
  */
 public final class AccessSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AccessSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The permissions to appear in result.
-     * 
      */
     @Import(name="permissions")
       private final @Nullable Output<List<String>> permissions;
@@ -32,7 +30,6 @@ public final class AccessSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The roles to appear in result.
-     * 
      */
     @Import(name="roles")
       private final @Nullable Output<List<String>> roles;

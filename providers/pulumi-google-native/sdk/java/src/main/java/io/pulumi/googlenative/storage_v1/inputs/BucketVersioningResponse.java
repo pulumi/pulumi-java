@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The bucket's versioning configuration.
- * 
  */
 public final class BucketVersioningResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class BucketVersioningResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * While set to true, versioning is fully enabled for this bucket.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

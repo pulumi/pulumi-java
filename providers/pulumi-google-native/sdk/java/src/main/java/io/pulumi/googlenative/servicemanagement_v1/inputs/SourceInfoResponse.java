@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Source information used to create a Service Config
- * 
  */
 public final class SourceInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SourceInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * All files used during config generation.
-     * 
      */
     @Import(name="sourceFiles", required=true)
       private final List<Map<String,String>> sourceFiles;

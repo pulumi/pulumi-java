@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies where the manifest is located.
- * 
  */
 public final class TransferManifestArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class TransferManifestArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Specifies the path to the manifest in Cloud Storage. The Google-managed service account for the transfer must have `storage.objects.get` permission for this object. An example path is `gs://bucket_name/path/manifest.csv`.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;

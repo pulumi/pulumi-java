@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class GoogleCloudDatacatalogV1BusinessContextResponse {
     /**
      * Contact people for the entry.
-     * 
      */
     private final GoogleCloudDatacatalogV1ContactsResponse contacts;
     /**
      * Entry overview fields for rich text descriptions of entries.
-     * 
      */
     private final GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview;
 
@@ -31,14 +29,12 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse {
 
     /**
      * Contact people for the entry.
-     * 
     */
     public GoogleCloudDatacatalogV1ContactsResponse getContacts() {
         return this.contacts;
     }
     /**
      * Entry overview fields for rich text descriptions of entries.
-     * 
     */
     public GoogleCloudDatacatalogV1EntryOverviewResponse getEntryOverview() {
         return this.entryOverview;

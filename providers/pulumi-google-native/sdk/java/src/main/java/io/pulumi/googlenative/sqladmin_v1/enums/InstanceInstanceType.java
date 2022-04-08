@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * The instance type.
-     * 
      */
     @EnumType
     public enum InstanceInstanceType {
         /**
          * This is an unknown Cloud SQL instance type.
-         * 
          */
         SqlInstanceTypeUnspecified("SQL_INSTANCE_TYPE_UNSPECIFIED"),
         /**
          * A regular Cloud SQL instance that is not replicating from a primary instance.
-         * 
          */
         CloudSqlInstance("CLOUD_SQL_INSTANCE"),
         /**
          * An instance running on the customer's premises that is not managed by Cloud SQL.
-         * 
          */
         OnPremisesInstance("ON_PREMISES_INSTANCE"),
         /**
          * A Cloud SQL instance acting as a read-replica.
-         * 
          */
         ReadReplicaInstance("READ_REPLICA_INSTANCE");
 

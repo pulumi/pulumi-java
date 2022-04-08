@@ -37,7 +37,6 @@ public final class CloneJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the clone.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

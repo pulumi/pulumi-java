@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * A condition to be met.
- * 
  */
 public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Trusted attributes supplied by the IAM system.
-     * 
      */
     @Import(name="iam")
       private final @Nullable Output<ConditionIam> iam;
@@ -35,7 +33,6 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An operator to apply the subject with.
-     * 
      */
     @Import(name="op")
       private final @Nullable Output<ConditionOp> op;
@@ -46,7 +43,6 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Trusted attributes discharged by the service.
-     * 
      */
     @Import(name="svc")
       private final @Nullable Output<String> svc;
@@ -57,7 +53,6 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.
-     * 
      */
     @Import(name="sys")
       private final @Nullable Output<ConditionSys> sys;
@@ -68,7 +63,6 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The objects of the condition.
-     * 
      */
     @Import(name="values")
       private final @Nullable Output<List<String>> values;

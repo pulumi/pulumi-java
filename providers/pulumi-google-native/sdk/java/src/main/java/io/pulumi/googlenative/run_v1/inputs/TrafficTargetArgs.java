@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * TrafficTarget holds a single entry of the routing table for a Route.
- * 
  */
 public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ConfigurationName of a configuration to whose latest revision we will send this portion of traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes, we will automatically migrate traffic from the prior "latest ready" revision to the new one. This field is never set in Route's status, only its spec. This is mutually exclusive with RevisionName. Cloud Run currently supports a single ConfigurationName.
-     * 
      */
     @Import(name="configurationName")
       private final @Nullable Output<String> configurationName;
@@ -33,7 +31,6 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. LatestRevision may be provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty.
-     * 
      */
     @Import(name="latestRevision")
       private final @Nullable Output<Boolean> latestRevision;
@@ -44,7 +41,6 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Percent specifies percent of the traffic to this Revision or Configuration. This defaults to zero if unspecified.
-     * 
      */
     @Import(name="percent")
       private final @Nullable Output<Integer> percent;
@@ -55,7 +51,6 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * RevisionName of a specific revision to which to send this portion of traffic. This is mutually exclusive with ConfigurationName.
-     * 
      */
     @Import(name="revisionName")
       private final @Nullable Output<String> revisionName;
@@ -66,7 +61,6 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Tag is used to expose a dedicated url for referencing this target exclusively.
-     * 
      */
     @Import(name="tag")
       private final @Nullable Output<String> tag;

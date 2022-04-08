@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Metadata for a File connector used by the job.
- * 
  */
 public final class FileIODetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class FileIODetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * File Pattern used to access files by the connector.
-     * 
      */
     @Import(name="filePattern", required=true)
       private final String filePattern;

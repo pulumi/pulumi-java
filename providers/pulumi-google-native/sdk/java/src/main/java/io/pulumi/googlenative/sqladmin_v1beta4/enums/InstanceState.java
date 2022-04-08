@@ -10,48 +10,39 @@ import java.util.StringJoiner;
 
     /**
      * The current serving state of the Cloud SQL instance.
-     * 
      */
     @EnumType
     public enum InstanceState {
         /**
          * The state of the instance is unknown.
-         * 
          */
         SqlInstanceStateUnspecified("SQL_INSTANCE_STATE_UNSPECIFIED"),
         /**
          * The instance is running, or has been stopped by owner.
-         * 
          */
         Runnable("RUNNABLE"),
         /**
          * The instance is not available, for example due to problems with billing.
-         * 
          */
         Suspended("SUSPENDED"),
         /**
          * The instance is being deleted.
-         * 
          */
         PendingDelete("PENDING_DELETE"),
         /**
          * The instance is being created.
-         * 
          */
         PendingCreate("PENDING_CREATE"),
         /**
          * The instance is down for maintenance.
-         * 
          */
         Maintenance("MAINTENANCE"),
         /**
          * The creation of the instance failed or a fatal error occurred during maintenance.
-         * 
          */
         Failed("FAILED"),
         /**
          * Deprecated
-         * 
          */
         OnlineMaintenance("ONLINE_MAINTENANCE");
 

@@ -14,62 +14,53 @@ import javax.annotation.Nullable;
 
 /**
  * Creates and returns a new ProductSet resource. Possible errors: * Returns INVALID_ARGUMENT if display_name is missing, or is longer than 4096 characters.
- * 
  */
 @ResourceType(type="google-native:vision/v1:ProductSet")
 public class ProductSet extends io.pulumi.resources.CustomResource {
     /**
      * The user-provided name for this ProductSet. Must not be empty. Must be at most 4096 characters long.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The user-provided name for this ProductSet. Must not be empty. Must be at most 4096 characters long.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * If there was an error with indexing the product set, the field is populated. This field is ignored when creating a ProductSet.
-     * 
      */
     @Export(name="indexError", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> indexError;
 
     /**
      * @return If there was an error with indexing the product set, the field is populated. This field is ignored when creating a ProductSet.
-     * 
      */
     public Output<StatusResponse> getIndexError() {
         return this.indexError;
     }
     /**
      * The time at which this ProductSet was last indexed. Query results will reflect all updates before this time. If this ProductSet has never been indexed, this timestamp is the default value "1970-01-01T00:00:00Z". This field is ignored when creating a ProductSet.
-     * 
      */
     @Export(name="indexTime", type=String.class, parameters={})
     private Output<String> indexTime;
 
     /**
      * @return The time at which this ProductSet was last indexed. Query results will reflect all updates before this time. If this ProductSet has never been indexed, this timestamp is the default value "1970-01-01T00:00:00Z". This field is ignored when creating a ProductSet.
-     * 
      */
     public Output<String> getIndexTime() {
         return this.indexTime;
     }
     /**
      * The resource name of the ProductSet. Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`. This field is ignored when creating a ProductSet.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the ProductSet. Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`. This field is ignored when creating a ProductSet.
-     * 
      */
     public Output<String> getName() {
         return this.name;

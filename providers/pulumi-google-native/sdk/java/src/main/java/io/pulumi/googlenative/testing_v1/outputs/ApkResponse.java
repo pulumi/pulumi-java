@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class ApkResponse {
     /**
      * The path to an APK to be installed on the device before the test begins.
-     * 
      */
     private final FileReferenceResponse location;
     /**
      * The java package for the APK to be installed. Value is determined by examining the application's manifest.
-     * 
      */
     private final String packageName;
 
@@ -31,14 +29,12 @@ public final class ApkResponse {
 
     /**
      * The path to an APK to be installed on the device before the test begins.
-     * 
     */
     public FileReferenceResponse getLocation() {
         return this.location;
     }
     /**
      * The java package for the APK to be installed. Value is determined by examining the application's manifest.
-     * 
     */
     public String getPackageName() {
         return this.packageName;

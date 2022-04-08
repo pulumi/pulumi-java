@@ -33,7 +33,6 @@ import javax.annotation.Nullable;
 
 /**
  * Corresponds to the `Response` field in the Dialogflow console.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -41,7 +40,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
 
     /**
      * Displays a basic card for Actions on Google.
-     * 
      */
     @Import(name="basicCard")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs> basicCard;
@@ -52,7 +50,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
 
     /**
      * Browse carousel card for Actions on Google.
-     * 
      */
     @Import(name="browseCarouselCard")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs> browseCarouselCard;
@@ -63,7 +60,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
 
     /**
      * Displays a card.
-     * 
      */
     @Import(name="card")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageCardArgs> card;
@@ -74,7 +70,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
 
     /**
      * Displays a carousel card for Actions on Google.
-     * 
      */
     @Import(name="carouselSelect")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs> carouselSelect;
@@ -85,7 +80,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
 
     /**
      * Displays an image.
-     * 
      */
     @Import(name="image")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
@@ -96,7 +90,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
 
     /**
      * Displays a link out suggestion chip for Actions on Google.
-     * 
      */
     @Import(name="linkOutSuggestion")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs> linkOutSuggestion;
@@ -107,7 +100,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
 
     /**
      * Displays a list card for Actions on Google.
-     * 
      */
     @Import(name="listSelect")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs> listSelect;
@@ -118,7 +110,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
 
     /**
      * The media content card for Actions on Google.
-     * 
      */
     @Import(name="mediaContent")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageMediaContentArgs> mediaContent;
@@ -129,7 +120,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
 
     /**
      * A custom platform-specific response.
-     * 
      */
     @Import(name="payload")
       private final @Nullable Output<Map<String,String>> payload;
@@ -140,7 +130,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
 
     /**
      * Optional. The platform that this message is intended for.
-     * 
      */
     @Import(name="platform")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessagePlatform> platform;
@@ -151,7 +140,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
 
     /**
      * Displays quick replies.
-     * 
      */
     @Import(name="quickReplies")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs> quickReplies;
@@ -162,7 +150,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
 
     /**
      * Rich Business Messaging (RBM) carousel rich card response.
-     * 
      */
     @Import(name="rbmCarouselRichCard")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs> rbmCarouselRichCard;
@@ -173,7 +160,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
 
     /**
      * Standalone Rich Business Messaging (RBM) rich card response.
-     * 
      */
     @Import(name="rbmStandaloneRichCard")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArgs> rbmStandaloneRichCard;
@@ -184,7 +170,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
 
     /**
      * Rich Business Messaging (RBM) text response. RBM allows businesses to send enriched and branded versions of SMS. See https://jibe.google.com/business-messaging.
-     * 
      */
     @Import(name="rbmText")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs> rbmText;
@@ -195,7 +180,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
 
     /**
      * Returns a voice or text-only response for Actions on Google.
-     * 
      */
     @Import(name="simpleResponses")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs> simpleResponses;
@@ -206,7 +190,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
 
     /**
      * Displays suggestion chips for Actions on Google.
-     * 
      */
     @Import(name="suggestions")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs> suggestions;
@@ -217,7 +200,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
 
     /**
      * Table card for Actions on Google.
-     * 
      */
     @Import(name="tableCard")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs> tableCard;
@@ -228,7 +210,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
 
     /**
      * Plays audio from a file in Telephony Gateway.
-     * 
      */
     @Import(name="telephonyPlayAudio")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs> telephonyPlayAudio;
@@ -239,7 +220,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
 
     /**
      * Synthesizes speech in Telephony Gateway.
-     * 
      */
     @Import(name="telephonySynthesizeSpeech")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs> telephonySynthesizeSpeech;
@@ -250,7 +230,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
 
     /**
      * Transfers the call in Telephony Gateway.
-     * 
      */
     @Import(name="telephonyTransferCall")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallArgs> telephonyTransferCall;
@@ -261,7 +240,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
 
     /**
      * Returns a text response.
-     * 
      */
     @Import(name="text")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTextArgs> text;

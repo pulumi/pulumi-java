@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Metadata of customer-supplied encryption key, if the object is encrypted by such a key.
- * 
  */
 public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resource
 
     /**
      * The encryption algorithm.
-     * 
      */
     @Import(name="encryptionAlgorithm")
       private final @Nullable Output<String> encryptionAlgorithm;
@@ -31,7 +29,6 @@ public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resource
 
     /**
      * SHA256 hash value of the encryption key.
-     * 
      */
     @Import(name="keySha256")
       private final @Nullable Output<String> keySha256;

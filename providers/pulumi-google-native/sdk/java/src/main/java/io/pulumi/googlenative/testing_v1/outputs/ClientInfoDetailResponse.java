@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ClientInfoDetailResponse {
     /**
      * The key of detailed client information.
-     * 
      */
     private final String key;
     /**
      * The value of detailed client information.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class ClientInfoDetailResponse {
 
     /**
      * The key of detailed client information.
-     * 
     */
     public String getKey() {
         return this.key;
     }
     /**
      * The value of detailed client information.
-     * 
     */
     public String getValue() {
         return this.value;

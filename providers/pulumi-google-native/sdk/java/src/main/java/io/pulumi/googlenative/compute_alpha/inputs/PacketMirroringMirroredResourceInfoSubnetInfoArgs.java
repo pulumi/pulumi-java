@@ -16,7 +16,6 @@ public final class PacketMirroringMirroredResourceInfoSubnetInfoArgs extends io.
 
     /**
      * Resource URL to the subnetwork for which traffic from/to all VM instances will be mirrored.
-     * 
      */
     @Import(name="url")
       private final @Nullable Output<String> url;

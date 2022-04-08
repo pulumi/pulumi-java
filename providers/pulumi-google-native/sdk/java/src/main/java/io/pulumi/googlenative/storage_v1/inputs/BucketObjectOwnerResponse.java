@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The owner of the object. This will always be the uploader of the object.
- * 
  */
 public final class BucketObjectOwnerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class BucketObjectOwnerResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The entity, in the form user-userId.
-     * 
      */
     @Import(name="entity", required=true)
       private final String entity;
@@ -29,7 +27,6 @@ public final class BucketObjectOwnerResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The ID for the entity.
-     * 
      */
     @Import(name="entityId", required=true)
       private final String entityId;

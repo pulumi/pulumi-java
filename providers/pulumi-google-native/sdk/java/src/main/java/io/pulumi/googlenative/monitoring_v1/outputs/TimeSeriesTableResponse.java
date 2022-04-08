@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class TimeSeriesTableResponse {
     /**
      * The data displayed in this table.
-     * 
      */
     private final List<TableDataSetResponse> dataSets;
 
@@ -23,7 +22,6 @@ public final class TimeSeriesTableResponse {
 
     /**
      * The data displayed in this table.
-     * 
     */
     public List<TableDataSetResponse> getDataSets() {
         return this.dataSets;

@@ -16,8 +16,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Represents the query input. It can contain one of: 1. A conversational query in the form of text. 2. An intent query that specifies which intent to trigger. 3. Natural language speech audio to be processed. 4. An event to be triggered.
- * 
+ * Represents the query input. It can contain one of: 1. A conversational query in the form of text. 2. An intent query that specifies which intent to trigger. 3. Natural language speech audio to be processed. 4. An event to be triggered. 
  */
 public final class GoogleCloudDialogflowCxV3QueryInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends io.pulumi.res
 
     /**
      * The natural language speech audio to be processed.
-     * 
      */
     @Import(name="audio")
       private final @Nullable Output<GoogleCloudDialogflowCxV3AudioInputArgs> audio;
@@ -36,7 +34,6 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends io.pulumi.res
 
     /**
      * The DTMF event to be handled.
-     * 
      */
     @Import(name="dtmf")
       private final @Nullable Output<GoogleCloudDialogflowCxV3DtmfInputArgs> dtmf;
@@ -47,7 +44,6 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends io.pulumi.res
 
     /**
      * The event to be triggered.
-     * 
      */
     @Import(name="event")
       private final @Nullable Output<GoogleCloudDialogflowCxV3EventInputArgs> event;
@@ -58,7 +54,6 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends io.pulumi.res
 
     /**
      * The intent to be triggered.
-     * 
      */
     @Import(name="intent")
       private final @Nullable Output<GoogleCloudDialogflowCxV3IntentInputArgs> intent;
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends io.pulumi.res
 
     /**
      * The language of the input. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. Note that queries in the same session do not necessarily need to specify the same language.
-     * 
      */
     @Import(name="languageCode", required=true)
       private final Output<String> languageCode;
@@ -80,7 +74,6 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends io.pulumi.res
 
     /**
      * The natural language text to be processed.
-     * 
      */
     @Import(name="text")
       private final @Nullable Output<GoogleCloudDialogflowCxV3TextInputArgs> text;

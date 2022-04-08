@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A widget that displays textual content.
- * 
  */
 public final class TextArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class TextArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The text content to be displayed.
-     * 
      */
     @Import(name="content")
       private final @Nullable Output<String> content;
@@ -32,7 +30,6 @@ public final class TextArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * How the text content is formatted.
-     * 
      */
     @Import(name="format")
       private final @Nullable Output<TextFormat> format;

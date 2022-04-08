@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class DefaultObjectAccessControlProjectTeamResponse {
     /**
      * The project number.
-     * 
      */
     private final String projectNumber;
     /**
      * The team.
-     * 
      */
     private final String team;
 
@@ -30,14 +28,12 @@ public final class DefaultObjectAccessControlProjectTeamResponse {
 
     /**
      * The project number.
-     * 
     */
     public String getProjectNumber() {
         return this.projectNumber;
     }
     /**
      * The team.
-     * 
     */
     public String getTeam() {
         return this.team;

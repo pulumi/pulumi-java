@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Locations where the results of running the test are stored.
- * 
  */
 public final class ResultStorageResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ResultStorageResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Required.
-     * 
      */
     @Import(name="googleCloudStorage", required=true)
       private final GoogleCloudStorageResponse googleCloudStorage;
@@ -32,7 +30,6 @@ public final class ResultStorageResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * URL to the results in the Firebase Web Console.
-     * 
      */
     @Import(name="resultsUrl", required=true)
       private final String resultsUrl;
@@ -43,7 +40,6 @@ public final class ResultStorageResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The tool results execution that results are written to.
-     * 
      */
     @Import(name="toolResultsExecution", required=true)
       private final ToolResultsExecutionResponse toolResultsExecution;
@@ -54,7 +50,6 @@ public final class ResultStorageResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The tool results history that contains the tool results execution that results are written to. If not provided, the service will choose an appropriate value.
-     * 
      */
     @Import(name="toolResultsHistory", required=true)
       private final ToolResultsHistoryResponse toolResultsHistory;

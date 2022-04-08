@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The encryption options for the Cloud Composer environment and its dependencies. Supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
- * 
  */
 public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Optional. Customer-managed Encryption Key available through Google's Key Management Service. Cannot be updated. If not specified, Google-managed key will be used.
-     * 
      */
     @Import(name="kmsKeyName", required=true)
       private final String kmsKeyName;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * MySQL table.
- * 
  */
 public final class MysqlTableResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class MysqlTableResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
-     * 
      */
     @Import(name="mysqlColumns", required=true)
       private final List<MysqlColumnResponse> mysqlColumns;
@@ -31,7 +29,6 @@ public final class MysqlTableResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Table name.
-     * 
      */
     @Import(name="table", required=true)
       private final String table;

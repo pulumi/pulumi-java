@@ -10,33 +10,27 @@ import java.util.StringJoiner;
 
     /**
      * Optional. Settings for displaying the image. Applies to every image in items.
-     * 
      */
     @EnumType
     public enum GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions {
         /**
          * Fill the gaps between the image and the image container with gray bars.
-         * 
          */
         ImageDisplayOptionsUnspecified("IMAGE_DISPLAY_OPTIONS_UNSPECIFIED"),
         /**
          * Fill the gaps between the image and the image container with gray bars.
-         * 
          */
         Gray("GRAY"),
         /**
          * Fill the gaps between the image and the image container with white bars.
-         * 
          */
         White("WHITE"),
         /**
          * Image is scaled such that the image width and height match or exceed the container dimensions. This may crop the top and bottom of the image if the scaled image height is greater than the container height, or crop the left and right of the image if the scaled image width is greater than the container width. This is similar to "Zoom Mode" on a widescreen TV when playing a 4:3 video.
-         * 
          */
         Cropped("CROPPED"),
         /**
          * Pad the gaps between image and image frame with a blurred copy of the same image.
-         * 
          */
         BlurredBackground("BLURRED_BACKGROUND");
 

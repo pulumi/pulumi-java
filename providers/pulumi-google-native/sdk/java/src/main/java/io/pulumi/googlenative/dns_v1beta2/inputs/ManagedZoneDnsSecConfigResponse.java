@@ -16,7 +16,6 @@ public final class ManagedZoneDnsSecConfigResponse extends io.pulumi.resources.I
 
     /**
      * Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.
-     * 
      */
     @Import(name="defaultKeySpecs", required=true)
       private final List<DnsKeySpecResponse> defaultKeySpecs;
@@ -34,7 +33,6 @@ public final class ManagedZoneDnsSecConfigResponse extends io.pulumi.resources.I
 
     /**
      * Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.
-     * 
      */
     @Import(name="nonExistence", required=true)
       private final String nonExistence;
@@ -45,7 +43,6 @@ public final class ManagedZoneDnsSecConfigResponse extends io.pulumi.resources.I
 
     /**
      * Specifies whether DNSSEC is enabled, and what mode it is in.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;

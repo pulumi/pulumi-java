@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Extracts an archive of the type specified in the specified directory.
- * 
  */
 public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
 
     /**
      * The id of the relevant artifact in the recipe.
-     * 
      */
     @Import(name="artifactId", required=true)
       private final Output<String> artifactId;
@@ -32,7 +30,6 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
 
     /**
      * Directory to extract archive to. Defaults to `/` on Linux or `C:\` on Windows.
-     * 
      */
     @Import(name="destination")
       private final @Nullable Output<String> destination;
@@ -43,7 +40,6 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
 
     /**
      * The type of the archive to extract.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<SoftwareRecipeStepExtractArchiveType> type;

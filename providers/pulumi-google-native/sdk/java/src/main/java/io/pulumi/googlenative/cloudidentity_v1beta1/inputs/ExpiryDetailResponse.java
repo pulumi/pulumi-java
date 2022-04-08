@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The `MembershipRole` expiry details.
- * 
  */
 public final class ExpiryDetailResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ExpiryDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The time at which the `MembershipRole` will expire.
-     * 
      */
     @Import(name="expireTime", required=true)
       private final String expireTime;

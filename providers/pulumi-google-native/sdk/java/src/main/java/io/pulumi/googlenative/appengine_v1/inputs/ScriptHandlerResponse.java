@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Executes a script to handle the request that matches the URL pattern.
- * 
  */
 public final class ScriptHandlerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ScriptHandlerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Path to the script from the application root directory.
-     * 
      */
     @Import(name="scriptPath", required=true)
       private final String scriptPath;

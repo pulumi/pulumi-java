@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * Level of login required to access this resource. Defaults to optional.
-     * 
      */
     @EnumType
     public enum ApiConfigHandlerLogin {
         /**
          * Not specified. LOGIN_OPTIONAL is assumed.
-         * 
          */
         LoginUnspecified("LOGIN_UNSPECIFIED"),
         /**
          * Does not require that the user is signed in.
-         * 
          */
         LoginOptional("LOGIN_OPTIONAL"),
         /**
          * If the user is not signed in, the auth_fail_action is taken. In addition, if the user is not an administrator for the application, they are given an error message regardless of auth_fail_action. If the user is an administrator, the handler proceeds.
-         * 
          */
         LoginAdmin("LOGIN_ADMIN"),
         /**
          * If the user has signed in, the handler proceeds normally. Otherwise, the auth_fail_action is taken.
-         * 
          */
         LoginRequired("LOGIN_REQUIRED");
 

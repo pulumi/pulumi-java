@@ -17,104 +17,89 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a glossary and returns the long-running operation. Returns NOT_FOUND, if the project doesn't exist.
- * 
  */
 @ResourceType(type="google-native:translate/v3:Glossary")
 public class Glossary extends io.pulumi.resources.CustomResource {
     /**
      * When the glossary creation was finished.
-     * 
      */
     @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
      * @return When the glossary creation was finished.
-     * 
      */
     public Output<String> getEndTime() {
         return this.endTime;
     }
     /**
      * The number of entries defined in the glossary.
-     * 
      */
     @Export(name="entryCount", type=Integer.class, parameters={})
     private Output<Integer> entryCount;
 
     /**
      * @return The number of entries defined in the glossary.
-     * 
      */
     public Output<Integer> getEntryCount() {
         return this.entryCount;
     }
     /**
      * Provides examples to build the glossary from. Total glossary must not exceed 10M Unicode codepoints.
-     * 
      */
     @Export(name="inputConfig", type=GlossaryInputConfigResponse.class, parameters={})
     private Output<GlossaryInputConfigResponse> inputConfig;
 
     /**
      * @return Provides examples to build the glossary from. Total glossary must not exceed 10M Unicode codepoints.
-     * 
      */
     public Output<GlossaryInputConfigResponse> getInputConfig() {
         return this.inputConfig;
     }
     /**
      * Used with equivalent term set glossaries.
-     * 
      */
     @Export(name="languageCodesSet", type=LanguageCodesSetResponse.class, parameters={})
     private Output<LanguageCodesSetResponse> languageCodesSet;
 
     /**
      * @return Used with equivalent term set glossaries.
-     * 
      */
     public Output<LanguageCodesSetResponse> getLanguageCodesSet() {
         return this.languageCodesSet;
     }
     /**
      * Used with unidirectional glossaries.
-     * 
      */
     @Export(name="languagePair", type=LanguageCodePairResponse.class, parameters={})
     private Output<LanguageCodePairResponse> languagePair;
 
     /**
      * @return Used with unidirectional glossaries.
-     * 
      */
     public Output<LanguageCodePairResponse> getLanguagePair() {
         return this.languagePair;
     }
     /**
      * The resource name of the glossary. Glossary names have the form `projects/{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the glossary. Glossary names have the form `projects/{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * When CreateGlossary was called.
-     * 
      */
     @Export(name="submitTime", type=String.class, parameters={})
     private Output<String> submitTime;
 
     /**
      * @return When CreateGlossary was called.
-     * 
      */
     public Output<String> getSubmitTime() {
         return this.submitTime;

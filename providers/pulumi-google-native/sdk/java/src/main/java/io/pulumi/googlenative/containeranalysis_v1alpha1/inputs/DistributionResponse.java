@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * This represents a particular channel of distribution for a given package. e.g. Debian's jessie-backports dpkg mirror
- * 
  */
 public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The CPU architecture for which packages in this distribution channel were built
-     * 
      */
     @Import(name="architecture", required=true)
       private final String architecture;
@@ -30,7 +28,6 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The cpe_uri in [cpe format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
-     * 
      */
     @Import(name="cpeUri", required=true)
       private final String cpeUri;
@@ -41,7 +38,6 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The distribution channel-specific description of this package.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -52,7 +48,6 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The latest available version of this package in this distribution channel.
-     * 
      */
     @Import(name="latestVersion", required=true)
       private final VersionResponse latestVersion;
@@ -63,7 +58,6 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A freeform string denoting the maintainer of this package.
-     * 
      */
     @Import(name="maintainer", required=true)
       private final String maintainer;
@@ -74,7 +68,6 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The distribution channel-specific homepage for this package.
-     * 
      */
     @Import(name="url", required=true)
       private final String url;

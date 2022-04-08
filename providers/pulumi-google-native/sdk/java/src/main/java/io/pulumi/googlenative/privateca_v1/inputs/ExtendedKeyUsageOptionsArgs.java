@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * KeyUsage.ExtendedKeyUsageOptions has fields that correspond to certain common OIDs that could be specified as an extended key usage value.
- * 
  */
 public final class ExtendedKeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ExtendedKeyUsageOptionsArgs extends io.pulumi.resources.Resou
 
     /**
      * Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
-     * 
      */
     @Import(name="clientAuth")
       private final @Nullable Output<Boolean> clientAuth;
@@ -31,7 +29,6 @@ public final class ExtendedKeyUsageOptionsArgs extends io.pulumi.resources.Resou
 
     /**
      * Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".
-     * 
      */
     @Import(name="codeSigning")
       private final @Nullable Output<Boolean> codeSigning;
@@ -42,7 +39,6 @@ public final class ExtendedKeyUsageOptionsArgs extends io.pulumi.resources.Resou
 
     /**
      * Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".
-     * 
      */
     @Import(name="emailProtection")
       private final @Nullable Output<Boolean> emailProtection;
@@ -53,7 +49,6 @@ public final class ExtendedKeyUsageOptionsArgs extends io.pulumi.resources.Resou
 
     /**
      * Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".
-     * 
      */
     @Import(name="ocspSigning")
       private final @Nullable Output<Boolean> ocspSigning;
@@ -64,7 +59,6 @@ public final class ExtendedKeyUsageOptionsArgs extends io.pulumi.resources.Resou
 
     /**
      * Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.
-     * 
      */
     @Import(name="serverAuth")
       private final @Nullable Output<Boolean> serverAuth;
@@ -75,7 +69,6 @@ public final class ExtendedKeyUsageOptionsArgs extends io.pulumi.resources.Resou
 
     /**
      * Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".
-     * 
      */
     @Import(name="timeStamping")
       private final @Nullable Output<Boolean> timeStamping;

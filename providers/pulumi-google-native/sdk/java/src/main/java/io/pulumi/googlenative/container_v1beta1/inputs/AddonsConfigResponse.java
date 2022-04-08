@@ -21,7 +21,6 @@ import java.util.Objects;
 
 /**
  * Configuration for the addons that can be automatically spun up in the cluster, enabling additional functionality.
- * 
  */
 public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -29,7 +28,6 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Configuration for the Cloud Run addon. The `IstioConfig` addon must be enabled in order to enable Cloud Run addon. This option can only be enabled at cluster creation time.
-     * 
      */
     @Import(name="cloudRunConfig", required=true)
       private final CloudRunConfigResponse cloudRunConfig;
@@ -40,7 +38,6 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted GCP services through the Kubernetes API
-     * 
      */
     @Import(name="configConnectorConfig", required=true)
       private final ConfigConnectorConfigResponse configConnectorConfig;
@@ -51,7 +48,6 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Configuration for NodeLocalDNS, a dns cache running on cluster nodes
-     * 
      */
     @Import(name="dnsCacheConfig", required=true)
       private final DnsCacheConfigResponse dnsCacheConfig;
@@ -62,7 +58,6 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Configuration for the Compute Engine Persistent Disk CSI driver.
-     * 
      */
     @Import(name="gcePersistentDiskCsiDriverConfig", required=true)
       private final GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig;
@@ -73,7 +68,6 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Configuration for the GCP Filestore CSI driver.
-     * 
      */
     @Import(name="gcpFilestoreCsiDriverConfig", required=true)
       private final GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig;
@@ -84,7 +78,6 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Configuration for the Backup for GKE agent addon.
-     * 
      */
     @Import(name="gkeBackupAgentConfig", required=true)
       private final GkeBackupAgentConfigResponse gkeBackupAgentConfig;
@@ -95,7 +88,6 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Configuration for the horizontal pod autoscaling feature, which increases or decreases the number of replica pods a replication controller has based on the resource usage of the existing pods.
-     * 
      */
     @Import(name="horizontalPodAutoscaling", required=true)
       private final HorizontalPodAutoscalingResponse horizontalPodAutoscaling;
@@ -106,7 +98,6 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Configuration for the HTTP (L7) load balancing controller addon, which makes it easy to set up HTTP load balancers for services in a cluster.
-     * 
      */
     @Import(name="httpLoadBalancing", required=true)
       private final HttpLoadBalancingResponse httpLoadBalancing;
@@ -117,7 +108,6 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Configuration for Istio, an open platform to connect, manage, and secure microservices.
-     * 
      */
     @Import(name="istioConfig", required=true)
       private final IstioConfigResponse istioConfig;
@@ -128,7 +118,6 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Configuration for the KALM addon, which manages the lifecycle of k8s applications.
-     * 
      */
     @Import(name="kalmConfig", required=true)
       private final KalmConfigResponse kalmConfig;
@@ -139,7 +128,6 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Configuration for the Kubernetes Dashboard. This addon is deprecated, and will be disabled in 1.15. It is recommended to use the Cloud Console to manage and monitor your Kubernetes clusters, workloads and applications. For more information, see: https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
-     * 
      */
     @Import(name="kubernetesDashboard", required=true)
       private final KubernetesDashboardResponse kubernetesDashboard;
@@ -150,7 +138,6 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Configuration for NetworkPolicy. This only tracks whether the addon is enabled or not on the Master, it does not track whether network policy is enabled for the nodes.
-     * 
      */
     @Import(name="networkPolicyConfig", required=true)
       private final NetworkPolicyConfigResponse networkPolicyConfig;

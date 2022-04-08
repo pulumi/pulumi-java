@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Taskrunner configuration settings.
- * 
  */
 public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Whether to also send taskrunner log info to stderr.
-     * 
      */
     @Import(name="alsologtostderr")
       private final @Nullable Output<Boolean> alsologtostderr;
@@ -34,7 +32,6 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The location on the worker for task-specific subdirectories.
-     * 
      */
     @Import(name="baseTaskDir")
       private final @Nullable Output<String> baseTaskDir;
@@ -45,7 +42,6 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The base URL for the taskrunner to use when accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value is "http://www.googleapis.com/"
-     * 
      */
     @Import(name="baseUrl")
       private final @Nullable Output<String> baseUrl;
@@ -56,7 +52,6 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The file to store preprocessing commands in.
-     * 
      */
     @Import(name="commandlinesFileName")
       private final @Nullable Output<String> commandlinesFileName;
@@ -67,7 +62,6 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Whether to continue taskrunner if an exception is hit.
-     * 
      */
     @Import(name="continueOnException")
       private final @Nullable Output<Boolean> continueOnException;
@@ -78,7 +72,6 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The API version of endpoint, e.g. "v1b3"
-     * 
      */
     @Import(name="dataflowApiVersion")
       private final @Nullable Output<String> dataflowApiVersion;
@@ -89,7 +82,6 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The command to launch the worker harness.
-     * 
      */
     @Import(name="harnessCommand")
       private final @Nullable Output<String> harnessCommand;
@@ -100,7 +92,6 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The suggested backend language.
-     * 
      */
     @Import(name="languageHint")
       private final @Nullable Output<String> languageHint;
@@ -111,7 +102,6 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The directory on the VM to store logs.
-     * 
      */
     @Import(name="logDir")
       private final @Nullable Output<String> logDir;
@@ -122,7 +112,6 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Whether to send taskrunner log info to Google Compute Engine VM serial console.
-     * 
      */
     @Import(name="logToSerialconsole")
       private final @Nullable Output<Boolean> logToSerialconsole;
@@ -133,7 +122,6 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Indicates where to put logs. If this is not specified, the logs will not be uploaded. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
-     * 
      */
     @Import(name="logUploadLocation")
       private final @Nullable Output<String> logUploadLocation;
@@ -144,7 +132,6 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The OAuth2 scopes to be requested by the taskrunner in order to access the Cloud Dataflow API.
-     * 
      */
     @Import(name="oauthScopes")
       private final @Nullable Output<List<String>> oauthScopes;
@@ -155,7 +142,6 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The settings to pass to the parallel worker harness.
-     * 
      */
     @Import(name="parallelWorkerSettings")
       private final @Nullable Output<WorkerSettingsArgs> parallelWorkerSettings;
@@ -166,7 +152,6 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The streaming worker main class name.
-     * 
      */
     @Import(name="streamingWorkerMainClass")
       private final @Nullable Output<String> streamingWorkerMainClass;
@@ -177,7 +162,6 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The UNIX group ID on the worker VM to use for tasks launched by taskrunner; e.g. "wheel".
-     * 
      */
     @Import(name="taskGroup")
       private final @Nullable Output<String> taskGroup;
@@ -188,7 +172,6 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The UNIX user ID on the worker VM to use for tasks launched by taskrunner; e.g. "root".
-     * 
      */
     @Import(name="taskUser")
       private final @Nullable Output<String> taskUser;
@@ -199,7 +182,6 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The prefix of the resources the taskrunner should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
-     * 
      */
     @Import(name="tempStoragePrefix")
       private final @Nullable Output<String> tempStoragePrefix;
@@ -210,7 +192,6 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The ID string of the VM.
-     * 
      */
     @Import(name="vmId")
       private final @Nullable Output<String> vmId;
@@ -221,7 +202,6 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The file to store the workflow in.
-     * 
      */
     @Import(name="workflowFileName")
       private final @Nullable Output<String> workflowFileName;

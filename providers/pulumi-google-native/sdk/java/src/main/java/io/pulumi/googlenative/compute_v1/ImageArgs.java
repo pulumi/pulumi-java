@@ -24,7 +24,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).
-     * 
      */
     @Import(name="archiveSizeBytes")
       private final @Nullable Output<String> archiveSizeBytes;
@@ -35,7 +34,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The deprecation status associated with this image.
-     * 
      */
     @Import(name="deprecated")
       private final @Nullable Output<DeprecationStatusArgs> deprecated;
@@ -46,7 +44,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -57,7 +54,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Size of the image when restored onto a persistent disk (in GB).
-     * 
      */
     @Import(name="diskSizeGb")
       private final @Nullable Output<String> diskSizeGb;
@@ -68,7 +64,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the image family to which this image belongs. You can create disks by specifying an image family instead of a specific image name. The image family always returns its latest image that is not deprecated. The name of the image family must comply with RFC1035.
-     * 
      */
     @Import(name="family")
       private final @Nullable Output<String> family;
@@ -86,7 +81,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of features to enable on the guest operating system. Applicable only for bootable images. To see a list of available options, see the guestOSfeatures[].type parameter.
-     * 
      */
     @Import(name="guestOsFeatures")
       private final @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
@@ -97,7 +91,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Encrypts the image using a customer-supplied encryption key. After you encrypt an image with a customer-supplied key, you must provide the same key if you use the image later (e.g. to create a disk from the image). Customer-supplied encryption keys do not protect access to metadata of the disk. If you do not provide an encryption key when creating the image, then the disk will be encrypted using an automatically generated key and you do not need to provide a key to use the image later.
-     * 
      */
     @Import(name="imageEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> imageEncryptionKey;
@@ -108,7 +101,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Labels to apply to this image. These can be later modified by the setLabels method.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -119,7 +111,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Integer license codes indicating which licenses are attached to this image.
-     * 
      */
     @Import(name="licenseCodes")
       private final @Nullable Output<List<String>> licenseCodes;
@@ -130,7 +121,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Any applicable license URI.
-     * 
      */
     @Import(name="licenses")
       private final @Nullable Output<List<String>> licenses;
@@ -141,7 +131,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -159,7 +148,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The parameters of the raw disk image.
-     * 
      */
     @Import(name="rawDisk")
       private final @Nullable Output<ImageRawDiskArgs> rawDisk;
@@ -177,7 +165,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Set the secure boot keys of shielded instance.
-     * 
      */
     @Import(name="shieldedInstanceInitialState")
       private final @Nullable Output<InitialStateConfigArgs> shieldedInstanceInitialState;
@@ -187,8 +174,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * URL of the source disk used to create this image. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - projects/project/zones/zone/disks/disk - zones/zone/disks/disk In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
-     * 
+     * URL of the source disk used to create this image. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - projects/project/zones/zone/disks/disk - zones/zone/disks/disk In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL 
      */
     @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;
@@ -199,7 +185,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key.
-     * 
      */
     @Import(name="sourceDiskEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey;
@@ -209,8 +194,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * URL of the source image used to create this image. The following are valid formats for the URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/ images/image_name - projects/project_id/global/images/image_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
-     * 
+     * URL of the source image used to create this image. The following are valid formats for the URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/ images/image_name - projects/project_id/global/images/image_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL 
      */
     @Import(name="sourceImage")
       private final @Nullable Output<String> sourceImage;
@@ -221,7 +205,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key.
-     * 
      */
     @Import(name="sourceImageEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
@@ -231,8 +214,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * URL of the source snapshot used to create this image. The following are valid formats for the URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/ snapshots/snapshot_name - projects/project_id/global/snapshots/snapshot_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
-     * 
+     * URL of the source snapshot used to create this image. The following are valid formats for the URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/ snapshots/snapshot_name - projects/project_id/global/snapshots/snapshot_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL 
      */
     @Import(name="sourceSnapshot")
       private final @Nullable Output<String> sourceSnapshot;
@@ -243,7 +225,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key.
-     * 
      */
     @Import(name="sourceSnapshotEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
@@ -254,7 +235,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of the image used to create this disk. The default and only value is RAW
-     * 
      */
     @Import(name="sourceType")
       private final @Nullable Output<ImageSourceType> sourceType;
@@ -265,7 +245,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Cloud Storage bucket storage location of the image (regional or multi-regional).
-     * 
      */
     @Import(name="storageLocations")
       private final @Nullable Output<List<String>> storageLocations;

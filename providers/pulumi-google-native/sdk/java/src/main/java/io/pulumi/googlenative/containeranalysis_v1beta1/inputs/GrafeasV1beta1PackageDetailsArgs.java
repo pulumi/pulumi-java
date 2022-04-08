@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Details of a package occurrence.
- * 
  */
 public final class GrafeasV1beta1PackageDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class GrafeasV1beta1PackageDetailsArgs extends io.pulumi.resources.
 
     /**
      * Where the package was installed.
-     * 
      */
     @Import(name="installation", required=true)
       private final Output<InstallationArgs> installation;

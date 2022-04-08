@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Metadata for a Cloud Bigtable connector used by the job.
- * 
  */
 public final class BigTableIODetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class BigTableIODetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * InstanceId accessed in the connection.
-     * 
      */
     @Import(name="instanceId", required=true)
       private final String instanceId;
@@ -29,7 +27,6 @@ public final class BigTableIODetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * ProjectId accessed in the connection.
-     * 
      */
     @Import(name="project", required=true)
       private final String project;
@@ -40,7 +37,6 @@ public final class BigTableIODetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * TableId accessed in the connection.
-     * 
      */
     @Import(name="tableId", required=true)
       private final String tableId;

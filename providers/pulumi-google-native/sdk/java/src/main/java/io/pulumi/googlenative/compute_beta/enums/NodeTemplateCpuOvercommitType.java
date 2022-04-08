@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * CPU overcommit.
-     * 
      */
     @EnumType
     public enum NodeTemplateCpuOvercommitType {

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Table view specification.
- * 
  */
 public final class GoogleCloudDatacatalogV1ViewSpecResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDatacatalogV1ViewSpecResponse extends io.pulumi.re
 
     /**
      * The query that defines the table view.
-     * 
      */
     @Import(name="viewQuery", required=true)
       private final String viewQuery;

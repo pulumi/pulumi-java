@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Target scaling by disk usage. Only applicable in the App Engine flexible environment.
- * 
  */
 public final class DiskUtilizationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DiskUtilizationArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Target bytes read per second.
-     * 
      */
     @Import(name="targetReadBytesPerSecond")
       private final @Nullable Output<Integer> targetReadBytesPerSecond;
@@ -31,7 +29,6 @@ public final class DiskUtilizationArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Target ops read per seconds.
-     * 
      */
     @Import(name="targetReadOpsPerSecond")
       private final @Nullable Output<Integer> targetReadOpsPerSecond;
@@ -42,7 +39,6 @@ public final class DiskUtilizationArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Target bytes written per second.
-     * 
      */
     @Import(name="targetWriteBytesPerSecond")
       private final @Nullable Output<Integer> targetWriteBytesPerSecond;
@@ -53,7 +49,6 @@ public final class DiskUtilizationArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Target ops written per second.
-     * 
      */
     @Import(name="targetWriteOpsPerSecond")
       private final @Nullable Output<Integer> targetWriteOpsPerSecond;

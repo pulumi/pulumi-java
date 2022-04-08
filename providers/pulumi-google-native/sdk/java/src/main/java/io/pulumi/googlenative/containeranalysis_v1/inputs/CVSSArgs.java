@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * Common Vulnerability Scoring System. For details, see https://www.first.org/cvss/specification-document This is a message we will try to use for storing multiple versions of CVSS. The intention is that as new versions of CVSS scores get added, we will be able to modify this message rather than adding new protos for each new version of the score.
- * 
  */
 public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -36,7 +35,6 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
-     * 
      */
     @Import(name="attackVector")
       private final @Nullable Output<CVSSAttackVector> attackVector;
@@ -61,7 +59,6 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The base score is a function of the base metric scores.
-     * 
      */
     @Import(name="baseScore")
       private final @Nullable Output<Double> baseScore;

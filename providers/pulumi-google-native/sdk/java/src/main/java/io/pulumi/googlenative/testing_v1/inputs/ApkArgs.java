@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An Android package file to install.
- * 
  */
 public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The path to an APK to be installed on the device before the test begins.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<FileReferenceArgs> location;
@@ -32,7 +30,6 @@ public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The java package for the APK to be installed. Value is determined by examining the application's manifest.
-     * 
      */
     @Import(name="packageName")
       private final @Nullable Output<String> packageName;

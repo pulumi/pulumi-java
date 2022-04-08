@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * ResourceRequirements describes the compute resource requirements.
- * 
  */
 public final class ResourceRequirementsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ResourceRequirementsResponse extends io.pulumi.resources.Invo
 
     /**
      * (Optional) Only memory and CPU are supported. Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
-     * 
      */
     @Import(name="limits", required=true)
       private final Map<String,String> limits;
@@ -30,7 +28,6 @@ public final class ResourceRequirementsResponse extends io.pulumi.resources.Invo
 
     /**
      * (Optional) Only memory and CPU are supported. Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
-     * 
      */
     @Import(name="requests", required=true)
       private final Map<String,String> requests;

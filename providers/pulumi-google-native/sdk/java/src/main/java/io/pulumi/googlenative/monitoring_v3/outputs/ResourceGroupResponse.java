@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ResourceGroupResponse {
     /**
      * The group of resources being monitored. Should be only the [GROUP_ID], and not the full-path projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID].
-     * 
      */
     private final String groupId;
     /**
      * The resource type of the group members.
-     * 
      */
     private final String resourceType;
 
@@ -30,14 +28,12 @@ public final class ResourceGroupResponse {
 
     /**
      * The group of resources being monitored. Should be only the [GROUP_ID], and not the full-path projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID].
-     * 
     */
     public String getGroupId() {
         return this.groupId;
     }
     /**
      * The resource type of the group members.
-     * 
     */
     public String getPropResourceType() {
         return this.resourceType;

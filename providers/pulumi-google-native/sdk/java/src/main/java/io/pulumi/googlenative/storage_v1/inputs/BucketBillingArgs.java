@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The bucket's billing configuration.
- * 
  */
 public final class BucketBillingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BucketBillingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * When set to true, Requester Pays is enabled for this bucket.
-     * 
      */
     @Import(name="requesterPays")
       private final @Nullable Output<Boolean> requesterPays;

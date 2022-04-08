@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a Cloud Run service destination.
- * 
  */
 public final class CloudRunServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CloudRunServiceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. The relative path on the Cloud Run service the events should be sent to. The value must conform to the definition of URI path segment (section 3.3 of RFC2396). Examples: "/route", "route", "route/subroute".
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<String> path;
@@ -31,7 +29,6 @@ public final class CloudRunServiceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The region the Cloud Run service is deployed in.
-     * 
      */
     @Import(name="region", required=true)
       private final Output<String> region;
@@ -42,7 +39,6 @@ public final class CloudRunServiceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the Cloud run service being addressed (see https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services). Only services located in the same project of the trigger object can be addressed.
-     * 
      */
     @Import(name="service", required=true)
       private final Output<String> service;

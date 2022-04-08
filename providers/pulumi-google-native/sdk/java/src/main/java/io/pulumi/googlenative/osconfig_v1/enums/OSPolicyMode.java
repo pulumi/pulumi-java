@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Required. Policy mode
-     * 
      */
     @EnumType
     public enum OSPolicyMode {
         /**
          * Invalid mode
-         * 
          */
         ModeUnspecified("MODE_UNSPECIFIED"),
         /**
          * This mode checks if the configuration resources in the policy are in their desired state. No actions are performed if they are not in the desired state. This mode is used for reporting purposes.
-         * 
          */
         Validation("VALIDATION"),
         /**
          * This mode checks if the configuration resources in the policy are in their desired state, and if not, enforces the desired state.
-         * 
          */
         Enforcement("ENFORCEMENT");
 

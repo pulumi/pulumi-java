@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse {
     /**
      * Text in this cell.
-     * 
      */
     private final String text;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardCellRespons
 
     /**
      * Text in this cell.
-     * 
     */
     public String getText() {
         return this.text;

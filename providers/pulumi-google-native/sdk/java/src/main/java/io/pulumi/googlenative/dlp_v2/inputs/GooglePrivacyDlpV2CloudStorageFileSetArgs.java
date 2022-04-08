@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Message representing a set of files in Cloud Storage.
- * 
  */
 public final class GooglePrivacyDlpV2CloudStorageFileSetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GooglePrivacyDlpV2CloudStorageFileSetArgs extends io.pulumi.r
 
     /**
      * The url, in the format `gs:///`. Trailing wildcard in the path is allowed.
-     * 
      */
     @Import(name="url")
       private final @Nullable Output<String> url;

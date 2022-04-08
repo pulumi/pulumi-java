@@ -16,7 +16,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the API product for which the developer is purchasing a subscription.
-     * 
      */
     @Import(name="apiproduct")
       private final @Nullable Output<String> apiproduct;
@@ -34,7 +33,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Time when the API product subscription ends in milliseconds since epoch.
-     * 
      */
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
@@ -52,7 +50,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Time when the API product subscription starts in milliseconds since epoch.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;

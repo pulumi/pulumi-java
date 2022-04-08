@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies a bandwidth limit for an agent pool.
- * 
  */
 public final class BandwidthLimitArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BandwidthLimitArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Bandwidth rate in megabytes per second, distributed across all the agents in the pool.
-     * 
      */
     @Import(name="limitMbps")
       private final @Nullable Output<String> limitMbps;

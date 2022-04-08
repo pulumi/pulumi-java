@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Represents a phone number for telephony integration. It allows for connecting a particular conversation over telephony.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse e
 
     /**
      * The phone number to connect to this conversation.
-     * 
      */
     @Import(name="phoneNumber", required=true)
       private final String phoneNumber;

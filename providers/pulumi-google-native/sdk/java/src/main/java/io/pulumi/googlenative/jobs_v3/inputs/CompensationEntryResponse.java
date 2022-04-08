@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * A compensation entry that represents one component of compensation, such as base pay, bonus, or other compensation type. Annualization: One compensation entry can be annualized if - it contains valid amount or range. - and its expected_units_per_year is set or can be derived. Its annualized range is determined as (amount or range) times expected_units_per_year.
- * 
  */
 public final class CompensationEntryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. Compensation amount.
-     * 
      */
     @Import(name="amount", required=true)
       private final MoneyResponse amount;
@@ -32,7 +30,6 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. Compensation description. For example, could indicate equity terms or provide additional context to an estimated bonus.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -43,7 +40,6 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. Expected number of units paid each year. If not specified, when Job.employment_types is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY: 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1
-     * 
      */
     @Import(name="expectedUnitsPerYear", required=true)
       private final Double expectedUnitsPerYear;
@@ -54,7 +50,6 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. Compensation range.
-     * 
      */
     @Import(name="range", required=true)
       private final CompensationRangeResponse range;
@@ -65,7 +60,6 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -76,7 +70,6 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional. Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
-     * 
      */
     @Import(name="unit", required=true)
       private final String unit;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The content of an HL7v2 message in a structured format as specified by a schema.
- * 
  */
 public final class SchematizedDataArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SchematizedDataArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * JSON output of the parser.
-     * 
      */
     @Import(name="data")
       private final @Nullable Output<String> data;
@@ -31,7 +29,6 @@ public final class SchematizedDataArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The error output of the parser.
-     * 
      */
     @Import(name="error")
       private final @Nullable Output<String> error;

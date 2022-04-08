@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Message for specifying a window around a finding to apply a detection rule.
- * 
  */
 public final class GooglePrivacyDlpV2ProximityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GooglePrivacyDlpV2ProximityArgs extends io.pulumi.resources.R
 
     /**
      * Number of characters after the finding to consider.
-     * 
      */
     @Import(name="windowAfter")
       private final @Nullable Output<Integer> windowAfter;
@@ -31,7 +29,6 @@ public final class GooglePrivacyDlpV2ProximityArgs extends io.pulumi.resources.R
 
     /**
      * Number of characters before the finding to consider.
-     * 
      */
     @Import(name="windowBefore")
       private final @Nullable Output<Integer> windowBefore;

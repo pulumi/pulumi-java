@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The cluster's GKE config.
- * 
  */
 public final class GkeClusterConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GkeClusterConfigResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Optional. A target for the deployment.
-     * 
      */
     @Import(name="namespacedGkeDeploymentTarget", required=true)
       private final NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget;

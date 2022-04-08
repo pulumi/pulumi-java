@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Output configuration for asset feed destination.
- * 
  */
 public final class FeedOutputConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class FeedOutputConfigResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Destination on Pub/Sub.
-     * 
      */
     @Import(name="pubsubDestination", required=true)
       private final PubsubDestinationResponse pubsubDestination;

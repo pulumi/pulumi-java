@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * This is deprecated and has no effect. Do not use.
- * 
  */
 public final class LogConfigDataAccessOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class LogConfigDataAccessOptionsArgs extends io.pulumi.resources.Re
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="logMode")
       private final @Nullable Output<LogConfigDataAccessOptionsLogMode> logMode;

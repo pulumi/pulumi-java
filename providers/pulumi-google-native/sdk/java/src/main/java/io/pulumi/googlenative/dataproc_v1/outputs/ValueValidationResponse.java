@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class ValueValidationResponse {
     /**
      * List of allowed values for the parameter.
-     * 
      */
     private final List<String> values;
 
@@ -23,7 +22,6 @@ public final class ValueValidationResponse {
 
     /**
      * List of allowed values for the parameter.
-     * 
     */
     public List<String> getValues() {
         return this.values;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * BitbucketServerRepositoryId identifies a specific repository hosted on a Bitbucket Server.
- * 
  */
 public final class BitbucketServerRepositoryIdResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class BitbucketServerRepositoryIdResponse extends io.pulumi.resourc
 
     /**
      * Identifier for the project storing the repository.
-     * 
      */
     @Import(name="projectKey", required=true)
       private final String projectKey;
@@ -30,7 +28,6 @@ public final class BitbucketServerRepositoryIdResponse extends io.pulumi.resourc
 
     /**
      * Identifier for the repository.
-     * 
      */
     @Import(name="repoSlug", required=true)
       private final String repoSlug;
@@ -41,7 +38,6 @@ public final class BitbucketServerRepositoryIdResponse extends io.pulumi.resourc
 
     /**
      * The ID of the webhook that was created for receiving events from this repo. We only create and manage a single webhook for each repo.
-     * 
      */
     @Import(name="webhookId", required=true)
       private final Integer webhookId;

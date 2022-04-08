@@ -14,7 +14,6 @@ public final class FirewallPolicyAssociationResponse extends io.pulumi.resources
 
     /**
      * The target that the firewall policy is attached to.
-     * 
      */
     @Import(name="attachmentTarget", required=true)
       private final String attachmentTarget;
@@ -25,7 +24,6 @@ public final class FirewallPolicyAssociationResponse extends io.pulumi.resources
 
     /**
      * Deprecated, please use short name instead. The display name of the firewall policy of the association.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -36,7 +34,6 @@ public final class FirewallPolicyAssociationResponse extends io.pulumi.resources
 
     /**
      * The firewall policy ID of the association.
-     * 
      */
     @Import(name="firewallPolicyId", required=true)
       private final String firewallPolicyId;
@@ -47,7 +44,6 @@ public final class FirewallPolicyAssociationResponse extends io.pulumi.resources
 
     /**
      * The name for an association.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -58,7 +54,6 @@ public final class FirewallPolicyAssociationResponse extends io.pulumi.resources
 
     /**
      * The short name of the firewall policy of the association.
-     * 
      */
     @Import(name="shortName", required=true)
       private final String shortName;

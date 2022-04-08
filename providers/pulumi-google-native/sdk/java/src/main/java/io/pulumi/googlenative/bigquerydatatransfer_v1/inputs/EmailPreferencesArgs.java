@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents preferences for sending email notifications for transfer run events.
- * 
  */
 public final class EmailPreferencesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EmailPreferencesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * If true, email notifications will be sent on transfer run failures.
-     * 
      */
     @Import(name="enableFailureEmail")
       private final @Nullable Output<Boolean> enableFailureEmail;

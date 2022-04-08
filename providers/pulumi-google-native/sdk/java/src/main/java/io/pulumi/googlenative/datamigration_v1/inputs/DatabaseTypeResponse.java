@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A message defining the database engine and provider.
- * 
  */
 public final class DatabaseTypeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DatabaseTypeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The database engine.
-     * 
      */
     @Import(name="engine", required=true)
       private final String engine;
@@ -29,7 +27,6 @@ public final class DatabaseTypeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The database provider.
-     * 
      */
     @Import(name="provider", required=true)
       private final String provider;

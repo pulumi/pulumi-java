@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A network endpoint over which a TPU worker can be reached.
- * 
  */
 public final class NetworkEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class NetworkEndpointResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The access config for the TPU worker.
-     * 
      */
     @Import(name="accessConfig", required=true)
       private final AccessConfigResponse accessConfig;
@@ -31,7 +29,6 @@ public final class NetworkEndpointResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The internal IP address of this network endpoint.
-     * 
      */
     @Import(name="ipAddress", required=true)
       private final String ipAddress;
@@ -42,7 +39,6 @@ public final class NetworkEndpointResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The port of this network endpoint.
-     * 
      */
     @Import(name="port", required=true)
       private final Integer port;

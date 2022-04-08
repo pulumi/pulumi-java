@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The share setting for reservations and sole tenancy node groups.
- * 
  */
 public final class ShareSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ShareSettingsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * A map of project id and project config. This is only valid when share_type's value is SPECIFIC_PROJECTS.
-     * 
      */
     @Import(name="projectMap", required=true)
       private final Map<String,String> projectMap;
@@ -31,7 +29,6 @@ public final class ShareSettingsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.
-     * 
      */
     @Import(name="projects", required=true)
       private final List<String> projects;
@@ -42,7 +39,6 @@ public final class ShareSettingsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Type of sharing for this shared-reservation
-     * 
      */
     @Import(name="shareType", required=true)
       private final String shareType;

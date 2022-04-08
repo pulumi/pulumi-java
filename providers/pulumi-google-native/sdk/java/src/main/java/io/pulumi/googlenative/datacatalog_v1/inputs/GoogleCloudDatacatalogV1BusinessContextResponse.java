@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Business Context of the entry.
- * 
  */
 public final class GoogleCloudDatacatalogV1BusinessContextResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse extends io.pu
 
     /**
      * Contact people for the entry.
-     * 
      */
     @Import(name="contacts", required=true)
       private final GoogleCloudDatacatalogV1ContactsResponse contacts;
@@ -30,7 +28,6 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse extends io.pu
 
     /**
      * Entry overview fields for rich text descriptions of entries.
-     * 
      */
     @Import(name="entryOverview", required=true)
       private final GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview;

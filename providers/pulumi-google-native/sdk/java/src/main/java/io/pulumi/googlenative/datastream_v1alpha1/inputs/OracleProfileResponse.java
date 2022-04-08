@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Oracle database profile.
- * 
  */
 public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Connection string attributes
-     * 
      */
     @Import(name="connectionAttributes", required=true)
       private final Map<String,String> connectionAttributes;
@@ -31,7 +29,6 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Database for the Oracle connection.
-     * 
      */
     @Import(name="databaseService", required=true)
       private final String databaseService;
@@ -42,7 +39,6 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Hostname for the Oracle connection.
-     * 
      */
     @Import(name="hostname", required=true)
       private final String hostname;
@@ -53,7 +49,6 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Password for the Oracle connection.
-     * 
      */
     @Import(name="password", required=true)
       private final String password;
@@ -64,7 +59,6 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Port for the Oracle connection, default value is 1521.
-     * 
      */
     @Import(name="port", required=true)
       private final Integer port;
@@ -75,7 +69,6 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Username for the Oracle connection.
-     * 
      */
     @Import(name="username", required=true)
       private final String username;

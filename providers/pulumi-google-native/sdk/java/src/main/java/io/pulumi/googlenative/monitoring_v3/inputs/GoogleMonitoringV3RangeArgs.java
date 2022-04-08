@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Range of numerical values within min and max.
- * 
  */
 public final class GoogleMonitoringV3RangeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleMonitoringV3RangeArgs extends io.pulumi.resources.Resou
 
     /**
      * Range maximum.
-     * 
      */
     @Import(name="max")
       private final @Nullable Output<Double> max;
@@ -31,7 +29,6 @@ public final class GoogleMonitoringV3RangeArgs extends io.pulumi.resources.Resou
 
     /**
      * Range minimum.
-     * 
      */
     @Import(name="min")
       private final @Nullable Output<Double> min;

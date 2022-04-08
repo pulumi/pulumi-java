@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The text response message.
- * 
  */
 public final class GoogleCloudDialogflowCxV3ResponseMessageTextArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextArgs extends io.p
 
     /**
      * A collection of text responses.
-     * 
      */
     @Import(name="text", required=true)
       private final Output<List<String>> text;

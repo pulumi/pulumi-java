@@ -18,132 +18,113 @@ import javax.annotation.Nullable;
 /**
  * Creates a new Runtime in a given project and location.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:notebooks/v1:Runtime")
 public class Runtime extends io.pulumi.resources.CustomResource {
     /**
      * The config settings for accessing runtime.
-     * 
      */
     @Export(name="accessConfig", type=RuntimeAccessConfigResponse.class, parameters={})
     private Output<RuntimeAccessConfigResponse> accessConfig;
 
     /**
      * @return The config settings for accessing runtime.
-     * 
      */
     public Output<RuntimeAccessConfigResponse> getAccessConfig() {
         return this.accessConfig;
     }
     /**
      * Runtime creation time.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return Runtime creation time.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Runtime health_state.
-     * 
      */
     @Export(name="healthState", type=String.class, parameters={})
     private Output<String> healthState;
 
     /**
      * @return Runtime health_state.
-     * 
      */
     public Output<String> getHealthState() {
         return this.healthState;
     }
     /**
      * Contains Runtime daemon metrics such as Service status and JupyterLab stats.
-     * 
      */
     @Export(name="metrics", type=RuntimeMetricsResponse.class, parameters={})
     private Output<RuntimeMetricsResponse> metrics;
 
     /**
      * @return Contains Runtime daemon metrics such as Service status and JupyterLab stats.
-     * 
      */
     public Output<RuntimeMetricsResponse> getMetrics() {
         return this.metrics;
     }
     /**
      * The resource name of the runtime. Format: `projects/{project}/locations/{location}/runtimes/{runtimeId}`
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the runtime. Format: `projects/{project}/locations/{location}/runtimes/{runtimeId}`
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The config settings for software inside the runtime.
-     * 
      */
     @Export(name="softwareConfig", type=RuntimeSoftwareConfigResponse.class, parameters={})
     private Output<RuntimeSoftwareConfigResponse> softwareConfig;
 
     /**
      * @return The config settings for software inside the runtime.
-     * 
      */
     public Output<RuntimeSoftwareConfigResponse> getSoftwareConfig() {
         return this.softwareConfig;
     }
     /**
      * Runtime state.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return Runtime state.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Runtime update time.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return Runtime update time.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
     /**
      * Use a Compute Engine VM image to start the managed notebook instance.
-     * 
      */
     @Export(name="virtualMachine", type=VirtualMachineResponse.class, parameters={})
     private Output<VirtualMachineResponse> virtualMachine;
 
     /**
      * @return Use a Compute Engine VM image to start the managed notebook instance.
-     * 
      */
     public Output<VirtualMachineResponse> getVirtualMachine() {
         return this.virtualMachine;

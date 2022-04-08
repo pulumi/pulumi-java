@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2CryptoKeyResponse {
     /**
      * Key wrapped using Cloud KMS
-     * 
      */
     private final GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped;
     /**
      * Transient crypto key
-     * 
      */
     private final GooglePrivacyDlpV2TransientCryptoKeyResponse transient_;
     /**
      * Unwrapped crypto key
-     * 
      */
     private final GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped;
 
@@ -39,21 +36,18 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse {
 
     /**
      * Key wrapped using Cloud KMS
-     * 
     */
     public GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse getKmsWrapped() {
         return this.kmsWrapped;
     }
     /**
      * Transient crypto key
-     * 
     */
     public GooglePrivacyDlpV2TransientCryptoKeyResponse getTransient_() {
         return this.transient_;
     }
     /**
      * Unwrapped crypto key
-     * 
     */
     public GooglePrivacyDlpV2UnwrappedCryptoKeyResponse getUnwrapped() {
         return this.unwrapped;

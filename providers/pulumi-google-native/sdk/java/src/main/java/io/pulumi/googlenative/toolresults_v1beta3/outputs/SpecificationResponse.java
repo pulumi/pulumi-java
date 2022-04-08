@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class SpecificationResponse {
     /**
      * An Android mobile test execution specification.
-     * 
      */
     private final AndroidTestResponse androidTest;
     /**
      * An iOS mobile test execution specification.
-     * 
      */
     private final IosTestResponse iosTest;
 
@@ -31,14 +29,12 @@ public final class SpecificationResponse {
 
     /**
      * An Android mobile test execution specification.
-     * 
     */
     public AndroidTestResponse getAndroidTest() {
         return this.androidTest;
     }
     /**
      * An iOS mobile test execution specification.
-     * 
     */
     public IosTestResponse getIosTest() {
         return this.iosTest;

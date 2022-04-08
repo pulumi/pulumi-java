@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudDatacatalogV1ViewSpecResponse {
     /**
      * The query that defines the table view.
-     * 
      */
     private final String viewQuery;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDatacatalogV1ViewSpecResponse {
 
     /**
      * The query that defines the table view.
-     * 
     */
     public String getViewQuery() {
         return this.viewQuery;

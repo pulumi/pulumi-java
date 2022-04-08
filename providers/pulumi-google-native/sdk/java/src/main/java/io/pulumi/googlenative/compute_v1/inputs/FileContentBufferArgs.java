@@ -17,7 +17,6 @@ public final class FileContentBufferArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The raw content in the secure keys file.
-     * 
      */
     @Import(name="content")
       private final @Nullable Output<String> content;
@@ -28,7 +27,6 @@ public final class FileContentBufferArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The file type of source file.
-     * 
      */
     @Import(name="fileType")
       private final @Nullable Output<FileContentBufferFileType> fileType;

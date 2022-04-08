@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Historical state information.
- * 
  */
 public final class StateHistoryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class StateHistoryResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The state of the batch at this point in history.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -29,7 +27,6 @@ public final class StateHistoryResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Details about the state at this point in history.
-     * 
      */
     @Import(name="stateMessage", required=true)
       private final String stateMessage;
@@ -40,7 +37,6 @@ public final class StateHistoryResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The time when the batch entered the historical state.
-     * 
      */
     @Import(name="stateStartTime", required=true)
       private final String stateStartTime;

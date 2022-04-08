@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * NotificationConfig is the configuration of notifications.
- * 
  */
 public final class NotificationConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class NotificationConfigResponse extends io.pulumi.resources.Invoke
 
     /**
      * Notification config for Pub/Sub.
-     * 
      */
     @Import(name="pubsub", required=true)
       private final PubSubResponse pubsub;

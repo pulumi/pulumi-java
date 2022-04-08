@@ -10,33 +10,27 @@ import java.util.StringJoiner;
 
     /**
      * Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.
-     * 
      */
     @EnumType
     public enum ConditionSys {
         /**
          * Default non-attribute type
-         * 
          */
         NoAttr("NO_ATTR"),
         /**
          * Region of the resource
-         * 
          */
         Region("REGION"),
         /**
          * Service name
-         * 
          */
         Service("SERVICE"),
         /**
          * Resource name
-         * 
          */
         Name("NAME"),
         /**
          * IP address of the caller
-         * 
          */
         Ip("IP");
 

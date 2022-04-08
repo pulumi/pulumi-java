@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * RepoSource describes the location of the source in a Google Cloud Source Repository.
- * 
  */
 public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the branch to build.
-     * 
      */
     @Import(name="branchName", required=true)
       private final String branchName;
@@ -29,7 +27,6 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Explicit commit SHA to build.
-     * 
      */
     @Import(name="commitSha", required=true)
       private final String commitSha;
@@ -40,7 +37,6 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * ID of the project that owns the repo.
-     * 
      */
     @Import(name="project", required=true)
       private final String project;
@@ -51,7 +47,6 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the repo.
-     * 
      */
     @Import(name="repoName", required=true)
       private final String repoName;
@@ -62,7 +57,6 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the tag to build.
-     * 
      */
     @Import(name="tagName", required=true)
       private final String tagName;

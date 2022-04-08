@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse {
     /**
      * Fields specific to BigQuery connections.
-     * 
      */
     private final GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse bigqueryConnectionSpec;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse {
 
     /**
      * Fields specific to BigQuery connections.
-     * 
     */
     public GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse getBigqueryConnectionSpec() {
         return this.bigqueryConnectionSpec;

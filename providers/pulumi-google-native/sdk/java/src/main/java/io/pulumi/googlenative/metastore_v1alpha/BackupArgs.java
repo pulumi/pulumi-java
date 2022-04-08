@@ -23,7 +23,6 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the backup.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -41,7 +40,6 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The relative resource name of the backup, in the following form:projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

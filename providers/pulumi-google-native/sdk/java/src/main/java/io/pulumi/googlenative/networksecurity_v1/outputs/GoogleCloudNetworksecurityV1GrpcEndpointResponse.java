@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudNetworksecurityV1GrpcEndpointResponse {
     /**
      * The target URI of the gRPC endpoint. Only UDS path is supported, and should start with “unix:”.
-     * 
      */
     private final String targetUri;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudNetworksecurityV1GrpcEndpointResponse {
 
     /**
      * The target URI of the gRPC endpoint. Only UDS path is supported, and should start with “unix:”.
-     * 
     */
     public String getTargetUri() {
         return this.targetUri;

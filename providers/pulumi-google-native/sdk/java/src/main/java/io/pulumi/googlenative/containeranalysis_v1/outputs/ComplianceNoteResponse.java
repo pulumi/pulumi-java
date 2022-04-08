@@ -15,32 +15,26 @@ public final class ComplianceNoteResponse {
     private final CisBenchmarkResponse cisBenchmark;
     /**
      * A description about this compliance check.
-     * 
      */
     private final String description;
     /**
      * A rationale for the existence of this compliance check.
-     * 
      */
     private final String rationale;
     /**
      * A description of remediation steps if the compliance check fails.
-     * 
      */
     private final String remediation;
     /**
      * Serialized scan instructions with a predefined format.
-     * 
      */
     private final String scanInstructions;
     /**
      * The title that identifies this compliance check.
-     * 
      */
     private final String title;
     /**
      * The OS and config versions the benchmark applies to.
-     * 
      */
     private final List<ComplianceVersionResponse> version;
 
@@ -67,42 +61,36 @@ public final class ComplianceNoteResponse {
     }
     /**
      * A description about this compliance check.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * A rationale for the existence of this compliance check.
-     * 
     */
     public String getRationale() {
         return this.rationale;
     }
     /**
      * A description of remediation steps if the compliance check fails.
-     * 
     */
     public String getRemediation() {
         return this.remediation;
     }
     /**
      * Serialized scan instructions with a predefined format.
-     * 
     */
     public String getScanInstructions() {
         return this.scanInstructions;
     }
     /**
      * The title that identifies this compliance check.
-     * 
     */
     public String getTitle() {
         return this.title;
     }
     /**
      * The OS and config versions the benchmark applies to.
-     * 
     */
     public List<ComplianceVersionResponse> getVersion() {
         return this.version;

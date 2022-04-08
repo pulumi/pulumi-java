@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The request and response header transformations that take effect before the request is passed along to the selected backendService.
- * 
  */
 public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Headers to add to a matching request before forwarding the request to the backendService.
-     * 
      */
     @Import(name="requestHeadersToAdd")
       private final @Nullable Output<List<HttpHeaderOptionArgs>> requestHeadersToAdd;
@@ -33,7 +31,6 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A list of header names for headers that need to be removed from the request before forwarding the request to the backendService.
-     * 
      */
     @Import(name="requestHeadersToRemove")
       private final @Nullable Output<List<String>> requestHeadersToRemove;
@@ -44,7 +41,6 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Headers to add the response before sending the response back to the client.
-     * 
      */
     @Import(name="responseHeadersToAdd")
       private final @Nullable Output<List<HttpHeaderOptionArgs>> responseHeadersToAdd;
@@ -55,7 +51,6 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A list of header names for headers that need to be removed from the response before sending the response back to the client.
-     * 
      */
     @Import(name="responseHeadersToRemove")
       private final @Nullable Output<List<String>> responseHeadersToRemove;

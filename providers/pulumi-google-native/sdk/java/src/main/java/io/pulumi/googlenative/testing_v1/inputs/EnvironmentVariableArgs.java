@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A key-value pair passed as an environment variable to the test.
- * 
  */
 public final class EnvironmentVariableArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EnvironmentVariableArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Key for the environment variable.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -31,7 +29,6 @@ public final class EnvironmentVariableArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Value for the environment variable.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

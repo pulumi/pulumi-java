@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class GoogleCloudDatacatalogV1ContactsResponse {
     /**
      * The list of contact people for the entry.
-     * 
      */
     private final List<GoogleCloudDatacatalogV1ContactsPersonResponse> people;
 
@@ -23,7 +22,6 @@ public final class GoogleCloudDatacatalogV1ContactsResponse {
 
     /**
      * The list of contact people for the entry.
-     * 
     */
     public List<GoogleCloudDatacatalogV1ContactsPersonResponse> getPeople() {
         return this.people;

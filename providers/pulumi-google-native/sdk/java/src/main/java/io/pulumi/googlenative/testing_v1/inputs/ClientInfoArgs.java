@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information about the client which invoked the test.
- * 
  */
 public final class ClientInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ClientInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of detailed information about client.
-     * 
      */
     @Import(name="clientInfoDetails")
       private final @Nullable Output<List<ClientInfoDetailArgs>> clientInfoDetails;
@@ -33,7 +31,6 @@ public final class ClientInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Client name, such as gcloud.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

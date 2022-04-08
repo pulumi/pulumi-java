@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The iOS apps that are allowed to use the key.
- * 
  */
 public final class V2IosKeyRestrictionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class V2IosKeyRestrictionsResponse extends io.pulumi.resources.Invo
 
     /**
      * A list of bundle IDs that are allowed when making API calls with this key.
-     * 
      */
     @Import(name="allowedBundleIds", required=true)
       private final List<String> allowedBundleIds;

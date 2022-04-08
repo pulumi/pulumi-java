@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * This is deprecated and has no effect. Do not use.
- * 
  */
 public final class AuthorizationLoggingOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AuthorizationLoggingOptionsResponse extends io.pulumi.resourc
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="permissionType", required=true)
       private final String permissionType;

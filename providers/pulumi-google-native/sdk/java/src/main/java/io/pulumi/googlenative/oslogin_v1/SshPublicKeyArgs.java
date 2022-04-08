@@ -16,7 +16,6 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An expiration time in microseconds since epoch.
-     * 
      */
     @Import(name="expirationTimeUsec")
       private final @Nullable Output<String> expirationTimeUsec;
@@ -27,7 +26,6 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Public key text in SSH format, defined by RFC4253 section 6.6.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;

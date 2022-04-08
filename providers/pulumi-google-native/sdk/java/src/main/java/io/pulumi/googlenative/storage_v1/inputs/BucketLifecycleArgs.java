@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The bucket's lifecycle configuration. See lifecycle management for more information.
- * 
  */
 public final class BucketLifecycleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class BucketLifecycleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.
-     * 
      */
     @Import(name="rule")
       private final @Nullable Output<List<BucketLifecycleRuleItemArgs>> rule;

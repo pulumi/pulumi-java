@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * Googet patching is performed by running `googet update`.
- * 
  */
 public final class GooSettingsResponse extends io.pulumi.resources.InvokeArgs {
 

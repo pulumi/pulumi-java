@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class BucketIamConfigurationBucketPolicyOnlyResponse {
     /**
      * If set, access is controlled only by bucket-level or above IAM policies.
-     * 
      */
     private final Boolean enabled;
     /**
      * The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.
-     * 
      */
     private final String lockedTime;
 
@@ -31,14 +29,12 @@ public final class BucketIamConfigurationBucketPolicyOnlyResponse {
 
     /**
      * If set, access is controlled only by bucket-level or above IAM policies.
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.
-     * 
     */
     public String getLockedTime() {
         return this.lockedTime;

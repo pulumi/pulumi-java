@@ -15,7 +15,6 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpec
 
     /**
      * Must be specified if type is `CATEGORICAL`. The list of possible categories.
-     * 
      */
     @Import(name="values", required=true)
       private final List<String> values;

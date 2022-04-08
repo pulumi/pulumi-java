@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Time window specified for daily operations.
- * 
  */
 public final class ResourcePolicyDailyCycleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ResourcePolicyDailyCycleArgs extends io.pulumi.resources.Reso
 
     /**
      * Defines a schedule with units measured in months. The value determines how many months pass between the start of each cycle.
-     * 
      */
     @Import(name="daysInCycle")
       private final @Nullable Output<Integer> daysInCycle;
@@ -32,7 +30,6 @@ public final class ResourcePolicyDailyCycleArgs extends io.pulumi.resources.Reso
 
     /**
      * Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;

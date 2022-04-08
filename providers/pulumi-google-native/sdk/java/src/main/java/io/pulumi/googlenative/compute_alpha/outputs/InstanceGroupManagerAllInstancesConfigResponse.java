@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class InstanceGroupManagerAllInstancesConfigResponse {
     /**
      * Properties for instances that are created using this instances config. You can add or modify properties using the instanceGroupManagers.patch or regionInstanceGroupManagers.patch. After setting instances_config, you must update your instances to use it; for example, you can use the applyUpdatesToInstances method.
-     * 
      */
     private final InstancePropertiesPatchResponse properties;
 
@@ -22,7 +21,6 @@ public final class InstanceGroupManagerAllInstancesConfigResponse {
 
     /**
      * Properties for instances that are created using this instances config. You can add or modify properties using the instanceGroupManagers.patch or regionInstanceGroupManagers.patch. After setting instances_config, you must update your instances to use it; for example, you can use the applyUpdatesToInstances method.
-     * 
     */
     public InstancePropertiesPatchResponse getProperties() {
         return this.properties;

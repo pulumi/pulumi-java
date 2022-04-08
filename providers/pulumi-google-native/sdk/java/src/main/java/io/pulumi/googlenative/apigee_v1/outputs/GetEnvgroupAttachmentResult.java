@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class GetEnvgroupAttachmentResult {
     /**
      * The time at which the environment group attachment was created as milliseconds since epoch.
-     * 
      */
     private final String createdAt;
     /**
      * ID of the attached environment.
-     * 
      */
     private final String environment;
     /**
      * ID of the environment group attachment.
-     * 
      */
     private final String name;
 
@@ -37,21 +34,18 @@ public final class GetEnvgroupAttachmentResult {
 
     /**
      * The time at which the environment group attachment was created as milliseconds since epoch.
-     * 
     */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * ID of the attached environment.
-     * 
     */
     public String getEnvironment() {
         return this.environment;
     }
     /**
      * ID of the environment group attachment.
-     * 
     */
     public String getName() {
         return this.name;

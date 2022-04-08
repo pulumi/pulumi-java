@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration options for the Config Connector add-on.
- * 
  */
 public final class ConfigConnectorConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ConfigConnectorConfigResponse extends io.pulumi.resources.Inv
 
     /**
      * Whether Cloud Connector is enabled for this cluster.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

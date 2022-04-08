@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Oracle database profile.
- * 
  */
 public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Connection string attributes
-     * 
      */
     @Import(name="connectionAttributes")
       private final @Nullable Output<Map<String,String>> connectionAttributes;
@@ -33,7 +31,6 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Database for the Oracle connection.
-     * 
      */
     @Import(name="databaseService", required=true)
       private final Output<String> databaseService;
@@ -44,7 +41,6 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Hostname for the Oracle connection.
-     * 
      */
     @Import(name="hostname", required=true)
       private final Output<String> hostname;
@@ -55,7 +51,6 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Password for the Oracle connection.
-     * 
      */
     @Import(name="password", required=true)
       private final Output<String> password;
@@ -66,7 +61,6 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Port for the Oracle connection, default value is 1521.
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Integer> port;
@@ -77,7 +71,6 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Username for the Oracle connection.
-     * 
      */
     @Import(name="username", required=true)
       private final Output<String> username;

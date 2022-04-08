@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Definition of a custom Compute Engine virtual machine image for starting a notebook instance with the environment installed directly on the VM.
- * 
  */
 public final class VmImageResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class VmImageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Use this VM image family to find the image; the newest image in this family will be used.
-     * 
      */
     @Import(name="imageFamily", required=true)
       private final String imageFamily;
@@ -29,7 +27,6 @@ public final class VmImageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Use VM image name to find the image.
-     * 
      */
     @Import(name="imageName", required=true)
       private final String imageName;
@@ -40,7 +37,6 @@ public final class VmImageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Google Cloud project that this VM image belongs to. Format: `projects/{project_id}`
-     * 
      */
     @Import(name="project", required=true)
       private final String project;

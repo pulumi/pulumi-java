@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class SystemParameterRuleResponse {
     /**
      * Define parameters. Multiple names may be defined for a parameter. For a given method call, only one of them should be used. If multiple names are used the behavior is implementation-dependent. If none of the specified names are present the behavior is parameter-dependent.
-     * 
      */
     private final List<SystemParameterResponse> parameters;
     /**
      * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs. Refer to selector for syntax details.
-     * 
      */
     private final String selector;
 
@@ -32,14 +30,12 @@ public final class SystemParameterRuleResponse {
 
     /**
      * Define parameters. Multiple names may be defined for a parameter. For a given method call, only one of them should be used. If multiple names are used the behavior is implementation-dependent. If none of the specified names are present the behavior is parameter-dependent.
-     * 
     */
     public List<SystemParameterResponse> getParameters() {
         return this.parameters;
     }
     /**
      * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs. Refer to selector for syntax details.
-     * 
     */
     public String getSelector() {
         return this.selector;

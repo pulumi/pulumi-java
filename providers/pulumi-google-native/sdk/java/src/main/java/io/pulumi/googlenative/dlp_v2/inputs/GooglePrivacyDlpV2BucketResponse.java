@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Bucket is represented as a range, along with replacement values.
- * 
  */
 public final class GooglePrivacyDlpV2BucketResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GooglePrivacyDlpV2BucketResponse extends io.pulumi.resources.
 
     /**
      * Upper bound of the range, exclusive; type must match min.
-     * 
      */
     @Import(name="max", required=true)
       private final GooglePrivacyDlpV2ValueResponse max;
@@ -29,7 +27,6 @@ public final class GooglePrivacyDlpV2BucketResponse extends io.pulumi.resources.
 
     /**
      * Lower bound of the range, inclusive. Type should be the same as max if used.
-     * 
      */
     @Import(name="min", required=true)
       private final GooglePrivacyDlpV2ValueResponse min;
@@ -40,7 +37,6 @@ public final class GooglePrivacyDlpV2BucketResponse extends io.pulumi.resources.
 
     /**
      * Replacement value for this bucket.
-     * 
      */
     @Import(name="replacementValue", required=true)
       private final GooglePrivacyDlpV2ValueResponse replacementValue;

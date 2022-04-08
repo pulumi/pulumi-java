@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a GitHub event is received.
- * 
  */
 public final class GitHubEventsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
 
     /**
      * Optional. The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
-     * 
      */
     @Import(name="enterpriseConfigResourceName", required=true)
       private final String enterpriseConfigResourceName;
@@ -31,7 +29,6 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
 
     /**
      * The installationID that emits the GitHub event.
-     * 
      */
     @Import(name="installationId", required=true)
       private final String installationId;
@@ -42,7 +39,6 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
 
     /**
      * Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-builders is "cloud-builders".
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -53,7 +49,6 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
 
     /**
      * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
-     * 
      */
     @Import(name="owner", required=true)
       private final String owner;
@@ -64,7 +59,6 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
 
     /**
      * filter to match changes in pull requests.
-     * 
      */
     @Import(name="pullRequest", required=true)
       private final PullRequestFilterResponse pullRequest;
@@ -75,7 +69,6 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
 
     /**
      * filter to match changes in refs like branches, tags.
-     * 
      */
     @Import(name="push", required=true)
       private final PushFilterResponse push;

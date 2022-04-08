@@ -21,7 +21,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The content is divided into equally spaced columns and the widgets are arranged vertically.
-     * 
      */
     @Import(name="columnLayout")
       private final @Nullable Output<ColumnLayoutArgs> columnLayout;
@@ -32,7 +31,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The mutable, human-readable name.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -43,7 +41,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * etag is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. An etag is returned in the response to GetDashboard, and users are expected to put that etag in the request to UpdateDashboard to ensure that their change will be applied to the same version of the Dashboard configuration. The field should not be passed during dashboard creation.
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -54,7 +51,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Content is arranged with a basic layout that re-flows a simple list of informational elements like widgets or tiles.
-     * 
      */
     @Import(name="gridLayout")
       private final @Nullable Output<GridLayoutArgs> gridLayout;
@@ -65,7 +61,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Labels applied to the dashboard
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -76,7 +71,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The content is arranged as a grid of tiles, with each content widget occupying one or more grid blocks.
-     * 
      */
     @Import(name="mosaicLayout")
       private final @Nullable Output<MosaicLayoutArgs> mosaicLayout;
@@ -87,7 +81,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The resource name of the dashboard.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -105,7 +98,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The content is divided into equally spaced rows and the widgets are arranged horizontally.
-     * 
      */
     @Import(name="rowLayout")
       private final @Nullable Output<RowLayoutArgs> rowLayout;

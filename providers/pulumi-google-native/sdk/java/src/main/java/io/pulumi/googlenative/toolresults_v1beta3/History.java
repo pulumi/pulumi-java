@@ -15,62 +15,53 @@ import javax.annotation.Nullable;
  * Creates a History. The returned History will have the id set. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing project does not exist
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:toolresults/v1beta3:History")
 public class History extends io.pulumi.resources.CustomResource {
     /**
      * A short human-readable (plain text) name to display in the UI. Maximum of 100 characters. - In response: present if set during create. - In create request: optional
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return A short human-readable (plain text) name to display in the UI. Maximum of 100 characters. - In response: present if set during create. - In create request: optional
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * A unique identifier within a project for this History. Returns INVALID_ARGUMENT if this field is set or overwritten by the caller. - In response always set - In create request: never set
-     * 
      */
     @Export(name="historyId", type=String.class, parameters={})
     private Output<String> historyId;
 
     /**
      * @return A unique identifier within a project for this History. Returns INVALID_ARGUMENT if this field is set or overwritten by the caller. - In response always set - In create request: never set
-     * 
      */
     public Output<String> getHistoryId() {
         return this.historyId;
     }
     /**
      * A name to uniquely identify a history within a project. Maximum of 200 characters. - In response always set - In create request: always set
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return A name to uniquely identify a history within a project. Maximum of 200 characters. - In response always set - In create request: always set
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The platform of the test history. - In response: always set. Returns the platform of the last execution if unknown.
-     * 
      */
     @Export(name="testPlatform", type=String.class, parameters={})
     private Output<String> testPlatform;
 
     /**
      * @return The platform of the test history. - In response: always set. Returns the platform of the last execution if unknown.
-     * 
      */
     public Output<String> getTestPlatform() {
         return this.testPlatform;

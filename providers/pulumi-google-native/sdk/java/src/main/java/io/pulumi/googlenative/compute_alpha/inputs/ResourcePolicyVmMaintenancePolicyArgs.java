@@ -24,7 +24,6 @@ public final class ResourcePolicyVmMaintenancePolicyArgs extends io.pulumi.resou
 
     /**
      * Maintenance windows that are applied to VMs covered by this policy.
-     * 
      */
     @Import(name="maintenanceWindow")
       private final @Nullable Output<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> maintenanceWindow;

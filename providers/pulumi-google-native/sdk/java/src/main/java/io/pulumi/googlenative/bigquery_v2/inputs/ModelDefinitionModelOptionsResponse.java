@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * [Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.
- * 
  */
 public final class ModelDefinitionModelOptionsResponse extends io.pulumi.resources.InvokeArgs {
 

@@ -14,27 +14,22 @@ import java.util.Objects;
 public final class GetApiResult {
     /**
      * User labels applied to this API Proxy.
-     * 
      */
     private final Map<String,String> labels;
     /**
      * The id of the most recently created revision for this api proxy.
-     * 
      */
     private final String latestRevisionId;
     /**
      * Metadata describing the API proxy.
-     * 
      */
     private final GoogleCloudApigeeV1EntityMetadataResponse metaData;
     /**
      * Name of the API proxy.
-     * 
      */
     private final String name;
     /**
      * List of revisons defined for the API proxy.
-     * 
      */
     private final List<String> revision;
 
@@ -54,35 +49,30 @@ public final class GetApiResult {
 
     /**
      * User labels applied to this API Proxy.
-     * 
     */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The id of the most recently created revision for this api proxy.
-     * 
     */
     public String getLatestRevisionId() {
         return this.latestRevisionId;
     }
     /**
      * Metadata describing the API proxy.
-     * 
     */
     public GoogleCloudApigeeV1EntityMetadataResponse getMetaData() {
         return this.metaData;
     }
     /**
      * Name of the API proxy.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * List of revisons defined for the API proxy.
-     * 
     */
     public List<String> getRevision() {
         return this.revision;

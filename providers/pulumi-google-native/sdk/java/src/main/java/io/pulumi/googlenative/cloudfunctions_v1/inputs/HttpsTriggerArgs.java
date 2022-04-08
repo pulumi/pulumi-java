@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes HttpsTrigger, could be used to connect web hooks to function.
- * 
  */
 public final class HttpsTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class HttpsTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The security level for the function.
-     * 
      */
     @Import(name="securityLevel")
       private final @Nullable Output<HttpsTriggerSecurityLevel> securityLevel;

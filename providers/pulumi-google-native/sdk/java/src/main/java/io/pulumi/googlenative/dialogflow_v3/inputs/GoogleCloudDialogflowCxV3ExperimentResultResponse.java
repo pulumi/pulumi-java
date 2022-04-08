@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The inference result which includes an objective metric to optimize and the confidence interval.
- * 
  */
 public final class GoogleCloudDialogflowCxV3ExperimentResultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultResponse extends io.
 
     /**
      * The last time the experiment's stats data was updated. Will have default value if stats have never been computed for this experiment.
-     * 
      */
     @Import(name="lastUpdateTime", required=true)
       private final String lastUpdateTime;
@@ -31,7 +29,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultResponse extends io.
 
     /**
      * Version variants and metrics.
-     * 
      */
     @Import(name="versionMetrics", required=true)
       private final List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics;

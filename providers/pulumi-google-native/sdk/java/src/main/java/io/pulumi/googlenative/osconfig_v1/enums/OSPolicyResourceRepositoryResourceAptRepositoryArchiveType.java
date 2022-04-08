@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Required. Type of archive files in this repository.
-     * 
      */
     @EnumType
     public enum OSPolicyResourceRepositoryResourceAptRepositoryArchiveType {
         /**
          * Unspecified is invalid.
-         * 
          */
         ArchiveTypeUnspecified("ARCHIVE_TYPE_UNSPECIFIED"),
         /**
          * Deb indicates that the archive contains binary files.
-         * 
          */
         Deb("DEB"),
         /**
          * Deb-src indicates that the archive contains source files.
-         * 
          */
         DebSrc("DEB_SRC");
 

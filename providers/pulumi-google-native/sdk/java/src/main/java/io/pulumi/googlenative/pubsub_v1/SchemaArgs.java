@@ -17,7 +17,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The definition of the schema. This should contain a string representing the full definition of the schema that is a valid schema definition of the type specified in `type`.
-     * 
      */
     @Import(name="definition")
       private final @Nullable Output<String> definition;
@@ -28,7 +27,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the schema. Format is `projects/{project}/schemas/{schema}`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -53,7 +51,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of the schema definition.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<SchemaType> type;

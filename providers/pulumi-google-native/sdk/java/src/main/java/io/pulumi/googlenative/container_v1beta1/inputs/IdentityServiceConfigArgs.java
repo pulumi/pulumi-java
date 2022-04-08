@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * IdentityServiceConfig is configuration for Identity Service which allows customers to use external identity providers with the K8S API
- * 
  */
 public final class IdentityServiceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class IdentityServiceConfigArgs extends io.pulumi.resources.Resourc
 
     /**
      * Whether to enable the Identity Service component
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;

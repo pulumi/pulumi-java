@@ -22,7 +22,6 @@ import java.util.Objects;
 
 /**
  * The cluster config.
- * 
  */
 public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -30,7 +29,6 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.
-     * 
      */
     @Import(name="autoscalingConfig", required=true)
       private final AutoscalingConfigResponse autoscalingConfig;
@@ -41,7 +39,6 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.
-     * 
      */
     @Import(name="configBucket", required=true)
       private final String configBucket;
@@ -52,7 +49,6 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Optional. Encryption settings for the cluster.
-     * 
      */
     @Import(name="encryptionConfig", required=true)
       private final EncryptionConfigResponse encryptionConfig;
@@ -63,7 +59,6 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Optional. Port/endpoint configuration for this cluster
-     * 
      */
     @Import(name="endpointConfig", required=true)
       private final EndpointConfigResponse endpointConfig;
@@ -74,7 +69,6 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Optional. The shared Compute Engine config settings for all instances in a cluster.
-     * 
      */
     @Import(name="gceClusterConfig", required=true)
       private final GceClusterConfigResponse gceClusterConfig;
@@ -85,7 +79,6 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Optional. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config.
-     * 
      */
     @Import(name="gkeClusterConfig", required=true)
       private final GkeClusterConfigResponse gkeClusterConfig;
@@ -95,8 +88,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node's role metadata to run an executable on a master or worker node, as shown below using curl (you can also use wget): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1beta2/instance/attributes/dataproc-role) if [[ "${ROLE}" == 'Master' ]]; then ... master specific actions ... else ... worker specific actions ... fi
-     * 
+     * Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node's role metadata to run an executable on a master or worker node, as shown below using curl (you can also use wget): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1beta2/instance/attributes/dataproc-role) if [[ "${ROLE}" == 'Master' ]]; then ... master specific actions ... else ... worker specific actions ... fi 
      */
     @Import(name="initializationActions", required=true)
       private final List<NodeInitializationActionResponse> initializationActions;
@@ -107,7 +99,6 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Optional. The config setting for auto delete cluster schedule.
-     * 
      */
     @Import(name="lifecycleConfig", required=true)
       private final LifecycleConfigResponse lifecycleConfig;
@@ -118,7 +109,6 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Optional. The Compute Engine config settings for the master instance in a cluster.
-     * 
      */
     @Import(name="masterConfig", required=true)
       private final InstanceGroupConfigResponse masterConfig;
@@ -129,7 +119,6 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Optional. Metastore configuration.
-     * 
      */
     @Import(name="metastoreConfig", required=true)
       private final MetastoreConfigResponse metastoreConfig;
@@ -140,7 +129,6 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Optional. The Compute Engine config settings for additional worker instances in a cluster.
-     * 
      */
     @Import(name="secondaryWorkerConfig", required=true)
       private final InstanceGroupConfigResponse secondaryWorkerConfig;
@@ -151,7 +139,6 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Optional. Security related configuration.
-     * 
      */
     @Import(name="securityConfig", required=true)
       private final SecurityConfigResponse securityConfig;
@@ -162,7 +149,6 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Optional. The config settings for software inside the cluster.
-     * 
      */
     @Import(name="softwareConfig", required=true)
       private final SoftwareConfigResponse softwareConfig;
@@ -173,7 +159,6 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.
-     * 
      */
     @Import(name="tempBucket", required=true)
       private final String tempBucket;
@@ -184,7 +169,6 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Optional. The Compute Engine config settings for worker instances in a cluster.
-     * 
      */
     @Import(name="workerConfig", required=true)
       private final InstanceGroupConfigResponse workerConfig;

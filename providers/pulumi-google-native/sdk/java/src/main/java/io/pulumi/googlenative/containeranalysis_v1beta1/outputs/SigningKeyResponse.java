@@ -11,22 +11,18 @@ import java.util.Objects;
 public final class SigningKeyResponse {
     /**
      * key_id is an identifier for the signing key.
-     * 
      */
     private final String keyId;
     /**
      * This field contains the corresponding signature scheme. Eg: "rsassa-pss-sha256".
-     * 
      */
     private final String keyScheme;
     /**
      * This field identifies the specific signing method. Eg: "rsa", "ed25519", and "ecdsa".
-     * 
      */
     private final String keyType;
     /**
      * This field contains the actual public key.
-     * 
      */
     private final String publicKeyValue;
 
@@ -44,28 +40,24 @@ public final class SigningKeyResponse {
 
     /**
      * key_id is an identifier for the signing key.
-     * 
     */
     public String getKeyId() {
         return this.keyId;
     }
     /**
      * This field contains the corresponding signature scheme. Eg: "rsassa-pss-sha256".
-     * 
     */
     public String getKeyScheme() {
         return this.keyScheme;
     }
     /**
      * This field identifies the specific signing method. Eg: "rsa", "ed25519", and "ecdsa".
-     * 
     */
     public String getKeyType() {
         return this.keyType;
     }
     /**
      * This field contains the actual public key.
-     * 
     */
     public String getPublicKeyValue() {
         return this.publicKeyValue;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Summary statistics of a custom dictionary.
- * 
  */
 public final class GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse extends 
 
     /**
      * Approximate number of distinct phrases in the dictionary.
-     * 
      */
     @Import(name="approxNumPhrases", required=true)
       private final String approxNumPhrases;

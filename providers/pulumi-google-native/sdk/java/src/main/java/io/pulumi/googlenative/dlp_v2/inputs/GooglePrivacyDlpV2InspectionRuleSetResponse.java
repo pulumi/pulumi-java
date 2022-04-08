@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Rule set for modifying a set of infoTypes to alter behavior under certain circumstances, depending on the specific details of the rules within the set.
- * 
  */
 public final class GooglePrivacyDlpV2InspectionRuleSetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GooglePrivacyDlpV2InspectionRuleSetResponse extends io.pulumi
 
     /**
      * List of infoTypes this rule set is applied to.
-     * 
      */
     @Import(name="infoTypes", required=true)
       private final List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
@@ -31,7 +29,6 @@ public final class GooglePrivacyDlpV2InspectionRuleSetResponse extends io.pulumi
 
     /**
      * Set of rules to be applied to infoTypes. The rules are applied in order.
-     * 
      */
     @Import(name="rules", required=true)
       private final List<GooglePrivacyDlpV2InspectionRuleResponse> rules;

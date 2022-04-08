@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Identity related configuration, including service account based secure multi-tenancy user mappings.
- * 
  */
 public final class IdentityConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class IdentityConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Map of user to service account.
-     * 
      */
     @Import(name="userServiceAccountMapping", required=true)
       private final Output<Map<String,String>> userServiceAccountMapping;

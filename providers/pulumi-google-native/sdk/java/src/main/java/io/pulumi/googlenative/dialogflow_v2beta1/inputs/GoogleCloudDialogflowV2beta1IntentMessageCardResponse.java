@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The card response message.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageCardResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardResponse extends
 
     /**
      * Optional. The collection of card buttons.
-     * 
      */
     @Import(name="buttons", required=true)
       private final List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse> buttons;
@@ -31,7 +29,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardResponse extends
 
     /**
      * Optional. The public URI to an image file for the card.
-     * 
      */
     @Import(name="imageUri", required=true)
       private final String imageUri;
@@ -42,7 +39,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardResponse extends
 
     /**
      * Optional. The subtitle of the card.
-     * 
      */
     @Import(name="subtitle", required=true)
       private final String subtitle;
@@ -53,7 +49,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardResponse extends
 
     /**
      * Optional. The title of the card.
-     * 
      */
     @Import(name="title", required=true)
       private final String title;

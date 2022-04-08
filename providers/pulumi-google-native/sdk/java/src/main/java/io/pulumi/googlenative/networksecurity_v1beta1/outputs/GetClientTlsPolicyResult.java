@@ -15,42 +15,34 @@ import java.util.Objects;
 public final class GetClientTlsPolicyResult {
     /**
      * Optional. Defines a mechanism to provision client identity (public and private keys) for peer to peer authentication. The presence of this dictates mTLS.
-     * 
      */
     private final GoogleCloudNetworksecurityV1beta1CertificateProviderResponse clientCertificate;
     /**
      * The timestamp when the resource was created.
-     * 
      */
     private final String createTime;
     /**
      * Optional. Free-text description of the resource.
-     * 
      */
     private final String description;
     /**
      * Optional. Set of label tags associated with the resource.
-     * 
      */
     private final Map<String,String> labels;
     /**
      * Name of the ClientTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/clientTlsPolicies/{client_tls_policy}`
-     * 
      */
     private final String name;
     /**
      * Optional. Defines the mechanism to obtain the Certificate Authority certificate to validate the server certificate. If empty, client does not validate the server certificate.
-     * 
      */
     private final List<ValidationCAResponse> serverValidationCa;
     /**
      * Optional. Server Name Indication string to present to the server during TLS handshake. E.g: "secure.example.com".
-     * 
      */
     private final String sni;
     /**
      * The timestamp when the resource was updated.
-     * 
      */
     private final String updateTime;
 
@@ -76,56 +68,48 @@ public final class GetClientTlsPolicyResult {
 
     /**
      * Optional. Defines a mechanism to provision client identity (public and private keys) for peer to peer authentication. The presence of this dictates mTLS.
-     * 
     */
     public GoogleCloudNetworksecurityV1beta1CertificateProviderResponse getClientCertificate() {
         return this.clientCertificate;
     }
     /**
      * The timestamp when the resource was created.
-     * 
     */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. Free-text description of the resource.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * Optional. Set of label tags associated with the resource.
-     * 
     */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Name of the ClientTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/clientTlsPolicies/{client_tls_policy}`
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Optional. Defines the mechanism to obtain the Certificate Authority certificate to validate the server certificate. If empty, client does not validate the server certificate.
-     * 
     */
     public List<ValidationCAResponse> getServerValidationCa() {
         return this.serverValidationCa;
     }
     /**
      * Optional. Server Name Indication string to present to the server during TLS handshake. E.g: "secure.example.com".
-     * 
     */
     public String getSni() {
         return this.sni;
     }
     /**
      * The timestamp when the resource was updated.
-     * 
     */
     public String getUpdateTime() {
         return this.updateTime;

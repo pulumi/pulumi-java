@@ -18,7 +18,6 @@ public final class CustomClassArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID to use for the custom class, which will become the final component of the custom class' resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
-     * 
      */
     @Import(name="customClassId", required=true)
       private final Output<String> customClassId;
@@ -29,7 +28,6 @@ public final class CustomClassArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A collection of class items.
-     * 
      */
     @Import(name="items")
       private final @Nullable Output<List<ClassItemArgs>> items;
@@ -47,7 +45,6 @@ public final class CustomClassArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the custom class.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

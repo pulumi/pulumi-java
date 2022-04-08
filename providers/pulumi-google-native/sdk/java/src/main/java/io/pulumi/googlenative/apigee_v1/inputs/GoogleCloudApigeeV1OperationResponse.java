@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Represents the pairing of REST resource path and the actions (verbs) allowed on the resource path.
- * 
  */
 public final class GoogleCloudApigeeV1OperationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudApigeeV1OperationResponse extends io.pulumi.resour
 
     /**
      * methods refers to the REST verbs as in https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html. When none specified, all verb types are allowed.
-     * 
      */
     @Import(name="methods", required=true)
       private final List<String> methods;
@@ -30,7 +28,6 @@ public final class GoogleCloudApigeeV1OperationResponse extends io.pulumi.resour
 
     /**
      * REST resource path associated with the API proxy or remote service.
-     * 
      */
     @Import(name="resource", required=true)
       private final String resource;

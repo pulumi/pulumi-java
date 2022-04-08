@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Definition for extended entitlement parameters.
- * 
  */
 public final class GoogleCloudChannelV1ParameterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudChannelV1ParameterResponse extends io.pulumi.resou
 
     /**
      * Specifies whether this parameter is allowed to be changed. For example, for a Google Workspace Business Starter entitlement in commitment plan, num_units is editable when entitlement is active.
-     * 
      */
     @Import(name="editable", required=true)
       private final Boolean editable;
@@ -31,7 +29,6 @@ public final class GoogleCloudChannelV1ParameterResponse extends io.pulumi.resou
 
     /**
      * Name of the parameter.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -42,7 +39,6 @@ public final class GoogleCloudChannelV1ParameterResponse extends io.pulumi.resou
 
     /**
      * Value of the parameter.
-     * 
      */
     @Import(name="value", required=true)
       private final GoogleCloudChannelV1ValueResponse value;

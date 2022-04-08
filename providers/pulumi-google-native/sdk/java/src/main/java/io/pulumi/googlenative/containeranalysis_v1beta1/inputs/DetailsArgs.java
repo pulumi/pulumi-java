@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Details of an attestation occurrence.
- * 
  */
 public final class DetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class DetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Attestation for the resource.
-     * 
      */
     @Import(name="attestation", required=true)
       private final Output<AttestationArgs> attestation;

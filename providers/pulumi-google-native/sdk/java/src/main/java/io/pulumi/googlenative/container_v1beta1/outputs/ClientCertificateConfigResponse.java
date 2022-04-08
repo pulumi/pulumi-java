@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ClientCertificateConfigResponse {
     /**
      * Issue a client certificate.
-     * 
      */
     private final Boolean issueClientCertificate;
 
@@ -22,7 +21,6 @@ public final class ClientCertificateConfigResponse {
 
     /**
      * Issue a client certificate.
-     * 
     */
     public Boolean getIssueClientCertificate() {
         return this.issueClientCertificate;

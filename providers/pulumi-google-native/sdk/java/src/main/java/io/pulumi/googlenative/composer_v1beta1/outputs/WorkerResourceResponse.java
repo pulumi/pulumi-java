@@ -12,27 +12,22 @@ import java.util.Objects;
 public final class WorkerResourceResponse {
     /**
      * Optional. CPU request and limit for a single Airflow worker replica.
-     * 
      */
     private final Double cpu;
     /**
      * Optional. Maximum number of workers for autoscaling.
-     * 
      */
     private final Integer maxCount;
     /**
      * Optional. Memory (GB) request and limit for a single Airflow worker replica.
-     * 
      */
     private final Double memoryGb;
     /**
      * Optional. Minimum number of workers for autoscaling.
-     * 
      */
     private final Integer minCount;
     /**
      * Optional. Storage (GB) request and limit for a single Airflow worker replica.
-     * 
      */
     private final Double storageGb;
 
@@ -52,35 +47,30 @@ public final class WorkerResourceResponse {
 
     /**
      * Optional. CPU request and limit for a single Airflow worker replica.
-     * 
     */
     public Double getCpu() {
         return this.cpu;
     }
     /**
      * Optional. Maximum number of workers for autoscaling.
-     * 
     */
     public Integer getMaxCount() {
         return this.maxCount;
     }
     /**
      * Optional. Memory (GB) request and limit for a single Airflow worker replica.
-     * 
     */
     public Double getMemoryGb() {
         return this.memoryGb;
     }
     /**
      * Optional. Minimum number of workers for autoscaling.
-     * 
     */
     public Integer getMinCount() {
         return this.minCount;
     }
     /**
      * Optional. Storage (GB) request and limit for a single Airflow worker replica.
-     * 
     */
     public Double getStorageGb() {
         return this.storageGb;

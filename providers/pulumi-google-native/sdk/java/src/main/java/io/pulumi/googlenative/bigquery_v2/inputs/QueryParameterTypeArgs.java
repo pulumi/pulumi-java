@@ -18,7 +18,6 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * [Optional] The type of the array's elements, if this is an array.
-     * 
      */
     @Import(name="arrayType")
       private final @Nullable Output<QueryParameterTypeArgs> arrayType;
@@ -29,7 +28,6 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * [Optional] The types of the fields of this struct, in order, if this is a struct.
-     * 
      */
     @Import(name="structTypes")
       private final @Nullable Output<List<QueryParameterTypeStructTypesItemArgs>> structTypes;
@@ -40,7 +38,6 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * [Required] The top level type of this field.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

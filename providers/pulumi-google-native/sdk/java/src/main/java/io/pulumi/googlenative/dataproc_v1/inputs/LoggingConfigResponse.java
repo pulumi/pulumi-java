@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The runtime logging config of the job.
- * 
  */
 public final class LoggingConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class LoggingConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-     * 
      */
     @Import(name="driverLogLevels", required=true)
       private final Map<String,String> driverLogLevels;

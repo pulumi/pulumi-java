@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * A descriptive representation of submitted pipeline as well as the executed form. This data is provided by the Dataflow service for ease of visualizing the pipeline and interpreting Dataflow provided metrics.
- * 
  */
 public final class PipelineDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class PipelineDescriptionResponse extends io.pulumi.resources.Invok
 
     /**
      * Pipeline level display data.
-     * 
      */
     @Import(name="displayData", required=true)
       private final List<DisplayDataResponse> displayData;
@@ -32,7 +30,6 @@ public final class PipelineDescriptionResponse extends io.pulumi.resources.Invok
 
     /**
      * Description of each stage of execution of the pipeline.
-     * 
      */
     @Import(name="executionPipelineStage", required=true)
       private final List<ExecutionStageSummaryResponse> executionPipelineStage;
@@ -43,7 +40,6 @@ public final class PipelineDescriptionResponse extends io.pulumi.resources.Invok
 
     /**
      * Description of each transform in the pipeline and collections between them.
-     * 
      */
     @Import(name="originalPipelineTransform", required=true)
       private final List<TransformSummaryResponse> originalPipelineTransform;

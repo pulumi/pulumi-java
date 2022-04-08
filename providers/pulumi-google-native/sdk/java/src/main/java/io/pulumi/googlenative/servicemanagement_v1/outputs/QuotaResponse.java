@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class QuotaResponse {
     /**
      * List of `QuotaLimit` definitions for the service.
-     * 
      */
     private final List<QuotaLimitResponse> limits;
     /**
      * List of `MetricRule` definitions, each one mapping a selected method to one or more metrics.
-     * 
      */
     private final List<MetricRuleResponse> metricRules;
 
@@ -32,14 +30,12 @@ public final class QuotaResponse {
 
     /**
      * List of `QuotaLimit` definitions for the service.
-     * 
     */
     public List<QuotaLimitResponse> getLimits() {
         return this.limits;
     }
     /**
      * List of `MetricRule` definitions, each one mapping a selected method to one or more metrics.
-     * 
     */
     public List<MetricRuleResponse> getMetricRules() {
         return this.metricRules;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Options for enabling sharding.
- * 
  */
 public final class ShardingOptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ShardingOptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Shards test cases into the specified groups of packages, classes, and/or methods.
-     * 
      */
     @Import(name="manualSharding")
       private final @Nullable Output<ManualShardingArgs> manualSharding;
@@ -32,7 +30,6 @@ public final class ShardingOptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Uniformly shards test cases given a total number of shards.
-     * 
      */
     @Import(name="uniformSharding")
       private final @Nullable Output<UniformShardingArgs> uniformSharding;

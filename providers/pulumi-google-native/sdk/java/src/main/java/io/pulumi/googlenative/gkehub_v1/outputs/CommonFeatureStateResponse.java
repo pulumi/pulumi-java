@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class CommonFeatureStateResponse {
     /**
      * Appdevexperience specific state.
-     * 
      */
     private final AppDevExperienceFeatureStateResponse appdevexperience;
     /**
      * The "running state" of the Feature in this Hub.
-     * 
      */
     private final FeatureStateResponse state;
 
@@ -31,14 +29,12 @@ public final class CommonFeatureStateResponse {
 
     /**
      * Appdevexperience specific state.
-     * 
     */
     public AppDevExperienceFeatureStateResponse getAppdevexperience() {
         return this.appdevexperience;
     }
     /**
      * The "running state" of the Feature in this Hub.
-     * 
     */
     public FeatureStateResponse getState() {
         return this.state;

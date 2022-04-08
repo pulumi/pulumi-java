@@ -19,7 +19,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration parameters for this environment.
-     * 
      */
     @Import(name="config")
       private final @Nullable Output<EnvironmentConfigArgs> config;
@@ -30,7 +29,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be <= 128 bytes in size.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -48,7 +46,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the environment, in the form: "projects/{projectId}/locations/{locationId}/environments/{environmentId}" EnvironmentId must start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -66,7 +63,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The current state of the environment.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<EnvironmentState> state;

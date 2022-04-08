@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of the SKU instances being reserved. Next ID: 9
- * 
  */
 public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
 
     /**
      * Specifies accelerator type and count.
-     * 
      */
     @Import(name="guestAccelerators")
       private final @Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators;
@@ -36,7 +34,6 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
 
     /**
      * Specifies amount of local ssd to reserve with each instance. The type of disk is local-ssd.
-     * 
      */
     @Import(name="localSsds")
       private final @Nullable Output<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds;
@@ -47,7 +44,6 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
 
     /**
      * An opaque location hint used to place the allocation close to other resources. This field is for use by internal tools that use the public API.
-     * 
      */
     @Import(name="locationHint")
       private final @Nullable Output<String> locationHint;
@@ -58,7 +54,6 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
 
     /**
      * Specifies type of machine (name only) which has fixed number of vCPUs and fixed amount of memory. This also includes specifying custom machine type following custom-NUMBER_OF_CPUS-AMOUNT_OF_MEMORY pattern.
-     * 
      */
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
@@ -69,7 +64,6 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
 
     /**
      * Specifies the number of hours after reservation creation where instances using the reservation won't be scheduled for maintenance.
-     * 
      */
     @Import(name="maintenanceFreezeDurationHours")
       private final @Nullable Output<Integer> maintenanceFreezeDurationHours;
@@ -80,7 +74,6 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
 
     /**
      * For more information about maintenance intervals, see Setting maintenance intervals.
-     * 
      */
     @Import(name="maintenanceInterval")
       private final @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval> maintenanceInterval;
@@ -91,7 +84,6 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
 
     /**
      * Minimum cpu platform the reservation.
-     * 
      */
     @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;

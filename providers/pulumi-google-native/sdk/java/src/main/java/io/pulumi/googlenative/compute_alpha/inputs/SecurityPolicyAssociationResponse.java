@@ -14,7 +14,6 @@ public final class SecurityPolicyAssociationResponse extends io.pulumi.resources
 
     /**
      * The resource that the security policy is attached to.
-     * 
      */
     @Import(name="attachmentId", required=true)
       private final String attachmentId;
@@ -25,7 +24,6 @@ public final class SecurityPolicyAssociationResponse extends io.pulumi.resources
 
     /**
      * The display name of the security policy of the association.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -36,7 +34,6 @@ public final class SecurityPolicyAssociationResponse extends io.pulumi.resources
 
     /**
      * The name for an association.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -47,7 +44,6 @@ public final class SecurityPolicyAssociationResponse extends io.pulumi.resources
 
     /**
      * The security policy ID of the association.
-     * 
      */
     @Import(name="securityPolicyId", required=true)
       private final String securityPolicyId;

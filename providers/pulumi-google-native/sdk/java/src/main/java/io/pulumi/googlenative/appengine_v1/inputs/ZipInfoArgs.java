@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The zip file information for a zip deployment.
- * 
  */
 public final class ZipInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ZipInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An estimate of the number of files in a zip for a zip deployment. If set, must be greater than or equal to the actual number of files. Used for optimizing performance; if not provided, deployment may be slow.
-     * 
      */
     @Import(name="filesCount")
       private final @Nullable Output<Integer> filesCount;
@@ -32,7 +30,6 @@ public final class ZipInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * URL of the zip file to deploy from. Must be a URL to a resource in Google Cloud Storage in the form 'http(s)://storage.googleapis.com//'.
-     * 
      */
     @Import(name="sourceUrl")
       private final @Nullable Output<String> sourceUrl;

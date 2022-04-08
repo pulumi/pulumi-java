@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Optional. The determinism level of the JavaScript UDF, if defined.
-     * 
      */
     @EnumType
     public enum RoutineDeterminismLevel {
         /**
          * The determinism of the UDF is unspecified.
-         * 
          */
         DeterminismLevelUnspecified("DETERMINISM_LEVEL_UNSPECIFIED"),
         /**
          * The UDF is deterministic, meaning that 2 function calls with the same inputs always produce the same result, even across 2 query runs.
-         * 
          */
         Deterministic("DETERMINISTIC"),
         /**
          * The UDF is not deterministic.
-         * 
          */
         NotDeterministic("NOT_DETERMINISTIC");
 

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Color preprocessing configuration.
- * 
  */
 public final class ColorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ColorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Control brightness of the video. Enter a value between -1 and 1, where -1 is minimum brightness and 1 is maximum brightness. 0 is no change. The default is 0.
-     * 
      */
     @Import(name="brightness", required=true)
       private final Double brightness;
@@ -29,7 +27,6 @@ public final class ColorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Control black and white contrast of the video. Enter a value between -1 and 1, where -1 is minimum contrast and 1 is maximum contrast. 0 is no change. The default is 0.
-     * 
      */
     @Import(name="contrast", required=true)
       private final Double contrast;
@@ -40,7 +37,6 @@ public final class ColorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Control color saturation of the video. Enter a value between -1 and 1, where -1 is fully desaturated and 1 is maximum saturation. 0 is no change. The default is 0.
-     * 
      */
     @Import(name="saturation", required=true)
       private final Double saturation;

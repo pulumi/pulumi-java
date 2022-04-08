@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A file or directory to install on the device before the test starts.
- * 
  */
 public final class IosDeviceFileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class IosDeviceFileResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The bundle id of the app where this file lives. iOS apps sandbox their own filesystem, so app files must specify which app installed on the device.
-     * 
      */
     @Import(name="bundleId", required=true)
       private final String bundleId;
@@ -30,7 +28,6 @@ public final class IosDeviceFileResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The source file
-     * 
      */
     @Import(name="content", required=true)
       private final FileReferenceResponse content;
@@ -41,7 +38,6 @@ public final class IosDeviceFileResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Location of the file on the device, inside the app's sandboxed filesystem
-     * 
      */
     @Import(name="devicePath", required=true)
       private final String devicePath;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Overlay configuration.
- * 
  */
 public final class OverlayResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class OverlayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of Animations. The list should be chronological, without any time overlap.
-     * 
      */
     @Import(name="animations", required=true)
       private final List<AnimationResponse> animations;
@@ -31,7 +29,6 @@ public final class OverlayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Image overlay.
-     * 
      */
     @Import(name="image", required=true)
       private final ImageResponse image;

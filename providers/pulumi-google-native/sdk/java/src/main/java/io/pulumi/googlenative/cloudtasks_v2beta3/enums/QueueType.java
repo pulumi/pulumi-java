@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Immutable. The type of a queue (push or pull). `Queue.type` is an immutable property of the queue that is set at the queue creation time. When left unspecified, the default value of `PUSH` is selected.
-     * 
      */
     @EnumType
     public enum QueueType {
         /**
          * Default value.
-         * 
          */
         TypeUnspecified("TYPE_UNSPECIFIED"),
         /**
          * A pull queue.
-         * 
          */
         Pull("PULL"),
         /**
          * A push queue.
-         * 
          */
         Push("PUSH");
 

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The conversation source, which is a combination of transcript and audio.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceRespo
 
     /**
      * The source when the conversation comes from Dialogflow.
-     * 
      */
     @Import(name="dialogflowSource", required=true)
       private final GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource;
@@ -30,7 +28,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceRespo
 
     /**
      * A Cloud Storage location specification for the audio and transcript.
-     * 
      */
     @Import(name="gcsSource", required=true)
       private final GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource;

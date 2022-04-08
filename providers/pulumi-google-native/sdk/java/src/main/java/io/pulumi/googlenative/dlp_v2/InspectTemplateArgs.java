@@ -17,7 +17,6 @@ public final class InspectTemplateArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Short description (max 256 chars).
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -28,7 +27,6 @@ public final class InspectTemplateArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Display name (max 256 chars).
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -39,7 +37,6 @@ public final class InspectTemplateArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The core content of the template. Configuration of the scanning process.
-     * 
      */
     @Import(name="inspectConfig")
       private final @Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
@@ -64,7 +61,6 @@ public final class InspectTemplateArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The template id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.
-     * 
      */
     @Import(name="templateId")
       private final @Nullable Output<String> templateId;

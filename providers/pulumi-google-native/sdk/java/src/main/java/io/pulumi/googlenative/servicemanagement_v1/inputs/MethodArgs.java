@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Method represents a method of an API interface.
- * 
  */
 public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The simple name of this method.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -35,7 +33,6 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Any metadata attached to the method.
-     * 
      */
     @Import(name="options")
       private final @Nullable Output<List<OptionArgs>> options;
@@ -46,7 +43,6 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If true, the request is streamed.
-     * 
      */
     @Import(name="requestStreaming")
       private final @Nullable Output<Boolean> requestStreaming;
@@ -57,7 +53,6 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A URL of the input message type.
-     * 
      */
     @Import(name="requestTypeUrl")
       private final @Nullable Output<String> requestTypeUrl;
@@ -68,7 +63,6 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If true, the response is streamed.
-     * 
      */
     @Import(name="responseStreaming")
       private final @Nullable Output<Boolean> responseStreaming;
@@ -79,7 +73,6 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The URL of the output message type.
-     * 
      */
     @Import(name="responseTypeUrl")
       private final @Nullable Output<String> responseTypeUrl;
@@ -90,7 +83,6 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The source syntax of this method.
-     * 
      */
     @Import(name="syntax")
       private final @Nullable Output<MethodSyntax> syntax;

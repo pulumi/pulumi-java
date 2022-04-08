@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Represents an arbitrary window of time.
- * 
  */
 public final class TimeWindowResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class TimeWindowResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The time that the window ends. The end time should take place after the start time.
-     * 
      */
     @Import(name="endTime", required=true)
       private final String endTime;
@@ -30,7 +28,6 @@ public final class TimeWindowResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * MaintenanceExclusionOptions provides maintenance exclusion related options.
-     * 
      */
     @Import(name="maintenanceExclusionOptions", required=true)
       private final MaintenanceExclusionOptionsResponse maintenanceExclusionOptions;
@@ -41,7 +38,6 @@ public final class TimeWindowResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The time that the window first starts.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;

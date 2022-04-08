@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Define a parameter's name and location. The parameter may be passed as either an HTTP header or a URL query parameter, and if both are passed the behavior is implementation-dependent.
- * 
  */
 public final class SystemParameterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SystemParameterArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Define the HTTP header name to use for the parameter. It is case insensitive.
-     * 
      */
     @Import(name="httpHeader")
       private final @Nullable Output<String> httpHeader;
@@ -31,7 +29,6 @@ public final class SystemParameterArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Define the name of the parameter, such as "api_key" . It is case sensitive.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -42,7 +39,6 @@ public final class SystemParameterArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Define the URL query parameter name to use for the parameter. It is case sensitive.
-     * 
      */
     @Import(name="urlQueryParameter")
       private final @Nullable Output<String> urlQueryParameter;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An artifact that can be deployed in some runtime.
- * 
  */
 public final class DeployableArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DeployableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource URI for the artifact being deployed.
-     * 
      */
     @Import(name="resourceUri")
       private final @Nullable Output<List<String>> resourceUri;

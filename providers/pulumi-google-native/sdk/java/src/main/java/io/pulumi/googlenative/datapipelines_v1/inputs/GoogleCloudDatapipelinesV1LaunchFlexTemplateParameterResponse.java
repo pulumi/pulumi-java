@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Launch Flex Template parameter.
- * 
  */
 public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
 
     /**
      * Cloud Storage path to a file with a JSON-serialized ContainerSpec as content.
-     * 
      */
     @Import(name="containerSpecGcsPath", required=true)
       private final String containerSpecGcsPath;
@@ -32,7 +30,6 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
 
     /**
      * The runtime environment for the Flex Template job.
-     * 
      */
     @Import(name="environment", required=true)
       private final GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment;
@@ -43,7 +40,6 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
 
     /**
      * The job name to use for the created job. For an update job request, the job name should be the same as the existing running job.
-     * 
      */
     @Import(name="jobName", required=true)
       private final String jobName;
@@ -54,7 +50,6 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
 
     /**
      * Launch options for this Flex Template job. This is a common set of options across languages and templates. This should not be used to pass job parameters.
-     * 
      */
     @Import(name="launchOptions", required=true)
       private final Map<String,String> launchOptions;
@@ -65,7 +60,6 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
 
     /**
      * The parameters for the Flex Template. Example: `{"num_workers":"5"}`
-     * 
      */
     @Import(name="parameters", required=true)
       private final Map<String,String> parameters;
@@ -76,7 +70,6 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
 
     /**
      * Use this to pass transform name mappings for streaming update jobs. Example: `{"oldTransformName":"newTransformName",...}`
-     * 
      */
     @Import(name="transformNameMappings", required=true)
       private final Map<String,String> transformNameMappings;
@@ -87,7 +80,6 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
 
     /**
      * Set this to true if you are sending a request to update a running streaming job. When set, the job name should be the same as the running job.
-     * 
      */
     @Import(name="update", required=true)
       private final Boolean update;

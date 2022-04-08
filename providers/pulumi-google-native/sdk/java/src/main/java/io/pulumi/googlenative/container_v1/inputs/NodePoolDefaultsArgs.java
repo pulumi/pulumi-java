@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Subset of Nodepool message that has defaults.
- * 
  */
 public final class NodePoolDefaultsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class NodePoolDefaultsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Subset of NodeConfig message that has defaults.
-     * 
      */
     @Import(name="nodeConfigDefaults")
       private final @Nullable Output<NodeConfigDefaultsArgs> nodeConfigDefaults;

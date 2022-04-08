@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Set FlexRS goal for the job. https://cloud.google.com/dataflow/docs/guides/flexrs
-     * 
      */
     @EnumType
     public enum GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoal {
         /**
          * Run in the default mode.
-         * 
          */
         FlexrsUnspecified("FLEXRS_UNSPECIFIED"),
         /**
          * Optimize for lower execution time.
-         * 
          */
         FlexrsSpeedOptimized("FLEXRS_SPEED_OPTIMIZED"),
         /**
          * Optimize for lower cost.
-         * 
          */
         FlexrsCostOptimized("FLEXRS_COST_OPTIMIZED");
 

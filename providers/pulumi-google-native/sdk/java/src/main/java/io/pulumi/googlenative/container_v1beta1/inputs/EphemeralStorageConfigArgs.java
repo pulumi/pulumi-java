@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * EphemeralStorageConfig contains configuration for the ephemeral storage filesystem.
- * 
  */
 public final class EphemeralStorageConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EphemeralStorageConfigArgs extends io.pulumi.resources.Resour
 
     /**
      * Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
-     * 
      */
     @Import(name="localSsdCount")
       private final @Nullable Output<Integer> localSsdCount;

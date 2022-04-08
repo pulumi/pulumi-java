@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A message representing a rule in the phrase matcher.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
 
     /**
      * A list of phase match rules that are included in this group.
-     * 
      */
     @Import(name="phraseMatchRules")
       private final @Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> phraseMatchRules;
@@ -33,7 +31,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
 
     /**
      * The type of this phrase match rule group.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type;

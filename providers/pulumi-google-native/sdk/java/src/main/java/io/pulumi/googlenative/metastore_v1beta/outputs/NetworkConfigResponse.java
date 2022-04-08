@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class NetworkConfigResponse {
     /**
      * Immutable. The consumer-side network configuration for the Dataproc Metastore instance.
-     * 
      */
     private final List<ConsumerResponse> consumers;
 
@@ -23,7 +22,6 @@ public final class NetworkConfigResponse {
 
     /**
      * Immutable. The consumer-side network configuration for the Dataproc Metastore instance.
-     * 
     */
     public List<ConsumerResponse> getConsumers() {
         return this.consumers;

@@ -20,7 +20,6 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional textual description of the resource; provided by the client when the resource is created.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -38,7 +37,6 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Map of labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<List<CompositeTypeLabelEntryArgs>> labels;
@@ -49,7 +47,6 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the composite type, must follow the expression: `[a-z]([-a-z0-9_.]{0,61}[a-z0-9])?`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -74,7 +71,6 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Files for the template type.
-     * 
      */
     @Import(name="templateContents")
       private final @Nullable Output<TemplateContentsArgs> templateContents;

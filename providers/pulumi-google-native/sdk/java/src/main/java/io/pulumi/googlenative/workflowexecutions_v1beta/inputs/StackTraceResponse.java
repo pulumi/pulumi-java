@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A collection of stack elements (frames) where an error occurred.
- * 
  */
 public final class StackTraceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class StackTraceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An array of stack elements.
-     * 
      */
     @Import(name="elements", required=true)
       private final List<StackTraceElementResponse> elements;

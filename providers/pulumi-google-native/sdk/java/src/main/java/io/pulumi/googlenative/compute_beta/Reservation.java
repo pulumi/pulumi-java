@@ -16,174 +16,149 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new reservation. For more information, read Reserving zonal resources.
- * 
  */
 @ResourceType(type="google-native:compute/beta:Reservation")
 public class Reservation extends io.pulumi.resources.CustomResource {
     /**
      * Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
-     * 
      */
     @Export(name="commitment", type=String.class, parameters={})
     private Output<String> commitment;
 
     /**
      * @return Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
-     * 
      */
     public Output<String> getCommitment() {
         return this.commitment;
     }
     /**
      * Creation timestamp in RFC3339 text format.
-     * 
      */
     @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
      * @return Creation timestamp in RFC3339 text format.
-     * 
      */
     public Output<String> getCreationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Type of the resource. Always compute#reservations for reservations.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return Type of the resource. Always compute#reservations for reservations.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Reserved for future use.
-     * 
      */
     @Export(name="satisfiesPzs", type=Boolean.class, parameters={})
     private Output<Boolean> satisfiesPzs;
 
     /**
      * @return Reserved for future use.
-     * 
      */
     public Output<Boolean> getSatisfiesPzs() {
         return this.satisfiesPzs;
     }
     /**
      * Server-defined fully-qualified URL for this resource.
-     * 
      */
     @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
      * @return Server-defined fully-qualified URL for this resource.
-     * 
      */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
     /**
      * Share-settings for shared-reservation
-     * 
      */
     @Export(name="shareSettings", type=ShareSettingsResponse.class, parameters={})
     private Output<ShareSettingsResponse> shareSettings;
 
     /**
      * @return Share-settings for shared-reservation
-     * 
      */
     public Output<ShareSettingsResponse> getShareSettings() {
         return this.shareSettings;
     }
     /**
      * Reservation for instances with specific machine shapes.
-     * 
      */
     @Export(name="specificReservation", type=AllocationSpecificSKUReservationResponse.class, parameters={})
     private Output<AllocationSpecificSKUReservationResponse> specificReservation;
 
     /**
      * @return Reservation for instances with specific machine shapes.
-     * 
      */
     public Output<AllocationSpecificSKUReservationResponse> getSpecificReservation() {
         return this.specificReservation;
     }
     /**
      * Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
-     * 
      */
     @Export(name="specificReservationRequired", type=Boolean.class, parameters={})
     private Output<Boolean> specificReservationRequired;
 
     /**
      * @return Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
-     * 
      */
     public Output<Boolean> getSpecificReservationRequired() {
         return this.specificReservationRequired;
     }
     /**
      * The status of the reservation.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return The status of the reservation.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.
-     * 
      */
     @Export(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
     /**
      * @return Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.
-     * 
      */
     public Output<String> getZone() {
         return this.zone;

@@ -24,7 +24,6 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The description of the notification config (max of 1024 characters).
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -35,7 +34,6 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -53,7 +51,6 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The Pub/Sub topic to send notifications to. Its format is "projects/[project_id]/topics/[topic]".
-     * 
      */
     @Import(name="pubsubTopic")
       private final @Nullable Output<String> pubsubTopic;
@@ -64,7 +61,6 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The config for triggering streaming-based notifications.
-     * 
      */
     @Import(name="streamingConfig")
       private final @Nullable Output<StreamingConfigArgs> streamingConfig;

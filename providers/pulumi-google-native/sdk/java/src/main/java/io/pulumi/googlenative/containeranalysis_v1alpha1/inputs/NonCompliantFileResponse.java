@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Details about files that caused a compliance check to fail.
- * 
  */
 public final class NonCompliantFileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class NonCompliantFileResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Command to display the non-compliant files.
-     * 
      */
     @Import(name="displayCommand", required=true)
       private final String displayCommand;
@@ -29,7 +27,6 @@ public final class NonCompliantFileResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * display_command is a single command that can be used to display a list of non compliant files. When there is no such command, we can also iterate a list of non compliant file using 'path'. Empty if `display_command` is set.
-     * 
      */
     @Import(name="path", required=true)
       private final String path;
@@ -40,7 +37,6 @@ public final class NonCompliantFileResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Explains why a file is non compliant for a CIS check.
-     * 
      */
     @Import(name="reason", required=true)
       private final String reason;

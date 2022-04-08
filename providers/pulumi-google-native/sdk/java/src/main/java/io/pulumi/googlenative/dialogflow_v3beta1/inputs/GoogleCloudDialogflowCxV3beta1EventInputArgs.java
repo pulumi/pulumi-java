@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents the event to trigger.
- * 
  */
 public final class GoogleCloudDialogflowCxV3beta1EventInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventInputArgs extends io.pulum
 
     /**
      * Name of the event.
-     * 
      */
     @Import(name="event")
       private final @Nullable Output<String> event;

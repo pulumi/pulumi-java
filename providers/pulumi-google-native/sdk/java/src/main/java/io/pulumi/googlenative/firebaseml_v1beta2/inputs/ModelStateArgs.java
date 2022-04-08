@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * State common to all model types. Includes publishing and validation information.
- * 
  */
 public final class ModelStateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ModelStateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates if this model has been published.
-     * 
      */
     @Import(name="published")
       private final @Nullable Output<Boolean> published;

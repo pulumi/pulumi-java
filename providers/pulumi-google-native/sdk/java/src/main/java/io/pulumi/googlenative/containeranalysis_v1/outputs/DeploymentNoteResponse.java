@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class DeploymentNoteResponse {
     /**
      * Resource URI for the artifact being deployed.
-     * 
      */
     private final List<String> resourceUri;
 
@@ -23,7 +22,6 @@ public final class DeploymentNoteResponse {
 
     /**
      * Resource URI for the artifact being deployed.
-     * 
     */
     public List<String> getResourceUri() {
         return this.resourceUri;

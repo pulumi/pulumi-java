@@ -27,117 +27,94 @@ import java.util.Objects;
 public final class GetOccurrenceResult {
     /**
      * Describes an attestation of an artifact.
-     * 
      */
     private final AttestationResponse attestation;
     /**
      * Build details for a verifiable build.
-     * 
      */
     private final BuildDetailsResponse buildDetails;
     /**
      * Describes whether or not a resource passes compliance checks.
-     * 
      */
     private final ComplianceOccurrenceResponse compliance;
     /**
      * The time this `Occurrence` was created.
-     * 
      */
     private final String createTime;
     /**
      * Describes the deployment of an artifact on a runtime.
-     * 
      */
     private final DeploymentResponse deployment;
     /**
      * Describes how this resource derives from the basis in the associated note.
-     * 
      */
     private final DerivedResponse derivedImage;
     /**
      * Describes the initial scan status for this resource.
-     * 
      */
     private final DiscoveredResponse discovered;
     /**
      * This represents a DSSE attestation occurrence
-     * 
      */
     private final DSSEAttestationOccurrenceResponse dsseAttestation;
     /**
      * https://github.com/secure-systems-lab/dsse
-     * 
      */
     private final EnvelopeResponse envelope;
     /**
      * Describes the installation of a package on the linked resource.
-     * 
      */
     private final InstallationResponse installation;
     /**
      * This explicitly denotes which of the `Occurrence` details are specified. This field can be used as a filter in list requests.
-     * 
      */
     private final String kind;
     /**
      * The name of the `Occurrence` in the form "projects/{project_id}/occurrences/{OCCURRENCE_ID}"
-     * 
      */
     private final String name;
     /**
      * An analysis note associated with this image, in the form "providers/{provider_id}/notes/{NOTE_ID}" This field can be used as a filter in list requests.
-     * 
      */
     private final String noteName;
     /**
      * A description of actions that can be taken to remedy the `Note`
-     * 
      */
     private final String remediation;
     /**
      *  The resource for which the `Occurrence` applies.
-     * 
      */
     private final ResourceResponse resource;
     /**
      * The unique URL of the image or the container for which the `Occurrence` applies. For example, https://gcr.io/project/image@sha256:foo This field can be used as a filter in list requests.
-     * 
      */
     private final String resourceUrl;
     /**
      * Describes a specific software bill of materials document.
-     * 
      */
     private final DocumentOccurrenceResponse sbom;
     /**
      * Describes a specific SPDX File.
-     * 
      */
     private final FileOccurrenceResponse spdxFile;
     /**
      * Describes a specific SPDX Package.
-     * 
      */
     private final PackageInfoOccurrenceResponse spdxPackage;
     /**
      * Describes a specific relationship between SPDX elements.
-     * 
      */
     private final RelationshipOccurrenceResponse spdxRelationship;
     /**
      * The time this `Occurrence` was last updated.
-     * 
      */
     private final String updateTime;
     /**
      * Describes an upgrade.
-     * 
      */
     private final UpgradeOccurrenceResponse upgrade;
     /**
      * Details of a security vulnerability note.
-     * 
      */
     private final VulnerabilityDetailsResponse vulnerabilityDetails;
 
@@ -193,161 +170,138 @@ public final class GetOccurrenceResult {
 
     /**
      * Describes an attestation of an artifact.
-     * 
     */
     public AttestationResponse getAttestation() {
         return this.attestation;
     }
     /**
      * Build details for a verifiable build.
-     * 
     */
     public BuildDetailsResponse getBuildDetails() {
         return this.buildDetails;
     }
     /**
      * Describes whether or not a resource passes compliance checks.
-     * 
     */
     public ComplianceOccurrenceResponse getCompliance() {
         return this.compliance;
     }
     /**
      * The time this `Occurrence` was created.
-     * 
     */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Describes the deployment of an artifact on a runtime.
-     * 
     */
     public DeploymentResponse getDeployment() {
         return this.deployment;
     }
     /**
      * Describes how this resource derives from the basis in the associated note.
-     * 
     */
     public DerivedResponse getDerivedImage() {
         return this.derivedImage;
     }
     /**
      * Describes the initial scan status for this resource.
-     * 
     */
     public DiscoveredResponse getDiscovered() {
         return this.discovered;
     }
     /**
      * This represents a DSSE attestation occurrence
-     * 
     */
     public DSSEAttestationOccurrenceResponse getDsseAttestation() {
         return this.dsseAttestation;
     }
     /**
      * https://github.com/secure-systems-lab/dsse
-     * 
     */
     public EnvelopeResponse getEnvelope() {
         return this.envelope;
     }
     /**
      * Describes the installation of a package on the linked resource.
-     * 
     */
     public InstallationResponse getInstallation() {
         return this.installation;
     }
     /**
      * This explicitly denotes which of the `Occurrence` details are specified. This field can be used as a filter in list requests.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * The name of the `Occurrence` in the form "projects/{project_id}/occurrences/{OCCURRENCE_ID}"
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * An analysis note associated with this image, in the form "providers/{provider_id}/notes/{NOTE_ID}" This field can be used as a filter in list requests.
-     * 
     */
     public String getNoteName() {
         return this.noteName;
     }
     /**
      * A description of actions that can be taken to remedy the `Note`
-     * 
     */
     public String getRemediation() {
         return this.remediation;
     }
     /**
      *  The resource for which the `Occurrence` applies.
-     * 
     */
     public ResourceResponse getResource() {
         return this.resource;
     }
     /**
      * The unique URL of the image or the container for which the `Occurrence` applies. For example, https://gcr.io/project/image@sha256:foo This field can be used as a filter in list requests.
-     * 
     */
     public String getResourceUrl() {
         return this.resourceUrl;
     }
     /**
      * Describes a specific software bill of materials document.
-     * 
     */
     public DocumentOccurrenceResponse getSbom() {
         return this.sbom;
     }
     /**
      * Describes a specific SPDX File.
-     * 
     */
     public FileOccurrenceResponse getSpdxFile() {
         return this.spdxFile;
     }
     /**
      * Describes a specific SPDX Package.
-     * 
     */
     public PackageInfoOccurrenceResponse getSpdxPackage() {
         return this.spdxPackage;
     }
     /**
      * Describes a specific relationship between SPDX elements.
-     * 
     */
     public RelationshipOccurrenceResponse getSpdxRelationship() {
         return this.spdxRelationship;
     }
     /**
      * The time this `Occurrence` was last updated.
-     * 
     */
     public String getUpdateTime() {
         return this.updateTime;
     }
     /**
      * Describes an upgrade.
-     * 
     */
     public UpgradeOccurrenceResponse getUpgrade() {
         return this.upgrade;
     }
     /**
      * Details of a security vulnerability note.
-     * 
     */
     public VulnerabilityDetailsResponse getVulnerabilityDetails() {
         return this.vulnerabilityDetails;

@@ -16,314 +16,269 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a Custom Report for an Organization. A Custom Report provides Apigee Customers to create custom dashboards in addition to the standard dashboards which are provided. The Custom Report in its simplest form contains specifications about metrics, dimensions and filters. It is important to note that the custom report by itself does not provide an executable entity. The Edge UI converts the custom report definition into an analytics query and displays the result in a chart.
- * 
  */
 @ResourceType(type="google-native:apigee/v1:Report")
 public class Report extends io.pulumi.resources.CustomResource {
     /**
      * This field contains the chart type for the report
-     * 
      */
     @Export(name="chartType", type=String.class, parameters={})
     private Output<String> chartType;
 
     /**
      * @return This field contains the chart type for the report
-     * 
      */
     public Output<String> getChartType() {
         return this.chartType;
     }
     /**
      * Legacy field: not used. This field contains a list of comments associated with custom report
-     * 
      */
     @Export(name="comments", type=List.class, parameters={String.class})
     private Output<List<String>> comments;
 
     /**
      * @return Legacy field: not used. This field contains a list of comments associated with custom report
-     * 
      */
     public Output<List<String>> getComments() {
         return this.comments;
     }
     /**
      * Unix time when the app was created json key: createdAt
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return Unix time when the app was created json key: createdAt
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * This contains the list of dimensions for the report
-     * 
      */
     @Export(name="dimensions", type=List.class, parameters={String.class})
     private Output<List<String>> dimensions;
 
     /**
      * @return This contains the list of dimensions for the report
-     * 
      */
     public Output<List<String>> getDimensions() {
         return this.dimensions;
     }
     /**
      * This is the display name for the report
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return This is the display name for the report
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Environment name
-     * 
      */
     @Export(name="environment", type=String.class, parameters={})
     private Output<String> environment;
 
     /**
      * @return Environment name
-     * 
      */
     public Output<String> getEnvironment() {
         return this.environment;
     }
     /**
      * This field contains the filter expression
-     * 
      */
     @Export(name="filter", type=String.class, parameters={})
     private Output<String> filter;
 
     /**
      * @return This field contains the filter expression
-     * 
      */
     public Output<String> getFilter() {
         return this.filter;
     }
     /**
      * Legacy field: not used. Contains the from time for the report
-     * 
      */
     @Export(name="fromTime", type=String.class, parameters={})
     private Output<String> fromTime;
 
     /**
      * @return Legacy field: not used. Contains the from time for the report
-     * 
      */
     public Output<String> getFromTime() {
         return this.fromTime;
     }
     /**
      * Modified time of this entity as milliseconds since epoch. json key: lastModifiedAt
-     * 
      */
     @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output<String> lastModifiedAt;
 
     /**
      * @return Modified time of this entity as milliseconds since epoch. json key: lastModifiedAt
-     * 
      */
     public Output<String> getLastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * Last viewed time of this entity as milliseconds since epoch
-     * 
      */
     @Export(name="lastViewedAt", type=String.class, parameters={})
     private Output<String> lastViewedAt;
 
     /**
      * @return Last viewed time of this entity as milliseconds since epoch
-     * 
      */
     public Output<String> getLastViewedAt() {
         return this.lastViewedAt;
     }
     /**
      * Legacy field: not used This field contains the limit for the result retrieved
-     * 
      */
     @Export(name="limit", type=String.class, parameters={})
     private Output<String> limit;
 
     /**
      * @return Legacy field: not used This field contains the limit for the result retrieved
-     * 
      */
     public Output<String> getLimit() {
         return this.limit;
     }
     /**
      * This contains the list of metrics
-     * 
      */
     @Export(name="metrics", type=List.class, parameters={GoogleCloudApigeeV1CustomReportMetricResponse.class})
     private Output<List<GoogleCloudApigeeV1CustomReportMetricResponse>> metrics;
 
     /**
      * @return This contains the list of metrics
-     * 
      */
     public Output<List<GoogleCloudApigeeV1CustomReportMetricResponse>> getMetrics() {
         return this.metrics;
     }
     /**
      * Unique identifier for the report T his is a legacy field used to encode custom report unique id
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Unique identifier for the report T his is a legacy field used to encode custom report unique id
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Legacy field: not used. This field contains the offset for the data
-     * 
      */
     @Export(name="offset", type=String.class, parameters={})
     private Output<String> offset;
 
     /**
      * @return Legacy field: not used. This field contains the offset for the data
-     * 
      */
     public Output<String> getOffset() {
         return this.offset;
     }
     /**
      * Organization name
-     * 
      */
     @Export(name="organization", type=String.class, parameters={})
     private Output<String> organization;
 
     /**
      * @return Organization name
-     * 
      */
     public Output<String> getOrganization() {
         return this.organization;
     }
     /**
      * This field contains report properties such as ui metadata etc.
-     * 
      */
     @Export(name="properties", type=List.class, parameters={GoogleCloudApigeeV1ReportPropertyResponse.class})
     private Output<List<GoogleCloudApigeeV1ReportPropertyResponse>> properties;
 
     /**
      * @return This field contains report properties such as ui metadata etc.
-     * 
      */
     public Output<List<GoogleCloudApigeeV1ReportPropertyResponse>> getProperties() {
         return this.properties;
     }
     /**
      * Legacy field: not used much. Contains the list of sort by columns
-     * 
      */
     @Export(name="sortByCols", type=List.class, parameters={String.class})
     private Output<List<String>> sortByCols;
 
     /**
      * @return Legacy field: not used much. Contains the list of sort by columns
-     * 
      */
     public Output<List<String>> getSortByCols() {
         return this.sortByCols;
     }
     /**
      * Legacy field: not used much. Contains the sort order for the sort columns
-     * 
      */
     @Export(name="sortOrder", type=String.class, parameters={})
     private Output<String> sortOrder;
 
     /**
      * @return Legacy field: not used much. Contains the sort order for the sort columns
-     * 
      */
     public Output<String> getSortOrder() {
         return this.sortOrder;
     }
     /**
      * Legacy field: not used. This field contains a list of tags associated with custom report
-     * 
      */
     @Export(name="tags", type=List.class, parameters={String.class})
     private Output<List<String>> tags;
 
     /**
      * @return Legacy field: not used. This field contains a list of tags associated with custom report
-     * 
      */
     public Output<List<String>> getTags() {
         return this.tags;
     }
     /**
      * This field contains the time unit of aggregation for the report
-     * 
      */
     @Export(name="timeUnit", type=String.class, parameters={})
     private Output<String> timeUnit;
 
     /**
      * @return This field contains the time unit of aggregation for the report
-     * 
      */
     public Output<String> getTimeUnit() {
         return this.timeUnit;
     }
     /**
      * Legacy field: not used. Contains the end time for the report
-     * 
      */
     @Export(name="toTime", type=String.class, parameters={})
     private Output<String> toTime;
 
     /**
      * @return Legacy field: not used. Contains the end time for the report
-     * 
      */
     public Output<String> getToTime() {
         return this.toTime;
     }
     /**
      * Legacy field: not used. This field contains the top k parameter value for restricting the result
-     * 
      */
     @Export(name="topk", type=String.class, parameters={})
     private Output<String> topk;
 
     /**
      * @return Legacy field: not used. This field contains the top k parameter value for restricting the result
-     * 
      */
     public Output<String> getTopk() {
         return this.topk;

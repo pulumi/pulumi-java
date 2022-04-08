@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A value of a field, including its frequency.
- * 
  */
 public final class GooglePrivacyDlpV2ValueFrequencyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse extends io.pulumi.re
 
     /**
      * How many times the value is contained in the field.
-     * 
      */
     @Import(name="count", required=true)
       private final String count;
@@ -30,7 +28,6 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse extends io.pulumi.re
 
     /**
      * A value contained in the field in question.
-     * 
      */
     @Import(name="value", required=true)
       private final GooglePrivacyDlpV2ValueResponse value;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Define a parameter's name and location. The parameter may be passed as either an HTTP header or a URL query parameter, and if both are passed the behavior is implementation-dependent.
- * 
  */
 public final class SystemParameterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SystemParameterResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Define the HTTP header name to use for the parameter. It is case insensitive.
-     * 
      */
     @Import(name="httpHeader", required=true)
       private final String httpHeader;
@@ -29,7 +27,6 @@ public final class SystemParameterResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Define the name of the parameter, such as "api_key" . It is case sensitive.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -40,7 +37,6 @@ public final class SystemParameterResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Define the URL query parameter name to use for the parameter. It is case sensitive.
-     * 
      */
     @Import(name="urlQueryParameter", required=true)
       private final String urlQueryParameter;

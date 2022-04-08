@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
- * 
  */
 public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResp
 
     /**
      * A list of cascading if-else conditions.
-     * 
      */
     @Import(name="cases", required=true)
       private final List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseResponse> cases;

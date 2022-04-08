@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The type of storage: `PD_SSD` (default) or `PD_HDD`.
-     * 
      */
     @EnumType
     public enum CloudSqlSettingsDataDiskType {
         /**
          * Unspecified.
-         * 
          */
         SqlDataDiskTypeUnspecified("SQL_DATA_DISK_TYPE_UNSPECIFIED"),
         /**
          * SSD disk.
-         * 
          */
         PdSsd("PD_SSD"),
         /**
          * HDD disk.
-         * 
          */
         PdHdd("PD_HDD");
 

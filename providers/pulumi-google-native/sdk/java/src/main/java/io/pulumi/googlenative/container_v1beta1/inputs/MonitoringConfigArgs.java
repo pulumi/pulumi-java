@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * MonitoringConfig is cluster monitoring configuration.
- * 
  */
 public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Monitoring components configuration
-     * 
      */
     @Import(name="componentConfig")
       private final @Nullable Output<MonitoringComponentConfigArgs> componentConfig;
@@ -32,7 +30,6 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Enable Google Cloud Managed Service for Prometheus in the cluster.
-     * 
      */
     @Import(name="managedPrometheusConfig")
       private final @Nullable Output<ManagedPrometheusConfigArgs> managedPrometheusConfig;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Not supported by Cloud Run ConfigMapEnvSource selects a ConfigMap to populate the environment variables with. The contents of the target ConfigMap's Data field will represent the key-value pairs as environment variables.
- * 
  */
 public final class ConfigMapEnvSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ConfigMapEnvSourceResponse extends io.pulumi.resources.Invoke
 
     /**
      * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
-     * 
      */
     @Import(name="localObjectReference", required=true)
       private final LocalObjectReferenceResponse localObjectReference;
@@ -31,7 +29,6 @@ public final class ConfigMapEnvSourceResponse extends io.pulumi.resources.Invoke
 
     /**
      * The ConfigMap to select from.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -42,7 +39,6 @@ public final class ConfigMapEnvSourceResponse extends io.pulumi.resources.Invoke
 
     /**
      * (Optional) Specify whether the ConfigMap must be defined
-     * 
      */
     @Import(name="optional", required=true)
       private final Boolean optional;

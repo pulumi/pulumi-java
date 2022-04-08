@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The project team associated with the entity, if any.
- * 
  */
 public final class BucketAccessControlProjectTeamArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BucketAccessControlProjectTeamArgs extends io.pulumi.resource
 
     /**
      * The project number.
-     * 
      */
     @Import(name="projectNumber")
       private final @Nullable Output<String> projectNumber;
@@ -31,7 +29,6 @@ public final class BucketAccessControlProjectTeamArgs extends io.pulumi.resource
 
     /**
      * The team.
-     * 
      */
     @Import(name="team")
       private final @Nullable Output<String> team;

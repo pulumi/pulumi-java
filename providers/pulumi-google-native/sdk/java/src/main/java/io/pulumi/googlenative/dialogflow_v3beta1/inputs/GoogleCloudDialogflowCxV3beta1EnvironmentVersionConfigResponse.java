@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration for the version.
- * 
  */
 public final class GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigRespons
 
     /**
      * Format: projects//locations//agents//flows//versions/.
-     * 
      */
     @Import(name="version", required=true)
       private final String version;

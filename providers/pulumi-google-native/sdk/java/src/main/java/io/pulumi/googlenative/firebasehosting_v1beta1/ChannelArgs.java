@@ -25,7 +25,6 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it's set directly or via the `ttl` field.
-     * 
      */
     @Import(name="expireTime")
       private final @Nullable Output<String> expireTime;
@@ -36,7 +35,6 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Text labels used for extra metadata and/or filtering.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -47,7 +45,6 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -65,7 +62,6 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of previous releases to retain on the channel for rollback or other purposes. Must be a number between 1-100. Defaults to 10 for new channels.
-     * 
      */
     @Import(name="retainedReleaseCount")
       private final @Nullable Output<Integer> retainedReleaseCount;
@@ -83,7 +79,6 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Input only. A time-to-live for this channel. Sets `expire_time` to the provided duration past the time of the request.
-     * 
      */
     @Import(name="ttl")
       private final @Nullable Output<String> ttl;

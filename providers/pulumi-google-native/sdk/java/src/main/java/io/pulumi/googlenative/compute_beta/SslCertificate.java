@@ -16,188 +16,161 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a SslCertificate resource in the specified project using the data included in the request.
- * 
  */
 @ResourceType(type="google-native:compute/beta:SslCertificate")
 public class SslCertificate extends io.pulumi.resources.CustomResource {
     /**
      * A value read into memory from a certificate file. The certificate file must be in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert.
-     * 
      */
     @Export(name="certificate", type=String.class, parameters={})
     private Output<String> certificate;
 
     /**
      * @return A value read into memory from a certificate file. The certificate file must be in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert.
-     * 
      */
     public Output<String> getCertificate() {
         return this.certificate;
     }
     /**
      * Creation timestamp in RFC3339 text format.
-     * 
      */
     @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
      * @return Creation timestamp in RFC3339 text format.
-     * 
      */
     public Output<String> getCreationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Expire time of the certificate. RFC3339
-     * 
      */
     @Export(name="expireTime", type=String.class, parameters={})
     private Output<String> expireTime;
 
     /**
      * @return Expire time of the certificate. RFC3339
-     * 
      */
     public Output<String> getExpireTime() {
         return this.expireTime;
     }
     /**
      * Type of the resource. Always compute#sslCertificate for SSL certificates.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return Type of the resource. Always compute#sslCertificate for SSL certificates.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Configuration and status of a managed SSL certificate.
-     * 
      */
     @Export(name="managed", type=SslCertificateManagedSslCertificateResponse.class, parameters={})
     private Output<SslCertificateManagedSslCertificateResponse> managed;
 
     /**
      * @return Configuration and status of a managed SSL certificate.
-     * 
      */
     public Output<SslCertificateManagedSslCertificateResponse> getManaged() {
         return this.managed;
     }
     /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * A value read into memory from a write-only private key file. The private key file must be in PEM format. For security, only insert requests include this field.
-     * 
      */
     @Export(name="privateKey", type=String.class, parameters={})
     private Output<String> privateKey;
 
     /**
      * @return A value read into memory from a write-only private key file. The private key file must be in PEM format. For security, only insert requests include this field.
-     * 
      */
     public Output<String> getPrivateKey() {
         return this.privateKey;
     }
     /**
      * URL of the region where the regional SSL Certificate resides. This field is not applicable to global SSL Certificate.
-     * 
      */
     @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
      * @return URL of the region where the regional SSL Certificate resides. This field is not applicable to global SSL Certificate.
-     * 
      */
     public Output<String> getRegion() {
         return this.region;
     }
     /**
      * [Output only] Server-defined URL for the resource.
-     * 
      */
     @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
      * @return [Output only] Server-defined URL for the resource.
-     * 
      */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
     /**
      * Configuration and status of a self-managed SSL certificate.
-     * 
      */
     @Export(name="selfManaged", type=SslCertificateSelfManagedSslCertificateResponse.class, parameters={})
     private Output<SslCertificateSelfManagedSslCertificateResponse> selfManaged;
 
     /**
      * @return Configuration and status of a self-managed SSL certificate.
-     * 
      */
     public Output<SslCertificateSelfManagedSslCertificateResponse> getSelfManaged() {
         return this.selfManaged;
     }
     /**
      * Domains associated with the certificate via Subject Alternative Name.
-     * 
      */
     @Export(name="subjectAlternativeNames", type=List.class, parameters={String.class})
     private Output<List<String>> subjectAlternativeNames;
 
     /**
      * @return Domains associated with the certificate via Subject Alternative Name.
-     * 
      */
     public Output<List<String>> getSubjectAlternativeNames() {
         return this.subjectAlternativeNames;
     }
     /**
      * (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not specified, the certificate is self-managed and the fields certificate and private_key are used.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not specified, the certificate is self-managed and the fields certificate and private_key are used.
-     * 
      */
     public Output<String> getType() {
         return this.type;

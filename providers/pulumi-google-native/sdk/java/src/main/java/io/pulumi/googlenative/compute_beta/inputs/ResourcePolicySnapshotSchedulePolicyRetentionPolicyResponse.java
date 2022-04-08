@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Policy for retention of scheduled snapshots.
- * 
  */
 public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse e
 
     /**
      * Maximum age of the snapshot that is allowed to be kept.
-     * 
      */
     @Import(name="maxRetentionDays", required=true)
       private final Integer maxRetentionDays;
@@ -30,7 +28,6 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse e
 
     /**
      * Specifies the behavior to apply to scheduled snapshots when the source disk is deleted.
-     * 
      */
     @Import(name="onSourceDiskDelete", required=true)
       private final String onSourceDiskDelete;

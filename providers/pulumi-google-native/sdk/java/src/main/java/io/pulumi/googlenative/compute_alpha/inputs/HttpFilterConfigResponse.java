@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * HttpFilterConfiguration supplies additional contextual settings for networkservices.HttpFilter resources enabled by Traffic Director.
- * 
  */
 public final class HttpFilterConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class HttpFilterConfigResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The configuration needed to enable the networkservices.HttpFilter resource. The configuration must be YAML formatted and only contain fields defined in the protobuf identified in configTypeUrl
-     * 
      */
     @Import(name="config", required=true)
       private final String config;
@@ -29,7 +27,6 @@ public final class HttpFilterConfigResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The fully qualified versioned proto3 type url of the protobuf that the filter expects for its contextual settings, for example: type.googleapis.com/google.protobuf.Struct
-     * 
      */
     @Import(name="configTypeUrl", required=true)
       private final String configTypeUrl;
@@ -40,7 +37,6 @@ public final class HttpFilterConfigResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Name of the networkservices.HttpFilter resource this configuration belongs to. This name must be known to the xDS client. Example: envoy.wasm
-     * 
      */
     @Import(name="filterName", required=true)
       private final String filterName;

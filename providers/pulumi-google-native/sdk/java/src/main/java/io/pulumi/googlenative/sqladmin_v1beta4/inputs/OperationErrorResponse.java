@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Database instance operation error.
- * 
  */
 public final class OperationErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class OperationErrorResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Identifies the specific error that occurred.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -29,7 +27,6 @@ public final class OperationErrorResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * This is always `sql#operationError`.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -40,7 +37,6 @@ public final class OperationErrorResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Additional information about the error encountered.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;

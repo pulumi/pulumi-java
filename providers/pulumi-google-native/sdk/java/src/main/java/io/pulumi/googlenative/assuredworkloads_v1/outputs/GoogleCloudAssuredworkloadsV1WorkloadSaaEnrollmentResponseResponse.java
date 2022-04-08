@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse {
     /**
      * Indicates SAA enrollment setup error if any.
-     * 
      */
     private final List<String> setupErrors;
     /**
      * Indicates SAA enrollment status of a given workload.
-     * 
      */
     private final String setupStatus;
 
@@ -31,14 +29,12 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
 
     /**
      * Indicates SAA enrollment setup error if any.
-     * 
     */
     public List<String> getSetupErrors() {
         return this.setupErrors;
     }
     /**
      * Indicates SAA enrollment status of a given workload.
-     * 
     */
     public String getSetupStatus() {
         return this.setupStatus;

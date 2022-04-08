@@ -20,7 +20,6 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Delimiter used in the CSV file, if `outputFormat` is set to `csv`. Defaults to the `,` (comma) character. Supported delimiter characters include comma (`,`), pipe (`|`), and tab (`\t`).
-     * 
      */
     @Import(name="csvDelimiter")
       private final @Nullable Output<String> csvDelimiter;
@@ -31,7 +30,6 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of dimensions. https://docs.apigee.com/api-platform/analytics/analytics-reference#dimensions
-     * 
      */
     @Import(name="dimensions")
       private final @Nullable Output<List<String>> dimensions;
@@ -42,7 +40,6 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Hostname needs to be specified if query intends to run at host level. This field is only allowed when query is submitted by CreateHostAsyncQuery where analytics data will be grouped by organization and hostname.
-     * 
      */
     @Import(name="envgroupHostname")
       private final @Nullable Output<String> envgroupHostname;
@@ -60,7 +57,6 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Boolean expression that can be used to filter data. Filter expressions can be combined using AND/OR terms and should be fully parenthesized to avoid ambiguity. See Analytics metrics, dimensions, and filters reference https://docs.apigee.com/api-platform/analytics/analytics-reference for more information on the fields available to filter on. For more information on the tokens that you use to build filter expressions, see Filter expression syntax. https://docs.apigee.com/api-platform/analytics/asynch-reports-api#filter-expression-syntax
-     * 
      */
     @Import(name="filter")
       private final @Nullable Output<String> filter;
@@ -71,7 +67,6 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Time unit used to group the result set. Valid values include: second, minute, hour, day, week, or month. If a query includes groupByTimeUnit, then the result is an aggregation based on the specified time unit and the resultant timestamp does not include milliseconds precision. If a query omits groupByTimeUnit, then the resultant timestamp includes milliseconds precision.
-     * 
      */
     @Import(name="groupByTimeUnit")
       private final @Nullable Output<String> groupByTimeUnit;
@@ -82,7 +77,6 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum number of rows that can be returned in the result.
-     * 
      */
     @Import(name="limit")
       private final @Nullable Output<Integer> limit;
@@ -93,7 +87,6 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of Metrics.
-     * 
      */
     @Import(name="metrics")
       private final @Nullable Output<List<GoogleCloudApigeeV1QueryMetricArgs>> metrics;
@@ -104,7 +97,6 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Asynchronous Query Name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -122,7 +114,6 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Valid values include: `csv` or `json`. Defaults to `json`. Note: Configure the delimiter for CSV output using the csvDelimiter property.
-     * 
      */
     @Import(name="outputFormat")
       private final @Nullable Output<String> outputFormat;
@@ -133,7 +124,6 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Asynchronous Report ID.
-     * 
      */
     @Import(name="reportDefinitionId")
       private final @Nullable Output<String> reportDefinitionId;
@@ -144,7 +134,6 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Time range for the query. Can use the following predefined strings to specify the time range: `last60minutes` `last24hours` `last7days` Or, specify the timeRange as a structure describing start and end timestamps in the ISO format: yyyy-mm-ddThh:mm:ssZ. Example: "timeRange": { "start": "2018-07-29T00:13:00Z", "end": "2018-08-01T00:18:00Z" }
-     * 
      */
     @Import(name="timeRange", required=true)
       private final Output<Object> timeRange;

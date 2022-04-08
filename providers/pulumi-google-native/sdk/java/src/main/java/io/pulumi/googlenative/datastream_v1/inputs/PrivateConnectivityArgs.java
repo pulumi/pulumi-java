@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Private Connectivity
- * 
  */
 public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceA
 
     /**
      * A reference to a private connection resource. Format: `projects/{project}/locations/{location}/privateConnections/{name}`
-     * 
      */
     @Import(name="privateConnection", required=true)
       private final Output<String> privateConnection;

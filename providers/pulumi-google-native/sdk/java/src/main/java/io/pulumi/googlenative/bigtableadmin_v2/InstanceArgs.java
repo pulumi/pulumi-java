@@ -18,7 +18,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The clusters to be created within the instance, mapped by desired cluster ID, e.g., just `mycluster` rather than `projects/myproject/instances/myinstance/clusters/mycluster`. Fields marked `OutputOnly` must be left blank. Currently, at most four clusters can be specified.
-     * 
      */
     @Import(name="clusters", required=true)
       private final Output<Map<String,String>> clusters;
@@ -29,7 +28,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The descriptive name for this instance as it appears in UIs. Can be changed at any time, but should be kept globally unique to avoid confusion.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -40,7 +38,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID to be used when referring to the new instance within its project, e.g., just `myinstance` rather than `projects/myproject/instances/myinstance`.
-     * 
      */
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
@@ -51,7 +48,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Labels are a flexible and lightweight mechanism for organizing cloud resources into groups that reflect a customer's organizational needs and deployment strategies. They can be used to filter resources and aggregate metrics. * Label keys must be between 1 and 63 characters long and must conform to the regular expression: `\p{Ll}\p{Lo}{0,62}`. * Label values must be between 0 and 63 characters long and must conform to the regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}`. * No more than 64 labels can be associated with a given resource. * Keys and values must both be under 128 bytes.
-     * 
      */
     @Import(name="labels", required=true)
       private final Output<Map<String,String>> labels;
@@ -62,7 +58,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique name of the instance. Values are of the form `projects/{project}/instances/a-z+[a-z0-9]`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -73,7 +68,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique name of the project in which to create the new instance. Values are of the form `projects/{project}`.
-     * 
      */
     @Import(name="parent", required=true)
       private final Output<String> parent;
@@ -91,7 +85,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of the instance. Defaults to `PRODUCTION`.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<InstanceType> type;

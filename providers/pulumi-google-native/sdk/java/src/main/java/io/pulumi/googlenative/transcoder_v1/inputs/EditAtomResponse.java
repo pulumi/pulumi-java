@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Edit atom.
- * 
  */
 public final class EditAtomResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class EditAtomResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * End time in seconds for the atom, relative to the input file timeline. When `end_time_offset` is not specified, the `inputs` are used until the end of the atom.
-     * 
      */
     @Import(name="endTimeOffset", required=true)
       private final String endTimeOffset;
@@ -30,7 +28,6 @@ public final class EditAtomResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of `Input.key`s identifying files that should be used in this atom. The listed `inputs` must have the same timeline.
-     * 
      */
     @Import(name="inputs", required=true)
       private final List<String> inputs;
@@ -41,7 +38,6 @@ public final class EditAtomResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A unique key for this atom. Must be specified when using advanced mapping.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -52,7 +48,6 @@ public final class EditAtomResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Start time in seconds for the atom, relative to the input file timeline. The default is `0s`.
-     * 
      */
     @Import(name="startTimeOffset", required=true)
       private final String startTimeOffset;

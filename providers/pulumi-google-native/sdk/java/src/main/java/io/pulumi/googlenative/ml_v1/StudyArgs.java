@@ -31,7 +31,6 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration of the study.
-     * 
      */
     @Import(name="studyConfig", required=true)
       private final Output<GoogleCloudMlV1__StudyConfigArgs> studyConfig;

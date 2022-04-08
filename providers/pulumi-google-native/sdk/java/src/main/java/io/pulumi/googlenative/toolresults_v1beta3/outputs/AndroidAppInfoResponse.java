@@ -11,22 +11,18 @@ import java.util.Objects;
 public final class AndroidAppInfoResponse {
     /**
      * The name of the app. Optional
-     * 
      */
     private final String name;
     /**
      * The package name of the app. Required.
-     * 
      */
     private final String packageName;
     /**
      * The internal version code of the app. Optional.
-     * 
      */
     private final String versionCode;
     /**
      * The version name of the app. Optional.
-     * 
      */
     private final String versionName;
 
@@ -44,28 +40,24 @@ public final class AndroidAppInfoResponse {
 
     /**
      * The name of the app. Optional
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The package name of the app. Required.
-     * 
     */
     public String getPackageName() {
         return this.packageName;
     }
     /**
      * The internal version code of the app. Optional.
-     * 
     */
     public String getVersionCode() {
         return this.versionCode;
     }
     /**
      * The version name of the app. Optional.
-     * 
     */
     public String getVersionName() {
         return this.versionName;

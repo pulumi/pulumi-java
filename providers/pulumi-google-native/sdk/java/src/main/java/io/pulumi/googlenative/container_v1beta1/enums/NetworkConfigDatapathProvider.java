@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
-     * 
      */
     @EnumType
     public enum NetworkConfigDatapathProvider {
         /**
          * Default value.
-         * 
          */
         DatapathProviderUnspecified("DATAPATH_PROVIDER_UNSPECIFIED"),
         /**
          * Use the IPTables implementation based on kube-proxy.
-         * 
          */
         LegacyDatapath("LEGACY_DATAPATH"),
         /**
          * Use the eBPF based GKE Dataplane V2 with additional features. See the [GKE Dataplane V2 documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/dataplane-v2) for more.
-         * 
          */
         AdvancedDatapath("ADVANCED_DATAPATH");
 

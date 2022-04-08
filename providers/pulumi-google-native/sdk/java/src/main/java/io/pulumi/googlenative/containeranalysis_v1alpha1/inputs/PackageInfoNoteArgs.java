@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * PackageInfoNote represents an SPDX Package Information section: https://spdx.github.io/spdx-spec/3-package-information/
- * 
  */
 public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document
-     * 
      */
     @Import(name="analyzed")
       private final @Nullable Output<Boolean> analyzed;
@@ -35,7 +33,6 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A place for the SPDX data creator to record, at the package level, acknowledgements that may be needed to be communicated in some contexts
-     * 
      */
     @Import(name="attribution")
       private final @Nullable Output<String> attribution;
@@ -46,7 +43,6 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Provide an independently reproducible mechanism that permits unique identification of a specific package that correlates to the data in this SPDX file
-     * 
      */
     @Import(name="checksum")
       private final @Nullable Output<String> checksum;
@@ -57,7 +53,6 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Identify the copyright holders of the package, as well as any dates present
-     * 
      */
     @Import(name="copyright")
       private final @Nullable Output<String> copyright;
@@ -68,7 +63,6 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A more detailed description of the package
-     * 
      */
     @Import(name="detailedDescription")
       private final @Nullable Output<String> detailedDescription;
@@ -79,7 +73,6 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * This section identifies the download Universal Resource Locator (URL), or a specific location within a version control system (VCS) for the package at the time that the SPDX file was created
-     * 
      */
     @Import(name="downloadLocation")
       private final @Nullable Output<String> downloadLocation;
@@ -90,7 +83,6 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * ExternalRef
-     * 
      */
     @Import(name="externalRefs")
       private final @Nullable Output<List<ExternalRefArgs>> externalRefs;
@@ -101,7 +93,6 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Contain the license the SPDX file creator has concluded as governing the This field is to contain a list of all licenses found in the package. The relationship between licenses (i.e., conjunctive, disjunctive) is not specified in this field – it is simply a listing of all licenses found
-     * 
      */
     @Import(name="filesLicenseInfo")
       private final @Nullable Output<List<String>> filesLicenseInfo;
@@ -112,7 +103,6 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Provide a place for the SPDX file creator to record a web site that serves as the package's home page
-     * 
      */
     @Import(name="homePage")
       private final @Nullable Output<String> homePage;
@@ -123,7 +113,6 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * List the licenses that have been declared by the authors of the package
-     * 
      */
     @Import(name="licenseDeclared")
       private final @Nullable Output<LicenseArgs> licenseDeclared;
@@ -134,7 +123,6 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * If the package identified in the SPDX file originated from a different person or organization than identified as Package Supplier, this field identifies from where or whom the package originally came
-     * 
      */
     @Import(name="originator")
       private final @Nullable Output<String> originator;
@@ -145,7 +133,6 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The type of package: OS, MAVEN, GO, GO_STDLIB, etc.
-     * 
      */
     @Import(name="packageType")
       private final @Nullable Output<String> packageType;
@@ -156,7 +143,6 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A short description of the package
-     * 
      */
     @Import(name="summaryDescription")
       private final @Nullable Output<String> summaryDescription;
@@ -167,7 +153,6 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Identify the actual distribution source for the package/directory identified in the SPDX file
-     * 
      */
     @Import(name="supplier")
       private final @Nullable Output<String> supplier;
@@ -178,7 +163,6 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Identify the full name of the package as given by the Package Originator
-     * 
      */
     @Import(name="title")
       private final @Nullable Output<String> title;
@@ -189,7 +173,6 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * This field provides an independently reproducible mechanism identifying specific contents of a package based on the actual files (except the SPDX file itself, if it is included in the package) that make up each package and that correlates to the data in this SPDX file
-     * 
      */
     @Import(name="verificationCode")
       private final @Nullable Output<String> verificationCode;
@@ -200,7 +183,6 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Identify the version of the package
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

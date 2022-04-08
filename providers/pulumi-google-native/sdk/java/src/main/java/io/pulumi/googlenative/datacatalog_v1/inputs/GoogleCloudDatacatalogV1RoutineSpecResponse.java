@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Specification that applies to a routine. Valid only for entries with the `ROUTINE` type.
- * 
  */
 public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
 
     /**
      * Fields specific for BigQuery routines.
-     * 
      */
     @Import(name="bigqueryRoutineSpec", required=true)
       private final GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec;
@@ -32,7 +30,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
 
     /**
      * The body of the routine.
-     * 
      */
     @Import(name="definitionBody", required=true)
       private final String definitionBody;
@@ -43,7 +40,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
 
     /**
      * The language the routine is written in. The exact value depends on the source system. For BigQuery routines, possible values are: * `SQL` * `JAVASCRIPT`
-     * 
      */
     @Import(name="language", required=true)
       private final String language;
@@ -54,7 +50,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
 
     /**
      * Return type of the argument. The exact value depends on the source system and the language.
-     * 
      */
     @Import(name="returnType", required=true)
       private final String returnType;
@@ -65,7 +60,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
 
     /**
      * Arguments of the routine.
-     * 
      */
     @Import(name="routineArguments", required=true)
       private final List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments;
@@ -76,7 +70,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
 
     /**
      * The type of the routine.
-     * 
      */
     @Import(name="routineType", required=true)
       private final String routineType;

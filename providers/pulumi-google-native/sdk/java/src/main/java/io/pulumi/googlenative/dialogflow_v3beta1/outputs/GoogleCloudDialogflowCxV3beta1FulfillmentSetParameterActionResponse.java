@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionResponse {
     /**
      * Display name of the parameter.
-     * 
      */
     private final String parameter;
     /**
      * The new value of the parameter. A null value clears the parameter.
-     * 
      */
     private final Object value;
 
@@ -31,14 +29,12 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionRe
 
     /**
      * Display name of the parameter.
-     * 
     */
     public String getParameter() {
         return this.parameter;
     }
     /**
      * The new value of the parameter. A null value clears the parameter.
-     * 
     */
     public Object getValue() {
         return this.value;

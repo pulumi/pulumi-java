@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class GoogleDatastoreAdminV1IndexedPropertyResponse {
     /**
      * The indexed property's direction. Must not be DIRECTION_UNSPECIFIED.
-     * 
      */
     private final String direction;
     /**
      * The property name to index.
-     * 
      */
     private final String name;
 
@@ -30,14 +28,12 @@ public final class GoogleDatastoreAdminV1IndexedPropertyResponse {
 
     /**
      * The indexed property's direction. Must not be DIRECTION_UNSPECIFIED.
-     * 
     */
     public String getDirection() {
         return this.direction;
     }
     /**
      * The property name to index.
-     * 
     */
     public String getName() {
         return this.name;

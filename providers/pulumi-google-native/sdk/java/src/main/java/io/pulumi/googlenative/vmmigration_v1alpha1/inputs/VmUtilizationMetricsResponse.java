@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Utilization metrics values for a single VM.
- * 
  */
 public final class VmUtilizationMetricsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
 
     /**
      * Average CPU usage, percent.
-     * 
      */
     @Import(name="cpuAverage", required=true)
       private final Integer cpuAverage;
@@ -30,7 +28,6 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
 
     /**
      * Average CPU usage, percent.
-     * 
      */
     @Import(name="cpuAveragePercent", required=true)
       private final Integer cpuAveragePercent;
@@ -41,7 +38,6 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
 
     /**
      * Max CPU usage, percent.
-     * 
      */
     @Import(name="cpuMax", required=true)
       private final Integer cpuMax;
@@ -52,7 +48,6 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
 
     /**
      * Max CPU usage, percent.
-     * 
      */
     @Import(name="cpuMaxPercent", required=true)
       private final Integer cpuMaxPercent;
@@ -63,7 +58,6 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
 
     /**
      * Average disk IO rate, in kilobytes per second.
-     * 
      */
     @Import(name="diskIoRateAverage", required=true)
       private final String diskIoRateAverage;
@@ -74,7 +68,6 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
 
     /**
      * Average disk IO rate, in kilobytes per second.
-     * 
      */
     @Import(name="diskIoRateAverageKbps", required=true)
       private final String diskIoRateAverageKbps;
@@ -85,7 +78,6 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
 
     /**
      * Max disk IO rate, in kilobytes per second.
-     * 
      */
     @Import(name="diskIoRateMax", required=true)
       private final String diskIoRateMax;
@@ -96,7 +88,6 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
 
     /**
      * Max disk IO rate, in kilobytes per second.
-     * 
      */
     @Import(name="diskIoRateMaxKbps", required=true)
       private final String diskIoRateMaxKbps;
@@ -107,7 +98,6 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
 
     /**
      * Average memory usage, percent.
-     * 
      */
     @Import(name="memoryAverage", required=true)
       private final Integer memoryAverage;
@@ -118,7 +108,6 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
 
     /**
      * Average memory usage, percent.
-     * 
      */
     @Import(name="memoryAveragePercent", required=true)
       private final Integer memoryAveragePercent;
@@ -129,7 +118,6 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
 
     /**
      * Max memory usage, percent.
-     * 
      */
     @Import(name="memoryMax", required=true)
       private final Integer memoryMax;
@@ -140,7 +128,6 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
 
     /**
      * Max memory usage, percent.
-     * 
      */
     @Import(name="memoryMaxPercent", required=true)
       private final Integer memoryMaxPercent;
@@ -151,7 +138,6 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
 
     /**
      * Average network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
-     * 
      */
     @Import(name="networkThroughputAverage", required=true)
       private final String networkThroughputAverage;
@@ -162,7 +148,6 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
 
     /**
      * Average network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
-     * 
      */
     @Import(name="networkThroughputAverageKbps", required=true)
       private final String networkThroughputAverageKbps;
@@ -173,7 +158,6 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
 
     /**
      * Max network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
-     * 
      */
     @Import(name="networkThroughputMax", required=true)
       private final String networkThroughputMax;
@@ -184,7 +168,6 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
 
     /**
      * Max network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
-     * 
      */
     @Import(name="networkThroughputMaxKbps", required=true)
       private final String networkThroughputMaxKbps;

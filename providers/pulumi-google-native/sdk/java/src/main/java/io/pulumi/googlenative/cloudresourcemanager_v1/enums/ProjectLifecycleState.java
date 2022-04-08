@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * The Project lifecycle state. Read-only.
-     * 
      */
     @EnumType
     public enum ProjectLifecycleState {
         /**
          * Unspecified state. This is only used/useful for distinguishing unset values.
-         * 
          */
         LifecycleStateUnspecified("LIFECYCLE_STATE_UNSPECIFIED"),
         /**
          * The normal and active state.
-         * 
          */
         Active("ACTIVE"),
         /**
          * The project has been marked for deletion by the user (by invoking DeleteProject) or by the system (Google Cloud Platform). This can generally be reversed by invoking UndeleteProject.
-         * 
          */
         DeleteRequested("DELETE_REQUESTED"),
         /**
          * This lifecycle state is no longer used and not returned by the API.
-         * 
          */
         DeleteInProgress("DELETE_IN_PROGRESS");
 

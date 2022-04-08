@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents the config of disk options.
- * 
  */
 public final class GoogleCloudMlV1__DiskConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudMlV1__DiskConfigArgs extends io.pulumi.resources.R
 
     /**
      * Size in GB of the boot disk (default is 100GB).
-     * 
      */
     @Import(name="bootDiskSizeGb")
       private final @Nullable Output<Integer> bootDiskSizeGb;
@@ -32,7 +30,6 @@ public final class GoogleCloudMlV1__DiskConfigArgs extends io.pulumi.resources.R
 
     /**
      * Type of the boot disk (default is "pd-ssd"). Valid values: "pd-ssd" (Persistent Disk Solid State Drive) or "pd-standard" (Persistent Disk Hard Disk Drive).
-     * 
      */
     @Import(name="bootDiskType")
       private final @Nullable Output<String> bootDiskType;

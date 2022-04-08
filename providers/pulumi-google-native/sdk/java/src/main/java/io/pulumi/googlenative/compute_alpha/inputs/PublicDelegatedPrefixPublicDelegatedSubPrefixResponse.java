@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Represents a sub PublicDelegatedPrefix.
- * 
  */
 public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
 
     /**
      * Name of the project scoping this PublicDelegatedSubPrefix.
-     * 
      */
     @Import(name="delegateeProject", required=true)
       private final String delegateeProject;
@@ -30,7 +28,6 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
 
     /**
      * An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -41,7 +38,6 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
 
     /**
      * The IPv4 address range, in CIDR format, represented by this sub public delegated prefix.
-     * 
      */
     @Import(name="ipCidrRange", required=true)
       private final String ipCidrRange;
@@ -52,7 +48,6 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
 
     /**
      * Whether the sub prefix is delegated to create Address resources in the delegatee project.
-     * 
      */
     @Import(name="isAddress", required=true)
       private final Boolean isAddress;
@@ -63,7 +58,6 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
 
     /**
      * The name of the sub public delegated prefix.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -74,7 +68,6 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
 
     /**
      * The region of the sub public delegated prefix if it is regional. If absent, the sub prefix is global.
-     * 
      */
     @Import(name="region", required=true)
       private final String region;
@@ -85,7 +78,6 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
 
     /**
      * The status of the sub public delegated prefix.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Metadata for a Pub/Sub connector used by the job.
- * 
  */
 public final class PubSubIODetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PubSubIODetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Subscription used in the connection.
-     * 
      */
     @Import(name="subscription")
       private final @Nullable Output<String> subscription;
@@ -31,7 +29,6 @@ public final class PubSubIODetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Topic accessed in the connection.
-     * 
      */
     @Import(name="topic")
       private final @Nullable Output<String> topic;

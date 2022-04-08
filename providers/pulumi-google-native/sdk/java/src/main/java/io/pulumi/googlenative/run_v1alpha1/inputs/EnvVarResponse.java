@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * EnvVar represents an environment variable present in a Container.
- * 
  */
 public final class EnvVarResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class EnvVarResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the environment variable. Must be a C_IDENTIFIER.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -30,7 +28,6 @@ public final class EnvVarResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * (Optional) Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".
-     * 
      */
     @Import(name="value", required=true)
       private final String value;
@@ -41,7 +38,6 @@ public final class EnvVarResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * (Optional) Source for the environment variable's value. Only supports secret_key_ref. Source for the environment variable's value. Cannot be used if value is not empty.
-     * 
      */
     @Import(name="valueFrom", required=true)
       private final EnvVarSourceResponse valueFrom;

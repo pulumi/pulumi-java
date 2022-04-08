@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Represents a target of an invocation over HTTP.
- * 
  */
 public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
-     * 
      */
     @Import(name="cloudRunService", required=true)
       private final CloudRunServiceResponse cloudRunService;

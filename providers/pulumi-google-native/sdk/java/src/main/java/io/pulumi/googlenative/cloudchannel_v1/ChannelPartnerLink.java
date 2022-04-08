@@ -17,118 +17,101 @@ import javax.annotation.Nullable;
  * Auto-naming is currently not supported for this resource.
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:cloudchannel/v1:ChannelPartnerLink")
 public class ChannelPartnerLink extends io.pulumi.resources.CustomResource {
     /**
      * Cloud Identity info of the channel partner (IR).
-     * 
      */
     @Export(name="channelPartnerCloudIdentityInfo", type=GoogleCloudChannelV1CloudIdentityInfoResponse.class, parameters={})
     private Output<GoogleCloudChannelV1CloudIdentityInfoResponse> channelPartnerCloudIdentityInfo;
 
     /**
      * @return Cloud Identity info of the channel partner (IR).
-     * 
      */
     public Output<GoogleCloudChannelV1CloudIdentityInfoResponse> getChannelPartnerCloudIdentityInfo() {
         return this.channelPartnerCloudIdentityInfo;
     }
     /**
      * Timestamp of when the channel partner link is created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return Timestamp of when the channel partner link is created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * URI of the web page where partner accepts the link invitation.
-     * 
      */
     @Export(name="inviteLinkUri", type=String.class, parameters={})
     private Output<String> inviteLinkUri;
 
     /**
      * @return URI of the web page where partner accepts the link invitation.
-     * 
      */
     public Output<String> getInviteLinkUri() {
         return this.inviteLinkUri;
     }
     /**
      * State of the channel partner link.
-     * 
      */
     @Export(name="linkState", type=String.class, parameters={})
     private Output<String> linkState;
 
     /**
      * @return State of the channel partner link.
-     * 
      */
     public Output<String> getLinkState() {
         return this.linkState;
     }
     /**
      * Resource name for the channel partner link, in the format accounts/{account_id}/channelPartnerLinks/{id}.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name for the channel partner link, in the format accounts/{account_id}/channelPartnerLinks/{id}.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Public identifier that a customer must use to generate a transfer token to move to this distributor-reseller combination.
-     * 
      */
     @Export(name="publicId", type=String.class, parameters={})
     private Output<String> publicId;
 
     /**
      * @return Public identifier that a customer must use to generate a transfer token to move to this distributor-reseller combination.
-     * 
      */
     public Output<String> getPublicId() {
         return this.publicId;
     }
     /**
      * Cloud Identity ID of the linked reseller.
-     * 
      */
     @Export(name="resellerCloudIdentityId", type=String.class, parameters={})
     private Output<String> resellerCloudIdentityId;
 
     /**
      * @return Cloud Identity ID of the linked reseller.
-     * 
      */
     public Output<String> getResellerCloudIdentityId() {
         return this.resellerCloudIdentityId;
     }
     /**
      * Timestamp of when the channel partner link is updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return Timestamp of when the channel partner link is updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

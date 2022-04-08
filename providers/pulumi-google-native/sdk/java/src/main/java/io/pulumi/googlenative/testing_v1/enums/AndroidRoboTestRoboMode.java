@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The mode in which Robo should run. Most clients should allow the server to populate this field automatically.
-     * 
      */
     @EnumType
     public enum AndroidRoboTestRoboMode {
         /**
          * This means that the server should choose the mode. Recommended.
-         * 
          */
         RoboModeUnspecified("ROBO_MODE_UNSPECIFIED"),
         /**
          * Runs Robo in UIAutomator-only mode without app resigning
-         * 
          */
         RoboVersion1("ROBO_VERSION_1"),
         /**
          * Runs Robo in standard Espresso with UIAutomator fallback
-         * 
          */
         RoboVersion2("ROBO_VERSION_2");
 

@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * Scope specifies the availability domain to which the VMs should be spread.
-     * 
      */
     @EnumType
     public enum ResourcePolicyGroupPlacementPolicyScope {
         /**
          * Specifies availability domain scope across hosts. VMs will be spread across different hosts.
-         * 
          */
         Host("HOST"),
         /**
          * VMs will be spread across different instrastructure to not share power, host and networking.
-         * 
          */
         UnspecifiedScope("UNSPECIFIED_SCOPE");
 

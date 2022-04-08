@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Defines the DNS configuration of a `Registration`, including name servers, DNSSEC, and glue records.
- * 
  */
 public final class DnsSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DnsSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An arbitrary DNS provider identified by its name servers.
-     * 
      */
     @Import(name="customDns", required=true)
       private final CustomDnsResponse customDns;
@@ -32,7 +30,6 @@ public final class DnsSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The list of glue records for this `Registration`. Commonly empty.
-     * 
      */
     @Import(name="glueRecords", required=true)
       private final List<GlueRecordResponse> glueRecords;
@@ -43,7 +40,6 @@ public final class DnsSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The free DNS zone provided by [Google Domains](https://domains.google/).
-     * 
      */
     @Import(name="googleDomainsDns", required=true)
       private final GoogleDomainsDnsResponse googleDomainsDns;

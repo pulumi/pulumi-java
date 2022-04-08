@@ -17,7 +17,6 @@ public final class SecurityPolicyRuleHttpHeaderActionArgs extends io.pulumi.reso
 
     /**
      * The list of request headers to add or overwrite if they're already present.
-     * 
      */
     @Import(name="requestHeadersToAdds")
       private final @Nullable Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds;

@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * No connectivity settings.
- * 
  */
 public final class NoConnectivitySettingsArgs extends io.pulumi.resources.ResourceArgs {
 

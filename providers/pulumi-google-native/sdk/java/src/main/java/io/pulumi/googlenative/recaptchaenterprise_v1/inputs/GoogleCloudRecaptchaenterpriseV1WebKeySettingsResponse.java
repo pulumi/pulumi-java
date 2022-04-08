@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Settings specific to keys that can be used by websites.
- * 
  */
 public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extend
 
     /**
      * If set to true, it means allowed_domains will not be enforced.
-     * 
      */
     @Import(name="allowAllDomains", required=true)
       private final Boolean allowAllDomains;
@@ -31,7 +29,6 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extend
 
     /**
      * If set to true, the key can be used on AMP (Accelerated Mobile Pages) websites. This is supported only for the SCORE integration type.
-     * 
      */
     @Import(name="allowAmpTraffic", required=true)
       private final Boolean allowAmpTraffic;
@@ -42,7 +39,6 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extend
 
     /**
      * Domains or subdomains of websites allowed to use the key. All subdomains of an allowed domain are automatically allowed. A valid domain requires a host and must not include any path, port, query or fragment. Examples: 'example.com' or 'subdomain.example.com'
-     * 
      */
     @Import(name="allowedDomains", required=true)
       private final List<String> allowedDomains;
@@ -53,7 +49,6 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extend
 
     /**
      * Settings for the frequency and difficulty at which this key triggers captcha challenges. This should only be specified for IntegrationTypes CHECKBOX and INVISIBLE.
-     * 
      */
     @Import(name="challengeSecurityPreference", required=true)
       private final String challengeSecurityPreference;
@@ -64,7 +59,6 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extend
 
     /**
      * Describes how this key is integrated with the website.
-     * 
      */
     @Import(name="integrationType", required=true)
       private final String integrationType;

@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class WorkflowTemplatePlacementResponse {
     /**
      * Optional. A selector that chooses target cluster for jobs based on metadata.The selector is evaluated at the time each job is submitted.
-     * 
      */
     private final ClusterSelectorResponse clusterSelector;
     /**
      * Optional. A cluster that is managed by the workflow.
-     * 
      */
     private final ManagedClusterResponse managedCluster;
 
@@ -31,14 +29,12 @@ public final class WorkflowTemplatePlacementResponse {
 
     /**
      * Optional. A selector that chooses target cluster for jobs based on metadata.The selector is evaluated at the time each job is submitted.
-     * 
     */
     public ClusterSelectorResponse getClusterSelector() {
         return this.clusterSelector;
     }
     /**
      * Optional. A cluster that is managed by the workflow.
-     * 
     */
     public ManagedClusterResponse getManagedCluster() {
         return this.managedCluster;

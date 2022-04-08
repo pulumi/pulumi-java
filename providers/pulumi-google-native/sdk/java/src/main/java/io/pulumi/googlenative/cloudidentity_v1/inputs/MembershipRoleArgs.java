@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A membership role within the Cloud Identity Groups API. A `MembershipRole` defines the privileges granted to a `Membership`.
- * 
  */
 public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER` `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other value.
-     * 
      */
     @Import(name="expiryDetail")
       private final @Nullable Output<ExpiryDetailArgs> expiryDetail;
@@ -33,7 +31,6 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -44,7 +41,6 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Evaluations of restrictions applied to parent group on this membership.
-     * 
      */
     @Import(name="restrictionEvaluations")
       private final @Nullable Output<RestrictionEvaluationsArgs> restrictionEvaluations;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A test of an iOS application that uses the XCTest framework.
- * 
  */
 public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Bundle ID of the app.
-     * 
      */
     @Import(name="bundleId")
       private final @Nullable Output<String> bundleId;
@@ -31,7 +29,6 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Xcode version that the test was run with.
-     * 
      */
     @Import(name="xcodeVersion")
       private final @Nullable Output<String> xcodeVersion;

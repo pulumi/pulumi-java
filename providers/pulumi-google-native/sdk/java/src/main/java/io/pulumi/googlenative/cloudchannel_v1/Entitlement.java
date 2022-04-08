@@ -22,174 +22,149 @@ import javax.annotation.Nullable;
  * Auto-naming is currently not supported for this resource.
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:cloudchannel/v1:Entitlement")
 public class Entitlement extends io.pulumi.resources.CustomResource {
     /**
      * Association information to other entitlements.
-     * 
      */
     @Export(name="associationInfo", type=GoogleCloudChannelV1AssociationInfoResponse.class, parameters={})
     private Output<GoogleCloudChannelV1AssociationInfoResponse> associationInfo;
 
     /**
      * @return Association information to other entitlements.
-     * 
      */
     public Output<GoogleCloudChannelV1AssociationInfoResponse> getAssociationInfo() {
         return this.associationInfo;
     }
     /**
      * Commitment settings for a commitment-based Offer. Required for commitment based offers.
-     * 
      */
     @Export(name="commitmentSettings", type=GoogleCloudChannelV1CommitmentSettingsResponse.class, parameters={})
     private Output<GoogleCloudChannelV1CommitmentSettingsResponse> commitmentSettings;
 
     /**
      * @return Commitment settings for a commitment-based Offer. Required for commitment based offers.
-     * 
      */
     public Output<GoogleCloudChannelV1CommitmentSettingsResponse> getCommitmentSettings() {
         return this.commitmentSettings;
     }
     /**
      * The time at which the entitlement is created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time at which the entitlement is created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Resource name of an entitlement in the form: accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name of an entitlement in the form: accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The offer resource name for which the entitlement is to be created. Takes the form: accounts/{account_id}/offers/{offer_id}.
-     * 
      */
     @Export(name="offer", type=String.class, parameters={})
     private Output<String> offer;
 
     /**
      * @return The offer resource name for which the entitlement is to be created. Takes the form: accounts/{account_id}/offers/{offer_id}.
-     * 
      */
     public Output<String> getOffer() {
         return this.offer;
     }
     /**
      * Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. The response may include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. - max_units: The maximum assignable units for a flexible offer. - num_units: The total commitment for commitment-based offers.
-     * 
      */
     @Export(name="parameters", type=List.class, parameters={GoogleCloudChannelV1ParameterResponse.class})
     private Output<List<GoogleCloudChannelV1ParameterResponse>> parameters;
 
     /**
      * @return Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. The response may include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. - max_units: The maximum assignable units for a flexible offer. - num_units: The total commitment for commitment-based offers.
-     * 
      */
     public Output<List<GoogleCloudChannelV1ParameterResponse>> getParameters() {
         return this.parameters;
     }
     /**
      * Service provisioning details for the entitlement.
-     * 
      */
     @Export(name="provisionedService", type=GoogleCloudChannelV1ProvisionedServiceResponse.class, parameters={})
     private Output<GoogleCloudChannelV1ProvisionedServiceResponse> provisionedService;
 
     /**
      * @return Service provisioning details for the entitlement.
-     * 
      */
     public Output<GoogleCloudChannelV1ProvisionedServiceResponse> getProvisionedService() {
         return this.provisionedService;
     }
     /**
      * Current provisioning state of the entitlement.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Current provisioning state of the entitlement.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Optional. This purchase order (PO) information is for resellers to use for their company tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows up in the invoice. The property accepts up to 80 plain text characters.
-     * 
      */
     @Export(name="purchaseOrderId", type=String.class, parameters={})
     private Output<String> purchaseOrderId;
 
     /**
      * @return Optional. This purchase order (PO) information is for resellers to use for their company tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows up in the invoice. The property accepts up to 80 plain text characters.
-     * 
      */
     public Output<String> getPurchaseOrderId() {
         return this.purchaseOrderId;
     }
     /**
      * Enumerable of all current suspension reasons for an entitlement.
-     * 
      */
     @Export(name="suspensionReasons", type=List.class, parameters={String.class})
     private Output<List<String>> suspensionReasons;
 
     /**
      * @return Enumerable of all current suspension reasons for an entitlement.
-     * 
      */
     public Output<List<String>> getSuspensionReasons() {
         return this.suspensionReasons;
     }
     /**
      * Settings for trial offers.
-     * 
      */
     @Export(name="trialSettings", type=GoogleCloudChannelV1TrialSettingsResponse.class, parameters={})
     private Output<GoogleCloudChannelV1TrialSettingsResponse> trialSettings;
 
     /**
      * @return Settings for trial offers.
-     * 
      */
     public Output<GoogleCloudChannelV1TrialSettingsResponse> getTrialSettings() {
         return this.trialSettings;
     }
     /**
      * The time at which the entitlement is updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The time at which the entitlement is updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

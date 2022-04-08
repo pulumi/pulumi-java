@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The IP addresses of callers that are allowed to use the key.
- * 
  */
 public final class V2ServerKeyRestrictionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class V2ServerKeyRestrictionsResponse extends io.pulumi.resources.I
 
     /**
      * A list of the caller IP addresses that are allowed to make API calls with this key.
-     * 
      */
     @Import(name="allowedIps", required=true)
       private final List<String> allowedIps;

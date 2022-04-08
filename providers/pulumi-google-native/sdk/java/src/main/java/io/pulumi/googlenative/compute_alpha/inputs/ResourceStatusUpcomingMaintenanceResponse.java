@@ -14,7 +14,6 @@ public final class ResourceStatusUpcomingMaintenanceResponse extends io.pulumi.r
 
     /**
      * Indicates if the maintenance can be customer triggered. See go/sf-ctm-design for more details
-     * 
      */
     @Import(name="canReschedule", required=true)
       private final Boolean canReschedule;

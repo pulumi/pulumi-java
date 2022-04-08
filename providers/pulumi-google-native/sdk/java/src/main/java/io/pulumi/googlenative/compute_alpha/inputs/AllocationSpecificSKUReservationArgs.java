@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * This reservation type allows to pre allocate specific instance configuration. Next ID: 5
- * 
  */
 public final class AllocationSpecificSKUReservationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AllocationSpecificSKUReservationArgs extends io.pulumi.resour
 
     /**
      * Specifies the number of resources that are allocated.
-     * 
      */
     @Import(name="count")
       private final @Nullable Output<String> count;
@@ -32,7 +30,6 @@ public final class AllocationSpecificSKUReservationArgs extends io.pulumi.resour
 
     /**
      * The instance properties for the reservation.
-     * 
      */
     @Import(name="instanceProperties")
       private final @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;

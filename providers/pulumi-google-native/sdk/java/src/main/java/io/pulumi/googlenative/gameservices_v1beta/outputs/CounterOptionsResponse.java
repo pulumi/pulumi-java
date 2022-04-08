@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class CounterOptionsResponse {
     /**
      * Custom fields.
-     * 
      */
     private final List<CustomFieldResponse> customFields;
     /**
      * The field value to attribute.
-     * 
      */
     private final String field;
     /**
      * The metric to update.
-     * 
      */
     private final String metric;
 
@@ -39,21 +36,18 @@ public final class CounterOptionsResponse {
 
     /**
      * Custom fields.
-     * 
     */
     public List<CustomFieldResponse> getCustomFields() {
         return this.customFields;
     }
     /**
      * The field value to attribute.
-     * 
     */
     public String getField() {
         return this.field;
     }
     /**
      * The metric to update.
-     * 
     */
     public String getMetric() {
         return this.metric;

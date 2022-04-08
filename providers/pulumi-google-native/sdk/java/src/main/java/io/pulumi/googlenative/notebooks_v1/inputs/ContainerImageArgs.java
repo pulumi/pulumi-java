@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of a container image for starting a notebook instance with the environment installed in a container.
- * 
  */
 public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`
-     * 
      */
     @Import(name="repository", required=true)
       private final Output<String> repository;
@@ -31,7 +29,6 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tag of the container image. If not specified, this defaults to the latest tag.
-     * 
      */
     @Import(name="tag")
       private final @Nullable Output<String> tag;

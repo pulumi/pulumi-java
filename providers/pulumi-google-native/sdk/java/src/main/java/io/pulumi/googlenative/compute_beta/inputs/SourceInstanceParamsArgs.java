@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A specification of the parameters to use when creating the instance template from a source instance.
- * 
  */
 public final class SourceInstanceParamsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SourceInstanceParamsArgs extends io.pulumi.resources.Resource
 
     /**
      * Attached disks configuration. If not provided, defaults are applied: For boot disk and any other R/W disks, new custom images will be created from each disk. For read-only disks, they will be attached in read-only mode. Local SSD disks will be created as blank volumes.
-     * 
      */
     @Import(name="diskConfigs")
       private final @Nullable Output<List<DiskInstantiationConfigArgs>> diskConfigs;

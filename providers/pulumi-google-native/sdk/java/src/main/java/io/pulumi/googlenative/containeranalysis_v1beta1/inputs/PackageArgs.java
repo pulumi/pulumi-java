@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * This represents a particular package that is distributed over various channels. E.g., glibc (aka libc6) is distributed by many, at various versions.
- * 
  */
 public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The various channels by which a package is distributed.
-     * 
      */
     @Import(name="distribution")
       private final @Nullable Output<List<DistributionArgs>> distribution;
@@ -33,7 +31,6 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The name of the package.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

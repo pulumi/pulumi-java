@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * TraceSamplingConfig represents the detail settings of distributed tracing. Only the fields that are defined in the distributed trace configuration can be overridden using the distribute trace configuration override APIs.
- * 
  */
 public final class GoogleCloudApigeeV1TraceSamplingConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigResponse extends io.pul
 
     /**
      * Sampler of distributed tracing. OFF is the default value.
-     * 
      */
     @Import(name="sampler", required=true)
       private final String sampler;
@@ -30,7 +28,6 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigResponse extends io.pul
 
     /**
      * Field sampling rate. This value is only applicable when using the PROBABILITY sampler. The supported values are > 0 and <= 0.5.
-     * 
      */
     @Import(name="samplingRate", required=true)
       private final Double samplingRate;

@@ -17,216 +17,185 @@ import javax.annotation.Nullable;
 /**
  * Creates a new backup run on demand.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:sqladmin/v1:BackupRun")
 public class BackupRun extends io.pulumi.resources.CustomResource {
     /**
      * Specifies the kind of backup, PHYSICAL or DEFAULT_SNAPSHOT.
-     * 
      */
     @Export(name="backupKind", type=String.class, parameters={})
     private Output<String> backupKind;
 
     /**
      * @return Specifies the kind of backup, PHYSICAL or DEFAULT_SNAPSHOT.
-     * 
      */
     public Output<String> getBackupKind() {
         return this.backupKind;
     }
     /**
      * The description of this run, only applicable to on-demand backups.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return The description of this run, only applicable to on-demand backups.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Encryption configuration specific to a backup.
-     * 
      */
     @Export(name="diskEncryptionConfiguration", type=DiskEncryptionConfigurationResponse.class, parameters={})
     private Output<DiskEncryptionConfigurationResponse> diskEncryptionConfiguration;
 
     /**
      * @return Encryption configuration specific to a backup.
-     * 
      */
     public Output<DiskEncryptionConfigurationResponse> getDiskEncryptionConfiguration() {
         return this.diskEncryptionConfiguration;
     }
     /**
      * Encryption status specific to a backup.
-     * 
      */
     @Export(name="diskEncryptionStatus", type=DiskEncryptionStatusResponse.class, parameters={})
     private Output<DiskEncryptionStatusResponse> diskEncryptionStatus;
 
     /**
      * @return Encryption status specific to a backup.
-     * 
      */
     public Output<DiskEncryptionStatusResponse> getDiskEncryptionStatus() {
         return this.diskEncryptionStatus;
     }
     /**
      * The time the backup operation completed in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
-     * 
      */
     @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
      * @return The time the backup operation completed in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
-     * 
      */
     public Output<String> getEndTime() {
         return this.endTime;
     }
     /**
      * The time the run was enqueued in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
-     * 
      */
     @Export(name="enqueuedTime", type=String.class, parameters={})
     private Output<String> enqueuedTime;
 
     /**
      * @return The time the run was enqueued in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
-     * 
      */
     public Output<String> getEnqueuedTime() {
         return this.enqueuedTime;
     }
     /**
      * Information about why the backup operation failed. This is only present if the run has the FAILED status.
-     * 
      */
     @Export(name="error", type=OperationErrorResponse.class, parameters={})
     private Output<OperationErrorResponse> error;
 
     /**
      * @return Information about why the backup operation failed. This is only present if the run has the FAILED status.
-     * 
      */
     public Output<OperationErrorResponse> getError() {
         return this.error;
     }
     /**
      * Name of the database instance.
-     * 
      */
     @Export(name="instance", type=String.class, parameters={})
     private Output<String> instance;
 
     /**
      * @return Name of the database instance.
-     * 
      */
     public Output<String> getInstance() {
         return this.instance;
     }
     /**
      * This is always `sql#backupRun`.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return This is always `sql#backupRun`.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Location of the backups.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Location of the backups.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The URI of this resource.
-     * 
      */
     @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
      * @return The URI of this resource.
-     * 
      */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
     /**
      * The time the backup operation actually started in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
-     * 
      */
     @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
      * @return The time the backup operation actually started in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
-     * 
      */
     public Output<String> getStartTime() {
         return this.startTime;
     }
     /**
      * The status of this run.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return The status of this run.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * The type of this run; can be either "AUTOMATED" or "ON_DEMAND". This field defaults to "ON_DEMAND" and is ignored, when specified for insert requests.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of this run; can be either "AUTOMATED" or "ON_DEMAND". This field defaults to "ON_DEMAND" and is ignored, when specified for insert requests.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The start time of the backup window during which this the backup was attempted in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
-     * 
      */
     @Export(name="windowStartTime", type=String.class, parameters={})
     private Output<String> windowStartTime;
 
     /**
      * @return The start time of the backup window during which this the backup was attempted in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
-     * 
      */
     public Output<String> getWindowStartTime() {
         return this.windowStartTime;

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse {
     /**
      * The input URI of source file. This must be a Cloud Storage path (`gs://...`).
-     * 
      */
     private final String inputUri;
     /**
      * The format of the source file. Only "text/csv" is supported.
-     * 
      */
     private final String mimeType;
 
@@ -30,14 +28,12 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse {
 
     /**
      * The input URI of source file. This must be a Cloud Storage path (`gs://...`).
-     * 
     */
     public String getInputUri() {
         return this.inputUri;
     }
     /**
      * The format of the source file. Only "text/csv" is supported.
-     * 
     */
     public String getMimeType() {
         return this.mimeType;

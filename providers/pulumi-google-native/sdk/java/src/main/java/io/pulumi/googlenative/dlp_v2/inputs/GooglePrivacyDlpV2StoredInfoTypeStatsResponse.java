@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Statistics for a StoredInfoType.
- * 
  */
 public final class GooglePrivacyDlpV2StoredInfoTypeStatsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeStatsResponse extends io.pulu
 
     /**
      * StoredInfoType where findings are defined by a dictionary of phrases.
-     * 
      */
     @Import(name="largeCustomDictionary", required=true)
       private final GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary;

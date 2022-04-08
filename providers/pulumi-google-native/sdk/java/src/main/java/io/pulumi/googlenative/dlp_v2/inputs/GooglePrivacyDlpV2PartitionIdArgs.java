@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Datastore partition ID. A partition ID identifies a grouping of entities. The grouping is always by project and namespace, however the namespace ID may be empty. A partition ID contains several dimensions: project ID and namespace ID.
- * 
  */
 public final class GooglePrivacyDlpV2PartitionIdArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GooglePrivacyDlpV2PartitionIdArgs extends io.pulumi.resources
 
     /**
      * If not empty, the ID of the namespace to which the entities belong.
-     * 
      */
     @Import(name="namespaceId")
       private final @Nullable Output<String> namespaceId;
@@ -31,7 +29,6 @@ public final class GooglePrivacyDlpV2PartitionIdArgs extends io.pulumi.resources
 
     /**
      * The ID of the project to which the entities belong.
-     * 
      */
     @Import(name="project")
       private final @Nullable Output<String> project;

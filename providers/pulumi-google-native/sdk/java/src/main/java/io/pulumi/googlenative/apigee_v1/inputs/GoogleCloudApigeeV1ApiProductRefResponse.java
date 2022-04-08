@@ -14,7 +14,6 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse extends io.pulumi.re
 
     /**
      * Name of the API product.
-     * 
      */
     @Import(name="apiproduct", required=true)
       private final String apiproduct;
@@ -25,7 +24,6 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse extends io.pulumi.re
 
     /**
      * Status of the API product. Valid values are `approved` or `revoked`.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

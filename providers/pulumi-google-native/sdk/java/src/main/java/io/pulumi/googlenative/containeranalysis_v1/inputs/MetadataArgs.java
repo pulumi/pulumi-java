@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Other properties of the build.
- * 
  */
 public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The timestamp of when the build completed.
-     * 
      */
     @Import(name="buildFinishedOn")
       private final @Nullable Output<String> buildFinishedOn;
@@ -33,7 +31,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identifies the particular build invocation, which can be useful for finding associated logs or other ad-hoc analysis. The value SHOULD be globally unique, per in-toto Provenance spec.
-     * 
      */
     @Import(name="buildInvocationId")
       private final @Nullable Output<String> buildInvocationId;
@@ -44,7 +41,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The timestamp of when the build started.
-     * 
      */
     @Import(name="buildStartedOn")
       private final @Nullable Output<String> buildStartedOn;
@@ -55,7 +51,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates that the builder claims certain fields in this message to be complete.
-     * 
      */
     @Import(name="completeness")
       private final @Nullable Output<CompletenessArgs> completeness;
@@ -66,7 +61,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If true, the builder claims that running the recipe on materials will produce bit-for-bit identical output.
-     * 
      */
     @Import(name="reproducible")
       private final @Nullable Output<Boolean> reproducible;

@@ -14,7 +14,6 @@ public final class StreamingbufferResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * A lower-bound estimate of the number of bytes currently in the streaming buffer.
-     * 
      */
     @Import(name="estimatedBytes", required=true)
       private final String estimatedBytes;
@@ -25,7 +24,6 @@ public final class StreamingbufferResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * A lower-bound estimate of the number of rows currently in the streaming buffer.
-     * 
      */
     @Import(name="estimatedRows", required=true)
       private final String estimatedRows;
@@ -36,7 +34,6 @@ public final class StreamingbufferResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Contains the timestamp of the oldest entry in the streaming buffer, in milliseconds since the epoch, if the streaming buffer is available.
-     * 
      */
     @Import(name="oldestEntryTime", required=true)
       private final String oldestEntryTime;

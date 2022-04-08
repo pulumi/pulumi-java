@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class BandwidthLimitResponse {
     /**
      * Bandwidth rate in megabytes per second, distributed across all the agents in the pool.
-     * 
      */
     private final String limitMbps;
 
@@ -22,7 +21,6 @@ public final class BandwidthLimitResponse {
 
     /**
      * Bandwidth rate in megabytes per second, distributed across all the agents in the pool.
-     * 
     */
     public String getLimitMbps() {
         return this.limitMbps;

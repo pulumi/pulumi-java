@@ -29,7 +29,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether the entity type can be automatically expanded.
-     * 
      */
     @Import(name="autoExpansionMode")
       private final @Nullable Output<EntityTypeAutoExpansionMode> autoExpansionMode;
@@ -40,7 +39,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The human-readable name of the entity type, unique within the agent.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -51,7 +49,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Enables fuzzy entity extraction during classification.
-     * 
      */
     @Import(name="enableFuzzyExtraction")
       private final @Nullable Output<Boolean> enableFuzzyExtraction;
@@ -62,7 +59,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The collection of entity entries associated with the entity type.
-     * 
      */
     @Import(name="entities")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs>> entities;
@@ -73,7 +69,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Collection of exceptional words and phrases that shouldn't be matched. For example, if you have a size entity type with entry `giant`(an adjective), you might consider adding `giants`(a noun) as an exclusion. If the kind of entity type is `KIND_MAP`, then the phrases specified by entities and excluded phrases should be mutually exclusive.
-     * 
      */
     @Import(name="excludedPhrases")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseArgs>> excludedPhrases;
@@ -84,7 +79,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates the kind of entity type.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<EntityTypeKind> kind;
@@ -109,7 +103,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType. Format: `projects//locations//agents//entityTypes/`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -127,7 +120,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether parameters of the entity type should be redacted in log. If redaction is enabled, page parameters and intent parameters referring to the entity type will be replaced by parameter name when logging.
-     * 
      */
     @Import(name="redact")
       private final @Nullable Output<Boolean> redact;

@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * Metadata describing the feedback from the operator.
- * 
  */
 public final class GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse extends io.pulumi.resources.InvokeArgs {
 

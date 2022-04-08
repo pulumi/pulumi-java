@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Authorization-related information used by Cloud Audit Logging.
- * 
  */
 public final class AuthorizationLoggingOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AuthorizationLoggingOptionsArgs extends io.pulumi.resources.R
 
     /**
      * The type of the permission that was checked.
-     * 
      */
     @Import(name="permissionType")
       private final @Nullable Output<AuthorizationLoggingOptionsPermissionType> permissionType;

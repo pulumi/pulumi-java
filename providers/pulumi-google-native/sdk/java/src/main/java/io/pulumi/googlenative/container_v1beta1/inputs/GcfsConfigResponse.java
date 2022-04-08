@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * GcfsConfig contains configurations of Google Container File System.
- * 
  */
 public final class GcfsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GcfsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether to use GCFS.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

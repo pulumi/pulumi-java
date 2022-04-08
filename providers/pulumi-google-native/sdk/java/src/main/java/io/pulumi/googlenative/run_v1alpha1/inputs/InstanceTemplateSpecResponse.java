@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * InstanceTemplateSpec describes the data an instance should have when created from a template.
- * 
  */
 public final class InstanceTemplateSpecResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class InstanceTemplateSpecResponse extends io.pulumi.resources.Invo
 
     /**
      * Optional. Specification of the desired behavior of the instance. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status +optional
-     * 
      */
     @Import(name="spec", required=true)
       private final InstanceSpecResponse spec;

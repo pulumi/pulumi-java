@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Required. Runtime type of the Apigee organization based on the Apigee subscription purchased.
-     * 
      */
     @EnumType
     public enum OrganizationRuntimeType {
         /**
          * Runtime type not specified.
-         * 
          */
         RuntimeTypeUnspecified("RUNTIME_TYPE_UNSPECIFIED"),
         /**
          * Google-managed Apigee runtime.
-         * 
          */
         Cloud("CLOUD"),
         /**
          * User-managed Apigee hybrid runtime.
-         * 
          */
         Hybrid("HYBRID");
 

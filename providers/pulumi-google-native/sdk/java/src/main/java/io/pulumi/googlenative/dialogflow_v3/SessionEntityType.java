@@ -15,48 +15,41 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a session entity type.
- * 
  */
 @ResourceType(type="google-native:dialogflow/v3:SessionEntityType")
 public class SessionEntityType extends io.pulumi.resources.CustomResource {
     /**
      * The collection of entities to override or supplement the custom entity type.
-     * 
      */
     @Export(name="entities", type=List.class, parameters={GoogleCloudDialogflowCxV3EntityTypeEntityResponse.class})
     private Output<List<GoogleCloudDialogflowCxV3EntityTypeEntityResponse>> entities;
 
     /**
      * @return The collection of entities to override or supplement the custom entity type.
-     * 
      */
     public Output<List<GoogleCloudDialogflowCxV3EntityTypeEntityResponse>> getEntities() {
         return this.entities;
     }
     /**
      * Indicates whether the additional data should override or supplement the custom entity type definition.
-     * 
      */
     @Export(name="entityOverrideMode", type=String.class, parameters={})
     private Output<String> entityOverrideMode;
 
     /**
      * @return Indicates whether the additional data should override or supplement the custom entity type definition.
-     * 
      */
     public Output<String> getEntityOverrideMode() {
         return this.entityOverrideMode;
     }
     /**
      * The unique identifier of the session entity type. Format: `projects//locations//agents//sessions//entityTypes/` or `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default 'draft' environment.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The unique identifier of the session entity type. Format: `projects//locations//agents//sessions//entityTypes/` or `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default 'draft' environment.
-     * 
      */
     public Output<String> getName() {
         return this.name;

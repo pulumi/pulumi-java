@@ -10,33 +10,27 @@ import java.util.StringJoiner;
 
     /**
      * Severity of issue. Required.
-     * 
      */
     @EnumType
     public enum TestIssueSeverity {
         /**
          * Default unspecified severity. Do not use. For versioning only.
-         * 
          */
         UnspecifiedSeverity("unspecifiedSeverity"),
         /**
          * Non critical issue, providing users with some info about the test run.
-         * 
          */
         Info("info"),
         /**
          * Non critical issue, providing users with some hints on improving their testing experience, e.g., suggesting to use Game Loops.
-         * 
          */
         Suggestion("suggestion"),
         /**
          * Potentially critical issue.
-         * 
          */
         Warning("warning"),
         /**
          * Critical issue.
-         * 
          */
         Severe("severe");
 

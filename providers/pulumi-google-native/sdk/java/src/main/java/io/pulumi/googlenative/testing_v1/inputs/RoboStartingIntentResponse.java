@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Message for specifying the start activities to crawl.
- * 
  */
 public final class RoboStartingIntentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RoboStartingIntentResponse extends io.pulumi.resources.Invoke
 
     /**
      * An intent that starts the main launcher activity.
-     * 
      */
     @Import(name="launcherActivity", required=true)
       private final LauncherActivityIntentResponse launcherActivity;
@@ -31,7 +29,6 @@ public final class RoboStartingIntentResponse extends io.pulumi.resources.Invoke
 
     /**
      * An intent that starts an activity with specific details.
-     * 
      */
     @Import(name="startActivity", required=true)
       private final StartActivityIntentResponse startActivity;
@@ -42,7 +39,6 @@ public final class RoboStartingIntentResponse extends io.pulumi.resources.Invoke
 
     /**
      * Timeout in seconds for each intent.
-     * 
      */
     @Import(name="timeout", required=true)
       private final String timeout;

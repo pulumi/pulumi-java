@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Application related details of a job posting.
- * 
  */
 public final class ApplicationInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ApplicationInfoResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Use this field to specify email address(es) to which resumes or applications can be sent. The maximum number of allowed characters for each entry is 255.
-     * 
      */
     @Import(name="emails", required=true)
       private final List<String> emails;
@@ -30,7 +28,6 @@ public final class ApplicationInfoResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Use this field to provide instructions, such as "Mail your application to ...", that a candidate can follow to apply for the job. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 3,000.
-     * 
      */
     @Import(name="instruction", required=true)
       private final String instruction;
@@ -41,7 +38,6 @@ public final class ApplicationInfoResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Use this URI field to direct an applicant to a website, for example to link to an online application form. The maximum number of allowed characters for each entry is 2,000.
-     * 
      */
     @Import(name="uris", required=true)
       private final List<String> uris;

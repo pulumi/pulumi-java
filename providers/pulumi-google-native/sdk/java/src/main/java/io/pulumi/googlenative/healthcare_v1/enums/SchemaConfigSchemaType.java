@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the output schema type. Schema type is required.
-     * 
      */
     @EnumType
     public enum SchemaConfigSchemaType {
         /**
          * No schema type specified. This type is unsupported.
-         * 
          */
         SchemaTypeUnspecified("SCHEMA_TYPE_UNSPECIFIED"),
         /**
          * Analytics schema defined by the FHIR community. See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md. BigQuery only allows a maximum of 10,000 columns per table. Due to this limitation, the server will not generate schemas for fields of type `Resource`, which can hold any resource type. The affected fields are `Parameters.parameter.resource`, `Bundle.entry.resource`, and `Bundle.entry.response.outcome`.
-         * 
          */
         Analytics("ANALYTICS");
 

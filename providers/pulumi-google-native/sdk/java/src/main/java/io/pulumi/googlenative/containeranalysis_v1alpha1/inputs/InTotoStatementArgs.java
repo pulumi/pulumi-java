@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Spec defined at https://github.com/in-toto/attestation/tree/main/spec#statement The serialized InTotoStatement will be stored as Envelope.payload. Envelope.payloadType is always "application/vnd.in-toto+json".
- * 
  */
 public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * "https://slsa.dev/provenance/v0.1" for SlsaProvenance.
-     * 
      */
     @Import(name="predicateType")
       private final @Nullable Output<String> predicateType;
@@ -35,7 +33,6 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * provenance is a predicate of type intotoprovenance
-     * 
      */
     @Import(name="provenance")
       private final @Nullable Output<InTotoProvenanceArgs> provenance;
@@ -46,7 +43,6 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * slsa_provenance is a predicate of type slsaProvenance
-     * 
      */
     @Import(name="slsaProvenance")
       private final @Nullable Output<SlsaProvenanceArgs> slsaProvenance;
@@ -57,7 +53,6 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * subject is the subjects of the intoto statement
-     * 
      */
     @Import(name="subject")
       private final @Nullable Output<List<SubjectArgs>> subject;
@@ -68,7 +63,6 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Always "https://in-toto.io/Statement/v0.1".
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

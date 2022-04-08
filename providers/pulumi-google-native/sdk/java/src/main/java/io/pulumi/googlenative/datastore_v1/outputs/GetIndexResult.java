@@ -13,32 +13,26 @@ import java.util.Objects;
 public final class GetIndexResult {
     /**
      * The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
-     * 
      */
     private final String ancestor;
     /**
      * The resource ID of the index.
-     * 
      */
     private final String indexId;
     /**
      * The entity kind to which this index applies.
-     * 
      */
     private final String kind;
     /**
      * Project ID.
-     * 
      */
     private final String project;
     /**
      * An ordered sequence of property names and their index attributes.
-     * 
      */
     private final List<GoogleDatastoreAdminV1IndexedPropertyResponse> properties;
     /**
      * The state of the index.
-     * 
      */
     private final String state;
 
@@ -60,42 +54,36 @@ public final class GetIndexResult {
 
     /**
      * The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
-     * 
     */
     public String getAncestor() {
         return this.ancestor;
     }
     /**
      * The resource ID of the index.
-     * 
     */
     public String getIndexId() {
         return this.indexId;
     }
     /**
      * The entity kind to which this index applies.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Project ID.
-     * 
     */
     public String getProject() {
         return this.project;
     }
     /**
      * An ordered sequence of property names and their index attributes.
-     * 
     */
     public List<GoogleDatastoreAdminV1IndexedPropertyResponse> getProperties() {
         return this.properties;
     }
     /**
      * The state of the index.
-     * 
     */
     public String getState() {
         return this.state;

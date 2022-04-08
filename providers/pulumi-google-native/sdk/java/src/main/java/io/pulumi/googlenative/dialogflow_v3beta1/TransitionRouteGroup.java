@@ -15,48 +15,41 @@ import javax.annotation.Nullable;
 
 /**
  * Creates an TransitionRouteGroup in the specified flow. Note: You should always train a flow prior to sending it queries. See the [training documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
- * 
  */
 @ResourceType(type="google-native:dialogflow/v3beta1:TransitionRouteGroup")
 public class TransitionRouteGroup extends io.pulumi.resources.CustomResource {
     /**
      * The human-readable name of the transition route group, unique within the Agent. The display name can be no longer than 30 characters.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The human-readable name of the transition route group, unique within the Agent. The display name can be no longer than 30 characters.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The unique identifier of the transition route group. TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format: `projects//locations//agents//flows//transitionRouteGroups/`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The unique identifier of the transition route group. TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format: `projects//locations//agents//flows//transitionRouteGroups/`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Transition routes associated with the TransitionRouteGroup.
-     * 
      */
     @Export(name="transitionRoutes", type=List.class, parameters={GoogleCloudDialogflowCxV3beta1TransitionRouteResponse.class})
     private Output<List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse>> transitionRoutes;
 
     /**
      * @return Transition routes associated with the TransitionRouteGroup.
-     * 
      */
     public Output<List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse>> getTransitionRoutes() {
         return this.transitionRoutes;

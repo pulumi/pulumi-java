@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Service Account used as a credential.
- * 
  */
 public final class ServiceAccountResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ServiceAccountResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The IAM service account email address like test@myproject.iam.gserviceaccount.com
-     * 
      */
     @Import(name="email", required=true)
       private final String email;

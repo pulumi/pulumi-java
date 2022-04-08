@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class DiscoveryResponse {
     /**
      * Immutable. The kind of analysis that is handled by this discovery.
-     * 
      */
     private final String analysisKind;
 
@@ -22,7 +21,6 @@ public final class DiscoveryResponse {
 
     /**
      * Immutable. The kind of analysis that is handled by this discovery.
-     * 
     */
     public String getAnalysisKind() {
         return this.analysisKind;

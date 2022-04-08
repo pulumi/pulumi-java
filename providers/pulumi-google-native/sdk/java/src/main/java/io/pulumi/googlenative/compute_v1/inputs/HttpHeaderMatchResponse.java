@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * matchRule criteria for request header matches.
- * 
  */
 public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The value should exactly match contents of exactMatch. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
-     * 
      */
     @Import(name="exactMatch", required=true)
       private final String exactMatch;
@@ -31,7 +29,6 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the HTTP header to match. For matching against the HTTP request's authority, use a headerMatch with the header name ":authority". For matching a request's method, use the headerName ":method". When the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true, only non-binary user-specified custom metadata and the `content-type` header are supported. The following transport-level headers cannot be used in header matching rules: `:authority`, `:method`, `:path`, `:scheme`, `user-agent`, `accept-encoding`, `content-encoding`, `grpc-accept-encoding`, `grpc-encoding`, `grpc-previous-rpc-attempts`, `grpc-tags-bin`, `grpc-timeout` and `grpc-trace-bin`.
-     * 
      */
     @Import(name="headerName", required=true)
       private final String headerName;
@@ -41,8 +38,7 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
     }
 
     /**
-     * If set to false, the headerMatch is considered a match if the preceding match criteria are met. If set to true, the headerMatch is considered a match if the preceding match criteria are NOT met. The default setting is false.
-     * 
+     * If set to false, the headerMatch is considered a match if the preceding match criteria are met. If set to true, the headerMatch is considered a match if the preceding match criteria are NOT met. The default setting is false. 
      */
     @Import(name="invertMatch", required=true)
       private final Boolean invertMatch;
@@ -53,7 +49,6 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The value of the header must start with the contents of prefixMatch. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
-     * 
      */
     @Import(name="prefixMatch", required=true)
       private final String prefixMatch;
@@ -64,7 +59,6 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * A header with the contents of headerName must exist. The match takes place whether or not the request's header has a value. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
-     * 
      */
     @Import(name="presentMatch", required=true)
       private final Boolean presentMatch;
@@ -75,7 +69,6 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The header value must be an integer and its value must be in the range specified in rangeMatch. If the header does not contain an integer, number or is empty, the match fails. For example for a range [-5, 0] - -3 will match. - 0 will not match. - 0.25 will not match. - -3someString will not match. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set. rangeMatch is not supported for load balancers that have loadBalancingScheme set to EXTERNAL.
-     * 
      */
     @Import(name="rangeMatch", required=true)
       private final Int64RangeMatchResponse rangeMatch;
@@ -86,7 +79,6 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The value of the header must match the regular expression specified in regexMatch. For more information about regular expression syntax, see Syntax. For matching against a port specified in the HTTP request, use a headerMatch with headerName set to PORT and a regular expression that satisfies the RFC2616 Host header's port specifier. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set. regexMatch only applies to load balancers that have loadBalancingScheme set to INTERNAL_SELF_MANAGED.
-     * 
      */
     @Import(name="regexMatch", required=true)
       private final String regexMatch;
@@ -97,7 +89,6 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The value of the header must end with the contents of suffixMatch. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
-     * 
      */
     @Import(name="suffixMatch", required=true)
       private final String suffixMatch;

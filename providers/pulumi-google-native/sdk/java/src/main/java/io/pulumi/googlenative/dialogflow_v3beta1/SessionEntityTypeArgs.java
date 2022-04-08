@@ -26,7 +26,6 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The collection of entities to override or supplement the custom entity type.
-     * 
      */
     @Import(name="entities", required=true)
       private final Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs>> entities;
@@ -37,7 +36,6 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Indicates whether the additional data should override or supplement the custom entity type definition.
-     * 
      */
     @Import(name="entityOverrideMode", required=true)
       private final Output<SessionEntityTypeEntityOverrideMode> entityOverrideMode;
@@ -62,7 +60,6 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The unique identifier of the session entity type. Format: `projects//locations//agents//sessions//entityTypes/` or `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default 'draft' environment.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

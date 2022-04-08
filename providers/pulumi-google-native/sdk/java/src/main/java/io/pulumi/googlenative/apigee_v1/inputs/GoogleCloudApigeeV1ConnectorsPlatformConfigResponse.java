@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Configuration for the Connectors Platform add-on.
- * 
  */
 public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse extends i
 
     /**
      * Flag that specifies whether the Connectors Platform add-on is enabled.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;
@@ -30,7 +28,6 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse extends i
 
     /**
      * Time at which the Connectors Platform add-on expires in milliseconds since epoch. If unspecified, the add-on will never expire.
-     * 
      */
     @Import(name="expiresAt", required=true)
       private final String expiresAt;

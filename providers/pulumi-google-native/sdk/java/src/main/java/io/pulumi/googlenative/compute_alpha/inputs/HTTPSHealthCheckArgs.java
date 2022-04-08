@@ -20,7 +20,6 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The value of the host header in the HTTPS health check request. If left empty (default value), the IP on behalf of which this health check is performed will be used.
-     * 
      */
     @Import(name="host")
       private final @Nullable Output<String> host;
@@ -31,7 +30,6 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The TCP port number for the health check request. The default value is 443. Valid values are 1 through 65535.
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Integer> port;
@@ -42,7 +40,6 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.
-     * 
      */
     @Import(name="portName")
       private final @Nullable Output<String> portName;
@@ -53,7 +50,6 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Specifies how port is selected for health checking, can be one of following values: USE_FIXED_PORT: The port number in port is used for health checking. USE_NAMED_PORT: The portName is used for health checking. USE_SERVING_PORT: For NetworkEndpointGroup, the port specified for each network endpoint is used for health checking. For other backends, the port or named port specified in the Backend Service is used for health checking. If not specified, HTTPS health check follows behavior specified in port and portName fields.
-     * 
      */
     @Import(name="portSpecification")
       private final @Nullable Output<HTTPSHealthCheckPortSpecification> portSpecification;
@@ -64,7 +60,6 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.
-     * 
      */
     @Import(name="proxyHeader")
       private final @Nullable Output<HTTPSHealthCheckProxyHeader> proxyHeader;
@@ -75,7 +70,6 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The request path of the HTTPS health check request. The default value is /.
-     * 
      */
     @Import(name="requestPath")
       private final @Nullable Output<String> requestPath;
@@ -86,7 +80,6 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.
-     * 
      */
     @Import(name="response")
       private final @Nullable Output<String> response;
@@ -97,7 +90,6 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Weight report mode. used for weighted Load Balancing.
-     * 
      */
     @Import(name="weightReportMode")
       private final @Nullable Output<HTTPSHealthCheckWeightReportMode> weightReportMode;

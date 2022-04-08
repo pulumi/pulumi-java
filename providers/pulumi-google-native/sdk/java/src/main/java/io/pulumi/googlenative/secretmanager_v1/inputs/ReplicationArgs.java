@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A policy that defines the replication and encryption configuration of data.
- * 
  */
 public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Secret will automatically be replicated without any restrictions.
-     * 
      */
     @Import(name="automatic")
       private final @Nullable Output<AutomaticArgs> automatic;
@@ -32,7 +30,6 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Secret will only be replicated into the locations specified.
-     * 
      */
     @Import(name="userManaged")
       private final @Nullable Output<UserManagedArgs> userManaged;

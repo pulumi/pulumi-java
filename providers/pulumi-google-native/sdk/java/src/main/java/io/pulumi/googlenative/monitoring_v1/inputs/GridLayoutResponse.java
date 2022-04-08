@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A basic layout divides the available space into vertical columns of equal width and arranges a list of widgets using a row-first strategy.
- * 
  */
 public final class GridLayoutResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GridLayoutResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The number of columns into which the view's width is divided. If omitted or set to zero, a system default will be used while rendering.
-     * 
      */
     @Import(name="columns", required=true)
       private final String columns;
@@ -31,7 +29,6 @@ public final class GridLayoutResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The informational elements that are arranged into the columns row-first.
-     * 
      */
     @Import(name="widgets", required=true)
       private final List<WidgetResponse> widgets;

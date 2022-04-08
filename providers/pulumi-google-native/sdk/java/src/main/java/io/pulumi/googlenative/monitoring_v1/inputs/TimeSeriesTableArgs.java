@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A table that displays time series data.
- * 
  */
 public final class TimeSeriesTableArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class TimeSeriesTableArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The data displayed in this table.
-     * 
      */
     @Import(name="dataSets", required=true)
       private final Output<List<TableDataSetArgs>> dataSets;

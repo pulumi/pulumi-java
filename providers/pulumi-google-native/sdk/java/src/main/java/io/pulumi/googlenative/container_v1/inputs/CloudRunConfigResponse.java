@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Configuration options for the Cloud Run feature.
- * 
  */
 public final class CloudRunConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class CloudRunConfigResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Whether Cloud Run addon is enabled for this cluster.
-     * 
      */
     @Import(name="disabled", required=true)
       private final Boolean disabled;
@@ -30,7 +28,6 @@ public final class CloudRunConfigResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Which load balancer type is installed for Cloud Run.
-     * 
      */
     @Import(name="loadBalancerType", required=true)
       private final String loadBalancerType;

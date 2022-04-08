@@ -15,7 +15,6 @@ public final class GSuitePrincipalResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * This principal represents all users of the G Suite domain of the customer.
-     * 
      */
     @Import(name="gsuiteDomain", required=true)
       private final Boolean gsuiteDomain;
@@ -26,7 +25,6 @@ public final class GSuitePrincipalResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * This principal references a G Suite group account
-     * 
      */
     @Import(name="gsuiteGroupEmail", required=true)
       private final String gsuiteGroupEmail;
@@ -37,7 +35,6 @@ public final class GSuitePrincipalResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * This principal references a G Suite user account
-     * 
      */
     @Import(name="gsuiteUserEmail", required=true)
       private final String gsuiteUserEmail;

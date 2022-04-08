@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class OracleSourceConfigResponse {
     /**
      * Oracle objects to exclude from the stream.
-     * 
      */
     private final OracleRdbmsResponse excludeObjects;
     /**
      * Oracle objects to include in the stream.
-     * 
      */
     private final OracleRdbmsResponse includeObjects;
 
@@ -30,14 +28,12 @@ public final class OracleSourceConfigResponse {
 
     /**
      * Oracle objects to exclude from the stream.
-     * 
     */
     public OracleRdbmsResponse getExcludeObjects() {
         return this.excludeObjects;
     }
     /**
      * Oracle objects to include in the stream.
-     * 
     */
     public OracleRdbmsResponse getIncludeObjects() {
         return this.includeObjects;

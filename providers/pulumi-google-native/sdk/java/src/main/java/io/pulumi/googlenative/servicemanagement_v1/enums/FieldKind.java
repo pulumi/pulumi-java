@@ -10,103 +10,83 @@ import java.util.StringJoiner;
 
     /**
      * The field type.
-     * 
      */
     @EnumType
     public enum FieldKind {
         /**
          * Field type unknown.
-         * 
          */
         TypeUnknown("TYPE_UNKNOWN"),
         /**
          * Field type double.
-         * 
          */
         TypeDouble("TYPE_DOUBLE"),
         /**
          * Field type float.
-         * 
          */
         TypeFloat("TYPE_FLOAT"),
         /**
          * Field type int64.
-         * 
          */
         TypeInt64("TYPE_INT64"),
         /**
          * Field type uint64.
-         * 
          */
         TypeUint64("TYPE_UINT64"),
         /**
          * Field type int32.
-         * 
          */
         TypeInt32("TYPE_INT32"),
         /**
          * Field type fixed64.
-         * 
          */
         TypeFixed64("TYPE_FIXED64"),
         /**
          * Field type fixed32.
-         * 
          */
         TypeFixed32("TYPE_FIXED32"),
         /**
          * Field type bool.
-         * 
          */
         TypeBool("TYPE_BOOL"),
         /**
          * Field type string.
-         * 
          */
         TypeString("TYPE_STRING"),
         /**
          * Field type group. Proto2 syntax only, and deprecated.
-         * 
          */
         TypeGroup("TYPE_GROUP"),
         /**
          * Field type message.
-         * 
          */
         TypeMessage("TYPE_MESSAGE"),
         /**
          * Field type bytes.
-         * 
          */
         TypeBytes("TYPE_BYTES"),
         /**
          * Field type uint32.
-         * 
          */
         TypeUint32("TYPE_UINT32"),
         /**
          * Field type enum.
-         * 
          */
         TypeEnum("TYPE_ENUM"),
         /**
          * Field type sfixed32.
-         * 
          */
         TypeSfixed32("TYPE_SFIXED32"),
         /**
          * Field type sfixed64.
-         * 
          */
         TypeSfixed64("TYPE_SFIXED64"),
         /**
          * Field type sint32.
-         * 
          */
         TypeSint32("TYPE_SINT32"),
         /**
          * Field type sint64.
-         * 
          */
         TypeSint64("TYPE_SINT64");
 

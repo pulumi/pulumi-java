@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * OnPremCluster contains information specific to GKE On-Prem clusters.
- * 
  */
 public final class OnPremClusterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class OnPremClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. Whether the cluster is an admin cluster.
-     * 
      */
     @Import(name="adminCluster")
       private final @Nullable Output<Boolean> adminCluster;
@@ -32,7 +30,6 @@ public final class OnPremClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster
-     * 
      */
     @Import(name="resourceLink")
       private final @Nullable Output<String> resourceLink;

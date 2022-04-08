@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class CustomErrorResponse {
     /**
      * The list of custom error rules that apply to individual API messages. **NOTE:** All service configuration rules follow "last one wins" order.
-     * 
      */
     private final List<CustomErrorRuleResponse> rules;
     /**
      * The list of custom error detail types, e.g. 'google.foo.v1.CustomError'.
-     * 
      */
     private final List<String> types;
 
@@ -32,14 +30,12 @@ public final class CustomErrorResponse {
 
     /**
      * The list of custom error rules that apply to individual API messages. **NOTE:** All service configuration rules follow "last one wins" order.
-     * 
     */
     public List<CustomErrorRuleResponse> getRules() {
         return this.rules;
     }
     /**
      * The list of custom error detail types, e.g. 'google.foo.v1.CustomError'.
-     * 
     */
     public List<String> getTypes() {
         return this.types;

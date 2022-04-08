@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines a query on a resource.
- * 
  */
 public final class DynamicGroupQueryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DynamicGroupQueryArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Query that determines the memberships of the dynamic group. Examples: All users with at least one `organizations.department` of engineering. `user.organizations.exists(org, org.department=='engineering')` All users with at least one location that has `area` of `foo` and `building_id` of `bar`. `user.locations.exists(loc, loc.area=='foo' && loc.building_id=='bar')` All users with any variation of the name John Doe (case-insensitive queries add `equalsIgnoreCase()` to the value being queried). `user.name.value.equalsIgnoreCase('jOhn DoE')`
-     * 
      */
     @Import(name="query")
       private final @Nullable Output<String> query;
@@ -32,7 +30,6 @@ public final class DynamicGroupQueryArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Resource type for the Dynamic Group Query
-     * 
      */
     @Import(name="resourceType")
       private final @Nullable Output<DynamicGroupQueryResourceType> resourceType;

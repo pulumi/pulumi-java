@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class OsConstraintResponse {
     /**
      * The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: `"major.minor.patch"`. Examples: `"10.5.301"`, `"9.2.1"`.
-     * 
      */
     private final String minimumVersion;
     /**
      * The allowed OS type.
-     * 
      */
     private final String osType;
     /**
      * Only allows requests from devices with a verified Chrome OS. Verifications includes requirements that the device is enterprise-managed, conformant to domain policies, and the caller has permission to call the API targeted by the request.
-     * 
      */
     private final Boolean requireVerifiedChromeOs;
 
@@ -38,21 +35,18 @@ public final class OsConstraintResponse {
 
     /**
      * The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: `"major.minor.patch"`. Examples: `"10.5.301"`, `"9.2.1"`.
-     * 
     */
     public String getMinimumVersion() {
         return this.minimumVersion;
     }
     /**
      * The allowed OS type.
-     * 
     */
     public String getOsType() {
         return this.osType;
     }
     /**
      * Only allows requests from devices with a verified Chrome OS. Verifications includes requirements that the device is enterprise-managed, conformant to domain policies, and the caller has permission to call the API targeted by the request.
-     * 
     */
     public Boolean getRequireVerifiedChromeOs() {
         return this.requireVerifiedChromeOs;

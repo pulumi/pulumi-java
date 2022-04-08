@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A step that runs an executable for a PatchJob.
- * 
  */
 public final class ExecStepArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ExecStepArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ExecStepConfig for all Linux VMs targeted by the PatchJob.
-     * 
      */
     @Import(name="linuxExecStepConfig")
       private final @Nullable Output<ExecStepConfigArgs> linuxExecStepConfig;
@@ -31,7 +29,6 @@ public final class ExecStepArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ExecStepConfig for all Windows VMs targeted by the PatchJob.
-     * 
      */
     @Import(name="windowsExecStepConfig")
       private final @Nullable Output<ExecStepConfigArgs> windowsExecStepConfig;

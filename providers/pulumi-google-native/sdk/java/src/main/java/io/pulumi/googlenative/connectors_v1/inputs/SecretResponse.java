@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Secret provides a reference to entries in Secret Manager.
- * 
  */
 public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource name of the secret version in the format, format as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
-     * 
      */
     @Import(name="secretVersion", required=true)
       private final String secretVersion;

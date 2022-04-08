@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * For display only. Metadata associated with a load balancer.
- * 
  */
 public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Type of load balancer's backend configuration.
-     * 
      */
     @Import(name="backendType", required=true)
       private final String backendType;
@@ -31,7 +29,6 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Backend configuration URI.
-     * 
      */
     @Import(name="backendUri", required=true)
       private final String backendUri;
@@ -42,7 +39,6 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Information for the loadbalancer backends.
-     * 
      */
     @Import(name="backends", required=true)
       private final List<LoadBalancerBackendResponse> backends;
@@ -53,7 +49,6 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * URI of the health check for the load balancer.
-     * 
      */
     @Import(name="healthCheckUri", required=true)
       private final String healthCheckUri;
@@ -64,7 +59,6 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Type of the load balancer.
-     * 
      */
     @Import(name="loadBalancerType", required=true)
       private final String loadBalancerType;

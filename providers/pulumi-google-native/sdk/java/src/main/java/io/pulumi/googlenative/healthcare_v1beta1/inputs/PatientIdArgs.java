@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A patient identifier and associated type.
- * 
  */
 public final class PatientIdArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PatientIdArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ID type. For example, MRN or NHS.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;
@@ -31,7 +29,6 @@ public final class PatientIdArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The patient's unique identifier.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

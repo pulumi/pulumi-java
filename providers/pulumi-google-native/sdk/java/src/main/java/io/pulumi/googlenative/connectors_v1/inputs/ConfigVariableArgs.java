@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * ConfigVariable represents a configuration variable present in a Connection. or AuthConfig.
- * 
  */
 public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value is a bool.
-     * 
      */
     @Import(name="boolValue")
       private final @Nullable Output<Boolean> boolValue;
@@ -33,7 +31,6 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value is an integer
-     * 
      */
     @Import(name="intValue")
       private final @Nullable Output<String> intValue;
@@ -44,7 +41,6 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Key of the config variable.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -55,7 +51,6 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value is a secret.
-     * 
      */
     @Import(name="secretValue")
       private final @Nullable Output<SecretArgs> secretValue;
@@ -66,7 +61,6 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value is a string.
-     * 
      */
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;

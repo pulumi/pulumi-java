@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class VirtualNICResponse {
     /**
      * Whether gVNIC features are enabled in the node pool.
-     * 
      */
     private final Boolean enabled;
 
@@ -22,7 +21,6 @@ public final class VirtualNICResponse {
 
     /**
      * Whether gVNIC features are enabled in the node pool.
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;

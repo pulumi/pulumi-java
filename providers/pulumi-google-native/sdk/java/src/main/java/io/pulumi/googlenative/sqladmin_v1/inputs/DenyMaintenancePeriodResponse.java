@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Deny maintenance Periods. This specifies a date range during when all CSA rollout will be denied.
- * 
  */
 public final class DenyMaintenancePeriodResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DenyMaintenancePeriodResponse extends io.pulumi.resources.Inv
 
     /**
      * "deny maintenance period" end date. If the year of the end date is empty, the year of the start date also must be empty. In this case, it means the no maintenance interval recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01
-     * 
      */
     @Import(name="endDate", required=true)
       private final String endDate;
@@ -29,7 +27,6 @@ public final class DenyMaintenancePeriodResponse extends io.pulumi.resources.Inv
 
     /**
      * "deny maintenance period" start date. If the year of the start date is empty, the year of the end date also must be empty. In this case, it means the deny maintenance period recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01
-     * 
      */
     @Import(name="startDate", required=true)
       private final String startDate;
@@ -40,7 +37,6 @@ public final class DenyMaintenancePeriodResponse extends io.pulumi.resources.Inv
 
     /**
      * Time in UTC when the "deny maintenance period" starts on start_date and ends on end_date. The time is in format: HH:mm:SS, i.e., 00:00:00
-     * 
      */
     @Import(name="time", required=true)
       private final String time;

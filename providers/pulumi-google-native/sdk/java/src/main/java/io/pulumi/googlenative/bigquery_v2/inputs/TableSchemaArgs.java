@@ -17,7 +17,6 @@ public final class TableSchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes the fields in a table.
-     * 
      */
     @Import(name="fields")
       private final @Nullable Output<List<TableFieldSchemaArgs>> fields;

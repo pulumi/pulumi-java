@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class RowLayoutResponse {
     /**
      * The rows of content to display.
-     * 
      */
     private final List<RowResponse> rows;
 
@@ -23,7 +22,6 @@ public final class RowLayoutResponse {
 
     /**
      * The rows of content to display.
-     * 
     */
     public List<RowResponse> getRows() {
         return this.rows;

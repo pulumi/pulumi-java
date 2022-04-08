@@ -14,32 +14,26 @@ import java.util.Objects;
 public final class ReplicationCycleResponse {
     /**
      * The time the replication cycle has ended.
-     * 
      */
     private final String endTime;
     /**
      * The current progress in percentage of this cycle.
-     * 
      */
     private final Integer progress;
     /**
      * The current progress in percentage of this cycle.
-     * 
      */
     private final Integer progressPercent;
     /**
      * The time the replication cycle has started.
-     * 
      */
     private final String startTime;
     /**
      * The cycle's steps list reflecting its progress.
-     * 
      */
     private final List<CycleStepResponse> steps;
     /**
      * The accumulated duration the replication cycle was paused.
-     * 
      */
     private final String totalPauseDuration;
 
@@ -61,42 +55,36 @@ public final class ReplicationCycleResponse {
 
     /**
      * The time the replication cycle has ended.
-     * 
     */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * The current progress in percentage of this cycle.
-     * 
     */
     public Integer getProgress() {
         return this.progress;
     }
     /**
      * The current progress in percentage of this cycle.
-     * 
     */
     public Integer getProgressPercent() {
         return this.progressPercent;
     }
     /**
      * The time the replication cycle has started.
-     * 
     */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * The cycle's steps list reflecting its progress.
-     * 
     */
     public List<CycleStepResponse> getSteps() {
         return this.steps;
     }
     /**
      * The accumulated duration the replication cycle was paused.
-     * 
     */
     public String getTotalPauseDuration() {
         return this.totalPauseDuration;

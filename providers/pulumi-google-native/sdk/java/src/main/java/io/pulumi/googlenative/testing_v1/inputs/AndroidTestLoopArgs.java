@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * A test of an Android Application with a Test Loop. The intent \ will be implicitly added, since Games is the only user of this api, for the time being.
- * 
  */
 public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The APK for the application under test.
-     * 
      */
     @Import(name="appApk")
       private final @Nullable Output<FileReferenceArgs> appApk;
@@ -35,7 +33,6 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A multi-apk app bundle for the application under test.
-     * 
      */
     @Import(name="appBundle")
       private final @Nullable Output<AppBundleArgs> appBundle;
@@ -46,7 +43,6 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The java package for the application under test. The default is determined by examining the application's manifest.
-     * 
      */
     @Import(name="appPackageId")
       private final @Nullable Output<String> appPackageId;
@@ -57,7 +53,6 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The list of scenario labels that should be run during the test. The scenario labels should map to labels defined in the application's manifest. For example, player_experience and com.google.test.loops.player_experience add all of the loops labeled in the manifest with the com.google.test.loops.player_experience name to the execution. Scenarios can also be specified in the scenarios field.
-     * 
      */
     @Import(name="scenarioLabels")
       private final @Nullable Output<List<String>> scenarioLabels;
@@ -68,7 +63,6 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The list of scenarios that should be run during the test. The default is all test loops, derived from the application's manifest.
-     * 
      */
     @Import(name="scenarios")
       private final @Nullable Output<List<Integer>> scenarios;

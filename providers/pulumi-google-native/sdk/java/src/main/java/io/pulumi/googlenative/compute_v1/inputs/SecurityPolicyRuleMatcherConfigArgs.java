@@ -17,7 +17,6 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
 
     /**
      * CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
-     * 
      */
     @Import(name="srcIpRanges")
       private final @Nullable Output<List<String>> srcIpRanges;

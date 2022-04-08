@@ -18,7 +18,6 @@ public final class CompositeFilterArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The logic operator of the sub filter.
-     * 
      */
     @Import(name="logicOperator")
       private final @Nullable Output<CompositeFilterLogicOperator> logicOperator;
@@ -29,7 +28,6 @@ public final class CompositeFilterArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Sub filters.
-     * 
      */
     @Import(name="subFilters")
       private final @Nullable Output<List<FilterArgs>> subFilters;

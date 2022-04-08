@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Configuration of logging on a NAT.
- * 
  */
 public final class RouterNatLogConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class RouterNatLogConfigResponse extends io.pulumi.resources.Invoke
 
     /**
      * Indicates whether or not to export logs. This is false by default.
-     * 
      */
     @Import(name="enable", required=true)
       private final Boolean enable;
@@ -29,8 +27,7 @@ public final class RouterNatLogConfigResponse extends io.pulumi.resources.Invoke
     }
 
     /**
-     * Specify the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT. This option can take one of the following values: - ERRORS_ONLY: Export logs only for connection failures. - TRANSLATIONS_ONLY: Export logs only for successful connections. - ALL: Export logs for all connections, successful and unsuccessful.
-     * 
+     * Specify the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT. This option can take one of the following values: - ERRORS_ONLY: Export logs only for connection failures. - TRANSLATIONS_ONLY: Export logs only for successful connections. - ALL: Export logs for all connections, successful and unsuccessful. 
      */
     @Import(name="filter", required=true)
       private final String filter;

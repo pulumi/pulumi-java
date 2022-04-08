@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse {
     /**
      * Conversation model resource name. Format: `projects//conversationModels/`.
-     * 
      */
     private final String model;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
 
     /**
      * Conversation model resource name. Format: `projects//conversationModels/`.
-     * 
     */
     public String getModel() {
         return this.model;

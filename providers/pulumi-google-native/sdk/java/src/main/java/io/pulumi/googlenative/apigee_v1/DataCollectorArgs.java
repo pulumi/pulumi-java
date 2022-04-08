@@ -24,7 +24,6 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description of the data collector.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -35,7 +34,6 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ID of the data collector. Must begin with `dc_`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -53,7 +51,6 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The type of data this data collector will collect.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<DataCollectorType> type;

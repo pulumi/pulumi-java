@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration for controlling master global access settings.
- * 
  */
 public final class PrivateClusterMasterGlobalAccessConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class PrivateClusterMasterGlobalAccessConfigResponse extends io.pul
 
     /**
      * Whenever master is accessible globally or not.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

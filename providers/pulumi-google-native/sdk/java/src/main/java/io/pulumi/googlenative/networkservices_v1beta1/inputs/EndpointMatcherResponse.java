@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A definition of a matcher that selects endpoints to which the policies should be applied.
- * 
  */
 public final class EndpointMatcherResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class EndpointMatcherResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The matcher is based on node metadata presented by xDS clients.
-     * 
      */
     @Import(name="metadataLabelMatcher", required=true)
       private final MetadataLabelMatcherResponse metadataLabelMatcher;

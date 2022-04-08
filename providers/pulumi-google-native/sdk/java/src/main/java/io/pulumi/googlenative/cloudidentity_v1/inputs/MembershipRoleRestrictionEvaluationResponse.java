@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The evaluated state of this restriction.
- * 
  */
 public final class MembershipRoleRestrictionEvaluationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MembershipRoleRestrictionEvaluationResponse extends io.pulumi
 
     /**
      * The current state of the restriction
-     * 
      */
     @Import(name="state", required=true)
       private final String state;

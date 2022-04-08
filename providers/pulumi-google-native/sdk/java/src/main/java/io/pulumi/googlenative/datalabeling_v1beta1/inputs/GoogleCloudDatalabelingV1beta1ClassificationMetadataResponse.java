@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Metadata for classification annotations.
- * 
  */
 public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse 
 
     /**
      * Whether the classification task is multi-label or not.
-     * 
      */
     @Import(name="isMultiLabel", required=true)
       private final Boolean isMultiLabel;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Provides data to pass through to the worker harness.
- * 
  */
 public final class WorkerSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class WorkerSettingsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value is "http://www.googleapis.com/"
-     * 
      */
     @Import(name="baseUrl", required=true)
       private final String baseUrl;
@@ -30,7 +28,6 @@ public final class WorkerSettingsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Whether to send work progress updates to the service.
-     * 
      */
     @Import(name="reportingEnabled", required=true)
       private final Boolean reportingEnabled;
@@ -41,7 +38,6 @@ public final class WorkerSettingsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The Cloud Dataflow service path relative to the root URL, for example, "dataflow/v1b3/projects".
-     * 
      */
     @Import(name="servicePath", required=true)
       private final String servicePath;
@@ -52,7 +48,6 @@ public final class WorkerSettingsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The Shuffle service path relative to the root URL, for example, "shuffle/v1beta1".
-     * 
      */
     @Import(name="shuffleServicePath", required=true)
       private final String shuffleServicePath;
@@ -63,7 +58,6 @@ public final class WorkerSettingsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The prefix of the resources the system should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
-     * 
      */
     @Import(name="tempStoragePrefix", required=true)
       private final String tempStoragePrefix;
@@ -74,7 +68,6 @@ public final class WorkerSettingsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The ID of the worker running this pipeline.
-     * 
      */
     @Import(name="workerId", required=true)
       private final String workerId;

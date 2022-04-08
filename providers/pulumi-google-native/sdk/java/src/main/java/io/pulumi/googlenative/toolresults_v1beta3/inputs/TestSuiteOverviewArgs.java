@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A summary of a test suite result either parsed from XML or uploaded directly by a user. Note: the API related comments are for StepService only. This message is also being used in ExecutionService in a read only mode for the corresponding step.
- * 
  */
 public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Elapsed time of test suite.
-     * 
      */
     @Import(name="elapsedTime")
       private final @Nullable Output<DurationArgs> elapsedTime;
@@ -34,7 +32,6 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Number of test cases in error, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
-     * 
      */
     @Import(name="errorCount")
       private final @Nullable Output<Integer> errorCount;
@@ -45,7 +42,6 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Number of failed test cases, typically set by the service by parsing the xml_source. May also be set by the user. - In create/response: always set - In update request: never
-     * 
      */
     @Import(name="failureCount")
       private final @Nullable Output<Integer> failureCount;
@@ -56,7 +52,6 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Number of flaky test cases, set by the service by rolling up flaky test attempts. Present only for rollup test suite overview at environment level. A step cannot have flaky test cases.
-     * 
      */
     @Import(name="flakyCount")
       private final @Nullable Output<Integer> flakyCount;
@@ -67,7 +62,6 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the test suite. - In create/response: always set - In update request: never
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -78,7 +72,6 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Number of test cases not run, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
-     * 
      */
     @Import(name="skippedCount")
       private final @Nullable Output<Integer> skippedCount;
@@ -89,7 +82,6 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Number of test cases, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
-     * 
      */
     @Import(name="totalCount")
       private final @Nullable Output<Integer> totalCount;
@@ -100,7 +92,6 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * If this test suite was parsed from XML, this is the URI where the original XML file is stored. Note: Multiple test suites can share the same xml_source Returns INVALID_ARGUMENT if the uri format is not supported. - In create/response: optional - In update request: never
-     * 
      */
     @Import(name="xmlSource")
       private final @Nullable Output<FileReferenceArgs> xmlSource;

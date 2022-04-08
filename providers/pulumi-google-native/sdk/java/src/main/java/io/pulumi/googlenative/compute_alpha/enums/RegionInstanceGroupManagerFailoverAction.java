@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The action to perform in case of zone failure. Only one value is supported, NO_FAILOVER. The default is NO_FAILOVER.
-     * 
      */
     @EnumType
     public enum RegionInstanceGroupManagerFailoverAction {

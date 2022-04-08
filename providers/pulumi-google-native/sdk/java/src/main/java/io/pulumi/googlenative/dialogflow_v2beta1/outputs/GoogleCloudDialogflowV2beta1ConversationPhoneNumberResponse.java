@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse {
     /**
      * The phone number to connect to this conversation.
-     * 
      */
     private final String phoneNumber;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse {
 
     /**
      * The phone number to connect to this conversation.
-     * 
     */
     public String getPhoneNumber() {
         return this.phoneNumber;

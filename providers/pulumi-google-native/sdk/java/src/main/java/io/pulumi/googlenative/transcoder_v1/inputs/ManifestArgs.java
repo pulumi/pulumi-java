@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Manifest configuration.
- * 
  */
 public final class ManifestArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ManifestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the generated file. The default is `manifest` with the extension suffix corresponding to the `Manifest.type`.
-     * 
      */
     @Import(name="fileName")
       private final @Nullable Output<String> fileName;
@@ -33,7 +31,6 @@ public final class ManifestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of user given `MuxStream.key`s that should appear in this manifest. When `Manifest.type` is `HLS`, a media manifest with name `MuxStream.key` and `.m3u8` extension is generated for each element of the `Manifest.mux_streams`.
-     * 
      */
     @Import(name="muxStreams", required=true)
       private final Output<List<String>> muxStreams;
@@ -44,7 +41,6 @@ public final class ManifestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of the manifest, can be `HLS` or `DASH`.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<ManifestType> type;

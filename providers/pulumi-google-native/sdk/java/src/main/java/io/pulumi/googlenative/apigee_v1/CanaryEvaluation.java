@@ -17,132 +17,113 @@ import javax.annotation.Nullable;
  * Auto-naming is currently not supported for this resource.
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:apigee/v1:CanaryEvaluation")
 public class CanaryEvaluation extends io.pulumi.resources.CustomResource {
     /**
      * The stable version that is serving requests.
-     * 
      */
     @Export(name="control", type=String.class, parameters={})
     private Output<String> control;
 
     /**
      * @return The stable version that is serving requests.
-     * 
      */
     public Output<String> getControl() {
         return this.control;
     }
     /**
      * Create time of the canary evaluation.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return Create time of the canary evaluation.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * End time for the evaluation's analysis.
-     * 
      */
     @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
      * @return End time for the evaluation's analysis.
-     * 
      */
     public Output<String> getEndTime() {
         return this.endTime;
     }
     /**
      * Labels used to filter the metrics used for a canary evaluation.
-     * 
      */
     @Export(name="metricLabels", type=GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse.class, parameters={})
     private Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse> metricLabels;
 
     /**
      * @return Labels used to filter the metrics used for a canary evaluation.
-     * 
      */
     public Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse> getMetricLabels() {
         return this.metricLabels;
     }
     /**
      * Name of the canary evalution.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the canary evalution.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Start time for the canary evaluation's analysis.
-     * 
      */
     @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
      * @return Start time for the canary evaluation's analysis.
-     * 
      */
     public Output<String> getStartTime() {
         return this.startTime;
     }
     /**
      * The current state of the canary evaluation.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The current state of the canary evaluation.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The newer version that is serving requests.
-     * 
      */
     @Export(name="treatment", type=String.class, parameters={})
     private Output<String> treatment;
 
     /**
      * @return The newer version that is serving requests.
-     * 
      */
     public Output<String> getTreatment() {
         return this.treatment;
     }
     /**
      * The resulting verdict of the canary evaluations: NONE, PASS, or FAIL.
-     * 
      */
     @Export(name="verdict", type=String.class, parameters={})
     private Output<String> verdict;
 
     /**
      * @return The resulting verdict of the canary evaluations: NONE, PASS, or FAIL.
-     * 
      */
     public Output<String> getVerdict() {
         return this.verdict;

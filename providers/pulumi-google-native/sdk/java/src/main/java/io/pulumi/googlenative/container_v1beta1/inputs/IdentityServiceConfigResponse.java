@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * IdentityServiceConfig is configuration for Identity Service which allows customers to use external identity providers with the K8S API
- * 
  */
 public final class IdentityServiceConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class IdentityServiceConfigResponse extends io.pulumi.resources.Inv
 
     /**
      * Whether to enable the Identity Service component
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

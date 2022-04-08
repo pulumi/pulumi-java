@@ -20,7 +20,6 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. Defines a mechanism to provision client identity (public and private keys) for peer to peer authentication. The presence of this dictates mTLS.
-     * 
      */
     @Import(name="clientCertificate")
       private final @Nullable Output<GoogleCloudNetworksecurityV1CertificateProviderArgs> clientCertificate;
@@ -38,7 +37,6 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. Free-text description of the resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -49,7 +47,6 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. Set of label tags associated with the resource.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -67,7 +64,6 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the ClientTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/clientTlsPolicies/{client_tls_policy}`
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -85,7 +81,6 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. Defines the mechanism to obtain the Certificate Authority certificate to validate the server certificate. If empty, client does not validate the server certificate.
-     * 
      */
     @Import(name="serverValidationCa")
       private final @Nullable Output<List<ValidationCAArgs>> serverValidationCa;
@@ -96,7 +91,6 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional. Server Name Indication string to present to the server during TLS handshake. E.g: "secure.example.com".
-     * 
      */
     @Import(name="sni")
       private final @Nullable Output<String> sni;

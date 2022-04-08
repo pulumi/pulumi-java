@@ -14,132 +14,113 @@ import javax.annotation.Nullable;
 
 /**
  * Creates an environment in an organization.
- * 
  */
 @ResourceType(type="google-native:apigee/v1:Environment")
 public class Environment extends io.pulumi.resources.CustomResource {
     /**
      * Optional. API Proxy type supported by the environment. The type can be set when creating the Environment and cannot be changed.
-     * 
      */
     @Export(name="apiProxyType", type=String.class, parameters={})
     private Output<String> apiProxyType;
 
     /**
      * @return Optional. API Proxy type supported by the environment. The type can be set when creating the Environment and cannot be changed.
-     * 
      */
     public Output<String> getApiProxyType() {
         return this.apiProxyType;
     }
     /**
      * Creation time of this environment as milliseconds since epoch.
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return Creation time of this environment as milliseconds since epoch.
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Optional. Deployment type supported by the environment. The deployment type can be set when creating the environment and cannot be changed. When you enable archive deployment, you will be **prevented from performing** a [subset of actions](/apigee/docs/api-platform/local-development/overview#prevented-actions) within the environment, including: * Managing the deployment of API proxy or shared flow revisions * Creating, updating, or deleting resource files * Creating, updating, or deleting target servers
-     * 
      */
     @Export(name="deploymentType", type=String.class, parameters={})
     private Output<String> deploymentType;
 
     /**
      * @return Optional. Deployment type supported by the environment. The deployment type can be set when creating the environment and cannot be changed. When you enable archive deployment, you will be **prevented from performing** a [subset of actions](/apigee/docs/api-platform/local-development/overview#prevented-actions) within the environment, including: * Managing the deployment of API proxy or shared flow revisions * Creating, updating, or deleting resource files * Creating, updating, or deleting target servers
-     * 
      */
     public Output<String> getDeploymentType() {
         return this.deploymentType;
     }
     /**
      * Optional. Description of the environment.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Optional. Description of the environment.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Optional. Display name for this environment.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return Optional. Display name for this environment.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Last modification time of this environment as milliseconds since epoch.
-     * 
      */
     @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output<String> lastModifiedAt;
 
     /**
      * @return Last modification time of this environment as milliseconds since epoch.
-     * 
      */
     public Output<String> getLastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * Name of the environment. Values must match the regular expression `^[.\\p{Alnum}-_]{1,255}$`
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the environment. Values must match the regular expression `^[.\\p{Alnum}-_]{1,255}$`
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Optional. Key-value pairs that may be used for customizing the environment.
-     * 
      */
     @Export(name="properties", type=GoogleCloudApigeeV1PropertiesResponse.class, parameters={})
     private Output<GoogleCloudApigeeV1PropertiesResponse> properties;
 
     /**
      * @return Optional. Key-value pairs that may be used for customizing the environment.
-     * 
      */
     public Output<GoogleCloudApigeeV1PropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * State of the environment. Values other than ACTIVE means the resource is not ready to use.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return State of the environment. Values other than ACTIVE means the resource is not ready to use.
-     * 
      */
     public Output<String> getState() {
         return this.state;

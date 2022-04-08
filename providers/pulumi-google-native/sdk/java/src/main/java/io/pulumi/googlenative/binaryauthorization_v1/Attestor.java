@@ -14,62 +14,53 @@ import javax.annotation.Nullable;
 
 /**
  * Creates an attestor, and returns a copy of the new attestor. Returns NOT_FOUND if the project does not exist, INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the attestor already exists.
- * 
  */
 @ResourceType(type="google-native:binaryauthorization/v1:Attestor")
 public class Attestor extends io.pulumi.resources.CustomResource {
     /**
      * Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Time when the attestor was last updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return Time when the attestor was last updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
     /**
      * This specifies how an attestation will be read, and how it will be used during policy enforcement.
-     * 
      */
     @Export(name="userOwnedGrafeasNote", type=UserOwnedGrafeasNoteResponse.class, parameters={})
     private Output<UserOwnedGrafeasNoteResponse> userOwnedGrafeasNote;
 
     /**
      * @return This specifies how an attestation will be read, and how it will be used during policy enforcement.
-     * 
      */
     public Output<UserOwnedGrafeasNoteResponse> getUserOwnedGrafeasNote() {
         return this.userOwnedGrafeasNote;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The owner of the bucket. This is always the project team's owner group.
- * 
  */
 public final class BucketOwnerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BucketOwnerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The entity, in the form project-owner-projectId.
-     * 
      */
     @Import(name="entity")
       private final @Nullable Output<String> entity;
@@ -31,7 +29,6 @@ public final class BucketOwnerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID for the entity.
-     * 
      */
     @Import(name="entityId")
       private final @Nullable Output<String> entityId;

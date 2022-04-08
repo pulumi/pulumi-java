@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A WindowsBasedSli defines good_service as the count of time windows for which the provided service was of good quality. Criteria for determining if service was good are embedded in the window_criterion.
- * 
  */
 public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries with ValueType = BOOL. The window is good if any true values appear in the window.
-     * 
      */
     @Import(name="goodBadMetricFilter")
       private final @Nullable Output<String> goodBadMetricFilter;
@@ -33,7 +31,6 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A window is good if its performance is high enough.
-     * 
      */
     @Import(name="goodTotalRatioThreshold")
       private final @Nullable Output<PerformanceThresholdArgs> goodTotalRatioThreshold;
@@ -44,7 +41,6 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A window is good if the metric's value is in a good range, averaged across returned streams.
-     * 
      */
     @Import(name="metricMeanInRange")
       private final @Nullable Output<MetricRangeArgs> metricMeanInRange;
@@ -55,7 +51,6 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A window is good if the metric's value is in a good range, summed across returned streams.
-     * 
      */
     @Import(name="metricSumInRange")
       private final @Nullable Output<MetricRangeArgs> metricSumInRange;
@@ -66,7 +61,6 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Duration over which window quality is evaluated. Must be an integer fraction of a day and at least 60s.
-     * 
      */
     @Import(name="windowPeriod")
       private final @Nullable Output<String> windowPeriod;

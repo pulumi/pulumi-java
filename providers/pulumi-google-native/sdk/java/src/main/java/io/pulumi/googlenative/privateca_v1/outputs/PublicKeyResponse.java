@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class PublicKeyResponse {
     /**
      * The format of the public key.
-     * 
      */
     private final String format;
     /**
      * A public key. The padding and encoding must match with the `KeyFormat` value specified for the `format` field.
-     * 
      */
     private final String key;
 
@@ -30,14 +28,12 @@ public final class PublicKeyResponse {
 
     /**
      * The format of the public key.
-     * 
     */
     public String getFormat() {
         return this.format;
     }
     /**
      * A public key. The padding and encoding must match with the `KeyFormat` value specified for the `format` field.
-     * 
     */
     public String getKey() {
         return this.key;

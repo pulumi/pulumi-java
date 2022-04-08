@@ -14,17 +14,14 @@ import java.util.Objects;
 public final class UpgradeNoteResponse {
     /**
      * Metadata about the upgrade for each specific operating system.
-     * 
      */
     private final List<UpgradeDistributionResponse> distributions;
     /**
      * Required - The package this Upgrade is for.
-     * 
      */
     private final String package_;
     /**
      * Required - The version of the package in machine + human readable form.
-     * 
      */
     private final VersionResponse version;
 
@@ -40,21 +37,18 @@ public final class UpgradeNoteResponse {
 
     /**
      * Metadata about the upgrade for each specific operating system.
-     * 
     */
     public List<UpgradeDistributionResponse> getDistributions() {
         return this.distributions;
     }
     /**
      * Required - The package this Upgrade is for.
-     * 
     */
     public String getPackage_() {
         return this.package_;
     }
     /**
      * Required - The version of the package in machine + human readable form.
-     * 
     */
     public VersionResponse getVersion() {
         return this.version;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A classification object with a product type and value.
- * 
  */
 public final class CaseClassificationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CaseClassificationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The display name of the classification.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -31,7 +29,6 @@ public final class CaseClassificationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The unique ID for a classification. Must be specified for case creation.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;

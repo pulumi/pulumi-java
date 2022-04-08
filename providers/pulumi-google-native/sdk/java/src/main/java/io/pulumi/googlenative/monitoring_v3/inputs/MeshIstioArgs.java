@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Istio service scoped to an Istio mesh. Anthos clusters running ASM < 1.6.8 will have their services ingested as this type.
- * 
  */
 public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identifier for the mesh in which this Istio service is defined. Corresponds to the mesh_uid metric label in Istio metrics.
-     * 
      */
     @Import(name="meshUid")
       private final @Nullable Output<String> meshUid;
@@ -31,7 +29,6 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.
-     * 
      */
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
@@ -42,7 +39,6 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.
-     * 
      */
     @Import(name="serviceNamespace")
       private final @Nullable Output<String> serviceNamespace;

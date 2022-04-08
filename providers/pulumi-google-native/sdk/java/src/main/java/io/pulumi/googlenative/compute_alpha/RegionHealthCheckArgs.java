@@ -26,7 +26,6 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * How often (in seconds) to send a health check. The default value is 5 seconds.
-     * 
      */
     @Import(name="checkIntervalSec")
       private final @Nullable Output<Integer> checkIntervalSec;
@@ -37,7 +36,6 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -55,7 +53,6 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
-     * 
      */
     @Import(name="healthyThreshold")
       private final @Nullable Output<Integer> healthyThreshold;
@@ -87,7 +84,6 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Type of the resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -98,7 +94,6 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Configure logging on this health check.
-     * 
      */
     @Import(name="logConfig")
       private final @Nullable Output<HealthCheckLogConfigArgs> logConfig;
@@ -109,7 +104,6 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. For example, a name that is 1-63 characters long, matches the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with RFC1035. This regular expression describes a name where the first character is a lowercase letter, and all following characters are a dash, lowercase letter, or digit, except the last character, which isn't a dash.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -155,7 +149,6 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have greater value than checkIntervalSec.
-     * 
      */
     @Import(name="timeoutSec")
       private final @Nullable Output<Integer> timeoutSec;
@@ -166,7 +159,6 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS or HTTP2. Exactly one of the protocol-specific health check field must be specified, which must match type field.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<RegionHealthCheckType> type;
@@ -184,7 +176,6 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
-     * 
      */
     @Import(name="unhealthyThreshold")
       private final @Nullable Output<Integer> unhealthyThreshold;

@@ -10,15 +10,13 @@ import java.util.Objects;
 
 /**
  * Encapsulates numeric value that can be either absolute or relative.
- * 
  */
 public final class FixedOrPercentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FixedOrPercentResponse Empty = new FixedOrPercentResponse();
 
     /**
-     * Absolute value of VM instances calculated based on the specific mode. - If the value is fixed, then the calculated value is equal to the fixed value. - If the value is a percent, then the calculated value is percent/100 * targetSize. For example, the calculated value of a 80% of a managed instance group with 150 instances would be (80/100 * 150) = 120 VM instances. If there is a remainder, the number is rounded.
-     * 
+     * Absolute value of VM instances calculated based on the specific mode. - If the value is fixed, then the calculated value is equal to the fixed value. - If the value is a percent, then the calculated value is percent/100 * targetSize. For example, the calculated value of a 80% of a managed instance group with 150 instances would be (80/100 * 150) = 120 VM instances. If there is a remainder, the number is rounded. 
      */
     @Import(name="calculated", required=true)
       private final Integer calculated;
@@ -29,7 +27,6 @@ public final class FixedOrPercentResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies a fixed number of VM instances. This must be a positive integer.
-     * 
      */
     @Import(name="fixed", required=true)
       private final Integer fixed;
@@ -40,7 +37,6 @@ public final class FixedOrPercentResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies a percentage of instances between 0 to 100%, inclusive. For example, specify 80 for 80%.
-     * 
      */
     @Import(name="percent", required=true)
       private final Integer percent;

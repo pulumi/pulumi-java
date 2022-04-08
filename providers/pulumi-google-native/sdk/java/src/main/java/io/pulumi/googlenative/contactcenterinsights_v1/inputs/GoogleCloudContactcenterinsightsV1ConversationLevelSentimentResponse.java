@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * One channel of conversation-level sentiment data.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
 
     /**
      * The channel of the audio that the data applies to.
-     * 
      */
     @Import(name="channelTag", required=true)
       private final Integer channelTag;
@@ -30,7 +28,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
 
     /**
      * Data specifying sentiment.
-     * 
      */
     @Import(name="sentimentData", required=true)
       private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData;

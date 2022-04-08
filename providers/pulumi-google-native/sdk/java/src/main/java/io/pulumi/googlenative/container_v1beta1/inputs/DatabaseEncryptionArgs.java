@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration of etcd encryption.
- * 
  */
 public final class DatabaseEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DatabaseEncryptionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Name of CloudKMS key to use for the encryption of secrets in etcd. Ex. projects/my-project/locations/global/keyRings/my-ring/cryptoKeys/my-key
-     * 
      */
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
@@ -32,7 +30,6 @@ public final class DatabaseEncryptionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Denotes the state of etcd encryption.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<DatabaseEncryptionState> state;

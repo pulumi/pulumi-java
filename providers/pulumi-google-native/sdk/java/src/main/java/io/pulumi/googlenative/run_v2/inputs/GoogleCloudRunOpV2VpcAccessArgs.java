@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * VPC Access settings. For more information on creating a VPC Connector, visit https://cloud.google.com/vpc/docs/configure-serverless-vpc-access For information on how to configure Cloud Run with an existing VPC Connector, visit https://cloud.google.com/run/docs/configuring/connecting-vpc
- * 
  */
 public final class GoogleCloudRunOpV2VpcAccessArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudRunOpV2VpcAccessArgs extends io.pulumi.resources.R
 
     /**
      * VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}
-     * 
      */
     @Import(name="connector")
       private final @Nullable Output<String> connector;
@@ -32,7 +30,6 @@ public final class GoogleCloudRunOpV2VpcAccessArgs extends io.pulumi.resources.R
 
     /**
      * Traffic VPC egress settings.
-     * 
      */
     @Import(name="egress")
       private final @Nullable Output<GoogleCloudRunOpV2VpcAccessEgress> egress;

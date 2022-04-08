@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class NotificationConfigResponse {
     /**
      * Notification config for Pub/Sub.
-     * 
      */
     private final PubSubResponse pubsub;
 
@@ -22,7 +21,6 @@ public final class NotificationConfigResponse {
 
     /**
      * Notification config for Pub/Sub.
-     * 
     */
     public PubSubResponse getPubsub() {
         return this.pubsub;

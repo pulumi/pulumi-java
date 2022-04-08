@@ -11,37 +11,30 @@ import java.util.Objects;
 public final class GetOrganizationMuteConfigResult {
     /**
      * The time at which the mute config was created. This field is set by the server and will be ignored if provided on config creation.
-     * 
      */
     private final String createTime;
     /**
      * A description of the mute config.
-     * 
      */
     private final String description;
     /**
      * The human readable name to be displayed for the mute config.
-     * 
      */
     private final String displayName;
     /**
      * An expression that defines the filter to apply across create/update events of findings. While creating a filter string, be mindful of the scope in which the mute configuration is being created. E.g., If a filter contains project = X but is created under the project = Y scope, it might not match any findings. The following field and operator combinations are supported: * severity: `=`, `:` * category: `=`, `:` * resource.name: `=`, `:` * resource.project_name: `=`, `:` * resource.project_display_name: `=`, `:` * resource.folders.resource_folder: `=`, `:` * resource.parent_name: `=`, `:` * resource.parent_display_name: `=`, `:` * resource.type: `=`, `:` * finding_class: `=`, `:` * indicator.ip_addresses: `=`, `:` * indicator.domains: `=`, `:`
-     * 
      */
     private final String filter;
     /**
      * Email address of the user who last edited the mute config. This field is set by the server and will be ignored if provided on config creation or update.
-     * 
      */
     private final String mostRecentEditor;
     /**
      * This field will be ignored if provided on config creation. Format "organizations/{organization}/muteConfigs/{mute_config}" "folders/{folder}/muteConfigs/{mute_config}" "projects/{project}/muteConfigs/{mute_config}"
-     * 
      */
     private final String name;
     /**
      * The most recent time at which the mute config was updated. This field is set by the server and will be ignored if provided on config creation or update.
-     * 
      */
     private final String updateTime;
 
@@ -65,49 +58,42 @@ public final class GetOrganizationMuteConfigResult {
 
     /**
      * The time at which the mute config was created. This field is set by the server and will be ignored if provided on config creation.
-     * 
     */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * A description of the mute config.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * The human readable name to be displayed for the mute config.
-     * 
     */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * An expression that defines the filter to apply across create/update events of findings. While creating a filter string, be mindful of the scope in which the mute configuration is being created. E.g., If a filter contains project = X but is created under the project = Y scope, it might not match any findings. The following field and operator combinations are supported: * severity: `=`, `:` * category: `=`, `:` * resource.name: `=`, `:` * resource.project_name: `=`, `:` * resource.project_display_name: `=`, `:` * resource.folders.resource_folder: `=`, `:` * resource.parent_name: `=`, `:` * resource.parent_display_name: `=`, `:` * resource.type: `=`, `:` * finding_class: `=`, `:` * indicator.ip_addresses: `=`, `:` * indicator.domains: `=`, `:`
-     * 
     */
     public String getFilter() {
         return this.filter;
     }
     /**
      * Email address of the user who last edited the mute config. This field is set by the server and will be ignored if provided on config creation or update.
-     * 
     */
     public String getMostRecentEditor() {
         return this.mostRecentEditor;
     }
     /**
      * This field will be ignored if provided on config creation. Format "organizations/{organization}/muteConfigs/{mute_config}" "folders/{folder}/muteConfigs/{mute_config}" "projects/{project}/muteConfigs/{mute_config}"
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The most recent time at which the mute config was updated. This field is set by the server and will be ignored if provided on config creation or update.
-     * 
     */
     public String getUpdateTime() {
         return this.updateTime;

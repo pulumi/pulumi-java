@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class EnvironmentResponse {
     /**
      * An Android device which must be used with an Android test.
-     * 
      */
     private final AndroidDeviceResponse androidDevice;
     /**
      * An iOS device which must be used with an iOS test.
-     * 
      */
     private final IosDeviceResponse iosDevice;
 
@@ -31,14 +29,12 @@ public final class EnvironmentResponse {
 
     /**
      * An Android device which must be used with an Android test.
-     * 
     */
     public AndroidDeviceResponse getAndroidDevice() {
         return this.androidDevice;
     }
     /**
      * An iOS device which must be used with an iOS test.
-     * 
     */
     public IosDeviceResponse getIosDevice() {
         return this.iosDevice;

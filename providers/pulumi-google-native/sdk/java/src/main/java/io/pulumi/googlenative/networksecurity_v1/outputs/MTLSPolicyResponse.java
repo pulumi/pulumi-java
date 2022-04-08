@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class MTLSPolicyResponse {
     /**
      *  Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.
-     * 
      */
     private final List<ValidationCAResponse> clientValidationCa;
 
@@ -23,7 +22,6 @@ public final class MTLSPolicyResponse {
 
     /**
      *  Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.
-     * 
     */
     public List<ValidationCAResponse> getClientValidationCa() {
         return this.clientValidationCa;

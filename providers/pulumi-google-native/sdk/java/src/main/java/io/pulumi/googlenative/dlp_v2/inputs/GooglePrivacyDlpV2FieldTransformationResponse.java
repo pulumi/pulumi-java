@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * The transformation to apply to the field.
- * 
  */
 public final class GooglePrivacyDlpV2FieldTransformationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class GooglePrivacyDlpV2FieldTransformationResponse extends io.pulu
 
     /**
      * Only apply the transformation if the condition evaluates to true for the given `RecordCondition`. The conditions are allowed to reference fields that are not used in the actual transformation. Example Use Cases: - Apply a different bucket transformation to an age column if the zip code column for the same record is within a specific range. - Redact a field if the date of birth field is greater than 85.
-     * 
      */
     @Import(name="condition", required=true)
       private final GooglePrivacyDlpV2RecordConditionResponse condition;
@@ -33,7 +31,6 @@ public final class GooglePrivacyDlpV2FieldTransformationResponse extends io.pulu
 
     /**
      * Input field(s) to apply the transformation to. When you have columns that reference their position within a list, omit the index from the FieldId. FieldId name matching ignores the index. For example, instead of "contact.nums[0].type", use "contact.nums.type".
-     * 
      */
     @Import(name="fields", required=true)
       private final List<GooglePrivacyDlpV2FieldIdResponse> fields;
@@ -44,7 +41,6 @@ public final class GooglePrivacyDlpV2FieldTransformationResponse extends io.pulu
 
     /**
      * Treat the contents of the field as free text, and selectively transform content that matches an `InfoType`.
-     * 
      */
     @Import(name="infoTypeTransformations", required=true)
       private final GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations;
@@ -55,7 +51,6 @@ public final class GooglePrivacyDlpV2FieldTransformationResponse extends io.pulu
 
     /**
      * Apply the transformation to the entire field.
-     * 
      */
     @Import(name="primitiveTransformation", required=true)
       private final GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation;

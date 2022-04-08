@@ -17,7 +17,6 @@ public final class SourceDiskEncryptionKeyArgs extends io.pulumi.resources.Resou
 
     /**
      * The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key.
-     * 
      */
     @Import(name="diskEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey;
@@ -27,8 +26,7 @@ public final class SourceDiskEncryptionKeyArgs extends io.pulumi.resources.Resou
     }
 
     /**
-     * URL of the disk attached to the source instance. This can be a full or valid partial URL. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - projects/project/zones/zone/disks/disk - zones/zone/disks/disk
-     * 
+     * URL of the disk attached to the source instance. This can be a full or valid partial URL. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - projects/project/zones/zone/disks/disk - zones/zone/disks/disk 
      */
     @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;

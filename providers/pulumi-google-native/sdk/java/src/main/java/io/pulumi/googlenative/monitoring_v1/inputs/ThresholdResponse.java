@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Defines a threshold for categorizing time series values.
- * 
  */
 public final class ThresholdResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ThresholdResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The state color for this threshold. Color is not allowed in a XyChart.
-     * 
      */
     @Import(name="color", required=true)
       private final String color;
@@ -30,7 +28,6 @@ public final class ThresholdResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The direction for the current threshold. Direction is not allowed in a XyChart.
-     * 
      */
     @Import(name="direction", required=true)
       private final String direction;
@@ -41,7 +38,6 @@ public final class ThresholdResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A label for the threshold.
-     * 
      */
     @Import(name="label", required=true)
       private final String label;
@@ -52,7 +48,6 @@ public final class ThresholdResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.
-     * 
      */
     @Import(name="targetAxis", required=true)
       private final String targetAxis;
@@ -63,7 +58,6 @@ public final class ThresholdResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The value of the threshold. The value should be defined in the native scale of the metric.
-     * 
      */
     @Import(name="value", required=true)
       private final Double value;

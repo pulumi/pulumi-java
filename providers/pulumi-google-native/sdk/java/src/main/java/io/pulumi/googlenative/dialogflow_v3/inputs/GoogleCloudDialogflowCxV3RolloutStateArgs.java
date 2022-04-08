@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * State of the auto-rollout process.
- * 
  */
 public final class GoogleCloudDialogflowCxV3RolloutStateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDialogflowCxV3RolloutStateArgs extends io.pulumi.r
 
     /**
      * Start time of the current step.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
@@ -32,7 +30,6 @@ public final class GoogleCloudDialogflowCxV3RolloutStateArgs extends io.pulumi.r
 
     /**
      * Display name of the current auto rollout step.
-     * 
      */
     @Import(name="step")
       private final @Nullable Output<String> step;
@@ -43,7 +40,6 @@ public final class GoogleCloudDialogflowCxV3RolloutStateArgs extends io.pulumi.r
 
     /**
      * Index of the current step in the auto rollout steps list.
-     * 
      */
     @Import(name="stepIndex")
       private final @Nullable Output<Integer> stepIndex;

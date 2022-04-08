@@ -15,34 +15,29 @@ import javax.annotation.Nullable;
 /**
  * Creates a Policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the constraint does not exist. Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the policy already exists on the given Cloud resource.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:orgpolicy/v2:OrganizationPolicy")
 public class OrganizationPolicy extends io.pulumi.resources.CustomResource {
     /**
      * Immutable. The resource name of the Policy. Must be one of the following forms, where constraint_name is the name of the constraint which this Policy configures: * `projects/{project_number}/policies/{constraint_name}` * `folders/{folder_id}/policies/{constraint_name}` * `organizations/{organization_id}/policies/{constraint_name}` For example, "projects/123/policies/compute.disableSerialPortAccess". Note: `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but responses will return the name using the equivalent project number.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Immutable. The resource name of the Policy. Must be one of the following forms, where constraint_name is the name of the constraint which this Policy configures: * `projects/{project_number}/policies/{constraint_name}` * `folders/{folder_id}/policies/{constraint_name}` * `organizations/{organization_id}/policies/{constraint_name}` For example, "projects/123/policies/compute.disableSerialPortAccess". Note: `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but responses will return the name using the equivalent project number.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Basic information about the Organization Policy.
-     * 
      */
     @Export(name="spec", type=GoogleCloudOrgpolicyV2PolicySpecResponse.class, parameters={})
     private Output<GoogleCloudOrgpolicyV2PolicySpecResponse> spec;
 
     /**
      * @return Basic information about the Organization Policy.
-     * 
      */
     public Output<GoogleCloudOrgpolicyV2PolicySpecResponse> getSpec() {
         return this.spec;

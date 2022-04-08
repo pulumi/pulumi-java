@@ -15,7 +15,6 @@ public final class ExplainQueryStepResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Machine-readable operation type.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -26,7 +25,6 @@ public final class ExplainQueryStepResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Human-readable stage descriptions.
-     * 
      */
     @Import(name="substeps", required=true)
       private final List<String> substeps;

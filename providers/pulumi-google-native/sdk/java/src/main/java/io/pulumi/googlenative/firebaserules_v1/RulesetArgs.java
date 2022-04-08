@@ -24,7 +24,6 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * `Source` for the `Ruleset`.
-     * 
      */
     @Import(name="source", required=true)
       private final Output<SourceArgs> source;

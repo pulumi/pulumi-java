@@ -15,7 +15,6 @@ public final class QueryParameterTypeStructTypesItemResponse extends io.pulumi.r
 
     /**
      * [Optional] Human-oriented description of the field.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -26,7 +25,6 @@ public final class QueryParameterTypeStructTypesItemResponse extends io.pulumi.r
 
     /**
      * [Optional] The name of this field.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -37,7 +35,6 @@ public final class QueryParameterTypeStructTypesItemResponse extends io.pulumi.r
 
     /**
      * [Required] The type of this field.
-     * 
      */
     @Import(name="type", required=true)
       private final QueryParameterTypeResponse type;

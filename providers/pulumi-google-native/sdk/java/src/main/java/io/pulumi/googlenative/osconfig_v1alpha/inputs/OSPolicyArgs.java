@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * An OS policy defines the desired state configuration for a VM.
- * 
  */
 public final class OSPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class OSPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. Set this value to `true` if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.
-     * 
      */
     @Import(name="allowNoResourceGroupMatch")
       private final @Nullable Output<Boolean> allowNoResourceGroupMatch;
@@ -35,7 +33,6 @@ public final class OSPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Policy description. Length of the description is limited to 1024 characters.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -46,7 +43,6 @@ public final class OSPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The id of the OS policy with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the assignment.
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;
@@ -57,7 +53,6 @@ public final class OSPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Policy mode
-     * 
      */
     @Import(name="mode", required=true)
       private final Output<OSPolicyMode> mode;
@@ -68,7 +63,6 @@ public final class OSPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of resource groups for the policy. For a particular VM, resource groups are evaluated in the order specified and the first resource group that is applicable is selected and the rest are ignored. If none of the resource groups are applicable for a VM, the VM is considered to be non-compliant w.r.t this policy. This behavior can be toggled by the flag `allow_no_resource_group_match`
-     * 
      */
     @Import(name="resourceGroups", required=true)
       private final Output<List<OSPolicyResourceGroupArgs>> resourceGroups;

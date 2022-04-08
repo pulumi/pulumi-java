@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Medium of conversations used in training data. This field is being deprecated. To specify the medium to be used in training a new issue model, set the `medium` field on `filter`.
-     * 
      */
     @EnumType
     public enum GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium {
         /**
          * Default value, if unspecified will default to PHONE_CALL.
-         * 
          */
         MediumUnspecified("MEDIUM_UNSPECIFIED"),
         /**
          * The format for conversations that took place over the phone.
-         * 
          */
         PhoneCall("PHONE_CALL"),
         /**
          * The format for conversations that took place over chat.
-         * 
          */
         Chat("CHAT");
 

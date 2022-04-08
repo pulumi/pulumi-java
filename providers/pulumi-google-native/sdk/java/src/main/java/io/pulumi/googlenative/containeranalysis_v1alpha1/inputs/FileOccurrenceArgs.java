@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * FileOccurrence represents an SPDX File Information section: https://spdx.github.io/spdx-spec/4-file-information/
- * 
  */
 public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This field provides a place for the SPDX data creator to record, at the file level, acknowledgements that may be needed to be communicated in some contexts
-     * 
      */
     @Import(name="attributions")
       private final @Nullable Output<List<String>> attributions;
@@ -33,7 +31,6 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This field provides a place for the SPDX file creator to record any general comments about the file
-     * 
      */
     @Import(name="comment")
       private final @Nullable Output<String> comment;
@@ -44,7 +41,6 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This field provides a place for the SPDX file creator to record file contributors
-     * 
      */
     @Import(name="contributors")
       private final @Nullable Output<List<String>> contributors;
@@ -55,7 +51,6 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identify the copyright holder of the file, as well as any dates present
-     * 
      */
     @Import(name="copyright")
       private final @Nullable Output<String> copyright;
@@ -66,7 +61,6 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This field contains the license information actually found in the file, if any
-     * 
      */
     @Import(name="filesLicenseInfo")
       private final @Nullable Output<List<String>> filesLicenseInfo;
@@ -77,7 +71,6 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Uniquely identify any element in an SPDX document which may be referenced by other elements
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -88,7 +81,6 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This field contains the license the SPDX file creator has concluded as governing the file or alternative values if the governing license cannot be determined
-     * 
      */
     @Import(name="licenseConcluded")
       private final @Nullable Output<LicenseArgs> licenseConcluded;
@@ -99,7 +91,6 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This field provides a place for the SPDX file creator to record license notices or other such related notices found in the file
-     * 
      */
     @Import(name="notice")
       private final @Nullable Output<String> notice;

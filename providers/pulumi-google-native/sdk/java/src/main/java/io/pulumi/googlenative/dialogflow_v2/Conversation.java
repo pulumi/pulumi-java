@@ -17,104 +17,89 @@ import javax.annotation.Nullable;
  * Auto-naming is currently not supported for this resource.
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:dialogflow/v2:Conversation")
 public class Conversation extends io.pulumi.resources.CustomResource {
     /**
      * The Conversation Profile to be used to configure this Conversation. This field cannot be updated. Format: `projects//locations//conversationProfiles/`.
-     * 
      */
     @Export(name="conversationProfile", type=String.class, parameters={})
     private Output<String> conversationProfile;
 
     /**
      * @return The Conversation Profile to be used to configure this Conversation. This field cannot be updated. Format: `projects//locations//conversationProfiles/`.
-     * 
      */
     public Output<String> getConversationProfile() {
         return this.conversationProfile;
     }
     /**
      * The stage of a conversation. It indicates whether the virtual agent or a human agent is handling the conversation. If the conversation is created with the conversation profile that has Dialogflow config set, defaults to ConversationStage.VIRTUAL_AGENT_STAGE; Otherwise, defaults to ConversationStage.HUMAN_ASSIST_STAGE. If the conversation is created with the conversation profile that has Dialogflow config set but explicitly sets conversation_stage to ConversationStage.HUMAN_ASSIST_STAGE, it skips ConversationStage.VIRTUAL_AGENT_STAGE stage and directly goes to ConversationStage.HUMAN_ASSIST_STAGE.
-     * 
      */
     @Export(name="conversationStage", type=String.class, parameters={})
     private Output<String> conversationStage;
 
     /**
      * @return The stage of a conversation. It indicates whether the virtual agent or a human agent is handling the conversation. If the conversation is created with the conversation profile that has Dialogflow config set, defaults to ConversationStage.VIRTUAL_AGENT_STAGE; Otherwise, defaults to ConversationStage.HUMAN_ASSIST_STAGE. If the conversation is created with the conversation profile that has Dialogflow config set but explicitly sets conversation_stage to ConversationStage.HUMAN_ASSIST_STAGE, it skips ConversationStage.VIRTUAL_AGENT_STAGE stage and directly goes to ConversationStage.HUMAN_ASSIST_STAGE.
-     * 
      */
     public Output<String> getConversationStage() {
         return this.conversationStage;
     }
     /**
      * The time the conversation was finished.
-     * 
      */
     @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
      * @return The time the conversation was finished.
-     * 
      */
     public Output<String> getEndTime() {
         return this.endTime;
     }
     /**
      * The current state of the Conversation.
-     * 
      */
     @Export(name="lifecycleState", type=String.class, parameters={})
     private Output<String> lifecycleState;
 
     /**
      * @return The current state of the Conversation.
-     * 
      */
     public Output<String> getLifecycleState() {
         return this.lifecycleState;
     }
     /**
      * The unique identifier of this conversation. Format: `projects//locations//conversations/`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The unique identifier of this conversation. Format: `projects//locations//conversations/`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * It will not be empty if the conversation is to be connected over telephony.
-     * 
      */
     @Export(name="phoneNumber", type=GoogleCloudDialogflowV2ConversationPhoneNumberResponse.class, parameters={})
     private Output<GoogleCloudDialogflowV2ConversationPhoneNumberResponse> phoneNumber;
 
     /**
      * @return It will not be empty if the conversation is to be connected over telephony.
-     * 
      */
     public Output<GoogleCloudDialogflowV2ConversationPhoneNumberResponse> getPhoneNumber() {
         return this.phoneNumber;
     }
     /**
      * The time the conversation was started.
-     * 
      */
     @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
      * @return The time the conversation was started.
-     * 
      */
     public Output<String> getStartTime() {
         return this.startTime;

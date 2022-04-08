@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Oracle data source configuration
- * 
  */
 public final class OracleSourceConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class OracleSourceConfigResponse extends io.pulumi.resources.Invoke
 
     /**
      * Oracle objects to exclude from the stream.
-     * 
      */
     @Import(name="excludeObjects", required=true)
       private final OracleRdbmsResponse excludeObjects;
@@ -29,7 +27,6 @@ public final class OracleSourceConfigResponse extends io.pulumi.resources.Invoke
 
     /**
      * Oracle objects to include in the stream.
-     * 
      */
     @Import(name="includeObjects", required=true)
       private final OracleRdbmsResponse includeObjects;

@@ -16,76 +16,65 @@ import javax.annotation.Nullable;
 /**
  * Creates a new instance in the specified region. Returns a long running operation which contains an instance on completion. While the long running operation is in progress, any call to `GetInstance` returns an instance in state `CREATING`.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:remotebuildexecution/v1alpha:Instance")
 public class Instance extends io.pulumi.resources.CustomResource {
     /**
      * The policy to define whether or not RBE features can be used or how they can be used.
-     * 
      */
     @Export(name="featurePolicy", type=GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse.class, parameters={})
     private Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse> featurePolicy;
 
     /**
      * @return The policy to define whether or not RBE features can be used or how they can be used.
-     * 
      */
     public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse> getFeaturePolicy() {
         return this.featurePolicy;
     }
     /**
      * The location is a GCP region. Currently only `us-central1` is supported.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The location is a GCP region. Currently only `us-central1` is supported.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Whether stack driver logging is enabled for the instance.
-     * 
      */
     @Export(name="loggingEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> loggingEnabled;
 
     /**
      * @return Whether stack driver logging is enabled for the instance.
-     * 
      */
     public Output<Boolean> getLoggingEnabled() {
         return this.loggingEnabled;
     }
     /**
      * Instance resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`. Name should not be populated when creating an instance since it is provided in the `instance_id` field.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Instance resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`. Name should not be populated when creating an instance since it is provided in the `instance_id` field.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * State of the instance.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return State of the instance.
-     * 
      */
     public Output<String> getState() {
         return this.state;

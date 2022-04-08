@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * [Deprecated] Defines the mechanism to obtain the Certificate Authority certificate to validate the client/server certificate. validate the client/server certificate.
- * 
  */
 public final class TlsValidationContextResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class TlsValidationContextResponse extends io.pulumi.resources.Invo
 
     /**
      * The path to the file holding the CA certificate to validate the client or server certificate.
-     * 
      */
     @Import(name="certificatePath", required=true)
       private final String certificatePath;
@@ -30,7 +28,6 @@ public final class TlsValidationContextResponse extends io.pulumi.resources.Invo
 
     /**
      * Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
-     * 
      */
     @Import(name="sdsConfig", required=true)
       private final SdsConfigResponse sdsConfig;
@@ -41,7 +38,6 @@ public final class TlsValidationContextResponse extends io.pulumi.resources.Invo
 
     /**
      * Defines how TLS certificates are obtained.
-     * 
      */
     @Import(name="validationSource", required=true)
       private final String validationSource;

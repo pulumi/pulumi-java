@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Secret provides a reference to entries in Secret Manager.
- * 
  */
 public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the secret version in the format, format as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
-     * 
      */
     @Import(name="secretVersion")
       private final @Nullable Output<String> secretVersion;

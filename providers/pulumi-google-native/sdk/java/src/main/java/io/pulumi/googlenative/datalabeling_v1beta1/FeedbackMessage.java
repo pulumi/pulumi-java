@@ -15,62 +15,53 @@ import javax.annotation.Nullable;
 
 /**
  * Create a FeedbackMessage object.
- * 
  */
 @ResourceType(type="google-native:datalabeling/v1beta1:FeedbackMessage")
 public class FeedbackMessage extends io.pulumi.resources.CustomResource {
     /**
      * String content of the feedback. Maximum of 10000 characters.
-     * 
      */
     @Export(name="body", type=String.class, parameters={})
     private Output<String> body;
 
     /**
      * @return String content of the feedback. Maximum of 10000 characters.
-     * 
      */
     public Output<String> getBody() {
         return this.body;
     }
     /**
      * Create time.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return Create time.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The image storing this feedback if the feedback is an image representing operator's comments.
-     * 
      */
     @Export(name="image", type=String.class, parameters={})
     private Output<String> image;
 
     /**
      * @return The image storing this feedback if the feedback is an image representing operator's comments.
-     * 
      */
     public Output<String> getImage() {
         return this.image;
     }
     /**
      * Name of the feedback message in a feedback thread. Format: 'project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}'
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the feedback message in a feedback thread. Format: 'project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}'
-     * 
      */
     public Output<String> getName() {
         return this.name;

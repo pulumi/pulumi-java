@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Required. The action to take when a rule match is found. Possible values are "ALLOW" or "DENY".
-     * 
      */
     @EnumType
     public enum AuthorizationPolicyAction {
         /**
          * Default value.
-         * 
          */
         ActionUnspecified("ACTION_UNSPECIFIED"),
         /**
          * Grant access.
-         * 
          */
         Allow("ALLOW"),
         /**
          * Deny access. Deny rules should be avoided unless they are used to provide a default "deny all" fallback.
-         * 
          */
         Deny("DENY");
 

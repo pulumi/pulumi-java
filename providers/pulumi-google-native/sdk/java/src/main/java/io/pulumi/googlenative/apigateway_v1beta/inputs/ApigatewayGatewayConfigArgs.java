@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Configuration settings for Gateways.
- * 
  */
 public final class ApigatewayGatewayConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ApigatewayGatewayConfigArgs extends io.pulumi.resources.Resou
 
     /**
      * Backend settings that are applied to all backends of the Gateway.
-     * 
      */
     @Import(name="backendConfig", required=true)
       private final Output<ApigatewayBackendConfigArgs> backendConfig;

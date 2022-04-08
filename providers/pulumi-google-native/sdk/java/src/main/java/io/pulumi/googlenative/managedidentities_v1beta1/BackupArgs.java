@@ -31,7 +31,6 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Resource labels to represent user provided metadata.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;

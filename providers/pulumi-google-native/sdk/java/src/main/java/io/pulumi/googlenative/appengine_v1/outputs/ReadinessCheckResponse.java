@@ -12,37 +12,30 @@ import java.util.Objects;
 public final class ReadinessCheckResponse {
     /**
      * A maximum time limit on application initialization, measured from moment the application successfully replies to a healthcheck until it is ready to serve traffic.
-     * 
      */
     private final String appStartTimeout;
     /**
      * Interval between health checks.
-     * 
      */
     private final String checkInterval;
     /**
      * Number of consecutive failed checks required before removing traffic.
-     * 
      */
     private final Integer failureThreshold;
     /**
      * Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
-     * 
      */
     private final String host;
     /**
      * The request path.
-     * 
      */
     private final String path;
     /**
      * Number of consecutive successful checks required before receiving traffic.
-     * 
      */
     private final Integer successThreshold;
     /**
      * Time before the check is considered failed.
-     * 
      */
     private final String timeout;
 
@@ -66,49 +59,42 @@ public final class ReadinessCheckResponse {
 
     /**
      * A maximum time limit on application initialization, measured from moment the application successfully replies to a healthcheck until it is ready to serve traffic.
-     * 
     */
     public String getAppStartTimeout() {
         return this.appStartTimeout;
     }
     /**
      * Interval between health checks.
-     * 
     */
     public String getCheckInterval() {
         return this.checkInterval;
     }
     /**
      * Number of consecutive failed checks required before removing traffic.
-     * 
     */
     public Integer getFailureThreshold() {
         return this.failureThreshold;
     }
     /**
      * Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
-     * 
     */
     public String getHost() {
         return this.host;
     }
     /**
      * The request path.
-     * 
     */
     public String getPath() {
         return this.path;
     }
     /**
      * Number of consecutive successful checks required before receiving traffic.
-     * 
     */
     public Integer getSuccessThreshold() {
         return this.successThreshold;
     }
     /**
      * Time before the check is considered failed.
-     * 
     */
     public String getTimeout() {
         return this.timeout;

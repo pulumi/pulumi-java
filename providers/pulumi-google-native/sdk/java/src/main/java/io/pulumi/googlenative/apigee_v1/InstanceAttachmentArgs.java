@@ -16,7 +16,6 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * ID of the attached environment.
-     * 
      */
     @Import(name="environment")
       private final @Nullable Output<String> environment;

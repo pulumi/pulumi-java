@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Additional details about the progress of the running test.
- * 
  */
 public final class TestDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class TestDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If the TestState is ERROR, then this string will contain human-readable details about the error.
-     * 
      */
     @Import(name="errorMessage", required=true)
       private final String errorMessage;
@@ -30,7 +28,6 @@ public final class TestDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Human-readable, detailed descriptions of the test's progress. For example: "Provisioning a device", "Starting Test". During the course of execution new data may be appended to the end of progress_messages.
-     * 
      */
     @Import(name="progressMessages", required=true)
       private final List<String> progressMessages;

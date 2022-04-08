@@ -16,32 +16,26 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigResponse {
     /**
      * Configs of custom conversation model.
-     * 
      */
     private final GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse conversationModelConfig;
     /**
      * Configs for processing conversation.
-     * 
      */
     private final GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigResponse conversationProcessConfig;
     /**
      * Automatically iterates all participants and tries to compile suggestions. Supported features: ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.
-     * 
      */
     private final Boolean enableEventBasedSuggestion;
     /**
      * Configs of query.
-     * 
      */
     private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig;
     /**
      * The suggestion feature.
-     * 
      */
     private final GoogleCloudDialogflowV2SuggestionFeatureResponse suggestionFeature;
     /**
      * Settings of suggestion trigger. Currently, only ARTICLE_SUGGESTION and FAQ will use this field.
-     * 
      */
     private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings;
 
@@ -63,42 +57,36 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
 
     /**
      * Configs of custom conversation model.
-     * 
     */
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse getConversationModelConfig() {
         return this.conversationModelConfig;
     }
     /**
      * Configs for processing conversation.
-     * 
     */
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigResponse getConversationProcessConfig() {
         return this.conversationProcessConfig;
     }
     /**
      * Automatically iterates all participants and tries to compile suggestions. Supported features: ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.
-     * 
     */
     public Boolean getEnableEventBasedSuggestion() {
         return this.enableEventBasedSuggestion;
     }
     /**
      * Configs of query.
-     * 
     */
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse getQueryConfig() {
         return this.queryConfig;
     }
     /**
      * The suggestion feature.
-     * 
     */
     public GoogleCloudDialogflowV2SuggestionFeatureResponse getSuggestionFeature() {
         return this.suggestionFeature;
     }
     /**
      * Settings of suggestion trigger. Currently, only ARTICLE_SUGGESTION and FAQ will use this field.
-     * 
     */
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse getSuggestionTriggerSettings() {
         return this.suggestionTriggerSettings;

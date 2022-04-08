@@ -15,62 +15,53 @@ import javax.annotation.Nullable;
 
 /**
  * Creates the specified index. A newly created index's initial state is `CREATING`. On completion of the returned google.longrunning.Operation, the state will be `READY`. If the index already exists, the call will return an `ALREADY_EXISTS` status. During creation, the process could result in an error, in which case the index will move to the `ERROR` state. The process can be recovered by fixing the data that caused the error, removing the index with delete, then re-creating the index with create. Indexes with a single field cannot be created.
- * 
  */
 @ResourceType(type="google-native:firestore/v1beta1:Index")
 public class Index extends io.pulumi.resources.CustomResource {
     /**
      * The collection ID to which this index applies. Required.
-     * 
      */
     @Export(name="collectionId", type=String.class, parameters={})
     private Output<String> collectionId;
 
     /**
      * @return The collection ID to which this index applies. Required.
-     * 
      */
     public Output<String> getCollectionId() {
         return this.collectionId;
     }
     /**
      * The fields to index.
-     * 
      */
     @Export(name="fields", type=List.class, parameters={GoogleFirestoreAdminV1beta1IndexFieldResponse.class})
     private Output<List<GoogleFirestoreAdminV1beta1IndexFieldResponse>> fields;
 
     /**
      * @return The fields to index.
-     * 
      */
     public Output<List<GoogleFirestoreAdminV1beta1IndexFieldResponse>> getFields() {
         return this.fields;
     }
     /**
      * The resource name of the index. Output only.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the index. Output only.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The state of the index. Output only.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The state of the index. Output only.
-     * 
      */
     public Output<String> getState() {
         return this.state;

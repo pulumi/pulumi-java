@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * This is deprecated and has no effect. Do not use.
- * 
  */
 public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.Resou
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="customFields")
       private final @Nullable Output<List<LogConfigCounterOptionsCustomFieldArgs>> customFields;
@@ -33,7 +31,6 @@ public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.Resou
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="field")
       private final @Nullable Output<String> field;
@@ -44,7 +41,6 @@ public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.Resou
 
     /**
      * This is deprecated and has no effect. Do not use.
-     * 
      */
     @Import(name="metric")
       private final @Nullable Output<String> metric;

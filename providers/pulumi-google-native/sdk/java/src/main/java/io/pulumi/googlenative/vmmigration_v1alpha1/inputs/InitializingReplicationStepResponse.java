@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * InitializingReplicationStep contains specific step details.
- * 
  */
 public final class InitializingReplicationStepResponse extends io.pulumi.resources.InvokeArgs {
 

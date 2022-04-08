@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Defines a name-pair value for a single label.
- * 
  */
 public final class MetadataLabelsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MetadataLabelsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Label name presented as key in xDS Node Metadata.
-     * 
      */
     @Import(name="labelName", required=true)
       private final String labelName;
@@ -29,7 +27,6 @@ public final class MetadataLabelsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Label value presented as value corresponding to the above key, in xDS Node Metadata.
-     * 
      */
     @Import(name="labelValue", required=true)
       private final String labelValue;

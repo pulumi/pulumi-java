@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Product price range when there are a range of prices for different variations of the same product.
- * 
  */
 public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
 
     /**
      * The maximum product price.
-     * 
      */
     @Import(name="max", required=true)
       private final Double max;
@@ -29,7 +27,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
 
     /**
      * The minimum product price.
-     * 
      */
     @Import(name="min", required=true)
       private final Double min;

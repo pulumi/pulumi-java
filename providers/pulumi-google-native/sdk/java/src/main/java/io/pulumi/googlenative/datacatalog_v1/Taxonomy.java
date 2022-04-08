@@ -17,90 +17,77 @@ import javax.annotation.Nullable;
 /**
  * Creates a taxonomy in a specified project. The taxonomy is initially empty, that is, it doesn't contain policy tags.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:datacatalog/v1:Taxonomy")
 public class Taxonomy extends io.pulumi.resources.CustomResource {
     /**
      * Optional. A list of policy types that are activated for this taxonomy. If not set, defaults to an empty list.
-     * 
      */
     @Export(name="activatedPolicyTypes", type=List.class, parameters={String.class})
     private Output<List<String>> activatedPolicyTypes;
 
     /**
      * @return Optional. A list of policy types that are activated for this taxonomy. If not set, defaults to an empty list.
-     * 
      */
     public Output<List<String>> getActivatedPolicyTypes() {
         return this.activatedPolicyTypes;
     }
     /**
      * Optional. Description of this taxonomy. If not set, defaults to empty. The description must contain only Unicode characters, tabs, newlines, carriage returns, and page breaks, and be at most 2000 bytes long when encoded in UTF-8.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Optional. Description of this taxonomy. If not set, defaults to empty. The description must contain only Unicode characters, tabs, newlines, carriage returns, and page breaks, and be at most 2000 bytes long when encoded in UTF-8.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * User-defined name of this taxonomy. The name can't start or end with spaces, must contain only Unicode letters, numbers, underscores, dashes, and spaces, and be at most 200 bytes long when encoded in UTF-8.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return User-defined name of this taxonomy. The name can't start or end with spaces, must contain only Unicode letters, numbers, underscores, dashes, and spaces, and be at most 200 bytes long when encoded in UTF-8.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Resource name of this taxonomy in URL format. Note: Policy tag manager generates unique taxonomy IDs.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name of this taxonomy in URL format. Note: Policy tag manager generates unique taxonomy IDs.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Number of policy tags in this taxonomy.
-     * 
      */
     @Export(name="policyTagCount", type=Integer.class, parameters={})
     private Output<Integer> policyTagCount;
 
     /**
      * @return Number of policy tags in this taxonomy.
-     * 
      */
     public Output<Integer> getPolicyTagCount() {
         return this.policyTagCount;
     }
     /**
      * Creation and modification timestamps of this taxonomy.
-     * 
      */
     @Export(name="taxonomyTimestamps", type=GoogleCloudDatacatalogV1SystemTimestampsResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1SystemTimestampsResponse> taxonomyTimestamps;
 
     /**
      * @return Creation and modification timestamps of this taxonomy.
-     * 
      */
     public Output<GoogleCloudDatacatalogV1SystemTimestampsResponse> getTaxonomyTimestamps() {
         return this.taxonomyTimestamps;

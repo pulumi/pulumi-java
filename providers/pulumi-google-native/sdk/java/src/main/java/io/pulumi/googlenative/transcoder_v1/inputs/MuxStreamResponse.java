@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Multiplexing settings for output stream.
- * 
  */
 public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the corresponding file extension is `.m4s` - `mp4` - `vtt`
-     * 
      */
     @Import(name="container", required=true)
       private final String container;
@@ -31,7 +29,6 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of `ElementaryStream.key`s multiplexed in this stream.
-     * 
      */
     @Import(name="elementaryStreams", required=true)
       private final List<String> elementaryStreams;
@@ -42,7 +39,6 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the generated file. The default is `MuxStream.key` with the extension suffix corresponding to the `MuxStream.container`. Individual segments also have an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `mux_stream0000000123.ts`.
-     * 
      */
     @Import(name="fileName", required=true)
       private final String fileName;
@@ -53,7 +49,6 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A unique key for this multiplexed stream. HLS media manifests will be named `MuxStream.key` with the `.m3u8` extension suffix.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -64,7 +59,6 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Segment settings for `ts`, `fmp4` and `vtt`.
-     * 
      */
     @Import(name="segmentSettings", required=true)
       private final SegmentSettingsResponse segmentSettings;

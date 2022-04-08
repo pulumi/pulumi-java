@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration of gVNIC feature.
- * 
  */
 public final class VirtualNICArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class VirtualNICArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether gVNIC features are enabled in the node pool.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;

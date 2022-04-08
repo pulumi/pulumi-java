@@ -17,76 +17,65 @@ import javax.annotation.Nullable;
 /**
  * Create a new domain mapping.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:run/v1:DomainMapping")
 public class DomainMapping extends io.pulumi.resources.CustomResource {
     /**
      * The API version for this call such as "domains.cloudrun.com/v1".
-     * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
     private Output<String> apiVersion;
 
     /**
      * @return The API version for this call such as "domains.cloudrun.com/v1".
-     * 
      */
     public Output<String> getApiVersion() {
         return this.apiVersion;
     }
     /**
      * The kind of resource, in this case "DomainMapping".
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return The kind of resource, in this case "DomainMapping".
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Metadata associated with this BuildTemplate.
-     * 
      */
     @Export(name="metadata", type=ObjectMetaResponse.class, parameters={})
     private Output<ObjectMetaResponse> metadata;
 
     /**
      * @return Metadata associated with this BuildTemplate.
-     * 
      */
     public Output<ObjectMetaResponse> getMetadata() {
         return this.metadata;
     }
     /**
      * The spec for this DomainMapping.
-     * 
      */
     @Export(name="spec", type=DomainMappingSpecResponse.class, parameters={})
     private Output<DomainMappingSpecResponse> spec;
 
     /**
      * @return The spec for this DomainMapping.
-     * 
      */
     public Output<DomainMappingSpecResponse> getSpec() {
         return this.spec;
     }
     /**
      * The current status of the DomainMapping.
-     * 
      */
     @Export(name="status", type=DomainMappingStatusResponse.class, parameters={})
     private Output<DomainMappingStatusResponse> status;
 
     /**
      * @return The current status of the DomainMapping.
-     * 
      */
     public Output<DomainMappingStatusResponse> getStatus() {
         return this.status;

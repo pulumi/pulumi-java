@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A Cloud Storage source of conversation data.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends io.pu
 
     /**
      * Cloud Storage URI that points to a file that contains the conversation audio.
-     * 
      */
     @Import(name="audioUri")
       private final @Nullable Output<String> audioUri;
@@ -31,7 +29,6 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends io.pu
 
     /**
      * Immutable. Cloud Storage URI that points to a file that contains the conversation transcript.
-     * 
      */
     @Import(name="transcriptUri")
       private final @Nullable Output<String> transcriptUri;

@@ -20,7 +20,6 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Cloud Storage bucket name.
-     * 
      */
     @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
@@ -31,7 +30,6 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Cloud CDN configuration for this BackendBucket.
-     * 
      */
     @Import(name="cdnPolicy")
       private final @Nullable Output<BackendBucketCdnPolicyArgs> cdnPolicy;
@@ -42,7 +40,6 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header.
-     * 
      */
     @Import(name="compressionMode")
       private final @Nullable Output<BackendBucketCompressionMode> compressionMode;
@@ -53,7 +50,6 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Headers that the HTTP/S load balancer should add to proxied responses.
-     * 
      */
     @Import(name="customResponseHeaders")
       private final @Nullable Output<List<String>> customResponseHeaders;
@@ -64,7 +60,6 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional textual description of the resource; provided by the client when the resource is created.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -75,7 +70,6 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If true, enable Cloud CDN for this BackendBucket.
-     * 
      */
     @Import(name="enableCdn")
       private final @Nullable Output<Boolean> enableCdn;
@@ -86,7 +80,6 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of the resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -97,7 +90,6 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

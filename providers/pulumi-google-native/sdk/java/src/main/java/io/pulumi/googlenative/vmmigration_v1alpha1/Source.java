@@ -17,104 +17,89 @@ import javax.annotation.Nullable;
 /**
  * Creates a new Source in a given project and location.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:vmmigration/v1alpha1:Source")
 public class Source extends io.pulumi.resources.CustomResource {
     /**
      * The create time timestamp.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The create time timestamp.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * User-provided description of the source.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return User-provided description of the source.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Provides details on the state of the Source in case of an error.
-     * 
      */
     @Export(name="error", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> error;
 
     /**
      * @return Provides details on the state of the Source in case of an error.
-     * 
      */
     public Output<StatusResponse> getError() {
         return this.error;
     }
     /**
      * The labels of the source.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return The labels of the source.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * The Source name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The Source name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The update time timestamp.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The update time timestamp.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
     /**
      * Vmware type source details.
-     * 
      */
     @Export(name="vmware", type=VmwareSourceDetailsResponse.class, parameters={})
     private Output<VmwareSourceDetailsResponse> vmware;
 
     /**
      * @return Vmware type source details.
-     * 
      */
     public Output<VmwareSourceDetailsResponse> getVmware() {
         return this.vmware;

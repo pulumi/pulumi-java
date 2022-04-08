@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A node-attached disk resource. Next ID: 8;
- * 
  */
 public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The mode in which to attach this disk. If not specified, the default is READ_WRITE mode. Only applicable to data_disks.
-     * 
      */
     @Import(name="mode")
       private final @Nullable Output<AttachedDiskMode> mode;
@@ -32,7 +30,6 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the full path to an existing disk. For example: "projects/my-project/zones/us-central1-c/disks/my-disk".
-     * 
      */
     @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;

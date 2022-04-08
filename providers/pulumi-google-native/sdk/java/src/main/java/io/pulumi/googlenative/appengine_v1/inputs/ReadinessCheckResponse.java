@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Readiness checking configuration for VM instances. Unhealthy instances are removed from traffic rotation.
- * 
  */
 public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A maximum time limit on application initialization, measured from moment the application successfully replies to a healthcheck until it is ready to serve traffic.
-     * 
      */
     @Import(name="appStartTimeout", required=true)
       private final String appStartTimeout;
@@ -30,7 +28,6 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Interval between health checks.
-     * 
      */
     @Import(name="checkInterval", required=true)
       private final String checkInterval;
@@ -41,7 +38,6 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Number of consecutive failed checks required before removing traffic.
-     * 
      */
     @Import(name="failureThreshold", required=true)
       private final Integer failureThreshold;
@@ -52,7 +48,6 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
-     * 
      */
     @Import(name="host", required=true)
       private final String host;
@@ -63,7 +58,6 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The request path.
-     * 
      */
     @Import(name="path", required=true)
       private final String path;
@@ -74,7 +68,6 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Number of consecutive successful checks required before receiving traffic.
-     * 
      */
     @Import(name="successThreshold", required=true)
       private final Integer successThreshold;
@@ -85,7 +78,6 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Time before the check is considered failed.
-     * 
      */
     @Import(name="timeout", required=true)
       private final String timeout;

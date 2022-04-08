@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ResourceSelectorResponse {
     /**
      * The [full resource name] (https://cloud.google.com/asset-inventory/docs/resource-name-format) of a resource of [supported resource types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#analyzable_asset_types).
-     * 
      */
     private final String fullResourceName;
 
@@ -22,7 +21,6 @@ public final class ResourceSelectorResponse {
 
     /**
      * The [full resource name] (https://cloud.google.com/asset-inventory/docs/resource-name-format) of a resource of [supported resource types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#analyzable_asset_types).
-     * 
     */
     public String getFullResourceName() {
         return this.fullResourceName;

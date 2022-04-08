@@ -33,7 +33,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The resource name for a CertificateTemplate used to issue this certificate, in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`. If this is specified, the caller must have the necessary permission to use this template. If this is omitted, no template will be used. This template must be in the same location as the Certificate.
-     * 
      */
     @Import(name="certificateTemplate")
       private final @Nullable Output<String> certificateTemplate;
@@ -44,7 +43,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. A description of the certificate and key that does not require X.509 or ASN.1.
-     * 
      */
     @Import(name="config")
       private final @Nullable Output<CertificateConfigArgs> config;
@@ -62,7 +60,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Labels with user-defined metadata.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -73,7 +70,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The desired lifetime of a certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
-     * 
      */
     @Import(name="lifetime", required=true)
       private final Output<String> lifetime;
@@ -91,7 +87,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. A pem-encoded X.509 certificate signing request (CSR).
-     * 
      */
     @Import(name="pemCsr")
       private final @Nullable Output<String> pemCsr;
@@ -116,7 +111,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. Specifies how the Certificate's identity fields are to be decided. If this is omitted, the `DEFAULT` subject mode will be used.
-     * 
      */
     @Import(name="subjectMode")
       private final @Nullable Output<CertificateSubjectMode> subjectMode;

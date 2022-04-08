@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * This encapsulates a metric property of the form sum(message_count) where name is message_count and function is sum
- * 
  */
 public final class GoogleCloudApigeeV1CustomReportMetricResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudApigeeV1CustomReportMetricResponse extends io.pulu
 
     /**
      * aggregate function
-     * 
      */
     @Import(name="function", required=true)
       private final String function;
@@ -29,7 +27,6 @@ public final class GoogleCloudApigeeV1CustomReportMetricResponse extends io.pulu
 
     /**
      * name of the metric
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Config to process conversation.
- * 
  */
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationP
 
     /**
      * Number of recent non-small-talk sentences to use as context for article and FAQ suggestion
-     * 
      */
     @Import(name="recentSentencesCount", required=true)
       private final Integer recentSentencesCount;

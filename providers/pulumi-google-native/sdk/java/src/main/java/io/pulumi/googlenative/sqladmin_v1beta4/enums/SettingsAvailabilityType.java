@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Availability type. Potential values: * `ZONAL`: The instance serves data from only one zone. Outages in that zone affect data accessibility. * `REGIONAL`: The instance can serve data from more than one zone in a region (it is highly available)./ For more information, see [Overview of the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-availability).
-     * 
      */
     @EnumType
     public enum SettingsAvailabilityType {
         /**
          * This is an unknown Availability type.
-         * 
          */
         SqlAvailabilityTypeUnspecified("SQL_AVAILABILITY_TYPE_UNSPECIFIED"),
         /**
          * Zonal available instance.
-         * 
          */
         Zonal("ZONAL"),
         /**
          * Regional available instance.
-         * 
          */
         Regional("REGIONAL");
 

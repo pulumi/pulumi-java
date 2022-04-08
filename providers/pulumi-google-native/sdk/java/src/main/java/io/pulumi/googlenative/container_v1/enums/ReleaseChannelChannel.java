@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * channel specifies which release channel the cluster is subscribed to.
-     * 
      */
     @EnumType
     public enum ReleaseChannelChannel {
         /**
          * No channel specified.
-         * 
          */
         Unspecified("UNSPECIFIED"),
         /**
          * RAPID channel is offered on an early access basis for customers who want to test new releases. WARNING: Versions available in the RAPID Channel may be subject to unresolved issues with no known workaround and are not subject to any SLAs.
-         * 
          */
         Rapid("RAPID"),
         /**
          * Clusters subscribed to REGULAR receive versions that are considered GA quality. REGULAR is intended for production users who want to take advantage of new features.
-         * 
          */
         Regular("REGULAR"),
         /**
          * Clusters subscribed to STABLE receive versions that are known to be stable and reliable in production.
-         * 
          */
         Stable("STABLE");
 

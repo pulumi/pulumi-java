@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * ComplianceNote encapsulates all information about a specific compliance check.
- * 
  */
 public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Right now we only have one compliance type, but we may add additional types in the future.
-     * 
      */
     @Import(name="cisBenchmark", required=true)
       private final CisBenchmarkResponse cisBenchmark;
@@ -32,7 +30,6 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A description about this compliance check.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -43,7 +40,6 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A rationale for the existence of this compliance check.
-     * 
      */
     @Import(name="rationale", required=true)
       private final String rationale;
@@ -54,7 +50,6 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A description of remediation steps if the compliance check fails.
-     * 
      */
     @Import(name="remediation", required=true)
       private final String remediation;
@@ -65,7 +60,6 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Serialized scan instructions with a predefined format.
-     * 
      */
     @Import(name="scanInstructions", required=true)
       private final String scanInstructions;
@@ -76,7 +70,6 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The title that identifies this compliance check.
-     * 
      */
     @Import(name="title", required=true)
       private final String title;
@@ -87,7 +80,6 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The OS and config versions the benchmark applies to.
-     * 
      */
     @Import(name="version", required=true)
       private final List<ComplianceVersionResponse> version;

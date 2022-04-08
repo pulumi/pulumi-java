@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The direction in which this rule applies.
-     * 
      */
     @EnumType
     public enum FirewallPolicyRuleDirection {

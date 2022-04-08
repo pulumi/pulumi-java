@@ -16,7 +16,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The canonical name of the finding. It's either "organizations/{organization_id}/sources/{source_id}", "folders/{folder_id}/sources/{source_id}" or "projects/{project_number}/sources/{source_id}", depending on the closest CRM ancestor of the resource associated with the finding.
-     * 
      */
     @Import(name="canonicalName")
       private final @Nullable Output<String> canonicalName;
@@ -27,7 +26,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the source (max of 1024 characters). Example: "Web Security Scanner is a web security scanner for common vulnerabilities in App Engine applications. It can automatically scan and detect four common vulnerabilities, including cross-site-scripting (XSS), Flash injection, mixed content (HTTP in HTTPS), and outdated or insecure libraries."
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -38,7 +36,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The source's display name. A source's display name must be unique amongst its siblings, for example, two sources with the same parent can't share the same display name. The display name must have a length between 1 and 64 characters (inclusive).
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -49,7 +46,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The relative resource name of this source. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/sources/{source_id}"
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

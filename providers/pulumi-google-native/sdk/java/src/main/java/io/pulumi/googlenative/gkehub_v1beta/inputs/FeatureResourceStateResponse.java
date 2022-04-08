@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * FeatureResourceState describes the state of a Feature *resource* in the GkeHub API. See `FeatureState` for the "running state" of the Feature in the Hub and across Memberships.
- * 
  */
 public final class FeatureResourceStateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class FeatureResourceStateResponse extends io.pulumi.resources.Invo
 
     /**
      * The current state of the Feature resource in the Hub API.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;

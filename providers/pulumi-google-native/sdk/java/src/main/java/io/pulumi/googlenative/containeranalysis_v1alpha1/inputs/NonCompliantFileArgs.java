@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details about files that caused a compliance check to fail.
- * 
  */
 public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Command to display the non-compliant files.
-     * 
      */
     @Import(name="displayCommand")
       private final @Nullable Output<String> displayCommand;
@@ -31,7 +29,6 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * display_command is a single command that can be used to display a list of non compliant files. When there is no such command, we can also iterate a list of non compliant file using 'path'. Empty if `display_command` is set.
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<String> path;
@@ -42,7 +39,6 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Explains why a file is non compliant for a CIS check.
-     * 
      */
     @Import(name="reason")
       private final @Nullable Output<String> reason;

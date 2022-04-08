@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class ServiceSpecResponse {
     /**
      * Template holds the latest specification for the Revision to be stamped out.
-     * 
      */
     private final RevisionTemplateResponse template;
     /**
      * Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations.
-     * 
      */
     private final List<TrafficTargetResponse> traffic;
 
@@ -32,14 +30,12 @@ public final class ServiceSpecResponse {
 
     /**
      * Template holds the latest specification for the Revision to be stamped out.
-     * 
     */
     public RevisionTemplateResponse getTemplate() {
         return this.template;
     }
     /**
      * Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations.
-     * 
     */
     public List<TrafficTargetResponse> getTraffic() {
         return this.traffic;

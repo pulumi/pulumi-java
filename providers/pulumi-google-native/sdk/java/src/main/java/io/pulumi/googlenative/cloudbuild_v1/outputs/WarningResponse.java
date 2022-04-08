@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class WarningResponse {
     /**
      * The priority for this warning.
-     * 
      */
     private final String priority;
     /**
      * Explanation of the warning generated.
-     * 
      */
     private final String text;
 
@@ -30,14 +28,12 @@ public final class WarningResponse {
 
     /**
      * The priority for this warning.
-     * 
     */
     public String getPriority() {
         return this.priority;
     }
     /**
      * Explanation of the warning generated.
-     * 
     */
     public String getText() {
         return this.text;

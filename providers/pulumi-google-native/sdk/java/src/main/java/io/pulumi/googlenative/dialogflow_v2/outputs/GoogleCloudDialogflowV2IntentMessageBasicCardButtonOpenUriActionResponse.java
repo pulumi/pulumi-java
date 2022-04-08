@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse {
     /**
      * The HTTP or HTTPS scheme URI.
-     * 
      */
     private final String uri;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriAct
 
     /**
      * The HTTP or HTTPS scheme URI.
-     * 
     */
     public String getUri() {
         return this.uri;

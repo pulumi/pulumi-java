@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * MetricSpec contains the specifications to use to calculate the desired nodes count when autoscaling is enabled.
- * 
  */
 public final class GoogleCloudMlV1__MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudMlV1__MetricSpecArgs extends io.pulumi.resources.R
 
     /**
      * metric name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<GoogleCloudMlV1__MetricSpecName> name;
@@ -32,7 +30,6 @@ public final class GoogleCloudMlV1__MetricSpecArgs extends io.pulumi.resources.R
 
     /**
      * Target specifies the target value for the given metric; once real metric deviates from the threshold by a certain percentage, the node count changes.
-     * 
      */
     @Import(name="target")
       private final @Nullable Output<Integer> target;

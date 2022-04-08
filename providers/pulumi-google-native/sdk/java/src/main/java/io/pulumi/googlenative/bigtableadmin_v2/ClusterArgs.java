@@ -20,7 +20,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration for this cluster.
-     * 
      */
     @Import(name="clusterConfig")
       private final @Nullable Output<ClusterConfigArgs> clusterConfig;
@@ -38,7 +37,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The type of storage used by this cluster to serve its parent instance's tables, unless explicitly overridden.
-     * 
      */
     @Import(name="defaultStorageType")
       private final @Nullable Output<ClusterDefaultStorageType> defaultStorageType;
@@ -49,7 +47,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The encryption configuration for CMEK-protected clusters.
-     * 
      */
     @Import(name="encryptionConfig")
       private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
@@ -67,7 +64,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The location where this cluster's nodes and storage reside. For best performance, clients should be located as close as possible to this cluster. Currently only zones are supported, so values should be of the form `projects/{project}/locations/{zone}`.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -78,7 +74,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique name of the cluster. Values are of the form `projects/{project}/instances/{instance}/clusters/a-z*`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -96,7 +91,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of nodes allocated to this cluster. More nodes enable higher throughput and more consistent performance.
-     * 
      */
     @Import(name="serveNodes")
       private final @Nullable Output<Integer> serveNodes;

@@ -24,7 +24,6 @@ public final class GameServerDeploymentArgs extends io.pulumi.resources.Resource
 
     /**
      * Human readable description of the game server delpoyment.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -35,7 +34,6 @@ public final class GameServerDeploymentArgs extends io.pulumi.resources.Resource
 
     /**
      * ETag of the resource.
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -46,7 +44,6 @@ public final class GameServerDeploymentArgs extends io.pulumi.resources.Resource
 
     /**
      * The labels associated with this game server deployment. Each label is a key-value pair.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -64,7 +61,6 @@ public final class GameServerDeploymentArgs extends io.pulumi.resources.Resource
 
     /**
      * The resource name of the game server deployment, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

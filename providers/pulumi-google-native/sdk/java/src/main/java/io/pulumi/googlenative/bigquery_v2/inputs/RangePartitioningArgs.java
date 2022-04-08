@@ -17,7 +17,6 @@ public final class RangePartitioningArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * [TrustedTester] [Required] The table is partitioned by this field. The field must be a top-level NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.
-     * 
      */
     @Import(name="field")
       private final @Nullable Output<String> field;
@@ -28,7 +27,6 @@ public final class RangePartitioningArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * [TrustedTester] [Required] Defines the ranges for range partitioning.
-     * 
      */
     @Import(name="range")
       private final @Nullable Output<RangePartitioningRangeArgs> range;

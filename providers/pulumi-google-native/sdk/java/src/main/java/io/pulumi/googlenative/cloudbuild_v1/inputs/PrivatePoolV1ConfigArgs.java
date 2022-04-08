@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for a V1 `PrivatePool`.
- * 
  */
 public final class PrivatePoolV1ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PrivatePoolV1ConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Network configuration for the pool.
-     * 
      */
     @Import(name="networkConfig")
       private final @Nullable Output<NetworkConfigArgs> networkConfig;
@@ -32,7 +30,6 @@ public final class PrivatePoolV1ConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Machine configuration for the workers in the pool.
-     * 
      */
     @Import(name="workerConfig")
       private final @Nullable Output<WorkerConfigArgs> workerConfig;

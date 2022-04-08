@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A (sub) field of a type.
- * 
  */
 public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum number of times this field can be repeated. 0 or -1 means unbounded.
-     * 
      */
     @Import(name="maxOccurs")
       private final @Nullable Output<Integer> maxOccurs;
@@ -32,7 +30,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The minimum number of times this field must be present/repeated.
-     * 
      */
     @Import(name="minOccurs")
       private final @Nullable Output<Integer> minOccurs;
@@ -43,7 +40,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the field. For example, "PID-1" or just "1".
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -54,7 +50,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The HL7v2 table this field refers to. For example, PID-15 (Patient's Primary Language) usually refers to table "0296".
-     * 
      */
     @Import(name="table")
       private final @Nullable Output<String> table;
@@ -65,7 +60,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of this field. A Type with this name must be defined in an Hl7TypesConfig.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

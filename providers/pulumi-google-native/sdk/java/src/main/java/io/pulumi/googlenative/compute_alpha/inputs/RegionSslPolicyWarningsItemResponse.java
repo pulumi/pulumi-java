@@ -16,7 +16,6 @@ public final class RegionSslPolicyWarningsItemResponse extends io.pulumi.resourc
 
     /**
      * A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -26,8 +25,7 @@ public final class RegionSslPolicyWarningsItemResponse extends io.pulumi.resourc
     }
 
     /**
-     * Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" }
-     * 
+     * Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } 
      */
     @Import(name="data", required=true)
       private final List<RegionSslPolicyWarningsItemDataItemResponse> data;
@@ -38,7 +36,6 @@ public final class RegionSslPolicyWarningsItemResponse extends io.pulumi.resourc
 
     /**
      * A human-readable description of the warning code.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;

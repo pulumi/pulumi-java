@@ -14,7 +14,6 @@ public final class PacketMirroringNetworkInfoResponse extends io.pulumi.resource
 
     /**
      * Unique identifier for the network; defined by the server.
-     * 
      */
     @Import(name="canonicalUrl", required=true)
       private final String canonicalUrl;
@@ -25,7 +24,6 @@ public final class PacketMirroringNetworkInfoResponse extends io.pulumi.resource
 
     /**
      * URL of the network resource.
-     * 
      */
     @Import(name="url", required=true)
       private final String url;

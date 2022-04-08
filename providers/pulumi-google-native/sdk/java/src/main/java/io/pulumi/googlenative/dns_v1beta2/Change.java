@@ -19,48 +19,41 @@ import javax.annotation.Nullable;
  * Auto-naming is currently not supported for this resource.
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:dns/v1beta2:Change")
 public class Change extends io.pulumi.resources.CustomResource {
     /**
      * Which ResourceRecordSets to add?
-     * 
      */
     @Export(name="additions", type=List.class, parameters={ResourceRecordSetResponse.class})
     private Output<List<ResourceRecordSetResponse>> additions;
 
     /**
      * @return Which ResourceRecordSets to add?
-     * 
      */
     public Output<List<ResourceRecordSetResponse>> getAdditions() {
         return this.additions;
     }
     /**
      * Which ResourceRecordSets to remove? Must match existing data exactly.
-     * 
      */
     @Export(name="deletions", type=List.class, parameters={ResourceRecordSetResponse.class})
     private Output<List<ResourceRecordSetResponse>> deletions;
 
     /**
      * @return Which ResourceRecordSets to remove? Must match existing data exactly.
-     * 
      */
     public Output<List<ResourceRecordSetResponse>> getDeletions() {
         return this.deletions;
     }
     /**
      * If the DNS queries for the zone will be served.
-     * 
      */
     @Export(name="isServing", type=Boolean.class, parameters={})
     private Output<Boolean> isServing;
 
     /**
      * @return If the DNS queries for the zone will be served.
-     * 
      */
     public Output<Boolean> getIsServing() {
         return this.isServing;
@@ -73,28 +66,24 @@ public class Change extends io.pulumi.resources.CustomResource {
     }
     /**
      * The time that this operation was started by the server (output only). This is in RFC3339 text format.
-     * 
      */
     @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
      * @return The time that this operation was started by the server (output only). This is in RFC3339 text format.
-     * 
      */
     public Output<String> getStartTime() {
         return this.startTime;
     }
     /**
      * Status of the operation (output only). A status of "done" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return Status of the operation (output only). A status of "done" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;

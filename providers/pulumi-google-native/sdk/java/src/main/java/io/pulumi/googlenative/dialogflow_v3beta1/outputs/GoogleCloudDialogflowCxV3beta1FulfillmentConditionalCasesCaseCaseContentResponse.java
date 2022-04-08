@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentResponse {
     /**
      * Additional cases to be evaluated.
-     * 
      */
     private final GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse additionalCases;
     /**
      * Returned message.
-     * 
      */
     private final GoogleCloudDialogflowCxV3beta1ResponseMessageResponse message;
 
@@ -31,14 +29,12 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
 
     /**
      * Additional cases to be evaluated.
-     * 
     */
     public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse getAdditionalCases() {
         return this.additionalCases;
     }
     /**
      * Returned message.
-     * 
     */
     public GoogleCloudDialogflowCxV3beta1ResponseMessageResponse getMessage() {
         return this.message;

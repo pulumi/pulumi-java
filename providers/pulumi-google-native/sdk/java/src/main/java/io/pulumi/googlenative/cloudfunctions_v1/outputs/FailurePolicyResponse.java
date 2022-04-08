@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class FailurePolicyResponse {
     /**
      * If specified, then the function will be retried in case of a failure.
-     * 
      */
     private final RetryResponse retry;
 
@@ -22,7 +21,6 @@ public final class FailurePolicyResponse {
 
     /**
      * If specified, then the function will be retried in case of a failure.
-     * 
     */
     public RetryResponse getRetry() {
         return this.retry;

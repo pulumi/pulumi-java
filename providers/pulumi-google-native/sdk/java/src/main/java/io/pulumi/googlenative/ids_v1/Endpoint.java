@@ -16,160 +16,137 @@ import javax.annotation.Nullable;
 /**
  * Creates a new Endpoint in a given project and location.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:ids/v1:Endpoint")
 public class Endpoint extends io.pulumi.resources.CustomResource {
     /**
      * The create time timestamp.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The create time timestamp.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * User-provided description of the endpoint
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return User-provided description of the endpoint
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The fully qualified URL of the endpoint's ILB Forwarding Rule.
-     * 
      */
     @Export(name="endpointForwardingRule", type=String.class, parameters={})
     private Output<String> endpointForwardingRule;
 
     /**
      * @return The fully qualified URL of the endpoint's ILB Forwarding Rule.
-     * 
      */
     public Output<String> getEndpointForwardingRule() {
         return this.endpointForwardingRule;
     }
     /**
      * The IP address of the IDS Endpoint's ILB.
-     * 
      */
     @Export(name="endpointIp", type=String.class, parameters={})
     private Output<String> endpointIp;
 
     /**
      * @return The IP address of the IDS Endpoint's ILB.
-     * 
      */
     public Output<String> getEndpointIp() {
         return this.endpointIp;
     }
     /**
      * The labels of the endpoint.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return The labels of the endpoint.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * The name of the endpoint.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the endpoint.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The fully qualified URL of the network to which the IDS Endpoint is attached.
-     * 
      */
     @Export(name="network", type=String.class, parameters={})
     private Output<String> network;
 
     /**
      * @return The fully qualified URL of the network to which the IDS Endpoint is attached.
-     * 
      */
     public Output<String> getNetwork() {
         return this.network;
     }
     /**
      * Lowest threat severity that this endpoint will alert on.
-     * 
      */
     @Export(name="severity", type=String.class, parameters={})
     private Output<String> severity;
 
     /**
      * @return Lowest threat severity that this endpoint will alert on.
-     * 
      */
     public Output<String> getSeverity() {
         return this.severity;
     }
     /**
      * Current state of the endpoint.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return Current state of the endpoint.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Whether the endpoint should report traffic logs in addition to threat logs.
-     * 
      */
     @Export(name="trafficLogs", type=Boolean.class, parameters={})
     private Output<Boolean> trafficLogs;
 
     /**
      * @return Whether the endpoint should report traffic logs in addition to threat logs.
-     * 
      */
     public Output<Boolean> getTrafficLogs() {
         return this.trafficLogs;
     }
     /**
      * The update time timestamp.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The update time timestamp.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

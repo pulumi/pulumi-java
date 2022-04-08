@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Sets the scheduling options for an Instance. NextID: 21
- * 
  */
 public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the automatic restart option for standard instances. Preemptible instances cannot be automatically restarted. By default, this is set to true so an instance is automatically restarted if it is terminated by Compute Engine.
-     * 
      */
     @Import(name="automaticRestart", required=true)
       private final Boolean automaticRestart;
@@ -33,7 +31,6 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specify the time in seconds for host error detection, the value must be within the range of [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will be used.
-     * 
      */
     @Import(name="hostErrorTimeoutSeconds", required=true)
       private final Integer hostErrorTimeoutSeconds;
@@ -44,7 +41,6 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the termination action for the instance.
-     * 
      */
     @Import(name="instanceTerminationAction", required=true)
       private final String instanceTerminationAction;
@@ -55,7 +51,6 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An opaque location hint used to place the instance close to other resources. This field is for use by internal tools that use the public API.
-     * 
      */
     @Import(name="locationHint", required=true)
       private final String locationHint;
@@ -66,7 +61,6 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the number of hours after VM instance creation where the VM won't be scheduled for maintenance.
-     * 
      */
     @Import(name="maintenanceFreezeDurationHours", required=true)
       private final Integer maintenanceFreezeDurationHours;
@@ -77,7 +71,6 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * For more information about maintenance intervals, see Setting maintenance intervals.
-     * 
      */
     @Import(name="maintenanceInterval", required=true)
       private final String maintenanceInterval;
@@ -88,7 +81,6 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
-     * 
      */
     @Import(name="minNodeCpus", required=true)
       private final Integer minNodeCpus;
@@ -99,7 +91,6 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.
-     * 
      */
     @Import(name="nodeAffinities", required=true)
       private final List<SchedulingNodeAffinityResponse> nodeAffinities;
@@ -110,7 +101,6 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Set VM availability policies.
-     * 
      */
     @Import(name="onHostMaintenance", required=true)
       private final String onHostMaintenance;
@@ -121,7 +111,6 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Defines whether the instance is preemptible. This can only be set during instance creation or while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
-     * 
      */
     @Import(name="preemptible", required=true)
       private final Boolean preemptible;
@@ -132,7 +121,6 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the provisioning model of the instance.
-     * 
      */
     @Import(name="provisioningModel", required=true)
       private final String provisioningModel;

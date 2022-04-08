@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Message containing connection draining configuration.
- * 
  */
 public final class ConnectionDrainingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ConnectionDrainingResponse extends io.pulumi.resources.Invoke
 
     /**
      * Configures a duration timeout for existing requests on a removed backend instance. For supported load balancers and protocols, as described in Enabling connection draining.
-     * 
      */
     @Import(name="drainingTimeoutSec", required=true)
       private final Integer drainingTimeoutSec;

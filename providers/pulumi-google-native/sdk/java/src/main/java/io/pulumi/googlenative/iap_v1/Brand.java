@@ -17,62 +17,53 @@ import javax.annotation.Nullable;
  * Auto-naming is currently not supported for this resource.
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:iap/v1:Brand")
 public class Brand extends io.pulumi.resources.CustomResource {
     /**
      * Application name displayed on OAuth consent screen.
-     * 
      */
     @Export(name="applicationTitle", type=String.class, parameters={})
     private Output<String> applicationTitle;
 
     /**
      * @return Application name displayed on OAuth consent screen.
-     * 
      */
     public Output<String> getApplicationTitle() {
         return this.applicationTitle;
     }
     /**
      * Identifier of the brand. NOTE: GCP project number achieves the same brand identification purpose as only one brand per project can be created.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Identifier of the brand. NOTE: GCP project number achieves the same brand identification purpose as only one brand per project can be created.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Whether the brand is only intended for usage inside the G Suite organization only.
-     * 
      */
     @Export(name="orgInternalOnly", type=Boolean.class, parameters={})
     private Output<Boolean> orgInternalOnly;
 
     /**
      * @return Whether the brand is only intended for usage inside the G Suite organization only.
-     * 
      */
     public Output<Boolean> getOrgInternalOnly() {
         return this.orgInternalOnly;
     }
     /**
      * Support email displayed on the OAuth consent screen.
-     * 
      */
     @Export(name="supportEmail", type=String.class, parameters={})
     private Output<String> supportEmail;
 
     /**
      * @return Support email displayed on the OAuth consent screen.
-     * 
      */
     public Output<String> getSupportEmail() {
         return this.supportEmail;

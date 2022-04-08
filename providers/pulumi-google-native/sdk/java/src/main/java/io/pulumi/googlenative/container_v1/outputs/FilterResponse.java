@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class FilterResponse {
     /**
      * Event types to allowlist.
-     * 
      */
     private final List<String> eventType;
 
@@ -23,7 +22,6 @@ public final class FilterResponse {
 
     /**
      * Event types to allowlist.
-     * 
     */
     public List<String> getEventType() {
         return this.eventType;

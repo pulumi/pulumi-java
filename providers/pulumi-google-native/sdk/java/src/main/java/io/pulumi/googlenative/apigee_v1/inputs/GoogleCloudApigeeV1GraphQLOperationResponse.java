@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Represents the pairing of GraphQL operation types and the GraphQL operation name.
- * 
  */
 public final class GoogleCloudApigeeV1GraphQLOperationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudApigeeV1GraphQLOperationResponse extends io.pulumi
 
     /**
      * GraphQL operation name. The name and operation type will be used to apply quotas. If no name is specified, the quota will be applied to all GraphQL operations irrespective of their operation names in the payload.
-     * 
      */
     @Import(name="operation", required=true)
       private final String operation;
@@ -30,7 +28,6 @@ public final class GoogleCloudApigeeV1GraphQLOperationResponse extends io.pulumi
 
     /**
      * GraphQL operation types. Valid values include `query` or `mutation`. **Note**: Apigee does not currently support `subscription` types.
-     * 
      */
     @Import(name="operationTypes", required=true)
       private final List<String> operationTypes;

@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class OSPolicyResourcePackageResourceDebResponse {
     /**
      * Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update && apt-get -y install package.deb`
-     * 
      */
     private final Boolean pullDeps;
     /**
      * A deb package.
-     * 
      */
     private final OSPolicyResourceFileResponse source;
 
@@ -31,14 +29,12 @@ public final class OSPolicyResourcePackageResourceDebResponse {
 
     /**
      * Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update && apt-get -y install package.deb`
-     * 
     */
     public Boolean getPullDeps() {
         return this.pullDeps;
     }
     /**
      * A deb package.
-     * 
     */
     public OSPolicyResourceFileResponse getSource() {
         return this.source;

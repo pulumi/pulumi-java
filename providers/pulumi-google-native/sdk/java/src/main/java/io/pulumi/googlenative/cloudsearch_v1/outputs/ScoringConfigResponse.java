@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ScoringConfigResponse {
     /**
      * Whether to use freshness as a ranking signal. By default, freshness is used as a ranking signal. Note that this setting is not available in the Admin UI.
-     * 
      */
     private final Boolean disableFreshness;
     /**
      * Whether to personalize the results. By default, personal signals will be used to boost results.
-     * 
      */
     private final Boolean disablePersonalization;
 
@@ -30,14 +28,12 @@ public final class ScoringConfigResponse {
 
     /**
      * Whether to use freshness as a ranking signal. By default, freshness is used as a ranking signal. Note that this setting is not available in the Admin UI.
-     * 
     */
     public Boolean getDisableFreshness() {
         return this.disableFreshness;
     }
     /**
      * Whether to personalize the results. By default, personal signals will be used to boost results.
-     * 
     */
     public Boolean getDisablePersonalization() {
         return this.disablePersonalization;

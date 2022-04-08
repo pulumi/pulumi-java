@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies operators to return facet results for. There will be one FacetResult for every source_name/object_type/operator_name combination.
- * 
  */
 public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum number of facet buckets that should be returned for this facet. Defaults to 10. Maximum value is 100.
-     * 
      */
     @Import(name="numFacetBuckets")
       private final @Nullable Output<Integer> numFacetBuckets;
@@ -32,7 +30,6 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If object_type is set, only those objects of that type will be used to compute facets. If empty, then all objects will be used to compute facets.
-     * 
      */
     @Import(name="objectType")
       private final @Nullable Output<String> objectType;
@@ -43,7 +40,6 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the operator chosen for faceting. @see cloudsearch.SchemaPropertyOptions
-     * 
      */
     @Import(name="operatorName")
       private final @Nullable Output<String> operatorName;
@@ -54,7 +50,6 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Source name to facet on. Format: datasources/{source_id} If empty, all data sources will be used.
-     * 
      */
     @Import(name="sourceName")
       private final @Nullable Output<String> sourceName;

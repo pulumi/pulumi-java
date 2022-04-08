@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2IntentMessageSuggestionResponse {
     /**
      * The text shown the in the suggestion chip.
-     * 
      */
     private final String title;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionResponse {
 
     /**
      * The text shown the in the suggestion chip.
-     * 
     */
     public String getTitle() {
         return this.title;

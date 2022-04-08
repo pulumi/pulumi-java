@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Required Edu Attributes
- * 
  */
 public final class GoogleCloudChannelV1EduDataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudChannelV1EduDataResponse extends io.pulumi.resourc
 
     /**
      * Size of the institute.
-     * 
      */
     @Import(name="instituteSize", required=true)
       private final String instituteSize;
@@ -29,7 +27,6 @@ public final class GoogleCloudChannelV1EduDataResponse extends io.pulumi.resourc
 
     /**
      * Designated institute type of customer.
-     * 
      */
     @Import(name="instituteType", required=true)
       private final String instituteType;
@@ -40,7 +37,6 @@ public final class GoogleCloudChannelV1EduDataResponse extends io.pulumi.resourc
 
     /**
      * Web address for the edu customer's institution.
-     * 
      */
     @Import(name="website", required=true)
       private final String website;

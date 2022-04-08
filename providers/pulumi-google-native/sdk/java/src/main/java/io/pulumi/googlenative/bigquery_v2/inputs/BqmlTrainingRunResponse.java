@@ -17,7 +17,6 @@ public final class BqmlTrainingRunResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * [Output-only, Beta] List of each iteration results.
-     * 
      */
     @Import(name="iterationResults", required=true)
       private final List<BqmlIterationResultResponse> iterationResults;
@@ -28,7 +27,6 @@ public final class BqmlTrainingRunResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * [Output-only, Beta] Training run start time in milliseconds since the epoch.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;
@@ -39,7 +37,6 @@ public final class BqmlTrainingRunResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * [Output-only, Beta] Different state applicable for a training run. IN PROGRESS: Training run is in progress. FAILED: Training run ended due to a non-retryable failure. SUCCEEDED: Training run successfully completed. CANCELLED: Training run cancelled by the user.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -50,7 +47,6 @@ public final class BqmlTrainingRunResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * [Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.
-     * 
      */
     @Import(name="trainingOptions", required=true)
       private final BqmlTrainingRunTrainingOptionsResponse trainingOptions;

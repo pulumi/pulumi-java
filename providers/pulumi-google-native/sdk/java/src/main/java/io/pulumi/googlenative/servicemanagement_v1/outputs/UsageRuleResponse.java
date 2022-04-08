@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class UsageRuleResponse {
     /**
      * If true, the selected method allows unregistered calls, e.g. calls that don't identify any user or application.
-     * 
      */
     private final Boolean allowUnregisteredCalls;
     /**
      * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs. Refer to selector for syntax details.
-     * 
      */
     private final String selector;
     /**
      * If true, the selected method should skip service control and the control plane features, such as quota and billing, will not be available. This flag is used by Google Cloud Endpoints to bypass checks for internal methods, such as service health check methods.
-     * 
      */
     private final Boolean skipServiceControl;
 
@@ -38,21 +35,18 @@ public final class UsageRuleResponse {
 
     /**
      * If true, the selected method allows unregistered calls, e.g. calls that don't identify any user or application.
-     * 
     */
     public Boolean getAllowUnregisteredCalls() {
         return this.allowUnregisteredCalls;
     }
     /**
      * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs. Refer to selector for syntax details.
-     * 
     */
     public String getSelector() {
         return this.selector;
     }
     /**
      * If true, the selected method should skip service control and the control plane features, such as quota and billing, will not be available. This flag is used by Google Cloud Endpoints to bypass checks for internal methods, such as service health check methods.
-     * 
     */
     public Boolean getSkipServiceControl() {
         return this.skipServiceControl;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A routing block which contains the routing information for one WRR item.
- * 
  */
 public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -34,7 +33,6 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse extends io.p
 
     /**
      * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there's a restriction of 1 ip per item. .
-     * 
      */
     @Import(name="signatureRrdatas", required=true)
       private final List<String> signatureRrdatas;
@@ -45,7 +43,6 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse extends io.p
 
     /**
      * The weight corresponding to this subset of rrdata. When multiple WeightedRoundRobinPolicyItems are configured, the probability of returning an rrset is proportional to its weight relative to the sum of weights configured for all items. This weight should be non-negative.
-     * 
      */
     @Import(name="weight", required=true)
       private final Double weight;

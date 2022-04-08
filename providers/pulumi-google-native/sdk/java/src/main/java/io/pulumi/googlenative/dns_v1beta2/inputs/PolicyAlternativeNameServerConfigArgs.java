@@ -25,7 +25,6 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
 
     /**
      * Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
-     * 
      */
     @Import(name="targetNameServers")
       private final @Nullable Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;

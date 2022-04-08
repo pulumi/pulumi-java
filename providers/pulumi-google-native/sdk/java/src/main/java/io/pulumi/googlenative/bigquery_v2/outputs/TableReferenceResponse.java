@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class TableReferenceResponse {
     /**
      * [Required] The ID of the dataset containing this table.
-     * 
      */
     private final String datasetId;
     /**
      * [Required] The ID of the project containing this table.
-     * 
      */
     private final String project;
     /**
      * [Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
-     * 
      */
     private final String tableId;
 
@@ -37,21 +34,18 @@ public final class TableReferenceResponse {
 
     /**
      * [Required] The ID of the dataset containing this table.
-     * 
     */
     public String getDatasetId() {
         return this.datasetId;
     }
     /**
      * [Required] The ID of the project containing this table.
-     * 
     */
     public String getProject() {
         return this.project;
     }
     /**
      * [Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
-     * 
     */
     public String getTableId() {
         return this.tableId;

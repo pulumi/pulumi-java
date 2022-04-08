@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * A facet specification to perform faceted search.
- * 
  */
 public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse extend
 
     /**
      * Enables dynamic position for this facet. If set to true, the position of this facet among all facets in the response is determined by Google Retail Search. It will be ordered together with dynamic facets if dynamic facets is enabled. If set to false, the position of this facet in the response will be the same as in the request, and it will be ranked before the facets with dynamic position enable and all dynamic facets. For example, you may always want to have rating facet returned in the response, but it's not necessarily to always display the rating facet at the top. In that case, you can set enable_dynamic_position to true so that the position of rating facet in response will be determined by Google Retail Search. Another example, assuming you have the following facets in the request: * "rating", enable_dynamic_position = true * "price", enable_dynamic_position = false * "brands", enable_dynamic_position = false And also you have a dynamic facets enable, which will generate a facet 'gender'. Then the final order of the facets in the response can be ("price", "brands", "rating", "gender") or ("price", "brands", "gender", "rating") depends on how Google Retail Search orders "gender" and "rating" facets. However, notice that "price" and "brands" will always be ranked at 1st and 2nd position since their enable_dynamic_position are false.
-     * 
      */
     @Import(name="enableDynamicPosition", required=true)
       private final Boolean enableDynamicPosition;
@@ -33,7 +31,6 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse extend
 
     /**
      * List of keys to exclude when faceting. By default, FacetKey.key is not excluded from the filter unless it is listed in this field. For example, suppose there are 100 products with color facet "Red" and 200 products with color facet "Blue". A query containing the filter "colorFamilies:ANY("Red")" and have "colorFamilies" as FacetKey.key will by default return the "Red" with count 100. If this field contains "colorFamilies", then the query returns both the "Red" with count 100 and "Blue" with count 200, because the "colorFamilies" key is now excluded from the filter. A maximum of 100 values are allowed. Otherwise, an INVALID_ARGUMENT error is returned.
-     * 
      */
     @Import(name="excludedFilterKeys", required=true)
       private final List<String> excludedFilterKeys;
@@ -44,7 +41,6 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse extend
 
     /**
      * The facet key specification.
-     * 
      */
     @Import(name="facetKey", required=true)
       private final GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyResponse facetKey;
@@ -55,7 +51,6 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse extend
 
     /**
      * Maximum of facet values that should be returned for this facet. If unspecified, defaults to 20. The maximum allowed value is 300. Values above 300 will be coerced to 300. If this field is negative, an INVALID_ARGUMENT is returned.
-     * 
      */
     @Import(name="limit", required=true)
       private final Integer limit;

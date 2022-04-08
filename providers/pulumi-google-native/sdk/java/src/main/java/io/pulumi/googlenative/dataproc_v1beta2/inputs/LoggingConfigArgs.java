@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The runtime logging config of the job.
- * 
  */
 public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-     * 
      */
     @Import(name="driverLogLevels")
       private final @Nullable Output<Map<String,String>> driverLogLevels;

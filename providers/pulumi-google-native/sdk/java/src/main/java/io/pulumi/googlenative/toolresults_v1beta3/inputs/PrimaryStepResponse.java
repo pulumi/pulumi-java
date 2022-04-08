@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Stores rollup test status of multiple steps that were run as a group and outcome of each individual step.
- * 
  */
 public final class PrimaryStepResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PrimaryStepResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Step Id and outcome of each individual step.
-     * 
      */
     @Import(name="individualOutcome", required=true)
       private final List<IndividualOutcomeResponse> individualOutcome;
@@ -31,7 +29,6 @@ public final class PrimaryStepResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Rollup test status of multiple steps that were run with the same configuration as a group.
-     * 
      */
     @Import(name="rollUp", required=true)
       private final String rollUp;

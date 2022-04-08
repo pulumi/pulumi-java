@@ -20,7 +20,6 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
 
     /**
      * [Optional] The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE. The default value is NONE. DEFLATE and SNAPPY are only supported for Avro. Not applicable when extracting models.
-     * 
      */
     @Import(name="compression")
       private final @Nullable Output<String> compression;
@@ -31,7 +30,6 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
 
     /**
      * [Optional] The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON, PARQUET or AVRO for tables and ML_TF_SAVED_MODEL or ML_XGBOOST_BOOSTER for models. The default value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV. The default value for models is ML_TF_SAVED_MODEL.
-     * 
      */
     @Import(name="destinationFormat")
       private final @Nullable Output<String> destinationFormat;
@@ -42,7 +40,6 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
 
     /**
      * [Pick one] DEPRECATED: Use destinationUris instead, passing only one URI as necessary. The fully-qualified Google Cloud Storage URI where the extracted table should be written.
-     * 
      */
     @Import(name="destinationUri")
       private final @Nullable Output<String> destinationUri;
@@ -53,7 +50,6 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
 
     /**
      * [Pick one] A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.
-     * 
      */
     @Import(name="destinationUris")
       private final @Nullable Output<List<String>> destinationUris;
@@ -64,7 +60,6 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
 
     /**
      * [Optional] Delimiter to use between fields in the exported data. Default is ','. Not applicable when extracting models.
-     * 
      */
     @Import(name="fieldDelimiter")
       private final @Nullable Output<String> fieldDelimiter;
@@ -75,7 +70,6 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
 
     /**
      * [Optional] Whether to print out a header row in the results. Default is true. Not applicable when extracting models.
-     * 
      */
     @Import(name="printHeader")
       private final @Nullable Output<Boolean> printHeader;
@@ -86,7 +80,6 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
 
     /**
      * A reference to the model being exported.
-     * 
      */
     @Import(name="sourceModel")
       private final @Nullable Output<ModelReferenceArgs> sourceModel;
@@ -97,7 +90,6 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
 
     /**
      * A reference to the table being exported.
-     * 
      */
     @Import(name="sourceTable")
       private final @Nullable Output<TableReferenceArgs> sourceTable;
@@ -108,7 +100,6 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
 
     /**
      * [Optional] If destinationFormat is set to "AVRO", this flag indicates whether to enable extracting applicable column types (such as TIMESTAMP) to their corresponding AVRO logical types (timestamp-micros), instead of only using their raw types (avro-long). Not applicable when extracting models.
-     * 
      */
     @Import(name="useAvroLogicalTypes")
       private final @Nullable Output<Boolean> useAvroLogicalTypes;

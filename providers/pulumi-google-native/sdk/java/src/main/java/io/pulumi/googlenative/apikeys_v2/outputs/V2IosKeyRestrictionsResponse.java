@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class V2IosKeyRestrictionsResponse {
     /**
      * A list of bundle IDs that are allowed when making API calls with this key.
-     * 
      */
     private final List<String> allowedBundleIds;
 
@@ -23,7 +22,6 @@ public final class V2IosKeyRestrictionsResponse {
 
     /**
      * A list of bundle IDs that are allowed when making API calls with this key.
-     * 
     */
     public List<String> getAllowedBundleIds() {
         return this.allowedBundleIds;

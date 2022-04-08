@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The data for an entity mention annotation. This represents a mention of an `Entity` in the conversation.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse e
 
     /**
      * The key of this entity in conversation entities. Can be used to retrieve the exact `Entity` this mention is attached to.
-     * 
      */
     @Import(name="entityUniqueId", required=true)
       private final String entityUniqueId;
@@ -30,7 +28,6 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse e
 
     /**
      * Sentiment expressed for this mention of the entity.
-     * 
      */
     @Import(name="sentiment", required=true)
       private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment;
@@ -41,7 +38,6 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse e
 
     /**
      * The type of the entity mention.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

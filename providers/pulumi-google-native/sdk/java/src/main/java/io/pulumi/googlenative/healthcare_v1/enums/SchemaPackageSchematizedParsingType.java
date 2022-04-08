@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Determines how messages that fail to parse are handled.
-     * 
      */
     @EnumType
     public enum SchemaPackageSchematizedParsingType {
         /**
          * Unspecified schematized parsing type, equivalent to `SOFT_FAIL`.
-         * 
          */
         SchematizedParsingTypeUnspecified("SCHEMATIZED_PARSING_TYPE_UNSPECIFIED"),
         /**
          * Messages that fail to parse are still stored and ACKed but a parser error is stored in place of the schematized data.
-         * 
          */
         SoftFail("SOFT_FAIL"),
         /**
          * Messages that fail to parse are rejected from ingestion/insertion and return an error code.
-         * 
          */
         HardFail("HARD_FAIL");
 

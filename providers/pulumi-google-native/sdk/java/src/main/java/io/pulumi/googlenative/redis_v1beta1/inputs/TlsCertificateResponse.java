@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * TlsCertificate Resource
- * 
  */
 public final class TlsCertificateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class TlsCertificateResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * PEM representation.
-     * 
      */
     @Import(name="cert", required=true)
       private final String cert;
@@ -29,7 +27,6 @@ public final class TlsCertificateResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
-     * 
      */
     @Import(name="createTime", required=true)
       private final String createTime;
@@ -40,7 +37,6 @@ public final class TlsCertificateResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
-     * 
      */
     @Import(name="expireTime", required=true)
       private final String expireTime;
@@ -51,7 +47,6 @@ public final class TlsCertificateResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Serial number, as extracted from the certificate.
-     * 
      */
     @Import(name="serialNumber", required=true)
       private final String serialNumber;
@@ -62,7 +57,6 @@ public final class TlsCertificateResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Sha1 Fingerprint of the certificate.
-     * 
      */
     @Import(name="sha1Fingerprint", required=true)
       private final String sha1Fingerprint;

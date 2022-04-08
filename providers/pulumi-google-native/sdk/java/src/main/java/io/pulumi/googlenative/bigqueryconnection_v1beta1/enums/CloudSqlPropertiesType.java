@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Type of the Cloud SQL database.
-     * 
      */
     @EnumType
     public enum CloudSqlPropertiesType {
         /**
          * Unspecified database type.
-         * 
          */
         DatabaseTypeUnspecified("DATABASE_TYPE_UNSPECIFIED"),
         /**
          * Cloud SQL for PostgreSQL.
-         * 
          */
         Postgres("POSTGRES"),
         /**
          * Cloud SQL for MySQL.
-         * 
          */
         Mysql("MYSQL");
 

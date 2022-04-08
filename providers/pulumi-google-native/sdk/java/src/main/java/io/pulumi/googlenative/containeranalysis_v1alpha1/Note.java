@@ -29,314 +29,269 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new `Note`.
- * 
  */
 @ResourceType(type="google-native:containeranalysis/v1alpha1:Note")
 public class Note extends io.pulumi.resources.CustomResource {
     /**
      * A note describing an attestation role.
-     * 
      */
     @Export(name="attestationAuthority", type=AttestationAuthorityResponse.class, parameters={})
     private Output<AttestationAuthorityResponse> attestationAuthority;
 
     /**
      * @return A note describing an attestation role.
-     * 
      */
     public Output<AttestationAuthorityResponse> getAttestationAuthority() {
         return this.attestationAuthority;
     }
     /**
      * A note describing a base image.
-     * 
      */
     @Export(name="baseImage", type=BasisResponse.class, parameters={})
     private Output<BasisResponse> baseImage;
 
     /**
      * @return A note describing a base image.
-     * 
      */
     public Output<BasisResponse> getBaseImage() {
         return this.baseImage;
     }
     /**
      * Build provenance type for a verifiable build.
-     * 
      */
     @Export(name="buildType", type=BuildTypeResponse.class, parameters={})
     private Output<BuildTypeResponse> buildType;
 
     /**
      * @return Build provenance type for a verifiable build.
-     * 
      */
     public Output<BuildTypeResponse> getBuildType() {
         return this.buildType;
     }
     /**
      * A note describing a compliance check.
-     * 
      */
     @Export(name="compliance", type=ComplianceNoteResponse.class, parameters={})
     private Output<ComplianceNoteResponse> compliance;
 
     /**
      * @return A note describing a compliance check.
-     * 
      */
     public Output<ComplianceNoteResponse> getCompliance() {
         return this.compliance;
     }
     /**
      * The time this note was created. This field can be used as a filter in list requests.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time this note was created. This field can be used as a filter in list requests.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * A note describing something that can be deployed.
-     * 
      */
     @Export(name="deployable", type=DeployableResponse.class, parameters={})
     private Output<DeployableResponse> deployable;
 
     /**
      * @return A note describing something that can be deployed.
-     * 
      */
     public Output<DeployableResponse> getDeployable() {
         return this.deployable;
     }
     /**
      * A note describing a provider/analysis type.
-     * 
      */
     @Export(name="discovery", type=DiscoveryResponse.class, parameters={})
     private Output<DiscoveryResponse> discovery;
 
     /**
      * @return A note describing a provider/analysis type.
-     * 
      */
     public Output<DiscoveryResponse> getDiscovery() {
         return this.discovery;
     }
     /**
      * A note describing a dsse attestation note.
-     * 
      */
     @Export(name="dsseAttestation", type=DSSEAttestationNoteResponse.class, parameters={})
     private Output<DSSEAttestationNoteResponse> dsseAttestation;
 
     /**
      * @return A note describing a dsse attestation note.
-     * 
      */
     public Output<DSSEAttestationNoteResponse> getDsseAttestation() {
         return this.dsseAttestation;
     }
     /**
      * Time of expiration for this note, null if note does not expire.
-     * 
      */
     @Export(name="expirationTime", type=String.class, parameters={})
     private Output<String> expirationTime;
 
     /**
      * @return Time of expiration for this note, null if note does not expire.
-     * 
      */
     public Output<String> getExpirationTime() {
         return this.expirationTime;
     }
     /**
      * This explicitly denotes which kind of note is specified. This field can be used as a filter in list requests.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return This explicitly denotes which kind of note is specified. This field can be used as a filter in list requests.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * A detailed description of this `Note`.
-     * 
      */
     @Export(name="longDescription", type=String.class, parameters={})
     private Output<String> longDescription;
 
     /**
      * @return A detailed description of this `Note`.
-     * 
      */
     public Output<String> getLongDescription() {
         return this.longDescription;
     }
     /**
      * The name of the note in the form "projects/{provider_project_id}/notes/{NOTE_ID}"
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the note in the form "projects/{provider_project_id}/notes/{NOTE_ID}"
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * A note describing a package hosted by various package managers.
-     * 
      */
     @Export(name="package", type=PackageResponse.class, parameters={})
     private Output<PackageResponse> package_;
 
     /**
      * @return A note describing a package hosted by various package managers.
-     * 
      */
     public Output<PackageResponse> getPackage_() {
         return this.package_;
     }
     /**
      * URLs associated with this note
-     * 
      */
     @Export(name="relatedUrl", type=List.class, parameters={RelatedUrlResponse.class})
     private Output<List<RelatedUrlResponse>> relatedUrl;
 
     /**
      * @return URLs associated with this note
-     * 
      */
     public Output<List<RelatedUrlResponse>> getRelatedUrl() {
         return this.relatedUrl;
     }
     /**
      * A note describing a software bill of materials.
-     * 
      */
     @Export(name="sbom", type=DocumentNoteResponse.class, parameters={})
     private Output<DocumentNoteResponse> sbom;
 
     /**
      * @return A note describing a software bill of materials.
-     * 
      */
     public Output<DocumentNoteResponse> getSbom() {
         return this.sbom;
     }
     /**
      * A one sentence description of this `Note`.
-     * 
      */
     @Export(name="shortDescription", type=String.class, parameters={})
     private Output<String> shortDescription;
 
     /**
      * @return A one sentence description of this `Note`.
-     * 
      */
     public Output<String> getShortDescription() {
         return this.shortDescription;
     }
     /**
      * A note describing an SPDX File.
-     * 
      */
     @Export(name="spdxFile", type=FileNoteResponse.class, parameters={})
     private Output<FileNoteResponse> spdxFile;
 
     /**
      * @return A note describing an SPDX File.
-     * 
      */
     public Output<FileNoteResponse> getSpdxFile() {
         return this.spdxFile;
     }
     /**
      * A note describing an SPDX Package.
-     * 
      */
     @Export(name="spdxPackage", type=PackageInfoNoteResponse.class, parameters={})
     private Output<PackageInfoNoteResponse> spdxPackage;
 
     /**
      * @return A note describing an SPDX Package.
-     * 
      */
     public Output<PackageInfoNoteResponse> getSpdxPackage() {
         return this.spdxPackage;
     }
     /**
      * A note describing a relationship between SPDX elements.
-     * 
      */
     @Export(name="spdxRelationship", type=RelationshipNoteResponse.class, parameters={})
     private Output<RelationshipNoteResponse> spdxRelationship;
 
     /**
      * @return A note describing a relationship between SPDX elements.
-     * 
      */
     public Output<RelationshipNoteResponse> getSpdxRelationship() {
         return this.spdxRelationship;
     }
     /**
      * The time this note was last updated. This field can be used as a filter in list requests.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The time this note was last updated. This field can be used as a filter in list requests.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
     /**
      * A note describing an upgrade.
-     * 
      */
     @Export(name="upgrade", type=UpgradeNoteResponse.class, parameters={})
     private Output<UpgradeNoteResponse> upgrade;
 
     /**
      * @return A note describing an upgrade.
-     * 
      */
     public Output<UpgradeNoteResponse> getUpgrade() {
         return this.upgrade;
     }
     /**
      * A package vulnerability type of note.
-     * 
      */
     @Export(name="vulnerabilityType", type=VulnerabilityTypeResponse.class, parameters={})
     private Output<VulnerabilityTypeResponse> vulnerabilityType;
 
     /**
      * @return A package vulnerability type of note.
-     * 
      */
     public Output<VulnerabilityTypeResponse> getVulnerabilityType() {
         return this.vulnerabilityType;

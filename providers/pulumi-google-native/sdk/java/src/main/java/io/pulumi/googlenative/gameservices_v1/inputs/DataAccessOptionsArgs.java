@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Write a Data Access (Gin) log
- * 
  */
 public final class DataAccessOptionsArgs extends io.pulumi.resources.ResourceArgs {
 

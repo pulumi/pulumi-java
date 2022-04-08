@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration for the GCP Filestore CSI driver.
- * 
  */
 public final class GcpFilestoreCsiDriverConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GcpFilestoreCsiDriverConfigResponse extends io.pulumi.resourc
 
     /**
      * Whether the GCP Filestore CSI driver is enabled for this cluster.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

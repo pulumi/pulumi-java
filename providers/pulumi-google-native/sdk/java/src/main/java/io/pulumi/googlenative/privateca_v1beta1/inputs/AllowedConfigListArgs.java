@@ -16,7 +16,6 @@ public final class AllowedConfigListArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * All Certificates issued by the CertificateAuthority must match at least one listed ReusableConfigWrapper. If a ReusableConfigWrapper has an empty field, any value will be allowed for that field.
-     * 
      */
     @Import(name="allowedConfigValues", required=true)
       private final Output<List<ReusableConfigWrapperArgs>> allowedConfigValues;

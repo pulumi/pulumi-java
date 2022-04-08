@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class CryptoKeyVersionTemplateResponse {
     /**
      * Algorithm to use when creating a CryptoKeyVersion based on this template. For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is omitted and CryptoKey.purpose is ENCRYPT_DECRYPT.
-     * 
      */
     private final String algorithm;
     /**
      * ProtectionLevel to use when creating a CryptoKeyVersion based on this template. Immutable. Defaults to SOFTWARE.
-     * 
      */
     private final String protectionLevel;
 
@@ -30,14 +28,12 @@ public final class CryptoKeyVersionTemplateResponse {
 
     /**
      * Algorithm to use when creating a CryptoKeyVersion based on this template. For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is omitted and CryptoKey.purpose is ENCRYPT_DECRYPT.
-     * 
     */
     public String getAlgorithm() {
         return this.algorithm;
     }
     /**
      * ProtectionLevel to use when creating a CryptoKeyVersion based on this template. Immutable. Defaults to SOFTWARE.
-     * 
     */
     public String getProtectionLevel() {
         return this.protectionLevel;

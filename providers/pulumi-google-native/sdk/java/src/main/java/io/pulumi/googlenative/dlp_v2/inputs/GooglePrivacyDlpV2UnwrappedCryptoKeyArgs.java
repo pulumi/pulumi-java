@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible.
- * 
  */
 public final class GooglePrivacyDlpV2UnwrappedCryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class GooglePrivacyDlpV2UnwrappedCryptoKeyArgs extends io.pulumi.re
 
     /**
      * A 128/192/256 bit key.
-     * 
      */
     @Import(name="key", required=true)
       private final Output<String> key;

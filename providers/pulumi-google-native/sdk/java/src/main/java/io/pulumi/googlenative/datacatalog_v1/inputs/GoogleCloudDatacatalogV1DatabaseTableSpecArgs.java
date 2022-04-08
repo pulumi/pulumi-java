@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specification that applies to a table resource. Valid only for entries with the `TABLE` type.
- * 
  */
 public final class GoogleCloudDatacatalogV1DatabaseTableSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecArgs extends io.pulu
 
     /**
      * Type of this table.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> type;

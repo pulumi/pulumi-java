@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Details of the final state "forward" and associated resource.
- * 
  */
 public final class ForwardInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ForwardInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * URI of the resource that the packet is forwarded to.
-     * 
      */
     @Import(name="resourceUri", required=true)
       private final String resourceUri;
@@ -29,7 +27,6 @@ public final class ForwardInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Target type where this packet is forwarded to.
-     * 
      */
     @Import(name="target", required=true)
       private final String target;

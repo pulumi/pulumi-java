@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * ApprovalResult describes the decision and associated metadata of a manual approval of a build.
- * 
  */
 public final class ApprovalResultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ApprovalResultResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The time when the approval decision was made.
-     * 
      */
     @Import(name="approvalTime", required=true)
       private final String approvalTime;
@@ -29,7 +27,6 @@ public final class ApprovalResultResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Email of the user that called the ApproveBuild API to approve or reject a build at the time that the API was called.
-     * 
      */
     @Import(name="approverAccount", required=true)
       private final String approverAccount;
@@ -40,7 +37,6 @@ public final class ApprovalResultResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Optional. An optional comment for this manual approval result.
-     * 
      */
     @Import(name="comment", required=true)
       private final String comment;
@@ -51,7 +47,6 @@ public final class ApprovalResultResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The decision of this manual approval.
-     * 
      */
     @Import(name="decision", required=true)
       private final String decision;
@@ -62,7 +57,6 @@ public final class ApprovalResultResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Optional. An optional URL tied to this manual approval result. This field is essentially the same as comment, except that it will be rendered by the UI differently. An example use case is a link to an external job that approved this Build.
-     * 
      */
     @Import(name="url", required=true)
       private final String url;

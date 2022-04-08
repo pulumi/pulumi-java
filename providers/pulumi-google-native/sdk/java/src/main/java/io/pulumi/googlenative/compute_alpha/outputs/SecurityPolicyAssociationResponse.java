@@ -11,22 +11,18 @@ import java.util.Objects;
 public final class SecurityPolicyAssociationResponse {
     /**
      * The resource that the security policy is attached to.
-     * 
      */
     private final String attachmentId;
     /**
      * The display name of the security policy of the association.
-     * 
      */
     private final String displayName;
     /**
      * The name for an association.
-     * 
      */
     private final String name;
     /**
      * The security policy ID of the association.
-     * 
      */
     private final String securityPolicyId;
 
@@ -44,28 +40,24 @@ public final class SecurityPolicyAssociationResponse {
 
     /**
      * The resource that the security policy is attached to.
-     * 
     */
     public String getAttachmentId() {
         return this.attachmentId;
     }
     /**
      * The display name of the security policy of the association.
-     * 
     */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The name for an association.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The security policy ID of the association.
-     * 
     */
     public String getSecurityPolicyId() {
         return this.securityPolicyId;

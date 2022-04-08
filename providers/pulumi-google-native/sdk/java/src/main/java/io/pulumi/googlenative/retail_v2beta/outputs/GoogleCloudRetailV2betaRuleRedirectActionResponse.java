@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudRetailV2betaRuleRedirectActionResponse {
     /**
      * URL must have length equal or less than 2000 characters.
-     * 
      */
     private final String redirectUri;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudRetailV2betaRuleRedirectActionResponse {
 
     /**
      * URL must have length equal or less than 2000 characters.
-     * 
     */
     public String getRedirectUri() {
         return this.redirectUri;

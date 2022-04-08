@@ -10,33 +10,27 @@ import java.util.StringJoiner;
 
     /**
      * Error condition this handler applies to.
-     * 
      */
     @EnumType
     public enum ErrorHandlerErrorCode {
         /**
          * Not specified. ERROR_CODE_DEFAULT is assumed.
-         * 
          */
         ErrorCodeUnspecified("ERROR_CODE_UNSPECIFIED"),
         /**
          * All other error types.
-         * 
          */
         ErrorCodeDefault("ERROR_CODE_DEFAULT"),
         /**
          * Application has exceeded a resource quota.
-         * 
          */
         ErrorCodeOverQuota("ERROR_CODE_OVER_QUOTA"),
         /**
          * Client blocked by the application's Denial of Service protection configuration.
-         * 
          */
         ErrorCodeDosApiDenial("ERROR_CODE_DOS_API_DENIAL"),
         /**
          * Deadline reached before the application responds.
-         * 
          */
         ErrorCodeTimeout("ERROR_CODE_TIMEOUT");
 

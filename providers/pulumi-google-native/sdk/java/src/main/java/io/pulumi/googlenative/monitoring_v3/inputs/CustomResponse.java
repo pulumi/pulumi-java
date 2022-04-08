@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * Custom view of service telemetry. Currently a place-holder pending final design.
- * 
  */
 public final class CustomResponse extends io.pulumi.resources.InvokeArgs {
 

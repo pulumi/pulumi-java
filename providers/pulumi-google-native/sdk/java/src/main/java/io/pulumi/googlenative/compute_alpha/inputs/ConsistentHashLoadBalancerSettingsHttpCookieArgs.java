@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The information about the HTTP Cookie on which the hash function is based for load balancing policies that use a consistent hash.
- * 
  */
 public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
 
     /**
      * Name of the cookie.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -32,7 +30,6 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
 
     /**
      * Path to set for the cookie.
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<String> path;
@@ -43,7 +40,6 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
 
     /**
      * Lifetime of the cookie.
-     * 
      */
     @Import(name="ttl")
       private final @Nullable Output<DurationArgs> ttl;

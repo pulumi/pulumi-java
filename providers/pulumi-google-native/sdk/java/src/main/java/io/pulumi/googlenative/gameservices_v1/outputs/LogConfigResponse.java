@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class LogConfigResponse {
     /**
      * Cloud audit options.
-     * 
      */
     private final CloudAuditOptionsResponse cloudAudit;
     /**
      * Counter options.
-     * 
      */
     private final CounterOptionsResponse counter;
     /**
      * Data access options.
-     * 
      */
     private final DataAccessOptionsResponse dataAccess;
 
@@ -39,21 +36,18 @@ public final class LogConfigResponse {
 
     /**
      * Cloud audit options.
-     * 
     */
     public CloudAuditOptionsResponse getCloudAudit() {
         return this.cloudAudit;
     }
     /**
      * Counter options.
-     * 
     */
     public CounterOptionsResponse getCounter() {
         return this.counter;
     }
     /**
      * Data access options.
-     * 
     */
     public DataAccessOptionsResponse getDataAccess() {
         return this.dataAccess;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Scan authentication configuration.
- * 
  */
 public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Authentication using a custom account.
-     * 
      */
     @Import(name="customAccount", required=true)
       private final CustomAccountResponse customAccount;
@@ -31,7 +29,6 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Authentication using a Google account.
-     * 
      */
     @Import(name="googleAccount", required=true)
       private final GoogleAccountResponse googleAccount;
@@ -42,7 +39,6 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Authentication using Identity-Aware-Proxy (IAP).
-     * 
      */
     @Import(name="iapCredential", required=true)
       private final IapCredentialResponse iapCredential;

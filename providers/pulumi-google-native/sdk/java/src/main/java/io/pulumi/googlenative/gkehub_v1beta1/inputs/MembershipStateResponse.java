@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * State of the Membership resource.
- * 
  */
 public final class MembershipStateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MembershipStateResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The current state of the Membership resource.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -29,7 +27,6 @@ public final class MembershipStateResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * This field is never set by the Hub Service.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -40,7 +37,6 @@ public final class MembershipStateResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * This field is never set by the Hub Service.
-     * 
      */
     @Import(name="updateTime", required=true)
       private final String updateTime;

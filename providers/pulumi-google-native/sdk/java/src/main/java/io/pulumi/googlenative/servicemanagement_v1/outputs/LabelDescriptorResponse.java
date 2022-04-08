@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class LabelDescriptorResponse {
     /**
      * A human-readable description for the label.
-     * 
      */
     private final String description;
     /**
      * The label key.
-     * 
      */
     private final String key;
     /**
      * The type of data that can be assigned to the label.
-     * 
      */
     private final String valueType;
 
@@ -37,21 +34,18 @@ public final class LabelDescriptorResponse {
 
     /**
      * A human-readable description for the label.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * The label key.
-     * 
     */
     public String getKey() {
         return this.key;
     }
     /**
      * The type of data that can be assigned to the label.
-     * 
     */
     public String getValueType() {
         return this.valueType;

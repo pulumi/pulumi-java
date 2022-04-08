@@ -30,7 +30,6 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The resource name of the analysis. Format: projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

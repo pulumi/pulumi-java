@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The HTTP referrers (websites) that are allowed to use the key.
- * 
  */
 public final class V2BrowserKeyRestrictionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class V2BrowserKeyRestrictionsArgs extends io.pulumi.resources.Reso
 
     /**
      * A list of regular expressions for the referrer URLs that are allowed to make API calls with this key.
-     * 
      */
     @Import(name="allowedReferrers")
       private final @Nullable Output<List<String>> allowedReferrers;

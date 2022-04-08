@@ -17,7 +17,6 @@ public final class ManagedZoneForwardingConfigNameServerTargetArgs extends io.pu
 
     /**
      * Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on IP address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.
-     * 
      */
     @Import(name="forwardingPath")
       private final @Nullable Output<ManagedZoneForwardingConfigNameServerTargetForwardingPath> forwardingPath;
@@ -28,7 +27,6 @@ public final class ManagedZoneForwardingConfigNameServerTargetArgs extends io.pu
 
     /**
      * IPv4 address of a target name server.
-     * 
      */
     @Import(name="ipv4Address")
       private final @Nullable Output<String> ipv4Address;

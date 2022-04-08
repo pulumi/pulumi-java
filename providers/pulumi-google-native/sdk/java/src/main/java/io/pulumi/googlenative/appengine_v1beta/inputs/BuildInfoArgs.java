@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Google Cloud Build information.
- * 
  */
 public final class BuildInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BuildInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Google Cloud Build id. Example: "f966068f-08b2-42c8-bdfe-74137dff2bf9"
-     * 
      */
     @Import(name="cloudBuildId")
       private final @Nullable Output<String> cloudBuildId;

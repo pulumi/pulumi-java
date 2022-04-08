@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Type of information detected by the API.
- * 
  */
 public final class GooglePrivacyDlpV2InfoTypeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GooglePrivacyDlpV2InfoTypeResponse extends io.pulumi.resource
 
     /**
      * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class GooglePrivacyDlpV2InfoTypeResponse extends io.pulumi.resource
 
     /**
      * Optional version name for this InfoType.
-     * 
      */
     @Import(name="version", required=true)
       private final String version;

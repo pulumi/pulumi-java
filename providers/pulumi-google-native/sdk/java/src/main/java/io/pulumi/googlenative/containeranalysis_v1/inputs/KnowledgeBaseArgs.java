@@ -16,7 +16,6 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The KB name (generally of the form KB[0-9]+ (e.g., KB123456)).
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -27,7 +26,6 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A link to the KB in the [Windows update catalog] (https://www.catalog.update.microsoft.com/).
-     * 
      */
     @Import(name="url")
       private final @Nullable Output<String> url;

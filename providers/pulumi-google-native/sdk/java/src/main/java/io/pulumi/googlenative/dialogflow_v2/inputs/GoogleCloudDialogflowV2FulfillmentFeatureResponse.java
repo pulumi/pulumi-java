@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Whether fulfillment is enabled for the specific feature.
- * 
  */
 public final class GoogleCloudDialogflowV2FulfillmentFeatureResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDialogflowV2FulfillmentFeatureResponse extends io.
 
     /**
      * The type of the feature that enabled for fulfillment.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

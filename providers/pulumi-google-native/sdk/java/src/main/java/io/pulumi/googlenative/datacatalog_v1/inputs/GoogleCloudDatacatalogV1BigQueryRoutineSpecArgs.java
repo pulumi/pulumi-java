@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Fields specific for BigQuery routines.
- * 
  */
 public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs extends io.pu
 
     /**
      * Paths of the imported libraries.
-     * 
      */
     @Import(name="importedLibraries")
       private final @Nullable Output<List<String>> importedLibraries;

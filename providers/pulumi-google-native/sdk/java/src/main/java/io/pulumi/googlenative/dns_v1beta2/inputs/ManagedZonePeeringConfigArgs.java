@@ -24,7 +24,6 @@ public final class ManagedZonePeeringConfigArgs extends io.pulumi.resources.Reso
 
     /**
      * The network with which to peer.
-     * 
      */
     @Import(name="targetNetwork")
       private final @Nullable Output<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork;

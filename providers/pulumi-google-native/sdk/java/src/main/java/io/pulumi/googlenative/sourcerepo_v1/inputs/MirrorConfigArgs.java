@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration to automatically mirror a repository from another hosting service, for example GitHub or Bitbucket.
- * 
  */
 public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ID of the SSH deploy key at the other hosting service. Removing this key from the other service would deauthorize Google Cloud Source Repositories from mirroring.
-     * 
      */
     @Import(name="deployKeyId")
       private final @Nullable Output<String> deployKeyId;
@@ -31,7 +29,6 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * URL of the main repository at the other hosting service.
-     * 
      */
     @Import(name="url")
       private final @Nullable Output<String> url;
@@ -42,7 +39,6 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ID of the webhook listening to updates to trigger mirroring. Removing this webhook from the other hosting service will stop Google Cloud Source Repositories from receiving notifications, and thereby disabling mirroring.
-     * 
      */
     @Import(name="webhookId")
       private final @Nullable Output<String> webhookId;

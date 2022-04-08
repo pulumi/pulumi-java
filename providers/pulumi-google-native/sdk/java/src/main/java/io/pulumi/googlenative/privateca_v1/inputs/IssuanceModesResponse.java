@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * IssuanceModes specifies the allowed ways in which Certificates may be requested from this CaPool.
- * 
  */
 public final class IssuanceModesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class IssuanceModesResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Optional. When true, allows callers to create Certificates by specifying a CertificateConfig.
-     * 
      */
     @Import(name="allowConfigBasedIssuance", required=true)
       private final Boolean allowConfigBasedIssuance;
@@ -29,7 +27,6 @@ public final class IssuanceModesResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Optional. When true, allows callers to create Certificates by specifying a CSR.
-     * 
      */
     @Import(name="allowCsrBasedIssuance", required=true)
       private final Boolean allowCsrBasedIssuance;

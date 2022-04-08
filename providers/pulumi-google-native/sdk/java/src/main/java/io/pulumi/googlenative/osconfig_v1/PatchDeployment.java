@@ -18,174 +18,149 @@ import javax.annotation.Nullable;
 
 /**
  * Create an OS Config patch deployment.
- * 
  */
 @ResourceType(type="google-native:osconfig/v1:PatchDeployment")
 public class PatchDeployment extends io.pulumi.resources.CustomResource {
     /**
      * Time the patch deployment was created. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return Time the patch deployment was created. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. Description of the patch deployment. Length of the description is limited to 1024 characters.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Optional. Description of the patch deployment. Length of the description is limited to 1024 characters.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Optional. Duration of the patch. After the duration ends, the patch times out.
-     * 
      */
     @Export(name="duration", type=String.class, parameters={})
     private Output<String> duration;
 
     /**
      * @return Optional. Duration of the patch. After the duration ends, the patch times out.
-     * 
      */
     public Output<String> getDuration() {
         return this.duration;
     }
     /**
      * VM instances to patch.
-     * 
      */
     @Export(name="instanceFilter", type=PatchInstanceFilterResponse.class, parameters={})
     private Output<PatchInstanceFilterResponse> instanceFilter;
 
     /**
      * @return VM instances to patch.
-     * 
      */
     public Output<PatchInstanceFilterResponse> getInstanceFilter() {
         return this.instanceFilter;
     }
     /**
      * The last time a patch job was started by this deployment. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
-     * 
      */
     @Export(name="lastExecuteTime", type=String.class, parameters={})
     private Output<String> lastExecuteTime;
 
     /**
      * @return The last time a patch job was started by this deployment. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
-     * 
      */
     public Output<String> getLastExecuteTime() {
         return this.lastExecuteTime;
     }
     /**
      * Unique name for the patch deployment resource in a project. The patch deployment name is in the form: `projects/{project_id}/patchDeployments/{patch_deployment_id}`. This field is ignored when you create a new patch deployment.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Unique name for the patch deployment resource in a project. The patch deployment name is in the form: `projects/{project_id}/patchDeployments/{patch_deployment_id}`. This field is ignored when you create a new patch deployment.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Schedule a one-time execution.
-     * 
      */
     @Export(name="oneTimeSchedule", type=OneTimeScheduleResponse.class, parameters={})
     private Output<OneTimeScheduleResponse> oneTimeSchedule;
 
     /**
      * @return Schedule a one-time execution.
-     * 
      */
     public Output<OneTimeScheduleResponse> getOneTimeSchedule() {
         return this.oneTimeSchedule;
     }
     /**
      * Optional. Patch configuration that is applied.
-     * 
      */
     @Export(name="patchConfig", type=PatchConfigResponse.class, parameters={})
     private Output<PatchConfigResponse> patchConfig;
 
     /**
      * @return Optional. Patch configuration that is applied.
-     * 
      */
     public Output<PatchConfigResponse> getPatchConfig() {
         return this.patchConfig;
     }
     /**
      * Schedule recurring executions.
-     * 
      */
     @Export(name="recurringSchedule", type=RecurringScheduleResponse.class, parameters={})
     private Output<RecurringScheduleResponse> recurringSchedule;
 
     /**
      * @return Schedule recurring executions.
-     * 
      */
     public Output<RecurringScheduleResponse> getRecurringSchedule() {
         return this.recurringSchedule;
     }
     /**
      * Optional. Rollout strategy of the patch job.
-     * 
      */
     @Export(name="rollout", type=PatchRolloutResponse.class, parameters={})
     private Output<PatchRolloutResponse> rollout;
 
     /**
      * @return Optional. Rollout strategy of the patch job.
-     * 
      */
     public Output<PatchRolloutResponse> getRollout() {
         return this.rollout;
     }
     /**
      * Current state of the patch deployment.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return Current state of the patch deployment.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Time the patch deployment was last updated. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return Time the patch deployment was last updated. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

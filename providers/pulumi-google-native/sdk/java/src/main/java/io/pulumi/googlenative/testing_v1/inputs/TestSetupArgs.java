@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * A description of how to set up the Android device prior to running the test.
- * 
  */
 public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The device will be logged in on this account for the duration of the test.
-     * 
      */
     @Import(name="account")
       private final @Nullable Output<AccountArgs> account;
@@ -37,7 +35,6 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * APKs to install in addition to those being directly tested. Currently capped at 100.
-     * 
      */
     @Import(name="additionalApks")
       private final @Nullable Output<List<ApkArgs>> additionalApks;
@@ -48,7 +45,6 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of directories on the device to upload to GCS at the end of the test; they must be absolute paths under /sdcard, /storage or /data/local/tmp. Path names are restricted to characters a-z A-Z 0-9 _ - . + and / Note: The paths /sdcard and /data will be made available and treated as implicit path substitutions. E.g. if /sdcard on a particular device does not map to external storage, the system will replace it with the external storage path prefix for that device.
-     * 
      */
     @Import(name="directoriesToPull")
       private final @Nullable Output<List<String>> directoriesToPull;
@@ -59,7 +55,6 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether to prevent all runtime permissions to be granted at app install
-     * 
      */
     @Import(name="dontAutograntPermissions")
       private final @Nullable Output<Boolean> dontAutograntPermissions;
@@ -70,7 +65,6 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Environment variables to set for the test (only applicable for instrumentation tests).
-     * 
      */
     @Import(name="environmentVariables")
       private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
@@ -81,7 +75,6 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of files to push to the device before starting the test.
-     * 
      */
     @Import(name="filesToPush")
       private final @Nullable Output<List<DeviceFileArgs>> filesToPush;
@@ -92,7 +85,6 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
-     * 
      */
     @Import(name="networkProfile")
       private final @Nullable Output<String> networkProfile;

@@ -16,7 +16,6 @@ public final class ConfigFileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The contents of the file.
-     * 
      */
     @Import(name="content")
       private final @Nullable Output<String> content;

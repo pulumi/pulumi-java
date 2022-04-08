@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ResourceResponse {
     /**
      * The unique URI of the resource. For example, `https://gcr.io/project/image@sha256:foo` for a Docker image.
-     * 
      */
     private final String uri;
 
@@ -22,7 +21,6 @@ public final class ResourceResponse {
 
     /**
      * The unique URI of the resource. For example, `https://gcr.io/project/image@sha256:foo` for a Docker image.
-     * 
     */
     public String getUri() {
         return this.uri;

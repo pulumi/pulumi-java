@@ -14,7 +14,6 @@ public final class PacketMirroringMirroredResourceInfoSubnetInfoResponse extends
 
     /**
      * Unique identifier for the subnetwork; defined by the server.
-     * 
      */
     @Import(name="canonicalUrl", required=true)
       private final String canonicalUrl;
@@ -25,7 +24,6 @@ public final class PacketMirroringMirroredResourceInfoSubnetInfoResponse extends
 
     /**
      * Resource URL to the subnetwork for which traffic from/to all VM instances will be mirrored.
-     * 
      */
     @Import(name="url", required=true)
       private final String url;

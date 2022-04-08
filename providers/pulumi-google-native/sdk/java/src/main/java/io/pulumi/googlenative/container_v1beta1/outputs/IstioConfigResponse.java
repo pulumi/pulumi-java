@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class IstioConfigResponse {
     /**
      * The specified Istio auth mode, either none, or mutual TLS.
-     * 
      */
     private final String auth;
     /**
      * Whether Istio is enabled for this cluster.
-     * 
      */
     private final Boolean disabled;
 
@@ -31,14 +29,12 @@ public final class IstioConfigResponse {
 
     /**
      * The specified Istio auth mode, either none, or mutual TLS.
-     * 
     */
     public String getAuth() {
         return this.auth;
     }
     /**
      * Whether Istio is enabled for this cluster.
-     * 
     */
     public Boolean getDisabled() {
         return this.disabled;

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class PacketMirroringForwardingRuleInfoResponse {
     /**
      * Unique identifier for the forwarding rule; defined by the server.
-     * 
      */
     private final String canonicalUrl;
     /**
      * Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.
-     * 
      */
     private final String url;
 
@@ -30,14 +28,12 @@ public final class PacketMirroringForwardingRuleInfoResponse {
 
     /**
      * Unique identifier for the forwarding rule; defined by the server.
-     * 
     */
     public String getCanonicalUrl() {
         return this.canonicalUrl;
     }
     /**
      * Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.
-     * 
     */
     public String getUrl() {
         return this.url;

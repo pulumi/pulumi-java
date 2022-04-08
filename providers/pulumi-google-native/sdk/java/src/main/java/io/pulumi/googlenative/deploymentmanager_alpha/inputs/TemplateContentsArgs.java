@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Files that make up the template contents of a template type.
- * 
  */
 public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Import files referenced by the main template.
-     * 
      */
     @Import(name="imports")
       private final @Nullable Output<List<ImportFileArgs>> imports;
@@ -34,7 +32,6 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Which interpreter (python or jinja) should be used during expansion.
-     * 
      */
     @Import(name="interpreter")
       private final @Nullable Output<TemplateContentsInterpreter> interpreter;
@@ -45,7 +42,6 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The filename of the mainTemplate
-     * 
      */
     @Import(name="mainTemplate")
       private final @Nullable Output<String> mainTemplate;
@@ -56,7 +52,6 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The contents of the template schema.
-     * 
      */
     @Import(name="schema")
       private final @Nullable Output<String> schema;
@@ -67,7 +62,6 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The contents of the main template file.
-     * 
      */
     @Import(name="template")
       private final @Nullable Output<String> template;

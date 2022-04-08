@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A group of fingerprints for the x509 certificate.
- * 
  */
 public final class CertificateFingerprintResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CertificateFingerprintResponse extends io.pulumi.resources.In
 
     /**
      * The SHA 256 hash, encoded in hexadecimal, of the DER x509 certificate.
-     * 
      */
     @Import(name="sha256Hash", required=true)
       private final String sha256Hash;

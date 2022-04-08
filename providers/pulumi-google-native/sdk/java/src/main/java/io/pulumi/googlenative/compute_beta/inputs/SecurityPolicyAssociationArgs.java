@@ -16,7 +16,6 @@ public final class SecurityPolicyAssociationArgs extends io.pulumi.resources.Res
 
     /**
      * The resource that the security policy is attached to.
-     * 
      */
     @Import(name="attachmentId")
       private final @Nullable Output<String> attachmentId;
@@ -27,7 +26,6 @@ public final class SecurityPolicyAssociationArgs extends io.pulumi.resources.Res
 
     /**
      * The name for an association.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

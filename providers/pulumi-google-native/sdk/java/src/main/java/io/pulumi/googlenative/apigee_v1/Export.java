@@ -14,132 +14,113 @@ import javax.annotation.Nullable;
  * Submit a data export job to be processed in the background. If the request is successful, the API returns a 201 status, a URI that can be used to retrieve the status of the export job, and the `state` value of "enqueued".
  * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
- * 
  */
 @ResourceType(type="google-native:apigee/v1:Export")
 public class Export extends io.pulumi.resources.CustomResource {
     /**
      * Time the export job was created.
-     * 
      */
     @io.pulumi.core.annotations.Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
      * @return Time the export job was created.
-     * 
      */
     public Output<String> getCreated() {
         return this.created;
     }
     /**
      * Name of the datastore that is the destination of the export job [datastore]
-     * 
      */
     @io.pulumi.core.annotations.Export(name="datastoreName", type=String.class, parameters={})
     private Output<String> datastoreName;
 
     /**
      * @return Name of the datastore that is the destination of the export job [datastore]
-     * 
      */
     public Output<String> getDatastoreName() {
         return this.datastoreName;
     }
     /**
      * Description of the export job.
-     * 
      */
     @io.pulumi.core.annotations.Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Description of the export job.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Error is set when export fails
-     * 
      */
     @io.pulumi.core.annotations.Export(name="error", type=String.class, parameters={})
     private Output<String> error;
 
     /**
      * @return Error is set when export fails
-     * 
      */
     public Output<String> getError() {
         return this.error;
     }
     /**
      * Execution time for this export job. If the job is still in progress, it will be set to the amount of time that has elapsed since`created`, in seconds. Else, it will set to (`updated` - `created`), in seconds.
-     * 
      */
     @io.pulumi.core.annotations.Export(name="executionTime", type=String.class, parameters={})
     private Output<String> executionTime;
 
     /**
      * @return Execution time for this export job. If the job is still in progress, it will be set to the amount of time that has elapsed since`created`, in seconds. Else, it will set to (`updated` - `created`), in seconds.
-     * 
      */
     public Output<String> getExecutionTime() {
         return this.executionTime;
     }
     /**
      * Display name of the export job.
-     * 
      */
     @io.pulumi.core.annotations.Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Display name of the export job.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Self link of the export job. A URI that can be used to retrieve the status of an export job. Example: `/organizations/myorg/environments/myenv/analytics/exports/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd`
-     * 
      */
     @io.pulumi.core.annotations.Export(name="self", type=String.class, parameters={})
     private Output<String> self;
 
     /**
      * @return Self link of the export job. A URI that can be used to retrieve the status of an export job. Example: `/organizations/myorg/environments/myenv/analytics/exports/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd`
-     * 
      */
     public Output<String> getSelf() {
         return this.self;
     }
     /**
      * Status of the export job. Valid values include `enqueued`, `running`, `completed`, and `failed`.
-     * 
      */
     @io.pulumi.core.annotations.Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return Status of the export job. Valid values include `enqueued`, `running`, `completed`, and `failed`.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Time the export job was last updated.
-     * 
      */
     @io.pulumi.core.annotations.Export(name="updated", type=String.class, parameters={})
     private Output<String> updated;
 
     /**
      * @return Time the export job was last updated.
-     * 
      */
     public Output<String> getUpdated() {
         return this.updated;

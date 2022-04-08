@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class WebhookConfigResponse {
     /**
      * Resource name for the secret required as a URL parameter.
-     * 
      */
     private final String secret;
     /**
      * Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
-     * 
      */
     private final String state;
 
@@ -30,14 +28,12 @@ public final class WebhookConfigResponse {
 
     /**
      * Resource name for the secret required as a URL parameter.
-     * 
     */
     public String getSecret() {
         return this.secret;
     }
     /**
      * Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
-     * 
     */
     public String getState() {
         return this.state;

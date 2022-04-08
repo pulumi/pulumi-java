@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Renewal settings for renewable Offers.
- * 
  */
 public final class GoogleCloudChannelV1RenewalSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse extends io.pulumi
 
     /**
      * If false, the plan will be completed at the end date.
-     * 
      */
     @Import(name="enableRenewal", required=true)
       private final Boolean enableRenewal;
@@ -31,7 +29,6 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse extends io.pulumi
 
     /**
      * Describes how frequently the reseller will be billed, such as once per month.
-     * 
      */
     @Import(name="paymentCycle", required=true)
       private final GoogleCloudChannelV1PeriodResponse paymentCycle;
@@ -42,7 +39,6 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse extends io.pulumi
 
     /**
      * Describes how a reseller will be billed.
-     * 
      */
     @Import(name="paymentPlan", required=true)
       private final String paymentPlan;
@@ -53,7 +49,6 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse extends io.pulumi
 
     /**
      * If true and enable_renewal = true, the unit (for example seats or licenses) will be set to the number of active units at renewal time.
-     * 
      */
     @Import(name="resizeUnitCount", required=true)
       private final Boolean resizeUnitCount;

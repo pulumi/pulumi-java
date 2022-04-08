@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration of a specific monitoring destination (the producer project or the consumer project).
- * 
  */
 public final class MonitoringDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class MonitoringDestinationArgs extends io.pulumi.resources.Resourc
 
     /**
      * Types of the metrics to report to this monitoring destination. Each type must be defined in Service.metrics section.
-     * 
      */
     @Import(name="metrics")
       private final @Nullable Output<List<String>> metrics;
@@ -32,7 +30,6 @@ public final class MonitoringDestinationArgs extends io.pulumi.resources.Resourc
 
     /**
      * The monitored resource type. The type must be defined in Service.monitored_resources section.
-     * 
      */
     @Import(name="monitoredResource")
       private final @Nullable Output<String> monitoredResource;

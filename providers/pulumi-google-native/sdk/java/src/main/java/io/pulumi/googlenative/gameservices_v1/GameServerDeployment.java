@@ -14,90 +14,77 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new game server deployment in a given project and location.
- * 
  */
 @ResourceType(type="google-native:gameservices/v1:GameServerDeployment")
 public class GameServerDeployment extends io.pulumi.resources.CustomResource {
     /**
      * The creation time.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The creation time.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Human readable description of the game server delpoyment.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Human readable description of the game server delpoyment.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * ETag of the resource.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return ETag of the resource.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The labels associated with this game server deployment. Each label is a key-value pair.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return The labels associated with this game server deployment. Each label is a key-value pair.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * The resource name of the game server deployment, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the game server deployment, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The last-modified time.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The last-modified time.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

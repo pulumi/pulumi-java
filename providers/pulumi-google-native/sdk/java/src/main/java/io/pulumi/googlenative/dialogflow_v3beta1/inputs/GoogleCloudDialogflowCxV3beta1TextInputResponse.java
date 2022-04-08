@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Represents the natural language text to be processed.
- * 
  */
 public final class GoogleCloudDialogflowCxV3beta1TextInputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDialogflowCxV3beta1TextInputResponse extends io.pu
 
     /**
      * The UTF-8 encoded natural language text to be processed. Text length must not exceed 256 characters.
-     * 
      */
     @Import(name="text", required=true)
       private final String text;

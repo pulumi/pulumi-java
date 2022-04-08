@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Defines sources for the suggest/search APIs.
- * 
  */
 public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Source name for content indexed by the Indexing API.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Predefined content source for Google Apps.
-     * 
      */
     @Import(name="predefinedSource", required=true)
       private final String predefinedSource;

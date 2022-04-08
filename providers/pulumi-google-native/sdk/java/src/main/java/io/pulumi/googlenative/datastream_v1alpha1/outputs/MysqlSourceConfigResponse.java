@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class MysqlSourceConfigResponse {
     /**
      * MySQL objects to retrieve from the source.
-     * 
      */
     private final MysqlRdbmsResponse allowlist;
     /**
      * MySQL objects to exclude from the stream.
-     * 
      */
     private final MysqlRdbmsResponse rejectlist;
 
@@ -30,14 +28,12 @@ public final class MysqlSourceConfigResponse {
 
     /**
      * MySQL objects to retrieve from the source.
-     * 
     */
     public MysqlRdbmsResponse getAllowlist() {
         return this.allowlist;
     }
     /**
      * MySQL objects to exclude from the stream.
-     * 
     */
     public MysqlRdbmsResponse getRejectlist() {
         return this.rejectlist;

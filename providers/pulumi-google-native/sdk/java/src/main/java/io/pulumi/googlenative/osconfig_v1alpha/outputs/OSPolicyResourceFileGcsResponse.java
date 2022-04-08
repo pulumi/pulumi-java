@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class OSPolicyResourceFileGcsResponse {
     /**
      * Bucket of the Cloud Storage object.
-     * 
      */
     private final String bucket;
     /**
      * Generation number of the Cloud Storage object.
-     * 
      */
     private final String generation;
     /**
      * Name of the Cloud Storage object.
-     * 
      */
     private final String object;
 
@@ -37,21 +34,18 @@ public final class OSPolicyResourceFileGcsResponse {
 
     /**
      * Bucket of the Cloud Storage object.
-     * 
     */
     public String getBucket() {
         return this.bucket;
     }
     /**
      * Generation number of the Cloud Storage object.
-     * 
     */
     public String getGeneration() {
         return this.generation;
     }
     /**
      * Name of the Cloud Storage object.
-     * 
     */
     public String getObject() {
         return this.object;

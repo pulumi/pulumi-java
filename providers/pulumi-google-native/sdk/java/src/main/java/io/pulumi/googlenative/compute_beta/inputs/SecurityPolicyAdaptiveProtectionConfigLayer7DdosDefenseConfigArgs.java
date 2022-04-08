@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration options for L7 DDoS detection.
- * 
  */
 public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
 
     /**
      * If set to true, enables CAAP for L7 DDoS detection.
-     * 
      */
     @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
@@ -32,7 +30,6 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
 
     /**
      * Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
-     * 
      */
     @Import(name="ruleVisibility")
       private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility> ruleVisibility;

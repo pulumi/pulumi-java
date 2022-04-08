@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Snapshot of the inspection configuration.
- * 
  */
 public final class GooglePrivacyDlpV2RequestedOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GooglePrivacyDlpV2RequestedOptionsResponse extends io.pulumi.
 
     /**
      * Inspect config.
-     * 
      */
     @Import(name="jobConfig", required=true)
       private final GooglePrivacyDlpV2InspectJobConfigResponse jobConfig;
@@ -30,7 +28,6 @@ public final class GooglePrivacyDlpV2RequestedOptionsResponse extends io.pulumi.
 
     /**
      * If run with an InspectTemplate, a snapshot of its state at the time of this run.
-     * 
      */
     @Import(name="snapshotInspectTemplate", required=true)
       private final GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate;

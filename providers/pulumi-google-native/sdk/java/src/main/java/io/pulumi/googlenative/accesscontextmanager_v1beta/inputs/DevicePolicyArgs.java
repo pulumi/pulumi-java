@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * `DevicePolicy` specifies device specific restrictions necessary to acquire a given access level. A `DevicePolicy` specifies requirements for requests from devices to be granted access levels, it does not do any enforcement on the device. `DevicePolicy` acts as an AND over all specified fields, and each repeated field is an OR over its elements. Any unset fields are ignored. For example, if the proto is { os_type : DESKTOP_WINDOWS, os_type : DESKTOP_LINUX, encryption_status: ENCRYPTED}, then the DevicePolicy will be true for requests originating from encrypted Linux desktops and encrypted Windows desktops.
- * 
  */
 public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Allowed device management levels, an empty list allows all management levels.
-     * 
      */
     @Import(name="allowedDeviceManagementLevels")
       private final @Nullable Output<List<DevicePolicyAllowedDeviceManagementLevelsItem>> allowedDeviceManagementLevels;
@@ -35,7 +33,6 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Allowed encryptions statuses, an empty list allows all statuses.
-     * 
      */
     @Import(name="allowedEncryptionStatuses")
       private final @Nullable Output<List<DevicePolicyAllowedEncryptionStatusesItem>> allowedEncryptionStatuses;
@@ -46,7 +43,6 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Allowed OS versions, an empty list allows all types and all versions.
-     * 
      */
     @Import(name="osConstraints")
       private final @Nullable Output<List<OsConstraintArgs>> osConstraints;
@@ -57,7 +53,6 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether the device needs to be approved by the customer admin.
-     * 
      */
     @Import(name="requireAdminApproval")
       private final @Nullable Output<Boolean> requireAdminApproval;
@@ -68,7 +63,6 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether the device needs to be corp owned.
-     * 
      */
     @Import(name="requireCorpOwned")
       private final @Nullable Output<Boolean> requireCorpOwned;
@@ -79,7 +73,6 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether or not screenlock is required for the DevicePolicy to be true. Defaults to `false`.
-     * 
      */
     @Import(name="requireScreenlock")
       private final @Nullable Output<Boolean> requireScreenlock;

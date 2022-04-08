@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Location of the source in a supported storage service.
- * 
  */
 public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If provided, get the source from this location in a Cloud Source Repository.
-     * 
      */
     @Import(name="repoSource", required=true)
       private final RepoSourceResponse repoSource;
@@ -31,7 +29,6 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If provided, get the source from this location in Google Cloud Storage.
-     * 
      */
     @Import(name="storageSource", required=true)
       private final StorageSourceResponse storageSource;
@@ -42,7 +39,6 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If provided, get the source from this manifest in Google Cloud Storage. This feature is in Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-fetcher).
-     * 
      */
     @Import(name="storageSourceManifest", required=true)
       private final StorageSourceManifestResponse storageSourceManifest;

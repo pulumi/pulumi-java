@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Spec defined at https://github.com/in-toto/attestation/tree/main/spec#statement The serialized InTotoStatement will be stored as Envelope.payload. Envelope.payloadType is always "application/vnd.in-toto+json".
- * 
  */
 public final class InTotoStatementResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class InTotoStatementResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * "https://slsa.dev/provenance/v0.1" for SlsaProvenance.
-     * 
      */
     @Import(name="predicateType", required=true)
       private final String predicateType;
@@ -54,7 +52,6 @@ public final class InTotoStatementResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Always "https://in-toto.io/Statement/v0.1".
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

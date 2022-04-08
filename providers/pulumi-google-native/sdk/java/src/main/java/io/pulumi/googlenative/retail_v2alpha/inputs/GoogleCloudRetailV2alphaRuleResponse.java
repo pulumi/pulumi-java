@@ -18,7 +18,6 @@ import java.util.Objects;
 
 /**
  * A rule is a condition-action pair * A condition defines when a rule is to be triggered. * An action specifies what occurs on that trigger. Currently only boost rules are supported. Currently only supported by the search endpoint.
- * 
  */
 public final class GoogleCloudRetailV2alphaRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends io.pulumi.resour
 
     /**
      * A boost action.
-     * 
      */
     @Import(name="boostAction", required=true)
       private final GoogleCloudRetailV2alphaRuleBoostActionResponse boostAction;
@@ -37,7 +35,6 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends io.pulumi.resour
 
     /**
      * The condition that triggers the rule. If the condition is empty, the rule will always apply.
-     * 
      */
     @Import(name="condition", required=true)
       private final GoogleCloudRetailV2alphaConditionResponse condition;
@@ -48,7 +45,6 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends io.pulumi.resour
 
     /**
      * Prevents term from being associated with other terms.
-     * 
      */
     @Import(name="doNotAssociateAction", required=true)
       private final GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse doNotAssociateAction;
@@ -59,7 +55,6 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends io.pulumi.resour
 
     /**
      * Filters results.
-     * 
      */
     @Import(name="filterAction", required=true)
       private final GoogleCloudRetailV2alphaRuleFilterActionResponse filterAction;
@@ -70,7 +65,6 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends io.pulumi.resour
 
     /**
      * Ignores specific terms from query during search.
-     * 
      */
     @Import(name="ignoreAction", required=true)
       private final GoogleCloudRetailV2alphaRuleIgnoreActionResponse ignoreAction;
@@ -81,7 +75,6 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends io.pulumi.resour
 
     /**
      * Treats specific term as a synonym with a group of terms. Group of terms will not be treated as synonyms with the specific term.
-     * 
      */
     @Import(name="onewaySynonymsAction", required=true)
       private final GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse onewaySynonymsAction;
@@ -92,7 +85,6 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends io.pulumi.resour
 
     /**
      * Redirects a shopper to a specific page.
-     * 
      */
     @Import(name="redirectAction", required=true)
       private final GoogleCloudRetailV2alphaRuleRedirectActionResponse redirectAction;
@@ -103,7 +95,6 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends io.pulumi.resour
 
     /**
      * Replaces specific terms in the query.
-     * 
      */
     @Import(name="replacementAction", required=true)
       private final GoogleCloudRetailV2alphaRuleReplacementActionResponse replacementAction;
@@ -114,7 +105,6 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends io.pulumi.resour
 
     /**
      * Treats a set of terms as synonyms of one another.
-     * 
      */
     @Import(name="twowaySynonymsAction", required=true)
       private final GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse twowaySynonymsAction;

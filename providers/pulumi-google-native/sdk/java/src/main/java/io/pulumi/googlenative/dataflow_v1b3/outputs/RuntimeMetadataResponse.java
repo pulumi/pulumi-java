@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class RuntimeMetadataResponse {
     /**
      * The parameters for the template.
-     * 
      */
     private final List<ParameterMetadataResponse> parameters;
     /**
      * SDK Info for the template.
-     * 
      */
     private final SDKInfoResponse sdkInfo;
 
@@ -32,14 +30,12 @@ public final class RuntimeMetadataResponse {
 
     /**
      * The parameters for the template.
-     * 
     */
     public List<ParameterMetadataResponse> getParameters() {
         return this.parameters;
     }
     /**
      * SDK Info for the template.
-     * 
     */
     public SDKInfoResponse getSdkInfo() {
         return this.sdkInfo;

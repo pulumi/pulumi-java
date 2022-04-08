@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Testing timing break down to know phases.
- * 
  */
 public final class TestTimingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class TestTimingResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * How long it took to run the test process. - In response: present if previously set. - In create/update request: optional
-     * 
      */
     @Import(name="testProcessDuration", required=true)
       private final DurationResponse testProcessDuration;

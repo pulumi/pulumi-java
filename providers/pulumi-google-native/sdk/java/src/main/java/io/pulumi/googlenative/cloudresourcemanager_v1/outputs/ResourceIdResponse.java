@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ResourceIdResponse {
     /**
      * The resource type this id is for. At present, the valid types are: "organization", "folder", and "project".
-     * 
      */
     private final String type;
 
@@ -22,7 +21,6 @@ public final class ResourceIdResponse {
 
     /**
      * The resource type this id is for. At present, the valid types are: "organization", "folder", and "project".
-     * 
     */
     public String getType() {
         return this.type;

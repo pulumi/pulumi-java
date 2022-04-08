@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Business Context of the entry.
- * 
  */
 public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi
 
     /**
      * Contact people for the entry.
-     * 
      */
     @Import(name="contacts")
       private final @Nullable Output<GoogleCloudDatacatalogV1ContactsArgs> contacts;
@@ -32,7 +30,6 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi
 
     /**
      * Entry overview fields for rich text descriptions of entries.
-     * 
      */
     @Import(name="entryOverview")
       private final @Nullable Output<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview;

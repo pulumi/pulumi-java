@@ -13,18 +13,15 @@ import java.util.Objects;
 public final class ManagedZoneDnsSecConfigResponse {
     /**
      * Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.
-     * 
      */
     private final List<DnsKeySpecResponse> defaultKeySpecs;
     private final String kind;
     /**
      * Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.
-     * 
      */
     private final String nonExistence;
     /**
      * Specifies whether DNSSEC is enabled, and what mode it is in.
-     * 
      */
     private final String state;
 
@@ -42,7 +39,6 @@ public final class ManagedZoneDnsSecConfigResponse {
 
     /**
      * Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.
-     * 
     */
     public List<DnsKeySpecResponse> getDefaultKeySpecs() {
         return this.defaultKeySpecs;
@@ -52,14 +48,12 @@ public final class ManagedZoneDnsSecConfigResponse {
     }
     /**
      * Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.
-     * 
     */
     public String getNonExistence() {
         return this.nonExistence;
     }
     /**
      * Specifies whether DNSSEC is enabled, and what mode it is in.
-     * 
     */
     public String getState() {
         return this.state;

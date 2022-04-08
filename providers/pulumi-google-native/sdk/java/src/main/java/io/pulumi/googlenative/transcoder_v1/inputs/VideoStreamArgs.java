@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Video stream resource.
- * 
  */
 public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * H264 codec settings.
-     * 
      */
     @Import(name="h264")
       private final @Nullable Output<H264CodecSettingsArgs> h264;
@@ -33,7 +31,6 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * H265 codec settings.
-     * 
      */
     @Import(name="h265")
       private final @Nullable Output<H265CodecSettingsArgs> h265;
@@ -44,7 +41,6 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * VP9 codec settings.
-     * 
      */
     @Import(name="vp9")
       private final @Nullable Output<Vp9CodecSettingsArgs> vp9;

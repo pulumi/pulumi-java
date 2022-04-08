@@ -16,7 +16,6 @@ public final class ScriptStatisticsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Whether this child job was a statement or expression.
-     * 
      */
     @Import(name="evaluationKind", required=true)
       private final String evaluationKind;
@@ -27,7 +26,6 @@ public final class ScriptStatisticsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Stack trace showing the line/column/procedure name of each frame on the stack at the point where the current evaluation happened. The leaf frame is first, the primary script is last. Never empty.
-     * 
      */
     @Import(name="stackFrames", required=true)
       private final List<ScriptStackFrameResponse> stackFrames;

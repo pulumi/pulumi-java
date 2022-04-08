@@ -32,7 +32,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A note describing an attestation role.
-     * 
      */
     @Import(name="attestationAuthority")
       private final @Nullable Output<AttestationAuthorityArgs> attestationAuthority;
@@ -43,7 +42,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A note describing a base image.
-     * 
      */
     @Import(name="baseImage")
       private final @Nullable Output<BasisArgs> baseImage;
@@ -54,7 +52,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Build provenance type for a verifiable build.
-     * 
      */
     @Import(name="buildType")
       private final @Nullable Output<BuildTypeArgs> buildType;
@@ -65,7 +62,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A note describing a compliance check.
-     * 
      */
     @Import(name="compliance")
       private final @Nullable Output<ComplianceNoteArgs> compliance;
@@ -76,7 +72,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A note describing something that can be deployed.
-     * 
      */
     @Import(name="deployable")
       private final @Nullable Output<DeployableArgs> deployable;
@@ -87,7 +82,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A note describing a provider/analysis type.
-     * 
      */
     @Import(name="discovery")
       private final @Nullable Output<DiscoveryArgs> discovery;
@@ -98,7 +92,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A note describing a dsse attestation note.
-     * 
      */
     @Import(name="dsseAttestation")
       private final @Nullable Output<DSSEAttestationNoteArgs> dsseAttestation;
@@ -109,7 +102,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Time of expiration for this note, null if note does not expire.
-     * 
      */
     @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
@@ -120,7 +112,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A detailed description of this `Note`.
-     * 
      */
     @Import(name="longDescription")
       private final @Nullable Output<String> longDescription;
@@ -131,7 +122,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the note in the form "projects/{provider_project_id}/notes/{NOTE_ID}"
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -149,7 +139,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A note describing a package hosted by various package managers.
-     * 
      */
     @Import(name="package")
       private final @Nullable Output<PackageArgs> package_;
@@ -167,7 +156,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * URLs associated with this note
-     * 
      */
     @Import(name="relatedUrl")
       private final @Nullable Output<List<RelatedUrlArgs>> relatedUrl;
@@ -178,7 +166,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A note describing a software bill of materials.
-     * 
      */
     @Import(name="sbom")
       private final @Nullable Output<DocumentNoteArgs> sbom;
@@ -189,7 +176,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A one sentence description of this `Note`.
-     * 
      */
     @Import(name="shortDescription")
       private final @Nullable Output<String> shortDescription;
@@ -200,7 +186,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A note describing an SPDX File.
-     * 
      */
     @Import(name="spdxFile")
       private final @Nullable Output<FileNoteArgs> spdxFile;
@@ -211,7 +196,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A note describing an SPDX Package.
-     * 
      */
     @Import(name="spdxPackage")
       private final @Nullable Output<PackageInfoNoteArgs> spdxPackage;
@@ -222,7 +206,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A note describing a relationship between SPDX elements.
-     * 
      */
     @Import(name="spdxRelationship")
       private final @Nullable Output<RelationshipNoteArgs> spdxRelationship;
@@ -233,7 +216,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A note describing an upgrade.
-     * 
      */
     @Import(name="upgrade")
       private final @Nullable Output<UpgradeNoteArgs> upgrade;
@@ -244,7 +226,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A package vulnerability type of note.
-     * 
      */
     @Import(name="vulnerabilityType")
       private final @Nullable Output<VulnerabilityTypeArgs> vulnerabilityType;

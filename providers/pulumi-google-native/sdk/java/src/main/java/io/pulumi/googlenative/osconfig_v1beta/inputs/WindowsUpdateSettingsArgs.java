@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Windows patching is performed using the Windows Update Agent.
- * 
  */
 public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
 
     /**
      * Only apply updates of these windows update classifications. If empty, all updates are applied.
-     * 
      */
     @Import(name="classifications")
       private final @Nullable Output<List<WindowsUpdateSettingsClassificationsItem>> classifications;
@@ -33,7 +31,6 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
 
     /**
      * List of KBs to exclude from update.
-     * 
      */
     @Import(name="excludes")
       private final @Nullable Output<List<String>> excludes;
@@ -44,7 +41,6 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
 
     /**
      * An exclusive list of kbs to be updated. These are the only patches that will be updated. This field must not be used with other patch configurations.
-     * 
      */
     @Import(name="exclusivePatches")
       private final @Nullable Output<List<String>> exclusivePatches;

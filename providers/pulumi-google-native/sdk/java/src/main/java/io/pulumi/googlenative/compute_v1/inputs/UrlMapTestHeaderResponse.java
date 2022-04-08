@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * HTTP headers used in UrlMapTests.
- * 
  */
 public final class UrlMapTestHeaderResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class UrlMapTestHeaderResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Header name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class UrlMapTestHeaderResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Header value.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

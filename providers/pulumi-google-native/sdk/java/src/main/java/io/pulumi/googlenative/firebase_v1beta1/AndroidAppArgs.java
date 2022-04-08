@@ -16,7 +16,6 @@ public final class AndroidAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The globally unique, Firebase-assigned identifier for the `AndroidApp`. This identifier should be treated as an opaque token, as the data format is not specified.
-     * 
      */
     @Import(name="appId")
       private final @Nullable Output<String> appId;
@@ -27,7 +26,6 @@ public final class AndroidAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user-assigned display name for the `AndroidApp`.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -38,7 +36,6 @@ public final class AndroidAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the AndroidApp, in the format: projects/ PROJECT_IDENTIFIER/androidApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id)).
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -49,7 +46,6 @@ public final class AndroidAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The canonical package name of the Android app as would appear in the Google Play Developer Console.
-     * 
      */
     @Import(name="packageName")
       private final @Nullable Output<String> packageName;
@@ -60,7 +56,6 @@ public final class AndroidAppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `AndroidApp`.
-     * 
      */
     @Import(name="project")
       private final @Nullable Output<String> project;

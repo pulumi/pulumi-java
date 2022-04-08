@@ -15,47 +15,38 @@ import java.util.Objects;
 public final class JobConfigurationExtractResponse {
     /**
      * [Optional] The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE. The default value is NONE. DEFLATE and SNAPPY are only supported for Avro. Not applicable when extracting models.
-     * 
      */
     private final String compression;
     /**
      * [Optional] The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON, PARQUET or AVRO for tables and ML_TF_SAVED_MODEL or ML_XGBOOST_BOOSTER for models. The default value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV. The default value for models is ML_TF_SAVED_MODEL.
-     * 
      */
     private final String destinationFormat;
     /**
      * [Pick one] DEPRECATED: Use destinationUris instead, passing only one URI as necessary. The fully-qualified Google Cloud Storage URI where the extracted table should be written.
-     * 
      */
     private final String destinationUri;
     /**
      * [Pick one] A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.
-     * 
      */
     private final List<String> destinationUris;
     /**
      * [Optional] Delimiter to use between fields in the exported data. Default is ','. Not applicable when extracting models.
-     * 
      */
     private final String fieldDelimiter;
     /**
      * [Optional] Whether to print out a header row in the results. Default is true. Not applicable when extracting models.
-     * 
      */
     private final Boolean printHeader;
     /**
      * A reference to the model being exported.
-     * 
      */
     private final ModelReferenceResponse sourceModel;
     /**
      * A reference to the table being exported.
-     * 
      */
     private final TableReferenceResponse sourceTable;
     /**
      * [Optional] If destinationFormat is set to "AVRO", this flag indicates whether to enable extracting applicable column types (such as TIMESTAMP) to their corresponding AVRO logical types (timestamp-micros), instead of only using their raw types (avro-long). Not applicable when extracting models.
-     * 
      */
     private final Boolean useAvroLogicalTypes;
 
@@ -83,63 +74,54 @@ public final class JobConfigurationExtractResponse {
 
     /**
      * [Optional] The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE. The default value is NONE. DEFLATE and SNAPPY are only supported for Avro. Not applicable when extracting models.
-     * 
     */
     public String getCompression() {
         return this.compression;
     }
     /**
      * [Optional] The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON, PARQUET or AVRO for tables and ML_TF_SAVED_MODEL or ML_XGBOOST_BOOSTER for models. The default value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV. The default value for models is ML_TF_SAVED_MODEL.
-     * 
     */
     public String getDestinationFormat() {
         return this.destinationFormat;
     }
     /**
      * [Pick one] DEPRECATED: Use destinationUris instead, passing only one URI as necessary. The fully-qualified Google Cloud Storage URI where the extracted table should be written.
-     * 
     */
     public String getDestinationUri() {
         return this.destinationUri;
     }
     /**
      * [Pick one] A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.
-     * 
     */
     public List<String> getDestinationUris() {
         return this.destinationUris;
     }
     /**
      * [Optional] Delimiter to use between fields in the exported data. Default is ','. Not applicable when extracting models.
-     * 
     */
     public String getFieldDelimiter() {
         return this.fieldDelimiter;
     }
     /**
      * [Optional] Whether to print out a header row in the results. Default is true. Not applicable when extracting models.
-     * 
     */
     public Boolean getPrintHeader() {
         return this.printHeader;
     }
     /**
      * A reference to the model being exported.
-     * 
     */
     public ModelReferenceResponse getSourceModel() {
         return this.sourceModel;
     }
     /**
      * A reference to the table being exported.
-     * 
     */
     public TableReferenceResponse getSourceTable() {
         return this.sourceTable;
     }
     /**
      * [Optional] If destinationFormat is set to "AVRO", this flag indicates whether to enable extracting applicable column types (such as TIMESTAMP) to their corresponding AVRO logical types (timestamp-micros), instead of only using their raw types (avro-long). Not applicable when extracting models.
-     * 
     */
     public Boolean getUseAvroLogicalTypes() {
         return this.useAvroLogicalTypes;

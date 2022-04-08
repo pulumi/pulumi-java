@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * License information: https://spdx.github.io/spdx-spec/3-package-information/#315-declared-license
- * 
  */
 public final class LicenseResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class LicenseResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Comments
-     * 
      */
     @Import(name="comments", required=true)
       private final String comments;
@@ -29,7 +27,6 @@ public final class LicenseResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
-     * 
      */
     @Import(name="expression", required=true)
       private final String expression;

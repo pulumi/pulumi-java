@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class BucketCustomPlacementConfigResponse {
     /**
      * The list of regional locations in which data is placed.
-     * 
      */
     private final List<String> dataLocations;
 
@@ -23,7 +22,6 @@ public final class BucketCustomPlacementConfigResponse {
 
     /**
      * The list of regional locations in which data is placed.
-     * 
     */
     public List<String> getDataLocations() {
         return this.dataLocations;

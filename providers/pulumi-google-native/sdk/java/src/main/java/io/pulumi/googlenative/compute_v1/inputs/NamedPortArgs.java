@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The named port. For example: <"http", 80>.
- * 
  */
 public final class NamedPortArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class NamedPortArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name for this named port. The name must be 1-63 characters long, and comply with RFC1035.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -32,7 +30,6 @@ public final class NamedPortArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The port number, which can be a value between 1 and 65535.
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Integer> port;

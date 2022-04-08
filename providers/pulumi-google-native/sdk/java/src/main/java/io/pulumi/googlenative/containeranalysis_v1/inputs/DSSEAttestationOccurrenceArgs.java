@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Deprecated. Prefer to use a regular Occurrence, and populate the Envelope at the top level of the Occurrence.
- * 
  */
 public final class DSSEAttestationOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DSSEAttestationOccurrenceArgs extends io.pulumi.resources.Res
 
     /**
      * If doing something security critical, make sure to verify the signatures in this metadata.
-     * 
      */
     @Import(name="envelope")
       private final @Nullable Output<EnvelopeArgs> envelope;

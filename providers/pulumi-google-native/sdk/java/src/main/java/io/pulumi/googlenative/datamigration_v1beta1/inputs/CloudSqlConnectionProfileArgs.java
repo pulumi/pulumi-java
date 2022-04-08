@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies required connection parameters, and, optionally, the parameters required to create a Cloud SQL destination database instance.
- * 
  */
 public final class CloudSqlConnectionProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CloudSqlConnectionProfileArgs extends io.pulumi.resources.Res
 
     /**
      * Immutable. Metadata used to create the destination Cloud SQL database.
-     * 
      */
     @Import(name="settings")
       private final @Nullable Output<CloudSqlSettingsArgs> settings;

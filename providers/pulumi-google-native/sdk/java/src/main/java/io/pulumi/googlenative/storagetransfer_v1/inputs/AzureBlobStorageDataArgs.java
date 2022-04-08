@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An AzureBlobStorageData resource can be a data source, but not a data sink. An AzureBlobStorageData resource represents one Azure container. The storage account determines the [Azure endpoint](https://docs.microsoft.com/en-us/azure/storage/common/storage-create-storage-account#storage-account-endpoints). In an AzureBlobStorageData resource, a blobs's name is the [Azure Blob Storage blob's key name](https://docs.microsoft.com/en-us/rest/api/storageservices/naming-and-referencing-containers--blobs--and-metadata#blob-names).
- * 
  */
 public final class AzureBlobStorageDataArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
 
     /**
      * Input only. Credentials used to authenticate API requests to Azure. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).
-     * 
      */
     @Import(name="azureCredentials", required=true)
       private final Output<AzureCredentialsArgs> azureCredentials;
@@ -32,7 +30,6 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
 
     /**
      * The container to transfer from the Azure Storage account.
-     * 
      */
     @Import(name="container", required=true)
       private final Output<String> container;
@@ -43,7 +40,6 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
 
     /**
      * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<String> path;
@@ -54,7 +50,6 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the Azure Storage account.
-     * 
      */
     @Import(name="storageAccount", required=true)
       private final Output<String> storageAccount;

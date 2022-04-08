@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Additional info about the select item for when it is triggered in a dialog.
- * 
  */
 public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse ex
 
     /**
      * A unique key that will be sent back to the agent if this response is given.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -30,7 +28,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse ex
 
     /**
      * Optional. A list of synonyms that can also be used to trigger this item in dialog.
-     * 
      */
     @Import(name="synonyms", required=true)
       private final List<String> synonyms;

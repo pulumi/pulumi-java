@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * The type of hash that was performed.
-     * 
      */
     @EnumType
     public enum HashType {
         /**
          * No hash requested.
-         * 
          */
         None("NONE"),
         /**
          * A sha256 hash.
-         * 
          */
         Sha256("SHA256");
 

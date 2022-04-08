@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * An excluded entity phrase that should not be matched.
- * 
  */
 public final class GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseArgs ex
 
     /**
      * The word or phrase to be excluded.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

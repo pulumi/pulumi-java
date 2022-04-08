@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * IssuanceModes specifies the allowed ways in which Certificates may be requested from this CertificateAuthority.
- * 
  */
 public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * When true, allows callers to create Certificates by specifying a CertificateConfig.
-     * 
      */
     @Import(name="allowConfigBasedIssuance", required=true)
       private final Output<Boolean> allowConfigBasedIssuance;
@@ -30,7 +28,6 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * When true, allows callers to create Certificates by specifying a CSR.
-     * 
      */
     @Import(name="allowCsrBasedIssuance", required=true)
       private final Output<Boolean> allowCsrBasedIssuance;

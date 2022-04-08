@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class IdentityServiceConfigResponse {
     /**
      * Whether to enable the Identity Service component
-     * 
      */
     private final Boolean enabled;
 
@@ -22,7 +21,6 @@ public final class IdentityServiceConfigResponse {
 
     /**
      * Whether to enable the Identity Service component
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;

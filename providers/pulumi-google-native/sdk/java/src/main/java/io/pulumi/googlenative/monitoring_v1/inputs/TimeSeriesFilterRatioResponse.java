@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A pair of time series filters that define a ratio computation. The output time series is the pair-wise division of each aligned element from the numerator and denominator time series.
- * 
  */
 public final class TimeSeriesFilterRatioResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class TimeSeriesFilterRatioResponse extends io.pulumi.resources.Inv
 
     /**
      * The denominator of the ratio.
-     * 
      */
     @Import(name="denominator", required=true)
       private final RatioPartResponse denominator;
@@ -31,7 +29,6 @@ public final class TimeSeriesFilterRatioResponse extends io.pulumi.resources.Inv
 
     /**
      * The numerator of the ratio.
-     * 
      */
     @Import(name="numerator", required=true)
       private final RatioPartResponse numerator;
@@ -42,7 +39,6 @@ public final class TimeSeriesFilterRatioResponse extends io.pulumi.resources.Inv
 
     /**
      * Ranking based time series filter.
-     * 
      */
     @Import(name="pickTimeSeriesFilter", required=true)
       private final PickTimeSeriesFilterResponse pickTimeSeriesFilter;
@@ -53,7 +49,6 @@ public final class TimeSeriesFilterRatioResponse extends io.pulumi.resources.Inv
 
     /**
      * Apply a second aggregation after the ratio is computed.
-     * 
      */
     @Import(name="secondaryAggregation", required=true)
       private final AggregationResponse secondaryAggregation;

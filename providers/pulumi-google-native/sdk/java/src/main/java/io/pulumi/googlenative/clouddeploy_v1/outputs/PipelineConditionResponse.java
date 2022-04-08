@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class PipelineConditionResponse {
     /**
      * Details around the Pipeline's overall status.
-     * 
      */
     private final PipelineReadyConditionResponse pipelineReadyCondition;
     /**
      * Detalis around targets enumerated in the pipeline.
-     * 
      */
     private final TargetsPresentConditionResponse targetsPresentCondition;
 
@@ -31,14 +29,12 @@ public final class PipelineConditionResponse {
 
     /**
      * Details around the Pipeline's overall status.
-     * 
     */
     public PipelineReadyConditionResponse getPipelineReadyCondition() {
         return this.pipelineReadyCondition;
     }
     /**
      * Detalis around targets enumerated in the pipeline.
-     * 
     */
     public TargetsPresentConditionResponse getTargetsPresentCondition() {
         return this.targetsPresentCondition;

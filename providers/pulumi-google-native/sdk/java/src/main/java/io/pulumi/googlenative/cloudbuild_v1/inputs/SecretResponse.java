@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Pairs a set of secret environment variables containing encrypted values with the Cloud KMS key to use to decrypt the value. Note: Use `kmsKeyName` with `available_secrets` instead of using `kmsKeyName` with `secret`. For instructions see: https://cloud.google.com/cloud-build/docs/securing-builds/use-encrypted-credentials.
- * 
  */
 public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Cloud KMS key name to use to decrypt these envs.
-     * 
      */
     @Import(name="kmsKeyName", required=true)
       private final String kmsKeyName;
@@ -30,7 +28,6 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build's secrets.
-     * 
      */
     @Import(name="secretEnv", required=true)
       private final Map<String,String> secretEnv;

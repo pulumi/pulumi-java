@@ -10,24 +10,20 @@ import java.util.StringJoiner;
 
     /**
      * Customize how deployment manager will validate the resource against schema errors.
-     * 
      */
     @EnumType
     public enum ValidationOptionsSchemaValidation {
         Unknown("UNKNOWN"),
         /**
          * Ignore schema failures.
-         * 
          */
         Ignore("IGNORE"),
         /**
          * Ignore schema failures but display them as warnings.
-         * 
          */
         IgnoreWithWarnings("IGNORE_WITH_WARNINGS"),
         /**
          * Fail the resource if the schema is not valid, this is the default behavior.
-         * 
          */
         Fail("FAIL");
 

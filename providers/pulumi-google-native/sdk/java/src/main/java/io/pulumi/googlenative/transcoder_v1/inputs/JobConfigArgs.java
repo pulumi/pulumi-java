@@ -22,7 +22,6 @@ import javax.annotation.Nullable;
 
 /**
  * Job configuration
- * 
  */
 public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -30,7 +29,6 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of ad breaks. Specifies where to insert ad break tags in the output manifests.
-     * 
      */
     @Import(name="adBreaks")
       private final @Nullable Output<List<AdBreakArgs>> adBreaks;
@@ -41,7 +39,6 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.
-     * 
      */
     @Import(name="editList")
       private final @Nullable Output<List<EditAtomArgs>> editList;
@@ -52,7 +49,6 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of elementary streams.
-     * 
      */
     @Import(name="elementaryStreams")
       private final @Nullable Output<List<ElementaryStreamArgs>> elementaryStreams;
@@ -63,7 +59,6 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of input assets stored in Cloud Storage.
-     * 
      */
     @Import(name="inputs")
       private final @Nullable Output<List<InputArgs>> inputs;
@@ -74,7 +69,6 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of output manifests.
-     * 
      */
     @Import(name="manifests")
       private final @Nullable Output<List<ManifestArgs>> manifests;
@@ -85,7 +79,6 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of multiplexing settings for output streams.
-     * 
      */
     @Import(name="muxStreams")
       private final @Nullable Output<List<MuxStreamArgs>> muxStreams;
@@ -96,7 +89,6 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Output configuration.
-     * 
      */
     @Import(name="output")
       private final @Nullable Output<OutputArgs> output;
@@ -107,7 +99,6 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of overlays on the output video, in descending Z-order.
-     * 
      */
     @Import(name="overlays")
       private final @Nullable Output<List<OverlayArgs>> overlays;
@@ -118,7 +109,6 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Destination on Pub/Sub.
-     * 
      */
     @Import(name="pubsubDestination")
       private final @Nullable Output<PubsubDestinationArgs> pubsubDestination;
@@ -129,7 +119,6 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of output sprite sheets.
-     * 
      */
     @Import(name="spriteSheets")
       private final @Nullable Output<List<SpriteSheetArgs>> spriteSheets;

@@ -16,7 +16,6 @@ public final class ProductSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user-provided name for this ProductSet. Must not be empty. Must be at most 4096 characters long.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -34,7 +33,6 @@ public final class ProductSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the ProductSet. Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`. This field is ignored when creating a ProductSet.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

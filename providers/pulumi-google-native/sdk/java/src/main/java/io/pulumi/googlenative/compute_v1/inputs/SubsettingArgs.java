@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Subsetting configuration for this BackendService. Currently this is applicable only for Internal TCP/UDP load balancing, Internal HTTP(S) load balancing and Traffic Director.
- * 
  */
 public final class SubsettingArgs extends io.pulumi.resources.ResourceArgs {
 

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse {
     /**
      * Annotation spec set resource name.
-     * 
      */
     private final String annotationSpecSet;
     /**
      * Optional. Instruction message showed on contributors UI.
-     * 
      */
     private final String instructionMessage;
 
@@ -30,14 +28,12 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse {
 
     /**
      * Annotation spec set resource name.
-     * 
     */
     public String getAnnotationSpecSet() {
         return this.annotationSpecSet;
     }
     /**
      * Optional. Instruction message showed on contributors UI.
-     * 
     */
     public String getInstructionMessage() {
         return this.instructionMessage;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Exact product price.
- * 
  */
 public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
 
     /**
      * Optional. Display price of the product.
-     * 
      */
     @Import(name="displayPrice")
       private final @Nullable Output<Double> displayPrice;
@@ -31,7 +29,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
 
     /**
      * Optional. Price of the product without any discount. If zero, by default set to be the 'displayPrice'.
-     * 
      */
     @Import(name="originalPrice")
       private final @Nullable Output<Double> originalPrice;

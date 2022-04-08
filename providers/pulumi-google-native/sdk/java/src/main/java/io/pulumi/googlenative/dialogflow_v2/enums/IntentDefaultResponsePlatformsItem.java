@@ -12,52 +12,42 @@ import java.util.StringJoiner;
     public enum IntentDefaultResponsePlatformsItem {
         /**
          * Default platform.
-         * 
          */
         PlatformUnspecified("PLATFORM_UNSPECIFIED"),
         /**
          * Facebook.
-         * 
          */
         Facebook("FACEBOOK"),
         /**
          * Slack.
-         * 
          */
         Slack("SLACK"),
         /**
          * Telegram.
-         * 
          */
         Telegram("TELEGRAM"),
         /**
          * Kik.
-         * 
          */
         Kik("KIK"),
         /**
          * Skype.
-         * 
          */
         Skype("SKYPE"),
         /**
          * Line.
-         * 
          */
         Line("LINE"),
         /**
          * Viber.
-         * 
          */
         Viber("VIBER"),
         /**
          * Google Assistant See [Dialogflow webhook format](https://developers.google.com/assistant/actions/build/json/dialogflow-webhook-json)
-         * 
          */
         ActionsOnGoogle("ACTIONS_ON_GOOGLE"),
         /**
          * Google Hangouts.
-         * 
          */
         GoogleHangouts("GOOGLE_HANGOUTS");
 

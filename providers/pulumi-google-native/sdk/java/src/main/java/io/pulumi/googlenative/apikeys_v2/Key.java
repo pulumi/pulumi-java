@@ -15,132 +15,113 @@ import javax.annotation.Nullable;
 /**
  * Creates a new API key. NOTE: Key is a global resource; hence the only supported value for location is `global`.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:apikeys/v2:Key")
 public class Key extends io.pulumi.resources.CustomResource {
     /**
      * A timestamp identifying the time this key was originally created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return A timestamp identifying the time this key was originally created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * A timestamp when this key was deleted. If the resource is not deleted, this must be empty.
-     * 
      */
     @Export(name="deleteTime", type=String.class, parameters={})
     private Output<String> deleteTime;
 
     /**
      * @return A timestamp when this key was deleted. If the resource is not deleted, this must be empty.
-     * 
      */
     public Output<String> getDeleteTime() {
         return this.deleteTime;
     }
     /**
      * Human-readable display name of this key that you can modify. The maximum length is 63 characters.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return Human-readable display name of this key that you can modify. The maximum length is 63 characters.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * A checksum computed by the server based on the current value of the Key resource. This may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding. See https://google.aip.dev/154.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A checksum computed by the server based on the current value of the Key resource. This may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding. See https://google.aip.dev/154.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * An encrypted and signed value held by this key. This field can be accessed only through the `GetKeyString` method.
-     * 
      */
     @Export(name="keyString", type=String.class, parameters={})
     private Output<String> keyString;
 
     /**
      * @return An encrypted and signed value held by this key. This field can be accessed only through the `GetKeyString` method.
-     * 
      */
     public Output<String> getKeyString() {
         return this.keyString;
     }
     /**
      * The resource name of the key. The `name` has the form: `projects//locations/global/keys/`. For example: `projects/123456867718/locations/global/keys/b7ff1f9f-8275-410a-94dd-3855ee9b5dd2` NOTE: Key is a global resource; hence the only supported value for location is `global`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the key. The `name` has the form: `projects//locations/global/keys/`. For example: `projects/123456867718/locations/global/keys/b7ff1f9f-8275-410a-94dd-3855ee9b5dd2` NOTE: Key is a global resource; hence the only supported value for location is `global`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Key restrictions.
-     * 
      */
     @Export(name="restrictions", type=V2RestrictionsResponse.class, parameters={})
     private Output<V2RestrictionsResponse> restrictions;
 
     /**
      * @return Key restrictions.
-     * 
      */
     public Output<V2RestrictionsResponse> getRestrictions() {
         return this.restrictions;
     }
     /**
      * Unique id in UUID4 format.
-     * 
      */
     @Export(name="uid", type=String.class, parameters={})
     private Output<String> uid;
 
     /**
      * @return Unique id in UUID4 format.
-     * 
      */
     public Output<String> getUid() {
         return this.uid;
     }
     /**
      * A timestamp identifying the time this key was last updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return A timestamp identifying the time this key was last updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

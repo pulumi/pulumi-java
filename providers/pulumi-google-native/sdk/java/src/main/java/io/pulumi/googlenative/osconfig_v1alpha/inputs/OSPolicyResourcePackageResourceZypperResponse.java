@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A package managed by Zypper. - install: `zypper -y install package` - remove: `zypper -y rm package`
- * 
  */
 public final class OSPolicyResourcePackageResourceZypperResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class OSPolicyResourcePackageResourceZypperResponse extends io.pulu
 
     /**
      * Package name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

@@ -14,90 +14,77 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new Attribute definition in the parent consent store.
- * 
  */
 @ResourceType(type="google-native:healthcare/v1:AttributeDefinition")
 public class AttributeDefinition extends io.pulumi.resources.CustomResource {
     /**
      * Possible values for the attribute. The number of allowed values must not exceed 500. An empty list is invalid. The list can only be expanded after creation.
-     * 
      */
     @Export(name="allowedValues", type=List.class, parameters={String.class})
     private Output<List<String>> allowedValues;
 
     /**
      * @return Possible values for the attribute. The number of allowed values must not exceed 500. An empty list is invalid. The list can only be expanded after creation.
-     * 
      */
     public Output<List<String>> getAllowedValues() {
         return this.allowedValues;
     }
     /**
      * The category of the attribute. The value of this field cannot be changed after creation.
-     * 
      */
     @Export(name="category", type=String.class, parameters={})
     private Output<String> category;
 
     /**
      * @return The category of the attribute. The value of this field cannot be changed after creation.
-     * 
      */
     public Output<String> getCategory() {
         return this.category;
     }
     /**
      * Optional. Default values of the attribute in Consents. If no default values are specified, it defaults to an empty value.
-     * 
      */
     @Export(name="consentDefaultValues", type=List.class, parameters={String.class})
     private Output<List<String>> consentDefaultValues;
 
     /**
      * @return Optional. Default values of the attribute in Consents. If no default values are specified, it defaults to an empty value.
-     * 
      */
     public Output<List<String>> getConsentDefaultValues() {
         return this.consentDefaultValues;
     }
     /**
      * Optional. Default value of the attribute in User data mappings. If no default value is specified, it defaults to an empty value. This field is only applicable to attributes of the category `RESOURCE`.
-     * 
      */
     @Export(name="dataMappingDefaultValue", type=String.class, parameters={})
     private Output<String> dataMappingDefaultValue;
 
     /**
      * @return Optional. Default value of the attribute in User data mappings. If no default value is specified, it defaults to an empty value. This field is only applicable to attributes of the category `RESOURCE`.
-     * 
      */
     public Output<String> getDataMappingDefaultValue() {
         return this.dataMappingDefaultValue;
     }
     /**
      * Optional. A description of the attribute.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Optional. A description of the attribute.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_definition_id}`. Cannot be changed after creation.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_definition_id}`. Cannot be changed after creation.
-     * 
      */
     public Output<String> getName() {
         return this.name;

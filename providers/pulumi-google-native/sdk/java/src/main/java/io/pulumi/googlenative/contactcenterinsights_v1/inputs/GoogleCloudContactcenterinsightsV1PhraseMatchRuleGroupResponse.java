@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A message representing a rule in the phrase matcher.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
 
     /**
      * A list of phase match rules that are included in this group.
-     * 
      */
     @Import(name="phraseMatchRules", required=true)
       private final List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules;
@@ -31,7 +29,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
 
     /**
      * The type of this phrase match rule group.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * A single field of a message type.
- * 
  */
 public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The field cardinality.
-     * 
      */
     @Import(name="cardinality")
       private final @Nullable Output<FieldCardinality> cardinality;
@@ -37,7 +35,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The string value of the default value of this field. Proto2 syntax only.
-     * 
      */
     @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
@@ -48,7 +45,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The field JSON name.
-     * 
      */
     @Import(name="jsonName")
       private final @Nullable Output<String> jsonName;
@@ -59,7 +55,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The field type.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<FieldKind> kind;
@@ -70,7 +65,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The field name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -81,7 +75,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The field number.
-     * 
      */
     @Import(name="number")
       private final @Nullable Output<Integer> number;
@@ -92,7 +85,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The index of the field type in `Type.oneofs`, for message or enumeration types. The first type has index 1; zero means the type is not in the list.
-     * 
      */
     @Import(name="oneofIndex")
       private final @Nullable Output<Integer> oneofIndex;
@@ -103,7 +95,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The protocol buffer options.
-     * 
      */
     @Import(name="options")
       private final @Nullable Output<List<OptionArgs>> options;
@@ -114,7 +105,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether to use alternative packed wire representation.
-     * 
      */
     @Import(name="packed")
       private final @Nullable Output<Boolean> packed;
@@ -125,7 +115,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The field type URL, without the scheme, for message or enumeration types. Example: `"type.googleapis.com/google.protobuf.Timestamp"`.
-     * 
      */
     @Import(name="typeUrl")
       private final @Nullable Output<String> typeUrl;

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class RouterApplianceInstanceResponse {
     /**
      * The IP address on the VM to use for peering.
-     * 
      */
     private final String ipAddress;
     /**
      * The URI of the VM.
-     * 
      */
     private final String virtualMachine;
 
@@ -30,14 +28,12 @@ public final class RouterApplianceInstanceResponse {
 
     /**
      * The IP address on the VM to use for peering.
-     * 
     */
     public String getIpAddress() {
         return this.ipAddress;
     }
     /**
      * The URI of the VM.
-     * 
     */
     public String getVirtualMachine() {
         return this.virtualMachine;

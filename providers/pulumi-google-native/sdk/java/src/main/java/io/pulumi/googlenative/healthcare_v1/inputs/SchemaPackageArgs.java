@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * A schema package contains a set of schemas and type definitions.
- * 
  */
 public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Flag to ignore all min_occurs restrictions in the schema. This means that incoming messages can omit any group, segment, field, component, or subcomponent.
-     * 
      */
     @Import(name="ignoreMinOccurs")
       private final @Nullable Output<Boolean> ignoreMinOccurs;
@@ -36,7 +34,6 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Schema configs that are layered based on their VersionSources that match the incoming message. Schema configs present in higher indices override those in lower indices with the same message type and trigger event if their VersionSources all match an incoming message.
-     * 
      */
     @Import(name="schemas")
       private final @Nullable Output<List<Hl7SchemaConfigArgs>> schemas;
@@ -47,7 +44,6 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Determines how messages that fail to parse are handled.
-     * 
      */
     @Import(name="schematizedParsingType")
       private final @Nullable Output<SchemaPackageSchematizedParsingType> schematizedParsingType;
@@ -58,7 +54,6 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.
-     * 
      */
     @Import(name="types")
       private final @Nullable Output<List<Hl7TypesConfigArgs>> types;
@@ -69,7 +64,6 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Determines how unexpected segments (segments not matched to the schema) are handled.
-     * 
      */
     @Import(name="unexpectedSegmentHandling")
       private final @Nullable Output<SchemaPackageUnexpectedSegmentHandling> unexpectedSegmentHandling;

@@ -17,7 +17,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Human-readable display name of this key that you can modify. The maximum length is 63 characters.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -49,7 +48,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Key restrictions.
-     * 
      */
     @Import(name="restrictions")
       private final @Nullable Output<V2RestrictionsArgs> restrictions;

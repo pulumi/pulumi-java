@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * **Multi-cluster Ingress**: The configuration for the MultiClusterIngress feature.
- * 
  */
 public final class MultiClusterIngressFeatureSpecResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MultiClusterIngressFeatureSpecResponse extends io.pulumi.reso
 
     /**
      * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
-     * 
      */
     @Import(name="configMembership", required=true)
       private final String configMembership;

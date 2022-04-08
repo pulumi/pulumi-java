@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse {
     /**
      * A list of phase match rules that are included in this group.
-     * 
      */
     private final List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules;
     /**
      * The type of this phrase match rule group.
-     * 
      */
     private final String type;
 
@@ -32,14 +30,12 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
 
     /**
      * A list of phase match rules that are included in this group.
-     * 
     */
     public List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> getPhraseMatchRules() {
         return this.phraseMatchRules;
     }
     /**
      * The type of this phrase match rule group.
-     * 
     */
     public String getType() {
         return this.type;

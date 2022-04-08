@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings specific to keys that can be used by Android apps.
- * 
  */
 public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs extend
 
     /**
      * If set to true, allowed_package_names are not enforced.
-     * 
      */
     @Import(name="allowAllPackageNames")
       private final @Nullable Output<Boolean> allowAllPackageNames;
@@ -33,7 +31,6 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs extend
 
     /**
      * Android package names of apps allowed to use the key. Example: 'com.companyname.appname'
-     * 
      */
     @Import(name="allowedPackageNames")
       private final @Nullable Output<List<String>> allowedPackageNames;

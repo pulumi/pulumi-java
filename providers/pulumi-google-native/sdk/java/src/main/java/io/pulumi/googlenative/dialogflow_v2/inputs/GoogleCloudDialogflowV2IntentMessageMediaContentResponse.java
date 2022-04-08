@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The media content card for Actions on Google.
- * 
  */
 public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponse exte
 
     /**
      * List of media objects.
-     * 
      */
     @Import(name="mediaObjects", required=true)
       private final List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects;
@@ -31,7 +29,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponse exte
 
     /**
      * Optional. What type of media is the content (ie "audio").
-     * 
      */
     @Import(name="mediaType", required=true)
       private final String mediaType;

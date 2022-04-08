@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class MaxPodsConstraintResponse {
     /**
      * Constraint enforced on the max num of pods per node.
-     * 
      */
     private final String maxPodsPerNode;
 
@@ -22,7 +21,6 @@ public final class MaxPodsConstraintResponse {
 
     /**
      * Constraint enforced on the max num of pods per node.
-     * 
     */
     public String getMaxPodsPerNode() {
         return this.maxPodsPerNode;

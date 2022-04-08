@@ -14,76 +14,65 @@ import javax.annotation.Nullable;
 /**
  * Create a storage volume snapshot in a containing volume.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:baremetalsolution/v2:Snapshot")
 public class Snapshot extends io.pulumi.resources.CustomResource {
     /**
      * The creation time of the storage volume snapshot.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The creation time of the storage volume snapshot.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The description of the storage volume snapshot.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return The description of the storage volume snapshot.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The name of the storage volume snapshot.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the storage volume snapshot.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The size of the storage volume snapshot, in bytes.
-     * 
      */
     @Export(name="sizeBytes", type=String.class, parameters={})
     private Output<String> sizeBytes;
 
     /**
      * @return The size of the storage volume snapshot, in bytes.
-     * 
      */
     public Output<String> getSizeBytes() {
         return this.sizeBytes;
     }
     /**
      * The storage volume this snapshot belongs to.
-     * 
      */
     @Export(name="storageVolume", type=String.class, parameters={})
     private Output<String> storageVolume;
 
     /**
      * @return The storage volume this snapshot belongs to.
-     * 
      */
     public Output<String> getStorageVolume() {
         return this.storageVolume;

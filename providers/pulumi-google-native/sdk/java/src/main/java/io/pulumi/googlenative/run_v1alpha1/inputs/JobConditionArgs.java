@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * JobCondition defines a readiness condition for a Revision.
- * 
  */
 public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Last time the condition transitioned from one status to another.
-     * 
      */
     @Import(name="lastTransitionTime")
       private final @Nullable Output<String> lastTransitionTime;
@@ -31,7 +29,6 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Human readable message indicating details about the current status.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -42,7 +39,6 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. One-word CamelCase reason for the condition's last transition.
-     * 
      */
     @Import(name="reason")
       private final @Nullable Output<String> reason;
@@ -53,7 +49,6 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. How to interpret failures of this condition, one of Error, Warning, Info
-     * 
      */
     @Import(name="severity")
       private final @Nullable Output<String> severity;
@@ -64,7 +59,6 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Status of the condition, one of True, False, Unknown.
-     * 
      */
     @Import(name="status", required=true)
       private final Output<String> status;
@@ -75,7 +69,6 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

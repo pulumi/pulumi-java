@@ -14,7 +14,6 @@ public final class InstantSnapshotResourceStatusResponse extends io.pulumi.resou
 
     /**
      * The storage size of this instant snapshot.
-     * 
      */
     @Import(name="storageSizeBytes", required=true)
       private final String storageSizeBytes;

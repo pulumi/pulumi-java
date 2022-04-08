@@ -10,33 +10,27 @@ import java.util.StringJoiner;
 
     /**
      * ProtectionLevel to use when creating a CryptoKeyVersion based on this template. Immutable. Defaults to SOFTWARE.
-     * 
      */
     @EnumType
     public enum CryptoKeyVersionTemplateProtectionLevel {
         /**
          * Not specified.
-         * 
          */
         ProtectionLevelUnspecified("PROTECTION_LEVEL_UNSPECIFIED"),
         /**
          * Crypto operations are performed in software.
-         * 
          */
         Software("SOFTWARE"),
         /**
          * Crypto operations are performed in a Hardware Security Module.
-         * 
          */
         Hsm("HSM"),
         /**
          * Crypto operations are performed by an external key manager.
-         * 
          */
         External("EXTERNAL"),
         /**
          * Crypto operations are performed in an EKM-over-VPC backend.
-         * 
          */
         ExternalVpc("EXTERNAL_VPC");
 

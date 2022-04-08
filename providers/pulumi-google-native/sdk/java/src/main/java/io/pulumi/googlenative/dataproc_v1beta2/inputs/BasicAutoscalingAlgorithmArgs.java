@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Basic algorithm for autoscaling.
- * 
  */
 public final class BasicAutoscalingAlgorithmArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class BasicAutoscalingAlgorithmArgs extends io.pulumi.resources.Res
 
     /**
      * Optional. Duration between scaling events. A scaling period starts after the update operation from the previous event has completed.Bounds: 2m, 1d. Default: 2m.
-     * 
      */
     @Import(name="cooldownPeriod")
       private final @Nullable Output<String> cooldownPeriod;
@@ -32,7 +30,6 @@ public final class BasicAutoscalingAlgorithmArgs extends io.pulumi.resources.Res
 
     /**
      * Optional. YARN autoscaling configuration.
-     * 
      */
     @Import(name="yarnConfig")
       private final @Nullable Output<BasicYarnAutoscalingConfigArgs> yarnConfig;

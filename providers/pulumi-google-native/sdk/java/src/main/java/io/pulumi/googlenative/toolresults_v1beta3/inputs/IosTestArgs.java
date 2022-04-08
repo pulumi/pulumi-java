@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * A iOS mobile test specification
- * 
  */
 public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Information about the application under test.
-     * 
      */
     @Import(name="iosAppInfo")
       private final @Nullable Output<IosAppInfoArgs> iosAppInfo;
@@ -35,7 +33,6 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An iOS Robo test.
-     * 
      */
     @Import(name="iosRoboTest")
       private final @Nullable Output<IosRoboTestArgs> iosRoboTest;
@@ -46,7 +43,6 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An iOS test loop.
-     * 
      */
     @Import(name="iosTestLoop")
       private final @Nullable Output<IosTestLoopArgs> iosTestLoop;
@@ -57,7 +53,6 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An iOS XCTest.
-     * 
      */
     @Import(name="iosXcTest")
       private final @Nullable Output<IosXcTestArgs> iosXcTest;
@@ -68,7 +63,6 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Max time a test is allowed to run before it is automatically cancelled.
-     * 
      */
     @Import(name="testTimeout")
       private final @Nullable Output<DurationArgs> testTimeout;

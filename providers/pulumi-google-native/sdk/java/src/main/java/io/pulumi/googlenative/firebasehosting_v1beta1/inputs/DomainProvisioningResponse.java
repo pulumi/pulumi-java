@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * The current certificate provisioning status information for a domain.
- * 
  */
 public final class DomainProvisioningResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
 
     /**
      * The TXT records (for the certificate challenge) that were found at the last DNS fetch.
-     * 
      */
     @Import(name="certChallengeDiscoveredTxt", required=true)
       private final List<String> certChallengeDiscoveredTxt;
@@ -32,7 +30,6 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
 
     /**
      * The DNS challenge for generating a certificate.
-     * 
      */
     @Import(name="certChallengeDns", required=true)
       private final CertDnsChallengeResponse certChallengeDns;
@@ -43,7 +40,6 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
 
     /**
      * The HTTP challenge for generating a certificate.
-     * 
      */
     @Import(name="certChallengeHttp", required=true)
       private final CertHttpChallengeResponse certChallengeHttp;
@@ -54,7 +50,6 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
 
     /**
      * The certificate provisioning status; updated when Firebase Hosting provisions an SSL certificate for the domain.
-     * 
      */
     @Import(name="certStatus", required=true)
       private final String certStatus;
@@ -65,7 +60,6 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
 
     /**
      * The IPs found at the last DNS fetch.
-     * 
      */
     @Import(name="discoveredIps", required=true)
       private final List<String> discoveredIps;
@@ -76,7 +70,6 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
 
     /**
      * The time at which the last DNS fetch occurred.
-     * 
      */
     @Import(name="dnsFetchTime", required=true)
       private final String dnsFetchTime;
@@ -87,7 +80,6 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
 
     /**
      * The DNS record match status as of the last DNS fetch.
-     * 
      */
     @Import(name="dnsStatus", required=true)
       private final String dnsStatus;
@@ -98,7 +90,6 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
 
     /**
      * The list of IPs to which the domain is expected to resolve.
-     * 
      */
     @Import(name="expectedIps", required=true)
       private final List<String> expectedIps;

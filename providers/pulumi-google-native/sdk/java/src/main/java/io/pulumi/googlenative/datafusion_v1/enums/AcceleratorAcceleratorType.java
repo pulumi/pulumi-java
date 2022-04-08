@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * The type of an accelator for a CDF instance.
-     * 
      */
     @EnumType
     public enum AcceleratorAcceleratorType {
         /**
          * Default value, if unspecified.
-         * 
          */
         AcceleratorTypeUnspecified("ACCELERATOR_TYPE_UNSPECIFIED"),
         /**
          * Change Data Capture accelerator for CDF.
-         * 
          */
         Cdc("CDC"),
         /**
          * Cloud Healthcare accelerator for CDF. This accelerator is to enable Cloud Healthcare specific CDF plugins developed by Healthcare team.
-         * 
          */
         Healthcare("HEALTHCARE"),
         /**
          * Contact Center AI Insights This accelerator is used to enable import and export pipelines custom built to streamline CCAI Insights processing.
-         * 
          */
         CcaiInsights("CCAI_INSIGHTS");
 

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Parameters to support Username and Password Authentication.
- * 
  */
 public final class UserPasswordArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class UserPasswordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Secret version reference containing the password.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<SecretArgs> password;
@@ -32,7 +30,6 @@ public final class UserPasswordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Username.
-     * 
      */
     @Import(name="username")
       private final @Nullable Output<String> username;

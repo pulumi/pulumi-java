@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Response media object for media content card.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
 
     /**
      * Url where the media is stored.
-     * 
      */
     @Import(name="contentUrl", required=true)
       private final String contentUrl;
@@ -30,7 +28,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
 
     /**
      * Optional. Description of media card.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -41,7 +38,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
 
     /**
      * Optional. Icon to display above media content.
-     * 
      */
     @Import(name="icon", required=true)
       private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse icon;
@@ -52,7 +48,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
 
     /**
      * Optional. Image to display above media content.
-     * 
      */
     @Import(name="largeImage", required=true)
       private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse largeImage;
@@ -63,7 +58,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
 
     /**
      * Name of media card.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

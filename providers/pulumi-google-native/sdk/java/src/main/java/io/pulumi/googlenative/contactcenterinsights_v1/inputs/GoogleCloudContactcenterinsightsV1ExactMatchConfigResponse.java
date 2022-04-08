@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Exact match configuration.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse ex
 
     /**
      * Whether to consider case sensitivity when performing an exact match.
-     * 
      */
     @Import(name="caseSensitive", required=true)
       private final Boolean caseSensitive;

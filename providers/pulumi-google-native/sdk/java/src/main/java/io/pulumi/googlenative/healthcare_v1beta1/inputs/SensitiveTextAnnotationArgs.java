@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A TextAnnotation specifies a text range that includes sensitive information.
- * 
  */
 public final class SensitiveTextAnnotationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SensitiveTextAnnotationArgs extends io.pulumi.resources.Resou
 
     /**
      * Maps from a resource slice. For example, FHIR resource field path to a set of sensitive text findings. For example, Appointment.Narrative text1 --> {findings_1, findings_2, findings_3}
-     * 
      */
     @Import(name="details")
       private final @Nullable Output<Map<String,String>> details;

@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class ShieldedVmConfigResponse {
     /**
      * Defines whether the instance has integrity monitoring enabled.
-     * 
      */
     private final Boolean enableIntegrityMonitoring;
     /**
      * Defines whether the instance has Secure Boot enabled.
-     * 
      */
     private final Boolean enableSecureBoot;
     /**
      * Defines whether the instance has the vTPM enabled.
-     * 
      */
     private final Boolean enableVtpm;
 
@@ -37,21 +34,18 @@ public final class ShieldedVmConfigResponse {
 
     /**
      * Defines whether the instance has integrity monitoring enabled.
-     * 
     */
     public Boolean getEnableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring;
     }
     /**
      * Defines whether the instance has Secure Boot enabled.
-     * 
     */
     public Boolean getEnableSecureBoot() {
         return this.enableSecureBoot;
     }
     /**
      * Defines whether the instance has the vTPM enabled.
-     * 
     */
     public Boolean getEnableVtpm() {
         return this.enableVtpm;

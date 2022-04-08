@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffResponse {
     /**
      * Custom metadata for your handoff procedure. Dialogflow doesn't impose any structure on this.
-     * 
      */
     private final Map<String,String> metadata;
 
@@ -23,7 +22,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoff
 
     /**
      * Custom metadata for your handoff procedure. Dialogflow doesn't impose any structure on this.
-     * 
     */
     public Map<String,String> getMetadata() {
         return this.metadata;

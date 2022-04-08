@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Config to process conversation.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
 
     /**
      * Number of recent non-small-talk sentences to use as context for article and FAQ suggestion
-     * 
      */
     @Import(name="recentSentencesCount")
       private final @Nullable Output<Integer> recentSentencesCount;

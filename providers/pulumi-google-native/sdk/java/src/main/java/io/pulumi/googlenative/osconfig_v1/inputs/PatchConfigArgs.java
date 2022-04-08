@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Patch configuration specifications. Contains details on how to apply the patch(es) to a VM instance.
- * 
  */
 public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Apt update settings. Use this setting to override the default `apt` patch rules.
-     * 
      */
     @Import(name="apt")
       private final @Nullable Output<AptSettingsArgs> apt;
@@ -38,7 +36,6 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Goo update settings. Use this setting to override the default `goo` patch rules.
-     * 
      */
     @Import(name="goo")
       private final @Nullable Output<GooSettingsArgs> goo;
@@ -49,7 +46,6 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Allows the patch job to run on Managed instance groups (MIGs).
-     * 
      */
     @Import(name="migInstancesAllowed")
       private final @Nullable Output<Boolean> migInstancesAllowed;
@@ -60,7 +56,6 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The `ExecStep` to run after the patch update.
-     * 
      */
     @Import(name="postStep")
       private final @Nullable Output<ExecStepArgs> postStep;
@@ -71,7 +66,6 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The `ExecStep` to run before the patch update.
-     * 
      */
     @Import(name="preStep")
       private final @Nullable Output<ExecStepArgs> preStep;
@@ -82,7 +76,6 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Post-patch reboot settings.
-     * 
      */
     @Import(name="rebootConfig")
       private final @Nullable Output<PatchConfigRebootConfig> rebootConfig;
@@ -93,7 +86,6 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Windows update settings. Use this override the default windows patch rules.
-     * 
      */
     @Import(name="windowsUpdate")
       private final @Nullable Output<WindowsUpdateSettingsArgs> windowsUpdate;
@@ -104,7 +96,6 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Yum update settings. Use this setting to override the default `yum` patch rules.
-     * 
      */
     @Import(name="yum")
       private final @Nullable Output<YumSettingsArgs> yum;
@@ -115,7 +106,6 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Zypper update settings. Use this setting to override the default `zypper` patch rules.
-     * 
      */
     @Import(name="zypper")
       private final @Nullable Output<ZypperSettingsArgs> zypper;

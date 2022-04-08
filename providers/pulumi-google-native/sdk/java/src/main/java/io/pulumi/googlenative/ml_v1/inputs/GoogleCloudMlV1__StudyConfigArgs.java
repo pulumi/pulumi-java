@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents configuration of a study.
- * 
  */
 public final class GoogleCloudMlV1__StudyConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends io.pulumi.resources.
 
     /**
      * The search algorithm specified for the study.
-     * 
      */
     @Import(name="algorithm")
       private final @Nullable Output<GoogleCloudMlV1__StudyConfigAlgorithm> algorithm;
@@ -35,7 +33,6 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends io.pulumi.resources.
 
     /**
      * Configuration for automated stopping of unpromising Trials.
-     * 
      */
     @Import(name="automatedStoppingConfig")
       private final @Nullable Output<GoogleCloudMlV1__AutomatedStoppingConfigArgs> automatedStoppingConfig;
@@ -46,7 +43,6 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends io.pulumi.resources.
 
     /**
      * Metric specs for the study.
-     * 
      */
     @Import(name="metrics")
       private final @Nullable Output<List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs>> metrics;
@@ -57,7 +53,6 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends io.pulumi.resources.
 
     /**
      * The set of parameters to tune.
-     * 
      */
     @Import(name="parameters", required=true)
       private final Output<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> parameters;

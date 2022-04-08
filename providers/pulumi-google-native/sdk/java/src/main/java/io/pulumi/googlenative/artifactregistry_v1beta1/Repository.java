@@ -14,104 +14,89 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a repository. The returned Operation will finish once the repository has been created. Its response will be the created Repository.
- * 
  */
 @ResourceType(type="google-native:artifactregistry/v1beta1:Repository")
 public class Repository extends io.pulumi.resources.CustomResource {
     /**
      * The time when the repository was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time when the repository was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The user-provided description of the repository.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return The user-provided description of the repository.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The format of packages that are stored in the repository.
-     * 
      */
     @Export(name="format", type=String.class, parameters={})
     private Output<String> format;
 
     /**
      * @return The format of packages that are stored in the repository.
-     * 
      */
     public Output<String> getFormat() {
         return this.format;
     }
     /**
      * The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
-     * 
      */
     @Export(name="kmsKeyName", type=String.class, parameters={})
     private Output<String> kmsKeyName;
 
     /**
      * @return The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
-     * 
      */
     public Output<String> getKmsKeyName() {
         return this.kmsKeyName;
     }
     /**
      * Labels with user-defined metadata. This field may contain up to 64 entries. Label keys and values may be no longer than 63 characters. Label keys must begin with a lowercase letter and may only contain lowercase letters, numeric characters, underscores, and dashes.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Labels with user-defined metadata. This field may contain up to 64 entries. Label keys and values may be no longer than 63 characters. Label keys must begin with a lowercase letter and may only contain lowercase letters, numeric characters, underscores, and dashes.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1".
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1".
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The time when the repository was last updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The time when the repository was last updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Standalone Rich Business Messaging (RBM) rich card. Rich cards allow you to respond to users with more vivid content, e.g. with media and suggestions. You can group multiple rich cards into one using RbmCarouselCard but carousel cards will give you less control over the card layout.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArg
 
     /**
      * Card content.
-     * 
      */
     @Import(name="cardContent", required=true)
       private final Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs> cardContent;
@@ -33,7 +31,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArg
 
     /**
      * Orientation of the card.
-     * 
      */
     @Import(name="cardOrientation", required=true)
       private final Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientation> cardOrientation;
@@ -44,7 +41,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArg
 
     /**
      * Required if orientation is horizontal. Image preview alignment for standalone cards with horizontal layout.
-     * 
      */
     @Import(name="thumbnailImageAlignment")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignment> thumbnailImageAlignment;

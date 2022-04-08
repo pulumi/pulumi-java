@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Confidential Instance Config for clusters using Confidential VMs (https://cloud.google.com/compute/confidential-vm/docs)
- * 
  */
 public final class ConfidentialInstanceConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ConfidentialInstanceConfigResponse extends io.pulumi.resource
 
     /**
      * Optional. Defines whether the instance should have confidential compute enabled.
-     * 
      */
     @Import(name="enableConfidentialCompute", required=true)
       private final Boolean enableConfidentialCompute;

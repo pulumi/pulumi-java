@@ -26,7 +26,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The amount of memory in MB available for a function. Defaults to 256MB.
-     * 
      */
     @Import(name="availableMemoryMb")
       private final @Nullable Output<Integer> availableMemoryMb;
@@ -37,7 +36,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Build environment variables that shall be available during build time.
-     * 
      */
     @Import(name="buildEnvironmentVariables")
       private final @Nullable Output<Map<String,String>> buildEnvironmentVariables;
@@ -48,7 +46,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Cloud Build Custom Worker Pool that should be used to build the function. The format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where `{project}` and `{region}` are the project id and region respectively where the worker pool is defined and `{workerPool}` is the short name of the worker pool. If the project id is not the same as the function, then the Cloud Functions Service Agent (`service-@gcf-admin-robot.iam.gserviceaccount.com`) must be granted the role Cloud Build Custom Workers Builder (`roles/cloudbuild.customworkers.builder`) in the project.
-     * 
      */
     @Import(name="buildWorkerPool")
       private final @Nullable Output<String> buildWorkerPool;
@@ -59,7 +56,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User-provided description of a function.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -70,7 +66,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User managed repository created in Artifact Registry optionally with a customer managed encryption key. If specified, deployments will use Artifact Registry. If unspecified and the deployment is eligible to use Artifact Registry, GCF will create and use a repository named 'gcf-artifacts' for every deployed region. This is the repository to which the function docker image will be pushed after it is built by Cloud Build. It must match the pattern `projects/{project}/locations/{location}/repositories/{repository}`. Cross-project repositories are not supported. Cross-location repositories are not supported. Repository format must be 'DOCKER'.
-     * 
      */
     @Import(name="dockerRepository")
       private final @Nullable Output<String> dockerRepository;
@@ -81,7 +76,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the function (as defined in source code) that will be executed. Defaults to the resource name suffix, if not specified. For backward compatibility, if function with given name is not found, then the system will try to use function named "function". For Node.js this is name of a function exported by the module specified in `source_location`.
-     * 
      */
     @Import(name="entryPoint")
       private final @Nullable Output<String> entryPoint;
@@ -92,7 +86,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Environment variables that shall be available during function execution.
-     * 
      */
     @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
@@ -103,7 +96,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A source that fires events in response to a condition in another service.
-     * 
      */
     @Import(name="eventTrigger")
       private final @Nullable Output<EventTriggerArgs> eventTrigger;
@@ -114,7 +106,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An HTTPS endpoint type of source that can be triggered via URL.
-     * 
      */
     @Import(name="httpsTrigger")
       private final @Nullable Output<HttpsTriggerArgs> httpsTrigger;
@@ -125,7 +116,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ingress settings for the function, controlling what traffic can reach it.
-     * 
      */
     @Import(name="ingressSettings")
       private final @Nullable Output<FunctionIngressSettings> ingressSettings;
@@ -136,7 +126,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources. It must match the pattern `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`. If specified, you must also provide an artifact registry repository using the `docker_repository` field that was created with the same KMS crypto key. The following service accounts need to be granted the role 'Cloud KMS CryptoKey Encrypter/Decrypter (roles/cloudkms.cryptoKeyEncrypterDecrypter)' on the Key/KeyRing/Project/Organization (least access preferred). 1. Google Cloud Functions service account (service-{project_number}@gcf-admin-robot.iam.gserviceaccount.com) - Required to protect the function's image. 2. Google Storage service account (service-{project_number}@gs-project-accounts.iam.gserviceaccount.com) - Required to protect the function's source code. If this service account does not exist, deploying a function without a KMS key or retrieving the service agent name provisions it. For more information, see https://cloud.google.com/storage/docs/projects#service-agents and https://cloud.google.com/storage/docs/getting-service-agent#gsutil. Google Cloud Functions delegates access to service agents to protect function resources in internal projects that are not accessible by the end user.
-     * 
      */
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
@@ -147,7 +136,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Labels associated with this Cloud Function.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -165,7 +153,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The limit on the maximum number of function instances that may coexist at a given time. In some cases, such as rapid traffic surges, Cloud Functions may, for a short period of time, create more instances than the specified max instances limit. If your function cannot tolerate this temporary behavior, you may want to factor in a safety margin and set a lower max instances value than your function can tolerate. See the [Max Instances](https://cloud.google.com/functions/docs/max-instances) Guide for more details.
-     * 
      */
     @Import(name="maxInstances")
       private final @Nullable Output<Integer> maxInstances;
@@ -176,7 +163,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A lower bound for the number function instances that may coexist at a given time.
-     * 
      */
     @Import(name="minInstances")
       private final @Nullable Output<Integer> minInstances;
@@ -187,7 +173,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A user-defined name of the function. Function names must be unique globally and match pattern `projects/*{@literal /}locations/*{@literal /}functions/*`
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -198,7 +183,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The VPC Network that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network resource. If the short network name is used, the network must belong to the same project. Otherwise, it must belong to a project within the same organization. The format of this field is either `projects/{project}/global/networks/{network}` or `{network}`, where `{project}` is a project id where the network is defined, and `{network}` is the short name of the network. This field is mutually exclusive with `vpc_connector` and will be replaced by it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
-     * 
      */
     @Import(name="network")
       private final @Nullable Output<String> network;
@@ -216,7 +200,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The runtime in which to run the function. Required when deploying a new function, optional when updating an existing function. For a complete list of possible choices, see the [`gcloud` command reference](https://cloud.google.com/sdk/gcloud/reference/functions/deploy#--runtime).
-     * 
      */
     @Import(name="runtime")
       private final @Nullable Output<String> runtime;
@@ -227,7 +210,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Secret environment variables configuration.
-     * 
      */
     @Import(name="secretEnvironmentVariables")
       private final @Nullable Output<List<SecretEnvVarArgs>> secretEnvironmentVariables;
@@ -238,7 +220,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Secret volumes configuration.
-     * 
      */
     @Import(name="secretVolumes")
       private final @Nullable Output<List<SecretVolumeArgs>> secretVolumes;
@@ -249,7 +230,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The email of the function's service account. If empty, defaults to `{project_id}@appspot.gserviceaccount.com`.
-     * 
      */
     @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
@@ -260,7 +240,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Google Cloud Storage URL, starting with `gs://`, pointing to the zip archive which contains the function.
-     * 
      */
     @Import(name="sourceArchiveUrl")
       private final @Nullable Output<String> sourceArchiveUrl;
@@ -271,7 +250,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * **Beta Feature** The source repository where a function is hosted.
-     * 
      */
     @Import(name="sourceRepository")
       private final @Nullable Output<SourceRepositoryArgs> sourceRepository;
@@ -282,7 +260,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Input only. An identifier for Firebase function sources. Disclaimer: This field is only supported for Firebase function deployments.
-     * 
      */
     @Import(name="sourceToken")
       private final @Nullable Output<String> sourceToken;
@@ -293,7 +270,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Google Cloud Storage signed URL used for source uploading, generated by calling [google.cloud.functions.v1.GenerateUploadUrl]. The signature is validated on write methods (Create, Update) The signature is stripped from the Function object on read methods (Get, List)
-     * 
      */
     @Import(name="sourceUploadUrl")
       private final @Nullable Output<String> sourceUploadUrl;
@@ -304,7 +280,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The function execution timeout. Execution is considered failed and can be terminated if the function is not completed at the end of the timeout period. Defaults to 60 seconds.
-     * 
      */
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
@@ -315,7 +290,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects/*{@literal /}locations/*{@literal /}connectors/*` This field is mutually exclusive with `network` field and will eventually replace it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
-     * 
      */
     @Import(name="vpcConnector")
       private final @Nullable Output<String> vpcConnector;
@@ -326,7 +300,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The egress settings for the connector, controlling what traffic is diverted through it.
-     * 
      */
     @Import(name="vpcConnectorEgressSettings")
       private final @Nullable Output<FunctionVpcConnectorEgressSettings> vpcConnectorEgressSettings;

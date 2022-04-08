@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Specification to configure notifications published to Pub/Sub. Notifications are published to the customer-provided topic using the following `PubsubMessage.attributes`: * `"eventType"`: one of the EventType values * `"payloadFormat"`: one of the PayloadFormat values * `"projectId"`: the project_id of the `TransferOperation` * `"transferJobName"`: the transfer_job_name of the `TransferOperation` * `"transferOperationName"`: the name of the `TransferOperation` The `PubsubMessage.data` contains a TransferOperation resource formatted according to the specified `PayloadFormat`.
- * 
  */
 public final class NotificationConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class NotificationConfigResponse extends io.pulumi.resources.Invoke
 
     /**
      * Event types for which a notification is desired. If empty, send notifications for all event types.
-     * 
      */
     @Import(name="eventTypes", required=true)
       private final List<String> eventTypes;
@@ -30,7 +28,6 @@ public final class NotificationConfigResponse extends io.pulumi.resources.Invoke
 
     /**
      * The desired format of the notification message payloads.
-     * 
      */
     @Import(name="payloadFormat", required=true)
       private final String payloadFormat;
@@ -41,7 +38,6 @@ public final class NotificationConfigResponse extends io.pulumi.resources.Invoke
 
     /**
      * The `Topic.name` of the Pub/Sub topic to which to publish notifications. Must be of the format: `projects/{project}/topics/{topic}`. Not matching this format results in an INVALID_ARGUMENT error.
-     * 
      */
     @Import(name="pubsubTopic", required=true)
       private final String pubsubTopic;

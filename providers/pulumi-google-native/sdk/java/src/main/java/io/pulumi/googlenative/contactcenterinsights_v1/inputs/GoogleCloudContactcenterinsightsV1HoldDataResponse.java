@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * The data for a hold annotation.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1HoldDataResponse extends io.pulumi.resources.InvokeArgs {
 

@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowCxV3VersionVariantsVariantResponse {
     /**
      * Whether the variant is for the control group.
-     * 
      */
     private final Boolean isControlGroup;
     /**
      * Percentage of the traffic which should be routed to this version of flow. Traffic allocation for a single flow must sum up to 1.0.
-     * 
      */
     private final Double trafficAllocation;
     /**
      * The name of the flow version. Format: `projects//locations//agents//flows//versions/`.
-     * 
      */
     private final String version;
 
@@ -39,21 +36,18 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantResponse {
 
     /**
      * Whether the variant is for the control group.
-     * 
     */
     public Boolean getIsControlGroup() {
         return this.isControlGroup;
     }
     /**
      * Percentage of the traffic which should be routed to this version of flow. Traffic allocation for a single flow must sum up to 1.0.
-     * 
     */
     public Double getTrafficAllocation() {
         return this.trafficAllocation;
     }
     /**
      * The name of the flow version. Format: `projects//locations//agents//flows//versions/`.
-     * 
     */
     public String getVersion() {
         return this.version;

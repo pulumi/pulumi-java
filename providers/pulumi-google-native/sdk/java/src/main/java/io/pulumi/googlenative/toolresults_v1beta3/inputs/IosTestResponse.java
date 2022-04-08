@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * A iOS mobile test specification
- * 
  */
 public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Information about the application under test.
-     * 
      */
     @Import(name="iosAppInfo", required=true)
       private final IosAppInfoResponse iosAppInfo;
@@ -33,7 +31,6 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An iOS Robo test.
-     * 
      */
     @Import(name="iosRoboTest", required=true)
       private final IosRoboTestResponse iosRoboTest;
@@ -44,7 +41,6 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An iOS test loop.
-     * 
      */
     @Import(name="iosTestLoop", required=true)
       private final IosTestLoopResponse iosTestLoop;
@@ -55,7 +51,6 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An iOS XCTest.
-     * 
      */
     @Import(name="iosXcTest", required=true)
       private final IosXcTestResponse iosXcTest;
@@ -66,7 +61,6 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Max time a test is allowed to run before it is automatically cancelled.
-     * 
      */
     @Import(name="testTimeout", required=true)
       private final DurationResponse testTimeout;

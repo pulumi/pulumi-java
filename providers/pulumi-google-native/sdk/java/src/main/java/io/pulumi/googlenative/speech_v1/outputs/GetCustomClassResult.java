@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class GetCustomClassResult {
     /**
      * If this custom class is a resource, the custom_class_id is the resource id of the CustomClass. Case sensitive.
-     * 
      */
     private final String customClassId;
     /**
      * A collection of class items.
-     * 
      */
     private final List<ClassItemResponse> items;
     /**
      * The resource name of the custom class.
-     * 
      */
     private final String name;
 
@@ -39,21 +36,18 @@ public final class GetCustomClassResult {
 
     /**
      * If this custom class is a resource, the custom_class_id is the resource id of the CustomClass. Case sensitive.
-     * 
     */
     public String getCustomClassId() {
         return this.customClassId;
     }
     /**
      * A collection of class items.
-     * 
     */
     public List<ClassItemResponse> getItems() {
         return this.items;
     }
     /**
      * The resource name of the custom class.
-     * 
     */
     public String getName() {
         return this.name;

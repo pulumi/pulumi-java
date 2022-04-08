@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * ServiceSpec holds the desired state of the Route (from the client), which is used to manipulate the underlying Route and Configuration(s).
- * 
  */
 public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Template holds the latest specification for the Revision to be stamped out.
-     * 
      */
     @Import(name="template")
       private final @Nullable Output<RevisionTemplateArgs> template;
@@ -33,7 +31,6 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations.
-     * 
      */
     @Import(name="traffic")
       private final @Nullable Output<List<TrafficTargetArgs>> traffic;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Sets the scheduling options for this node.
- * 
  */
 public final class SchedulingConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SchedulingConfigResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Defines whether the node is preemptible.
-     * 
      */
     @Import(name="preemptible", required=true)
       private final Boolean preemptible;
@@ -29,7 +27,6 @@ public final class SchedulingConfigResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Whether the node is created under a reservation.
-     * 
      */
     @Import(name="reserved", required=true)
       private final Boolean reserved;

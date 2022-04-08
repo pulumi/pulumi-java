@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Validation based on a list of allowed values.
- * 
  */
 public final class ValueValidationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ValueValidationResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * List of allowed values for the parameter.
-     * 
      */
     @Import(name="values", required=true)
       private final List<String> values;

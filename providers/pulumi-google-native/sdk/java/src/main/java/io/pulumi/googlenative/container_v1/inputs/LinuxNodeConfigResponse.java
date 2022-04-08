@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Parameters that can be configured on Linux nodes.
- * 
  */
 public final class LinuxNodeConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class LinuxNodeConfigResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. The following parameters are supported. net.core.netdev_max_backlog net.core.rmem_max net.core.wmem_default net.core.wmem_max net.core.optmem_max net.core.somaxconn net.ipv4.tcp_rmem net.ipv4.tcp_wmem net.ipv4.tcp_tw_reuse
-     * 
      */
     @Import(name="sysctls", required=true)
       private final Map<String,String> sysctls;

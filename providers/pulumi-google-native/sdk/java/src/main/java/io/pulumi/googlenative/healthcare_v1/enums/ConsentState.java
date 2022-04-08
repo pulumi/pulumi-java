@@ -10,38 +10,31 @@ import java.util.StringJoiner;
 
     /**
      * Required. Indicates the current state of this Consent.
-     * 
      */
     @EnumType
     public enum ConsentState {
         /**
          * No state specified. Treated as ACTIVE only at the time of resource creation.
-         * 
          */
         StateUnspecified("STATE_UNSPECIFIED"),
         /**
          * The Consent is active and is considered when evaluating a user's consent on resources.
-         * 
          */
         Active("ACTIVE"),
         /**
          * The archived state is currently not being used.
-         * 
          */
         Archived("ARCHIVED"),
         /**
          * A revoked Consent is not considered when evaluating a user's consent on resources.
-         * 
          */
         Revoked("REVOKED"),
         /**
          * A draft Consent is not considered when evaluating a user's consent on resources unless explicitly specified.
-         * 
          */
         Draft("DRAFT"),
         /**
          * When a draft Consent is rejected by a user, it is set to a rejected state. A rejected Consent is not considered when evaluating a user's consent on resources.
-         * 
          */
         Rejected("REJECTED");
 

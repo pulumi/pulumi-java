@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * NodePoolAutoscaling contains information required by cluster autoscaler to adjust the size of the node pool to the current cluster usage.
- * 
  */
 public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Can this node pool be deleted automatically.
-     * 
      */
     @Import(name="autoprovisioned")
       private final @Nullable Output<Boolean> autoprovisioned;
@@ -32,7 +30,6 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Is autoscaling enabled for this node pool.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -43,7 +40,6 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Maximum number of nodes for one location in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.
-     * 
      */
     @Import(name="maxNodeCount")
       private final @Nullable Output<Integer> maxNodeCount;
@@ -54,7 +50,6 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Minimum number of nodes for one location in the NodePool. Must be >= 1 and <= max_node_count.
-     * 
      */
     @Import(name="minNodeCount")
       private final @Nullable Output<Integer> minNodeCount;

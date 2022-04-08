@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Istio service scoped to a single Kubernetes cluster. Learn more at https://istio.io. Clusters running OSS Istio will have their services ingested as this type.
- * 
  */
 public final class ClusterIstioResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ClusterIstioResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Kubernetes cluster in which this Istio service is defined. Corresponds to the cluster_name resource label in k8s_cluster resources.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final String clusterName;
@@ -29,7 +27,6 @@ public final class ClusterIstioResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The location of the Kubernetes cluster in which this Istio service is defined. Corresponds to the location resource label in k8s_cluster resources.
-     * 
      */
     @Import(name="location", required=true)
       private final String location;
@@ -40,7 +37,6 @@ public final class ClusterIstioResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;
@@ -51,7 +47,6 @@ public final class ClusterIstioResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.
-     * 
      */
     @Import(name="serviceNamespace", required=true)
       private final String serviceNamespace;

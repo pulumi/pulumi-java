@@ -17,37 +17,30 @@ import java.util.Objects;
 public final class SoftwareRecipeStepResponse {
     /**
      * Extracts an archive into the specified directory.
-     * 
      */
     private final SoftwareRecipeStepExtractArchiveResponse archiveExtraction;
     /**
      * Installs a deb file via dpkg.
-     * 
      */
     private final SoftwareRecipeStepInstallDpkgResponse dpkgInstallation;
     /**
      * Copies a file onto the instance.
-     * 
      */
     private final SoftwareRecipeStepCopyFileResponse fileCopy;
     /**
      * Executes an artifact or local file.
-     * 
      */
     private final SoftwareRecipeStepExecFileResponse fileExec;
     /**
      * Installs an MSI file.
-     * 
      */
     private final SoftwareRecipeStepInstallMsiResponse msiInstallation;
     /**
      * Installs an rpm file via the rpm utility.
-     * 
      */
     private final SoftwareRecipeStepInstallRpmResponse rpmInstallation;
     /**
      * Runs commands in a shell.
-     * 
      */
     private final SoftwareRecipeStepRunScriptResponse scriptRun;
 
@@ -71,49 +64,42 @@ public final class SoftwareRecipeStepResponse {
 
     /**
      * Extracts an archive into the specified directory.
-     * 
     */
     public SoftwareRecipeStepExtractArchiveResponse getArchiveExtraction() {
         return this.archiveExtraction;
     }
     /**
      * Installs a deb file via dpkg.
-     * 
     */
     public SoftwareRecipeStepInstallDpkgResponse getDpkgInstallation() {
         return this.dpkgInstallation;
     }
     /**
      * Copies a file onto the instance.
-     * 
     */
     public SoftwareRecipeStepCopyFileResponse getFileCopy() {
         return this.fileCopy;
     }
     /**
      * Executes an artifact or local file.
-     * 
     */
     public SoftwareRecipeStepExecFileResponse getFileExec() {
         return this.fileExec;
     }
     /**
      * Installs an MSI file.
-     * 
     */
     public SoftwareRecipeStepInstallMsiResponse getMsiInstallation() {
         return this.msiInstallation;
     }
     /**
      * Installs an rpm file via the rpm utility.
-     * 
     */
     public SoftwareRecipeStepInstallRpmResponse getRpmInstallation() {
         return this.rpmInstallation;
     }
     /**
      * Runs commands in a shell.
-     * 
     */
     public SoftwareRecipeStepRunScriptResponse getScriptRun() {
         return this.scriptRun;

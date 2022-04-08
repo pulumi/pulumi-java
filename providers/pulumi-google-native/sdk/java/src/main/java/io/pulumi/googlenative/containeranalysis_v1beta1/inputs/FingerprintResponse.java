@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A set of properties that uniquely identify a given Docker image.
- * 
  */
 public final class FingerprintResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class FingerprintResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The layer ID of the final layer in the Docker image's v1 representation.
-     * 
      */
     @Import(name="v1Name", required=true)
       private final String v1Name;
@@ -30,7 +28,6 @@ public final class FingerprintResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ordered list of v2 blobs that represent a given image.
-     * 
      */
     @Import(name="v2Blob", required=true)
       private final List<String> v2Blob;
@@ -41,7 +38,6 @@ public final class FingerprintResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the image's v2 blobs computed via: [bottom] := v2_blobbottom := sha256(v2_blob[N] + " " + v2_name[N+1]) Only the name of the final blob is kept.
-     * 
      */
     @Import(name="v2Name", required=true)
       private final String v2Name;

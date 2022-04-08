@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Represents a window of time using two timestamps: `earliest` and `latest`. This timestamp values are in RFC3339 text format.
- * 
  */
 public final class UpcomingMaintenanceTimeWindowResponse extends io.pulumi.resources.InvokeArgs {
 

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The spec for modifying the path before sending the request to the matched backend service.
- * 
  */
 public final class UrlRewriteResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class UrlRewriteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Before forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be from 1 to 255 characters.
-     * 
      */
     @Import(name="hostRewrite", required=true)
       private final String hostRewrite;
@@ -29,7 +27,6 @@ public final class UrlRewriteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Before forwarding the request to the selected backend service, the matching portion of the request's path is replaced by pathPrefixRewrite. The value must be from 1 to 1024 characters.
-     * 
      */
     @Import(name="pathPrefixRewrite", required=true)
       private final String pathPrefixRewrite;

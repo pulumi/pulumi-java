@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A Cloud KMS key configuration that a CertificateAuthority will use.
- * 
  */
 public final class KeyVersionSpecResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class KeyVersionSpecResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The algorithm to use for creating a managed Cloud KMS key for a for a simplified experience. All managed keys will be have their ProtectionLevel as `HSM`.
-     * 
      */
     @Import(name="algorithm", required=true)
       private final String algorithm;
@@ -29,7 +27,6 @@ public final class KeyVersionSpecResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The resource name for an existing Cloud KMS CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`. This option enables full flexibility in the key's capabilities and properties.
-     * 
      */
     @Import(name="cloudKmsKeyVersion", required=true)
       private final String cloudKmsKeyVersion;

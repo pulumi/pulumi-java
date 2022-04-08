@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration of Shielded Nodes feature.
- * 
  */
 public final class ShieldedNodesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ShieldedNodesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether Shielded Nodes features are enabled on all nodes in this cluster.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;

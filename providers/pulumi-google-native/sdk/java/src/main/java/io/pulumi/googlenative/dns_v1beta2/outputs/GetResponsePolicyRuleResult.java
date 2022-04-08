@@ -12,23 +12,19 @@ import java.util.Objects;
 public final class GetResponsePolicyRuleResult {
     /**
      * Answer this query with a behavior rather than DNS data.
-     * 
      */
     private final String behavior;
     /**
      * The DNS name (wildcard or exact) to apply this rule to. Must be unique within the Response Policy Rule.
-     * 
      */
     private final String dnsName;
     private final String kind;
     /**
      * Answer this query directly with DNS data. These ResourceRecordSets override any other DNS behavior for the matched name; in particular they override private zones, the public internet, and GCP internal DNS. No SOA nor NS types are allowed.
-     * 
      */
     private final ResponsePolicyRuleLocalDataResponse localData;
     /**
      * An identifier for this rule. Must be unique with the ResponsePolicy.
-     * 
      */
     private final String ruleName;
 
@@ -48,14 +44,12 @@ public final class GetResponsePolicyRuleResult {
 
     /**
      * Answer this query with a behavior rather than DNS data.
-     * 
     */
     public String getBehavior() {
         return this.behavior;
     }
     /**
      * The DNS name (wildcard or exact) to apply this rule to. Must be unique within the Response Policy Rule.
-     * 
     */
     public String getDnsName() {
         return this.dnsName;
@@ -65,14 +59,12 @@ public final class GetResponsePolicyRuleResult {
     }
     /**
      * Answer this query directly with DNS data. These ResourceRecordSets override any other DNS behavior for the matched name; in particular they override private zones, the public internet, and GCP internal DNS. No SOA nor NS types are allowed.
-     * 
     */
     public ResponsePolicyRuleLocalDataResponse getLocalData() {
         return this.localData;
     }
     /**
      * An identifier for this rule. Must be unique with the ResponsePolicy.
-     * 
     */
     public String getRuleName() {
         return this.ruleName;

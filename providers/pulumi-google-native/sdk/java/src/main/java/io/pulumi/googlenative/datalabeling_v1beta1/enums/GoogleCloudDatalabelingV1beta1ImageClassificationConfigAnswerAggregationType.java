@@ -10,24 +10,20 @@ import java.util.StringJoiner;
 
     /**
      * Optional. The type of how to aggregate answers.
-     * 
      */
     @EnumType
     public enum GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType {
         StringAggregationTypeUnspecified("STRING_AGGREGATION_TYPE_UNSPECIFIED"),
         /**
          * Majority vote to aggregate answers.
-         * 
          */
         MajorityVote("MAJORITY_VOTE"),
         /**
          * Unanimous answers will be adopted.
-         * 
          */
         UnanimousVote("UNANIMOUS_VOTE"),
         /**
          * Preserve all answers by crowd compute.
-         * 
          */
         NoAggregation("NO_AGGREGATION");
 

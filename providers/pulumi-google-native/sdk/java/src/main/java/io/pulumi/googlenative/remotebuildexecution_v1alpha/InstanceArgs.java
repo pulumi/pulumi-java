@@ -17,7 +17,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The policy to define whether or not RBE features can be used or how they can be used.
-     * 
      */
     @Import(name="featurePolicy")
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> featurePolicy;
@@ -28,7 +27,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ID of the created instance. A valid `instance_id` must: be 6-50 characters long, contain only lowercase letters, digits, hyphens and underscores, start with a lowercase letter, and end with a lowercase letter or a digit.
-     * 
      */
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
@@ -39,7 +37,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location is a GCP region. Currently only `us-central1` is supported.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -50,7 +47,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource name of the project containing the instance. Format: `projects/[PROJECT_ID]`.
-     * 
      */
     @Import(name="parent")
       private final @Nullable Output<String> parent;

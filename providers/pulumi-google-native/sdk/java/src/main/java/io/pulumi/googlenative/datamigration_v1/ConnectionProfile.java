@@ -18,160 +18,137 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new connection profile in a given project and location.
- * 
  */
 @ResourceType(type="google-native:datamigration/v1:ConnectionProfile")
 public class ConnectionProfile extends io.pulumi.resources.CustomResource {
     /**
      * A CloudSQL database connection profile.
-     * 
      */
     @Export(name="cloudsql", type=CloudSqlConnectionProfileResponse.class, parameters={})
     private Output<CloudSqlConnectionProfileResponse> cloudsql;
 
     /**
      * @return A CloudSQL database connection profile.
-     * 
      */
     public Output<CloudSqlConnectionProfileResponse> getCloudsql() {
         return this.cloudsql;
     }
     /**
      * The timestamp when the resource was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The timestamp when the resource was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The connection profile display name.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The connection profile display name.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The error details in case of state FAILED.
-     * 
      */
     @Export(name="error", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> error;
 
     /**
      * @return The error details in case of state FAILED.
-     * 
      */
     public Output<StatusResponse> getError() {
         return this.error;
     }
     /**
      * The resource labels for connection profile to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return The resource labels for connection profile to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * A MySQL database connection profile.
-     * 
      */
     @Export(name="mysql", type=MySqlConnectionProfileResponse.class, parameters={})
     private Output<MySqlConnectionProfileResponse> mysql;
 
     /**
      * @return A MySQL database connection profile.
-     * 
      */
     public Output<MySqlConnectionProfileResponse> getMysql() {
         return this.mysql;
     }
     /**
      * The name of this connection profile resource in the form of projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of this connection profile resource in the form of projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * A PostgreSQL database connection profile.
-     * 
      */
     @Export(name="postgresql", type=PostgreSqlConnectionProfileResponse.class, parameters={})
     private Output<PostgreSqlConnectionProfileResponse> postgresql;
 
     /**
      * @return A PostgreSQL database connection profile.
-     * 
      */
     public Output<PostgreSqlConnectionProfileResponse> getPostgresql() {
         return this.postgresql;
     }
     /**
      * The database provider.
-     * 
      */
     @Export(name="provider", type=String.class, parameters={})
     private Output<String> provider;
 
     /**
      * @return The database provider.
-     * 
      */
     public Output<String> getProvider() {
         return this.provider;
     }
     /**
      * The current connection profile state (e.g. DRAFT, READY, or FAILED).
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The current connection profile state (e.g. DRAFT, READY, or FAILED).
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The timestamp when the resource was last updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The timestamp when the resource was last updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

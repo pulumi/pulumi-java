@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ContentMatcherResponse {
     /**
      * String or regex content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
-     * 
      */
     private final String content;
     /**
      * The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
-     * 
      */
     private final String matcher;
 
@@ -30,14 +28,12 @@ public final class ContentMatcherResponse {
 
     /**
      * String or regex content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
-     * 
     */
     public String getContent() {
         return this.content;
     }
     /**
      * The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
-     * 
     */
     public String getMatcher() {
         return this.matcher;

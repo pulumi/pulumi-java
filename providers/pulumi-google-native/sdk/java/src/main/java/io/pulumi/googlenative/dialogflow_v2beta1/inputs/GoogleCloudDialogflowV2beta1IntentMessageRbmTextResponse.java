@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Rich Business Messaging (RBM) text response with suggestions.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse exte
 
     /**
      * Optional. One or more suggestions to show to the user.
-     * 
      */
     @Import(name="rbmSuggestion", required=true)
       private final List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion;
@@ -31,7 +29,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse exte
 
     /**
      * Text sent and displayed to the user.
-     * 
      */
     @Import(name="text", required=true)
       private final String text;

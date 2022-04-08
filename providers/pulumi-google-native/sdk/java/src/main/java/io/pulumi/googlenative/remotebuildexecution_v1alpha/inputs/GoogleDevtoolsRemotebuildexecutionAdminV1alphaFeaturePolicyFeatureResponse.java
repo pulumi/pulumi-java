@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Defines whether a feature can be used or what values are accepted.
- * 
  */
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
 
     /**
      * A list of acceptable values. Only effective when the policy is `RESTRICTED`.
-     * 
      */
     @Import(name="allowedValues", required=true)
       private final List<String> allowedValues;
@@ -30,7 +28,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
 
     /**
      * The policy of the feature.
-     * 
      */
     @Import(name="policy", required=true)
       private final String policy;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Installs an MSI file.
- * 
  */
 public final class SoftwareRecipeStepInstallMsiArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SoftwareRecipeStepInstallMsiArgs extends io.pulumi.resources.
 
     /**
      * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
-     * 
      */
     @Import(name="allowedExitCodes")
       private final @Nullable Output<List<Integer>> allowedExitCodes;
@@ -33,7 +31,6 @@ public final class SoftwareRecipeStepInstallMsiArgs extends io.pulumi.resources.
 
     /**
      * The id of the relevant artifact in the recipe.
-     * 
      */
     @Import(name="artifactId", required=true)
       private final Output<String> artifactId;
@@ -44,7 +41,6 @@ public final class SoftwareRecipeStepInstallMsiArgs extends io.pulumi.resources.
 
     /**
      * The flags to use when installing the MSI defaults to ["/i"] (i.e. the install flag).
-     * 
      */
     @Import(name="flags")
       private final @Nullable Output<List<String>> flags;

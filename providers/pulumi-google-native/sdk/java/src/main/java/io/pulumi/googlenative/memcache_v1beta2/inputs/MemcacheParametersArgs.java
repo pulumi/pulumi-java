@@ -17,7 +17,6 @@ public final class MemcacheParametersArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * User defined set of parameters to use in the memcached process.
-     * 
      */
     @Import(name="params")
       private final @Nullable Output<Map<String,String>> params;

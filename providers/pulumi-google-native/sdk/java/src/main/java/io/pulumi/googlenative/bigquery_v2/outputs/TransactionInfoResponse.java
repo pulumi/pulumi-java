@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class TransactionInfoResponse {
     /**
      * // [Alpha] Id of the transaction.
-     * 
      */
     private final String transactionId;
 
@@ -22,7 +21,6 @@ public final class TransactionInfoResponse {
 
     /**
      * // [Alpha] Id of the transaction.
-     * 
     */
     public String getTransactionId() {
         return this.transactionId;

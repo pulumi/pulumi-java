@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class HashResponse {
     /**
      * The type of hash that was performed.
-     * 
      */
     private final String type;
     /**
      * The hash value.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class HashResponse {
 
     /**
      * The type of hash that was performed.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The hash value.
-     * 
     */
     public String getValue() {
         return this.value;

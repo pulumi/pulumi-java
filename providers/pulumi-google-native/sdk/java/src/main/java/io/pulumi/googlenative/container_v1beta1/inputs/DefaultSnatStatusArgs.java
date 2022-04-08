@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster.
- * 
  */
 public final class DefaultSnatStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DefaultSnatStatusArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Disables cluster default sNAT rules.
-     * 
      */
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;

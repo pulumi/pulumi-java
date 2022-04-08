@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * δ-presence metric, used to estimate how likely it is for an attacker to figure out that one given individual appears in a de-identified dataset. Similarly to the k-map metric, we cannot compute δ-presence exactly without knowing the attack dataset, so we use a statistical model instead.
- * 
  */
 public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse exten
 
     /**
      * Several auxiliary tables can be used in the analysis. Each custom_tag used to tag a quasi-identifiers field must appear in exactly one field of one auxiliary table.
-     * 
      */
     @Import(name="auxiliaryTables", required=true)
       private final List<GooglePrivacyDlpV2StatisticalTableResponse> auxiliaryTables;
@@ -32,7 +30,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse exten
 
     /**
      * Fields considered to be quasi-identifiers. No two fields can have the same tag.
-     * 
      */
     @Import(name="quasiIds", required=true)
       private final List<GooglePrivacyDlpV2QuasiIdResponse> quasiIds;
@@ -43,7 +40,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse exten
 
     /**
      * ISO 3166-1 alpha-2 region code to use in the statistical modeling. Set if no column is tagged with a region-specific InfoType (like US_ZIP_5) or a region code.
-     * 
      */
     @Import(name="regionCode", required=true)
       private final String regionCode;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * `File` containing source content.
- * 
  */
 public final class FileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Textual Content.
-     * 
      */
     @Import(name="content", required=true)
       private final Output<String> content;
@@ -31,7 +29,6 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Fingerprint (e.g. github sha) associated with the `File`.
-     * 
      */
     @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
@@ -42,7 +39,6 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * File name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

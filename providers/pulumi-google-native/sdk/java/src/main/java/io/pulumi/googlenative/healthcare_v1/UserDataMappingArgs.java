@@ -25,7 +25,6 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A unique identifier for the mapped resource.
-     * 
      */
     @Import(name="dataId", required=true)
       private final Output<String> dataId;
@@ -50,7 +49,6 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource name of the User data mapping, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/userDataMappings/{user_data_mapping_id}`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -68,7 +66,6 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Attributes of the resource. Only explicitly set attributes are displayed here. Attribute definitions with defaults set implicitly apply to these User data mappings. Attributes listed here must be single valued, that is, exactly one value is specified for the field "values" in each Attribute.
-     * 
      */
     @Import(name="resourceAttributes")
       private final @Nullable Output<List<AttributeArgs>> resourceAttributes;
@@ -79,7 +76,6 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * User's UUID provided by the client.
-     * 
      */
     @Import(name="userId", required=true)
       private final Output<String> userId;

@@ -10,14 +10,12 @@ import java.util.StringJoiner;
 
     /**
      * Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.
-     * 
      */
     @EnumType
     public enum SecurityPolicyRuleMatcherVersionedExpr {
         Firewall("FIREWALL"),
         /**
          * Matches the source IP address of a request to the IP ranges supplied in config.
-         * 
          */
         SrcIpsV1("SRC_IPS_V1");
 

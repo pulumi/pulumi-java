@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Control over the rate of notifications sent to this alert policy's notification channels.
- * 
  */
 public final class NotificationRateLimitResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class NotificationRateLimitResponse extends io.pulumi.resources.Inv
 
     /**
      * Not more than one notification per period.
-     * 
      */
     @Import(name="period", required=true)
       private final String period;

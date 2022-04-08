@@ -18,7 +18,6 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -29,7 +28,6 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the instance group. The name must be 1-63 characters long, and comply with RFC1035.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -39,8 +37,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     *  Assigns a name to a port number. For example: {name: "http", port: 80} This allows the system to reference ports by the assigned name instead of a port number. Named ports can also contain multiple ports. For example: [{name: "http", port: 80},{name: "http", port: 8080}] Named ports apply to all instances in this instance group.
-     * 
+     *  Assigns a name to a port number. For example: {name: "http", port: 80} This allows the system to reference ports by the assigned name instead of a port number. Named ports can also contain multiple ports. For example: [{name: "http", port: 80},{name: "http", port: 8080}] Named ports apply to all instances in this instance group. 
      */
     @Import(name="namedPorts")
       private final @Nullable Output<List<NamedPortArgs>> namedPorts;

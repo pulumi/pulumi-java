@@ -19,7 +19,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the model to create. The name can be up to 32 characters long and can consist only of ASCII Latin letters A-Z and a-z, underscores(_) and ASCII digits 0-9. It must start with a letter.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -30,7 +29,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the Model. Model names have the form `projects/{project_id}/models/{model_id}` The name is ignored when creating a model.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -48,7 +46,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * State common to all model types. Includes publishing and validation information.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<ModelStateArgs> state;
@@ -59,7 +56,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User defined tags which can be used to group/filter models during listing
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
@@ -70,7 +66,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A TFLite Model
-     * 
      */
     @Import(name="tfliteModel")
       private final @Nullable Output<TfLiteModelArgs> tfliteModel;

@@ -18,7 +18,6 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * How this repository mirrors a repository managed by another service. Read-only field.
-     * 
      */
     @Import(name="mirrorConfig")
       private final @Nullable Output<MirrorConfigArgs> mirrorConfig;
@@ -29,7 +28,6 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource name of the repository, of the form `projects//repos/`. The repo name may contain slashes. eg, `projects/myproject/repos/name/with/slash`
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -47,7 +45,6 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.
-     * 
      */
     @Import(name="pubsubConfigs")
       private final @Nullable Output<Map<String,String>> pubsubConfigs;
@@ -58,7 +55,6 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The disk usage of the repo, in bytes. Read-only field. Size is only returned by GetRepo.
-     * 
      */
     @Import(name="size")
       private final @Nullable Output<String> size;
@@ -69,7 +65,6 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * URL to clone the repository from Google Cloud Source Repositories. Read-only field.
-     * 
      */
     @Import(name="url")
       private final @Nullable Output<String> url;

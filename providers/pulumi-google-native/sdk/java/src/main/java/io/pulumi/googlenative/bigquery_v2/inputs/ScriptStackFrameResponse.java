@@ -15,7 +15,6 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * One-based end column.
-     * 
      */
     @Import(name="endColumn", required=true)
       private final Integer endColumn;
@@ -26,7 +25,6 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * One-based end line.
-     * 
      */
     @Import(name="endLine", required=true)
       private final Integer endLine;
@@ -37,7 +35,6 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Name of the active procedure, empty if in a top-level script.
-     * 
      */
     @Import(name="procedureId", required=true)
       private final String procedureId;
@@ -48,7 +45,6 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * One-based start column.
-     * 
      */
     @Import(name="startColumn", required=true)
       private final Integer startColumn;
@@ -59,7 +55,6 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * One-based start line.
-     * 
      */
     @Import(name="startLine", required=true)
       private final Integer startLine;
@@ -70,7 +65,6 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Text of the current statement/expression.
-     * 
      */
     @Import(name="text", required=true)
       private final String text;

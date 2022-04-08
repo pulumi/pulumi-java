@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A configuration for running an Apache Spark (https://spark.apache.org/) batch workload.
- * 
  */
 public final class SparkBatchArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SparkBatchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
-     * 
      */
     @Import(name="archiveUris")
       private final @Nullable Output<List<String>> archiveUris;
@@ -32,7 +30,6 @@ public final class SparkBatchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The arguments to pass to the driver. Do not include arguments that can be set as batch properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
-     * 
      */
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
@@ -43,7 +40,6 @@ public final class SparkBatchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. HCFS URIs of files to be placed in the working directory of each executor.
-     * 
      */
     @Import(name="fileUris")
       private final @Nullable Output<List<String>> fileUris;
@@ -54,7 +50,6 @@ public final class SparkBatchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. HCFS URIs of jar files to add to the classpath of the Spark driver and tasks.
-     * 
      */
     @Import(name="jarFileUris")
       private final @Nullable Output<List<String>> jarFileUris;
@@ -65,7 +60,6 @@ public final class SparkBatchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The name of the driver main class. The jar file that contains the class must be in the classpath or specified in jar_file_uris.
-     * 
      */
     @Import(name="mainClass")
       private final @Nullable Output<String> mainClass;
@@ -76,7 +70,6 @@ public final class SparkBatchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The HCFS URI of the jar file that contains the main class.
-     * 
      */
     @Import(name="mainJarFileUri")
       private final @Nullable Output<String> mainJarFileUri;

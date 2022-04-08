@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * General identifier of a data field in a storage service.
- * 
  */
 public final class GooglePrivacyDlpV2FieldIdArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GooglePrivacyDlpV2FieldIdArgs extends io.pulumi.resources.Res
 
     /**
      * Name describing the field.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

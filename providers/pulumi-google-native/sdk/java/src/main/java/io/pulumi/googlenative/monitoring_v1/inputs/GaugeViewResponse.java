@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A gauge chart shows where the current value sits within a pre-defined range. The upper and lower bounds should define the possible range of values for the scorecard's query (inclusive).
- * 
  */
 public final class GaugeViewResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GaugeViewResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The lower bound for this gauge chart. The value of the chart should always be greater than or equal to this.
-     * 
      */
     @Import(name="lowerBound", required=true)
       private final Double lowerBound;
@@ -29,7 +27,6 @@ public final class GaugeViewResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The upper bound for this gauge chart. The value of the chart should always be less than or equal to this.
-     * 
      */
     @Import(name="upperBound", required=true)
       private final Double upperBound;

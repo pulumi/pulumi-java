@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Stage specifies a location to which to deploy.
- * 
  */
 public final class StageArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Skaffold profiles to use when rendering the manifest for this stage's `Target`.
-     * 
      */
     @Import(name="profiles")
       private final @Nullable Output<List<String>> profiles;
@@ -32,7 +30,6 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The target_id to which this stage points. This field refers exclusively to the last segment of a target name. For example, this field would just be `my-target` (rather than `projects/project/locations/location/targets/my-target`). The location of the `Target` is inferred to be the same as the location of the `DeliveryPipeline` that contains this `Stage`.
-     * 
      */
     @Import(name="targetId")
       private final @Nullable Output<String> targetId;

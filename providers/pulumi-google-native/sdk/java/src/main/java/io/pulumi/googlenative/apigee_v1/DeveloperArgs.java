@@ -18,7 +18,6 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Access type.
-     * 
      */
     @Import(name="accessType")
       private final @Nullable Output<String> accessType;
@@ -29,7 +28,6 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Developer app family.
-     * 
      */
     @Import(name="appFamily")
       private final @Nullable Output<String> appFamily;
@@ -40,7 +38,6 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of apps associated with the developer.
-     * 
      */
     @Import(name="apps")
       private final @Nullable Output<List<String>> apps;
@@ -51,7 +48,6 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Developer attributes (name/value pairs). The custom attribute limit is 18.
-     * 
      */
     @Import(name="attributes")
       private final @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
@@ -62,7 +58,6 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of companies associated with the developer.
-     * 
      */
     @Import(name="companies")
       private final @Nullable Output<List<String>> companies;
@@ -73,7 +68,6 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ID of the developer. **Note**: IDs are generated internally by Apigee and are not guaranteed to stay the same over time.
-     * 
      */
     @Import(name="developerId")
       private final @Nullable Output<String> developerId;
@@ -84,7 +78,6 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Email address of the developer. This value is used to uniquely identify the developer in Apigee hybrid. Note that the email address has to be in lowercase only.
-     * 
      */
     @Import(name="email", required=true)
       private final Output<String> email;
@@ -95,7 +88,6 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * First name of the developer.
-     * 
      */
     @Import(name="firstName", required=true)
       private final Output<String> firstName;
@@ -106,7 +98,6 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Last name of the developer.
-     * 
      */
     @Import(name="lastName", required=true)
       private final Output<String> lastName;
@@ -124,7 +115,6 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User name of the developer. Not used by Apigee hybrid.
-     * 
      */
     @Import(name="userName", required=true)
       private final Output<String> userName;

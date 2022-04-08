@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * Immutable. The role this participant plays in the conversation. This field must be set during participant creation and is then immutable.
-     * 
      */
     @EnumType
     public enum ParticipantRole {
         /**
          * Participant role not set.
-         * 
          */
         RoleUnspecified("ROLE_UNSPECIFIED"),
         /**
          * Participant is a human agent.
-         * 
          */
         HumanAgent("HUMAN_AGENT"),
         /**
          * Participant is an automated agent, such as a Dialogflow agent.
-         * 
          */
         AutomatedAgent("AUTOMATED_AGENT"),
         /**
          * Participant is an end user that has called or chatted with Dialogflow services.
-         * 
          */
         EndUser("END_USER");
 

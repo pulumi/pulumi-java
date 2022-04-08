@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class WorkloadIdentityConfigResponse {
     /**
      * The workload pool to attach all Kubernetes service accounts to.
-     * 
      */
     private final String workloadPool;
 
@@ -22,7 +21,6 @@ public final class WorkloadIdentityConfigResponse {
 
     /**
      * The workload pool to attach all Kubernetes service accounts to.
-     * 
     */
     public String getWorkloadPool() {
         return this.workloadPool;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The inference result which includes an objective metric to optimize and the confidence interval.
- * 
  */
 public final class GoogleCloudDialogflowCxV3ExperimentResultArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultArgs extends io.pulu
 
     /**
      * The last time the experiment's stats data was updated. Will have default value if stats have never been computed for this experiment.
-     * 
      */
     @Import(name="lastUpdateTime")
       private final @Nullable Output<String> lastUpdateTime;
@@ -33,7 +31,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultArgs extends io.pulu
 
     /**
      * Version variants and metrics.
-     * 
      */
     @Import(name="versionMetrics")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs>> versionMetrics;

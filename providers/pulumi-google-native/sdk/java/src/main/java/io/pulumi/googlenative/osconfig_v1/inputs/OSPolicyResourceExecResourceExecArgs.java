@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A file or script to execute.
- * 
  */
 public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
 
     /**
      * Optional arguments to pass to the source during execution.
-     * 
      */
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
@@ -34,7 +32,6 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
 
     /**
      * A remote or local file.
-     * 
      */
     @Import(name="file")
       private final @Nullable Output<OSPolicyResourceFileArgs> file;
@@ -45,7 +42,6 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
 
     /**
      * The script interpreter to use.
-     * 
      */
     @Import(name="interpreter", required=true)
       private final Output<OSPolicyResourceExecResourceExecInterpreter> interpreter;
@@ -56,7 +52,6 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
 
     /**
      * Only recorded for enforce Exec. Path to an output file (that is created by this Exec) whose content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or failure to read this file will result in this ExecResource being non-compliant. Output file size is limited to 100K bytes.
-     * 
      */
     @Import(name="outputFilePath")
       private final @Nullable Output<String> outputFilePath;
@@ -67,7 +62,6 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
 
     /**
      * An inline script. The size of the script is limited to 1024 characters.
-     * 
      */
     @Import(name="script")
       private final @Nullable Output<String> script;

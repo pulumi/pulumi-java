@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Input/output argument of a function or a stored procedure.
- * 
  */
 public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. Defaults to FIXED_TYPE.
-     * 
      */
     @Import(name="argumentKind", required=true)
       private final String argumentKind;
@@ -30,7 +28,6 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Required unless argument_kind = ANY_TYPE.
-     * 
      */
     @Import(name="dataType", required=true)
       private final StandardSqlDataTypeResponse dataType;
@@ -41,7 +38,6 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. Specifies whether the argument is input or output. Can be set for procedures only.
-     * 
      */
     @Import(name="mode", required=true)
       private final String mode;
@@ -52,7 +48,6 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. The name of this argument. Can be absent for function return argument.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

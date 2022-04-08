@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class GoogleCloudRetailV2betaConditionTimeRangeResponse {
     /**
      * End of time range. Range is inclusive.
-     * 
      */
     private final String endTime;
     /**
      * Start of time range. Range is inclusive.
-     * 
      */
     private final String startTime;
 
@@ -30,14 +28,12 @@ public final class GoogleCloudRetailV2betaConditionTimeRangeResponse {
 
     /**
      * End of time range. Range is inclusive.
-     * 
     */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * Start of time range. Range is inclusive.
-     * 
     */
     public String getStartTime() {
         return this.startTime;

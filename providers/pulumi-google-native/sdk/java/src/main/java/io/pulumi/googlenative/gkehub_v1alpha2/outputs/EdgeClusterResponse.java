@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class EdgeClusterResponse {
     /**
      * Immutable. Self-link of the GCP resource for the Edge Cluster. For example: //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
-     * 
      */
     private final String resourceLink;
 
@@ -22,7 +21,6 @@ public final class EdgeClusterResponse {
 
     /**
      * Immutable. Self-link of the GCP resource for the Edge Cluster. For example: //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
-     * 
     */
     public String getResourceLink() {
         return this.resourceLink;

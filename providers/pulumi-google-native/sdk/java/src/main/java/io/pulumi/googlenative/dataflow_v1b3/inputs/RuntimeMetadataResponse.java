@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * RuntimeMetadata describing a runtime environment.
- * 
  */
 public final class RuntimeMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RuntimeMetadataResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The parameters for the template.
-     * 
      */
     @Import(name="parameters", required=true)
       private final List<ParameterMetadataResponse> parameters;
@@ -31,7 +29,6 @@ public final class RuntimeMetadataResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * SDK Info for the template.
-     * 
      */
     @Import(name="sdkInfo", required=true)
       private final SDKInfoResponse sdkInfo;

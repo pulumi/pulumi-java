@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Table display options that can be reused.
- * 
  */
 public final class TableDisplayOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class TableDisplayOptionsResponse extends io.pulumi.resources.Invok
 
     /**
      * Optional. Columns to display in the table. Leave empty to display all available columns. Note: This field is for future features and is not currently used.
-     * 
      */
     @Import(name="shownColumns", required=true)
       private final List<String> shownColumns;

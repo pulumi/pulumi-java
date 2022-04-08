@@ -27,7 +27,6 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The IssuancePolicy to control how Certificates will be issued from this CaPool.
-     * 
      */
     @Import(name="issuancePolicy")
       private final @Nullable Output<IssuancePolicyArgs> issuancePolicy;
@@ -38,7 +37,6 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Labels with user-defined metadata.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -63,7 +61,6 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.
-     * 
      */
     @Import(name="publishingOptions")
       private final @Nullable Output<PublishingOptionsArgs> publishingOptions;
@@ -81,7 +78,6 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The Tier of this CaPool.
-     * 
      */
     @Import(name="tier", required=true)
       private final Output<CaPoolTier> tier;

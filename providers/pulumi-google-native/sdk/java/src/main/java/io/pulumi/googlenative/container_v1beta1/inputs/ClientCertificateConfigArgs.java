@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for client certificates on the cluster.
- * 
  */
 public final class ClientCertificateConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ClientCertificateConfigArgs extends io.pulumi.resources.Resou
 
     /**
      * Issue a client certificate.
-     * 
      */
     @Import(name="issueClientCertificate")
       private final @Nullable Output<Boolean> issueClientCertificate;

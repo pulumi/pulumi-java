@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
-     * 
      */
     @EnumType
     public enum CVSSAttackVector {

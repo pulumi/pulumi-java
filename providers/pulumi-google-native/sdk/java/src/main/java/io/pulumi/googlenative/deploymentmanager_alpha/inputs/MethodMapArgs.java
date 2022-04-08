@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Deployment Manager will call these methods during the events of creation/deletion/update/get/setIamPolicy
- * 
  */
 public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The action identifier for the create method to be used for this collection
-     * 
      */
     @Import(name="create")
       private final @Nullable Output<String> create;
@@ -31,7 +29,6 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The action identifier for the delete method to be used for this collection
-     * 
      */
     @Import(name="delete")
       private final @Nullable Output<String> delete;
@@ -42,7 +39,6 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The action identifier for the get method to be used for this collection
-     * 
      */
     @Import(name="get")
       private final @Nullable Output<String> get;
@@ -53,7 +49,6 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The action identifier for the setIamPolicy method to be used for this collection
-     * 
      */
     @Import(name="setIamPolicy")
       private final @Nullable Output<String> setIamPolicy;
@@ -64,7 +59,6 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The action identifier for the update method to be used for this collection
-     * 
      */
     @Import(name="update")
       private final @Nullable Output<String> update;

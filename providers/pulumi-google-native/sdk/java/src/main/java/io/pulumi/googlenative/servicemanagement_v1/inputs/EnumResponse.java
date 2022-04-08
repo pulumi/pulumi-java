@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Enum type definition.
- * 
  */
 public final class EnumResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class EnumResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Enum value definitions.
-     * 
      */
     @Import(name="enumvalue", required=true)
       private final List<EnumValueResponse> enumvalue;
@@ -33,7 +31,6 @@ public final class EnumResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Enum type name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -44,7 +41,6 @@ public final class EnumResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Protocol buffer options.
-     * 
      */
     @Import(name="options", required=true)
       private final List<OptionResponse> options;
@@ -55,7 +51,6 @@ public final class EnumResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The source context.
-     * 
      */
     @Import(name="sourceContext", required=true)
       private final SourceContextResponse sourceContext;
@@ -66,7 +61,6 @@ public final class EnumResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The source syntax.
-     * 
      */
     @Import(name="syntax", required=true)
       private final String syntax;

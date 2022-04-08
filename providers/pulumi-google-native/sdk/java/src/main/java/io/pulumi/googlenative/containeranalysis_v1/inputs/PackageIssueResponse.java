@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A detail for a distro and package this vulnerability occurrence was found in and its associated fix (if one is available).
- * 
  */
 public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was found in.
-     * 
      */
     @Import(name="affectedCpeUri", required=true)
       private final String affectedCpeUri;
@@ -31,7 +29,6 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The package this vulnerability was found in.
-     * 
      */
     @Import(name="affectedPackage", required=true)
       private final String affectedPackage;
@@ -42,7 +39,6 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The version of the package that is installed on the resource affected by this vulnerability.
-     * 
      */
     @Import(name="affectedVersion", required=true)
       private final VersionResponse affectedVersion;
@@ -53,7 +49,6 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when it is not available.
-     * 
      */
     @Import(name="effectiveSeverity", required=true)
       private final String effectiveSeverity;
@@ -64,7 +59,6 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether a fix is available for this package.
-     * 
      */
     @Import(name="fixAvailable", required=true)
       private final Boolean fixAvailable;
@@ -75,7 +69,6 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was fixed in. It is possible for this to be different from the affected_cpe_uri.
-     * 
      */
     @Import(name="fixedCpeUri", required=true)
       private final String fixedCpeUri;
@@ -86,7 +79,6 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The package this vulnerability was fixed in. It is possible for this to be different from the affected_package.
-     * 
      */
     @Import(name="fixedPackage", required=true)
       private final String fixedPackage;
@@ -97,7 +89,6 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The version of the package this vulnerability was fixed in. Setting this to VersionKind.MAXIMUM means no fix is yet available.
-     * 
      */
     @Import(name="fixedVersion", required=true)
       private final VersionResponse fixedVersion;
@@ -108,7 +99,6 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of package (e.g. OS, MAVEN, GO).
-     * 
      */
     @Import(name="packageType", required=true)
       private final String packageType;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A tuple of values for the quasi-identifier columns.
- * 
  */
 public final class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesRespons
 
     /**
      * The estimated probability that a given individual sharing these quasi-identifier values is in the dataset. This value, typically called δ, is the ratio between the number of records in the dataset with these quasi-identifier values, and the total number of individuals (inside *and* outside the dataset) with these quasi-identifier values. For example, if there are 15 individuals in the dataset who share the same quasi-identifier values, and an estimated 100 people in the entire population with these values, then δ is 0.15.
-     * 
      */
     @Import(name="estimatedProbability", required=true)
       private final Double estimatedProbability;
@@ -31,7 +29,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesRespons
 
     /**
      * The quasi-identifier values.
-     * 
      */
     @Import(name="quasiIdsValues", required=true)
       private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;

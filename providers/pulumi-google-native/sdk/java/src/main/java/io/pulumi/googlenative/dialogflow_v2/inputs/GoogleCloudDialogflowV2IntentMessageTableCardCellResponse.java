@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Cell of TableCardRow.
- * 
  */
 public final class GoogleCloudDialogflowV2IntentMessageTableCardCellResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardCellResponse ext
 
     /**
      * Text in this cell.
-     * 
      */
     @Import(name="text", required=true)
       private final String text;

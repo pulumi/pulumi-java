@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * InstanceTemplateSpec describes the data an instance should have when created from a template.
- * 
  */
 public final class InstanceTemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class InstanceTemplateSpecArgs extends io.pulumi.resources.Resource
 
     /**
      * Optional. Specification of the desired behavior of the instance. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status +optional
-     * 
      */
     @Import(name="spec")
       private final @Nullable Output<InstanceSpecArgs> spec;

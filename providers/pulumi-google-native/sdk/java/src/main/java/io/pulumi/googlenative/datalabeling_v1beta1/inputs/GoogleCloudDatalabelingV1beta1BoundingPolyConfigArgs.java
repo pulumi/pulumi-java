@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Config for image bounding poly (and bounding box) human labeling task.
- * 
  */
 public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
 
     /**
      * Annotation spec set resource name.
-     * 
      */
     @Import(name="annotationSpecSet", required=true)
       private final Output<String> annotationSpecSet;
@@ -31,7 +29,6 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
 
     /**
      * Optional. Instruction message showed on contributors UI.
-     * 
      */
     @Import(name="instructionMessage")
       private final @Nullable Output<String> instructionMessage;

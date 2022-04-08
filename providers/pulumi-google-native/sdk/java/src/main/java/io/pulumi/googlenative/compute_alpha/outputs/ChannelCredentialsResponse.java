@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class ChannelCredentialsResponse {
     /**
      * The call credentials to access the SDS server.
-     * 
      */
     private final TlsCertificatePathsResponse certificates;
     /**
      * The channel credentials to access the SDS server. This field can be set to one of the following: CERTIFICATES: Use TLS certificates to access the SDS server. GCE_VM: Use local GCE VM credentials to access the SDS server.
-     * 
      */
     private final String channelCredentialType;
 
@@ -31,14 +29,12 @@ public final class ChannelCredentialsResponse {
 
     /**
      * The call credentials to access the SDS server.
-     * 
     */
     public TlsCertificatePathsResponse getCertificates() {
         return this.certificates;
     }
     /**
      * The channel credentials to access the SDS server. This field can be set to one of the following: CERTIFICATES: Use TLS certificates to access the SDS server. GCE_VM: Use local GCE VM credentials to access the SDS server.
-     * 
     */
     public String getChannelCredentialType() {
         return this.channelCredentialType;

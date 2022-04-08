@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Scan authentication configuration.
- * 
  */
 public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Authentication using a custom account.
-     * 
      */
     @Import(name="customAccount")
       private final @Nullable Output<CustomAccountArgs> customAccount;
@@ -33,7 +31,6 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Authentication using a Google account.
-     * 
      */
     @Import(name="googleAccount")
       private final @Nullable Output<GoogleAccountArgs> googleAccount;
@@ -44,7 +41,6 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Authentication using Identity-Aware-Proxy (IAP).
-     * 
      */
     @Import(name="iapCredential")
       private final @Nullable Output<IapCredentialArgs> iapCredential;

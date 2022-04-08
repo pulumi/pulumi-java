@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Metadata for any related URL information
- * 
  */
 public final class RelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Label to describe usage of the URL
-     * 
      */
     @Import(name="label")
       private final @Nullable Output<String> label;
@@ -31,7 +29,6 @@ public final class RelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specific URL to associate with the note
-     * 
      */
     @Import(name="url")
       private final @Nullable Output<String> url;

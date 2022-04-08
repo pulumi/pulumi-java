@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The content of an HL7v2 message in a structured format as specified by a schema.
- * 
  */
 public final class SchematizedDataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SchematizedDataResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * JSON output of the parser.
-     * 
      */
     @Import(name="data", required=true)
       private final String data;
@@ -29,7 +27,6 @@ public final class SchematizedDataResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The error output of the parser.
-     * 
      */
     @Import(name="error", required=true)
       private final String error;

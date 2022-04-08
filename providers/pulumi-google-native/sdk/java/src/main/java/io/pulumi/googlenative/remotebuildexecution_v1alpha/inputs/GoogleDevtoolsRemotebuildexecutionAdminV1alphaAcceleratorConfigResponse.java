@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * AcceleratorConfig defines the accelerator cards to attach to the VM.
- * 
  */
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
 
     /**
      * The number of guest accelerator cards exposed to each VM.
-     * 
      */
     @Import(name="acceleratorCount", required=true)
       private final String acceleratorCount;
@@ -29,7 +27,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
 
     /**
      * The type of accelerator to attach to each VM, e.g. "nvidia-tesla-k80" for nVidia Tesla K80.
-     * 
      */
     @Import(name="acceleratorType", required=true)
       private final String acceleratorType;

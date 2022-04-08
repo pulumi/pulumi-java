@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * [Deprecated] The configuration to access the SDS server. The configuration to access the SDS server.
- * 
  */
 public final class SdsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SdsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The configuration to access the SDS server over GRPC.
-     * 
      */
     @Import(name="grpcServiceConfig", required=true)
       private final GrpcServiceConfigResponse grpcServiceConfig;

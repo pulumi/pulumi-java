@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Insights configuration. This specifies when Cloud SQL Insights feature is enabled and optional configuration.
- * 
  */
 public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether Query Insights feature is enabled.
-     * 
      */
     @Import(name="queryInsightsEnabled")
       private final @Nullable Output<Boolean> queryInsightsEnabled;
@@ -32,7 +30,6 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Number of query execution plans captured by Insights per minute for all queries combined. Default is 5.
-     * 
      */
     @Import(name="queryPlansPerMinute")
       private final @Nullable Output<Integer> queryPlansPerMinute;
@@ -43,7 +40,6 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum query length stored in bytes. Default value: 1024 bytes. Range: 256-4500 bytes. Query length more than this field value will be truncated to this value. When unset, query length will be the default value. Changing query length will restart the database.
-     * 
      */
     @Import(name="queryStringLength")
       private final @Nullable Output<Integer> queryStringLength;
@@ -54,7 +50,6 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether Query Insights will record application tags from query when enabled.
-     * 
      */
     @Import(name="recordApplicationTags")
       private final @Nullable Output<Boolean> recordApplicationTags;
@@ -65,7 +60,6 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether Query Insights will record client address when enabled.
-     * 
      */
     @Import(name="recordClientAddress")
       private final @Nullable Output<Boolean> recordClientAddress;

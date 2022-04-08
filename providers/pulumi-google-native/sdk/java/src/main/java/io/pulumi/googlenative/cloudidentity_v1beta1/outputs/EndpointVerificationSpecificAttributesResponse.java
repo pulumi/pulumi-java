@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class EndpointVerificationSpecificAttributesResponse {
     /**
      * Details of certificates.
-     * 
      */
     private final List<CertificateAttributesResponse> certificateAttributes;
 
@@ -23,7 +22,6 @@ public final class EndpointVerificationSpecificAttributesResponse {
 
     /**
      * Details of certificates.
-     * 
     */
     public List<CertificateAttributesResponse> getCertificateAttributes() {
         return this.certificateAttributes;

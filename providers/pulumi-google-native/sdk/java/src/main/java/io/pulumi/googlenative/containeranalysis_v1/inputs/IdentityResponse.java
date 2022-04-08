@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The unique identifier of the update.
- * 
  */
 public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The revision number of the update.
-     * 
      */
     @Import(name="revision", required=true)
       private final Integer revision;
@@ -30,7 +28,6 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The revision independent identifier of the update.
-     * 
      */
     @Import(name="updateId", required=true)
       private final String updateId;

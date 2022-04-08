@@ -15,76 +15,65 @@ import javax.annotation.Nullable;
 /**
  * Creates an agent version. The new version points to the agent instance in the "default" environment.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:dialogflow/v2beta1:Version")
 public class Version extends io.pulumi.resources.CustomResource {
     /**
      * The creation time of this version. This field is read-only, i.e., it cannot be set by create and update methods.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The creation time of this version. This field is read-only, i.e., it cannot be set by create and update methods.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. The developer-provided description of this version.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Optional. The developer-provided description of this version.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The unique identifier of this agent version. Supported formats: - `projects//agent/versions/` - `projects//locations//agent/versions/`
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The unique identifier of this agent version. Supported formats: - `projects//agent/versions/` - `projects//locations//agent/versions/`
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The status of this version. This field is read-only and cannot be set by create and update methods.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return The status of this version. This field is read-only and cannot be set by create and update methods.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * The sequential number of this version. This field is read-only which means it cannot be set by create and update methods.
-     * 
      */
     @Export(name="versionNumber", type=Integer.class, parameters={})
     private Output<Integer> versionNumber;
 
     /**
      * @return The sequential number of this version. This field is read-only which means it cannot be set by create and update methods.
-     * 
      */
     public Output<Integer> getVersionNumber() {
         return this.versionNumber;

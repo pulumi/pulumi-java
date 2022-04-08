@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class GoogleCloudDatacatalogV1beta1SystemTimestampsResponse {
     /**
      * The creation time of the resource within the given system.
-     * 
      */
     private final String createTime;
     /**
      * The expiration time of the resource within the given system. Currently only apllicable to BigQuery resources.
-     * 
      */
     private final String expireTime;
     /**
      * The last-modified time of the resource within the given system.
-     * 
      */
     private final String updateTime;
 
@@ -37,21 +34,18 @@ public final class GoogleCloudDatacatalogV1beta1SystemTimestampsResponse {
 
     /**
      * The creation time of the resource within the given system.
-     * 
     */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The expiration time of the resource within the given system. Currently only apllicable to BigQuery resources.
-     * 
     */
     public String getExpireTime() {
         return this.expireTime;
     }
     /**
      * The last-modified time of the resource within the given system.
-     * 
     */
     public String getUpdateTime() {
         return this.updateTime;

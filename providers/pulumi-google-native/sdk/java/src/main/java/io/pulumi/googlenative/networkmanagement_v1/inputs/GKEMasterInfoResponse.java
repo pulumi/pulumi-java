@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * For display only. Metadata associated with a Google Kubernetes Engine (GKE) cluster master.
- * 
  */
 public final class GKEMasterInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GKEMasterInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * URI of a GKE cluster network.
-     * 
      */
     @Import(name="clusterNetworkUri", required=true)
       private final String clusterNetworkUri;
@@ -29,7 +27,6 @@ public final class GKEMasterInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * URI of a GKE cluster.
-     * 
      */
     @Import(name="clusterUri", required=true)
       private final String clusterUri;
@@ -40,7 +37,6 @@ public final class GKEMasterInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * External IP address of a GKE cluster master.
-     * 
      */
     @Import(name="externalIp", required=true)
       private final String externalIp;
@@ -51,7 +47,6 @@ public final class GKEMasterInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Internal IP address of a GKE cluster master.
-     * 
      */
     @Import(name="internalIp", required=true)
       private final String internalIp;

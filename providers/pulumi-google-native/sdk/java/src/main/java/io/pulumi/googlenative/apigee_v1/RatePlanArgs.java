@@ -25,7 +25,6 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the API product that the rate plan is associated with.
-     * 
      */
     @Import(name="apiproduct")
       private final @Nullable Output<String> apiproduct;
@@ -43,7 +42,6 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Frequency at which the customer will be billed.
-     * 
      */
     @Import(name="billingPeriod")
       private final @Nullable Output<RatePlanBillingPeriod> billingPeriod;
@@ -53,8 +51,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * API call volume ranges and the fees charged when the total number of API calls is within a given range. The method used to calculate the final fee depends on the selected pricing model. For example, if the pricing model is `STAIRSTEP` and the ranges are defined as follows: ```{ "start": 1, "end": 100, "fee": 75 }, { "start": 101, "end": 200, "fee": 100 }, }``` Then the following fees would be charged based on the total number of API calls (assuming the currency selected is `USD`): * 1 call costs $75 * 50 calls cost $75 * 150 calls cost $100 The number of API calls cannot exceed 200.
-     * 
+     * API call volume ranges and the fees charged when the total number of API calls is within a given range. The method used to calculate the final fee depends on the selected pricing model. For example, if the pricing model is `STAIRSTEP` and the ranges are defined as follows: ``` { "start": 1, "end": 100, "fee": 75 }, { "start": 101, "end": 200, "fee": 100 }, } ``` Then the following fees would be charged based on the total number of API calls (assuming the currency selected is `USD`): * 1 call costs $75 * 50 calls cost $75 * 150 calls cost $100 The number of API calls cannot exceed 200.
      */
     @Import(name="consumptionPricingRates")
       private final @Nullable Output<List<GoogleCloudApigeeV1RateRangeArgs>> consumptionPricingRates;
@@ -65,7 +62,6 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Pricing model used for consumption-based charges.
-     * 
      */
     @Import(name="consumptionPricingType")
       private final @Nullable Output<RatePlanConsumptionPricingType> consumptionPricingType;
@@ -76,7 +72,6 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Currency to be used for billing. Consists of a three-letter code as defined by the [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) standard.
-     * 
      */
     @Import(name="currencyCode")
       private final @Nullable Output<String> currencyCode;
@@ -87,7 +82,6 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of the rate plan.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -98,7 +92,6 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Display name of the rate plan.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -109,7 +102,6 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Time when the rate plan will expire in milliseconds since epoch. Set to 0 or `null` to indicate that the rate plan should never expire.
-     * 
      */
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
@@ -120,7 +112,6 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Frequency at which the fixed fee is charged.
-     * 
      */
     @Import(name="fixedFeeFrequency")
       private final @Nullable Output<Integer> fixedFeeFrequency;
@@ -131,7 +122,6 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Fixed amount that is charged at a defined interval and billed in advance of use of the API product. The fee will be prorated for the first billing period.
-     * 
      */
     @Import(name="fixedRecurringFee")
       private final @Nullable Output<GoogleTypeMoneyArgs> fixedRecurringFee;
@@ -149,7 +139,6 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Details of the revenue sharing model.
-     * 
      */
     @Import(name="revenueShareRates")
       private final @Nullable Output<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> revenueShareRates;
@@ -160,7 +149,6 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Method used to calculate the revenue that is shared with developers.
-     * 
      */
     @Import(name="revenueShareType")
       private final @Nullable Output<RatePlanRevenueShareType> revenueShareType;
@@ -171,7 +159,6 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Initial, one-time fee paid when purchasing the API product.
-     * 
      */
     @Import(name="setupFee")
       private final @Nullable Output<GoogleTypeMoneyArgs> setupFee;
@@ -182,7 +169,6 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Time when the rate plan becomes active in milliseconds since epoch.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
@@ -193,7 +179,6 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Current state of the rate plan (draft or published).
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<RatePlanState> state;

@@ -15,7 +15,6 @@ import java.util.Objects;
 
 /**
  * A chart that displays data on a 2D (X and Y axes) plane.
- * 
  */
 public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Display options for the chart.
-     * 
      */
     @Import(name="chartOptions", required=true)
       private final ChartOptionsResponse chartOptions;
@@ -34,7 +32,6 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The data displayed in this chart.
-     * 
      */
     @Import(name="dataSets", required=true)
       private final List<DataSetResponse> dataSets;
@@ -45,7 +42,6 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Threshold lines drawn horizontally across the chart.
-     * 
      */
     @Import(name="thresholds", required=true)
       private final List<ThresholdResponse> thresholds;
@@ -56,7 +52,6 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The duration used to display a comparison chart. A comparison chart simultaneously shows values from two similar-length time periods (e.g., week-over-week metrics). The duration must be positive, and it can only be applied to charts with data sets of LINE plot type.
-     * 
      */
     @Import(name="timeshiftDuration", required=true)
       private final String timeshiftDuration;
@@ -67,7 +62,6 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The properties applied to the X axis.
-     * 
      */
     @Import(name="xAxis", required=true)
       private final AxisResponse xAxis;
@@ -78,7 +72,6 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The properties applied to the Y2 axis.
-     * 
      */
     @Import(name="y2Axis", required=true)
       private final AxisResponse y2Axis;
@@ -89,7 +82,6 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The properties applied to the Y axis.
-     * 
      */
     @Import(name="yAxis", required=true)
       private final AxisResponse yAxis;

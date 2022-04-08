@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A filter that defines a subset of time series data that is displayed in a widget. Time series data is fetched using the ListTimeSeries (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) method.
- * 
  */
 public final class TimeSeriesFilterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class TimeSeriesFilterResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.
-     * 
      */
     @Import(name="aggregation", required=true)
       private final AggregationResponse aggregation;
@@ -31,7 +29,6 @@ public final class TimeSeriesFilterResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.
-     * 
      */
     @Import(name="filter", required=true)
       private final String filter;
@@ -42,7 +39,6 @@ public final class TimeSeriesFilterResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Ranking based time series filter.
-     * 
      */
     @Import(name="pickTimeSeriesFilter", required=true)
       private final PickTimeSeriesFilterResponse pickTimeSeriesFilter;
@@ -53,7 +49,6 @@ public final class TimeSeriesFilterResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Apply a second aggregation after aggregation is applied.
-     * 
      */
     @Import(name="secondaryAggregation", required=true)
       private final AggregationResponse secondaryAggregation;

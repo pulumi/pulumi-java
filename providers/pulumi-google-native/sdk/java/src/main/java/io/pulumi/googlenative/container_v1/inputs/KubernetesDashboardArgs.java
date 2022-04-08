@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for the Kubernetes Dashboard.
- * 
  */
 public final class KubernetesDashboardArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class KubernetesDashboardArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Whether the Kubernetes Dashboard is enabled for this cluster.
-     * 
      */
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;

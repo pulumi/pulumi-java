@@ -10,19 +10,16 @@ import java.util.StringJoiner;
 
     /**
      * The egress setting for the connector, controlling what traffic is diverted through it.
-     * 
      */
     @EnumType
     public enum VpcAccessConnectorEgressSetting {
         EgressSettingUnspecified("EGRESS_SETTING_UNSPECIFIED"),
         /**
          * Force the use of VPC Access for all egress traffic from the function.
-         * 
          */
         AllTraffic("ALL_TRAFFIC"),
         /**
          * Use the VPC Access Connector for private IP space from RFC1918.
-         * 
          */
         PrivateIpRanges("PRIVATE_IP_RANGES");
 

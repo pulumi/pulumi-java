@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a result from running a test case in an agent environment.
- * 
  */
 public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
 
     /**
      * The conversation turns uttered during the test case replay in chronological order.
-     * 
      */
     @Import(name="conversationTurns")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> conversationTurns;
@@ -34,7 +32,6 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
 
     /**
      * Environment where the test was run. If not set, it indicates the draft environment.
-     * 
      */
     @Import(name="environment")
       private final @Nullable Output<String> environment;
@@ -45,7 +42,6 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
 
     /**
      * The resource name for the test case result. Format: `projects//locations//agents//testCases/ /results/`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -56,7 +52,6 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
 
     /**
      * Whether the test case passed in the agent environment.
-     * 
      */
     @Import(name="testResult")
       private final @Nullable Output<GoogleCloudDialogflowCxV3TestCaseResultTestResult> testResult;
@@ -67,7 +62,6 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
 
     /**
      * The time that the test was run.
-     * 
      */
     @Import(name="testTime")
       private final @Nullable Output<String> testTime;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GrafeasV1beta1DeploymentDetailsResponse {
     /**
      * Deployment history for the resource.
-     * 
      */
     private final DeploymentResponse deployment;
 
@@ -22,7 +21,6 @@ public final class GrafeasV1beta1DeploymentDetailsResponse {
 
     /**
      * Deployment history for the resource.
-     * 
     */
     public DeploymentResponse getDeployment() {
         return this.deployment;

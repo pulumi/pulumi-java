@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * [Deprecated] Defines the mechanism to obtain the client or server certificate. Defines the mechanism to obtain the client or server certificate.
- * 
  */
 public final class TlsCertificateContextResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class TlsCertificateContextResponse extends io.pulumi.resources.Inv
 
     /**
      * Specifies the certificate and private key paths. This field is applicable only if tlsCertificateSource is set to USE_PATH.
-     * 
      */
     @Import(name="certificatePaths", required=true)
       private final TlsCertificatePathsResponse certificatePaths;
@@ -31,7 +29,6 @@ public final class TlsCertificateContextResponse extends io.pulumi.resources.Inv
 
     /**
      * Defines how TLS certificates are obtained.
-     * 
      */
     @Import(name="certificateSource", required=true)
       private final String certificateSource;
@@ -42,7 +39,6 @@ public final class TlsCertificateContextResponse extends io.pulumi.resources.Inv
 
     /**
      * Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
-     * 
      */
     @Import(name="sdsConfig", required=true)
       private final SdsConfigResponse sdsConfig;

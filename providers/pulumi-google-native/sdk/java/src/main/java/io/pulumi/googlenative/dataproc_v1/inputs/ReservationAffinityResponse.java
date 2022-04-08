@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Reservation Affinity for consuming Zonal reservation.
- * 
  */
 public final class ReservationAffinityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ReservationAffinityResponse extends io.pulumi.resources.Invok
 
     /**
      * Optional. Type of reservation to consume
-     * 
      */
     @Import(name="consumeReservationType", required=true)
       private final String consumeReservationType;
@@ -30,7 +28,6 @@ public final class ReservationAffinityResponse extends io.pulumi.resources.Invok
 
     /**
      * Optional. Corresponds to the label key of reservation resource.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -41,7 +38,6 @@ public final class ReservationAffinityResponse extends io.pulumi.resources.Invok
 
     /**
      * Optional. Corresponds to the label values of reservation resource.
-     * 
      */
     @Import(name="values", required=true)
       private final List<String> values;

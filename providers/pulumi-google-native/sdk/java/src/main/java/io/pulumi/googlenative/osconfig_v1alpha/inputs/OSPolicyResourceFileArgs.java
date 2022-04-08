@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A remote or local file.
- * 
  */
 public final class OSPolicyResourceFileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class OSPolicyResourceFileArgs extends io.pulumi.resources.Resource
 
     /**
      * Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
-     * 
      */
     @Import(name="allowInsecure")
       private final @Nullable Output<Boolean> allowInsecure;
@@ -34,7 +32,6 @@ public final class OSPolicyResourceFileArgs extends io.pulumi.resources.Resource
 
     /**
      * A Cloud Storage object.
-     * 
      */
     @Import(name="gcs")
       private final @Nullable Output<OSPolicyResourceFileGcsArgs> gcs;
@@ -45,7 +42,6 @@ public final class OSPolicyResourceFileArgs extends io.pulumi.resources.Resource
 
     /**
      * A local path within the VM to use.
-     * 
      */
     @Import(name="localPath")
       private final @Nullable Output<String> localPath;
@@ -56,7 +52,6 @@ public final class OSPolicyResourceFileArgs extends io.pulumi.resources.Resource
 
     /**
      * A generic remote file.
-     * 
      */
     @Import(name="remote")
       private final @Nullable Output<OSPolicyResourceFileRemoteArgs> remote;

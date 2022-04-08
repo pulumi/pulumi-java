@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Options for how to validate and process properties on a resource.
- * 
  */
 public final class ValidationOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ValidationOptionsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Customize how deployment manager will validate the resource against schema errors.
-     * 
      */
     @Import(name="schemaValidation", required=true)
       private final String schemaValidation;
@@ -29,7 +27,6 @@ public final class ValidationOptionsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Specify what to do with extra properties when executing a request.
-     * 
      */
     @Import(name="undeclaredProperties", required=true)
       private final String undeclaredProperties;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An alias to a repo revision.
- * 
  */
 public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs exten
 
     /**
      * The alias kind.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> kind;
@@ -32,7 +30,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs exten
 
     /**
      * The alias name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

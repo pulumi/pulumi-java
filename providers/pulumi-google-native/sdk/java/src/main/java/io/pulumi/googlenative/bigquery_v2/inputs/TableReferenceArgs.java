@@ -16,7 +16,6 @@ public final class TableReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * [Required] The ID of the dataset containing this table.
-     * 
      */
     @Import(name="datasetId")
       private final @Nullable Output<String> datasetId;
@@ -27,7 +26,6 @@ public final class TableReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * [Required] The ID of the project containing this table.
-     * 
      */
     @Import(name="project")
       private final @Nullable Output<String> project;
@@ -38,7 +36,6 @@ public final class TableReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * [Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
-     * 
      */
     @Import(name="tableId")
       private final @Nullable Output<String> tableId;

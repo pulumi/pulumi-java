@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Message containing what to include in the cache key for a request for Cloud CDN.
- * 
  */
 public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends io.pulumi.re
 
     /**
      * Allows HTTP request headers (by name) to be used in the cache key.
-     * 
      */
     @Import(name="includeHttpHeaders")
       private final @Nullable Output<List<String>> includeHttpHeaders;
@@ -32,7 +30,6 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends io.pulumi.re
 
     /**
      * Names of query string parameters to include in cache keys. All other parameters will be excluded. '&' and '=' will be percent encoded and not treated as delimiters.
-     * 
      */
     @Import(name="queryStringWhitelist")
       private final @Nullable Output<List<String>> queryStringWhitelist;

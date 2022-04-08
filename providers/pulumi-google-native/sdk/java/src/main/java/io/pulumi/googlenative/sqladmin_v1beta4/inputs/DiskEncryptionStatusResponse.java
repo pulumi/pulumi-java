@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Disk encryption status for an instance.
- * 
  */
 public final class DiskEncryptionStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DiskEncryptionStatusResponse extends io.pulumi.resources.Invo
 
     /**
      * This is always `sql#diskEncryptionStatus`.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -29,7 +27,6 @@ public final class DiskEncryptionStatusResponse extends io.pulumi.resources.Invo
 
     /**
      * KMS key version used to encrypt the Cloud SQL instance resource
-     * 
      */
     @Import(name="kmsKeyVersionName", required=true)
       private final String kmsKeyVersionName;

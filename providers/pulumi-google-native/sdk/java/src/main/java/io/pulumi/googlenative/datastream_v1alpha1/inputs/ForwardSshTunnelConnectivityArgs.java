@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Forward SSH Tunnel connectivity.
- * 
  */
 public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
 
     /**
      * Hostname for the SSH tunnel.
-     * 
      */
     @Import(name="hostname", required=true)
       private final Output<String> hostname;
@@ -32,7 +30,6 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
 
     /**
      * Input only. SSH password.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -43,7 +40,6 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
 
     /**
      * Port for the SSH tunnel, default value is 22.
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Integer> port;
@@ -54,7 +50,6 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
 
     /**
      * Input only. SSH private key.
-     * 
      */
     @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
@@ -65,7 +60,6 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
 
     /**
      * Username for the SSH tunnel.
-     * 
      */
     @Import(name="username", required=true)
       private final Output<String> username;

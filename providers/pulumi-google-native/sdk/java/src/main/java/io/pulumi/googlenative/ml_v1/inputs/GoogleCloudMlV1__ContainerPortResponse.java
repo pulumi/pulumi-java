@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Represents a network port in a single container. This message is a subset of the [Kubernetes ContainerPort v1 core specification](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#containerport-v1-core).
- * 
  */
 public final class GoogleCloudMlV1__ContainerPortResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudMlV1__ContainerPortResponse extends io.pulumi.reso
 
     /**
      * Number of the port to expose on the container. This must be a valid port number: 0 < PORT_NUMBER < 65536.
-     * 
      */
     @Import(name="containerPort", required=true)
       private final Integer containerPort;

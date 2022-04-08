@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * MaintenanceWindow defines the maintenance window to be used for the cluster.
- * 
  */
 public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * DailyMaintenanceWindow specifies a daily maintenance operation window.
-     * 
      */
     @Import(name="dailyMaintenanceWindow")
       private final @Nullable Output<DailyMaintenanceWindowArgs> dailyMaintenanceWindow;
@@ -34,7 +32,6 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows.
-     * 
      */
     @Import(name="maintenanceExclusions")
       private final @Nullable Output<Map<String,String>> maintenanceExclusions;
@@ -45,7 +42,6 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * RecurringWindow specifies some number of recurring time periods for maintenance to occur. The time windows may be overlapping. If no maintenance windows are set, maintenance can occur at any time.
-     * 
      */
     @Import(name="recurringWindow")
       private final @Nullable Output<RecurringTimeWindowArgs> recurringWindow;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Settings controlling the volume of requests, connections and retries to this backend service.
- * 
  */
 public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
-     * 
      */
     @Import(name="maxConnections", required=true)
       private final Integer maxConnections;
@@ -29,7 +27,6 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
-     * 
      */
     @Import(name="maxPendingRequests", required=true)
       private final Integer maxPendingRequests;
@@ -40,7 +37,6 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The maximum number of parallel requests that allowed to the backend service. If not specified, there is no limit.
-     * 
      */
     @Import(name="maxRequests", required=true)
       private final Integer maxRequests;
@@ -51,7 +47,6 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
-     * 
      */
     @Import(name="maxRequestsPerConnection", required=true)
       private final Integer maxRequestsPerConnection;
@@ -62,7 +57,6 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
-     * 
      */
     @Import(name="maxRetries", required=true)
       private final Integer maxRetries;

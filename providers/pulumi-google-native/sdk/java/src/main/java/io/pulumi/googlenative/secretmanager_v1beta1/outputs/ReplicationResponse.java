@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class ReplicationResponse {
     /**
      * The Secret will automatically be replicated without any restrictions.
-     * 
      */
     private final AutomaticResponse automatic;
     /**
      * The Secret will only be replicated into the locations specified.
-     * 
      */
     private final UserManagedResponse userManaged;
 
@@ -31,14 +29,12 @@ public final class ReplicationResponse {
 
     /**
      * The Secret will automatically be replicated without any restrictions.
-     * 
     */
     public AutomaticResponse getAutomatic() {
         return this.automatic;
     }
     /**
      * The Secret will only be replicated into the locations specified.
-     * 
     */
     public UserManagedResponse getUserManaged() {
         return this.userManaged;

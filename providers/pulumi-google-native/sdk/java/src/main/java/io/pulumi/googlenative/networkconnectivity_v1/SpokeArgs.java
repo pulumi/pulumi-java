@@ -20,7 +20,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional description of the spoke.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -31,7 +30,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The name of the hub that this spoke is attached to.
-     * 
      */
     @Import(name="hub")
       private final @Nullable Output<String> hub;
@@ -42,7 +40,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -53,7 +50,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * VLAN attachments that are associated with the spoke.
-     * 
      */
     @Import(name="linkedInterconnectAttachments")
       private final @Nullable Output<LinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments;
@@ -64,7 +60,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Router appliance instances that are associated with the spoke.
-     * 
      */
     @Import(name="linkedRouterApplianceInstances")
       private final @Nullable Output<LinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances;
@@ -75,7 +70,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * VPN tunnels that are associated with the spoke.
-     * 
      */
     @Import(name="linkedVpnTunnels")
       private final @Nullable Output<LinkedVpnTunnelsArgs> linkedVpnTunnels;
@@ -93,7 +87,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The name of the spoke. Spoke names must be unique. They use the following form: `projects/{project_number}/locations/{region}/spokes/{spoke_id}`
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

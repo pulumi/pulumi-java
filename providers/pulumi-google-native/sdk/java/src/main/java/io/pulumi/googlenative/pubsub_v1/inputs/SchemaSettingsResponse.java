@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Settings for validating messages published against a schema.
- * 
  */
 public final class SchemaSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SchemaSettingsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The encoding of messages validated against `schema`.
-     * 
      */
     @Import(name="encoding", required=true)
       private final String encoding;
@@ -29,7 +27,6 @@ public final class SchemaSettingsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the schema that messages published should be validated against. Format is `projects/{project}/schemas/{schema}`. The value of this field will be `_deleted-schema_` if the schema has been deleted.
-     * 
      */
     @Import(name="schema", required=true)
       private final String schema;

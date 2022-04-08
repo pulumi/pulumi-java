@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details required for a contact associated with a `Registration`.
- * 
  */
 public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Email address of the contact.
-     * 
      */
     @Import(name="email", required=true)
       private final Output<String> email;
@@ -32,7 +30,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Fax number of the contact in international format. For example, `"+1-800-555-0123"`.
-     * 
      */
     @Import(name="faxNumber")
       private final @Nullable Output<String> faxNumber;
@@ -43,7 +40,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Phone number of the contact in international format. For example, `"+1-800-555-0123"`.
-     * 
      */
     @Import(name="phoneNumber", required=true)
       private final Output<String> phoneNumber;
@@ -54,7 +50,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Postal address of the contact.
-     * 
      */
     @Import(name="postalAddress", required=true)
       private final Output<PostalAddressArgs> postalAddress;

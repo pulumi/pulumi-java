@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Either READ_ONLY, for allowing only read requests on the exported directory, or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.
-     * 
      */
     @EnumType
     public enum NfsExportOptionsAccessMode {
         /**
          * AccessMode not set.
-         * 
          */
         AccessModeUnspecified("ACCESS_MODE_UNSPECIFIED"),
         /**
          * The client can only read the file share.
-         * 
          */
         ReadOnly("READ_ONLY"),
         /**
          * The client can read and write the file share (default).
-         * 
          */
         ReadWrite("READ_WRITE");
 

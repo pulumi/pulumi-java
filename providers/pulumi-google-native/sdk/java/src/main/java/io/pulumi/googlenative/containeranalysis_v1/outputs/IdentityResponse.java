@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class IdentityResponse {
     /**
      * The revision number of the update.
-     * 
      */
     private final Integer revision;
     /**
      * The revision independent identifier of the update.
-     * 
      */
     private final String updateId;
 
@@ -31,14 +29,12 @@ public final class IdentityResponse {
 
     /**
      * The revision number of the update.
-     * 
     */
     public Integer getRevision() {
         return this.revision;
     }
     /**
      * The revision independent identifier of the update.
-     * 
     */
     public String getUpdateId() {
         return this.updateId;

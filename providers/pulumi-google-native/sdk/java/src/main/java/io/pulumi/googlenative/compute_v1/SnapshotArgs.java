@@ -19,7 +19,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Creates the new snapshot in the snapshot chain labeled with the specified name. The chain name must be 1-63 characters long and comply with RFC1035. This is an uncommon option only for advanced service owners who needs to create separate snapshot chains, for example, for chargeback tracking. When you describe your snapshot resource, this field is visible only if it has a non-empty value.
-     * 
      */
     @Import(name="chainName")
       private final @Nullable Output<String> chainName;
@@ -30,7 +29,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -41,7 +39,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Labels to apply to this snapshot. These can be later modified by the setLabels method. Label values may be empty.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -52,7 +49,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An opaque location hint used to place the snapshot close to other resources. This field is for use by internal tools that use the public API.
-     * 
      */
     @Import(name="locationHint")
       private final @Nullable Output<String> locationHint;
@@ -63,7 +59,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -88,7 +83,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Encrypts the snapshot using a customer-supplied encryption key. After you encrypt a snapshot using a customer-supplied key, you must provide the same key if you use the snapshot later. For example, you must provide the encryption key when you create a disk from the encrypted snapshot in a future request. Customer-supplied encryption keys do not protect access to metadata of the snapshot. If you do not provide an encryption key when creating the snapshot, then the snapshot will be encrypted using an automatically generated key and you do not need to provide a key to use the snapshot later.
-     * 
      */
     @Import(name="snapshotEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> snapshotEncryptionKey;
@@ -99,7 +93,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The source disk used to create this snapshot.
-     * 
      */
     @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;
@@ -110,7 +103,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key.
-     * 
      */
     @Import(name="sourceDiskEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey;
@@ -121,7 +113,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
-     * 
      */
     @Import(name="storageLocations")
       private final @Nullable Output<List<String>> storageLocations;

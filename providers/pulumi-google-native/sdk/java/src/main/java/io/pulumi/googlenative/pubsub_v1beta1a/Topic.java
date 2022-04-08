@@ -13,20 +13,17 @@ import javax.annotation.Nullable;
 
 /**
  * Creates the given topic with the given name.
- * 
  */
 @ResourceType(type="google-native:pubsub/v1beta1a:Topic")
 public class Topic extends io.pulumi.resources.CustomResource {
     /**
      * Name of the topic.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the topic.
-     * 
      */
     public Output<String> getName() {
         return this.name;

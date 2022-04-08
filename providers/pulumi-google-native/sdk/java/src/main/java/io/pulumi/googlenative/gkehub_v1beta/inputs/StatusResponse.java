@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Status specifies state for the subcomponent.
- * 
  */
 public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Code specifies AppDevExperienceFeature's subcomponent ready state.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -29,7 +27,6 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Description is populated if Code is Failed, explaining why it has failed.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;

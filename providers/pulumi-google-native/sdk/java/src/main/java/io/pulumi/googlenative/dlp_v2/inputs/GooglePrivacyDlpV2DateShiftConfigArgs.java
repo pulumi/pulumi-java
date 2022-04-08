@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Shifts dates by random number of days, with option to be consistent for the same context. See https://cloud.google.com/dlp/docs/concepts-date-shifting to learn more.
- * 
  */
 public final class GooglePrivacyDlpV2DateShiftConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GooglePrivacyDlpV2DateShiftConfigArgs extends io.pulumi.resou
 
     /**
      * Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context.
-     * 
      */
     @Import(name="context")
       private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> context;
@@ -33,7 +31,6 @@ public final class GooglePrivacyDlpV2DateShiftConfigArgs extends io.pulumi.resou
 
     /**
      * Causes the shift to be computed based on this key and the context. This results in the same shift for the same context and crypto_key. If set, must also set context. Can only be applied to table items.
-     * 
      */
     @Import(name="cryptoKey")
       private final @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
@@ -44,7 +41,6 @@ public final class GooglePrivacyDlpV2DateShiftConfigArgs extends io.pulumi.resou
 
     /**
      * For example, -5 means shift date to at most 5 days back in the past.
-     * 
      */
     @Import(name="lowerBoundDays", required=true)
       private final Output<Integer> lowerBoundDays;
@@ -55,7 +51,6 @@ public final class GooglePrivacyDlpV2DateShiftConfigArgs extends io.pulumi.resou
 
     /**
      * Range of shift in days. Actual shift will be selected at random within this range (inclusive ends). Negative means shift to earlier in time. Must not be more than 365250 days (1000 years) each direction. For example, 3 means shift date to at most 3 days into the future.
-     * 
      */
     @Import(name="upperBoundDays", required=true)
       private final Output<Integer> upperBoundDays;

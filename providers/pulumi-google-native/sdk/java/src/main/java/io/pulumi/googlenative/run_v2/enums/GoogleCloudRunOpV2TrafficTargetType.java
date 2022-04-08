@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The allocation type for this traffic target.
-     * 
      */
     @EnumType
     public enum GoogleCloudRunOpV2TrafficTargetType {
         /**
          * Unspecified instance allocation type.
-         * 
          */
         TrafficTargetAllocationTypeUnspecified("TRAFFIC_TARGET_ALLOCATION_TYPE_UNSPECIFIED"),
         /**
          * Allocates instances to the Service's latest ready Revision.
-         * 
          */
         TrafficTargetAllocationTypeLatest("TRAFFIC_TARGET_ALLOCATION_TYPE_LATEST"),
         /**
          * Allocates instances to a Revision by name.
-         * 
          */
         TrafficTargetAllocationTypeRevision("TRAFFIC_TARGET_ALLOCATION_TYPE_REVISION");
 

@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * The policy of the feature.
-     * 
      */
     @EnumType
     public enum GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy {
         /**
          * Default value, if not explicitly set. Equivalent to FORBIDDEN, unless otherwise documented on a specific Feature.
-         * 
          */
         PolicyUnspecified("POLICY_UNSPECIFIED"),
         /**
          * Feature is explicitly allowed.
-         * 
          */
         Allowed("ALLOWED"),
         /**
          * Feature is forbidden. Requests attempting to leverage it will get an FailedPrecondition error, with a message like: "Feature forbidden by FeaturePolicy: Feature on instance "
-         * 
          */
         Forbidden("FORBIDDEN"),
         /**
          * Only the values specified in the `allowed_values` are allowed.
-         * 
          */
         Restricted("RESTRICTED");
 

@@ -16,7 +16,6 @@ import java.util.Objects;
 
 /**
  * RevisionSpec holds the desired state of the Revision (from the client).
- * 
  */
 public final class RevisionSpecResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class RevisionSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is not limited, and the system decides the target concurrency for the autoscaler.
-     * 
      */
     @Import(name="containerConcurrency", required=true)
       private final Integer containerConcurrency;
@@ -35,7 +33,6 @@ public final class RevisionSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Containers holds the single container that defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of fields on this Container, including: name and lifecycle. In Cloud Run, only a single container may be provided. The runtime contract is documented here: https://github.com/knative/serving/blob/main/docs/runtime-contract.md
-     * 
      */
     @Import(name="containers", required=true)
       private final List<ContainerResponse> containers;
@@ -46,7 +43,6 @@ public final class RevisionSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Indicates whether information about services should be injected into pod's environment variables, matching the syntax of Docker links. Cloud Run fully managed: Not supported. Cloud Run for Anthos: supported, defaults to true.
-     * 
      */
     @Import(name="enableServiceLinks", required=true)
       private final Boolean enableServiceLinks;
@@ -57,7 +53,6 @@ public final class RevisionSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * ImagePullSecrets is a list of references to secrets in the same namespace to use for pulling any images in pods that reference this ServiceAccount. ImagePullSecrets are distinct from Secrets because Secrets can be mounted in the pod, but ImagePullSecrets are only accessed by the kubelet. More info: https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod Cloud Run fully managed: Not supported. Cloud Run for Anthos: supported.
-     * 
      */
     @Import(name="imagePullSecrets", required=true)
       private final List<LocalObjectReferenceResponse> imagePullSecrets;
@@ -68,7 +63,6 @@ public final class RevisionSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project's default service account.
-     * 
      */
     @Import(name="serviceAccountName", required=true)
       private final String serviceAccountName;
@@ -79,7 +73,6 @@ public final class RevisionSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * TimeoutSeconds holds the max duration the instance is allowed for responding to a request. Cloud Run fully managed: defaults to 300 seconds (5 minutes). Maximum allowed value is 3600 seconds (1 hour). Cloud Run for Anthos: defaults to 300 seconds (5 minutes). Maximum allowed value is configurable by the cluster operator.
-     * 
      */
     @Import(name="timeoutSeconds", required=true)
       private final Integer timeoutSeconds;

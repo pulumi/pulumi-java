@@ -14,104 +14,89 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new realm in a given project and location.
- * 
  */
 @ResourceType(type="google-native:gameservices/v1:Realm")
 public class Realm extends io.pulumi.resources.CustomResource {
     /**
      * The creation time.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The creation time.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Human readable description of the realm.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Human readable description of the realm.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * ETag of the resource.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return ETag of the resource.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The labels associated with this realm. Each label is a key-value pair.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return The labels associated with this realm. Each label is a key-value pair.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * The resource name of the realm, in the following form: `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-project/locations/{location}/realms/my-realm`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the realm, in the following form: `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-project/locations/{location}/realms/my-realm`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Time zone where all policies targeting this realm are evaluated. The value of this field must be from the IANA time zone database: https://www.iana.org/time-zones.
-     * 
      */
     @Export(name="timeZone", type=String.class, parameters={})
     private Output<String> timeZone;
 
     /**
      * @return Time zone where all policies targeting this realm are evaluated. The value of this field must be from the IANA time zone database: https://www.iana.org/time-zones.
-     * 
      */
     public Output<String> getTimeZone() {
         return this.timeZone;
     }
     /**
      * The last-modified time.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The last-modified time.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

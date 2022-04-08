@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Required. The type of sparkchart to show in this chartView.
-     * 
      */
     @EnumType
     public enum SparkChartViewSparkChartType {
         /**
          * Not allowed in well-formed requests.
-         * 
          */
         SparkChartTypeUnspecified("SPARK_CHART_TYPE_UNSPECIFIED"),
         /**
          * The sparkline will be rendered as a small line chart.
-         * 
          */
         SparkLine("SPARK_LINE"),
         /**
          * The sparkbar will be rendered as a small bar chart.
-         * 
          */
         SparkBar("SPARK_BAR");
 

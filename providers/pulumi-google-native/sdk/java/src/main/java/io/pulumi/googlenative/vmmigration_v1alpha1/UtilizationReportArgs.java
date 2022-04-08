@@ -19,7 +19,6 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The report display name, as assigned by the user.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -58,7 +57,6 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Time frame of the report.
-     * 
      */
     @Import(name="timeFrame")
       private final @Nullable Output<UtilizationReportTimeFrame> timeFrame;
@@ -76,7 +74,6 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * List of utilization information per VM. When sent as part of the request, the "vm_id" field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
-     * 
      */
     @Import(name="vms")
       private final @Nullable Output<List<VmUtilizationInfoArgs>> vms;

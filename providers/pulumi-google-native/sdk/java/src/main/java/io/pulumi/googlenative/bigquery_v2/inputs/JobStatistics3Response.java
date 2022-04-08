@@ -14,7 +14,6 @@ public final class JobStatistics3Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * The number of bad records encountered. Note that if the job has failed because of more bad records encountered than the maximum allowed in the load job configuration, then this number can be less than the total number of bad records present in the input data.
-     * 
      */
     @Import(name="badRecords", required=true)
       private final String badRecords;
@@ -25,7 +24,6 @@ public final class JobStatistics3Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * Number of bytes of source data in a load job.
-     * 
      */
     @Import(name="inputFileBytes", required=true)
       private final String inputFileBytes;
@@ -36,7 +34,6 @@ public final class JobStatistics3Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * Number of source files in a load job.
-     * 
      */
     @Import(name="inputFiles", required=true)
       private final String inputFiles;
@@ -47,7 +44,6 @@ public final class JobStatistics3Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * Size of the loaded data in bytes. Note that while a load job is in the running state, this value may change.
-     * 
      */
     @Import(name="outputBytes", required=true)
       private final String outputBytes;
@@ -58,7 +54,6 @@ public final class JobStatistics3Response extends io.pulumi.resources.InvokeArgs
 
     /**
      * Number of rows imported in a load job. Note that while an import job is in the running state, this value may change.
-     * 
      */
     @Import(name="outputRows", required=true)
       private final String outputRows;

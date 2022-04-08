@@ -15,27 +15,22 @@ import java.util.Objects;
 public final class EnumResponse {
     /**
      * Enum value definitions.
-     * 
      */
     private final List<EnumValueResponse> enumvalue;
     /**
      * Enum type name.
-     * 
      */
     private final String name;
     /**
      * Protocol buffer options.
-     * 
      */
     private final List<OptionResponse> options;
     /**
      * The source context.
-     * 
      */
     private final SourceContextResponse sourceContext;
     /**
      * The source syntax.
-     * 
      */
     private final String syntax;
 
@@ -55,35 +50,30 @@ public final class EnumResponse {
 
     /**
      * Enum value definitions.
-     * 
     */
     public List<EnumValueResponse> getEnumvalue() {
         return this.enumvalue;
     }
     /**
      * Enum type name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Protocol buffer options.
-     * 
     */
     public List<OptionResponse> getOptions() {
         return this.options;
     }
     /**
      * The source context.
-     * 
     */
     public SourceContextResponse getSourceContext() {
         return this.sourceContext;
     }
     /**
      * The source syntax.
-     * 
     */
     public String getSyntax() {
         return this.syntax;

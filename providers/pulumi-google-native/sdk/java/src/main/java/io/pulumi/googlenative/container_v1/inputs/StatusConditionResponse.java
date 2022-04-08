@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * StatusCondition describes why a cluster or a node pool has a certain status (e.g., ERROR or DEGRADED).
- * 
  */
 public final class StatusConditionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class StatusConditionResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Canonical code of the condition.
-     * 
      */
     @Import(name="canonicalCode", required=true)
       private final String canonicalCode;
@@ -29,7 +27,6 @@ public final class StatusConditionResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Human-friendly representation of the condition
-     * 
      */
     @Import(name="message", required=true)
       private final String message;

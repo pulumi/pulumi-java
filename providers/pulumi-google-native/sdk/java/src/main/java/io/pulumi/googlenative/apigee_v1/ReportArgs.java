@@ -19,7 +19,6 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This field contains the chart type for the report
-     * 
      */
     @Import(name="chartType")
       private final @Nullable Output<String> chartType;
@@ -30,7 +29,6 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Legacy field: not used. This field contains a list of comments associated with custom report
-     * 
      */
     @Import(name="comments")
       private final @Nullable Output<List<String>> comments;
@@ -41,7 +39,6 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This contains the list of dimensions for the report
-     * 
      */
     @Import(name="dimensions")
       private final @Nullable Output<List<String>> dimensions;
@@ -52,7 +49,6 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This is the display name for the report
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -63,7 +59,6 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This field contains the filter expression
-     * 
      */
     @Import(name="filter")
       private final @Nullable Output<String> filter;
@@ -74,7 +69,6 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Legacy field: not used. Contains the from time for the report
-     * 
      */
     @Import(name="fromTime")
       private final @Nullable Output<String> fromTime;
@@ -85,7 +79,6 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Legacy field: not used This field contains the limit for the result retrieved
-     * 
      */
     @Import(name="limit")
       private final @Nullable Output<String> limit;
@@ -96,7 +89,6 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This contains the list of metrics
-     * 
      */
     @Import(name="metrics", required=true)
       private final Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics;
@@ -107,7 +99,6 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unique identifier for the report T his is a legacy field used to encode custom report unique id
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -118,7 +109,6 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Legacy field: not used. This field contains the offset for the data
-     * 
      */
     @Import(name="offset")
       private final @Nullable Output<String> offset;
@@ -136,7 +126,6 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This field contains report properties such as ui metadata etc.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties;
@@ -147,7 +136,6 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Legacy field: not used much. Contains the list of sort by columns
-     * 
      */
     @Import(name="sortByCols")
       private final @Nullable Output<List<String>> sortByCols;
@@ -158,7 +146,6 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Legacy field: not used much. Contains the sort order for the sort columns
-     * 
      */
     @Import(name="sortOrder")
       private final @Nullable Output<String> sortOrder;
@@ -169,7 +156,6 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Legacy field: not used. This field contains a list of tags associated with custom report
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
@@ -180,7 +166,6 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This field contains the time unit of aggregation for the report
-     * 
      */
     @Import(name="timeUnit")
       private final @Nullable Output<String> timeUnit;
@@ -191,7 +176,6 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Legacy field: not used. Contains the end time for the report
-     * 
      */
     @Import(name="toTime")
       private final @Nullable Output<String> toTime;
@@ -202,7 +186,6 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Legacy field: not used. This field contains the top k parameter value for restricting the result
-     * 
      */
     @Import(name="topk")
       private final @Nullable Output<String> topk;

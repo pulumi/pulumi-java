@@ -24,7 +24,6 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * [TrustedTester] [Output-only] Job progress (0.0 -> 1.0) for LOAD and EXTRACT jobs.
-     * 
      */
     @Import(name="completionRatio", required=true)
       private final Double completionRatio;
@@ -35,7 +34,6 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Creation time of this job, in milliseconds since the epoch. This field will be present on all jobs.
-     * 
      */
     @Import(name="creationTime", required=true)
       private final String creationTime;
@@ -46,7 +44,6 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * End time of this job, in milliseconds since the epoch. This field will be present whenever a job is in the DONE state.
-     * 
      */
     @Import(name="endTime", required=true)
       private final String endTime;
@@ -57,7 +54,6 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Statistics for an extract job.
-     * 
      */
     @Import(name="extract", required=true)
       private final JobStatistics4Response extract;
@@ -68,7 +64,6 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Statistics for a load job.
-     * 
      */
     @Import(name="load", required=true)
       private final JobStatistics3Response load;
@@ -79,7 +74,6 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Number of child jobs executed.
-     * 
      */
     @Import(name="numChildJobs", required=true)
       private final String numChildJobs;
@@ -90,7 +84,6 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * If this is a child job, the id of the parent.
-     * 
      */
     @Import(name="parentJobId", required=true)
       private final String parentJobId;
@@ -101,7 +94,6 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Statistics for a query job.
-     * 
      */
     @Import(name="query", required=true)
       private final JobStatistics2Response query;
@@ -112,7 +104,6 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Quotas which delayed this job's start time.
-     * 
      */
     @Import(name="quotaDeferments", required=true)
       private final List<String> quotaDeferments;
@@ -123,7 +114,6 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Name of the primary reservation assigned to this job. Note that this could be different than reservations reported in the reservation usage field if parent reservations were used to execute this job.
-     * 
      */
     @Import(name="reservationId", required=true)
       private final String reservationId;
@@ -134,7 +124,6 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Job resource usage breakdown by reservation.
-     * 
      */
     @Import(name="reservationUsage", required=true)
       private final List<JobStatisticsReservationUsageItemResponse> reservationUsage;
@@ -145,7 +134,6 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * [Preview] Statistics for row-level security. Present only for query and extract jobs.
-     * 
      */
     @Import(name="rowLevelSecurityStatistics", required=true)
       private final RowLevelSecurityStatisticsResponse rowLevelSecurityStatistics;
@@ -156,7 +144,6 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Statistics for a child job of a script.
-     * 
      */
     @Import(name="scriptStatistics", required=true)
       private final ScriptStatisticsResponse scriptStatistics;
@@ -167,7 +154,6 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * [Preview] Information of the session if this job is part of one.
-     * 
      */
     @Import(name="sessionInfo", required=true)
       private final SessionInfoResponse sessionInfo;
@@ -178,7 +164,6 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Start time of this job, in milliseconds since the epoch. This field will be present when the job transitions from the PENDING state to either RUNNING or DONE.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;
@@ -189,7 +174,6 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Slot-milliseconds for the job.
-     * 
      */
     @Import(name="totalSlotMs", required=true)
       private final String totalSlotMs;
@@ -200,7 +184,6 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * [Alpha] Information of the multi-statement transaction if this job is part of one.
-     * 
      */
     @Import(name="transactionInfo", required=true)
       private final TransactionInfoResponse transactionInfo;

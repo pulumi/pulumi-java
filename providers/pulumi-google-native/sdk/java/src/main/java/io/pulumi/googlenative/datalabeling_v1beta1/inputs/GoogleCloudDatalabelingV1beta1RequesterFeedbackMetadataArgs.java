@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * Metadata describing the feedback from the labeling task requester.
- * 
  */
 public final class GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs extends io.pulumi.resources.ResourceArgs {
 

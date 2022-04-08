@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * AutoUpgradeOptions defines the set of options for the user to control how the Auto Upgrades will proceed.
- * 
  */
 public final class AutoUpgradeOptionsArgs extends io.pulumi.resources.ResourceArgs {
 

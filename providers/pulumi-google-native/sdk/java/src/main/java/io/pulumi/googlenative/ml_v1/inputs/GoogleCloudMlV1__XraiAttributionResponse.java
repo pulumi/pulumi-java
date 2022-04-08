@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Attributes credit by computing the XRAI taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1906.02825 Currently only implemented for models with natural image inputs.
- * 
  */
 public final class GoogleCloudMlV1__XraiAttributionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudMlV1__XraiAttributionResponse extends io.pulumi.re
 
     /**
      * Number of steps for approximating the path integral. A good value to start is 50 and gradually increase until the sum to diff property is met within the desired error range.
-     * 
      */
     @Import(name="numIntegralSteps", required=true)
       private final Integer numIntegralSteps;

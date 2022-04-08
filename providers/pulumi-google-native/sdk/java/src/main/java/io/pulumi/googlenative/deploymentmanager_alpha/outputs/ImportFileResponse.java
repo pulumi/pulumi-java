@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ImportFileResponse {
     /**
      * The contents of the file.
-     * 
      */
     private final String content;
     /**
      * The name of the file.
-     * 
      */
     private final String name;
 
@@ -30,14 +28,12 @@ public final class ImportFileResponse {
 
     /**
      * The contents of the file.
-     * 
     */
     public String getContent() {
         return this.content;
     }
     /**
      * The name of the file.
-     * 
     */
     public String getName() {
         return this.name;

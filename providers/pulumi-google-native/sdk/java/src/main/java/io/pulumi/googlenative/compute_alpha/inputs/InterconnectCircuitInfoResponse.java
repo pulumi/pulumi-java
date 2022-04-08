@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Describes a single physical circuit between the Customer and Google. CircuitInfo objects are created by Google, so all fields are output only.
- * 
  */
 public final class InterconnectCircuitInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class InterconnectCircuitInfoResponse extends io.pulumi.resources.I
 
     /**
      * Customer-side demarc ID for this circuit.
-     * 
      */
     @Import(name="customerDemarcId", required=true)
       private final String customerDemarcId;
@@ -29,7 +27,6 @@ public final class InterconnectCircuitInfoResponse extends io.pulumi.resources.I
 
     /**
      * Google-assigned unique ID for this circuit. Assigned at circuit turn-up.
-     * 
      */
     @Import(name="googleCircuitId", required=true)
       private final String googleCircuitId;
@@ -40,7 +37,6 @@ public final class InterconnectCircuitInfoResponse extends io.pulumi.resources.I
 
     /**
      * Google-side demarc ID for this circuit. Assigned at circuit turn-up and provided by Google to the customer in the LOA.
-     * 
      */
     @Import(name="googleDemarcId", required=true)
       private final String googleDemarcId;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Metadata describing a template.
- * 
  */
 public final class TemplateMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class TemplateMetadataResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Optional. A description of the template.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -31,7 +29,6 @@ public final class TemplateMetadataResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the template.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -42,7 +39,6 @@ public final class TemplateMetadataResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The parameters for the template.
-     * 
      */
     @Import(name="parameters", required=true)
       private final List<ParameterMetadataResponse> parameters;

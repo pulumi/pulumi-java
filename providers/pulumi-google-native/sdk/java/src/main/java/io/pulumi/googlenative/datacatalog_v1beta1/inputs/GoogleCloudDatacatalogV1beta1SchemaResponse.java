@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Represents a schema (e.g. BigQuery, GoogleSQL, Avro schema).
- * 
  */
 public final class GoogleCloudDatacatalogV1beta1SchemaResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudDatacatalogV1beta1SchemaResponse extends io.pulumi
 
     /**
      * Schema of columns. A maximum of 10,000 columns and sub-columns can be specified.
-     * 
      */
     @Import(name="columns", required=true)
       private final List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> columns;

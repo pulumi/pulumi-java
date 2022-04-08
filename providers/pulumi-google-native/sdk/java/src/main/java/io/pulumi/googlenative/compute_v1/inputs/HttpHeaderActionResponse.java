@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The request and response header transformations that take effect before the request is passed along to the selected backendService.
- * 
  */
 public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Headers to add to a matching request before forwarding the request to the backendService.
-     * 
      */
     @Import(name="requestHeadersToAdd", required=true)
       private final List<HttpHeaderOptionResponse> requestHeadersToAdd;
@@ -31,7 +29,6 @@ public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * A list of header names for headers that need to be removed from the request before forwarding the request to the backendService.
-     * 
      */
     @Import(name="requestHeadersToRemove", required=true)
       private final List<String> requestHeadersToRemove;
@@ -42,7 +39,6 @@ public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Headers to add the response before sending the response back to the client.
-     * 
      */
     @Import(name="responseHeadersToAdd", required=true)
       private final List<HttpHeaderOptionResponse> responseHeadersToAdd;
@@ -53,7 +49,6 @@ public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * A list of header names for headers that need to be removed from the response before sending the response back to the client.
-     * 
      */
     @Import(name="responseHeadersToRemove", required=true)
       private final List<String> responseHeadersToRemove;

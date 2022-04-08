@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Rich Business Messaging (RBM) suggested reply that the user can click instead of typing in their own response.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyRes
 
     /**
      * Opaque payload that the Dialogflow receives in a user event when the user taps the suggested reply. This data will be also forwarded to webhook to allow performing custom business logic.
-     * 
      */
     @Import(name="postbackData", required=true)
       private final String postbackData;
@@ -29,7 +27,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyRes
 
     /**
      * Suggested reply text.
-     * 
      */
     @Import(name="text", required=true)
       private final String text;

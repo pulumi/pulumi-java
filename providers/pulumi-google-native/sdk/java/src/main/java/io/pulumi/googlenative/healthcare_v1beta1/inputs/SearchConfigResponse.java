@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Contains the configuration for FHIR search.
- * 
  */
 public final class SearchConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class SearchConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A list of search parameters in this FHIR store that are used to configure this FHIR store.
-     * 
      */
     @Import(name="searchParameters", required=true)
       private final List<SearchParameterResponse> searchParameters;

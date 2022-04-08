@@ -16,118 +16,101 @@ import javax.annotation.Nullable;
 /**
  * Creates a saved query in a parent project/folder/organization.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:cloudasset/v1:SavedQuery")
 public class SavedQuery extends io.pulumi.resources.CustomResource {
     /**
      * The query content.
-     * 
      */
     @Export(name="content", type=QueryContentResponse.class, parameters={})
     private Output<QueryContentResponse> content;
 
     /**
      * @return The query content.
-     * 
      */
     public Output<QueryContentResponse> getContent() {
         return this.content;
     }
     /**
      * The create time of this saved query.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The create time of this saved query.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The account's email address who has created this saved query.
-     * 
      */
     @Export(name="creator", type=String.class, parameters={})
     private Output<String> creator;
 
     /**
      * @return The account's email address who has created this saved query.
-     * 
      */
     public Output<String> getCreator() {
         return this.creator;
     }
     /**
      * The description of this saved query. This value should be fewer than 255 characters.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return The description of this saved query. This value should be fewer than 255 characters.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * Labels applied on the resource. This value should not contain more than 10 entries. The key and value of each entry must be non-empty and fewer than 64 characters.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Labels applied on the resource. This value should not contain more than 10 entries. The key and value of each entry must be non-empty and fewer than 64 characters.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * The last update time of this saved query.
-     * 
      */
     @Export(name="lastUpdateTime", type=String.class, parameters={})
     private Output<String> lastUpdateTime;
 
     /**
      * @return The last update time of this saved query.
-     * 
      */
     public Output<String> getLastUpdateTime() {
         return this.lastUpdateTime;
     }
     /**
      * The account's email address who has updated this saved query most recently.
-     * 
      */
     @Export(name="lastUpdater", type=String.class, parameters={})
     private Output<String> lastUpdater;
 
     /**
      * @return The account's email address who has updated this saved query most recently.
-     * 
      */
     public Output<String> getLastUpdater() {
         return this.lastUpdater;
     }
     /**
      * The resource name of the saved query. The format must be: * projects/project_number/savedQueries/saved_query_id * folders/folder_number/savedQueries/saved_query_id * organizations/organization_number/savedQueries/saved_query_id
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the saved query. The format must be: * projects/project_number/savedQueries/saved_query_id * folders/folder_number/savedQueries/saved_query_id * organizations/organization_number/savedQueries/saved_query_id
-     * 
      */
     public Output<String> getName() {
         return this.name;

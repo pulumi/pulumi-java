@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents configuration for a generic web service.
- * 
  */
 public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs ex
 
     /**
      * Optional. Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification. This overrides the default SSL trust store. If this is empty or unspecified, Dialogflow will use Google's default trust store to verify certificates. N.B. Make sure the HTTPS server certificates are signed with "subject alt name". For instance a certificate can be self-signed using the following command, openssl x509 -req -days 200 -in example.com.csr \ -signkey example.com.key \ -out example.com.crt \ -extfile <(printf "\nsubjectAltName='DNS:www.example.com'")
-     * 
      */
     @Import(name="allowedCaCerts")
       private final @Nullable Output<List<String>> allowedCaCerts;
@@ -33,7 +31,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs ex
 
     /**
      * The password for HTTP Basic authentication.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -44,7 +41,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs ex
 
     /**
      * The HTTP request headers to send together with webhook requests.
-     * 
      */
     @Import(name="requestHeaders")
       private final @Nullable Output<Map<String,String>> requestHeaders;
@@ -55,7 +51,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs ex
 
     /**
      * The webhook URI for receiving POST requests. It must use https protocol.
-     * 
      */
     @Import(name="uri", required=true)
       private final Output<String> uri;
@@ -66,7 +61,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs ex
 
     /**
      * The user name for HTTP Basic authentication.
-     * 
      */
     @Import(name="username")
       private final @Nullable Output<String> username;

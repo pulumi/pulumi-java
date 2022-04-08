@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class FirewallPolicyRuleSecureTagResponse {
     /**
      * Name of the secure tag, created with TagManager's TagValue API.
-     * 
      */
     private final String name;
     /**
      * State of the secure tag, either `EFFECTIVE` or `INEFFECTIVE`. A secure tag is `INEFFECTIVE` when it is deleted or its network is deleted.
-     * 
      */
     private final String state;
 
@@ -30,14 +28,12 @@ public final class FirewallPolicyRuleSecureTagResponse {
 
     /**
      * Name of the secure tag, created with TagManager's TagValue API.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * State of the secure tag, either `EFFECTIVE` or `INEFFECTIVE`. A secure tag is `INEFFECTIVE` when it is deleted or its network is deleted.
-     * 
     */
     public String getState() {
         return this.state;

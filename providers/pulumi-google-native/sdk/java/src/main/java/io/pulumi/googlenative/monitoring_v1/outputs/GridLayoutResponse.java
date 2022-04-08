@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class GridLayoutResponse {
     /**
      * The number of columns into which the view's width is divided. If omitted or set to zero, a system default will be used while rendering.
-     * 
      */
     private final String columns;
     /**
      * The informational elements that are arranged into the columns row-first.
-     * 
      */
     private final List<WidgetResponse> widgets;
 
@@ -32,14 +30,12 @@ public final class GridLayoutResponse {
 
     /**
      * The number of columns into which the view's width is divided. If omitted or set to zero, a system default will be used while rendering.
-     * 
     */
     public String getColumns() {
         return this.columns;
     }
     /**
      * The informational elements that are arranged into the columns row-first.
-     * 
     */
     public List<WidgetResponse> getWidgets() {
         return this.widgets;

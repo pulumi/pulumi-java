@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Workload details for creating the pipeline jobs.
- * 
  */
 public final class GoogleCloudDatapipelinesV1WorkloadArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDatapipelinesV1WorkloadArgs extends io.pulumi.reso
 
     /**
      * Template information and additional parameters needed to launch a Dataflow job using the flex launch API.
-     * 
      */
     @Import(name="dataflowFlexTemplateRequest")
       private final @Nullable Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> dataflowFlexTemplateRequest;
@@ -32,7 +30,6 @@ public final class GoogleCloudDatapipelinesV1WorkloadArgs extends io.pulumi.reso
 
     /**
      * Template information and additional parameters needed to launch a Dataflow job using the standard launch API.
-     * 
      */
     @Import(name="dataflowLaunchTemplateRequest")
       private final @Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> dataflowLaunchTemplateRequest;

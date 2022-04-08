@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * BitbucketServerSecrets represents the secrets in Secret Manager for a Bitbucket Server.
- * 
  */
 public final class BitbucketServerSecretsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class BitbucketServerSecretsResponse extends io.pulumi.resources.In
 
     /**
      * The resource name for the admin access token's secret version.
-     * 
      */
     @Import(name="adminAccessTokenVersionName", required=true)
       private final String adminAccessTokenVersionName;
@@ -29,7 +27,6 @@ public final class BitbucketServerSecretsResponse extends io.pulumi.resources.In
 
     /**
      * The resource name for the read access token's secret version.
-     * 
      */
     @Import(name="readAccessTokenVersionName", required=true)
       private final String readAccessTokenVersionName;
@@ -40,7 +37,6 @@ public final class BitbucketServerSecretsResponse extends io.pulumi.resources.In
 
     /**
      * Immutable. The resource name for the webhook secret's secret version. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
-     * 
      */
     @Import(name="webhookSecretVersionName", required=true)
       private final String webhookSecretVersionName;

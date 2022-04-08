@@ -24,7 +24,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Access controls on the object.
-     * 
      */
     @Import(name="acl")
       private final @Nullable Output<List<ObjectAccessControlArgs>> acl;
@@ -35,7 +34,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the bucket containing this object.
-     * 
      */
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
@@ -46,7 +44,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Cache-Control directive for the object data. If omitted, and the object is accessible to all anonymous users, the default will be public, max-age=3600.
-     * 
      */
     @Import(name="cacheControl")
       private final @Nullable Output<String> cacheControl;
@@ -57,7 +54,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Number of underlying components that make up this object. Components are accumulated by compose operations.
-     * 
      */
     @Import(name="componentCount")
       private final @Nullable Output<Integer> componentCount;
@@ -68,7 +64,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Content-Disposition of the object data.
-     * 
      */
     @Import(name="contentDisposition")
       private final @Nullable Output<String> contentDisposition;
@@ -79,7 +74,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Content-Encoding of the object data.
-     * 
      */
     @Import(name="contentEncoding")
       private final @Nullable Output<String> contentEncoding;
@@ -90,7 +84,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Content-Language of the object data.
-     * 
      */
     @Import(name="contentLanguage")
       private final @Nullable Output<String> contentLanguage;
@@ -101,7 +94,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Content-Type of the object data. If an object is stored without a Content-Type, it is served as application/octet-stream.
-     * 
      */
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
@@ -112,7 +104,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * CRC32c checksum, as described in RFC 4960, Appendix B; encoded using base64 in big-endian byte order. For more information about using the CRC32c checksum, see Hashes and ETags: Best Practices.
-     * 
      */
     @Import(name="crc32c")
       private final @Nullable Output<String> crc32c;
@@ -123,7 +114,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A timestamp in RFC 3339 format specified by the user for an object.
-     * 
      */
     @Import(name="customTime")
       private final @Nullable Output<String> customTime;
@@ -134,7 +124,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Metadata of customer-supplied encryption key, if the object is encrypted by such a key.
-     * 
      */
     @Import(name="customerEncryption")
       private final @Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption;
@@ -145,7 +134,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * HTTP 1.1 Entity tag for the object.
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -156,7 +144,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is the loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false.
-     * 
      */
     @Import(name="eventBasedHold")
       private final @Nullable Output<Boolean> eventBasedHold;
@@ -167,7 +154,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The content generation of this object. Used for object versioning.
-     * 
      */
     @Import(name="generation")
       private final @Nullable Output<String> generation;
@@ -178,7 +164,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the object, including the bucket name, object name, and generation number.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -217,7 +202,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The kind of item this is. For objects, this is always storage#object.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -228,7 +212,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Not currently supported. Specifying the parameter causes the request to fail with status code 400 - Bad Request.
-     * 
      */
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
@@ -239,7 +222,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * MD5 hash of the data; encoded using base64. For more information about using the MD5 hash, see Hashes and ETags: Best Practices.
-     * 
      */
     @Import(name="md5Hash")
       private final @Nullable Output<String> md5Hash;
@@ -250,7 +232,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Media download link.
-     * 
      */
     @Import(name="mediaLink")
       private final @Nullable Output<String> mediaLink;
@@ -261,7 +242,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User-provided metadata, in key/value pairs.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
@@ -272,7 +252,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The version of the metadata for this object at this generation. Used for preconditions and for detecting changes in metadata. A metageneration number is only meaningful in the context of a particular generation of a particular object.
-     * 
      */
     @Import(name="metageneration")
       private final @Nullable Output<String> metageneration;
@@ -283,7 +262,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the object. Required if not specified by URL parameter.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -294,7 +272,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The owner of the object. This will always be the uploader of the object.
-     * 
      */
     @Import(name="owner")
       private final @Nullable Output<BucketObjectOwnerArgs> owner;
@@ -326,7 +303,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A server-determined value that specifies the earliest time that the object's retention period expires. This value is in RFC 3339 format. Note 1: This field is not provided for objects with an active event-based hold, since retention expiration is unknown until the hold is removed. Note 2: This value can be provided even when temporary hold is set (so that the user can reason about policy without having to first unset the temporary hold).
-     * 
      */
     @Import(name="retentionExpirationTime")
       private final @Nullable Output<String> retentionExpirationTime;
@@ -337,7 +313,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The link to this object.
-     * 
      */
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
@@ -348,7 +323,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Content-Length of the data in bytes.
-     * 
      */
     @Import(name="size")
       private final @Nullable Output<String> size;
@@ -366,7 +340,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Storage class of the object.
-     * 
      */
     @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
@@ -377,7 +350,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and overwrites. A common use case of this flag is regulatory investigations where objects need to be retained while the investigation is ongoing. Note that unlike event-based hold, temporary hold does not impact retention expiration time of an object.
-     * 
      */
     @Import(name="temporaryHold")
       private final @Nullable Output<Boolean> temporaryHold;
@@ -388,7 +360,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The creation time of the object in RFC 3339 format.
-     * 
      */
     @Import(name="timeCreated")
       private final @Nullable Output<String> timeCreated;
@@ -399,7 +370,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The deletion time of the object in RFC 3339 format. Will be returned if and only if this version of the object has been deleted.
-     * 
      */
     @Import(name="timeDeleted")
       private final @Nullable Output<String> timeDeleted;
@@ -410,7 +380,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time at which the object's storage class was last changed. When the object is initially created, it will be set to timeCreated.
-     * 
      */
     @Import(name="timeStorageClassUpdated")
       private final @Nullable Output<String> timeStorageClassUpdated;
@@ -421,7 +390,6 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The modification time of the object metadata in RFC 3339 format.
-     * 
      */
     @Import(name="updated")
       private final @Nullable Output<String> updated;

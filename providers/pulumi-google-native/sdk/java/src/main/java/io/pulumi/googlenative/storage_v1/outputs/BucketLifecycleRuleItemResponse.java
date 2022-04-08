@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class BucketLifecycleRuleItemResponse {
     /**
      * The action to take.
-     * 
      */
     private final BucketLifecycleRuleItemActionResponse action;
     /**
      * The condition(s) under which the action will be taken.
-     * 
      */
     private final BucketLifecycleRuleItemConditionResponse condition;
 
@@ -31,14 +29,12 @@ public final class BucketLifecycleRuleItemResponse {
 
     /**
      * The action to take.
-     * 
     */
     public BucketLifecycleRuleItemActionResponse getAction() {
         return this.action;
     }
     /**
      * The condition(s) under which the action will be taken.
-     * 
     */
     public BucketLifecycleRuleItemConditionResponse getCondition() {
         return this.condition;

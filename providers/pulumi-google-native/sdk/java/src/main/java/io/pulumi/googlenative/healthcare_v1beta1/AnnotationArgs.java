@@ -21,7 +21,6 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Details of the source.
-     * 
      */
     @Import(name="annotationSource")
       private final @Nullable Output<AnnotationSourceArgs> annotationSource;
@@ -39,7 +38,6 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Additional information for this annotation record, such as annotator and verifier information or study campaign.
-     * 
      */
     @Import(name="customData")
       private final @Nullable Output<Map<String,String>> customData;
@@ -57,7 +55,6 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Annotations for images. For example, bounding polygons.
-     * 
      */
     @Import(name="imageAnnotation")
       private final @Nullable Output<ImageAnnotationArgs> imageAnnotation;
@@ -75,7 +72,6 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -93,7 +89,6 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Annotations for resource. For example, classification tags.
-     * 
      */
     @Import(name="resourceAnnotation")
       private final @Nullable Output<ResourceAnnotationArgs> resourceAnnotation;
@@ -104,7 +99,6 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Annotations for sensitive texts. For example, a range that describes the location of sensitive text.
-     * 
      */
     @Import(name="textAnnotation")
       private final @Nullable Output<SensitiveTextAnnotationArgs> textAnnotation;

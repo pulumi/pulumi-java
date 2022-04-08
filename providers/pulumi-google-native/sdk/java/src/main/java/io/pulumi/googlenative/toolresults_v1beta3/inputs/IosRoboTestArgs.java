@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * A Robo test for an iOS application.
- * 
  */
 public final class IosRoboTestArgs extends io.pulumi.resources.ResourceArgs {
 

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Metadata for any related URL information.
- * 
  */
 public final class RelatedUrlResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class RelatedUrlResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Label to describe usage of the URL.
-     * 
      */
     @Import(name="label", required=true)
       private final String label;
@@ -29,7 +27,6 @@ public final class RelatedUrlResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specific URL associated with the resource.
-     * 
      */
     @Import(name="url", required=true)
       private final String url;

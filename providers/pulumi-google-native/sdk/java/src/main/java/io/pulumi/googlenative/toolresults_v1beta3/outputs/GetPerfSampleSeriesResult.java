@@ -12,32 +12,26 @@ import java.util.Objects;
 public final class GetPerfSampleSeriesResult {
     /**
      * Basic series represented by a line chart
-     * 
      */
     private final BasicPerfSampleSeriesResponse basicPerfSampleSeries;
     /**
-     * A tool results execution ID.
-     * 
+     * A tool results execution ID. 
      */
     private final String executionId;
     /**
-     * A tool results history ID.
-     * 
+     * A tool results history ID. 
      */
     private final String historyId;
     /**
-     * The cloud project
-     * 
+     * The cloud project 
      */
     private final String project;
     /**
-     * A sample series id
-     * 
+     * A sample series id 
      */
     private final String sampleSeriesId;
     /**
-     * A tool results step ID.
-     * 
+     * A tool results step ID. 
      */
     private final String stepId;
 
@@ -59,42 +53,36 @@ public final class GetPerfSampleSeriesResult {
 
     /**
      * Basic series represented by a line chart
-     * 
     */
     public BasicPerfSampleSeriesResponse getBasicPerfSampleSeries() {
         return this.basicPerfSampleSeries;
     }
     /**
-     * A tool results execution ID.
-     * 
+     * A tool results execution ID. 
     */
     public String getExecutionId() {
         return this.executionId;
     }
     /**
-     * A tool results history ID.
-     * 
+     * A tool results history ID. 
     */
     public String getHistoryId() {
         return this.historyId;
     }
     /**
-     * The cloud project
-     * 
+     * The cloud project 
     */
     public String getProject() {
         return this.project;
     }
     /**
-     * A sample series id
-     * 
+     * A sample series id 
     */
     public String getSampleSeriesId() {
         return this.sampleSeriesId;
     }
     /**
-     * A tool results step ID.
-     * 
+     * A tool results step ID. 
     */
     public String getStepId() {
         return this.stepId;

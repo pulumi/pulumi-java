@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Message encapsulating build provenance details.
- * 
  */
 public final class BuildDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class BuildDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * In-toto Statement representation as defined in spec. The intoto_statement can contain any type of provenance. The serialized payload of the statement can be stored and signed in the Occurrence's envelope.
-     * 
      */
     @Import(name="intotoStatement", required=true)
       private final InTotoStatementResponse intotoStatement;
@@ -31,7 +29,6 @@ public final class BuildDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The actual provenance
-     * 
      */
     @Import(name="provenance", required=true)
       private final BuildProvenanceResponse provenance;
@@ -42,7 +39,6 @@ public final class BuildDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Serialized JSON representation of the provenance, used in generating the `BuildSignature` in the corresponding Result. After verifying the signature, `provenance_bytes` can be unmarshalled and compared to the provenance to confirm that it is unchanged. A base64-encoded string representation of the provenance bytes is used for the signature in order to interoperate with openssl which expects this format for signature verification. The serialized form is captured both to avoid ambiguity in how the provenance is marshalled to json as well to prevent incompatibilities with future changes.
-     * 
      */
     @Import(name="provenanceBytes", required=true)
       private final String provenanceBytes;

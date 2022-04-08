@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class FirewallLogConfigResponse {
     /**
      * This field denotes whether to enable logging for a particular firewall rule.
-     * 
      */
     private final Boolean enable;
     /**
      * This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.
-     * 
      */
     private final String metadata;
 
@@ -31,14 +29,12 @@ public final class FirewallLogConfigResponse {
 
     /**
      * This field denotes whether to enable logging for a particular firewall rule.
-     * 
     */
     public Boolean getEnable() {
         return this.enable;
     }
     /**
      * This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.
-     * 
     */
     public String getMetadata() {
         return this.metadata;

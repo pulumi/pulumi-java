@@ -15,118 +15,101 @@ import javax.annotation.Nullable;
 /**
  * Creates a new capacity commitment resource.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:bigqueryreservation/v1beta1:CapacityCommitment")
 public class CapacityCommitment extends io.pulumi.resources.CustomResource {
     /**
      * The end of the current commitment period. It is applicable only for ACTIVE capacity commitments.
-     * 
      */
     @Export(name="commitmentEndTime", type=String.class, parameters={})
     private Output<String> commitmentEndTime;
 
     /**
      * @return The end of the current commitment period. It is applicable only for ACTIVE capacity commitments.
-     * 
      */
     public Output<String> getCommitmentEndTime() {
         return this.commitmentEndTime;
     }
     /**
      * The start of the current commitment period. It is applicable only for ACTIVE capacity commitments.
-     * 
      */
     @Export(name="commitmentStartTime", type=String.class, parameters={})
     private Output<String> commitmentStartTime;
 
     /**
      * @return The start of the current commitment period. It is applicable only for ACTIVE capacity commitments.
-     * 
      */
     public Output<String> getCommitmentStartTime() {
         return this.commitmentStartTime;
     }
     /**
      * For FAILED commitment plan, provides the reason of failure.
-     * 
      */
     @Export(name="failureStatus", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> failureStatus;
 
     /**
      * @return For FAILED commitment plan, provides the reason of failure.
-     * 
      */
     public Output<StatusResponse> getFailureStatus() {
         return this.failureStatus;
     }
     /**
      * The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123`
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123`
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Capacity commitment commitment plan.
-     * 
      */
     @Export(name="plan", type=String.class, parameters={})
     private Output<String> plan;
 
     /**
      * @return Capacity commitment commitment plan.
-     * 
      */
     public Output<String> getPlan() {
         return this.plan;
     }
     /**
      * The plan this capacity commitment is converted to after commitment_end_time passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL commitments.
-     * 
      */
     @Export(name="renewalPlan", type=String.class, parameters={})
     private Output<String> renewalPlan;
 
     /**
      * @return The plan this capacity commitment is converted to after commitment_end_time passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL commitments.
-     * 
      */
     public Output<String> getRenewalPlan() {
         return this.renewalPlan;
     }
     /**
      * Number of slots in this commitment.
-     * 
      */
     @Export(name="slotCount", type=String.class, parameters={})
     private Output<String> slotCount;
 
     /**
      * @return Number of slots in this commitment.
-     * 
      */
     public Output<String> getSlotCount() {
         return this.slotCount;
     }
     /**
      * State of the commitment.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return State of the commitment.
-     * 
      */
     public Output<String> getState() {
         return this.state;

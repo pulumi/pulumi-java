@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * A Dataproc job for running Apache Hive (https://hive.apache.org/) queries on YARN.
- * 
  */
 public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
-     * 
      */
     @Import(name="continueOnFailure")
       private final @Nullable Output<Boolean> continueOnFailure;
@@ -35,7 +33,6 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.
-     * 
      */
     @Import(name="jarFileUris")
       private final @Nullable Output<List<String>> jarFileUris;
@@ -46,7 +43,6 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -57,7 +53,6 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The HCFS URI of the script that contains Hive queries.
-     * 
      */
     @Import(name="queryFileUri")
       private final @Nullable Output<String> queryFileUri;
@@ -68,7 +63,6 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of queries.
-     * 
      */
     @Import(name="queryList")
       private final @Nullable Output<QueryListArgs> queryList;
@@ -79,7 +73,6 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Mapping of query variable names to values (equivalent to the Hive command: SET name="value";).
-     * 
      */
     @Import(name="scriptVariables")
       private final @Nullable Output<Map<String,String>> scriptVariables;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A message representing a measurement.
- * 
  */
 public final class GoogleCloudMlV1__MeasurementResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudMlV1__MeasurementResponse extends io.pulumi.resour
 
     /**
      * Time that the trial has been running at the point of this measurement.
-     * 
      */
     @Import(name="elapsedTime", required=true)
       private final String elapsedTime;
@@ -31,7 +29,6 @@ public final class GoogleCloudMlV1__MeasurementResponse extends io.pulumi.resour
 
     /**
      * Provides a list of metrics that act as inputs into the objective function.
-     * 
      */
     @Import(name="metrics", required=true)
       private final List<GoogleCloudMlV1_Measurement_MetricResponse> metrics;
@@ -42,7 +39,6 @@ public final class GoogleCloudMlV1__MeasurementResponse extends io.pulumi.resour
 
     /**
      * The number of steps a machine learning model has been trained for. Must be non-negative.
-     * 
      */
     @Import(name="stepCount", required=true)
       private final String stepCount;

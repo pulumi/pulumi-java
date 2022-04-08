@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A message representing the transcript of a conversation.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptRespo
 
     /**
      * A list of sequential transcript segments that comprise the conversation.
-     * 
      */
     @Import(name="transcriptSegments", required=true)
       private final List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments;

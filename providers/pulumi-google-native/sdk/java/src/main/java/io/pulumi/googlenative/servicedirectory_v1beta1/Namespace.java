@@ -14,62 +14,53 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a namespace, and returns the new namespace.
- * 
  */
 @ResourceType(type="google-native:servicedirectory/v1beta1:Namespace")
 public class Namespace extends io.pulumi.resources.CustomResource {
     /**
      * The timestamp when the namespace was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The timestamp when the namespace was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. Resource labels associated with this namespace. No more than 64 user labels can be associated with a given resource. Label keys and values can be no longer than 63 characters.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return Optional. Resource labels associated with this namespace. No more than 64 user labels can be associated with a given resource. Label keys and values can be no longer than 63 characters.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * Immutable. The resource name for the namespace in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Immutable. The resource name for the namespace in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The timestamp when the namespace was last updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The timestamp when the namespace was last updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

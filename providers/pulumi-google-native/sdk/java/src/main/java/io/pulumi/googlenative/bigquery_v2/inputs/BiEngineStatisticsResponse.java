@@ -16,7 +16,6 @@ public final class BiEngineStatisticsResponse extends io.pulumi.resources.Invoke
 
     /**
      * Specifies which mode of BI Engine acceleration was performed (if any).
-     * 
      */
     @Import(name="biEngineMode", required=true)
       private final String biEngineMode;
@@ -27,7 +26,6 @@ public final class BiEngineStatisticsResponse extends io.pulumi.resources.Invoke
 
     /**
      * In case of DISABLED or PARTIAL bi_engine_mode, these contain the explanatory reasons as to why BI Engine could not accelerate. In case the full query was accelerated, this field is not populated.
-     * 
      */
     @Import(name="biEngineReasons", required=true)
       private final List<BiEngineReasonResponse> biEngineReasons;

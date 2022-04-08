@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Custom static error page to be served when an error occurs.
- * 
  */
 public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Error condition this handler applies to.
-     * 
      */
     @Import(name="errorCode")
       private final @Nullable Output<ErrorHandlerErrorCode> errorCode;
@@ -32,7 +30,6 @@ public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * MIME type of file. Defaults to text/html.
-     * 
      */
     @Import(name="mimeType")
       private final @Nullable Output<String> mimeType;
@@ -43,7 +40,6 @@ public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Static file content to be served for this error.
-     * 
      */
     @Import(name="staticFile")
       private final @Nullable Output<String> staticFile;

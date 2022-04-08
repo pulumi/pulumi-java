@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Validation based on regular expressions.
- * 
  */
 public final class RegexValidationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RegexValidationArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).
-     * 
      */
     @Import(name="regexes", required=true)
       private final Output<List<String>> regexes;

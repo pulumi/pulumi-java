@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * [Deprecated] The configuration to access the SDS server. The configuration to access the SDS server.
- * 
  */
 public final class SdsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SdsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The configuration to access the SDS server over GRPC.
-     * 
      */
     @Import(name="grpcServiceConfig")
       private final @Nullable Output<GrpcServiceConfigArgs> grpcServiceConfig;

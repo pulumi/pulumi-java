@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Provides information about the analysis status of a discovered resource.
- * 
  */
 public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The status of discovery for the resource.
-     * 
      */
     @Import(name="analysisStatus")
       private final @Nullable Output<DiscoveryOccurrenceAnalysisStatus> analysisStatus;
@@ -34,7 +32,6 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage is output only and populated by the API.
-     * 
      */
     @Import(name="analysisStatusError")
       private final @Nullable Output<StatusArgs> analysisStatusError;
@@ -45,7 +42,6 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Whether the resource is continuously analyzed.
-     * 
      */
     @Import(name="continuousAnalysis")
       private final @Nullable Output<DiscoveryOccurrenceContinuousAnalysis> continuousAnalysis;
@@ -56,7 +52,6 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The CPE of the resource being scanned.
-     * 
      */
     @Import(name="cpe")
       private final @Nullable Output<String> cpe;
@@ -67,7 +62,6 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The last time this resource was scanned.
-     * 
      */
     @Import(name="lastScanTime")
       private final @Nullable Output<String> lastScanTime;

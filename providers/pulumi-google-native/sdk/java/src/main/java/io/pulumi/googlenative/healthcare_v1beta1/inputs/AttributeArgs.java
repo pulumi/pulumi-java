@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An attribute value for a Consent or User data mapping. Each Attribute must have a corresponding AttributeDefinition in the consent store that defines the default and allowed values.
- * 
  */
 public final class AttributeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AttributeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates the name of an attribute defined in the consent store.
-     * 
      */
     @Import(name="attributeDefinitionId")
       private final @Nullable Output<String> attributeDefinitionId;
@@ -32,7 +30,6 @@ public final class AttributeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value of the attribute. Must be an acceptable value as defined in the consent store. For example, if the consent store defines "data type" with acceptable values "questionnaire" and "step-count", when the attribute name is data type, this field must contain one of those values.
-     * 
      */
     @Import(name="values")
       private final @Nullable Output<List<String>> values;

@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class GoogleCloudApigeeV1TlsInfoCommonNameResponse {
     /**
      * The TLS Common Name string of the certificate.
-     * 
      */
     private final String value;
     /**
      * Indicates whether the cert should be matched against as a wildcard cert.
-     * 
      */
     private final Boolean wildcardMatch;
 
@@ -31,14 +29,12 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameResponse {
 
     /**
      * The TLS Common Name string of the certificate.
-     * 
     */
     public String getValue() {
         return this.value;
     }
     /**
      * Indicates whether the cert should be matched against as a wildcard cert.
-     * 
     */
     public Boolean getWildcardMatch() {
         return this.wildcardMatch;

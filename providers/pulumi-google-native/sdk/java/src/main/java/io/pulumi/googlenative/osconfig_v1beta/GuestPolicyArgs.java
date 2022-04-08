@@ -21,7 +21,6 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the VM instances that are assigned to this policy. This allows you to target sets or groups of VM instances by different parameters such as labels, names, OS, or zones. If left empty, all VM instances underneath this policy are targeted. At the same level in the resource hierarchy (that is within a project), the service prevents the creation of multiple policies that conflict with each other. For more information, see how the service [handles assignment conflicts](/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
-     * 
      */
     @Import(name="assignment", required=true)
       private final Output<AssignmentArgs> assignment;
@@ -32,7 +31,6 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of the guest policy. Length of the description is limited to 1024 characters.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -43,7 +41,6 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The etag for this guest policy. If this is provided on update, it must match the server's etag.
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -61,7 +58,6 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unique name of the resource in this project using one of the following forms: `projects/{project_number}/guestPolicies/{guest_policy_id}`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -72,7 +68,6 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of package repositories to configure on the VM instance. This is done before any other configs are applied so they can use these repos. Package repositories are only configured if the corresponding package manager(s) are available.
-     * 
      */
     @Import(name="packageRepositories")
       private final @Nullable Output<List<PackageRepositoryArgs>> packageRepositories;
@@ -83,7 +78,6 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The software packages to be managed by this policy.
-     * 
      */
     @Import(name="packages")
       private final @Nullable Output<List<PackageArgs>> packages;
@@ -101,7 +95,6 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of Recipes to install on the VM instance.
-     * 
      */
     @Import(name="recipes")
       private final @Nullable Output<List<SoftwareRecipeArgs>> recipes;

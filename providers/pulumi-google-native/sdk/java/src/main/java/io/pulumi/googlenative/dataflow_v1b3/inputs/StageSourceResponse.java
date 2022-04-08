@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Description of an input or output of an execution stage.
- * 
  */
 public final class StageSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class StageSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Dataflow service generated name for this source.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class StageSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * User name for the original user transform or collection with which this source is most closely associated.
-     * 
      */
     @Import(name="originalTransformOrCollection", required=true)
       private final String originalTransformOrCollection;
@@ -40,7 +37,6 @@ public final class StageSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Size of the source, if measurable.
-     * 
      */
     @Import(name="sizeBytes", required=true)
       private final String sizeBytes;
@@ -51,7 +47,6 @@ public final class StageSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Human-readable name for this source; may be user or system generated.
-     * 
      */
     @Import(name="userName", required=true)
       private final String userName;

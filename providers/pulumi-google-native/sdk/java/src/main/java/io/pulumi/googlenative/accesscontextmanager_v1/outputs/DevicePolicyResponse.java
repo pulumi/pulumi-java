@@ -14,32 +14,26 @@ import java.util.Objects;
 public final class DevicePolicyResponse {
     /**
      * Allowed device management levels, an empty list allows all management levels.
-     * 
      */
     private final List<String> allowedDeviceManagementLevels;
     /**
      * Allowed encryptions statuses, an empty list allows all statuses.
-     * 
      */
     private final List<String> allowedEncryptionStatuses;
     /**
      * Allowed OS versions, an empty list allows all types and all versions.
-     * 
      */
     private final List<OsConstraintResponse> osConstraints;
     /**
      * Whether the device needs to be approved by the customer admin.
-     * 
      */
     private final Boolean requireAdminApproval;
     /**
      * Whether the device needs to be corp owned.
-     * 
      */
     private final Boolean requireCorpOwned;
     /**
      * Whether or not screenlock is required for the DevicePolicy to be true. Defaults to `false`.
-     * 
      */
     private final Boolean requireScreenlock;
 
@@ -61,42 +55,36 @@ public final class DevicePolicyResponse {
 
     /**
      * Allowed device management levels, an empty list allows all management levels.
-     * 
     */
     public List<String> getAllowedDeviceManagementLevels() {
         return this.allowedDeviceManagementLevels;
     }
     /**
      * Allowed encryptions statuses, an empty list allows all statuses.
-     * 
     */
     public List<String> getAllowedEncryptionStatuses() {
         return this.allowedEncryptionStatuses;
     }
     /**
      * Allowed OS versions, an empty list allows all types and all versions.
-     * 
     */
     public List<OsConstraintResponse> getOsConstraints() {
         return this.osConstraints;
     }
     /**
      * Whether the device needs to be approved by the customer admin.
-     * 
     */
     public Boolean getRequireAdminApproval() {
         return this.requireAdminApproval;
     }
     /**
      * Whether the device needs to be corp owned.
-     * 
     */
     public Boolean getRequireCorpOwned() {
         return this.requireCorpOwned;
     }
     /**
      * Whether or not screenlock is required for the DevicePolicy to be true. Defaults to `false`.
-     * 
     */
     public Boolean getRequireScreenlock() {
         return this.requireScreenlock;

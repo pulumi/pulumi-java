@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Specification of the GRPC Endpoint.
- * 
  */
 public final class GoogleCloudNetworksecurityV1GrpcEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudNetworksecurityV1GrpcEndpointResponse extends io.p
 
     /**
      * The target URI of the gRPC endpoint. Only UDS path is supported, and should start with “unix:”.
-     * 
      */
     @Import(name="targetUri", required=true)
       private final String targetUri;

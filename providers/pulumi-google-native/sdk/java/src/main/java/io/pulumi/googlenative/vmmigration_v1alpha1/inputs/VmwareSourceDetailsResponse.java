@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * VmwareSourceDetails message describes a specific source details for the vmware source type.
- * 
  */
 public final class VmwareSourceDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class VmwareSourceDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * Input only. The credentials password. This is write only and can not be read in a GET operation.
-     * 
      */
     @Import(name="password", required=true)
       private final String password;
@@ -29,7 +27,6 @@ public final class VmwareSourceDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * The thumbprint representing the certificate for the vcenter.
-     * 
      */
     @Import(name="thumbprint", required=true)
       private final String thumbprint;
@@ -40,7 +37,6 @@ public final class VmwareSourceDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * The credentials username.
-     * 
      */
     @Import(name="username", required=true)
       private final String username;
@@ -51,7 +47,6 @@ public final class VmwareSourceDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * The ip address of the vcenter this Source represents.
-     * 
      */
     @Import(name="vcenterIp", required=true)
       private final String vcenterIp;

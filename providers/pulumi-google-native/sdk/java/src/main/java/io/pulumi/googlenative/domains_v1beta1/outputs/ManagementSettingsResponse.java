@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ManagementSettingsResponse {
     /**
      * The renewal method for this `Registration`.
-     * 
      */
     private final String renewalMethod;
     /**
      * Controls whether the domain can be transferred to another registrar.
-     * 
      */
     private final String transferLockState;
 
@@ -30,14 +28,12 @@ public final class ManagementSettingsResponse {
 
     /**
      * The renewal method for this `Registration`.
-     * 
     */
     public String getRenewalMethod() {
         return this.renewalMethod;
     }
     /**
      * Controls whether the domain can be transferred to another registrar.
-     * 
     */
     public String getTransferLockState() {
         return this.transferLockState;

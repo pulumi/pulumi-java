@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * An MSI package. MSI packages only support INSTALLED state.
- * 
  */
 public final class OSPolicyResourcePackageResourceMSIResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class OSPolicyResourcePackageResourceMSIResponse extends io.pulumi.
 
     /**
      * Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
-     * 
      */
     @Import(name="properties", required=true)
       private final List<String> properties;
@@ -31,7 +29,6 @@ public final class OSPolicyResourcePackageResourceMSIResponse extends io.pulumi.
 
     /**
      * The MSI package.
-     * 
      */
     @Import(name="source", required=true)
       private final OSPolicyResourceFileResponse source;

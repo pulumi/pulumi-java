@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * iOS app information
- * 
  */
 public final class IosAppInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class IosAppInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the app. Required
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

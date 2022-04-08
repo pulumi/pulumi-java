@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * Specifies an intent that starts the main launcher activity.
- * 
  */
 public final class LauncherActivityIntentResponse extends io.pulumi.resources.InvokeArgs {
 

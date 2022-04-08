@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of a single value with generic type.
- * 
  */
 public final class ValueArgs extends io.pulumi.resources.ResourceArgs {
 

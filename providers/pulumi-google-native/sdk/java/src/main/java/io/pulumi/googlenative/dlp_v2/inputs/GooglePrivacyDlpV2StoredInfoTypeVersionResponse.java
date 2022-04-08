@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Version of a StoredInfoType, including the configuration used to build it, create timestamp, and current state.
- * 
  */
 public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends io.pu
 
     /**
      * StoredInfoType configuration.
-     * 
      */
     @Import(name="config", required=true)
       private final GooglePrivacyDlpV2StoredInfoTypeConfigResponse config;
@@ -33,7 +31,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends io.pu
 
     /**
      * Create timestamp of the version. Read-only, determined by the system when the version is created.
-     * 
      */
     @Import(name="createTime", required=true)
       private final String createTime;
@@ -44,7 +41,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends io.pu
 
     /**
      * Errors that occurred when creating this storedInfoType version, or anomalies detected in the storedInfoType data that render it unusable. Only the five most recent errors will be displayed, with the most recent error appearing first. For example, some of the data for stored custom dictionaries is put in the user's Google Cloud Storage bucket, and if this data is modified or deleted by the user or another system, the dictionary becomes invalid. If any errors occur, fix the problem indicated by the error message and use the UpdateStoredInfoType API method to create another version of the storedInfoType to continue using it, reusing the same `config` if it was not the source of the error.
-     * 
      */
     @Import(name="errors", required=true)
       private final List<GooglePrivacyDlpV2ErrorResponse> errors;
@@ -55,7 +51,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends io.pu
 
     /**
      * Stored info type version state. Read-only, updated by the system during dictionary creation.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -66,7 +61,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends io.pu
 
     /**
      * Statistics about this storedInfoType version.
-     * 
      */
     @Import(name="stats", required=true)
       private final GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats;

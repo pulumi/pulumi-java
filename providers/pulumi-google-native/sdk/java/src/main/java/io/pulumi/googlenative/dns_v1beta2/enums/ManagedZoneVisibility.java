@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private Cloud resources.
-     * 
      */
     @EnumType
     public enum ManagedZoneVisibility {

@@ -11,22 +11,18 @@ import java.util.Objects;
 public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse {
     /**
      * The Data Catalog resource name of the dataset entry the current table belongs to. For example: `projects/{PROJECT_ID}/locations/{LOCATION}/entrygroups/{ENTRY_GROUP_ID}/entries/{ENTRY_ID}`.
-     * 
      */
     private final String dataset;
     /**
      * BigQuery resource name of the latest shard.
-     * 
      */
     private final String latestShardResource;
     /**
      * Total number of shards.
-     * 
      */
     private final String shardCount;
     /**
      * The table name prefix of the shards. The name of any given shard is `[table_prefix]YYYYMMDD`. For example, for the `MyTable20180101` shard, the `table_prefix` is `MyTable`.
-     * 
      */
     private final String tablePrefix;
 
@@ -44,28 +40,24 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse {
 
     /**
      * The Data Catalog resource name of the dataset entry the current table belongs to. For example: `projects/{PROJECT_ID}/locations/{LOCATION}/entrygroups/{ENTRY_GROUP_ID}/entries/{ENTRY_ID}`.
-     * 
     */
     public String getDataset() {
         return this.dataset;
     }
     /**
      * BigQuery resource name of the latest shard.
-     * 
     */
     public String getLatestShardResource() {
         return this.latestShardResource;
     }
     /**
      * Total number of shards.
-     * 
     */
     public String getShardCount() {
         return this.shardCount;
     }
     /**
      * The table name prefix of the shards. The name of any given shard is `[table_prefix]YYYYMMDD`. For example, for the `MyTable20180101` shard, the `table_prefix` is `MyTable`.
-     * 
     */
     public String getTablePrefix() {
         return this.tablePrefix;

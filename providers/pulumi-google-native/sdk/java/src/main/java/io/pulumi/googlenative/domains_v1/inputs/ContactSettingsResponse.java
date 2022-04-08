@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Defines the contact information associated with a `Registration`. [ICANN](https://icann.org/) requires all domain names to have associated contact information. The `registrant_contact` is considered the domain's legal owner, and often the other contacts are identical.
- * 
  */
 public final class ContactSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ContactSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The administrative contact for the `Registration`.
-     * 
      */
     @Import(name="adminContact", required=true)
       private final ContactResponse adminContact;
@@ -30,7 +28,6 @@ public final class ContactSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Privacy setting for the contacts associated with the `Registration`.
-     * 
      */
     @Import(name="privacy", required=true)
       private final String privacy;
@@ -41,7 +38,6 @@ public final class ContactSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The registrant contact for the `Registration`. *Caution: Anyone with access to this email address, phone number, and/or postal address can take control of the domain.* *Warning: For new `Registration`s, the registrant receives an email confirmation that they must complete within 15 days to avoid domain suspension.*
-     * 
      */
     @Import(name="registrantContact", required=true)
       private final ContactResponse registrantContact;
@@ -52,7 +48,6 @@ public final class ContactSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The technical contact for the `Registration`.
-     * 
      */
     @Import(name="technicalContact", required=true)
       private final ContactResponse technicalContact;

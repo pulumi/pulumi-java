@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class BigQueryDestinationResponse {
     /**
      * The ID of a BigQuery Dataset.
-     * 
      */
     private final String datasetId;
 
@@ -22,7 +21,6 @@ public final class BigQueryDestinationResponse {
 
     /**
      * The ID of a BigQuery Dataset.
-     * 
     */
     public String getDatasetId() {
         return this.datasetId;

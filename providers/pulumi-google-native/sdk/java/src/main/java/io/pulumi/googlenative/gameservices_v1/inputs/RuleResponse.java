@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * A rule to be applied in a Policy.
- * 
  */
 public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Required
-     * 
      */
     @Import(name="action", required=true)
       private final String action;
@@ -32,7 +30,6 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Additional restrictions that must be met. All conditions must pass for the rule to match.
-     * 
      */
     @Import(name="conditions", required=true)
       private final List<ConditionResponse> conditions;
@@ -43,7 +40,6 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Human-readable description of the rule.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -54,7 +50,6 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If one or more 'in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in at least one of these entries.
-     * 
      */
     @Import(name="in", required=true)
       private final List<String> in;
@@ -65,7 +60,6 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The config returned to callers of CheckPolicy for any entries that match the LOG action.
-     * 
      */
     @Import(name="logConfig", required=true)
       private final List<LogConfigResponse> logConfig;
@@ -76,7 +70,6 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If one or more 'not_in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in none of the entries. The format for in and not_in entries can be found at in the Local IAM documentation (see go/local-iam#features).
-     * 
      */
     @Import(name="notIn", required=true)
       private final List<String> notIn;
@@ -87,7 +80,6 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A permission is a string of form '..' (e.g., 'storage.buckets.list'). A value of '*' matches all permissions, and a verb part of '*' (e.g., 'storage.buckets.*') matches all verbs.
-     * 
      */
     @Import(name="permissions", required=true)
       private final List<String> permissions;

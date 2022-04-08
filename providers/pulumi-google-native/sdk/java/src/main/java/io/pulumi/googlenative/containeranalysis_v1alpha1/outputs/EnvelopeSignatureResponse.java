@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class EnvelopeSignatureResponse {
     /**
      * A reference id to the key being used for signing
-     * 
      */
     private final String keyid;
     /**
      * The signature itself
-     * 
      */
     private final String sig;
 
@@ -30,14 +28,12 @@ public final class EnvelopeSignatureResponse {
 
     /**
      * A reference id to the key being used for signing
-     * 
     */
     public String getKeyid() {
         return this.keyid;
     }
     /**
      * The signature itself
-     * 
     */
     public String getSig() {
         return this.sig;

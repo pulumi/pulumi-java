@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The data for an intent match. Represents an intent match for a text segment in the conversation. A text segment can be part of a sentence, a complete sentence, or an utterance with multiple sentences.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1IntentMatchDataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudContactcenterinsightsV1IntentMatchDataResponse ext
 
     /**
      * The id of the matched intent. Can be used to retrieve the corresponding intent information.
-     * 
      */
     @Import(name="intentUniqueId", required=true)
       private final String intentUniqueId;

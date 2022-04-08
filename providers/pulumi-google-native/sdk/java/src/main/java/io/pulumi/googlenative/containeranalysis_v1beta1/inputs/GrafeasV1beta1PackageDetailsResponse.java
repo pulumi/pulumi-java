@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Details of a package occurrence.
- * 
  */
 public final class GrafeasV1beta1PackageDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GrafeasV1beta1PackageDetailsResponse extends io.pulumi.resour
 
     /**
      * Where the package was installed.
-     * 
      */
     @Import(name="installation", required=true)
       private final InstallationResponse installation;

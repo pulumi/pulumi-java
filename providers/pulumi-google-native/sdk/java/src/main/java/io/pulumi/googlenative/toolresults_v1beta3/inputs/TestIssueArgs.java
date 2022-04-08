@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * An issue detected occurring during a test execution.
- * 
  */
 public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Category of issue. Required.
-     * 
      */
     @Import(name="category")
       private final @Nullable Output<TestIssueCategory> category;
@@ -35,7 +33,6 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A brief human-readable message describing the issue. Required.
-     * 
      */
     @Import(name="errorMessage")
       private final @Nullable Output<String> errorMessage;
@@ -46,7 +43,6 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Severity of issue. Required.
-     * 
      */
     @Import(name="severity")
       private final @Nullable Output<TestIssueSeverity> severity;
@@ -57,7 +53,6 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of issue. Required.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<TestIssueType> type;
@@ -68,7 +63,6 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Warning message with additional details of the issue. Should always be a message from com.google.devtools.toolresults.v1.warnings
-     * 
      */
     @Import(name="warning")
       private final @Nullable Output<AnyArgs> warning;

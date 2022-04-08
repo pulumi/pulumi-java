@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A starting intent specified by an action, uri, and categories.
- * 
  */
 public final class StartActivityIntentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class StartActivityIntentResponse extends io.pulumi.resources.Invok
 
     /**
      * Action name. Required for START_ACTIVITY.
-     * 
      */
     @Import(name="action", required=true)
       private final String action;
@@ -30,7 +28,6 @@ public final class StartActivityIntentResponse extends io.pulumi.resources.Invok
 
     /**
      * Intent categories to set on the intent.
-     * 
      */
     @Import(name="categories", required=true)
       private final List<String> categories;
@@ -41,7 +38,6 @@ public final class StartActivityIntentResponse extends io.pulumi.resources.Invok
 
     /**
      * URI for the action.
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;

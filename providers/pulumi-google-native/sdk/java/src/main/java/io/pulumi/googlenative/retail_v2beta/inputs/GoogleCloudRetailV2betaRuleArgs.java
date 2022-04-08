@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * A rule is a condition-action pair * A condition defines when a rule is to be triggered. * An action specifies what occurs on that trigger. Currently only boost rules are supported. Currently only supported by the search endpoint.
- * 
  */
 public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
 
     /**
      * A boost action.
-     * 
      */
     @Import(name="boostAction")
       private final @Nullable Output<GoogleCloudRetailV2betaRuleBoostActionArgs> boostAction;
@@ -39,7 +37,6 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
 
     /**
      * The condition that triggers the rule. If the condition is empty, the rule will always apply.
-     * 
      */
     @Import(name="condition", required=true)
       private final Output<GoogleCloudRetailV2betaConditionArgs> condition;
@@ -50,7 +47,6 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
 
     /**
      * Prevents term from being associated with other terms.
-     * 
      */
     @Import(name="doNotAssociateAction")
       private final @Nullable Output<GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs> doNotAssociateAction;
@@ -61,7 +57,6 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
 
     /**
      * Filters results.
-     * 
      */
     @Import(name="filterAction")
       private final @Nullable Output<GoogleCloudRetailV2betaRuleFilterActionArgs> filterAction;
@@ -72,7 +67,6 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
 
     /**
      * Ignores specific terms from query during search.
-     * 
      */
     @Import(name="ignoreAction")
       private final @Nullable Output<GoogleCloudRetailV2betaRuleIgnoreActionArgs> ignoreAction;
@@ -83,7 +77,6 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
 
     /**
      * Treats specific term as a synonym with a group of terms. Group of terms will not be treated as synonyms with the specific term.
-     * 
      */
     @Import(name="onewaySynonymsAction")
       private final @Nullable Output<GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs> onewaySynonymsAction;
@@ -94,7 +87,6 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
 
     /**
      * Redirects a shopper to a specific page.
-     * 
      */
     @Import(name="redirectAction")
       private final @Nullable Output<GoogleCloudRetailV2betaRuleRedirectActionArgs> redirectAction;
@@ -105,7 +97,6 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
 
     /**
      * Replaces specific terms in the query.
-     * 
      */
     @Import(name="replacementAction")
       private final @Nullable Output<GoogleCloudRetailV2betaRuleReplacementActionArgs> replacementAction;
@@ -116,7 +107,6 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
 
     /**
      * Treats a set of terms as synonyms of one another.
-     * 
      */
     @Import(name="twowaySynonymsAction")
       private final @Nullable Output<GoogleCloudRetailV2betaRuleTwowaySynonymsActionArgs> twowaySynonymsAction;

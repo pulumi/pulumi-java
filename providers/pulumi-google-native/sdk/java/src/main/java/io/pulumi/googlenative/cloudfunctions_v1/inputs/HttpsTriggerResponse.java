@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Describes HttpsTrigger, could be used to connect web hooks to function.
- * 
  */
 public final class HttpsTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class HttpsTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The security level for the function.
-     * 
      */
     @Import(name="securityLevel", required=true)
       private final String securityLevel;
@@ -29,7 +27,6 @@ public final class HttpsTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The deployed url for the function.
-     * 
      */
     @Import(name="url", required=true)
       private final String url;

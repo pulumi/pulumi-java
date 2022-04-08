@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * An OpenAPI Specification Document describing an API.
- * 
  */
 public final class ApigatewayApiConfigOpenApiDocumentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ApigatewayApiConfigOpenApiDocumentArgs extends io.pulumi.reso
 
     /**
      * The OpenAPI Specification document file.
-     * 
      */
     @Import(name="document")
       private final @Nullable Output<ApigatewayApiConfigFileArgs> document;

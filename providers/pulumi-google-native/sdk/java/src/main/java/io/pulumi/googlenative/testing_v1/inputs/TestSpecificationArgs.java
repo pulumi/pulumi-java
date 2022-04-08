@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * A description of how to run the test.
- * 
  */
 public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * An Android instrumentation test.
-     * 
      */
     @Import(name="androidInstrumentationTest")
       private final @Nullable Output<AndroidInstrumentationTestArgs> androidInstrumentationTest;
@@ -39,7 +37,6 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * An Android robo test.
-     * 
      */
     @Import(name="androidRoboTest")
       private final @Nullable Output<AndroidRoboTestArgs> androidRoboTest;
@@ -50,7 +47,6 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * An Android Application with a Test Loop.
-     * 
      */
     @Import(name="androidTestLoop")
       private final @Nullable Output<AndroidTestLoopArgs> androidTestLoop;
@@ -61,7 +57,6 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Disables performance metrics recording. May reduce test latency.
-     * 
      */
     @Import(name="disablePerformanceMetrics")
       private final @Nullable Output<Boolean> disablePerformanceMetrics;
@@ -72,7 +67,6 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Disables video recording. May reduce test latency.
-     * 
      */
     @Import(name="disableVideoRecording")
       private final @Nullable Output<Boolean> disableVideoRecording;
@@ -83,7 +77,6 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * An iOS application with a test loop.
-     * 
      */
     @Import(name="iosTestLoop")
       private final @Nullable Output<IosTestLoopArgs> iosTestLoop;
@@ -94,7 +87,6 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Test setup requirements for iOS.
-     * 
      */
     @Import(name="iosTestSetup")
       private final @Nullable Output<IosTestSetupArgs> iosTestSetup;
@@ -105,7 +97,6 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * An iOS XCTest, via an .xctestrun file.
-     * 
      */
     @Import(name="iosXcTest")
       private final @Nullable Output<IosXcTestArgs> iosXcTest;
@@ -116,7 +107,6 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Test setup requirements for Android e.g. files to install, bootstrap scripts.
-     * 
      */
     @Import(name="testSetup")
       private final @Nullable Output<TestSetupArgs> testSetup;
@@ -127,7 +117,6 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Max time a test execution is allowed to run before it is automatically cancelled. The default value is 5 min.
-     * 
      */
     @Import(name="testTimeout")
       private final @Nullable Output<String> testTimeout;

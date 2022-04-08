@@ -14,104 +14,89 @@ import javax.annotation.Nullable;
 
 /**
  * Inserts a resource containing information about a database inside a Cloud SQL instance.
- * 
  */
 @ResourceType(type="google-native:sqladmin/v1:Database")
 public class Database extends io.pulumi.resources.CustomResource {
     /**
      * The Cloud SQL charset value.
-     * 
      */
     @Export(name="charset", type=String.class, parameters={})
     private Output<String> charset;
 
     /**
      * @return The Cloud SQL charset value.
-     * 
      */
     public Output<String> getCharset() {
         return this.charset;
     }
     /**
      * The Cloud SQL collation value.
-     * 
      */
     @Export(name="collation", type=String.class, parameters={})
     private Output<String> collation;
 
     /**
      * @return The Cloud SQL collation value.
-     * 
      */
     public Output<String> getCollation() {
         return this.collation;
     }
     /**
      * The name of the Cloud SQL instance. This does not include the project ID.
-     * 
      */
     @Export(name="instance", type=String.class, parameters={})
     private Output<String> instance;
 
     /**
      * @return The name of the Cloud SQL instance. This does not include the project ID.
-     * 
      */
     public Output<String> getInstance() {
         return this.instance;
     }
     /**
      * This is always `sql#database`.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return This is always `sql#database`.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The project ID of the project containing the Cloud SQL database. The Google apps domain is prefixed if applicable.
-     * 
      */
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
      * @return The project ID of the project containing the Cloud SQL database. The Google apps domain is prefixed if applicable.
-     * 
      */
     public Output<String> getProject() {
         return this.project;
     }
     /**
      * The URI of this resource.
-     * 
      */
     @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
      * @return The URI of this resource.
-     * 
      */
     public Output<String> getSelfLink() {
         return this.selfLink;

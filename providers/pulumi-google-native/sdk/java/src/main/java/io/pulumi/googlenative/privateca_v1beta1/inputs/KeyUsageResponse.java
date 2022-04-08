@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * A KeyUsage describes key usage values that may appear in an X.509 certificate.
- * 
  */
 public final class KeyUsageResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class KeyUsageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Describes high-level ways in which a key may be used.
-     * 
      */
     @Import(name="baseKeyUsage", required=true)
       private final KeyUsageOptionsResponse baseKeyUsage;
@@ -32,7 +30,6 @@ public final class KeyUsageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Detailed scenarios in which a key may be used.
-     * 
      */
     @Import(name="extendedKeyUsage", required=true)
       private final ExtendedKeyUsageOptionsResponse extendedKeyUsage;
@@ -43,7 +40,6 @@ public final class KeyUsageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
-     * 
      */
     @Import(name="unknownExtendedKeyUsages", required=true)
       private final List<ObjectIdResponse> unknownExtendedKeyUsages;

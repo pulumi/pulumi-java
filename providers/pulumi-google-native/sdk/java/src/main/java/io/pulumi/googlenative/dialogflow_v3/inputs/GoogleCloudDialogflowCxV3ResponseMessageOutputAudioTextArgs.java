@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A text or ssml response that is preferentially used for TTS output audio synthesis, as described in the comment on the ResponseMessage message.
- * 
  */
 public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs e
 
     /**
      * The SSML text to be synthesized. For more information, see [SSML](/speech/text-to-speech/docs/ssml).
-     * 
      */
     @Import(name="ssml")
       private final @Nullable Output<String> ssml;
@@ -31,7 +29,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs e
 
     /**
      * The raw text to be synthesized.
-     * 
      */
     @Import(name="text")
       private final @Nullable Output<String> text;

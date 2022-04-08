@@ -16,7 +16,6 @@ public final class PacketMirroringForwardingRuleInfoArgs extends io.pulumi.resou
 
     /**
      * Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.
-     * 
      */
     @Import(name="url")
       private final @Nullable Output<String> url;

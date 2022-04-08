@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Call-specific metadata.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
 
     /**
      * The audio channel that contains the agent.
-     * 
      */
     @Import(name="agentChannel")
       private final @Nullable Output<Integer> agentChannel;
@@ -31,7 +29,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
 
     /**
      * The audio channel that contains the customer.
-     * 
      */
     @Import(name="customerChannel")
       private final @Nullable Output<Integer> customerChannel;

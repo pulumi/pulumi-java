@@ -25,7 +25,6 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels.
-     * 
      */
     @Import(name="externalProtectionLevelOptions")
       private final @Nullable Output<ExternalProtectionLevelOptionsArgs> externalProtectionLevelOptions;
@@ -57,7 +56,6 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The current state of the CryptoKeyVersion.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<CryptoKeyVersionState> state;

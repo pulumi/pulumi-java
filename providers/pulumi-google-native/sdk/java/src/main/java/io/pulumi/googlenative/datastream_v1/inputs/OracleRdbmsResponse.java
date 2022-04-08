@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Oracle database structure.
- * 
  */
 public final class OracleRdbmsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class OracleRdbmsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Oracle schemas/databases in the database server.
-     * 
      */
     @Import(name="oracleSchemas", required=true)
       private final List<OracleSchemaResponse> oracleSchemas;

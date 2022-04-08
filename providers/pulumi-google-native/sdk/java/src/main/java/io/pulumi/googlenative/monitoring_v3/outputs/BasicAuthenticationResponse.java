@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class BasicAuthenticationResponse {
     /**
      * The password to use when authenticating with the HTTP server.
-     * 
      */
     private final String password;
     /**
      * The username to use when authenticating with the HTTP server.
-     * 
      */
     private final String username;
 
@@ -30,14 +28,12 @@ public final class BasicAuthenticationResponse {
 
     /**
      * The password to use when authenticating with the HTTP server.
-     * 
     */
     public String getPassword() {
         return this.password;
     }
     /**
      * The username to use when authenticating with the HTTP server.
-     * 
     */
     public String getUsername() {
         return this.username;

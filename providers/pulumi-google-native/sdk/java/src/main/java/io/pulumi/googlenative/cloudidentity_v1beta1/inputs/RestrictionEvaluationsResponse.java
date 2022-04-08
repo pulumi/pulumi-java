@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Evaluations of restrictions applied to parent group on this membership.
- * 
  */
 public final class RestrictionEvaluationsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class RestrictionEvaluationsResponse extends io.pulumi.resources.In
 
     /**
      * Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.
-     * 
      */
     @Import(name="memberRestrictionEvaluation", required=true)
       private final MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation;

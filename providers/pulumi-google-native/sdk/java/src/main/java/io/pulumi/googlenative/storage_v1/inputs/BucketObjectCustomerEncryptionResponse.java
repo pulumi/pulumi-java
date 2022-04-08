@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Metadata of customer-supplied encryption key, if the object is encrypted by such a key.
- * 
  */
 public final class BucketObjectCustomerEncryptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class BucketObjectCustomerEncryptionResponse extends io.pulumi.reso
 
     /**
      * The encryption algorithm.
-     * 
      */
     @Import(name="encryptionAlgorithm", required=true)
       private final String encryptionAlgorithm;
@@ -29,7 +27,6 @@ public final class BucketObjectCustomerEncryptionResponse extends io.pulumi.reso
 
     /**
      * SHA256 hash value of the encryption key.
-     * 
      */
     @Import(name="keySha256", required=true)
       private final String keySha256;

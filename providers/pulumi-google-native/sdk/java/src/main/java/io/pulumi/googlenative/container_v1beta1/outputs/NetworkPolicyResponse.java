@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class NetworkPolicyResponse {
     /**
      * Whether network policy is enabled on the cluster.
-     * 
      */
     private final Boolean enabled;
     /**
      * The selected network policy provider.
-     * 
      */
     private final String provider;
 
@@ -31,14 +29,12 @@ public final class NetworkPolicyResponse {
 
     /**
      * Whether network policy is enabled on the cluster.
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * The selected network policy provider.
-     * 
     */
     public String getProvider() {
         return this.provider;

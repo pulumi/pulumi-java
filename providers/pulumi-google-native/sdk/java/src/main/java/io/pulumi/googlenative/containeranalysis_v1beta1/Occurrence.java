@@ -27,272 +27,233 @@ import javax.annotation.Nullable;
 /**
  * Creates a new occurrence.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:containeranalysis/v1beta1:Occurrence")
 public class Occurrence extends io.pulumi.resources.CustomResource {
     /**
      * Describes an attestation of an artifact.
-     * 
      */
     @Export(name="attestation", type=DetailsResponse.class, parameters={})
     private Output<DetailsResponse> attestation;
 
     /**
      * @return Describes an attestation of an artifact.
-     * 
      */
     public Output<DetailsResponse> getAttestation() {
         return this.attestation;
     }
     /**
      * Describes a verifiable build.
-     * 
      */
     @Export(name="build", type=GrafeasV1beta1BuildDetailsResponse.class, parameters={})
     private Output<GrafeasV1beta1BuildDetailsResponse> build;
 
     /**
      * @return Describes a verifiable build.
-     * 
      */
     public Output<GrafeasV1beta1BuildDetailsResponse> getBuild() {
         return this.build;
     }
     /**
      * The time this occurrence was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time this occurrence was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * Describes the deployment of an artifact on a runtime.
-     * 
      */
     @Export(name="deployment", type=GrafeasV1beta1DeploymentDetailsResponse.class, parameters={})
     private Output<GrafeasV1beta1DeploymentDetailsResponse> deployment;
 
     /**
      * @return Describes the deployment of an artifact on a runtime.
-     * 
      */
     public Output<GrafeasV1beta1DeploymentDetailsResponse> getDeployment() {
         return this.deployment;
     }
     /**
      * Describes how this resource derives from the basis in the associated note.
-     * 
      */
     @Export(name="derivedImage", type=GrafeasV1beta1ImageDetailsResponse.class, parameters={})
     private Output<GrafeasV1beta1ImageDetailsResponse> derivedImage;
 
     /**
      * @return Describes how this resource derives from the basis in the associated note.
-     * 
      */
     public Output<GrafeasV1beta1ImageDetailsResponse> getDerivedImage() {
         return this.derivedImage;
     }
     /**
      * Describes when a resource was discovered.
-     * 
      */
     @Export(name="discovered", type=GrafeasV1beta1DiscoveryDetailsResponse.class, parameters={})
     private Output<GrafeasV1beta1DiscoveryDetailsResponse> discovered;
 
     /**
      * @return Describes when a resource was discovered.
-     * 
      */
     public Output<GrafeasV1beta1DiscoveryDetailsResponse> getDiscovered() {
         return this.discovered;
     }
     /**
      * Describes the installation of a package on the linked resource.
-     * 
      */
     @Export(name="installation", type=GrafeasV1beta1PackageDetailsResponse.class, parameters={})
     private Output<GrafeasV1beta1PackageDetailsResponse> installation;
 
     /**
      * @return Describes the installation of a package on the linked resource.
-     * 
      */
     public Output<GrafeasV1beta1PackageDetailsResponse> getInstallation() {
         return this.installation;
     }
     /**
      * Describes a specific in-toto link.
-     * 
      */
     @Export(name="intoto", type=GrafeasV1beta1IntotoDetailsResponse.class, parameters={})
     private Output<GrafeasV1beta1IntotoDetailsResponse> intoto;
 
     /**
      * @return Describes a specific in-toto link.
-     * 
      */
     public Output<GrafeasV1beta1IntotoDetailsResponse> getIntoto() {
         return this.intoto;
     }
     /**
      * This explicitly denotes which of the occurrence details are specified. This field can be used as a filter in list requests.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return This explicitly denotes which of the occurrence details are specified. This field can be used as a filter in list requests.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * The name of the occurrence in the form of `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the occurrence in the form of `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
-     * 
      */
     @Export(name="noteName", type=String.class, parameters={})
     private Output<String> noteName;
 
     /**
      * @return Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
-     * 
      */
     public Output<String> getNoteName() {
         return this.noteName;
     }
     /**
      * A description of actions that can be taken to remedy the note.
-     * 
      */
     @Export(name="remediation", type=String.class, parameters={})
     private Output<String> remediation;
 
     /**
      * @return A description of actions that can be taken to remedy the note.
-     * 
      */
     public Output<String> getRemediation() {
         return this.remediation;
     }
     /**
      * Immutable. The resource for which the occurrence applies.
-     * 
      */
     @Export(name="resource", type=ResourceResponse.class, parameters={})
     private Output<ResourceResponse> resource;
 
     /**
      * @return Immutable. The resource for which the occurrence applies.
-     * 
      */
     public Output<ResourceResponse> getResource() {
         return this.resource;
     }
     /**
      * Describes a specific software bill of materials document.
-     * 
      */
     @Export(name="sbom", type=DocumentOccurrenceResponse.class, parameters={})
     private Output<DocumentOccurrenceResponse> sbom;
 
     /**
      * @return Describes a specific software bill of materials document.
-     * 
      */
     public Output<DocumentOccurrenceResponse> getSbom() {
         return this.sbom;
     }
     /**
      * Describes a specific SPDX File.
-     * 
      */
     @Export(name="spdxFile", type=FileOccurrenceResponse.class, parameters={})
     private Output<FileOccurrenceResponse> spdxFile;
 
     /**
      * @return Describes a specific SPDX File.
-     * 
      */
     public Output<FileOccurrenceResponse> getSpdxFile() {
         return this.spdxFile;
     }
     /**
      * Describes a specific SPDX Package.
-     * 
      */
     @Export(name="spdxPackage", type=PackageInfoOccurrenceResponse.class, parameters={})
     private Output<PackageInfoOccurrenceResponse> spdxPackage;
 
     /**
      * @return Describes a specific SPDX Package.
-     * 
      */
     public Output<PackageInfoOccurrenceResponse> getSpdxPackage() {
         return this.spdxPackage;
     }
     /**
      * Describes a specific SPDX Relationship.
-     * 
      */
     @Export(name="spdxRelationship", type=RelationshipOccurrenceResponse.class, parameters={})
     private Output<RelationshipOccurrenceResponse> spdxRelationship;
 
     /**
      * @return Describes a specific SPDX Relationship.
-     * 
      */
     public Output<RelationshipOccurrenceResponse> getSpdxRelationship() {
         return this.spdxRelationship;
     }
     /**
      * The time this occurrence was last updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The time this occurrence was last updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
     /**
      * Describes a security vulnerability.
-     * 
      */
     @Export(name="vulnerability", type=GrafeasV1beta1VulnerabilityDetailsResponse.class, parameters={})
     private Output<GrafeasV1beta1VulnerabilityDetailsResponse> vulnerability;
 
     /**
      * @return Describes a security vulnerability.
-     * 
      */
     public Output<GrafeasV1beta1VulnerabilityDetailsResponse> getVulnerability() {
         return this.vulnerability;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * An occurrence describing an attestation on a resource
- * 
  */
 public final class DSSEAttestationOccurrenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class DSSEAttestationOccurrenceResponse extends io.pulumi.resources
 
     /**
      * If doing something security critical, make sure to verify the signatures in this metadata.
-     * 
      */
     @Import(name="envelope", required=true)
       private final EnvelopeResponse envelope;

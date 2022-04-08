@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class AutoUpgradeOptionsResponse {
     /**
      * [Output only] This field is set when upgrades are about to commence with the approximate start time for the upgrades, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
-     * 
      */
     private final String autoUpgradeStartTime;
     /**
      * [Output only] This field is set when upgrades are about to commence with the description of the upgrade.
-     * 
      */
     private final String description;
 
@@ -30,14 +28,12 @@ public final class AutoUpgradeOptionsResponse {
 
     /**
      * [Output only] This field is set when upgrades are about to commence with the approximate start time for the upgrades, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
-     * 
     */
     public String getAutoUpgradeStartTime() {
         return this.autoUpgradeStartTime;
     }
     /**
      * [Output only] This field is set when upgrades are about to commence with the description of the upgrade.
-     * 
     */
     public String getDescription() {
         return this.description;

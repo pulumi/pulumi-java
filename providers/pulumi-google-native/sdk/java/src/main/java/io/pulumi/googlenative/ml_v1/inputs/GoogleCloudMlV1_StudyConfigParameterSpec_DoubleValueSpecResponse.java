@@ -14,7 +14,6 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecRespo
 
     /**
      * Must be specified if type is `DOUBLE`. Maximum value of the parameter.
-     * 
      */
     @Import(name="maxValue", required=true)
       private final Double maxValue;
@@ -25,7 +24,6 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecRespo
 
     /**
      * Must be specified if type is `DOUBLE`. Minimum value of the parameter.
-     * 
      */
     @Import(name="minValue", required=true)
       private final Double minValue;

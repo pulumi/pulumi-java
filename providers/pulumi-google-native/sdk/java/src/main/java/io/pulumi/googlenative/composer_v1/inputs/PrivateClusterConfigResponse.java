@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Configuration options for the private GKE cluster in a Cloud Composer environment.
- * 
  */
 public final class PrivateClusterConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
 
     /**
      * Optional. If `true`, access to the public endpoint of the GKE cluster is denied.
-     * 
      */
     @Import(name="enablePrivateEndpoint", required=true)
       private final Boolean enablePrivateEndpoint;
@@ -30,7 +28,6 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
 
     /**
      * Optional. The CIDR block from which IPv4 range for GKE master will be reserved. If left blank, the default value of '172.16.0.0/23' is used.
-     * 
      */
     @Import(name="masterIpv4CidrBlock", required=true)
       private final String masterIpv4CidrBlock;
@@ -41,7 +38,6 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
 
     /**
      * The IP range in CIDR notation to use for the hosted master network. This range is used for assigning internal IP addresses to the GKE cluster master or set of masters and to the internal load balancer virtual IP. This range must not overlap with any other ranges in use within the cluster's network.
-     * 
      */
     @Import(name="masterIpv4ReservedRange", required=true)
       private final String masterIpv4ReservedRange;

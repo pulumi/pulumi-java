@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * VolumeMount describes a mounting of a Volume within a container.
- * 
  */
 public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Path within the container at which the volume should be mounted. Must not contain ':'.
-     * 
      */
     @Import(name="mountPath")
       private final @Nullable Output<String> mountPath;
@@ -32,7 +30,6 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the volume. There must be a corresponding Volume with the same name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -43,7 +40,6 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * (Optional) Only true is accepted. Defaults to true.
-     * 
      */
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
@@ -54,7 +50,6 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * (Optional) Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).
-     * 
      */
     @Import(name="subPath")
       private final @Nullable Output<String> subPath;

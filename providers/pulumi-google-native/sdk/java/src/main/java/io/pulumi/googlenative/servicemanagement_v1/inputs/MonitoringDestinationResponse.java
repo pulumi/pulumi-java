@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Configuration of a specific monitoring destination (the producer project or the consumer project).
- * 
  */
 public final class MonitoringDestinationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class MonitoringDestinationResponse extends io.pulumi.resources.Inv
 
     /**
      * Types of the metrics to report to this monitoring destination. Each type must be defined in Service.metrics section.
-     * 
      */
     @Import(name="metrics", required=true)
       private final List<String> metrics;
@@ -30,7 +28,6 @@ public final class MonitoringDestinationResponse extends io.pulumi.resources.Inv
 
     /**
      * The monitored resource type. The type must be defined in Service.monitored_resources section.
-     * 
      */
     @Import(name="monitoredResource", required=true)
       private final String monitoredResource;

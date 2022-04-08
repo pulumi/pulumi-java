@@ -12,22 +12,18 @@ import java.util.Objects;
 public final class UpgradeDistributionResponse {
     /**
      * The operating system classification of this Upgrade, as specified by the upstream operating system upgrade feed.
-     * 
      */
     private final String classification;
     /**
      * Required - The specific operating system this metadata applies to. See https://cpe.mitre.org/specification/.
-     * 
      */
     private final String cpeUri;
     /**
      * The cve that would be resolved by this upgrade.
-     * 
      */
     private final List<String> cve;
     /**
      * The severity as specified by the upstream operating system.
-     * 
      */
     private final String severity;
 
@@ -45,28 +41,24 @@ public final class UpgradeDistributionResponse {
 
     /**
      * The operating system classification of this Upgrade, as specified by the upstream operating system upgrade feed.
-     * 
     */
     public String getClassification() {
         return this.classification;
     }
     /**
      * Required - The specific operating system this metadata applies to. See https://cpe.mitre.org/specification/.
-     * 
     */
     public String getCpeUri() {
         return this.cpeUri;
     }
     /**
      * The cve that would be resolved by this upgrade.
-     * 
     */
     public List<String> getCve() {
         return this.cve;
     }
     /**
      * The severity as specified by the upstream operating system.
-     * 
     */
     public String getSeverity() {
         return this.severity;

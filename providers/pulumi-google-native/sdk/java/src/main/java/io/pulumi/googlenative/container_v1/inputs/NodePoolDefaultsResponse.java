@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Subset of Nodepool message that has defaults.
- * 
  */
 public final class NodePoolDefaultsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class NodePoolDefaultsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Subset of NodeConfig message that has defaults.
-     * 
      */
     @Import(name="nodeConfigDefaults", required=true)
       private final NodeConfigDefaultsResponse nodeConfigDefaults;

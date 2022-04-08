@@ -20,7 +20,6 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Raw message bytes.
-     * 
      */
     @Import(name="data")
       private final @Nullable Output<String> data;
@@ -45,7 +44,6 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -63,7 +61,6 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The message type for this message. MSH-9.1.
-     * 
      */
     @Import(name="messageType")
       private final @Nullable Output<String> messageType;
@@ -74,7 +71,6 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource name of the Message, of the form `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -85,7 +81,6 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * All patient IDs listed in the PID-2, PID-3, and PID-4 segments of this message.
-     * 
      */
     @Import(name="patientIds")
       private final @Nullable Output<List<PatientIdArgs>> patientIds;
@@ -103,7 +98,6 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The parsed version of the raw message data schematized according to this store's schemas and type definitions.
-     * 
      */
     @Import(name="schematizedData")
       private final @Nullable Output<SchematizedDataArgs> schematizedData;
@@ -114,7 +108,6 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The hospital that this message came from. MSH-4.
-     * 
      */
     @Import(name="sendFacility")
       private final @Nullable Output<String> sendFacility;
@@ -125,7 +118,6 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The datetime the sending application sent this message. MSH-7.
-     * 
      */
     @Import(name="sendTime")
       private final @Nullable Output<String> sendTime;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Represents preferences for sending email notifications for transfer run events.
- * 
  */
 public final class EmailPreferencesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class EmailPreferencesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * If true, email notifications will be sent on transfer run failures.
-     * 
      */
     @Import(name="enableFailureEmail", required=true)
       private final Boolean enableFailureEmail;

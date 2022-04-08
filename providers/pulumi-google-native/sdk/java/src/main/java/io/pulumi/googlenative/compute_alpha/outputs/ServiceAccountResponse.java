@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class ServiceAccountResponse {
     /**
      * Email address of the service account.
-     * 
      */
     private final String email;
     /**
      * The list of scopes to be made available for this service account.
-     * 
      */
     private final List<String> scopes;
 
@@ -31,14 +29,12 @@ public final class ServiceAccountResponse {
 
     /**
      * Email address of the service account.
-     * 
     */
     public String getEmail() {
         return this.email;
     }
     /**
      * The list of scopes to be made available for this service account.
-     * 
     */
     public List<String> getScopes() {
         return this.scopes;

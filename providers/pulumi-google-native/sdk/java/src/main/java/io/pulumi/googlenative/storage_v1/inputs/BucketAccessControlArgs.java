@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An access-control entry.
- * 
  */
 public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the bucket.
-     * 
      */
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
@@ -32,7 +30,6 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The domain associated with the entity, if any.
-     * 
      */
     @Import(name="domain")
       private final @Nullable Output<String> domain;
@@ -43,7 +40,6 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The email address associated with the entity, if any.
-     * 
      */
     @Import(name="email")
       private final @Nullable Output<String> email;
@@ -53,19 +49,18 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
     }
 
     /**
-     * The entity holding the permission, in one of the following forms:
-     * - user-userId
-     * - user-email
-     * - group-groupId
-     * - group-email
-     * - domain-domain
-     * - project-team-projectId
-     * - allUsers
-     * - allAuthenticatedUsers Examples:
-     * - The user liz@example.com would be user-liz@example.com.
-     * - The group example@googlegroups.com would be group-example@googlegroups.com.
+     * The entity holding the permission, in one of the following forms: 
+     * - user-userId 
+     * - user-email 
+     * - group-groupId 
+     * - group-email 
+     * - domain-domain 
+     * - project-team-projectId 
+     * - allUsers 
+     * - allAuthenticatedUsers Examples: 
+     * - The user liz@example.com would be user-liz@example.com. 
+     * - The group example@googlegroups.com would be group-example@googlegroups.com. 
      * - To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
-     * 
      */
     @Import(name="entity")
       private final @Nullable Output<String> entity;
@@ -76,7 +71,6 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The ID for the entity, if any.
-     * 
      */
     @Import(name="entityId")
       private final @Nullable Output<String> entityId;
@@ -87,7 +81,6 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
 
     /**
      * HTTP 1.1 Entity tag for the access-control entry.
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -98,7 +91,6 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The ID of the access-control entry.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -109,7 +101,6 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The kind of item this is. For bucket access control entries, this is always storage#bucketAccessControl.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -120,7 +111,6 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The project team associated with the entity, if any.
-     * 
      */
     @Import(name="projectTeam")
       private final @Nullable Output<BucketAccessControlProjectTeamArgs> projectTeam;
@@ -131,7 +121,6 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The access permission for the entity.
-     * 
      */
     @Import(name="role")
       private final @Nullable Output<String> role;
@@ -142,7 +131,6 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The link to this access-control entry.
-     * 
      */
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;

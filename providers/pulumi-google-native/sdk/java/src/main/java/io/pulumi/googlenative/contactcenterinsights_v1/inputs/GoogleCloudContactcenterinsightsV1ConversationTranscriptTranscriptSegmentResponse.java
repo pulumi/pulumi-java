@@ -17,7 +17,6 @@ import java.util.Objects;
 
 /**
  * A segment of a full transcript.
- * 
  */
 public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
 
     /**
      * For conversations derived from multi-channel audio, this is the channel number corresponding to the audio from that channel. For audioChannelCount = N, its output values can range from '1' to 'N'. A channel tag of 0 indicates that the audio is mono.
-     * 
      */
     @Import(name="channelTag", required=true)
       private final Integer channelTag;
@@ -36,7 +34,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
 
     /**
      * A confidence estimate between 0.0 and 1.0 of the fidelity of this segment. A default value of 0.0 indicates that the value is unset.
-     * 
      */
     @Import(name="confidence", required=true)
       private final Double confidence;
@@ -47,7 +44,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
 
     /**
      * CCAI metadata relating to the current transcript segment.
-     * 
      */
     @Import(name="dialogflowSegmentMetadata", required=true)
       private final GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata;
@@ -58,7 +54,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
 
     /**
      * The language code of this segment as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
-     * 
      */
     @Import(name="languageCode", required=true)
       private final String languageCode;
@@ -69,7 +64,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
 
     /**
      * The time that the message occurred, if provided.
-     * 
      */
     @Import(name="messageTime", required=true)
       private final String messageTime;
@@ -80,7 +74,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
 
     /**
      * The participant of this segment.
-     * 
      */
     @Import(name="segmentParticipant", required=true)
       private final GoogleCloudContactcenterinsightsV1ConversationParticipantResponse segmentParticipant;
@@ -91,7 +84,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
 
     /**
      * The sentiment for this transcript segment.
-     * 
      */
     @Import(name="sentiment", required=true)
       private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment;
@@ -102,7 +94,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
 
     /**
      * The text of this segment.
-     * 
      */
     @Import(name="text", required=true)
       private final String text;
@@ -113,7 +104,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
 
     /**
      * A list of the word-specific information for each word in the segment.
-     * 
      */
     @Import(name="words", required=true)
       private final List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words;

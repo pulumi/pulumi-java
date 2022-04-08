@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * The input from the human user.
- * 
  */
 public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse ex
 
     /**
      * Whether sentiment analysis is enabled.
-     * 
      */
     @Import(name="enableSentimentAnalysis", required=true)
       private final Boolean enableSentimentAnalysis;
@@ -32,7 +30,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse ex
 
     /**
      * Parameters that need to be injected into the conversation during intent detection.
-     * 
      */
     @Import(name="injectedParameters", required=true)
       private final Map<String,String> injectedParameters;
@@ -43,7 +40,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse ex
 
     /**
      * Supports text input, event input, dtmf input in the test case.
-     * 
      */
     @Import(name="input", required=true)
       private final GoogleCloudDialogflowCxV3QueryInputResponse input;
@@ -54,7 +50,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse ex
 
     /**
      * If webhooks should be allowed to trigger in response to the user utterance. Often if parameters are injected, webhooks should not be enabled.
-     * 
      */
     @Import(name="isWebhookEnabled", required=true)
       private final Boolean isWebhookEnabled;

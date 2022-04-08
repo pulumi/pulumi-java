@@ -23,7 +23,6 @@ public final class NatAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID of the NAT address.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

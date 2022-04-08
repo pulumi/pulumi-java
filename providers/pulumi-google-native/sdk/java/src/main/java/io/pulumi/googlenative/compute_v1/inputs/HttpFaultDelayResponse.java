@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Specifies the delay introduced by the load balancer before forwarding the request to the backend service as part of fault injection.
- * 
  */
 public final class HttpFaultDelayResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class HttpFaultDelayResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies the value of the fixed delay interval.
-     * 
      */
     @Import(name="fixedDelay", required=true)
       private final DurationResponse fixedDelay;
@@ -30,7 +28,6 @@ public final class HttpFaultDelayResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The percentage of traffic for connections, operations, or requests for which a delay is introduced as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
-     * 
      */
     @Import(name="percentage", required=true)
       private final Double percentage;

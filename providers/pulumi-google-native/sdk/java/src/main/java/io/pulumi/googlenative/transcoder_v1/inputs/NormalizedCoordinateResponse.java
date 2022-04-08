@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * 2D normalized coordinates. Default: `{0.0, 0.0}`
- * 
  */
 public final class NormalizedCoordinateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class NormalizedCoordinateResponse extends io.pulumi.resources.Invo
 
     /**
      * Normalized x coordinate.
-     * 
      */
     @Import(name="x", required=true)
       private final Double x;
@@ -29,7 +27,6 @@ public final class NormalizedCoordinateResponse extends io.pulumi.resources.Invo
 
     /**
      * Normalized y coordinate.
-     * 
      */
     @Import(name="y", required=true)
       private final Double y;

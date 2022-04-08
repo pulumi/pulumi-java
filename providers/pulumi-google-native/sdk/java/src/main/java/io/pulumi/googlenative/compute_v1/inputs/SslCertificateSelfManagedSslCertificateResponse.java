@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration and status of a self-managed SSL certificate.
- * 
  */
 public final class SslCertificateSelfManagedSslCertificateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SslCertificateSelfManagedSslCertificateResponse extends io.pu
 
     /**
      * A local certificate file. The certificate must be in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert.
-     * 
      */
     @Import(name="certificate", required=true)
       private final String certificate;
@@ -29,7 +27,6 @@ public final class SslCertificateSelfManagedSslCertificateResponse extends io.pu
 
     /**
      * A write-only private key in PEM format. Only insert requests will include this field.
-     * 
      */
     @Import(name="privateKey", required=true)
       private final String privateKey;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class PubsubDestinationResponse {
     /**
      * The name of the Pub/Sub topic to publish to. Example: `projects/PROJECT_ID/topics/TOPIC_ID`.
-     * 
      */
     private final String topic;
 
@@ -22,7 +21,6 @@ public final class PubsubDestinationResponse {
 
     /**
      * The name of the Pub/Sub topic to publish to. Example: `projects/PROJECT_ID/topics/TOPIC_ID`.
-     * 
     */
     public String getTopic() {
         return this.topic;

@@ -15,7 +15,6 @@ import java.util.Objects;
 
 /**
  * An X509Parameters is used to describe certain fields of an X.509 certificate, such as the key usage fields, fields specific to CA certificates, certificate policy extensions and custom extensions.
- * 
  */
 public final class X509ParametersResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class X509ParametersResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Optional. Describes custom X.509 extensions.
-     * 
      */
     @Import(name="additionalExtensions", required=true)
       private final List<X509ExtensionResponse> additionalExtensions;
@@ -34,7 +32,6 @@ public final class X509ParametersResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.
-     * 
      */
     @Import(name="aiaOcspServers", required=true)
       private final List<String> aiaOcspServers;
@@ -45,7 +42,6 @@ public final class X509ParametersResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
-     * 
      */
     @Import(name="caOptions", required=true)
       private final CaOptionsResponse caOptions;
@@ -56,7 +52,6 @@ public final class X509ParametersResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Optional. Indicates the intended use for keys that correspond to a certificate.
-     * 
      */
     @Import(name="keyUsage", required=true)
       private final KeyUsageResponse keyUsage;
@@ -67,7 +62,6 @@ public final class X509ParametersResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
-     * 
      */
     @Import(name="policyIds", required=true)
       private final List<ObjectIdResponse> policyIds;

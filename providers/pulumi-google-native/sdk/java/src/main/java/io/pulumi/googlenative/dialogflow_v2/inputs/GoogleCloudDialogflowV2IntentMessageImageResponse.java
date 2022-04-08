@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The image response message.
- * 
  */
 public final class GoogleCloudDialogflowV2IntentMessageImageResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudDialogflowV2IntentMessageImageResponse extends io.
 
     /**
      * Optional. A text description of the image to be used for accessibility, e.g., screen readers.
-     * 
      */
     @Import(name="accessibilityText", required=true)
       private final String accessibilityText;
@@ -29,7 +27,6 @@ public final class GoogleCloudDialogflowV2IntentMessageImageResponse extends io.
 
     /**
      * Optional. The public URI to an image file.
-     * 
      */
     @Import(name="imageUri", required=true)
       private final String imageUri;

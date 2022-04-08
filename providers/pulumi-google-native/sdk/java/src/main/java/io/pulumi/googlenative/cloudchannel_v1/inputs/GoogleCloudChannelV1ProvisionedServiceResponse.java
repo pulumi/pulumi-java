@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Service provisioned for an entitlement.
- * 
  */
 public final class GoogleCloudChannelV1ProvisionedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse extends io.pul
 
     /**
      * The product pertaining to the provisioning resource as specified in the Offer.
-     * 
      */
     @Import(name="productId", required=true)
       private final String productId;
@@ -29,7 +27,6 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse extends io.pul
 
     /**
      * Provisioning ID of the entitlement. For Google Workspace, this would be the underlying Subscription ID. For Google Cloud Platform, this would be the Billing Account ID of the billing subaccount."
-     * 
      */
     @Import(name="provisioningId", required=true)
       private final String provisioningId;
@@ -40,7 +37,6 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse extends io.pul
 
     /**
      * The SKU pertaining to the provisioning resource as specified in the Offer.
-     * 
      */
     @Import(name="skuId", required=true)
       private final String skuId;

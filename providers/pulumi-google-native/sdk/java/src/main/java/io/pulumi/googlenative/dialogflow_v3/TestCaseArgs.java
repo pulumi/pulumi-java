@@ -27,7 +27,6 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The human-readable name of the test case, unique within the agent. Limit of 200 characters.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -38,7 +37,6 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The latest test result.
-     * 
      */
     @Import(name="lastTestResult")
       private final @Nullable Output<GoogleCloudDialogflowCxV3TestCaseResultArgs> lastTestResult;
@@ -56,7 +54,6 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique identifier of the test case. TestCases.CreateTestCase will populate the name automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -67,7 +64,6 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Additional freeform notes about the test case. Limit of 400 characters.
-     * 
      */
     @Import(name="notes")
       private final @Nullable Output<String> notes;
@@ -85,7 +81,6 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tags are short descriptions that users may apply to test cases for organizational and filtering purposes. Each tag should start with "#" and has a limit of 30 characters.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
@@ -96,7 +91,6 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The conversation turns uttered when the test case was created, in chronological order. These include the canonical set of agent utterances that should occur when the agent is working properly.
-     * 
      */
     @Import(name="testCaseConversationTurns")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> testCaseConversationTurns;
@@ -107,7 +101,6 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Config for the test case.
-     * 
      */
     @Import(name="testConfig")
       private final @Nullable Output<GoogleCloudDialogflowCxV3TestConfigArgs> testConfig;

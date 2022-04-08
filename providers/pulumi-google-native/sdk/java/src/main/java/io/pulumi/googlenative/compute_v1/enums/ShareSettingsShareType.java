@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Type of sharing for this shared-reservation
-     * 
      */
     @EnumType
     public enum ShareSettingsShareType {
         /**
          * Default value.
-         * 
          */
         Local("LOCAL"),
         /**
          * Default value. This value is unused.
-         * 
          */
         ShareTypeUnspecified("SHARE_TYPE_UNSPECIFIED"),
         /**
          * Shared-reservation is open to specific projects
-         * 
          */
         SpecificProjects("SPECIFIC_PROJECTS");
 

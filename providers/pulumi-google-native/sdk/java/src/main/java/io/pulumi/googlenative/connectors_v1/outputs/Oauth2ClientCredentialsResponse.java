@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class Oauth2ClientCredentialsResponse {
     /**
      * The client identifier.
-     * 
      */
     private final String clientId;
     /**
      * Secret version reference containing the client secret.
-     * 
      */
     private final SecretResponse clientSecret;
 
@@ -31,14 +29,12 @@ public final class Oauth2ClientCredentialsResponse {
 
     /**
      * The client identifier.
-     * 
     */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * Secret version reference containing the client secret.
-     * 
     */
     public SecretResponse getClientSecret() {
         return this.clientSecret;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * RepoSource describes the location of the source in a Google Cloud Source Repository.
- * 
  */
 public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the branch to build.
-     * 
      */
     @Import(name="branchName")
       private final @Nullable Output<String> branchName;
@@ -31,7 +29,6 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Explicit commit SHA to build.
-     * 
      */
     @Import(name="commitSha")
       private final @Nullable Output<String> commitSha;
@@ -42,7 +39,6 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ID of the project that owns the repo.
-     * 
      */
     @Import(name="project")
       private final @Nullable Output<String> project;
@@ -53,7 +49,6 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the repo.
-     * 
      */
     @Import(name="repoName")
       private final @Nullable Output<String> repoName;
@@ -64,7 +59,6 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the tag to build.
-     * 
      */
     @Import(name="tagName")
       private final @Nullable Output<String> tagName;

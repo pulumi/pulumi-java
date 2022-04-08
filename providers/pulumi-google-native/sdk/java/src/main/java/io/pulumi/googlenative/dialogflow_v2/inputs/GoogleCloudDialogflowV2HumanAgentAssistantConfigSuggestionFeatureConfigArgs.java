@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Config for suggestion features.
- * 
  */
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
 
     /**
      * Configs of custom conversation model.
-     * 
      */
     @Import(name="conversationModelConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs> conversationModelConfig;
@@ -36,7 +34,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
 
     /**
      * Configs for processing conversation.
-     * 
      */
     @Import(name="conversationProcessConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs> conversationProcessConfig;
@@ -47,7 +44,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
 
     /**
      * Automatically iterates all participants and tries to compile suggestions. Supported features: ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.
-     * 
      */
     @Import(name="enableEventBasedSuggestion")
       private final @Nullable Output<Boolean> enableEventBasedSuggestion;
@@ -58,7 +54,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
 
     /**
      * Configs of query.
-     * 
      */
     @Import(name="queryConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigArgs> queryConfig;
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
 
     /**
      * The suggestion feature.
-     * 
      */
     @Import(name="suggestionFeature")
       private final @Nullable Output<GoogleCloudDialogflowV2SuggestionFeatureArgs> suggestionFeature;
@@ -80,7 +74,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
 
     /**
      * Settings of suggestion trigger. Currently, only ARTICLE_SUGGESTION and FAQ will use this field.
-     * 
      */
     @Import(name="suggestionTriggerSettings")
       private final @Nullable Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs> suggestionTriggerSettings;

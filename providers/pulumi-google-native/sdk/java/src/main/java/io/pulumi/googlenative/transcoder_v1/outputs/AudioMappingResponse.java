@@ -13,32 +13,26 @@ import java.util.Objects;
 public final class AudioMappingResponse {
     /**
      * The `EditAtom.key` that references the atom with audio inputs in the `Job.edit_list`.
-     * 
      */
     private final String atomKey;
     /**
      * Audio volume control in dB. Negative values decrease volume, positive values increase. The default is 0.
-     * 
      */
     private final Double gainDb;
     /**
      * The zero-based index of the channel in the input audio stream.
-     * 
      */
     private final Integer inputChannel;
     /**
      * The `Input.key` that identifies the input file.
-     * 
      */
     private final String inputKey;
     /**
      * The zero-based index of the track in the input file.
-     * 
      */
     private final Integer inputTrack;
     /**
      * The zero-based index of the channel in the output audio stream.
-     * 
      */
     private final Integer outputChannel;
 
@@ -60,42 +54,36 @@ public final class AudioMappingResponse {
 
     /**
      * The `EditAtom.key` that references the atom with audio inputs in the `Job.edit_list`.
-     * 
     */
     public String getAtomKey() {
         return this.atomKey;
     }
     /**
      * Audio volume control in dB. Negative values decrease volume, positive values increase. The default is 0.
-     * 
     */
     public Double getGainDb() {
         return this.gainDb;
     }
     /**
      * The zero-based index of the channel in the input audio stream.
-     * 
     */
     public Integer getInputChannel() {
         return this.inputChannel;
     }
     /**
      * The `Input.key` that identifies the input file.
-     * 
     */
     public String getInputKey() {
         return this.inputKey;
     }
     /**
      * The zero-based index of the track in the input file.
-     * 
     */
     public Integer getInputTrack() {
         return this.inputTrack;
     }
     /**
      * The zero-based index of the channel in the output audio stream.
-     * 
     */
     public Integer getOutputChannel() {
         return this.outputChannel;

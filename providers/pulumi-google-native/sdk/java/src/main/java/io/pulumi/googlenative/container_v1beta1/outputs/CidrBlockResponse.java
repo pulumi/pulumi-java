@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class CidrBlockResponse {
     /**
      * cidr_block must be specified in CIDR notation.
-     * 
      */
     private final String cidrBlock;
     /**
      * display_name is an optional field for users to identify CIDR blocks.
-     * 
      */
     private final String displayName;
 
@@ -30,14 +28,12 @@ public final class CidrBlockResponse {
 
     /**
      * cidr_block must be specified in CIDR notation.
-     * 
     */
     public String getCidrBlock() {
         return this.cidrBlock;
     }
     /**
      * display_name is an optional field for users to identify CIDR blocks.
-     * 
     */
     public String getDisplayName() {
         return this.displayName;

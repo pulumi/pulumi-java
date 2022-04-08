@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GooglePrivacyDlpV2ReplaceValueConfigResponse {
     /**
      * Value to replace it with.
-     * 
      */
     private final GooglePrivacyDlpV2ValueResponse newValue;
 
@@ -22,7 +21,6 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigResponse {
 
     /**
      * Value to replace it with.
-     * 
     */
     public GooglePrivacyDlpV2ValueResponse getNewValue() {
         return this.newValue;

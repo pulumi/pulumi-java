@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The named port. For example: <"http", 80>.
- * 
  */
 public final class NamedPortResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class NamedPortResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name for this named port. The name must be 1-63 characters long, and comply with RFC1035.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -30,7 +28,6 @@ public final class NamedPortResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The port number, which can be a value between 1 and 65535.
-     * 
      */
     @Import(name="port", required=true)
       private final Integer port;

@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * Master is the configuration for components on master.
- * 
  */
 public final class MasterArgs extends io.pulumi.resources.ResourceArgs {
 

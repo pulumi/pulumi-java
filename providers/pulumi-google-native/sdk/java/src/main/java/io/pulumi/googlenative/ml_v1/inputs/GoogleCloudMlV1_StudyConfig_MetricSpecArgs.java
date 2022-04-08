@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Represents a metric to optimize.
- * 
  */
 public final class GoogleCloudMlV1_StudyConfig_MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecArgs extends io.pulumi.
 
     /**
      * The optimization goal of the metric.
-     * 
      */
     @Import(name="goal", required=true)
       private final Output<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal;
@@ -31,7 +29,6 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecArgs extends io.pulumi.
 
     /**
      * The name of the metric.
-     * 
      */
     @Import(name="metric", required=true)
       private final Output<String> metric;

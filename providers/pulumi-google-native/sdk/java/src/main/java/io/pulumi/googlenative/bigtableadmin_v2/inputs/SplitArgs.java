@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * An initial split point for a newly created table.
- * 
  */
 public final class SplitArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SplitArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Row key to use as an initial tablet boundary.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;

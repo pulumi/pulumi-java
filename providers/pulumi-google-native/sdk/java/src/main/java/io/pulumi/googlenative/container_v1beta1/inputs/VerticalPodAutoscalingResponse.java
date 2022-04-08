@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * VerticalPodAutoscaling contains global, per-cluster information required by Vertical Pod Autoscaler to automatically adjust the resources of pods controlled by it.
- * 
  */
 public final class VerticalPodAutoscalingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class VerticalPodAutoscalingResponse extends io.pulumi.resources.In
 
     /**
      * Enables vertical pod autoscaling.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;

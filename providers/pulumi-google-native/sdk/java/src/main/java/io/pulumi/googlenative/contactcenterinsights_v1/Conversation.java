@@ -21,272 +21,233 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a conversation.
- * 
  */
 @ResourceType(type="google-native:contactcenterinsights/v1:Conversation")
 public class Conversation extends io.pulumi.resources.CustomResource {
     /**
      * An opaque, user-specified string representing the human agent who handled the conversation.
-     * 
      */
     @Export(name="agentId", type=String.class, parameters={})
     private Output<String> agentId;
 
     /**
      * @return An opaque, user-specified string representing the human agent who handled the conversation.
-     * 
      */
     public Output<String> getAgentId() {
         return this.agentId;
     }
     /**
      * Call-specific metadata.
-     * 
      */
     @Export(name="callMetadata", type=GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse.class, parameters={})
     private Output<GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse> callMetadata;
 
     /**
      * @return Call-specific metadata.
-     * 
      */
     public Output<GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse> getCallMetadata() {
         return this.callMetadata;
     }
     /**
      * The time at which the conversation was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time at which the conversation was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The source of the audio and transcription for the conversation.
-     * 
      */
     @Export(name="dataSource", type=GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse.class, parameters={})
     private Output<GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse> dataSource;
 
     /**
      * @return The source of the audio and transcription for the conversation.
-     * 
      */
     public Output<GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse> getDataSource() {
         return this.dataSource;
     }
     /**
      * All the matched Dialogflow intents in the call. The key corresponds to a Dialogflow intent, format: projects/{project}/agent/{agent}/intents/{intent}
-     * 
      */
     @Export(name="dialogflowIntents", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> dialogflowIntents;
 
     /**
      * @return All the matched Dialogflow intents in the call. The key corresponds to a Dialogflow intent, format: projects/{project}/agent/{agent}/intents/{intent}
-     * 
      */
     public Output<Map<String,String>> getDialogflowIntents() {
         return this.dialogflowIntents;
     }
     /**
      * The duration of the conversation.
-     * 
      */
     @Export(name="duration", type=String.class, parameters={})
     private Output<String> duration;
 
     /**
      * @return The duration of the conversation.
-     * 
      */
     public Output<String> getDuration() {
         return this.duration;
     }
     /**
      * The time at which this conversation should expire. After this time, the conversation data and any associated analyses will be deleted.
-     * 
      */
     @Export(name="expireTime", type=String.class, parameters={})
     private Output<String> expireTime;
 
     /**
      * @return The time at which this conversation should expire. After this time, the conversation data and any associated analyses will be deleted.
-     * 
      */
     public Output<String> getExpireTime() {
         return this.expireTime;
     }
     /**
      * A map for the user to specify any custom fields. A maximum of 20 labels per conversation is allowed, with a maximum of 256 characters per entry.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return A map for the user to specify any custom fields. A maximum of 20 labels per conversation is allowed, with a maximum of 256 characters per entry.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * A user-specified language code for the conversation.
-     * 
      */
     @Export(name="languageCode", type=String.class, parameters={})
     private Output<String> languageCode;
 
     /**
      * @return A user-specified language code for the conversation.
-     * 
      */
     public Output<String> getLanguageCode() {
         return this.languageCode;
     }
     /**
      * The conversation's latest analysis, if one exists.
-     * 
      */
     @Export(name="latestAnalysis", type=GoogleCloudContactcenterinsightsV1AnalysisResponse.class, parameters={})
     private Output<GoogleCloudContactcenterinsightsV1AnalysisResponse> latestAnalysis;
 
     /**
      * @return The conversation's latest analysis, if one exists.
-     * 
      */
     public Output<GoogleCloudContactcenterinsightsV1AnalysisResponse> getLatestAnalysis() {
         return this.latestAnalysis;
     }
     /**
      * Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
-     * 
      */
     @Export(name="medium", type=String.class, parameters={})
     private Output<String> medium;
 
     /**
      * @return Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
-     * 
      */
     public Output<String> getMedium() {
         return this.medium;
     }
     /**
      * Immutable. The resource name of the conversation. Format: projects/{project}/locations/{location}/conversations/{conversation}
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Immutable. The resource name of the conversation. Format: projects/{project}/locations/{location}/conversations/{conversation}
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Obfuscated user ID which the customer sent to us.
-     * 
      */
     @Export(name="obfuscatedUserId", type=String.class, parameters={})
     private Output<String> obfuscatedUserId;
 
     /**
      * @return Obfuscated user ID which the customer sent to us.
-     * 
      */
     public Output<String> getObfuscatedUserId() {
         return this.obfuscatedUserId;
     }
     /**
      * The annotations that were generated during the customer and agent interaction.
-     * 
      */
     @Export(name="runtimeAnnotations", type=List.class, parameters={GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse.class})
     private Output<List<GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse>> runtimeAnnotations;
 
     /**
      * @return The annotations that were generated during the customer and agent interaction.
-     * 
      */
     public Output<List<GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse>> getRuntimeAnnotations() {
         return this.runtimeAnnotations;
     }
     /**
      * The time at which the conversation started.
-     * 
      */
     @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
      * @return The time at which the conversation started.
-     * 
      */
     public Output<String> getStartTime() {
         return this.startTime;
     }
     /**
      * The conversation transcript.
-     * 
      */
     @Export(name="transcript", type=GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse.class, parameters={})
     private Output<GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse> transcript;
 
     /**
      * @return The conversation transcript.
-     * 
      */
     public Output<GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse> getTranscript() {
         return this.transcript;
     }
     /**
      * Input only. The TTL for this resource. If specified, then this TTL will be used to calculate the expire time.
-     * 
      */
     @Export(name="ttl", type=String.class, parameters={})
     private Output<String> ttl;
 
     /**
      * @return Input only. The TTL for this resource. If specified, then this TTL will be used to calculate the expire time.
-     * 
      */
     public Output<String> getTtl() {
         return this.ttl;
     }
     /**
      * The number of turns in the conversation.
-     * 
      */
     @Export(name="turnCount", type=Integer.class, parameters={})
     private Output<Integer> turnCount;
 
     /**
      * @return The number of turns in the conversation.
-     * 
      */
     public Output<Integer> getTurnCount() {
         return this.turnCount;
     }
     /**
      * The most recent time at which the conversation was updated.
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The most recent time at which the conversation was updated.
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;

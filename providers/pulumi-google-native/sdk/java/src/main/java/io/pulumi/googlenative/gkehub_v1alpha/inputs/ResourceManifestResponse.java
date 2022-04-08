@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * ResourceManifest represents a single Kubernetes resource to be applied to the cluster.
- * 
  */
 public final class ResourceManifestResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ResourceManifestResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Whether the resource provided in the manifest is `cluster_scoped`. If unset, the manifest is assumed to be namespace scoped. This field is used for REST mapping when applying the resource in a cluster.
-     * 
      */
     @Import(name="clusterScoped", required=true)
       private final Boolean clusterScoped;
@@ -30,7 +28,6 @@ public final class ResourceManifestResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * YAML manifest of the resource.
-     * 
      */
     @Import(name="manifest", required=true)
       private final String manifest;

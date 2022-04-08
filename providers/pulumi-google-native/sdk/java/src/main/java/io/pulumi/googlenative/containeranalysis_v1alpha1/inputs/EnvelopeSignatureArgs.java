@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A DSSE signature
- * 
  */
 public final class EnvelopeSignatureArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EnvelopeSignatureArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A reference id to the key being used for signing
-     * 
      */
     @Import(name="keyid")
       private final @Nullable Output<String> keyid;
@@ -31,7 +29,6 @@ public final class EnvelopeSignatureArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The signature itself
-     * 
      */
     @Import(name="sig")
       private final @Nullable Output<String> sig;

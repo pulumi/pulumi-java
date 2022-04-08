@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Constraints applied to pods.
- * 
  */
 public final class MaxPodsConstraintResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MaxPodsConstraintResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Constraint enforced on the max num of pods per node.
-     * 
      */
     @Import(name="maxPodsPerNode", required=true)
       private final String maxPodsPerNode;

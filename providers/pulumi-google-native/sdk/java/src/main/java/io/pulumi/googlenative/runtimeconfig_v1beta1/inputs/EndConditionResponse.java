@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The condition that a Waiter resource is waiting for.
- * 
  */
 public final class EndConditionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class EndConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The cardinality of the `EndCondition`.
-     * 
      */
     @Import(name="cardinality", required=true)
       private final CardinalityResponse cardinality;

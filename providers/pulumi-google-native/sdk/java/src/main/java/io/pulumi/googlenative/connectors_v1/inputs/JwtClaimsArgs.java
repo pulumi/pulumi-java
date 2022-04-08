@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * JWT claims used for the jwt-bearer authorization grant.
- * 
  */
 public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value for the "aud" claim.
-     * 
      */
     @Import(name="audience")
       private final @Nullable Output<String> audience;
@@ -31,7 +29,6 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value for the "iss" claim.
-     * 
      */
     @Import(name="issuer")
       private final @Nullable Output<String> issuer;
@@ -42,7 +39,6 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value for the "sub" claim.
-     * 
      */
     @Import(name="subject")
       private final @Nullable Output<String> subject;

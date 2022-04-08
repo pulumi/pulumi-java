@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class EmailPreferencesResponse {
     /**
      * If true, email notifications will be sent on transfer run failures.
-     * 
      */
     private final Boolean enableFailureEmail;
 
@@ -22,7 +21,6 @@ public final class EmailPreferencesResponse {
 
     /**
      * If true, email notifications will be sent on transfer run failures.
-     * 
     */
     public Boolean getEnableFailureEmail() {
         return this.enableFailureEmail;

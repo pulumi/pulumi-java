@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * An image built by the pipeline.
- * 
  */
 public final class BuiltImageResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class BuiltImageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Docker Registry 2.0 digest.
-     * 
      */
     @Import(name="digest", required=true)
       private final String digest;
@@ -30,7 +28,6 @@ public final class BuiltImageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name used to push the container image to Google Container Registry, as presented to `docker push`.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -41,7 +38,6 @@ public final class BuiltImageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Stores timing information for pushing the specified image.
-     * 
      */
     @Import(name="pushTiming", required=true)
       private final TimeSpanResponse pushTiming;

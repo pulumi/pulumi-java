@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class DiagnosticResponse {
     /**
      * JsonPath expression on the resource that if non empty, indicates that this field needs to be extracted as a diagnostic.
-     * 
      */
     private final String field;
     /**
      * Level to record this diagnostic.
-     * 
      */
     private final String level;
 
@@ -30,14 +28,12 @@ public final class DiagnosticResponse {
 
     /**
      * JsonPath expression on the resource that if non empty, indicates that this field needs to be extracted as a diagnostic.
-     * 
     */
     public String getField() {
         return this.field;
     }
     /**
      * Level to record this diagnostic.
-     * 
     */
     public String getLevel() {
         return this.level;

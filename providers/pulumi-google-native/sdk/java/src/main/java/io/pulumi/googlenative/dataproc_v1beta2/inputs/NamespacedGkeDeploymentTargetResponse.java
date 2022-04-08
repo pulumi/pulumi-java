@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A full, namespace-isolated deployment target for an existing GKE cluster.
- * 
  */
 public final class NamespacedGkeDeploymentTargetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class NamespacedGkeDeploymentTargetResponse extends io.pulumi.resou
 
     /**
      * Optional. A namespace within the GKE cluster to deploy into.
-     * 
      */
     @Import(name="clusterNamespace", required=true)
       private final String clusterNamespace;
@@ -29,7 +27,6 @@ public final class NamespacedGkeDeploymentTargetResponse extends io.pulumi.resou
 
     /**
      * Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'
-     * 
      */
     @Import(name="targetGkeCluster", required=true)
       private final String targetGkeCluster;

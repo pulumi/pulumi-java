@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Describes a change made to a configuration.
- * 
  */
 public final class MutationRecordResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MutationRecordResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * When the change occurred.
-     * 
      */
     @Import(name="mutateTime", required=true)
       private final String mutateTime;
@@ -29,7 +27,6 @@ public final class MutationRecordResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The email address of the user making the change.
-     * 
      */
     @Import(name="mutatedBy", required=true)
       private final String mutatedBy;

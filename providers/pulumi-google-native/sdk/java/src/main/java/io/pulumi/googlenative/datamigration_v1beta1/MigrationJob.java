@@ -19,272 +19,233 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new migration job in a given project and location.
- * 
  */
 @ResourceType(type="google-native:datamigration/v1beta1:MigrationJob")
 public class MigrationJob extends io.pulumi.resources.CustomResource {
     /**
      * The timestamp when the migration job resource was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The timestamp when the migration job resource was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The resource name (URI) of the destination connection profile.
-     * 
      */
     @Export(name="destination", type=String.class, parameters={})
     private Output<String> destination;
 
     /**
      * @return The resource name (URI) of the destination connection profile.
-     * 
      */
     public Output<String> getDestination() {
         return this.destination;
     }
     /**
      * The database engine type and provider of the destination.
-     * 
      */
     @Export(name="destinationDatabase", type=DatabaseTypeResponse.class, parameters={})
     private Output<DatabaseTypeResponse> destinationDatabase;
 
     /**
      * @return The database engine type and provider of the destination.
-     * 
      */
     public Output<DatabaseTypeResponse> getDestinationDatabase() {
         return this.destinationDatabase;
     }
     /**
      * The migration job display name.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The migration job display name.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
-     * 
      */
     @Export(name="dumpPath", type=String.class, parameters={})
     private Output<String> dumpPath;
 
     /**
      * @return The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
-     * 
      */
     public Output<String> getDumpPath() {
         return this.dumpPath;
     }
     /**
      * The duration of the migration job (in seconds). A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-     * 
      */
     @Export(name="duration", type=String.class, parameters={})
     private Output<String> duration;
 
     /**
      * @return The duration of the migration job (in seconds). A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-     * 
      */
     public Output<String> getDuration() {
         return this.duration;
     }
     /**
      * If the migration job is completed, the time when it was completed.
-     * 
      */
     @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
      * @return If the migration job is completed, the time when it was completed.
-     * 
      */
     public Output<String> getEndTime() {
         return this.endTime;
     }
     /**
      * The error details in case of state FAILED.
-     * 
      */
     @Export(name="error", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> error;
 
     /**
      * @return The error details in case of state FAILED.
-     * 
      */
     public Output<StatusResponse> getError() {
         return this.error;
     }
     /**
      * The resource labels for migration job to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.
-     * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
      * @return The resource labels for migration job to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.
-     * 
      */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
     /**
      * The name (URI) of this migration job resource, in the form of: projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name (URI) of this migration job resource, in the form of: projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The current migration job phase.
-     * 
      */
     @Export(name="phase", type=String.class, parameters={})
     private Output<String> phase;
 
     /**
      * @return The current migration job phase.
-     * 
      */
     public Output<String> getPhase() {
         return this.phase;
     }
     /**
      * The details needed to communicate to the source over Reverse SSH tunnel connectivity.
-     * 
      */
     @Export(name="reverseSshConnectivity", type=ReverseSshConnectivityResponse.class, parameters={})
     private Output<ReverseSshConnectivityResponse> reverseSshConnectivity;
 
     /**
      * @return The details needed to communicate to the source over Reverse SSH tunnel connectivity.
-     * 
      */
     public Output<ReverseSshConnectivityResponse> getReverseSshConnectivity() {
         return this.reverseSshConnectivity;
     }
     /**
      * The resource name (URI) of the source connection profile.
-     * 
      */
     @Export(name="source", type=String.class, parameters={})
     private Output<String> source;
 
     /**
      * @return The resource name (URI) of the source connection profile.
-     * 
      */
     public Output<String> getSource() {
         return this.source;
     }
     /**
      * The database engine type and provider of the source.
-     * 
      */
     @Export(name="sourceDatabase", type=DatabaseTypeResponse.class, parameters={})
     private Output<DatabaseTypeResponse> sourceDatabase;
 
     /**
      * @return The database engine type and provider of the source.
-     * 
      */
     public Output<DatabaseTypeResponse> getSourceDatabase() {
         return this.sourceDatabase;
     }
     /**
      * The current migration job state.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The current migration job state.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * static ip connectivity data (default, no additional details needed).
-     * 
      */
     @Export(name="staticIpConnectivity", type=StaticIpConnectivityResponse.class, parameters={})
     private Output<StaticIpConnectivityResponse> staticIpConnectivity;
 
     /**
      * @return static ip connectivity data (default, no additional details needed).
-     * 
      */
     public Output<StaticIpConnectivityResponse> getStaticIpConnectivity() {
         return this.staticIpConnectivity;
     }
     /**
      * The migration job type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The migration job type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The timestamp when the migration job resource was last updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-     * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
      * @return The timestamp when the migration job resource was last updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-     * 
      */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
     /**
      * The details of the VPC network that the source database is located in.
-     * 
      */
     @Export(name="vpcPeeringConnectivity", type=VpcPeeringConnectivityResponse.class, parameters={})
     private Output<VpcPeeringConnectivityResponse> vpcPeeringConnectivity;
 
     /**
      * @return The details of the VPC network that the source database is located in.
-     * 
      */
     public Output<VpcPeeringConnectivityResponse> getVpcPeeringConnectivity() {
         return this.vpcPeeringConnectivity;

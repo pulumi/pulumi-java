@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The category to which the update belongs.
- * 
  */
 public final class CategoryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CategoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identifier of the category.
-     * 
      */
     @Import(name="categoryId")
       private final @Nullable Output<String> categoryId;
@@ -31,7 +29,6 @@ public final class CategoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The localized name of the category.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

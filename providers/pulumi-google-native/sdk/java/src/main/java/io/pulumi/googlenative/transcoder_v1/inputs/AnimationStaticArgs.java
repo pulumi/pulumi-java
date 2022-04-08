@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Display static overlay object.
- * 
  */
 public final class AnimationStaticArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AnimationStaticArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The time to start displaying the overlay object, in seconds. Default: 0
-     * 
      */
     @Import(name="startTimeOffset")
       private final @Nullable Output<String> startTimeOffset;
@@ -32,7 +30,6 @@ public final class AnimationStaticArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.
-     * 
      */
     @Import(name="xy")
       private final @Nullable Output<NormalizedCoordinateArgs> xy;

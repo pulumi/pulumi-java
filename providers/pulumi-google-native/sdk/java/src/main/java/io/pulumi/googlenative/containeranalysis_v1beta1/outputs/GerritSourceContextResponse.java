@@ -12,22 +12,18 @@ import java.util.Objects;
 public final class GerritSourceContextResponse {
     /**
      * An alias, which may be a branch or tag.
-     * 
      */
     private final AliasContextResponse aliasContext;
     /**
      * The full project name within the host. Projects may be nested, so "project/subproject" is a valid project name. The "repo name" is the hostURI/project.
-     * 
      */
     private final String gerritProject;
     /**
      * The URI of a running Gerrit instance.
-     * 
      */
     private final String hostUri;
     /**
      * A revision (commit) ID.
-     * 
      */
     private final String revisionId;
 
@@ -45,28 +41,24 @@ public final class GerritSourceContextResponse {
 
     /**
      * An alias, which may be a branch or tag.
-     * 
     */
     public AliasContextResponse getAliasContext() {
         return this.aliasContext;
     }
     /**
      * The full project name within the host. Projects may be nested, so "project/subproject" is a valid project name. The "repo name" is the hostURI/project.
-     * 
     */
     public String getGerritProject() {
         return this.gerritProject;
     }
     /**
      * The URI of a running Gerrit instance.
-     * 
     */
     public String getHostUri() {
         return this.hostUri;
     }
     /**
      * A revision (commit) ID.
-     * 
     */
     public String getRevisionId() {
         return this.revisionId;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Determines whether or no a connection is locked. If locked, a reason must be specified.
- * 
  */
 public final class LockConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class LockConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Indicates whether or not the connection is locked.
-     * 
      */
     @Import(name="locked", required=true)
       private final Boolean locked;
@@ -30,7 +28,6 @@ public final class LockConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Describes why a connection is locked.
-     * 
      */
     @Import(name="reason", required=true)
       private final String reason;

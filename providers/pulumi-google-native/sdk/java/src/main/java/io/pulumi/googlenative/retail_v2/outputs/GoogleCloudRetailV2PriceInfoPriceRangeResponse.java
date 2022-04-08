@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class GoogleCloudRetailV2PriceInfoPriceRangeResponse {
     /**
      * The inclusive Product.pricing_info.original_price internal of all variant Product having the same Product.primary_product_id.
-     * 
      */
     private final GoogleCloudRetailV2IntervalResponse originalPrice;
     /**
      * The inclusive Product.pricing_info.price interval of all variant Product having the same Product.primary_product_id.
-     * 
      */
     private final GoogleCloudRetailV2IntervalResponse price;
 
@@ -30,14 +28,12 @@ public final class GoogleCloudRetailV2PriceInfoPriceRangeResponse {
 
     /**
      * The inclusive Product.pricing_info.original_price internal of all variant Product having the same Product.primary_product_id.
-     * 
     */
     public GoogleCloudRetailV2IntervalResponse getOriginalPrice() {
         return this.originalPrice;
     }
     /**
      * The inclusive Product.pricing_info.price interval of all variant Product having the same Product.primary_product_id.
-     * 
     */
     public GoogleCloudRetailV2IntervalResponse getPrice() {
         return this.price;

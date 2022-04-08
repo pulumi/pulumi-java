@@ -10,38 +10,31 @@ import java.util.StringJoiner;
 
     /**
      * Immutable. The type of data this data collector will collect.
-     * 
      */
     @EnumType
     public enum DataCollectorType {
         /**
          * For future compatibility.
-         * 
          */
         TypeUnspecified("TYPE_UNSPECIFIED"),
         /**
          * For integer values.
-         * 
          */
         Integer("INTEGER"),
         /**
          * For float values.
-         * 
          */
         Float("FLOAT"),
         /**
          * For string values.
-         * 
          */
         String("STRING"),
         /**
          * For boolean values.
-         * 
          */
         Boolean("BOOLEAN"),
         /**
          * For datetime values.
-         * 
          */
         Datetime("DATETIME");
 

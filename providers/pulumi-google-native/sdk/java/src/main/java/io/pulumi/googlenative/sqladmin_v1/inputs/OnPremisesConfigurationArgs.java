@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * On-premises instance configuration.
- * 
  */
 public final class OnPremisesConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * PEM representation of the trusted CA's x509 certificate.
-     * 
      */
     @Import(name="caCertificate")
       private final @Nullable Output<String> caCertificate;
@@ -32,7 +30,6 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * PEM representation of the replica's x509 certificate.
-     * 
      */
     @Import(name="clientCertificate")
       private final @Nullable Output<String> clientCertificate;
@@ -43,7 +40,6 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.
-     * 
      */
     @Import(name="clientKey")
       private final @Nullable Output<String> clientKey;
@@ -54,7 +50,6 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * The dump file to create the Cloud SQL replica.
-     * 
      */
     @Import(name="dumpFilePath")
       private final @Nullable Output<String> dumpFilePath;
@@ -65,7 +60,6 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * The host and port of the on-premises instance in host:port format
-     * 
      */
     @Import(name="hostPort")
       private final @Nullable Output<String> hostPort;
@@ -76,7 +70,6 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * This is always `sql#onPremisesConfiguration`.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -87,7 +80,6 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * The password for connecting to on-premises instance.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -98,7 +90,6 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * The reference to Cloud SQL instance if the source is Cloud SQL.
-     * 
      */
     @Import(name="sourceInstance")
       private final @Nullable Output<InstanceReferenceArgs> sourceInstance;
@@ -109,7 +100,6 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * The username for connecting to on-premises instance.
-     * 
      */
     @Import(name="username")
       private final @Nullable Output<String> username;

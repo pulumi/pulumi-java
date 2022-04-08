@@ -14,118 +14,101 @@ import javax.annotation.Nullable;
 /**
  * Creates a processor from the type processor that the user chose. The processor will be at "ENABLED" state by default after its creation.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:documentai/v1:Processor")
 public class Processor extends io.pulumi.resources.CustomResource {
     /**
      * The time the processor was created.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return The time the processor was created.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The default processor version.
-     * 
      */
     @Export(name="defaultProcessorVersion", type=String.class, parameters={})
     private Output<String> defaultProcessorVersion;
 
     /**
      * @return The default processor version.
-     * 
      */
     public Output<String> getDefaultProcessorVersion() {
         return this.defaultProcessorVersion;
     }
     /**
      * The display name of the processor.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The display name of the processor.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management.
-     * 
      */
     @Export(name="kmsKeyName", type=String.class, parameters={})
     private Output<String> kmsKeyName;
 
     /**
      * @return The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management.
-     * 
      */
     public Output<String> getKmsKeyName() {
         return this.kmsKeyName;
     }
     /**
      * Immutable. The resource name of the processor. Format: `projects/{project}/locations/{location}/processors/{processor}`
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Immutable. The resource name of the processor. Format: `projects/{project}/locations/{location}/processors/{processor}`
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Immutable. The http endpoint that can be called to invoke processing.
-     * 
      */
     @Export(name="processEndpoint", type=String.class, parameters={})
     private Output<String> processEndpoint;
 
     /**
      * @return Immutable. The http endpoint that can be called to invoke processing.
-     * 
      */
     public Output<String> getProcessEndpoint() {
         return this.processEndpoint;
     }
     /**
      * The state of the processor.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The state of the processor.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
-     * 
      */
     public Output<String> getType() {
         return this.type;

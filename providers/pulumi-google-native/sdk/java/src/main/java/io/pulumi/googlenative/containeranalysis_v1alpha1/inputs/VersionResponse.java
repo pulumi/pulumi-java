@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Version contains structured information about the version of the package. For a discussion of this in Debian/Ubuntu: http://serverfault.com/questions/604541/debian-packages-version-convention For a discussion of this in Redhat/Fedora/Centos: http://blog.jasonantman.com/2014/07/how-yum-and-rpm-compare-versions/
- * 
  */
 public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Used to correct mistakes in the version numbering scheme.
-     * 
      */
     @Import(name="epoch", required=true)
       private final Integer epoch;
@@ -31,7 +29,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether this version is vulnerable, when defining the version bounds. For example, if the minimum version is 2.0, inclusive=true would say 2.0 is vulnerable, while inclusive=false would say it's not
-     * 
      */
     @Import(name="inclusive", required=true)
       private final Boolean inclusive;
@@ -42,7 +39,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then the other fields are ignored.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -53,7 +49,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The main part of the version name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -64,7 +59,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The iteration of the package build from the above version.
-     * 
      */
     @Import(name="revision", required=true)
       private final String revision;

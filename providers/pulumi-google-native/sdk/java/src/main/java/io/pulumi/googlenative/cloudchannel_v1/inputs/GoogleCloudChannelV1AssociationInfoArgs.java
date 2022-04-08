@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Association links that an entitlement has to other entitlements.
- * 
  */
 public final class GoogleCloudChannelV1AssociationInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudChannelV1AssociationInfoArgs extends io.pulumi.res
 
     /**
      * The name of the base entitlement, for which this entitlement is an add-on.
-     * 
      */
     @Import(name="baseEntitlement")
       private final @Nullable Output<String> baseEntitlement;

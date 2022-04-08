@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class KeyIdResponse {
     /**
      * Optional. The value of this KeyId encoded in lowercase hexadecimal. This is most likely the 160 bit SHA-1 hash of the public key.
-     * 
      */
     private final String keyId;
 
@@ -22,7 +21,6 @@ public final class KeyIdResponse {
 
     /**
      * Optional. The value of this KeyId encoded in lowercase hexadecimal. This is most likely the 160 bit SHA-1 hash of the public key.
-     * 
     */
     public String getKeyId() {
         return this.keyId;

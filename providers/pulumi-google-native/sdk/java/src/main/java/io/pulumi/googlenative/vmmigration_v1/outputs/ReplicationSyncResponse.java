@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ReplicationSyncResponse {
     /**
      * The most updated snapshot created time in the source that finished replication.
-     * 
      */
     private final String lastSyncTime;
 
@@ -22,7 +21,6 @@ public final class ReplicationSyncResponse {
 
     /**
      * The most updated snapshot created time in the source that finished replication.
-     * 
     */
     public String getLastSyncTime() {
         return this.lastSyncTime;

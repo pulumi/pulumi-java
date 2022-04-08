@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The image response message.
- * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageImageArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageArgs extends io
 
     /**
      * A text description of the image to be used for accessibility, e.g., screen readers. Required if image_uri is set for CarouselSelect.
-     * 
      */
     @Import(name="accessibilityText")
       private final @Nullable Output<String> accessibilityText;
@@ -31,7 +29,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageArgs extends io
 
     /**
      * Optional. The public URI to an image file.
-     * 
      */
     @Import(name="imageUri")
       private final @Nullable Output<String> imageUri;

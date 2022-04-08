@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Label object for TypeProviders
- * 
  */
 public final class TypeProviderLabelEntryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class TypeProviderLabelEntryResponse extends io.pulumi.resources.In
 
     /**
      * Key of the label
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -29,7 +27,6 @@ public final class TypeProviderLabelEntryResponse extends io.pulumi.resources.In
 
     /**
      * Value of the label
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Evaluations of restrictions applied to parent group on this membership.
- * 
  */
 public final class RestrictionEvaluationsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RestrictionEvaluationsArgs extends io.pulumi.resources.Resour
 
     /**
      * Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.
-     * 
      */
     @Import(name="memberRestrictionEvaluation")
       private final @Nullable Output<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation;

@@ -14,7 +14,6 @@ public final class JobReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * [Required] The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
-     * 
      */
     @Import(name="jobId", required=true)
       private final String jobId;
@@ -25,7 +24,6 @@ public final class JobReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The geographic location of the job. See details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
-     * 
      */
     @Import(name="location", required=true)
       private final String location;
@@ -36,7 +34,6 @@ public final class JobReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * [Required] The ID of the project containing this job.
-     * 
      */
     @Import(name="project", required=true)
       private final String project;

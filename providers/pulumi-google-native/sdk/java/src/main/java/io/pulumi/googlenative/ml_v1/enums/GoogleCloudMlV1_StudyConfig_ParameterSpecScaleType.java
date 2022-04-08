@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * How the parameter should be scaled. Leave unset for categorical parameters.
-     * 
      */
     @EnumType
     public enum GoogleCloudMlV1_StudyConfig_ParameterSpecScaleType {
         /**
          * By default, no scaling is applied.
-         * 
          */
         ScaleTypeUnspecified("SCALE_TYPE_UNSPECIFIED"),
         /**
          * Scales the feasible space to (0, 1) linearly.
-         * 
          */
         UnitLinearScale("UNIT_LINEAR_SCALE"),
         /**
          * Scales the feasible space logarithmically to (0, 1). The entire feasible space must be strictly positive.
-         * 
          */
         UnitLogScale("UNIT_LOG_SCALE"),
         /**
          * Scales the feasible space "reverse" logarithmically to (0, 1). The result is that values close to the top of the feasible space are spread out more than points near the bottom. The entire feasible space must be strictly positive.
-         * 
          */
         UnitReverseLogScale("UNIT_REVERSE_LOG_SCALE");
 

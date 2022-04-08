@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container message for hash values.
- * 
  */
 public final class HashArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class HashArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of hash that was performed.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<HashType> type;
@@ -32,7 +30,6 @@ public final class HashArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The hash value.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

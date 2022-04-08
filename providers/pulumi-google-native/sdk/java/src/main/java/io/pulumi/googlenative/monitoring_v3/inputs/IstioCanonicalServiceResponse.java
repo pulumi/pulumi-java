@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Canonical service scoped to an Istio mesh. Anthos clusters running ASM >= 1.6.8 will have their services ingested as this type.
- * 
  */
 public final class IstioCanonicalServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class IstioCanonicalServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * The name of the canonical service underlying this service. Corresponds to the destination_canonical_service_name metric label in label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).
-     * 
      */
     @Import(name="canonicalService", required=true)
       private final String canonicalService;
@@ -29,7 +27,6 @@ public final class IstioCanonicalServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * The namespace of the canonical service underlying this service. Corresponds to the destination_canonical_service_namespace metric label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).
-     * 
      */
     @Import(name="canonicalServiceNamespace", required=true)
       private final String canonicalServiceNamespace;
@@ -40,7 +37,6 @@ public final class IstioCanonicalServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * Identifier for the Istio mesh in which this canonical service is defined. Corresponds to the mesh_uid metric label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).
-     * 
      */
     @Import(name="meshUid", required=true)
       private final String meshUid;

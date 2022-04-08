@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A package repository.
- * 
  */
 public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * An Apt Repository.
-     * 
      */
     @Import(name="apt")
       private final @Nullable Output<AptRepositoryArgs> apt;
@@ -34,7 +32,6 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A Goo Repository.
-     * 
      */
     @Import(name="goo")
       private final @Nullable Output<GooRepositoryArgs> goo;
@@ -45,7 +42,6 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A Yum Repository.
-     * 
      */
     @Import(name="yum")
       private final @Nullable Output<YumRepositoryArgs> yum;
@@ -56,7 +52,6 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A Zypper Repository.
-     * 
      */
     @Import(name="zypper")
       private final @Nullable Output<ZypperRepositoryArgs> zypper;

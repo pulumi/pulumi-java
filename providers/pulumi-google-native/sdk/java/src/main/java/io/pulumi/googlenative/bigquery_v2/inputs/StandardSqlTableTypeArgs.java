@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A table type
- * 
  */
 public final class StandardSqlTableTypeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class StandardSqlTableTypeArgs extends io.pulumi.resources.Resource
 
     /**
      * The columns in this table type
-     * 
      */
     @Import(name="columns")
       private final @Nullable Output<List<StandardSqlFieldArgs>> columns;

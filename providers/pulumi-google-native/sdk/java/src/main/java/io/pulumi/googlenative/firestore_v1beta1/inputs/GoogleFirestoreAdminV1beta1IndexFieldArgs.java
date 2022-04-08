@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A field of an index.
- * 
  */
 public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.r
 
     /**
      * The path of the field. Must match the field path specification described by google.firestore.v1beta1.Document.fields. Special field path `__name__` may be used by itself or at the end of a path. `__type__` may be used only at the end of path.
-     * 
      */
     @Import(name="fieldPath")
       private final @Nullable Output<String> fieldPath;
@@ -32,7 +30,6 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.r
 
     /**
      * The field's mode.
-     * 
      */
     @Import(name="mode")
       private final @Nullable Output<GoogleFirestoreAdminV1beta1IndexFieldMode> mode;

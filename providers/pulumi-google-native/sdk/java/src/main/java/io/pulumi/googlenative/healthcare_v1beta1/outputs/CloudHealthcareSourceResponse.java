@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class CloudHealthcareSourceResponse {
     /**
      * Full path of a Cloud Healthcare API resource.
-     * 
      */
     private final String name;
 
@@ -22,7 +21,6 @@ public final class CloudHealthcareSourceResponse {
 
     /**
      * Full path of a Cloud Healthcare API resource.
-     * 
     */
     public String getName() {
         return this.name;

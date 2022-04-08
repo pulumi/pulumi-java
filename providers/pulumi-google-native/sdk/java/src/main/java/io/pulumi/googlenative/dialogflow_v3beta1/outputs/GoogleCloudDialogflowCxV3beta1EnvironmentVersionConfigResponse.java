@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse {
     /**
      * Format: projects//locations//agents//flows//versions/.
-     * 
      */
     private final String version;
 
@@ -22,7 +21,6 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigRespons
 
     /**
      * Format: projects//locations//agents//flows//versions/.
-     * 
     */
     public String getVersion() {
         return this.version;

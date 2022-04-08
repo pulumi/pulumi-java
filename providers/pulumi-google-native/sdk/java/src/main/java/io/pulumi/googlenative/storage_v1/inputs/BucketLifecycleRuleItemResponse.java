@@ -15,7 +15,6 @@ public final class BucketLifecycleRuleItemResponse extends io.pulumi.resources.I
 
     /**
      * The action to take.
-     * 
      */
     @Import(name="action", required=true)
       private final BucketLifecycleRuleItemActionResponse action;
@@ -26,7 +25,6 @@ public final class BucketLifecycleRuleItemResponse extends io.pulumi.resources.I
 
     /**
      * The condition(s) under which the action will be taken.
-     * 
      */
     @Import(name="condition", required=true)
       private final BucketLifecycleRuleItemConditionResponse condition;

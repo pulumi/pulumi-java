@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A chart axis.
- * 
  */
 public final class AxisArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AxisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The label of the axis.
-     * 
      */
     @Import(name="label")
       private final @Nullable Output<String> label;
@@ -32,7 +30,6 @@ public final class AxisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The axis scale. By default, a linear scale is used.
-     * 
      */
     @Import(name="scale")
       private final @Nullable Output<AxisScale> scale;

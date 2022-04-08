@@ -17,7 +17,6 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The canonical sink resource name, unique within the project. Must be of the form: project/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `"projects/12345/traceSinks/my-project-trace-sink"`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -28,7 +27,6 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The export destination.
-     * 
      */
     @Import(name="outputConfig", required=true)
       private final Output<OutputConfigArgs> outputConfig;

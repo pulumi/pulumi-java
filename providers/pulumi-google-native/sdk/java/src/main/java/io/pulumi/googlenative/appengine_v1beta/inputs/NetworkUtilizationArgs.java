@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Target scaling by network usage. Only applicable in the App Engine flexible environment.
- * 
  */
 public final class NetworkUtilizationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class NetworkUtilizationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Target bytes received per second.
-     * 
      */
     @Import(name="targetReceivedBytesPerSecond")
       private final @Nullable Output<Integer> targetReceivedBytesPerSecond;
@@ -31,7 +29,6 @@ public final class NetworkUtilizationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Target packets received per second.
-     * 
      */
     @Import(name="targetReceivedPacketsPerSecond")
       private final @Nullable Output<Integer> targetReceivedPacketsPerSecond;
@@ -42,7 +39,6 @@ public final class NetworkUtilizationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Target bytes sent per second.
-     * 
      */
     @Import(name="targetSentBytesPerSecond")
       private final @Nullable Output<Integer> targetSentBytesPerSecond;
@@ -53,7 +49,6 @@ public final class NetworkUtilizationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Target packets sent per second.
-     * 
      */
     @Import(name="targetSentPacketsPerSecond")
       private final @Nullable Output<Integer> targetSentPacketsPerSecond;

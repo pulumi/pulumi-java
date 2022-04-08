@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class GetSchemaResult {
     /**
      * The definition of the schema. This should contain a string representing the full definition of the schema that is a valid schema definition of the type specified in `type`.
-     * 
      */
     private final String definition;
     /**
      * Name of the schema. Format is `projects/{project}/schemas/{schema}`.
-     * 
      */
     private final String name;
     /**
      * The type of the schema definition.
-     * 
      */
     private final String type;
 
@@ -37,21 +34,18 @@ public final class GetSchemaResult {
 
     /**
      * The definition of the schema. This should contain a string representing the full definition of the schema that is a valid schema definition of the type specified in `type`.
-     * 
     */
     public String getDefinition() {
         return this.definition;
     }
     /**
      * Name of the schema. Format is `projects/{project}/schemas/{schema}`.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The type of the schema definition.
-     * 
     */
     public String getType() {
         return this.type;

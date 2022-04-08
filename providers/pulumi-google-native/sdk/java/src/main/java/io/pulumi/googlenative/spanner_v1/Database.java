@@ -18,146 +18,125 @@ import javax.annotation.Nullable;
 /**
  * Creates a new Cloud Spanner database and starts to prepare it for serving. The returned long-running operation will have a name of the format `/operations/` and can be used to track preparation of the database. The metadata field type is CreateDatabaseMetadata. The response field type is Database, if successful.
  * Auto-naming is currently not supported for this resource.
- * 
  */
 @ResourceType(type="google-native:spanner/v1:Database")
 public class Database extends io.pulumi.resources.CustomResource {
     /**
      * If exists, the time at which the database creation started.
-     * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
      * @return If exists, the time at which the database creation started.
-     * 
      */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
     /**
      * The dialect of the Cloud Spanner Database.
-     * 
      */
     @Export(name="databaseDialect", type=String.class, parameters={})
     private Output<String> databaseDialect;
 
     /**
      * @return The dialect of the Cloud Spanner Database.
-     * 
      */
     public Output<String> getDatabaseDialect() {
         return this.databaseDialect;
     }
     /**
      * The read-write region which contains the database's leader replicas. This is the same as the value of default_leader database option set using DatabaseAdmin.CreateDatabase or DatabaseAdmin.UpdateDatabaseDdl. If not explicitly set, this is empty.
-     * 
      */
     @Export(name="defaultLeader", type=String.class, parameters={})
     private Output<String> defaultLeader;
 
     /**
      * @return The read-write region which contains the database's leader replicas. This is the same as the value of default_leader database option set using DatabaseAdmin.CreateDatabase or DatabaseAdmin.UpdateDatabaseDdl. If not explicitly set, this is empty.
-     * 
      */
     public Output<String> getDefaultLeader() {
         return this.defaultLeader;
     }
     /**
      * Earliest timestamp at which older versions of the data can be read. This value is continuously updated by Cloud Spanner and becomes stale the moment it is queried. If you are using this value to recover data, make sure to account for the time from the moment when the value is queried to the moment when you initiate the recovery.
-     * 
      */
     @Export(name="earliestVersionTime", type=String.class, parameters={})
     private Output<String> earliestVersionTime;
 
     /**
      * @return Earliest timestamp at which older versions of the data can be read. This value is continuously updated by Cloud Spanner and becomes stale the moment it is queried. If you are using this value to recover data, make sure to account for the time from the moment when the value is queried to the moment when you initiate the recovery.
-     * 
      */
     public Output<String> getEarliestVersionTime() {
         return this.earliestVersionTime;
     }
     /**
      * For databases that are using customer managed encryption, this field contains the encryption configuration for the database. For databases that are using Google default or other types of encryption, this field is empty.
-     * 
      */
     @Export(name="encryptionConfig", type=EncryptionConfigResponse.class, parameters={})
     private Output<EncryptionConfigResponse> encryptionConfig;
 
     /**
      * @return For databases that are using customer managed encryption, this field contains the encryption configuration for the database. For databases that are using Google default or other types of encryption, this field is empty.
-     * 
      */
     public Output<EncryptionConfigResponse> getEncryptionConfig() {
         return this.encryptionConfig;
     }
     /**
      * For databases that are using customer managed encryption, this field contains the encryption information for the database, such as encryption state and the Cloud KMS key versions that are in use. For databases that are using Google default or other types of encryption, this field is empty. This field is propagated lazily from the backend. There might be a delay from when a key version is being used and when it appears in this field.
-     * 
      */
     @Export(name="encryptionInfo", type=List.class, parameters={EncryptionInfoResponse.class})
     private Output<List<EncryptionInfoResponse>> encryptionInfo;
 
     /**
      * @return For databases that are using customer managed encryption, this field contains the encryption information for the database, such as encryption state and the Cloud KMS key versions that are in use. For databases that are using Google default or other types of encryption, this field is empty. This field is propagated lazily from the backend. There might be a delay from when a key version is being used and when it appears in this field.
-     * 
      */
     public Output<List<EncryptionInfoResponse>> getEncryptionInfo() {
         return this.encryptionInfo;
     }
     /**
      * The name of the database. Values are of the form `projects//instances//databases/`, where `` is as specified in the `CREATE DATABASE` statement. This name can be passed to other API methods to identify the database.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the database. Values are of the form `projects//instances//databases/`, where `` is as specified in the `CREATE DATABASE` statement. This name can be passed to other API methods to identify the database.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Applicable only for restored databases. Contains information about the restore source.
-     * 
      */
     @Export(name="restoreInfo", type=RestoreInfoResponse.class, parameters={})
     private Output<RestoreInfoResponse> restoreInfo;
 
     /**
      * @return Applicable only for restored databases. Contains information about the restore source.
-     * 
      */
     public Output<RestoreInfoResponse> getRestoreInfo() {
         return this.restoreInfo;
     }
     /**
      * The current database state.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The current database state.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The period in which Cloud Spanner retains all versions of data for the database. This is the same as the value of version_retention_period database option set using UpdateDatabaseDdl. Defaults to 1 hour, if not set.
-     * 
      */
     @Export(name="versionRetentionPeriod", type=String.class, parameters={})
     private Output<String> versionRetentionPeriod;
 
     /**
      * @return The period in which Cloud Spanner retains all versions of data for the database. This is the same as the value of version_retention_period database option set using UpdateDatabaseDdl. Defaults to 1 hour, if not set.
-     * 
      */
     public Output<String> getVersionRetentionPeriod() {
         return this.versionRetentionPeriod;

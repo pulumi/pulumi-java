@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A description of a label.
- * 
  */
 public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A human-readable description for the label.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -32,7 +30,6 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The label key.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -43,7 +40,6 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The type of data that can be assigned to the label.
-     * 
      */
     @Import(name="valueType")
       private final @Nullable Output<LabelDescriptorValueType> valueType;

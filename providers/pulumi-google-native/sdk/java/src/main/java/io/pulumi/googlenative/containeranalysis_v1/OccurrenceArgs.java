@@ -27,7 +27,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes an attestation of an artifact.
-     * 
      */
     @Import(name="attestation")
       private final @Nullable Output<AttestationOccurrenceArgs> attestation;
@@ -38,7 +37,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes a verifiable build.
-     * 
      */
     @Import(name="build")
       private final @Nullable Output<BuildOccurrenceArgs> build;
@@ -49,7 +47,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes a compliance violation on a linked resource.
-     * 
      */
     @Import(name="compliance")
       private final @Nullable Output<ComplianceOccurrenceArgs> compliance;
@@ -60,7 +57,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes the deployment of an artifact on a runtime.
-     * 
      */
     @Import(name="deployment")
       private final @Nullable Output<DeploymentOccurrenceArgs> deployment;
@@ -71,7 +67,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes when a resource was discovered.
-     * 
      */
     @Import(name="discovery")
       private final @Nullable Output<DiscoveryOccurrenceArgs> discovery;
@@ -82,7 +77,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes an attestation of an artifact using dsse.
-     * 
      */
     @Import(name="dsseAttestation")
       private final @Nullable Output<DSSEAttestationOccurrenceArgs> dsseAttestation;
@@ -93,7 +87,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * https://github.com/secure-systems-lab/dsse
-     * 
      */
     @Import(name="envelope")
       private final @Nullable Output<EnvelopeArgs> envelope;
@@ -104,7 +97,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes how this resource derives from the basis in the associated note.
-     * 
      */
     @Import(name="image")
       private final @Nullable Output<ImageOccurrenceArgs> image;
@@ -115,7 +107,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
-     * 
      */
     @Import(name="noteName", required=true)
       private final Output<String> noteName;
@@ -126,7 +117,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes the installation of a package on the linked resource.
-     * 
      */
     @Import(name="package")
       private final @Nullable Output<PackageOccurrenceArgs> package_;
@@ -144,7 +134,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description of actions that can be taken to remedy the note.
-     * 
      */
     @Import(name="remediation")
       private final @Nullable Output<String> remediation;
@@ -155,7 +144,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. A URI that represents the resource for which the occurrence applies. For example, `https://gcr.io/project/image@sha256:123abc` for a Docker image.
-     * 
      */
     @Import(name="resourceUri", required=true)
       private final Output<String> resourceUri;
@@ -166,7 +154,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes an available package upgrade on the linked resource.
-     * 
      */
     @Import(name="upgrade")
       private final @Nullable Output<UpgradeOccurrenceArgs> upgrade;
@@ -177,7 +164,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes a security vulnerability.
-     * 
      */
     @Import(name="vulnerability")
       private final @Nullable Output<VulnerabilityOccurrenceArgs> vulnerability;

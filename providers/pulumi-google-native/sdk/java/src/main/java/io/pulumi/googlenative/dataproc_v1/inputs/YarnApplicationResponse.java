@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A YARN application created by a job. Application information is a subset of org.apache.hadoop.yarn.proto.YarnProtos.ApplicationReportProto.Beta Feature: This report is available for testing purposes only. It may be changed before final release.
- * 
  */
 public final class YarnApplicationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class YarnApplicationResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The application name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -30,7 +28,6 @@ public final class YarnApplicationResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The numerical progress of the application, from 1 to 100.
-     * 
      */
     @Import(name="progress", required=true)
       private final Double progress;
@@ -41,7 +38,6 @@ public final class YarnApplicationResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The application state.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -52,7 +48,6 @@ public final class YarnApplicationResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Optional. The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer that provides application-specific information. The URL uses the internal hostname, and requires a proxy server for resolution and, possibly, access.
-     * 
      */
     @Import(name="trackingUrl", required=true)
       private final String trackingUrl;

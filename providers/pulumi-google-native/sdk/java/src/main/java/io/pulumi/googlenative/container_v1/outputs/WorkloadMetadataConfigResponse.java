@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class WorkloadMetadataConfigResponse {
     /**
      * Mode is the configuration for how to expose metadata to workloads running on the node pool.
-     * 
      */
     private final String mode;
 
@@ -22,7 +21,6 @@ public final class WorkloadMetadataConfigResponse {
 
     /**
      * Mode is the configuration for how to expose metadata to workloads running on the node pool.
-     * 
     */
     public String getMode() {
         return this.mode;

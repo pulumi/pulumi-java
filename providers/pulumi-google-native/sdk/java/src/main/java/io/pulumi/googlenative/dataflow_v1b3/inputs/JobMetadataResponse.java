@@ -17,7 +17,6 @@ import java.util.Objects;
 
 /**
  * Metadata available primarily for filtering jobs. Will be included in the ListJob response and Job SUMMARY view.
- * 
  */
 public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Identification of a Cloud Bigtable source used in the Dataflow job.
-     * 
      */
     @Import(name="bigTableDetails", required=true)
       private final List<BigTableIODetailsResponse> bigTableDetails;
@@ -36,7 +34,6 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Identification of a BigQuery source used in the Dataflow job.
-     * 
      */
     @Import(name="bigqueryDetails", required=true)
       private final List<BigQueryIODetailsResponse> bigqueryDetails;
@@ -47,7 +44,6 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Identification of a Datastore source used in the Dataflow job.
-     * 
      */
     @Import(name="datastoreDetails", required=true)
       private final List<DatastoreIODetailsResponse> datastoreDetails;
@@ -58,7 +54,6 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Identification of a File source used in the Dataflow job.
-     * 
      */
     @Import(name="fileDetails", required=true)
       private final List<FileIODetailsResponse> fileDetails;
@@ -69,7 +64,6 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Identification of a Pub/Sub source used in the Dataflow job.
-     * 
      */
     @Import(name="pubsubDetails", required=true)
       private final List<PubSubIODetailsResponse> pubsubDetails;
@@ -80,7 +74,6 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The SDK version used to run the job.
-     * 
      */
     @Import(name="sdkVersion", required=true)
       private final SdkVersionResponse sdkVersion;
@@ -91,7 +84,6 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Identification of a Spanner source used in the Dataflow job.
-     * 
      */
     @Import(name="spannerDetails", required=true)
       private final List<SpannerIODetailsResponse> spannerDetails;

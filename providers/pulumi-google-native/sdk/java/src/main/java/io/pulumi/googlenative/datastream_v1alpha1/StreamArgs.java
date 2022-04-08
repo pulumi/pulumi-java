@@ -22,7 +22,6 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Automatically backfill objects included in the stream source configuration. Specific objects can be excluded.
-     * 
      */
     @Import(name="backfillAll")
       private final @Nullable Output<BackfillAllStrategyArgs> backfillAll;
@@ -33,7 +32,6 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Do not automatically backfill any objects.
-     * 
      */
     @Import(name="backfillNone")
       private final @Nullable Output<BackfillNoneStrategyArgs> backfillNone;
@@ -44,7 +42,6 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable. A reference to a KMS encryption key. If provided, it will be used to encrypt the data. If left blank, data will be encrypted using an internal Stream-specific encryption key provisioned through KMS.
-     * 
      */
     @Import(name="customerManagedEncryptionKey")
       private final @Nullable Output<String> customerManagedEncryptionKey;
@@ -55,7 +52,6 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Destination connection profile configuration.
-     * 
      */
     @Import(name="destinationConfig", required=true)
       private final Output<DestinationConfigArgs> destinationConfig;
@@ -66,7 +62,6 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Display name.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -84,7 +79,6 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Labels.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -116,7 +110,6 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Source connection profile configuration.
-     * 
      */
     @Import(name="sourceConfig", required=true)
       private final Output<SourceConfigArgs> sourceConfig;
@@ -127,7 +120,6 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The state of the stream.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<StreamState> state;

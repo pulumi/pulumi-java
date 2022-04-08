@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class MatchingCriteriaResponse {
     /**
      * The name of a CloudEvents attribute. Currently, only a subset of attributes can be specified. All triggers MUST provide a matching criteria for the 'type' attribute.
-     * 
      */
     private final String attribute;
     /**
      * The value for the attribute.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class MatchingCriteriaResponse {
 
     /**
      * The name of a CloudEvents attribute. Currently, only a subset of attributes can be specified. All triggers MUST provide a matching criteria for the 'type' attribute.
-     * 
     */
     public String getAttribute() {
         return this.attribute;
     }
     /**
      * The value for the attribute.
-     * 
     */
     public String getValue() {
         return this.value;

@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * An Upgrade Note represents a potential upgrade of a package to a given version. For each package version combination (i.e. bash 4.0, bash 4.1, bash 4.1.2), there will be an Upgrade Note. For Windows, windows_update field represents the information related to the update.
- * 
  */
 public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Metadata about the upgrade for each specific operating system.
-     * 
      */
     @Import(name="distributions", required=true)
       private final List<UpgradeDistributionResponse> distributions;
@@ -33,7 +31,6 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Required for non-Windows OS. The package this Upgrade is for.
-     * 
      */
     @Import(name="package", required=true)
       private final String package_;
@@ -44,7 +41,6 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Required for non-Windows OS. The version of the package in machine + human readable form.
-     * 
      */
     @Import(name="version", required=true)
       private final VersionResponse version;
@@ -55,7 +51,6 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Required for Windows OS. Represents the metadata about the Windows update.
-     * 
      */
     @Import(name="windowsUpdate", required=true)
       private final WindowsUpdateResponse windowsUpdate;

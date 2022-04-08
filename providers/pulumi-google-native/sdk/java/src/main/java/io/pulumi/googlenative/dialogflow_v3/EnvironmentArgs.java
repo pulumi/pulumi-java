@@ -26,7 +26,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -37,7 +36,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The human-readable name of the environment (unique in an agent). Limit of 64 characters.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -55,7 +53,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the environment. Format: `projects//locations//agents//environments/`.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -73,7 +70,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The test cases config for continuous tests of this environment.
-     * 
      */
     @Import(name="testCasesConfig")
       private final @Nullable Output<GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs> testCasesConfig;
@@ -84,7 +80,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of configurations for flow versions. You should include version configs for all flows that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
-     * 
      */
     @Import(name="versionConfigs", required=true)
       private final Output<List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs>> versionConfigs;

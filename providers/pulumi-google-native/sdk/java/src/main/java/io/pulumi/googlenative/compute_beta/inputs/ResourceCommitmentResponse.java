@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Commitment for a particular resource (a Commitment is composed of one or more of these).
- * 
  */
 public final class ResourceCommitmentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ResourceCommitmentResponse extends io.pulumi.resources.Invoke
 
     /**
      * Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.
-     * 
      */
     @Import(name="acceleratorType", required=true)
       private final String acceleratorType;
@@ -29,7 +27,6 @@ public final class ResourceCommitmentResponse extends io.pulumi.resources.Invoke
 
     /**
      * The amount of the resource purchased (in a type-dependent unit, such as bytes). For vCPUs, this can just be an integer. For memory, this must be provided in MB. Memory must be a multiple of 256 MB, with up to 6.5GB of memory per every vCPU.
-     * 
      */
     @Import(name="amount", required=true)
       private final String amount;
@@ -40,7 +37,6 @@ public final class ResourceCommitmentResponse extends io.pulumi.resources.Invoke
 
     /**
      * Type of resource for which this commitment applies. Possible values are VCPU and MEMORY
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

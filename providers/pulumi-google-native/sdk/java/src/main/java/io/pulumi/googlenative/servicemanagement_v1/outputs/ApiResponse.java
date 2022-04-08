@@ -16,37 +16,30 @@ import java.util.Objects;
 public final class ApiResponse {
     /**
      * The methods of this interface, in unspecified order.
-     * 
      */
     private final List<MethodResponse> methods;
     /**
      * Included interfaces. See Mixin.
-     * 
      */
     private final List<MixinResponse> mixins;
     /**
      * The fully qualified name of this interface, including package name followed by the interface's simple name.
-     * 
      */
     private final String name;
     /**
      * Any metadata attached to the interface.
-     * 
      */
     private final List<OptionResponse> options;
     /**
      * Source context for the protocol buffer service represented by this message.
-     * 
      */
     private final SourceContextResponse sourceContext;
     /**
      * The source syntax of the service.
-     * 
      */
     private final String syntax;
     /**
-     * A version string for this interface. If specified, must have the form `major-version.minor-version`, as in `1.10`. If the minor version is omitted, it defaults to zero. If the entire version field is empty, the major version is derived from the package name, as outlined below. If the field is not empty, the version in the package name will be verified to be consistent with what is provided here. The versioning schema uses [semantic versioning](http://semver.org) where the major version number indicates a breaking change and the minor version an additive, non-breaking change. Both version numbers are signals to users what to expect from different versions, and should be carefully chosen based on the product plan. The major version is also reflected in the package name of the interface, which must end in `v`, as in `google.feature.v1`. For major versions 0 and 1, the suffix can be omitted. Zero major versions must only be used for experimental, non-GA interfaces.
-     * 
+     * A version string for this interface. If specified, must have the form `major-version.minor-version`, as in `1.10`. If the minor version is omitted, it defaults to zero. If the entire version field is empty, the major version is derived from the package name, as outlined below. If the field is not empty, the version in the package name will be verified to be consistent with what is provided here. The versioning schema uses [semantic versioning](http://semver.org) where the major version number indicates a breaking change and the minor version an additive, non-breaking change. Both version numbers are signals to users what to expect from different versions, and should be carefully chosen based on the product plan. The major version is also reflected in the package name of the interface, which must end in `v`, as in `google.feature.v1`. For major versions 0 and 1, the suffix can be omitted. Zero major versions must only be used for experimental, non-GA interfaces. 
      */
     private final String version;
 
@@ -70,49 +63,42 @@ public final class ApiResponse {
 
     /**
      * The methods of this interface, in unspecified order.
-     * 
     */
     public List<MethodResponse> getMethods() {
         return this.methods;
     }
     /**
      * Included interfaces. See Mixin.
-     * 
     */
     public List<MixinResponse> getMixins() {
         return this.mixins;
     }
     /**
      * The fully qualified name of this interface, including package name followed by the interface's simple name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Any metadata attached to the interface.
-     * 
     */
     public List<OptionResponse> getOptions() {
         return this.options;
     }
     /**
      * Source context for the protocol buffer service represented by this message.
-     * 
     */
     public SourceContextResponse getSourceContext() {
         return this.sourceContext;
     }
     /**
      * The source syntax of the service.
-     * 
     */
     public String getSyntax() {
         return this.syntax;
     }
     /**
-     * A version string for this interface. If specified, must have the form `major-version.minor-version`, as in `1.10`. If the minor version is omitted, it defaults to zero. If the entire version field is empty, the major version is derived from the package name, as outlined below. If the field is not empty, the version in the package name will be verified to be consistent with what is provided here. The versioning schema uses [semantic versioning](http://semver.org) where the major version number indicates a breaking change and the minor version an additive, non-breaking change. Both version numbers are signals to users what to expect from different versions, and should be carefully chosen based on the product plan. The major version is also reflected in the package name of the interface, which must end in `v`, as in `google.feature.v1`. For major versions 0 and 1, the suffix can be omitted. Zero major versions must only be used for experimental, non-GA interfaces.
-     * 
+     * A version string for this interface. If specified, must have the form `major-version.minor-version`, as in `1.10`. If the minor version is omitted, it defaults to zero. If the entire version field is empty, the major version is derived from the package name, as outlined below. If the field is not empty, the version in the package name will be verified to be consistent with what is provided here. The versioning schema uses [semantic versioning](http://semver.org) where the major version number indicates a breaking change and the minor version an additive, non-breaking change. Both version numbers are signals to users what to expect from different versions, and should be carefully chosen based on the product plan. The major version is also reflected in the package name of the interface, which must end in `v`, as in `google.feature.v1`. For major versions 0 and 1, the suffix can be omitted. Zero major versions must only be used for experimental, non-GA interfaces. 
     */
     public String getVersion() {
         return this.version;

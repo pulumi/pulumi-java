@@ -17,7 +17,6 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
 
     /**
      * The URL of the Autoscaler that targets this instance group manager.
-     * 
      */
     @Import(name="autoscaler", required=true)
       private final String autoscaler;
@@ -28,7 +27,6 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
 
     /**
      * A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
-     * 
      */
     @Import(name="isStable", required=true)
       private final Boolean isStable;
@@ -39,7 +37,6 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
 
     /**
      * Stateful status of the given Instance Group Manager.
-     * 
      */
     @Import(name="stateful", required=true)
       private final InstanceGroupManagerStatusStatefulResponse stateful;
@@ -50,7 +47,6 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
 
     /**
      * A status of consistency of Instances' versions with their target version specified by version field on Instance Group Manager.
-     * 
      */
     @Import(name="versionTarget", required=true)
       private final InstanceGroupManagerStatusVersionTargetResponse versionTarget;

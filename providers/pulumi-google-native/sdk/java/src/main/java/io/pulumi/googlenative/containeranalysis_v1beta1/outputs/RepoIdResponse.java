@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class RepoIdResponse {
     /**
      * A combination of a project ID and a repo name.
-     * 
      */
     private final ProjectRepoIdResponse projectRepoId;
     /**
      * A server-assigned, globally unique identifier.
-     * 
      */
     private final String uid;
 
@@ -31,14 +29,12 @@ public final class RepoIdResponse {
 
     /**
      * A combination of a project ID and a repo name.
-     * 
     */
     public ProjectRepoIdResponse getProjectRepoId() {
         return this.projectRepoId;
     }
     /**
      * A server-assigned, globally unique identifier.
-     * 
     */
     public String getUid() {
         return this.uid;

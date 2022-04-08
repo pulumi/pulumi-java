@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class BucketObjectOwnerResponse {
     /**
      * The entity, in the form user-userId.
-     * 
      */
     private final String entity;
     /**
      * The ID for the entity.
-     * 
      */
     private final String entityId;
 
@@ -30,14 +28,12 @@ public final class BucketObjectOwnerResponse {
 
     /**
      * The entity, in the form user-userId.
-     * 
     */
     public String getEntity() {
         return this.entity;
     }
     /**
      * The ID for the entity.
-     * 
     */
     public String getEntityId() {
         return this.entityId;

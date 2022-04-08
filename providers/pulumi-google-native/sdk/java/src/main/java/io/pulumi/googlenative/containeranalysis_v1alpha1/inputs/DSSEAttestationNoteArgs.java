@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A note describing an attestation
- * 
  */
 public final class DSSEAttestationNoteArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DSSEAttestationNoteArgs extends io.pulumi.resources.ResourceA
 
     /**
      * DSSEHint hints at the purpose of the attestation authority.
-     * 
      */
     @Import(name="hint")
       private final @Nullable Output<DSSEHintArgs> hint;

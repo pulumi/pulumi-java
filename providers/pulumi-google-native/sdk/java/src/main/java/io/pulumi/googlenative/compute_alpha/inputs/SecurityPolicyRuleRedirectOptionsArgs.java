@@ -17,7 +17,6 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends io.pulumi.resou
 
     /**
      * Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
-     * 
      */
     @Import(name="target")
       private final @Nullable Output<String> target;
@@ -28,7 +27,6 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends io.pulumi.resou
 
     /**
      * Type of the redirect action.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<SecurityPolicyRuleRedirectOptionsType> type;

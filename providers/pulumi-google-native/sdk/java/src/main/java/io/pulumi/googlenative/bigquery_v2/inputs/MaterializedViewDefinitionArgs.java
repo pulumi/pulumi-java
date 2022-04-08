@@ -17,7 +17,6 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
 
     /**
      * [Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base table is updated. The default value is "true".
-     * 
      */
     @Import(name="enableRefresh")
       private final @Nullable Output<Boolean> enableRefresh;
@@ -28,7 +27,6 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
 
     /**
      * [Required] A query whose result is persisted.
-     * 
      */
     @Import(name="query")
       private final @Nullable Output<String> query;
@@ -39,7 +37,6 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
 
     /**
      * [Optional] [TrustedTester] The maximum frequency at which this materialized view will be refreshed. The default value is "1800000" (30 minutes).
-     * 
      */
     @Import(name="refreshIntervalMs")
       private final @Nullable Output<String> refreshIntervalMs;

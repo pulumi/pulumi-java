@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the restrictions on the key.
- * 
  */
 public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Android apps that are allowed to use the key.
-     * 
      */
     @Import(name="androidKeyRestrictions")
       private final @Nullable Output<V2AndroidKeyRestrictionsArgs> androidKeyRestrictions;
@@ -36,7 +34,6 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A restriction for a specific service and optionally one or more specific methods. Requests are allowed if they match any of these restrictions. If no restrictions are specified, all targets are allowed.
-     * 
      */
     @Import(name="apiTargets")
       private final @Nullable Output<List<V2ApiTargetArgs>> apiTargets;
@@ -47,7 +44,6 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The HTTP referrers (websites) that are allowed to use the key.
-     * 
      */
     @Import(name="browserKeyRestrictions")
       private final @Nullable Output<V2BrowserKeyRestrictionsArgs> browserKeyRestrictions;
@@ -58,7 +54,6 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The iOS apps that are allowed to use the key.
-     * 
      */
     @Import(name="iosKeyRestrictions")
       private final @Nullable Output<V2IosKeyRestrictionsArgs> iosKeyRestrictions;
@@ -69,7 +64,6 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The IP addresses of callers that are allowed to use the key.
-     * 
      */
     @Import(name="serverKeyRestrictions")
       private final @Nullable Output<V2ServerKeyRestrictionsArgs> serverKeyRestrictions;

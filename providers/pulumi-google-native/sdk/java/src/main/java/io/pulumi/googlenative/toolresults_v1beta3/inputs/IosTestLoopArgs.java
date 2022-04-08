@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A game loop test of an iOS application.
- * 
  */
 public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Bundle ID of the app.
-     * 
      */
     @Import(name="bundleId")
       private final @Nullable Output<String> bundleId;

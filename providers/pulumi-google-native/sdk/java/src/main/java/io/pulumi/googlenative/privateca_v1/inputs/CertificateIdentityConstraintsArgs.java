@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes constraints on a Certificate's Subject and SubjectAltNames.
- * 
  */
 public final class CertificateIdentityConstraintsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class CertificateIdentityConstraintsArgs extends io.pulumi.resource
 
     /**
      * If this is true, the SubjectAltNames extension may be copied from a certificate request into the signed certificate. Otherwise, the requested SubjectAltNames will be discarded.
-     * 
      */
     @Import(name="allowSubjectAltNamesPassthrough", required=true)
       private final Output<Boolean> allowSubjectAltNamesPassthrough;
@@ -32,7 +30,6 @@ public final class CertificateIdentityConstraintsArgs extends io.pulumi.resource
 
     /**
      * If this is true, the Subject field may be copied from a certificate request into the signed certificate. Otherwise, the requested Subject will be discarded.
-     * 
      */
     @Import(name="allowSubjectPassthrough", required=true)
       private final Output<Boolean> allowSubjectPassthrough;
@@ -43,7 +40,6 @@ public final class CertificateIdentityConstraintsArgs extends io.pulumi.resource
 
     /**
      * Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel
-     * 
      */
     @Import(name="celExpression")
       private final @Nullable Output<ExprArgs> celExpression;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * UrlMaps A host-matching rule for a URL. If matched, will use the named PathMatcher to select the BackendService.
- * 
  */
 public final class HostRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class HostRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An optional description of this resource. Provide this property when you create the resource.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -30,7 +28,6 @@ public final class HostRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The list of host patterns to match. They must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*). In that case, * must be the first character and must be followed in the pattern by either - or .. * based matching is not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
-     * 
      */
     @Import(name="hosts", required=true)
       private final List<String> hosts;
@@ -41,7 +38,6 @@ public final class HostRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the PathMatcher to use to match the path portion of the URL if the hostRule matches the URL's host portion.
-     * 
      */
     @Import(name="pathMatcher", required=true)
       private final String pathMatcher;

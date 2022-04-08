@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Message defining a list of words or phrases to search for in the data.
- * 
  */
 public final class GooglePrivacyDlpV2WordListResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GooglePrivacyDlpV2WordListResponse extends io.pulumi.resource
 
     /**
      * Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]
-     * 
      */
     @Import(name="words", required=true)
       private final List<String> words;

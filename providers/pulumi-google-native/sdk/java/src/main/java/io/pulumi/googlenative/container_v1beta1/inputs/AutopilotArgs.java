@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Autopilot is the configuration for Autopilot settings on the cluster.
- * 
  */
 public final class AutopilotArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AutopilotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Enable Autopilot
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Commitment settings for commitment-based offers.
- * 
  */
 public final class GoogleCloudChannelV1CommitmentSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse extends io.pul
 
     /**
      * Commitment end timestamp.
-     * 
      */
     @Import(name="endTime", required=true)
       private final String endTime;
@@ -30,7 +28,6 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse extends io.pul
 
     /**
      * Optional. Renewal settings applicable for a commitment-based Offer.
-     * 
      */
     @Import(name="renewalSettings", required=true)
       private final GoogleCloudChannelV1RenewalSettingsResponse renewalSettings;
@@ -41,7 +38,6 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse extends io.pul
 
     /**
      * Commitment start timestamp.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;

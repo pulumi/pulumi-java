@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class ComplianceOccurrenceResponse {
     /**
      * The reason for non compliance of these files.
-     * 
      */
     private final String nonComplianceReason;
     /**
      * A list of files which are violating compliance checks.
-     * 
      */
     private final List<NonCompliantFileResponse> nonCompliantFiles;
 
@@ -32,14 +30,12 @@ public final class ComplianceOccurrenceResponse {
 
     /**
      * The reason for non compliance of these files.
-     * 
     */
     public String getNonComplianceReason() {
         return this.nonComplianceReason;
     }
     /**
      * A list of files which are violating compliance checks.
-     * 
     */
     public List<NonCompliantFileResponse> getNonCompliantFiles() {
         return this.nonCompliantFiles;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * IssuanceModes specifies the allowed ways in which Certificates may be requested from this CaPool.
- * 
  */
 public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. When true, allows callers to create Certificates by specifying a CertificateConfig.
-     * 
      */
     @Import(name="allowConfigBasedIssuance")
       private final @Nullable Output<Boolean> allowConfigBasedIssuance;
@@ -31,7 +29,6 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. When true, allows callers to create Certificates by specifying a CSR.
-     * 
      */
     @Import(name="allowCsrBasedIssuance")
       private final @Nullable Output<Boolean> allowCsrBasedIssuance;

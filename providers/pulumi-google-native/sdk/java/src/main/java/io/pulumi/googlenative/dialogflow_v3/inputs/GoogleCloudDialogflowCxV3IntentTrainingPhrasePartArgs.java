@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a part of a training phrase.
- * 
  */
 public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs extends
 
     /**
      * The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
-     * 
      */
     @Import(name="parameterId")
       private final @Nullable Output<String> parameterId;
@@ -31,7 +29,6 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs extends
 
     /**
      * The text for this part.
-     * 
      */
     @Import(name="text", required=true)
       private final Output<String> text;

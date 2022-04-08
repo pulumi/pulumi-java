@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The results of an inspect DataSource job.
- * 
  */
 public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse extends io
 
     /**
      * The configuration used for this job.
-     * 
      */
     @Import(name="requestedOptions", required=true)
       private final GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions;
@@ -30,7 +28,6 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse extends io
 
     /**
      * A summary of the outcome of this inspection job.
-     * 
      */
     @Import(name="result", required=true)
       private final GooglePrivacyDlpV2ResultResponse result;

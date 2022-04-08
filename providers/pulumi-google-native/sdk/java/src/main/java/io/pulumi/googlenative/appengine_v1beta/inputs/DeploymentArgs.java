@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Code and application artifacts used to deploy a version to App Engine.
- * 
  */
 public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Google Cloud Build build information. Only applicable for instances running in the App Engine flexible environment.
-     * 
      */
     @Import(name="build")
       private final @Nullable Output<BuildInfoArgs> build;
@@ -36,7 +34,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Options for any Google Cloud Build builds created as a part of this deployment.These options will only be used if a new build is created, such as when deploying to the App Engine flexible environment using files or zip.
-     * 
      */
     @Import(name="cloudBuildOptions")
       private final @Nullable Output<CloudBuildOptionsArgs> cloudBuildOptions;
@@ -47,7 +44,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Docker image for the container that runs the version. Only applicable for instances running in the App Engine flexible environment.
-     * 
      */
     @Import(name="container")
       private final @Nullable Output<ContainerInfoArgs> container;
@@ -58,7 +54,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Manifest of the files stored in Google Cloud Storage that are included as part of this version. All files must be readable using the credentials supplied with this call.
-     * 
      */
     @Import(name="files")
       private final @Nullable Output<Map<String,String>> files;
@@ -69,7 +64,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The zip file for this deployment, if this is a zip deployment.
-     * 
      */
     @Import(name="zip")
       private final @Nullable Output<ZipInfoArgs> zip;

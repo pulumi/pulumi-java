@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * MySQL database structure
- * 
  */
 public final class MysqlRdbmsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class MysqlRdbmsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Mysql databases on the server
-     * 
      */
     @Import(name="mysqlDatabases", required=true)
       private final List<MysqlDatabaseResponse> mysqlDatabases;

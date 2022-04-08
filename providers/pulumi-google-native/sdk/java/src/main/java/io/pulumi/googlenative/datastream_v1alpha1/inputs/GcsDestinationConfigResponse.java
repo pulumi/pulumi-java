@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Google Cloud Storage destination configuration
- * 
  */
 public final class GcsDestinationConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class GcsDestinationConfigResponse extends io.pulumi.resources.Invo
 
     /**
      * AVRO file format configuration.
-     * 
      */
     @Import(name="avroFileFormat", required=true)
       private final AvroFileFormatResponse avroFileFormat;
@@ -32,7 +30,6 @@ public final class GcsDestinationConfigResponse extends io.pulumi.resources.Invo
 
     /**
      * The maximum duration for which new events are added before a file is closed and a new file is created.
-     * 
      */
     @Import(name="fileRotationInterval", required=true)
       private final String fileRotationInterval;
@@ -43,7 +40,6 @@ public final class GcsDestinationConfigResponse extends io.pulumi.resources.Invo
 
     /**
      * The maximum file size to be saved in the bucket.
-     * 
      */
     @Import(name="fileRotationMb", required=true)
       private final Integer fileRotationMb;
@@ -54,7 +50,6 @@ public final class GcsDestinationConfigResponse extends io.pulumi.resources.Invo
 
     /**
      * JSON file format configuration.
-     * 
      */
     @Import(name="jsonFileFormat", required=true)
       private final JsonFileFormatResponse jsonFileFormat;
@@ -65,7 +60,6 @@ public final class GcsDestinationConfigResponse extends io.pulumi.resources.Invo
 
     /**
      * Path inside the Cloud Storage bucket to write data to.
-     * 
      */
     @Import(name="path", required=true)
       private final String path;

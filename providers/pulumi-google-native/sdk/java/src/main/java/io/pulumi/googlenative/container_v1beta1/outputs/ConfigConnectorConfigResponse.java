@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ConfigConnectorConfigResponse {
     /**
      * Whether Cloud Connector is enabled for this cluster.
-     * 
      */
     private final Boolean enabled;
 
@@ -22,7 +21,6 @@ public final class ConfigConnectorConfigResponse {
 
     /**
      * Whether Cloud Connector is enabled for this cluster.
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;

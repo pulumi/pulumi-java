@@ -16,7 +16,6 @@ public final class GoogleCloudApigeeV1ReportPropertyResponse extends io.pulumi.r
 
     /**
      * name of the property
-     * 
      */
     @Import(name="property", required=true)
       private final String property;
@@ -27,7 +26,6 @@ public final class GoogleCloudApigeeV1ReportPropertyResponse extends io.pulumi.r
 
     /**
      * property values
-     * 
      */
     @Import(name="value", required=true)
       private final List<GoogleCloudApigeeV1AttributeResponse> value;

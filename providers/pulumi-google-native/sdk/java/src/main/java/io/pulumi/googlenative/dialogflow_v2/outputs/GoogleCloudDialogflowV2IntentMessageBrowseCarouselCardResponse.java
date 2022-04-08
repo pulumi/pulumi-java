@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse {
     /**
      * Optional. Settings for displaying the image. Applies to every image in items.
-     * 
      */
     private final String imageDisplayOptions;
     /**
      * List of items in the Browse Carousel Card. Minimum of two items, maximum of ten.
-     * 
      */
     private final List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items;
 
@@ -32,14 +30,12 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardRespons
 
     /**
      * Optional. Settings for displaying the image. Applies to every image in items.
-     * 
     */
     public String getImageDisplayOptions() {
         return this.imageDisplayOptions;
     }
     /**
      * List of items in the Browse Carousel Card. Minimum of two items, maximum of ten.
-     * 
     */
     public List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> getItems() {
         return this.items;

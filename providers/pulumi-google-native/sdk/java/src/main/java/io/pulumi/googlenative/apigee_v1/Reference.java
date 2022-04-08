@@ -13,62 +13,53 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a Reference in the specified environment.
- * 
  */
 @ResourceType(type="google-native:apigee/v1:Reference")
 public class Reference extends io.pulumi.resources.CustomResource {
     /**
      * Optional. A human-readable description of this reference.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return Optional. A human-readable description of this reference.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The resource id of this reference. Values must match the regular expression [\w\s\-.]+.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource id of this reference. Values must match the regular expression [\w\s\-.]+.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The id of the resource to which this reference refers. Must be the id of a resource that exists in the parent environment and is of the given resource_type.
-     * 
      */
     @Export(name="refers", type=String.class, parameters={})
     private Output<String> refers;
 
     /**
      * @return The id of the resource to which this reference refers. Must be the id of a resource that exists in the parent environment and is of the given resource_type.
-     * 
      */
     public Output<String> getRefers() {
         return this.refers;
     }
     /**
      * The type of resource referred to by this reference. Valid values are 'KeyStore' or 'TrustStore'.
-     * 
      */
     @Export(name="resourceType", type=String.class, parameters={})
     private Output<String> resourceType;
 
     /**
      * @return The type of resource referred to by this reference. Valid values are 'KeyStore' or 'TrustStore'.
-     * 
      */
     public Output<String> getPropResourceType() {
         return this.resourceType;

@@ -18,47 +18,38 @@ import java.util.Objects;
 public final class PatchConfigResponse {
     /**
      * Apt update settings. Use this setting to override the default `apt` patch rules.
-     * 
      */
     private final AptSettingsResponse apt;
     /**
      * Goo update settings. Use this setting to override the default `goo` patch rules.
-     * 
      */
     private final GooSettingsResponse goo;
     /**
      * Allows the patch job to run on Managed instance groups (MIGs).
-     * 
      */
     private final Boolean migInstancesAllowed;
     /**
      * The `ExecStep` to run after the patch update.
-     * 
      */
     private final ExecStepResponse postStep;
     /**
      * The `ExecStep` to run before the patch update.
-     * 
      */
     private final ExecStepResponse preStep;
     /**
      * Post-patch reboot settings.
-     * 
      */
     private final String rebootConfig;
     /**
      * Windows update settings. Use this override the default windows patch rules.
-     * 
      */
     private final WindowsUpdateSettingsResponse windowsUpdate;
     /**
      * Yum update settings. Use this setting to override the default `yum` patch rules.
-     * 
      */
     private final YumSettingsResponse yum;
     /**
      * Zypper update settings. Use this setting to override the default `zypper` patch rules.
-     * 
      */
     private final ZypperSettingsResponse zypper;
 
@@ -86,63 +77,54 @@ public final class PatchConfigResponse {
 
     /**
      * Apt update settings. Use this setting to override the default `apt` patch rules.
-     * 
     */
     public AptSettingsResponse getApt() {
         return this.apt;
     }
     /**
      * Goo update settings. Use this setting to override the default `goo` patch rules.
-     * 
     */
     public GooSettingsResponse getGoo() {
         return this.goo;
     }
     /**
      * Allows the patch job to run on Managed instance groups (MIGs).
-     * 
     */
     public Boolean getMigInstancesAllowed() {
         return this.migInstancesAllowed;
     }
     /**
      * The `ExecStep` to run after the patch update.
-     * 
     */
     public ExecStepResponse getPostStep() {
         return this.postStep;
     }
     /**
      * The `ExecStep` to run before the patch update.
-     * 
     */
     public ExecStepResponse getPreStep() {
         return this.preStep;
     }
     /**
      * Post-patch reboot settings.
-     * 
     */
     public String getRebootConfig() {
         return this.rebootConfig;
     }
     /**
      * Windows update settings. Use this override the default windows patch rules.
-     * 
     */
     public WindowsUpdateSettingsResponse getWindowsUpdate() {
         return this.windowsUpdate;
     }
     /**
      * Yum update settings. Use this setting to override the default `yum` patch rules.
-     * 
     */
     public YumSettingsResponse getYum() {
         return this.yum;
     }
     /**
      * Zypper update settings. Use this setting to override the default `zypper` patch rules.
-     * 
     */
     public ZypperSettingsResponse getZypper() {
         return this.zypper;

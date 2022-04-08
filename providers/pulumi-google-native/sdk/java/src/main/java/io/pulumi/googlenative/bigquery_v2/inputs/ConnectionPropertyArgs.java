@@ -16,7 +16,6 @@ public final class ConnectionPropertyArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * [Required] Name of the connection property to set.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -27,7 +26,6 @@ public final class ConnectionPropertyArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * [Required] Value of the connection property.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

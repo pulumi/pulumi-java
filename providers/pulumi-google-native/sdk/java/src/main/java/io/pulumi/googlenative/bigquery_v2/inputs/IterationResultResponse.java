@@ -16,7 +16,6 @@ public final class IterationResultResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Time taken to run the iteration in milliseconds.
-     * 
      */
     @Import(name="durationMs", required=true)
       private final String durationMs;
@@ -27,7 +26,6 @@ public final class IterationResultResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Loss computed on the eval data at the end of iteration.
-     * 
      */
     @Import(name="evalLoss", required=true)
       private final Double evalLoss;
@@ -38,7 +36,6 @@ public final class IterationResultResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Index of the iteration, 0 based.
-     * 
      */
     @Import(name="index", required=true)
       private final Integer index;
@@ -49,7 +46,6 @@ public final class IterationResultResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Learn rate used for this iteration.
-     * 
      */
     @Import(name="learnRate", required=true)
       private final Double learnRate;
@@ -60,7 +56,6 @@ public final class IterationResultResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Loss computed on the training data at the end of iteration.
-     * 
      */
     @Import(name="trainingLoss", required=true)
       private final Double trainingLoss;

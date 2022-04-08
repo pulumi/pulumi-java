@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Service Account used as a credential.
- * 
  */
 public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The IAM service account email address like test@myproject.iam.gserviceaccount.com
-     * 
      */
     @Import(name="email")
       private final @Nullable Output<String> email;

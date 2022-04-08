@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The current state of the Domain Mapping.
- * 
  */
 public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Array of observed DomainMappingConditions, indicating the current state of the DomainMapping.
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<List<GoogleCloudRunV1ConditionArgs>> conditions;
@@ -35,7 +33,6 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the route that the mapping currently points to.
-     * 
      */
     @Import(name="mappedRouteName")
       private final @Nullable Output<String> mappedRouteName;
@@ -46,7 +43,6 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
 
     /**
      * ObservedGeneration is the 'Generation' of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition's status is True or False.
-     * 
      */
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
@@ -57,7 +53,6 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.
-     * 
      */
     @Import(name="resourceRecords")
       private final @Nullable Output<List<ResourceRecordArgs>> resourceRecords;
@@ -68,7 +63,6 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Optional. Cloud Run fully managed: not supported Cloud Run on GKE: supported Holds the URL that will serve the traffic of the DomainMapping.
-     * 
      */
     @Import(name="url")
       private final @Nullable Output<String> url;

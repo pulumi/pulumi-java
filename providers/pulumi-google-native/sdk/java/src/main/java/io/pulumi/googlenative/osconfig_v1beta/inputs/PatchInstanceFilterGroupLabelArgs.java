@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a group of VMs that can be identified as having all these labels, for example "env=prod and app=web".
- * 
  */
 public final class PatchInstanceFilterGroupLabelArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PatchInstanceFilterGroupLabelArgs extends io.pulumi.resources
 
     /**
      * Compute Engine instance labels that must be present for a VM instance to be targeted by this filter.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;

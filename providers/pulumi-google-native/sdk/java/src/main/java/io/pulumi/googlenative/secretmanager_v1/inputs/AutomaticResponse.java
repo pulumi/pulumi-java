@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A replication policy that replicates the Secret payload without any restrictions.
- * 
  */
 public final class AutomaticResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AutomaticResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional. The customer-managed encryption configuration of the Secret. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
-     * 
      */
     @Import(name="customerManagedEncryption", required=true)
       private final CustomerManagedEncryptionResponse customerManagedEncryption;

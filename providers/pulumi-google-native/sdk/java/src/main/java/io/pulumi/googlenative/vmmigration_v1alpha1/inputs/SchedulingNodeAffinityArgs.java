@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Node Affinity: the configuration of desired nodes onto which this Instance could be scheduled. Based on https://cloud.google.com/compute/docs/reference/rest/v1/instances/setScheduling
- * 
  */
 public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.Resour
 
     /**
      * The label key of Node resource to reference.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -33,7 +31,6 @@ public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.Resour
 
     /**
      * The operator to use for the node resources specified in the `values` parameter.
-     * 
      */
     @Import(name="operator")
       private final @Nullable Output<SchedulingNodeAffinityOperator> operator;
@@ -44,7 +41,6 @@ public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.Resour
 
     /**
      * Corresponds to the label values of Node resource.
-     * 
      */
     @Import(name="values")
       private final @Nullable Output<List<String>> values;

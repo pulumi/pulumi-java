@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * WorkerConfig defines the configuration to be used for a creating workers in the pool.
- * 
  */
 public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/ If `0` is specified, Cloud Build will use a standard disk size.
-     * 
      */
     @Import(name="diskSizeGb")
       private final @Nullable Output<String> diskSizeGb;
@@ -31,7 +29,6 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Machine Type of the worker, such as n1-standard-1. See https://cloud.google.com/compute/docs/machine-types. If left blank, Cloud Build will use a standard unspecified machine to create the worker pool.
-     * 
      */
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;

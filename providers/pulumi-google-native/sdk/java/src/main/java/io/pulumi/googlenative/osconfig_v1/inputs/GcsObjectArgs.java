@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Cloud Storage object representation.
- * 
  */
 public final class GcsObjectArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class GcsObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Bucket of the Cloud Storage object.
-     * 
      */
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
@@ -30,7 +28,6 @@ public final class GcsObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
-     * 
      */
     @Import(name="generationNumber", required=true)
       private final Output<String> generationNumber;
@@ -41,7 +38,6 @@ public final class GcsObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Cloud Storage object.
-     * 
      */
     @Import(name="object", required=true)
       private final Output<String> object;

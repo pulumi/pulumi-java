@@ -13,22 +13,18 @@ import java.util.Objects;
 public final class GetFeedbackMessageResult {
     /**
      * String content of the feedback. Maximum of 10000 characters.
-     * 
      */
     private final String body;
     /**
      * Create time.
-     * 
      */
     private final String createTime;
     /**
      * The image storing this feedback if the feedback is an image representing operator's comments.
-     * 
      */
     private final String image;
     /**
      * Name of the feedback message in a feedback thread. Format: 'project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}'
-     * 
      */
     private final String name;
     private final GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse operatorFeedbackMetadata;
@@ -52,28 +48,24 @@ public final class GetFeedbackMessageResult {
 
     /**
      * String content of the feedback. Maximum of 10000 characters.
-     * 
     */
     public String getBody() {
         return this.body;
     }
     /**
      * Create time.
-     * 
     */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The image storing this feedback if the feedback is an image representing operator's comments.
-     * 
     */
     public String getImage() {
         return this.image;
     }
     /**
      * Name of the feedback message in a feedback thread. Format: 'project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}'
-     * 
     */
     public String getName() {
         return this.name;
