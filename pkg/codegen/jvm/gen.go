@@ -2277,7 +2277,7 @@ func (mod *modContext) gen(fs fs) error {
 	}
 
 	// Functions
-	modMethodClass := names.Ident(names.Title(mod.mod) + "Methods")
+	modMethodClass := names.Ident(names.Title(mod.mod) + "Functions")
 	if err := addClass(javaPkg, modMethodClass, func(ctx *classFileContext) error {
 		w := ctx.writer
 
@@ -2302,8 +2302,7 @@ func (mod *modContext) gen(fs fs) error {
 			argsClass := names.Ident(tokenToName(fun.Token) + "Args")
 			argsFQN := inputsPkg.Dot(argsClass)
 
-			// TODO CODEGEN THE METHODS
-			methodName := tokenToFunctionName(fun.Token)
+			methodName := names.LowerCamelCase(tokenToFunctionName(fun.Token))
 
 			var typeParameter string
 			if fun.Outputs != nil {
