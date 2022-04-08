@@ -404,11 +404,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
          * remove this function.
          */
         private static String cleanKey(String key) {
+            final var prefix = "config:";
             var idx = key.indexOf(":");
-            if (idx > 0 && key.substring(idx + 1).startsWith("config:")) {
-                return key.substring(0, idx) + ":" + key.substring(idx + 1 + "config:" .length());
+            if (idx > 0 && key.substring(idx + 1).startsWith(prefix)) {
+                return key.substring(0, idx) + ":" + key.substring(idx + 1 + prefix.length());
             }
-
             return key;
         }
     }
