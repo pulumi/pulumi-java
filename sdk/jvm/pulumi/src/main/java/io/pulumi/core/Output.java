@@ -159,29 +159,6 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     /**
-     * @see Output#of() for more details
-     */
-    static <T> Output<T> empty() {
-        return new OutputInternal<>(OutputData.empty());
-    }
-
-    /**
-     * Returns an {@code Output<T>} with given output, if
-     * non-{@code null}, otherwise returns an empty {@code Output<T>}.
-     *
-     * @param output the possibly-{@code null} output
-     * @param <T>    the type of the value
-     * @return an {@code Output<T>} if the specified output
-     * is non-{@code null}, otherwise an empty {@code Output<T>}
-     */
-    static <T> Output<T> ofNullable(@Nullable Output<T> output) {
-        if (output == null) {
-            return Output.empty();
-        }
-        return output;
-    }
-
-    /**
      * Returns an {@code Output<T>} describing the given value, if
      * non-{@code null}, otherwise returns an empty {@code Output<T>}.
      *
@@ -195,6 +172,9 @@ public interface Output<T> extends Copyable<Output<T>> {
             return Output.empty();
         }
         return Output.of(value);
+
+    static <T> Output<T> unknown() {
+        return new OutputInternal<>(OutputData.unknown());
     }
 
     /**

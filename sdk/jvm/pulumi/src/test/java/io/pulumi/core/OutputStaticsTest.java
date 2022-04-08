@@ -201,8 +201,13 @@ public class OutputStaticsTest {
     }
 
     @Test
+<<<<<<< HEAD
     void testNullableSecretifyOutput() {
         Output<String> res0_ = Output.ofNullable((String) null);
+=======
+    public void testNullableSecretifyOutput() {
+        Output<String> res0_ = Output.of((String) null);
+>>>>>>> 6481a1eeb1 (Inline ofNullable as of)
         Output<String> res0 = res0_.asSecret();
         var data0 = OutputTests.waitFor(res0);
         assertThat(data0.getValueNullable()).isEqualTo(null);
@@ -214,7 +219,7 @@ public class OutputStaticsTest {
         var data0_ = OutputTests.waitFor(res0_);
         assertThat(data0_.isSecret()).isFalse();
 
-        Output<String> res1 = Output.ofNullable("test1").asSecret();
+        Output<String> res1 = Output.of("test1").asSecret();
         var data1 = OutputTests.waitFor(res1);
         assertThat(data1.getValueNullable()).isEqualTo("test1");
         assertThat(data1.isSecret()).isTrue();
