@@ -51,9 +51,9 @@ class OutputDataTest {
     void testAccumulator() {
         var result = OutputData.builder(null)
                 .accumulate(OutputData.of("foo"), (__, o2) -> o2)
-                .accumulate(OutputData.of(null), (o1, __) -> o1)
+                .accumulate(OutputData.ofNullable(null), (o1, __) -> o1)
                 .accumulate(OutputData.unknown(), (o1, __) -> o1)
-                .accumulate(OutputData.of(null).withIsSecret(true), (o1, __) -> o1)
+                .accumulate(OutputData.ofNullable(null).withIsSecret(true), (o1, __) -> o1)
                 .accumulate(OutputData.unknownSecret(), (o1, __) -> o1)
                 .build();
 
