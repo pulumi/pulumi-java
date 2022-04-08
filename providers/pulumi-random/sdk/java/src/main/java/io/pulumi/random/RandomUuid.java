@@ -6,6 +6,7 @@ package io.pulumi.random;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.random.RandomUuidArgs;
 import io.pulumi.random.Utilities;
 import io.pulumi.random.inputs.RandomUuidState;
@@ -83,7 +84,7 @@ public class RandomUuid extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RandomUuid(String name, @Nullable RandomUuidArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("random:index/randomUuid:RandomUuid", name, args == null ? RandomUuidArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("random:index/randomUuid:RandomUuid", name, args == null ? RandomUuidArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RandomUuid(String name, Output<String> id, @Nullable RandomUuidState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
