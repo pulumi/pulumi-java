@@ -6,6 +6,7 @@ package io.pulumi.gcp.accesscontextmanager;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.accesscontextmanager.ServicePerimeterResourceArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterResourceState;
@@ -102,7 +103,7 @@ public class ServicePerimeterResource extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public ServicePerimeterResource(String name, ServicePerimeterResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:accesscontextmanager/servicePerimeterResource:ServicePerimeterResource", name, args == null ? ServicePerimeterResourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:accesscontextmanager/servicePerimeterResource:ServicePerimeterResource", name, args == null ? ServicePerimeterResourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServicePerimeterResource(String name, Output<String> id, @Nullable ServicePerimeterResourceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.gcp.spanner;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.spanner.DatabaseIAMBindingArgs;
 import io.pulumi.gcp.spanner.inputs.DatabaseIAMBindingState;
@@ -172,7 +173,7 @@ public class DatabaseIAMBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DatabaseIAMBinding(String name, DatabaseIAMBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:spanner/databaseIAMBinding:DatabaseIAMBinding", name, args == null ? DatabaseIAMBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:spanner/databaseIAMBinding:DatabaseIAMBinding", name, args == null ? DatabaseIAMBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DatabaseIAMBinding(String name, Output<String> id, @Nullable DatabaseIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

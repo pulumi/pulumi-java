@@ -5,6 +5,7 @@ package io.pulumi.gcp.gameservices;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.gameservices.inputs.GameServerConfigFleetConfigArgs;
 import io.pulumi.gcp.gameservices.inputs.GameServerConfigScalingConfigArgs;
 import java.lang.String;
@@ -48,7 +49,7 @@ public final class GameServerConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class GameServerConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class GameServerConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class GameServerConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class GameServerConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<GameServerConfigScalingConfigArgs>> scalingConfigs;
 
     public Output<List<GameServerConfigScalingConfigArgs>> getScalingConfigs() {
-        return this.scalingConfigs == null ? Output.empty() : this.scalingConfigs;
+        return this.scalingConfigs == null ? Codegen.empty() : this.scalingConfigs;
     }
 
     public GameServerConfigArgs(
@@ -130,14 +131,14 @@ public final class GameServerConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private GameServerConfigArgs() {
-        this.configId = Output.empty();
-        this.deploymentId = Output.empty();
-        this.description = Output.empty();
-        this.fleetConfigs = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.scalingConfigs = Output.empty();
+        this.configId = Codegen.empty();
+        this.deploymentId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.fleetConfigs = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.scalingConfigs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -195,7 +196,7 @@ public final class GameServerConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder fleetConfigs(Output<List<GameServerConfigFleetConfigArgs>> fleetConfigs) {
@@ -214,7 +215,7 @@ public final class GameServerConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -222,7 +223,7 @@ public final class GameServerConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -230,7 +231,7 @@ public final class GameServerConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder scalingConfigs(@Nullable Output<List<GameServerConfigScalingConfigArgs>> scalingConfigs) {
@@ -238,7 +239,7 @@ public final class GameServerConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder scalingConfigs(@Nullable List<GameServerConfigScalingConfigArgs> scalingConfigs) {
-            this.scalingConfigs = Output.ofNullable(scalingConfigs);
+            this.scalingConfigs = Codegen.ofNullable(scalingConfigs);
             return this;
         }
         public Builder scalingConfigs(GameServerConfigScalingConfigArgs... scalingConfigs) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudfunctions.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudfunctions.inputs.FunctionEventTriggerFailurePolicyArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class FunctionEventTriggerArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<FunctionEventTriggerFailurePolicyArgs> failurePolicy;
 
     public Output<FunctionEventTriggerFailurePolicyArgs> getFailurePolicy() {
-        return this.failurePolicy == null ? Output.empty() : this.failurePolicy;
+        return this.failurePolicy == null ? Codegen.empty() : this.failurePolicy;
     }
 
     /**
@@ -61,9 +62,9 @@ public final class FunctionEventTriggerArgs extends io.pulumi.resources.Resource
     }
 
     private FunctionEventTriggerArgs() {
-        this.eventType = Output.empty();
-        this.failurePolicy = Output.empty();
-        this.resource = Output.empty();
+        this.eventType = Codegen.empty();
+        this.failurePolicy = Codegen.empty();
+        this.resource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -103,7 +104,7 @@ public final class FunctionEventTriggerArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder failurePolicy(@Nullable FunctionEventTriggerFailurePolicyArgs failurePolicy) {
-            this.failurePolicy = Output.ofNullable(failurePolicy);
+            this.failurePolicy = Codegen.ofNullable(failurePolicy);
             return this;
         }
         public Builder resource(Output<String> resource) {

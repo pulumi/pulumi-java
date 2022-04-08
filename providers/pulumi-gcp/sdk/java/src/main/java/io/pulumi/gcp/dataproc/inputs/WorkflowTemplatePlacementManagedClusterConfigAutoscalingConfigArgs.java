@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfi
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     public WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs(@Nullable Output<String> policy) {
@@ -30,7 +31,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfi
     }
 
     private WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs() {
-        this.policy = Output.empty();
+        this.policy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfi
             return this;
         }
         public Builder policy(@Nullable String policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }        public WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs(policy);

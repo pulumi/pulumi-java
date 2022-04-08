@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,8 +45,8 @@ public final class ServiceTemplateSpecContainerVolumeMountArgs extends io.pulumi
     }
 
     private ServiceTemplateSpecContainerVolumeMountArgs() {
-        this.mountPath = Output.empty();
-        this.name = Output.empty();
+        this.mountPath = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

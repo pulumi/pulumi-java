@@ -5,6 +5,7 @@ package io.pulumi.gcp.notebooks;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.notebooks.inputs.RuntimeAccessConfigArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeSoftwareConfigArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineArgs;
@@ -26,7 +27,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RuntimeAccessConfigArgs> accessConfig;
 
     public Output<RuntimeAccessConfigArgs> getAccessConfig() {
-        return this.accessConfig == null ? Output.empty() : this.accessConfig;
+        return this.accessConfig == null ? Codegen.empty() : this.accessConfig;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RuntimeSoftwareConfigArgs> softwareConfig;
 
     public Output<RuntimeSoftwareConfigArgs> getSoftwareConfig() {
-        return this.softwareConfig == null ? Output.empty() : this.softwareConfig;
+        return this.softwareConfig == null ? Codegen.empty() : this.softwareConfig;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RuntimeVirtualMachineArgs> virtualMachine;
 
     public Output<RuntimeVirtualMachineArgs> getVirtualMachine() {
-        return this.virtualMachine == null ? Output.empty() : this.virtualMachine;
+        return this.virtualMachine == null ? Codegen.empty() : this.virtualMachine;
     }
 
     public RuntimeArgs(
@@ -103,12 +104,12 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RuntimeArgs() {
-        this.accessConfig = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.softwareConfig = Output.empty();
-        this.virtualMachine = Output.empty();
+        this.accessConfig = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.softwareConfig = Codegen.empty();
+        this.virtualMachine = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessConfig(@Nullable RuntimeAccessConfigArgs accessConfig) {
-            this.accessConfig = Output.ofNullable(accessConfig);
+            this.accessConfig = Codegen.ofNullable(accessConfig);
             return this;
         }
         public Builder location(Output<String> location) {
@@ -162,7 +163,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -170,7 +171,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder softwareConfig(@Nullable Output<RuntimeSoftwareConfigArgs> softwareConfig) {
@@ -178,7 +179,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder softwareConfig(@Nullable RuntimeSoftwareConfigArgs softwareConfig) {
-            this.softwareConfig = Output.ofNullable(softwareConfig);
+            this.softwareConfig = Codegen.ofNullable(softwareConfig);
             return this;
         }
         public Builder virtualMachine(@Nullable Output<RuntimeVirtualMachineArgs> virtualMachine) {
@@ -186,7 +187,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualMachine(@Nullable RuntimeVirtualMachineArgs virtualMachine) {
-            this.virtualMachine = Output.ofNullable(virtualMachine);
+            this.virtualMachine = Codegen.ofNullable(virtualMachine);
             return this;
         }        public RuntimeArgs build() {
             return new RuntimeArgs(accessConfig, location, name, project, softwareConfig, virtualMachine);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.dns;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dns.ManagedZoneArgs;
 import io.pulumi.gcp.dns.inputs.ManagedZoneState;
@@ -303,7 +304,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagedZone(String name, ManagedZoneArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:dns/managedZone:ManagedZone", name, args == null ? ManagedZoneArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:dns/managedZone:ManagedZone", name, args == null ? ManagedZoneArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ManagedZone(String name, Output<String> id, @Nullable ManagedZoneState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

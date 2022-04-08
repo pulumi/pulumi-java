@@ -5,6 +5,7 @@ package io.pulumi.gcp.billing.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class BudgetAmountSpecifiedAmountArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> currencyCode;
 
     public Output<String> getCurrencyCode() {
-        return this.currencyCode == null ? Output.empty() : this.currencyCode;
+        return this.currencyCode == null ? Codegen.empty() : this.currencyCode;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class BudgetAmountSpecifiedAmountArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> nanos;
 
     public Output<Integer> getNanos() {
-        return this.nanos == null ? Output.empty() : this.nanos;
+        return this.nanos == null ? Codegen.empty() : this.nanos;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class BudgetAmountSpecifiedAmountArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> units;
 
     public Output<String> getUnits() {
-        return this.units == null ? Output.empty() : this.units;
+        return this.units == null ? Codegen.empty() : this.units;
     }
 
     public BudgetAmountSpecifiedAmountArgs(
@@ -65,9 +66,9 @@ public final class BudgetAmountSpecifiedAmountArgs extends io.pulumi.resources.R
     }
 
     private BudgetAmountSpecifiedAmountArgs() {
-        this.currencyCode = Output.empty();
-        this.nanos = Output.empty();
-        this.units = Output.empty();
+        this.currencyCode = Codegen.empty();
+        this.nanos = Codegen.empty();
+        this.units = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class BudgetAmountSpecifiedAmountArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder currencyCode(@Nullable String currencyCode) {
-            this.currencyCode = Output.ofNullable(currencyCode);
+            this.currencyCode = Codegen.ofNullable(currencyCode);
             return this;
         }
         public Builder nanos(@Nullable Output<Integer> nanos) {
@@ -107,7 +108,7 @@ public final class BudgetAmountSpecifiedAmountArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder nanos(@Nullable Integer nanos) {
-            this.nanos = Output.ofNullable(nanos);
+            this.nanos = Codegen.ofNullable(nanos);
             return this;
         }
         public Builder units(@Nullable Output<String> units) {
@@ -115,7 +116,7 @@ public final class BudgetAmountSpecifiedAmountArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder units(@Nullable String units) {
-            this.units = Output.ofNullable(units);
+            this.units = Codegen.ofNullable(units);
             return this;
         }        public BudgetAmountSpecifiedAmountArgs build() {
             return new BudgetAmountSpecifiedAmountArgs(currencyCode, nanos, units);

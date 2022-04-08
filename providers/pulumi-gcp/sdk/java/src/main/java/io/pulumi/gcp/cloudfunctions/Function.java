@@ -6,6 +6,7 @@ package io.pulumi.gcp.cloudfunctions;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudfunctions.FunctionArgs;
 import io.pulumi.gcp.cloudfunctions.inputs.FunctionState;
@@ -397,7 +398,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Function(String name, FunctionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:cloudfunctions/function:Function", name, args == null ? FunctionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:cloudfunctions/function:Function", name, args == null ? FunctionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Function(String name, Output<String> id, @Nullable FunctionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> deletionPolicy;
 
     public Output<String> getDeletionPolicy() {
-        return this.deletionPolicy == null ? Output.empty() : this.deletionPolicy;
+        return this.deletionPolicy == null ? Codegen.empty() : this.deletionPolicy;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
-        return this.host == null ? Output.empty() : this.host;
+        return this.host == null ? Codegen.empty() : this.host;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
-        return this.instance == null ? Output.empty() : this.instance;
+        return this.instance == null ? Codegen.empty() : this.instance;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public UserState(
@@ -119,13 +120,13 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserState() {
-        this.deletionPolicy = Output.empty();
-        this.host = Output.empty();
-        this.instance = Output.empty();
-        this.name = Output.empty();
-        this.password = Output.empty();
-        this.project = Output.empty();
-        this.type = Output.empty();
+        this.deletionPolicy = Codegen.empty();
+        this.host = Codegen.empty();
+        this.instance = Codegen.empty();
+        this.name = Codegen.empty();
+        this.password = Codegen.empty();
+        this.project = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -165,7 +166,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deletionPolicy(@Nullable String deletionPolicy) {
-            this.deletionPolicy = Output.ofNullable(deletionPolicy);
+            this.deletionPolicy = Codegen.ofNullable(deletionPolicy);
             return this;
         }
         public Builder host(@Nullable Output<String> host) {
@@ -173,7 +174,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder host(@Nullable String host) {
-            this.host = Output.ofNullable(host);
+            this.host = Codegen.ofNullable(host);
             return this;
         }
         public Builder instance(@Nullable Output<String> instance) {
@@ -181,7 +182,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instance(@Nullable String instance) {
-            this.instance = Output.ofNullable(instance);
+            this.instance = Codegen.ofNullable(instance);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -189,7 +190,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -197,7 +198,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -205,7 +206,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -213,7 +214,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public UserState build() {
             return new UserState(deletionPolicy, host, instance, name, password, project, type);

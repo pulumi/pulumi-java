@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.bigquery.inputs.DatasetAccessArgs;
 import io.pulumi.gcp.bigquery.inputs.DatasetDefaultEncryptionConfigurationArgs;
 import java.lang.Boolean;
@@ -29,7 +30,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DatasetAccessArgs>> accesses;
 
     public Output<List<DatasetAccessArgs>> getAccesses() {
-        return this.accesses == null ? Output.empty() : this.accesses;
+        return this.accesses == null ? Codegen.empty() : this.accesses;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DatasetDefaultEncryptionConfigurationArgs> defaultEncryptionConfiguration;
 
     public Output<DatasetDefaultEncryptionConfigurationArgs> getDefaultEncryptionConfiguration() {
-        return this.defaultEncryptionConfiguration == null ? Output.empty() : this.defaultEncryptionConfiguration;
+        return this.defaultEncryptionConfiguration == null ? Codegen.empty() : this.defaultEncryptionConfiguration;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> defaultPartitionExpirationMs;
 
     public Output<Integer> getDefaultPartitionExpirationMs() {
-        return this.defaultPartitionExpirationMs == null ? Output.empty() : this.defaultPartitionExpirationMs;
+        return this.defaultPartitionExpirationMs == null ? Codegen.empty() : this.defaultPartitionExpirationMs;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> defaultTableExpirationMs;
 
     public Output<Integer> getDefaultTableExpirationMs() {
-        return this.defaultTableExpirationMs == null ? Output.empty() : this.defaultTableExpirationMs;
+        return this.defaultTableExpirationMs == null ? Codegen.empty() : this.defaultTableExpirationMs;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> deleteContentsOnDestroy;
 
     public Output<Boolean> getDeleteContentsOnDestroy() {
-        return this.deleteContentsOnDestroy == null ? Output.empty() : this.deleteContentsOnDestroy;
+        return this.deleteContentsOnDestroy == null ? Codegen.empty() : this.deleteContentsOnDestroy;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public DatasetArgs(
@@ -178,17 +179,17 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatasetArgs() {
-        this.accesses = Output.empty();
-        this.datasetId = Output.empty();
-        this.defaultEncryptionConfiguration = Output.empty();
-        this.defaultPartitionExpirationMs = Output.empty();
-        this.defaultTableExpirationMs = Output.empty();
-        this.deleteContentsOnDestroy = Output.empty();
-        this.description = Output.empty();
-        this.friendlyName = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
+        this.accesses = Codegen.empty();
+        this.datasetId = Codegen.empty();
+        this.defaultEncryptionConfiguration = Codegen.empty();
+        this.defaultPartitionExpirationMs = Codegen.empty();
+        this.defaultTableExpirationMs = Codegen.empty();
+        this.deleteContentsOnDestroy = Codegen.empty();
+        this.description = Codegen.empty();
+        this.friendlyName = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -236,7 +237,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accesses(@Nullable List<DatasetAccessArgs> accesses) {
-            this.accesses = Output.ofNullable(accesses);
+            this.accesses = Codegen.ofNullable(accesses);
             return this;
         }
         public Builder accesses(DatasetAccessArgs... accesses) {
@@ -255,7 +256,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultEncryptionConfiguration(@Nullable DatasetDefaultEncryptionConfigurationArgs defaultEncryptionConfiguration) {
-            this.defaultEncryptionConfiguration = Output.ofNullable(defaultEncryptionConfiguration);
+            this.defaultEncryptionConfiguration = Codegen.ofNullable(defaultEncryptionConfiguration);
             return this;
         }
         public Builder defaultPartitionExpirationMs(@Nullable Output<Integer> defaultPartitionExpirationMs) {
@@ -263,7 +264,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultPartitionExpirationMs(@Nullable Integer defaultPartitionExpirationMs) {
-            this.defaultPartitionExpirationMs = Output.ofNullable(defaultPartitionExpirationMs);
+            this.defaultPartitionExpirationMs = Codegen.ofNullable(defaultPartitionExpirationMs);
             return this;
         }
         public Builder defaultTableExpirationMs(@Nullable Output<Integer> defaultTableExpirationMs) {
@@ -271,7 +272,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultTableExpirationMs(@Nullable Integer defaultTableExpirationMs) {
-            this.defaultTableExpirationMs = Output.ofNullable(defaultTableExpirationMs);
+            this.defaultTableExpirationMs = Codegen.ofNullable(defaultTableExpirationMs);
             return this;
         }
         public Builder deleteContentsOnDestroy(@Nullable Output<Boolean> deleteContentsOnDestroy) {
@@ -279,7 +280,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deleteContentsOnDestroy(@Nullable Boolean deleteContentsOnDestroy) {
-            this.deleteContentsOnDestroy = Output.ofNullable(deleteContentsOnDestroy);
+            this.deleteContentsOnDestroy = Codegen.ofNullable(deleteContentsOnDestroy);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -287,7 +288,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
@@ -295,7 +296,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -303,7 +304,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -311,7 +312,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -319,7 +320,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public DatasetArgs build() {
             return new DatasetArgs(accesses, datasetId, defaultEncryptionConfiguration, defaultPartitionExpirationMs, defaultTableExpirationMs, deleteContentsOnDestroy, description, friendlyName, labels, location, project);

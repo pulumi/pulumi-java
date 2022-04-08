@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class CertificateCertificateDescriptionAuthorityKeyIdGetArgs extend
       private final @Nullable Output<String> keyId;
 
     public Output<String> getKeyId() {
-        return this.keyId == null ? Output.empty() : this.keyId;
+        return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 
     public CertificateCertificateDescriptionAuthorityKeyIdGetArgs(@Nullable Output<String> keyId) {
@@ -26,7 +27,7 @@ public final class CertificateCertificateDescriptionAuthorityKeyIdGetArgs extend
     }
 
     private CertificateCertificateDescriptionAuthorityKeyIdGetArgs() {
-        this.keyId = Output.empty();
+        this.keyId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class CertificateCertificateDescriptionAuthorityKeyIdGetArgs extend
             return this;
         }
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = Output.ofNullable(keyId);
+            this.keyId = Codegen.ofNullable(keyId);
             return this;
         }        public CertificateCertificateDescriptionAuthorityKeyIdGetArgs build() {
             return new CertificateCertificateDescriptionAuthorityKeyIdGetArgs(keyId);

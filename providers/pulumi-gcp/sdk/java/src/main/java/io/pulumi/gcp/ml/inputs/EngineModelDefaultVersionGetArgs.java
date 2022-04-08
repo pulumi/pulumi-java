@@ -5,6 +5,7 @@ package io.pulumi.gcp.ml.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class EngineModelDefaultVersionGetArgs extends io.pulumi.resources.
     }
 
     private EngineModelDefaultVersionGetArgs() {
-        this.name = Output.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

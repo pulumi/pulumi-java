@@ -5,6 +5,7 @@ package io.pulumi.gcp.billing.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> billingAccountId;
 
     public Output<String> getBillingAccountId() {
-        return this.billingAccountId == null ? Output.empty() : this.billingAccountId;
+        return this.billingAccountId == null ? Codegen.empty() : this.billingAccountId;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> deletionPolicy;
 
     public Output<String> getDeletionPolicy() {
-        return this.deletionPolicy == null ? Output.empty() : this.deletionPolicy;
+        return this.deletionPolicy == null ? Codegen.empty() : this.deletionPolicy;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> masterBillingAccount;
 
     public Output<String> getMasterBillingAccount() {
-        return this.masterBillingAccount == null ? Output.empty() : this.masterBillingAccount;
+        return this.masterBillingAccount == null ? Codegen.empty() : this.masterBillingAccount;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> open;
 
     public Output<Boolean> getOpen() {
-        return this.open == null ? Output.empty() : this.open;
+        return this.open == null ? Codegen.empty() : this.open;
     }
 
     public SubAccountState(
@@ -100,12 +101,12 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubAccountState() {
-        this.billingAccountId = Output.empty();
-        this.deletionPolicy = Output.empty();
-        this.displayName = Output.empty();
-        this.masterBillingAccount = Output.empty();
-        this.name = Output.empty();
-        this.open = Output.empty();
+        this.billingAccountId = Codegen.empty();
+        this.deletionPolicy = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.masterBillingAccount = Codegen.empty();
+        this.name = Codegen.empty();
+        this.open = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder billingAccountId(@Nullable String billingAccountId) {
-            this.billingAccountId = Output.ofNullable(billingAccountId);
+            this.billingAccountId = Codegen.ofNullable(billingAccountId);
             return this;
         }
         public Builder deletionPolicy(@Nullable Output<String> deletionPolicy) {
@@ -151,7 +152,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deletionPolicy(@Nullable String deletionPolicy) {
-            this.deletionPolicy = Output.ofNullable(deletionPolicy);
+            this.deletionPolicy = Codegen.ofNullable(deletionPolicy);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -159,7 +160,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder masterBillingAccount(@Nullable Output<String> masterBillingAccount) {
@@ -167,7 +168,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder masterBillingAccount(@Nullable String masterBillingAccount) {
-            this.masterBillingAccount = Output.ofNullable(masterBillingAccount);
+            this.masterBillingAccount = Codegen.ofNullable(masterBillingAccount);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -175,7 +176,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder open(@Nullable Output<Boolean> open) {
@@ -183,7 +184,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder open(@Nullable Boolean open) {
-            this.open = Output.ofNullable(open);
+            this.open = Codegen.ofNullable(open);
             return this;
         }        public SubAccountState build() {
             return new SubAccountState(billingAccountId, deletionPolicy, displayName, masterBillingAccount, name, open);

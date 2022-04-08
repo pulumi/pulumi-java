@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGe
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs> kerberosConfig;
 
     public Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs> getKerberosConfig() {
-        return this.kerberosConfig == null ? Output.empty() : this.kerberosConfig;
+        return this.kerberosConfig == null ? Codegen.empty() : this.kerberosConfig;
     }
 
     public WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs> kerberosConfig) {
@@ -30,7 +31,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGe
     }
 
     private WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs() {
-        this.kerberosConfig = Output.empty();
+        this.kerberosConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGe
             return this;
         }
         public Builder kerberosConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs kerberosConfig) {
-            this.kerberosConfig = Output.ofNullable(kerberosConfig);
+            this.kerberosConfig = Codegen.ofNullable(kerberosConfig);
             return this;
         }        public WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs(kerberosConfig);

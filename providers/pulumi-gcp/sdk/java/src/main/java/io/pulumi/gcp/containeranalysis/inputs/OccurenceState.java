@@ -5,6 +5,7 @@ package io.pulumi.gcp.containeranalysis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.containeranalysis.inputs.OccurenceAttestationGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -31,7 +32,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<OccurenceAttestationGetArgs> attestation;
 
     public Output<OccurenceAttestationGetArgs> getAttestation() {
-        return this.attestation == null ? Output.empty() : this.attestation;
+        return this.attestation == null ? Codegen.empty() : this.attestation;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> noteName;
 
     public Output<String> getNoteName() {
-        return this.noteName == null ? Output.empty() : this.noteName;
+        return this.noteName == null ? Codegen.empty() : this.noteName;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> remediation;
 
     public Output<String> getRemediation() {
-        return this.remediation == null ? Output.empty() : this.remediation;
+        return this.remediation == null ? Codegen.empty() : this.remediation;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceUri;
 
     public Output<String> getResourceUri() {
-        return this.resourceUri == null ? Output.empty() : this.resourceUri;
+        return this.resourceUri == null ? Codegen.empty() : this.resourceUri;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     public OccurenceState(
@@ -150,15 +151,15 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private OccurenceState() {
-        this.attestation = Output.empty();
-        this.createTime = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.noteName = Output.empty();
-        this.project = Output.empty();
-        this.remediation = Output.empty();
-        this.resourceUri = Output.empty();
-        this.updateTime = Output.empty();
+        this.attestation = Codegen.empty();
+        this.createTime = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.noteName = Codegen.empty();
+        this.project = Codegen.empty();
+        this.remediation = Codegen.empty();
+        this.resourceUri = Codegen.empty();
+        this.updateTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -202,7 +203,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attestation(@Nullable OccurenceAttestationGetArgs attestation) {
-            this.attestation = Output.ofNullable(attestation);
+            this.attestation = Codegen.ofNullable(attestation);
             return this;
         }
         public Builder createTime(@Nullable Output<String> createTime) {
@@ -210,7 +211,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -218,7 +219,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -226,7 +227,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder noteName(@Nullable Output<String> noteName) {
@@ -234,7 +235,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder noteName(@Nullable String noteName) {
-            this.noteName = Output.ofNullable(noteName);
+            this.noteName = Codegen.ofNullable(noteName);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -242,7 +243,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder remediation(@Nullable Output<String> remediation) {
@@ -250,7 +251,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder remediation(@Nullable String remediation) {
-            this.remediation = Output.ofNullable(remediation);
+            this.remediation = Codegen.ofNullable(remediation);
             return this;
         }
         public Builder resourceUri(@Nullable Output<String> resourceUri) {
@@ -258,7 +259,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceUri(@Nullable String resourceUri) {
-            this.resourceUri = Output.ofNullable(resourceUri);
+            this.resourceUri = Codegen.ofNullable(resourceUri);
             return this;
         }
         public Builder updateTime(@Nullable Output<String> updateTime) {
@@ -266,7 +267,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }        public OccurenceState build() {
             return new OccurenceState(attestation, createTime, kind, name, noteName, project, remediation, resourceUri, updateTime);

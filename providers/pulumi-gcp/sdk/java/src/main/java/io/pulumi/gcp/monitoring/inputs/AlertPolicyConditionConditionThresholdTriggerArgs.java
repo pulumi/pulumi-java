@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class AlertPolicyConditionConditionThresholdTriggerArgs extends io.
       private final @Nullable Output<Integer> count;
 
     public Output<Integer> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AlertPolicyConditionConditionThresholdTriggerArgs extends io.
       private final @Nullable Output<Double> percent;
 
     public Output<Double> getPercent() {
-        return this.percent == null ? Output.empty() : this.percent;
+        return this.percent == null ? Codegen.empty() : this.percent;
     }
 
     public AlertPolicyConditionConditionThresholdTriggerArgs(
@@ -49,8 +50,8 @@ public final class AlertPolicyConditionConditionThresholdTriggerArgs extends io.
     }
 
     private AlertPolicyConditionConditionThresholdTriggerArgs() {
-        this.count = Output.empty();
-        this.percent = Output.empty();
+        this.count = Codegen.empty();
+        this.percent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class AlertPolicyConditionConditionThresholdTriggerArgs extends io.
             return this;
         }
         public Builder count(@Nullable Integer count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }
         public Builder percent(@Nullable Output<Double> percent) {
@@ -88,7 +89,7 @@ public final class AlertPolicyConditionConditionThresholdTriggerArgs extends io.
             return this;
         }
         public Builder percent(@Nullable Double percent) {
-            this.percent = Output.ofNullable(percent);
+            this.percent = Codegen.ofNullable(percent);
             return this;
         }        public AlertPolicyConditionConditionThresholdTriggerArgs build() {
             return new AlertPolicyConditionConditionThresholdTriggerArgs(count, percent);

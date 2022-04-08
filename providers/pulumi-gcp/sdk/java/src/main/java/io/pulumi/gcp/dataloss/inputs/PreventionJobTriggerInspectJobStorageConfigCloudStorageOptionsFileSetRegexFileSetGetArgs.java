@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
       private final @Nullable Output<List<String>> excludeRegexes;
 
     public Output<List<String>> getExcludeRegexes() {
-        return this.excludeRegexes == null ? Output.empty() : this.excludeRegexes;
+        return this.excludeRegexes == null ? Codegen.empty() : this.excludeRegexes;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
       private final @Nullable Output<List<String>> includeRegexes;
 
     public Output<List<String>> getIncludeRegexes() {
-        return this.includeRegexes == null ? Output.empty() : this.includeRegexes;
+        return this.includeRegexes == null ? Codegen.empty() : this.includeRegexes;
     }
 
     public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetGetArgs(
@@ -62,9 +63,9 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     }
 
     private PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetGetArgs() {
-        this.bucketName = Output.empty();
-        this.excludeRegexes = Output.empty();
-        this.includeRegexes = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.excludeRegexes = Codegen.empty();
+        this.includeRegexes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
             return this;
         }
         public Builder excludeRegexes(@Nullable List<String> excludeRegexes) {
-            this.excludeRegexes = Output.ofNullable(excludeRegexes);
+            this.excludeRegexes = Codegen.ofNullable(excludeRegexes);
             return this;
         }
         public Builder excludeRegexes(String... excludeRegexes) {
@@ -115,7 +116,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
             return this;
         }
         public Builder includeRegexes(@Nullable List<String> includeRegexes) {
-            this.includeRegexes = Output.ofNullable(includeRegexes);
+            this.includeRegexes = Codegen.ofNullable(includeRegexes);
             return this;
         }
         public Builder includeRegexes(String... includeRegexes) {

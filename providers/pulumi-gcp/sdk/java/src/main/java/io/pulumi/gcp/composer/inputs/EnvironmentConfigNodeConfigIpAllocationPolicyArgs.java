@@ -5,6 +5,7 @@ package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,35 +20,35 @@ public final class EnvironmentConfigNodeConfigIpAllocationPolicyArgs extends io.
       private final @Nullable Output<String> clusterIpv4CidrBlock;
 
     public Output<String> getClusterIpv4CidrBlock() {
-        return this.clusterIpv4CidrBlock == null ? Output.empty() : this.clusterIpv4CidrBlock;
+        return this.clusterIpv4CidrBlock == null ? Codegen.empty() : this.clusterIpv4CidrBlock;
     }
 
     @Import(name="clusterSecondaryRangeName")
       private final @Nullable Output<String> clusterSecondaryRangeName;
 
     public Output<String> getClusterSecondaryRangeName() {
-        return this.clusterSecondaryRangeName == null ? Output.empty() : this.clusterSecondaryRangeName;
+        return this.clusterSecondaryRangeName == null ? Codegen.empty() : this.clusterSecondaryRangeName;
     }
 
     @Import(name="servicesIpv4CidrBlock")
       private final @Nullable Output<String> servicesIpv4CidrBlock;
 
     public Output<String> getServicesIpv4CidrBlock() {
-        return this.servicesIpv4CidrBlock == null ? Output.empty() : this.servicesIpv4CidrBlock;
+        return this.servicesIpv4CidrBlock == null ? Codegen.empty() : this.servicesIpv4CidrBlock;
     }
 
     @Import(name="servicesSecondaryRangeName")
       private final @Nullable Output<String> servicesSecondaryRangeName;
 
     public Output<String> getServicesSecondaryRangeName() {
-        return this.servicesSecondaryRangeName == null ? Output.empty() : this.servicesSecondaryRangeName;
+        return this.servicesSecondaryRangeName == null ? Codegen.empty() : this.servicesSecondaryRangeName;
     }
 
     @Import(name="useIpAliases")
       private final @Nullable Output<Boolean> useIpAliases;
 
     public Output<Boolean> getUseIpAliases() {
-        return this.useIpAliases == null ? Output.empty() : this.useIpAliases;
+        return this.useIpAliases == null ? Codegen.empty() : this.useIpAliases;
     }
 
     public EnvironmentConfigNodeConfigIpAllocationPolicyArgs(
@@ -64,11 +65,11 @@ public final class EnvironmentConfigNodeConfigIpAllocationPolicyArgs extends io.
     }
 
     private EnvironmentConfigNodeConfigIpAllocationPolicyArgs() {
-        this.clusterIpv4CidrBlock = Output.empty();
-        this.clusterSecondaryRangeName = Output.empty();
-        this.servicesIpv4CidrBlock = Output.empty();
-        this.servicesSecondaryRangeName = Output.empty();
-        this.useIpAliases = Output.empty();
+        this.clusterIpv4CidrBlock = Codegen.empty();
+        this.clusterSecondaryRangeName = Codegen.empty();
+        this.servicesIpv4CidrBlock = Codegen.empty();
+        this.servicesSecondaryRangeName = Codegen.empty();
+        this.useIpAliases = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class EnvironmentConfigNodeConfigIpAllocationPolicyArgs extends io.
             return this;
         }
         public Builder clusterIpv4CidrBlock(@Nullable String clusterIpv4CidrBlock) {
-            this.clusterIpv4CidrBlock = Output.ofNullable(clusterIpv4CidrBlock);
+            this.clusterIpv4CidrBlock = Codegen.ofNullable(clusterIpv4CidrBlock);
             return this;
         }
         public Builder clusterSecondaryRangeName(@Nullable Output<String> clusterSecondaryRangeName) {
@@ -112,7 +113,7 @@ public final class EnvironmentConfigNodeConfigIpAllocationPolicyArgs extends io.
             return this;
         }
         public Builder clusterSecondaryRangeName(@Nullable String clusterSecondaryRangeName) {
-            this.clusterSecondaryRangeName = Output.ofNullable(clusterSecondaryRangeName);
+            this.clusterSecondaryRangeName = Codegen.ofNullable(clusterSecondaryRangeName);
             return this;
         }
         public Builder servicesIpv4CidrBlock(@Nullable Output<String> servicesIpv4CidrBlock) {
@@ -120,7 +121,7 @@ public final class EnvironmentConfigNodeConfigIpAllocationPolicyArgs extends io.
             return this;
         }
         public Builder servicesIpv4CidrBlock(@Nullable String servicesIpv4CidrBlock) {
-            this.servicesIpv4CidrBlock = Output.ofNullable(servicesIpv4CidrBlock);
+            this.servicesIpv4CidrBlock = Codegen.ofNullable(servicesIpv4CidrBlock);
             return this;
         }
         public Builder servicesSecondaryRangeName(@Nullable Output<String> servicesSecondaryRangeName) {
@@ -128,7 +129,7 @@ public final class EnvironmentConfigNodeConfigIpAllocationPolicyArgs extends io.
             return this;
         }
         public Builder servicesSecondaryRangeName(@Nullable String servicesSecondaryRangeName) {
-            this.servicesSecondaryRangeName = Output.ofNullable(servicesSecondaryRangeName);
+            this.servicesSecondaryRangeName = Codegen.ofNullable(servicesSecondaryRangeName);
             return this;
         }
         public Builder useIpAliases(@Nullable Output<Boolean> useIpAliases) {
@@ -136,7 +137,7 @@ public final class EnvironmentConfigNodeConfigIpAllocationPolicyArgs extends io.
             return this;
         }
         public Builder useIpAliases(@Nullable Boolean useIpAliases) {
-            this.useIpAliases = Output.ofNullable(useIpAliases);
+            this.useIpAliases = Codegen.ofNullable(useIpAliases);
             return this;
         }        public EnvironmentConfigNodeConfigIpAllocationPolicyArgs build() {
             return new EnvironmentConfigNodeConfigIpAllocationPolicyArgs(clusterIpv4CidrBlock, clusterSecondaryRangeName, servicesIpv4CidrBlock, servicesSecondaryRangeName, useIpAliases);

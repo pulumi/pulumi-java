@@ -6,6 +6,7 @@ package io.pulumi.gcp.diagflow;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.diagflow.CxFlowArgs;
 import io.pulumi.gcp.diagflow.inputs.CxFlowState;
@@ -225,7 +226,7 @@ public class CxFlow extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CxFlow(String name, CxFlowArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:diagflow/cxFlow:CxFlow", name, args == null ? CxFlowArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:diagflow/cxFlow:CxFlow", name, args == null ? CxFlowArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CxFlow(String name, Output<String> id, @Nullable CxFlowState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

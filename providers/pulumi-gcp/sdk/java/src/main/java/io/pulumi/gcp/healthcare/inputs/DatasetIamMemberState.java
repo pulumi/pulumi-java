@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.healthcare.inputs.DatasetIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<DatasetIamMemberConditionGetArgs> condition;
 
     public Output<DatasetIamMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> datasetId;
 
     public Output<String> getDatasetId() {
-        return this.datasetId == null ? Output.empty() : this.datasetId;
+        return this.datasetId == null ? Codegen.empty() : this.datasetId;
     }
 
     /**
@@ -44,14 +45,14 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
-        return this.member == null ? Output.empty() : this.member;
+        return this.member == null ? Codegen.empty() : this.member;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public DatasetIamMemberState(
@@ -81,11 +82,11 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
     }
 
     private DatasetIamMemberState() {
-        this.condition = Output.empty();
-        this.datasetId = Output.empty();
-        this.etag = Output.empty();
-        this.member = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.datasetId = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.member = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -121,7 +122,7 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder condition(@Nullable DatasetIamMemberConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder datasetId(@Nullable Output<String> datasetId) {
@@ -129,7 +130,7 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Output.ofNullable(datasetId);
+            this.datasetId = Codegen.ofNullable(datasetId);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -137,7 +138,7 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder member(@Nullable Output<String> member) {
@@ -145,7 +146,7 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder member(@Nullable String member) {
-            this.member = Output.ofNullable(member);
+            this.member = Codegen.ofNullable(member);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -153,7 +154,7 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public DatasetIamMemberState build() {
             return new DatasetIamMemberState(condition, datasetId, etag, member, role);

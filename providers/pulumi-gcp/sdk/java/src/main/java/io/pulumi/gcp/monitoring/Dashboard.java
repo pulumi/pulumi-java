@@ -6,6 +6,7 @@ package io.pulumi.gcp.monitoring;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.monitoring.DashboardArgs;
 import io.pulumi.gcp.monitoring.inputs.DashboardState;
@@ -93,7 +94,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Dashboard(String name, DashboardArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:monitoring/dashboard:Dashboard", name, args == null ? DashboardArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:monitoring/dashboard:Dashboard", name, args == null ? DashboardArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Dashboard(String name, Output<String> id, @Nullable DashboardState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

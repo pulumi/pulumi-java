@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplateIdentityConstraintsCelExpressionArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class CertificateTemplateIdentityConstraintsArgs extends io.pulumi.
       private final @Nullable Output<CertificateTemplateIdentityConstraintsCelExpressionArgs> celExpression;
 
     public Output<CertificateTemplateIdentityConstraintsCelExpressionArgs> getCelExpression() {
-        return this.celExpression == null ? Output.empty() : this.celExpression;
+        return this.celExpression == null ? Codegen.empty() : this.celExpression;
     }
 
     public CertificateTemplateIdentityConstraintsArgs(
@@ -58,9 +59,9 @@ public final class CertificateTemplateIdentityConstraintsArgs extends io.pulumi.
     }
 
     private CertificateTemplateIdentityConstraintsArgs() {
-        this.allowSubjectAltNamesPassthrough = Output.empty();
-        this.allowSubjectPassthrough = Output.empty();
-        this.celExpression = Output.empty();
+        this.allowSubjectAltNamesPassthrough = Codegen.empty();
+        this.allowSubjectPassthrough = Codegen.empty();
+        this.celExpression = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class CertificateTemplateIdentityConstraintsArgs extends io.pulumi.
             return this;
         }
         public Builder celExpression(@Nullable CertificateTemplateIdentityConstraintsCelExpressionArgs celExpression) {
-            this.celExpression = Output.ofNullable(celExpression);
+            this.celExpression = Codegen.ofNullable(celExpression);
             return this;
         }        public CertificateTemplateIdentityConstraintsArgs build() {
             return new CertificateTemplateIdentityConstraintsArgs(allowSubjectAltNamesPassthrough, allowSubjectPassthrough, celExpression);

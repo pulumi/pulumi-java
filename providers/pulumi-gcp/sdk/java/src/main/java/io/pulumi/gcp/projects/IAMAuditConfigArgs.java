@@ -5,6 +5,7 @@ package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.projects.inputs.IAMAuditConfigAuditLogConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -59,9 +60,9 @@ public final class IAMAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IAMAuditConfigArgs() {
-        this.auditLogConfigs = Output.empty();
-        this.project = Output.empty();
-        this.service = Output.empty();
+        this.auditLogConfigs = Codegen.empty();
+        this.project = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {

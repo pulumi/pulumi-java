@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueKeyUsageArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class CertificateCertificateDescriptionConfigValueArgs extends io.p
       private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageArgs>> keyUsages;
 
     public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageArgs>> getKeyUsages() {
-        return this.keyUsages == null ? Output.empty() : this.keyUsages;
+        return this.keyUsages == null ? Codegen.empty() : this.keyUsages;
     }
 
     public CertificateCertificateDescriptionConfigValueArgs(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageArgs>> keyUsages) {
@@ -32,7 +33,7 @@ public final class CertificateCertificateDescriptionConfigValueArgs extends io.p
     }
 
     private CertificateCertificateDescriptionConfigValueArgs() {
-        this.keyUsages = Output.empty();
+        this.keyUsages = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -60,7 +61,7 @@ public final class CertificateCertificateDescriptionConfigValueArgs extends io.p
             return this;
         }
         public Builder keyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageArgs> keyUsages) {
-            this.keyUsages = Output.ofNullable(keyUsages);
+            this.keyUsages = Codegen.ofNullable(keyUsages);
             return this;
         }
         public Builder keyUsages(CertificateCertificateDescriptionConfigValueKeyUsageArgs... keyUsages) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromGetArgs extends
       private final @Nullable Output<List<String>> identities;
 
     public Output<List<String>> getIdentities() {
-        return this.identities == null ? Output.empty() : this.identities;
+        return this.identities == null ? Codegen.empty() : this.identities;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromGetArgs extends
       private final @Nullable Output<String> identityType;
 
     public Output<String> getIdentityType() {
-        return this.identityType == null ? Output.empty() : this.identityType;
+        return this.identityType == null ? Codegen.empty() : this.identityType;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromGetArgs extends
       private final @Nullable Output<List<ServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs>> sources;
 
     public Output<List<ServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs>> getSources() {
-        return this.sources == null ? Output.empty() : this.sources;
+        return this.sources == null ? Codegen.empty() : this.sources;
     }
 
     public ServicePerimeterStatusIngressPolicyIngressFromGetArgs(
@@ -65,9 +66,9 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromGetArgs extends
     }
 
     private ServicePerimeterStatusIngressPolicyIngressFromGetArgs() {
-        this.identities = Output.empty();
-        this.identityType = Output.empty();
-        this.sources = Output.empty();
+        this.identities = Codegen.empty();
+        this.identityType = Codegen.empty();
+        this.sources = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromGetArgs extends
             return this;
         }
         public Builder identities(@Nullable List<String> identities) {
-            this.identities = Output.ofNullable(identities);
+            this.identities = Codegen.ofNullable(identities);
             return this;
         }
         public Builder identities(String... identities) {
@@ -110,7 +111,7 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromGetArgs extends
             return this;
         }
         public Builder identityType(@Nullable String identityType) {
-            this.identityType = Output.ofNullable(identityType);
+            this.identityType = Codegen.ofNullable(identityType);
             return this;
         }
         public Builder sources(@Nullable Output<List<ServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs>> sources) {
@@ -118,7 +119,7 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromGetArgs extends
             return this;
         }
         public Builder sources(@Nullable List<ServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs> sources) {
-            this.sources = Output.ofNullable(sources);
+            this.sources = Codegen.ofNullable(sources);
             return this;
         }
         public Builder sources(ServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs... sources) {

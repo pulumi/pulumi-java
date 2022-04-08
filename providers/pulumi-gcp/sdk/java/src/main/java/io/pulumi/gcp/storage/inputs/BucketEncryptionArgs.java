@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private BucketEncryptionArgs() {
-        this.defaultKmsKeyName = Output.empty();
+        this.defaultKmsKeyName = Codegen.empty();
     }
 
     public static Builder builder() {

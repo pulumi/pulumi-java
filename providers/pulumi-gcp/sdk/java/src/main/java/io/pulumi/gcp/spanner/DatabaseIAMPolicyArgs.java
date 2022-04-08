@@ -5,6 +5,7 @@ package io.pulumi.gcp.spanner;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -57,7 +58,7 @@ public final class DatabaseIAMPolicyArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public DatabaseIAMPolicyArgs(
@@ -72,10 +73,10 @@ public final class DatabaseIAMPolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DatabaseIAMPolicyArgs() {
-        this.database = Output.empty();
-        this.instance = Output.empty();
-        this.policyData = Output.empty();
-        this.project = Output.empty();
+        this.database = Codegen.empty();
+        this.instance = Codegen.empty();
+        this.policyData = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class DatabaseIAMPolicyArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public DatabaseIAMPolicyArgs build() {
             return new DatabaseIAMPolicyArgs(database, instance, policyData, project);

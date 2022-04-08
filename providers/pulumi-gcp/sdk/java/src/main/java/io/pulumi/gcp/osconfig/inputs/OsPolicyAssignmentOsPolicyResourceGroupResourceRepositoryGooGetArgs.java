@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooG
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooGetArgs() {
-        this.name = Output.empty();
-        this.url = Output.empty();
+        this.name = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {

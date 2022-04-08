@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudidentity;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudidentity.inputs.GroupGroupKeyArgs;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> initialGroupConfig;
 
     public Output<String> getInitialGroupConfig() {
-        return this.initialGroupConfig == null ? Output.empty() : this.initialGroupConfig;
+        return this.initialGroupConfig == null ? Codegen.empty() : this.initialGroupConfig;
     }
 
     /**
@@ -111,12 +112,12 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.groupKey = Output.empty();
-        this.initialGroupConfig = Output.empty();
-        this.labels = Output.empty();
-        this.parent = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.groupKey = Codegen.empty();
+        this.initialGroupConfig = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.parent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -154,7 +155,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -162,7 +163,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder groupKey(Output<GroupGroupKeyArgs> groupKey) {
@@ -178,7 +179,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder initialGroupConfig(@Nullable String initialGroupConfig) {
-            this.initialGroupConfig = Output.ofNullable(initialGroupConfig);
+            this.initialGroupConfig = Codegen.ofNullable(initialGroupConfig);
             return this;
         }
         public Builder labels(Output<Map<String,String>> labels) {

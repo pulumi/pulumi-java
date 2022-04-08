@@ -5,6 +5,7 @@ package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class MetricBucketOptionsLinearBucketsGetArgs extends io.pulumi.res
       private final @Nullable Output<Integer> numFiniteBuckets;
 
     public Output<Integer> getNumFiniteBuckets() {
-        return this.numFiniteBuckets == null ? Output.empty() : this.numFiniteBuckets;
+        return this.numFiniteBuckets == null ? Codegen.empty() : this.numFiniteBuckets;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class MetricBucketOptionsLinearBucketsGetArgs extends io.pulumi.res
       private final @Nullable Output<Double> offset;
 
     public Output<Double> getOffset() {
-        return this.offset == null ? Output.empty() : this.offset;
+        return this.offset == null ? Codegen.empty() : this.offset;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class MetricBucketOptionsLinearBucketsGetArgs extends io.pulumi.res
       private final @Nullable Output<Double> width;
 
     public Output<Double> getWidth() {
-        return this.width == null ? Output.empty() : this.width;
+        return this.width == null ? Codegen.empty() : this.width;
     }
 
     public MetricBucketOptionsLinearBucketsGetArgs(
@@ -58,9 +59,9 @@ public final class MetricBucketOptionsLinearBucketsGetArgs extends io.pulumi.res
     }
 
     private MetricBucketOptionsLinearBucketsGetArgs() {
-        this.numFiniteBuckets = Output.empty();
-        this.offset = Output.empty();
-        this.width = Output.empty();
+        this.numFiniteBuckets = Codegen.empty();
+        this.offset = Codegen.empty();
+        this.width = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class MetricBucketOptionsLinearBucketsGetArgs extends io.pulumi.res
             return this;
         }
         public Builder numFiniteBuckets(@Nullable Integer numFiniteBuckets) {
-            this.numFiniteBuckets = Output.ofNullable(numFiniteBuckets);
+            this.numFiniteBuckets = Codegen.ofNullable(numFiniteBuckets);
             return this;
         }
         public Builder offset(@Nullable Output<Double> offset) {
@@ -100,7 +101,7 @@ public final class MetricBucketOptionsLinearBucketsGetArgs extends io.pulumi.res
             return this;
         }
         public Builder offset(@Nullable Double offset) {
-            this.offset = Output.ofNullable(offset);
+            this.offset = Codegen.ofNullable(offset);
             return this;
         }
         public Builder width(@Nullable Output<Double> width) {
@@ -108,7 +109,7 @@ public final class MetricBucketOptionsLinearBucketsGetArgs extends io.pulumi.res
             return this;
         }
         public Builder width(@Nullable Double width) {
-            this.width = Output.ofNullable(width);
+            this.width = Codegen.ofNullable(width);
             return this;
         }        public MetricBucketOptionsLinearBucketsGetArgs build() {
             return new MetricBucketOptionsLinearBucketsGetArgs(numFiniteBuckets, offset, width);

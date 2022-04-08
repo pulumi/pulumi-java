@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,21 +19,21 @@ public final class DomainMappingResourceRecordGetArgs extends io.pulumi.resource
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="rrdata")
       private final @Nullable Output<String> rrdata;
 
     public Output<String> getRrdata() {
-        return this.rrdata == null ? Output.empty() : this.rrdata;
+        return this.rrdata == null ? Codegen.empty() : this.rrdata;
     }
 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public DomainMappingResourceRecordGetArgs(
@@ -45,9 +46,9 @@ public final class DomainMappingResourceRecordGetArgs extends io.pulumi.resource
     }
 
     private DomainMappingResourceRecordGetArgs() {
-        this.name = Output.empty();
-        this.rrdata = Output.empty();
-        this.type = Output.empty();
+        this.name = Codegen.empty();
+        this.rrdata = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class DomainMappingResourceRecordGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder rrdata(@Nullable Output<String> rrdata) {
@@ -87,7 +88,7 @@ public final class DomainMappingResourceRecordGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder rrdata(@Nullable String rrdata) {
-            this.rrdata = Output.ofNullable(rrdata);
+            this.rrdata = Codegen.ofNullable(rrdata);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -95,7 +96,7 @@ public final class DomainMappingResourceRecordGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public DomainMappingResourceRecordGetArgs build() {
             return new DomainMappingResourceRecordGetArgs(name, rrdata, type);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateMetadataArgs;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecArgs;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ServiceTemplateArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<ServiceTemplateMetadataArgs> metadata;
 
     public Output<ServiceTemplateMetadataArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ServiceTemplateArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<ServiceTemplateSpecArgs> spec;
 
     public Output<ServiceTemplateSpecArgs> getSpec() {
-        return this.spec == null ? Output.empty() : this.spec;
+        return this.spec == null ? Codegen.empty() : this.spec;
     }
 
     public ServiceTemplateArgs(
@@ -48,8 +49,8 @@ public final class ServiceTemplateArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ServiceTemplateArgs() {
-        this.metadata = Output.empty();
-        this.spec = Output.empty();
+        this.metadata = Codegen.empty();
+        this.spec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ServiceTemplateArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder metadata(@Nullable ServiceTemplateMetadataArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder spec(@Nullable Output<ServiceTemplateSpecArgs> spec) {
@@ -87,7 +88,7 @@ public final class ServiceTemplateArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder spec(@Nullable ServiceTemplateSpecArgs spec) {
-            this.spec = Output.ofNullable(spec);
+            this.spec = Codegen.ofNullable(spec);
             return this;
         }        public ServiceTemplateArgs build() {
             return new ServiceTemplateArgs(metadata, spec);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class DicomStoreIamMemberState extends io.pulumi.resources.Resource
       private final @Nullable Output<DicomStoreIamMemberConditionGetArgs> condition;
 
     public Output<DicomStoreIamMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class DicomStoreIamMemberState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> dicomStoreId;
 
     public Output<String> getDicomStoreId() {
-        return this.dicomStoreId == null ? Output.empty() : this.dicomStoreId;
+        return this.dicomStoreId == null ? Codegen.empty() : this.dicomStoreId;
     }
 
     /**
@@ -44,14 +45,14 @@ public final class DicomStoreIamMemberState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
-        return this.member == null ? Output.empty() : this.member;
+        return this.member == null ? Codegen.empty() : this.member;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class DicomStoreIamMemberState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public DicomStoreIamMemberState(
@@ -81,11 +82,11 @@ public final class DicomStoreIamMemberState extends io.pulumi.resources.Resource
     }
 
     private DicomStoreIamMemberState() {
-        this.condition = Output.empty();
-        this.dicomStoreId = Output.empty();
-        this.etag = Output.empty();
-        this.member = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.dicomStoreId = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.member = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -121,7 +122,7 @@ public final class DicomStoreIamMemberState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder condition(@Nullable DicomStoreIamMemberConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder dicomStoreId(@Nullable Output<String> dicomStoreId) {
@@ -129,7 +130,7 @@ public final class DicomStoreIamMemberState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder dicomStoreId(@Nullable String dicomStoreId) {
-            this.dicomStoreId = Output.ofNullable(dicomStoreId);
+            this.dicomStoreId = Codegen.ofNullable(dicomStoreId);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -137,7 +138,7 @@ public final class DicomStoreIamMemberState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder member(@Nullable Output<String> member) {
@@ -145,7 +146,7 @@ public final class DicomStoreIamMemberState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder member(@Nullable String member) {
-            this.member = Output.ofNullable(member);
+            this.member = Codegen.ofNullable(member);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -153,7 +154,7 @@ public final class DicomStoreIamMemberState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public DicomStoreIamMemberState build() {
             return new DicomStoreIamMemberState(condition, dicomStoreId, etag, member, role);

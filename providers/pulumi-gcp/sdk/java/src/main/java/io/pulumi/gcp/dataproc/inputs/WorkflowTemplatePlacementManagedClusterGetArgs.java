@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigGetArgs;
 import java.lang.String;
 import java.util.Map;
@@ -46,7 +47,7 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends io.pul
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     public WorkflowTemplatePlacementManagedClusterGetArgs(
@@ -59,9 +60,9 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends io.pul
     }
 
     private WorkflowTemplatePlacementManagedClusterGetArgs() {
-        this.clusterName = Output.empty();
-        this.config = Output.empty();
-        this.labels = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.config = Codegen.empty();
+        this.labels = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends io.pul
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }        public WorkflowTemplatePlacementManagedClusterGetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterGetArgs(clusterName, config, labels);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class DiskResourcePolicyAttachmentArgs extends io.pulumi.resources.
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class DiskResourcePolicyAttachmentArgs extends io.pulumi.resources.
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class DiskResourcePolicyAttachmentArgs extends io.pulumi.resources.
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public DiskResourcePolicyAttachmentArgs(
@@ -72,10 +73,10 @@ public final class DiskResourcePolicyAttachmentArgs extends io.pulumi.resources.
     }
 
     private DiskResourcePolicyAttachmentArgs() {
-        this.disk = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.zone = Output.empty();
+        this.disk = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class DiskResourcePolicyAttachmentArgs extends io.pulumi.resources.
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -125,7 +126,7 @@ public final class DiskResourcePolicyAttachmentArgs extends io.pulumi.resources.
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -133,7 +134,7 @@ public final class DiskResourcePolicyAttachmentArgs extends io.pulumi.resources.
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public DiskResourcePolicyAttachmentArgs build() {
             return new DiskResourcePolicyAttachmentArgs(disk, name, project, zone);

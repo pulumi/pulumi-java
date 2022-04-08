@@ -6,6 +6,7 @@ package io.pulumi.gcp.projects;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.projects.OrganizationPolicyArgs;
 import io.pulumi.gcp.projects.inputs.OrganizationPolicyState;
@@ -183,7 +184,7 @@ public class OrganizationPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationPolicy(String name, OrganizationPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:projects/organizationPolicy:OrganizationPolicy", name, args == null ? OrganizationPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:projects/organizationPolicy:OrganizationPolicy", name, args == null ? OrganizationPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OrganizationPolicy(String name, Output<String> id, @Nullable OrganizationPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

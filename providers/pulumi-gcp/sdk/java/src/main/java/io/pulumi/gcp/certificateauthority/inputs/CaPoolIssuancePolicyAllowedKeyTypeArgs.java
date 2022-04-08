@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyAllowedKeyTypeRsaArgs;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeArgs extends io.pulumi.reso
       private final @Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs> ellipticCurve;
 
     public Output<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs> getEllipticCurve() {
-        return this.ellipticCurve == null ? Output.empty() : this.ellipticCurve;
+        return this.ellipticCurve == null ? Codegen.empty() : this.ellipticCurve;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeArgs extends io.pulumi.reso
       private final @Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeRsaArgs> rsa;
 
     public Output<CaPoolIssuancePolicyAllowedKeyTypeRsaArgs> getRsa() {
-        return this.rsa == null ? Output.empty() : this.rsa;
+        return this.rsa == null ? Codegen.empty() : this.rsa;
     }
 
     public CaPoolIssuancePolicyAllowedKeyTypeArgs(
@@ -47,8 +48,8 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeArgs extends io.pulumi.reso
     }
 
     private CaPoolIssuancePolicyAllowedKeyTypeArgs() {
-        this.ellipticCurve = Output.empty();
-        this.rsa = Output.empty();
+        this.ellipticCurve = Codegen.empty();
+        this.rsa = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeArgs extends io.pulumi.reso
             return this;
         }
         public Builder ellipticCurve(@Nullable CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs ellipticCurve) {
-            this.ellipticCurve = Output.ofNullable(ellipticCurve);
+            this.ellipticCurve = Codegen.ofNullable(ellipticCurve);
             return this;
         }
         public Builder rsa(@Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeRsaArgs> rsa) {
@@ -86,7 +87,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeArgs extends io.pulumi.reso
             return this;
         }
         public Builder rsa(@Nullable CaPoolIssuancePolicyAllowedKeyTypeRsaArgs rsa) {
-            this.rsa = Output.ofNullable(rsa);
+            this.rsa = Codegen.ofNullable(rsa);
             return this;
         }        public CaPoolIssuancePolicyAllowedKeyTypeArgs build() {
             return new CaPoolIssuancePolicyAllowedKeyTypeArgs(ellipticCurve, rsa);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobActionGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigGetArgs;
 import java.lang.String;
@@ -61,9 +62,9 @@ public final class PreventionJobTriggerInspectJobGetArgs extends io.pulumi.resou
     }
 
     private PreventionJobTriggerInspectJobGetArgs() {
-        this.actions = Output.empty();
-        this.inspectTemplateName = Output.empty();
-        this.storageConfig = Output.empty();
+        this.actions = Codegen.empty();
+        this.inspectTemplateName = Codegen.empty();
+        this.storageConfig = Codegen.empty();
     }
 
     public static Builder builder() {

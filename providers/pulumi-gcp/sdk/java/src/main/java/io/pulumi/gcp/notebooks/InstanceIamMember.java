@@ -6,6 +6,7 @@ package io.pulumi.gcp.notebooks;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.notebooks.InstanceIamMemberArgs;
 import io.pulumi.gcp.notebooks.inputs.InstanceIamMemberState;
@@ -168,7 +169,7 @@ public class InstanceIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InstanceIamMember(String name, InstanceIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:notebooks/instanceIamMember:InstanceIamMember", name, args == null ? InstanceIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:notebooks/instanceIamMember:InstanceIamMember", name, args == null ? InstanceIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InstanceIamMember(String name, Output<String> id, @Nullable InstanceIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

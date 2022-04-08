@@ -6,6 +6,7 @@ package io.pulumi.gcp.folder;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.folder.IAMMemberArgs;
 import io.pulumi.gcp.folder.inputs.IAMMemberState;
@@ -68,7 +69,7 @@ public class IAMMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IAMMember(String name, IAMMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:folder/iAMMember:IAMMember", name, args == null ? IAMMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:folder/iAMMember:IAMMember", name, args == null ? IAMMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IAMMember(String name, Output<String> id, @Nullable IAMMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

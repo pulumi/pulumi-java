@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.TargetSSLProxyArgs;
 import io.pulumi.gcp.compute.inputs.TargetSSLProxyState;
@@ -237,7 +238,7 @@ public class TargetSSLProxy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TargetSSLProxy(String name, TargetSSLProxyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/targetSSLProxy:TargetSSLProxy", name, args == null ? TargetSSLProxyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/targetSSLProxy:TargetSSLProxy", name, args == null ? TargetSSLProxyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TargetSSLProxy(String name, Output<String> id, @Nullable TargetSSLProxyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

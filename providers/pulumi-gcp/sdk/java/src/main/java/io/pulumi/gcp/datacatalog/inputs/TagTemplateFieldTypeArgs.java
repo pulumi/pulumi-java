@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.datacatalog.inputs.TagTemplateFieldTypeEnumTypeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class TagTemplateFieldTypeArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<TagTemplateFieldTypeEnumTypeArgs> enumType;
 
     public Output<TagTemplateFieldTypeEnumTypeArgs> getEnumType() {
-        return this.enumType == null ? Output.empty() : this.enumType;
+        return this.enumType == null ? Codegen.empty() : this.enumType;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class TagTemplateFieldTypeArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> primitiveType;
 
     public Output<String> getPrimitiveType() {
-        return this.primitiveType == null ? Output.empty() : this.primitiveType;
+        return this.primitiveType == null ? Codegen.empty() : this.primitiveType;
     }
 
     public TagTemplateFieldTypeArgs(
@@ -49,8 +50,8 @@ public final class TagTemplateFieldTypeArgs extends io.pulumi.resources.Resource
     }
 
     private TagTemplateFieldTypeArgs() {
-        this.enumType = Output.empty();
-        this.primitiveType = Output.empty();
+        this.enumType = Codegen.empty();
+        this.primitiveType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class TagTemplateFieldTypeArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder enumType(@Nullable TagTemplateFieldTypeEnumTypeArgs enumType) {
-            this.enumType = Output.ofNullable(enumType);
+            this.enumType = Codegen.ofNullable(enumType);
             return this;
         }
         public Builder primitiveType(@Nullable Output<String> primitiveType) {
@@ -88,7 +89,7 @@ public final class TagTemplateFieldTypeArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder primitiveType(@Nullable String primitiveType) {
-            this.primitiveType = Output.ofNullable(primitiveType);
+            this.primitiveType = Codegen.ofNullable(primitiveType);
             return this;
         }        public TagTemplateFieldTypeArgs build() {
             return new TagTemplateFieldTypeArgs(enumType, primitiveType);

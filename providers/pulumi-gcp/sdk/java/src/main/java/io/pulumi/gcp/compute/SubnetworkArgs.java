@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.SubnetworkLogConfigArgs;
 import io.pulumi.gcp.compute.inputs.SubnetworkSecondaryIpRangeArgs;
 import java.lang.Boolean;
@@ -28,7 +29,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ipv6AccessType;
 
     public Output<String> getIpv6AccessType() {
-        return this.ipv6AccessType == null ? Output.empty() : this.ipv6AccessType;
+        return this.ipv6AccessType == null ? Codegen.empty() : this.ipv6AccessType;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SubnetworkLogConfigArgs> logConfig;
 
     public Output<SubnetworkLogConfigArgs> getLogConfig() {
-        return this.logConfig == null ? Output.empty() : this.logConfig;
+        return this.logConfig == null ? Codegen.empty() : this.logConfig;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> privateIpGoogleAccess;
 
     public Output<Boolean> getPrivateIpGoogleAccess() {
-        return this.privateIpGoogleAccess == null ? Output.empty() : this.privateIpGoogleAccess;
+        return this.privateIpGoogleAccess == null ? Codegen.empty() : this.privateIpGoogleAccess;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> privateIpv6GoogleAccess;
 
     public Output<String> getPrivateIpv6GoogleAccess() {
-        return this.privateIpv6GoogleAccess == null ? Output.empty() : this.privateIpv6GoogleAccess;
+        return this.privateIpv6GoogleAccess == null ? Codegen.empty() : this.privateIpv6GoogleAccess;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> purpose;
 
     public Output<String> getPurpose() {
-        return this.purpose == null ? Output.empty() : this.purpose;
+        return this.purpose == null ? Codegen.empty() : this.purpose;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -175,7 +176,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     /**
@@ -190,7 +191,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges;
 
     public Output<List<SubnetworkSecondaryIpRangeArgs>> getSecondaryIpRanges() {
-        return this.secondaryIpRanges == null ? Output.empty() : this.secondaryIpRanges;
+        return this.secondaryIpRanges == null ? Codegen.empty() : this.secondaryIpRanges;
     }
 
     /**
@@ -203,7 +204,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> stackType;
 
     public Output<String> getStackType() {
-        return this.stackType == null ? Output.empty() : this.stackType;
+        return this.stackType == null ? Codegen.empty() : this.stackType;
     }
 
     public SubnetworkArgs(
@@ -238,20 +239,20 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubnetworkArgs() {
-        this.description = Output.empty();
-        this.ipCidrRange = Output.empty();
-        this.ipv6AccessType = Output.empty();
-        this.logConfig = Output.empty();
-        this.name = Output.empty();
-        this.network = Output.empty();
-        this.privateIpGoogleAccess = Output.empty();
-        this.privateIpv6GoogleAccess = Output.empty();
-        this.project = Output.empty();
-        this.purpose = Output.empty();
-        this.region = Output.empty();
-        this.role = Output.empty();
-        this.secondaryIpRanges = Output.empty();
-        this.stackType = Output.empty();
+        this.description = Codegen.empty();
+        this.ipCidrRange = Codegen.empty();
+        this.ipv6AccessType = Codegen.empty();
+        this.logConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.network = Codegen.empty();
+        this.privateIpGoogleAccess = Codegen.empty();
+        this.privateIpv6GoogleAccess = Codegen.empty();
+        this.project = Codegen.empty();
+        this.purpose = Codegen.empty();
+        this.region = Codegen.empty();
+        this.role = Codegen.empty();
+        this.secondaryIpRanges = Codegen.empty();
+        this.stackType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -305,7 +306,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder ipCidrRange(Output<String> ipCidrRange) {
@@ -321,7 +322,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipv6AccessType(@Nullable String ipv6AccessType) {
-            this.ipv6AccessType = Output.ofNullable(ipv6AccessType);
+            this.ipv6AccessType = Codegen.ofNullable(ipv6AccessType);
             return this;
         }
         public Builder logConfig(@Nullable Output<SubnetworkLogConfigArgs> logConfig) {
@@ -329,7 +330,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logConfig(@Nullable SubnetworkLogConfigArgs logConfig) {
-            this.logConfig = Output.ofNullable(logConfig);
+            this.logConfig = Codegen.ofNullable(logConfig);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -337,7 +338,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder network(Output<String> network) {
@@ -353,7 +354,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateIpGoogleAccess(@Nullable Boolean privateIpGoogleAccess) {
-            this.privateIpGoogleAccess = Output.ofNullable(privateIpGoogleAccess);
+            this.privateIpGoogleAccess = Codegen.ofNullable(privateIpGoogleAccess);
             return this;
         }
         public Builder privateIpv6GoogleAccess(@Nullable Output<String> privateIpv6GoogleAccess) {
@@ -361,7 +362,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateIpv6GoogleAccess(@Nullable String privateIpv6GoogleAccess) {
-            this.privateIpv6GoogleAccess = Output.ofNullable(privateIpv6GoogleAccess);
+            this.privateIpv6GoogleAccess = Codegen.ofNullable(privateIpv6GoogleAccess);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -369,7 +370,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder purpose(@Nullable Output<String> purpose) {
@@ -377,7 +378,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder purpose(@Nullable String purpose) {
-            this.purpose = Output.ofNullable(purpose);
+            this.purpose = Codegen.ofNullable(purpose);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -385,7 +386,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -393,7 +394,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }
         public Builder secondaryIpRanges(@Nullable Output<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges) {
@@ -401,7 +402,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secondaryIpRanges(@Nullable List<SubnetworkSecondaryIpRangeArgs> secondaryIpRanges) {
-            this.secondaryIpRanges = Output.ofNullable(secondaryIpRanges);
+            this.secondaryIpRanges = Codegen.ofNullable(secondaryIpRanges);
             return this;
         }
         public Builder secondaryIpRanges(SubnetworkSecondaryIpRangeArgs... secondaryIpRanges) {
@@ -412,7 +413,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stackType(@Nullable String stackType) {
-            this.stackType = Output.ofNullable(stackType);
+            this.stackType = Codegen.ofNullable(stackType);
             return this;
         }        public SubnetworkArgs build() {
             return new SubnetworkArgs(description, ipCidrRange, ipv6AccessType, logConfig, name, network, privateIpGoogleAccess, privateIpv6GoogleAccess, project, purpose, region, role, secondaryIpRanges, stackType);

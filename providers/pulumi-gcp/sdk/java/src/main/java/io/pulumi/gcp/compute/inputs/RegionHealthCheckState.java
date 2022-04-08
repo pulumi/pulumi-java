@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.RegionHealthCheckGrpcHealthCheckGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionHealthCheckHttp2HealthCheckGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionHealthCheckHttpHealthCheckGetArgs;
@@ -31,7 +32,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> checkIntervalSec;
 
     public Output<Integer> getCheckIntervalSec() {
-        return this.checkIntervalSec == null ? Output.empty() : this.checkIntervalSec;
+        return this.checkIntervalSec == null ? Codegen.empty() : this.checkIntervalSec;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
+        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<RegionHealthCheckGrpcHealthCheckGetArgs> grpcHealthCheck;
 
     public Output<RegionHealthCheckGrpcHealthCheckGetArgs> getGrpcHealthCheck() {
-        return this.grpcHealthCheck == null ? Output.empty() : this.grpcHealthCheck;
+        return this.grpcHealthCheck == null ? Codegen.empty() : this.grpcHealthCheck;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> healthyThreshold;
 
     public Output<Integer> getHealthyThreshold() {
-        return this.healthyThreshold == null ? Output.empty() : this.healthyThreshold;
+        return this.healthyThreshold == null ? Codegen.empty() : this.healthyThreshold;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<RegionHealthCheckHttp2HealthCheckGetArgs> http2HealthCheck;
 
     public Output<RegionHealthCheckHttp2HealthCheckGetArgs> getHttp2HealthCheck() {
-        return this.http2HealthCheck == null ? Output.empty() : this.http2HealthCheck;
+        return this.http2HealthCheck == null ? Codegen.empty() : this.http2HealthCheck;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<RegionHealthCheckHttpHealthCheckGetArgs> httpHealthCheck;
 
     public Output<RegionHealthCheckHttpHealthCheckGetArgs> getHttpHealthCheck() {
-        return this.httpHealthCheck == null ? Output.empty() : this.httpHealthCheck;
+        return this.httpHealthCheck == null ? Codegen.empty() : this.httpHealthCheck;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<RegionHealthCheckHttpsHealthCheckGetArgs> httpsHealthCheck;
 
     public Output<RegionHealthCheckHttpsHealthCheckGetArgs> getHttpsHealthCheck() {
-        return this.httpsHealthCheck == null ? Output.empty() : this.httpsHealthCheck;
+        return this.httpsHealthCheck == null ? Codegen.empty() : this.httpsHealthCheck;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<RegionHealthCheckLogConfigGetArgs> logConfig;
 
     public Output<RegionHealthCheckLogConfigGetArgs> getLogConfig() {
-        return this.logConfig == null ? Output.empty() : this.logConfig;
+        return this.logConfig == null ? Codegen.empty() : this.logConfig;
     }
 
     /**
@@ -143,7 +144,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -155,7 +156,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -167,7 +168,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -178,7 +179,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -190,7 +191,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<RegionHealthCheckSslHealthCheckGetArgs> sslHealthCheck;
 
     public Output<RegionHealthCheckSslHealthCheckGetArgs> getSslHealthCheck() {
-        return this.sslHealthCheck == null ? Output.empty() : this.sslHealthCheck;
+        return this.sslHealthCheck == null ? Codegen.empty() : this.sslHealthCheck;
     }
 
     /**
@@ -202,7 +203,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<RegionHealthCheckTcpHealthCheckGetArgs> tcpHealthCheck;
 
     public Output<RegionHealthCheckTcpHealthCheckGetArgs> getTcpHealthCheck() {
-        return this.tcpHealthCheck == null ? Output.empty() : this.tcpHealthCheck;
+        return this.tcpHealthCheck == null ? Codegen.empty() : this.tcpHealthCheck;
     }
 
     /**
@@ -215,7 +216,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> timeoutSec;
 
     public Output<Integer> getTimeoutSec() {
-        return this.timeoutSec == null ? Output.empty() : this.timeoutSec;
+        return this.timeoutSec == null ? Codegen.empty() : this.timeoutSec;
     }
 
     /**
@@ -226,7 +227,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -238,7 +239,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> unhealthyThreshold;
 
     public Output<Integer> getUnhealthyThreshold() {
-        return this.unhealthyThreshold == null ? Output.empty() : this.unhealthyThreshold;
+        return this.unhealthyThreshold == null ? Codegen.empty() : this.unhealthyThreshold;
     }
 
     public RegionHealthCheckState(
@@ -281,24 +282,24 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
     }
 
     private RegionHealthCheckState() {
-        this.checkIntervalSec = Output.empty();
-        this.creationTimestamp = Output.empty();
-        this.description = Output.empty();
-        this.grpcHealthCheck = Output.empty();
-        this.healthyThreshold = Output.empty();
-        this.http2HealthCheck = Output.empty();
-        this.httpHealthCheck = Output.empty();
-        this.httpsHealthCheck = Output.empty();
-        this.logConfig = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.selfLink = Output.empty();
-        this.sslHealthCheck = Output.empty();
-        this.tcpHealthCheck = Output.empty();
-        this.timeoutSec = Output.empty();
-        this.type = Output.empty();
-        this.unhealthyThreshold = Output.empty();
+        this.checkIntervalSec = Codegen.empty();
+        this.creationTimestamp = Codegen.empty();
+        this.description = Codegen.empty();
+        this.grpcHealthCheck = Codegen.empty();
+        this.healthyThreshold = Codegen.empty();
+        this.http2HealthCheck = Codegen.empty();
+        this.httpHealthCheck = Codegen.empty();
+        this.httpsHealthCheck = Codegen.empty();
+        this.logConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.sslHealthCheck = Codegen.empty();
+        this.tcpHealthCheck = Codegen.empty();
+        this.timeoutSec = Codegen.empty();
+        this.type = Codegen.empty();
+        this.unhealthyThreshold = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -360,7 +361,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder checkIntervalSec(@Nullable Integer checkIntervalSec) {
-            this.checkIntervalSec = Output.ofNullable(checkIntervalSec);
+            this.checkIntervalSec = Codegen.ofNullable(checkIntervalSec);
             return this;
         }
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
@@ -368,7 +369,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Output.ofNullable(creationTimestamp);
+            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -376,7 +377,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder grpcHealthCheck(@Nullable Output<RegionHealthCheckGrpcHealthCheckGetArgs> grpcHealthCheck) {
@@ -384,7 +385,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder grpcHealthCheck(@Nullable RegionHealthCheckGrpcHealthCheckGetArgs grpcHealthCheck) {
-            this.grpcHealthCheck = Output.ofNullable(grpcHealthCheck);
+            this.grpcHealthCheck = Codegen.ofNullable(grpcHealthCheck);
             return this;
         }
         public Builder healthyThreshold(@Nullable Output<Integer> healthyThreshold) {
@@ -392,7 +393,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
-            this.healthyThreshold = Output.ofNullable(healthyThreshold);
+            this.healthyThreshold = Codegen.ofNullable(healthyThreshold);
             return this;
         }
         public Builder http2HealthCheck(@Nullable Output<RegionHealthCheckHttp2HealthCheckGetArgs> http2HealthCheck) {
@@ -400,7 +401,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder http2HealthCheck(@Nullable RegionHealthCheckHttp2HealthCheckGetArgs http2HealthCheck) {
-            this.http2HealthCheck = Output.ofNullable(http2HealthCheck);
+            this.http2HealthCheck = Codegen.ofNullable(http2HealthCheck);
             return this;
         }
         public Builder httpHealthCheck(@Nullable Output<RegionHealthCheckHttpHealthCheckGetArgs> httpHealthCheck) {
@@ -408,7 +409,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder httpHealthCheck(@Nullable RegionHealthCheckHttpHealthCheckGetArgs httpHealthCheck) {
-            this.httpHealthCheck = Output.ofNullable(httpHealthCheck);
+            this.httpHealthCheck = Codegen.ofNullable(httpHealthCheck);
             return this;
         }
         public Builder httpsHealthCheck(@Nullable Output<RegionHealthCheckHttpsHealthCheckGetArgs> httpsHealthCheck) {
@@ -416,7 +417,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder httpsHealthCheck(@Nullable RegionHealthCheckHttpsHealthCheckGetArgs httpsHealthCheck) {
-            this.httpsHealthCheck = Output.ofNullable(httpsHealthCheck);
+            this.httpsHealthCheck = Codegen.ofNullable(httpsHealthCheck);
             return this;
         }
         public Builder logConfig(@Nullable Output<RegionHealthCheckLogConfigGetArgs> logConfig) {
@@ -424,7 +425,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder logConfig(@Nullable RegionHealthCheckLogConfigGetArgs logConfig) {
-            this.logConfig = Output.ofNullable(logConfig);
+            this.logConfig = Codegen.ofNullable(logConfig);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -432,7 +433,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -440,7 +441,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -448,7 +449,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -456,7 +457,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder sslHealthCheck(@Nullable Output<RegionHealthCheckSslHealthCheckGetArgs> sslHealthCheck) {
@@ -464,7 +465,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder sslHealthCheck(@Nullable RegionHealthCheckSslHealthCheckGetArgs sslHealthCheck) {
-            this.sslHealthCheck = Output.ofNullable(sslHealthCheck);
+            this.sslHealthCheck = Codegen.ofNullable(sslHealthCheck);
             return this;
         }
         public Builder tcpHealthCheck(@Nullable Output<RegionHealthCheckTcpHealthCheckGetArgs> tcpHealthCheck) {
@@ -472,7 +473,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tcpHealthCheck(@Nullable RegionHealthCheckTcpHealthCheckGetArgs tcpHealthCheck) {
-            this.tcpHealthCheck = Output.ofNullable(tcpHealthCheck);
+            this.tcpHealthCheck = Codegen.ofNullable(tcpHealthCheck);
             return this;
         }
         public Builder timeoutSec(@Nullable Output<Integer> timeoutSec) {
@@ -480,7 +481,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder timeoutSec(@Nullable Integer timeoutSec) {
-            this.timeoutSec = Output.ofNullable(timeoutSec);
+            this.timeoutSec = Codegen.ofNullable(timeoutSec);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -488,7 +489,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
@@ -496,7 +497,7 @@ public final class RegionHealthCheckState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
-            this.unhealthyThreshold = Output.ofNullable(unhealthyThreshold);
+            this.unhealthyThreshold = Codegen.ofNullable(unhealthyThreshold);
             return this;
         }        public RegionHealthCheckState build() {
             return new RegionHealthCheckState(checkIntervalSec, creationTimestamp, description, grpcHealthCheck, healthyThreshold, http2HealthCheck, httpHealthCheck, httpsHealthCheck, logConfig, name, project, region, selfLink, sslHealthCheck, tcpHealthCheck, timeoutSec, type, unhealthyThreshold);

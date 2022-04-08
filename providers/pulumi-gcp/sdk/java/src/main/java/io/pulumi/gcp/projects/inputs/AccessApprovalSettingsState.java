@@ -5,6 +5,7 @@ package io.pulumi.gcp.projects.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.projects.inputs.AccessApprovalSettingsEnrolledServiceGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
       private final @Nullable Output<Boolean> enrolledAncestor;
 
     public Output<Boolean> getEnrolledAncestor() {
-        return this.enrolledAncestor == null ? Output.empty() : this.enrolledAncestor;
+        return this.enrolledAncestor == null ? Codegen.empty() : this.enrolledAncestor;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
       private final @Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices;
 
     public Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> getEnrolledServices() {
-        return this.enrolledServices == null ? Output.empty() : this.enrolledServices;
+        return this.enrolledServices == null ? Codegen.empty() : this.enrolledServices;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
       private final @Nullable Output<List<String>> notificationEmails;
 
     public Output<List<String>> getNotificationEmails() {
-        return this.notificationEmails == null ? Output.empty() : this.notificationEmails;
+        return this.notificationEmails == null ? Codegen.empty() : this.notificationEmails;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
 
     @Deprecated /* Deprecated in favor of `project_id` */
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> projectId;
 
     public Output<String> getProjectId() {
-        return this.projectId == null ? Output.empty() : this.projectId;
+        return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 
     public AccessApprovalSettingsState(
@@ -113,12 +114,12 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
     }
 
     private AccessApprovalSettingsState() {
-        this.enrolledAncestor = Output.empty();
-        this.enrolledServices = Output.empty();
-        this.name = Output.empty();
-        this.notificationEmails = Output.empty();
-        this.project = Output.empty();
-        this.projectId = Output.empty();
+        this.enrolledAncestor = Codegen.empty();
+        this.enrolledServices = Codegen.empty();
+        this.name = Codegen.empty();
+        this.notificationEmails = Codegen.empty();
+        this.project = Codegen.empty();
+        this.projectId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder enrolledAncestor(@Nullable Boolean enrolledAncestor) {
-            this.enrolledAncestor = Output.ofNullable(enrolledAncestor);
+            this.enrolledAncestor = Codegen.ofNullable(enrolledAncestor);
             return this;
         }
         public Builder enrolledServices(@Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices) {
@@ -164,7 +165,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder enrolledServices(@Nullable List<AccessApprovalSettingsEnrolledServiceGetArgs> enrolledServices) {
-            this.enrolledServices = Output.ofNullable(enrolledServices);
+            this.enrolledServices = Codegen.ofNullable(enrolledServices);
             return this;
         }
         public Builder enrolledServices(AccessApprovalSettingsEnrolledServiceGetArgs... enrolledServices) {
@@ -175,7 +176,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder notificationEmails(@Nullable Output<List<String>> notificationEmails) {
@@ -183,7 +184,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder notificationEmails(@Nullable List<String> notificationEmails) {
-            this.notificationEmails = Output.ofNullable(notificationEmails);
+            this.notificationEmails = Codegen.ofNullable(notificationEmails);
             return this;
         }
         public Builder notificationEmails(String... notificationEmails) {
@@ -194,7 +195,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder projectId(@Nullable Output<String> projectId) {
@@ -202,7 +203,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Output.ofNullable(projectId);
+            this.projectId = Codegen.ofNullable(projectId);
             return this;
         }        public AccessApprovalSettingsState build() {
             return new AccessApprovalSettingsState(enrolledAncestor, enrolledServices, name, notificationEmails, project, projectId);

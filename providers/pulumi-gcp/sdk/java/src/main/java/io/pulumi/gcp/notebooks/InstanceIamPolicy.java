@@ -6,6 +6,7 @@ package io.pulumi.gcp.notebooks;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.notebooks.InstanceIamPolicyArgs;
 import io.pulumi.gcp.notebooks.inputs.InstanceIamPolicyState;
@@ -153,7 +154,7 @@ public class InstanceIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InstanceIamPolicy(String name, InstanceIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:notebooks/instanceIamPolicy:InstanceIamPolicy", name, args == null ? InstanceIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:notebooks/instanceIamPolicy:InstanceIamPolicy", name, args == null ? InstanceIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InstanceIamPolicy(String name, Output<String> id, @Nullable InstanceIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

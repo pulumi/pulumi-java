@@ -5,6 +5,7 @@ package io.pulumi.gcp.memcache.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class InstanceMemcacheParametersGetArgs extends io.pulumi.resources
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class InstanceMemcacheParametersGetArgs extends io.pulumi.resources
       private final @Nullable Output<Map<String,String>> params;
 
     public Output<Map<String,String>> getParams() {
-        return this.params == null ? Output.empty() : this.params;
+        return this.params == null ? Codegen.empty() : this.params;
     }
 
     public InstanceMemcacheParametersGetArgs(
@@ -46,8 +47,8 @@ public final class InstanceMemcacheParametersGetArgs extends io.pulumi.resources
     }
 
     private InstanceMemcacheParametersGetArgs() {
-        this.id = Output.empty();
-        this.params = Output.empty();
+        this.id = Codegen.empty();
+        this.params = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class InstanceMemcacheParametersGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder params(@Nullable Output<Map<String,String>> params) {
@@ -85,7 +86,7 @@ public final class InstanceMemcacheParametersGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder params(@Nullable Map<String,String> params) {
-            this.params = Output.ofNullable(params);
+            this.params = Codegen.ofNullable(params);
             return this;
         }        public InstanceMemcacheParametersGetArgs build() {
             return new InstanceMemcacheParametersGetArgs(id, params);

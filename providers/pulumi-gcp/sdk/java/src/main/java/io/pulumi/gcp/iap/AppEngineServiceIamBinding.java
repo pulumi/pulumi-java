@@ -6,6 +6,7 @@ package io.pulumi.gcp.iap;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.AppEngineServiceIamBindingArgs;
 import io.pulumi.gcp.iap.inputs.AppEngineServiceIamBindingState;
@@ -183,7 +184,7 @@ public class AppEngineServiceIamBinding extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public AppEngineServiceIamBinding(String name, AppEngineServiceIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/appEngineServiceIamBinding:AppEngineServiceIamBinding", name, args == null ? AppEngineServiceIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:iap/appEngineServiceIamBinding:AppEngineServiceIamBinding", name, args == null ? AppEngineServiceIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppEngineServiceIamBinding(String name, Output<String> id, @Nullable AppEngineServiceIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.eventarc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.eventarc.inputs.TriggerTransportPubsubArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class TriggerTransportArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<TriggerTransportPubsubArgs>> pubsubs;
 
     public Output<List<TriggerTransportPubsubArgs>> getPubsubs() {
-        return this.pubsubs == null ? Output.empty() : this.pubsubs;
+        return this.pubsubs == null ? Codegen.empty() : this.pubsubs;
     }
 
     public TriggerTransportArgs(@Nullable Output<List<TriggerTransportPubsubArgs>> pubsubs) {
@@ -31,7 +32,7 @@ public final class TriggerTransportArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private TriggerTransportArgs() {
-        this.pubsubs = Output.empty();
+        this.pubsubs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class TriggerTransportArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder pubsubs(@Nullable List<TriggerTransportPubsubArgs> pubsubs) {
-            this.pubsubs = Output.ofNullable(pubsubs);
+            this.pubsubs = Codegen.ofNullable(pubsubs);
             return this;
         }
         public Builder pubsubs(TriggerTransportPubsubArgs... pubsubs) {

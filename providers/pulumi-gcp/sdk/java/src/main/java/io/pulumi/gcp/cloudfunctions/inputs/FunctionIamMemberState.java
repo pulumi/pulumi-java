@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudfunctions.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudfunctions.inputs.FunctionIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,49 +20,49 @@ public final class FunctionIamMemberState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> cloudFunction;
 
     public Output<String> getCloudFunction() {
-        return this.cloudFunction == null ? Output.empty() : this.cloudFunction;
+        return this.cloudFunction == null ? Codegen.empty() : this.cloudFunction;
     }
 
     @Import(name="condition")
       private final @Nullable Output<FunctionIamMemberConditionGetArgs> condition;
 
     public Output<FunctionIamMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
-        return this.member == null ? Output.empty() : this.member;
+        return this.member == null ? Codegen.empty() : this.member;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public FunctionIamMemberState(
@@ -82,13 +83,13 @@ public final class FunctionIamMemberState extends io.pulumi.resources.ResourceAr
     }
 
     private FunctionIamMemberState() {
-        this.cloudFunction = Output.empty();
-        this.condition = Output.empty();
-        this.etag = Output.empty();
-        this.member = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.role = Output.empty();
+        this.cloudFunction = Codegen.empty();
+        this.condition = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.member = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class FunctionIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder cloudFunction(@Nullable String cloudFunction) {
-            this.cloudFunction = Output.ofNullable(cloudFunction);
+            this.cloudFunction = Codegen.ofNullable(cloudFunction);
             return this;
         }
         public Builder condition(@Nullable Output<FunctionIamMemberConditionGetArgs> condition) {
@@ -136,7 +137,7 @@ public final class FunctionIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder condition(@Nullable FunctionIamMemberConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -144,7 +145,7 @@ public final class FunctionIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder member(@Nullable Output<String> member) {
@@ -152,7 +153,7 @@ public final class FunctionIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder member(@Nullable String member) {
-            this.member = Output.ofNullable(member);
+            this.member = Codegen.ofNullable(member);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -160,7 +161,7 @@ public final class FunctionIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -168,7 +169,7 @@ public final class FunctionIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -176,7 +177,7 @@ public final class FunctionIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public FunctionIamMemberState build() {
             return new FunctionIamMemberState(cloudFunction, condition, etag, member, project, region, role);

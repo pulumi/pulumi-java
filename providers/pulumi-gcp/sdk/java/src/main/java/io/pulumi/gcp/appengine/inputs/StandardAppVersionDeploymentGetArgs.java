@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionDeploymentFileGetArgs;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionDeploymentZipGetArgs;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class StandardAppVersionDeploymentGetArgs extends io.pulumi.resourc
       private final @Nullable Output<List<StandardAppVersionDeploymentFileGetArgs>> files;
 
     public Output<List<StandardAppVersionDeploymentFileGetArgs>> getFiles() {
-        return this.files == null ? Output.empty() : this.files;
+        return this.files == null ? Codegen.empty() : this.files;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class StandardAppVersionDeploymentGetArgs extends io.pulumi.resourc
       private final @Nullable Output<StandardAppVersionDeploymentZipGetArgs> zip;
 
     public Output<StandardAppVersionDeploymentZipGetArgs> getZip() {
-        return this.zip == null ? Output.empty() : this.zip;
+        return this.zip == null ? Codegen.empty() : this.zip;
     }
 
     public StandardAppVersionDeploymentGetArgs(
@@ -49,8 +50,8 @@ public final class StandardAppVersionDeploymentGetArgs extends io.pulumi.resourc
     }
 
     private StandardAppVersionDeploymentGetArgs() {
-        this.files = Output.empty();
-        this.zip = Output.empty();
+        this.files = Codegen.empty();
+        this.zip = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class StandardAppVersionDeploymentGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder files(@Nullable List<StandardAppVersionDeploymentFileGetArgs> files) {
-            this.files = Output.ofNullable(files);
+            this.files = Codegen.ofNullable(files);
             return this;
         }
         public Builder files(StandardAppVersionDeploymentFileGetArgs... files) {
@@ -91,7 +92,7 @@ public final class StandardAppVersionDeploymentGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder zip(@Nullable StandardAppVersionDeploymentZipGetArgs zip) {
-            this.zip = Output.ofNullable(zip);
+            this.zip = Codegen.ofNullable(zip);
             return this;
         }        public StandardAppVersionDeploymentGetArgs build() {
             return new StandardAppVersionDeploymentGetArgs(files, zip);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.dataloss;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataloss.PreventionInspectTemplateArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateState;
@@ -144,7 +145,7 @@ public class PreventionInspectTemplate extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public PreventionInspectTemplate(String name, PreventionInspectTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:dataloss/preventionInspectTemplate:PreventionInspectTemplate", name, args == null ? PreventionInspectTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:dataloss/preventionInspectTemplate:PreventionInspectTemplate", name, args == null ? PreventionInspectTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PreventionInspectTemplate(String name, Output<String> id, @Nullable PreventionInspectTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

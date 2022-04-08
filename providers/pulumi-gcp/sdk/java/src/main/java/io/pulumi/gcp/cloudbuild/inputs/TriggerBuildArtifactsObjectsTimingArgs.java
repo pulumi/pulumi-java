@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class TriggerBuildArtifactsObjectsTimingArgs extends io.pulumi.reso
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
-        return this.endTime == null ? Output.empty() : this.endTime;
+        return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class TriggerBuildArtifactsObjectsTimingArgs extends io.pulumi.reso
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     public TriggerBuildArtifactsObjectsTimingArgs(
@@ -48,8 +49,8 @@ public final class TriggerBuildArtifactsObjectsTimingArgs extends io.pulumi.reso
     }
 
     private TriggerBuildArtifactsObjectsTimingArgs() {
-        this.endTime = Output.empty();
-        this.startTime = Output.empty();
+        this.endTime = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class TriggerBuildArtifactsObjectsTimingArgs extends io.pulumi.reso
             return this;
         }
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Output.ofNullable(endTime);
+            this.endTime = Codegen.ofNullable(endTime);
             return this;
         }
         public Builder startTime(@Nullable Output<String> startTime) {
@@ -87,7 +88,7 @@ public final class TriggerBuildArtifactsObjectsTimingArgs extends io.pulumi.reso
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }        public TriggerBuildArtifactsObjectsTimingArgs build() {
             return new TriggerBuildArtifactsObjectsTimingArgs(endTime, startTime);

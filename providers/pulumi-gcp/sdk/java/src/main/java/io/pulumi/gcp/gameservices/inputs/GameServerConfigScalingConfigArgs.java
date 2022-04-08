@@ -5,6 +5,7 @@ package io.pulumi.gcp.gameservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.gameservices.inputs.GameServerConfigScalingConfigScheduleArgs;
 import io.pulumi.gcp.gameservices.inputs.GameServerConfigScalingConfigSelectorArgs;
 import java.lang.String;
@@ -50,7 +51,7 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
       private final @Nullable Output<List<GameServerConfigScalingConfigScheduleArgs>> schedules;
 
     public Output<List<GameServerConfigScalingConfigScheduleArgs>> getSchedules() {
-        return this.schedules == null ? Output.empty() : this.schedules;
+        return this.schedules == null ? Codegen.empty() : this.schedules;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
       private final @Nullable Output<List<GameServerConfigScalingConfigSelectorArgs>> selectors;
 
     public Output<List<GameServerConfigScalingConfigSelectorArgs>> getSelectors() {
-        return this.selectors == null ? Output.empty() : this.selectors;
+        return this.selectors == null ? Codegen.empty() : this.selectors;
     }
 
     public GameServerConfigScalingConfigArgs(
@@ -79,10 +80,10 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
     }
 
     private GameServerConfigScalingConfigArgs() {
-        this.fleetAutoscalerSpec = Output.empty();
-        this.name = Output.empty();
-        this.schedules = Output.empty();
-        this.selectors = Output.empty();
+        this.fleetAutoscalerSpec = Codegen.empty();
+        this.name = Codegen.empty();
+        this.schedules = Codegen.empty();
+        this.selectors = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
             return this;
         }
         public Builder schedules(@Nullable List<GameServerConfigScalingConfigScheduleArgs> schedules) {
-            this.schedules = Output.ofNullable(schedules);
+            this.schedules = Codegen.ofNullable(schedules);
             return this;
         }
         public Builder schedules(GameServerConfigScalingConfigScheduleArgs... schedules) {
@@ -143,7 +144,7 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
             return this;
         }
         public Builder selectors(@Nullable List<GameServerConfigScalingConfigSelectorArgs> selectors) {
-            this.selectors = Output.ofNullable(selectors);
+            this.selectors = Codegen.ofNullable(selectors);
             return this;
         }
         public Builder selectors(GameServerConfigScalingConfigSelectorArgs... selectors) {

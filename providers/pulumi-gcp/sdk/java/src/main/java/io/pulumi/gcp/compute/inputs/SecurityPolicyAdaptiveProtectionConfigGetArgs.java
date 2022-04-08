@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigGetArgs extends io.pulu
       private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> layer7DdosDefenseConfig;
 
     public Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> getLayer7DdosDefenseConfig() {
-        return this.layer7DdosDefenseConfig == null ? Output.empty() : this.layer7DdosDefenseConfig;
+        return this.layer7DdosDefenseConfig == null ? Codegen.empty() : this.layer7DdosDefenseConfig;
     }
 
     public SecurityPolicyAdaptiveProtectionConfigGetArgs(@Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> layer7DdosDefenseConfig) {
@@ -30,7 +31,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigGetArgs extends io.pulu
     }
 
     private SecurityPolicyAdaptiveProtectionConfigGetArgs() {
-        this.layer7DdosDefenseConfig = Output.empty();
+        this.layer7DdosDefenseConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigGetArgs extends io.pulu
             return this;
         }
         public Builder layer7DdosDefenseConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs layer7DdosDefenseConfig) {
-            this.layer7DdosDefenseConfig = Output.ofNullable(layer7DdosDefenseConfig);
+            this.layer7DdosDefenseConfig = Codegen.ofNullable(layer7DdosDefenseConfig);
             return this;
         }        public SecurityPolicyAdaptiveProtectionConfigGetArgs build() {
             return new SecurityPolicyAdaptiveProtectionConfigGetArgs(layer7DdosDefenseConfig);

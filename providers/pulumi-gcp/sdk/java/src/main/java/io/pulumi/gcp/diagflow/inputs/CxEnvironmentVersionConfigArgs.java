@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class CxEnvironmentVersionConfigArgs extends io.pulumi.resources.Re
     }
 
     private CxEnvironmentVersionConfigArgs() {
-        this.version = Output.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {

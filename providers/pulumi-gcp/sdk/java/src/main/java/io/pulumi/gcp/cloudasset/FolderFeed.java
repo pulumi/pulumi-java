@@ -6,6 +6,7 @@ package io.pulumi.gcp.cloudasset;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudasset.FolderFeedArgs;
 import io.pulumi.gcp.cloudasset.inputs.FolderFeedState;
@@ -236,7 +237,7 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FolderFeed(String name, FolderFeedArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:cloudasset/folderFeed:FolderFeed", name, args == null ? FolderFeedArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:cloudasset/folderFeed:FolderFeed", name, args == null ? FolderFeedArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FolderFeed(String name, Output<String> id, @Nullable FolderFeedState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

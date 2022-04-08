@@ -5,6 +5,7 @@ package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.vertex.inputs.AiMetadataStoreEncryptionSpecGetArgs;
 import io.pulumi.gcp.vertex.inputs.AiMetadataStoreStateGetArgs;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<AiMetadataStoreEncryptionSpecGetArgs> encryptionSpec;
 
     public Output<AiMetadataStoreEncryptionSpecGetArgs> getEncryptionSpec() {
-        return this.encryptionSpec == null ? Output.empty() : this.encryptionSpec;
+        return this.encryptionSpec == null ? Codegen.empty() : this.encryptionSpec;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<AiMetadataStoreStateGetArgs>> states;
 
     public Output<List<AiMetadataStoreStateGetArgs>> getStates() {
-        return this.states == null ? Output.empty() : this.states;
+        return this.states == null ? Codegen.empty() : this.states;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     public AiMetadataStoreState(
@@ -129,14 +130,14 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
     }
 
     private AiMetadataStoreState() {
-        this.createTime = Output.empty();
-        this.description = Output.empty();
-        this.encryptionSpec = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.states = Output.empty();
-        this.updateTime = Output.empty();
+        this.createTime = Codegen.empty();
+        this.description = Codegen.empty();
+        this.encryptionSpec = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.states = Codegen.empty();
+        this.updateTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -178,7 +179,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -186,7 +187,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder encryptionSpec(@Nullable Output<AiMetadataStoreEncryptionSpecGetArgs> encryptionSpec) {
@@ -194,7 +195,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder encryptionSpec(@Nullable AiMetadataStoreEncryptionSpecGetArgs encryptionSpec) {
-            this.encryptionSpec = Output.ofNullable(encryptionSpec);
+            this.encryptionSpec = Codegen.ofNullable(encryptionSpec);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -202,7 +203,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -210,7 +211,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -218,7 +219,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder states(@Nullable Output<List<AiMetadataStoreStateGetArgs>> states) {
@@ -226,7 +227,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder states(@Nullable List<AiMetadataStoreStateGetArgs> states) {
-            this.states = Output.ofNullable(states);
+            this.states = Codegen.ofNullable(states);
             return this;
         }
         public Builder states(AiMetadataStoreStateGetArgs... states) {
@@ -237,7 +238,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }        public AiMetadataStoreState build() {
             return new AiMetadataStoreState(createTime, description, encryptionSpec, name, project, region, states, updateTime);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.resourcemanager;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -80,10 +81,10 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LienArgs() {
-        this.origin = Output.empty();
-        this.parent = Output.empty();
-        this.reason = Output.empty();
-        this.restrictions = Output.empty();
+        this.origin = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.reason = Codegen.empty();
+        this.restrictions = Codegen.empty();
     }
 
     public static Builder builder() {

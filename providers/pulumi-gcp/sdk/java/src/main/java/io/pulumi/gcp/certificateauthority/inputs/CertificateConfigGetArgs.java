@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigPublicKeyGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigSubjectConfigGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigX509ConfigGetArgs;
@@ -61,9 +62,9 @@ public final class CertificateConfigGetArgs extends io.pulumi.resources.Resource
     }
 
     private CertificateConfigGetArgs() {
-        this.publicKey = Output.empty();
-        this.subjectConfig = Output.empty();
-        this.x509Config = Output.empty();
+        this.publicKey = Codegen.empty();
+        this.subjectConfig = Codegen.empty();
+        this.x509Config = Codegen.empty();
     }
 
     public static Builder builder() {

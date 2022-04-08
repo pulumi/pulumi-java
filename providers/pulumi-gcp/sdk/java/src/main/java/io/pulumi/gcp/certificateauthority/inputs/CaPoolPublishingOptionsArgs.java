@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -48,8 +49,8 @@ public final class CaPoolPublishingOptionsArgs extends io.pulumi.resources.Resou
     }
 
     private CaPoolPublishingOptionsArgs() {
-        this.publishCaCert = Output.empty();
-        this.publishCrl = Output.empty();
+        this.publishCaCert = Codegen.empty();
+        this.publishCrl = Codegen.empty();
     }
 
     public static Builder builder() {

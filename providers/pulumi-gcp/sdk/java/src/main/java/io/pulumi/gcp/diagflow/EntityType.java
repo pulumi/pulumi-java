@@ -6,6 +6,7 @@ package io.pulumi.gcp.diagflow;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.diagflow.EntityTypeArgs;
 import io.pulumi.gcp.diagflow.inputs.EntityTypeState;
@@ -158,7 +159,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EntityType(String name, EntityTypeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:diagflow/entityType:EntityType", name, args == null ? EntityTypeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:diagflow/entityType:EntityType", name, args == null ? EntityTypeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EntityType(String name, Output<String> id, @Nullable EntityTypeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

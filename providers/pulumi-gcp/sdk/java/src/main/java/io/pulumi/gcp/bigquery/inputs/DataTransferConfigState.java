@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.bigquery.inputs.DataTransferConfigEmailPreferencesGetArgs;
 import io.pulumi.gcp.bigquery.inputs.DataTransferConfigScheduleOptionsGetArgs;
 import io.pulumi.gcp.bigquery.inputs.DataTransferConfigSensitiveParamsGetArgs;
@@ -32,7 +33,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Integer> dataRefreshWindowDays;
 
     public Output<Integer> getDataRefreshWindowDays() {
-        return this.dataRefreshWindowDays == null ? Output.empty() : this.dataRefreshWindowDays;
+        return this.dataRefreshWindowDays == null ? Codegen.empty() : this.dataRefreshWindowDays;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> dataSourceId;
 
     public Output<String> getDataSourceId() {
-        return this.dataSourceId == null ? Output.empty() : this.dataSourceId;
+        return this.dataSourceId == null ? Codegen.empty() : this.dataSourceId;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> destinationDatasetId;
 
     public Output<String> getDestinationDatasetId() {
-        return this.destinationDatasetId == null ? Output.empty() : this.destinationDatasetId;
+        return this.destinationDatasetId == null ? Codegen.empty() : this.destinationDatasetId;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<DataTransferConfigEmailPreferencesGetArgs> emailPreferences;
 
     public Output<DataTransferConfigEmailPreferencesGetArgs> getEmailPreferences() {
-        return this.emailPreferences == null ? Output.empty() : this.emailPreferences;
+        return this.emailPreferences == null ? Codegen.empty() : this.emailPreferences;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> notificationPubsubTopic;
 
     public Output<String> getNotificationPubsubTopic() {
-        return this.notificationPubsubTopic == null ? Output.empty() : this.notificationPubsubTopic;
+        return this.notificationPubsubTopic == null ? Codegen.empty() : this.notificationPubsubTopic;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> params;
 
     public Output<Map<String,String>> getParams() {
-        return this.params == null ? Output.empty() : this.params;
+        return this.params == null ? Codegen.empty() : this.params;
     }
 
     /**
@@ -151,7 +152,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -169,7 +170,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> schedule;
 
     public Output<String> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     /**
@@ -181,7 +182,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<DataTransferConfigScheduleOptionsGetArgs> scheduleOptions;
 
     public Output<DataTransferConfigScheduleOptionsGetArgs> getScheduleOptions() {
-        return this.scheduleOptions == null ? Output.empty() : this.scheduleOptions;
+        return this.scheduleOptions == null ? Codegen.empty() : this.scheduleOptions;
     }
 
     /**
@@ -198,7 +199,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<DataTransferConfigSensitiveParamsGetArgs> sensitiveParams;
 
     public Output<DataTransferConfigSensitiveParamsGetArgs> getSensitiveParams() {
-        return this.sensitiveParams == null ? Output.empty() : this.sensitiveParams;
+        return this.sensitiveParams == null ? Codegen.empty() : this.sensitiveParams;
     }
 
     /**
@@ -211,7 +212,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> serviceAccountName;
 
     public Output<String> getServiceAccountName() {
-        return this.serviceAccountName == null ? Output.empty() : this.serviceAccountName;
+        return this.serviceAccountName == null ? Codegen.empty() : this.serviceAccountName;
     }
 
     public DataTransferConfigState(
@@ -248,21 +249,21 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
     }
 
     private DataTransferConfigState() {
-        this.dataRefreshWindowDays = Output.empty();
-        this.dataSourceId = Output.empty();
-        this.destinationDatasetId = Output.empty();
-        this.disabled = Output.empty();
-        this.displayName = Output.empty();
-        this.emailPreferences = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.notificationPubsubTopic = Output.empty();
-        this.params = Output.empty();
-        this.project = Output.empty();
-        this.schedule = Output.empty();
-        this.scheduleOptions = Output.empty();
-        this.sensitiveParams = Output.empty();
-        this.serviceAccountName = Output.empty();
+        this.dataRefreshWindowDays = Codegen.empty();
+        this.dataSourceId = Codegen.empty();
+        this.destinationDatasetId = Codegen.empty();
+        this.disabled = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.emailPreferences = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.notificationPubsubTopic = Codegen.empty();
+        this.params = Codegen.empty();
+        this.project = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.scheduleOptions = Codegen.empty();
+        this.sensitiveParams = Codegen.empty();
+        this.serviceAccountName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -318,7 +319,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder dataRefreshWindowDays(@Nullable Integer dataRefreshWindowDays) {
-            this.dataRefreshWindowDays = Output.ofNullable(dataRefreshWindowDays);
+            this.dataRefreshWindowDays = Codegen.ofNullable(dataRefreshWindowDays);
             return this;
         }
         public Builder dataSourceId(@Nullable Output<String> dataSourceId) {
@@ -326,7 +327,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder dataSourceId(@Nullable String dataSourceId) {
-            this.dataSourceId = Output.ofNullable(dataSourceId);
+            this.dataSourceId = Codegen.ofNullable(dataSourceId);
             return this;
         }
         public Builder destinationDatasetId(@Nullable Output<String> destinationDatasetId) {
@@ -334,7 +335,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder destinationDatasetId(@Nullable String destinationDatasetId) {
-            this.destinationDatasetId = Output.ofNullable(destinationDatasetId);
+            this.destinationDatasetId = Codegen.ofNullable(destinationDatasetId);
             return this;
         }
         public Builder disabled(@Nullable Output<Boolean> disabled) {
@@ -342,7 +343,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -350,7 +351,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder emailPreferences(@Nullable Output<DataTransferConfigEmailPreferencesGetArgs> emailPreferences) {
@@ -358,7 +359,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder emailPreferences(@Nullable DataTransferConfigEmailPreferencesGetArgs emailPreferences) {
-            this.emailPreferences = Output.ofNullable(emailPreferences);
+            this.emailPreferences = Codegen.ofNullable(emailPreferences);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -366,7 +367,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -374,7 +375,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder notificationPubsubTopic(@Nullable Output<String> notificationPubsubTopic) {
@@ -382,7 +383,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder notificationPubsubTopic(@Nullable String notificationPubsubTopic) {
-            this.notificationPubsubTopic = Output.ofNullable(notificationPubsubTopic);
+            this.notificationPubsubTopic = Codegen.ofNullable(notificationPubsubTopic);
             return this;
         }
         public Builder params(@Nullable Output<Map<String,String>> params) {
@@ -390,7 +391,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder params(@Nullable Map<String,String> params) {
-            this.params = Output.ofNullable(params);
+            this.params = Codegen.ofNullable(params);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -398,7 +399,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder schedule(@Nullable Output<String> schedule) {
@@ -406,7 +407,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder schedule(@Nullable String schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }
         public Builder scheduleOptions(@Nullable Output<DataTransferConfigScheduleOptionsGetArgs> scheduleOptions) {
@@ -414,7 +415,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder scheduleOptions(@Nullable DataTransferConfigScheduleOptionsGetArgs scheduleOptions) {
-            this.scheduleOptions = Output.ofNullable(scheduleOptions);
+            this.scheduleOptions = Codegen.ofNullable(scheduleOptions);
             return this;
         }
         public Builder sensitiveParams(@Nullable Output<DataTransferConfigSensitiveParamsGetArgs> sensitiveParams) {
@@ -422,7 +423,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder sensitiveParams(@Nullable DataTransferConfigSensitiveParamsGetArgs sensitiveParams) {
-            this.sensitiveParams = Output.ofNullable(sensitiveParams);
+            this.sensitiveParams = Codegen.ofNullable(sensitiveParams);
             return this;
         }
         public Builder serviceAccountName(@Nullable Output<String> serviceAccountName) {
@@ -430,7 +431,7 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder serviceAccountName(@Nullable String serviceAccountName) {
-            this.serviceAccountName = Output.ofNullable(serviceAccountName);
+            this.serviceAccountName = Codegen.ofNullable(serviceAccountName);
             return this;
         }        public DataTransferConfigState build() {
             return new DataTransferConfigState(dataRefreshWindowDays, dataSourceId, destinationDatasetId, disabled, displayName, emailPreferences, location, name, notificationPubsubTopic, params, project, schedule, scheduleOptions, sensitiveParams, serviceAccountName);

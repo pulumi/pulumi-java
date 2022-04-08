@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityGetArgs;
@@ -65,9 +66,9 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleG
     }
 
     private PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs() {
-        this.hotwordRegex = Output.empty();
-        this.likelihoodAdjustment = Output.empty();
-        this.proximity = Output.empty();
+        this.hotwordRegex = Codegen.empty();
+        this.likelihoodAdjustment = Codegen.empty();
+        this.proximity = Codegen.empty();
     }
 
     public static Builder builder() {

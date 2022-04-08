@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class DicomStoreIamPolicyState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> dicomStoreId;
 
     public Output<String> getDicomStoreId() {
-        return this.dicomStoreId == null ? Output.empty() : this.dicomStoreId;
+        return this.dicomStoreId == null ? Codegen.empty() : this.dicomStoreId;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class DicomStoreIamPolicyState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class DicomStoreIamPolicyState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> policyData;
 
     public Output<String> getPolicyData() {
-        return this.policyData == null ? Output.empty() : this.policyData;
+        return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
     public DicomStoreIamPolicyState(
@@ -61,9 +62,9 @@ public final class DicomStoreIamPolicyState extends io.pulumi.resources.Resource
     }
 
     private DicomStoreIamPolicyState() {
-        this.dicomStoreId = Output.empty();
-        this.etag = Output.empty();
-        this.policyData = Output.empty();
+        this.dicomStoreId = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.policyData = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class DicomStoreIamPolicyState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder dicomStoreId(@Nullable String dicomStoreId) {
-            this.dicomStoreId = Output.ofNullable(dicomStoreId);
+            this.dicomStoreId = Codegen.ofNullable(dicomStoreId);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -103,7 +104,7 @@ public final class DicomStoreIamPolicyState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder policyData(@Nullable Output<String> policyData) {
@@ -111,7 +112,7 @@ public final class DicomStoreIamPolicyState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Output.ofNullable(policyData);
+            this.policyData = Codegen.ofNullable(policyData);
             return this;
         }        public DicomStoreIamPolicyState build() {
             return new DicomStoreIamPolicyState(dicomStoreId, etag, policyData);

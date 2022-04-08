@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionAbsentGetArgs;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionMatchedLogGetArgs;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs;
@@ -28,7 +29,7 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<AlertPolicyConditionConditionAbsentGetArgs> conditionAbsent;
 
     public Output<AlertPolicyConditionConditionAbsentGetArgs> getConditionAbsent() {
-        return this.conditionAbsent == null ? Output.empty() : this.conditionAbsent;
+        return this.conditionAbsent == null ? Codegen.empty() : this.conditionAbsent;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<AlertPolicyConditionConditionMatchedLogGetArgs> conditionMatchedLog;
 
     public Output<AlertPolicyConditionConditionMatchedLogGetArgs> getConditionMatchedLog() {
-        return this.conditionMatchedLog == null ? Output.empty() : this.conditionMatchedLog;
+        return this.conditionMatchedLog == null ? Codegen.empty() : this.conditionMatchedLog;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs> conditionMonitoringQueryLanguage;
 
     public Output<AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs> getConditionMonitoringQueryLanguage() {
-        return this.conditionMonitoringQueryLanguage == null ? Output.empty() : this.conditionMonitoringQueryLanguage;
+        return this.conditionMonitoringQueryLanguage == null ? Codegen.empty() : this.conditionMonitoringQueryLanguage;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<AlertPolicyConditionConditionThresholdGetArgs> conditionThreshold;
 
     public Output<AlertPolicyConditionConditionThresholdGetArgs> getConditionThreshold() {
-        return this.conditionThreshold == null ? Output.empty() : this.conditionThreshold;
+        return this.conditionThreshold == null ? Codegen.empty() : this.conditionThreshold;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public AlertPolicyConditionGetArgs(
@@ -117,12 +118,12 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
     }
 
     private AlertPolicyConditionGetArgs() {
-        this.conditionAbsent = Output.empty();
-        this.conditionMatchedLog = Output.empty();
-        this.conditionMonitoringQueryLanguage = Output.empty();
-        this.conditionThreshold = Output.empty();
-        this.displayName = Output.empty();
-        this.name = Output.empty();
+        this.conditionAbsent = Codegen.empty();
+        this.conditionMatchedLog = Codegen.empty();
+        this.conditionMonitoringQueryLanguage = Codegen.empty();
+        this.conditionThreshold = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder conditionAbsent(@Nullable AlertPolicyConditionConditionAbsentGetArgs conditionAbsent) {
-            this.conditionAbsent = Output.ofNullable(conditionAbsent);
+            this.conditionAbsent = Codegen.ofNullable(conditionAbsent);
             return this;
         }
         public Builder conditionMatchedLog(@Nullable Output<AlertPolicyConditionConditionMatchedLogGetArgs> conditionMatchedLog) {
@@ -168,7 +169,7 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder conditionMatchedLog(@Nullable AlertPolicyConditionConditionMatchedLogGetArgs conditionMatchedLog) {
-            this.conditionMatchedLog = Output.ofNullable(conditionMatchedLog);
+            this.conditionMatchedLog = Codegen.ofNullable(conditionMatchedLog);
             return this;
         }
         public Builder conditionMonitoringQueryLanguage(@Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs> conditionMonitoringQueryLanguage) {
@@ -176,7 +177,7 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder conditionMonitoringQueryLanguage(@Nullable AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs conditionMonitoringQueryLanguage) {
-            this.conditionMonitoringQueryLanguage = Output.ofNullable(conditionMonitoringQueryLanguage);
+            this.conditionMonitoringQueryLanguage = Codegen.ofNullable(conditionMonitoringQueryLanguage);
             return this;
         }
         public Builder conditionThreshold(@Nullable Output<AlertPolicyConditionConditionThresholdGetArgs> conditionThreshold) {
@@ -184,7 +185,7 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder conditionThreshold(@Nullable AlertPolicyConditionConditionThresholdGetArgs conditionThreshold) {
-            this.conditionThreshold = Output.ofNullable(conditionThreshold);
+            this.conditionThreshold = Codegen.ofNullable(conditionThreshold);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -200,7 +201,7 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public AlertPolicyConditionGetArgs build() {
             return new AlertPolicyConditionGetArgs(conditionAbsent, conditionMatchedLog, conditionMonitoringQueryLanguage, conditionThreshold, displayName, name);

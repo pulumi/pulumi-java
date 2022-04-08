@@ -5,6 +5,7 @@ package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class LiteTopicPartitionConfigCapacityArgs extends io.pulumi.resour
     }
 
     private LiteTopicPartitionConfigCapacityArgs() {
-        this.publishMibPerSec = Output.empty();
-        this.subscribeMibPerSec = Output.empty();
+        this.publishMibPerSec = Codegen.empty();
+        this.subscribeMibPerSec = Codegen.empty();
     }
 
     public static Builder builder() {

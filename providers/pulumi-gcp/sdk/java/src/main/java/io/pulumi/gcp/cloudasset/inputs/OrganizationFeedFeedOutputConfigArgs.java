@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudasset.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudasset.inputs.OrganizationFeedFeedOutputConfigPubsubDestinationArgs;
 import java.util.Objects;
 
@@ -30,7 +31,7 @@ public final class OrganizationFeedFeedOutputConfigArgs extends io.pulumi.resour
     }
 
     private OrganizationFeedFeedOutputConfigArgs() {
-        this.pubsubDestination = Output.empty();
+        this.pubsubDestination = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs exte
       private final @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs> exclusionRule;
 
     public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs> getExclusionRule() {
-        return this.exclusionRule == null ? Output.empty() : this.exclusionRule;
+        return this.exclusionRule == null ? Codegen.empty() : this.exclusionRule;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs exte
       private final @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs> hotwordRule;
 
     public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs> getHotwordRule() {
-        return this.hotwordRule == null ? Output.empty() : this.hotwordRule;
+        return this.hotwordRule == null ? Codegen.empty() : this.hotwordRule;
     }
 
     public PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs(
@@ -47,8 +48,8 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs exte
     }
 
     private PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs() {
-        this.exclusionRule = Output.empty();
-        this.hotwordRule = Output.empty();
+        this.exclusionRule = Codegen.empty();
+        this.hotwordRule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs exte
             return this;
         }
         public Builder exclusionRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs exclusionRule) {
-            this.exclusionRule = Output.ofNullable(exclusionRule);
+            this.exclusionRule = Codegen.ofNullable(exclusionRule);
             return this;
         }
         public Builder hotwordRule(@Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs> hotwordRule) {
@@ -86,7 +87,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs exte
             return this;
         }
         public Builder hotwordRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs hotwordRule) {
-            this.hotwordRule = Output.ofNullable(hotwordRule);
+            this.hotwordRule = Codegen.ofNullable(hotwordRule);
             return this;
         }        public PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs(exclusionRule, hotwordRule);

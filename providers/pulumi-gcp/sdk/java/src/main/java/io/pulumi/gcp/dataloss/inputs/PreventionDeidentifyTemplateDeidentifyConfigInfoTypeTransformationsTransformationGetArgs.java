@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationGetArgs;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
       private final @Nullable Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeGetArgs>> infoTypes;
 
     public Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeGetArgs>> getInfoTypes() {
-        return this.infoTypes == null ? Output.empty() : this.infoTypes;
+        return this.infoTypes == null ? Codegen.empty() : this.infoTypes;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     }
 
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationGetArgs() {
-        this.infoTypes = Output.empty();
-        this.primitiveTransformation = Output.empty();
+        this.infoTypes = Codegen.empty();
+        this.primitiveTransformation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             return this;
         }
         public Builder infoTypes(@Nullable List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeGetArgs> infoTypes) {
-            this.infoTypes = Output.ofNullable(infoTypes);
+            this.infoTypes = Codegen.ofNullable(infoTypes);
             return this;
         }
         public Builder infoTypes(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeGetArgs... infoTypes) {

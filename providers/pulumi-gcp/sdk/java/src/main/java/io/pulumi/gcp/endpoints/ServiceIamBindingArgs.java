@@ -5,6 +5,7 @@ package io.pulumi.gcp.endpoints;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.endpoints.inputs.ServiceIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ public final class ServiceIamBindingArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<ServiceIamBindingConditionArgs> condition;
 
     public Output<ServiceIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="members", required=true)
@@ -62,10 +63,10 @@ public final class ServiceIamBindingArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ServiceIamBindingArgs() {
-        this.condition = Output.empty();
-        this.members = Output.empty();
-        this.role = Output.empty();
-        this.serviceName = Output.empty();
+        this.condition = Codegen.empty();
+        this.members = Codegen.empty();
+        this.role = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class ServiceIamBindingArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder condition(@Nullable ServiceIamBindingConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder members(Output<List<String>> members) {

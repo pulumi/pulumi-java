@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdGetArgs;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliMetricMeanInRangeGetArgs;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliMetricSumInRangeGetArgs;
@@ -29,7 +30,7 @@ public final class SloWindowsBasedSliGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> goodBadMetricFilter;
 
     public Output<String> getGoodBadMetricFilter() {
-        return this.goodBadMetricFilter == null ? Output.empty() : this.goodBadMetricFilter;
+        return this.goodBadMetricFilter == null ? Codegen.empty() : this.goodBadMetricFilter;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class SloWindowsBasedSliGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdGetArgs> goodTotalRatioThreshold;
 
     public Output<SloWindowsBasedSliGoodTotalRatioThresholdGetArgs> getGoodTotalRatioThreshold() {
-        return this.goodTotalRatioThreshold == null ? Output.empty() : this.goodTotalRatioThreshold;
+        return this.goodTotalRatioThreshold == null ? Codegen.empty() : this.goodTotalRatioThreshold;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class SloWindowsBasedSliGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<SloWindowsBasedSliMetricMeanInRangeGetArgs> metricMeanInRange;
 
     public Output<SloWindowsBasedSliMetricMeanInRangeGetArgs> getMetricMeanInRange() {
-        return this.metricMeanInRange == null ? Output.empty() : this.metricMeanInRange;
+        return this.metricMeanInRange == null ? Codegen.empty() : this.metricMeanInRange;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class SloWindowsBasedSliGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<SloWindowsBasedSliMetricSumInRangeGetArgs> metricSumInRange;
 
     public Output<SloWindowsBasedSliMetricSumInRangeGetArgs> getMetricSumInRange() {
-        return this.metricSumInRange == null ? Output.empty() : this.metricSumInRange;
+        return this.metricSumInRange == null ? Codegen.empty() : this.metricSumInRange;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class SloWindowsBasedSliGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> windowPeriod;
 
     public Output<String> getWindowPeriod() {
-        return this.windowPeriod == null ? Output.empty() : this.windowPeriod;
+        return this.windowPeriod == null ? Codegen.empty() : this.windowPeriod;
     }
 
     public SloWindowsBasedSliGetArgs(
@@ -110,11 +111,11 @@ public final class SloWindowsBasedSliGetArgs extends io.pulumi.resources.Resourc
     }
 
     private SloWindowsBasedSliGetArgs() {
-        this.goodBadMetricFilter = Output.empty();
-        this.goodTotalRatioThreshold = Output.empty();
-        this.metricMeanInRange = Output.empty();
-        this.metricSumInRange = Output.empty();
-        this.windowPeriod = Output.empty();
+        this.goodBadMetricFilter = Codegen.empty();
+        this.goodTotalRatioThreshold = Codegen.empty();
+        this.metricMeanInRange = Codegen.empty();
+        this.metricSumInRange = Codegen.empty();
+        this.windowPeriod = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -150,7 +151,7 @@ public final class SloWindowsBasedSliGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder goodBadMetricFilter(@Nullable String goodBadMetricFilter) {
-            this.goodBadMetricFilter = Output.ofNullable(goodBadMetricFilter);
+            this.goodBadMetricFilter = Codegen.ofNullable(goodBadMetricFilter);
             return this;
         }
         public Builder goodTotalRatioThreshold(@Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdGetArgs> goodTotalRatioThreshold) {
@@ -158,7 +159,7 @@ public final class SloWindowsBasedSliGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder goodTotalRatioThreshold(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdGetArgs goodTotalRatioThreshold) {
-            this.goodTotalRatioThreshold = Output.ofNullable(goodTotalRatioThreshold);
+            this.goodTotalRatioThreshold = Codegen.ofNullable(goodTotalRatioThreshold);
             return this;
         }
         public Builder metricMeanInRange(@Nullable Output<SloWindowsBasedSliMetricMeanInRangeGetArgs> metricMeanInRange) {
@@ -166,7 +167,7 @@ public final class SloWindowsBasedSliGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder metricMeanInRange(@Nullable SloWindowsBasedSliMetricMeanInRangeGetArgs metricMeanInRange) {
-            this.metricMeanInRange = Output.ofNullable(metricMeanInRange);
+            this.metricMeanInRange = Codegen.ofNullable(metricMeanInRange);
             return this;
         }
         public Builder metricSumInRange(@Nullable Output<SloWindowsBasedSliMetricSumInRangeGetArgs> metricSumInRange) {
@@ -174,7 +175,7 @@ public final class SloWindowsBasedSliGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder metricSumInRange(@Nullable SloWindowsBasedSliMetricSumInRangeGetArgs metricSumInRange) {
-            this.metricSumInRange = Output.ofNullable(metricSumInRange);
+            this.metricSumInRange = Codegen.ofNullable(metricSumInRange);
             return this;
         }
         public Builder windowPeriod(@Nullable Output<String> windowPeriod) {
@@ -182,7 +183,7 @@ public final class SloWindowsBasedSliGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder windowPeriod(@Nullable String windowPeriod) {
-            this.windowPeriod = Output.ofNullable(windowPeriod);
+            this.windowPeriod = Codegen.ofNullable(windowPeriod);
             return this;
         }        public SloWindowsBasedSliGetArgs build() {
             return new SloWindowsBasedSliGetArgs(goodBadMetricFilter, goodTotalRatioThreshold, metricMeanInRange, metricSumInRange, windowPeriod);

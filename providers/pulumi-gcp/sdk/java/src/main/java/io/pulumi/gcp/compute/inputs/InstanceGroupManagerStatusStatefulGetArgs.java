@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class InstanceGroupManagerStatusStatefulGetArgs extends io.pulumi.r
       private final @Nullable Output<Boolean> hasStatefulConfig;
 
     public Output<Boolean> getHasStatefulConfig() {
-        return this.hasStatefulConfig == null ? Output.empty() : this.hasStatefulConfig;
+        return this.hasStatefulConfig == null ? Codegen.empty() : this.hasStatefulConfig;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class InstanceGroupManagerStatusStatefulGetArgs extends io.pulumi.r
       private final @Nullable Output<List<InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs>> perInstanceConfigs;
 
     public Output<List<InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs>> getPerInstanceConfigs() {
-        return this.perInstanceConfigs == null ? Output.empty() : this.perInstanceConfigs;
+        return this.perInstanceConfigs == null ? Codegen.empty() : this.perInstanceConfigs;
     }
 
     public InstanceGroupManagerStatusStatefulGetArgs(
@@ -46,8 +47,8 @@ public final class InstanceGroupManagerStatusStatefulGetArgs extends io.pulumi.r
     }
 
     private InstanceGroupManagerStatusStatefulGetArgs() {
-        this.hasStatefulConfig = Output.empty();
-        this.perInstanceConfigs = Output.empty();
+        this.hasStatefulConfig = Codegen.empty();
+        this.perInstanceConfigs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class InstanceGroupManagerStatusStatefulGetArgs extends io.pulumi.r
             return this;
         }
         public Builder hasStatefulConfig(@Nullable Boolean hasStatefulConfig) {
-            this.hasStatefulConfig = Output.ofNullable(hasStatefulConfig);
+            this.hasStatefulConfig = Codegen.ofNullable(hasStatefulConfig);
             return this;
         }
         public Builder perInstanceConfigs(@Nullable Output<List<InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs>> perInstanceConfigs) {
@@ -85,7 +86,7 @@ public final class InstanceGroupManagerStatusStatefulGetArgs extends io.pulumi.r
             return this;
         }
         public Builder perInstanceConfigs(@Nullable List<InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs> perInstanceConfigs) {
-            this.perInstanceConfigs = Output.ofNullable(perInstanceConfigs);
+            this.perInstanceConfigs = Codegen.ofNullable(perInstanceConfigs);
             return this;
         }
         public Builder perInstanceConfigs(InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs... perInstanceConfigs) {

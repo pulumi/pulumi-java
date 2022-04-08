@@ -6,6 +6,7 @@ package io.pulumi.gcp.storage;
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.storage.inputs.BucketObjectCustomerEncryptionArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -38,7 +39,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cacheControl;
 
     public Output<String> getCacheControl() {
-        return this.cacheControl == null ? Output.empty() : this.cacheControl;
+        return this.cacheControl == null ? Codegen.empty() : this.cacheControl;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> contentDisposition;
 
     public Output<String> getContentDisposition() {
-        return this.contentDisposition == null ? Output.empty() : this.contentDisposition;
+        return this.contentDisposition == null ? Codegen.empty() : this.contentDisposition;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> contentEncoding;
 
     public Output<String> getContentEncoding() {
-        return this.contentEncoding == null ? Output.empty() : this.contentEncoding;
+        return this.contentEncoding == null ? Codegen.empty() : this.contentEncoding;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> contentLanguage;
 
     public Output<String> getContentLanguage() {
-        return this.contentLanguage == null ? Output.empty() : this.contentLanguage;
+        return this.contentLanguage == null ? Codegen.empty() : this.contentLanguage;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -105,14 +106,14 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption;
 
     public Output<BucketObjectCustomerEncryptionArgs> getCustomerEncryption() {
-        return this.customerEncryption == null ? Output.empty() : this.customerEncryption;
+        return this.customerEncryption == null ? Codegen.empty() : this.customerEncryption;
     }
 
     @Import(name="detectMd5hash")
       private final @Nullable Output<String> detectMd5hash;
 
     public Output<String> getDetectMd5hash() {
-        return this.detectMd5hash == null ? Output.empty() : this.detectMd5hash;
+        return this.detectMd5hash == null ? Codegen.empty() : this.detectMd5hash;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> eventBasedHold;
 
     public Output<Boolean> getEventBasedHold() {
-        return this.eventBasedHold == null ? Output.empty() : this.eventBasedHold;
+        return this.eventBasedHold == null ? Codegen.empty() : this.eventBasedHold;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
+        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -170,7 +171,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AssetOrArchive> source;
 
     public Output<AssetOrArchive> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -183,7 +184,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> storageClass;
 
     public Output<String> getStorageClass() {
-        return this.storageClass == null ? Output.empty() : this.storageClass;
+        return this.storageClass == null ? Codegen.empty() : this.storageClass;
     }
 
     /**
@@ -195,7 +196,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> temporaryHold;
 
     public Output<Boolean> getTemporaryHold() {
-        return this.temporaryHold == null ? Output.empty() : this.temporaryHold;
+        return this.temporaryHold == null ? Codegen.empty() : this.temporaryHold;
     }
 
     public BucketObjectArgs(
@@ -234,22 +235,22 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketObjectArgs() {
-        this.bucket = Output.empty();
-        this.cacheControl = Output.empty();
-        this.content = Output.empty();
-        this.contentDisposition = Output.empty();
-        this.contentEncoding = Output.empty();
-        this.contentLanguage = Output.empty();
-        this.contentType = Output.empty();
-        this.customerEncryption = Output.empty();
-        this.detectMd5hash = Output.empty();
-        this.eventBasedHold = Output.empty();
-        this.kmsKeyName = Output.empty();
-        this.metadata = Output.empty();
-        this.name = Output.empty();
-        this.source = Output.empty();
-        this.storageClass = Output.empty();
-        this.temporaryHold = Output.empty();
+        this.bucket = Codegen.empty();
+        this.cacheControl = Codegen.empty();
+        this.content = Codegen.empty();
+        this.contentDisposition = Codegen.empty();
+        this.contentEncoding = Codegen.empty();
+        this.contentLanguage = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.customerEncryption = Codegen.empty();
+        this.detectMd5hash = Codegen.empty();
+        this.eventBasedHold = Codegen.empty();
+        this.kmsKeyName = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.name = Codegen.empty();
+        this.source = Codegen.empty();
+        this.storageClass = Codegen.empty();
+        this.temporaryHold = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -315,7 +316,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cacheControl(@Nullable String cacheControl) {
-            this.cacheControl = Output.ofNullable(cacheControl);
+            this.cacheControl = Codegen.ofNullable(cacheControl);
             return this;
         }
         public Builder content(@Nullable Output<String> content) {
@@ -323,7 +324,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder contentDisposition(@Nullable Output<String> contentDisposition) {
@@ -331,7 +332,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentDisposition(@Nullable String contentDisposition) {
-            this.contentDisposition = Output.ofNullable(contentDisposition);
+            this.contentDisposition = Codegen.ofNullable(contentDisposition);
             return this;
         }
         public Builder contentEncoding(@Nullable Output<String> contentEncoding) {
@@ -339,7 +340,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentEncoding(@Nullable String contentEncoding) {
-            this.contentEncoding = Output.ofNullable(contentEncoding);
+            this.contentEncoding = Codegen.ofNullable(contentEncoding);
             return this;
         }
         public Builder contentLanguage(@Nullable Output<String> contentLanguage) {
@@ -347,7 +348,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentLanguage(@Nullable String contentLanguage) {
-            this.contentLanguage = Output.ofNullable(contentLanguage);
+            this.contentLanguage = Codegen.ofNullable(contentLanguage);
             return this;
         }
         public Builder contentType(@Nullable Output<String> contentType) {
@@ -355,7 +356,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder customerEncryption(@Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption) {
@@ -363,7 +364,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customerEncryption(@Nullable BucketObjectCustomerEncryptionArgs customerEncryption) {
-            this.customerEncryption = Output.ofNullable(customerEncryption);
+            this.customerEncryption = Codegen.ofNullable(customerEncryption);
             return this;
         }
         public Builder detectMd5hash(@Nullable Output<String> detectMd5hash) {
@@ -371,7 +372,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder detectMd5hash(@Nullable String detectMd5hash) {
-            this.detectMd5hash = Output.ofNullable(detectMd5hash);
+            this.detectMd5hash = Codegen.ofNullable(detectMd5hash);
             return this;
         }
         public Builder eventBasedHold(@Nullable Output<Boolean> eventBasedHold) {
@@ -379,7 +380,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventBasedHold(@Nullable Boolean eventBasedHold) {
-            this.eventBasedHold = Output.ofNullable(eventBasedHold);
+            this.eventBasedHold = Codegen.ofNullable(eventBasedHold);
             return this;
         }
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
@@ -387,7 +388,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Output.ofNullable(kmsKeyName);
+            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
             return this;
         }
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
@@ -395,7 +396,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -403,7 +404,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder source(@Nullable Output<AssetOrArchive> source) {
@@ -411,7 +412,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder source(@Nullable AssetOrArchive source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder storageClass(@Nullable Output<String> storageClass) {
@@ -419,7 +420,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageClass(@Nullable String storageClass) {
-            this.storageClass = Output.ofNullable(storageClass);
+            this.storageClass = Codegen.ofNullable(storageClass);
             return this;
         }
         public Builder temporaryHold(@Nullable Output<Boolean> temporaryHold) {
@@ -427,7 +428,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder temporaryHold(@Nullable Boolean temporaryHold) {
-            this.temporaryHold = Output.ofNullable(temporaryHold);
+            this.temporaryHold = Codegen.ofNullable(temporaryHold);
             return this;
         }        public BucketObjectArgs build() {
             return new BucketObjectArgs(bucket, cacheControl, content, contentDisposition, contentEncoding, contentLanguage, contentType, customerEncryption, detectMd5hash, eventBasedHold, kmsKeyName, metadata, name, source, storageClass, temporaryHold);

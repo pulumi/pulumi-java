@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.healthcare.inputs.DatasetIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ public final class DatasetIamBindingArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<DatasetIamBindingConditionArgs> condition;
 
     public Output<DatasetIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -69,10 +70,10 @@ public final class DatasetIamBindingArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DatasetIamBindingArgs() {
-        this.condition = Output.empty();
-        this.datasetId = Output.empty();
-        this.members = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.datasetId = Codegen.empty();
+        this.members = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class DatasetIamBindingArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder condition(@Nullable DatasetIamBindingConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder datasetId(Output<String> datasetId) {

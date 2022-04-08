@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsAccessLevelArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class AccessLevelsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<AccessLevelsAccessLevelArgs>> accessLevels;
 
     public Output<List<AccessLevelsAccessLevelArgs>> getAccessLevels() {
-        return this.accessLevels == null ? Output.empty() : this.accessLevels;
+        return this.accessLevels == null ? Codegen.empty() : this.accessLevels;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AccessLevelsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccessLevelsArgs() {
-        this.accessLevels = Output.empty();
-        this.parent = Output.empty();
+        this.accessLevels = Codegen.empty();
+        this.parent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class AccessLevelsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessLevels(@Nullable List<AccessLevelsAccessLevelArgs> accessLevels) {
-            this.accessLevels = Output.ofNullable(accessLevels);
+            this.accessLevels = Codegen.ofNullable(accessLevels);
             return this;
         }
         public Builder accessLevels(AccessLevelsAccessLevelArgs... accessLevels) {

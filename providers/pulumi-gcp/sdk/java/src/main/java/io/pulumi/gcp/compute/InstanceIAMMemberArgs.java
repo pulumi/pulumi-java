@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.InstanceIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<InstanceIAMMemberConditionArgs> condition;
 
     public Output<InstanceIAMMemberConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public InstanceIAMMemberArgs(
@@ -99,12 +100,12 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
     }
 
     private InstanceIAMMemberArgs() {
-        this.condition = Output.empty();
-        this.instanceName = Output.empty();
-        this.member = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
-        this.zone = Output.empty();
+        this.condition = Codegen.empty();
+        this.instanceName = Codegen.empty();
+        this.member = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder condition(@Nullable InstanceIAMMemberConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder instanceName(Output<String> instanceName) {
@@ -166,7 +167,7 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(Output<String> role) {
@@ -182,7 +183,7 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public InstanceIAMMemberArgs build() {
             return new InstanceIAMMemberArgs(condition, instanceName, member, project, role, zone);

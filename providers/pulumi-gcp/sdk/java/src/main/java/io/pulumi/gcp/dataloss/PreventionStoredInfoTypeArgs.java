@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeRegexArgs;
@@ -25,7 +26,7 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<PreventionStoredInfoTypeDictionaryArgs> dictionary;
 
     public Output<PreventionStoredInfoTypeDictionaryArgs> getDictionary() {
-        return this.dictionary == null ? Output.empty() : this.dictionary;
+        return this.dictionary == null ? Codegen.empty() : this.dictionary;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryArgs> largeCustomDictionary;
 
     public Output<PreventionStoredInfoTypeLargeCustomDictionaryArgs> getLargeCustomDictionary() {
-        return this.largeCustomDictionary == null ? Output.empty() : this.largeCustomDictionary;
+        return this.largeCustomDictionary == null ? Codegen.empty() : this.largeCustomDictionary;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<PreventionStoredInfoTypeRegexArgs> regex;
 
     public Output<PreventionStoredInfoTypeRegexArgs> getRegex() {
-        return this.regex == null ? Output.empty() : this.regex;
+        return this.regex == null ? Codegen.empty() : this.regex;
     }
 
     public PreventionStoredInfoTypeArgs(
@@ -106,12 +107,12 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
     }
 
     private PreventionStoredInfoTypeArgs() {
-        this.description = Output.empty();
-        this.dictionary = Output.empty();
-        this.displayName = Output.empty();
-        this.largeCustomDictionary = Output.empty();
-        this.parent = Output.empty();
-        this.regex = Output.empty();
+        this.description = Codegen.empty();
+        this.dictionary = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.largeCustomDictionary = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.regex = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder dictionary(@Nullable Output<PreventionStoredInfoTypeDictionaryArgs> dictionary) {
@@ -157,7 +158,7 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder dictionary(@Nullable PreventionStoredInfoTypeDictionaryArgs dictionary) {
-            this.dictionary = Output.ofNullable(dictionary);
+            this.dictionary = Codegen.ofNullable(dictionary);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -165,7 +166,7 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder largeCustomDictionary(@Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryArgs> largeCustomDictionary) {
@@ -173,7 +174,7 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder largeCustomDictionary(@Nullable PreventionStoredInfoTypeLargeCustomDictionaryArgs largeCustomDictionary) {
-            this.largeCustomDictionary = Output.ofNullable(largeCustomDictionary);
+            this.largeCustomDictionary = Codegen.ofNullable(largeCustomDictionary);
             return this;
         }
         public Builder parent(Output<String> parent) {
@@ -189,7 +190,7 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder regex(@Nullable PreventionStoredInfoTypeRegexArgs regex) {
-            this.regex = Output.ofNullable(regex);
+            this.regex = Codegen.ofNullable(regex);
             return this;
         }        public PreventionStoredInfoTypeArgs build() {
             return new PreventionStoredInfoTypeArgs(description, dictionary, displayName, largeCustomDictionary, parent, regex);

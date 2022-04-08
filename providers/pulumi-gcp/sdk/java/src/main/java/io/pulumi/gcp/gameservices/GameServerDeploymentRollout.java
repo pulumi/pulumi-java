@@ -6,6 +6,7 @@ package io.pulumi.gcp.gameservices;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.gameservices.GameServerDeploymentRolloutArgs;
 import io.pulumi.gcp.gameservices.inputs.GameServerDeploymentRolloutState;
@@ -154,7 +155,7 @@ public class GameServerDeploymentRollout extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public GameServerDeploymentRollout(String name, GameServerDeploymentRolloutArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:gameservices/gameServerDeploymentRollout:GameServerDeploymentRollout", name, args == null ? GameServerDeploymentRolloutArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:gameservices/gameServerDeploymentRollout:GameServerDeploymentRollout", name, args == null ? GameServerDeploymentRolloutArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GameServerDeploymentRollout(String name, Output<String> id, @Nullable GameServerDeploymentRolloutState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

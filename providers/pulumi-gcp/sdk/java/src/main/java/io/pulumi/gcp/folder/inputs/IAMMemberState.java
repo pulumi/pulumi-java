@@ -5,6 +5,7 @@ package io.pulumi.gcp.folder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.folder.inputs.IAMMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,35 +20,35 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IAMMemberConditionGetArgs> condition;
 
     public Output<IAMMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="folder")
       private final @Nullable Output<String> folder;
 
     public Output<String> getFolder() {
-        return this.folder == null ? Output.empty() : this.folder;
+        return this.folder == null ? Codegen.empty() : this.folder;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
-        return this.member == null ? Output.empty() : this.member;
+        return this.member == null ? Codegen.empty() : this.member;
     }
 
     @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public IAMMemberState(
@@ -64,11 +65,11 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
     }
 
     private IAMMemberState() {
-        this.condition = Output.empty();
-        this.etag = Output.empty();
-        this.folder = Output.empty();
-        this.member = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.folder = Codegen.empty();
+        this.member = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder condition(@Nullable IAMMemberConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -112,7 +113,7 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder folder(@Nullable Output<String> folder) {
@@ -120,7 +121,7 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder folder(@Nullable String folder) {
-            this.folder = Output.ofNullable(folder);
+            this.folder = Codegen.ofNullable(folder);
             return this;
         }
         public Builder member(@Nullable Output<String> member) {
@@ -128,7 +129,7 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder member(@Nullable String member) {
-            this.member = Output.ofNullable(member);
+            this.member = Codegen.ofNullable(member);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -136,7 +137,7 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public IAMMemberState build() {
             return new IAMMemberState(condition, etag, folder, member, role);

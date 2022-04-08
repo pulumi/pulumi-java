@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.HttpHealthCheckArgs;
 import io.pulumi.gcp.compute.inputs.HttpHealthCheckState;
@@ -275,7 +276,7 @@ public class HttpHealthCheck extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public HttpHealthCheck(String name, @Nullable HttpHealthCheckArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/httpHealthCheck:HttpHealthCheck", name, args == null ? HttpHealthCheckArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/httpHealthCheck:HttpHealthCheck", name, args == null ? HttpHealthCheckArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private HttpHealthCheck(String name, Output<String> id, @Nullable HttpHealthCheckState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -53,9 +54,9 @@ public final class EnvironmentIamPolicyArgs extends io.pulumi.resources.Resource
     }
 
     private EnvironmentIamPolicyArgs() {
-        this.envId = Output.empty();
-        this.orgId = Output.empty();
-        this.policyData = Output.empty();
+        this.envId = Codegen.empty();
+        this.orgId = Codegen.empty();
+        this.policyData = Codegen.empty();
     }
 
     public static Builder builder() {

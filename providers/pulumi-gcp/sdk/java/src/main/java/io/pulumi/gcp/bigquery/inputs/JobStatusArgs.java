@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.bigquery.inputs.JobStatusErrorArgs;
 import io.pulumi.gcp.bigquery.inputs.JobStatusErrorResultArgs;
 import java.lang.String;
@@ -21,21 +22,21 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<JobStatusErrorResultArgs>> errorResults;
 
     public Output<List<JobStatusErrorResultArgs>> getErrorResults() {
-        return this.errorResults == null ? Output.empty() : this.errorResults;
+        return this.errorResults == null ? Codegen.empty() : this.errorResults;
     }
 
     @Import(name="errors")
       private final @Nullable Output<List<JobStatusErrorArgs>> errors;
 
     public Output<List<JobStatusErrorArgs>> getErrors() {
-        return this.errors == null ? Output.empty() : this.errors;
+        return this.errors == null ? Codegen.empty() : this.errors;
     }
 
     @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public JobStatusArgs(
@@ -48,9 +49,9 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobStatusArgs() {
-        this.errorResults = Output.empty();
-        this.errors = Output.empty();
-        this.state = Output.empty();
+        this.errorResults = Codegen.empty();
+        this.errors = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder errorResults(@Nullable List<JobStatusErrorResultArgs> errorResults) {
-            this.errorResults = Output.ofNullable(errorResults);
+            this.errorResults = Codegen.ofNullable(errorResults);
             return this;
         }
         public Builder errorResults(JobStatusErrorResultArgs... errorResults) {
@@ -93,7 +94,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder errors(@Nullable List<JobStatusErrorArgs> errors) {
-            this.errors = Output.ofNullable(errors);
+            this.errors = Codegen.ofNullable(errors);
             return this;
         }
         public Builder errors(JobStatusErrorArgs... errors) {
@@ -104,7 +105,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public JobStatusArgs build() {
             return new JobStatusArgs(errorResults, errors, state);

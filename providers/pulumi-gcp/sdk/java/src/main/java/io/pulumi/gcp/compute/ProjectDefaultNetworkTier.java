@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.ProjectDefaultNetworkTierArgs;
 import io.pulumi.gcp.compute.inputs.ProjectDefaultNetworkTierState;
@@ -88,7 +89,7 @@ public class ProjectDefaultNetworkTier extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public ProjectDefaultNetworkTier(String name, ProjectDefaultNetworkTierArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/projectDefaultNetworkTier:ProjectDefaultNetworkTier", name, args == null ? ProjectDefaultNetworkTierArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/projectDefaultNetworkTier:ProjectDefaultNetworkTier", name, args == null ? ProjectDefaultNetworkTierArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProjectDefaultNetworkTier(String name, Output<String> id, @Nullable ProjectDefaultNetworkTierState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

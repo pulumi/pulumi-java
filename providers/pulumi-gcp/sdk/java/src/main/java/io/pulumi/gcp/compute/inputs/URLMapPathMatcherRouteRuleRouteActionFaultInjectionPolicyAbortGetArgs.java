@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbor
       private final @Nullable Output<Integer> httpStatus;
 
     public Output<Integer> getHttpStatus() {
-        return this.httpStatus == null ? Output.empty() : this.httpStatus;
+        return this.httpStatus == null ? Codegen.empty() : this.httpStatus;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbor
       private final @Nullable Output<Double> percentage;
 
     public Output<Double> getPercentage() {
-        return this.percentage == null ? Output.empty() : this.percentage;
+        return this.percentage == null ? Codegen.empty() : this.percentage;
     }
 
     public URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortGetArgs(
@@ -47,8 +48,8 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbor
     }
 
     private URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortGetArgs() {
-        this.httpStatus = Output.empty();
-        this.percentage = Output.empty();
+        this.httpStatus = Codegen.empty();
+        this.percentage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbor
             return this;
         }
         public Builder httpStatus(@Nullable Integer httpStatus) {
-            this.httpStatus = Output.ofNullable(httpStatus);
+            this.httpStatus = Codegen.ofNullable(httpStatus);
             return this;
         }
         public Builder percentage(@Nullable Output<Double> percentage) {
@@ -86,7 +87,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbor
             return this;
         }
         public Builder percentage(@Nullable Double percentage) {
-            this.percentage = Output.ofNullable(percentage);
+            this.percentage = Codegen.ofNullable(percentage);
             return this;
         }        public URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortGetArgs build() {
             return new URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortGetArgs(httpStatus, percentage);

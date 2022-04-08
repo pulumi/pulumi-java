@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -57,7 +58,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfigArgs extends io.pulu
       private final @Nullable Output<Double> scaleDownMinWorkerFraction;
 
     public Output<Double> getScaleDownMinWorkerFraction() {
-        return this.scaleDownMinWorkerFraction == null ? Output.empty() : this.scaleDownMinWorkerFraction;
+        return this.scaleDownMinWorkerFraction == null ? Codegen.empty() : this.scaleDownMinWorkerFraction;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfigArgs extends io.pulu
       private final @Nullable Output<Double> scaleUpMinWorkerFraction;
 
     public Output<Double> getScaleUpMinWorkerFraction() {
-        return this.scaleUpMinWorkerFraction == null ? Output.empty() : this.scaleUpMinWorkerFraction;
+        return this.scaleUpMinWorkerFraction == null ? Codegen.empty() : this.scaleUpMinWorkerFraction;
     }
 
     public AutoscalingPolicyBasicAlgorithmYarnConfigArgs(
@@ -105,11 +106,11 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfigArgs extends io.pulu
     }
 
     private AutoscalingPolicyBasicAlgorithmYarnConfigArgs() {
-        this.gracefulDecommissionTimeout = Output.empty();
-        this.scaleDownFactor = Output.empty();
-        this.scaleDownMinWorkerFraction = Output.empty();
-        this.scaleUpFactor = Output.empty();
-        this.scaleUpMinWorkerFraction = Output.empty();
+        this.gracefulDecommissionTimeout = Codegen.empty();
+        this.scaleDownFactor = Codegen.empty();
+        this.scaleDownMinWorkerFraction = Codegen.empty();
+        this.scaleUpFactor = Codegen.empty();
+        this.scaleUpMinWorkerFraction = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfigArgs extends io.pulu
             return this;
         }
         public Builder scaleDownMinWorkerFraction(@Nullable Double scaleDownMinWorkerFraction) {
-            this.scaleDownMinWorkerFraction = Output.ofNullable(scaleDownMinWorkerFraction);
+            this.scaleDownMinWorkerFraction = Codegen.ofNullable(scaleDownMinWorkerFraction);
             return this;
         }
         public Builder scaleUpFactor(Output<Double> scaleUpFactor) {
@@ -177,7 +178,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfigArgs extends io.pulu
             return this;
         }
         public Builder scaleUpMinWorkerFraction(@Nullable Double scaleUpMinWorkerFraction) {
-            this.scaleUpMinWorkerFraction = Output.ofNullable(scaleUpMinWorkerFraction);
+            this.scaleUpMinWorkerFraction = Codegen.ofNullable(scaleUpMinWorkerFraction);
             return this;
         }        public AutoscalingPolicyBasicAlgorithmYarnConfigArgs build() {
             return new AutoscalingPolicyBasicAlgorithmYarnConfigArgs(gracefulDecommissionTimeout, scaleDownFactor, scaleDownMinWorkerFraction, scaleUpFactor, scaleUpMinWorkerFraction);

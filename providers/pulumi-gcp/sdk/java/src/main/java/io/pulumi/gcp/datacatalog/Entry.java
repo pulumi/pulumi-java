@@ -6,6 +6,7 @@ package io.pulumi.gcp.datacatalog;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.EntryArgs;
 import io.pulumi.gcp.datacatalog.inputs.EntryState;
@@ -304,7 +305,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Entry(String name, EntryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:datacatalog/entry:Entry", name, args == null ? EntryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:datacatalog/entry:Entry", name, args == null ? EntryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Entry(String name, Output<String> id, @Nullable EntryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

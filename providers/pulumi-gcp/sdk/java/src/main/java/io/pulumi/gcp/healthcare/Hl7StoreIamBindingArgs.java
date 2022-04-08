@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.healthcare.inputs.Hl7StoreIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ public final class Hl7StoreIamBindingArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Hl7StoreIamBindingConditionArgs> condition;
 
     public Output<Hl7StoreIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -69,10 +70,10 @@ public final class Hl7StoreIamBindingArgs extends io.pulumi.resources.ResourceAr
     }
 
     private Hl7StoreIamBindingArgs() {
-        this.condition = Output.empty();
-        this.hl7V2StoreId = Output.empty();
-        this.members = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.hl7V2StoreId = Codegen.empty();
+        this.members = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class Hl7StoreIamBindingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder condition(@Nullable Hl7StoreIamBindingConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder hl7V2StoreId(Output<String> hl7V2StoreId) {

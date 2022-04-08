@@ -5,6 +5,7 @@ package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementBinauthzArgs;
 import io.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementConfigSyncArgs;
 import io.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementHierarchyControllerArgs;
@@ -26,7 +27,7 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
       private final @Nullable Output<FeatureMembershipConfigmanagementBinauthzArgs> binauthz;
 
     public Output<FeatureMembershipConfigmanagementBinauthzArgs> getBinauthz() {
-        return this.binauthz == null ? Output.empty() : this.binauthz;
+        return this.binauthz == null ? Codegen.empty() : this.binauthz;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
       private final @Nullable Output<FeatureMembershipConfigmanagementConfigSyncArgs> configSync;
 
     public Output<FeatureMembershipConfigmanagementConfigSyncArgs> getConfigSync() {
-        return this.configSync == null ? Output.empty() : this.configSync;
+        return this.configSync == null ? Codegen.empty() : this.configSync;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
       private final @Nullable Output<FeatureMembershipConfigmanagementHierarchyControllerArgs> hierarchyController;
 
     public Output<FeatureMembershipConfigmanagementHierarchyControllerArgs> getHierarchyController() {
-        return this.hierarchyController == null ? Output.empty() : this.hierarchyController;
+        return this.hierarchyController == null ? Codegen.empty() : this.hierarchyController;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
       private final @Nullable Output<FeatureMembershipConfigmanagementPolicyControllerArgs> policyController;
 
     public Output<FeatureMembershipConfigmanagementPolicyControllerArgs> getPolicyController() {
-        return this.policyController == null ? Output.empty() : this.policyController;
+        return this.policyController == null ? Codegen.empty() : this.policyController;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public FeatureMembershipConfigmanagementArgs(
@@ -87,11 +88,11 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
     }
 
     private FeatureMembershipConfigmanagementArgs() {
-        this.binauthz = Output.empty();
-        this.configSync = Output.empty();
-        this.hierarchyController = Output.empty();
-        this.policyController = Output.empty();
-        this.version = Output.empty();
+        this.binauthz = Codegen.empty();
+        this.configSync = Codegen.empty();
+        this.hierarchyController = Codegen.empty();
+        this.policyController = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
             return this;
         }
         public Builder binauthz(@Nullable FeatureMembershipConfigmanagementBinauthzArgs binauthz) {
-            this.binauthz = Output.ofNullable(binauthz);
+            this.binauthz = Codegen.ofNullable(binauthz);
             return this;
         }
         public Builder configSync(@Nullable Output<FeatureMembershipConfigmanagementConfigSyncArgs> configSync) {
@@ -135,7 +136,7 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
             return this;
         }
         public Builder configSync(@Nullable FeatureMembershipConfigmanagementConfigSyncArgs configSync) {
-            this.configSync = Output.ofNullable(configSync);
+            this.configSync = Codegen.ofNullable(configSync);
             return this;
         }
         public Builder hierarchyController(@Nullable Output<FeatureMembershipConfigmanagementHierarchyControllerArgs> hierarchyController) {
@@ -143,7 +144,7 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
             return this;
         }
         public Builder hierarchyController(@Nullable FeatureMembershipConfigmanagementHierarchyControllerArgs hierarchyController) {
-            this.hierarchyController = Output.ofNullable(hierarchyController);
+            this.hierarchyController = Codegen.ofNullable(hierarchyController);
             return this;
         }
         public Builder policyController(@Nullable Output<FeatureMembershipConfigmanagementPolicyControllerArgs> policyController) {
@@ -151,7 +152,7 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
             return this;
         }
         public Builder policyController(@Nullable FeatureMembershipConfigmanagementPolicyControllerArgs policyController) {
-            this.policyController = Output.ofNullable(policyController);
+            this.policyController = Codegen.ofNullable(policyController);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -159,7 +160,7 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public FeatureMembershipConfigmanagementArgs build() {
             return new FeatureMembershipConfigmanagementArgs(binauthz, configSync, hierarchyController, policyController, version);

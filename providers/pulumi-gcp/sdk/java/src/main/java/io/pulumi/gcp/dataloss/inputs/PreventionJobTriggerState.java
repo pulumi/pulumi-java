@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerTriggerGetArgs;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
       private final @Nullable Output<PreventionJobTriggerInspectJobGetArgs> inspectJob;
 
     public Output<PreventionJobTriggerInspectJobGetArgs> getInspectJob() {
-        return this.inspectJob == null ? Output.empty() : this.inspectJob;
+        return this.inspectJob == null ? Codegen.empty() : this.inspectJob;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> lastRunTime;
 
     public Output<String> getLastRunTime() {
-        return this.lastRunTime == null ? Output.empty() : this.lastRunTime;
+        return this.lastRunTime == null ? Codegen.empty() : this.lastRunTime;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<PreventionJobTriggerTriggerGetArgs>> triggers;
 
     public Output<List<PreventionJobTriggerTriggerGetArgs>> getTriggers() {
-        return this.triggers == null ? Output.empty() : this.triggers;
+        return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 
     public PreventionJobTriggerState(
@@ -130,14 +131,14 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
     }
 
     private PreventionJobTriggerState() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.inspectJob = Output.empty();
-        this.lastRunTime = Output.empty();
-        this.name = Output.empty();
-        this.parent = Output.empty();
-        this.status = Output.empty();
-        this.triggers = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.inspectJob = Codegen.empty();
+        this.lastRunTime = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.status = Codegen.empty();
+        this.triggers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -187,7 +188,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder inspectJob(@Nullable Output<PreventionJobTriggerInspectJobGetArgs> inspectJob) {
@@ -195,7 +196,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder inspectJob(@Nullable PreventionJobTriggerInspectJobGetArgs inspectJob) {
-            this.inspectJob = Output.ofNullable(inspectJob);
+            this.inspectJob = Codegen.ofNullable(inspectJob);
             return this;
         }
         public Builder lastRunTime(@Nullable Output<String> lastRunTime) {
@@ -203,7 +204,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder lastRunTime(@Nullable String lastRunTime) {
-            this.lastRunTime = Output.ofNullable(lastRunTime);
+            this.lastRunTime = Codegen.ofNullable(lastRunTime);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -211,7 +212,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parent(@Nullable Output<String> parent) {
@@ -219,7 +220,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -227,7 +228,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder triggers(@Nullable Output<List<PreventionJobTriggerTriggerGetArgs>> triggers) {
@@ -235,7 +236,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder triggers(@Nullable List<PreventionJobTriggerTriggerGetArgs> triggers) {
-            this.triggers = Output.ofNullable(triggers);
+            this.triggers = Codegen.ofNullable(triggers);
             return this;
         }
         public Builder triggers(PreventionJobTriggerTriggerGetArgs... triggers) {

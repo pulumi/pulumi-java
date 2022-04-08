@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CxEntityTypeExcludedPhraseArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public CxEntityTypeExcludedPhraseArgs(@Nullable Output<String> value) {
@@ -30,7 +31,7 @@ public final class CxEntityTypeExcludedPhraseArgs extends io.pulumi.resources.Re
     }
 
     private CxEntityTypeExcludedPhraseArgs() {
-        this.value = Output.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class CxEntityTypeExcludedPhraseArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public CxEntityTypeExcludedPhraseArgs build() {
             return new CxEntityTypeExcludedPhraseArgs(value);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.notebooks;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.notebooks.inputs.RuntimeIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ public final class RuntimeIamBindingArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<RuntimeIamBindingConditionArgs> condition;
 
     public Output<RuntimeIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -31,7 +32,7 @@ public final class RuntimeIamBindingArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="members", required=true)
@@ -50,7 +51,7 @@ public final class RuntimeIamBindingArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -93,12 +94,12 @@ public final class RuntimeIamBindingArgs extends io.pulumi.resources.ResourceArg
     }
 
     private RuntimeIamBindingArgs() {
-        this.condition = Output.empty();
-        this.location = Output.empty();
-        this.members = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
-        this.runtimeName = Output.empty();
+        this.condition = Codegen.empty();
+        this.location = Codegen.empty();
+        this.members = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
+        this.runtimeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -136,7 +137,7 @@ public final class RuntimeIamBindingArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder condition(@Nullable RuntimeIamBindingConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -144,7 +145,7 @@ public final class RuntimeIamBindingArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder members(Output<List<String>> members) {
@@ -163,7 +164,7 @@ public final class RuntimeIamBindingArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(Output<String> role) {

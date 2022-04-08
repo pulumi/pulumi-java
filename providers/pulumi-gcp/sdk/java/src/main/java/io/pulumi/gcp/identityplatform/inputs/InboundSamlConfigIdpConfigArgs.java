@@ -5,6 +5,7 @@ package io.pulumi.gcp.identityplatform.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.identityplatform.inputs.InboundSamlConfigIdpConfigIdpCertificateArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -48,7 +49,7 @@ public final class InboundSamlConfigIdpConfigArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> signRequest;
 
     public Output<Boolean> getSignRequest() {
-        return this.signRequest == null ? Output.empty() : this.signRequest;
+        return this.signRequest == null ? Codegen.empty() : this.signRequest;
     }
 
     /**
@@ -74,10 +75,10 @@ public final class InboundSamlConfigIdpConfigArgs extends io.pulumi.resources.Re
     }
 
     private InboundSamlConfigIdpConfigArgs() {
-        this.idpCertificates = Output.empty();
-        this.idpEntityId = Output.empty();
-        this.signRequest = Output.empty();
-        this.ssoUrl = Output.empty();
+        this.idpCertificates = Codegen.empty();
+        this.idpEntityId = Codegen.empty();
+        this.signRequest = Codegen.empty();
+        this.ssoUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class InboundSamlConfigIdpConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder signRequest(@Nullable Boolean signRequest) {
-            this.signRequest = Output.ofNullable(signRequest);
+            this.signRequest = Codegen.ofNullable(signRequest);
             return this;
         }
         public Builder ssoUrl(Output<String> ssoUrl) {

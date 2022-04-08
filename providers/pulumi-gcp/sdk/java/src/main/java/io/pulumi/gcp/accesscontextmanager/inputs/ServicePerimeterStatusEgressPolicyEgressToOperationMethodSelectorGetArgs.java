@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class ServicePerimeterStatusEgressPolicyEgressToOperationMethodSele
       private final @Nullable Output<String> method;
 
     public Output<String> getMethod() {
-        return this.method == null ? Output.empty() : this.method;
+        return this.method == null ? Codegen.empty() : this.method;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ServicePerimeterStatusEgressPolicyEgressToOperationMethodSele
       private final @Nullable Output<String> permission;
 
     public Output<String> getPermission() {
-        return this.permission == null ? Output.empty() : this.permission;
+        return this.permission == null ? Codegen.empty() : this.permission;
     }
 
     public ServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorGetArgs(
@@ -47,8 +48,8 @@ public final class ServicePerimeterStatusEgressPolicyEgressToOperationMethodSele
     }
 
     private ServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorGetArgs() {
-        this.method = Output.empty();
-        this.permission = Output.empty();
+        this.method = Codegen.empty();
+        this.permission = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class ServicePerimeterStatusEgressPolicyEgressToOperationMethodSele
             return this;
         }
         public Builder method(@Nullable String method) {
-            this.method = Output.ofNullable(method);
+            this.method = Codegen.ofNullable(method);
             return this;
         }
         public Builder permission(@Nullable Output<String> permission) {
@@ -86,7 +87,7 @@ public final class ServicePerimeterStatusEgressPolicyEgressToOperationMethodSele
             return this;
         }
         public Builder permission(@Nullable String permission) {
-            this.permission = Output.ofNullable(permission);
+            this.permission = Codegen.ofNullable(permission);
             return this;
         }        public ServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorGetArgs build() {
             return new ServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorGetArgs(method, permission);

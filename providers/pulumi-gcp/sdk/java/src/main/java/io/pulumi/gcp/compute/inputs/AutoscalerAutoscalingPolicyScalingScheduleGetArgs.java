@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {
-        return this.timeZone == null ? Output.empty() : this.timeZone;
+        return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
     public AutoscalerAutoscalingPolicyScalingScheduleGetArgs(
@@ -111,13 +112,13 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
     }
 
     private AutoscalerAutoscalingPolicyScalingScheduleGetArgs() {
-        this.description = Output.empty();
-        this.disabled = Output.empty();
-        this.durationSec = Output.empty();
-        this.minRequiredReplicas = Output.empty();
-        this.name = Output.empty();
-        this.schedule = Output.empty();
-        this.timeZone = Output.empty();
+        this.description = Codegen.empty();
+        this.disabled = Codegen.empty();
+        this.durationSec = Codegen.empty();
+        this.minRequiredReplicas = Codegen.empty();
+        this.name = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.timeZone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder disabled(@Nullable Output<Boolean> disabled) {
@@ -165,7 +166,7 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }
         public Builder durationSec(Output<Integer> durationSec) {
@@ -205,7 +206,7 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
             return this;
         }
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Output.ofNullable(timeZone);
+            this.timeZone = Codegen.ofNullable(timeZone);
             return this;
         }        public AutoscalerAutoscalingPolicyScalingScheduleGetArgs build() {
             return new AutoscalerAutoscalingPolicyScalingScheduleGetArgs(description, disabled, durationSec, minRequiredReplicas, name, schedule, timeZone);

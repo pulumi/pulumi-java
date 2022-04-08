@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget;
 
     public Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs> getNamespacedGkeDeploymentTarget() {
-        return this.namespacedGkeDeploymentTarget == null ? Output.empty() : this.namespacedGkeDeploymentTarget;
+        return this.namespacedGkeDeploymentTarget == null ? Codegen.empty() : this.namespacedGkeDeploymentTarget;
     }
 
     public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget) {
@@ -30,7 +31,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
     }
 
     private WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs() {
-        this.namespacedGkeDeploymentTarget = Output.empty();
+        this.namespacedGkeDeploymentTarget = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
             return this;
         }
         public Builder namespacedGkeDeploymentTarget(@Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs namespacedGkeDeploymentTarget) {
-            this.namespacedGkeDeploymentTarget = Output.ofNullable(namespacedGkeDeploymentTarget);
+            this.namespacedGkeDeploymentTarget = Codegen.ofNullable(namespacedGkeDeploymentTarget);
             return this;
         }        public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs(namespacedGkeDeploymentTarget);

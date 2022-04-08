@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class ClusterNodePoolManagementGetArgs extends io.pulumi.resources.
       private final @Nullable Output<Boolean> autoRepair;
 
     public Output<Boolean> getAutoRepair() {
-        return this.autoRepair == null ? Output.empty() : this.autoRepair;
+        return this.autoRepair == null ? Codegen.empty() : this.autoRepair;
     }
 
     @Import(name="autoUpgrade")
       private final @Nullable Output<Boolean> autoUpgrade;
 
     public Output<Boolean> getAutoUpgrade() {
-        return this.autoUpgrade == null ? Output.empty() : this.autoUpgrade;
+        return this.autoUpgrade == null ? Codegen.empty() : this.autoUpgrade;
     }
 
     public ClusterNodePoolManagementGetArgs(
@@ -36,8 +37,8 @@ public final class ClusterNodePoolManagementGetArgs extends io.pulumi.resources.
     }
 
     private ClusterNodePoolManagementGetArgs() {
-        this.autoRepair = Output.empty();
-        this.autoUpgrade = Output.empty();
+        this.autoRepair = Codegen.empty();
+        this.autoUpgrade = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class ClusterNodePoolManagementGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder autoRepair(@Nullable Boolean autoRepair) {
-            this.autoRepair = Output.ofNullable(autoRepair);
+            this.autoRepair = Codegen.ofNullable(autoRepair);
             return this;
         }
         public Builder autoUpgrade(@Nullable Output<Boolean> autoUpgrade) {
@@ -75,7 +76,7 @@ public final class ClusterNodePoolManagementGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder autoUpgrade(@Nullable Boolean autoUpgrade) {
-            this.autoUpgrade = Output.ofNullable(autoUpgrade);
+            this.autoUpgrade = Codegen.ofNullable(autoUpgrade);
             return this;
         }        public ClusterNodePoolManagementGetArgs build() {
             return new ClusterNodePoolManagementGetArgs(autoRepair, autoUpgrade);

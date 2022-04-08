@@ -5,6 +5,7 @@ package io.pulumi.gcp.spanner;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.spanner.inputs.DatabaseIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<DatabaseIAMMemberConditionArgs> condition;
 
     public Output<DatabaseIAMMemberConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -92,12 +93,12 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DatabaseIAMMemberArgs() {
-        this.condition = Output.empty();
-        this.database = Output.empty();
-        this.instance = Output.empty();
-        this.member = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.database = Codegen.empty();
+        this.instance = Codegen.empty();
+        this.member = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -135,7 +136,7 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder condition(@Nullable DatabaseIAMMemberConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder database(Output<String> database) {
@@ -167,7 +168,7 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(Output<String> role) {

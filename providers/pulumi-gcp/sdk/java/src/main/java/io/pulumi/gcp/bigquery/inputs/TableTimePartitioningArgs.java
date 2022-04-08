@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class TableTimePartitioningArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> expirationMs;
 
     public Output<Integer> getExpirationMs() {
-        return this.expirationMs == null ? Output.empty() : this.expirationMs;
+        return this.expirationMs == null ? Codegen.empty() : this.expirationMs;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class TableTimePartitioningArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> field;
 
     public Output<String> getField() {
-        return this.field == null ? Output.empty() : this.field;
+        return this.field == null ? Codegen.empty() : this.field;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class TableTimePartitioningArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> requirePartitionFilter;
 
     public Output<Boolean> getRequirePartitionFilter() {
-        return this.requirePartitionFilter == null ? Output.empty() : this.requirePartitionFilter;
+        return this.requirePartitionFilter == null ? Codegen.empty() : this.requirePartitionFilter;
     }
 
     /**
@@ -77,10 +78,10 @@ public final class TableTimePartitioningArgs extends io.pulumi.resources.Resourc
     }
 
     private TableTimePartitioningArgs() {
-        this.expirationMs = Output.empty();
-        this.field = Output.empty();
-        this.requirePartitionFilter = Output.empty();
-        this.type = Output.empty();
+        this.expirationMs = Codegen.empty();
+        this.field = Codegen.empty();
+        this.requirePartitionFilter = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class TableTimePartitioningArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder expirationMs(@Nullable Integer expirationMs) {
-            this.expirationMs = Output.ofNullable(expirationMs);
+            this.expirationMs = Codegen.ofNullable(expirationMs);
             return this;
         }
         public Builder field(@Nullable Output<String> field) {
@@ -122,7 +123,7 @@ public final class TableTimePartitioningArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder field(@Nullable String field) {
-            this.field = Output.ofNullable(field);
+            this.field = Codegen.ofNullable(field);
             return this;
         }
         public Builder requirePartitionFilter(@Nullable Output<Boolean> requirePartitionFilter) {
@@ -130,7 +131,7 @@ public final class TableTimePartitioningArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder requirePartitionFilter(@Nullable Boolean requirePartitionFilter) {
-            this.requirePartitionFilter = Output.ofNullable(requirePartitionFilter);
+            this.requirePartitionFilter = Codegen.ofNullable(requirePartitionFilter);
             return this;
         }
         public Builder type(Output<String> type) {

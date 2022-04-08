@@ -6,6 +6,7 @@ package io.pulumi.gcp.diagflow;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.diagflow.CxVersionArgs;
 import io.pulumi.gcp.diagflow.inputs.CxVersionState;
@@ -170,7 +171,7 @@ public class CxVersion extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CxVersion(String name, CxVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:diagflow/cxVersion:CxVersion", name, args == null ? CxVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:diagflow/cxVersion:CxVersion", name, args == null ? CxVersionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CxVersion(String name, Output<String> id, @Nullable CxVersionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

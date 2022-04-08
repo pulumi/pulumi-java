@@ -5,6 +5,7 @@ package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.pubsub.inputs.SubscriptionPushConfigOidcTokenArgs;
 import java.lang.String;
 import java.util.Map;
@@ -41,7 +42,7 @@ public final class SubscriptionPushConfigArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Map<String,String>> attributes;
 
     public Output<Map<String,String>> getAttributes() {
-        return this.attributes == null ? Output.empty() : this.attributes;
+        return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class SubscriptionPushConfigArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<SubscriptionPushConfigOidcTokenArgs> oidcToken;
 
     public Output<SubscriptionPushConfigOidcTokenArgs> getOidcToken() {
-        return this.oidcToken == null ? Output.empty() : this.oidcToken;
+        return this.oidcToken == null ? Codegen.empty() : this.oidcToken;
     }
 
     /**
@@ -80,9 +81,9 @@ public final class SubscriptionPushConfigArgs extends io.pulumi.resources.Resour
     }
 
     private SubscriptionPushConfigArgs() {
-        this.attributes = Output.empty();
-        this.oidcToken = Output.empty();
-        this.pushEndpoint = Output.empty();
+        this.attributes = Codegen.empty();
+        this.oidcToken = Codegen.empty();
+        this.pushEndpoint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class SubscriptionPushConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Output.ofNullable(attributes);
+            this.attributes = Codegen.ofNullable(attributes);
             return this;
         }
         public Builder oidcToken(@Nullable Output<SubscriptionPushConfigOidcTokenArgs> oidcToken) {
@@ -122,7 +123,7 @@ public final class SubscriptionPushConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder oidcToken(@Nullable SubscriptionPushConfigOidcTokenArgs oidcToken) {
-            this.oidcToken = Output.ofNullable(oidcToken);
+            this.oidcToken = Codegen.ofNullable(oidcToken);
             return this;
         }
         public Builder pushEndpoint(Output<String> pushEndpoint) {

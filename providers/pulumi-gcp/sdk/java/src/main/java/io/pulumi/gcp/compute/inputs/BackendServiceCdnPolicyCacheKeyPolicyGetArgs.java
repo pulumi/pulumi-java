@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
       private final @Nullable Output<Boolean> includeHost;
 
     public Output<Boolean> getIncludeHost() {
-        return this.includeHost == null ? Output.empty() : this.includeHost;
+        return this.includeHost == null ? Codegen.empty() : this.includeHost;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
       private final @Nullable Output<Boolean> includeProtocol;
 
     public Output<Boolean> getIncludeProtocol() {
-        return this.includeProtocol == null ? Output.empty() : this.includeProtocol;
+        return this.includeProtocol == null ? Codegen.empty() : this.includeProtocol;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
       private final @Nullable Output<Boolean> includeQueryString;
 
     public Output<Boolean> getIncludeQueryString() {
-        return this.includeQueryString == null ? Output.empty() : this.includeQueryString;
+        return this.includeQueryString == null ? Codegen.empty() : this.includeQueryString;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
       private final @Nullable Output<List<String>> queryStringBlacklists;
 
     public Output<List<String>> getQueryStringBlacklists() {
-        return this.queryStringBlacklists == null ? Output.empty() : this.queryStringBlacklists;
+        return this.queryStringBlacklists == null ? Codegen.empty() : this.queryStringBlacklists;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
       private final @Nullable Output<List<String>> queryStringWhitelists;
 
     public Output<List<String>> getQueryStringWhitelists() {
-        return this.queryStringWhitelists == null ? Output.empty() : this.queryStringWhitelists;
+        return this.queryStringWhitelists == null ? Codegen.empty() : this.queryStringWhitelists;
     }
 
     public BackendServiceCdnPolicyCacheKeyPolicyGetArgs(
@@ -98,11 +99,11 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
     }
 
     private BackendServiceCdnPolicyCacheKeyPolicyGetArgs() {
-        this.includeHost = Output.empty();
-        this.includeProtocol = Output.empty();
-        this.includeQueryString = Output.empty();
-        this.queryStringBlacklists = Output.empty();
-        this.queryStringWhitelists = Output.empty();
+        this.includeHost = Codegen.empty();
+        this.includeProtocol = Codegen.empty();
+        this.includeQueryString = Codegen.empty();
+        this.queryStringBlacklists = Codegen.empty();
+        this.queryStringWhitelists = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -138,7 +139,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
             return this;
         }
         public Builder includeHost(@Nullable Boolean includeHost) {
-            this.includeHost = Output.ofNullable(includeHost);
+            this.includeHost = Codegen.ofNullable(includeHost);
             return this;
         }
         public Builder includeProtocol(@Nullable Output<Boolean> includeProtocol) {
@@ -146,7 +147,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
             return this;
         }
         public Builder includeProtocol(@Nullable Boolean includeProtocol) {
-            this.includeProtocol = Output.ofNullable(includeProtocol);
+            this.includeProtocol = Codegen.ofNullable(includeProtocol);
             return this;
         }
         public Builder includeQueryString(@Nullable Output<Boolean> includeQueryString) {
@@ -154,7 +155,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
             return this;
         }
         public Builder includeQueryString(@Nullable Boolean includeQueryString) {
-            this.includeQueryString = Output.ofNullable(includeQueryString);
+            this.includeQueryString = Codegen.ofNullable(includeQueryString);
             return this;
         }
         public Builder queryStringBlacklists(@Nullable Output<List<String>> queryStringBlacklists) {
@@ -162,7 +163,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
             return this;
         }
         public Builder queryStringBlacklists(@Nullable List<String> queryStringBlacklists) {
-            this.queryStringBlacklists = Output.ofNullable(queryStringBlacklists);
+            this.queryStringBlacklists = Codegen.ofNullable(queryStringBlacklists);
             return this;
         }
         public Builder queryStringBlacklists(String... queryStringBlacklists) {
@@ -173,7 +174,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
             return this;
         }
         public Builder queryStringWhitelists(@Nullable List<String> queryStringWhitelists) {
-            this.queryStringWhitelists = Output.ofNullable(queryStringWhitelists);
+            this.queryStringWhitelists = Codegen.ofNullable(queryStringWhitelists);
             return this;
         }
         public Builder queryStringWhitelists(String... queryStringWhitelists) {

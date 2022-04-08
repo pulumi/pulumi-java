@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class FhirStoreIamPolicyArgs extends io.pulumi.resources.ResourceAr
     }
 
     private FhirStoreIamPolicyArgs() {
-        this.fhirStoreId = Output.empty();
-        this.policyData = Output.empty();
+        this.fhirStoreId = Codegen.empty();
+        this.policyData = Codegen.empty();
     }
 
     public static Builder builder() {

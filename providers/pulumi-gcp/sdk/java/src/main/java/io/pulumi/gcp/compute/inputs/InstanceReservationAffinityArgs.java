@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.InstanceReservationAffinitySpecificReservationArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class InstanceReservationAffinityArgs extends io.pulumi.resources.R
       private final @Nullable Output<InstanceReservationAffinitySpecificReservationArgs> specificReservation;
 
     public Output<InstanceReservationAffinitySpecificReservationArgs> getSpecificReservation() {
-        return this.specificReservation == null ? Output.empty() : this.specificReservation;
+        return this.specificReservation == null ? Codegen.empty() : this.specificReservation;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class InstanceReservationAffinityArgs extends io.pulumi.resources.R
     }
 
     private InstanceReservationAffinityArgs() {
-        this.specificReservation = Output.empty();
-        this.type = Output.empty();
+        this.specificReservation = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class InstanceReservationAffinityArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder specificReservation(@Nullable InstanceReservationAffinitySpecificReservationArgs specificReservation) {
-            this.specificReservation = Output.ofNullable(specificReservation);
+            this.specificReservation = Codegen.ofNullable(specificReservation);
             return this;
         }
         public Builder type(Output<String> type) {

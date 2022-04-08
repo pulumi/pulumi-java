@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class ApplicationUrlDispatchRulesDispatchRuleGetArgs extends io.pul
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
-        return this.domain == null ? Output.empty() : this.domain;
+        return this.domain == null ? Codegen.empty() : this.domain;
     }
 
     /**
@@ -60,9 +61,9 @@ public final class ApplicationUrlDispatchRulesDispatchRuleGetArgs extends io.pul
     }
 
     private ApplicationUrlDispatchRulesDispatchRuleGetArgs() {
-        this.domain = Output.empty();
-        this.path = Output.empty();
-        this.service = Output.empty();
+        this.domain = Codegen.empty();
+        this.path = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class ApplicationUrlDispatchRulesDispatchRuleGetArgs extends io.pul
             return this;
         }
         public Builder domain(@Nullable String domain) {
-            this.domain = Output.ofNullable(domain);
+            this.domain = Codegen.ofNullable(domain);
             return this;
         }
         public Builder path(Output<String> path) {

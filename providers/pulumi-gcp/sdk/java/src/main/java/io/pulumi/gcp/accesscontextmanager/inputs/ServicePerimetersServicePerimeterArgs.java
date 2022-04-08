@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterSpecArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterStatusArgs;
 import java.lang.Boolean;
@@ -26,7 +27,7 @@ public final class ServicePerimetersServicePerimeterArgs extends io.pulumi.resou
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ServicePerimetersServicePerimeterArgs extends io.pulumi.resou
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class ServicePerimetersServicePerimeterArgs extends io.pulumi.resou
       private final @Nullable Output<String> perimeterType;
 
     public Output<String> getPerimeterType() {
-        return this.perimeterType == null ? Output.empty() : this.perimeterType;
+        return this.perimeterType == null ? Codegen.empty() : this.perimeterType;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class ServicePerimetersServicePerimeterArgs extends io.pulumi.resou
       private final @Nullable Output<ServicePerimetersServicePerimeterSpecArgs> spec;
 
     public Output<ServicePerimetersServicePerimeterSpecArgs> getSpec() {
-        return this.spec == null ? Output.empty() : this.spec;
+        return this.spec == null ? Codegen.empty() : this.spec;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class ServicePerimetersServicePerimeterArgs extends io.pulumi.resou
       private final @Nullable Output<ServicePerimetersServicePerimeterStatusArgs> status;
 
     public Output<ServicePerimetersServicePerimeterStatusArgs> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -129,7 +130,7 @@ public final class ServicePerimetersServicePerimeterArgs extends io.pulumi.resou
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class ServicePerimetersServicePerimeterArgs extends io.pulumi.resou
       private final @Nullable Output<Boolean> useExplicitDryRunSpec;
 
     public Output<Boolean> getUseExplicitDryRunSpec() {
-        return this.useExplicitDryRunSpec == null ? Output.empty() : this.useExplicitDryRunSpec;
+        return this.useExplicitDryRunSpec == null ? Codegen.empty() : this.useExplicitDryRunSpec;
     }
 
     public ServicePerimetersServicePerimeterArgs(
@@ -173,15 +174,15 @@ public final class ServicePerimetersServicePerimeterArgs extends io.pulumi.resou
     }
 
     private ServicePerimetersServicePerimeterArgs() {
-        this.createTime = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.perimeterType = Output.empty();
-        this.spec = Output.empty();
-        this.status = Output.empty();
-        this.title = Output.empty();
-        this.updateTime = Output.empty();
-        this.useExplicitDryRunSpec = Output.empty();
+        this.createTime = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.perimeterType = Codegen.empty();
+        this.spec = Codegen.empty();
+        this.status = Codegen.empty();
+        this.title = Codegen.empty();
+        this.updateTime = Codegen.empty();
+        this.useExplicitDryRunSpec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -225,7 +226,7 @@ public final class ServicePerimetersServicePerimeterArgs extends io.pulumi.resou
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -233,7 +234,7 @@ public final class ServicePerimetersServicePerimeterArgs extends io.pulumi.resou
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -249,7 +250,7 @@ public final class ServicePerimetersServicePerimeterArgs extends io.pulumi.resou
             return this;
         }
         public Builder perimeterType(@Nullable String perimeterType) {
-            this.perimeterType = Output.ofNullable(perimeterType);
+            this.perimeterType = Codegen.ofNullable(perimeterType);
             return this;
         }
         public Builder spec(@Nullable Output<ServicePerimetersServicePerimeterSpecArgs> spec) {
@@ -257,7 +258,7 @@ public final class ServicePerimetersServicePerimeterArgs extends io.pulumi.resou
             return this;
         }
         public Builder spec(@Nullable ServicePerimetersServicePerimeterSpecArgs spec) {
-            this.spec = Output.ofNullable(spec);
+            this.spec = Codegen.ofNullable(spec);
             return this;
         }
         public Builder status(@Nullable Output<ServicePerimetersServicePerimeterStatusArgs> status) {
@@ -265,7 +266,7 @@ public final class ServicePerimetersServicePerimeterArgs extends io.pulumi.resou
             return this;
         }
         public Builder status(@Nullable ServicePerimetersServicePerimeterStatusArgs status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder title(Output<String> title) {
@@ -281,7 +282,7 @@ public final class ServicePerimetersServicePerimeterArgs extends io.pulumi.resou
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }
         public Builder useExplicitDryRunSpec(@Nullable Output<Boolean> useExplicitDryRunSpec) {
@@ -289,7 +290,7 @@ public final class ServicePerimetersServicePerimeterArgs extends io.pulumi.resou
             return this;
         }
         public Builder useExplicitDryRunSpec(@Nullable Boolean useExplicitDryRunSpec) {
-            this.useExplicitDryRunSpec = Output.ofNullable(useExplicitDryRunSpec);
+            this.useExplicitDryRunSpec = Codegen.ofNullable(useExplicitDryRunSpec);
             return this;
         }        public ServicePerimetersServicePerimeterArgs build() {
             return new ServicePerimetersServicePerimeterArgs(createTime, description, name, perimeterType, spec, status, title, updateTime, useExplicitDryRunSpec);

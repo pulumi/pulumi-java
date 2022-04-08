@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.RegionBackendServiceBackendGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionBackendServiceCdnPolicyGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionBackendServiceCircuitBreakersGetArgs;
@@ -38,7 +39,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> affinityCookieTtlSec;
 
     public Output<Integer> getAffinityCookieTtlSec() {
-        return this.affinityCookieTtlSec == null ? Output.empty() : this.affinityCookieTtlSec;
+        return this.affinityCookieTtlSec == null ? Codegen.empty() : this.affinityCookieTtlSec;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<RegionBackendServiceBackendGetArgs>> backends;
 
     public Output<List<RegionBackendServiceBackendGetArgs>> getBackends() {
-        return this.backends == null ? Output.empty() : this.backends;
+        return this.backends == null ? Codegen.empty() : this.backends;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<RegionBackendServiceCdnPolicyGetArgs> cdnPolicy;
 
     public Output<RegionBackendServiceCdnPolicyGetArgs> getCdnPolicy() {
-        return this.cdnPolicy == null ? Output.empty() : this.cdnPolicy;
+        return this.cdnPolicy == null ? Codegen.empty() : this.cdnPolicy;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<RegionBackendServiceCircuitBreakersGetArgs> circuitBreakers;
 
     public Output<RegionBackendServiceCircuitBreakersGetArgs> getCircuitBreakers() {
-        return this.circuitBreakers == null ? Output.empty() : this.circuitBreakers;
+        return this.circuitBreakers == null ? Codegen.empty() : this.circuitBreakers;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> connectionDrainingTimeoutSec;
 
     public Output<Integer> getConnectionDrainingTimeoutSec() {
-        return this.connectionDrainingTimeoutSec == null ? Output.empty() : this.connectionDrainingTimeoutSec;
+        return this.connectionDrainingTimeoutSec == null ? Codegen.empty() : this.connectionDrainingTimeoutSec;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<RegionBackendServiceConnectionTrackingPolicyGetArgs> connectionTrackingPolicy;
 
     public Output<RegionBackendServiceConnectionTrackingPolicyGetArgs> getConnectionTrackingPolicy() {
-        return this.connectionTrackingPolicy == null ? Output.empty() : this.connectionTrackingPolicy;
+        return this.connectionTrackingPolicy == null ? Codegen.empty() : this.connectionTrackingPolicy;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<RegionBackendServiceConsistentHashGetArgs> consistentHash;
 
     public Output<RegionBackendServiceConsistentHashGetArgs> getConsistentHash() {
-        return this.consistentHash == null ? Output.empty() : this.consistentHash;
+        return this.consistentHash == null ? Codegen.empty() : this.consistentHash;
     }
 
     /**
@@ -130,7 +131,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
+        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
     /**
@@ -142,7 +143,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -153,7 +154,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> enableCdn;
 
     public Output<Boolean> getEnableCdn() {
-        return this.enableCdn == null ? Output.empty() : this.enableCdn;
+        return this.enableCdn == null ? Codegen.empty() : this.enableCdn;
     }
 
     /**
@@ -165,7 +166,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<RegionBackendServiceFailoverPolicyGetArgs> failoverPolicy;
 
     public Output<RegionBackendServiceFailoverPolicyGetArgs> getFailoverPolicy() {
-        return this.failoverPolicy == null ? Output.empty() : this.failoverPolicy;
+        return this.failoverPolicy == null ? Codegen.empty() : this.failoverPolicy;
     }
 
     /**
@@ -176,7 +177,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> fingerprint;
 
     public Output<String> getFingerprint() {
-        return this.fingerprint == null ? Output.empty() : this.fingerprint;
+        return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
     }
 
     /**
@@ -191,7 +192,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> healthChecks;
 
     public Output<String> getHealthChecks() {
-        return this.healthChecks == null ? Output.empty() : this.healthChecks;
+        return this.healthChecks == null ? Codegen.empty() : this.healthChecks;
     }
 
     /**
@@ -203,7 +204,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<RegionBackendServiceIapGetArgs> iap;
 
     public Output<RegionBackendServiceIapGetArgs> getIap() {
-        return this.iap == null ? Output.empty() : this.iap;
+        return this.iap == null ? Codegen.empty() : this.iap;
     }
 
     /**
@@ -219,7 +220,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> loadBalancingScheme;
 
     public Output<String> getLoadBalancingScheme() {
-        return this.loadBalancingScheme == null ? Output.empty() : this.loadBalancingScheme;
+        return this.loadBalancingScheme == null ? Codegen.empty() : this.loadBalancingScheme;
     }
 
     /**
@@ -249,7 +250,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> localityLbPolicy;
 
     public Output<String> getLocalityLbPolicy() {
-        return this.localityLbPolicy == null ? Output.empty() : this.localityLbPolicy;
+        return this.localityLbPolicy == null ? Codegen.empty() : this.localityLbPolicy;
     }
 
     /**
@@ -262,7 +263,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<RegionBackendServiceLogConfigGetArgs> logConfig;
 
     public Output<RegionBackendServiceLogConfigGetArgs> getLogConfig() {
-        return this.logConfig == null ? Output.empty() : this.logConfig;
+        return this.logConfig == null ? Codegen.empty() : this.logConfig;
     }
 
     /**
@@ -273,7 +274,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -285,7 +286,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -299,7 +300,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<RegionBackendServiceOutlierDetectionGetArgs> outlierDetection;
 
     public Output<RegionBackendServiceOutlierDetectionGetArgs> getOutlierDetection() {
-        return this.outlierDetection == null ? Output.empty() : this.outlierDetection;
+        return this.outlierDetection == null ? Codegen.empty() : this.outlierDetection;
     }
 
     /**
@@ -316,7 +317,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> portName;
 
     public Output<String> getPortName() {
-        return this.portName == null ? Output.empty() : this.portName;
+        return this.portName == null ? Codegen.empty() : this.portName;
     }
 
     /**
@@ -328,7 +329,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -342,7 +343,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     /**
@@ -354,7 +355,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -365,7 +366,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -378,7 +379,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> sessionAffinity;
 
     public Output<String> getSessionAffinity() {
-        return this.sessionAffinity == null ? Output.empty() : this.sessionAffinity;
+        return this.sessionAffinity == null ? Codegen.empty() : this.sessionAffinity;
     }
 
     /**
@@ -390,7 +391,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> timeoutSec;
 
     public Output<Integer> getTimeoutSec() {
-        return this.timeoutSec == null ? Output.empty() : this.timeoutSec;
+        return this.timeoutSec == null ? Codegen.empty() : this.timeoutSec;
     }
 
     public RegionBackendServiceState(
@@ -451,33 +452,33 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
     }
 
     private RegionBackendServiceState() {
-        this.affinityCookieTtlSec = Output.empty();
-        this.backends = Output.empty();
-        this.cdnPolicy = Output.empty();
-        this.circuitBreakers = Output.empty();
-        this.connectionDrainingTimeoutSec = Output.empty();
-        this.connectionTrackingPolicy = Output.empty();
-        this.consistentHash = Output.empty();
-        this.creationTimestamp = Output.empty();
-        this.description = Output.empty();
-        this.enableCdn = Output.empty();
-        this.failoverPolicy = Output.empty();
-        this.fingerprint = Output.empty();
-        this.healthChecks = Output.empty();
-        this.iap = Output.empty();
-        this.loadBalancingScheme = Output.empty();
-        this.localityLbPolicy = Output.empty();
-        this.logConfig = Output.empty();
-        this.name = Output.empty();
-        this.network = Output.empty();
-        this.outlierDetection = Output.empty();
-        this.portName = Output.empty();
-        this.project = Output.empty();
-        this.protocol = Output.empty();
-        this.region = Output.empty();
-        this.selfLink = Output.empty();
-        this.sessionAffinity = Output.empty();
-        this.timeoutSec = Output.empty();
+        this.affinityCookieTtlSec = Codegen.empty();
+        this.backends = Codegen.empty();
+        this.cdnPolicy = Codegen.empty();
+        this.circuitBreakers = Codegen.empty();
+        this.connectionDrainingTimeoutSec = Codegen.empty();
+        this.connectionTrackingPolicy = Codegen.empty();
+        this.consistentHash = Codegen.empty();
+        this.creationTimestamp = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enableCdn = Codegen.empty();
+        this.failoverPolicy = Codegen.empty();
+        this.fingerprint = Codegen.empty();
+        this.healthChecks = Codegen.empty();
+        this.iap = Codegen.empty();
+        this.loadBalancingScheme = Codegen.empty();
+        this.localityLbPolicy = Codegen.empty();
+        this.logConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.network = Codegen.empty();
+        this.outlierDetection = Codegen.empty();
+        this.portName = Codegen.empty();
+        this.project = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.region = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.sessionAffinity = Codegen.empty();
+        this.timeoutSec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -557,7 +558,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder affinityCookieTtlSec(@Nullable Integer affinityCookieTtlSec) {
-            this.affinityCookieTtlSec = Output.ofNullable(affinityCookieTtlSec);
+            this.affinityCookieTtlSec = Codegen.ofNullable(affinityCookieTtlSec);
             return this;
         }
         public Builder backends(@Nullable Output<List<RegionBackendServiceBackendGetArgs>> backends) {
@@ -565,7 +566,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder backends(@Nullable List<RegionBackendServiceBackendGetArgs> backends) {
-            this.backends = Output.ofNullable(backends);
+            this.backends = Codegen.ofNullable(backends);
             return this;
         }
         public Builder backends(RegionBackendServiceBackendGetArgs... backends) {
@@ -576,7 +577,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder cdnPolicy(@Nullable RegionBackendServiceCdnPolicyGetArgs cdnPolicy) {
-            this.cdnPolicy = Output.ofNullable(cdnPolicy);
+            this.cdnPolicy = Codegen.ofNullable(cdnPolicy);
             return this;
         }
         public Builder circuitBreakers(@Nullable Output<RegionBackendServiceCircuitBreakersGetArgs> circuitBreakers) {
@@ -584,7 +585,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder circuitBreakers(@Nullable RegionBackendServiceCircuitBreakersGetArgs circuitBreakers) {
-            this.circuitBreakers = Output.ofNullable(circuitBreakers);
+            this.circuitBreakers = Codegen.ofNullable(circuitBreakers);
             return this;
         }
         public Builder connectionDrainingTimeoutSec(@Nullable Output<Integer> connectionDrainingTimeoutSec) {
@@ -592,7 +593,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder connectionDrainingTimeoutSec(@Nullable Integer connectionDrainingTimeoutSec) {
-            this.connectionDrainingTimeoutSec = Output.ofNullable(connectionDrainingTimeoutSec);
+            this.connectionDrainingTimeoutSec = Codegen.ofNullable(connectionDrainingTimeoutSec);
             return this;
         }
         public Builder connectionTrackingPolicy(@Nullable Output<RegionBackendServiceConnectionTrackingPolicyGetArgs> connectionTrackingPolicy) {
@@ -600,7 +601,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder connectionTrackingPolicy(@Nullable RegionBackendServiceConnectionTrackingPolicyGetArgs connectionTrackingPolicy) {
-            this.connectionTrackingPolicy = Output.ofNullable(connectionTrackingPolicy);
+            this.connectionTrackingPolicy = Codegen.ofNullable(connectionTrackingPolicy);
             return this;
         }
         public Builder consistentHash(@Nullable Output<RegionBackendServiceConsistentHashGetArgs> consistentHash) {
@@ -608,7 +609,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder consistentHash(@Nullable RegionBackendServiceConsistentHashGetArgs consistentHash) {
-            this.consistentHash = Output.ofNullable(consistentHash);
+            this.consistentHash = Codegen.ofNullable(consistentHash);
             return this;
         }
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
@@ -616,7 +617,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Output.ofNullable(creationTimestamp);
+            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -624,7 +625,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enableCdn(@Nullable Output<Boolean> enableCdn) {
@@ -632,7 +633,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder enableCdn(@Nullable Boolean enableCdn) {
-            this.enableCdn = Output.ofNullable(enableCdn);
+            this.enableCdn = Codegen.ofNullable(enableCdn);
             return this;
         }
         public Builder failoverPolicy(@Nullable Output<RegionBackendServiceFailoverPolicyGetArgs> failoverPolicy) {
@@ -640,7 +641,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder failoverPolicy(@Nullable RegionBackendServiceFailoverPolicyGetArgs failoverPolicy) {
-            this.failoverPolicy = Output.ofNullable(failoverPolicy);
+            this.failoverPolicy = Codegen.ofNullable(failoverPolicy);
             return this;
         }
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
@@ -648,7 +649,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Output.ofNullable(fingerprint);
+            this.fingerprint = Codegen.ofNullable(fingerprint);
             return this;
         }
         public Builder healthChecks(@Nullable Output<String> healthChecks) {
@@ -656,7 +657,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder healthChecks(@Nullable String healthChecks) {
-            this.healthChecks = Output.ofNullable(healthChecks);
+            this.healthChecks = Codegen.ofNullable(healthChecks);
             return this;
         }
         public Builder iap(@Nullable Output<RegionBackendServiceIapGetArgs> iap) {
@@ -664,7 +665,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder iap(@Nullable RegionBackendServiceIapGetArgs iap) {
-            this.iap = Output.ofNullable(iap);
+            this.iap = Codegen.ofNullable(iap);
             return this;
         }
         public Builder loadBalancingScheme(@Nullable Output<String> loadBalancingScheme) {
@@ -672,7 +673,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder loadBalancingScheme(@Nullable String loadBalancingScheme) {
-            this.loadBalancingScheme = Output.ofNullable(loadBalancingScheme);
+            this.loadBalancingScheme = Codegen.ofNullable(loadBalancingScheme);
             return this;
         }
         public Builder localityLbPolicy(@Nullable Output<String> localityLbPolicy) {
@@ -680,7 +681,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder localityLbPolicy(@Nullable String localityLbPolicy) {
-            this.localityLbPolicy = Output.ofNullable(localityLbPolicy);
+            this.localityLbPolicy = Codegen.ofNullable(localityLbPolicy);
             return this;
         }
         public Builder logConfig(@Nullable Output<RegionBackendServiceLogConfigGetArgs> logConfig) {
@@ -688,7 +689,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder logConfig(@Nullable RegionBackendServiceLogConfigGetArgs logConfig) {
-            this.logConfig = Output.ofNullable(logConfig);
+            this.logConfig = Codegen.ofNullable(logConfig);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -696,7 +697,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -704,7 +705,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder outlierDetection(@Nullable Output<RegionBackendServiceOutlierDetectionGetArgs> outlierDetection) {
@@ -712,7 +713,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder outlierDetection(@Nullable RegionBackendServiceOutlierDetectionGetArgs outlierDetection) {
-            this.outlierDetection = Output.ofNullable(outlierDetection);
+            this.outlierDetection = Codegen.ofNullable(outlierDetection);
             return this;
         }
         public Builder portName(@Nullable Output<String> portName) {
@@ -720,7 +721,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder portName(@Nullable String portName) {
-            this.portName = Output.ofNullable(portName);
+            this.portName = Codegen.ofNullable(portName);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -728,7 +729,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder protocol(@Nullable Output<String> protocol) {
@@ -736,7 +737,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -744,7 +745,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -752,7 +753,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder sessionAffinity(@Nullable Output<String> sessionAffinity) {
@@ -760,7 +761,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder sessionAffinity(@Nullable String sessionAffinity) {
-            this.sessionAffinity = Output.ofNullable(sessionAffinity);
+            this.sessionAffinity = Codegen.ofNullable(sessionAffinity);
             return this;
         }
         public Builder timeoutSec(@Nullable Output<Integer> timeoutSec) {
@@ -768,7 +769,7 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder timeoutSec(@Nullable Integer timeoutSec) {
-            this.timeoutSec = Output.ofNullable(timeoutSec);
+            this.timeoutSec = Codegen.ofNullable(timeoutSec);
             return this;
         }        public RegionBackendServiceState build() {
             return new RegionBackendServiceState(affinityCookieTtlSec, backends, cdnPolicy, circuitBreakers, connectionDrainingTimeoutSec, connectionTrackingPolicy, consistentHash, creationTimestamp, description, enableCdn, failoverPolicy, fingerprint, healthChecks, iap, loadBalancingScheme, localityLbPolicy, logConfig, name, network, outlierDetection, portName, project, protocol, region, selfLink, sessionAffinity, timeoutSec);
