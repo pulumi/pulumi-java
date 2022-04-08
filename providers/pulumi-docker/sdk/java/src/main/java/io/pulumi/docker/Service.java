@@ -22,6 +22,9 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * ### Example Assuming you created a `service` as follows #!/bin/bash docker service create --name foo -p 8080:80 nginx # prints th ID 4pcphbxkfn2rffhbhe6czytgi you provide the definition for the resource as follows terraform resource "docker_service" "foo" {
@@ -30,9 +33,17 @@ import javax.annotation.Nullable;
  * 
  *  task_spec {
  * 
+ * 
+ * 
  *  container_spec {
  * 
+ * 
+ * 
+ * 
+ * 
  *  image = "nginx"
+ * 
+ * 
  * 
  *  }
  * 
@@ -40,13 +51,27 @@ import javax.annotation.Nullable;
  * 
  *  endpoint_spec {
  * 
+ * 
+ * 
  *  ports {
+ * 
+ * 
+ * 
+ * 
  * 
  *  target_port
  * 
+ * 
+ * 
  * = "80"
  * 
+ * 
+ * 
+ * 
+ * 
  *  published_port = "8080"
+ * 
+ * 
  * 
  *  }
  * 
@@ -56,6 +81,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import docker:index/service:Service foo 4pcphbxkfn2rffhbhe6czytgi
  * ```
  * 
+ *  
  */
 @ResourceType(type="docker:index/service:Service")
 public class Service extends io.pulumi.resources.CustomResource {

@@ -18,7 +18,6 @@ public final class ContainerNetworkDataArgs extends io.pulumi.resources.Resource
     /**
      * @Deprecated
      * Use `network_data` instead. The network gateway of the container as read from its NetworkSettings.
-     * 
      */
     @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
     @Import(name="gateway")
@@ -46,7 +45,6 @@ public final class ContainerNetworkDataArgs extends io.pulumi.resources.Resource
     /**
      * @Deprecated
      * Use `network_data` instead. The IP address of the container's first network it.
-     * 
      */
     @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
     @Import(name="ipAddress")
@@ -60,7 +58,6 @@ public final class ContainerNetworkDataArgs extends io.pulumi.resources.Resource
     /**
      * @Deprecated
      * Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings.
-     * 
      */
     @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
     @Import(name="ipPrefixLength")

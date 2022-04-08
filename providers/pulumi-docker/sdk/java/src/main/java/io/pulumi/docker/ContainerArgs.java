@@ -273,7 +273,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      * @Deprecated
      * The --link flag is a legacy feature of Docker. It may eventually be removed.
-     * 
      */
     @Deprecated /* The --link flag is a legacy feature of Docker. It may eventually be removed. */
     @Import(name="links")
@@ -390,7 +389,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      * @Deprecated
      * Use networks_advanced instead. Will be removed in v3.0.0
-     * 
      */
     @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
     @Import(name="networkAliases")
@@ -417,7 +415,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      * @Deprecated
      * Use networks_advanced instead. Will be removed in v3.0.0
-     * 
      */
     @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
     @Import(name="networks")

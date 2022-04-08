@@ -15,10 +15,12 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
- * Import is supported using the following syntax#!/bin/bash # Docker secret cannot be imported as the secret data, once set, is never exposed again.
- * 
+ * Import is supported using the following syntax#!/bin/bash # Docker secret cannot be imported as the secret data, once set, is never exposed again. 
  */
 @ResourceType(type="docker:index/secret:Secret")
 public class Secret extends io.pulumi.resources.CustomResource {

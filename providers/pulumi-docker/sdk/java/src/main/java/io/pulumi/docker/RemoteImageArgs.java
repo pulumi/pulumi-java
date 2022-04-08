@@ -68,7 +68,6 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      * @Deprecated
      * Use field pull_triggers instead
-     * 
      */
     @Deprecated /* Use field pull_triggers instead */
     @Import(name="pullTrigger")
