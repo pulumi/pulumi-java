@@ -11,8 +11,8 @@ class OutputDataTest {
 
     @Test
     void testHashCodeEqualsContract() {
-        assertThat(OutputData.of((Object)null)).isEqualTo(OutputData.of((Object)null));
-        assertThat(OutputData.of((Object)null)).isNotEqualTo(OutputData.of(1));
+        assertThat(OutputData.ofNullable(null)).isEqualTo(OutputData.ofNullable(null));
+        assertThat(OutputData.ofNullable(null)).isNotEqualTo(OutputData.of(1));
     }
 
     @Test
