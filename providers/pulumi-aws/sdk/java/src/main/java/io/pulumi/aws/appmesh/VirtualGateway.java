@@ -17,7 +17,268 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS App Mesh virtual gateway resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.appmesh.VirtualGateway("example", {
+ *     meshName: "example-service-mesh",
+ *     spec: {
+ *         listener: {
+ *             portMapping: {
+ *                 port: 8080,
+ *                 protocol: "http",
+ *             },
+ *         },
+ *     },
+ *     tags: {
+ *         Environment: "test",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.appmesh.VirtualGateway("example",
+ *     mesh_name="example-service-mesh",
+ *     spec=aws.appmesh.VirtualGatewaySpecArgs(
+ *         listener=aws.appmesh.VirtualGatewaySpecListenerArgs(
+ *             port_mapping=aws.appmesh.VirtualGatewaySpecListenerPortMappingArgs(
+ *                 port=8080,
+ *                 protocol="http",
+ *             ),
+ *         ),
+ *     ),
+ *     tags={
+ *         "Environment": "test",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.AppMesh.VirtualGateway("example", new Aws.AppMesh.VirtualGatewayArgs
+ *         {
+ *             MeshName = "example-service-mesh",
+ *             Spec = new Aws.AppMesh.Inputs.VirtualGatewaySpecArgs
+ *             {
+ *                 Listener = new Aws.AppMesh.Inputs.VirtualGatewaySpecListenerArgs
+ *                 {
+ *                     PortMapping = new Aws.AppMesh.Inputs.VirtualGatewaySpecListenerPortMappingArgs
+ *                     {
+ *                         Port = 8080,
+ *                         Protocol = "http",
+ *                     },
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Environment", "test" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appmesh"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appmesh.NewVirtualGateway(ctx, "example", &appmesh.VirtualGatewayArgs{
+ * 			MeshName: pulumi.String("example-service-mesh"),
+ * 			Spec: &appmesh.VirtualGatewaySpecArgs{
+ * 				Listener: &appmesh.VirtualGatewaySpecListenerArgs{
+ * 					PortMapping: &appmesh.VirtualGatewaySpecListenerPortMappingArgs{
+ * 						Port:     pulumi.Int(8080),
+ * 						Protocol: pulumi.String("http"),
+ * 					},
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Environment": pulumi.String("test"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Access Logs and TLS
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.appmesh.VirtualGateway("example", {
+ *     meshName: "example-service-mesh",
+ *     spec: {
+ *         listener: {
+ *             portMapping: {
+ *                 port: 8080,
+ *                 protocol: "http",
+ *             },
+ *             tls: {
+ *                 certificate: {
+ *                     acm: {
+ *                         certificateArn: aws_acm_certificate.example.arn,
+ *                     },
+ *                 },
+ *                 mode: "STRICT",
+ *             },
+ *         },
+ *         logging: {
+ *             accessLog: {
+ *                 file: {
+ *                     path: "/var/log/access.log",
+ *                 },
+ *             },
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.appmesh.VirtualGateway("example",
+ *     mesh_name="example-service-mesh",
+ *     spec=aws.appmesh.VirtualGatewaySpecArgs(
+ *         listener=aws.appmesh.VirtualGatewaySpecListenerArgs(
+ *             port_mapping=aws.appmesh.VirtualGatewaySpecListenerPortMappingArgs(
+ *                 port=8080,
+ *                 protocol="http",
+ *             ),
+ *             tls=aws.appmesh.VirtualGatewaySpecListenerTlsArgs(
+ *                 certificate=aws.appmesh.VirtualGatewaySpecListenerTlsCertificateArgs(
+ *                     acm=aws.appmesh.VirtualGatewaySpecListenerTlsCertificateAcmArgs(
+ *                         certificate_arn=aws_acm_certificate["example"]["arn"],
+ *                     ),
+ *                 ),
+ *                 mode="STRICT",
+ *             ),
+ *         ),
+ *         logging=aws.appmesh.VirtualGatewaySpecLoggingArgs(
+ *             access_log=aws.appmesh.VirtualGatewaySpecLoggingAccessLogArgs(
+ *                 file=aws.appmesh.VirtualGatewaySpecLoggingAccessLogFileArgs(
+ *                     path="/var/log/access.log",
+ *                 ),
+ *             ),
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.AppMesh.VirtualGateway("example", new Aws.AppMesh.VirtualGatewayArgs
+ *         {
+ *             MeshName = "example-service-mesh",
+ *             Spec = new Aws.AppMesh.Inputs.VirtualGatewaySpecArgs
+ *             {
+ *                 Listener = new Aws.AppMesh.Inputs.VirtualGatewaySpecListenerArgs
+ *                 {
+ *                     PortMapping = new Aws.AppMesh.Inputs.VirtualGatewaySpecListenerPortMappingArgs
+ *                     {
+ *                         Port = 8080,
+ *                         Protocol = "http",
+ *                     },
+ *                     Tls = new Aws.AppMesh.Inputs.VirtualGatewaySpecListenerTlsArgs
+ *                     {
+ *                         Certificate = new Aws.AppMesh.Inputs.VirtualGatewaySpecListenerTlsCertificateArgs
+ *                         {
+ *                             Acm = new Aws.AppMesh.Inputs.VirtualGatewaySpecListenerTlsCertificateAcmArgs
+ *                             {
+ *                                 CertificateArn = aws_acm_certificate.Example.Arn,
+ *                             },
+ *                         },
+ *                         Mode = "STRICT",
+ *                     },
+ *                 },
+ *                 Logging = new Aws.AppMesh.Inputs.VirtualGatewaySpecLoggingArgs
+ *                 {
+ *                     AccessLog = new Aws.AppMesh.Inputs.VirtualGatewaySpecLoggingAccessLogArgs
+ *                     {
+ *                         File = new Aws.AppMesh.Inputs.VirtualGatewaySpecLoggingAccessLogFileArgs
+ *                         {
+ *                             Path = "/var/log/access.log",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appmesh"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appmesh.NewVirtualGateway(ctx, "example", &appmesh.VirtualGatewayArgs{
+ * 			MeshName: pulumi.String("example-service-mesh"),
+ * 			Spec: &appmesh.VirtualGatewaySpecArgs{
+ * 				Listener: &appmesh.VirtualGatewaySpecListenerArgs{
+ * 					PortMapping: &appmesh.VirtualGatewaySpecListenerPortMappingArgs{
+ * 						Port:     pulumi.Int(8080),
+ * 						Protocol: pulumi.String("http"),
+ * 					},
+ * 					Tls: &appmesh.VirtualGatewaySpecListenerTlsArgs{
+ * 						Certificate: &appmesh.VirtualGatewaySpecListenerTlsCertificateArgs{
+ * 							Acm: &appmesh.VirtualGatewaySpecListenerTlsCertificateAcmArgs{
+ * 								CertificateArn: pulumi.Any(aws_acm_certificate.Example.Arn),
+ * 							},
+ * 						},
+ * 						Mode: pulumi.String("STRICT"),
+ * 					},
+ * 				},
+ * 				Logging: &appmesh.VirtualGatewaySpecLoggingArgs{
+ * 					AccessLog: &appmesh.VirtualGatewaySpecLoggingAccessLogArgs{
+ * 						File: &appmesh.VirtualGatewaySpecLoggingAccessLogFileArgs{
+ * 							Path: pulumi.String("/var/log/access.log"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,8 +288,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appmesh/virtualGateway:VirtualGateway example mesh/gw1
  * ```
  * 
- *  [1]/docs/providers/aws/index.html
- * 
+ *  [1]/docs/providers/aws/index.html 
  */
 @ResourceType(type="aws:appmesh/virtualGateway:VirtualGateway")
 public class VirtualGateway extends io.pulumi.resources.CustomResource {

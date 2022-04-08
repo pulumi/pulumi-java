@@ -19,7 +19,72 @@ import javax.annotation.Nullable;
  * 
  * For more details, see the [Amazon Kinesis Stream Consumer Documentation](https://docs.aws.amazon.com/streams/latest/dev/amazon-kinesis-consumers.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleStream = new aws.kinesis.Stream("exampleStream", {shardCount: 1});
+ * const exampleStreamConsumer = new aws.kinesis.StreamConsumer("exampleStreamConsumer", {streamArn: exampleStream.arn});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_stream = aws.kinesis.Stream("exampleStream", shard_count=1)
+ * example_stream_consumer = aws.kinesis.StreamConsumer("exampleStreamConsumer", stream_arn=example_stream.arn)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleStream = new Aws.Kinesis.Stream("exampleStream", new Aws.Kinesis.StreamArgs
+ *         {
+ *             ShardCount = 1,
+ *         });
+ *         var exampleStreamConsumer = new Aws.Kinesis.StreamConsumer("exampleStreamConsumer", new Aws.Kinesis.StreamConsumerArgs
+ *         {
+ *             StreamArn = exampleStream.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kinesis"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleStream, err := kinesis.NewStream(ctx, "exampleStream", &kinesis.StreamArgs{
+ * 			ShardCount: pulumi.Int(1),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = kinesis.NewStreamConsumer(ctx, "exampleStreamConsumer", &kinesis.StreamConsumerArgs{
+ * 			StreamArn: exampleStream.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,8 +94,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:kinesis/streamConsumer:StreamConsumer example arn:aws:kinesis:us-west-2:123456789012:stream/example/consumer/example:1616044553
  * ```
  * 
- *  [1]https://docs.aws.amazon.com/streams/latest/dev/amazon-kinesis-consumers.html
- * 
+ *  [1]https://docs.aws.amazon.com/streams/latest/dev/amazon-kinesis-consumers.html 
  */
 @ResourceType(type="aws:kinesis/streamConsumer:StreamConsumer")
 public class StreamConsumer extends io.pulumi.resources.CustomResource {

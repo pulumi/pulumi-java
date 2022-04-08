@@ -15,7 +15,93 @@ import javax.annotation.Nullable;
 /**
  * Provides an environment member to an AWS Cloud9 development environment.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const testEnvironmentEC2 = new aws.cloud9.EnvironmentEC2("testEnvironmentEC2", {instanceType: "t2.micro"});
+ * const testUser = new aws.iam.User("testUser", {});
+ * const testEnvironmentMembership = new aws.cloud9.EnvironmentMembership("testEnvironmentMembership", {
+ *     environmentId: testEnvironmentEC2.id,
+ *     permissions: "read-only",
+ *     userArn: testUser.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_environment_ec2 = aws.cloud9.EnvironmentEC2("testEnvironmentEC2", instance_type="t2.micro")
+ * test_user = aws.iam.User("testUser")
+ * test_environment_membership = aws.cloud9.EnvironmentMembership("testEnvironmentMembership",
+ *     environment_id=test_environment_ec2.id,
+ *     permissions="read-only",
+ *     user_arn=test_user.arn)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testEnvironmentEC2 = new Aws.Cloud9.EnvironmentEC2("testEnvironmentEC2", new Aws.Cloud9.EnvironmentEC2Args
+ *         {
+ *             InstanceType = "t2.micro",
+ *         });
+ *         var testUser = new Aws.Iam.User("testUser", new Aws.Iam.UserArgs
+ *         {
+ *         });
+ *         var testEnvironmentMembership = new Aws.Cloud9.EnvironmentMembership("testEnvironmentMembership", new Aws.Cloud9.EnvironmentMembershipArgs
+ *         {
+ *             EnvironmentId = testEnvironmentEC2.Id,
+ *             Permissions = "read-only",
+ *             UserArn = testUser.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloud9"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		testEnvironmentEC2, err := cloud9.NewEnvironmentEC2(ctx, "testEnvironmentEC2", &cloud9.EnvironmentEC2Args{
+ * 			InstanceType: pulumi.String("t2.micro"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		testUser, err := iam.NewUser(ctx, "testUser", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloud9.NewEnvironmentMembership(ctx, "testEnvironmentMembership", &cloud9.EnvironmentMembershipArgs{
+ * 			EnvironmentId: testEnvironmentEC2.ID(),
+ * 			Permissions:   pulumi.String("read-only"),
+ * 			UserArn:       testUser.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +111,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloud9/environmentMembership:EnvironmentMembership test environment-id#user-arn
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloud9/environmentMembership:EnvironmentMembership")
 public class EnvironmentMembership extends io.pulumi.resources.CustomResource {

@@ -15,6 +15,9 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * ECS cluster capacity providers can be imported using the `cluster_name` attribute. For example
@@ -23,6 +26,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ecs/clusterCapacityProviders:ClusterCapacityProviders example my-cluster
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ecs/clusterCapacityProviders:ClusterCapacityProviders")
 public class ClusterCapacityProviders extends io.pulumi.resources.CustomResource {

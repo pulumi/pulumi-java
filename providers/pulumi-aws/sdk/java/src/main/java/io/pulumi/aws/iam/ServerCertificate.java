@@ -25,7 +25,303 @@ import javax.annotation.Nullable;
  * For information about server certificates in IAM, see [Managing Server
  * Certificates][2] in AWS Documentation.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * **Using certs on file:**
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * from "fs";
+ * 
+ * const testCert = new aws.iam.ServerCertificate("testCert", {
+ *     certificateBody: fs.readFileSync("self-ca-cert.pem"),
+ *     privateKey: fs.readFileSync("test-key.pem"),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_cert = aws.iam.ServerCertificate("testCert",
+ *     certificate_body=(lambda path: open(path).read())("self-ca-cert.pem"),
+ *     private_key=(lambda path: open(path).read())("test-key.pem"))
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testCert = new Aws.Iam.ServerCertificate("testCert", new Aws.Iam.ServerCertificateArgs
+ *         {
+ *             CertificateBody = File.ReadAllText("self-ca-cert.pem"),
+ *             PrivateKey = File.ReadAllText("test-key.pem"),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iam.NewServerCertificate(ctx, "testCert", &iam.ServerCertificateArgs{
+ * 			CertificateBody: readFileOrPanic("self-ca-cert.pem"),
+ * 			PrivateKey:      readFileOrPanic("test-key.pem"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * **Example with cert in-line:**
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const testCertAlt = new aws.iam.ServerCertificate("test_cert_alt", {
+ *     certificateBody: `-----BEGIN CERTIFICATE-----
+ * [......] # cert contents
+ * -----END CERTIFICATE-----
+ * `,
+ *     privateKey: `-----BEGIN RSA PRIVATE KEY-----
+ * [......] # cert contents
+ * -----END RSA PRIVATE KEY-----
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_cert_alt = aws.iam.ServerCertificate("testCertAlt",
+ *     certificate_body="""-----BEGIN CERTIFICATE-----
+ * [......] # cert contents
+ * -----END CERTIFICATE-----
+ * 
+ * """,
+ *     private_key="""-----BEGIN RSA PRIVATE KEY-----
+ * [......] # cert contents
+ * -----END RSA PRIVATE KEY-----
+ * 
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testCertAlt = new Aws.Iam.ServerCertificate("testCertAlt", new Aws.Iam.ServerCertificateArgs
+ *         {
+ *             CertificateBody = @"-----BEGIN CERTIFICATE-----
+ * [......] # cert contents
+ * -----END CERTIFICATE-----
+ * 
+ * ",
+ *             PrivateKey = @"-----BEGIN RSA PRIVATE KEY-----
+ * [......] # cert contents
+ * -----END RSA PRIVATE KEY-----
+ * 
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iam.NewServerCertificate(ctx, "testCertAlt", &iam.ServerCertificateArgs{
+ * 			CertificateBody: pulumi.String(fmt.Sprintf("%v%v%v%v", "-----BEGIN CERTIFICATE-----\n", "[......] # cert contents\n", "-----END CERTIFICATE-----\n", "\n")),
+ * 			PrivateKey:      pulumi.String(fmt.Sprintf("%v%v%v%v", "-----BEGIN RSA PRIVATE KEY-----\n", "[......] # cert contents\n", "-----END RSA PRIVATE KEY-----\n", "\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * **Use in combination with an AWS ELB resource:**
+ * 
+ * Some properties of an IAM Server Certificates cannot be updated while they are
+ * in use. In order for this provider to effectively manage a Certificate in this situation, it is
+ * recommended you utilize the `name_prefix` attribute and enable the
+ * `create_before_destroy` [lifecycle block][lifecycle]. This will allow this provider
+ * to create a new, updated `aws.iam.ServerCertificate` resource and replace it in
+ * dependant resources before attempting to destroy the old version.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * from "fs";
+ * 
+ * const testCert = new aws.iam.ServerCertificate("testCert", {
+ *     namePrefix: "example-cert",
+ *     certificateBody: fs.readFileSync("self-ca-cert.pem"),
+ *     privateKey: fs.readFileSync("test-key.pem"),
+ * });
+ * const ourapp = new aws.elb.LoadBalancer("ourapp", {
+ *     availabilityZones: ["us-west-2a"],
+ *     crossZoneLoadBalancing: true,
+ *     listeners: [{
+ *         instancePort: 8000,
+ *         instanceProtocol: "http",
+ *         lbPort: 443,
+ *         lbProtocol: "https",
+ *         sslCertificateId: testCert.arn,
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_cert = aws.iam.ServerCertificate("testCert",
+ *     name_prefix="example-cert",
+ *     certificate_body=(lambda path: open(path).read())("self-ca-cert.pem"),
+ *     private_key=(lambda path: open(path).read())("test-key.pem"))
+ * ourapp = aws.elb.LoadBalancer("ourapp",
+ *     availability_zones=["us-west-2a"],
+ *     cross_zone_load_balancing=True,
+ *     listeners=[aws.elb.LoadBalancerListenerArgs(
+ *         instance_port=8000,
+ *         instance_protocol="http",
+ *         lb_port=443,
+ *         lb_protocol="https",
+ *         ssl_certificate_id=test_cert.arn,
+ *     )])
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testCert = new Aws.Iam.ServerCertificate("testCert", new Aws.Iam.ServerCertificateArgs
+ *         {
+ *             NamePrefix = "example-cert",
+ *             CertificateBody = File.ReadAllText("self-ca-cert.pem"),
+ *             PrivateKey = File.ReadAllText("test-key.pem"),
+ *         });
+ *         var ourapp = new Aws.Elb.LoadBalancer("ourapp", new Aws.Elb.LoadBalancerArgs
+ *         {
+ *             AvailabilityZones = 
+ *             {
+ *                 "us-west-2a",
+ *             },
+ *             CrossZoneLoadBalancing = true,
+ *             Listeners = 
+ *             {
+ *                 new Aws.Elb.Inputs.LoadBalancerListenerArgs
+ *                 {
+ *                     InstancePort = 8000,
+ *                     InstanceProtocol = "http",
+ *                     LbPort = 443,
+ *                     LbProtocol = "https",
+ *                     SslCertificateId = testCert.Arn,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elb"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		testCert, err := iam.NewServerCertificate(ctx, "testCert", &iam.ServerCertificateArgs{
+ * 			NamePrefix:      pulumi.String("example-cert"),
+ * 			CertificateBody: readFileOrPanic("self-ca-cert.pem"),
+ * 			PrivateKey:      readFileOrPanic("test-key.pem"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = elb.NewLoadBalancer(ctx, "ourapp", &elb.LoadBalancerArgs{
+ * 			AvailabilityZones: pulumi.StringArray{
+ * 				pulumi.String("us-west-2a"),
+ * 			},
+ * 			CrossZoneLoadBalancing: pulumi.Bool(true),
+ * 			Listeners: elb.LoadBalancerListenerArray{
+ * 				&elb.LoadBalancerListenerArgs{
+ * 					InstancePort:     pulumi.Int(8000),
+ * 					InstanceProtocol: pulumi.String("http"),
+ * 					LbPort:           pulumi.Int(443),
+ * 					LbProtocol:       pulumi.String("https"),
+ * 					SslCertificateId: testCert.Arn,
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,8 +331,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:iam/serverCertificate:ServerCertificate certificate example.com-certificate-until-2018
  * ```
  * 
- *  [1]https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html [2]https://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingServerCerts.html [lifecycle]/docs/configuration/resources.html
- * 
+ *  [1]https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html [2]https://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingServerCerts.html [lifecycle]/docs/configuration/resources.html 
  */
 @ResourceType(type="aws:iam/serverCertificate:ServerCertificate")
 public class ServerCertificate extends io.pulumi.resources.CustomResource {

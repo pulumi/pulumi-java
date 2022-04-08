@@ -18,7 +18,7 @@ public final class GetClusterResult {
      * * `cluster_certificates.0.aws_hardware_certificate` - The HSM hardware certificate issued (signed) by AWS CloudHSM.
      * * `cluster_certificates.0.hsm_certificate` - The HSM certificate issued (signed) by the HSM hardware.
      * * `cluster_certificates.0.manufacturer_hardware_certificate` - The HSM hardware certificate issued (signed) by the hardware manufacturer.
-     *   The number of available cluster certificates may vary depending on state of the cluster.
+     * The number of available cluster certificates may vary depending on state of the cluster.
      * 
      */
     private final GetClusterClusterCertificates clusterCertificates;
@@ -70,7 +70,7 @@ public final class GetClusterResult {
      * * `cluster_certificates.0.aws_hardware_certificate` - The HSM hardware certificate issued (signed) by AWS CloudHSM.
      * * `cluster_certificates.0.hsm_certificate` - The HSM certificate issued (signed) by the HSM hardware.
      * * `cluster_certificates.0.manufacturer_hardware_certificate` - The HSM hardware certificate issued (signed) by the hardware manufacturer.
-     *   The number of available cluster certificates may vary depending on state of the cluster.
+     * The number of available cluster certificates may vary depending on state of the cluster.
      * 
     */
     public GetClusterClusterCertificates getClusterCertificates() {

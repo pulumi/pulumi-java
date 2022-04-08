@@ -18,7 +18,110 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage an [AWS Macie Custom Data Identifier](https://docs.aws.amazon.com/macie/latest/APIReference/custom-data-identifiers-id.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleAccount = new aws.macie2.Account("exampleAccount", {});
+ * const exampleCustomDataIdentifier = new aws.macie.CustomDataIdentifier("exampleCustomDataIdentifier", {
+ *     regex: "[0-9]{3}-[0-9]{2}-[0-9]{4}",
+ *     description: "DESCRIPTION",
+ *     maximumMatchDistance: 10,
+ *     keywords: ["keyword"],
+ *     ignoreWords: ["ignore"],
+ * }, {
+ *     dependsOn: [aws_macie2_account.test],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_account = aws.macie2.Account("exampleAccount")
+ * example_custom_data_identifier = aws.macie.CustomDataIdentifier("exampleCustomDataIdentifier",
+ *     regex="[0-9]{3}-[0-9]{2}-[0-9]{4}",
+ *     description="DESCRIPTION",
+ *     maximum_match_distance=10,
+ *     keywords=["keyword"],
+ *     ignore_words=["ignore"],
+ *     opts=pulumi.ResourceOptions(depends_on=[aws_macie2_account["test"]]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleAccount = new Aws.Macie2.Account("exampleAccount", new Aws.Macie2.AccountArgs
+ *         {
+ *         });
+ *         var exampleCustomDataIdentifier = new Aws.Macie.CustomDataIdentifier("exampleCustomDataIdentifier", new Aws.Macie.CustomDataIdentifierArgs
+ *         {
+ *             Regex = "[0-9]{3}-[0-9]{2}-[0-9]{4}",
+ *             Description = "DESCRIPTION",
+ *             MaximumMatchDistance = 10,
+ *             Keywords = 
+ *             {
+ *                 "keyword",
+ *             },
+ *             IgnoreWords = 
+ *             {
+ *                 "ignore",
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 aws_macie2_account.Test,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/macie"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/macie2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := macie2.NewAccount(ctx, "exampleAccount", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = macie.NewCustomDataIdentifier(ctx, "exampleCustomDataIdentifier", &macie.CustomDataIdentifierArgs{
+ * 			Regex:                pulumi.String("[0-9]{3}-[0-9]{2}-[0-9]{4}"),
+ * 			Description:          pulumi.String("DESCRIPTION"),
+ * 			MaximumMatchDistance: pulumi.Int(10),
+ * 			Keywords: pulumi.StringArray{
+ * 				pulumi.String("keyword"),
+ * 			},
+ * 			IgnoreWords: pulumi.StringArray{
+ * 				pulumi.String("ignore"),
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			aws_macie2_account.Test,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +131,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:macie/customDataIdentifier:CustomDataIdentifier example abcd1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:macie/customDataIdentifier:CustomDataIdentifier")
 public class CustomDataIdentifier extends io.pulumi.resources.CustomResource {

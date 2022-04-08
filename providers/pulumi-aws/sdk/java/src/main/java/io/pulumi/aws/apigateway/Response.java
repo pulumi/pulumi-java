@@ -16,7 +16,108 @@ import javax.annotation.Nullable;
 /**
  * Provides an API Gateway Gateway Response for a REST API Gateway.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const main = new aws.apigateway.RestApi("main", {});
+ * const test = new aws.apigateway.Response("test", {
+ *     restApiId: main.id,
+ *     statusCode: "401",
+ *     responseType: "UNAUTHORIZED",
+ *     responseTemplates: {
+ *         "application/json": `{"message":$context.error.messageString}`,
+ *     },
+ *     responseParameters: {
+ *         "gatewayresponse.header.Authorization": "'Basic'",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * main = aws.apigateway.RestApi("main")
+ * test = aws.apigateway.Response("test",
+ *     rest_api_id=main.id,
+ *     status_code="401",
+ *     response_type="UNAUTHORIZED",
+ *     response_templates={
+ *         "application/json": "{\"message\":$context.error.messageString}",
+ *     },
+ *     response_parameters={
+ *         "gatewayresponse.header.Authorization": "'Basic'",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var main = new Aws.ApiGateway.RestApi("main", new Aws.ApiGateway.RestApiArgs
+ *         {
+ *         });
+ *         var test = new Aws.ApiGateway.Response("test", new Aws.ApiGateway.ResponseArgs
+ *         {
+ *             RestApiId = main.Id,
+ *             StatusCode = "401",
+ *             ResponseType = "UNAUTHORIZED",
+ *             ResponseTemplates = 
+ *             {
+ *                 { "application/json", "{\"message\":$context.error.messageString}" },
+ *             },
+ *             ResponseParameters = 
+ *             {
+ *                 { "gatewayresponse.header.Authorization", "'Basic'" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		main, err := apigateway.NewRestApi(ctx, "main", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = apigateway.NewResponse(ctx, "test", &apigateway.ResponseArgs{
+ * 			RestApiId:    main.ID(),
+ * 			StatusCode:   pulumi.String("401"),
+ * 			ResponseType: pulumi.String("UNAUTHORIZED"),
+ * 			ResponseTemplates: pulumi.StringMap{
+ * 				"application/json": pulumi.String(fmt.Sprintf("%v%v%v", "{\"message\":", "$", "context.error.messageString}")),
+ * 			},
+ * 			ResponseParameters: pulumi.StringMap{
+ * 				"gatewayresponse.header.Authorization": pulumi.String("'Basic'"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +127,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:apigateway/response:Response example 12345abcde/UNAUTHORIZED
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:apigateway/response:Response")
 public class Response extends io.pulumi.resources.CustomResource {

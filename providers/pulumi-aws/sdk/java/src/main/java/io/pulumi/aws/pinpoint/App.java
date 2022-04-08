@@ -19,7 +19,89 @@ import javax.annotation.Nullable;
 /**
  * Provides a Pinpoint App resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.pinpoint.App("example", {
+ *     limits: {
+ *         maximumDuration: 600,
+ *     },
+ *     quietTime: {
+ *         end: "06:00",
+ *         start: "00:00",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.pinpoint.App("example",
+ *     limits=aws.pinpoint.AppLimitsArgs(
+ *         maximum_duration=600,
+ *     ),
+ *     quiet_time=aws.pinpoint.AppQuietTimeArgs(
+ *         end="06:00",
+ *         start="00:00",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Pinpoint.App("example", new Aws.Pinpoint.AppArgs
+ *         {
+ *             Limits = new Aws.Pinpoint.Inputs.AppLimitsArgs
+ *             {
+ *                 MaximumDuration = 600,
+ *             },
+ *             QuietTime = new Aws.Pinpoint.Inputs.AppQuietTimeArgs
+ *             {
+ *                 End = "06:00",
+ *                 Start = "00:00",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/pinpoint"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := pinpoint.NewApp(ctx, "example", &pinpoint.AppArgs{
+ * 			Limits: &pinpoint.AppLimitsArgs{
+ * 				MaximumDuration: pulumi.Int(600),
+ * 			},
+ * 			QuietTime: &pinpoint.AppQuietTimeArgs{
+ * 				End:   pulumi.String("06:00"),
+ * 				Start: pulumi.String("00:00"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +111,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:pinpoint/app:App name application-id
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:pinpoint/app:App")
 public class App extends io.pulumi.resources.CustomResource {

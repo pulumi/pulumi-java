@@ -21,7 +21,60 @@ import javax.annotation.Nullable;
 /**
  * Provides an OpsWorks PHP application layer resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const app = new aws.opsworks.PhpAppLayer("app", {stackId: aws_opsworks_stack.main.id});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * app = aws.opsworks.PhpAppLayer("app", stack_id=aws_opsworks_stack["main"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var app = new Aws.OpsWorks.PhpAppLayer("app", new Aws.OpsWorks.PhpAppLayerArgs
+ *         {
+ *             StackId = aws_opsworks_stack.Main.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/opsworks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := opsworks.NewPhpAppLayer(ctx, "app", &opsworks.PhpAppLayerArgs{
+ * 			StackId: pulumi.Any(aws_opsworks_stack.Main.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,6 +84,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:opsworks/phpAppLayer:PhpAppLayer bar 00000000-0000-0000-0000-000000000000
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:opsworks/phpAppLayer:PhpAppLayer")
 public class PhpAppLayer extends io.pulumi.resources.CustomResource {

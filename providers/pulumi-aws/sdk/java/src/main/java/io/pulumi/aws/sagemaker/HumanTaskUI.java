@@ -17,7 +17,88 @@ import javax.annotation.Nullable;
 /**
  * Provides a Sagemaker Human Task UI resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * from "fs";
+ * 
+ * const example = new aws.sagemaker.HumanTaskUI("example", {
+ *     humanTaskUiName: "example",
+ *     uiTemplate: {
+ *         content: fs.readFileSync("sagemaker-human-task-ui-template.html"),
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.sagemaker.HumanTaskUI("example",
+ *     human_task_ui_name="example",
+ *     ui_template=aws.sagemaker.HumanTaskUIUiTemplateArgs(
+ *         content=(lambda path: open(path).read())("sagemaker-human-task-ui-template.html"),
+ *     ))
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Sagemaker.HumanTaskUI("example", new Aws.Sagemaker.HumanTaskUIArgs
+ *         {
+ *             HumanTaskUiName = "example",
+ *             UiTemplate = new Aws.Sagemaker.Inputs.HumanTaskUIUiTemplateArgs
+ *             {
+ *                 Content = File.ReadAllText("sagemaker-human-task-ui-template.html"),
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sagemaker.NewHumanTaskUI(ctx, "example", &sagemaker.HumanTaskUIArgs{
+ * 			HumanTaskUiName: pulumi.String("example"),
+ * 			UiTemplate: &sagemaker.HumanTaskUIUiTemplateArgs{
+ * 				Content: readFileOrPanic("sagemaker-human-task-ui-template.html"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +108,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sagemaker/humanTaskUI:HumanTaskUI example example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sagemaker/humanTaskUI:HumanTaskUI")
 public class HumanTaskUI extends io.pulumi.resources.CustomResource {

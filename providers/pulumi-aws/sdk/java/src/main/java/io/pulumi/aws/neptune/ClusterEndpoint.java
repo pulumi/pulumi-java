@@ -17,7 +17,71 @@ import javax.annotation.Nullable;
 /**
  * Provides an Neptune Cluster Endpoint Resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.neptune.ClusterEndpoint("example", {
+ *     clusterIdentifier: aws_neptune_cluster.test.cluster_identifier,
+ *     clusterEndpointIdentifier: "example",
+ *     endpointType: "READER",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.neptune.ClusterEndpoint("example",
+ *     cluster_identifier=aws_neptune_cluster["test"]["cluster_identifier"],
+ *     cluster_endpoint_identifier="example",
+ *     endpoint_type="READER")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Neptune.ClusterEndpoint("example", new Aws.Neptune.ClusterEndpointArgs
+ *         {
+ *             ClusterIdentifier = aws_neptune_cluster.Test.Cluster_identifier,
+ *             ClusterEndpointIdentifier = "example",
+ *             EndpointType = "READER",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/neptune"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := neptune.NewClusterEndpoint(ctx, "example", &neptune.ClusterEndpointArgs{
+ * 			ClusterIdentifier:         pulumi.Any(aws_neptune_cluster.Test.Cluster_identifier),
+ * 			ClusterEndpointIdentifier: pulumi.String("example"),
+ * 			EndpointType:              pulumi.String("READER"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +91,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:neptune/clusterEndpoint:ClusterEndpoint example my-cluster:my-endpoint
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:neptune/clusterEndpoint:ClusterEndpoint")
 public class ClusterEndpoint extends io.pulumi.resources.CustomResource {

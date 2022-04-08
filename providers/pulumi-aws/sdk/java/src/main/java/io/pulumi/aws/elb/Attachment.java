@@ -24,8 +24,70 @@ import javax.annotation.Nullable;
  * instances in conjunction with an ELB Attachment resource. Doing so will cause a
  * conflict and will overwrite attachments.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // Create a new load balancer attachment
+ * const baz = new aws.elb.Attachment("baz", {
+ *     elb: aws_elb.bar.id,
+ *     instance: aws_instance.foo.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # Create a new load balancer attachment
+ * baz = aws.elb.Attachment("baz",
+ *     elb=aws_elb["bar"]["id"],
+ *     instance=aws_instance["foo"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // Create a new load balancer attachment
+ *         var baz = new Aws.Elb.Attachment("baz", new Aws.Elb.AttachmentArgs
+ *         {
+ *             Elb = aws_elb.Bar.Id,
+ *             Instance = aws_instance.Foo.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := elb.NewAttachment(ctx, "baz", &elb.AttachmentArgs{
+ * 			Elb:      pulumi.Any(aws_elb.Bar.Id),
+ * 			Instance: pulumi.Any(aws_instance.Foo.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:elb/attachment:Attachment")
 public class Attachment extends io.pulumi.resources.CustomResource {

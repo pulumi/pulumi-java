@@ -19,7 +19,71 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** Global quotas apply to all AWS regions, but can only be accessed in `us-east-1` in the Commercial partition or `us-gov-west-1` in the GovCloud partition. In other regions, the AWS API will return the error `The request failed because the specified service does not exist.`
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.servicequotas.ServiceQuota("example", {
+ *     quotaCode: "L-F678F1CE",
+ *     serviceCode: "vpc",
+ *     value: 75,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.servicequotas.ServiceQuota("example",
+ *     quota_code="L-F678F1CE",
+ *     service_code="vpc",
+ *     value=75)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ServiceQuotas.ServiceQuota("example", new Aws.ServiceQuotas.ServiceQuotaArgs
+ *         {
+ *             QuotaCode = "L-F678F1CE",
+ *             ServiceCode = "vpc",
+ *             Value = 75,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/servicequotas"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicequotas.NewServiceQuota(ctx, "example", &servicequotas.ServiceQuotaArgs{
+ * 			QuotaCode:   pulumi.String("L-F678F1CE"),
+ * 			ServiceCode: pulumi.String("vpc"),
+ * 			Value:       pulumi.Float64(75),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +93,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:servicequotas/serviceQuota:ServiceQuota example vpc/L-F678F1CE
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:servicequotas/serviceQuota:ServiceQuota")
 public class ServiceQuota extends io.pulumi.resources.CustomResource {

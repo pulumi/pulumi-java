@@ -16,7 +16,98 @@ import javax.annotation.Nullable;
 /**
  * Provides an AppConfig Hosted Configuration Version resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.appconfig.HostedConfigurationVersion("example", {
+ *     applicationId: aws_appconfig_application.example.id,
+ *     configurationProfileId: aws_appconfig_configuration_profile.example.configuration_profile_id,
+ *     description: "Example Hosted Configuration Version",
+ *     contentType: "application/json",
+ *     content: JSON.stringify({
+ *         foo: "bar",
+ *     }),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import json
+ * import pulumi_aws as aws
+ * 
+ * example = aws.appconfig.HostedConfigurationVersion("example",
+ *     application_id=aws_appconfig_application["example"]["id"],
+ *     configuration_profile_id=aws_appconfig_configuration_profile["example"]["configuration_profile_id"],
+ *     description="Example Hosted Configuration Version",
+ *     content_type="application/json",
+ *     content=json.dumps({
+ *         "foo": "bar",
+ *     }))
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using System.Text.Json;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.AppConfig.HostedConfigurationVersion("example", new Aws.AppConfig.HostedConfigurationVersionArgs
+ *         {
+ *             ApplicationId = aws_appconfig_application.Example.Id,
+ *             ConfigurationProfileId = aws_appconfig_configuration_profile.Example.Configuration_profile_id,
+ *             Description = "Example Hosted Configuration Version",
+ *             ContentType = "application/json",
+ *             Content = JsonSerializer.Serialize(new Dictionary<string, object?>
+ *             {
+ *                 { "foo", "bar" },
+ *             }),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"encoding/json"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appconfig"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+ * 			"foo": "bar",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		json0 := string(tmpJSON0)
+ * 		_, err := appconfig.NewHostedConfigurationVersion(ctx, "example", &appconfig.HostedConfigurationVersionArgs{
+ * 			ApplicationId:          pulumi.Any(aws_appconfig_application.Example.Id),
+ * 			ConfigurationProfileId: pulumi.Any(aws_appconfig_configuration_profile.Example.Configuration_profile_id),
+ * 			Description:            pulumi.String("Example Hosted Configuration Version"),
+ * 			ContentType:            pulumi.String("application/json"),
+ * 			Content:                pulumi.String(json0),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +117,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appconfig/hostedConfigurationVersion:HostedConfigurationVersion example 71abcde/11xxxxx/2
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:appconfig/hostedConfigurationVersion:HostedConfigurationVersion")
 public class HostedConfigurationVersion extends io.pulumi.resources.CustomResource {

@@ -15,6 +15,7 @@ import javax.annotation.Nullable;
 /**
  * Provides a lifecycle configuration for SageMaker Notebook Instances.
  * 
+ * 
  * ## Import
  * 
  * Models can be imported using the `name`, e.g.,
@@ -23,6 +24,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sagemaker/notebookInstanceLifecycleConfiguration:NotebookInstanceLifecycleConfiguration lc foo
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sagemaker/notebookInstanceLifecycleConfiguration:NotebookInstanceLifecycleConfiguration")
 public class NotebookInstanceLifecycleConfiguration extends io.pulumi.resources.CustomResource {

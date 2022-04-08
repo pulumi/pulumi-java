@@ -30,7 +30,7 @@ public final class SecurityConfigurationEncryptionConfigurationArgs extends io.p
     }
 
     /**
-     * A ` s3_encryption  ` block as described below, which contains encryption configuration for S3 data.
+     * A `s3_encryption ` block as described below, which contains encryption configuration for S3 data.
      * 
      */
     @Import(name="s3Encryption", required=true)

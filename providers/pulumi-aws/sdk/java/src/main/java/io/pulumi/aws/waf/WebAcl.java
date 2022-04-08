@@ -20,7 +20,329 @@ import javax.annotation.Nullable;
 /**
  * Provides a WAF Web ACL Resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * This example blocks requests coming from `192.0.7.0/24` and allows everything else.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const ipset = new aws.waf.IpSet("ipset", {ipSetDescriptors: [{
+ *     type: "IPV4",
+ *     value: "192.0.7.0/24",
+ * }]});
+ * const wafrule = new aws.waf.Rule("wafrule", {
+ *     metricName: "tfWAFRule",
+ *     predicates: [{
+ *         dataId: ipset.id,
+ *         negated: false,
+ *         type: "IPMatch",
+ *     }],
+ * }, {
+ *     dependsOn: [ipset],
+ * });
+ * const wafAcl = new aws.waf.WebAcl("wafAcl", {
+ *     metricName: "tfWebACL",
+ *     defaultAction: {
+ *         type: "ALLOW",
+ *     },
+ *     rules: [{
+ *         action: {
+ *             type: "BLOCK",
+ *         },
+ *         priority: 1,
+ *         ruleId: wafrule.id,
+ *         type: "REGULAR",
+ *     }],
+ * }, {
+ *     dependsOn: [
+ *         ipset,
+ *         wafrule,
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * ipset = aws.waf.IpSet("ipset", ip_set_descriptors=[aws.waf.IpSetIpSetDescriptorArgs(
+ *     type="IPV4",
+ *     value="192.0.7.0/24",
+ * )])
+ * wafrule = aws.waf.Rule("wafrule",
+ *     metric_name="tfWAFRule",
+ *     predicates=[aws.waf.RulePredicateArgs(
+ *         data_id=ipset.id,
+ *         negated=False,
+ *         type="IPMatch",
+ *     )],
+ *     opts=pulumi.ResourceOptions(depends_on=[ipset]))
+ * waf_acl = aws.waf.WebAcl("wafAcl",
+ *     metric_name="tfWebACL",
+ *     default_action=aws.waf.WebAclDefaultActionArgs(
+ *         type="ALLOW",
+ *     ),
+ *     rules=[aws.waf.WebAclRuleArgs(
+ *         action=aws.waf.WebAclRuleActionArgs(
+ *             type="BLOCK",
+ *         ),
+ *         priority=1,
+ *         rule_id=wafrule.id,
+ *         type="REGULAR",
+ *     )],
+ *     opts=pulumi.ResourceOptions(depends_on=[
+ *             ipset,
+ *             wafrule,
+ *         ]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var ipset = new Aws.Waf.IpSet("ipset", new Aws.Waf.IpSetArgs
+ *         {
+ *             IpSetDescriptors = 
+ *             {
+ *                 new Aws.Waf.Inputs.IpSetIpSetDescriptorArgs
+ *                 {
+ *                     Type = "IPV4",
+ *                     Value = "192.0.7.0/24",
+ *                 },
+ *             },
+ *         });
+ *         var wafrule = new Aws.Waf.Rule("wafrule", new Aws.Waf.RuleArgs
+ *         {
+ *             MetricName = "tfWAFRule",
+ *             Predicates = 
+ *             {
+ *                 new Aws.Waf.Inputs.RulePredicateArgs
+ *                 {
+ *                     DataId = ipset.Id,
+ *                     Negated = false,
+ *                     Type = "IPMatch",
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 ipset,
+ *             },
+ *         });
+ *         var wafAcl = new Aws.Waf.WebAcl("wafAcl", new Aws.Waf.WebAclArgs
+ *         {
+ *             MetricName = "tfWebACL",
+ *             DefaultAction = new Aws.Waf.Inputs.WebAclDefaultActionArgs
+ *             {
+ *                 Type = "ALLOW",
+ *             },
+ *             Rules = 
+ *             {
+ *                 new Aws.Waf.Inputs.WebAclRuleArgs
+ *                 {
+ *                     Action = new Aws.Waf.Inputs.WebAclRuleActionArgs
+ *                     {
+ *                         Type = "BLOCK",
+ *                     },
+ *                     Priority = 1,
+ *                     RuleId = wafrule.Id,
+ *                     Type = "REGULAR",
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 ipset,
+ *                 wafrule,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/waf"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		ipset, err := waf.NewIpSet(ctx, "ipset", &waf.IpSetArgs{
+ * 			IpSetDescriptors: waf.IpSetIpSetDescriptorArray{
+ * 				&waf.IpSetIpSetDescriptorArgs{
+ * 					Type:  pulumi.String("IPV4"),
+ * 					Value: pulumi.String("192.0.7.0/24"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		wafrule, err := waf.NewRule(ctx, "wafrule", &waf.RuleArgs{
+ * 			MetricName: pulumi.String("tfWAFRule"),
+ * 			Predicates: waf.RulePredicateArray{
+ * 				&waf.RulePredicateArgs{
+ * 					DataId:  ipset.ID(),
+ * 					Negated: pulumi.Bool(false),
+ * 					Type:    pulumi.String("IPMatch"),
+ * 				},
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			ipset,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = waf.NewWebAcl(ctx, "wafAcl", &waf.WebAclArgs{
+ * 			MetricName: pulumi.String("tfWebACL"),
+ * 			DefaultAction: &waf.WebAclDefaultActionArgs{
+ * 				Type: pulumi.String("ALLOW"),
+ * 			},
+ * 			Rules: waf.WebAclRuleArray{
+ * 				&waf.WebAclRuleArgs{
+ * 					Action: &waf.WebAclRuleActionArgs{
+ * 						Type: pulumi.String("BLOCK"),
+ * 					},
+ * 					Priority: pulumi.Int(1),
+ * 					RuleId:   wafrule.ID(),
+ * 					Type:     pulumi.String("REGULAR"),
+ * 				},
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			ipset,
+ * 			wafrule,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Logging
+ * 
+ * > *NOTE:* The Kinesis Firehose Delivery Stream name must begin with `aws-waf-logs-` and be located in `us-east-1` region. See the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/logging.html) for more information about enabling WAF logging.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.waf.WebAcl("example", {loggingConfiguration: {
+ *     logDestination: aws_kinesis_firehose_delivery_stream.example.arn,
+ *     redactedFields: {
+ *         fieldToMatches: [
+ *             {
+ *                 type: "URI",
+ *             },
+ *             {
+ *                 data: "referer",
+ *                 type: "HEADER",
+ *             },
+ *         ],
+ *     },
+ * }});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.waf.WebAcl("example", logging_configuration=aws.waf.WebAclLoggingConfigurationArgs(
+ *     log_destination=aws_kinesis_firehose_delivery_stream["example"]["arn"],
+ *     redacted_fields=aws.waf.WebAclLoggingConfigurationRedactedFieldsArgs(
+ *         field_to_matches=[
+ *             aws.waf.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs(
+ *                 type="URI",
+ *             ),
+ *             aws.waf.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs(
+ *                 data="referer",
+ *                 type="HEADER",
+ *             ),
+ *         ],
+ *     ),
+ * ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Waf.WebAcl("example", new Aws.Waf.WebAclArgs
+ *         {
+ *             LoggingConfiguration = new Aws.Waf.Inputs.WebAclLoggingConfigurationArgs
+ *             {
+ *                 LogDestination = aws_kinesis_firehose_delivery_stream.Example.Arn,
+ *                 RedactedFields = new Aws.Waf.Inputs.WebAclLoggingConfigurationRedactedFieldsArgs
+ *                 {
+ *                     FieldToMatches = 
+ *                     {
+ *                         new Aws.Waf.Inputs.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs
+ *                         {
+ *                             Type = "URI",
+ *                         },
+ *                         new Aws.Waf.Inputs.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs
+ *                         {
+ *                             Data = "referer",
+ *                             Type = "HEADER",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/waf"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := waf.NewWebAcl(ctx, "example", &waf.WebAclArgs{
+ * 			LoggingConfiguration: &waf.WebAclLoggingConfigurationArgs{
+ * 				LogDestination: pulumi.Any(aws_kinesis_firehose_delivery_stream.Example.Arn),
+ * 				RedactedFields: &waf.WebAclLoggingConfigurationRedactedFieldsArgs{
+ * 					FieldToMatches: waf.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArray{
+ * 						&waf.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs{
+ * 							Type: pulumi.String("URI"),
+ * 						},
+ * 						&waf.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs{
+ * 							Data: pulumi.String("referer"),
+ * 							Type: pulumi.String("HEADER"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +352,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:waf/webAcl:WebAcl main 0c8e583e-18f3-4c13-9e2a-67c4805d2f94
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:waf/webAcl:WebAcl")
 public class WebAcl extends io.pulumi.resources.CustomResource {

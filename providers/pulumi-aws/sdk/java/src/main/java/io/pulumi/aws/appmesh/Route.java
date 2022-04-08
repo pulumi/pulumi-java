@@ -17,7 +17,579 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS App Mesh route resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### HTTP Routing
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const serviceb = new aws.appmesh.Route("serviceb", {
+ *     meshName: aws_appmesh_mesh.simple.id,
+ *     virtualRouterName: aws_appmesh_virtual_router.serviceb.name,
+ *     spec: {
+ *         httpRoute: {
+ *             match: {
+ *                 prefix: "/",
+ *             },
+ *             action: {
+ *                 weightedTargets: [
+ *                     {
+ *                         virtualNode: aws_appmesh_virtual_node.serviceb1.name,
+ *                         weight: 90,
+ *                     },
+ *                     {
+ *                         virtualNode: aws_appmesh_virtual_node.serviceb2.name,
+ *                         weight: 10,
+ *                     },
+ *                 ],
+ *             },
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * serviceb = aws.appmesh.Route("serviceb",
+ *     mesh_name=aws_appmesh_mesh["simple"]["id"],
+ *     virtual_router_name=aws_appmesh_virtual_router["serviceb"]["name"],
+ *     spec=aws.appmesh.RouteSpecArgs(
+ *         http_route=aws.appmesh.RouteSpecHttpRouteArgs(
+ *             match=aws.appmesh.RouteSpecHttpRouteMatchArgs(
+ *                 prefix="/",
+ *             ),
+ *             action=aws.appmesh.RouteSpecHttpRouteActionArgs(
+ *                 weighted_targets=[
+ *                     aws.appmesh.RouteSpecHttpRouteActionWeightedTargetArgs(
+ *                         virtual_node=aws_appmesh_virtual_node["serviceb1"]["name"],
+ *                         weight=90,
+ *                     ),
+ *                     aws.appmesh.RouteSpecHttpRouteActionWeightedTargetArgs(
+ *                         virtual_node=aws_appmesh_virtual_node["serviceb2"]["name"],
+ *                         weight=10,
+ *                     ),
+ *                 ],
+ *             ),
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serviceb = new Aws.AppMesh.Route("serviceb", new Aws.AppMesh.RouteArgs
+ *         {
+ *             MeshName = aws_appmesh_mesh.Simple.Id,
+ *             VirtualRouterName = aws_appmesh_virtual_router.Serviceb.Name,
+ *             Spec = new Aws.AppMesh.Inputs.RouteSpecArgs
+ *             {
+ *                 HttpRoute = new Aws.AppMesh.Inputs.RouteSpecHttpRouteArgs
+ *                 {
+ *                     Match = new Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchArgs
+ *                     {
+ *                         Prefix = "/",
+ *                     },
+ *                     Action = new Aws.AppMesh.Inputs.RouteSpecHttpRouteActionArgs
+ *                     {
+ *                         WeightedTargets = 
+ *                         {
+ *                             new Aws.AppMesh.Inputs.RouteSpecHttpRouteActionWeightedTargetArgs
+ *                             {
+ *                                 VirtualNode = aws_appmesh_virtual_node.Serviceb1.Name,
+ *                                 Weight = 90,
+ *                             },
+ *                             new Aws.AppMesh.Inputs.RouteSpecHttpRouteActionWeightedTargetArgs
+ *                             {
+ *                                 VirtualNode = aws_appmesh_virtual_node.Serviceb2.Name,
+ *                                 Weight = 10,
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appmesh"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
+ * 			MeshName:          pulumi.Any(aws_appmesh_mesh.Simple.Id),
+ * 			VirtualRouterName: pulumi.Any(aws_appmesh_virtual_router.Serviceb.Name),
+ * 			Spec: &appmesh.RouteSpecArgs{
+ * 				HttpRoute: &appmesh.RouteSpecHttpRouteArgs{
+ * 					Match: &appmesh.RouteSpecHttpRouteMatchArgs{
+ * 						Prefix: pulumi.String("/"),
+ * 					},
+ * 					Action: &appmesh.RouteSpecHttpRouteActionArgs{
+ * 						WeightedTargets: appmesh.RouteSpecHttpRouteActionWeightedTargetArray{
+ * 							&appmesh.RouteSpecHttpRouteActionWeightedTargetArgs{
+ * 								VirtualNode: pulumi.Any(aws_appmesh_virtual_node.Serviceb1.Name),
+ * 								Weight:      pulumi.Int(90),
+ * 							},
+ * 							&appmesh.RouteSpecHttpRouteActionWeightedTargetArgs{
+ * 								VirtualNode: pulumi.Any(aws_appmesh_virtual_node.Serviceb2.Name),
+ * 								Weight:      pulumi.Int(10),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### HTTP Header Routing
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const serviceb = new aws.appmesh.Route("serviceb", {
+ *     meshName: aws_appmesh_mesh.simple.id,
+ *     virtualRouterName: aws_appmesh_virtual_router.serviceb.name,
+ *     spec: {
+ *         httpRoute: {
+ *             match: {
+ *                 method: "POST",
+ *                 prefix: "/",
+ *                 scheme: "https",
+ *                 headers: [{
+ *                     name: "clientRequestId",
+ *                     match: {
+ *                         prefix: "123",
+ *                     },
+ *                 }],
+ *             },
+ *             action: {
+ *                 weightedTargets: [{
+ *                     virtualNode: aws_appmesh_virtual_node.serviceb.name,
+ *                     weight: 100,
+ *                 }],
+ *             },
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * serviceb = aws.appmesh.Route("serviceb",
+ *     mesh_name=aws_appmesh_mesh["simple"]["id"],
+ *     virtual_router_name=aws_appmesh_virtual_router["serviceb"]["name"],
+ *     spec=aws.appmesh.RouteSpecArgs(
+ *         http_route=aws.appmesh.RouteSpecHttpRouteArgs(
+ *             match=aws.appmesh.RouteSpecHttpRouteMatchArgs(
+ *                 method="POST",
+ *                 prefix="/",
+ *                 scheme="https",
+ *                 headers=[aws.appmesh.RouteSpecHttpRouteMatchHeaderArgs(
+ *                     name="clientRequestId",
+ *                     match=aws.appmesh.RouteSpecHttpRouteMatchHeaderMatchArgs(
+ *                         prefix="123",
+ *                     ),
+ *                 )],
+ *             ),
+ *             action=aws.appmesh.RouteSpecHttpRouteActionArgs(
+ *                 weighted_targets=[aws.appmesh.RouteSpecHttpRouteActionWeightedTargetArgs(
+ *                     virtual_node=aws_appmesh_virtual_node["serviceb"]["name"],
+ *                     weight=100,
+ *                 )],
+ *             ),
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serviceb = new Aws.AppMesh.Route("serviceb", new Aws.AppMesh.RouteArgs
+ *         {
+ *             MeshName = aws_appmesh_mesh.Simple.Id,
+ *             VirtualRouterName = aws_appmesh_virtual_router.Serviceb.Name,
+ *             Spec = new Aws.AppMesh.Inputs.RouteSpecArgs
+ *             {
+ *                 HttpRoute = new Aws.AppMesh.Inputs.RouteSpecHttpRouteArgs
+ *                 {
+ *                     Match = new Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchArgs
+ *                     {
+ *                         Method = "POST",
+ *                         Prefix = "/",
+ *                         Scheme = "https",
+ *                         Headers = 
+ *                         {
+ *                             new Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchHeaderArgs
+ *                             {
+ *                                 Name = "clientRequestId",
+ *                                 Match = new Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchHeaderMatchArgs
+ *                                 {
+ *                                     Prefix = "123",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                     Action = new Aws.AppMesh.Inputs.RouteSpecHttpRouteActionArgs
+ *                     {
+ *                         WeightedTargets = 
+ *                         {
+ *                             new Aws.AppMesh.Inputs.RouteSpecHttpRouteActionWeightedTargetArgs
+ *                             {
+ *                                 VirtualNode = aws_appmesh_virtual_node.Serviceb.Name,
+ *                                 Weight = 100,
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appmesh"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
+ * 			MeshName:          pulumi.Any(aws_appmesh_mesh.Simple.Id),
+ * 			VirtualRouterName: pulumi.Any(aws_appmesh_virtual_router.Serviceb.Name),
+ * 			Spec: &appmesh.RouteSpecArgs{
+ * 				HttpRoute: &appmesh.RouteSpecHttpRouteArgs{
+ * 					Match: &appmesh.RouteSpecHttpRouteMatchArgs{
+ * 						Method: pulumi.String("POST"),
+ * 						Prefix: pulumi.String("/"),
+ * 						Scheme: pulumi.String("https"),
+ * 						Headers: appmesh.RouteSpecHttpRouteMatchHeaderArray{
+ * 							&appmesh.RouteSpecHttpRouteMatchHeaderArgs{
+ * 								Name: pulumi.String("clientRequestId"),
+ * 								Match: &appmesh.RouteSpecHttpRouteMatchHeaderMatchArgs{
+ * 									Prefix: pulumi.String("123"),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 					Action: &appmesh.RouteSpecHttpRouteActionArgs{
+ * 						WeightedTargets: appmesh.RouteSpecHttpRouteActionWeightedTargetArray{
+ * 							&appmesh.RouteSpecHttpRouteActionWeightedTargetArgs{
+ * 								VirtualNode: pulumi.Any(aws_appmesh_virtual_node.Serviceb.Name),
+ * 								Weight:      pulumi.Int(100),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Retry Policy
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const serviceb = new aws.appmesh.Route("serviceb", {
+ *     meshName: aws_appmesh_mesh.simple.id,
+ *     virtualRouterName: aws_appmesh_virtual_router.serviceb.name,
+ *     spec: {
+ *         httpRoute: {
+ *             match: {
+ *                 prefix: "/",
+ *             },
+ *             retryPolicy: {
+ *                 httpRetryEvents: ["server-error"],
+ *                 maxRetries: 1,
+ *                 perRetryTimeout: {
+ *                     unit: "s",
+ *                     value: 15,
+ *                 },
+ *             },
+ *             action: {
+ *                 weightedTargets: [{
+ *                     virtualNode: aws_appmesh_virtual_node.serviceb.name,
+ *                     weight: 100,
+ *                 }],
+ *             },
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * serviceb = aws.appmesh.Route("serviceb",
+ *     mesh_name=aws_appmesh_mesh["simple"]["id"],
+ *     virtual_router_name=aws_appmesh_virtual_router["serviceb"]["name"],
+ *     spec=aws.appmesh.RouteSpecArgs(
+ *         http_route=aws.appmesh.RouteSpecHttpRouteArgs(
+ *             match=aws.appmesh.RouteSpecHttpRouteMatchArgs(
+ *                 prefix="/",
+ *             ),
+ *             retry_policy=aws.appmesh.RouteSpecHttpRouteRetryPolicyArgs(
+ *                 http_retry_events=["server-error"],
+ *                 max_retries=1,
+ *                 per_retry_timeout=aws.appmesh.RouteSpecHttpRouteRetryPolicyPerRetryTimeoutArgs(
+ *                     unit="s",
+ *                     value=15,
+ *                 ),
+ *             ),
+ *             action=aws.appmesh.RouteSpecHttpRouteActionArgs(
+ *                 weighted_targets=[aws.appmesh.RouteSpecHttpRouteActionWeightedTargetArgs(
+ *                     virtual_node=aws_appmesh_virtual_node["serviceb"]["name"],
+ *                     weight=100,
+ *                 )],
+ *             ),
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serviceb = new Aws.AppMesh.Route("serviceb", new Aws.AppMesh.RouteArgs
+ *         {
+ *             MeshName = aws_appmesh_mesh.Simple.Id,
+ *             VirtualRouterName = aws_appmesh_virtual_router.Serviceb.Name,
+ *             Spec = new Aws.AppMesh.Inputs.RouteSpecArgs
+ *             {
+ *                 HttpRoute = new Aws.AppMesh.Inputs.RouteSpecHttpRouteArgs
+ *                 {
+ *                     Match = new Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchArgs
+ *                     {
+ *                         Prefix = "/",
+ *                     },
+ *                     RetryPolicy = new Aws.AppMesh.Inputs.RouteSpecHttpRouteRetryPolicyArgs
+ *                     {
+ *                         HttpRetryEvents = 
+ *                         {
+ *                             "server-error",
+ *                         },
+ *                         MaxRetries = 1,
+ *                         PerRetryTimeout = new Aws.AppMesh.Inputs.RouteSpecHttpRouteRetryPolicyPerRetryTimeoutArgs
+ *                         {
+ *                             Unit = "s",
+ *                             Value = 15,
+ *                         },
+ *                     },
+ *                     Action = new Aws.AppMesh.Inputs.RouteSpecHttpRouteActionArgs
+ *                     {
+ *                         WeightedTargets = 
+ *                         {
+ *                             new Aws.AppMesh.Inputs.RouteSpecHttpRouteActionWeightedTargetArgs
+ *                             {
+ *                                 VirtualNode = aws_appmesh_virtual_node.Serviceb.Name,
+ *                                 Weight = 100,
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appmesh"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
+ * 			MeshName:          pulumi.Any(aws_appmesh_mesh.Simple.Id),
+ * 			VirtualRouterName: pulumi.Any(aws_appmesh_virtual_router.Serviceb.Name),
+ * 			Spec: &appmesh.RouteSpecArgs{
+ * 				HttpRoute: &appmesh.RouteSpecHttpRouteArgs{
+ * 					Match: &appmesh.RouteSpecHttpRouteMatchArgs{
+ * 						Prefix: pulumi.String("/"),
+ * 					},
+ * 					RetryPolicy: &appmesh.RouteSpecHttpRouteRetryPolicyArgs{
+ * 						HttpRetryEvents: pulumi.StringArray{
+ * 							pulumi.String("server-error"),
+ * 						},
+ * 						MaxRetries: pulumi.Int(1),
+ * 						PerRetryTimeout: &appmesh.RouteSpecHttpRouteRetryPolicyPerRetryTimeoutArgs{
+ * 							Unit:  pulumi.String("s"),
+ * 							Value: pulumi.Int(15),
+ * 						},
+ * 					},
+ * 					Action: &appmesh.RouteSpecHttpRouteActionArgs{
+ * 						WeightedTargets: appmesh.RouteSpecHttpRouteActionWeightedTargetArray{
+ * 							&appmesh.RouteSpecHttpRouteActionWeightedTargetArgs{
+ * 								VirtualNode: pulumi.Any(aws_appmesh_virtual_node.Serviceb.Name),
+ * 								Weight:      pulumi.Int(100),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### TCP Routing
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const serviceb = new aws.appmesh.Route("serviceb", {
+ *     meshName: aws_appmesh_mesh.simple.id,
+ *     virtualRouterName: aws_appmesh_virtual_router.serviceb.name,
+ *     spec: {
+ *         tcpRoute: {
+ *             action: {
+ *                 weightedTargets: [{
+ *                     virtualNode: aws_appmesh_virtual_node.serviceb1.name,
+ *                     weight: 100,
+ *                 }],
+ *             },
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * serviceb = aws.appmesh.Route("serviceb",
+ *     mesh_name=aws_appmesh_mesh["simple"]["id"],
+ *     virtual_router_name=aws_appmesh_virtual_router["serviceb"]["name"],
+ *     spec=aws.appmesh.RouteSpecArgs(
+ *         tcp_route=aws.appmesh.RouteSpecTcpRouteArgs(
+ *             action=aws.appmesh.RouteSpecTcpRouteActionArgs(
+ *                 weighted_targets=[aws.appmesh.RouteSpecTcpRouteActionWeightedTargetArgs(
+ *                     virtual_node=aws_appmesh_virtual_node["serviceb1"]["name"],
+ *                     weight=100,
+ *                 )],
+ *             ),
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serviceb = new Aws.AppMesh.Route("serviceb", new Aws.AppMesh.RouteArgs
+ *         {
+ *             MeshName = aws_appmesh_mesh.Simple.Id,
+ *             VirtualRouterName = aws_appmesh_virtual_router.Serviceb.Name,
+ *             Spec = new Aws.AppMesh.Inputs.RouteSpecArgs
+ *             {
+ *                 TcpRoute = new Aws.AppMesh.Inputs.RouteSpecTcpRouteArgs
+ *                 {
+ *                     Action = new Aws.AppMesh.Inputs.RouteSpecTcpRouteActionArgs
+ *                     {
+ *                         WeightedTargets = 
+ *                         {
+ *                             new Aws.AppMesh.Inputs.RouteSpecTcpRouteActionWeightedTargetArgs
+ *                             {
+ *                                 VirtualNode = aws_appmesh_virtual_node.Serviceb1.Name,
+ *                                 Weight = 100,
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appmesh"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
+ * 			MeshName:          pulumi.Any(aws_appmesh_mesh.Simple.Id),
+ * 			VirtualRouterName: pulumi.Any(aws_appmesh_virtual_router.Serviceb.Name),
+ * 			Spec: &appmesh.RouteSpecArgs{
+ * 				TcpRoute: &appmesh.RouteSpecTcpRouteArgs{
+ * 					Action: &appmesh.RouteSpecTcpRouteActionArgs{
+ * 						WeightedTargets: appmesh.RouteSpecTcpRouteActionWeightedTargetArray{
+ * 							&appmesh.RouteSpecTcpRouteActionWeightedTargetArgs{
+ * 								VirtualNode: pulumi.Any(aws_appmesh_virtual_node.Serviceb1.Name),
+ * 								Weight:      pulumi.Int(100),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,8 +599,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appmesh/route:Route serviceb simpleapp/serviceB/serviceB-route
  * ```
  * 
- *  [1]/docs/providers/aws/index.html
- * 
+ *  [1]/docs/providers/aws/index.html 
  */
 @ResourceType(type="aws:appmesh/route:Route")
 public class Route extends io.pulumi.resources.CustomResource {

@@ -20,7 +20,148 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** The EventBridge bus policy resource  (`aws.cloudwatch.EventBusPolicy`) is incompatible with the EventBridge permission resource (`aws.cloudwatch.EventPermission`) and will overwrite permissions.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Account Access
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const devAccountAccess = new aws.cloudwatch.EventPermission("DevAccountAccess", {
+ *     principal: "123456789012",
+ *     statementId: "DevAccountAccess",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * dev_account_access = aws.cloudwatch.EventPermission("devAccountAccess",
+ *     principal="123456789012",
+ *     statement_id="DevAccountAccess")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var devAccountAccess = new Aws.CloudWatch.EventPermission("devAccountAccess", new Aws.CloudWatch.EventPermissionArgs
+ *         {
+ *             Principal = "123456789012",
+ *             StatementId = "DevAccountAccess",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudwatch.NewEventPermission(ctx, "devAccountAccess", &cloudwatch.EventPermissionArgs{
+ * 			Principal:   pulumi.String("123456789012"),
+ * 			StatementId: pulumi.String("DevAccountAccess"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Organization Access
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const organizationAccess = new aws.cloudwatch.EventPermission("organizationAccess", {
+ *     principal: "*",
+ *     statementId: "OrganizationAccess",
+ *     condition: {
+ *         key: "aws:PrincipalOrgID",
+ *         type: "StringEquals",
+ *         value: aws_organizations_organization.example.id,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * organization_access = aws.cloudwatch.EventPermission("organizationAccess",
+ *     principal="*",
+ *     statement_id="OrganizationAccess",
+ *     condition=aws.cloudwatch.EventPermissionConditionArgs(
+ *         key="aws:PrincipalOrgID",
+ *         type="StringEquals",
+ *         value=aws_organizations_organization["example"]["id"],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var organizationAccess = new Aws.CloudWatch.EventPermission("organizationAccess", new Aws.CloudWatch.EventPermissionArgs
+ *         {
+ *             Principal = "*",
+ *             StatementId = "OrganizationAccess",
+ *             Condition = new Aws.CloudWatch.Inputs.EventPermissionConditionArgs
+ *             {
+ *                 Key = "aws:PrincipalOrgID",
+ *                 Type = "StringEquals",
+ *                 Value = aws_organizations_organization.Example.Id,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudwatch.NewEventPermission(ctx, "organizationAccess", &cloudwatch.EventPermissionArgs{
+ * 			Principal:   pulumi.String("*"),
+ * 			StatementId: pulumi.String("OrganizationAccess"),
+ * 			Condition: &cloudwatch.EventPermissionConditionArgs{
+ * 				Key:   pulumi.String("aws:PrincipalOrgID"),
+ * 				Type:  pulumi.String("StringEquals"),
+ * 				Value: pulumi.Any(aws_organizations_organization.Example.Id),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +171,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudwatch/eventPermission:EventPermission DevAccountAccess example-event-bus/DevAccountAccess
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudwatch/eventPermission:EventPermission")
 public class EventPermission extends io.pulumi.resources.CustomResource {

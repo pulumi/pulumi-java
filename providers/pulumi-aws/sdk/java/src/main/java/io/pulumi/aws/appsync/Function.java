@@ -17,7 +17,226 @@ import javax.annotation.Nullable;
 /**
  * Provides an AppSync Function.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleGraphQLApi = new aws.appsync.GraphQLApi("exampleGraphQLApi", {
+ *     authenticationType: "API_KEY",
+ *     schema: `type Mutation {
+ *   putPost(id: ID!, title: String!): Post
+ * }
+ * 
+ * type Post {
+ *   id: ID!
+ *   title: String!
+ * }
+ * 
+ * type Query {
+ *   singlePost(id: ID!): Post
+ * }
+ * 
+ * schema {
+ *   query: Query
+ *   mutation: Mutation
+ * }
+ * `,
+ * });
+ * const exampleDataSource = new aws.appsync.DataSource("exampleDataSource", {
+ *     apiId: exampleGraphQLApi.id,
+ *     name: "example",
+ *     type: "HTTP",
+ *     httpConfig: {
+ *         endpoint: "http://example.com",
+ *     },
+ * });
+ * const exampleFunction = new aws.appsync.Function("exampleFunction", {
+ *     apiId: exampleGraphQLApi.id,
+ *     dataSource: exampleDataSource.name,
+ *     name: "example",
+ *     requestMappingTemplate: `{
+ *     "version": "2018-05-29",
+ *     "method": "GET",
+ *     "resourcePath": "/",
+ *     "params":{
+ *         "headers": $utils.http.copyheaders($ctx.request.headers)
+ *     }
+ * }
+ * `,
+ *     responseMappingTemplate: `#if($ctx.result.statusCode == 200)
+ *     $ctx.result.body
+ * #else
+ *     $utils.appendError($ctx.result.body, $ctx.result.statusCode)
+ * #end
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_graph_ql_api = aws.appsync.GraphQLApi("exampleGraphQLApi",
+ *     authentication_type="API_KEY",
+ *     schema="""type Mutation {
+ *   putPost(id: ID!, title: String!): Post
+ * }
+ * 
+ * type Post {
+ *   id: ID!
+ *   title: String!
+ * }
+ * 
+ * type Query {
+ *   singlePost(id: ID!): Post
+ * }
+ * 
+ * schema {
+ *   query: Query
+ *   mutation: Mutation
+ * }
+ * """)
+ * example_data_source = aws.appsync.DataSource("exampleDataSource",
+ *     api_id=example_graph_ql_api.id,
+ *     name="example",
+ *     type="HTTP",
+ *     http_config=aws.appsync.DataSourceHttpConfigArgs(
+ *         endpoint="http://example.com",
+ *     ))
+ * example_function = aws.appsync.Function("exampleFunction",
+ *     api_id=example_graph_ql_api.id,
+ *     data_source=example_data_source.name,
+ *     name="example",
+ *     request_mapping_template="""{
+ *     "version": "2018-05-29",
+ *     "method": "GET",
+ *     "resourcePath": "/",
+ *     "params":{
+ *         "headers": $utils.http.copyheaders($ctx.request.headers)
+ *     }
+ * }
+ * """,
+ *     response_mapping_template="""#if($ctx.result.statusCode == 200)
+ *     $ctx.result.body
+ * #else
+ *     $utils.appendError($ctx.result.body, $ctx.result.statusCode)
+ * #end
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleGraphQLApi = new Aws.AppSync.GraphQLApi("exampleGraphQLApi", new Aws.AppSync.GraphQLApiArgs
+ *         {
+ *             AuthenticationType = "API_KEY",
+ *             Schema = @"type Mutation {
+ *   putPost(id: ID!, title: String!): Post
+ * }
+ * 
+ * type Post {
+ *   id: ID!
+ *   title: String!
+ * }
+ * 
+ * type Query {
+ *   singlePost(id: ID!): Post
+ * }
+ * 
+ * schema {
+ *   query: Query
+ *   mutation: Mutation
+ * }
+ * ",
+ *         });
+ *         var exampleDataSource = new Aws.AppSync.DataSource("exampleDataSource", new Aws.AppSync.DataSourceArgs
+ *         {
+ *             ApiId = exampleGraphQLApi.Id,
+ *             Name = "example",
+ *             Type = "HTTP",
+ *             HttpConfig = new Aws.AppSync.Inputs.DataSourceHttpConfigArgs
+ *             {
+ *                 Endpoint = "http://example.com",
+ *             },
+ *         });
+ *         var exampleFunction = new Aws.AppSync.Function("exampleFunction", new Aws.AppSync.FunctionArgs
+ *         {
+ *             ApiId = exampleGraphQLApi.Id,
+ *             DataSource = exampleDataSource.Name,
+ *             Name = "example",
+ *             RequestMappingTemplate = @"{
+ *     ""version"": ""2018-05-29"",
+ *     ""method"": ""GET"",
+ *     ""resourcePath"": ""/"",
+ *     ""params"":{
+ *         ""headers"": $utils.http.copyheaders($ctx.request.headers)
+ *     }
+ * }
+ * ",
+ *             ResponseMappingTemplate = @"#if($ctx.result.statusCode == 200)
+ *     $ctx.result.body
+ * #else
+ *     $utils.appendError($ctx.result.body, $ctx.result.statusCode)
+ * #end
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appsync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleGraphQLApi, err := appsync.NewGraphQLApi(ctx, "exampleGraphQLApi", &appsync.GraphQLApiArgs{
+ * 			AuthenticationType: pulumi.String("API_KEY"),
+ * 			Schema:             pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "type Mutation {\n", "  putPost(id: ID!, title: String!): Post\n", "}\n", "\n", "type Post {\n", "  id: ID!\n", "  title: String!\n", "}\n", "\n", "type Query {\n", "  singlePost(id: ID!): Post\n", "}\n", "\n", "schema {\n", "  query: Query\n", "  mutation: Mutation\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleDataSource, err := appsync.NewDataSource(ctx, "exampleDataSource", &appsync.DataSourceArgs{
+ * 			ApiId: exampleGraphQLApi.ID(),
+ * 			Name:  pulumi.String("example"),
+ * 			Type:  pulumi.String("HTTP"),
+ * 			HttpConfig: &appsync.DataSourceHttpConfigArgs{
+ * 				Endpoint: pulumi.String("http://example.com"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = appsync.NewFunction(ctx, "exampleFunction", &appsync.FunctionArgs{
+ * 			ApiId:                   exampleGraphQLApi.ID(),
+ * 			DataSource:              exampleDataSource.Name,
+ * 			Name:                    pulumi.String("example"),
+ * 			RequestMappingTemplate:  pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"version\": \"2018-05-29\",\n", "    \"method\": \"GET\",\n", "    \"resourcePath\": \"/\",\n", "    \"params\":{\n", "        \"headers\": ", "$", "utils.http.copyheaders(", "$", "ctx.request.headers)\n", "    }\n", "}\n")),
+ * 			ResponseMappingTemplate: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "#if(", "$", "ctx.result.statusCode == 200)\n", "    ", "$", "ctx.result.body\n", "#else\n", "    ", "$", "utils.appendError(", "$", "ctx.result.body, ", "$", "ctx.result.statusCode)\n", "#end\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +246,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appsync/function:Function example xxxxx-yyyyy
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:appsync/function:Function")
 public class Function extends io.pulumi.resources.CustomResource {

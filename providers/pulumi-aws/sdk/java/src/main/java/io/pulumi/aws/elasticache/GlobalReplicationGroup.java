@@ -16,7 +16,130 @@ import javax.annotation.Nullable;
 /**
  * Provides an ElastiCache Global Replication Group resource, which manages replication between two or more Replication Groups in different regions. For more information, see the [ElastiCache User Guide](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Redis-Global-Datastore.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Global replication group with one secondary replication group
+ * 
+ * The global replication group depends on the primary group existing. Secondary replication groups depend on the global replication group. the provider dependency management will handle this transparently using resource value references.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const primary = new aws.elasticache.ReplicationGroup("primary", {
+ *     replicationGroupDescription: "primary replication group",
+ *     engine: "redis",
+ *     engineVersion: "5.0.6",
+ *     nodeType: "cache.m5.large",
+ *     numberCacheClusters: 1,
+ * });
+ * const example = new aws.elasticache.GlobalReplicationGroup("example", {
+ *     globalReplicationGroupIdSuffix: "example",
+ *     primaryReplicationGroupId: primary.id,
+ * });
+ * const secondary = new aws.elasticache.ReplicationGroup("secondary", {
+ *     replicationGroupDescription: "secondary replication group",
+ *     globalReplicationGroupId: example.globalReplicationGroupId,
+ *     numberCacheClusters: 1,
+ * }, {
+ *     provider: aws.other_region,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * primary = aws.elasticache.ReplicationGroup("primary",
+ *     replication_group_description="primary replication group",
+ *     engine="redis",
+ *     engine_version="5.0.6",
+ *     node_type="cache.m5.large",
+ *     number_cache_clusters=1)
+ * example = aws.elasticache.GlobalReplicationGroup("example",
+ *     global_replication_group_id_suffix="example",
+ *     primary_replication_group_id=primary.id)
+ * secondary = aws.elasticache.ReplicationGroup("secondary",
+ *     replication_group_description="secondary replication group",
+ *     global_replication_group_id=example.global_replication_group_id,
+ *     number_cache_clusters=1,
+ *     opts=pulumi.ResourceOptions(provider=aws["other_region"]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Aws.ElastiCache.ReplicationGroup("primary", new Aws.ElastiCache.ReplicationGroupArgs
+ *         {
+ *             ReplicationGroupDescription = "primary replication group",
+ *             Engine = "redis",
+ *             EngineVersion = "5.0.6",
+ *             NodeType = "cache.m5.large",
+ *             NumberCacheClusters = 1,
+ *         });
+ *         var example = new Aws.ElastiCache.GlobalReplicationGroup("example", new Aws.ElastiCache.GlobalReplicationGroupArgs
+ *         {
+ *             GlobalReplicationGroupIdSuffix = "example",
+ *             PrimaryReplicationGroupId = primary.Id,
+ *         });
+ *         var secondary = new Aws.ElastiCache.ReplicationGroup("secondary", new Aws.ElastiCache.ReplicationGroupArgs
+ *         {
+ *             ReplicationGroupDescription = "secondary replication group",
+ *             GlobalReplicationGroupId = example.GlobalReplicationGroupId,
+ *             NumberCacheClusters = 1,
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Other_region,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticache"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		primary, err := elasticache.NewReplicationGroup(ctx, "primary", &elasticache.ReplicationGroupArgs{
+ * 			ReplicationGroupDescription: pulumi.String("primary replication group"),
+ * 			Engine:                      pulumi.String("redis"),
+ * 			EngineVersion:               pulumi.String("5.0.6"),
+ * 			NodeType:                    pulumi.String("cache.m5.large"),
+ * 			NumberCacheClusters:         pulumi.Int(1),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		example, err := elasticache.NewGlobalReplicationGroup(ctx, "example", &elasticache.GlobalReplicationGroupArgs{
+ * 			GlobalReplicationGroupIdSuffix: pulumi.String("example"),
+ * 			PrimaryReplicationGroupId:      primary.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = elasticache.NewReplicationGroup(ctx, "secondary", &elasticache.ReplicationGroupArgs{
+ * 			ReplicationGroupDescription: pulumi.String("secondary replication group"),
+ * 			GlobalReplicationGroupId:    example.GlobalReplicationGroupId,
+ * 			NumberCacheClusters:         pulumi.Int(1),
+ * 		}, pulumi.Provider(aws.Other_region))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +149,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:elasticache/globalReplicationGroup:GlobalReplicationGroup my_global_replication_group okuqm-global-replication-group-1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:elasticache/globalReplicationGroup:GlobalReplicationGroup")
 public class GlobalReplicationGroup extends io.pulumi.resources.CustomResource {
@@ -34,7 +158,6 @@ public class GlobalReplicationGroup extends io.pulumi.resources.CustomResource {
      * 
      * @Deprecated
      * Use engine_version_actual instead
-     * 
      */
     @Deprecated /* Use engine_version_actual instead */
     @Export(name="actualEngineVersion", type=String.class, parameters={})

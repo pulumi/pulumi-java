@@ -16,7 +16,109 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage a GuardDuty member. To accept invitations in member accounts, see the `aws.guardduty.InviteAccepter` resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const primary = new aws.guardduty.Detector("primary", {enable: true});
+ * const memberDetector = new aws.guardduty.Detector("memberDetector", {enable: true}, {
+ *     provider: aws.dev,
+ * });
+ * const memberMember = new aws.guardduty.Member("memberMember", {
+ *     accountId: memberDetector.accountId,
+ *     detectorId: primary.id,
+ *     email: "required@example.com",
+ *     invite: true,
+ *     invitationMessage: "please accept guardduty invitation",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * primary = aws.guardduty.Detector("primary", enable=True)
+ * member_detector = aws.guardduty.Detector("memberDetector", enable=True,
+ * opts=pulumi.ResourceOptions(provider=aws["dev"]))
+ * member_member = aws.guardduty.Member("memberMember",
+ *     account_id=member_detector.account_id,
+ *     detector_id=primary.id,
+ *     email="required@example.com",
+ *     invite=True,
+ *     invitation_message="please accept guardduty invitation")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Aws.GuardDuty.Detector("primary", new Aws.GuardDuty.DetectorArgs
+ *         {
+ *             Enable = true,
+ *         });
+ *         var memberDetector = new Aws.GuardDuty.Detector("memberDetector", new Aws.GuardDuty.DetectorArgs
+ *         {
+ *             Enable = true,
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Dev,
+ *         });
+ *         var memberMember = new Aws.GuardDuty.Member("memberMember", new Aws.GuardDuty.MemberArgs
+ *         {
+ *             AccountId = memberDetector.AccountId,
+ *             DetectorId = primary.Id,
+ *             Email = "required@example.com",
+ *             Invite = true,
+ *             InvitationMessage = "please accept guardduty invitation",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/guardduty"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		primary, err := guardduty.NewDetector(ctx, "primary", &guardduty.DetectorArgs{
+ * 			Enable: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		memberDetector, err := guardduty.NewDetector(ctx, "memberDetector", &guardduty.DetectorArgs{
+ * 			Enable: pulumi.Bool(true),
+ * 		}, pulumi.Provider(aws.Dev))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = guardduty.NewMember(ctx, "memberMember", &guardduty.MemberArgs{
+ * 			AccountId:         memberDetector.AccountId,
+ * 			DetectorId:        primary.ID(),
+ * 			Email:             pulumi.String("required@example.com"),
+ * 			Invite:            pulumi.Bool(true),
+ * 			InvitationMessage: pulumi.String("please accept guardduty invitation"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +128,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:guardduty/member:Member MyMember 00b00fd5aecc0ab60a708659477e9617:123456789012
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:guardduty/member:Member")
 public class Member extends io.pulumi.resources.CustomResource {

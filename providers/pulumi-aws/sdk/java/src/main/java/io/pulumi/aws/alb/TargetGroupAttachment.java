@@ -20,13 +20,221 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** `aws.alb.TargetGroupAttachment` is known as `aws.lb.TargetGroupAttachment`. The functionality is identical.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const testTargetGroup = new aws.lb.TargetGroup("testTargetGroup", {});
+ * // ... other configuration ...
+ * const testInstance = new aws.ec2.Instance("testInstance", {});
+ * // ... other configuration ...
+ * const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("testTargetGroupAttachment", {
+ *     targetGroupArn: testTargetGroup.arn,
+ *     targetId: testInstance.id,
+ *     port: 80,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_target_group = aws.lb.TargetGroup("testTargetGroup")
+ * # ... other configuration ...
+ * test_instance = aws.ec2.Instance("testInstance")
+ * # ... other configuration ...
+ * test_target_group_attachment = aws.lb.TargetGroupAttachment("testTargetGroupAttachment",
+ *     target_group_arn=test_target_group.arn,
+ *     target_id=test_instance.id,
+ *     port=80)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testTargetGroup = new Aws.LB.TargetGroup("testTargetGroup", new Aws.LB.TargetGroupArgs
+ *         {
+ *         });
+ *         // ... other configuration ...
+ *         var testInstance = new Aws.Ec2.Instance("testInstance", new Aws.Ec2.InstanceArgs
+ *         {
+ *         });
+ *         // ... other configuration ...
+ *         var testTargetGroupAttachment = new Aws.LB.TargetGroupAttachment("testTargetGroupAttachment", new Aws.LB.TargetGroupAttachmentArgs
+ *         {
+ *             TargetGroupArn = testTargetGroup.Arn,
+ *             TargetId = testInstance.Id,
+ *             Port = 80,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		testTargetGroup, err := lb.NewTargetGroup(ctx, "testTargetGroup", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		testInstance, err := ec2.NewInstance(ctx, "testInstance", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = lb.NewTargetGroupAttachment(ctx, "testTargetGroupAttachment", &lb.TargetGroupAttachmentArgs{
+ * 			TargetGroupArn: testTargetGroup.Arn,
+ * 			TargetId:       testInstance.ID(),
+ * 			Port:           pulumi.Int(80),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * ## Usage with lambda
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const testTargetGroup = new aws.lb.TargetGroup("testTargetGroup", {targetType: "lambda"});
+ * const testFunction = new aws.lambda.Function("testFunction", {});
+ * // ... other configuration ...
+ * const withLb = new aws.lambda.Permission("withLb", {
+ *     action: "lambda:InvokeFunction",
+ *     "function": testFunction.arn,
+ *     principal: "elasticloadbalancing.amazonaws.com",
+ *     sourceArn: testTargetGroup.arn,
+ * });
+ * const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("testTargetGroupAttachment", {
+ *     targetGroupArn: testTargetGroup.arn,
+ *     targetId: testFunction.arn,
+ * }, {
+ *     dependsOn: [withLb],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_target_group = aws.lb.TargetGroup("testTargetGroup", target_type="lambda")
+ * test_function = aws.lambda_.Function("testFunction")
+ * # ... other configuration ...
+ * with_lb = aws.lambda_.Permission("withLb",
+ *     action="lambda:InvokeFunction",
+ *     function=test_function.arn,
+ *     principal="elasticloadbalancing.amazonaws.com",
+ *     source_arn=test_target_group.arn)
+ * test_target_group_attachment = aws.lb.TargetGroupAttachment("testTargetGroupAttachment",
+ *     target_group_arn=test_target_group.arn,
+ *     target_id=test_function.arn,
+ *     opts=pulumi.ResourceOptions(depends_on=[with_lb]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testTargetGroup = new Aws.LB.TargetGroup("testTargetGroup", new Aws.LB.TargetGroupArgs
+ *         {
+ *             TargetType = "lambda",
+ *         });
+ *         var testFunction = new Aws.Lambda.Function("testFunction", new Aws.Lambda.FunctionArgs
+ *         {
+ *         });
+ *         // ... other configuration ...
+ *         var withLb = new Aws.Lambda.Permission("withLb", new Aws.Lambda.PermissionArgs
+ *         {
+ *             Action = "lambda:InvokeFunction",
+ *             Function = testFunction.Arn,
+ *             Principal = "elasticloadbalancing.amazonaws.com",
+ *             SourceArn = testTargetGroup.Arn,
+ *         });
+ *         var testTargetGroupAttachment = new Aws.LB.TargetGroupAttachment("testTargetGroupAttachment", new Aws.LB.TargetGroupAttachmentArgs
+ *         {
+ *             TargetGroupArn = testTargetGroup.Arn,
+ *             TargetId = testFunction.Arn,
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 withLb,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		testTargetGroup, err := lb.NewTargetGroup(ctx, "testTargetGroup", &lb.TargetGroupArgs{
+ * 			TargetType: pulumi.String("lambda"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		testFunction, err := lambda.NewFunction(ctx, "testFunction", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		withLb, err := lambda.NewPermission(ctx, "withLb", &lambda.PermissionArgs{
+ * 			Action:    pulumi.String("lambda:InvokeFunction"),
+ * 			Function:  testFunction.Arn,
+ * 			Principal: pulumi.String("elasticloadbalancing.amazonaws.com"),
+ * 			SourceArn: testTargetGroup.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = lb.NewTargetGroupAttachment(ctx, "testTargetGroupAttachment", &lb.TargetGroupAttachmentArgs{
+ * 			TargetGroupArn: testTargetGroup.Arn,
+ * 			TargetId:       testFunction.Arn,
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			withLb,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * 
  * ## Import
  * 
- * Target Group Attachments cannot be imported.
- * 
+ * Target Group Attachments cannot be imported. 
  */
 @ResourceType(type="aws:alb/targetGroupAttachment:TargetGroupAttachment")
 public class TargetGroupAttachment extends io.pulumi.resources.CustomResource {

@@ -15,7 +15,67 @@ import javax.annotation.Nullable;
 /**
  * Provides an SES receipt filter resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const filter = new aws.ses.ReceiptFilter("filter", {
+ *     cidr: "10.10.10.10",
+ *     policy: "Block",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * filter = aws.ses.ReceiptFilter("filter",
+ *     cidr="10.10.10.10",
+ *     policy="Block")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var filter = new Aws.Ses.ReceiptFilter("filter", new Aws.Ses.ReceiptFilterArgs
+ *         {
+ *             Cidr = "10.10.10.10",
+ *             Policy = "Block",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ses"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ses.NewReceiptFilter(ctx, "filter", &ses.ReceiptFilterArgs{
+ * 			Cidr:   pulumi.String("10.10.10.10"),
+ * 			Policy: pulumi.String("Block"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +85,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ses/receiptFilter:ReceiptFilter test some-filter
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ses/receiptFilter:ReceiptFilter")
 public class ReceiptFilter extends io.pulumi.resources.CustomResource {

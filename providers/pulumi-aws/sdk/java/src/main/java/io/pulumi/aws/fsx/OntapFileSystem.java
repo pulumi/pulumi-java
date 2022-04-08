@@ -21,7 +21,92 @@ import javax.annotation.Nullable;
  * Manages an Amazon FSx for NetApp ONTAP file system.
  * See the [FSx ONTAP User Guide](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html) for more information.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.fsx.OntapFileSystem("test", {
+ *     storageCapacity: 1024,
+ *     subnetIds: [
+ *         aws_subnet.test1.id,
+ *         aws_subnet.test2.id,
+ *     ],
+ *     deploymentType: "MULTI_AZ_1",
+ *     throughputCapacity: 512,
+ *     preferredSubnetId: aws_subnet.test1.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.fsx.OntapFileSystem("test",
+ *     storage_capacity=1024,
+ *     subnet_ids=[
+ *         aws_subnet["test1"]["id"],
+ *         aws_subnet["test2"]["id"],
+ *     ],
+ *     deployment_type="MULTI_AZ_1",
+ *     throughput_capacity=512,
+ *     preferred_subnet_id=aws_subnet["test1"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Fsx.OntapFileSystem("test", new Aws.Fsx.OntapFileSystemArgs
+ *         {
+ *             StorageCapacity = 1024,
+ *             SubnetIds = 
+ *             {
+ *                 aws_subnet.Test1.Id,
+ *                 aws_subnet.Test2.Id,
+ *             },
+ *             DeploymentType = "MULTI_AZ_1",
+ *             ThroughputCapacity = 512,
+ *             PreferredSubnetId = aws_subnet.Test1.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/fsx"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := fsx.NewOntapFileSystem(ctx, "test", &fsx.OntapFileSystemArgs{
+ * 			StorageCapacity: pulumi.Int(1024),
+ * 			SubnetIds: pulumi.StringArray{
+ * 				pulumi.Any(aws_subnet.Test1.Id),
+ * 				pulumi.Any(aws_subnet.Test2.Id),
+ * 			},
+ * 			DeploymentType:     pulumi.String("MULTI_AZ_1"),
+ * 			ThroughputCapacity: pulumi.Int(512),
+ * 			PreferredSubnetId:  pulumi.Any(aws_subnet.Test1.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,18 +118,19 @@ import javax.annotation.Nullable;
  * 
  *  Certain resource arguments, like `security_group_ids`, do not have a FSx API method for reading the information after creation. If the argument is set in the Terraform configuration on an imported resource, Terraform will always show a difference. To workaround this behavior, either omit the argument from the Terraform configuration or use [`ignore_changes`](https://www.terraform.io/docs/configuration/meta-arguments/lifecycle.html#ignore_changes) to hide the difference, e.g., terraform resource "aws_fsx_ontap_file_system" "example" {
  * 
- * # ... other configuration ...
+ *  # ... other configuration ...
  * 
  *  security_group_ids = [aws_security_group.example.id]
  * 
- * # There is no FSx API for reading security_group_ids
+ *  # There is no FSx API for reading security_group_ids
  * 
  *  lifecycle {
  * 
+ * 
+ * 
  *  ignore_changes = [security_group_ids]
  * 
- *  } }
- * 
+ *  } } 
  */
 @ResourceType(type="aws:fsx/ontapFileSystem:OntapFileSystem")
 public class OntapFileSystem extends io.pulumi.resources.CustomResource {

@@ -15,7 +15,62 @@ import javax.annotation.Nullable;
 /**
  * Provides an SES email identity resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ses.EmailIdentity("example", {
+ *     email: "email@example.com",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ses.EmailIdentity("example", email="email@example.com")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ses.EmailIdentity("example", new Aws.Ses.EmailIdentityArgs
+ *         {
+ *             Email = "email@example.com",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ses"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ses.NewEmailIdentity(ctx, "example", &ses.EmailIdentityArgs{
+ * 			Email: pulumi.String("email@example.com"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +80,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ses/emailIdentity:EmailIdentity example email@example.com
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ses/emailIdentity:EmailIdentity")
 public class EmailIdentity extends io.pulumi.resources.CustomResource {

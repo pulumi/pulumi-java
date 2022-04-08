@@ -17,7 +17,119 @@ import javax.annotation.Nullable;
 /**
  * Provides a WAF Regional XSS Match Set Resource for use with Application Load Balancer.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const xssMatchSet = new aws.wafregional.XssMatchSet("xss_match_set", {
+ *     xssMatchTuples: [
+ *         {
+ *             fieldToMatch: {
+ *                 type: "URI",
+ *             },
+ *             textTransformation: "NONE",
+ *         },
+ *         {
+ *             fieldToMatch: {
+ *                 type: "QUERY_STRING",
+ *             },
+ *             textTransformation: "NONE",
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * xss_match_set = aws.wafregional.XssMatchSet("xssMatchSet", xss_match_tuples=[
+ *     aws.wafregional.XssMatchSetXssMatchTupleArgs(
+ *         field_to_match=aws.wafregional.XssMatchSetXssMatchTupleFieldToMatchArgs(
+ *             type="URI",
+ *         ),
+ *         text_transformation="NONE",
+ *     ),
+ *     aws.wafregional.XssMatchSetXssMatchTupleArgs(
+ *         field_to_match=aws.wafregional.XssMatchSetXssMatchTupleFieldToMatchArgs(
+ *             type="QUERY_STRING",
+ *         ),
+ *         text_transformation="NONE",
+ *     ),
+ * ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var xssMatchSet = new Aws.WafRegional.XssMatchSet("xssMatchSet", new Aws.WafRegional.XssMatchSetArgs
+ *         {
+ *             XssMatchTuples = 
+ *             {
+ *                 new Aws.WafRegional.Inputs.XssMatchSetXssMatchTupleArgs
+ *                 {
+ *                     FieldToMatch = new Aws.WafRegional.Inputs.XssMatchSetXssMatchTupleFieldToMatchArgs
+ *                     {
+ *                         Type = "URI",
+ *                     },
+ *                     TextTransformation = "NONE",
+ *                 },
+ *                 new Aws.WafRegional.Inputs.XssMatchSetXssMatchTupleArgs
+ *                 {
+ *                     FieldToMatch = new Aws.WafRegional.Inputs.XssMatchSetXssMatchTupleFieldToMatchArgs
+ *                     {
+ *                         Type = "QUERY_STRING",
+ *                     },
+ *                     TextTransformation = "NONE",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/wafregional"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := wafregional.NewXssMatchSet(ctx, "xssMatchSet", &wafregional.XssMatchSetArgs{
+ * 			XssMatchTuples: wafregional.XssMatchSetXssMatchTupleArray{
+ * 				&wafregional.XssMatchSetXssMatchTupleArgs{
+ * 					FieldToMatch: &wafregional.XssMatchSetXssMatchTupleFieldToMatchArgs{
+ * 						Type: pulumi.String("URI"),
+ * 					},
+ * 					TextTransformation: pulumi.String("NONE"),
+ * 				},
+ * 				&wafregional.XssMatchSetXssMatchTupleArgs{
+ * 					FieldToMatch: &wafregional.XssMatchSetXssMatchTupleFieldToMatchArgs{
+ * 						Type: pulumi.String("QUERY_STRING"),
+ * 					},
+ * 					TextTransformation: pulumi.String("NONE"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +139,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:wafregional/xssMatchSet:XssMatchSet example 12345abcde
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:wafregional/xssMatchSet:XssMatchSet")
 public class XssMatchSet extends io.pulumi.resources.CustomResource {

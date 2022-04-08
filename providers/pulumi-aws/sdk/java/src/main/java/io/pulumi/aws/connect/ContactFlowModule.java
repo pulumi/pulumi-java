@@ -23,7 +23,217 @@ import javax.annotation.Nullable;
  * !> **WARN:** Contact Flow Modules exported from the Console [See Contact Flow import/export which is the same for Contact Flow Modules](https://docs.aws.amazon.com/connect/latest/adminguide/contact-flow-import-export.html) are not in the Amazon Connect Contact Flow Language and can not be used with this resource. Instead, the recommendation is to use the AWS CLI [`describe-contact-flow-module`](https://docs.aws.amazon.com/cli/latest/reference/connect/describe-contact-flow-module.html).
  * See example below which uses `jq` to extract the `Content` attribute and saves it to a local file.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.connect.ContactFlowModule("example", {
+ *     content: `    {
+ * 		"Version": "2019-10-30",
+ * 		"StartAction": "12345678-1234-1234-1234-123456789012",
+ * 		"Actions": [
+ * 			{
+ * 				"Identifier": "12345678-1234-1234-1234-123456789012",
+ * 				"Parameters": {
+ * 					"Text": "Hello contact flow module"
+ * 				},
+ * 				"Transitions": {
+ * 					"NextAction": "abcdef-abcd-abcd-abcd-abcdefghijkl",
+ * 					"Errors": [],
+ * 					"Conditions": []
+ * 				},
+ * 				"Type": "MessageParticipant"
+ * 			},
+ * 			{
+ * 				"Identifier": "abcdef-abcd-abcd-abcd-abcdefghijkl",
+ * 				"Type": "DisconnectParticipant",
+ * 				"Parameters": {},
+ * 				"Transitions": {}
+ * 			}
+ * 		],
+ * 		"Settings": {
+ * 			"InputParameters": [],
+ * 			"OutputParameters": [],
+ * 			"Transitions": [
+ * 				{
+ * 					"DisplayName": "Success",
+ * 					"ReferenceName": "Success",
+ * 					"Description": ""
+ * 				},
+ * 				{
+ * 					"DisplayName": "Error",
+ * 					"ReferenceName": "Error",
+ * 					"Description": ""
+ * 				}
+ * 			]
+ * 		}
+ * 	}
+ *     `,
+ *     description: "Example Contact Flow Module Description",
+ *     instanceId: "aaaaaaaa-bbbb-cccc-dddd-111111111111",
+ *     tags: {
+ *         Application: "Terraform",
+ *         Method: "Create",
+ *         Name: "Example Contact Flow Module",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.connect.ContactFlowModule("example",
+ *     content="""    {
+ * 		"Version": "2019-10-30",
+ * 		"StartAction": "12345678-1234-1234-1234-123456789012",
+ * 		"Actions": [
+ * 			{
+ * 				"Identifier": "12345678-1234-1234-1234-123456789012",
+ * 				"Parameters": {
+ * 					"Text": "Hello contact flow module"
+ * 				},
+ * 				"Transitions": {
+ * 					"NextAction": "abcdef-abcd-abcd-abcd-abcdefghijkl",
+ * 					"Errors": [],
+ * 					"Conditions": []
+ * 				},
+ * 				"Type": "MessageParticipant"
+ * 			},
+ * 			{
+ * 				"Identifier": "abcdef-abcd-abcd-abcd-abcdefghijkl",
+ * 				"Type": "DisconnectParticipant",
+ * 				"Parameters": {},
+ * 				"Transitions": {}
+ * 			}
+ * 		],
+ * 		"Settings": {
+ * 			"InputParameters": [],
+ * 			"OutputParameters": [],
+ * 			"Transitions": [
+ * 				{
+ * 					"DisplayName": "Success",
+ * 					"ReferenceName": "Success",
+ * 					"Description": ""
+ * 				},
+ * 				{
+ * 					"DisplayName": "Error",
+ * 					"ReferenceName": "Error",
+ * 					"Description": ""
+ * 				}
+ * 			]
+ * 		}
+ * 	}
+ *     
+ * """,
+ *     description="Example Contact Flow Module Description",
+ *     instance_id="aaaaaaaa-bbbb-cccc-dddd-111111111111",
+ *     tags={
+ *         "Application": "Terraform",
+ *         "Method": "Create",
+ *         "Name": "Example Contact Flow Module",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Connect.ContactFlowModule("example", new Aws.Connect.ContactFlowModuleArgs
+ *         {
+ *             Content = @"    {
+ * 		""Version"": ""2019-10-30"",
+ * 		""StartAction"": ""12345678-1234-1234-1234-123456789012"",
+ * 		""Actions"": [
+ * 			{
+ * 				""Identifier"": ""12345678-1234-1234-1234-123456789012"",
+ * 				""Parameters"": {
+ * 					""Text"": ""Hello contact flow module""
+ * 				},
+ * 				""Transitions"": {
+ * 					""NextAction"": ""abcdef-abcd-abcd-abcd-abcdefghijkl"",
+ * 					""Errors"": [],
+ * 					""Conditions"": []
+ * 				},
+ * 				""Type"": ""MessageParticipant""
+ * 			},
+ * 			{
+ * 				""Identifier"": ""abcdef-abcd-abcd-abcd-abcdefghijkl"",
+ * 				""Type"": ""DisconnectParticipant"",
+ * 				""Parameters"": {},
+ * 				""Transitions"": {}
+ * 			}
+ * 		],
+ * 		""Settings"": {
+ * 			""InputParameters"": [],
+ * 			""OutputParameters"": [],
+ * 			""Transitions"": [
+ * 				{
+ * 					""DisplayName"": ""Success"",
+ * 					""ReferenceName"": ""Success"",
+ * 					""Description"": """"
+ * 				},
+ * 				{
+ * 					""DisplayName"": ""Error"",
+ * 					""ReferenceName"": ""Error"",
+ * 					""Description"": """"
+ * 				}
+ * 			]
+ * 		}
+ * 	}
+ *     
+ * ",
+ *             Description = "Example Contact Flow Module Description",
+ *             InstanceId = "aaaaaaaa-bbbb-cccc-dddd-111111111111",
+ *             Tags = 
+ *             {
+ *                 { "Application", "Terraform" },
+ *                 { "Method", "Create" },
+ *                 { "Name", "Example Contact Flow Module" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/connect"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := connect.NewContactFlowModule(ctx, "example", &connect.ContactFlowModuleArgs{
+ * 			Content: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "    {\n", "		\"Version\": \"2019-10-30\",\n", "		\"StartAction\": \"12345678-1234-1234-1234-123456789012\",\n", "		\"Actions\": [\n", "			{\n", "				\"Identifier\": \"12345678-1234-1234-1234-123456789012\",\n", "				\"Parameters\": {\n", "					\"Text\": \"Hello contact flow module\"\n", "				},\n", "				\"Transitions\": {\n", "					\"NextAction\": \"abcdef-abcd-abcd-abcd-abcdefghijkl\",\n", "					\"Errors\": [],\n", "					\"Conditions\": []\n", "				},\n", "				\"Type\": \"MessageParticipant\"\n", "			},\n", "			{\n", "				\"Identifier\": \"abcdef-abcd-abcd-abcd-abcdefghijkl\",\n", "				\"Type\": \"DisconnectParticipant\",\n", "				\"Parameters\": {},\n", "				\"Transitions\": {}\n", "			}\n", "		],\n", "		\"Settings\": {\n", "			\"InputParameters\": [],\n", "			\"OutputParameters\": [],\n", "			\"Transitions\": [\n", "				{\n", "					\"DisplayName\": \"Success\",\n", "					\"ReferenceName\": \"Success\",\n", "					\"Description\": \"\"\n", "				},\n", "				{\n", "					\"DisplayName\": \"Error\",\n", "					\"ReferenceName\": \"Error\",\n", "					\"Description\": \"\"\n", "				}\n", "			]\n", "		}\n", "	}\n", "    \n")),
+ * 			Description: pulumi.String("Example Contact Flow Module Description"),
+ * 			InstanceId:  pulumi.String("aaaaaaaa-bbbb-cccc-dddd-111111111111"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Application": pulumi.String("Terraform"),
+ * 				"Method":      pulumi.String("Create"),
+ * 				"Name":        pulumi.String("Example Contact Flow Module"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,6 +243,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:connect/contactFlowModule:ContactFlowModule example f1288a1f-6193-445a-b47e-af739b2:c1d4e5f6-1b3c-1b3c-1b3c-c1d4e5f6c1d4e5
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:connect/contactFlowModule:ContactFlowModule")
 public class ContactFlowModule extends io.pulumi.resources.CustomResource {

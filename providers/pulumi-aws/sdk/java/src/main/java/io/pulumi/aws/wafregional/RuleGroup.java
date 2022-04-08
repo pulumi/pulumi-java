@@ -18,7 +18,110 @@ import javax.annotation.Nullable;
 /**
  * Provides a WAF Regional Rule Group Resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleRule = new aws.wafregional.Rule("exampleRule", {metricName: "example"});
+ * const exampleRuleGroup = new aws.wafregional.RuleGroup("exampleRuleGroup", {
+ *     metricName: "example",
+ *     activatedRules: [{
+ *         action: {
+ *             type: "COUNT",
+ *         },
+ *         priority: 50,
+ *         ruleId: exampleRule.id,
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_rule = aws.wafregional.Rule("exampleRule", metric_name="example")
+ * example_rule_group = aws.wafregional.RuleGroup("exampleRuleGroup",
+ *     metric_name="example",
+ *     activated_rules=[aws.wafregional.RuleGroupActivatedRuleArgs(
+ *         action=aws.wafregional.RuleGroupActivatedRuleActionArgs(
+ *             type="COUNT",
+ *         ),
+ *         priority=50,
+ *         rule_id=example_rule.id,
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleRule = new Aws.WafRegional.Rule("exampleRule", new Aws.WafRegional.RuleArgs
+ *         {
+ *             MetricName = "example",
+ *         });
+ *         var exampleRuleGroup = new Aws.WafRegional.RuleGroup("exampleRuleGroup", new Aws.WafRegional.RuleGroupArgs
+ *         {
+ *             MetricName = "example",
+ *             ActivatedRules = 
+ *             {
+ *                 new Aws.WafRegional.Inputs.RuleGroupActivatedRuleArgs
+ *                 {
+ *                     Action = new Aws.WafRegional.Inputs.RuleGroupActivatedRuleActionArgs
+ *                     {
+ *                         Type = "COUNT",
+ *                     },
+ *                     Priority = 50,
+ *                     RuleId = exampleRule.Id,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/wafregional"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleRule, err := wafregional.NewRule(ctx, "exampleRule", &wafregional.RuleArgs{
+ * 			MetricName: pulumi.String("example"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = wafregional.NewRuleGroup(ctx, "exampleRuleGroup", &wafregional.RuleGroupArgs{
+ * 			MetricName: pulumi.String("example"),
+ * 			ActivatedRules: wafregional.RuleGroupActivatedRuleArray{
+ * 				&wafregional.RuleGroupActivatedRuleArgs{
+ * 					Action: &wafregional.RuleGroupActivatedRuleActionArgs{
+ * 						Type: pulumi.String("COUNT"),
+ * 					},
+ * 					Priority: pulumi.Int(50),
+ * 					RuleId:   exampleRule.ID(),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +131,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:wafregional/ruleGroup:RuleGroup example a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:wafregional/ruleGroup:RuleGroup")
 public class RuleGroup extends io.pulumi.resources.CustomResource {

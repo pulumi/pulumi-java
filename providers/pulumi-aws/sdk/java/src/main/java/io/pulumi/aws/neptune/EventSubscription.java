@@ -16,7 +16,222 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const defaultCluster = new aws.neptune.Cluster("defaultCluster", {
+ *     clusterIdentifier: "neptune-cluster-demo",
+ *     engine: "neptune",
+ *     backupRetentionPeriod: 5,
+ *     preferredBackupWindow: "07:00-09:00",
+ *     skipFinalSnapshot: true,
+ *     iamDatabaseAuthenticationEnabled: "true",
+ *     applyImmediately: "true",
+ * });
+ * const example = new aws.neptune.ClusterInstance("example", {
+ *     clusterIdentifier: defaultCluster.id,
+ *     engine: "neptune",
+ *     instanceClass: "db.r4.large",
+ *     applyImmediately: "true",
+ * });
+ * const defaultTopic = new aws.sns.Topic("defaultTopic", {});
+ * const defaultEventSubscription = new aws.neptune.EventSubscription("defaultEventSubscription", {
+ *     snsTopicArn: defaultTopic.arn,
+ *     sourceType: "db-instance",
+ *     sourceIds: [example.id],
+ *     eventCategories: [
+ *         "maintenance",
+ *         "availability",
+ *         "creation",
+ *         "backup",
+ *         "restoration",
+ *         "recovery",
+ *         "deletion",
+ *         "failover",
+ *         "failure",
+ *         "notification",
+ *         "configuration change",
+ *         "read replica",
+ *     ],
+ *     tags: {
+ *         env: "test",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default_cluster = aws.neptune.Cluster("defaultCluster",
+ *     cluster_identifier="neptune-cluster-demo",
+ *     engine="neptune",
+ *     backup_retention_period=5,
+ *     preferred_backup_window="07:00-09:00",
+ *     skip_final_snapshot=True,
+ *     iam_database_authentication_enabled=True,
+ *     apply_immediately=True)
+ * example = aws.neptune.ClusterInstance("example",
+ *     cluster_identifier=default_cluster.id,
+ *     engine="neptune",
+ *     instance_class="db.r4.large",
+ *     apply_immediately=True)
+ * default_topic = aws.sns.Topic("defaultTopic")
+ * default_event_subscription = aws.neptune.EventSubscription("defaultEventSubscription",
+ *     sns_topic_arn=default_topic.arn,
+ *     source_type="db-instance",
+ *     source_ids=[example.id],
+ *     event_categories=[
+ *         "maintenance",
+ *         "availability",
+ *         "creation",
+ *         "backup",
+ *         "restoration",
+ *         "recovery",
+ *         "deletion",
+ *         "failover",
+ *         "failure",
+ *         "notification",
+ *         "configuration change",
+ *         "read replica",
+ *     ],
+ *     tags={
+ *         "env": "test",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultCluster = new Aws.Neptune.Cluster("defaultCluster", new Aws.Neptune.ClusterArgs
+ *         {
+ *             ClusterIdentifier = "neptune-cluster-demo",
+ *             Engine = "neptune",
+ *             BackupRetentionPeriod = 5,
+ *             PreferredBackupWindow = "07:00-09:00",
+ *             SkipFinalSnapshot = true,
+ *             IamDatabaseAuthenticationEnabled = true,
+ *             ApplyImmediately = true,
+ *         });
+ *         var example = new Aws.Neptune.ClusterInstance("example", new Aws.Neptune.ClusterInstanceArgs
+ *         {
+ *             ClusterIdentifier = defaultCluster.Id,
+ *             Engine = "neptune",
+ *             InstanceClass = "db.r4.large",
+ *             ApplyImmediately = true,
+ *         });
+ *         var defaultTopic = new Aws.Sns.Topic("defaultTopic", new Aws.Sns.TopicArgs
+ *         {
+ *         });
+ *         var defaultEventSubscription = new Aws.Neptune.EventSubscription("defaultEventSubscription", new Aws.Neptune.EventSubscriptionArgs
+ *         {
+ *             SnsTopicArn = defaultTopic.Arn,
+ *             SourceType = "db-instance",
+ *             SourceIds = 
+ *             {
+ *                 example.Id,
+ *             },
+ *             EventCategories = 
+ *             {
+ *                 "maintenance",
+ *                 "availability",
+ *                 "creation",
+ *                 "backup",
+ *                 "restoration",
+ *                 "recovery",
+ *                 "deletion",
+ *                 "failover",
+ *                 "failure",
+ *                 "notification",
+ *                 "configuration change",
+ *                 "read replica",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "env", "test" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/neptune"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultCluster, err := neptune.NewCluster(ctx, "defaultCluster", &neptune.ClusterArgs{
+ * 			ClusterIdentifier:                pulumi.String("neptune-cluster-demo"),
+ * 			Engine:                           pulumi.String("neptune"),
+ * 			BackupRetentionPeriod:            pulumi.Int(5),
+ * 			PreferredBackupWindow:            pulumi.String("07:00-09:00"),
+ * 			SkipFinalSnapshot:                pulumi.Bool(true),
+ * 			IamDatabaseAuthenticationEnabled: pulumi.Bool(true),
+ * 			ApplyImmediately:                 pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		example, err := neptune.NewClusterInstance(ctx, "example", &neptune.ClusterInstanceArgs{
+ * 			ClusterIdentifier: defaultCluster.ID(),
+ * 			Engine:            pulumi.String("neptune"),
+ * 			InstanceClass:     pulumi.String("db.r4.large"),
+ * 			ApplyImmediately:  pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultTopic, err := sns.NewTopic(ctx, "defaultTopic", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = neptune.NewEventSubscription(ctx, "defaultEventSubscription", &neptune.EventSubscriptionArgs{
+ * 			SnsTopicArn: defaultTopic.Arn,
+ * 			SourceType:  pulumi.String("db-instance"),
+ * 			SourceIds: pulumi.StringArray{
+ * 				example.ID(),
+ * 			},
+ * 			EventCategories: pulumi.StringArray{
+ * 				pulumi.String("maintenance"),
+ * 				pulumi.String("availability"),
+ * 				pulumi.String("creation"),
+ * 				pulumi.String("backup"),
+ * 				pulumi.String("restoration"),
+ * 				pulumi.String("recovery"),
+ * 				pulumi.String("deletion"),
+ * 				pulumi.String("failover"),
+ * 				pulumi.String("failure"),
+ * 				pulumi.String("notification"),
+ * 				pulumi.String("configuration change"),
+ * 				pulumi.String("read replica"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"env": pulumi.String("test"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +241,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:neptune/eventSubscription:EventSubscription example my-event-subscription
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:neptune/eventSubscription:EventSubscription")
 public class EventSubscription extends io.pulumi.resources.CustomResource {

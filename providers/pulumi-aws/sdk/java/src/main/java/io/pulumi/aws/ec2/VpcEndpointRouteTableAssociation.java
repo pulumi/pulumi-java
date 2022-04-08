@@ -15,7 +15,67 @@ import javax.annotation.Nullable;
 /**
  * Manages a VPC Endpoint Route Table Association
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ec2.VpcEndpointRouteTableAssociation("example", {
+ *     routeTableId: aws_route_table.example.id,
+ *     vpcEndpointId: aws_vpc_endpoint.example.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ec2.VpcEndpointRouteTableAssociation("example",
+ *     route_table_id=aws_route_table["example"]["id"],
+ *     vpc_endpoint_id=aws_vpc_endpoint["example"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ec2.VpcEndpointRouteTableAssociation("example", new Aws.Ec2.VpcEndpointRouteTableAssociationArgs
+ *         {
+ *             RouteTableId = aws_route_table.Example.Id,
+ *             VpcEndpointId = aws_vpc_endpoint.Example.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewVpcEndpointRouteTableAssociation(ctx, "example", &ec2.VpcEndpointRouteTableAssociationArgs{
+ * 			RouteTableId:  pulumi.Any(aws_route_table.Example.Id),
+ * 			VpcEndpointId: pulumi.Any(aws_vpc_endpoint.Example.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +85,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/vpcEndpointRouteTableAssociation:VpcEndpointRouteTableAssociation example vpce-aaaaaaaa/rtb-bbbbbbbb
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/vpcEndpointRouteTableAssociation:VpcEndpointRouteTableAssociation")
 public class VpcEndpointRouteTableAssociation extends io.pulumi.resources.CustomResource {

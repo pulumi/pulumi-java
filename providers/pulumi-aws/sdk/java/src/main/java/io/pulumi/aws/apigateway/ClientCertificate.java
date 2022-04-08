@@ -16,7 +16,62 @@ import javax.annotation.Nullable;
 /**
  * Provides an API Gateway Client Certificate.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const demo = new aws.apigateway.ClientCertificate("demo", {
+ *     description: "My client certificate",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * demo = aws.apigateway.ClientCertificate("demo", description="My client certificate")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var demo = new Aws.ApiGateway.ClientCertificate("demo", new Aws.ApiGateway.ClientCertificateArgs
+ *         {
+ *             Description = "My client certificate",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apigateway.NewClientCertificate(ctx, "demo", &apigateway.ClientCertificateArgs{
+ * 			Description: pulumi.String("My client certificate"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +81,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:apigateway/clientCertificate:ClientCertificate demo ab1cqe
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:apigateway/clientCertificate:ClientCertificate")
 public class ClientCertificate extends io.pulumi.resources.CustomResource {

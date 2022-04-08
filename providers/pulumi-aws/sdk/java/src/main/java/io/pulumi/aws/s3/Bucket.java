@@ -29,7 +29,1410 @@ import javax.annotation.Nullable;
  * 
  * > This functionality is for managing S3 in an AWS Partition. To manage [S3 on Outposts](https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html), see the `aws.s3control.Bucket` resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Private Bucket w/ Tags
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const bucket = new aws.s3.Bucket("b", {
+ *     acl: "private",
+ *     tags: {
+ *         Environment: "Dev",
+ *         Name: "My bucket",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * bucket = aws.s3.Bucket("bucket",
+ *     acl="private",
+ *     tags={
+ *         "Environment": "Dev",
+ *         "Name": "My bucket",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+ *         {
+ *             Acl = "private",
+ *             Tags = 
+ *             {
+ *                 { "Environment", "Dev" },
+ *                 { "Name", "My bucket" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := s3.NewBucket(ctx, "bucket", &s3.BucketArgs{
+ * 			Acl: pulumi.String("private"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Environment": pulumi.String("Dev"),
+ * 				"Name":        pulumi.String("My bucket"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Static Website Hosting
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * from "fs";
+ * 
+ * const bucket = new aws.s3.Bucket("bucket", {
+ *     acl: "public-read",
+ *     policy: fs.readFileSync("policy.json"),
+ *     website: {
+ *         indexDocument: "index.html",
+ *         errorDocument: "error.html",
+ *         routingRules: `[{
+ *     "Condition": {
+ *         "KeyPrefixEquals": "docs/"
+ *     },
+ *     "Redirect": {
+ *         "ReplaceKeyPrefixWith": "documents/"
+ *     }
+ * }]
+ * `,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * bucket = aws.s3.Bucket("bucket",
+ *     acl="public-read",
+ *     policy=(lambda path: open(path).read())("policy.json"),
+ *     website=aws.s3.BucketWebsiteArgs(
+ *         index_document="index.html",
+ *         error_document="error.html",
+ *         routing_rules="""[{
+ *     "Condition": {
+ *         "KeyPrefixEquals": "docs/"
+ *     },
+ *     "Redirect": {
+ *         "ReplaceKeyPrefixWith": "documents/"
+ *     }
+ * }]
+ * """,
+ *     ))
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+ *         {
+ *             Acl = "public-read",
+ *             Policy = File.ReadAllText("policy.json"),
+ *             Website = new Aws.S3.Inputs.BucketWebsiteArgs
+ *             {
+ *                 IndexDocument = "index.html",
+ *                 ErrorDocument = "error.html",
+ *                 RoutingRules = @"[{
+ *     ""Condition"": {
+ *         ""KeyPrefixEquals"": ""docs/""
+ *     },
+ *     ""Redirect"": {
+ *         ""ReplaceKeyPrefixWith"": ""documents/""
+ *     }
+ * }]
+ * ",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := s3.NewBucket(ctx, "bucket", &s3.BucketArgs{
+ * 			Acl:    pulumi.String("public-read"),
+ * 			Policy: readFileOrPanic("policy.json"),
+ * 			Website: &s3.BucketWebsiteArgs{
+ * 				IndexDocument: pulumi.String("index.html"),
+ * 				ErrorDocument: pulumi.String("error.html"),
+ * 				RoutingRules:  pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v", "[{\n", "    \"Condition\": {\n", "        \"KeyPrefixEquals\": \"docs/\"\n", "    },\n", "    \"Redirect\": {\n", "        \"ReplaceKeyPrefixWith\": \"documents/\"\n", "    }\n", "}]\n")),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Using CORS
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const bucket = new aws.s3.Bucket("b", {
+ *     acl: "public-read",
+ *     corsRules: [{
+ *         allowedHeaders: ["*"],
+ *         allowedMethods: [
+ *             "PUT",
+ *             "POST",
+ *         ],
+ *         allowedOrigins: ["https://s3-website-test.mydomain.com"],
+ *         exposeHeaders: ["ETag"],
+ *         maxAgeSeconds: 3000,
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * bucket = aws.s3.Bucket("bucket",
+ *     acl="public-read",
+ *     cors_rules=[aws.s3.BucketCorsRuleArgs(
+ *         allowed_headers=["*"],
+ *         allowed_methods=[
+ *             "PUT",
+ *             "POST",
+ *         ],
+ *         allowed_origins=["https://s3-website-test.mydomain.com"],
+ *         expose_headers=["ETag"],
+ *         max_age_seconds=3000,
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+ *         {
+ *             Acl = "public-read",
+ *             CorsRules = 
+ *             {
+ *                 new Aws.S3.Inputs.BucketCorsRuleArgs
+ *                 {
+ *                     AllowedHeaders = 
+ *                     {
+ *                         "*",
+ *                     },
+ *                     AllowedMethods = 
+ *                     {
+ *                         "PUT",
+ *                         "POST",
+ *                     },
+ *                     AllowedOrigins = 
+ *                     {
+ *                         "https://s3-website-test.mydomain.com",
+ *                     },
+ *                     ExposeHeaders = 
+ *                     {
+ *                         "ETag",
+ *                     },
+ *                     MaxAgeSeconds = 3000,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := s3.NewBucket(ctx, "bucket", &s3.BucketArgs{
+ * 			Acl: pulumi.String("public-read"),
+ * 			CorsRules: s3.BucketCorsRuleArray{
+ * 				&s3.BucketCorsRuleArgs{
+ * 					AllowedHeaders: pulumi.StringArray{
+ * 						pulumi.String("*"),
+ * 					},
+ * 					AllowedMethods: pulumi.StringArray{
+ * 						pulumi.String("PUT"),
+ * 						pulumi.String("POST"),
+ * 					},
+ * 					AllowedOrigins: pulumi.StringArray{
+ * 						pulumi.String("https://s3-website-test.mydomain.com"),
+ * 					},
+ * 					ExposeHeaders: pulumi.StringArray{
+ * 						pulumi.String("ETag"),
+ * 					},
+ * 					MaxAgeSeconds: pulumi.Int(3000),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Using versioning
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const bucket = new aws.s3.Bucket("b", {
+ *     acl: "private",
+ *     versioning: {
+ *         enabled: true,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * bucket = aws.s3.Bucket("bucket",
+ *     acl="private",
+ *     versioning=aws.s3.BucketVersioningArgs(
+ *         enabled=True,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+ *         {
+ *             Acl = "private",
+ *             Versioning = new Aws.S3.Inputs.BucketVersioningArgs
+ *             {
+ *                 Enabled = true,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := s3.NewBucket(ctx, "bucket", &s3.BucketArgs{
+ * 			Acl: pulumi.String("private"),
+ * 			Versioning: &s3.BucketVersioningArgs{
+ * 				Enabled: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Enable Logging
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const logBucket = new aws.s3.Bucket("logBucket", {acl: "log-delivery-write"});
+ * const bucket = new aws.s3.Bucket("bucket", {
+ *     acl: "private",
+ *     loggings: [{
+ *         targetBucket: logBucket.id,
+ *         targetPrefix: "log/",
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * log_bucket = aws.s3.Bucket("logBucket", acl="log-delivery-write")
+ * bucket = aws.s3.Bucket("bucket",
+ *     acl="private",
+ *     loggings=[aws.s3.BucketLoggingArgs(
+ *         target_bucket=log_bucket.id,
+ *         target_prefix="log/",
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var logBucket = new Aws.S3.Bucket("logBucket", new Aws.S3.BucketArgs
+ *         {
+ *             Acl = "log-delivery-write",
+ *         });
+ *         var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+ *         {
+ *             Acl = "private",
+ *             Loggings = 
+ *             {
+ *                 new Aws.S3.Inputs.BucketLoggingArgs
+ *                 {
+ *                     TargetBucket = logBucket.Id,
+ *                     TargetPrefix = "log/",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		logBucket, err := s3.NewBucket(ctx, "logBucket", &s3.BucketArgs{
+ * 			Acl: pulumi.String("log-delivery-write"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewBucket(ctx, "bucket", &s3.BucketArgs{
+ * 			Acl: pulumi.String("private"),
+ * 			Loggings: s3.BucketLoggingArray{
+ * 				&s3.BucketLoggingArgs{
+ * 					TargetBucket: logBucket.ID(),
+ * 					TargetPrefix: pulumi.String("log/"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Using object lifecycle
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const bucket = new aws.s3.Bucket("bucket", {
+ *     acl: "private",
+ *     lifecycleRules: [
+ *         {
+ *             enabled: true,
+ *             expiration: {
+ *                 days: 90,
+ *             },
+ *             id: "log",
+ *             prefix: "log/",
+ *             tags: {
+ *                 autoclean: "true",
+ *                 rule: "log",
+ *             },
+ *             transitions: [
+ *                 {
+ *                     days: 30,
+ *                     storageClass: "STANDARD_IA", // or "ONEZONE_IA"
+ *                 },
+ *                 {
+ *                     days: 60,
+ *                     storageClass: "GLACIER",
+ *                 },
+ *             ],
+ *         },
+ *         {
+ *             enabled: true,
+ *             expiration: {
+ *                 date: "2016-01-12",
+ *             },
+ *             id: "tmp",
+ *             prefix: "tmp/",
+ *         },
+ *     ],
+ * });
+ * const versioningBucket = new aws.s3.Bucket("versioning_bucket", {
+ *     acl: "private",
+ *     lifecycleRules: [{
+ *         enabled: true,
+ *         noncurrentVersionExpiration: {
+ *             days: 90,
+ *         },
+ *         noncurrentVersionTransitions: [
+ *             {
+ *                 days: 30,
+ *                 storageClass: "STANDARD_IA",
+ *             },
+ *             {
+ *                 days: 60,
+ *                 storageClass: "GLACIER",
+ *             },
+ *         ],
+ *         prefix: "config/",
+ *     }],
+ *     versioning: {
+ *         enabled: true,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * bucket = aws.s3.Bucket("bucket",
+ *     acl="private",
+ *     lifecycle_rules=[
+ *         aws.s3.BucketLifecycleRuleArgs(
+ *             enabled=True,
+ *             expiration=aws.s3.BucketLifecycleRuleExpirationArgs(
+ *                 days=90,
+ *             ),
+ *             id="log",
+ *             prefix="log/",
+ *             tags={
+ *                 "autoclean": "true",
+ *                 "rule": "log",
+ *             },
+ *             transitions=[
+ *                 aws.s3.BucketLifecycleRuleTransitionArgs(
+ *                     days=30,
+ *                     storage_class="STANDARD_IA",
+ *                 ),
+ *                 aws.s3.BucketLifecycleRuleTransitionArgs(
+ *                     days=60,
+ *                     storage_class="GLACIER",
+ *                 ),
+ *             ],
+ *         ),
+ *         aws.s3.BucketLifecycleRuleArgs(
+ *             enabled=True,
+ *             expiration=aws.s3.BucketLifecycleRuleExpirationArgs(
+ *                 date="2016-01-12",
+ *             ),
+ *             id="tmp",
+ *             prefix="tmp/",
+ *         ),
+ *     ])
+ * versioning_bucket = aws.s3.Bucket("versioningBucket",
+ *     acl="private",
+ *     lifecycle_rules=[aws.s3.BucketLifecycleRuleArgs(
+ *         enabled=True,
+ *         noncurrent_version_expiration=aws.s3.BucketLifecycleRuleNoncurrentVersionExpirationArgs(
+ *             days=90,
+ *         ),
+ *         noncurrent_version_transitions=[
+ *             aws.s3.BucketLifecycleRuleNoncurrentVersionTransitionArgs(
+ *                 days=30,
+ *                 storage_class="STANDARD_IA",
+ *             ),
+ *             aws.s3.BucketLifecycleRuleNoncurrentVersionTransitionArgs(
+ *                 days=60,
+ *                 storage_class="GLACIER",
+ *             ),
+ *         ],
+ *         prefix="config/",
+ *     )],
+ *     versioning=aws.s3.BucketVersioningArgs(
+ *         enabled=True,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+ *         {
+ *             Acl = "private",
+ *             LifecycleRules = 
+ *             {
+ *                 new Aws.S3.Inputs.BucketLifecycleRuleArgs
+ *                 {
+ *                     Enabled = true,
+ *                     Expiration = new Aws.S3.Inputs.BucketLifecycleRuleExpirationArgs
+ *                     {
+ *                         Days = 90,
+ *                     },
+ *                     Id = "log",
+ *                     Prefix = "log/",
+ *                     Tags = 
+ *                     {
+ *                         { "autoclean", "true" },
+ *                         { "rule", "log" },
+ *                     },
+ *                     Transitions = 
+ *                     {
+ *                         new Aws.S3.Inputs.BucketLifecycleRuleTransitionArgs
+ *                         {
+ *                             Days = 30,
+ *                             StorageClass = "STANDARD_IA",
+ *                         },
+ *                         new Aws.S3.Inputs.BucketLifecycleRuleTransitionArgs
+ *                         {
+ *                             Days = 60,
+ *                             StorageClass = "GLACIER",
+ *                         },
+ *                     },
+ *                 },
+ *                 new Aws.S3.Inputs.BucketLifecycleRuleArgs
+ *                 {
+ *                     Enabled = true,
+ *                     Expiration = new Aws.S3.Inputs.BucketLifecycleRuleExpirationArgs
+ *                     {
+ *                         Date = "2016-01-12",
+ *                     },
+ *                     Id = "tmp",
+ *                     Prefix = "tmp/",
+ *                 },
+ *             },
+ *         });
+ *         var versioningBucket = new Aws.S3.Bucket("versioningBucket", new Aws.S3.BucketArgs
+ *         {
+ *             Acl = "private",
+ *             LifecycleRules = 
+ *             {
+ *                 new Aws.S3.Inputs.BucketLifecycleRuleArgs
+ *                 {
+ *                     Enabled = true,
+ *                     NoncurrentVersionExpiration = new Aws.S3.Inputs.BucketLifecycleRuleNoncurrentVersionExpirationArgs
+ *                     {
+ *                         Days = 90,
+ *                     },
+ *                     NoncurrentVersionTransitions = 
+ *                     {
+ *                         new Aws.S3.Inputs.BucketLifecycleRuleNoncurrentVersionTransitionArgs
+ *                         {
+ *                             Days = 30,
+ *                             StorageClass = "STANDARD_IA",
+ *                         },
+ *                         new Aws.S3.Inputs.BucketLifecycleRuleNoncurrentVersionTransitionArgs
+ *                         {
+ *                             Days = 60,
+ *                             StorageClass = "GLACIER",
+ *                         },
+ *                     },
+ *                     Prefix = "config/",
+ *                 },
+ *             },
+ *             Versioning = new Aws.S3.Inputs.BucketVersioningArgs
+ *             {
+ *                 Enabled = true,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := s3.NewBucket(ctx, "bucket", &s3.BucketArgs{
+ * 			Acl: pulumi.String("private"),
+ * 			LifecycleRules: s3.BucketLifecycleRuleArray{
+ * 				&s3.BucketLifecycleRuleArgs{
+ * 					Enabled: pulumi.Bool(true),
+ * 					Expiration: &s3.BucketLifecycleRuleExpirationArgs{
+ * 						Days: pulumi.Int(90),
+ * 					},
+ * 					Id:     pulumi.String("log"),
+ * 					Prefix: pulumi.String("log/"),
+ * 					Tags: pulumi.StringMap{
+ * 						"autoclean": pulumi.String("true"),
+ * 						"rule":      pulumi.String("log"),
+ * 					},
+ * 					Transitions: s3.BucketLifecycleRuleTransitionArray{
+ * 						&s3.BucketLifecycleRuleTransitionArgs{
+ * 							Days:         pulumi.Int(30),
+ * 							StorageClass: pulumi.String("STANDARD_IA"),
+ * 						},
+ * 						&s3.BucketLifecycleRuleTransitionArgs{
+ * 							Days:         pulumi.Int(60),
+ * 							StorageClass: pulumi.String("GLACIER"),
+ * 						},
+ * 					},
+ * 				},
+ * 				&s3.BucketLifecycleRuleArgs{
+ * 					Enabled: pulumi.Bool(true),
+ * 					Expiration: &s3.BucketLifecycleRuleExpirationArgs{
+ * 						Date: pulumi.String("2016-01-12"),
+ * 					},
+ * 					Id:     pulumi.String("tmp"),
+ * 					Prefix: pulumi.String("tmp/"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewBucket(ctx, "versioningBucket", &s3.BucketArgs{
+ * 			Acl: pulumi.String("private"),
+ * 			LifecycleRules: s3.BucketLifecycleRuleArray{
+ * 				&s3.BucketLifecycleRuleArgs{
+ * 					Enabled: pulumi.Bool(true),
+ * 					NoncurrentVersionExpiration: &s3.BucketLifecycleRuleNoncurrentVersionExpirationArgs{
+ * 						Days: pulumi.Int(90),
+ * 					},
+ * 					NoncurrentVersionTransitions: s3.BucketLifecycleRuleNoncurrentVersionTransitionArray{
+ * 						&s3.BucketLifecycleRuleNoncurrentVersionTransitionArgs{
+ * 							Days:         pulumi.Int(30),
+ * 							StorageClass: pulumi.String("STANDARD_IA"),
+ * 						},
+ * 						&s3.BucketLifecycleRuleNoncurrentVersionTransitionArgs{
+ * 							Days:         pulumi.Int(60),
+ * 							StorageClass: pulumi.String("GLACIER"),
+ * 						},
+ * 					},
+ * 					Prefix: pulumi.String("config/"),
+ * 				},
+ * 			},
+ * 			Versioning: &s3.BucketVersioningArgs{
+ * 				Enabled: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Using replication configuration
+ * 
+ * > **NOTE:** See the `aws.s3.BucketReplicationConfig` resource to support bi-directional replication configuration and additional features.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const central = new aws.Provider("central", {region: "eu-central-1"});
+ * const replicationRole = new aws.iam.Role("replicationRole", {assumeRolePolicy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "s3.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * `});
+ * const destination = new aws.s3.Bucket("destination", {versioning: {
+ *     enabled: true,
+ * }});
+ * const source = new aws.s3.Bucket("source", {
+ *     acl: "private",
+ *     versioning: {
+ *         enabled: true,
+ *     },
+ *     replicationConfiguration: {
+ *         role: replicationRole.arn,
+ *         rules: [{
+ *             id: "foobar",
+ *             status: "Enabled",
+ *             filter: {
+ *                 tags: {},
+ *             },
+ *             destination: {
+ *                 bucket: destination.arn,
+ *                 storageClass: "STANDARD",
+ *                 replicationTime: {
+ *                     status: "Enabled",
+ *                     minutes: 15,
+ *                 },
+ *                 metrics: {
+ *                     status: "Enabled",
+ *                     minutes: 15,
+ *                 },
+ *             },
+ *         }],
+ *     },
+ * }, {
+ *     provider: aws.central,
+ * });
+ * const replicationPolicy = new aws.iam.Policy("replicationPolicy", {policy: pulumi.interpolate`{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": [
+ *         "s3:GetReplicationConfiguration",
+ *         "s3:ListBucket"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": [
+ *         "${source.arn}"
+ *       ]
+ *     },
+ *     {
+ *       "Action": [
+ *         "s3:GetObjectVersionForReplication",
+ *         "s3:GetObjectVersionAcl",
+ *          "s3:GetObjectVersionTagging"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": [
+ *         "${source.arn}/*"
+ *       ]
+ *     },
+ *     {
+ *       "Action": [
+ *         "s3:ReplicateObject",
+ *         "s3:ReplicateDelete",
+ *         "s3:ReplicateTags"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": "${destination.arn}/*"
+ *     }
+ *   ]
+ * }
+ * `});
+ * const replicationRolePolicyAttachment = new aws.iam.RolePolicyAttachment("replicationRolePolicyAttachment", {
+ *     role: replicationRole.name,
+ *     policyArn: replicationPolicy.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * import pulumi_pulumi as pulumi
+ * 
+ * central = pulumi.providers.Aws("central", region="eu-central-1")
+ * replication_role = aws.iam.Role("replicationRole", assume_role_policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "s3.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * """)
+ * destination = aws.s3.Bucket("destination", versioning=aws.s3.BucketVersioningArgs(
+ *     enabled=True,
+ * ))
+ * source = aws.s3.Bucket("source",
+ *     acl="private",
+ *     versioning=aws.s3.BucketVersioningArgs(
+ *         enabled=True,
+ *     ),
+ *     replication_configuration=aws.s3.BucketReplicationConfigurationArgs(
+ *         role=replication_role.arn,
+ *         rules=[aws.s3.BucketReplicationConfigurationRuleArgs(
+ *             id="foobar",
+ *             status="Enabled",
+ *             filter=aws.s3.BucketReplicationConfigurationRuleFilterArgs(
+ *                 tags={},
+ *             ),
+ *             destination=aws.s3.BucketReplicationConfigurationRuleDestinationArgs(
+ *                 bucket=destination.arn,
+ *                 storage_class="STANDARD",
+ *                 replication_time=aws.s3.BucketReplicationConfigurationRuleDestinationReplicationTimeArgs(
+ *                     status="Enabled",
+ *                     minutes=15,
+ *                 ),
+ *                 metrics=aws.s3.BucketReplicationConfigurationRuleDestinationMetricsArgs(
+ *                     status="Enabled",
+ *                     minutes=15,
+ *                 ),
+ *             ),
+ *         )],
+ *     ),
+ *     opts=pulumi.ResourceOptions(provider=aws["central"]))
+ * replication_policy = aws.iam.Policy("replicationPolicy", policy=pulumi.Output.all(source.arn, source.arn, destination.arn).apply(lambda sourceArn, sourceArn1, destinationArn: f"""{{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {{
+ *       "Action": [
+ *         "s3:GetReplicationConfiguration",
+ *         "s3:ListBucket"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": [
+ *         "{source_arn}"
+ *       ]
+ *     }},
+ *     {{
+ *       "Action": [
+ *         "s3:GetObjectVersionForReplication",
+ *         "s3:GetObjectVersionAcl",
+ *          "s3:GetObjectVersionTagging"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": [
+ *         "{source_arn1}/*"
+ *       ]
+ *     }},
+ *     {{
+ *       "Action": [
+ *         "s3:ReplicateObject",
+ *         "s3:ReplicateDelete",
+ *         "s3:ReplicateTags"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": "{destination_arn}/*"
+ *     }}
+ *   ]
+ * }}
+ * """))
+ * replication_role_policy_attachment = aws.iam.RolePolicyAttachment("replicationRolePolicyAttachment",
+ *     role=replication_role.name,
+ *     policy_arn=replication_policy.arn)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var central = new Aws.Provider("central", new Aws.ProviderArgs
+ *         {
+ *             Region = "eu-central-1",
+ *         });
+ *         var replicationRole = new Aws.Iam.Role("replicationRole", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Action"": ""sts:AssumeRole"",
+ *       ""Principal"": {
+ *         ""Service"": ""s3.amazonaws.com""
+ *       },
+ *       ""Effect"": ""Allow"",
+ *       ""Sid"": """"
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var destination = new Aws.S3.Bucket("destination", new Aws.S3.BucketArgs
+ *         {
+ *             Versioning = new Aws.S3.Inputs.BucketVersioningArgs
+ *             {
+ *                 Enabled = true,
+ *             },
+ *         });
+ *         var source = new Aws.S3.Bucket("source", new Aws.S3.BucketArgs
+ *         {
+ *             Acl = "private",
+ *             Versioning = new Aws.S3.Inputs.BucketVersioningArgs
+ *             {
+ *                 Enabled = true,
+ *             },
+ *             ReplicationConfiguration = new Aws.S3.Inputs.BucketReplicationConfigurationArgs
+ *             {
+ *                 Role = replicationRole.Arn,
+ *                 Rules = 
+ *                 {
+ *                     new Aws.S3.Inputs.BucketReplicationConfigurationRuleArgs
+ *                     {
+ *                         Id = "foobar",
+ *                         Status = "Enabled",
+ *                         Filter = new Aws.S3.Inputs.BucketReplicationConfigurationRuleFilterArgs
+ *                         {
+ *                             Tags = ,
+ *                         },
+ *                         Destination = new Aws.S3.Inputs.BucketReplicationConfigurationRuleDestinationArgs
+ *                         {
+ *                             Bucket = destination.Arn,
+ *                             StorageClass = "STANDARD",
+ *                             ReplicationTime = new Aws.S3.Inputs.BucketReplicationConfigurationRuleDestinationReplicationTimeArgs
+ *                             {
+ *                                 Status = "Enabled",
+ *                                 Minutes = 15,
+ *                             },
+ *                             Metrics = new Aws.S3.Inputs.BucketReplicationConfigurationRuleDestinationMetricsArgs
+ *                             {
+ *                                 Status = "Enabled",
+ *                                 Minutes = 15,
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Central,
+ *         });
+ *         var replicationPolicy = new Aws.Iam.Policy("replicationPolicy", new Aws.Iam.PolicyArgs
+ *         {
+ *             Policy = Output.Tuple(source.Arn, source.Arn, destination.Arn).Apply(values =>
+ *             {
+ *                 var sourceArn = values.Item1;
+ *                 var sourceArn1 = values.Item2;
+ *                 var destinationArn = values.Item3;
+ *                 return @$"{{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {{
+ *       ""Action"": [
+ *         ""s3:GetReplicationConfiguration"",
+ *         ""s3:ListBucket""
+ *       ],
+ *       ""Effect"": ""Allow"",
+ *       ""Resource"": [
+ *         ""{sourceArn}""
+ *       ]
+ *     }},
+ *     {{
+ *       ""Action"": [
+ *         ""s3:GetObjectVersionForReplication"",
+ *         ""s3:GetObjectVersionAcl"",
+ *          ""s3:GetObjectVersionTagging""
+ *       ],
+ *       ""Effect"": ""Allow"",
+ *       ""Resource"": [
+ *         ""{sourceArn1}/*""
+ *       ]
+ *     }},
+ *     {{
+ *       ""Action"": [
+ *         ""s3:ReplicateObject"",
+ *         ""s3:ReplicateDelete"",
+ *         ""s3:ReplicateTags""
+ *       ],
+ *       ""Effect"": ""Allow"",
+ *       ""Resource"": ""{destinationArn}/*""
+ *     }}
+ *   ]
+ * }}
+ * ";
+ *             }),
+ *         });
+ *         var replicationRolePolicyAttachment = new Aws.Iam.RolePolicyAttachment("replicationRolePolicyAttachment", new Aws.Iam.RolePolicyAttachmentArgs
+ *         {
+ *             Role = replicationRole.Name,
+ *             PolicyArn = replicationPolicy.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/providers"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := providers.Newaws(ctx, "central", &providers.awsArgs{
+ * 			Region: "eu-central-1",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		replicationRole, err := iam.NewRole(ctx, "replicationRole", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"s3.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		destination, err := s3.NewBucket(ctx, "destination", &s3.BucketArgs{
+ * 			Versioning: &s3.BucketVersioningArgs{
+ * 				Enabled: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		source, err := s3.NewBucket(ctx, "source", &s3.BucketArgs{
+ * 			Acl: pulumi.String("private"),
+ * 			Versioning: &s3.BucketVersioningArgs{
+ * 				Enabled: pulumi.Bool(true),
+ * 			},
+ * 			ReplicationConfiguration: &s3.BucketReplicationConfigurationArgs{
+ * 				Role: replicationRole.Arn,
+ * 				Rules: s3.BucketReplicationConfigurationRuleArray{
+ * 					&s3.BucketReplicationConfigurationRuleArgs{
+ * 						Id:     pulumi.String("foobar"),
+ * 						Status: pulumi.String("Enabled"),
+ * 						Filter: &s3.BucketReplicationConfigurationRuleFilterArgs{
+ * 							Tags: nil,
+ * 						},
+ * 						Destination: &s3.BucketReplicationConfigurationRuleDestinationArgs{
+ * 							Bucket:       destination.Arn,
+ * 							StorageClass: pulumi.String("STANDARD"),
+ * 							ReplicationTime: &s3.BucketReplicationConfigurationRuleDestinationReplicationTimeArgs{
+ * 								Status:  pulumi.String("Enabled"),
+ * 								Minutes: pulumi.Int(15),
+ * 							},
+ * 							Metrics: &s3.BucketReplicationConfigurationRuleDestinationMetricsArgs{
+ * 								Status:  pulumi.String("Enabled"),
+ * 								Minutes: pulumi.Int(15),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		}, pulumi.Provider(aws.Central))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		replicationPolicy, err := iam.NewPolicy(ctx, "replicationPolicy", &iam.PolicyArgs{
+ * 			Policy: pulumi.All(source.Arn, source.Arn, destination.Arn).ApplyT(func(_args []interface{}) (string, error) {
+ * 				sourceArn := _args[0].(string)
+ * 				sourceArn1 := _args[1].(string)
+ * 				destinationArn := _args[2].(string)
+ * 				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"s3:GetReplicationConfiguration\",\n", "        \"s3:ListBucket\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": [\n", "        \"", sourceArn, "\"\n", "      ]\n", "    },\n", "    {\n", "      \"Action\": [\n", "        \"s3:GetObjectVersionForReplication\",\n", "        \"s3:GetObjectVersionAcl\",\n", "         \"s3:GetObjectVersionTagging\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": [\n", "        \"", sourceArn1, "/*\"\n", "      ]\n", "    },\n", "    {\n", "      \"Action\": [\n", "        \"s3:ReplicateObject\",\n", "        \"s3:ReplicateDelete\",\n", "        \"s3:ReplicateTags\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"", destinationArn, "/*\"\n", "    }\n", "  ]\n", "}\n"), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicyAttachment(ctx, "replicationRolePolicyAttachment", &iam.RolePolicyAttachmentArgs{
+ * 			Role:      replicationRole.Name,
+ * 			PolicyArn: replicationPolicy.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Enable Default Server Side Encryption
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const mykey = new aws.kms.Key("mykey", {
+ *     description: "This key is used to encrypt bucket objects",
+ *     deletionWindowInDays: 10,
+ * });
+ * const mybucket = new aws.s3.Bucket("mybucket", {serverSideEncryptionConfiguration: {
+ *     rule: {
+ *         applyServerSideEncryptionByDefault: {
+ *             kmsMasterKeyId: mykey.arn,
+ *             sseAlgorithm: "aws:kms",
+ *         },
+ *     },
+ * }});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * mykey = aws.kms.Key("mykey",
+ *     description="This key is used to encrypt bucket objects",
+ *     deletion_window_in_days=10)
+ * mybucket = aws.s3.Bucket("mybucket", server_side_encryption_configuration=aws.s3.BucketServerSideEncryptionConfigurationArgs(
+ *     rule=aws.s3.BucketServerSideEncryptionConfigurationRuleArgs(
+ *         apply_server_side_encryption_by_default=aws.s3.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs(
+ *             kms_master_key_id=mykey.arn,
+ *             sse_algorithm="aws:kms",
+ *         ),
+ *     ),
+ * ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var mykey = new Aws.Kms.Key("mykey", new Aws.Kms.KeyArgs
+ *         {
+ *             Description = "This key is used to encrypt bucket objects",
+ *             DeletionWindowInDays = 10,
+ *         });
+ *         var mybucket = new Aws.S3.Bucket("mybucket", new Aws.S3.BucketArgs
+ *         {
+ *             ServerSideEncryptionConfiguration = new Aws.S3.Inputs.BucketServerSideEncryptionConfigurationArgs
+ *             {
+ *                 Rule = new Aws.S3.Inputs.BucketServerSideEncryptionConfigurationRuleArgs
+ *                 {
+ *                     ApplyServerSideEncryptionByDefault = new Aws.S3.Inputs.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs
+ *                     {
+ *                         KmsMasterKeyId = mykey.Arn,
+ *                         SseAlgorithm = "aws:kms",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kms"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		mykey, err := kms.NewKey(ctx, "mykey", &kms.KeyArgs{
+ * 			Description:          pulumi.String("This key is used to encrypt bucket objects"),
+ * 			DeletionWindowInDays: pulumi.Int(10),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewBucket(ctx, "mybucket", &s3.BucketArgs{
+ * 			ServerSideEncryptionConfiguration: &s3.BucketServerSideEncryptionConfigurationArgs{
+ * 				Rule: &s3.BucketServerSideEncryptionConfigurationRuleArgs{
+ * 					ApplyServerSideEncryptionByDefault: &s3.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs{
+ * 						KmsMasterKeyId: mykey.Arn,
+ * 						SseAlgorithm:   pulumi.String("aws:kms"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Using ACL policy grants
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const currentUser = aws.s3.getCanonicalUserId({});
+ * const bucket = new aws.s3.Bucket("bucket", {grants: [
+ *     {
+ *         id: currentUser.then(currentUser => currentUser.id),
+ *         type: "CanonicalUser",
+ *         permissions: ["FULL_CONTROL"],
+ *     },
+ *     {
+ *         type: "Group",
+ *         permissions: [
+ *             "READ_ACP",
+ *             "WRITE",
+ *         ],
+ *         uri: "http://acs.amazonaws.com/groups/s3/LogDelivery",
+ *     },
+ * ]});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * current_user = aws.s3.get_canonical_user_id()
+ * bucket = aws.s3.Bucket("bucket", grants=[
+ *     aws.s3.BucketGrantArgs(
+ *         id=current_user.id,
+ *         type="CanonicalUser",
+ *         permissions=["FULL_CONTROL"],
+ *     ),
+ *     aws.s3.BucketGrantArgs(
+ *         type="Group",
+ *         permissions=[
+ *             "READ_ACP",
+ *             "WRITE",
+ *         ],
+ *         uri="http://acs.amazonaws.com/groups/s3/LogDelivery",
+ *     ),
+ * ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var currentUser = Output.Create(Aws.S3.GetCanonicalUserId.InvokeAsync());
+ *         var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+ *         {
+ *             Grants = 
+ *             {
+ *                 new Aws.S3.Inputs.BucketGrantArgs
+ *                 {
+ *                     Id = currentUser.Apply(currentUser => currentUser.Id),
+ *                     Type = "CanonicalUser",
+ *                     Permissions = 
+ *                     {
+ *                         "FULL_CONTROL",
+ *                     },
+ *                 },
+ *                 new Aws.S3.Inputs.BucketGrantArgs
+ *                 {
+ *                     Type = "Group",
+ *                     Permissions = 
+ *                     {
+ *                         "READ_ACP",
+ *                         "WRITE",
+ *                     },
+ *                     Uri = "http://acs.amazonaws.com/groups/s3/LogDelivery",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		currentUser, err := s3.GetCanonicalUserId(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewBucket(ctx, "bucket", &s3.BucketArgs{
+ * 			Grants: s3.BucketGrantArray{
+ * 				&s3.BucketGrantArgs{
+ * 					Id:   pulumi.String(currentUser.Id),
+ * 					Type: pulumi.String("CanonicalUser"),
+ * 					Permissions: pulumi.StringArray{
+ * 						pulumi.String("FULL_CONTROL"),
+ * 					},
+ * 				},
+ * 				&s3.BucketGrantArgs{
+ * 					Type: pulumi.String("Group"),
+ * 					Permissions: pulumi.StringArray{
+ * 						pulumi.String("READ_ACP"),
+ * 						pulumi.String("WRITE"),
+ * 					},
+ * 					Uri: pulumi.String("http://acs.amazonaws.com/groups/s3/LogDelivery"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -39,8 +1442,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:s3/bucket:Bucket bucket bucket-name
  * ```
  * 
- *  The `policy` argument is not imported and will be deprecated in a future version of the provider. Use the `aws_s3_bucket_policy` resource to manage the S3 Bucket Policy instead.
- * 
+ *  The `policy` argument is not imported and will be deprecated in a future version of the provider. Use the `aws_s3_bucket_policy` resource to manage the S3 Bucket Policy instead. 
  */
 @ResourceType(type="aws:s3/bucket:Bucket")
 public class Bucket extends io.pulumi.resources.CustomResource {

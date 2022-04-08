@@ -16,8 +16,134 @@ import javax.annotation.Nullable;
 /**
  * Creates and manages an AWS IoT certificate.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### With CSR
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * from "fs";
+ * 
+ * const cert = new aws.iot.Certificate("cert", {
+ *     csr: fs.readFileSync("/my/csr.pem"),
+ *     active: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * cert = aws.iot.Certificate("cert",
+ *     csr=(lambda path: open(path).read())("/my/csr.pem"),
+ *     active=True)
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cert = new Aws.Iot.Certificate("cert", new Aws.Iot.CertificateArgs
+ *         {
+ *             Csr = File.ReadAllText("/my/csr.pem"),
+ *             Active = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iot"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iot.NewCertificate(ctx, "cert", &iot.CertificateArgs{
+ * 			Csr:    readFileOrPanic("/my/csr.pem"),
+ * 			Active: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Without CSR
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const cert = new aws.iot.Certificate("cert", {
+ *     active: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * cert = aws.iot.Certificate("cert", active=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cert = new Aws.Iot.Certificate("cert", new Aws.Iot.CertificateArgs
+ *         {
+ *             Active = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iot"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iot.NewCertificate(ctx, "cert", &iot.CertificateArgs{
+ * 			Active: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:iot/certificate:Certificate")
 public class Certificate extends io.pulumi.resources.CustomResource {

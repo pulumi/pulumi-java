@@ -17,7 +17,62 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** This AWS functionality is in Preview and may change before General Availability release. Backwards compatibility is not guaranteed between provider releases.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const demo = new aws.amp.Workspace("demo", {
+ *     alias: "prometheus-test",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * demo = aws.amp.Workspace("demo", alias="prometheus-test")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var demo = new Aws.Amp.Workspace("demo", new Aws.Amp.WorkspaceArgs
+ *         {
+ *             Alias = "prometheus-test",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/amp"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := amp.NewWorkspace(ctx, "demo", &amp.WorkspaceArgs{
+ * 			Alias: pulumi.String("prometheus-test"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +82,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:amp/workspace:Workspace demo ws-C6DCB907-F2D7-4D96-957B-66691F865D8B
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:amp/workspace:Workspace")
 public class Workspace extends io.pulumi.resources.CustomResource {

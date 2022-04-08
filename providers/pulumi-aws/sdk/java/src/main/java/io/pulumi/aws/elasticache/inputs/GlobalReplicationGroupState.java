@@ -20,7 +20,6 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      * @Deprecated
      * Use engine_version_actual instead
-     * 
      */
     @Deprecated /* Use engine_version_actual instead */
     @Import(name="actualEngineVersion")

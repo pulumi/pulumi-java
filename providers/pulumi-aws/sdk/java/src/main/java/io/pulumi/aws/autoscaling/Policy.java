@@ -26,7 +26,120 @@ import javax.annotation.Nullable;
  * or [dynamic](https://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-scale-based-on-demand.html)
  * (policy-based) scaling.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const bar = new aws.autoscaling.Group("bar", {
+ *     availabilityZones: ["us-east-1a"],
+ *     maxSize: 5,
+ *     minSize: 2,
+ *     healthCheckGracePeriod: 300,
+ *     healthCheckType: "ELB",
+ *     forceDelete: true,
+ *     launchConfiguration: aws_launch_configuration.foo.name,
+ * });
+ * const bat = new aws.autoscaling.Policy("bat", {
+ *     scalingAdjustment: 4,
+ *     adjustmentType: "ChangeInCapacity",
+ *     cooldown: 300,
+ *     autoscalingGroupName: bar.name,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * bar = aws.autoscaling.Group("bar",
+ *     availability_zones=["us-east-1a"],
+ *     max_size=5,
+ *     min_size=2,
+ *     health_check_grace_period=300,
+ *     health_check_type="ELB",
+ *     force_delete=True,
+ *     launch_configuration=aws_launch_configuration["foo"]["name"])
+ * bat = aws.autoscaling.Policy("bat",
+ *     scaling_adjustment=4,
+ *     adjustment_type="ChangeInCapacity",
+ *     cooldown=300,
+ *     autoscaling_group_name=bar.name)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bar = new Aws.AutoScaling.Group("bar", new Aws.AutoScaling.GroupArgs
+ *         {
+ *             AvailabilityZones = 
+ *             {
+ *                 "us-east-1a",
+ *             },
+ *             MaxSize = 5,
+ *             MinSize = 2,
+ *             HealthCheckGracePeriod = 300,
+ *             HealthCheckType = "ELB",
+ *             ForceDelete = true,
+ *             LaunchConfiguration = aws_launch_configuration.Foo.Name,
+ *         });
+ *         var bat = new Aws.AutoScaling.Policy("bat", new Aws.AutoScaling.PolicyArgs
+ *         {
+ *             ScalingAdjustment = 4,
+ *             AdjustmentType = "ChangeInCapacity",
+ *             Cooldown = 300,
+ *             AutoscalingGroupName = bar.Name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/autoscaling"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		bar, err := autoscaling.NewGroup(ctx, "bar", &autoscaling.GroupArgs{
+ * 			AvailabilityZones: pulumi.StringArray{
+ * 				pulumi.String("us-east-1a"),
+ * 			},
+ * 			MaxSize:                pulumi.Int(5),
+ * 			MinSize:                pulumi.Int(2),
+ * 			HealthCheckGracePeriod: pulumi.Int(300),
+ * 			HealthCheckType:        pulumi.String("ELB"),
+ * 			ForceDelete:            pulumi.Bool(true),
+ * 			LaunchConfiguration:    pulumi.Any(aws_launch_configuration.Foo.Name),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = autoscaling.NewPolicy(ctx, "bat", &autoscaling.PolicyArgs{
+ * 			ScalingAdjustment:    pulumi.Int(4),
+ * 			AdjustmentType:       pulumi.String("ChangeInCapacity"),
+ * 			Cooldown:             pulumi.Int(300),
+ * 			AutoscalingGroupName: bar.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,6 +149,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:autoscaling/policy:Policy test-policy asg-name/policy-name
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:autoscaling/policy:Policy")
 public class Policy extends io.pulumi.resources.CustomResource {

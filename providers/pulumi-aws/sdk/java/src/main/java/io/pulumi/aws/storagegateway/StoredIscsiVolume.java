@@ -20,7 +20,155 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** The gateway must have a working storage added (e.g. via the `aws.storagegateway.WorkingStorage` resource) before the volume is operational to clients, however the Storage Gateway API will allow volume creation without error in that case and return volume status as `WORKING STORAGE NOT CONFIGURED`.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create Empty Stored iSCSI Volume
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.storagegateway.StoredIscsiVolume("example", {
+ *     gatewayArn: aws_storagegateway_cache.example.gateway_arn,
+ *     networkInterfaceId: aws_instance.example.private_ip,
+ *     targetName: "example",
+ *     preserveExistingData: false,
+ *     diskId: data.aws_storagegateway_local_disk.test.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.storagegateway.StoredIscsiVolume("example",
+ *     gateway_arn=aws_storagegateway_cache["example"]["gateway_arn"],
+ *     network_interface_id=aws_instance["example"]["private_ip"],
+ *     target_name="example",
+ *     preserve_existing_data=False,
+ *     disk_id=data["aws_storagegateway_local_disk"]["test"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.StorageGateway.StoredIscsiVolume("example", new Aws.StorageGateway.StoredIscsiVolumeArgs
+ *         {
+ *             GatewayArn = aws_storagegateway_cache.Example.Gateway_arn,
+ *             NetworkInterfaceId = aws_instance.Example.Private_ip,
+ *             TargetName = "example",
+ *             PreserveExistingData = false,
+ *             DiskId = data.Aws_storagegateway_local_disk.Test.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/storagegateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storagegateway.NewStoredIscsiVolume(ctx, "example", &storagegateway.StoredIscsiVolumeArgs{
+ * 			GatewayArn:           pulumi.Any(aws_storagegateway_cache.Example.Gateway_arn),
+ * 			NetworkInterfaceId:   pulumi.Any(aws_instance.Example.Private_ip),
+ * 			TargetName:           pulumi.String("example"),
+ * 			PreserveExistingData: pulumi.Bool(false),
+ * 			DiskId:               pulumi.Any(data.Aws_storagegateway_local_disk.Test.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create Stored iSCSI Volume From Snapshot
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.storagegateway.StoredIscsiVolume("example", {
+ *     gatewayArn: aws_storagegateway_cache.example.gateway_arn,
+ *     networkInterfaceId: aws_instance.example.private_ip,
+ *     snapshotId: aws_ebs_snapshot.example.id,
+ *     targetName: "example",
+ *     preserveExistingData: false,
+ *     diskId: data.aws_storagegateway_local_disk.test.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.storagegateway.StoredIscsiVolume("example",
+ *     gateway_arn=aws_storagegateway_cache["example"]["gateway_arn"],
+ *     network_interface_id=aws_instance["example"]["private_ip"],
+ *     snapshot_id=aws_ebs_snapshot["example"]["id"],
+ *     target_name="example",
+ *     preserve_existing_data=False,
+ *     disk_id=data["aws_storagegateway_local_disk"]["test"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.StorageGateway.StoredIscsiVolume("example", new Aws.StorageGateway.StoredIscsiVolumeArgs
+ *         {
+ *             GatewayArn = aws_storagegateway_cache.Example.Gateway_arn,
+ *             NetworkInterfaceId = aws_instance.Example.Private_ip,
+ *             SnapshotId = aws_ebs_snapshot.Example.Id,
+ *             TargetName = "example",
+ *             PreserveExistingData = false,
+ *             DiskId = data.Aws_storagegateway_local_disk.Test.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/storagegateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storagegateway.NewStoredIscsiVolume(ctx, "example", &storagegateway.StoredIscsiVolumeArgs{
+ * 			GatewayArn:           pulumi.Any(aws_storagegateway_cache.Example.Gateway_arn),
+ * 			NetworkInterfaceId:   pulumi.Any(aws_instance.Example.Private_ip),
+ * 			SnapshotId:           pulumi.Any(aws_ebs_snapshot.Example.Id),
+ * 			TargetName:           pulumi.String("example"),
+ * 			PreserveExistingData: pulumi.Bool(false),
+ * 			DiskId:               pulumi.Any(data.Aws_storagegateway_local_disk.Test.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +178,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:storagegateway/storedIscsiVolume:StoredIscsiVolume example arn:aws:storagegateway:us-east-1:123456789012:gateway/sgw-12345678/volume/vol-12345678
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:storagegateway/storedIscsiVolume:StoredIscsiVolume")
 public class StoredIscsiVolume extends io.pulumi.resources.CustomResource {

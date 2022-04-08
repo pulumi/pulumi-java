@@ -17,7 +17,69 @@ import javax.annotation.Nullable;
  * but API (hence this provider too) allows you to create as many aliases as
  * the [account limits](http://docs.aws.amazon.com/kms/latest/developerguide/limits.html) allow you.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const key = new aws.kms.Key("key", {});
+ * const alias = new aws.kms.Alias("alias", {targetKeyId: key.keyId});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * key = aws.kms.Key("key")
+ * alias = aws.kms.Alias("alias", target_key_id=key.key_id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var key = new Aws.Kms.Key("key", new Aws.Kms.KeyArgs
+ *         {
+ *         });
+ *         var @alias = new Aws.Kms.Alias("alias", new Aws.Kms.AliasArgs
+ *         {
+ *             TargetKeyId = key.KeyId,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kms"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		key, err := kms.NewKey(ctx, "key", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = kms.NewAlias(ctx, "alias", &kms.AliasArgs{
+ * 			TargetKeyId: key.KeyId,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +89,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:kms/alias:Alias a alias/my-key-alias
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:kms/alias:Alias")
 public class Alias extends io.pulumi.resources.CustomResource {

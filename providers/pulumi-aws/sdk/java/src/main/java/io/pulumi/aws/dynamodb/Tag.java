@@ -13,6 +13,9 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * `aws_dynamodb_tag` can be imported by using the DynamoDB resource identifier and key, separated by a comma (`,`), e.g.,
@@ -21,6 +24,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:dynamodb/tag:Tag example arn:aws:dynamodb:us-east-1:123456789012:table/example,Name
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:dynamodb/tag:Tag")
 public class Tag extends io.pulumi.resources.CustomResource {

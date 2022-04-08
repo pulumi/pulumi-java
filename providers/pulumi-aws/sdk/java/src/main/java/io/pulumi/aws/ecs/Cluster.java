@@ -18,6 +18,9 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * ECS clusters can be imported using the `name`, e.g.,
@@ -26,6 +29,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ecs/cluster:Cluster stateless stateless-app
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ecs/cluster:Cluster")
 public class Cluster extends io.pulumi.resources.CustomResource {

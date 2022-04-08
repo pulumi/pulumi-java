@@ -18,7 +18,71 @@ import javax.annotation.Nullable;
 /**
  * Provides an SSM Maintenance Window resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const production = new aws.ssm.MaintenanceWindow("production", {
+ *     cutoff: 1,
+ *     duration: 3,
+ *     schedule: "cron(0 16 ? * TUE *)",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * production = aws.ssm.MaintenanceWindow("production",
+ *     cutoff=1,
+ *     duration=3,
+ *     schedule="cron(0 16 ? * TUE *)")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var production = new Aws.Ssm.MaintenanceWindow("production", new Aws.Ssm.MaintenanceWindowArgs
+ *         {
+ *             Cutoff = 1,
+ *             Duration = 3,
+ *             Schedule = "cron(0 16 ? * TUE *)",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ssm.NewMaintenanceWindow(ctx, "production", &ssm.MaintenanceWindowArgs{
+ * 			Cutoff:   pulumi.Int(1),
+ * 			Duration: pulumi.Int(3),
+ * 			Schedule: pulumi.String("cron(0 16 ? * TUE *)"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +94,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ssm/maintenanceWindow:MaintenanceWindow imported-window mw-0123456789
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ssm/maintenanceWindow:MaintenanceWindow")
 public class MaintenanceWindow extends io.pulumi.resources.CustomResource {

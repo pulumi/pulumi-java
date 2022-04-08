@@ -19,7 +19,105 @@ import javax.annotation.Nullable;
 /**
  * Provides an OpsWorks stack resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const main = new aws.opsworks.Stack("main", {
+ *     region: "us-west-1",
+ *     serviceRoleArn: aws_iam_role.opsworks.arn,
+ *     defaultInstanceProfileArn: aws_iam_instance_profile.opsworks.arn,
+ *     tags: {
+ *         Name: "foobar-stack",
+ *     },
+ *     customJson: `{
+ *  "foobar": {
+ *     "version": "1.0.0"
+ *   }
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * main = aws.opsworks.Stack("main",
+ *     region="us-west-1",
+ *     service_role_arn=aws_iam_role["opsworks"]["arn"],
+ *     default_instance_profile_arn=aws_iam_instance_profile["opsworks"]["arn"],
+ *     tags={
+ *         "Name": "foobar-stack",
+ *     },
+ *     custom_json="""{
+ *  "foobar": {
+ *     "version": "1.0.0"
+ *   }
+ * }
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var main = new Aws.OpsWorks.Stack("main", new Aws.OpsWorks.StackArgs
+ *         {
+ *             Region = "us-west-1",
+ *             ServiceRoleArn = aws_iam_role.Opsworks.Arn,
+ *             DefaultInstanceProfileArn = aws_iam_instance_profile.Opsworks.Arn,
+ *             Tags = 
+ *             {
+ *                 { "Name", "foobar-stack" },
+ *             },
+ *             CustomJson = @"{
+ *  ""foobar"": {
+ *     ""version"": ""1.0.0""
+ *   }
+ * }
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/opsworks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := opsworks.NewStack(ctx, "main", &opsworks.StackArgs{
+ * 			Region:                    pulumi.String("us-west-1"),
+ * 			ServiceRoleArn:            pulumi.Any(aws_iam_role.Opsworks.Arn),
+ * 			DefaultInstanceProfileArn: pulumi.Any(aws_iam_instance_profile.Opsworks.Arn),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("foobar-stack"),
+ * 			},
+ * 			CustomJson: pulumi.String(fmt.Sprintf("%v%v%v%v%v", "{\n", " \"foobar\": {\n", "    \"version\": \"1.0.0\"\n", "  }\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +127,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:opsworks/stack:Stack bar 00000000-0000-0000-0000-000000000000
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:opsworks/stack:Stack")
 public class Stack extends io.pulumi.resources.CustomResource {

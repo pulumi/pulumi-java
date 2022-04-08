@@ -16,7 +16,77 @@ import javax.annotation.Nullable;
 /**
  * Provides a Sagemaker Device resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.sagemaker.Device("example", {
+ *     deviceFleetName: aws_sagemaker_device_fleet.example.device_fleet_name,
+ *     device: {
+ *         deviceName: "example",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.sagemaker.Device("example",
+ *     device_fleet_name=aws_sagemaker_device_fleet["example"]["device_fleet_name"],
+ *     device=aws.sagemaker.DeviceDeviceArgs(
+ *         device_name="example",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Sagemaker.Device("example", new Aws.Sagemaker.DeviceArgs
+ *         {
+ *             DeviceFleetName = aws_sagemaker_device_fleet.Example.Device_fleet_name,
+ *             Device = new Aws.Sagemaker.Inputs.DeviceDeviceArgs
+ *             {
+ *                 DeviceName = "example",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sagemaker.NewDevice(ctx, "example", &sagemaker.DeviceArgs{
+ * 			DeviceFleetName: pulumi.Any(aws_sagemaker_device_fleet.Example.Device_fleet_name),
+ * 			Device: &sagemaker.DeviceDeviceArgs{
+ * 				DeviceName: pulumi.String("example"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +96,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sagemaker/device:Device example my-fleet/my-device
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sagemaker/device:Device")
 public class Device extends io.pulumi.resources.CustomResource {

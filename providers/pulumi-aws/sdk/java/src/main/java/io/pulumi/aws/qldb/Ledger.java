@@ -19,7 +19,62 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** Deletion protection is enabled by default. To successfully delete this resource via this provider, `deletion_protection = false` must be applied before attempting deletion.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const sample_ledger = new aws.qldb.Ledger("sample-ledger", {
+ *     permissionsMode: "STANDARD",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * sample_ledger = aws.qldb.Ledger("sample-ledger", permissions_mode="STANDARD")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sample_ledger = new Aws.Qldb.Ledger("sample-ledger", new Aws.Qldb.LedgerArgs
+ *         {
+ *             PermissionsMode = "STANDARD",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/qldb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := qldb.NewLedger(ctx, "sample-ledger", &qldb.LedgerArgs{
+ * 			PermissionsMode: pulumi.String("STANDARD"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +84,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:qldb/ledger:Ledger sample-ledger sample-ledger
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:qldb/ledger:Ledger")
 public class Ledger extends io.pulumi.resources.CustomResource {

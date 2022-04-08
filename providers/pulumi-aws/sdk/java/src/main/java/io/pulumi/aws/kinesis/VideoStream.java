@@ -19,7 +19,84 @@ import javax.annotation.Nullable;
  * 
  * For more details, see the [Amazon Kinesis Documentation](https://aws.amazon.com/documentation/kinesis/).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const defaultVideoStream = new aws.kinesis.VideoStream("default", {
+ *     dataRetentionInHours: 1,
+ *     deviceName: "kinesis-video-device-name",
+ *     mediaType: "video/h264",
+ *     tags: {
+ *         Name: "kinesis-video-stream",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default = aws.kinesis.VideoStream("default",
+ *     data_retention_in_hours=1,
+ *     device_name="kinesis-video-device-name",
+ *     media_type="video/h264",
+ *     tags={
+ *         "Name": "kinesis-video-stream",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Aws.Kinesis.VideoStream("default", new Aws.Kinesis.VideoStreamArgs
+ *         {
+ *             DataRetentionInHours = 1,
+ *             DeviceName = "kinesis-video-device-name",
+ *             MediaType = "video/h264",
+ *             Tags = 
+ *             {
+ *                 { "Name", "kinesis-video-stream" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kinesis"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := kinesis.NewVideoStream(ctx, "default", &kinesis.VideoStreamArgs{
+ * 			DataRetentionInHours: pulumi.Int(1),
+ * 			DeviceName:           pulumi.String("kinesis-video-device-name"),
+ * 			MediaType:            pulumi.String("video/h264"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("kinesis-video-stream"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,8 +106,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:kinesis/videoStream:VideoStream test_stream arn:aws:kinesisvideo:us-west-2:123456789012:stream/terraform-kinesis-test/1554978910975
  * ```
  * 
- *  [1]https://aws.amazon.com/documentation/kinesis/ [2]http://www.iana.org/assignments/media-types/media-types.xhtml [3]https://tools.ietf.org/html/rfc6838#section-4.2
- * 
+ *  [1]https://aws.amazon.com/documentation/kinesis/ [2]http://www.iana.org/assignments/media-types/media-types.xhtml [3]https://tools.ietf.org/html/rfc6838#section-4.2 
  */
 @ResourceType(type="aws:kinesis/videoStream:VideoStream")
 public class VideoStream extends io.pulumi.resources.CustomResource {

@@ -16,7 +16,76 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to create a VPC Internet Gateway.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const gw = new aws.ec2.InternetGateway("gw", {
+ *     vpcId: aws_vpc.main.id,
+ *     tags: {
+ *         Name: "main",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * gw = aws.ec2.InternetGateway("gw",
+ *     vpc_id=aws_vpc["main"]["id"],
+ *     tags={
+ *         "Name": "main",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var gw = new Aws.Ec2.InternetGateway("gw", new Aws.Ec2.InternetGatewayArgs
+ *         {
+ *             VpcId = aws_vpc.Main.Id,
+ *             Tags = 
+ *             {
+ *                 { "Name", "main" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewInternetGateway(ctx, "gw", &ec2.InternetGatewayArgs{
+ * 			VpcId: pulumi.Any(aws_vpc.Main.Id),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("main"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +95,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/internetGateway:InternetGateway gw igw-c0a643a9
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/internetGateway:InternetGateway")
 public class InternetGateway extends io.pulumi.resources.CustomResource {

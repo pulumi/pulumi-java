@@ -17,7 +17,80 @@ import javax.annotation.Nullable;
 /**
  * Provides a Route 53 Resolver DNS Firewall rule group association resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleResolverFirewallRuleGroup = new aws.route53.ResolverFirewallRuleGroup("exampleResolverFirewallRuleGroup", {});
+ * const exampleResolverFirewallRuleGroupAssociation = new aws.route53.ResolverFirewallRuleGroupAssociation("exampleResolverFirewallRuleGroupAssociation", {
+ *     firewallRuleGroupId: exampleResolverFirewallRuleGroup.id,
+ *     priority: 100,
+ *     vpcId: aws_vpc.example.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_resolver_firewall_rule_group = aws.route53.ResolverFirewallRuleGroup("exampleResolverFirewallRuleGroup")
+ * example_resolver_firewall_rule_group_association = aws.route53.ResolverFirewallRuleGroupAssociation("exampleResolverFirewallRuleGroupAssociation",
+ *     firewall_rule_group_id=example_resolver_firewall_rule_group.id,
+ *     priority=100,
+ *     vpc_id=aws_vpc["example"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleResolverFirewallRuleGroup = new Aws.Route53.ResolverFirewallRuleGroup("exampleResolverFirewallRuleGroup", new Aws.Route53.ResolverFirewallRuleGroupArgs
+ *         {
+ *         });
+ *         var exampleResolverFirewallRuleGroupAssociation = new Aws.Route53.ResolverFirewallRuleGroupAssociation("exampleResolverFirewallRuleGroupAssociation", new Aws.Route53.ResolverFirewallRuleGroupAssociationArgs
+ *         {
+ *             FirewallRuleGroupId = exampleResolverFirewallRuleGroup.Id,
+ *             Priority = 100,
+ *             VpcId = aws_vpc.Example.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleResolverFirewallRuleGroup, err := route53.NewResolverFirewallRuleGroup(ctx, "exampleResolverFirewallRuleGroup", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = route53.NewResolverFirewallRuleGroupAssociation(ctx, "exampleResolverFirewallRuleGroupAssociation", &route53.ResolverFirewallRuleGroupAssociationArgs{
+ * 			FirewallRuleGroupId: exampleResolverFirewallRuleGroup.ID(),
+ * 			Priority:            pulumi.Int(100),
+ * 			VpcId:               pulumi.Any(aws_vpc.Example.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +100,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:route53/resolverFirewallRuleGroupAssociation:ResolverFirewallRuleGroupAssociation example rslvr-frgassoc-0123456789abcdef
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:route53/resolverFirewallRuleGroupAssociation:ResolverFirewallRuleGroupAssociation")
 public class ResolverFirewallRuleGroupAssociation extends io.pulumi.resources.CustomResource {

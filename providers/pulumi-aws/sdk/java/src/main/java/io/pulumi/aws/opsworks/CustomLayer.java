@@ -21,7 +21,67 @@ import javax.annotation.Nullable;
 /**
  * Provides an OpsWorks custom layer resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const custlayer = new aws.opsworks.CustomLayer("custlayer", {
+ *     shortName: "awesome",
+ *     stackId: aws_opsworks_stack.main.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * custlayer = aws.opsworks.CustomLayer("custlayer",
+ *     short_name="awesome",
+ *     stack_id=aws_opsworks_stack["main"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var custlayer = new Aws.OpsWorks.CustomLayer("custlayer", new Aws.OpsWorks.CustomLayerArgs
+ *         {
+ *             ShortName = "awesome",
+ *             StackId = aws_opsworks_stack.Main.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/opsworks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := opsworks.NewCustomLayer(ctx, "custlayer", &opsworks.CustomLayerArgs{
+ * 			ShortName: pulumi.String("awesome"),
+ * 			StackId:   pulumi.Any(aws_opsworks_stack.Main.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,6 +91,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:opsworks/customLayer:CustomLayer bar 00000000-0000-0000-0000-000000000000
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:opsworks/customLayer:CustomLayer")
 public class CustomLayer extends io.pulumi.resources.CustomResource {

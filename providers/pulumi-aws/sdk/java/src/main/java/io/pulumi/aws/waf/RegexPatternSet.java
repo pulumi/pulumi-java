@@ -16,7 +16,75 @@ import javax.annotation.Nullable;
 /**
  * Provides a WAF Regex Pattern Set Resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.waf.RegexPatternSet("example", {
+ *     regexPatternStrings: [
+ *         "one",
+ *         "two",
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.waf.RegexPatternSet("example", regex_pattern_strings=[
+ *     "one",
+ *     "two",
+ * ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Waf.RegexPatternSet("example", new Aws.Waf.RegexPatternSetArgs
+ *         {
+ *             RegexPatternStrings = 
+ *             {
+ *                 "one",
+ *                 "two",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/waf"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := waf.NewRegexPatternSet(ctx, "example", &waf.RegexPatternSetArgs{
+ * 			RegexPatternStrings: pulumi.StringArray{
+ * 				pulumi.String("one"),
+ * 				pulumi.String("two"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +94,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:waf/regexPatternSet:RegexPatternSet example a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:waf/regexPatternSet:RegexPatternSet")
 public class RegexPatternSet extends io.pulumi.resources.CustomResource {

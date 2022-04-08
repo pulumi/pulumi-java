@@ -17,7 +17,78 @@ import javax.annotation.Nullable;
 /**
  * Provides a SageMaker Endpoint resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * Basic usage:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const endpoint = new aws.sagemaker.Endpoint("endpoint", {
+ *     endpointConfigName: aws_sagemaker_endpoint_configuration.ec.name,
+ *     tags: {
+ *         Name: "foo",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * endpoint = aws.sagemaker.Endpoint("endpoint",
+ *     endpoint_config_name=aws_sagemaker_endpoint_configuration["ec"]["name"],
+ *     tags={
+ *         "Name": "foo",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var endpoint = new Aws.Sagemaker.Endpoint("endpoint", new Aws.Sagemaker.EndpointArgs
+ *         {
+ *             EndpointConfigName = aws_sagemaker_endpoint_configuration.Ec.Name,
+ *             Tags = 
+ *             {
+ *                 { "Name", "foo" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sagemaker.NewEndpoint(ctx, "endpoint", &sagemaker.EndpointArgs{
+ * 			EndpointConfigName: pulumi.Any(aws_sagemaker_endpoint_configuration.Ec.Name),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("foo"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +98,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sagemaker/endpoint:Endpoint test_endpoint my-endpoint
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sagemaker/endpoint:Endpoint")
 public class Endpoint extends io.pulumi.resources.CustomResource {

@@ -18,7 +18,67 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS Elemental MediaPackage Channel.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const kittens = new aws.mediapackage.Channel("kittens", {
+ *     channelId: "kitten-channel",
+ *     description: "A channel dedicated to amusing videos of kittens.",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * kittens = aws.mediapackage.Channel("kittens",
+ *     channel_id="kitten-channel",
+ *     description="A channel dedicated to amusing videos of kittens.")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var kittens = new Aws.MediaPackage.Channel("kittens", new Aws.MediaPackage.ChannelArgs
+ *         {
+ *             ChannelId = "kitten-channel",
+ *             Description = "A channel dedicated to amusing videos of kittens.",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/mediapackage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := mediapackage.NewChannel(ctx, "kittens", &mediapackage.ChannelArgs{
+ * 			ChannelId:   pulumi.String("kitten-channel"),
+ * 			Description: pulumi.String("A channel dedicated to amusing videos of kittens."),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +88,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:mediapackage/channel:Channel kittens kittens-channel
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:mediapackage/channel:Channel")
 public class Channel extends io.pulumi.resources.CustomResource {

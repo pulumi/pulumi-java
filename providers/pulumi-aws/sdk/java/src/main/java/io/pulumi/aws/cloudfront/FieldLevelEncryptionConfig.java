@@ -17,7 +17,151 @@ import javax.annotation.Nullable;
 /**
  * Provides a CloudFront Field-level Encryption Config resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.cloudfront.FieldLevelEncryptionConfig("test", {
+ *     comment: "test comment",
+ *     contentTypeProfileConfig: {
+ *         forwardWhenContentTypeIsUnknown: true,
+ *         contentTypeProfiles: {
+ *             items: [{
+ *                 contentType: "application/x-www-form-urlencoded",
+ *                 format: "URLEncoded",
+ *             }],
+ *         },
+ *     },
+ *     queryArgProfileConfig: {
+ *         forwardWhenQueryArgProfileIsUnknown: true,
+ *         queryArgProfiles: {
+ *             items: [{
+ *                 profileId: aws_cloudfront_field_level_encryption_profile.test.id,
+ *                 queryArg: "Arg1",
+ *             }],
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.cloudfront.FieldLevelEncryptionConfig("test",
+ *     comment="test comment",
+ *     content_type_profile_config=aws.cloudfront.FieldLevelEncryptionConfigContentTypeProfileConfigArgs(
+ *         forward_when_content_type_is_unknown=True,
+ *         content_type_profiles=aws.cloudfront.FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs(
+ *             items=[aws.cloudfront.FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArgs(
+ *                 content_type="application/x-www-form-urlencoded",
+ *                 format="URLEncoded",
+ *             )],
+ *         ),
+ *     ),
+ *     query_arg_profile_config=aws.cloudfront.FieldLevelEncryptionConfigQueryArgProfileConfigArgs(
+ *         forward_when_query_arg_profile_is_unknown=True,
+ *         query_arg_profiles=aws.cloudfront.FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs(
+ *             items=[aws.cloudfront.FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemArgs(
+ *                 profile_id=aws_cloudfront_field_level_encryption_profile["test"]["id"],
+ *                 query_arg="Arg1",
+ *             )],
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.CloudFront.FieldLevelEncryptionConfig("test", new Aws.CloudFront.FieldLevelEncryptionConfigArgs
+ *         {
+ *             Comment = "test comment",
+ *             ContentTypeProfileConfig = new Aws.CloudFront.Inputs.FieldLevelEncryptionConfigContentTypeProfileConfigArgs
+ *             {
+ *                 ForwardWhenContentTypeIsUnknown = true,
+ *                 ContentTypeProfiles = new Aws.CloudFront.Inputs.FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs
+ *                 {
+ *                     Items = 
+ *                     {
+ *                         new Aws.CloudFront.Inputs.FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArgs
+ *                         {
+ *                             ContentType = "application/x-www-form-urlencoded",
+ *                             Format = "URLEncoded",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             QueryArgProfileConfig = new Aws.CloudFront.Inputs.FieldLevelEncryptionConfigQueryArgProfileConfigArgs
+ *             {
+ *                 ForwardWhenQueryArgProfileIsUnknown = true,
+ *                 QueryArgProfiles = new Aws.CloudFront.Inputs.FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs
+ *                 {
+ *                     Items = 
+ *                     {
+ *                         new Aws.CloudFront.Inputs.FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemArgs
+ *                         {
+ *                             ProfileId = aws_cloudfront_field_level_encryption_profile.Test.Id,
+ *                             QueryArg = "Arg1",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudfront"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudfront.NewFieldLevelEncryptionConfig(ctx, "test", &cloudfront.FieldLevelEncryptionConfigArgs{
+ * 			Comment: pulumi.String("test comment"),
+ * 			ContentTypeProfileConfig: &cloudfront.FieldLevelEncryptionConfigContentTypeProfileConfigArgs{
+ * 				ForwardWhenContentTypeIsUnknown: pulumi.Bool(true),
+ * 				ContentTypeProfiles: &cloudfront.FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs{
+ * 					Items: cloudfront.FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArray{
+ * 						&cloudfront.FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArgs{
+ * 							ContentType: pulumi.String("application/x-www-form-urlencoded"),
+ * 							Format:      pulumi.String("URLEncoded"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			QueryArgProfileConfig: &cloudfront.FieldLevelEncryptionConfigQueryArgProfileConfigArgs{
+ * 				ForwardWhenQueryArgProfileIsUnknown: pulumi.Bool(true),
+ * 				QueryArgProfiles: &cloudfront.FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs{
+ * 					Items: cloudfront.FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemArray{
+ * 						&cloudfront.FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemArgs{
+ * 							ProfileId: pulumi.Any(aws_cloudfront_field_level_encryption_profile.Test.Id),
+ * 							QueryArg:  pulumi.String("Arg1"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +171,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudfront/fieldLevelEncryptionConfig:FieldLevelEncryptionConfig config E74FTE3AEXAMPLE
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudfront/fieldLevelEncryptionConfig:FieldLevelEncryptionConfig")
 public class FieldLevelEncryptionConfig extends io.pulumi.resources.CustomResource {

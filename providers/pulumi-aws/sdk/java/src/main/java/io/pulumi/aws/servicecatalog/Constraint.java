@@ -17,7 +17,99 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** This resource does not associate a Service Catalog product and portfolio. However, the product and portfolio must be associated (see the `aws.servicecatalog.ProductPortfolioAssociation` resource) prior to creating a constraint or you will receive an error.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic Usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.servicecatalog.Constraint("example", {
+ *     description: "Back off, man. I'm a scientist.",
+ *     portfolioId: aws_servicecatalog_portfolio.example.id,
+ *     productId: aws_servicecatalog_product.example.id,
+ *     type: "LAUNCH",
+ *     parameters: JSON.stringify({
+ *         RoleArn: "arn:aws:iam::123456789012:role/LaunchRole",
+ *     }),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import json
+ * import pulumi_aws as aws
+ * 
+ * example = aws.servicecatalog.Constraint("example",
+ *     description="Back off, man. I'm a scientist.",
+ *     portfolio_id=aws_servicecatalog_portfolio["example"]["id"],
+ *     product_id=aws_servicecatalog_product["example"]["id"],
+ *     type="LAUNCH",
+ *     parameters=json.dumps({
+ *         "RoleArn": "arn:aws:iam::123456789012:role/LaunchRole",
+ *     }))
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using System.Text.Json;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ServiceCatalog.Constraint("example", new Aws.ServiceCatalog.ConstraintArgs
+ *         {
+ *             Description = "Back off, man. I'm a scientist.",
+ *             PortfolioId = aws_servicecatalog_portfolio.Example.Id,
+ *             ProductId = aws_servicecatalog_product.Example.Id,
+ *             Type = "LAUNCH",
+ *             Parameters = JsonSerializer.Serialize(new Dictionary<string, object?>
+ *             {
+ *                 { "RoleArn", "arn:aws:iam::123456789012:role/LaunchRole" },
+ *             }),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"encoding/json"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/servicecatalog"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+ * 			"RoleArn": "arn:aws:iam::123456789012:role/LaunchRole",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		json0 := string(tmpJSON0)
+ * 		_, err := servicecatalog.NewConstraint(ctx, "example", &servicecatalog.ConstraintArgs{
+ * 			Description: pulumi.String("Back off, man. I'm a scientist."),
+ * 			PortfolioId: pulumi.Any(aws_servicecatalog_portfolio.Example.Id),
+ * 			ProductId:   pulumi.Any(aws_servicecatalog_product.Example.Id),
+ * 			Type:        pulumi.String("LAUNCH"),
+ * 			Parameters:  pulumi.String(json0),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +119,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:servicecatalog/constraint:Constraint example cons-nmdkb6cgxfcrs
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:servicecatalog/constraint:Constraint")
 public class Constraint extends io.pulumi.resources.CustomResource {

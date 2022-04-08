@@ -24,8 +24,273 @@ import javax.annotation.Nullable;
  * conflicts, and will lead to spurious diffs and undefined behavior - please use
  * one or the other.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * The following provides a very basic example of setting up an instance (provided
+ * by `instance`) in the default security group, creating a security group
+ * (provided by `sg`) and then attaching the security group to the instance's
+ * primary network interface via the `aws.ec2.NetworkInterfaceSecurityGroupAttachment` resource,
+ * named `sg_attachment`:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const ami = aws.ec2.getAmi({
+ *     mostRecent: true,
+ *     filters: [{
+ *         name: "name",
+ *         values: ["amzn-ami-hvm-*"],
+ *     }],
+ *     owners: ["amazon"],
+ * });
+ * const instance = new aws.ec2.Instance("instance", {
+ *     instanceType: "t2.micro",
+ *     ami: ami.then(ami => ami.id),
+ *     tags: {
+ *         type: "test-instance",
+ *     },
+ * });
+ * const sg = new aws.ec2.SecurityGroup("sg", {tags: {
+ *     type: "test-security-group",
+ * }});
+ * const sgAttachment = new aws.ec2.NetworkInterfaceSecurityGroupAttachment("sgAttachment", {
+ *     securityGroupId: sg.id,
+ *     networkInterfaceId: instance.primaryNetworkInterfaceId,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * ami = aws.ec2.get_ami(most_recent=True,
+ *     filters=[aws.ec2.GetAmiFilterArgs(
+ *         name="name",
+ *         values=["amzn-ami-hvm-*"],
+ *     )],
+ *     owners=["amazon"])
+ * instance = aws.ec2.Instance("instance",
+ *     instance_type="t2.micro",
+ *     ami=ami.id,
+ *     tags={
+ *         "type": "test-instance",
+ *     })
+ * sg = aws.ec2.SecurityGroup("sg", tags={
+ *     "type": "test-security-group",
+ * })
+ * sg_attachment = aws.ec2.NetworkInterfaceSecurityGroupAttachment("sgAttachment",
+ *     security_group_id=sg.id,
+ *     network_interface_id=instance.primary_network_interface_id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var ami = Output.Create(Aws.Ec2.GetAmi.InvokeAsync(new Aws.Ec2.GetAmiArgs
+ *         {
+ *             MostRecent = true,
+ *             Filters = 
+ *             {
+ *                 new Aws.Ec2.Inputs.GetAmiFilterArgs
+ *                 {
+ *                     Name = "name",
+ *                     Values = 
+ *                     {
+ *                         "amzn-ami-hvm-*",
+ *                     },
+ *                 },
+ *             },
+ *             Owners = 
+ *             {
+ *                 "amazon",
+ *             },
+ *         }));
+ *         var instance = new Aws.Ec2.Instance("instance", new Aws.Ec2.InstanceArgs
+ *         {
+ *             InstanceType = "t2.micro",
+ *             Ami = ami.Apply(ami => ami.Id),
+ *             Tags = 
+ *             {
+ *                 { "type", "test-instance" },
+ *             },
+ *         });
+ *         var sg = new Aws.Ec2.SecurityGroup("sg", new Aws.Ec2.SecurityGroupArgs
+ *         {
+ *             Tags = 
+ *             {
+ *                 { "type", "test-security-group" },
+ *             },
+ *         });
+ *         var sgAttachment = new Aws.Ec2.NetworkInterfaceSecurityGroupAttachment("sgAttachment", new Aws.Ec2.NetworkInterfaceSecurityGroupAttachmentArgs
+ *         {
+ *             SecurityGroupId = sg.Id,
+ *             NetworkInterfaceId = instance.PrimaryNetworkInterfaceId,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		opt0 := true
+ * 		ami, err := ec2.LookupAmi(ctx, &ec2.LookupAmiArgs{
+ * 			MostRecent: &opt0,
+ * 			Filters: []ec2.GetAmiFilter{
+ * 				ec2.GetAmiFilter{
+ * 					Name: "name",
+ * 					Values: []string{
+ * 						"amzn-ami-hvm-*",
+ * 					},
+ * 				},
+ * 			},
+ * 			Owners: []string{
+ * 				"amazon",
+ * 			},
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		instance, err := ec2.NewInstance(ctx, "instance", &ec2.InstanceArgs{
+ * 			InstanceType: pulumi.String("t2.micro"),
+ * 			Ami:          pulumi.String(ami.Id),
+ * 			Tags: pulumi.StringMap{
+ * 				"type": pulumi.String("test-instance"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		sg, err := ec2.NewSecurityGroup(ctx, "sg", &ec2.SecurityGroupArgs{
+ * 			Tags: pulumi.StringMap{
+ * 				"type": pulumi.String("test-security-group"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewNetworkInterfaceSecurityGroupAttachment(ctx, "sgAttachment", &ec2.NetworkInterfaceSecurityGroupAttachmentArgs{
+ * 			SecurityGroupId:    sg.ID(),
+ * 			NetworkInterfaceId: instance.PrimaryNetworkInterfaceId,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * In this example, `instance` is provided by the `aws.ec2.Instance` data source,
+ * fetching an external instance, possibly not managed by this provider.
+ * `sg_attachment` then attaches to the output instance's `network_interface_id`:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const instance = aws.ec2.getInstance({
+ *     instanceId: "i-1234567890abcdef0",
+ * });
+ * const sg = new aws.ec2.SecurityGroup("sg", {tags: {
+ *     type: "test-security-group",
+ * }});
+ * const sgAttachment = new aws.ec2.NetworkInterfaceSecurityGroupAttachment("sgAttachment", {
+ *     securityGroupId: sg.id,
+ *     networkInterfaceId: instance.then(instance => instance.networkInterfaceId),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * instance = aws.ec2.get_instance(instance_id="i-1234567890abcdef0")
+ * sg = aws.ec2.SecurityGroup("sg", tags={
+ *     "type": "test-security-group",
+ * })
+ * sg_attachment = aws.ec2.NetworkInterfaceSecurityGroupAttachment("sgAttachment",
+ *     security_group_id=sg.id,
+ *     network_interface_id=instance.network_interface_id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var instance = Output.Create(Aws.Ec2.GetInstance.InvokeAsync(new Aws.Ec2.GetInstanceArgs
+ *         {
+ *             InstanceId = "i-1234567890abcdef0",
+ *         }));
+ *         var sg = new Aws.Ec2.SecurityGroup("sg", new Aws.Ec2.SecurityGroupArgs
+ *         {
+ *             Tags = 
+ *             {
+ *                 { "type", "test-security-group" },
+ *             },
+ *         });
+ *         var sgAttachment = new Aws.Ec2.NetworkInterfaceSecurityGroupAttachment("sgAttachment", new Aws.Ec2.NetworkInterfaceSecurityGroupAttachmentArgs
+ *         {
+ *             SecurityGroupId = sg.Id,
+ *             NetworkInterfaceId = instance.Apply(instance => instance.NetworkInterfaceId),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		opt0 := "i-1234567890abcdef0"
+ * 		instance, err := ec2.LookupInstance(ctx, &ec2.LookupInstanceArgs{
+ * 			InstanceId: &opt0,
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		sg, err := ec2.NewSecurityGroup(ctx, "sg", &ec2.SecurityGroupArgs{
+ * 			Tags: pulumi.StringMap{
+ * 				"type": pulumi.String("test-security-group"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewNetworkInterfaceSecurityGroupAttachment(ctx, "sgAttachment", &ec2.NetworkInterfaceSecurityGroupAttachmentArgs{
+ * 			SecurityGroupId:    sg.ID(),
+ * 			NetworkInterfaceId: pulumi.String(instance.NetworkInterfaceId),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:ec2/networkInterfaceSecurityGroupAttachment:NetworkInterfaceSecurityGroupAttachment")
 public class NetworkInterfaceSecurityGroupAttachment extends io.pulumi.resources.CustomResource {

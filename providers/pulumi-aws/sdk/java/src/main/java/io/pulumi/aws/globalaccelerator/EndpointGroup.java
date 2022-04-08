@@ -20,7 +20,85 @@ import javax.annotation.Nullable;
 /**
  * Provides a Global Accelerator endpoint group.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.globalaccelerator.EndpointGroup("example", {
+ *     listenerArn: aws_globalaccelerator_listener.example.id,
+ *     endpointConfigurations: [{
+ *         endpointId: aws_lb.example.arn,
+ *         weight: 100,
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.globalaccelerator.EndpointGroup("example",
+ *     listener_arn=aws_globalaccelerator_listener["example"]["id"],
+ *     endpoint_configurations=[aws.globalaccelerator.EndpointGroupEndpointConfigurationArgs(
+ *         endpoint_id=aws_lb["example"]["arn"],
+ *         weight=100,
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.GlobalAccelerator.EndpointGroup("example", new Aws.GlobalAccelerator.EndpointGroupArgs
+ *         {
+ *             ListenerArn = aws_globalaccelerator_listener.Example.Id,
+ *             EndpointConfigurations = 
+ *             {
+ *                 new Aws.GlobalAccelerator.Inputs.EndpointGroupEndpointConfigurationArgs
+ *                 {
+ *                     EndpointId = aws_lb.Example.Arn,
+ *                     Weight = 100,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/globalaccelerator"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := globalaccelerator.NewEndpointGroup(ctx, "example", &globalaccelerator.EndpointGroupArgs{
+ * 			ListenerArn: pulumi.Any(aws_globalaccelerator_listener.Example.Id),
+ * 			EndpointConfigurations: globalaccelerator.EndpointGroupEndpointConfigurationArray{
+ * 				&globalaccelerator.EndpointGroupEndpointConfigurationArgs{
+ * 					EndpointId: pulumi.Any(aws_lb.Example.Arn),
+ * 					Weight:     pulumi.Int(100),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +108,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:globalaccelerator/endpointGroup:EndpointGroup example arn:aws:globalaccelerator::111111111111:accelerator/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/listener/xxxxxxx/endpoint-group/xxxxxxxx
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:globalaccelerator/endpointGroup:EndpointGroup")
 public class EndpointGroup extends io.pulumi.resources.CustomResource {

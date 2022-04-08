@@ -18,7 +18,179 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const testRegistry = new aws.schemas.Registry("testRegistry", {});
+ * const testSchema = new aws.schemas.Schema("testSchema", {
+ *     registryName: testRegistry.name,
+ *     type: "OpenApi3",
+ *     description: "The schema definition for my event",
+ *     content: JSON.stringify({
+ *         openapi: "3.0.0",
+ *         info: {
+ *             version: "1.0.0",
+ *             title: "Event",
+ *         },
+ *         paths: {},
+ *         components: {
+ *             schemas: {
+ *                 Event: {
+ *                     type: "object",
+ *                     properties: {
+ *                         name: {
+ *                             type: "string",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         },
+ *     }),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import json
+ * import pulumi_aws as aws
+ * 
+ * test_registry = aws.schemas.Registry("testRegistry")
+ * test_schema = aws.schemas.Schema("testSchema",
+ *     registry_name=test_registry.name,
+ *     type="OpenApi3",
+ *     description="The schema definition for my event",
+ *     content=json.dumps({
+ *         "openapi": "3.0.0",
+ *         "info": {
+ *             "version": "1.0.0",
+ *             "title": "Event",
+ *         },
+ *         "paths": {},
+ *         "components": {
+ *             "schemas": {
+ *                 "Event": {
+ *                     "type": "object",
+ *                     "properties": {
+ *                         "name": {
+ *                             "type": "string",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         },
+ *     }))
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using System.Text.Json;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testRegistry = new Aws.Schemas.Registry("testRegistry", new Aws.Schemas.RegistryArgs
+ *         {
+ *         });
+ *         var testSchema = new Aws.Schemas.Schema("testSchema", new Aws.Schemas.SchemaArgs
+ *         {
+ *             RegistryName = testRegistry.Name,
+ *             Type = "OpenApi3",
+ *             Description = "The schema definition for my event",
+ *             Content = JsonSerializer.Serialize(new Dictionary<string, object?>
+ *             {
+ *                 { "openapi", "3.0.0" },
+ *                 { "info", new Dictionary<string, object?>
+ *                 {
+ *                     { "version", "1.0.0" },
+ *                     { "title", "Event" },
+ *                 } },
+ *                 { "paths", new Dictionary<string, object?>
+ *                 {
+ *                 } },
+ *                 { "components", new Dictionary<string, object?>
+ *                 {
+ *                     { "schemas", new Dictionary<string, object?>
+ *                     {
+ *                         { "Event", new Dictionary<string, object?>
+ *                         {
+ *                             { "type", "object" },
+ *                             { "properties", new Dictionary<string, object?>
+ *                             {
+ *                                 { "name", new Dictionary<string, object?>
+ *                                 {
+ *                                     { "type", "string" },
+ *                                 } },
+ *                             } },
+ *                         } },
+ *                     } },
+ *                 } },
+ *             }),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"encoding/json"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/schemas"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		testRegistry, err := schemas.NewRegistry(ctx, "testRegistry", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+ * 			"openapi": "3.0.0",
+ * 			"info": map[string]interface{}{
+ * 				"version": "1.0.0",
+ * 				"title":   "Event",
+ * 			},
+ * 			"paths": nil,
+ * 			"components": map[string]interface{}{
+ * 				"schemas": map[string]interface{}{
+ * 					"Event": map[string]interface{}{
+ * 						"type": "object",
+ * 						"properties": map[string]interface{}{
+ * 							"name": map[string]interface{}{
+ * 								"type": "string",
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		json0 := string(tmpJSON0)
+ * 		_, err = schemas.NewSchema(ctx, "testSchema", &schemas.SchemaArgs{
+ * 			RegistryName: testRegistry.Name,
+ * 			Type:         pulumi.String("OpenApi3"),
+ * 			Description:  pulumi.String("The schema definition for my event"),
+ * 			Content:      pulumi.String(json0),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +200,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:schemas/schema:Schema test name/registry
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:schemas/schema:Schema")
 public class Schema extends io.pulumi.resources.CustomResource {

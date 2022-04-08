@@ -14,7 +14,105 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * The following example below creates a CloudFront key group.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * from "fs";
+ * 
+ * const examplePublicKey = new aws.cloudfront.PublicKey("examplePublicKey", {
+ *     comment: "example public key",
+ *     encodedKey: fs.readFileSync("public_key.pem"),
+ * });
+ * const exampleKeyGroup = new aws.cloudfront.KeyGroup("exampleKeyGroup", {
+ *     comment: "example key group",
+ *     items: [examplePublicKey.id],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_public_key = aws.cloudfront.PublicKey("examplePublicKey",
+ *     comment="example public key",
+ *     encoded_key=(lambda path: open(path).read())("public_key.pem"))
+ * example_key_group = aws.cloudfront.KeyGroup("exampleKeyGroup",
+ *     comment="example key group",
+ *     items=[example_public_key.id])
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var examplePublicKey = new Aws.CloudFront.PublicKey("examplePublicKey", new Aws.CloudFront.PublicKeyArgs
+ *         {
+ *             Comment = "example public key",
+ *             EncodedKey = File.ReadAllText("public_key.pem"),
+ *         });
+ *         var exampleKeyGroup = new Aws.CloudFront.KeyGroup("exampleKeyGroup", new Aws.CloudFront.KeyGroupArgs
+ *         {
+ *             Comment = "example key group",
+ *             Items = 
+ *             {
+ *                 examplePublicKey.Id,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudfront"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		examplePublicKey, err := cloudfront.NewPublicKey(ctx, "examplePublicKey", &cloudfront.PublicKeyArgs{
+ * 			Comment:    pulumi.String("example public key"),
+ * 			EncodedKey: readFileOrPanic("public_key.pem"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudfront.NewKeyGroup(ctx, "exampleKeyGroup", &cloudfront.KeyGroupArgs{
+ * 			Comment: pulumi.String("example key group"),
+ * 			Items: pulumi.StringArray{
+ * 				examplePublicKey.ID(),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -24,6 +122,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudfront/keyGroup:KeyGroup example 4b4f2r1c-315d-5c2e-f093-216t50jed10f
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudfront/keyGroup:KeyGroup")
 public class KeyGroup extends io.pulumi.resources.CustomResource {

@@ -17,7 +17,76 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** AWS currently has limited regional support for Device Farm (e.g., `us-west-2`). See [AWS Device Farm endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/devicefarm.html) for information on supported regions.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleProject = new aws.devicefarm.Project("exampleProject", {});
+ * const exampleUpload = new aws.devicefarm.Upload("exampleUpload", {
+ *     projectArn: exampleProject.arn,
+ *     type: "APPIUM_JAVA_TESTNG_TEST_SPEC",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_project = aws.devicefarm.Project("exampleProject")
+ * example_upload = aws.devicefarm.Upload("exampleUpload",
+ *     project_arn=example_project.arn,
+ *     type="APPIUM_JAVA_TESTNG_TEST_SPEC")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleProject = new Aws.DeviceFarm.Project("exampleProject", new Aws.DeviceFarm.ProjectArgs
+ *         {
+ *         });
+ *         var exampleUpload = new Aws.DeviceFarm.Upload("exampleUpload", new Aws.DeviceFarm.UploadArgs
+ *         {
+ *             ProjectArn = exampleProject.Arn,
+ *             Type = "APPIUM_JAVA_TESTNG_TEST_SPEC",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/devicefarm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleProject, err := devicefarm.NewProject(ctx, "exampleProject", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = devicefarm.NewUpload(ctx, "exampleUpload", &devicefarm.UploadArgs{
+ * 			ProjectArn: exampleProject.Arn,
+ * 			Type:       pulumi.String("APPIUM_JAVA_TESTNG_TEST_SPEC"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +96,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:devicefarm/upload:Upload example arn:aws:devicefarm:us-west-2:123456789012:upload:4fa784c7-ccb4-4dbf-ba4f-02198320daa1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:devicefarm/upload:Upload")
 public class Upload extends io.pulumi.resources.CustomResource {

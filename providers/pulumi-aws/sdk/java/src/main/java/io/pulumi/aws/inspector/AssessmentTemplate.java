@@ -18,7 +18,92 @@ import javax.annotation.Nullable;
 /**
  * Provides a Inspector assessment template
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.inspector.AssessmentTemplate("example", {
+ *     targetArn: aws_inspector_assessment_target.example.arn,
+ *     duration: 3600,
+ *     rulesPackageArns: [
+ *         "arn:aws:inspector:us-west-2:758058086616:rulespackage/0-9hgA516p",
+ *         "arn:aws:inspector:us-west-2:758058086616:rulespackage/0-H5hpSawc",
+ *         "arn:aws:inspector:us-west-2:758058086616:rulespackage/0-JJOtZiqQ",
+ *         "arn:aws:inspector:us-west-2:758058086616:rulespackage/0-vg5GGHSD",
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.inspector.AssessmentTemplate("example",
+ *     target_arn=aws_inspector_assessment_target["example"]["arn"],
+ *     duration=3600,
+ *     rules_package_arns=[
+ *         "arn:aws:inspector:us-west-2:758058086616:rulespackage/0-9hgA516p",
+ *         "arn:aws:inspector:us-west-2:758058086616:rulespackage/0-H5hpSawc",
+ *         "arn:aws:inspector:us-west-2:758058086616:rulespackage/0-JJOtZiqQ",
+ *         "arn:aws:inspector:us-west-2:758058086616:rulespackage/0-vg5GGHSD",
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Inspector.AssessmentTemplate("example", new Aws.Inspector.AssessmentTemplateArgs
+ *         {
+ *             TargetArn = aws_inspector_assessment_target.Example.Arn,
+ *             Duration = 3600,
+ *             RulesPackageArns = 
+ *             {
+ *                 "arn:aws:inspector:us-west-2:758058086616:rulespackage/0-9hgA516p",
+ *                 "arn:aws:inspector:us-west-2:758058086616:rulespackage/0-H5hpSawc",
+ *                 "arn:aws:inspector:us-west-2:758058086616:rulespackage/0-JJOtZiqQ",
+ *                 "arn:aws:inspector:us-west-2:758058086616:rulespackage/0-vg5GGHSD",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/inspector"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := inspector.NewAssessmentTemplate(ctx, "example", &inspector.AssessmentTemplateArgs{
+ * 			TargetArn: pulumi.Any(aws_inspector_assessment_target.Example.Arn),
+ * 			Duration:  pulumi.Int(3600),
+ * 			RulesPackageArns: pulumi.StringArray{
+ * 				pulumi.String("arn:aws:inspector:us-west-2:758058086616:rulespackage/0-9hgA516p"),
+ * 				pulumi.String("arn:aws:inspector:us-west-2:758058086616:rulespackage/0-H5hpSawc"),
+ * 				pulumi.String("arn:aws:inspector:us-west-2:758058086616:rulespackage/0-JJOtZiqQ"),
+ * 				pulumi.String("arn:aws:inspector:us-west-2:758058086616:rulespackage/0-vg5GGHSD"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +113,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:inspector/assessmentTemplate:AssessmentTemplate example arn:aws:inspector:us-west-2:123456789012:target/0-9IaAzhGR/template/0-WEcjR8CH
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:inspector/assessmentTemplate:AssessmentTemplate")
 public class AssessmentTemplate extends io.pulumi.resources.CustomResource {

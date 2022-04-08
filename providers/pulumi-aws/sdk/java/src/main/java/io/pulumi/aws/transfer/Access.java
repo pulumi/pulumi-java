@@ -18,7 +18,164 @@ import javax.annotation.Nullable;
 /**
  * Provides a AWS Transfer Access resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic S3
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.transfer.Access("example", {
+ *     externalId: "S-1-1-12-1234567890-123456789-1234567890-1234",
+ *     serverId: aws_transfer_server.example.id,
+ *     role: aws_iam_role.example.arn,
+ *     homeDirectory: `/${aws_s3_bucket.example.id}/`,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.transfer.Access("example",
+ *     external_id="S-1-1-12-1234567890-123456789-1234567890-1234",
+ *     server_id=aws_transfer_server["example"]["id"],
+ *     role=aws_iam_role["example"]["arn"],
+ *     home_directory=f"/{aws_s3_bucket['example']['id']}/")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Transfer.Access("example", new Aws.Transfer.AccessArgs
+ *         {
+ *             ExternalId = "S-1-1-12-1234567890-123456789-1234567890-1234",
+ *             ServerId = aws_transfer_server.Example.Id,
+ *             Role = aws_iam_role.Example.Arn,
+ *             HomeDirectory = $"/{aws_s3_bucket.Example.Id}/",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/transfer"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := transfer.NewAccess(ctx, "example", &transfer.AccessArgs{
+ * 			ExternalId:    pulumi.String("S-1-1-12-1234567890-123456789-1234567890-1234"),
+ * 			ServerId:      pulumi.Any(aws_transfer_server.Example.Id),
+ * 			Role:          pulumi.Any(aws_iam_role.Example.Arn),
+ * 			HomeDirectory: pulumi.String(fmt.Sprintf("%v%v%v", "/", aws_s3_bucket.Example.Id, "/")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Basic EFS
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.transfer.Access("test", {
+ *     externalId: "S-1-1-12-1234567890-123456789-1234567890-1234",
+ *     serverId: aws_transfer_server.test.id,
+ *     role: aws_iam_role.test.arn,
+ *     homeDirectory: `/${aws_efs_file_system.test.id}/`,
+ *     posixProfile: {
+ *         gid: 1000,
+ *         uid: 1000,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.transfer.Access("test",
+ *     external_id="S-1-1-12-1234567890-123456789-1234567890-1234",
+ *     server_id=aws_transfer_server["test"]["id"],
+ *     role=aws_iam_role["test"]["arn"],
+ *     home_directory=f"/{aws_efs_file_system['test']['id']}/",
+ *     posix_profile=aws.transfer.AccessPosixProfileArgs(
+ *         gid=1000,
+ *         uid=1000,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Transfer.Access("test", new Aws.Transfer.AccessArgs
+ *         {
+ *             ExternalId = "S-1-1-12-1234567890-123456789-1234567890-1234",
+ *             ServerId = aws_transfer_server.Test.Id,
+ *             Role = aws_iam_role.Test.Arn,
+ *             HomeDirectory = $"/{aws_efs_file_system.Test.Id}/",
+ *             PosixProfile = new Aws.Transfer.Inputs.AccessPosixProfileArgs
+ *             {
+ *                 Gid = 1000,
+ *                 Uid = 1000,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/transfer"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := transfer.NewAccess(ctx, "test", &transfer.AccessArgs{
+ * 			ExternalId:    pulumi.String("S-1-1-12-1234567890-123456789-1234567890-1234"),
+ * 			ServerId:      pulumi.Any(aws_transfer_server.Test.Id),
+ * 			Role:          pulumi.Any(aws_iam_role.Test.Arn),
+ * 			HomeDirectory: pulumi.String(fmt.Sprintf("%v%v%v", "/", aws_efs_file_system.Test.Id, "/")),
+ * 			PosixProfile: &transfer.AccessPosixProfileArgs{
+ * 				Gid: pulumi.Int(1000),
+ * 				Uid: pulumi.Int(1000),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +185,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:transfer/access:Access example s-12345678/S-1-1-12-1234567890-123456789-1234567890-1234
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:transfer/access:Access")
 public class Access extends io.pulumi.resources.CustomResource {

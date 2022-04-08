@@ -21,7 +21,245 @@ import javax.annotation.Nullable;
  * After you create a response headers policy, you can use its ID to attach it to one or more cache behaviors in a CloudFront distribution.
  * When it’s attached to a cache behavior, CloudFront adds the headers in the policy to every response that it sends for requests that match the cache behavior.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * The example below creates a CloudFront response headers policy.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.cloudfront.ResponseHeadersPolicy("example", {
+ *     comment: "test comment",
+ *     corsConfig: {
+ *         accessControlAllowCredentials: true,
+ *         accessControlAllowHeaders: {
+ *             items: ["test"],
+ *         },
+ *         accessControlAllowMethods: {
+ *             items: ["GET"],
+ *         },
+ *         accessControlAllowOrigins: {
+ *             items: ["test.example.comtest"],
+ *         },
+ *         originOverride: true,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.cloudfront.ResponseHeadersPolicy("example",
+ *     comment="test comment",
+ *     cors_config=aws.cloudfront.ResponseHeadersPolicyCorsConfigArgs(
+ *         access_control_allow_credentials=True,
+ *         access_control_allow_headers=aws.cloudfront.ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs(
+ *             items=["test"],
+ *         ),
+ *         access_control_allow_methods=aws.cloudfront.ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs(
+ *             items=["GET"],
+ *         ),
+ *         access_control_allow_origins=aws.cloudfront.ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsArgs(
+ *             items=["test.example.comtest"],
+ *         ),
+ *         origin_override=True,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.CloudFront.ResponseHeadersPolicy("example", new Aws.CloudFront.ResponseHeadersPolicyArgs
+ *         {
+ *             Comment = "test comment",
+ *             CorsConfig = new Aws.CloudFront.Inputs.ResponseHeadersPolicyCorsConfigArgs
+ *             {
+ *                 AccessControlAllowCredentials = true,
+ *                 AccessControlAllowHeaders = new Aws.CloudFront.Inputs.ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs
+ *                 {
+ *                     Items = 
+ *                     {
+ *                         "test",
+ *                     },
+ *                 },
+ *                 AccessControlAllowMethods = new Aws.CloudFront.Inputs.ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs
+ *                 {
+ *                     Items = 
+ *                     {
+ *                         "GET",
+ *                     },
+ *                 },
+ *                 AccessControlAllowOrigins = new Aws.CloudFront.Inputs.ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsArgs
+ *                 {
+ *                     Items = 
+ *                     {
+ *                         "test.example.comtest",
+ *                     },
+ *                 },
+ *                 OriginOverride = true,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudfront"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudfront.NewResponseHeadersPolicy(ctx, "example", &cloudfront.ResponseHeadersPolicyArgs{
+ * 			Comment: pulumi.String("test comment"),
+ * 			CorsConfig: &cloudfront.ResponseHeadersPolicyCorsConfigArgs{
+ * 				AccessControlAllowCredentials: pulumi.Bool(true),
+ * 				AccessControlAllowHeaders: &cloudfront.ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs{
+ * 					Items: pulumi.StringArray{
+ * 						pulumi.String("test"),
+ * 					},
+ * 				},
+ * 				AccessControlAllowMethods: &cloudfront.ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs{
+ * 					Items: pulumi.StringArray{
+ * 						pulumi.String("GET"),
+ * 					},
+ * 				},
+ * 				AccessControlAllowOrigins: &cloudfront.ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsArgs{
+ * 					Items: pulumi.StringArray{
+ * 						pulumi.String("test.example.comtest"),
+ * 					},
+ * 				},
+ * 				OriginOverride: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * The example below creates a CloudFront response headers policy with a custom headers config.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.cloudfront.ResponseHeadersPolicy("example", {
+ *     customHeadersConfig: {
+ *         items: [
+ *             {
+ *                 header: "X-Permitted-Cross-Domain-Policies",
+ *                 override: true,
+ *                 value: "none",
+ *             },
+ *             {
+ *                 header: "X-Test",
+ *                 override: true,
+ *                 value: "none",
+ *             },
+ *         ],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.cloudfront.ResponseHeadersPolicy("example", custom_headers_config=aws.cloudfront.ResponseHeadersPolicyCustomHeadersConfigArgs(
+ *     items=[
+ *         aws.cloudfront.ResponseHeadersPolicyCustomHeadersConfigItemArgs(
+ *             header="X-Permitted-Cross-Domain-Policies",
+ *             override=True,
+ *             value="none",
+ *         ),
+ *         aws.cloudfront.ResponseHeadersPolicyCustomHeadersConfigItemArgs(
+ *             header="X-Test",
+ *             override=True,
+ *             value="none",
+ *         ),
+ *     ],
+ * ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.CloudFront.ResponseHeadersPolicy("example", new Aws.CloudFront.ResponseHeadersPolicyArgs
+ *         {
+ *             CustomHeadersConfig = new Aws.CloudFront.Inputs.ResponseHeadersPolicyCustomHeadersConfigArgs
+ *             {
+ *                 Items = 
+ *                 {
+ *                     new Aws.CloudFront.Inputs.ResponseHeadersPolicyCustomHeadersConfigItemArgs
+ *                     {
+ *                         Header = "X-Permitted-Cross-Domain-Policies",
+ *                         Override = true,
+ *                         Value = "none",
+ *                     },
+ *                     new Aws.CloudFront.Inputs.ResponseHeadersPolicyCustomHeadersConfigItemArgs
+ *                     {
+ *                         Header = "X-Test",
+ *                         Override = true,
+ *                         Value = "none",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudfront"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudfront.NewResponseHeadersPolicy(ctx, "example", &cloudfront.ResponseHeadersPolicyArgs{
+ * 			CustomHeadersConfig: &cloudfront.ResponseHeadersPolicyCustomHeadersConfigArgs{
+ * 				Items: cloudfront.ResponseHeadersPolicyCustomHeadersConfigItemArray{
+ * 					&cloudfront.ResponseHeadersPolicyCustomHeadersConfigItemArgs{
+ * 						Header:   pulumi.String("X-Permitted-Cross-Domain-Policies"),
+ * 						Override: pulumi.Bool(true),
+ * 						Value:    pulumi.String("none"),
+ * 					},
+ * 					&cloudfront.ResponseHeadersPolicyCustomHeadersConfigItemArgs{
+ * 						Header:   pulumi.String("X-Test"),
+ * 						Override: pulumi.Bool(true),
+ * 						Value:    pulumi.String("none"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,6 +269,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudfront/responseHeadersPolicy:ResponseHeadersPolicy policy 658327ea-f89d-4fab-a63d-7e88639e58f9
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudfront/responseHeadersPolicy:ResponseHeadersPolicy")
 public class ResponseHeadersPolicy extends io.pulumi.resources.CustomResource {

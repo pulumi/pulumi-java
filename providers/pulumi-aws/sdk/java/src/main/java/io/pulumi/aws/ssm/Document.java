@@ -22,7 +22,217 @@ import javax.annotation.Nullable;
  * > **NOTE on updating SSM documents:** Only documents with a schema version of 2.0
  * or greater can update their content once created, see [SSM Schema Features](http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html#document-schemas-features). To update a document with an older schema version you must recreate the resource. Not all document types support a schema version of 2.0 or greater. Refer to [SSM document schema features and examples](https://docs.aws.amazon.com/systems-manager/latest/userguide/document-schemas-features.html) for information about which schema versions are supported for the respective `document_type`.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create an ssm document in JSON format
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const foo = new aws.ssm.Document("foo", {
+ *     content: `  {
+ *     "schemaVersion": "1.2",
+ *     "description": "Check ip configuration of a Linux instance.",
+ *     "parameters": {
+ * 
+ *     },
+ *     "runtimeConfig": {
+ *       "aws:runShellScript": {
+ *         "properties": [
+ *           {
+ *             "id": "0.aws:runShellScript",
+ *             "runCommand": ["ifconfig"]
+ *           }
+ *         ]
+ *       }
+ *     }
+ *   }
+ * `,
+ *     documentType: "Command",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * foo = aws.ssm.Document("foo",
+ *     content="""  {
+ *     "schemaVersion": "1.2",
+ *     "description": "Check ip configuration of a Linux instance.",
+ *     "parameters": {
+ * 
+ *     },
+ *     "runtimeConfig": {
+ *       "aws:runShellScript": {
+ *         "properties": [
+ *           {
+ *             "id": "0.aws:runShellScript",
+ *             "runCommand": ["ifconfig"]
+ *           }
+ *         ]
+ *       }
+ *     }
+ *   }
+ * 
+ * """,
+ *     document_type="Command")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var foo = new Aws.Ssm.Document("foo", new Aws.Ssm.DocumentArgs
+ *         {
+ *             Content = @"  {
+ *     ""schemaVersion"": ""1.2"",
+ *     ""description"": ""Check ip configuration of a Linux instance."",
+ *     ""parameters"": {
+ * 
+ *     },
+ *     ""runtimeConfig"": {
+ *       ""aws:runShellScript"": {
+ *         ""properties"": [
+ *           {
+ *             ""id"": ""0.aws:runShellScript"",
+ *             ""runCommand"": [""ifconfig""]
+ *           }
+ *         ]
+ *       }
+ *     }
+ *   }
+ * 
+ * ",
+ *             DocumentType = "Command",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ssm.NewDocument(ctx, "foo", &ssm.DocumentArgs{
+ * 			Content:      pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "  {\n", "    \"schemaVersion\": \"1.2\",\n", "    \"description\": \"Check ip configuration of a Linux instance.\",\n", "    \"parameters\": {\n", "\n", "    },\n", "    \"runtimeConfig\": {\n", "      \"aws:runShellScript\": {\n", "        \"properties\": [\n", "          {\n", "            \"id\": \"0.aws:runShellScript\",\n", "            \"runCommand\": [\"ifconfig\"]\n", "          }\n", "        ]\n", "      }\n", "    }\n", "  }\n", "\n")),
+ * 			DocumentType: pulumi.String("Command"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create an ssm document in YAML format
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const foo = new aws.ssm.Document("foo", {
+ *     content: `schemaVersion: '1.2'
+ * description: Check ip configuration of a Linux instance.
+ * parameters: {}
+ * runtimeConfig:
+ *   'aws:runShellScript':
+ *     properties:
+ *       - id: '0.aws:runShellScript'
+ *         runCommand:
+ *           - ifconfig
+ * `,
+ *     documentFormat: "YAML",
+ *     documentType: "Command",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * foo = aws.ssm.Document("foo",
+ *     content="""schemaVersion: '1.2'
+ * description: Check ip configuration of a Linux instance.
+ * parameters: {}
+ * runtimeConfig:
+ *   'aws:runShellScript':
+ *     properties:
+ *       - id: '0.aws:runShellScript'
+ *         runCommand:
+ *           - ifconfig
+ * 
+ * """,
+ *     document_format="YAML",
+ *     document_type="Command")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var foo = new Aws.Ssm.Document("foo", new Aws.Ssm.DocumentArgs
+ *         {
+ *             Content = @"schemaVersion: '1.2'
+ * description: Check ip configuration of a Linux instance.
+ * parameters: {}
+ * runtimeConfig:
+ *   'aws:runShellScript':
+ *     properties:
+ *       - id: '0.aws:runShellScript'
+ *         runCommand:
+ *           - ifconfig
+ * 
+ * ",
+ *             DocumentFormat = "YAML",
+ *             DocumentType = "Command",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ssm.NewDocument(ctx, "foo", &ssm.DocumentArgs{
+ * 			Content:        pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v", "schemaVersion: '1.2'\n", "description: Check ip configuration of a Linux instance.\n", "parameters: {}\n", "runtimeConfig:\n", "  'aws:runShellScript':\n", "    properties:\n", "      - id: '0.aws:runShellScript'\n", "        runCommand:\n", "          - ifconfig\n", "\n")),
+ * 			DocumentFormat: pulumi.String("YAML"),
+ * 			DocumentType:   pulumi.String("Command"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * ## Permissions
  * 
  * The permissions attribute specifies how you want to share the document. If you share a document privately,
@@ -33,6 +243,7 @@ import javax.annotation.Nullable;
  * 
  * * `type` - The permission type for the document. The permission type can be `Share`.
  * * `account_ids` - The AWS user accounts that should have access to the document. The account IDs can either be a group of account IDs or `All`.
+ * 
  * 
  * ## Import
  * 
@@ -46,28 +257,43 @@ import javax.annotation.Nullable;
  * 
  *  name
  * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
  * = "test_document"
  * 
  *  document_type = "Package"
  * 
  *  attachments_source {
  * 
+ * 
+ * 
  *  key
  * 
+ * 
+ * 
  * = "SourceUrl"
+ * 
+ * 
  * 
  *  values = ["s3://${aws_s3_bucket.object_bucket.bucket}/test.zip"]
  * 
  *  }
  * 
- * # There is no AWS SSM API for reading attachments_source info directly
+ *  # There is no AWS SSM API for reading attachments_source info directly
  * 
  *  lifecycle {
  * 
+ * 
+ * 
  *  ignore_changes = [attachments_source]
  * 
- *  } }
- * 
+ *  } } 
  */
 @ResourceType(type="aws:ssm/document:Document")
 public class Document extends io.pulumi.resources.CustomResource {

@@ -24,7 +24,91 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** Lightsail is currently only supported in a limited number of AWS Regions, please see ["Regions and Availability Zones in Amazon Lightsail"](https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail) for more details
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // Create a new GitLab Lightsail Instance
+ * const gitlabTest = new aws.lightsail.Instance("gitlab_test", {
+ *     availabilityZone: "us-east-1b",
+ *     blueprintId: "string",
+ *     bundleId: "string",
+ *     keyPairName: "some_key_name",
+ *     tags: {
+ *         foo: "bar",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # Create a new GitLab Lightsail Instance
+ * gitlab_test = aws.lightsail.Instance("gitlabTest",
+ *     availability_zone="us-east-1b",
+ *     blueprint_id="string",
+ *     bundle_id="string",
+ *     key_pair_name="some_key_name",
+ *     tags={
+ *         "foo": "bar",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // Create a new GitLab Lightsail Instance
+ *         var gitlabTest = new Aws.LightSail.Instance("gitlabTest", new Aws.LightSail.InstanceArgs
+ *         {
+ *             AvailabilityZone = "us-east-1b",
+ *             BlueprintId = "string",
+ *             BundleId = "string",
+ *             KeyPairName = "some_key_name",
+ *             Tags = 
+ *             {
+ *                 { "foo", "bar" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lightsail"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := lightsail.NewInstance(ctx, "gitlabTest", &lightsail.InstanceArgs{
+ * 			AvailabilityZone: pulumi.String("us-east-1b"),
+ * 			BlueprintId:      pulumi.String("string"),
+ * 			BundleId:         pulumi.String("string"),
+ * 			KeyPairName:      pulumi.String("some_key_name"),
+ * 			Tags: pulumi.StringMap{
+ * 				"foo": pulumi.String("bar"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * ## Availability Zones
  * 
  * Lightsail currently supports the following Availability Zones (e.g., `us-east-1a`):
@@ -77,6 +161,7 @@ import javax.annotation.Nullable;
  * - us-east-2: `2_0`
  * - us-west-2: `2_0`
  * 
+ * 
  * ## Import
  * 
  * Lightsail Instances can be imported using their name, e.g.,
@@ -85,6 +170,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:lightsail/instance:Instance gitlab_test 'custom gitlab'
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:lightsail/instance:Instance")
 public class Instance extends io.pulumi.resources.CustomResource {
@@ -179,7 +265,6 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * 
      * @Deprecated
      * use `ipv6_addresses` attribute instead
-     * 
      */
     @Deprecated /* use `ipv6_addresses` attribute instead */
     @Export(name="ipv6Address", type=String.class, parameters={})

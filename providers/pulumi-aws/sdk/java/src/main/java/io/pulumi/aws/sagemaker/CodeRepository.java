@@ -17,7 +17,212 @@ import javax.annotation.Nullable;
 /**
  * Provides a Sagemaker Code Repository resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.sagemaker.CodeRepository("example", {
+ *     codeRepositoryName: "example",
+ *     gitConfig: {
+ *         repositoryUrl: "https://github.com/hashicorp/terraform-provider-aws.git",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.sagemaker.CodeRepository("example",
+ *     code_repository_name="example",
+ *     git_config=aws.sagemaker.CodeRepositoryGitConfigArgs(
+ *         repository_url="https://github.com/hashicorp/terraform-provider-aws.git",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Sagemaker.CodeRepository("example", new Aws.Sagemaker.CodeRepositoryArgs
+ *         {
+ *             CodeRepositoryName = "example",
+ *             GitConfig = new Aws.Sagemaker.Inputs.CodeRepositoryGitConfigArgs
+ *             {
+ *                 RepositoryUrl = "https://github.com/hashicorp/terraform-provider-aws.git",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sagemaker.NewCodeRepository(ctx, "example", &sagemaker.CodeRepositoryArgs{
+ * 			CodeRepositoryName: pulumi.String("example"),
+ * 			GitConfig: &sagemaker.CodeRepositoryGitConfigArgs{
+ * 				RepositoryUrl: pulumi.String("https://github.com/hashicorp/terraform-provider-aws.git"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example with Secret
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleSecret = new aws.secretsmanager.Secret("exampleSecret", {});
+ * const exampleSecretVersion = new aws.secretsmanager.SecretVersion("exampleSecretVersion", {
+ *     secretId: exampleSecret.id,
+ *     secretString: JSON.stringify({
+ *         username: "example",
+ *         password: "example",
+ *     }),
+ * });
+ * const exampleCodeRepository = new aws.sagemaker.CodeRepository("exampleCodeRepository", {
+ *     codeRepositoryName: "example",
+ *     gitConfig: {
+ *         repositoryUrl: "https://github.com/hashicorp/terraform-provider-aws.git",
+ *         secretArn: exampleSecret.arn,
+ *     },
+ * }, {
+ *     dependsOn: [exampleSecretVersion],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import json
+ * import pulumi_aws as aws
+ * 
+ * example_secret = aws.secretsmanager.Secret("exampleSecret")
+ * example_secret_version = aws.secretsmanager.SecretVersion("exampleSecretVersion",
+ *     secret_id=example_secret.id,
+ *     secret_string=json.dumps({
+ *         "username": "example",
+ *         "password": "example",
+ *     }))
+ * example_code_repository = aws.sagemaker.CodeRepository("exampleCodeRepository",
+ *     code_repository_name="example",
+ *     git_config=aws.sagemaker.CodeRepositoryGitConfigArgs(
+ *         repository_url="https://github.com/hashicorp/terraform-provider-aws.git",
+ *         secret_arn=example_secret.arn,
+ *     ),
+ *     opts=pulumi.ResourceOptions(depends_on=[example_secret_version]))
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using System.Text.Json;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleSecret = new Aws.SecretsManager.Secret("exampleSecret", new Aws.SecretsManager.SecretArgs
+ *         {
+ *         });
+ *         var exampleSecretVersion = new Aws.SecretsManager.SecretVersion("exampleSecretVersion", new Aws.SecretsManager.SecretVersionArgs
+ *         {
+ *             SecretId = exampleSecret.Id,
+ *             SecretString = JsonSerializer.Serialize(new Dictionary<string, object?>
+ *             {
+ *                 { "username", "example" },
+ *                 { "password", "example" },
+ *             }),
+ *         });
+ *         var exampleCodeRepository = new Aws.Sagemaker.CodeRepository("exampleCodeRepository", new Aws.Sagemaker.CodeRepositoryArgs
+ *         {
+ *             CodeRepositoryName = "example",
+ *             GitConfig = new Aws.Sagemaker.Inputs.CodeRepositoryGitConfigArgs
+ *             {
+ *                 RepositoryUrl = "https://github.com/hashicorp/terraform-provider-aws.git",
+ *                 SecretArn = exampleSecret.Arn,
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 exampleSecretVersion,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"encoding/json"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/secretsmanager"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleSecret, err := secretsmanager.NewSecret(ctx, "exampleSecret", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+ * 			"username": "example",
+ * 			"password": "example",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		json0 := string(tmpJSON0)
+ * 		exampleSecretVersion, err := secretsmanager.NewSecretVersion(ctx, "exampleSecretVersion", &secretsmanager.SecretVersionArgs{
+ * 			SecretId:     exampleSecret.ID(),
+ * 			SecretString: pulumi.String(json0),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = sagemaker.NewCodeRepository(ctx, "exampleCodeRepository", &sagemaker.CodeRepositoryArgs{
+ * 			CodeRepositoryName: pulumi.String("example"),
+ * 			GitConfig: &sagemaker.CodeRepositoryGitConfigArgs{
+ * 				RepositoryUrl: pulumi.String("https://github.com/hashicorp/terraform-provider-aws.git"),
+ * 				SecretArn:     exampleSecret.Arn,
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			exampleSecretVersion,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +232,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sagemaker/codeRepository:CodeRepository test_code_repository my-code-repo
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sagemaker/codeRepository:CodeRepository")
 public class CodeRepository extends io.pulumi.resources.CustomResource {

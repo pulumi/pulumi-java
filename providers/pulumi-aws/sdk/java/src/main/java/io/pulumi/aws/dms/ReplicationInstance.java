@@ -19,7 +19,311 @@ import javax.annotation.Nullable;
 /**
  * Provides a DMS (Data Migration Service) replication instance resource. DMS replication instances can be created, updated, deleted, and imported.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * Create required roles and then create a DMS instance, setting the depends_on to the required role policy attachments.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const dmsAssumeRole = aws.iam.getPolicyDocument({
+ *     statements: [{
+ *         actions: ["sts:AssumeRole"],
+ *         principals: [{
+ *             identifiers: ["dms.amazonaws.com"],
+ *             type: "Service",
+ *         }],
+ *     }],
+ * });
+ * const dms_access_for_endpoint = new aws.iam.Role("dms-access-for-endpoint", {assumeRolePolicy: dmsAssumeRole.then(dmsAssumeRole => dmsAssumeRole.json)});
+ * const dms_access_for_endpoint_AmazonDMSRedshiftS3Role = new aws.iam.RolePolicyAttachment("dms-access-for-endpoint-AmazonDMSRedshiftS3Role", {
+ *     policyArn: "arn:aws:iam::aws:policy/service-role/AmazonDMSRedshiftS3Role",
+ *     role: dms_access_for_endpoint.name,
+ * });
+ * const dms_cloudwatch_logs_role = new aws.iam.Role("dms-cloudwatch-logs-role", {assumeRolePolicy: dmsAssumeRole.then(dmsAssumeRole => dmsAssumeRole.json)});
+ * const dms_cloudwatch_logs_role_AmazonDMSCloudWatchLogsRole = new aws.iam.RolePolicyAttachment("dms-cloudwatch-logs-role-AmazonDMSCloudWatchLogsRole", {
+ *     policyArn: "arn:aws:iam::aws:policy/service-role/AmazonDMSCloudWatchLogsRole",
+ *     role: dms_cloudwatch_logs_role.name,
+ * });
+ * const dms_vpc_role = new aws.iam.Role("dms-vpc-role", {assumeRolePolicy: dmsAssumeRole.then(dmsAssumeRole => dmsAssumeRole.json)});
+ * const dms_vpc_role_AmazonDMSVPCManagementRole = new aws.iam.RolePolicyAttachment("dms-vpc-role-AmazonDMSVPCManagementRole", {
+ *     policyArn: "arn:aws:iam::aws:policy/service-role/AmazonDMSVPCManagementRole",
+ *     role: dms_vpc_role.name,
+ * });
+ * // Create a new replication instance
+ * const test = new aws.dms.ReplicationInstance("test", {
+ *     allocatedStorage: 20,
+ *     applyImmediately: true,
+ *     autoMinorVersionUpgrade: true,
+ *     availabilityZone: "us-west-2c",
+ *     engineVersion: "3.1.4",
+ *     kmsKeyArn: "arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012",
+ *     multiAz: false,
+ *     preferredMaintenanceWindow: "sun:10:30-sun:14:30",
+ *     publiclyAccessible: true,
+ *     replicationInstanceClass: "dms.t2.micro",
+ *     replicationInstanceId: "test-dms-replication-instance-tf",
+ *     replicationSubnetGroupId: aws_dms_replication_subnet_group["test-dms-replication-subnet-group-tf"].id,
+ *     tags: {
+ *         Name: "test",
+ *     },
+ *     vpcSecurityGroupIds: ["sg-12345678"],
+ * }, {
+ *     dependsOn: [
+ *         dms_access_for_endpoint_AmazonDMSRedshiftS3Role,
+ *         dms_cloudwatch_logs_role_AmazonDMSCloudWatchLogsRole,
+ *         dms_vpc_role_AmazonDMSVPCManagementRole,
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * dms_assume_role = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+ *     actions=["sts:AssumeRole"],
+ *     principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+ *         identifiers=["dms.amazonaws.com"],
+ *         type="Service",
+ *     )],
+ * )])
+ * dms_access_for_endpoint = aws.iam.Role("dms-access-for-endpoint", assume_role_policy=dms_assume_role.json)
+ * dms_access_for_endpoint__amazon_dms_redshift_s3_role = aws.iam.RolePolicyAttachment("dms-access-for-endpoint-AmazonDMSRedshiftS3Role",
+ *     policy_arn="arn:aws:iam::aws:policy/service-role/AmazonDMSRedshiftS3Role",
+ *     role=dms_access_for_endpoint.name)
+ * dms_cloudwatch_logs_role = aws.iam.Role("dms-cloudwatch-logs-role", assume_role_policy=dms_assume_role.json)
+ * dms_cloudwatch_logs_role__amazon_dms_cloud_watch_logs_role = aws.iam.RolePolicyAttachment("dms-cloudwatch-logs-role-AmazonDMSCloudWatchLogsRole",
+ *     policy_arn="arn:aws:iam::aws:policy/service-role/AmazonDMSCloudWatchLogsRole",
+ *     role=dms_cloudwatch_logs_role.name)
+ * dms_vpc_role = aws.iam.Role("dms-vpc-role", assume_role_policy=dms_assume_role.json)
+ * dms_vpc_role__amazon_dmsvpc_management_role = aws.iam.RolePolicyAttachment("dms-vpc-role-AmazonDMSVPCManagementRole",
+ *     policy_arn="arn:aws:iam::aws:policy/service-role/AmazonDMSVPCManagementRole",
+ *     role=dms_vpc_role.name)
+ * # Create a new replication instance
+ * test = aws.dms.ReplicationInstance("test",
+ *     allocated_storage=20,
+ *     apply_immediately=True,
+ *     auto_minor_version_upgrade=True,
+ *     availability_zone="us-west-2c",
+ *     engine_version="3.1.4",
+ *     kms_key_arn="arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012",
+ *     multi_az=False,
+ *     preferred_maintenance_window="sun:10:30-sun:14:30",
+ *     publicly_accessible=True,
+ *     replication_instance_class="dms.t2.micro",
+ *     replication_instance_id="test-dms-replication-instance-tf",
+ *     replication_subnet_group_id=aws_dms_replication_subnet_group["test-dms-replication-subnet-group-tf"]["id"],
+ *     tags={
+ *         "Name": "test",
+ *     },
+ *     vpc_security_group_ids=["sg-12345678"],
+ *     opts=pulumi.ResourceOptions(depends_on=[
+ *             dms_access_for_endpoint__amazon_dms_redshift_s3_role,
+ *             dms_cloudwatch_logs_role__amazon_dms_cloud_watch_logs_role,
+ *             dms_vpc_role__amazon_dmsvpc_management_role,
+ *         ]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dmsAssumeRole = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+ *         {
+ *             Statements = 
+ *             {
+ *                 new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+ *                 {
+ *                     Actions = 
+ *                     {
+ *                         "sts:AssumeRole",
+ *                     },
+ *                     Principals = 
+ *                     {
+ *                         new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+ *                         {
+ *                             Identifiers = 
+ *                             {
+ *                                 "dms.amazonaws.com",
+ *                             },
+ *                             Type = "Service",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         }));
+ *         var dms_access_for_endpoint = new Aws.Iam.Role("dms-access-for-endpoint", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = dmsAssumeRole.Apply(dmsAssumeRole => dmsAssumeRole.Json),
+ *         });
+ *         var dms_access_for_endpoint_AmazonDMSRedshiftS3Role = new Aws.Iam.RolePolicyAttachment("dms-access-for-endpoint-AmazonDMSRedshiftS3Role", new Aws.Iam.RolePolicyAttachmentArgs
+ *         {
+ *             PolicyArn = "arn:aws:iam::aws:policy/service-role/AmazonDMSRedshiftS3Role",
+ *             Role = dms_access_for_endpoint.Name,
+ *         });
+ *         var dms_cloudwatch_logs_role = new Aws.Iam.Role("dms-cloudwatch-logs-role", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = dmsAssumeRole.Apply(dmsAssumeRole => dmsAssumeRole.Json),
+ *         });
+ *         var dms_cloudwatch_logs_role_AmazonDMSCloudWatchLogsRole = new Aws.Iam.RolePolicyAttachment("dms-cloudwatch-logs-role-AmazonDMSCloudWatchLogsRole", new Aws.Iam.RolePolicyAttachmentArgs
+ *         {
+ *             PolicyArn = "arn:aws:iam::aws:policy/service-role/AmazonDMSCloudWatchLogsRole",
+ *             Role = dms_cloudwatch_logs_role.Name,
+ *         });
+ *         var dms_vpc_role = new Aws.Iam.Role("dms-vpc-role", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = dmsAssumeRole.Apply(dmsAssumeRole => dmsAssumeRole.Json),
+ *         });
+ *         var dms_vpc_role_AmazonDMSVPCManagementRole = new Aws.Iam.RolePolicyAttachment("dms-vpc-role-AmazonDMSVPCManagementRole", new Aws.Iam.RolePolicyAttachmentArgs
+ *         {
+ *             PolicyArn = "arn:aws:iam::aws:policy/service-role/AmazonDMSVPCManagementRole",
+ *             Role = dms_vpc_role.Name,
+ *         });
+ *         // Create a new replication instance
+ *         var test = new Aws.Dms.ReplicationInstance("test", new Aws.Dms.ReplicationInstanceArgs
+ *         {
+ *             AllocatedStorage = 20,
+ *             ApplyImmediately = true,
+ *             AutoMinorVersionUpgrade = true,
+ *             AvailabilityZone = "us-west-2c",
+ *             EngineVersion = "3.1.4",
+ *             KmsKeyArn = "arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012",
+ *             MultiAz = false,
+ *             PreferredMaintenanceWindow = "sun:10:30-sun:14:30",
+ *             PubliclyAccessible = true,
+ *             ReplicationInstanceClass = "dms.t2.micro",
+ *             ReplicationInstanceId = "test-dms-replication-instance-tf",
+ *             ReplicationSubnetGroupId = aws_dms_replication_subnet_group.Test_dms_replication_subnet_group_tf.Id,
+ *             Tags = 
+ *             {
+ *                 { "Name", "test" },
+ *             },
+ *             VpcSecurityGroupIds = 
+ *             {
+ *                 "sg-12345678",
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 dms_access_for_endpoint_AmazonDMSRedshiftS3Role,
+ *                 dms_cloudwatch_logs_role_AmazonDMSCloudWatchLogsRole,
+ *                 dms_vpc_role_AmazonDMSVPCManagementRole,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/dms"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		dmsAssumeRole, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+ * 			Statements: []iam.GetPolicyDocumentStatement{
+ * 				iam.GetPolicyDocumentStatement{
+ * 					Actions: []string{
+ * 						"sts:AssumeRole",
+ * 					},
+ * 					Principals: []iam.GetPolicyDocumentStatementPrincipal{
+ * 						iam.GetPolicyDocumentStatementPrincipal{
+ * 							Identifiers: []string{
+ * 								"dms.amazonaws.com",
+ * 							},
+ * 							Type: "Service",
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRole(ctx, "dms-access-for-endpoint", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.String(dmsAssumeRole.Json),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicyAttachment(ctx, "dms-access-for-endpoint-AmazonDMSRedshiftS3Role", &iam.RolePolicyAttachmentArgs{
+ * 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/service-role/AmazonDMSRedshiftS3Role"),
+ * 			Role:      dms_access_for_endpoint.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRole(ctx, "dms-cloudwatch-logs-role", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.String(dmsAssumeRole.Json),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicyAttachment(ctx, "dms-cloudwatch-logs-role-AmazonDMSCloudWatchLogsRole", &iam.RolePolicyAttachmentArgs{
+ * 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/service-role/AmazonDMSCloudWatchLogsRole"),
+ * 			Role:      dms_cloudwatch_logs_role.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRole(ctx, "dms-vpc-role", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.String(dmsAssumeRole.Json),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicyAttachment(ctx, "dms-vpc-role-AmazonDMSVPCManagementRole", &iam.RolePolicyAttachmentArgs{
+ * 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/service-role/AmazonDMSVPCManagementRole"),
+ * 			Role:      dms_vpc_role.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = dms.NewReplicationInstance(ctx, "test", &dms.ReplicationInstanceArgs{
+ * 			AllocatedStorage:           pulumi.Int(20),
+ * 			ApplyImmediately:           pulumi.Bool(true),
+ * 			AutoMinorVersionUpgrade:    pulumi.Bool(true),
+ * 			AvailabilityZone:           pulumi.String("us-west-2c"),
+ * 			EngineVersion:              pulumi.String("3.1.4"),
+ * 			KmsKeyArn:                  pulumi.String("arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012"),
+ * 			MultiAz:                    pulumi.Bool(false),
+ * 			PreferredMaintenanceWindow: pulumi.String("sun:10:30-sun:14:30"),
+ * 			PubliclyAccessible:         pulumi.Bool(true),
+ * 			ReplicationInstanceClass:   pulumi.String("dms.t2.micro"),
+ * 			ReplicationInstanceId:      pulumi.String("test-dms-replication-instance-tf"),
+ * 			ReplicationSubnetGroupId:   pulumi.Any(aws_dms_replication_subnet_group.Test - dms - replication - subnet - group - tf.Id),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("test"),
+ * 			},
+ * 			VpcSecurityGroupIds: pulumi.StringArray{
+ * 				pulumi.String("sg-12345678"),
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			dms_access_for_endpoint_AmazonDMSRedshiftS3Role,
+ * 			dms_cloudwatch_logs_role_AmazonDMSCloudWatchLogsRole,
+ * 			dms_vpc_role_AmazonDMSVPCManagementRole,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +333,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:dms/replicationInstance:ReplicationInstance test test-dms-replication-instance-tf
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:dms/replicationInstance:ReplicationInstance")
 public class ReplicationInstance extends io.pulumi.resources.CustomResource {

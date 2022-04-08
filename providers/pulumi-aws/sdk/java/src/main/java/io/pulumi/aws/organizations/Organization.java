@@ -21,7 +21,80 @@ import javax.annotation.Nullable;
  * 
  * !> **WARNING:** When migrating from a `feature_set` of `CONSOLIDATED_BILLING` to `ALL`, the Organization account owner will received an email stating the following: "You started the process to enable all features for your AWS organization. As part of that process, all member accounts that joined your organization by invitation must approve the change. You don’t need approval from member accounts that you directly created from within your AWS organization." After all member accounts have accepted the invitation, the Organization account owner must then finalize the changes via the [AWS Console](https://console.aws.amazon.com/organizations/home#/organization/settings/migration-progress). Until these steps are performed, the provider will perpetually show a difference, and the `DescribeOrganization` API will continue to show the `FeatureSet` as `CONSOLIDATED_BILLING`. See the [AWS Organizations documentation](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html) for more information.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const org = new aws.organizations.Organization("org", {
+ *     awsServiceAccessPrincipals: [
+ *         "cloudtrail.amazonaws.com",
+ *         "config.amazonaws.com",
+ *     ],
+ *     featureSet: "ALL",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * org = aws.organizations.Organization("org",
+ *     aws_service_access_principals=[
+ *         "cloudtrail.amazonaws.com",
+ *         "config.amazonaws.com",
+ *     ],
+ *     feature_set="ALL")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var org = new Aws.Organizations.Organization("org", new Aws.Organizations.OrganizationArgs
+ *         {
+ *             AwsServiceAccessPrincipals = 
+ *             {
+ *                 "cloudtrail.amazonaws.com",
+ *                 "config.amazonaws.com",
+ *             },
+ *             FeatureSet = "ALL",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := organizations.NewOrganization(ctx, "org", &organizations.OrganizationArgs{
+ * 			AwsServiceAccessPrincipals: pulumi.StringArray{
+ * 				pulumi.String("cloudtrail.amazonaws.com"),
+ * 				pulumi.String("config.amazonaws.com"),
+ * 			},
+ * 			FeatureSet: pulumi.String("ALL"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,6 +104,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:organizations/organization:Organization my_org o-1234567
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:organizations/organization:Organization")
 public class Organization extends io.pulumi.resources.CustomResource {

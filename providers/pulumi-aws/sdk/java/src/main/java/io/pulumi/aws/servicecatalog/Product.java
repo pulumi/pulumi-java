@@ -22,7 +22,99 @@ import javax.annotation.Nullable;
  * 
  * > A "provisioning artifact" is also referred to as a "version." A "distributor" is also referred to as a "vendor."
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic Usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.servicecatalog.Product("example", {
+ *     owner: [aws_security_group.example.id],
+ *     type: aws_subnet.main.id,
+ *     provisioningArtifactParameters: {
+ *         templateUrl: "https://s3.amazonaws.com/cf-templates-ozkq9d3hgiq2-us-east-1/temp1.json",
+ *     },
+ *     tags: {
+ *         foo: "bar",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.servicecatalog.Product("example",
+ *     owner=[aws_security_group["example"]["id"]],
+ *     type=aws_subnet["main"]["id"],
+ *     provisioning_artifact_parameters=aws.servicecatalog.ProductProvisioningArtifactParametersArgs(
+ *         template_url="https://s3.amazonaws.com/cf-templates-ozkq9d3hgiq2-us-east-1/temp1.json",
+ *     ),
+ *     tags={
+ *         "foo": "bar",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ServiceCatalog.Product("example", new Aws.ServiceCatalog.ProductArgs
+ *         {
+ *             Owner = 
+ *             {
+ *                 aws_security_group.Example.Id,
+ *             },
+ *             Type = aws_subnet.Main.Id,
+ *             ProvisioningArtifactParameters = new Aws.ServiceCatalog.Inputs.ProductProvisioningArtifactParametersArgs
+ *             {
+ *                 TemplateUrl = "https://s3.amazonaws.com/cf-templates-ozkq9d3hgiq2-us-east-1/temp1.json",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "foo", "bar" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/servicecatalog"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicecatalog.NewProduct(ctx, "example", &servicecatalog.ProductArgs{
+ * 			Owner: pulumi.String{
+ * 				aws_security_group.Example.Id,
+ * 			},
+ * 			Type: pulumi.Any(aws_subnet.Main.Id),
+ * 			ProvisioningArtifactParameters: &servicecatalog.ProductProvisioningArtifactParametersArgs{
+ * 				TemplateUrl: pulumi.String("https://s3.amazonaws.com/cf-templates-ozkq9d3hgiq2-us-east-1/temp1.json"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"foo": pulumi.String("bar"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,6 +124,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:servicecatalog/product:Product example prod-dnigbtea24ste
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:servicecatalog/product:Product")
 public class Product extends io.pulumi.resources.CustomResource {

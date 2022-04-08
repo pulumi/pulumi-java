@@ -31,7 +31,144 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** Deletion Protection from the RDS service can only be enabled at the cluster level, not for individual cluster instances. You can still add the [`protect` CustomResourceOption](https://www.pulumi.com/docs/intro/concepts/programming-model/#protect) to this resource configuration if you desire protection from accidental deletion.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const _default = new aws.rds.Cluster("default", {
+ *     clusterIdentifier: "aurora-cluster-demo",
+ *     availabilityZones: [
+ *         "us-west-2a",
+ *         "us-west-2b",
+ *         "us-west-2c",
+ *     ],
+ *     databaseName: "mydb",
+ *     masterUsername: "foo",
+ *     masterPassword: "barbut8chars",
+ * });
+ * const clusterInstances: aws.rds.ClusterInstance[];
+ * for (const range = {value: 0}; range.value < 2; range.value++) {
+ *     clusterInstances.push(new aws.rds.ClusterInstance(`clusterInstances-${range.value}`, {
+ *         identifier: `aurora-cluster-demo-${range.value}`,
+ *         clusterIdentifier: _default.id,
+ *         instanceClass: "db.r4.large",
+ *         engine: _default.engine,
+ *         engineVersion: _default.engineVersion,
+ *     }));
+ * }
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default = aws.rds.Cluster("default",
+ *     cluster_identifier="aurora-cluster-demo",
+ *     availability_zones=[
+ *         "us-west-2a",
+ *         "us-west-2b",
+ *         "us-west-2c",
+ *     ],
+ *     database_name="mydb",
+ *     master_username="foo",
+ *     master_password="barbut8chars")
+ * cluster_instances = []
+ * for range in [{"value": i} for i in range(0, 2)]:
+ *     cluster_instances.append(aws.rds.ClusterInstance(f"clusterInstances-{range['value']}",
+ *         identifier=f"aurora-cluster-demo-{range['value']}",
+ *         cluster_identifier=default.id,
+ *         instance_class="db.r4.large",
+ *         engine=default.engine,
+ *         engine_version=default.engine_version))
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Aws.Rds.Cluster("default", new Aws.Rds.ClusterArgs
+ *         {
+ *             ClusterIdentifier = "aurora-cluster-demo",
+ *             AvailabilityZones = 
+ *             {
+ *                 "us-west-2a",
+ *                 "us-west-2b",
+ *                 "us-west-2c",
+ *             },
+ *             DatabaseName = "mydb",
+ *             MasterUsername = "foo",
+ *             MasterPassword = "barbut8chars",
+ *         });
+ *         var clusterInstances = new List<Aws.Rds.ClusterInstance>();
+ *         for (var rangeIndex = 0; rangeIndex < 2; rangeIndex++)
+ *         {
+ *             var range = new { Value = rangeIndex };
+ *             clusterInstances.Add(new Aws.Rds.ClusterInstance($"clusterInstances-{range.Value}", new Aws.Rds.ClusterInstanceArgs
+ *             {
+ *                 Identifier = $"aurora-cluster-demo-{range.Value}",
+ *                 ClusterIdentifier = @default.Id,
+ *                 InstanceClass = "db.r4.large",
+ *                 Engine = @default.Engine,
+ *                 EngineVersion = @default.EngineVersion,
+ *             }));
+ *         }
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/rds"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := rds.NewCluster(ctx, "default", &rds.ClusterArgs{
+ * 			ClusterIdentifier: pulumi.String("aurora-cluster-demo"),
+ * 			AvailabilityZones: pulumi.StringArray{
+ * 				pulumi.String("us-west-2a"),
+ * 				pulumi.String("us-west-2b"),
+ * 				pulumi.String("us-west-2c"),
+ * 			},
+ * 			DatabaseName:   pulumi.String("mydb"),
+ * 			MasterUsername: pulumi.String("foo"),
+ * 			MasterPassword: pulumi.String("barbut8chars"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		var clusterInstances []*rds.ClusterInstance
+ * 		for key0, val0 := range 2 {
+ * 			__res, err := rds.NewClusterInstance(ctx, fmt.Sprintf("clusterInstances-%v", key0), &rds.ClusterInstanceArgs{
+ * 				Identifier:        pulumi.String(fmt.Sprintf("%v%v", "aurora-cluster-demo-", val0)),
+ * 				ClusterIdentifier: _default.ID(),
+ * 				InstanceClass:     pulumi.String("db.r4.large"),
+ * 				Engine:            _default.Engine,
+ * 				EngineVersion:     _default.EngineVersion,
+ * 			})
+ * 			if err != nil {
+ * 				return err
+ * 			}
+ * 			clusterInstances = append(clusterInstances, __res)
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -41,6 +178,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:rds/clusterInstance:ClusterInstance prod_instance_1 aurora-cluster-instance-1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:rds/clusterInstance:ClusterInstance")
 public class ClusterInstance extends io.pulumi.resources.CustomResource {

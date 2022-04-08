@@ -21,7 +21,76 @@ import javax.annotation.Nullable;
  * `aws_db_instance.vpc_security_group_ids`
  * attribute instead.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const defaultSecurityGroup = new aws.rds.SecurityGroup("default", {
+ *     ingress: [{
+ *         cidr: "10.0.0.0/24",
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default = aws.rds.SecurityGroup("default", ingress=[aws.rds.SecurityGroupIngressArgs(
+ *     cidr="10.0.0.0/24",
+ * )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Aws.Rds.SecurityGroup("default", new Aws.Rds.SecurityGroupArgs
+ *         {
+ *             Ingress = 
+ *             {
+ *                 new Aws.Rds.Inputs.SecurityGroupIngressArgs
+ *                 {
+ *                     Cidr = "10.0.0.0/24",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/rds"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := rds.NewSecurityGroup(ctx, "default", &rds.SecurityGroupArgs{
+ * 			Ingress: rds.SecurityGroupIngressArray{
+ * 				&rds.SecurityGroupIngressArgs{
+ * 					Cidr: pulumi.String("10.0.0.0/24"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,6 +100,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:rds/securityGroup:SecurityGroup default aws_rds_sg-1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:rds/securityGroup:SecurityGroup")
 public class SecurityGroup extends io.pulumi.resources.CustomResource {

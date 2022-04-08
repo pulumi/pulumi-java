@@ -18,7 +18,235 @@ import javax.annotation.Nullable;
 /**
  * Manages an AWS Config Configuration Aggregator
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Account Based Aggregation
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const account = new aws.cfg.ConfigurationAggregator("account", {
+ *     accountAggregationSource: {
+ *         accountIds: ["123456789012"],
+ *         regions: ["us-west-2"],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * account = aws.cfg.ConfigurationAggregator("account", account_aggregation_source=aws.cfg.ConfigurationAggregatorAccountAggregationSourceArgs(
+ *     account_ids=["123456789012"],
+ *     regions=["us-west-2"],
+ * ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var account = new Aws.Cfg.ConfigurationAggregator("account", new Aws.Cfg.ConfigurationAggregatorArgs
+ *         {
+ *             AccountAggregationSource = new Aws.Cfg.Inputs.ConfigurationAggregatorAccountAggregationSourceArgs
+ *             {
+ *                 AccountIds = 
+ *                 {
+ *                     "123456789012",
+ *                 },
+ *                 Regions = 
+ *                 {
+ *                     "us-west-2",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cfg"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cfg.NewConfigurationAggregator(ctx, "account", &cfg.ConfigurationAggregatorArgs{
+ * 			AccountAggregationSource: &cfg.ConfigurationAggregatorAccountAggregationSourceArgs{
+ * 				AccountIds: pulumi.StringArray{
+ * 					pulumi.String("123456789012"),
+ * 				},
+ * 				Regions: pulumi.StringArray{
+ * 					pulumi.String("us-west-2"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Organization Based Aggregation
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const organizationRole = new aws.iam.Role("organizationRole", {assumeRolePolicy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Sid": "",
+ *       "Effect": "Allow",
+ *       "Principal": {
+ *         "Service": "config.amazonaws.com"
+ *       },
+ *       "Action": "sts:AssumeRole"
+ *     }
+ *   ]
+ * }
+ * `});
+ * const organizationRolePolicyAttachment = new aws.iam.RolePolicyAttachment("organizationRolePolicyAttachment", {
+ *     role: organizationRole.name,
+ *     policyArn: "arn:aws:iam::aws:policy/service-role/AWSConfigRoleForOrganizations",
+ * });
+ * const organizationConfigurationAggregator = new aws.cfg.ConfigurationAggregator("organizationConfigurationAggregator", {organizationAggregationSource: {
+ *     allRegions: true,
+ *     roleArn: organizationRole.arn,
+ * }}, {
+ *     dependsOn: [organizationRolePolicyAttachment],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * organization_role = aws.iam.Role("organizationRole", assume_role_policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Sid": "",
+ *       "Effect": "Allow",
+ *       "Principal": {
+ *         "Service": "config.amazonaws.com"
+ *       },
+ *       "Action": "sts:AssumeRole"
+ *     }
+ *   ]
+ * }
+ * """)
+ * organization_role_policy_attachment = aws.iam.RolePolicyAttachment("organizationRolePolicyAttachment",
+ *     role=organization_role.name,
+ *     policy_arn="arn:aws:iam::aws:policy/service-role/AWSConfigRoleForOrganizations")
+ * organization_configuration_aggregator = aws.cfg.ConfigurationAggregator("organizationConfigurationAggregator", organization_aggregation_source=aws.cfg.ConfigurationAggregatorOrganizationAggregationSourceArgs(
+ *     all_regions=True,
+ *     role_arn=organization_role.arn,
+ * ),
+ * opts=pulumi.ResourceOptions(depends_on=[organization_role_policy_attachment]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var organizationRole = new Aws.Iam.Role("organizationRole", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Sid"": """",
+ *       ""Effect"": ""Allow"",
+ *       ""Principal"": {
+ *         ""Service"": ""config.amazonaws.com""
+ *       },
+ *       ""Action"": ""sts:AssumeRole""
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var organizationRolePolicyAttachment = new Aws.Iam.RolePolicyAttachment("organizationRolePolicyAttachment", new Aws.Iam.RolePolicyAttachmentArgs
+ *         {
+ *             Role = organizationRole.Name,
+ *             PolicyArn = "arn:aws:iam::aws:policy/service-role/AWSConfigRoleForOrganizations",
+ *         });
+ *         var organizationConfigurationAggregator = new Aws.Cfg.ConfigurationAggregator("organizationConfigurationAggregator", new Aws.Cfg.ConfigurationAggregatorArgs
+ *         {
+ *             OrganizationAggregationSource = new Aws.Cfg.Inputs.ConfigurationAggregatorOrganizationAggregationSourceArgs
+ *             {
+ *                 AllRegions = true,
+ *                 RoleArn = organizationRole.Arn,
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 organizationRolePolicyAttachment,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cfg"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		organizationRole, err := iam.NewRole(ctx, "organizationRole", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Sid\": \"\",\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"Service\": \"config.amazonaws.com\"\n", "      },\n", "      \"Action\": \"sts:AssumeRole\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		organizationRolePolicyAttachment, err := iam.NewRolePolicyAttachment(ctx, "organizationRolePolicyAttachment", &iam.RolePolicyAttachmentArgs{
+ * 			Role:      organizationRole.Name,
+ * 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/service-role/AWSConfigRoleForOrganizations"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cfg.NewConfigurationAggregator(ctx, "organizationConfigurationAggregator", &cfg.ConfigurationAggregatorArgs{
+ * 			OrganizationAggregationSource: &cfg.ConfigurationAggregatorOrganizationAggregationSourceArgs{
+ * 				AllRegions: pulumi.Bool(true),
+ * 				RoleArn:    organizationRole.Arn,
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			organizationRolePolicyAttachment,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +256,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cfg/configurationAggregator:ConfigurationAggregator example foo
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cfg/configurationAggregator:ConfigurationAggregator")
 public class ConfigurationAggregator extends io.pulumi.resources.CustomResource {

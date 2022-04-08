@@ -20,7 +20,373 @@ import javax.annotation.Nullable;
 /**
  * Provides a Cognito User Pool Client resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a basic user pool client
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const pool = new aws.cognito.UserPool("pool", {});
+ * const client = new aws.cognito.UserPoolClient("client", {userPoolId: pool.id});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * pool = aws.cognito.UserPool("pool")
+ * client = aws.cognito.UserPoolClient("client", user_pool_id=pool.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var pool = new Aws.Cognito.UserPool("pool", new Aws.Cognito.UserPoolArgs
+ *         {
+ *         });
+ *         var client = new Aws.Cognito.UserPoolClient("client", new Aws.Cognito.UserPoolClientArgs
+ *         {
+ *             UserPoolId = pool.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		pool, err := cognito.NewUserPool(ctx, "pool", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cognito.NewUserPoolClient(ctx, "client", &cognito.UserPoolClientArgs{
+ * 			UserPoolId: pool.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a user pool client with no SRP authentication
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const pool = new aws.cognito.UserPool("pool", {});
+ * const client = new aws.cognito.UserPoolClient("client", {
+ *     userPoolId: pool.id,
+ *     generateSecret: true,
+ *     explicitAuthFlows: ["ADMIN_NO_SRP_AUTH"],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * pool = aws.cognito.UserPool("pool")
+ * client = aws.cognito.UserPoolClient("client",
+ *     user_pool_id=pool.id,
+ *     generate_secret=True,
+ *     explicit_auth_flows=["ADMIN_NO_SRP_AUTH"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var pool = new Aws.Cognito.UserPool("pool", new Aws.Cognito.UserPoolArgs
+ *         {
+ *         });
+ *         var client = new Aws.Cognito.UserPoolClient("client", new Aws.Cognito.UserPoolClientArgs
+ *         {
+ *             UserPoolId = pool.Id,
+ *             GenerateSecret = true,
+ *             ExplicitAuthFlows = 
+ *             {
+ *                 "ADMIN_NO_SRP_AUTH",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		pool, err := cognito.NewUserPool(ctx, "pool", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cognito.NewUserPoolClient(ctx, "client", &cognito.UserPoolClientArgs{
+ * 			UserPoolId:     pool.ID(),
+ * 			GenerateSecret: pulumi.Bool(true),
+ * 			ExplicitAuthFlows: pulumi.StringArray{
+ * 				pulumi.String("ADMIN_NO_SRP_AUTH"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a user pool client with pinpoint analytics
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const current = aws.getCallerIdentity({});
+ * const testUserPool = new aws.cognito.UserPool("testUserPool", {});
+ * const testApp = new aws.pinpoint.App("testApp", {});
+ * const testRole = new aws.iam.Role("testRole", {assumeRolePolicy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "cognito-idp.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * `});
+ * const testRolePolicy = new aws.iam.RolePolicy("testRolePolicy", {
+ *     role: testRole.id,
+ *     policy: pulumi.all([current, testApp.applicationId]).apply(([current, applicationId]) => `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": [
+ *         "mobiletargeting:UpdateEndpoint",
+ *         "mobiletargeting:PutItems"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": "arn:aws:mobiletargeting:*:${current.accountId}:apps/${applicationId}*"
+ *     }
+ *   ]
+ * }
+ * `),
+ * });
+ * const testUserPoolClient = new aws.cognito.UserPoolClient("testUserPoolClient", {
+ *     userPoolId: testUserPool.id,
+ *     analyticsConfiguration: {
+ *         applicationId: testApp.applicationId,
+ *         externalId: "some_id",
+ *         roleArn: testRole.arn,
+ *         userDataShared: true,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * current = aws.get_caller_identity()
+ * test_user_pool = aws.cognito.UserPool("testUserPool")
+ * test_app = aws.pinpoint.App("testApp")
+ * test_role = aws.iam.Role("testRole", assume_role_policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "cognito-idp.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * """)
+ * test_role_policy = aws.iam.RolePolicy("testRolePolicy",
+ *     role=test_role.id,
+ *     policy=test_app.application_id.apply(lambda application_id: f"""{{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {{
+ *       "Action": [
+ *         "mobiletargeting:UpdateEndpoint",
+ *         "mobiletargeting:PutItems"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": "arn:aws:mobiletargeting:*:{current.account_id}:apps/{application_id}*"
+ *     }}
+ *   ]
+ * }}
+ * """))
+ * test_user_pool_client = aws.cognito.UserPoolClient("testUserPoolClient",
+ *     user_pool_id=test_user_pool.id,
+ *     analytics_configuration=aws.cognito.UserPoolClientAnalyticsConfigurationArgs(
+ *         application_id=test_app.application_id,
+ *         external_id="some_id",
+ *         role_arn=test_role.arn,
+ *         user_data_shared=True,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var current = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+ *         var testUserPool = new Aws.Cognito.UserPool("testUserPool", new Aws.Cognito.UserPoolArgs
+ *         {
+ *         });
+ *         var testApp = new Aws.Pinpoint.App("testApp", new Aws.Pinpoint.AppArgs
+ *         {
+ *         });
+ *         var testRole = new Aws.Iam.Role("testRole", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Action"": ""sts:AssumeRole"",
+ *       ""Principal"": {
+ *         ""Service"": ""cognito-idp.amazonaws.com""
+ *       },
+ *       ""Effect"": ""Allow"",
+ *       ""Sid"": """"
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var testRolePolicy = new Aws.Iam.RolePolicy("testRolePolicy", new Aws.Iam.RolePolicyArgs
+ *         {
+ *             Role = testRole.Id,
+ *             Policy = Output.Tuple(current, testApp.ApplicationId).Apply(values =>
+ *             {
+ *                 var current = values.Item1;
+ *                 var applicationId = values.Item2;
+ *                 return @$"{{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {{
+ *       ""Action"": [
+ *         ""mobiletargeting:UpdateEndpoint"",
+ *         ""mobiletargeting:PutItems""
+ *       ],
+ *       ""Effect"": ""Allow"",
+ *       ""Resource"": ""arn:aws:mobiletargeting:*:{current.AccountId}:apps/{applicationId}*""
+ *     }}
+ *   ]
+ * }}
+ * ";
+ *             }),
+ *         });
+ *         var testUserPoolClient = new Aws.Cognito.UserPoolClient("testUserPoolClient", new Aws.Cognito.UserPoolClientArgs
+ *         {
+ *             UserPoolId = testUserPool.Id,
+ *             AnalyticsConfiguration = new Aws.Cognito.Inputs.UserPoolClientAnalyticsConfigurationArgs
+ *             {
+ *                 ApplicationId = testApp.ApplicationId,
+ *                 ExternalId = "some_id",
+ *                 RoleArn = testRole.Arn,
+ *                 UserDataShared = true,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/pinpoint"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		current, err := aws.GetCallerIdentity(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		testUserPool, err := cognito.NewUserPool(ctx, "testUserPool", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		testApp, err := pinpoint.NewApp(ctx, "testApp", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		testRole, err := iam.NewRole(ctx, "testRole", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"cognito-idp.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicy(ctx, "testRolePolicy", &iam.RolePolicyArgs{
+ * 			Role: testRole.ID(),
+ * 			Policy: testApp.ApplicationId.ApplyT(func(applicationId string) (string, error) {
+ * 				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"mobiletargeting:UpdateEndpoint\",\n", "        \"mobiletargeting:PutItems\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"arn:aws:mobiletargeting:*:", current.AccountId, ":apps/", applicationId, "*\"\n", "    }\n", "  ]\n", "}\n"), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cognito.NewUserPoolClient(ctx, "testUserPoolClient", &cognito.UserPoolClientArgs{
+ * 			UserPoolId: testUserPool.ID(),
+ * 			AnalyticsConfiguration: &cognito.UserPoolClientAnalyticsConfigurationArgs{
+ * 				ApplicationId:  testApp.ApplicationId,
+ * 				ExternalId:     pulumi.String("some_id"),
+ * 				RoleArn:        testRole.Arn,
+ * 				UserDataShared: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +396,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cognito/userPoolClient:UserPoolClient client <user_pool_id>/<user_pool_client_id>
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cognito/userPoolClient:UserPoolClient")
 public class UserPoolClient extends io.pulumi.resources.CustomResource {

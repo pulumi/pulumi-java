@@ -18,7 +18,62 @@ import javax.annotation.Nullable;
  * Provides an EC2 placement group. Read more about placement groups
  * in [AWS Docs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const web = new aws.ec2.PlacementGroup("web", {
+ *     strategy: "cluster",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * web = aws.ec2.PlacementGroup("web", strategy="cluster")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var web = new Aws.Ec2.PlacementGroup("web", new Aws.Ec2.PlacementGroupArgs
+ *         {
+ *             Strategy = "cluster",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewPlacementGroup(ctx, "web", &ec2.PlacementGroupArgs{
+ * 			Strategy: pulumi.String("cluster"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +83,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/placementGroup:PlacementGroup prod_pg production-placement-group
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/placementGroup:PlacementGroup")
 public class PlacementGroup extends io.pulumi.resources.CustomResource {

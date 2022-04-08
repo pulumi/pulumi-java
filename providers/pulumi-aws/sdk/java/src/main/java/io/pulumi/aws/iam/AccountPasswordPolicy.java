@@ -20,7 +20,83 @@ import javax.annotation.Nullable;
  * See more about [Account Password Policy](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_account-policy.html)
  * in the official AWS docs.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const strict = new aws.iam.AccountPasswordPolicy("strict", {
+ *     allowUsersToChangePassword: true,
+ *     minimumPasswordLength: 8,
+ *     requireLowercaseCharacters: true,
+ *     requireNumbers: true,
+ *     requireSymbols: true,
+ *     requireUppercaseCharacters: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * strict = aws.iam.AccountPasswordPolicy("strict",
+ *     allow_users_to_change_password=True,
+ *     minimum_password_length=8,
+ *     require_lowercase_characters=True,
+ *     require_numbers=True,
+ *     require_symbols=True,
+ *     require_uppercase_characters=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var strict = new Aws.Iam.AccountPasswordPolicy("strict", new Aws.Iam.AccountPasswordPolicyArgs
+ *         {
+ *             AllowUsersToChangePassword = true,
+ *             MinimumPasswordLength = 8,
+ *             RequireLowercaseCharacters = true,
+ *             RequireNumbers = true,
+ *             RequireSymbols = true,
+ *             RequireUppercaseCharacters = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iam.NewAccountPasswordPolicy(ctx, "strict", &iam.AccountPasswordPolicyArgs{
+ * 			AllowUsersToChangePassword: pulumi.Bool(true),
+ * 			MinimumPasswordLength:      pulumi.Int(8),
+ * 			RequireLowercaseCharacters: pulumi.Bool(true),
+ * 			RequireNumbers:             pulumi.Bool(true),
+ * 			RequireSymbols:             pulumi.Bool(true),
+ * 			RequireUppercaseCharacters: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +106,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:iam/accountPasswordPolicy:AccountPasswordPolicy strict iam-account-password-policy
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:iam/accountPasswordPolicy:AccountPasswordPolicy")
 public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {

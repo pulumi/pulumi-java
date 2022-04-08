@@ -15,7 +15,244 @@ import javax.annotation.Nullable;
 /**
  * Provides a AWS Transfer User SSH Key resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleServer = new aws.transfer.Server("exampleServer", {
+ *     identityProviderType: "SERVICE_MANAGED",
+ *     tags: {
+ *         NAME: "tf-acc-test-transfer-server",
+ *     },
+ * });
+ * const exampleRole = new aws.iam.Role("exampleRole", {assumeRolePolicy: `{
+ * 	"Version": "2012-10-17",
+ * 	"Statement": [
+ * 		{
+ * 		"Effect": "Allow",
+ * 		"Principal": {
+ * 			"Service": "transfer.amazonaws.com"
+ * 		},
+ * 		"Action": "sts:AssumeRole"
+ * 		}
+ * 	]
+ * }
+ * `});
+ * const exampleUser = new aws.transfer.User("exampleUser", {
+ *     serverId: exampleServer.id,
+ *     userName: "tftestuser",
+ *     role: exampleRole.arn,
+ *     tags: {
+ *         NAME: "tftestuser",
+ *     },
+ * });
+ * const exampleSshKey = new aws.transfer.SshKey("exampleSshKey", {
+ *     serverId: exampleServer.id,
+ *     userName: exampleUser.userName,
+ *     body: "... SSH key ...",
+ * });
+ * const exampleRolePolicy = new aws.iam.RolePolicy("exampleRolePolicy", {
+ *     role: exampleRole.id,
+ *     policy: `{
+ * 	"Version": "2012-10-17",
+ * 	"Statement": [
+ * 		{
+ * 			"Sid": "AllowFullAccesstoS3",
+ * 			"Effect": "Allow",
+ * 			"Action": [
+ * 				"s3:*"
+ * 			],
+ * 			"Resource": "*"
+ * 		}
+ * 	]
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_server = aws.transfer.Server("exampleServer",
+ *     identity_provider_type="SERVICE_MANAGED",
+ *     tags={
+ *         "NAME": "tf-acc-test-transfer-server",
+ *     })
+ * example_role = aws.iam.Role("exampleRole", assume_role_policy="""{
+ * 	"Version": "2012-10-17",
+ * 	"Statement": [
+ * 		{
+ * 		"Effect": "Allow",
+ * 		"Principal": {
+ * 			"Service": "transfer.amazonaws.com"
+ * 		},
+ * 		"Action": "sts:AssumeRole"
+ * 		}
+ * 	]
+ * }
+ * """)
+ * example_user = aws.transfer.User("exampleUser",
+ *     server_id=example_server.id,
+ *     user_name="tftestuser",
+ *     role=example_role.arn,
+ *     tags={
+ *         "NAME": "tftestuser",
+ *     })
+ * example_ssh_key = aws.transfer.SshKey("exampleSshKey",
+ *     server_id=example_server.id,
+ *     user_name=example_user.user_name,
+ *     body="... SSH key ...")
+ * example_role_policy = aws.iam.RolePolicy("exampleRolePolicy",
+ *     role=example_role.id,
+ *     policy="""{
+ * 	"Version": "2012-10-17",
+ * 	"Statement": [
+ * 		{
+ * 			"Sid": "AllowFullAccesstoS3",
+ * 			"Effect": "Allow",
+ * 			"Action": [
+ * 				"s3:*"
+ * 			],
+ * 			"Resource": "*"
+ * 		}
+ * 	]
+ * }
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleServer = new Aws.Transfer.Server("exampleServer", new Aws.Transfer.ServerArgs
+ *         {
+ *             IdentityProviderType = "SERVICE_MANAGED",
+ *             Tags = 
+ *             {
+ *                 { "NAME", "tf-acc-test-transfer-server" },
+ *             },
+ *         });
+ *         var exampleRole = new Aws.Iam.Role("exampleRole", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ * 	""Version"": ""2012-10-17"",
+ * 	""Statement"": [
+ * 		{
+ * 		""Effect"": ""Allow"",
+ * 		""Principal"": {
+ * 			""Service"": ""transfer.amazonaws.com""
+ * 		},
+ * 		""Action"": ""sts:AssumeRole""
+ * 		}
+ * 	]
+ * }
+ * ",
+ *         });
+ *         var exampleUser = new Aws.Transfer.User("exampleUser", new Aws.Transfer.UserArgs
+ *         {
+ *             ServerId = exampleServer.Id,
+ *             UserName = "tftestuser",
+ *             Role = exampleRole.Arn,
+ *             Tags = 
+ *             {
+ *                 { "NAME", "tftestuser" },
+ *             },
+ *         });
+ *         var exampleSshKey = new Aws.Transfer.SshKey("exampleSshKey", new Aws.Transfer.SshKeyArgs
+ *         {
+ *             ServerId = exampleServer.Id,
+ *             UserName = exampleUser.UserName,
+ *             Body = "... SSH key ...",
+ *         });
+ *         var exampleRolePolicy = new Aws.Iam.RolePolicy("exampleRolePolicy", new Aws.Iam.RolePolicyArgs
+ *         {
+ *             Role = exampleRole.Id,
+ *             Policy = @"{
+ * 	""Version"": ""2012-10-17"",
+ * 	""Statement"": [
+ * 		{
+ * 			""Sid"": ""AllowFullAccesstoS3"",
+ * 			""Effect"": ""Allow"",
+ * 			""Action"": [
+ * 				""s3:*""
+ * 			],
+ * 			""Resource"": ""*""
+ * 		}
+ * 	]
+ * }
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/transfer"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleServer, err := transfer.NewServer(ctx, "exampleServer", &transfer.ServerArgs{
+ * 			IdentityProviderType: pulumi.String("SERVICE_MANAGED"),
+ * 			Tags: pulumi.StringMap{
+ * 				"NAME": pulumi.String("tf-acc-test-transfer-server"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleRole, err := iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "	\"Version\": \"2012-10-17\",\n", "	\"Statement\": [\n", "		{\n", "		\"Effect\": \"Allow\",\n", "		\"Principal\": {\n", "			\"Service\": \"transfer.amazonaws.com\"\n", "		},\n", "		\"Action\": \"sts:AssumeRole\"\n", "		}\n", "	]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleUser, err := transfer.NewUser(ctx, "exampleUser", &transfer.UserArgs{
+ * 			ServerId: exampleServer.ID(),
+ * 			UserName: pulumi.String("tftestuser"),
+ * 			Role:     exampleRole.Arn,
+ * 			Tags: pulumi.StringMap{
+ * 				"NAME": pulumi.String("tftestuser"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = transfer.NewSshKey(ctx, "exampleSshKey", &transfer.SshKeyArgs{
+ * 			ServerId: exampleServer.ID(),
+ * 			UserName: exampleUser.UserName,
+ * 			Body:     pulumi.String("... SSH key ..."),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicy(ctx, "exampleRolePolicy", &iam.RolePolicyArgs{
+ * 			Role: exampleRole.ID(),
+ * 			Policy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "	\"Version\": \"2012-10-17\",\n", "	\"Statement\": [\n", "		{\n", "			\"Sid\": \"AllowFullAccesstoS3\",\n", "			\"Effect\": \"Allow\",\n", "			\"Action\": [\n", "				\"s3:*\"\n", "			],\n", "			\"Resource\": \"*\"\n", "		}\n", "	]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +262,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:transfer/sshKey:SshKey bar s-12345678/test-username/key-12345
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:transfer/sshKey:SshKey")
 public class SshKey extends io.pulumi.resources.CustomResource {

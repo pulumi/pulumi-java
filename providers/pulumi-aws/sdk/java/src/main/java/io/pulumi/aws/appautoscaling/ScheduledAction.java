@@ -16,8 +16,239 @@ import javax.annotation.Nullable;
 /**
  * Provides an Application AutoScaling ScheduledAction resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### DynamoDB Table Autoscaling
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const dynamodbTarget = new aws.appautoscaling.Target("dynamodbTarget", {
+ *     maxCapacity: 100,
+ *     minCapacity: 5,
+ *     resourceId: "table/tableName",
+ *     scalableDimension: "dynamodb:table:ReadCapacityUnits",
+ *     serviceNamespace: "dynamodb",
+ * });
+ * const dynamodbScheduledAction = new aws.appautoscaling.ScheduledAction("dynamodbScheduledAction", {
+ *     serviceNamespace: dynamodbTarget.serviceNamespace,
+ *     resourceId: dynamodbTarget.resourceId,
+ *     scalableDimension: dynamodbTarget.scalableDimension,
+ *     schedule: "at(2006-01-02T15:04:05)",
+ *     scalableTargetAction: {
+ *         minCapacity: 1,
+ *         maxCapacity: 200,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * dynamodb_target = aws.appautoscaling.Target("dynamodbTarget",
+ *     max_capacity=100,
+ *     min_capacity=5,
+ *     resource_id="table/tableName",
+ *     scalable_dimension="dynamodb:table:ReadCapacityUnits",
+ *     service_namespace="dynamodb")
+ * dynamodb_scheduled_action = aws.appautoscaling.ScheduledAction("dynamodbScheduledAction",
+ *     service_namespace=dynamodb_target.service_namespace,
+ *     resource_id=dynamodb_target.resource_id,
+ *     scalable_dimension=dynamodb_target.scalable_dimension,
+ *     schedule="at(2006-01-02T15:04:05)",
+ *     scalable_target_action=aws.appautoscaling.ScheduledActionScalableTargetActionArgs(
+ *         min_capacity=1,
+ *         max_capacity=200,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dynamodbTarget = new Aws.AppAutoScaling.Target("dynamodbTarget", new Aws.AppAutoScaling.TargetArgs
+ *         {
+ *             MaxCapacity = 100,
+ *             MinCapacity = 5,
+ *             ResourceId = "table/tableName",
+ *             ScalableDimension = "dynamodb:table:ReadCapacityUnits",
+ *             ServiceNamespace = "dynamodb",
+ *         });
+ *         var dynamodbScheduledAction = new Aws.AppAutoScaling.ScheduledAction("dynamodbScheduledAction", new Aws.AppAutoScaling.ScheduledActionArgs
+ *         {
+ *             ServiceNamespace = dynamodbTarget.ServiceNamespace,
+ *             ResourceId = dynamodbTarget.ResourceId,
+ *             ScalableDimension = dynamodbTarget.ScalableDimension,
+ *             Schedule = "at(2006-01-02T15:04:05)",
+ *             ScalableTargetAction = new Aws.AppAutoScaling.Inputs.ScheduledActionScalableTargetActionArgs
+ *             {
+ *                 MinCapacity = 1,
+ *                 MaxCapacity = 200,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appautoscaling"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		dynamodbTarget, err := appautoscaling.NewTarget(ctx, "dynamodbTarget", &appautoscaling.TargetArgs{
+ * 			MaxCapacity:       pulumi.Int(100),
+ * 			MinCapacity:       pulumi.Int(5),
+ * 			ResourceId:        pulumi.String("table/tableName"),
+ * 			ScalableDimension: pulumi.String("dynamodb:table:ReadCapacityUnits"),
+ * 			ServiceNamespace:  pulumi.String("dynamodb"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = appautoscaling.NewScheduledAction(ctx, "dynamodbScheduledAction", &appautoscaling.ScheduledActionArgs{
+ * 			ServiceNamespace:  dynamodbTarget.ServiceNamespace,
+ * 			ResourceId:        dynamodbTarget.ResourceId,
+ * 			ScalableDimension: dynamodbTarget.ScalableDimension,
+ * 			Schedule:          pulumi.String("at(2006-01-02T15:04:05)"),
+ * 			ScalableTargetAction: &appautoscaling.ScheduledActionScalableTargetActionArgs{
+ * 				MinCapacity: pulumi.Int(1),
+ * 				MaxCapacity: pulumi.Int(200),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### ECS Service Autoscaling
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const ecsTarget = new aws.appautoscaling.Target("ecsTarget", {
+ *     maxCapacity: 4,
+ *     minCapacity: 1,
+ *     resourceId: "service/clusterName/serviceName",
+ *     scalableDimension: "ecs:service:DesiredCount",
+ *     serviceNamespace: "ecs",
+ * });
+ * const ecsScheduledAction = new aws.appautoscaling.ScheduledAction("ecsScheduledAction", {
+ *     serviceNamespace: ecsTarget.serviceNamespace,
+ *     resourceId: ecsTarget.resourceId,
+ *     scalableDimension: ecsTarget.scalableDimension,
+ *     schedule: "at(2006-01-02T15:04:05)",
+ *     scalableTargetAction: {
+ *         minCapacity: 1,
+ *         maxCapacity: 10,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * ecs_target = aws.appautoscaling.Target("ecsTarget",
+ *     max_capacity=4,
+ *     min_capacity=1,
+ *     resource_id="service/clusterName/serviceName",
+ *     scalable_dimension="ecs:service:DesiredCount",
+ *     service_namespace="ecs")
+ * ecs_scheduled_action = aws.appautoscaling.ScheduledAction("ecsScheduledAction",
+ *     service_namespace=ecs_target.service_namespace,
+ *     resource_id=ecs_target.resource_id,
+ *     scalable_dimension=ecs_target.scalable_dimension,
+ *     schedule="at(2006-01-02T15:04:05)",
+ *     scalable_target_action=aws.appautoscaling.ScheduledActionScalableTargetActionArgs(
+ *         min_capacity=1,
+ *         max_capacity=10,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var ecsTarget = new Aws.AppAutoScaling.Target("ecsTarget", new Aws.AppAutoScaling.TargetArgs
+ *         {
+ *             MaxCapacity = 4,
+ *             MinCapacity = 1,
+ *             ResourceId = "service/clusterName/serviceName",
+ *             ScalableDimension = "ecs:service:DesiredCount",
+ *             ServiceNamespace = "ecs",
+ *         });
+ *         var ecsScheduledAction = new Aws.AppAutoScaling.ScheduledAction("ecsScheduledAction", new Aws.AppAutoScaling.ScheduledActionArgs
+ *         {
+ *             ServiceNamespace = ecsTarget.ServiceNamespace,
+ *             ResourceId = ecsTarget.ResourceId,
+ *             ScalableDimension = ecsTarget.ScalableDimension,
+ *             Schedule = "at(2006-01-02T15:04:05)",
+ *             ScalableTargetAction = new Aws.AppAutoScaling.Inputs.ScheduledActionScalableTargetActionArgs
+ *             {
+ *                 MinCapacity = 1,
+ *                 MaxCapacity = 10,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appautoscaling"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		ecsTarget, err := appautoscaling.NewTarget(ctx, "ecsTarget", &appautoscaling.TargetArgs{
+ * 			MaxCapacity:       pulumi.Int(4),
+ * 			MinCapacity:       pulumi.Int(1),
+ * 			ResourceId:        pulumi.String("service/clusterName/serviceName"),
+ * 			ScalableDimension: pulumi.String("ecs:service:DesiredCount"),
+ * 			ServiceNamespace:  pulumi.String("ecs"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = appautoscaling.NewScheduledAction(ctx, "ecsScheduledAction", &appautoscaling.ScheduledActionArgs{
+ * 			ServiceNamespace:  ecsTarget.ServiceNamespace,
+ * 			ResourceId:        ecsTarget.ResourceId,
+ * 			ScalableDimension: ecsTarget.ScalableDimension,
+ * 			Schedule:          pulumi.String("at(2006-01-02T15:04:05)"),
+ * 			ScalableTargetAction: &appautoscaling.ScheduledActionScalableTargetActionArgs{
+ * 				MinCapacity: pulumi.Int(1),
+ * 				MaxCapacity: pulumi.Int(10),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:appautoscaling/scheduledAction:ScheduledAction")
 public class ScheduledAction extends io.pulumi.resources.CustomResource {

@@ -39,7 +39,447 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** Be aware of the terminology collision around "cluster" for `aws.elasticache.ReplicationGroup`. For example, it is possible to create a ["Cluster Mode Disabled [Redis] Cluster"](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.Create.CON.Redis.html). With "Cluster Mode Enabled", the data will be stored in shards (called "node groups"). See [Redis Cluster Configuration](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/cluster-create-determine-requirements.html#redis-cluster-configuration) for a diagram of the differences. To enable cluster mode, use a parameter group that has cluster mode enabled. The default parameter groups provided by AWS end with ".cluster.on", for example `default.redis6.x.cluster.on`.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Redis Cluster Mode Disabled
+ * 
+ * To create a single shard primary with single read replica:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.elasticache.ReplicationGroup("example", {
+ *     automaticFailoverEnabled: true,
+ *     availabilityZones: [
+ *         "us-west-2a",
+ *         "us-west-2b",
+ *     ],
+ *     nodeType: "cache.m4.large",
+ *     numberCacheClusters: 2,
+ *     parameterGroupName: "default.redis3.2",
+ *     port: 6379,
+ *     replicationGroupDescription: "test description",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.elasticache.ReplicationGroup("example",
+ *     automatic_failover_enabled=True,
+ *     availability_zones=[
+ *         "us-west-2a",
+ *         "us-west-2b",
+ *     ],
+ *     node_type="cache.m4.large",
+ *     number_cache_clusters=2,
+ *     parameter_group_name="default.redis3.2",
+ *     port=6379,
+ *     replication_group_description="test description")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ElastiCache.ReplicationGroup("example", new Aws.ElastiCache.ReplicationGroupArgs
+ *         {
+ *             AutomaticFailoverEnabled = true,
+ *             AvailabilityZones = 
+ *             {
+ *                 "us-west-2a",
+ *                 "us-west-2b",
+ *             },
+ *             NodeType = "cache.m4.large",
+ *             NumberCacheClusters = 2,
+ *             ParameterGroupName = "default.redis3.2",
+ *             Port = 6379,
+ *             ReplicationGroupDescription = "test description",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticache"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := elasticache.NewReplicationGroup(ctx, "example", &elasticache.ReplicationGroupArgs{
+ * 			AutomaticFailoverEnabled: pulumi.Bool(true),
+ * 			AvailabilityZones: pulumi.StringArray{
+ * 				pulumi.String("us-west-2a"),
+ * 				pulumi.String("us-west-2b"),
+ * 			},
+ * 			NodeType:                    pulumi.String("cache.m4.large"),
+ * 			NumberCacheClusters:         pulumi.Int(2),
+ * 			ParameterGroupName:          pulumi.String("default.redis3.2"),
+ * 			Port:                        pulumi.Int(6379),
+ * 			ReplicationGroupDescription: pulumi.String("test description"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * You have two options for adjusting the number of replicas:
+ * 
+ * * Adjusting `number_cache_clusters` directly. This will attempt to automatically add or remove replicas, but provides no granular control (e.g. preferred availability zone, cache cluster ID) for the added or removed replicas. This also currently expects cache cluster IDs in the form of `replication_group_id-00#`.
+ * * Otherwise for fine grained control of the underlying cache clusters, they can be added or removed with the `aws.elasticache.Cluster` resource and its `replication_group_id` attribute. In this situation, you will need to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to prevent perpetual differences with the `number_cache_cluster` attribute.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.elasticache.ReplicationGroup("example", {
+ *     automaticFailoverEnabled: true,
+ *     availabilityZones: [
+ *         "us-west-2a",
+ *         "us-west-2b",
+ *     ],
+ *     replicationGroupDescription: "test description",
+ *     nodeType: "cache.m4.large",
+ *     numberCacheClusters: 2,
+ *     parameterGroupName: "default.redis3.2",
+ *     port: 6379,
+ * });
+ * let replica: aws.elasticache.Cluster | undefined;
+ * if (1 == true) {
+ *     replica = new aws.elasticache.Cluster("replica", {replicationGroupId: example.id});
+ * }
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.elasticache.ReplicationGroup("example",
+ *     automatic_failover_enabled=True,
+ *     availability_zones=[
+ *         "us-west-2a",
+ *         "us-west-2b",
+ *     ],
+ *     replication_group_description="test description",
+ *     node_type="cache.m4.large",
+ *     number_cache_clusters=2,
+ *     parameter_group_name="default.redis3.2",
+ *     port=6379)
+ * replica = None
+ * if 1 == True:
+ *     replica = aws.elasticache.Cluster("replica", replication_group_id=example.id)
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ElastiCache.ReplicationGroup("example", new Aws.ElastiCache.ReplicationGroupArgs
+ *         {
+ *             AutomaticFailoverEnabled = true,
+ *             AvailabilityZones = 
+ *             {
+ *                 "us-west-2a",
+ *                 "us-west-2b",
+ *             },
+ *             ReplicationGroupDescription = "test description",
+ *             NodeType = "cache.m4.large",
+ *             NumberCacheClusters = 2,
+ *             ParameterGroupName = "default.redis3.2",
+ *             Port = 6379,
+ *         });
+ *         var replica = new List<Aws.ElastiCache.Cluster>();
+ *         for (var rangeIndex = 0; rangeIndex < (1 == true); rangeIndex++)
+ *         {
+ *             var range = new { Value = rangeIndex };
+ *             replica.Add(new Aws.ElastiCache.Cluster($"replica-{range.Value}", new Aws.ElastiCache.ClusterArgs
+ *             {
+ *                 ReplicationGroupId = example.Id,
+ *             }));
+ *         }
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticache"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		example, err := elasticache.NewReplicationGroup(ctx, "example", &elasticache.ReplicationGroupArgs{
+ * 			AutomaticFailoverEnabled: pulumi.Bool(true),
+ * 			AvailabilityZones: pulumi.StringArray{
+ * 				pulumi.String("us-west-2a"),
+ * 				pulumi.String("us-west-2b"),
+ * 			},
+ * 			ReplicationGroupDescription: pulumi.String("test description"),
+ * 			NodeType:                    pulumi.String("cache.m4.large"),
+ * 			NumberCacheClusters:         pulumi.Int(2),
+ * 			ParameterGroupName:          pulumi.String("default.redis3.2"),
+ * 			Port:                        pulumi.Int(6379),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		var replica []*elasticache.Cluster
+ * 		for key0, _ := range 1 == true {
+ * 			__res, err := elasticache.NewCluster(ctx, fmt.Sprintf("replica-%v", key0), &elasticache.ClusterArgs{
+ * 				ReplicationGroupId: example.ID(),
+ * 			})
+ * 			if err != nil {
+ * 				return err
+ * 			}
+ * 			replica = append(replica, __res)
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Redis Cluster Mode Enabled
+ * 
+ * To create two shards with a primary and a single read replica each:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const baz = new aws.elasticache.ReplicationGroup("baz", {
+ *     automaticFailoverEnabled: true,
+ *     clusterMode: {
+ *         numNodeGroups: 2,
+ *         replicasPerNodeGroup: 1,
+ *     },
+ *     nodeType: "cache.t2.small",
+ *     parameterGroupName: "default.redis3.2.cluster.on",
+ *     port: 6379,
+ *     replicationGroupDescription: "test description",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * baz = aws.elasticache.ReplicationGroup("baz",
+ *     automatic_failover_enabled=True,
+ *     cluster_mode=aws.elasticache.ReplicationGroupClusterModeArgs(
+ *         num_node_groups=2,
+ *         replicas_per_node_group=1,
+ *     ),
+ *     node_type="cache.t2.small",
+ *     parameter_group_name="default.redis3.2.cluster.on",
+ *     port=6379,
+ *     replication_group_description="test description")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var baz = new Aws.ElastiCache.ReplicationGroup("baz", new Aws.ElastiCache.ReplicationGroupArgs
+ *         {
+ *             AutomaticFailoverEnabled = true,
+ *             ClusterMode = new Aws.ElastiCache.Inputs.ReplicationGroupClusterModeArgs
+ *             {
+ *                 NumNodeGroups = 2,
+ *                 ReplicasPerNodeGroup = 1,
+ *             },
+ *             NodeType = "cache.t2.small",
+ *             ParameterGroupName = "default.redis3.2.cluster.on",
+ *             Port = 6379,
+ *             ReplicationGroupDescription = "test description",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticache"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := elasticache.NewReplicationGroup(ctx, "baz", &elasticache.ReplicationGroupArgs{
+ * 			AutomaticFailoverEnabled: pulumi.Bool(true),
+ * 			ClusterMode: &elasticache.ReplicationGroupClusterModeArgs{
+ * 				NumNodeGroups:        pulumi.Int(2),
+ * 				ReplicasPerNodeGroup: pulumi.Int(1),
+ * 			},
+ * 			NodeType:                    pulumi.String("cache.t2.small"),
+ * 			ParameterGroupName:          pulumi.String("default.redis3.2.cluster.on"),
+ * 			Port:                        pulumi.Int(6379),
+ * 			ReplicationGroupDescription: pulumi.String("test description"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * > **Note:** We currently do not support passing a `primary_cluster_id` in order to create the Replication Group.
+ * 
+ * > **Note:** Automatic Failover is unavailable for Redis versions earlier than 2.8.6,
+ * and unavailable on T1 node types. For T2 node types, it is only available on Redis version 3.2.4 or later with cluster mode enabled. See the [High Availability Using Replication Groups](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Replication.html) guide
+ * for full details on using Replication Groups.
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Creating a secondary replication group for a global replication group
+ * 
+ * A Global Replication Group can have one one two secondary Replication Groups in different regions. These are added to an existing Global Replication Group.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const primary = new aws.elasticache.ReplicationGroup("primary", {
+ *     replicationGroupDescription: "primary replication group",
+ *     engine: "redis",
+ *     engineVersion: "5.0.6",
+ *     nodeType: "cache.m5.large",
+ *     numberCacheClusters: 1,
+ * }, {
+ *     provider: aws.other_region,
+ * });
+ * const example = new aws.elasticache.GlobalReplicationGroup("example", {
+ *     globalReplicationGroupIdSuffix: "example",
+ *     primaryReplicationGroupId: primary.id,
+ * }, {
+ *     provider: aws.other_region,
+ * });
+ * const secondary = new aws.elasticache.ReplicationGroup("secondary", {
+ *     replicationGroupDescription: "secondary replication group",
+ *     globalReplicationGroupId: example.globalReplicationGroupId,
+ *     numberCacheClusters: 1,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * primary = aws.elasticache.ReplicationGroup("primary",
+ *     replication_group_description="primary replication group",
+ *     engine="redis",
+ *     engine_version="5.0.6",
+ *     node_type="cache.m5.large",
+ *     number_cache_clusters=1,
+ *     opts=pulumi.ResourceOptions(provider=aws["other_region"]))
+ * example = aws.elasticache.GlobalReplicationGroup("example",
+ *     global_replication_group_id_suffix="example",
+ *     primary_replication_group_id=primary.id,
+ *     opts=pulumi.ResourceOptions(provider=aws["other_region"]))
+ * secondary = aws.elasticache.ReplicationGroup("secondary",
+ *     replication_group_description="secondary replication group",
+ *     global_replication_group_id=example.global_replication_group_id,
+ *     number_cache_clusters=1)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Aws.ElastiCache.ReplicationGroup("primary", new Aws.ElastiCache.ReplicationGroupArgs
+ *         {
+ *             ReplicationGroupDescription = "primary replication group",
+ *             Engine = "redis",
+ *             EngineVersion = "5.0.6",
+ *             NodeType = "cache.m5.large",
+ *             NumberCacheClusters = 1,
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Other_region,
+ *         });
+ *         var example = new Aws.ElastiCache.GlobalReplicationGroup("example", new Aws.ElastiCache.GlobalReplicationGroupArgs
+ *         {
+ *             GlobalReplicationGroupIdSuffix = "example",
+ *             PrimaryReplicationGroupId = primary.Id,
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Other_region,
+ *         });
+ *         var secondary = new Aws.ElastiCache.ReplicationGroup("secondary", new Aws.ElastiCache.ReplicationGroupArgs
+ *         {
+ *             ReplicationGroupDescription = "secondary replication group",
+ *             GlobalReplicationGroupId = example.GlobalReplicationGroupId,
+ *             NumberCacheClusters = 1,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticache"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		primary, err := elasticache.NewReplicationGroup(ctx, "primary", &elasticache.ReplicationGroupArgs{
+ * 			ReplicationGroupDescription: pulumi.String("primary replication group"),
+ * 			Engine:                      pulumi.String("redis"),
+ * 			EngineVersion:               pulumi.String("5.0.6"),
+ * 			NodeType:                    pulumi.String("cache.m5.large"),
+ * 			NumberCacheClusters:         pulumi.Int(1),
+ * 		}, pulumi.Provider(aws.Other_region))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		example, err := elasticache.NewGlobalReplicationGroup(ctx, "example", &elasticache.GlobalReplicationGroupArgs{
+ * 			GlobalReplicationGroupIdSuffix: pulumi.String("example"),
+ * 			PrimaryReplicationGroupId:      primary.ID(),
+ * 		}, pulumi.Provider(aws.Other_region))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = elasticache.NewReplicationGroup(ctx, "secondary", &elasticache.ReplicationGroupArgs{
+ * 			ReplicationGroupDescription: pulumi.String("secondary replication group"),
+ * 			GlobalReplicationGroupId:    example.GlobalReplicationGroupId,
+ * 			NumberCacheClusters:         pulumi.Int(1),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -49,6 +489,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:elasticache/replicationGroup:ReplicationGroup my_replication_group replication-group-1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:elasticache/replicationGroup:ReplicationGroup")
 public class ReplicationGroup extends io.pulumi.resources.CustomResource {

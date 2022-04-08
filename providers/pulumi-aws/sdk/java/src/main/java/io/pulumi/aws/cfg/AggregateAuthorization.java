@@ -16,7 +16,67 @@ import javax.annotation.Nullable;
 /**
  * Manages an AWS Config Aggregate Authorization
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.cfg.AggregateAuthorization("example", {
+ *     accountId: "123456789012",
+ *     region: "eu-west-2",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.cfg.AggregateAuthorization("example",
+ *     account_id="123456789012",
+ *     region="eu-west-2")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Cfg.AggregateAuthorization("example", new Aws.Cfg.AggregateAuthorizationArgs
+ *         {
+ *             AccountId = "123456789012",
+ *             Region = "eu-west-2",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cfg"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cfg.NewAggregateAuthorization(ctx, "example", &cfg.AggregateAuthorizationArgs{
+ * 			AccountId: pulumi.String("123456789012"),
+ * 			Region:    pulumi.String("eu-west-2"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +86,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cfg/aggregateAuthorization:AggregateAuthorization example 123456789012:us-east-1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cfg/aggregateAuthorization:AggregateAuthorization")
 public class AggregateAuthorization extends io.pulumi.resources.CustomResource {

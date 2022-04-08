@@ -20,7 +20,67 @@ import javax.annotation.Nullable;
  * 
  * > Advanced usage: To use a custom API endpoint for this resource, use the `s3control` endpoint provider configuration, not the `s3` endpoint provider configuration.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.s3.AccountPublicAccessBlock("example", {
+ *     blockPublicAcls: true,
+ *     blockPublicPolicy: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.s3.AccountPublicAccessBlock("example",
+ *     block_public_acls=True,
+ *     block_public_policy=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.S3.AccountPublicAccessBlock("example", new Aws.S3.AccountPublicAccessBlockArgs
+ *         {
+ *             BlockPublicAcls = true,
+ *             BlockPublicPolicy = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := s3.NewAccountPublicAccessBlock(ctx, "example", &s3.AccountPublicAccessBlockArgs{
+ * 			BlockPublicAcls:   pulumi.Bool(true),
+ * 			BlockPublicPolicy: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +90,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:s3/accountPublicAccessBlock:AccountPublicAccessBlock example 123456789012
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:s3/accountPublicAccessBlock:AccountPublicAccessBlock")
 public class AccountPublicAccessBlock extends io.pulumi.resources.CustomResource {

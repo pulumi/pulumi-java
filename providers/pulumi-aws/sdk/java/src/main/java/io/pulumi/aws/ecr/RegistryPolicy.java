@@ -15,7 +15,166 @@ import javax.annotation.Nullable;
 /**
  * Provides an Elastic Container Registry Policy.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const currentCallerIdentity = aws.getCallerIdentity({});
+ * const currentRegion = aws.getRegion({});
+ * const currentPartition = aws.getPartition({});
+ * const example = new aws.ecr.RegistryPolicy("example", {policy: Promise.all([currentPartition, currentCallerIdentity, currentPartition, currentRegion, currentCallerIdentity]).then(([currentPartition, currentCallerIdentity, currentPartition1, currentRegion, currentCallerIdentity1]) => JSON.stringify({
+ *     Version: "2012-10-17",
+ *     Statement: [{
+ *         Sid: "testpolicy",
+ *         Effect: "Allow",
+ *         Principal: {
+ *             AWS: `arn:${currentPartition.partition}:iam::${currentCallerIdentity.accountId}:root`,
+ *         },
+ *         Action: ["ecr:ReplicateImage"],
+ *         Resource: [`arn:${currentPartition1.partition}:ecr:${currentRegion.name}:${currentCallerIdentity1.accountId}:repository/*`],
+ *     }],
+ * }))});
+ * ```
+ * ```python
+ * import pulumi
+ * import json
+ * import pulumi_aws as aws
+ * 
+ * current_caller_identity = aws.get_caller_identity()
+ * current_region = aws.get_region()
+ * current_partition = aws.get_partition()
+ * example = aws.ecr.RegistryPolicy("example", policy=json.dumps({
+ *     "Version": "2012-10-17",
+ *     "Statement": [{
+ *         "Sid": "testpolicy",
+ *         "Effect": "Allow",
+ *         "Principal": {
+ *             "AWS": f"arn:{current_partition.partition}:iam::{current_caller_identity.account_id}:root",
+ *         },
+ *         "Action": ["ecr:ReplicateImage"],
+ *         "Resource": [f"arn:{current_partition.partition}:ecr:{current_region.name}:{current_caller_identity.account_id}:repository/*"],
+ *     }],
+ * }))
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using System.Text.Json;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var currentCallerIdentity = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+ *         var currentRegion = Output.Create(Aws.GetRegion.InvokeAsync());
+ *         var currentPartition = Output.Create(Aws.GetPartition.InvokeAsync());
+ *         var example = new Aws.Ecr.RegistryPolicy("example", new Aws.Ecr.RegistryPolicyArgs
+ *         {
+ *             Policy = Output.Tuple(currentPartition, currentCallerIdentity, currentPartition, currentRegion, currentCallerIdentity).Apply(values =>
+ *             {
+ *                 var currentPartition = values.Item1;
+ *                 var currentCallerIdentity = values.Item2;
+ *                 var currentPartition1 = values.Item3;
+ *                 var currentRegion = values.Item4;
+ *                 var currentCallerIdentity1 = values.Item5;
+ *                 return JsonSerializer.Serialize(new Dictionary<string, object?>
+ *                 {
+ *                     { "Version", "2012-10-17" },
+ *                     { "Statement", new[]
+ *                         {
+ *                             new Dictionary<string, object?>
+ *                             {
+ *                                 { "Sid", "testpolicy" },
+ *                                 { "Effect", "Allow" },
+ *                                 { "Principal", new Dictionary<string, object?>
+ *                                 {
+ *                                     { "AWS", $"arn:{currentPartition.Partition}:iam::{currentCallerIdentity.AccountId}:root" },
+ *                                 } },
+ *                                 { "Action", new[]
+ *                                     {
+ *                                         "ecr:ReplicateImage",
+ *                                     }
+ *                                  },
+ *                                 { "Resource", new[]
+ *                                     {
+ *                                         $"arn:{currentPartition1.Partition}:ecr:{currentRegion.Name}:{currentCallerIdentity1.AccountId}:repository/*",
+ *                                     }
+ *                                  },
+ *                             },
+ *                         }
+ *                      },
+ *                 });
+ *             }),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"encoding/json"
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecr"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		currentCallerIdentity, err := aws.GetCallerIdentity(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		currentRegion, err := aws.GetRegion(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		currentPartition, err := aws.GetPartition(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+ * 			"Version": "2012-10-17",
+ * 			"Statement": []map[string]interface{}{
+ * 				map[string]interface{}{
+ * 					"Sid":    "testpolicy",
+ * 					"Effect": "Allow",
+ * 					"Principal": map[string]interface{}{
+ * 						"AWS": fmt.Sprintf("%v%v%v%v%v", "arn:", currentPartition.Partition, ":iam::", currentCallerIdentity.AccountId, ":root"),
+ * 					},
+ * 					"Action": []string{
+ * 						"ecr:ReplicateImage",
+ * 					},
+ * 					"Resource": []string{
+ * 						fmt.Sprintf("%v%v%v%v%v%v%v", "arn:", currentPartition.Partition, ":ecr:", currentRegion.Name, ":", currentCallerIdentity.AccountId, ":repository/*"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		json0 := string(tmpJSON0)
+ * 		_, err = ecr.NewRegistryPolicy(ctx, "example", &ecr.RegistryPolicyArgs{
+ * 			Policy: pulumi.String(json0),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +184,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ecr/registryPolicy:RegistryPolicy example 123456789012
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ecr/registryPolicy:RegistryPolicy")
 public class RegistryPolicy extends io.pulumi.resources.CustomResource {

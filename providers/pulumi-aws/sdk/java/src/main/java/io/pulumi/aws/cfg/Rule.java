@@ -20,7 +20,342 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** Config Rule requires an existing `Configuration Recorder` to be present. Use of `depends_on` is recommended (as shown below) to avoid race conditions.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### AWS Managed Rules
+ * 
+ * AWS managed rules can be used by setting the source owner to `AWS` and the source identifier to the name of the managed rule. More information about AWS managed rules can be found in the [AWS Config Developer Guide](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html).
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const role = new aws.iam.Role("role", {assumeRolePolicy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "config.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * `});
+ * const foo = new aws.cfg.Recorder("foo", {roleArn: role.arn});
+ * const rule = new aws.cfg.Rule("rule", {source: {
+ *     owner: "AWS",
+ *     sourceIdentifier: "S3_BUCKET_VERSIONING_ENABLED",
+ * }}, {
+ *     dependsOn: [foo],
+ * });
+ * const rolePolicy = new aws.iam.RolePolicy("rolePolicy", {
+ *     role: role.id,
+ *     policy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *   	{
+ *   		"Action": "config:Put*",
+ *   		"Effect": "Allow",
+ *   		"Resource": "*"
+ * 
+ *   	}
+ *   ]
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * role = aws.iam.Role("role", assume_role_policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "config.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * """)
+ * foo = aws.cfg.Recorder("foo", role_arn=role.arn)
+ * rule = aws.cfg.Rule("rule", source=aws.cfg.RuleSourceArgs(
+ *     owner="AWS",
+ *     source_identifier="S3_BUCKET_VERSIONING_ENABLED",
+ * ),
+ * opts=pulumi.ResourceOptions(depends_on=[foo]))
+ * role_policy = aws.iam.RolePolicy("rolePolicy",
+ *     role=role.id,
+ *     policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *   	{
+ *   		"Action": "config:Put*",
+ *   		"Effect": "Allow",
+ *   		"Resource": "*"
+ * 
+ *   	}
+ *   ]
+ * }
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Action"": ""sts:AssumeRole"",
+ *       ""Principal"": {
+ *         ""Service"": ""config.amazonaws.com""
+ *       },
+ *       ""Effect"": ""Allow"",
+ *       ""Sid"": """"
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var foo = new Aws.Cfg.Recorder("foo", new Aws.Cfg.RecorderArgs
+ *         {
+ *             RoleArn = role.Arn,
+ *         });
+ *         var rule = new Aws.Cfg.Rule("rule", new Aws.Cfg.RuleArgs
+ *         {
+ *             Source = new Aws.Cfg.Inputs.RuleSourceArgs
+ *             {
+ *                 Owner = "AWS",
+ *                 SourceIdentifier = "S3_BUCKET_VERSIONING_ENABLED",
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 foo,
+ *             },
+ *         });
+ *         var rolePolicy = new Aws.Iam.RolePolicy("rolePolicy", new Aws.Iam.RolePolicyArgs
+ *         {
+ *             Role = role.Id,
+ *             Policy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *   	{
+ *   		""Action"": ""config:Put*"",
+ *   		""Effect"": ""Allow"",
+ *   		""Resource"": ""*""
+ * 
+ *   	}
+ *   ]
+ * }
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cfg"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"config.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		foo, err := cfg.NewRecorder(ctx, "foo", &cfg.RecorderArgs{
+ * 			RoleArn: role.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cfg.NewRule(ctx, "rule", &cfg.RuleArgs{
+ * 			Source: &cfg.RuleSourceArgs{
+ * 				Owner:            pulumi.String("AWS"),
+ * 				SourceIdentifier: pulumi.String("S3_BUCKET_VERSIONING_ENABLED"),
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			foo,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicy(ctx, "rolePolicy", &iam.RolePolicyArgs{
+ * 			Role: role.ID(),
+ * 			Policy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "  	{\n", "  		\"Action\": \"config:Put*\",\n", "  		\"Effect\": \"Allow\",\n", "  		\"Resource\": \"*\"\n", "\n", "  	}\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Custom Rules
+ * 
+ * Custom rules can be used by setting the source owner to `CUSTOM_LAMBDA` and the source identifier to the Amazon Resource Name (ARN) of the Lambda Function. The AWS Config service must have permissions to invoke the Lambda Function, e.g. via the `aws.lambda.Permission` resource. More information about custom rules can be found in the [AWS Config Developer Guide](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html).
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleRecorder = new aws.cfg.Recorder("exampleRecorder", {});
+ * // ... other configuration ...
+ * const exampleFunction = new aws.lambda.Function("exampleFunction", {});
+ * // ... other configuration ...
+ * const examplePermission = new aws.lambda.Permission("examplePermission", {
+ *     action: "lambda:InvokeFunction",
+ *     "function": exampleFunction.arn,
+ *     principal: "config.amazonaws.com",
+ * });
+ * // ... other configuration ...
+ * const exampleRule = new aws.cfg.Rule("exampleRule", {source: {
+ *     owner: "CUSTOM_LAMBDA",
+ *     sourceIdentifier: exampleFunction.arn,
+ * }}, {
+ *     dependsOn: [
+ *         exampleRecorder,
+ *         examplePermission,
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_recorder = aws.cfg.Recorder("exampleRecorder")
+ * # ... other configuration ...
+ * example_function = aws.lambda_.Function("exampleFunction")
+ * # ... other configuration ...
+ * example_permission = aws.lambda_.Permission("examplePermission",
+ *     action="lambda:InvokeFunction",
+ *     function=example_function.arn,
+ *     principal="config.amazonaws.com")
+ * # ... other configuration ...
+ * example_rule = aws.cfg.Rule("exampleRule", source=aws.cfg.RuleSourceArgs(
+ *     owner="CUSTOM_LAMBDA",
+ *     source_identifier=example_function.arn,
+ * ),
+ * opts=pulumi.ResourceOptions(depends_on=[
+ *         example_recorder,
+ *         example_permission,
+ *     ]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleRecorder = new Aws.Cfg.Recorder("exampleRecorder", new Aws.Cfg.RecorderArgs
+ *         {
+ *         });
+ *         // ... other configuration ...
+ *         var exampleFunction = new Aws.Lambda.Function("exampleFunction", new Aws.Lambda.FunctionArgs
+ *         {
+ *         });
+ *         // ... other configuration ...
+ *         var examplePermission = new Aws.Lambda.Permission("examplePermission", new Aws.Lambda.PermissionArgs
+ *         {
+ *             Action = "lambda:InvokeFunction",
+ *             Function = exampleFunction.Arn,
+ *             Principal = "config.amazonaws.com",
+ *         });
+ *         // ... other configuration ...
+ *         var exampleRule = new Aws.Cfg.Rule("exampleRule", new Aws.Cfg.RuleArgs
+ *         {
+ *             Source = new Aws.Cfg.Inputs.RuleSourceArgs
+ *             {
+ *                 Owner = "CUSTOM_LAMBDA",
+ *                 SourceIdentifier = exampleFunction.Arn,
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 exampleRecorder,
+ *                 examplePermission,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cfg"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleRecorder, err := cfg.NewRecorder(ctx, "exampleRecorder", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleFunction, err := lambda.NewFunction(ctx, "exampleFunction", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		examplePermission, err := lambda.NewPermission(ctx, "examplePermission", &lambda.PermissionArgs{
+ * 			Action:    pulumi.String("lambda:InvokeFunction"),
+ * 			Function:  exampleFunction.Arn,
+ * 			Principal: pulumi.String("config.amazonaws.com"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cfg.NewRule(ctx, "exampleRule", &cfg.RuleArgs{
+ * 			Source: &cfg.RuleSourceArgs{
+ * 				Owner:            pulumi.String("CUSTOM_LAMBDA"),
+ * 				SourceIdentifier: exampleFunction.Arn,
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			exampleRecorder,
+ * 			examplePermission,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +365,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cfg/rule:Rule foo example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cfg/rule:Rule")
 public class Rule extends io.pulumi.resources.CustomResource {

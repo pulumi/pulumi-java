@@ -16,7 +16,76 @@ import javax.annotation.Nullable;
 /**
  * Provides a Pinpoint GCM Channel resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const app = new aws.pinpoint.App("app", {});
+ * const gcm = new aws.pinpoint.GcmChannel("gcm", {
+ *     applicationId: app.applicationId,
+ *     apiKey: "api_key",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * app = aws.pinpoint.App("app")
+ * gcm = aws.pinpoint.GcmChannel("gcm",
+ *     application_id=app.application_id,
+ *     api_key="api_key")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var app = new Aws.Pinpoint.App("app", new Aws.Pinpoint.AppArgs
+ *         {
+ *         });
+ *         var gcm = new Aws.Pinpoint.GcmChannel("gcm", new Aws.Pinpoint.GcmChannelArgs
+ *         {
+ *             ApplicationId = app.ApplicationId,
+ *             ApiKey = "api_key",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/pinpoint"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		app, err := pinpoint.NewApp(ctx, "app", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = pinpoint.NewGcmChannel(ctx, "gcm", &pinpoint.GcmChannelArgs{
+ * 			ApplicationId: app.ApplicationId,
+ * 			ApiKey:        pulumi.String("api_key"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +95,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:pinpoint/gcmChannel:GcmChannel gcm application-id
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:pinpoint/gcmChannel:GcmChannel")
 public class GcmChannel extends io.pulumi.resources.CustomResource {

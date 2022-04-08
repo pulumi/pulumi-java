@@ -21,7 +21,110 @@ import javax.annotation.Nullable;
  * * [Aurora MySQL Parameters](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Reference.html)
  * * [Aurora PostgreSQL Parameters](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraPostgreSQL.Reference.html)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const defaultClusterParameterGroup = new aws.rds.ClusterParameterGroup("default", {
+ *     description: "RDS default cluster parameter group",
+ *     family: "aurora5.6",
+ *     parameters: [
+ *         {
+ *             name: "character_set_server",
+ *             value: "utf8",
+ *         },
+ *         {
+ *             name: "character_set_client",
+ *             value: "utf8",
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default = aws.rds.ClusterParameterGroup("default",
+ *     description="RDS default cluster parameter group",
+ *     family="aurora5.6",
+ *     parameters=[
+ *         aws.rds.ClusterParameterGroupParameterArgs(
+ *             name="character_set_server",
+ *             value="utf8",
+ *         ),
+ *         aws.rds.ClusterParameterGroupParameterArgs(
+ *             name="character_set_client",
+ *             value="utf8",
+ *         ),
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Aws.Rds.ClusterParameterGroup("default", new Aws.Rds.ClusterParameterGroupArgs
+ *         {
+ *             Description = "RDS default cluster parameter group",
+ *             Family = "aurora5.6",
+ *             Parameters = 
+ *             {
+ *                 new Aws.Rds.Inputs.ClusterParameterGroupParameterArgs
+ *                 {
+ *                     Name = "character_set_server",
+ *                     Value = "utf8",
+ *                 },
+ *                 new Aws.Rds.Inputs.ClusterParameterGroupParameterArgs
+ *                 {
+ *                     Name = "character_set_client",
+ *                     Value = "utf8",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/rds"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := rds.NewClusterParameterGroup(ctx, "default", &rds.ClusterParameterGroupArgs{
+ * 			Description: pulumi.String("RDS default cluster parameter group"),
+ * 			Family:      pulumi.String("aurora5.6"),
+ * 			Parameters: rds.ClusterParameterGroupParameterArray{
+ * 				&rds.ClusterParameterGroupParameterArgs{
+ * 					Name:  pulumi.String("character_set_server"),
+ * 					Value: pulumi.String("utf8"),
+ * 				},
+ * 				&rds.ClusterParameterGroupParameterArgs{
+ * 					Name:  pulumi.String("character_set_client"),
+ * 					Value: pulumi.String("utf8"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,6 +134,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:rds/clusterParameterGroup:ClusterParameterGroup cluster_pg production-pg-1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:rds/clusterParameterGroup:ClusterParameterGroup")
 public class ClusterParameterGroup extends io.pulumi.resources.CustomResource {

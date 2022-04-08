@@ -17,7 +17,76 @@ import javax.annotation.Nullable;
 /**
  * Provides a Sagemaker App resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.sagemaker.App("example", {
+ *     domainId: aws_sagemaker_domain.example.id,
+ *     userProfileName: aws_sagemaker_user_profile.example.user_profile_name,
+ *     appName: "example",
+ *     appType: "JupyterServer",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.sagemaker.App("example",
+ *     domain_id=aws_sagemaker_domain["example"]["id"],
+ *     user_profile_name=aws_sagemaker_user_profile["example"]["user_profile_name"],
+ *     app_name="example",
+ *     app_type="JupyterServer")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Sagemaker.App("example", new Aws.Sagemaker.AppArgs
+ *         {
+ *             DomainId = aws_sagemaker_domain.Example.Id,
+ *             UserProfileName = aws_sagemaker_user_profile.Example.User_profile_name,
+ *             AppName = "example",
+ *             AppType = "JupyterServer",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sagemaker.NewApp(ctx, "example", &sagemaker.AppArgs{
+ * 			DomainId:        pulumi.Any(aws_sagemaker_domain.Example.Id),
+ * 			UserProfileName: pulumi.Any(aws_sagemaker_user_profile.Example.User_profile_name),
+ * 			AppName:         pulumi.String("example"),
+ * 			AppType:         pulumi.String("JupyterServer"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +96,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sagemaker/app:App example arn:aws:sagemaker:us-west-2:012345678912:app/domain-id/user-profile-name/app-type/app-name
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sagemaker/app:App")
 public class App extends io.pulumi.resources.CustomResource {

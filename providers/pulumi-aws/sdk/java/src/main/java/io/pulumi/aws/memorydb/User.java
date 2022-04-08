@@ -15,6 +15,9 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * Use the `user_name` to import a user. For example
@@ -23,8 +26,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:memorydb/user:User example my-user
  * ```
  * 
- *  The `passwords` are not available for imported resources, as this information cannot be read back from the MemoryDB API.
- * 
+ *  The `passwords` are not available for imported resources, as this information cannot be read back from the MemoryDB API. 
  */
 @ResourceType(type="aws:memorydb/user:User")
 public class User extends io.pulumi.resources.CustomResource {

@@ -19,7 +19,127 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE on EBS block devices:** If you use `ebs_block_device` on an `aws.ec2.Instance`, this provider will assume management over the full set of non-root EBS block devices for the instance, and treats additional block devices as drift. For this reason, `ebs_block_device` cannot be mixed with external `aws.ebs.Volume` + `aws_ebs_volume_attachment` resources for a given instance.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const web = new aws.ec2.Instance("web", {
+ *     ami: "ami-21f78e11",
+ *     availabilityZone: "us-west-2a",
+ *     instanceType: "t2.micro",
+ *     tags: {
+ *         Name: "HelloWorld",
+ *     },
+ * });
+ * const example = new aws.ebs.Volume("example", {
+ *     availabilityZone: "us-west-2a",
+ *     size: 1,
+ * });
+ * const ebsAtt = new aws.ec2.VolumeAttachment("ebsAtt", {
+ *     deviceName: "/dev/sdh",
+ *     volumeId: example.id,
+ *     instanceId: web.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * web = aws.ec2.Instance("web",
+ *     ami="ami-21f78e11",
+ *     availability_zone="us-west-2a",
+ *     instance_type="t2.micro",
+ *     tags={
+ *         "Name": "HelloWorld",
+ *     })
+ * example = aws.ebs.Volume("example",
+ *     availability_zone="us-west-2a",
+ *     size=1)
+ * ebs_att = aws.ec2.VolumeAttachment("ebsAtt",
+ *     device_name="/dev/sdh",
+ *     volume_id=example.id,
+ *     instance_id=web.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var web = new Aws.Ec2.Instance("web", new Aws.Ec2.InstanceArgs
+ *         {
+ *             Ami = "ami-21f78e11",
+ *             AvailabilityZone = "us-west-2a",
+ *             InstanceType = "t2.micro",
+ *             Tags = 
+ *             {
+ *                 { "Name", "HelloWorld" },
+ *             },
+ *         });
+ *         var example = new Aws.Ebs.Volume("example", new Aws.Ebs.VolumeArgs
+ *         {
+ *             AvailabilityZone = "us-west-2a",
+ *             Size = 1,
+ *         });
+ *         var ebsAtt = new Aws.Ec2.VolumeAttachment("ebsAtt", new Aws.Ec2.VolumeAttachmentArgs
+ *         {
+ *             DeviceName = "/dev/sdh",
+ *             VolumeId = example.Id,
+ *             InstanceId = web.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ebs"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		web, err := ec2.NewInstance(ctx, "web", &ec2.InstanceArgs{
+ * 			Ami:              pulumi.String("ami-21f78e11"),
+ * 			AvailabilityZone: pulumi.String("us-west-2a"),
+ * 			InstanceType:     pulumi.String("t2.micro"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("HelloWorld"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		example, err := ebs.NewVolume(ctx, "example", &ebs.VolumeArgs{
+ * 			AvailabilityZone: pulumi.String("us-west-2a"),
+ * 			Size:             pulumi.Int(1),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewVolumeAttachment(ctx, "ebsAtt", &ec2.VolumeAttachmentArgs{
+ * 			DeviceName: pulumi.String("/dev/sdh"),
+ * 			VolumeId:   example.ID(),
+ * 			InstanceId: web.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,8 +149,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/volumeAttachment:VolumeAttachment example /dev/sdh:vol-049df61146c4d7901:i-12345678
  * ```
  * 
- *  [1]https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names [2]https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names [3]https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html
- * 
+ *  [1]https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names [2]https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names [3]https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html 
  */
 @ResourceType(type="aws:ec2/volumeAttachment:VolumeAttachment")
 public class VolumeAttachment extends io.pulumi.resources.CustomResource {

@@ -30,7 +30,202 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** Referencing Security Groups across VPC peering has certain restrictions. More information is available in the [VPC Peering User Guide](https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * Basic usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ec2.SecurityGroupRule("example", {
+ *     type: "ingress",
+ *     fromPort: 0,
+ *     toPort: 65535,
+ *     protocol: "tcp",
+ *     cidrBlocks: [aws_vpc.example.cidr_block],
+ *     ipv6CidrBlocks: [aws_vpc.example.ipv6_cidr_block],
+ *     securityGroupId: "sg-123456",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ec2.SecurityGroupRule("example",
+ *     type="ingress",
+ *     from_port=0,
+ *     to_port=65535,
+ *     protocol="tcp",
+ *     cidr_blocks=[aws_vpc["example"]["cidr_block"]],
+ *     ipv6_cidr_blocks=[aws_vpc["example"]["ipv6_cidr_block"]],
+ *     security_group_id="sg-123456")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ec2.SecurityGroupRule("example", new Aws.Ec2.SecurityGroupRuleArgs
+ *         {
+ *             Type = "ingress",
+ *             FromPort = 0,
+ *             ToPort = 65535,
+ *             Protocol = "tcp",
+ *             CidrBlocks = 
+ *             {
+ *                 aws_vpc.Example.Cidr_block,
+ *             },
+ *             Ipv6CidrBlocks = 
+ *             {
+ *                 aws_vpc.Example.Ipv6_cidr_block,
+ *             },
+ *             SecurityGroupId = "sg-123456",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewSecurityGroupRule(ctx, "example", &ec2.SecurityGroupRuleArgs{
+ * 			Type:     pulumi.String("ingress"),
+ * 			FromPort: pulumi.Int(0),
+ * 			ToPort:   pulumi.Int(65535),
+ * 			Protocol: pulumi.String("tcp"),
+ * 			CidrBlocks: pulumi.StringArray{
+ * 				pulumi.Any(aws_vpc.Example.Cidr_block),
+ * 			},
+ * 			Ipv6CidrBlocks: pulumi.StringArray{
+ * 				pulumi.Any(aws_vpc.Example.Ipv6_cidr_block),
+ * 			},
+ * 			SecurityGroupId: pulumi.String("sg-123456"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Usage With Prefix List IDs
+ * 
+ * Prefix Lists are either managed by AWS internally, or created by the customer using a
+ * Managed Prefix List resource. Prefix Lists provided by
+ * AWS are associated with a prefix list name, or service name, that is linked to a specific region.
+ * 
+ * Prefix list IDs are exported on VPC Endpoints, so you can use this format:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // ...
+ * const myEndpoint = new aws.ec2.VpcEndpoint("myEndpoint", {});
+ * // ...
+ * const allowAll = new aws.ec2.SecurityGroupRule("allowAll", {
+ *     type: "egress",
+ *     toPort: 0,
+ *     protocol: "-1",
+ *     prefixListIds: [myEndpoint.prefixListId],
+ *     fromPort: 0,
+ *     securityGroupId: "sg-123456",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # ...
+ * my_endpoint = aws.ec2.VpcEndpoint("myEndpoint")
+ * # ...
+ * allow_all = aws.ec2.SecurityGroupRule("allowAll",
+ *     type="egress",
+ *     to_port=0,
+ *     protocol="-1",
+ *     prefix_list_ids=[my_endpoint.prefix_list_id],
+ *     from_port=0,
+ *     security_group_id="sg-123456")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // ...
+ *         var myEndpoint = new Aws.Ec2.VpcEndpoint("myEndpoint", new Aws.Ec2.VpcEndpointArgs
+ *         {
+ *         });
+ *         // ...
+ *         var allowAll = new Aws.Ec2.SecurityGroupRule("allowAll", new Aws.Ec2.SecurityGroupRuleArgs
+ *         {
+ *             Type = "egress",
+ *             ToPort = 0,
+ *             Protocol = "-1",
+ *             PrefixListIds = 
+ *             {
+ *                 myEndpoint.PrefixListId,
+ *             },
+ *             FromPort = 0,
+ *             SecurityGroupId = "sg-123456",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		myEndpoint, err := ec2.NewVpcEndpoint(ctx, "myEndpoint", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewSecurityGroupRule(ctx, "allowAll", &ec2.SecurityGroupRuleArgs{
+ * 			Type:     pulumi.String("egress"),
+ * 			ToPort:   pulumi.Int(0),
+ * 			Protocol: pulumi.String("-1"),
+ * 			PrefixListIds: pulumi.StringArray{
+ * 				myEndpoint.PrefixListId,
+ * 			},
+ * 			FromPort:        pulumi.Int(0),
+ * 			SecurityGroupId: pulumi.String("sg-123456"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * You can also find a specific Prefix List using the `aws.ec2.getPrefixList` data source.
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -76,6 +271,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/securityGroupRule:SecurityGroupRule rule_name sg-656c65616e6f72_ingress_tcp_80_80_self_2001:db8::/48
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/securityGroupRule:SecurityGroupRule")
 public class SecurityGroupRule extends io.pulumi.resources.CustomResource {

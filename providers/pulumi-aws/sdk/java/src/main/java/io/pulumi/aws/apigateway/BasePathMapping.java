@@ -17,7 +17,138 @@ import javax.annotation.Nullable;
  * with a deployed API so that its methods can be called via the
  * custom domain name.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * from "fs";
+ * 
+ * const exampleStage = new aws.apigateway.Stage("exampleStage", {
+ *     deployment: aws_api_gateway_deployment.example.id,
+ *     restApi: aws_api_gateway_rest_api.example.id,
+ *     stageName: "example",
+ * });
+ * const exampleDomainName = new aws.apigateway.DomainName("exampleDomainName", {
+ *     domainName: "example.com",
+ *     certificateName: "example-api",
+ *     certificateBody: fs.readFileSync(`${path.module}/example.com/example.crt`),
+ *     certificateChain: fs.readFileSync(`${path.module}/example.com/ca.crt`),
+ *     certificatePrivateKey: fs.readFileSync(`${path.module}/example.com/example.key`),
+ * });
+ * const exampleBasePathMapping = new aws.apigateway.BasePathMapping("exampleBasePathMapping", {
+ *     restApi: aws_api_gateway_rest_api.example.id,
+ *     stageName: exampleStage.stageName,
+ *     domainName: exampleDomainName.domainName,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_stage = aws.apigateway.Stage("exampleStage",
+ *     deployment=aws_api_gateway_deployment["example"]["id"],
+ *     rest_api=aws_api_gateway_rest_api["example"]["id"],
+ *     stage_name="example")
+ * example_domain_name = aws.apigateway.DomainName("exampleDomainName",
+ *     domain_name="example.com",
+ *     certificate_name="example-api",
+ *     certificate_body=(lambda path: open(path).read())(f"{path['module']}/example.com/example.crt"),
+ *     certificate_chain=(lambda path: open(path).read())(f"{path['module']}/example.com/ca.crt"),
+ *     certificate_private_key=(lambda path: open(path).read())(f"{path['module']}/example.com/example.key"))
+ * example_base_path_mapping = aws.apigateway.BasePathMapping("exampleBasePathMapping",
+ *     rest_api=aws_api_gateway_rest_api["example"]["id"],
+ *     stage_name=example_stage.stage_name,
+ *     domain_name=example_domain_name.domain_name)
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleStage = new Aws.ApiGateway.Stage("exampleStage", new Aws.ApiGateway.StageArgs
+ *         {
+ *             Deployment = aws_api_gateway_deployment.Example.Id,
+ *             RestApi = aws_api_gateway_rest_api.Example.Id,
+ *             StageName = "example",
+ *         });
+ *         var exampleDomainName = new Aws.ApiGateway.DomainName("exampleDomainName", new Aws.ApiGateway.DomainNameArgs
+ *         {
+ *             DomainName = "example.com",
+ *             CertificateName = "example-api",
+ *             CertificateBody = File.ReadAllText($"{path.Module}/example.com/example.crt"),
+ *             CertificateChain = File.ReadAllText($"{path.Module}/example.com/ca.crt"),
+ *             CertificatePrivateKey = File.ReadAllText($"{path.Module}/example.com/example.key"),
+ *         });
+ *         var exampleBasePathMapping = new Aws.ApiGateway.BasePathMapping("exampleBasePathMapping", new Aws.ApiGateway.BasePathMappingArgs
+ *         {
+ *             RestApi = aws_api_gateway_rest_api.Example.Id,
+ *             StageName = exampleStage.StageName,
+ *             DomainName = exampleDomainName.Domain,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleStage, err := apigateway.NewStage(ctx, "exampleStage", &apigateway.StageArgs{
+ * 			Deployment: pulumi.Any(aws_api_gateway_deployment.Example.Id),
+ * 			RestApi:    pulumi.Any(aws_api_gateway_rest_api.Example.Id),
+ * 			StageName:  pulumi.String("example"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleDomainName, err := apigateway.NewDomainName(ctx, "exampleDomainName", &apigateway.DomainNameArgs{
+ * 			DomainName:            pulumi.String("example.com"),
+ * 			CertificateName:       pulumi.String("example-api"),
+ * 			CertificateBody:       readFileOrPanic(fmt.Sprintf("%v%v", path.Module, "/example.com/example.crt")),
+ * 			CertificateChain:      readFileOrPanic(fmt.Sprintf("%v%v", path.Module, "/example.com/ca.crt")),
+ * 			CertificatePrivateKey: readFileOrPanic(fmt.Sprintf("%v%v", path.Module, "/example.com/example.key")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = apigateway.NewBasePathMapping(ctx, "exampleBasePathMapping", &apigateway.BasePathMappingArgs{
+ * 			RestApi:    pulumi.Any(aws_api_gateway_rest_api.Example.Id),
+ * 			StageName:  exampleStage.StageName,
+ * 			DomainName: exampleDomainName.DomainName,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,6 +164,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:apigateway/basePathMapping:BasePathMapping example example.com/base-path
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:apigateway/basePathMapping:BasePathMapping")
 public class BasePathMapping extends io.pulumi.resources.CustomResource {

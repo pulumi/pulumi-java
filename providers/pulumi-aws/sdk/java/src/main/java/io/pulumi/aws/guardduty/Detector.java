@@ -20,7 +20,85 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** Deleting this resource is equivalent to "disabling" GuardDuty for an AWS region, which removes all existing findings. You can set the `enable` attribute to `false` to instead "suspend" monitoring and feedback reporting while keeping existing data. See the [Suspending or Disabling Amazon GuardDuty documentation](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_suspend-disable.html) for more information.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const myDetector = new aws.guardduty.Detector("MyDetector", {
+ *     datasources: {
+ *         s3Logs: {
+ *             enable: true,
+ *         },
+ *     },
+ *     enable: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * my_detector = aws.guardduty.Detector("myDetector",
+ *     datasources=aws.guardduty.DetectorDatasourcesArgs(
+ *         s3_logs=aws.guardduty.DetectorDatasourcesS3LogsArgs(
+ *             enable=True,
+ *         ),
+ *     ),
+ *     enable=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myDetector = new Aws.GuardDuty.Detector("myDetector", new Aws.GuardDuty.DetectorArgs
+ *         {
+ *             Datasources = new Aws.GuardDuty.Inputs.DetectorDatasourcesArgs
+ *             {
+ *                 S3Logs = new Aws.GuardDuty.Inputs.DetectorDatasourcesS3LogsArgs
+ *                 {
+ *                     Enable = true,
+ *                 },
+ *             },
+ *             Enable = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/guardduty"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := guardduty.NewDetector(ctx, "myDetector", &guardduty.DetectorArgs{
+ * 			Datasources: &guardduty.DetectorDatasourcesArgs{
+ * 				S3Logs: &guardduty.DetectorDatasourcesS3LogsArgs{
+ * 					Enable: pulumi.Bool(true),
+ * 				},
+ * 			},
+ * 			Enable: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +108,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:guardduty/detector:Detector MyDetector 00b00fd5aecc0ab60a708659477e9617
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:guardduty/detector:Detector")
 public class Detector extends io.pulumi.resources.CustomResource {

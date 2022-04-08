@@ -18,7 +18,119 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS WAFv2 Regex Pattern Set Resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.wafv2.RegexPatternSet("example", {
+ *     description: "Example regex pattern set",
+ *     regularExpressions: [
+ *         {
+ *             regexString: "one",
+ *         },
+ *         {
+ *             regexString: "two",
+ *         },
+ *     ],
+ *     scope: "REGIONAL",
+ *     tags: {
+ *         Tag1: "Value1",
+ *         Tag2: "Value2",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.wafv2.RegexPatternSet("example",
+ *     description="Example regex pattern set",
+ *     regular_expressions=[
+ *         aws.wafv2.RegexPatternSetRegularExpressionArgs(
+ *             regex_string="one",
+ *         ),
+ *         aws.wafv2.RegexPatternSetRegularExpressionArgs(
+ *             regex_string="two",
+ *         ),
+ *     ],
+ *     scope="REGIONAL",
+ *     tags={
+ *         "Tag1": "Value1",
+ *         "Tag2": "Value2",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.WafV2.RegexPatternSet("example", new Aws.WafV2.RegexPatternSetArgs
+ *         {
+ *             Description = "Example regex pattern set",
+ *             RegularExpressions = 
+ *             {
+ *                 new Aws.WafV2.Inputs.RegexPatternSetRegularExpressionArgs
+ *                 {
+ *                     RegexString = "one",
+ *                 },
+ *                 new Aws.WafV2.Inputs.RegexPatternSetRegularExpressionArgs
+ *                 {
+ *                     RegexString = "two",
+ *                 },
+ *             },
+ *             Scope = "REGIONAL",
+ *             Tags = 
+ *             {
+ *                 { "Tag1", "Value1" },
+ *                 { "Tag2", "Value2" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/wafv2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := wafv2.NewRegexPatternSet(ctx, "example", &wafv2.RegexPatternSetArgs{
+ * 			Description: pulumi.String("Example regex pattern set"),
+ * 			RegularExpressions: wafv2.RegexPatternSetRegularExpressionArray{
+ * 				&wafv2.RegexPatternSetRegularExpressionArgs{
+ * 					RegexString: pulumi.String("one"),
+ * 				},
+ * 				&wafv2.RegexPatternSetRegularExpressionArgs{
+ * 					RegexString: pulumi.String("two"),
+ * 				},
+ * 			},
+ * 			Scope: pulumi.String("REGIONAL"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Tag1": pulumi.String("Value1"),
+ * 				"Tag2": pulumi.String("Value2"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +140,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:wafv2/regexPatternSet:RegexPatternSet example a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc/example/REGIONAL
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:wafv2/regexPatternSet:RegexPatternSet")
 public class RegexPatternSet extends io.pulumi.resources.CustomResource {

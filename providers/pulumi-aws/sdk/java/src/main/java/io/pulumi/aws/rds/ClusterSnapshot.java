@@ -19,7 +19,67 @@ import javax.annotation.Nullable;
 /**
  * Manages an RDS database cluster snapshot for Aurora clusters. For managing RDS database instance snapshots, see the `aws.rds.Snapshot` resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.rds.ClusterSnapshot("example", {
+ *     dbClusterIdentifier: aws_rds_cluster.example.id,
+ *     dbClusterSnapshotIdentifier: "resourcetestsnapshot1234",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.rds.ClusterSnapshot("example",
+ *     db_cluster_identifier=aws_rds_cluster["example"]["id"],
+ *     db_cluster_snapshot_identifier="resourcetestsnapshot1234")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Rds.ClusterSnapshot("example", new Aws.Rds.ClusterSnapshotArgs
+ *         {
+ *             DbClusterIdentifier = aws_rds_cluster.Example.Id,
+ *             DbClusterSnapshotIdentifier = "resourcetestsnapshot1234",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/rds"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := rds.NewClusterSnapshot(ctx, "example", &rds.ClusterSnapshotArgs{
+ * 			DbClusterIdentifier:         pulumi.Any(aws_rds_cluster.Example.Id),
+ * 			DbClusterSnapshotIdentifier: pulumi.String("resourcetestsnapshot1234"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +89,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:rds/clusterSnapshot:ClusterSnapshot example my-cluster-snapshot
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:rds/clusterSnapshot:ClusterSnapshot")
 public class ClusterSnapshot extends io.pulumi.resources.CustomResource {

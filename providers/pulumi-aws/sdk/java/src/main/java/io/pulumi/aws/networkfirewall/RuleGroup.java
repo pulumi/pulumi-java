@@ -18,7 +18,1181 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS Network Firewall Rule Group Resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Stateful Inspection for denying access to a domain
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.networkfirewall.RuleGroup("example", {
+ *     capacity: 100,
+ *     ruleGroup: {
+ *         rulesSource: {
+ *             rulesSourceList: {
+ *                 generatedRulesType: "DENYLIST",
+ *                 targetTypes: ["HTTP_HOST"],
+ *                 targets: ["test.example.com"],
+ *             },
+ *         },
+ *     },
+ *     tags: {
+ *         Tag1: "Value1",
+ *         Tag2: "Value2",
+ *     },
+ *     type: "STATEFUL",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.networkfirewall.RuleGroup("example",
+ *     capacity=100,
+ *     rule_group=aws.networkfirewall.RuleGroupRuleGroupArgs(
+ *         rules_source=aws.networkfirewall.RuleGroupRuleGroupRulesSourceArgs(
+ *             rules_source_list=aws.networkfirewall.RuleGroupRuleGroupRulesSourceRulesSourceListArgs(
+ *                 generated_rules_type="DENYLIST",
+ *                 target_types=["HTTP_HOST"],
+ *                 targets=["test.example.com"],
+ *             ),
+ *         ),
+ *     ),
+ *     tags={
+ *         "Tag1": "Value1",
+ *         "Tag2": "Value2",
+ *     },
+ *     type="STATEFUL")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.NetworkFirewall.RuleGroup("example", new Aws.NetworkFirewall.RuleGroupArgs
+ *         {
+ *             Capacity = 100,
+ *             RuleGroup = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupArgs
+ *             {
+ *                 RulesSource = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceArgs
+ *                 {
+ *                     RulesSourceList = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceRulesSourceListArgs
+ *                     {
+ *                         GeneratedRulesType = "DENYLIST",
+ *                         TargetTypes = 
+ *                         {
+ *                             "HTTP_HOST",
+ *                         },
+ *                         Targets = 
+ *                         {
+ *                             "test.example.com",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Tag1", "Value1" },
+ *                 { "Tag2", "Value2" },
+ *             },
+ *             Type = "STATEFUL",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/networkfirewall"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := networkfirewall.NewRuleGroup(ctx, "example", &networkfirewall.RuleGroupArgs{
+ * 			Capacity: pulumi.Int(100),
+ * 			RuleGroup: &networkfirewall.RuleGroupRuleGroupArgs{
+ * 				RulesSource: &networkfirewall.RuleGroupRuleGroupRulesSourceArgs{
+ * 					RulesSourceList: &networkfirewall.RuleGroupRuleGroupRulesSourceRulesSourceListArgs{
+ * 						GeneratedRulesType: pulumi.String("DENYLIST"),
+ * 						TargetTypes: pulumi.StringArray{
+ * 							pulumi.String("HTTP_HOST"),
+ * 						},
+ * 						Targets: pulumi.StringArray{
+ * 							pulumi.String("test.example.com"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Tag1": pulumi.String("Value1"),
+ * 				"Tag2": pulumi.String("Value2"),
+ * 			},
+ * 			Type: pulumi.String("STATEFUL"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Stateful Inspection for permitting packets from a source IP address
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const ips = [
+ *     "1.1.1.1/32",
+ *     "1.0.0.1/32",
+ * ];
+ * const example = new aws.networkfirewall.RuleGroup("example", {
+ *     capacity: 50,
+ *     description: "Permits http traffic from source",
+ *     type: "STATEFUL",
+ *     ruleGroup: {
+ *         rulesSource: {
+ *             dynamic: [{
+ *                 forEach: ips,
+ *                 content: [{
+ *                     action: "PASS",
+ *                     header: [{
+ *                         destination: "ANY",
+ *                         destinationPort: "ANY",
+ *                         protocol: "HTTP",
+ *                         direction: "ANY",
+ *                         sourcePort: "ANY",
+ *                         source: stateful_rule.value,
+ *                     }],
+ *                     ruleOption: [{
+ *                         keyword: "sid:1",
+ *                     }],
+ *                 }],
+ *             }],
+ *         },
+ *     },
+ *     tags: {
+ *         Name: "permit HTTP from source",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * ips = [
+ *     "1.1.1.1/32",
+ *     "1.0.0.1/32",
+ * ]
+ * example = aws.networkfirewall.RuleGroup("example",
+ *     capacity=50,
+ *     description="Permits http traffic from source",
+ *     type="STATEFUL",
+ *     rule_group=aws.networkfirewall.RuleGroupRuleGroupArgs(
+ *         rules_source=aws.networkfirewall.RuleGroupRuleGroupRulesSourceArgs(
+ *             dynamic=[{
+ *                 "forEach": ips,
+ *                 "content": [{
+ *                     "action": "PASS",
+ *                     "header": [{
+ *                         "destination": "ANY",
+ *                         "destinationPort": "ANY",
+ *                         "protocol": "HTTP",
+ *                         "direction": "ANY",
+ *                         "sourcePort": "ANY",
+ *                         "source": stateful_rule["value"],
+ *                     }],
+ *                     "ruleOption": [{
+ *                         "keyword": "sid:1",
+ *                     }],
+ *                 }],
+ *             }],
+ *         ),
+ *     ),
+ *     tags={
+ *         "Name": "permit HTTP from source",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var ips = 
+ *         {
+ *             "1.1.1.1/32",
+ *             "1.0.0.1/32",
+ *         };
+ *         var example = new Aws.NetworkFirewall.RuleGroup("example", new Aws.NetworkFirewall.RuleGroupArgs
+ *         {
+ *             Capacity = 50,
+ *             Description = "Permits http traffic from source",
+ *             Type = "STATEFUL",
+ *             RuleGroup = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupArgs
+ *             {
+ *                 RulesSource = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceArgs
+ *                 {
+ *                     Dynamic = 
+ *                     {
+ *                         
+ *                         {
+ *                             { "forEach", ips },
+ *                             { "content", 
+ *                             {
+ *                                 
+ *                                 {
+ *                                     { "action", "PASS" },
+ *                                     { "header", 
+ *                                     {
+ *                                         
+ *                                         {
+ *                                             { "destination", "ANY" },
+ *                                             { "destinationPort", "ANY" },
+ *                                             { "protocol", "HTTP" },
+ *                                             { "direction", "ANY" },
+ *                                             { "sourcePort", "ANY" },
+ *                                             { "source", stateful_rule.Value },
+ *                                         },
+ *                                     } },
+ *                                     { "ruleOption", 
+ *                                     {
+ *                                         
+ *                                         {
+ *                                             { "keyword", "sid:1" },
+ *                                         },
+ *                                     } },
+ *                                 },
+ *                             } },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Name", "permit HTTP from source" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/networkfirewall"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		ips := []string{
+ * 			"1.1.1.1/32",
+ * 			"1.0.0.1/32",
+ * 		}
+ * 		_, err := networkfirewall.NewRuleGroup(ctx, "example", &networkfirewall.RuleGroupArgs{
+ * 			Capacity:    pulumi.Int(50),
+ * 			Description: pulumi.String("Permits http traffic from source"),
+ * 			Type:        pulumi.String("STATEFUL"),
+ * 			RuleGroup: &networkfirewall.RuleGroupRuleGroupArgs{
+ * 				RulesSource: &networkfirewall.RuleGroupRuleGroupRulesSourceArgs{
+ * 					Dynamic: []map[string]interface{}{
+ * 						map[string]interface{}{
+ * 							"forEach": ips,
+ * 							"content": []map[string]interface{}{
+ * 								map[string]interface{}{
+ * 									"action": "PASS",
+ * 									"header": []map[string]interface{}{
+ * 										map[string]interface{}{
+ * 											"destination":     "ANY",
+ * 											"destinationPort": "ANY",
+ * 											"protocol":        "HTTP",
+ * 											"direction":       "ANY",
+ * 											"sourcePort":      "ANY",
+ * 											"source":          stateful_rule.Value,
+ * 										},
+ * 									},
+ * 									"ruleOption": []map[string]interface{}{
+ * 										map[string]interface{}{
+ * 											"keyword": "sid:1",
+ * 										},
+ * 									},
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("permit HTTP from source"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Stateful Inspection for blocking packets from going to an intended destination
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.networkfirewall.RuleGroup("example", {
+ *     capacity: 100,
+ *     ruleGroup: {
+ *         rulesSource: {
+ *             statefulRules: [{
+ *                 action: "DROP",
+ *                 header: {
+ *                     destination: "124.1.1.24/32",
+ *                     destinationPort: "53",
+ *                     direction: "ANY",
+ *                     protocol: "TCP",
+ *                     source: "1.2.3.4/32",
+ *                     sourcePort: "53",
+ *                 },
+ *                 ruleOptions: [{
+ *                     keyword: "sid:1",
+ *                 }],
+ *             }],
+ *         },
+ *     },
+ *     tags: {
+ *         Tag1: "Value1",
+ *         Tag2: "Value2",
+ *     },
+ *     type: "STATEFUL",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.networkfirewall.RuleGroup("example",
+ *     capacity=100,
+ *     rule_group=aws.networkfirewall.RuleGroupRuleGroupArgs(
+ *         rules_source=aws.networkfirewall.RuleGroupRuleGroupRulesSourceArgs(
+ *             stateful_rule=[{
+ *                 "action": "DROP",
+ *                 "header": {
+ *                     "destination": "124.1.1.24/32",
+ *                     "destinationPort": 53,
+ *                     "direction": "ANY",
+ *                     "protocol": "TCP",
+ *                     "source": "1.2.3.4/32",
+ *                     "sourcePort": 53,
+ *                 },
+ *                 "ruleOption": [{
+ *                     "keyword": "sid:1",
+ *                 }],
+ *             }],
+ *         ),
+ *     ),
+ *     tags={
+ *         "Tag1": "Value1",
+ *         "Tag2": "Value2",
+ *     },
+ *     type="STATEFUL")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.NetworkFirewall.RuleGroup("example", new Aws.NetworkFirewall.RuleGroupArgs
+ *         {
+ *             Capacity = 100,
+ *             RuleGroup = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupArgs
+ *             {
+ *                 RulesSource = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceArgs
+ *                 {
+ *                     StatefulRule = 
+ *                     {
+ *                         
+ *                         {
+ *                             { "action", "DROP" },
+ *                             { "header", 
+ *                             {
+ *                                 { "destination", "124.1.1.24/32" },
+ *                                 { "destinationPort", 53 },
+ *                                 { "direction", "ANY" },
+ *                                 { "protocol", "TCP" },
+ *                                 { "source", "1.2.3.4/32" },
+ *                                 { "sourcePort", 53 },
+ *                             } },
+ *                             { "ruleOption", 
+ *                             {
+ *                                 
+ *                                 {
+ *                                     { "keyword", "sid:1" },
+ *                                 },
+ *                             } },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Tag1", "Value1" },
+ *                 { "Tag2", "Value2" },
+ *             },
+ *             Type = "STATEFUL",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/networkfirewall"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := networkfirewall.NewRuleGroup(ctx, "example", &networkfirewall.RuleGroupArgs{
+ * 			Capacity: pulumi.Int(100),
+ * 			RuleGroup: &networkfirewall.RuleGroupRuleGroupArgs{
+ * 				RulesSource: &networkfirewall.RuleGroupRuleGroupRulesSourceArgs{
+ * 					StatefulRule: []map[string]interface{}{
+ * 						map[string]interface{}{
+ * 							"action": "DROP",
+ * 							"header": map[string]interface{}{
+ * 								"destination":     "124.1.1.24/32",
+ * 								"destinationPort": 53,
+ * 								"direction":       "ANY",
+ * 								"protocol":        "TCP",
+ * 								"source":          "1.2.3.4/32",
+ * 								"sourcePort":      53,
+ * 							},
+ * 							"ruleOption": []map[string]interface{}{
+ * 								map[string]interface{}{
+ * 									"keyword": "sid:1",
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Tag1": pulumi.String("Value1"),
+ * 				"Tag2": pulumi.String("Value2"),
+ * 			},
+ * 			Type: pulumi.String("STATEFUL"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Stateful Inspection from rules specifications defined in Suricata flat format
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * from "fs";
+ * 
+ * const example = new aws.networkfirewall.RuleGroup("example", {
+ *     capacity: 100,
+ *     type: "STATEFUL",
+ *     rules: fs.readFileSync("example.rules"),
+ *     tags: {
+ *         Tag1: "Value1",
+ *         Tag2: "Value2",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.networkfirewall.RuleGroup("example",
+ *     capacity=100,
+ *     type="STATEFUL",
+ *     rules=(lambda path: open(path).read())("example.rules"),
+ *     tags={
+ *         "Tag1": "Value1",
+ *         "Tag2": "Value2",
+ *     })
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.NetworkFirewall.RuleGroup("example", new Aws.NetworkFirewall.RuleGroupArgs
+ *         {
+ *             Capacity = 100,
+ *             Type = "STATEFUL",
+ *             Rules = File.ReadAllText("example.rules"),
+ *             Tags = 
+ *             {
+ *                 { "Tag1", "Value1" },
+ *                 { "Tag2", "Value2" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/networkfirewall"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := networkfirewall.NewRuleGroup(ctx, "example", &networkfirewall.RuleGroupArgs{
+ * 			Capacity: pulumi.Int(100),
+ * 			Type:     pulumi.String("STATEFUL"),
+ * 			Rules:    readFileOrPanic("example.rules"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Tag1": pulumi.String("Value1"),
+ * 				"Tag2": pulumi.String("Value2"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Stateful Inspection from rule group specifications using rule variables and Suricata format rules
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * from "fs";
+ * 
+ * const example = new aws.networkfirewall.RuleGroup("example", {
+ *     capacity: 100,
+ *     type: "STATEFUL",
+ *     ruleGroup: {
+ *         ruleVariables: {
+ *             ipSets: [
+ *                 {
+ *                     key: "WEBSERVERS_HOSTS",
+ *                     ipSet: {
+ *                         definitions: [
+ *                             "10.0.0.0/16",
+ *                             "10.0.1.0/24",
+ *                             "192.168.0.0/16",
+ *                         ],
+ *                     },
+ *                 },
+ *                 {
+ *                     key: "EXTERNAL_HOST",
+ *                     ipSet: {
+ *                         definitions: ["1.2.3.4/32"],
+ *                     },
+ *                 },
+ *             ],
+ *             portSets: [{
+ *                 key: "HTTP_PORTS",
+ *                 portSet: {
+ *                     definitions: [
+ *                         "443",
+ *                         "80",
+ *                     ],
+ *                 },
+ *             }],
+ *         },
+ *         rulesSource: {
+ *             rulesString: fs.readFileSync("suricata_rules_file"),
+ *         },
+ *     },
+ *     tags: {
+ *         Tag1: "Value1",
+ *         Tag2: "Value2",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.networkfirewall.RuleGroup("example",
+ *     capacity=100,
+ *     type="STATEFUL",
+ *     rule_group=aws.networkfirewall.RuleGroupRuleGroupArgs(
+ *         rule_variables=aws.networkfirewall.RuleGroupRuleGroupRuleVariablesArgs(
+ *             ip_sets=[
+ *                 aws.networkfirewall.RuleGroupRuleGroupRuleVariablesIpSetArgs(
+ *                     key="WEBSERVERS_HOSTS",
+ *                     ip_set=aws.networkfirewall.RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs(
+ *                         definitions=[
+ *                             "10.0.0.0/16",
+ *                             "10.0.1.0/24",
+ *                             "192.168.0.0/16",
+ *                         ],
+ *                     ),
+ *                 ),
+ *                 aws.networkfirewall.RuleGroupRuleGroupRuleVariablesIpSetArgs(
+ *                     key="EXTERNAL_HOST",
+ *                     ip_set=aws.networkfirewall.RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs(
+ *                         definitions=["1.2.3.4/32"],
+ *                     ),
+ *                 ),
+ *             ],
+ *             port_sets=[aws.networkfirewall.RuleGroupRuleGroupRuleVariablesPortSetArgs(
+ *                 key="HTTP_PORTS",
+ *                 port_set=aws.networkfirewall.RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs(
+ *                     definitions=[
+ *                         "443",
+ *                         "80",
+ *                     ],
+ *                 ),
+ *             )],
+ *         ),
+ *         rules_source=aws.networkfirewall.RuleGroupRuleGroupRulesSourceArgs(
+ *             rules_string=(lambda path: open(path).read())("suricata_rules_file"),
+ *         ),
+ *     ),
+ *     tags={
+ *         "Tag1": "Value1",
+ *         "Tag2": "Value2",
+ *     })
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.NetworkFirewall.RuleGroup("example", new Aws.NetworkFirewall.RuleGroupArgs
+ *         {
+ *             Capacity = 100,
+ *             Type = "STATEFUL",
+ *             RuleGroup = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupArgs
+ *             {
+ *                 RuleVariables = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesArgs
+ *                 {
+ *                     IpSets = 
+ *                     {
+ *                         new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesIpSetArgs
+ *                         {
+ *                             Key = "WEBSERVERS_HOSTS",
+ *                             IpSet = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs
+ *                             {
+ *                                 Definitions = 
+ *                                 {
+ *                                     "10.0.0.0/16",
+ *                                     "10.0.1.0/24",
+ *                                     "192.168.0.0/16",
+ *                                 },
+ *                             },
+ *                         },
+ *                         new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesIpSetArgs
+ *                         {
+ *                             Key = "EXTERNAL_HOST",
+ *                             IpSet = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs
+ *                             {
+ *                                 Definitions = 
+ *                                 {
+ *                                     "1.2.3.4/32",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                     PortSets = 
+ *                     {
+ *                         new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesPortSetArgs
+ *                         {
+ *                             Key = "HTTP_PORTS",
+ *                             PortSet = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs
+ *                             {
+ *                                 Definitions = 
+ *                                 {
+ *                                     "443",
+ *                                     "80",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 RulesSource = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceArgs
+ *                 {
+ *                     RulesString = File.ReadAllText("suricata_rules_file"),
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Tag1", "Value1" },
+ *                 { "Tag2", "Value2" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/networkfirewall"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := networkfirewall.NewRuleGroup(ctx, "example", &networkfirewall.RuleGroupArgs{
+ * 			Capacity: pulumi.Int(100),
+ * 			Type:     pulumi.String("STATEFUL"),
+ * 			RuleGroup: &networkfirewall.RuleGroupRuleGroupArgs{
+ * 				RuleVariables: &networkfirewall.RuleGroupRuleGroupRuleVariablesArgs{
+ * 					IpSets: networkfirewall.RuleGroupRuleGroupRuleVariablesIpSetArray{
+ * 						&networkfirewall.RuleGroupRuleGroupRuleVariablesIpSetArgs{
+ * 							Key: pulumi.String("WEBSERVERS_HOSTS"),
+ * 							IpSet: &networkfirewall.RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs{
+ * 								Definitions: pulumi.StringArray{
+ * 									pulumi.String("10.0.0.0/16"),
+ * 									pulumi.String("10.0.1.0/24"),
+ * 									pulumi.String("192.168.0.0/16"),
+ * 								},
+ * 							},
+ * 						},
+ * 						&networkfirewall.RuleGroupRuleGroupRuleVariablesIpSetArgs{
+ * 							Key: pulumi.String("EXTERNAL_HOST"),
+ * 							IpSet: &networkfirewall.RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs{
+ * 								Definitions: pulumi.StringArray{
+ * 									pulumi.String("1.2.3.4/32"),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 					PortSets: networkfirewall.RuleGroupRuleGroupRuleVariablesPortSetArray{
+ * 						&networkfirewall.RuleGroupRuleGroupRuleVariablesPortSetArgs{
+ * 							Key: pulumi.String("HTTP_PORTS"),
+ * 							PortSet: &networkfirewall.RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs{
+ * 								Definitions: pulumi.StringArray{
+ * 									pulumi.String("443"),
+ * 									pulumi.String("80"),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				RulesSource: &networkfirewall.RuleGroupRuleGroupRulesSourceArgs{
+ * 					RulesString: readFileOrPanic("suricata_rules_file"),
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Tag1": pulumi.String("Value1"),
+ * 				"Tag2": pulumi.String("Value2"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Stateless Inspection with a Custom Action
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.networkfirewall.RuleGroup("example", {
+ *     capacity: 100,
+ *     description: "Stateless Rate Limiting Rule",
+ *     ruleGroup: {
+ *         rulesSource: {
+ *             statelessRulesAndCustomActions: {
+ *                 customActions: [{
+ *                     actionDefinition: {
+ *                         publishMetricAction: {
+ *                             dimensions: [{
+ *                                 value: "2",
+ *                             }],
+ *                         },
+ *                     },
+ *                     actionName: "ExampleMetricsAction",
+ *                 }],
+ *                 statelessRules: [{
+ *                     priority: 1,
+ *                     ruleDefinition: {
+ *                         actions: [
+ *                             "aws:pass",
+ *                             "ExampleMetricsAction",
+ *                         ],
+ *                         matchAttributes: {
+ *                             destinations: [{
+ *                                 addressDefinition: "124.1.1.5/32",
+ *                             }],
+ *                             destinationPorts: [{
+ *                                 fromPort: 443,
+ *                                 toPort: 443,
+ *                             }],
+ *                             protocols: [6],
+ *                             sources: [{
+ *                                 addressDefinition: "1.2.3.4/32",
+ *                             }],
+ *                             sourcePorts: [{
+ *                                 fromPort: 443,
+ *                                 toPort: 443,
+ *                             }],
+ *                             tcpFlags: [{
+ *                                 flags: ["SYN"],
+ *                                 masks: [
+ *                                     "SYN",
+ *                                     "ACK",
+ *                                 ],
+ *                             }],
+ *                         },
+ *                     },
+ *                 }],
+ *             },
+ *         },
+ *     },
+ *     tags: {
+ *         Tag1: "Value1",
+ *         Tag2: "Value2",
+ *     },
+ *     type: "STATELESS",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.networkfirewall.RuleGroup("example",
+ *     capacity=100,
+ *     description="Stateless Rate Limiting Rule",
+ *     rule_group=aws.networkfirewall.RuleGroupRuleGroupArgs(
+ *         rules_source=aws.networkfirewall.RuleGroupRuleGroupRulesSourceArgs(
+ *             stateless_rules_and_custom_actions=aws.networkfirewall.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs(
+ *                 custom_action=[{
+ *                     "actionDefinition": {
+ *                         "publishMetricAction": {
+ *                             "dimension": [{
+ *                                 "value": "2",
+ *                             }],
+ *                         },
+ *                     },
+ *                     "actionName": "ExampleMetricsAction",
+ *                 }],
+ *                 stateless_rule=[{
+ *                     "priority": 1,
+ *                     "ruleDefinition": {
+ *                         "actions": [
+ *                             "aws:pass",
+ *                             "ExampleMetricsAction",
+ *                         ],
+ *                         "matchAttributes": {
+ *                             "destination": [{
+ *                                 "addressDefinition": "124.1.1.5/32",
+ *                             }],
+ *                             "destinationPort": [{
+ *                                 "fromPort": 443,
+ *                                 "toPort": 443,
+ *                             }],
+ *                             "protocols": [6],
+ *                             "source": [{
+ *                                 "addressDefinition": "1.2.3.4/32",
+ *                             }],
+ *                             "sourcePort": [{
+ *                                 "fromPort": 443,
+ *                                 "toPort": 443,
+ *                             }],
+ *                             "tcpFlag": [{
+ *                                 "flags": ["SYN"],
+ *                                 "masks": [
+ *                                     "SYN",
+ *                                     "ACK",
+ *                                 ],
+ *                             }],
+ *                         },
+ *                     },
+ *                 }],
+ *             ),
+ *         ),
+ *     ),
+ *     tags={
+ *         "Tag1": "Value1",
+ *         "Tag2": "Value2",
+ *     },
+ *     type="STATELESS")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.NetworkFirewall.RuleGroup("example", new Aws.NetworkFirewall.RuleGroupArgs
+ *         {
+ *             Capacity = 100,
+ *             Description = "Stateless Rate Limiting Rule",
+ *             RuleGroup = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupArgs
+ *             {
+ *                 RulesSource = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceArgs
+ *                 {
+ *                     StatelessRulesAndCustomActions = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs
+ *                     {
+ *                         CustomAction = 
+ *                         {
+ *                             
+ *                             {
+ *                                 { "actionDefinition", 
+ *                                 {
+ *                                     { "publishMetricAction", 
+ *                                     {
+ *                                         { "dimension", 
+ *                                         {
+ *                                             
+ *                                             {
+ *                                                 { "value", "2" },
+ *                                             },
+ *                                         } },
+ *                                     } },
+ *                                 } },
+ *                                 { "actionName", "ExampleMetricsAction" },
+ *                             },
+ *                         },
+ *                         StatelessRule = 
+ *                         {
+ *                             
+ *                             {
+ *                                 { "priority", 1 },
+ *                                 { "ruleDefinition", 
+ *                                 {
+ *                                     { "actions", 
+ *                                     {
+ *                                         "aws:pass",
+ *                                         "ExampleMetricsAction",
+ *                                     } },
+ *                                     { "matchAttributes", 
+ *                                     {
+ *                                         { "destination", 
+ *                                         {
+ *                                             
+ *                                             {
+ *                                                 { "addressDefinition", "124.1.1.5/32" },
+ *                                             },
+ *                                         } },
+ *                                         { "destinationPort", 
+ *                                         {
+ *                                             
+ *                                             {
+ *                                                 { "fromPort", 443 },
+ *                                                 { "toPort", 443 },
+ *                                             },
+ *                                         } },
+ *                                         { "protocols", 
+ *                                         {
+ *                                             6,
+ *                                         } },
+ *                                         { "source", 
+ *                                         {
+ *                                             
+ *                                             {
+ *                                                 { "addressDefinition", "1.2.3.4/32" },
+ *                                             },
+ *                                         } },
+ *                                         { "sourcePort", 
+ *                                         {
+ *                                             
+ *                                             {
+ *                                                 { "fromPort", 443 },
+ *                                                 { "toPort", 443 },
+ *                                             },
+ *                                         } },
+ *                                         { "tcpFlag", 
+ *                                         {
+ *                                             
+ *                                             {
+ *                                                 { "flags", 
+ *                                                 {
+ *                                                     "SYN",
+ *                                                 } },
+ *                                                 { "masks", 
+ *                                                 {
+ *                                                     "SYN",
+ *                                                     "ACK",
+ *                                                 } },
+ *                                             },
+ *                                         } },
+ *                                     } },
+ *                                 } },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Tag1", "Value1" },
+ *                 { "Tag2", "Value2" },
+ *             },
+ *             Type = "STATELESS",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/networkfirewall"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := networkfirewall.NewRuleGroup(ctx, "example", &networkfirewall.RuleGroupArgs{
+ * 			Capacity:    pulumi.Int(100),
+ * 			Description: pulumi.String("Stateless Rate Limiting Rule"),
+ * 			RuleGroup: &networkfirewall.RuleGroupRuleGroupArgs{
+ * 				RulesSource: &networkfirewall.RuleGroupRuleGroupRulesSourceArgs{
+ * 					StatelessRulesAndCustomActions: &networkfirewall.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs{
+ * 						CustomAction: []map[string]interface{}{
+ * 							map[string]interface{}{
+ * 								"actionDefinition": map[string]interface{}{
+ * 									"publishMetricAction": map[string]interface{}{
+ * 										"dimension": []map[string]interface{}{
+ * 											map[string]interface{}{
+ * 												"value": "2",
+ * 											},
+ * 										},
+ * 									},
+ * 								},
+ * 								"actionName": "ExampleMetricsAction",
+ * 							},
+ * 						},
+ * 						StatelessRule: []map[string]interface{}{
+ * 							map[string]interface{}{
+ * 								"priority": 1,
+ * 								"ruleDefinition": map[string]interface{}{
+ * 									"actions": []string{
+ * 										"aws:pass",
+ * 										"ExampleMetricsAction",
+ * 									},
+ * 									"matchAttributes": map[string]interface{}{
+ * 										"destination": []map[string]interface{}{
+ * 											map[string]interface{}{
+ * 												"addressDefinition": "124.1.1.5/32",
+ * 											},
+ * 										},
+ * 										"destinationPort": []map[string]interface{}{
+ * 											map[string]interface{}{
+ * 												"fromPort": 443,
+ * 												"toPort":   443,
+ * 											},
+ * 										},
+ * 										"protocols": []float64{
+ * 											6,
+ * 										},
+ * 										"source": []map[string]interface{}{
+ * 											map[string]interface{}{
+ * 												"addressDefinition": "1.2.3.4/32",
+ * 											},
+ * 										},
+ * 										"sourcePort": []map[string]interface{}{
+ * 											map[string]interface{}{
+ * 												"fromPort": 443,
+ * 												"toPort":   443,
+ * 											},
+ * 										},
+ * 										"tcpFlag": []map[string]interface{}{
+ * 											map[string]interface{}{
+ * 												"flags": []string{
+ * 													"SYN",
+ * 												},
+ * 												"masks": []string{
+ * 													"SYN",
+ * 													"ACK",
+ * 												},
+ * 											},
+ * 										},
+ * 									},
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Tag1": pulumi.String("Value1"),
+ * 				"Tag2": pulumi.String("Value2"),
+ * 			},
+ * 			Type: pulumi.String("STATELESS"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +1202,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:networkfirewall/ruleGroup:RuleGroup example arn:aws:network-firewall:us-west-1:123456789012:stateful-rulegroup/example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:networkfirewall/ruleGroup:RuleGroup")
 public class RuleGroup extends io.pulumi.resources.CustomResource {

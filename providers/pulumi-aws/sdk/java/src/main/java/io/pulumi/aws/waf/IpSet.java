@@ -17,7 +17,101 @@ import javax.annotation.Nullable;
 /**
  * Provides a WAF IPSet Resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const ipset = new aws.waf.IpSet("ipset", {
+ *     ipSetDescriptors: [
+ *         {
+ *             type: "IPV4",
+ *             value: "192.0.7.0/24",
+ *         },
+ *         {
+ *             type: "IPV4",
+ *             value: "10.16.16.0/16",
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * ipset = aws.waf.IpSet("ipset", ip_set_descriptors=[
+ *     aws.waf.IpSetIpSetDescriptorArgs(
+ *         type="IPV4",
+ *         value="192.0.7.0/24",
+ *     ),
+ *     aws.waf.IpSetIpSetDescriptorArgs(
+ *         type="IPV4",
+ *         value="10.16.16.0/16",
+ *     ),
+ * ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var ipset = new Aws.Waf.IpSet("ipset", new Aws.Waf.IpSetArgs
+ *         {
+ *             IpSetDescriptors = 
+ *             {
+ *                 new Aws.Waf.Inputs.IpSetIpSetDescriptorArgs
+ *                 {
+ *                     Type = "IPV4",
+ *                     Value = "192.0.7.0/24",
+ *                 },
+ *                 new Aws.Waf.Inputs.IpSetIpSetDescriptorArgs
+ *                 {
+ *                     Type = "IPV4",
+ *                     Value = "10.16.16.0/16",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/waf"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := waf.NewIpSet(ctx, "ipset", &waf.IpSetArgs{
+ * 			IpSetDescriptors: waf.IpSetIpSetDescriptorArray{
+ * 				&waf.IpSetIpSetDescriptorArgs{
+ * 					Type:  pulumi.String("IPV4"),
+ * 					Value: pulumi.String("192.0.7.0/24"),
+ * 				},
+ * 				&waf.IpSetIpSetDescriptorArgs{
+ * 					Type:  pulumi.String("IPV4"),
+ * 					Value: pulumi.String("10.16.16.0/16"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +121,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:waf/ipSet:IpSet example a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:waf/ipSet:IpSet")
 public class IpSet extends io.pulumi.resources.CustomResource {

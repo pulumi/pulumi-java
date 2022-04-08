@@ -16,8 +16,160 @@ import javax.annotation.Nullable;
 /**
  * Provides a proxy protocol policy, which allows an ELB to carry a client connection information to a backend.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const lb = new aws.elb.LoadBalancer("lb", {
+ *     availabilityZones: ["us-east-1a"],
+ *     listeners: [
+ *         {
+ *             instancePort: 25,
+ *             instanceProtocol: "tcp",
+ *             lbPort: 25,
+ *             lbProtocol: "tcp",
+ *         },
+ *         {
+ *             instancePort: 587,
+ *             instanceProtocol: "tcp",
+ *             lbPort: 587,
+ *             lbProtocol: "tcp",
+ *         },
+ *     ],
+ * });
+ * const smtp = new aws.ec2.ProxyProtocolPolicy("smtp", {
+ *     loadBalancer: lb.name,
+ *     instancePorts: [
+ *         "25",
+ *         "587",
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * lb = aws.elb.LoadBalancer("lb",
+ *     availability_zones=["us-east-1a"],
+ *     listeners=[
+ *         aws.elb.LoadBalancerListenerArgs(
+ *             instance_port=25,
+ *             instance_protocol="tcp",
+ *             lb_port=25,
+ *             lb_protocol="tcp",
+ *         ),
+ *         aws.elb.LoadBalancerListenerArgs(
+ *             instance_port=587,
+ *             instance_protocol="tcp",
+ *             lb_port=587,
+ *             lb_protocol="tcp",
+ *         ),
+ *     ])
+ * smtp = aws.ec2.ProxyProtocolPolicy("smtp",
+ *     load_balancer=lb.name,
+ *     instance_ports=[
+ *         "25",
+ *         "587",
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var lb = new Aws.Elb.LoadBalancer("lb", new Aws.Elb.LoadBalancerArgs
+ *         {
+ *             AvailabilityZones = 
+ *             {
+ *                 "us-east-1a",
+ *             },
+ *             Listeners = 
+ *             {
+ *                 new Aws.Elb.Inputs.LoadBalancerListenerArgs
+ *                 {
+ *                     InstancePort = 25,
+ *                     InstanceProtocol = "tcp",
+ *                     LbPort = 25,
+ *                     LbProtocol = "tcp",
+ *                 },
+ *                 new Aws.Elb.Inputs.LoadBalancerListenerArgs
+ *                 {
+ *                     InstancePort = 587,
+ *                     InstanceProtocol = "tcp",
+ *                     LbPort = 587,
+ *                     LbProtocol = "tcp",
+ *                 },
+ *             },
+ *         });
+ *         var smtp = new Aws.Ec2.ProxyProtocolPolicy("smtp", new Aws.Ec2.ProxyProtocolPolicyArgs
+ *         {
+ *             LoadBalancer = lb.Name,
+ *             InstancePorts = 
+ *             {
+ *                 "25",
+ *                 "587",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		lb, err := elb.NewLoadBalancer(ctx, "lb", &elb.LoadBalancerArgs{
+ * 			AvailabilityZones: pulumi.StringArray{
+ * 				pulumi.String("us-east-1a"),
+ * 			},
+ * 			Listeners: elb.LoadBalancerListenerArray{
+ * 				&elb.LoadBalancerListenerArgs{
+ * 					InstancePort:     pulumi.Int(25),
+ * 					InstanceProtocol: pulumi.String("tcp"),
+ * 					LbPort:           pulumi.Int(25),
+ * 					LbProtocol:       pulumi.String("tcp"),
+ * 				},
+ * 				&elb.LoadBalancerListenerArgs{
+ * 					InstancePort:     pulumi.Int(587),
+ * 					InstanceProtocol: pulumi.String("tcp"),
+ * 					LbPort:           pulumi.Int(587),
+ * 					LbProtocol:       pulumi.String("tcp"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewProxyProtocolPolicy(ctx, "smtp", &ec2.ProxyProtocolPolicyArgs{
+ * 			LoadBalancer: lb.Name,
+ * 			InstancePorts: pulumi.StringArray{
+ * 				pulumi.String("25"),
+ * 				pulumi.String("587"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:ec2/proxyProtocolPolicy:ProxyProtocolPolicy")
 public class ProxyProtocolPolicy extends io.pulumi.resources.CustomResource {

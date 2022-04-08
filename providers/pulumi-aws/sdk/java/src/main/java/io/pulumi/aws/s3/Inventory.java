@@ -20,7 +20,258 @@ import javax.annotation.Nullable;
 /**
  * Provides a S3 bucket [inventory configuration](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html) resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Add inventory configuration
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const testBucket = new aws.s3.Bucket("testBucket", {});
+ * const inventory = new aws.s3.Bucket("inventory", {});
+ * const testInventory = new aws.s3.Inventory("testInventory", {
+ *     bucket: testBucket.id,
+ *     includedObjectVersions: "All",
+ *     schedule: {
+ *         frequency: "Daily",
+ *     },
+ *     destination: {
+ *         bucket: {
+ *             format: "ORC",
+ *             bucketArn: inventory.arn,
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_bucket = aws.s3.Bucket("testBucket")
+ * inventory = aws.s3.Bucket("inventory")
+ * test_inventory = aws.s3.Inventory("testInventory",
+ *     bucket=test_bucket.id,
+ *     included_object_versions="All",
+ *     schedule=aws.s3.InventoryScheduleArgs(
+ *         frequency="Daily",
+ *     ),
+ *     destination=aws.s3.InventoryDestinationArgs(
+ *         bucket=aws.s3.InventoryDestinationBucketArgs(
+ *             format="ORC",
+ *             bucket_arn=inventory.arn,
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testBucket = new Aws.S3.Bucket("testBucket", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var inventory = new Aws.S3.Bucket("inventory", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var testInventory = new Aws.S3.Inventory("testInventory", new Aws.S3.InventoryArgs
+ *         {
+ *             Bucket = testBucket.Id,
+ *             IncludedObjectVersions = "All",
+ *             Schedule = new Aws.S3.Inputs.InventoryScheduleArgs
+ *             {
+ *                 Frequency = "Daily",
+ *             },
+ *             Destination = new Aws.S3.Inputs.InventoryDestinationArgs
+ *             {
+ *                 Bucket = new Aws.S3.Inputs.InventoryDestinationBucketArgs
+ *                 {
+ *                     Format = "ORC",
+ *                     BucketArn = inventory.Arn,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		testBucket, err := s3.NewBucket(ctx, "testBucket", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		inventory, err := s3.NewBucket(ctx, "inventory", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewInventory(ctx, "testInventory", &s3.InventoryArgs{
+ * 			Bucket:                 testBucket.ID(),
+ * 			IncludedObjectVersions: pulumi.String("All"),
+ * 			Schedule: &s3.InventoryScheduleArgs{
+ * 				Frequency: pulumi.String("Daily"),
+ * 			},
+ * 			Destination: &s3.InventoryDestinationArgs{
+ * 				Bucket: &s3.InventoryDestinationBucketArgs{
+ * 					Format:    pulumi.String("ORC"),
+ * 					BucketArn: inventory.Arn,
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Add inventory configuration with S3 bucket object prefix
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.s3.Bucket("test", {});
+ * const inventory = new aws.s3.Bucket("inventory", {});
+ * const test_prefix = new aws.s3.Inventory("test-prefix", {
+ *     bucket: test.id,
+ *     includedObjectVersions: "All",
+ *     schedule: {
+ *         frequency: "Daily",
+ *     },
+ *     filter: {
+ *         prefix: "documents/",
+ *     },
+ *     destination: {
+ *         bucket: {
+ *             format: "ORC",
+ *             bucketArn: inventory.arn,
+ *             prefix: "inventory",
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.s3.Bucket("test")
+ * inventory = aws.s3.Bucket("inventory")
+ * test_prefix = aws.s3.Inventory("test-prefix",
+ *     bucket=test.id,
+ *     included_object_versions="All",
+ *     schedule=aws.s3.InventoryScheduleArgs(
+ *         frequency="Daily",
+ *     ),
+ *     filter=aws.s3.InventoryFilterArgs(
+ *         prefix="documents/",
+ *     ),
+ *     destination=aws.s3.InventoryDestinationArgs(
+ *         bucket=aws.s3.InventoryDestinationBucketArgs(
+ *             format="ORC",
+ *             bucket_arn=inventory.arn,
+ *             prefix="inventory",
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.S3.Bucket("test", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var inventory = new Aws.S3.Bucket("inventory", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var test_prefix = new Aws.S3.Inventory("test-prefix", new Aws.S3.InventoryArgs
+ *         {
+ *             Bucket = test.Id,
+ *             IncludedObjectVersions = "All",
+ *             Schedule = new Aws.S3.Inputs.InventoryScheduleArgs
+ *             {
+ *                 Frequency = "Daily",
+ *             },
+ *             Filter = new Aws.S3.Inputs.InventoryFilterArgs
+ *             {
+ *                 Prefix = "documents/",
+ *             },
+ *             Destination = new Aws.S3.Inputs.InventoryDestinationArgs
+ *             {
+ *                 Bucket = new Aws.S3.Inputs.InventoryDestinationBucketArgs
+ *                 {
+ *                     Format = "ORC",
+ *                     BucketArn = inventory.Arn,
+ *                     Prefix = "inventory",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		test, err := s3.NewBucket(ctx, "test", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		inventory, err := s3.NewBucket(ctx, "inventory", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewInventory(ctx, "test-prefix", &s3.InventoryArgs{
+ * 			Bucket:                 test.ID(),
+ * 			IncludedObjectVersions: pulumi.String("All"),
+ * 			Schedule: &s3.InventoryScheduleArgs{
+ * 				Frequency: pulumi.String("Daily"),
+ * 			},
+ * 			Filter: &s3.InventoryFilterArgs{
+ * 				Prefix: pulumi.String("documents/"),
+ * 			},
+ * 			Destination: &s3.InventoryDestinationArgs{
+ * 				Bucket: &s3.InventoryDestinationBucketArgs{
+ * 					Format:    pulumi.String("ORC"),
+ * 					BucketArn: inventory.Arn,
+ * 					Prefix:    pulumi.String("inventory"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +281,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:s3/inventory:Inventory my-bucket-entire-bucket my-bucket:EntireBucket
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:s3/inventory:Inventory")
 public class Inventory extends io.pulumi.resources.CustomResource {

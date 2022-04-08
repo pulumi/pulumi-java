@@ -18,7 +18,77 @@ import javax.annotation.Nullable;
  * To help you understand the charges for your Spot instances, Amazon EC2 provides a data feed that describes your Spot instance usage and pricing.
  * This data feed is sent to an Amazon S3 bucket that you specify when you subscribe to the data feed.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const defaultBucket = new aws.s3.Bucket("defaultBucket", {});
+ * const defaultSpotDatafeedSubscription = new aws.ec2.SpotDatafeedSubscription("defaultSpotDatafeedSubscription", {
+ *     bucket: defaultBucket.bucket,
+ *     prefix: "my_subdirectory",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default_bucket = aws.s3.Bucket("defaultBucket")
+ * default_spot_datafeed_subscription = aws.ec2.SpotDatafeedSubscription("defaultSpotDatafeedSubscription",
+ *     bucket=default_bucket.bucket,
+ *     prefix="my_subdirectory")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultBucket = new Aws.S3.Bucket("defaultBucket", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var defaultSpotDatafeedSubscription = new Aws.Ec2.SpotDatafeedSubscription("defaultSpotDatafeedSubscription", new Aws.Ec2.SpotDatafeedSubscriptionArgs
+ *         {
+ *             Bucket = defaultBucket.BucketName,
+ *             Prefix = "my_subdirectory",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultBucket, err := s3.NewBucket(ctx, "defaultBucket", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewSpotDatafeedSubscription(ctx, "defaultSpotDatafeedSubscription", &ec2.SpotDatafeedSubscriptionArgs{
+ * 			Bucket: defaultBucket.Bucket,
+ * 			Prefix: pulumi.String("my_subdirectory"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +98,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/spotDatafeedSubscription:SpotDatafeedSubscription mysubscription spot-datafeed-subscription
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/spotDatafeedSubscription:SpotDatafeedSubscription")
 public class SpotDatafeedSubscription extends io.pulumi.resources.CustomResource {

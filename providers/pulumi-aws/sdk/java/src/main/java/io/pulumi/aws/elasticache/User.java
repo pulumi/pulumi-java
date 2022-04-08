@@ -16,6 +16,9 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * ElastiCache users can be imported using the `user_id`, e.g.,
@@ -24,6 +27,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:elasticache/user:User my_user userId1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:elasticache/user:User")
 public class User extends io.pulumi.resources.CustomResource {

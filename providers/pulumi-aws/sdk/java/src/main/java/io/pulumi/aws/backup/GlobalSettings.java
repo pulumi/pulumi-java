@@ -16,7 +16,71 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS Backup Global Settings resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.backup.GlobalSettings("test", {
+ *     globalSettings: {
+ *         isCrossAccountBackupEnabled: "true",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.backup.GlobalSettings("test", global_settings={
+ *     "isCrossAccountBackupEnabled": "true",
+ * })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Backup.GlobalSettings("test", new Aws.Backup.GlobalSettingsArgs
+ *         {
+ *             GlobalSettings = 
+ *             {
+ *                 { "isCrossAccountBackupEnabled", "true" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/backup"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := backup.NewGlobalSettings(ctx, "test", &backup.GlobalSettingsArgs{
+ * 			GlobalSettings: pulumi.StringMap{
+ * 				"isCrossAccountBackupEnabled": pulumi.String("true"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +90,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:backup/globalSettings:GlobalSettings example 123456789012
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:backup/globalSettings:GlobalSettings")
 public class GlobalSettings extends io.pulumi.resources.CustomResource {

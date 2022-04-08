@@ -18,7 +18,166 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** If the `AWSCURRENT` staging label is present on this version during resource deletion, that label cannot be removed and will be skipped to prevent errors when fully deleting the secret. That label will leave this secret version active even after the resource is deleted from this provider unless the secret itself is deleted. Move the `AWSCURRENT` staging label before or after deleting this resource from this provider to fully trigger version deprecation if necessary.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Simple String Value
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.secretsmanager.SecretVersion("example", {
+ *     secretId: aws_secretsmanager_secret.example.id,
+ *     secretString: "example-string-to-protect",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.secretsmanager.SecretVersion("example",
+ *     secret_id=aws_secretsmanager_secret["example"]["id"],
+ *     secret_string="example-string-to-protect")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.SecretsManager.SecretVersion("example", new Aws.SecretsManager.SecretVersionArgs
+ *         {
+ *             SecretId = aws_secretsmanager_secret.Example.Id,
+ *             SecretString = "example-string-to-protect",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/secretsmanager"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := secretsmanager.NewSecretVersion(ctx, "example", &secretsmanager.SecretVersionArgs{
+ * 			SecretId:     pulumi.Any(aws_secretsmanager_secret.Example.Id),
+ * 			SecretString: pulumi.String("example-string-to-protect"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Key-Value Pairs
+ * 
+ * Secrets Manager also accepts key-value pairs in JSON.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const config = new pulumi.Config();
+ * const example = config.getObject("example") || {
+ *     key1: "value1",
+ *     key2: "value2",
+ * };
+ * const exampleSecretVersion = new aws.secretsmanager.SecretVersion("exampleSecretVersion", {
+ *     secretId: aws_secretsmanager_secret.example.id,
+ *     secretString: JSON.stringify(example),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import json
+ * import pulumi_aws as aws
+ * 
+ * config = pulumi.Config()
+ * example = config.get_object("example")
+ * if example is None:
+ *     example = {
+ *         "key1": "value1",
+ *         "key2": "value2",
+ *     }
+ * example_secret_version = aws.secretsmanager.SecretVersion("exampleSecretVersion",
+ *     secret_id=aws_secretsmanager_secret["example"]["id"],
+ *     secret_string=json.dumps(example))
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using System.Text.Json;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var example = config.GetObject<dynamic>("example") ?? 
+ *         {
+ *             { "key1", "value1" },
+ *             { "key2", "value2" },
+ *         };
+ *         var exampleSecretVersion = new Aws.SecretsManager.SecretVersion("exampleSecretVersion", new Aws.SecretsManager.SecretVersionArgs
+ *         {
+ *             SecretId = aws_secretsmanager_secret.Example.Id,
+ *             SecretString = JsonSerializer.Serialize(example),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"encoding/json"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/secretsmanager"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		cfg := config.New(ctx, "")
+ * 		example := map[string]interface{}{
+ * 			"key1": "value1",
+ * 			"key2": "value2",
+ * 		}
+ * 		if param := cfg.GetBool("example"); param != nil {
+ * 			example = param
+ * 		}
+ * 		tmpJSON0, err := json.Marshal(example)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		json0 := string(tmpJSON0)
+ * 		_, err := secretsmanager.NewSecretVersion(ctx, "exampleSecretVersion", &secretsmanager.SecretVersionArgs{
+ * 			SecretId:     pulumi.Any(aws_secretsmanager_secret.Example.Id),
+ * 			SecretString: pulumi.String(json0),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +187,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:secretsmanager/secretVersion:SecretVersion example 'arn:aws:secretsmanager:us-east-1:123456789012:secret:example-123456|xxxxx-xxxxxxx-xxxxxxx-xxxxx'
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:secretsmanager/secretVersion:SecretVersion")
 public class SecretVersion extends io.pulumi.resources.CustomResource {

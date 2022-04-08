@@ -17,7 +17,96 @@ import javax.annotation.Nullable;
 /**
  * Provides an AppConfig Deployment resource for an `aws.appconfig.Application` resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.appconfig.Deployment("example", {
+ *     applicationId: aws_appconfig_application.example.id,
+ *     configurationProfileId: aws_appconfig_configuration_profile.example.configuration_profile_id,
+ *     configurationVersion: aws_appconfig_hosted_configuration_version.example.version_number,
+ *     deploymentStrategyId: aws_appconfig_deployment_strategy.example.id,
+ *     description: "My example deployment",
+ *     environmentId: aws_appconfig_environment.example.environment_id,
+ *     tags: {
+ *         Type: "AppConfig Deployment",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.appconfig.Deployment("example",
+ *     application_id=aws_appconfig_application["example"]["id"],
+ *     configuration_profile_id=aws_appconfig_configuration_profile["example"]["configuration_profile_id"],
+ *     configuration_version=aws_appconfig_hosted_configuration_version["example"]["version_number"],
+ *     deployment_strategy_id=aws_appconfig_deployment_strategy["example"]["id"],
+ *     description="My example deployment",
+ *     environment_id=aws_appconfig_environment["example"]["environment_id"],
+ *     tags={
+ *         "Type": "AppConfig Deployment",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.AppConfig.Deployment("example", new Aws.AppConfig.DeploymentArgs
+ *         {
+ *             ApplicationId = aws_appconfig_application.Example.Id,
+ *             ConfigurationProfileId = aws_appconfig_configuration_profile.Example.Configuration_profile_id,
+ *             ConfigurationVersion = aws_appconfig_hosted_configuration_version.Example.Version_number,
+ *             DeploymentStrategyId = aws_appconfig_deployment_strategy.Example.Id,
+ *             Description = "My example deployment",
+ *             EnvironmentId = aws_appconfig_environment.Example.Environment_id,
+ *             Tags = 
+ *             {
+ *                 { "Type", "AppConfig Deployment" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appconfig"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appconfig.NewDeployment(ctx, "example", &appconfig.DeploymentArgs{
+ * 			ApplicationId:          pulumi.Any(aws_appconfig_application.Example.Id),
+ * 			ConfigurationProfileId: pulumi.Any(aws_appconfig_configuration_profile.Example.Configuration_profile_id),
+ * 			ConfigurationVersion:   pulumi.Any(aws_appconfig_hosted_configuration_version.Example.Version_number),
+ * 			DeploymentStrategyId:   pulumi.Any(aws_appconfig_deployment_strategy.Example.Id),
+ * 			Description:            pulumi.String("My example deployment"),
+ * 			EnvironmentId:          pulumi.Any(aws_appconfig_environment.Example.Environment_id),
+ * 			Tags: pulumi.StringMap{
+ * 				"Type": pulumi.String("AppConfig Deployment"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +116,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appconfig/deployment:Deployment example 71abcde/11xxxxx/1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:appconfig/deployment:Deployment")
 public class Deployment extends io.pulumi.resources.CustomResource {

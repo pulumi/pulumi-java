@@ -21,8 +21,67 @@ import javax.annotation.Nullable;
 /**
  * Provides an OpsWorks Ganglia layer resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const monitor = new aws.opsworks.GangliaLayer("monitor", {
+ *     stackId: aws_opsworks_stack.main.id,
+ *     password: "foobarbaz",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * monitor = aws.opsworks.GangliaLayer("monitor",
+ *     stack_id=aws_opsworks_stack["main"]["id"],
+ *     password="foobarbaz")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var monitor = new Aws.OpsWorks.GangliaLayer("monitor", new Aws.OpsWorks.GangliaLayerArgs
+ *         {
+ *             StackId = aws_opsworks_stack.Main.Id,
+ *             Password = "foobarbaz",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/opsworks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := opsworks.NewGangliaLayer(ctx, "monitor", &opsworks.GangliaLayerArgs{
+ * 			StackId:  pulumi.Any(aws_opsworks_stack.Main.Id),
+ * 			Password: pulumi.String("foobarbaz"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:opsworks/gangliaLayer:GangliaLayer")
 public class GangliaLayer extends io.pulumi.resources.CustomResource {

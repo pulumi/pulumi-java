@@ -15,7 +15,112 @@ import javax.annotation.Nullable;
 /**
  * Provides an IoT policy.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const pubsub = new aws.iot.Policy("pubsub", {policy: JSON.stringify({
+ *     Version: "2012-10-17",
+ *     Statement: [{
+ *         Action: ["iot:*"],
+ *         Effect: "Allow",
+ *         Resource: "*",
+ *     }],
+ * })});
+ * ```
+ * ```python
+ * import pulumi
+ * import json
+ * import pulumi_aws as aws
+ * 
+ * pubsub = aws.iot.Policy("pubsub", policy=json.dumps({
+ *     "Version": "2012-10-17",
+ *     "Statement": [{
+ *         "Action": ["iot:*"],
+ *         "Effect": "Allow",
+ *         "Resource": "*",
+ *     }],
+ * }))
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using System.Text.Json;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var pubsub = new Aws.Iot.Policy("pubsub", new Aws.Iot.PolicyArgs
+ *         {
+ *             Policy = JsonSerializer.Serialize(new Dictionary<string, object?>
+ *             {
+ *                 { "Version", "2012-10-17" },
+ *                 { "Statement", new[]
+ *                     {
+ *                         new Dictionary<string, object?>
+ *                         {
+ *                             { "Action", new[]
+ *                                 {
+ *                                     "iot:*",
+ *                                 }
+ *                              },
+ *                             { "Effect", "Allow" },
+ *                             { "Resource", "*" },
+ *                         },
+ *                     }
+ *                  },
+ *             }),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"encoding/json"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iot"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+ * 			"Version": "2012-10-17",
+ * 			"Statement": []map[string]interface{}{
+ * 				map[string]interface{}{
+ * 					"Action": []string{
+ * 						"iot:*",
+ * 					},
+ * 					"Effect":   "Allow",
+ * 					"Resource": "*",
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		json0 := string(tmpJSON0)
+ * 		_, err := iot.NewPolicy(ctx, "pubsub", &iot.PolicyArgs{
+ * 			Policy: pulumi.String(json0),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +130,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:iot/policy:Policy pubsub PubSubToAnyTopic
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:iot/policy:Policy")
 public class Policy extends io.pulumi.resources.CustomResource {

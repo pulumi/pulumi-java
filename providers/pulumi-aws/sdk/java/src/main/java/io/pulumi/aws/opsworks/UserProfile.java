@@ -16,8 +16,67 @@ import javax.annotation.Nullable;
 /**
  * Provides an OpsWorks User Profile resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const myProfile = new aws.opsworks.UserProfile("myProfile", {
+ *     userArn: aws_iam_user.user.arn,
+ *     sshUsername: "my_user",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * my_profile = aws.opsworks.UserProfile("myProfile",
+ *     user_arn=aws_iam_user["user"]["arn"],
+ *     ssh_username="my_user")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myProfile = new Aws.OpsWorks.UserProfile("myProfile", new Aws.OpsWorks.UserProfileArgs
+ *         {
+ *             UserArn = aws_iam_user.User.Arn,
+ *             SshUsername = "my_user",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/opsworks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := opsworks.NewUserProfile(ctx, "myProfile", &opsworks.UserProfileArgs{
+ * 			UserArn:     pulumi.Any(aws_iam_user.User.Arn),
+ * 			SshUsername: pulumi.String("my_user"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:opsworks/userProfile:UserProfile")
 public class UserProfile extends io.pulumi.resources.CustomResource {

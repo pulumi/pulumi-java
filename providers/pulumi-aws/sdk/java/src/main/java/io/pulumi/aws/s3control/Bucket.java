@@ -19,7 +19,67 @@ import javax.annotation.Nullable;
  * 
  * > This functionality is for managing [S3 on Outposts](https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html). To manage S3 Buckets in an AWS Partition, see the `aws.s3.Bucket` resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.s3control.Bucket("example", {
+ *     bucket: "example",
+ *     outpostId: data.aws_outposts_outpost.example.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.s3control.Bucket("example",
+ *     bucket="example",
+ *     outpost_id=data["aws_outposts_outpost"]["example"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.S3Control.Bucket("example", new Aws.S3Control.BucketArgs
+ *         {
+ *             Bucket = "example",
+ *             OutpostId = data.Aws_outposts_outpost.Example.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3control"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := s3control.NewBucket(ctx, "example", &s3control.BucketArgs{
+ * 			Bucket:    pulumi.String("example"),
+ * 			OutpostId: pulumi.Any(data.Aws_outposts_outpost.Example.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +89,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:s3control/bucket:Bucket example arn:aws:s3-outposts:us-east-1:123456789012:outpost/op-12345678/bucket/example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:s3control/bucket:Bucket")
 public class Bucket extends io.pulumi.resources.CustomResource {

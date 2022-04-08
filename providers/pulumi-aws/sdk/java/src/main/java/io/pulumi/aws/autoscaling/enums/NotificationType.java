@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * See https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_NotificationConfiguration.html
-     * 
      */
     @EnumType
     public enum NotificationType {

@@ -15,7 +15,162 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to accept a pending GuardDuty invite on creation, ensure the detector has the correct primary account on read, and disassociate with the primary account upon removal.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const primary = new aws.Provider("primary", {});
+ * const member = new aws.Provider("member", {});
+ * const primaryDetector = new aws.guardduty.Detector("primaryDetector", {}, {
+ *     provider: aws.primary,
+ * });
+ * const memberDetector = new aws.guardduty.Detector("memberDetector", {}, {
+ *     provider: aws.member,
+ * });
+ * const memberMember = new aws.guardduty.Member("memberMember", {
+ *     accountId: memberDetector.accountId,
+ *     detectorId: primaryDetector.id,
+ *     email: "required@example.com",
+ *     invite: true,
+ * }, {
+ *     provider: aws.primary,
+ * });
+ * const memberInviteAccepter = new aws.guardduty.InviteAccepter("memberInviteAccepter", {
+ *     detectorId: memberDetector.id,
+ *     masterAccountId: primaryDetector.accountId,
+ * }, {
+ *     provider: aws.member,
+ *     dependsOn: [memberMember],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * import pulumi_pulumi as pulumi
+ * 
+ * primary = pulumi.providers.Aws("primary")
+ * member = pulumi.providers.Aws("member")
+ * primary_detector = aws.guardduty.Detector("primaryDetector", opts=pulumi.ResourceOptions(provider=aws["primary"]))
+ * member_detector = aws.guardduty.Detector("memberDetector", opts=pulumi.ResourceOptions(provider=aws["member"]))
+ * member_member = aws.guardduty.Member("memberMember",
+ *     account_id=member_detector.account_id,
+ *     detector_id=primary_detector.id,
+ *     email="required@example.com",
+ *     invite=True,
+ *     opts=pulumi.ResourceOptions(provider=aws["primary"]))
+ * member_invite_accepter = aws.guardduty.InviteAccepter("memberInviteAccepter",
+ *     detector_id=member_detector.id,
+ *     master_account_id=primary_detector.account_id,
+ *     opts=pulumi.ResourceOptions(provider=aws["member"],
+ *         depends_on=[member_member]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Aws.Provider("primary", new Aws.ProviderArgs
+ *         {
+ *         });
+ *         var member = new Aws.Provider("member", new Aws.ProviderArgs
+ *         {
+ *         });
+ *         var primaryDetector = new Aws.GuardDuty.Detector("primaryDetector", new Aws.GuardDuty.DetectorArgs
+ *         {
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Primary,
+ *         });
+ *         var memberDetector = new Aws.GuardDuty.Detector("memberDetector", new Aws.GuardDuty.DetectorArgs
+ *         {
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Member,
+ *         });
+ *         var memberMember = new Aws.GuardDuty.Member("memberMember", new Aws.GuardDuty.MemberArgs
+ *         {
+ *             AccountId = memberDetector.AccountId,
+ *             DetectorId = primaryDetector.Id,
+ *             Email = "required@example.com",
+ *             Invite = true,
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Primary,
+ *         });
+ *         var memberInviteAccepter = new Aws.GuardDuty.InviteAccepter("memberInviteAccepter", new Aws.GuardDuty.InviteAccepterArgs
+ *         {
+ *             DetectorId = memberDetector.Id,
+ *             MasterAccountId = primaryDetector.AccountId,
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Member,
+ *             DependsOn = 
+ *             {
+ *                 memberMember,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/guardduty"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/providers"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := providers.Newaws(ctx, "primary", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = providers.Newaws(ctx, "member", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		primaryDetector, err := guardduty.NewDetector(ctx, "primaryDetector", nil, pulumi.Provider(aws.Primary))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		memberDetector, err := guardduty.NewDetector(ctx, "memberDetector", nil, pulumi.Provider(aws.Member))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		memberMember, err := guardduty.NewMember(ctx, "memberMember", &guardduty.MemberArgs{
+ * 			AccountId:  memberDetector.AccountId,
+ * 			DetectorId: primaryDetector.ID(),
+ * 			Email:      pulumi.String("required@example.com"),
+ * 			Invite:     pulumi.Bool(true),
+ * 		}, pulumi.Provider(aws.Primary))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = guardduty.NewInviteAccepter(ctx, "memberInviteAccepter", &guardduty.InviteAccepterArgs{
+ * 			DetectorId:      memberDetector.ID(),
+ * 			MasterAccountId: primaryDetector.AccountId,
+ * 		}, pulumi.Provider(aws.Member), pulumi.DependsOn([]pulumi.Resource{
+ * 			memberMember,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +180,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:guardduty/inviteAccepter:InviteAccepter member 00b00fd5aecc0ab60a708659477e9617
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:guardduty/inviteAccepter:InviteAccepter")
 public class InviteAccepter extends io.pulumi.resources.CustomResource {

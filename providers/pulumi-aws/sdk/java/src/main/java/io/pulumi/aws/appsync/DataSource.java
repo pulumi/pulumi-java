@@ -20,7 +20,260 @@ import javax.annotation.Nullable;
 /**
  * Provides an AppSync DataSource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleTable = new aws.dynamodb.Table("exampleTable", {
+ *     readCapacity: 1,
+ *     writeCapacity: 1,
+ *     hashKey: "UserId",
+ *     attributes: [{
+ *         name: "UserId",
+ *         type: "S",
+ *     }],
+ * });
+ * const exampleRole = new aws.iam.Role("exampleRole", {assumeRolePolicy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "appsync.amazonaws.com"
+ *       },
+ *       "Effect": "Allow"
+ *     }
+ *   ]
+ * }
+ * `});
+ * const exampleRolePolicy = new aws.iam.RolePolicy("exampleRolePolicy", {
+ *     role: exampleRole.id,
+ *     policy: pulumi.interpolate`{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": [
+ *         "dynamodb:*"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": [
+ *         "${exampleTable.arn}"
+ *       ]
+ *     }
+ *   ]
+ * }
+ * `,
+ * });
+ * const exampleGraphQLApi = new aws.appsync.GraphQLApi("exampleGraphQLApi", {authenticationType: "API_KEY"});
+ * const exampleDataSource = new aws.appsync.DataSource("exampleDataSource", {
+ *     apiId: exampleGraphQLApi.id,
+ *     name: "tf_appsync_example",
+ *     serviceRoleArn: exampleRole.arn,
+ *     type: "AMAZON_DYNAMODB",
+ *     dynamodbConfig: {
+ *         tableName: exampleTable.name,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_table = aws.dynamodb.Table("exampleTable",
+ *     read_capacity=1,
+ *     write_capacity=1,
+ *     hash_key="UserId",
+ *     attributes=[aws.dynamodb.TableAttributeArgs(
+ *         name="UserId",
+ *         type="S",
+ *     )])
+ * example_role = aws.iam.Role("exampleRole", assume_role_policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "appsync.amazonaws.com"
+ *       },
+ *       "Effect": "Allow"
+ *     }
+ *   ]
+ * }
+ * """)
+ * example_role_policy = aws.iam.RolePolicy("exampleRolePolicy",
+ *     role=example_role.id,
+ *     policy=example_table.arn.apply(lambda arn: f"""{{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {{
+ *       "Action": [
+ *         "dynamodb:*"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": [
+ *         "{arn}"
+ *       ]
+ *     }}
+ *   ]
+ * }}
+ * """))
+ * example_graph_ql_api = aws.appsync.GraphQLApi("exampleGraphQLApi", authentication_type="API_KEY")
+ * example_data_source = aws.appsync.DataSource("exampleDataSource",
+ *     api_id=example_graph_ql_api.id,
+ *     name="tf_appsync_example",
+ *     service_role_arn=example_role.arn,
+ *     type="AMAZON_DYNAMODB",
+ *     dynamodb_config=aws.appsync.DataSourceDynamodbConfigArgs(
+ *         table_name=example_table.name,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleTable = new Aws.DynamoDB.Table("exampleTable", new Aws.DynamoDB.TableArgs
+ *         {
+ *             ReadCapacity = 1,
+ *             WriteCapacity = 1,
+ *             HashKey = "UserId",
+ *             Attributes = 
+ *             {
+ *                 new Aws.DynamoDB.Inputs.TableAttributeArgs
+ *                 {
+ *                     Name = "UserId",
+ *                     Type = "S",
+ *                 },
+ *             },
+ *         });
+ *         var exampleRole = new Aws.Iam.Role("exampleRole", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Action"": ""sts:AssumeRole"",
+ *       ""Principal"": {
+ *         ""Service"": ""appsync.amazonaws.com""
+ *       },
+ *       ""Effect"": ""Allow""
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var exampleRolePolicy = new Aws.Iam.RolePolicy("exampleRolePolicy", new Aws.Iam.RolePolicyArgs
+ *         {
+ *             Role = exampleRole.Id,
+ *             Policy = exampleTable.Arn.Apply(arn => @$"{{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {{
+ *       ""Action"": [
+ *         ""dynamodb:*""
+ *       ],
+ *       ""Effect"": ""Allow"",
+ *       ""Resource"": [
+ *         ""{arn}""
+ *       ]
+ *     }}
+ *   ]
+ * }}
+ * "),
+ *         });
+ *         var exampleGraphQLApi = new Aws.AppSync.GraphQLApi("exampleGraphQLApi", new Aws.AppSync.GraphQLApiArgs
+ *         {
+ *             AuthenticationType = "API_KEY",
+ *         });
+ *         var exampleDataSource = new Aws.AppSync.DataSource("exampleDataSource", new Aws.AppSync.DataSourceArgs
+ *         {
+ *             ApiId = exampleGraphQLApi.Id,
+ *             Name = "tf_appsync_example",
+ *             ServiceRoleArn = exampleRole.Arn,
+ *             Type = "AMAZON_DYNAMODB",
+ *             DynamodbConfig = new Aws.AppSync.Inputs.DataSourceDynamodbConfigArgs
+ *             {
+ *                 TableName = exampleTable.Name,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appsync"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/dynamodb"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleTable, err := dynamodb.NewTable(ctx, "exampleTable", &dynamodb.TableArgs{
+ * 			ReadCapacity:  pulumi.Int(1),
+ * 			WriteCapacity: pulumi.Int(1),
+ * 			HashKey:       pulumi.String("UserId"),
+ * 			Attributes: dynamodb.TableAttributeArray{
+ * 				&dynamodb.TableAttributeArgs{
+ * 					Name: pulumi.String("UserId"),
+ * 					Type: pulumi.String("S"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleRole, err := iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"appsync.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicy(ctx, "exampleRolePolicy", &iam.RolePolicyArgs{
+ * 			Role: exampleRole.ID(),
+ * 			Policy: exampleTable.Arn.ApplyT(func(arn string) (string, error) {
+ * 				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"dynamodb:*\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": [\n", "        \"", arn, "\"\n", "      ]\n", "    }\n", "  ]\n", "}\n"), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleGraphQLApi, err := appsync.NewGraphQLApi(ctx, "exampleGraphQLApi", &appsync.GraphQLApiArgs{
+ * 			AuthenticationType: pulumi.String("API_KEY"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = appsync.NewDataSource(ctx, "exampleDataSource", &appsync.DataSourceArgs{
+ * 			ApiId:          exampleGraphQLApi.ID(),
+ * 			Name:           pulumi.String("tf_appsync_example"),
+ * 			ServiceRoleArn: exampleRole.Arn,
+ * 			Type:           pulumi.String("AMAZON_DYNAMODB"),
+ * 			DynamodbConfig: &appsync.DataSourceDynamodbConfigArgs{
+ * 				TableName: exampleTable.Name,
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +283,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appsync/dataSource:DataSource example abcdef123456-example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:appsync/dataSource:DataSource")
 public class DataSource extends io.pulumi.resources.CustomResource {

@@ -16,7 +16,67 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to create a Service Catalog Portfolio.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const portfolio = new aws.servicecatalog.Portfolio("portfolio", {
+ *     description: "List of my organizations apps",
+ *     providerName: "Brett",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * portfolio = aws.servicecatalog.Portfolio("portfolio",
+ *     description="List of my organizations apps",
+ *     provider_name="Brett")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var portfolio = new Aws.ServiceCatalog.Portfolio("portfolio", new Aws.ServiceCatalog.PortfolioArgs
+ *         {
+ *             Description = "List of my organizations apps",
+ *             ProviderName = "Brett",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/servicecatalog"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicecatalog.NewPortfolio(ctx, "portfolio", &servicecatalog.PortfolioArgs{
+ * 			Description:  pulumi.String("List of my organizations apps"),
+ * 			ProviderName: pulumi.String("Brett"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +86,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:servicecatalog/portfolio:Portfolio testfolio port-12344321
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:servicecatalog/portfolio:Portfolio")
 public class Portfolio extends io.pulumi.resources.CustomResource {

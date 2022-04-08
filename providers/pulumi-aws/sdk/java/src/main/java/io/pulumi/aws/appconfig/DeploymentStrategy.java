@@ -18,7 +18,96 @@ import javax.annotation.Nullable;
 /**
  * Provides an AppConfig Deployment Strategy resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.appconfig.DeploymentStrategy("example", {
+ *     deploymentDurationInMinutes: 3,
+ *     description: "Example Deployment Strategy",
+ *     finalBakeTimeInMinutes: 4,
+ *     growthFactor: 10,
+ *     growthType: "LINEAR",
+ *     replicateTo: "NONE",
+ *     tags: {
+ *         Type: "AppConfig Deployment Strategy",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.appconfig.DeploymentStrategy("example",
+ *     deployment_duration_in_minutes=3,
+ *     description="Example Deployment Strategy",
+ *     final_bake_time_in_minutes=4,
+ *     growth_factor=10,
+ *     growth_type="LINEAR",
+ *     replicate_to="NONE",
+ *     tags={
+ *         "Type": "AppConfig Deployment Strategy",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.AppConfig.DeploymentStrategy("example", new Aws.AppConfig.DeploymentStrategyArgs
+ *         {
+ *             DeploymentDurationInMinutes = 3,
+ *             Description = "Example Deployment Strategy",
+ *             FinalBakeTimeInMinutes = 4,
+ *             GrowthFactor = 10,
+ *             GrowthType = "LINEAR",
+ *             ReplicateTo = "NONE",
+ *             Tags = 
+ *             {
+ *                 { "Type", "AppConfig Deployment Strategy" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appconfig"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appconfig.NewDeploymentStrategy(ctx, "example", &appconfig.DeploymentStrategyArgs{
+ * 			DeploymentDurationInMinutes: pulumi.Int(3),
+ * 			Description:                 pulumi.String("Example Deployment Strategy"),
+ * 			FinalBakeTimeInMinutes:      pulumi.Int(4),
+ * 			GrowthFactor:                pulumi.Float64(10),
+ * 			GrowthType:                  pulumi.String("LINEAR"),
+ * 			ReplicateTo:                 pulumi.String("NONE"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Type": pulumi.String("AppConfig Deployment Strategy"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +117,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appconfig/deploymentStrategy:DeploymentStrategy example 11xxxxx
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:appconfig/deploymentStrategy:DeploymentStrategy")
 public class DeploymentStrategy extends io.pulumi.resources.CustomResource {

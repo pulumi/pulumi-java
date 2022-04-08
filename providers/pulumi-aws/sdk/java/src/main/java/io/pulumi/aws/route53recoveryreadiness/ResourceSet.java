@@ -18,7 +18,85 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS Route 53 Recovery Readiness Resource Set.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.route53recoveryreadiness.ResourceSet("example", {
+ *     resourceSetName: my_cw_alarm_set,
+ *     resourceSetType: "AWS::CloudWatch::Alarm",
+ *     resources: [{
+ *         resourceArn: aws_cloudwatch_metric_alarm.example.arn,
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.route53recoveryreadiness.ResourceSet("example",
+ *     resource_set_name=my_cw_alarm_set,
+ *     resource_set_type="AWS::CloudWatch::Alarm",
+ *     resources=[aws.route53recoveryreadiness.ResourceSetResourceArgs(
+ *         resource_arn=aws_cloudwatch_metric_alarm["example"]["arn"],
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Route53RecoveryReadiness.ResourceSet("example", new Aws.Route53RecoveryReadiness.ResourceSetArgs
+ *         {
+ *             ResourceSetName = my_cw_alarm_set,
+ *             ResourceSetType = "AWS::CloudWatch::Alarm",
+ *             Resources = 
+ *             {
+ *                 new Aws.Route53RecoveryReadiness.Inputs.ResourceSetResourceArgs
+ *                 {
+ *                     ResourceArn = aws_cloudwatch_metric_alarm.Example.Arn,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53recoveryreadiness"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := route53recoveryreadiness.NewResourceSet(ctx, "example", &route53recoveryreadiness.ResourceSetArgs{
+ * 			ResourceSetName: pulumi.Any(my_cw_alarm_set),
+ * 			ResourceSetType: pulumi.String("AWS::CloudWatch::Alarm"),
+ * 			Resources: route53recoveryreadiness.ResourceSetResourceArray{
+ * 				&route53recoveryreadiness.ResourceSetResourceArgs{
+ * 					ResourceArn: pulumi.Any(aws_cloudwatch_metric_alarm.Example.Arn),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +106,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:route53recoveryreadiness/resourceSet:ResourceSet my-cw-alarm-set
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:route53recoveryreadiness/resourceSet:ResourceSet")
 public class ResourceSet extends io.pulumi.resources.CustomResource {

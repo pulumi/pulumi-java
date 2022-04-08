@@ -15,7 +15,156 @@ import javax.annotation.Nullable;
 /**
  * Manages a SES Identity Policy. More information about SES Sending Authorization Policies can be found in the [SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization-policies.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleDomainIdentity = new aws.ses.DomainIdentity("exampleDomainIdentity", {domain: "example.com"});
+ * const examplePolicyDocument = aws.iam.getPolicyDocumentOutput({
+ *     statements: [{
+ *         actions: [
+ *             "SES:SendEmail",
+ *             "SES:SendRawEmail",
+ *         ],
+ *         resources: [exampleDomainIdentity.arn],
+ *         principals: [{
+ *             identifiers: ["*"],
+ *             type: "AWS",
+ *         }],
+ *     }],
+ * });
+ * const exampleIdentityPolicy = new aws.ses.IdentityPolicy("exampleIdentityPolicy", {
+ *     identity: exampleDomainIdentity.arn,
+ *     policy: examplePolicyDocument.apply(examplePolicyDocument => examplePolicyDocument.json),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_domain_identity = aws.ses.DomainIdentity("exampleDomainIdentity", domain="example.com")
+ * example_policy_document = aws.iam.get_policy_document_output(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+ *     actions=[
+ *         "SES:SendEmail",
+ *         "SES:SendRawEmail",
+ *     ],
+ *     resources=[example_domain_identity.arn],
+ *     principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+ *         identifiers=["*"],
+ *         type="AWS",
+ *     )],
+ * )])
+ * example_identity_policy = aws.ses.IdentityPolicy("exampleIdentityPolicy",
+ *     identity=example_domain_identity.arn,
+ *     policy=example_policy_document.json)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleDomainIdentity = new Aws.Ses.DomainIdentity("exampleDomainIdentity", new Aws.Ses.DomainIdentityArgs
+ *         {
+ *             Domain = "example.com",
+ *         });
+ *         var examplePolicyDocument = Aws.Iam.GetPolicyDocument.Invoke(new Aws.Iam.GetPolicyDocumentInvokeArgs
+ *         {
+ *             Statements = 
+ *             {
+ *                 new Aws.Iam.Inputs.GetPolicyDocumentStatementInputArgs
+ *                 {
+ *                     Actions = 
+ *                     {
+ *                         "SES:SendEmail",
+ *                         "SES:SendRawEmail",
+ *                     },
+ *                     Resources = 
+ *                     {
+ *                         exampleDomainIdentity.Arn,
+ *                     },
+ *                     Principals = 
+ *                     {
+ *                         new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalInputArgs
+ *                         {
+ *                             Identifiers = 
+ *                             {
+ *                                 "*",
+ *                             },
+ *                             Type = "AWS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var exampleIdentityPolicy = new Aws.Ses.IdentityPolicy("exampleIdentityPolicy", new Aws.Ses.IdentityPolicyArgs
+ *         {
+ *             Identity = exampleDomainIdentity.Arn,
+ *             Policy = examplePolicyDocument.Apply(examplePolicyDocument => examplePolicyDocument.Json),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ses"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleDomainIdentity, err := ses.NewDomainIdentity(ctx, "exampleDomainIdentity", &ses.DomainIdentityArgs{
+ * 			Domain: pulumi.String("example.com"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		examplePolicyDocument := iam.GetPolicyDocumentOutput(ctx, iam.GetPolicyDocumentOutputArgs{
+ * 			Statements: iam.GetPolicyDocumentStatementArray{
+ * 				&iam.GetPolicyDocumentStatementArgs{
+ * 					Actions: pulumi.StringArray{
+ * 						pulumi.String("SES:SendEmail"),
+ * 						pulumi.String("SES:SendRawEmail"),
+ * 					},
+ * 					Resources: pulumi.StringArray{
+ * 						exampleDomainIdentity.Arn,
+ * 					},
+ * 					Principals: iam.GetPolicyDocumentStatementPrincipalArray{
+ * 						&iam.GetPolicyDocumentStatementPrincipalArgs{
+ * 							Identifiers: pulumi.StringArray{
+ * 								pulumi.String("*"),
+ * 							},
+ * 							Type: pulumi.String("AWS"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		_, err = ses.NewIdentityPolicy(ctx, "exampleIdentityPolicy", &ses.IdentityPolicyArgs{
+ * 			Identity: exampleDomainIdentity.Arn,
+ * 			Policy: examplePolicyDocument.ApplyT(func(examplePolicyDocument iam.GetPolicyDocumentResult) (string, error) {
+ * 				return examplePolicyDocument.Json, nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +174,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ses/identityPolicy:IdentityPolicy example 'example.com|example'
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ses/identityPolicy:IdentityPolicy")
 public class IdentityPolicy extends io.pulumi.resources.CustomResource {

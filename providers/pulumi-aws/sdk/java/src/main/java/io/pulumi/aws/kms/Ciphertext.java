@@ -19,8 +19,100 @@ import javax.annotation.Nullable;
  * is stable across every apply. For a changing ciphertext value each apply, see
  * the `aws.kms.Ciphertext` data source.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const oauthConfig = new aws.kms.Key("oauthConfig", {
+ *     description: "oauth config",
+ *     isEnabled: true,
+ * });
+ * const oauth = new aws.kms.Ciphertext("oauth", {
+ *     keyId: oauthConfig.keyId,
+ *     plaintext: `{
+ *   "client_id": "e587dbae22222f55da22",
+ *   "client_secret": "8289575d00000ace55e1815ec13673955721b8a5"
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * oauth_config = aws.kms.Key("oauthConfig",
+ *     description="oauth config",
+ *     is_enabled=True)
+ * oauth = aws.kms.Ciphertext("oauth",
+ *     key_id=oauth_config.key_id,
+ *     plaintext="""{
+ *   "client_id": "e587dbae22222f55da22",
+ *   "client_secret": "8289575d00000ace55e1815ec13673955721b8a5"
+ * }
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var oauthConfig = new Aws.Kms.Key("oauthConfig", new Aws.Kms.KeyArgs
+ *         {
+ *             Description = "oauth config",
+ *             IsEnabled = true,
+ *         });
+ *         var oauth = new Aws.Kms.Ciphertext("oauth", new Aws.Kms.CiphertextArgs
+ *         {
+ *             KeyId = oauthConfig.KeyId,
+ *             Plaintext = @"{
+ *   ""client_id"": ""e587dbae22222f55da22"",
+ *   ""client_secret"": ""8289575d00000ace55e1815ec13673955721b8a5""
+ * }
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kms"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		oauthConfig, err := kms.NewKey(ctx, "oauthConfig", &kms.KeyArgs{
+ * 			Description: pulumi.String("oauth config"),
+ * 			IsEnabled:   pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = kms.NewCiphertext(ctx, "oauth", &kms.CiphertextArgs{
+ * 			KeyId:     oauthConfig.KeyId,
+ * 			Plaintext: pulumi.String(fmt.Sprintf("%v%v%v%v", "{\n", "  \"client_id\": \"e587dbae22222f55da22\",\n", "  \"client_secret\": \"8289575d00000ace55e1815ec13673955721b8a5\"\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:kms/ciphertext:Ciphertext")
 public class Ciphertext extends io.pulumi.resources.CustomResource {

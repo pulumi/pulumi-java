@@ -22,7 +22,80 @@ import javax.annotation.Nullable;
  * Manages an Amazon FSx for OpenZFS file system.
  * See the [FSx OpenZFS User Guide](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/what-is-fsx.html) for more information.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.fsx.OpenZfsFileSystem("test", {
+ *     storageCapacity: 64,
+ *     subnetIds: [aws_subnet.test1.id],
+ *     deploymentType: "SINGLE_AZ_1",
+ *     throughputCapacity: 64,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.fsx.OpenZfsFileSystem("test",
+ *     storage_capacity=64,
+ *     subnet_ids=[aws_subnet["test1"]["id"]],
+ *     deployment_type="SINGLE_AZ_1",
+ *     throughput_capacity=64)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Fsx.OpenZfsFileSystem("test", new Aws.Fsx.OpenZfsFileSystemArgs
+ *         {
+ *             StorageCapacity = 64,
+ *             SubnetIds = 
+ *             {
+ *                 aws_subnet.Test1.Id,
+ *             },
+ *             DeploymentType = "SINGLE_AZ_1",
+ *             ThroughputCapacity = 64,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/fsx"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := fsx.NewOpenZfsFileSystem(ctx, "test", &fsx.OpenZfsFileSystemArgs{
+ * 			StorageCapacity: pulumi.Int(64),
+ * 			SubnetIds: pulumi.String{
+ * 				aws_subnet.Test1.Id,
+ * 			},
+ * 			DeploymentType:     pulumi.String("SINGLE_AZ_1"),
+ * 			ThroughputCapacity: pulumi.Int(64),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,18 +107,19 @@ import javax.annotation.Nullable;
  * 
  *  Certain resource arguments, like `security_group_ids`, do not have a FSx API method for reading the information after creation. If the argument is set in the Terraform configuration on an imported resource, Terraform will always show a difference. To workaround this behavior, either omit the argument from the Terraform configuration or use [`ignore_changes`](https://www.terraform.io/docs/configuration/meta-arguments/lifecycle.html#ignore_changes) to hide the difference, e.g., terraform resource "aws_fsx_openzfs_file_system" "example" {
  * 
- * # ... other configuration ...
+ *  # ... other configuration ...
  * 
  *  security_group_ids = [aws_security_group.example.id]
  * 
- * # There is no FSx API for reading security_group_ids
+ *  # There is no FSx API for reading security_group_ids
  * 
  *  lifecycle {
  * 
+ * 
+ * 
  *  ignore_changes = [security_group_ids]
  * 
- *  } }
- * 
+ *  } } 
  */
 @ResourceType(type="aws:fsx/openZfsFileSystem:OpenZfsFileSystem")
 public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {

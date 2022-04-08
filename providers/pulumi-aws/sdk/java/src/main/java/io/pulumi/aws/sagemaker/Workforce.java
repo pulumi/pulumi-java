@@ -18,7 +18,225 @@ import javax.annotation.Nullable;
 /**
  * Provides a Sagemaker Workforce resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Cognito Usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleUserPool = new aws.cognito.UserPool("exampleUserPool", {});
+ * const exampleUserPoolClient = new aws.cognito.UserPoolClient("exampleUserPoolClient", {
+ *     generateSecret: true,
+ *     userPoolId: exampleUserPool.id,
+ * });
+ * const exampleUserPoolDomain = new aws.cognito.UserPoolDomain("exampleUserPoolDomain", {
+ *     domain: "example",
+ *     userPoolId: exampleUserPool.id,
+ * });
+ * const exampleWorkforce = new aws.sagemaker.Workforce("exampleWorkforce", {
+ *     workforceName: "example",
+ *     cognitoConfig: {
+ *         clientId: exampleUserPoolClient.id,
+ *         userPool: exampleUserPoolDomain.userPoolId,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_user_pool = aws.cognito.UserPool("exampleUserPool")
+ * example_user_pool_client = aws.cognito.UserPoolClient("exampleUserPoolClient",
+ *     generate_secret=True,
+ *     user_pool_id=example_user_pool.id)
+ * example_user_pool_domain = aws.cognito.UserPoolDomain("exampleUserPoolDomain",
+ *     domain="example",
+ *     user_pool_id=example_user_pool.id)
+ * example_workforce = aws.sagemaker.Workforce("exampleWorkforce",
+ *     workforce_name="example",
+ *     cognito_config=aws.sagemaker.WorkforceCognitoConfigArgs(
+ *         client_id=example_user_pool_client.id,
+ *         user_pool=example_user_pool_domain.user_pool_id,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleUserPool = new Aws.Cognito.UserPool("exampleUserPool", new Aws.Cognito.UserPoolArgs
+ *         {
+ *         });
+ *         var exampleUserPoolClient = new Aws.Cognito.UserPoolClient("exampleUserPoolClient", new Aws.Cognito.UserPoolClientArgs
+ *         {
+ *             GenerateSecret = true,
+ *             UserPoolId = exampleUserPool.Id,
+ *         });
+ *         var exampleUserPoolDomain = new Aws.Cognito.UserPoolDomain("exampleUserPoolDomain", new Aws.Cognito.UserPoolDomainArgs
+ *         {
+ *             Domain = "example",
+ *             UserPoolId = exampleUserPool.Id,
+ *         });
+ *         var exampleWorkforce = new Aws.Sagemaker.Workforce("exampleWorkforce", new Aws.Sagemaker.WorkforceArgs
+ *         {
+ *             WorkforceName = "example",
+ *             CognitoConfig = new Aws.Sagemaker.Inputs.WorkforceCognitoConfigArgs
+ *             {
+ *                 ClientId = exampleUserPoolClient.Id,
+ *                 UserPool = exampleUserPoolDomain.UserPoolId,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleUserPool, err := cognito.NewUserPool(ctx, "exampleUserPool", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleUserPoolClient, err := cognito.NewUserPoolClient(ctx, "exampleUserPoolClient", &cognito.UserPoolClientArgs{
+ * 			GenerateSecret: pulumi.Bool(true),
+ * 			UserPoolId:     exampleUserPool.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleUserPoolDomain, err := cognito.NewUserPoolDomain(ctx, "exampleUserPoolDomain", &cognito.UserPoolDomainArgs{
+ * 			Domain:     pulumi.String("example"),
+ * 			UserPoolId: exampleUserPool.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = sagemaker.NewWorkforce(ctx, "exampleWorkforce", &sagemaker.WorkforceArgs{
+ * 			WorkforceName: pulumi.String("example"),
+ * 			CognitoConfig: &sagemaker.WorkforceCognitoConfigArgs{
+ * 				ClientId: exampleUserPoolClient.ID(),
+ * 				UserPool: exampleUserPoolDomain.UserPoolId,
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Oidc Usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.sagemaker.Workforce("example", {
+ *     oidcConfig: {
+ *         authorizationEndpoint: "https://example.com",
+ *         clientId: "example",
+ *         clientSecret: "example",
+ *         issuer: "https://example.com",
+ *         jwksUri: "https://example.com",
+ *         logoutEndpoint: "https://example.com",
+ *         tokenEndpoint: "https://example.com",
+ *         userInfoEndpoint: "https://example.com",
+ *     },
+ *     workforceName: "example",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.sagemaker.Workforce("example",
+ *     oidc_config=aws.sagemaker.WorkforceOidcConfigArgs(
+ *         authorization_endpoint="https://example.com",
+ *         client_id="example",
+ *         client_secret="example",
+ *         issuer="https://example.com",
+ *         jwks_uri="https://example.com",
+ *         logout_endpoint="https://example.com",
+ *         token_endpoint="https://example.com",
+ *         user_info_endpoint="https://example.com",
+ *     ),
+ *     workforce_name="example")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Sagemaker.Workforce("example", new Aws.Sagemaker.WorkforceArgs
+ *         {
+ *             OidcConfig = new Aws.Sagemaker.Inputs.WorkforceOidcConfigArgs
+ *             {
+ *                 AuthorizationEndpoint = "https://example.com",
+ *                 ClientId = "example",
+ *                 ClientSecret = "example",
+ *                 Issuer = "https://example.com",
+ *                 JwksUri = "https://example.com",
+ *                 LogoutEndpoint = "https://example.com",
+ *                 TokenEndpoint = "https://example.com",
+ *                 UserInfoEndpoint = "https://example.com",
+ *             },
+ *             WorkforceName = "example",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sagemaker.NewWorkforce(ctx, "example", &sagemaker.WorkforceArgs{
+ * 			OidcConfig: &sagemaker.WorkforceOidcConfigArgs{
+ * 				AuthorizationEndpoint: pulumi.String("https://example.com"),
+ * 				ClientId:              pulumi.String("example"),
+ * 				ClientSecret:          pulumi.String("example"),
+ * 				Issuer:                pulumi.String("https://example.com"),
+ * 				JwksUri:               pulumi.String("https://example.com"),
+ * 				LogoutEndpoint:        pulumi.String("https://example.com"),
+ * 				TokenEndpoint:         pulumi.String("https://example.com"),
+ * 				UserInfoEndpoint:      pulumi.String("https://example.com"),
+ * 			},
+ * 			WorkforceName: pulumi.String("example"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +246,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sagemaker/workforce:Workforce example example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sagemaker/workforce:Workforce")
 public class Workforce extends io.pulumi.resources.CustomResource {

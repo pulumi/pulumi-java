@@ -15,7 +15,186 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to attach an AWS Organizations policy to an organization account, root, or unit.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Organization Account
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const account = new aws.organizations.PolicyAttachment("account", {
+ *     policyId: aws_organizations_policy.example.id,
+ *     targetId: "123456789012",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * account = aws.organizations.PolicyAttachment("account",
+ *     policy_id=aws_organizations_policy["example"]["id"],
+ *     target_id="123456789012")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var account = new Aws.Organizations.PolicyAttachment("account", new Aws.Organizations.PolicyAttachmentArgs
+ *         {
+ *             PolicyId = aws_organizations_policy.Example.Id,
+ *             TargetId = "123456789012",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := organizations.NewPolicyAttachment(ctx, "account", &organizations.PolicyAttachmentArgs{
+ * 			PolicyId: pulumi.Any(aws_organizations_policy.Example.Id),
+ * 			TargetId: pulumi.String("123456789012"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Organization Root
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const root = new aws.organizations.PolicyAttachment("root", {
+ *     policyId: aws_organizations_policy.example.id,
+ *     targetId: aws_organizations_organization.example.roots[0].id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * root = aws.organizations.PolicyAttachment("root",
+ *     policy_id=aws_organizations_policy["example"]["id"],
+ *     target_id=aws_organizations_organization["example"]["roots"][0]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var root = new Aws.Organizations.PolicyAttachment("root", new Aws.Organizations.PolicyAttachmentArgs
+ *         {
+ *             PolicyId = aws_organizations_policy.Example.Id,
+ *             TargetId = aws_organizations_organization.Example.Roots[0].Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := organizations.NewPolicyAttachment(ctx, "root", &organizations.PolicyAttachmentArgs{
+ * 			PolicyId: pulumi.Any(aws_organizations_policy.Example.Id),
+ * 			TargetId: pulumi.Any(aws_organizations_organization.Example.Roots[0].Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Organization Unit
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const unit = new aws.organizations.PolicyAttachment("unit", {
+ *     policyId: aws_organizations_policy.example.id,
+ *     targetId: aws_organizations_organizational_unit.example.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * unit = aws.organizations.PolicyAttachment("unit",
+ *     policy_id=aws_organizations_policy["example"]["id"],
+ *     target_id=aws_organizations_organizational_unit["example"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var unit = new Aws.Organizations.PolicyAttachment("unit", new Aws.Organizations.PolicyAttachmentArgs
+ *         {
+ *             PolicyId = aws_organizations_policy.Example.Id,
+ *             TargetId = aws_organizations_organizational_unit.Example.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := organizations.NewPolicyAttachment(ctx, "unit", &organizations.PolicyAttachmentArgs{
+ * 			PolicyId: pulumi.Any(aws_organizations_policy.Example.Id),
+ * 			TargetId: pulumi.Any(aws_organizations_organizational_unit.Example.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +204,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:organizations/policyAttachment:PolicyAttachment account 123456789012:p-12345678
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:organizations/policyAttachment:PolicyAttachment")
 public class PolicyAttachment extends io.pulumi.resources.CustomResource {

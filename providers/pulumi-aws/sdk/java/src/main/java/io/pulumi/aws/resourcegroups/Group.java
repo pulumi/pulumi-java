@@ -17,7 +17,108 @@ import javax.annotation.Nullable;
 /**
  * Provides a Resource Group.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.resourcegroups.Group("test", {
+ *     resourceQuery: {
+ *         query: `{
+ *   "ResourceTypeFilters": [
+ *     "AWS::EC2::Instance"
+ *   ],
+ *   "TagFilters": [
+ *     {
+ *       "Key": "Stage",
+ *       "Values": ["Test"]
+ *     }
+ *   ]
+ * }
+ * `,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.resourcegroups.Group("test", resource_query=aws.resourcegroups.GroupResourceQueryArgs(
+ *     query="""{
+ *   "ResourceTypeFilters": [
+ *     "AWS::EC2::Instance"
+ *   ],
+ *   "TagFilters": [
+ *     {
+ *       "Key": "Stage",
+ *       "Values": ["Test"]
+ *     }
+ *   ]
+ * }
+ * 
+ * """,
+ * ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.ResourceGroups.Group("test", new Aws.ResourceGroups.GroupArgs
+ *         {
+ *             ResourceQuery = new Aws.ResourceGroups.Inputs.GroupResourceQueryArgs
+ *             {
+ *                 Query = @"{
+ *   ""ResourceTypeFilters"": [
+ *     ""AWS::EC2::Instance""
+ *   ],
+ *   ""TagFilters"": [
+ *     {
+ *       ""Key"": ""Stage"",
+ *       ""Values"": [""Test""]
+ *     }
+ *   ]
+ * }
+ * 
+ * ",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/resourcegroups"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := resourcegroups.NewGroup(ctx, "test", &resourcegroups.GroupArgs{
+ * 			ResourceQuery: &resourcegroups.GroupResourceQueryArgs{
+ * 				Query: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"ResourceTypeFilters\": [\n", "    \"AWS::EC2::Instance\"\n", "  ],\n", "  \"TagFilters\": [\n", "    {\n", "      \"Key\": \"Stage\",\n", "      \"Values\": [\"Test\"]\n", "    }\n", "  ]\n", "}\n", "\n")),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +128,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:resourcegroups/group:Group foo resource-group-name
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:resourcegroups/group:Group")
 public class Group extends io.pulumi.resources.CustomResource {

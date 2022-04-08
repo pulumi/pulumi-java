@@ -17,7 +17,68 @@ import javax.annotation.Nullable;
  * 
  * > **Tip:** A "resource" is either a Service Catalog portfolio or product.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic Usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.servicecatalog.BudgetResourceAssociation("example", {
+ *     budgetName: "budget-pjtvyakdlyo3m",
+ *     resourceId: "prod-dnigbtea24ste",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.servicecatalog.BudgetResourceAssociation("example",
+ *     budget_name="budget-pjtvyakdlyo3m",
+ *     resource_id="prod-dnigbtea24ste")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ServiceCatalog.BudgetResourceAssociation("example", new Aws.ServiceCatalog.BudgetResourceAssociationArgs
+ *         {
+ *             BudgetName = "budget-pjtvyakdlyo3m",
+ *             ResourceId = "prod-dnigbtea24ste",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/servicecatalog"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicecatalog.NewBudgetResourceAssociation(ctx, "example", &servicecatalog.BudgetResourceAssociationArgs{
+ * 			BudgetName: pulumi.String("budget-pjtvyakdlyo3m"),
+ * 			ResourceId: pulumi.String("prod-dnigbtea24ste"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +88,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:servicecatalog/budgetResourceAssociation:BudgetResourceAssociation example budget-pjtvyakdlyo3m:prod-dnigbtea24ste
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:servicecatalog/budgetResourceAssociation:BudgetResourceAssociation")
 public class BudgetResourceAssociation extends io.pulumi.resources.CustomResource {

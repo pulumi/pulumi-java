@@ -15,7 +15,108 @@ import javax.annotation.Nullable;
 /**
  * Manages an AppStream Fleet Stack association.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleFleet = new aws.appstream.Fleet("exampleFleet", {
+ *     imageName: "Amazon-AppStream2-Sample-Image-02-04-2019",
+ *     instanceType: "stream.standard.small",
+ *     computeCapacity: {
+ *         desiredInstances: 1,
+ *     },
+ * });
+ * const exampleStack = new aws.appstream.Stack("exampleStack", {});
+ * const exampleFleetStackAssociation = new aws.appstream.FleetStackAssociation("exampleFleetStackAssociation", {
+ *     fleetName: exampleFleet.name,
+ *     stackName: exampleStack.name,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_fleet = aws.appstream.Fleet("exampleFleet",
+ *     image_name="Amazon-AppStream2-Sample-Image-02-04-2019",
+ *     instance_type="stream.standard.small",
+ *     compute_capacity=aws.appstream.FleetComputeCapacityArgs(
+ *         desired_instances=1,
+ *     ))
+ * example_stack = aws.appstream.Stack("exampleStack")
+ * example_fleet_stack_association = aws.appstream.FleetStackAssociation("exampleFleetStackAssociation",
+ *     fleet_name=example_fleet.name,
+ *     stack_name=example_stack.name)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleFleet = new Aws.AppStream.Fleet("exampleFleet", new Aws.AppStream.FleetArgs
+ *         {
+ *             ImageName = "Amazon-AppStream2-Sample-Image-02-04-2019",
+ *             InstanceType = "stream.standard.small",
+ *             ComputeCapacity = new Aws.AppStream.Inputs.FleetComputeCapacityArgs
+ *             {
+ *                 DesiredInstances = 1,
+ *             },
+ *         });
+ *         var exampleStack = new Aws.AppStream.Stack("exampleStack", new Aws.AppStream.StackArgs
+ *         {
+ *         });
+ *         var exampleFleetStackAssociation = new Aws.AppStream.FleetStackAssociation("exampleFleetStackAssociation", new Aws.AppStream.FleetStackAssociationArgs
+ *         {
+ *             FleetName = exampleFleet.Name,
+ *             StackName = exampleStack.Name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appstream"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleFleet, err := appstream.NewFleet(ctx, "exampleFleet", &appstream.FleetArgs{
+ * 			ImageName:    pulumi.String("Amazon-AppStream2-Sample-Image-02-04-2019"),
+ * 			InstanceType: pulumi.String("stream.standard.small"),
+ * 			ComputeCapacity: &appstream.FleetComputeCapacityArgs{
+ * 				DesiredInstances: pulumi.Int(1),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleStack, err := appstream.NewStack(ctx, "exampleStack", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = appstream.NewFleetStackAssociation(ctx, "exampleFleetStackAssociation", &appstream.FleetStackAssociationArgs{
+ * 			FleetName: exampleFleet.Name,
+ * 			StackName: exampleStack.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +126,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appstream/fleetStackAssociation:FleetStackAssociation example fleetName/stackName
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:appstream/fleetStackAssociation:FleetStackAssociation")
 public class FleetStackAssociation extends io.pulumi.resources.CustomResource {

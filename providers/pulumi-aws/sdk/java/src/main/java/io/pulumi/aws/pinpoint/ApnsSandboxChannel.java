@@ -16,7 +16,92 @@ import javax.annotation.Nullable;
 /**
  * Provides a Pinpoint APNs Sandbox Channel resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * from "fs";
+ * 
+ * const app = new aws.pinpoint.App("app", {});
+ * const apnsSandbox = new aws.pinpoint.ApnsSandboxChannel("apnsSandbox", {
+ *     applicationId: app.applicationId,
+ *     certificate: fs.readFileSync("./certificate.pem"),
+ *     privateKey: fs.readFileSync("./private_key.key"),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * app = aws.pinpoint.App("app")
+ * apns_sandbox = aws.pinpoint.ApnsSandboxChannel("apnsSandbox",
+ *     application_id=app.application_id,
+ *     certificate=(lambda path: open(path).read())("./certificate.pem"),
+ *     private_key=(lambda path: open(path).read())("./private_key.key"))
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var app = new Aws.Pinpoint.App("app", new Aws.Pinpoint.AppArgs
+ *         {
+ *         });
+ *         var apnsSandbox = new Aws.Pinpoint.ApnsSandboxChannel("apnsSandbox", new Aws.Pinpoint.ApnsSandboxChannelArgs
+ *         {
+ *             ApplicationId = app.ApplicationId,
+ *             Certificate = File.ReadAllText("./certificate.pem"),
+ *             PrivateKey = File.ReadAllText("./private_key.key"),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/pinpoint"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		app, err := pinpoint.NewApp(ctx, "app", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = pinpoint.NewApnsSandboxChannel(ctx, "apnsSandbox", &pinpoint.ApnsSandboxChannelArgs{
+ * 			ApplicationId: app.ApplicationId,
+ * 			Certificate:   readFileOrPanic("./certificate.pem"),
+ * 			PrivateKey:    readFileOrPanic("./private_key.key"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +111,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:pinpoint/apnsSandboxChannel:ApnsSandboxChannel apns_sandbox application-id
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:pinpoint/apnsSandboxChannel:ApnsSandboxChannel")
 public class ApnsSandboxChannel extends io.pulumi.resources.CustomResource {

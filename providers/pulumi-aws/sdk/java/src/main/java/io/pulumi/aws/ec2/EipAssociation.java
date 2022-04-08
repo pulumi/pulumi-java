@@ -22,7 +22,115 @@ import javax.annotation.Nullable;
  * > **NOTE:** `aws.ec2.EipAssociation` is useful in scenarios where EIPs are either
  * pre-existing or distributed to customers or users and therefore cannot be changed.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const web = new aws.ec2.Instance("web", {
+ *     ami: "ami-21f78e11",
+ *     availabilityZone: "us-west-2a",
+ *     instanceType: "t2.micro",
+ *     tags: {
+ *         Name: "HelloWorld",
+ *     },
+ * });
+ * const example = new aws.ec2.Eip("example", {vpc: true});
+ * const eipAssoc = new aws.ec2.EipAssociation("eipAssoc", {
+ *     instanceId: web.id,
+ *     allocationId: example.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * web = aws.ec2.Instance("web",
+ *     ami="ami-21f78e11",
+ *     availability_zone="us-west-2a",
+ *     instance_type="t2.micro",
+ *     tags={
+ *         "Name": "HelloWorld",
+ *     })
+ * example = aws.ec2.Eip("example", vpc=True)
+ * eip_assoc = aws.ec2.EipAssociation("eipAssoc",
+ *     instance_id=web.id,
+ *     allocation_id=example.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var web = new Aws.Ec2.Instance("web", new Aws.Ec2.InstanceArgs
+ *         {
+ *             Ami = "ami-21f78e11",
+ *             AvailabilityZone = "us-west-2a",
+ *             InstanceType = "t2.micro",
+ *             Tags = 
+ *             {
+ *                 { "Name", "HelloWorld" },
+ *             },
+ *         });
+ *         var example = new Aws.Ec2.Eip("example", new Aws.Ec2.EipArgs
+ *         {
+ *             Vpc = true,
+ *         });
+ *         var eipAssoc = new Aws.Ec2.EipAssociation("eipAssoc", new Aws.Ec2.EipAssociationArgs
+ *         {
+ *             InstanceId = web.Id,
+ *             AllocationId = example.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		web, err := ec2.NewInstance(ctx, "web", &ec2.InstanceArgs{
+ * 			Ami:              pulumi.String("ami-21f78e11"),
+ * 			AvailabilityZone: pulumi.String("us-west-2a"),
+ * 			InstanceType:     pulumi.String("t2.micro"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("HelloWorld"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		example, err := ec2.NewEip(ctx, "example", &ec2.EipArgs{
+ * 			Vpc: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewEipAssociation(ctx, "eipAssoc", &ec2.EipAssociationArgs{
+ * 			InstanceId:   web.ID(),
+ * 			AllocationId: example.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,6 +140,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/eipAssociation:EipAssociation test eipassoc-ab12c345
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/eipAssociation:EipAssociation")
 public class EipAssociation extends io.pulumi.resources.CustomResource {

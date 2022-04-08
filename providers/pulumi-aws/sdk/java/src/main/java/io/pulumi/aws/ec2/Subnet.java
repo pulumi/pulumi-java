@@ -19,7 +19,162 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** Due to [AWS Lambda improved VPC networking changes that began deploying in September 2019](https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/), subnets associated with Lambda Functions can take up to 45 minutes to successfully delete.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic Usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const main = new aws.ec2.Subnet("main", {
+ *     vpcId: aws_vpc.main.id,
+ *     cidrBlock: "10.0.1.0/24",
+ *     tags: {
+ *         Name: "Main",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * main = aws.ec2.Subnet("main",
+ *     vpc_id=aws_vpc["main"]["id"],
+ *     cidr_block="10.0.1.0/24",
+ *     tags={
+ *         "Name": "Main",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var main = new Aws.Ec2.Subnet("main", new Aws.Ec2.SubnetArgs
+ *         {
+ *             VpcId = aws_vpc.Main.Id,
+ *             CidrBlock = "10.0.1.0/24",
+ *             Tags = 
+ *             {
+ *                 { "Name", "Main" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewSubnet(ctx, "main", &ec2.SubnetArgs{
+ * 			VpcId:     pulumi.Any(aws_vpc.Main.Id),
+ * 			CidrBlock: pulumi.String("10.0.1.0/24"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("Main"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Subnets In Secondary VPC CIDR Blocks
+ * 
+ * When managing subnets in one of a VPC's secondary CIDR blocks created using a `aws.ec2.VpcIpv4CidrBlockAssociation`
+ * resource, it is recommended to reference that resource's `vpc_id` attribute to ensure correct dependency ordering.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const secondaryCidr = new aws.ec2.VpcIpv4CidrBlockAssociation("secondaryCidr", {
+ *     vpcId: aws_vpc.main.id,
+ *     cidrBlock: "172.2.0.0/16",
+ * });
+ * const inSecondaryCidr = new aws.ec2.Subnet("inSecondaryCidr", {
+ *     vpcId: secondaryCidr.vpcId,
+ *     cidrBlock: "172.2.0.0/24",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * secondary_cidr = aws.ec2.VpcIpv4CidrBlockAssociation("secondaryCidr",
+ *     vpc_id=aws_vpc["main"]["id"],
+ *     cidr_block="172.2.0.0/16")
+ * in_secondary_cidr = aws.ec2.Subnet("inSecondaryCidr",
+ *     vpc_id=secondary_cidr.vpc_id,
+ *     cidr_block="172.2.0.0/24")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var secondaryCidr = new Aws.Ec2.VpcIpv4CidrBlockAssociation("secondaryCidr", new Aws.Ec2.VpcIpv4CidrBlockAssociationArgs
+ *         {
+ *             VpcId = aws_vpc.Main.Id,
+ *             CidrBlock = "172.2.0.0/16",
+ *         });
+ *         var inSecondaryCidr = new Aws.Ec2.Subnet("inSecondaryCidr", new Aws.Ec2.SubnetArgs
+ *         {
+ *             VpcId = secondaryCidr.VpcId,
+ *             CidrBlock = "172.2.0.0/24",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		secondaryCidr, err := ec2.NewVpcIpv4CidrBlockAssociation(ctx, "secondaryCidr", &ec2.VpcIpv4CidrBlockAssociationArgs{
+ * 			VpcId:     pulumi.Any(aws_vpc.Main.Id),
+ * 			CidrBlock: pulumi.String("172.2.0.0/16"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewSubnet(ctx, "inSecondaryCidr", &ec2.SubnetArgs{
+ * 			VpcId:     secondaryCidr.VpcId,
+ * 			CidrBlock: pulumi.String("172.2.0.0/24"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +184,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/subnet:Subnet public_subnet subnet-9d4a7b6c
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/subnet:Subnet")
 public class Subnet extends io.pulumi.resources.CustomResource {

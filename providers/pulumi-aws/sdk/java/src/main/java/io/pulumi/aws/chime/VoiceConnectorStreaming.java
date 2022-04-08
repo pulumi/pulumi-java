@@ -19,7 +19,92 @@ import javax.annotation.Nullable;
  * Adds a streaming configuration for the specified Amazon Chime Voice Connector. The streaming configuration specifies whether media streaming is enabled for sending to Amazon Kinesis.
  * It also sets the retention period, in hours, for the Amazon Kinesis data.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const defaultVoiceConnector = new aws.chime.VoiceConnector("defaultVoiceConnector", {requireEncryption: true});
+ * const defaultVoiceConnectorStreaming = new aws.chime.VoiceConnectorStreaming("defaultVoiceConnectorStreaming", {
+ *     disabled: false,
+ *     voiceConnectorId: defaultVoiceConnector.id,
+ *     dataRetention: 7,
+ *     streamingNotificationTargets: ["SQS"],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default_voice_connector = aws.chime.VoiceConnector("defaultVoiceConnector", require_encryption=True)
+ * default_voice_connector_streaming = aws.chime.VoiceConnectorStreaming("defaultVoiceConnectorStreaming",
+ *     disabled=False,
+ *     voice_connector_id=default_voice_connector.id,
+ *     data_retention=7,
+ *     streaming_notification_targets=["SQS"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultVoiceConnector = new Aws.Chime.VoiceConnector("defaultVoiceConnector", new Aws.Chime.VoiceConnectorArgs
+ *         {
+ *             RequireEncryption = true,
+ *         });
+ *         var defaultVoiceConnectorStreaming = new Aws.Chime.VoiceConnectorStreaming("defaultVoiceConnectorStreaming", new Aws.Chime.VoiceConnectorStreamingArgs
+ *         {
+ *             Disabled = false,
+ *             VoiceConnectorId = defaultVoiceConnector.Id,
+ *             DataRetention = 7,
+ *             StreamingNotificationTargets = 
+ *             {
+ *                 "SQS",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/chime"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultVoiceConnector, err := chime.NewVoiceConnector(ctx, "defaultVoiceConnector", &chime.VoiceConnectorArgs{
+ * 			RequireEncryption: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = chime.NewVoiceConnectorStreaming(ctx, "defaultVoiceConnectorStreaming", &chime.VoiceConnectorStreamingArgs{
+ * 			Disabled:         pulumi.Bool(false),
+ * 			VoiceConnectorId: defaultVoiceConnector.ID(),
+ * 			DataRetention:    pulumi.Int(7),
+ * 			StreamingNotificationTargets: pulumi.StringArray{
+ * 				pulumi.String("SQS"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +114,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:chime/voiceConnectorStreaming:VoiceConnectorStreaming default abcdef1ghij2klmno3pqr4
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:chime/voiceConnectorStreaming:VoiceConnectorStreaming")
 public class VoiceConnectorStreaming extends io.pulumi.resources.CustomResource {

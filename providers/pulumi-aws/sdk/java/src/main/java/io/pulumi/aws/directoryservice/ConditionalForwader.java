@@ -16,7 +16,84 @@ import javax.annotation.Nullable;
 /**
  * Provides a conditional forwarder for managed Microsoft AD in AWS Directory Service.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.directoryservice.ConditionalForwader("example", {
+ *     directoryId: aws_directory_service_directory.ad.id,
+ *     remoteDomainName: "example.com",
+ *     dnsIps: [
+ *         "8.8.8.8",
+ *         "8.8.4.4",
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.directoryservice.ConditionalForwader("example",
+ *     directory_id=aws_directory_service_directory["ad"]["id"],
+ *     remote_domain_name="example.com",
+ *     dns_ips=[
+ *         "8.8.8.8",
+ *         "8.8.4.4",
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.DirectoryService.ConditionalForwader("example", new Aws.DirectoryService.ConditionalForwaderArgs
+ *         {
+ *             DirectoryId = aws_directory_service_directory.Ad.Id,
+ *             RemoteDomainName = "example.com",
+ *             DnsIps = 
+ *             {
+ *                 "8.8.8.8",
+ *                 "8.8.4.4",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/directoryservice"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := directoryservice.NewConditionalForwader(ctx, "example", &directoryservice.ConditionalForwaderArgs{
+ * 			DirectoryId:      pulumi.Any(aws_directory_service_directory.Ad.Id),
+ * 			RemoteDomainName: pulumi.String("example.com"),
+ * 			DnsIps: pulumi.StringArray{
+ * 				pulumi.String("8.8.8.8"),
+ * 				pulumi.String("8.8.4.4"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +103,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:directoryservice/conditionalForwader:ConditionalForwader example d-1234567890:example.com
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:directoryservice/conditionalForwader:ConditionalForwader")
 public class ConditionalForwader extends io.pulumi.resources.CustomResource {

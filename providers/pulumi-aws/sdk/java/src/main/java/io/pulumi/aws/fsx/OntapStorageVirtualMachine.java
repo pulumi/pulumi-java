@@ -20,7 +20,170 @@ import javax.annotation.Nullable;
  * Manages a FSx Storage Virtual Machine.
  * See the [FSx ONTAP User Guide](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html) for more information.
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic Usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.fsx.OntapStorageVirtualMachine("test", {fileSystemId: aws_fsx_ontap_file_system.test.id});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.fsx.OntapStorageVirtualMachine("test", file_system_id=aws_fsx_ontap_file_system["test"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Fsx.OntapStorageVirtualMachine("test", new Aws.Fsx.OntapStorageVirtualMachineArgs
+ *         {
+ *             FileSystemId = aws_fsx_ontap_file_system.Test.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/fsx"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := fsx.NewOntapStorageVirtualMachine(ctx, "test", &fsx.OntapStorageVirtualMachineArgs{
+ * 			FileSystemId: pulumi.Any(aws_fsx_ontap_file_system.Test.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Using a Self-Managed Microsoft Active Directory
+ * 
+ * Additional information for using AWS Directory Service with ONTAP File Systems can be found in the [FSx ONTAP Guide](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/self-managed-AD.html).
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.fsx.OntapStorageVirtualMachine("test", {
+ *     fileSystemId: aws_fsx_ontap_file_system.test.id,
+ *     activeDirectoryConfiguration: {
+ *         netbiosName: "mysvm",
+ *         selfManagedActiveDirectoryConfiguration: {
+ *             dnsIps: [
+ *                 "10.0.0.111",
+ *                 "10.0.0.222",
+ *             ],
+ *             domainName: "corp.example.com",
+ *             password: "avoid-plaintext-passwords",
+ *             username: "Admin",
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.fsx.OntapStorageVirtualMachine("test",
+ *     file_system_id=aws_fsx_ontap_file_system["test"]["id"],
+ *     active_directory_configuration=aws.fsx.OntapStorageVirtualMachineActiveDirectoryConfigurationArgs(
+ *         netbios_name="mysvm",
+ *         self_managed_active_directory_configuration=aws.fsx.OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs(
+ *             dns_ips=[
+ *                 "10.0.0.111",
+ *                 "10.0.0.222",
+ *             ],
+ *             domain_name="corp.example.com",
+ *             password="avoid-plaintext-passwords",
+ *             username="Admin",
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Fsx.OntapStorageVirtualMachine("test", new Aws.Fsx.OntapStorageVirtualMachineArgs
+ *         {
+ *             FileSystemId = aws_fsx_ontap_file_system.Test.Id,
+ *             ActiveDirectoryConfiguration = new Aws.Fsx.Inputs.OntapStorageVirtualMachineActiveDirectoryConfigurationArgs
+ *             {
+ *                 NetbiosName = "mysvm",
+ *                 SelfManagedActiveDirectoryConfiguration = new Aws.Fsx.Inputs.OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs
+ *                 {
+ *                     DnsIps = 
+ *                     {
+ *                         "10.0.0.111",
+ *                         "10.0.0.222",
+ *                     },
+ *                     DomainName = "corp.example.com",
+ *                     Password = "avoid-plaintext-passwords",
+ *                     Username = "Admin",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/fsx"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := fsx.NewOntapStorageVirtualMachine(ctx, "test", &fsx.OntapStorageVirtualMachineArgs{
+ * 			FileSystemId: pulumi.Any(aws_fsx_ontap_file_system.Test.Id),
+ * 			ActiveDirectoryConfiguration: &fsx.OntapStorageVirtualMachineActiveDirectoryConfigurationArgs{
+ * 				NetbiosName: pulumi.String("mysvm"),
+ * 				SelfManagedActiveDirectoryConfiguration: &fsx.OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs{
+ * 					DnsIps: pulumi.StringArray{
+ * 						pulumi.String("10.0.0.111"),
+ * 						pulumi.String("10.0.0.222"),
+ * 					},
+ * 					DomainName: pulumi.String("corp.example.com"),
+ * 					Password:   pulumi.String("avoid-plaintext-passwords"),
+ * 					Username:   pulumi.String("Admin"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,18 +195,19 @@ import javax.annotation.Nullable;
  * 
  *  Certain resource arguments, like `svm_admin_password` and the `self_managed_active_directory` configuation block `password`, do not have a FSx API method for reading the information after creation. If these arguments are set in the Terraform configuration on an imported resource, Terraform will always show a difference. To workaround this behavior, either omit the argument from the Terraform configuration or use [`ignore_changes`](https://www.terraform.io/docs/configuration/meta-arguments/lifecycle.html#ignore_changes) to hide the difference, e.g., terraform resource "aws_fsx_ontap_storage_virtual_machine" "example" {
  * 
- * # ... other configuration ...
+ *  # ... other configuration ...
  * 
  *  svm_admin_password = "avoid-plaintext-passwords"
  * 
- * # There is no FSx API for reading svm_admin_password
+ *  # There is no FSx API for reading svm_admin_password
  * 
  *  lifecycle {
  * 
+ * 
+ * 
  *  ignore_changes = [svm_admin_password]
  * 
- *  } }
- * 
+ *  } } 
  */
 @ResourceType(type="aws:fsx/ontapStorageVirtualMachine:OntapStorageVirtualMachine")
 public class OntapStorageVirtualMachine extends io.pulumi.resources.CustomResource {

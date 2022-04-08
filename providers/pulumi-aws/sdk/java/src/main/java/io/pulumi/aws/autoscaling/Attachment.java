@@ -23,8 +23,198 @@ import javax.annotation.Nullable;
  * `load_balancers` or `target_group_arns`, the `aws.autoscaling.Group` resource must be configured
  * to [ignore changes](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to the `load_balancers` and `target_group_arns` arguments.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // Create a new load balancer attachment
+ * const asgAttachmentBar = new aws.autoscaling.Attachment("asgAttachmentBar", {
+ *     autoscalingGroupName: aws_autoscaling_group.asg.id,
+ *     elb: aws_elb.bar.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # Create a new load balancer attachment
+ * asg_attachment_bar = aws.autoscaling.Attachment("asgAttachmentBar",
+ *     autoscaling_group_name=aws_autoscaling_group["asg"]["id"],
+ *     elb=aws_elb["bar"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // Create a new load balancer attachment
+ *         var asgAttachmentBar = new Aws.AutoScaling.Attachment("asgAttachmentBar", new Aws.AutoScaling.AttachmentArgs
+ *         {
+ *             AutoscalingGroupName = aws_autoscaling_group.Asg.Id,
+ *             Elb = aws_elb.Bar.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/autoscaling"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := autoscaling.NewAttachment(ctx, "asgAttachmentBar", &autoscaling.AttachmentArgs{
+ * 			AutoscalingGroupName: pulumi.Any(aws_autoscaling_group.Asg.Id),
+ * 			Elb:                  pulumi.Any(aws_elb.Bar.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // Create a new ALB Target Group attachment
+ * const asgAttachmentBar = new aws.autoscaling.Attachment("asgAttachmentBar", {
+ *     autoscalingGroupName: aws_autoscaling_group.asg.id,
+ *     albTargetGroupArn: aws_lb_target_group.test.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # Create a new ALB Target Group attachment
+ * asg_attachment_bar = aws.autoscaling.Attachment("asgAttachmentBar",
+ *     autoscaling_group_name=aws_autoscaling_group["asg"]["id"],
+ *     alb_target_group_arn=aws_lb_target_group["test"]["arn"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // Create a new ALB Target Group attachment
+ *         var asgAttachmentBar = new Aws.AutoScaling.Attachment("asgAttachmentBar", new Aws.AutoScaling.AttachmentArgs
+ *         {
+ *             AutoscalingGroupName = aws_autoscaling_group.Asg.Id,
+ *             AlbTargetGroupArn = aws_lb_target_group.Test.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/autoscaling"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := autoscaling.NewAttachment(ctx, "asgAttachmentBar", &autoscaling.AttachmentArgs{
+ * 			AutoscalingGroupName: pulumi.Any(aws_autoscaling_group.Asg.Id),
+ * 			AlbTargetGroupArn:    pulumi.Any(aws_lb_target_group.Test.Arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * ## With An AutoScaling Group Resource
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // ... other configuration ...
+ * const asg = new aws.autoscaling.Group("asg", {});
+ * const asgAttachmentBar = new aws.autoscaling.Attachment("asgAttachmentBar", {
+ *     autoscalingGroupName: asg.id,
+ *     elb: aws_elb.test.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # ... other configuration ...
+ * asg = aws.autoscaling.Group("asg")
+ * asg_attachment_bar = aws.autoscaling.Attachment("asgAttachmentBar",
+ *     autoscaling_group_name=asg.id,
+ *     elb=aws_elb["test"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // ... other configuration ...
+ *         var asg = new Aws.AutoScaling.Group("asg", new Aws.AutoScaling.GroupArgs
+ *         {
+ *         });
+ *         var asgAttachmentBar = new Aws.AutoScaling.Attachment("asgAttachmentBar", new Aws.AutoScaling.AttachmentArgs
+ *         {
+ *             AutoscalingGroupName = asg.Id,
+ *             Elb = aws_elb.Test.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/autoscaling"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		asg, err := autoscaling.NewGroup(ctx, "asg", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = autoscaling.NewAttachment(ctx, "asgAttachmentBar", &autoscaling.AttachmentArgs{
+ * 			AutoscalingGroupName: asg.ID(),
+ * 			Elb:                  pulumi.Any(aws_elb.Test.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:autoscaling/attachment:Attachment")

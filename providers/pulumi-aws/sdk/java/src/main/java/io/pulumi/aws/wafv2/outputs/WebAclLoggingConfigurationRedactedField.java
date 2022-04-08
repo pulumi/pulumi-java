@@ -22,7 +22,6 @@ public final class WebAclLoggingConfigurationRedactedField {
      * 
      * @Deprecated
      * Not supported by WAFv2 API
-     * 
      */
         @Deprecated /* Not supported by WAFv2 API */
     private final @Nullable WebAclLoggingConfigurationRedactedFieldAllQueryArguments allQueryArguments;
@@ -31,7 +30,6 @@ public final class WebAclLoggingConfigurationRedactedField {
      * 
      * @Deprecated
      * Not supported by WAFv2 API
-     * 
      */
         @Deprecated /* Not supported by WAFv2 API */
     private final @Nullable WebAclLoggingConfigurationRedactedFieldBody body;
@@ -55,7 +53,6 @@ public final class WebAclLoggingConfigurationRedactedField {
      * 
      * @Deprecated
      * Not supported by WAFv2 API
-     * 
      */
         @Deprecated /* Not supported by WAFv2 API */
     private final @Nullable WebAclLoggingConfigurationRedactedFieldSingleQueryArgument singleQueryArgument;
@@ -88,7 +85,6 @@ public final class WebAclLoggingConfigurationRedactedField {
      * 
      * @Deprecated
      * Not supported by WAFv2 API
-     * 
     */
     @Deprecated /* Not supported by WAFv2 API */
     public Optional<WebAclLoggingConfigurationRedactedFieldAllQueryArguments> getAllQueryArguments() {
@@ -99,7 +95,6 @@ public final class WebAclLoggingConfigurationRedactedField {
      * 
      * @Deprecated
      * Not supported by WAFv2 API
-     * 
     */
     @Deprecated /* Not supported by WAFv2 API */
     public Optional<WebAclLoggingConfigurationRedactedFieldBody> getBody() {
@@ -131,7 +126,6 @@ public final class WebAclLoggingConfigurationRedactedField {
      * 
      * @Deprecated
      * Not supported by WAFv2 API
-     * 
     */
     @Deprecated /* Not supported by WAFv2 API */
     public Optional<WebAclLoggingConfigurationRedactedFieldSingleQueryArgument> getSingleQueryArgument() {

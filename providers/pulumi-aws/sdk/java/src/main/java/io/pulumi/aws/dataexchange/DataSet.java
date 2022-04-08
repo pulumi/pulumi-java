@@ -16,7 +16,67 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage AWS Data Exchange DataSets.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.dataexchange.DataSet("example", {
+ *     assetType: "S3_SNAPSHOT",
+ *     description: "example",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.dataexchange.DataSet("example",
+ *     asset_type="S3_SNAPSHOT",
+ *     description="example")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.DataExchange.DataSet("example", new Aws.DataExchange.DataSetArgs
+ *         {
+ *             AssetType = "S3_SNAPSHOT",
+ *             Description = "example",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/dataexchange"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dataexchange.NewDataSet(ctx, "example", &dataexchange.DataSetArgs{
+ * 			AssetType:   pulumi.String("S3_SNAPSHOT"),
+ * 			Description: pulumi.String("example"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +86,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:dataexchange/dataSet:DataSet example arn:aws:dataexchange:us-west-2:123456789012:data-sets/4fa784c7-ccb4-4dbf-ba4f-02198320daa1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:dataexchange/dataSet:DataSet")
 public class DataSet extends io.pulumi.resources.CustomResource {

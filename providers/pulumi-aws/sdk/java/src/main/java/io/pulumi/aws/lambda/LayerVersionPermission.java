@@ -18,7 +18,79 @@ import javax.annotation.Nullable;
  * 
  * For information about Lambda Layer Permissions and how to use them, see [Using Resource-based Policies for AWS Lambda][1]
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const lambdaLayerPermission = new aws.lambda.LayerVersionPermission("lambda_layer_permission", {
+ *     action: "lambda:GetLayerVersion",
+ *     layerName: "arn:aws:lambda:us-west-2:123456654321:layer:test_layer1",
+ *     principal: "111111111111",
+ *     statementId: "dev-account",
+ *     versionNumber: 1,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * lambda_layer_permission = aws.lambda_.LayerVersionPermission("lambdaLayerPermission",
+ *     action="lambda:GetLayerVersion",
+ *     layer_name="arn:aws:lambda:us-west-2:123456654321:layer:test_layer1",
+ *     principal="111111111111",
+ *     statement_id="dev-account",
+ *     version_number=1)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var lambdaLayerPermission = new Aws.Lambda.LayerVersionPermission("lambdaLayerPermission", new Aws.Lambda.LayerVersionPermissionArgs
+ *         {
+ *             Action = "lambda:GetLayerVersion",
+ *             LayerName = "arn:aws:lambda:us-west-2:123456654321:layer:test_layer1",
+ *             Principal = "111111111111",
+ *             StatementId = "dev-account",
+ *             VersionNumber = 1,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := lambda.NewLayerVersionPermission(ctx, "lambdaLayerPermission", &lambda.LayerVersionPermissionArgs{
+ * 			Action:        pulumi.String("lambda:GetLayerVersion"),
+ * 			LayerName:     pulumi.String("arn:aws:lambda:us-west-2:123456654321:layer:test_layer1"),
+ * 			Principal:     pulumi.String("111111111111"),
+ * 			StatementId:   pulumi.String("dev-account"),
+ * 			VersionNumber: pulumi.Int(1),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,8 +100,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:lambda/layerVersionPermission:LayerVersionPermission example arn:aws:lambda:us-west-2:123456654321:layer:test_layer1,1
  * ```
  * 
- *  [1]https://docs.aws.amazon.com/lambda/latest/dg/access-control-resource-based.html#permissions-resource-xaccountlayer
- * 
+ *  [1]https://docs.aws.amazon.com/lambda/latest/dg/access-control-resource-based.html#permissions-resource-xaccountlayer 
  */
 @ResourceType(type="aws:lambda/layerVersionPermission:LayerVersionPermission")
 public class LayerVersionPermission extends io.pulumi.resources.CustomResource {

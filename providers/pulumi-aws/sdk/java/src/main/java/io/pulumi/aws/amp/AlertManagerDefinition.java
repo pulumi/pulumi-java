@@ -15,7 +15,93 @@ import javax.annotation.Nullable;
 /**
  * Manages an Amazon Managed Service for Prometheus (AMP) Alert Manager Definition
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const demoWorkspace = new aws.amp.Workspace("demoWorkspace", {});
+ * const demoAlertManagerDefinition = new aws.amp.AlertManagerDefinition("demoAlertManagerDefinition", {
+ *     workspaceId: demoWorkspace.id,
+ *     definition: `alertmanager_config: |
+ *   route:
+ *     receiver: 'default'
+ *   receivers:
+ *     - name: 'default'
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * demo_workspace = aws.amp.Workspace("demoWorkspace")
+ * demo_alert_manager_definition = aws.amp.AlertManagerDefinition("demoAlertManagerDefinition",
+ *     workspace_id=demo_workspace.id,
+ *     definition="""alertmanager_config: |
+ *   route:
+ *     receiver: 'default'
+ *   receivers:
+ *     - name: 'default'
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var demoWorkspace = new Aws.Amp.Workspace("demoWorkspace", new Aws.Amp.WorkspaceArgs
+ *         {
+ *         });
+ *         var demoAlertManagerDefinition = new Aws.Amp.AlertManagerDefinition("demoAlertManagerDefinition", new Aws.Amp.AlertManagerDefinitionArgs
+ *         {
+ *             WorkspaceId = demoWorkspace.Id,
+ *             Definition = @"alertmanager_config: |
+ *   route:
+ *     receiver: 'default'
+ *   receivers:
+ *     - name: 'default'
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/amp"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		demoWorkspace, err := amp.NewWorkspace(ctx, "demoWorkspace", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = amp.NewAlertManagerDefinition(ctx, "demoAlertManagerDefinition", &amp.AlertManagerDefinitionArgs{
+ * 			WorkspaceId: demoWorkspace.ID(),
+ * 			Definition:  pulumi.String(fmt.Sprintf("%v%v%v%v%v", "alertmanager_config: |\n", "  route:\n", "    receiver: 'default'\n", "  receivers:\n", "    - name: 'default'\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +111,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:amp/alertManagerDefinition:AlertManagerDefinition demo ws-C6DCB907-F2D7-4D96-957B-66691F865D8B
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:amp/alertManagerDefinition:AlertManagerDefinition")
 public class AlertManagerDefinition extends io.pulumi.resources.CustomResource {

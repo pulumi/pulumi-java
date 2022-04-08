@@ -19,6 +19,7 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** AWS currently has limited regional support for Device Farm (e.g., `us-west-2`). See [AWS Device Farm endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/devicefarm.html) for information on supported regions.
  * 
+ * 
  * ## Import
  * 
  * DeviceFarm Test Grid Projects can be imported by their arn
@@ -27,6 +28,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:devicefarm/testGridProject:TestGridProject example arn:aws:devicefarm:us-west-2:123456789012:testgrid-project:4fa784c7-ccb4-4dbf-ba4f-02198320daa1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:devicefarm/testGridProject:TestGridProject")
 public class TestGridProject extends io.pulumi.resources.CustomResource {

@@ -19,7 +19,329 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** This resource must be created in the Organization master account or a delegated administrator account, and the Organization must have all features enabled. Every Organization account except those configured in the `excluded_accounts` argument must have a Configuration Recorder with proper IAM permissions before the Organization Conformance Pack will successfully create or update. See also the `aws.cfg.Recorder` resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Using Template Body
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleOrganization = new aws.organizations.Organization("exampleOrganization", {
+ *     awsServiceAccessPrincipals: ["config-multiaccountsetup.amazonaws.com"],
+ *     featureSet: "ALL",
+ * });
+ * const exampleOrganizationConformancePack = new aws.cfg.OrganizationConformancePack("exampleOrganizationConformancePack", {
+ *     inputParameters: [{
+ *         parameterName: "AccessKeysRotatedParameterMaxAccessKeyAge",
+ *         parameterValue: "90",
+ *     }],
+ *     templateBody: `Parameters:
+ *   AccessKeysRotatedParameterMaxAccessKeyAge:
+ *     Type: String
+ * Resources:
+ *   IAMPasswordPolicy:
+ *     Properties:
+ *       ConfigRuleName: IAMPasswordPolicy
+ *       Source:
+ *         Owner: AWS
+ *         SourceIdentifier: IAM_PASSWORD_POLICY
+ *     Type: AWS::Config::ConfigRule
+ * `,
+ * }, {
+ *     dependsOn: [
+ *         aws_config_configuration_recorder.example,
+ *         exampleOrganization,
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_organization = aws.organizations.Organization("exampleOrganization",
+ *     aws_service_access_principals=["config-multiaccountsetup.amazonaws.com"],
+ *     feature_set="ALL")
+ * example_organization_conformance_pack = aws.cfg.OrganizationConformancePack("exampleOrganizationConformancePack",
+ *     input_parameters=[aws.cfg.OrganizationConformancePackInputParameterArgs(
+ *         parameter_name="AccessKeysRotatedParameterMaxAccessKeyAge",
+ *         parameter_value="90",
+ *     )],
+ *     template_body="""Parameters:
+ *   AccessKeysRotatedParameterMaxAccessKeyAge:
+ *     Type: String
+ * Resources:
+ *   IAMPasswordPolicy:
+ *     Properties:
+ *       ConfigRuleName: IAMPasswordPolicy
+ *       Source:
+ *         Owner: AWS
+ *         SourceIdentifier: IAM_PASSWORD_POLICY
+ *     Type: AWS::Config::ConfigRule
+ * """,
+ *     opts=pulumi.ResourceOptions(depends_on=[
+ *             aws_config_configuration_recorder["example"],
+ *             example_organization,
+ *         ]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleOrganization = new Aws.Organizations.Organization("exampleOrganization", new Aws.Organizations.OrganizationArgs
+ *         {
+ *             AwsServiceAccessPrincipals = 
+ *             {
+ *                 "config-multiaccountsetup.amazonaws.com",
+ *             },
+ *             FeatureSet = "ALL",
+ *         });
+ *         var exampleOrganizationConformancePack = new Aws.Cfg.OrganizationConformancePack("exampleOrganizationConformancePack", new Aws.Cfg.OrganizationConformancePackArgs
+ *         {
+ *             InputParameters = 
+ *             {
+ *                 new Aws.Cfg.Inputs.OrganizationConformancePackInputParameterArgs
+ *                 {
+ *                     ParameterName = "AccessKeysRotatedParameterMaxAccessKeyAge",
+ *                     ParameterValue = "90",
+ *                 },
+ *             },
+ *             TemplateBody = @"Parameters:
+ *   AccessKeysRotatedParameterMaxAccessKeyAge:
+ *     Type: String
+ * Resources:
+ *   IAMPasswordPolicy:
+ *     Properties:
+ *       ConfigRuleName: IAMPasswordPolicy
+ *       Source:
+ *         Owner: AWS
+ *         SourceIdentifier: IAM_PASSWORD_POLICY
+ *     Type: AWS::Config::ConfigRule
+ * ",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 aws_config_configuration_recorder.Example,
+ *                 exampleOrganization,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cfg"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleOrganization, err := organizations.NewOrganization(ctx, "exampleOrganization", &organizations.OrganizationArgs{
+ * 			AwsServiceAccessPrincipals: pulumi.StringArray{
+ * 				pulumi.String("config-multiaccountsetup.amazonaws.com"),
+ * 			},
+ * 			FeatureSet: pulumi.String("ALL"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cfg.NewOrganizationConformancePack(ctx, "exampleOrganizationConformancePack", &cfg.OrganizationConformancePackArgs{
+ * 			InputParameters: cfg.OrganizationConformancePackInputParameterArray{
+ * 				&cfg.OrganizationConformancePackInputParameterArgs{
+ * 					ParameterName:  pulumi.String("AccessKeysRotatedParameterMaxAccessKeyAge"),
+ * 					ParameterValue: pulumi.String("90"),
+ * 				},
+ * 			},
+ * 			TemplateBody: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v", "Parameters:\n", "  AccessKeysRotatedParameterMaxAccessKeyAge:\n", "    Type: String\n", "Resources:\n", "  IAMPasswordPolicy:\n", "    Properties:\n", "      ConfigRuleName: IAMPasswordPolicy\n", "      Source:\n", "        Owner: AWS\n", "        SourceIdentifier: IAM_PASSWORD_POLICY\n", "    Type: AWS::Config::ConfigRule\n")),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			aws_config_configuration_recorder.Example,
+ * 			exampleOrganization,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Using Template S3 URI
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleOrganization = new aws.organizations.Organization("exampleOrganization", {
+ *     awsServiceAccessPrincipals: ["config-multiaccountsetup.amazonaws.com"],
+ *     featureSet: "ALL",
+ * });
+ * const exampleBucket = new aws.s3.Bucket("exampleBucket", {});
+ * const exampleBucketObject = new aws.s3.BucketObject("exampleBucketObject", {
+ *     bucket: exampleBucket.id,
+ *     key: "example-key",
+ *     content: `Resources:
+ *   IAMPasswordPolicy:
+ *     Properties:
+ *       ConfigRuleName: IAMPasswordPolicy
+ *       Source:
+ *         Owner: AWS
+ *         SourceIdentifier: IAM_PASSWORD_POLICY
+ *     Type: AWS::Config::ConfigRule
+ * `,
+ * });
+ * const exampleOrganizationConformancePack = new aws.cfg.OrganizationConformancePack("exampleOrganizationConformancePack", {templateS3Uri: pulumi.interpolate`s3://${exampleBucket.bucket}/${exampleBucketObject.key}`}, {
+ *     dependsOn: [
+ *         aws_config_configuration_recorder.example,
+ *         exampleOrganization,
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_organization = aws.organizations.Organization("exampleOrganization",
+ *     aws_service_access_principals=["config-multiaccountsetup.amazonaws.com"],
+ *     feature_set="ALL")
+ * example_bucket = aws.s3.Bucket("exampleBucket")
+ * example_bucket_object = aws.s3.BucketObject("exampleBucketObject",
+ *     bucket=example_bucket.id,
+ *     key="example-key",
+ *     content="""Resources:
+ *   IAMPasswordPolicy:
+ *     Properties:
+ *       ConfigRuleName: IAMPasswordPolicy
+ *       Source:
+ *         Owner: AWS
+ *         SourceIdentifier: IAM_PASSWORD_POLICY
+ *     Type: AWS::Config::ConfigRule
+ * """)
+ * example_organization_conformance_pack = aws.cfg.OrganizationConformancePack("exampleOrganizationConformancePack", template_s3_uri=pulumi.Output.all(example_bucket.bucket, example_bucket_object.key).apply(lambda bucket, key: f"s3://{bucket}/{key}"),
+ * opts=pulumi.ResourceOptions(depends_on=[
+ *         aws_config_configuration_recorder["example"],
+ *         example_organization,
+ *     ]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleOrganization = new Aws.Organizations.Organization("exampleOrganization", new Aws.Organizations.OrganizationArgs
+ *         {
+ *             AwsServiceAccessPrincipals = 
+ *             {
+ *                 "config-multiaccountsetup.amazonaws.com",
+ *             },
+ *             FeatureSet = "ALL",
+ *         });
+ *         var exampleBucket = new Aws.S3.Bucket("exampleBucket", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var exampleBucketObject = new Aws.S3.BucketObject("exampleBucketObject", new Aws.S3.BucketObjectArgs
+ *         {
+ *             Bucket = exampleBucket.Id,
+ *             Key = "example-key",
+ *             Content = @"Resources:
+ *   IAMPasswordPolicy:
+ *     Properties:
+ *       ConfigRuleName: IAMPasswordPolicy
+ *       Source:
+ *         Owner: AWS
+ *         SourceIdentifier: IAM_PASSWORD_POLICY
+ *     Type: AWS::Config::ConfigRule
+ * ",
+ *         });
+ *         var exampleOrganizationConformancePack = new Aws.Cfg.OrganizationConformancePack("exampleOrganizationConformancePack", new Aws.Cfg.OrganizationConformancePackArgs
+ *         {
+ *             TemplateS3Uri = Output.Tuple(exampleBucket.BucketName, exampleBucketObject.Key).Apply(values =>
+ *             {
+ *                 var bucket = values.Item1;
+ *                 var key = values.Item2;
+ *                 return $"s3://{bucket}/{key}";
+ *             }),
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 aws_config_configuration_recorder.Example,
+ *                 exampleOrganization,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cfg"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/organizations"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleOrganization, err := organizations.NewOrganization(ctx, "exampleOrganization", &organizations.OrganizationArgs{
+ * 			AwsServiceAccessPrincipals: pulumi.StringArray{
+ * 				pulumi.String("config-multiaccountsetup.amazonaws.com"),
+ * 			},
+ * 			FeatureSet: pulumi.String("ALL"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleBucket, err := s3.NewBucket(ctx, "exampleBucket", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleBucketObject, err := s3.NewBucketObject(ctx, "exampleBucketObject", &s3.BucketObjectArgs{
+ * 			Bucket:  exampleBucket.ID(),
+ * 			Key:     pulumi.String("example-key"),
+ * 			Content: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v", "Resources:\n", "  IAMPasswordPolicy:\n", "    Properties:\n", "      ConfigRuleName: IAMPasswordPolicy\n", "      Source:\n", "        Owner: AWS\n", "        SourceIdentifier: IAM_PASSWORD_POLICY\n", "    Type: AWS::Config::ConfigRule\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cfg.NewOrganizationConformancePack(ctx, "exampleOrganizationConformancePack", &cfg.OrganizationConformancePackArgs{
+ * 			TemplateS3Uri: pulumi.All(exampleBucket.Bucket, exampleBucketObject.Key).ApplyT(func(_args []interface{}) (string, error) {
+ * 				bucket := _args[0].(string)
+ * 				key := _args[1].(string)
+ * 				return fmt.Sprintf("%v%v%v%v", "s3://", bucket, "/", key), nil
+ * 			}).(pulumi.StringOutput),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			aws_config_configuration_recorder.Example,
+ * 			exampleOrganization,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +351,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cfg/organizationConformancePack:OrganizationConformancePack example example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cfg/organizationConformancePack:OrganizationConformancePack")
 public class OrganizationConformancePack extends io.pulumi.resources.CustomResource {

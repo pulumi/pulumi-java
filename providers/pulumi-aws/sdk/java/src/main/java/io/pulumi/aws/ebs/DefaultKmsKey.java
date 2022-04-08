@@ -22,7 +22,60 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** Destroying this resource will reset the default CMK to the account's AWS-managed default CMK for EBS.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ebs.DefaultKmsKey("example", {keyArn: aws_kms_key.example.arn});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ebs.DefaultKmsKey("example", key_arn=aws_kms_key["example"]["arn"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ebs.DefaultKmsKey("example", new Aws.Ebs.DefaultKmsKeyArgs
+ *         {
+ *             KeyArn = aws_kms_key.Example.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ebs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ebs.NewDefaultKmsKey(ctx, "example", &ebs.DefaultKmsKeyArgs{
+ * 			KeyArn: pulumi.Any(aws_kms_key.Example.Arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,6 +85,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ebs/defaultKmsKey:DefaultKmsKey example arn:aws:kms:us-east-1:123456789012:key/abcd-1234
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ebs/defaultKmsKey:DefaultKmsKey")
 public class DefaultKmsKey extends io.pulumi.resources.CustomResource {

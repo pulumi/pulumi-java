@@ -20,7 +20,75 @@ import javax.annotation.Nullable;
 /**
  * Provides a DAX Cluster resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const bar = new aws.dax.Cluster("bar", {
+ *     clusterName: "cluster-example",
+ *     iamRoleArn: data.aws_iam_role.example.arn,
+ *     nodeType: "dax.r4.large",
+ *     replicationFactor: 1,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * bar = aws.dax.Cluster("bar",
+ *     cluster_name="cluster-example",
+ *     iam_role_arn=data["aws_iam_role"]["example"]["arn"],
+ *     node_type="dax.r4.large",
+ *     replication_factor=1)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bar = new Aws.Dax.Cluster("bar", new Aws.Dax.ClusterArgs
+ *         {
+ *             ClusterName = "cluster-example",
+ *             IamRoleArn = data.Aws_iam_role.Example.Arn,
+ *             NodeType = "dax.r4.large",
+ *             ReplicationFactor = 1,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/dax"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dax.NewCluster(ctx, "bar", &dax.ClusterArgs{
+ * 			ClusterName:       pulumi.String("cluster-example"),
+ * 			IamRoleArn:        pulumi.Any(data.Aws_iam_role.Example.Arn),
+ * 			NodeType:          pulumi.String("dax.r4.large"),
+ * 			ReplicationFactor: pulumi.Int(1),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,8 +98,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:dax/cluster:Cluster my_cluster my_cluster
  * ```
  * 
- *  [1]http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes
- * 
+ *  [1]http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes 
  */
 @ResourceType(type="aws:dax/cluster:Cluster")
 public class Cluster extends io.pulumi.resources.CustomResource {

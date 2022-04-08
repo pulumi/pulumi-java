@@ -19,7 +19,101 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** This is an advanced resource. The provider will automatically assume management of the GuardDuty Organization Configuration without import and perform no actions on removal from the resource configuration.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleDetector = new aws.guardduty.Detector("exampleDetector", {enable: true});
+ * const exampleOrganizationConfiguration = new aws.guardduty.OrganizationConfiguration("exampleOrganizationConfiguration", {
+ *     autoEnable: true,
+ *     detectorId: exampleDetector.id,
+ *     datasources: {
+ *         s3Logs: {
+ *             autoEnable: true,
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_detector = aws.guardduty.Detector("exampleDetector", enable=True)
+ * example_organization_configuration = aws.guardduty.OrganizationConfiguration("exampleOrganizationConfiguration",
+ *     auto_enable=True,
+ *     detector_id=example_detector.id,
+ *     datasources=aws.guardduty.OrganizationConfigurationDatasourcesArgs(
+ *         s3_logs=aws.guardduty.OrganizationConfigurationDatasourcesS3LogsArgs(
+ *             auto_enable=True,
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleDetector = new Aws.GuardDuty.Detector("exampleDetector", new Aws.GuardDuty.DetectorArgs
+ *         {
+ *             Enable = true,
+ *         });
+ *         var exampleOrganizationConfiguration = new Aws.GuardDuty.OrganizationConfiguration("exampleOrganizationConfiguration", new Aws.GuardDuty.OrganizationConfigurationArgs
+ *         {
+ *             AutoEnable = true,
+ *             DetectorId = exampleDetector.Id,
+ *             Datasources = new Aws.GuardDuty.Inputs.OrganizationConfigurationDatasourcesArgs
+ *             {
+ *                 S3Logs = new Aws.GuardDuty.Inputs.OrganizationConfigurationDatasourcesS3LogsArgs
+ *                 {
+ *                     AutoEnable = true,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/guardduty"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleDetector, err := guardduty.NewDetector(ctx, "exampleDetector", &guardduty.DetectorArgs{
+ * 			Enable: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = guardduty.NewOrganizationConfiguration(ctx, "exampleOrganizationConfiguration", &guardduty.OrganizationConfigurationArgs{
+ * 			AutoEnable: pulumi.Bool(true),
+ * 			DetectorId: exampleDetector.ID(),
+ * 			Datasources: &guardduty.OrganizationConfigurationDatasourcesArgs{
+ * 				S3Logs: &guardduty.OrganizationConfigurationDatasourcesS3LogsArgs{
+ * 					AutoEnable: pulumi.Bool(true),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +123,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:guardduty/organizationConfiguration:OrganizationConfiguration example 00b00fd5aecc0ab60a708659477e9617
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:guardduty/organizationConfiguration:OrganizationConfiguration")
 public class OrganizationConfiguration extends io.pulumi.resources.CustomResource {

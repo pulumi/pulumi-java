@@ -36,8 +36,62 @@ import javax.annotation.Nullable;
  * the generated AMI. Users may taint or otherwise recreate the resource in order
  * to produce a fresh snapshot.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ec2.AmiFromInstance("example", {
+ *     sourceInstanceId: "i-xxxxxxxx",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ec2.AmiFromInstance("example", source_instance_id="i-xxxxxxxx")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ec2.AmiFromInstance("example", new Aws.Ec2.AmiFromInstanceArgs
+ *         {
+ *             SourceInstanceId = "i-xxxxxxxx",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewAmiFromInstance(ctx, "example", &ec2.AmiFromInstanceArgs{
+ * 			SourceInstanceId: pulumi.String("i-xxxxxxxx"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:ec2/amiFromInstance:AmiFromInstance")
 public class AmiFromInstance extends io.pulumi.resources.CustomResource {

@@ -17,7 +17,171 @@ import javax.annotation.Nullable;
 /**
  * Provides a CodeDeploy application to be used as a basis for deployments
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ECS Application
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.codedeploy.Application("example", {
+ *     computePlatform: "ECS",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.codedeploy.Application("example", compute_platform="ECS")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.CodeDeploy.Application("example", new Aws.CodeDeploy.ApplicationArgs
+ *         {
+ *             ComputePlatform = "ECS",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/codedeploy"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codedeploy.NewApplication(ctx, "example", &codedeploy.ApplicationArgs{
+ * 			ComputePlatform: pulumi.String("ECS"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Lambda Application
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.codedeploy.Application("example", {
+ *     computePlatform: "Lambda",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.codedeploy.Application("example", compute_platform="Lambda")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.CodeDeploy.Application("example", new Aws.CodeDeploy.ApplicationArgs
+ *         {
+ *             ComputePlatform = "Lambda",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/codedeploy"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codedeploy.NewApplication(ctx, "example", &codedeploy.ApplicationArgs{
+ * 			ComputePlatform: pulumi.String("Lambda"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Server Application
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.codedeploy.Application("example", {
+ *     computePlatform: "Server",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.codedeploy.Application("example", compute_platform="Server")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.CodeDeploy.Application("example", new Aws.CodeDeploy.ApplicationArgs
+ *         {
+ *             ComputePlatform = "Server",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/codedeploy"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codedeploy.NewApplication(ctx, "example", &codedeploy.ApplicationArgs{
+ * 			ComputePlatform: pulumi.String("Server"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +191,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:codedeploy/application:Application example my-application
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:codedeploy/application:Application")
 public class Application extends io.pulumi.resources.CustomResource {

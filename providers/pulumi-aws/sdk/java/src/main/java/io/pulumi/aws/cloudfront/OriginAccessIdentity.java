@@ -20,7 +20,64 @@ import javax.annotation.Nullable;
  * origin access identities, see
  * [Using an Origin Access Identity to Restrict Access to Your Amazon S3 Content][2].
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * The following example below creates a CloudFront origin access identity.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.cloudfront.OriginAccessIdentity("example", {
+ *     comment: "Some comment",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.cloudfront.OriginAccessIdentity("example", comment="Some comment")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.CloudFront.OriginAccessIdentity("example", new Aws.CloudFront.OriginAccessIdentityArgs
+ *         {
+ *             Comment = "Some comment",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudfront"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudfront.NewOriginAccessIdentity(ctx, "example", &cloudfront.OriginAccessIdentityArgs{
+ * 			Comment: pulumi.String("Some comment"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * ## Using With CloudFront
  * 
  * Normally, when referencing an origin access identity in CloudFront, you need to
@@ -29,6 +86,81 @@ import javax.annotation.Nullable;
  * The below snippet demonstrates use with the `s3_origin_config` structure for the
  * `aws.cloudfront.Distribution` resource:
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // ... other configuration ...
+ * const example = new aws.cloudfront.Distribution("example", {origins: [{
+ *     s3OriginConfig: {
+ *         originAccessIdentity: aws_cloudfront_origin_access_identity.example.cloudfront_access_identity_path,
+ *     },
+ * }]});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # ... other configuration ...
+ * example = aws.cloudfront.Distribution("example", origins=[aws.cloudfront.DistributionOriginArgs(
+ *     s3_origin_config=aws.cloudfront.DistributionOriginS3OriginConfigArgs(
+ *         origin_access_identity=aws_cloudfront_origin_access_identity["example"]["cloudfront_access_identity_path"],
+ *     ),
+ * )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // ... other configuration ...
+ *         var example = new Aws.CloudFront.Distribution("example", new Aws.CloudFront.DistributionArgs
+ *         {
+ *             Origins = 
+ *             {
+ *                 new Aws.CloudFront.Inputs.DistributionOriginArgs
+ *                 {
+ *                     S3OriginConfig = new Aws.CloudFront.Inputs.DistributionOriginS3OriginConfigArgs
+ *                     {
+ *                         OriginAccessIdentity = aws_cloudfront_origin_access_identity.Example.Cloudfront_access_identity_path,
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudfront"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudfront.NewDistribution(ctx, "example", &cloudfront.DistributionArgs{
+ * 			Origins: cloudfront.DistributionOriginArray{
+ * 				&cloudfront.DistributionOriginArgs{
+ * 					S3OriginConfig: &cloudfront.DistributionOriginS3OriginConfigArgs{
+ * 						OriginAccessIdentity: pulumi.Any(aws_cloudfront_origin_access_identity.Example.Cloudfront_access_identity_path),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * ### Updating your bucket policy
  * 
  * Note that the AWS API may translate the `s3_canonical_user_id` `CanonicalUser`
@@ -36,8 +168,90 @@ import javax.annotation.Nullable;
  * `aws.s3.Bucket` bucket policy, causing spurious diffs. If
  * you see this behaviour, use the `iam_arn` instead:
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const s3Policy = aws.iam.getPolicyDocument({
+ *     statements: [{
+ *         actions: ["s3:GetObject"],
+ *         resources: [`${aws_s3_bucket.example.arn}/*`],
+ *         principals: [{
+ *             type: "AWS",
+ *             identifiers: [aws_cloudfront_origin_access_identity.example.iam_arn],
+ *         }],
+ *     }],
+ * });
+ * const example = new aws.s3.BucketPolicy("example", {
+ *     bucket: aws_s3_bucket.example.id,
+ *     policy: s3Policy.then(s3Policy => s3Policy.json),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * s3_policy = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+ *     actions=["s3:GetObject"],
+ *     resources=[f"{aws_s3_bucket['example']['arn']}/*"],
+ *     principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+ *         type="AWS",
+ *         identifiers=[aws_cloudfront_origin_access_identity["example"]["iam_arn"]],
+ *     )],
+ * )])
+ * example = aws.s3.BucketPolicy("example",
+ *     bucket=aws_s3_bucket["example"]["id"],
+ *     policy=s3_policy.json)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var s3Policy = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+ *         {
+ *             Statements = 
+ *             {
+ *                 new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+ *                 {
+ *                     Actions = 
+ *                     {
+ *                         "s3:GetObject",
+ *                     },
+ *                     Resources = 
+ *                     {
+ *                         $"{aws_s3_bucket.Example.Arn}/*",
+ *                     },
+ *                     Principals = 
+ *                     {
+ *                         new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+ *                         {
+ *                             Type = "AWS",
+ *                             Identifiers = 
+ *                             {
+ *                                 aws_cloudfront_origin_access_identity.Example.Iam_arn,
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         }));
+ *         var example = new Aws.S3.BucketPolicy("example", new Aws.S3.BucketPolicyArgs
+ *         {
+ *             Bucket = aws_s3_bucket.Example.Id,
+ *             Policy = s3Policy.Apply(s3Policy => s3Policy.Json),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * 
  * [1]: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html
  * [2]: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html
+ * 
  * 
  * ## Import
  * 
@@ -47,6 +261,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudfront/originAccessIdentity:OriginAccessIdentity origin_access E74FTE3AEXAMPLE
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudfront/originAccessIdentity:OriginAccessIdentity")
 public class OriginAccessIdentity extends io.pulumi.resources.CustomResource {

@@ -25,7 +25,409 @@ import javax.annotation.Nullable;
  * Provides an Amazon Lex Intent resource. For more information see
  * [Amazon Lex: How It Works](https://docs.aws.amazon.com/lex/latest/dg/how-it-works.html)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const orderFlowersIntent = new aws.lex.Intent("order_flowers_intent", {
+ *     confirmationPrompt: {
+ *         maxAttempts: 2,
+ *         messages: [{
+ *             content: "Okay, your {FlowerType} will be ready for pickup by {PickupTime} on {PickupDate}.  Does this sound okay?",
+ *             contentType: "PlainText",
+ *         }],
+ *     },
+ *     createVersion: false,
+ *     description: "Intent to order a bouquet of flowers for pick up",
+ *     fulfillmentActivity: {
+ *         type: "ReturnIntent",
+ *     },
+ *     name: "OrderFlowers",
+ *     rejectionStatement: {
+ *         messages: [{
+ *             content: "Okay, I will not place your order.",
+ *             contentType: "PlainText",
+ *         }],
+ *     },
+ *     sampleUtterances: [
+ *         "I would like to order some flowers",
+ *         "I would like to pick up flowers",
+ *     ],
+ *     slots: [
+ *         {
+ *             description: "The type of flowers to pick up",
+ *             name: "FlowerType",
+ *             priority: 1,
+ *             sampleUtterances: ["I would like to order {FlowerType}"],
+ *             slotConstraint: "Required",
+ *             slotType: "FlowerTypes",
+ *             slotTypeVersion: "$LATEST",
+ *             valueElicitationPrompt: {
+ *                 maxAttempts: 2,
+ *                 messages: [{
+ *                     content: "What type of flowers would you like to order?",
+ *                     contentType: "PlainText",
+ *                 }],
+ *             },
+ *         },
+ *         {
+ *             description: "The date to pick up the flowers",
+ *             name: "PickupDate",
+ *             priority: 2,
+ *             sampleUtterances: ["I would like to order {FlowerType}"],
+ *             slotConstraint: "Required",
+ *             slotType: "AMAZON.DATE",
+ *             slotTypeVersion: "$LATEST",
+ *             valueElicitationPrompt: {
+ *                 maxAttempts: 2,
+ *                 messages: [{
+ *                     content: "What day do you want the {FlowerType} to be picked up?",
+ *                     contentType: "PlainText",
+ *                 }],
+ *             },
+ *         },
+ *         {
+ *             description: "The time to pick up the flowers",
+ *             name: "PickupTime",
+ *             priority: 3,
+ *             sampleUtterances: ["I would like to order {FlowerType}"],
+ *             slotConstraint: "Required",
+ *             slotType: "AMAZON.TIME",
+ *             slotTypeVersion: "$LATEST",
+ *             valueElicitationPrompt: {
+ *                 maxAttempts: 2,
+ *                 messages: [{
+ *                     content: "Pick up the {FlowerType} at what time on {PickupDate}?",
+ *                     contentType: "PlainText",
+ *                 }],
+ *             },
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * order_flowers_intent = aws.lex.Intent("orderFlowersIntent",
+ *     confirmation_prompt=aws.lex.IntentConfirmationPromptArgs(
+ *         max_attempts=2,
+ *         messages=[aws.lex.IntentConfirmationPromptMessageArgs(
+ *             content="Okay, your {FlowerType} will be ready for pickup by {PickupTime} on {PickupDate}.  Does this sound okay?",
+ *             content_type="PlainText",
+ *         )],
+ *     ),
+ *     create_version=False,
+ *     description="Intent to order a bouquet of flowers for pick up",
+ *     fulfillment_activity=aws.lex.IntentFulfillmentActivityArgs(
+ *         type="ReturnIntent",
+ *     ),
+ *     name="OrderFlowers",
+ *     rejection_statement=aws.lex.IntentRejectionStatementArgs(
+ *         messages=[aws.lex.IntentRejectionStatementMessageArgs(
+ *             content="Okay, I will not place your order.",
+ *             content_type="PlainText",
+ *         )],
+ *     ),
+ *     sample_utterances=[
+ *         "I would like to order some flowers",
+ *         "I would like to pick up flowers",
+ *     ],
+ *     slots=[
+ *         aws.lex.IntentSlotArgs(
+ *             description="The type of flowers to pick up",
+ *             name="FlowerType",
+ *             priority=1,
+ *             sample_utterances=["I would like to order {FlowerType}"],
+ *             slot_constraint="Required",
+ *             slot_type="FlowerTypes",
+ *             slot_type_version="$LATEST",
+ *             value_elicitation_prompt=aws.lex.IntentSlotValueElicitationPromptArgs(
+ *                 max_attempts=2,
+ *                 message=[{
+ *                     "content": "What type of flowers would you like to order?",
+ *                     "contentType": "PlainText",
+ *                 }],
+ *             ),
+ *         ),
+ *         aws.lex.IntentSlotArgs(
+ *             description="The date to pick up the flowers",
+ *             name="PickupDate",
+ *             priority=2,
+ *             sample_utterances=["I would like to order {FlowerType}"],
+ *             slot_constraint="Required",
+ *             slot_type="AMAZON.DATE",
+ *             slot_type_version="$LATEST",
+ *             value_elicitation_prompt=aws.lex.IntentSlotValueElicitationPromptArgs(
+ *                 max_attempts=2,
+ *                 message=[{
+ *                     "content": "What day do you want the {FlowerType} to be picked up?",
+ *                     "contentType": "PlainText",
+ *                 }],
+ *             ),
+ *         ),
+ *         aws.lex.IntentSlotArgs(
+ *             description="The time to pick up the flowers",
+ *             name="PickupTime",
+ *             priority=3,
+ *             sample_utterances=["I would like to order {FlowerType}"],
+ *             slot_constraint="Required",
+ *             slot_type="AMAZON.TIME",
+ *             slot_type_version="$LATEST",
+ *             value_elicitation_prompt=aws.lex.IntentSlotValueElicitationPromptArgs(
+ *                 max_attempts=2,
+ *                 message=[{
+ *                     "content": "Pick up the {FlowerType} at what time on {PickupDate}?",
+ *                     "contentType": "PlainText",
+ *                 }],
+ *             ),
+ *         ),
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var orderFlowersIntent = new Aws.Lex.Intent("orderFlowersIntent", new Aws.Lex.IntentArgs
+ *         {
+ *             ConfirmationPrompt = new Aws.Lex.Inputs.IntentConfirmationPromptArgs
+ *             {
+ *                 MaxAttempts = 2,
+ *                 Messages = 
+ *                 {
+ *                     new Aws.Lex.Inputs.IntentConfirmationPromptMessageArgs
+ *                     {
+ *                         Content = "Okay, your {FlowerType} will be ready for pickup by {PickupTime} on {PickupDate}.  Does this sound okay?",
+ *                         ContentType = "PlainText",
+ *                     },
+ *                 },
+ *             },
+ *             CreateVersion = false,
+ *             Description = "Intent to order a bouquet of flowers for pick up",
+ *             FulfillmentActivity = new Aws.Lex.Inputs.IntentFulfillmentActivityArgs
+ *             {
+ *                 Type = "ReturnIntent",
+ *             },
+ *             Name = "OrderFlowers",
+ *             RejectionStatement = new Aws.Lex.Inputs.IntentRejectionStatementArgs
+ *             {
+ *                 Messages = 
+ *                 {
+ *                     new Aws.Lex.Inputs.IntentRejectionStatementMessageArgs
+ *                     {
+ *                         Content = "Okay, I will not place your order.",
+ *                         ContentType = "PlainText",
+ *                     },
+ *                 },
+ *             },
+ *             SampleUtterances = 
+ *             {
+ *                 "I would like to order some flowers",
+ *                 "I would like to pick up flowers",
+ *             },
+ *             Slots = 
+ *             {
+ *                 new Aws.Lex.Inputs.IntentSlotArgs
+ *                 {
+ *                     Description = "The type of flowers to pick up",
+ *                     Name = "FlowerType",
+ *                     Priority = 1,
+ *                     SampleUtterances = 
+ *                     {
+ *                         "I would like to order {FlowerType}",
+ *                     },
+ *                     SlotConstraint = "Required",
+ *                     SlotType = "FlowerTypes",
+ *                     SlotTypeVersion = "$LATEST",
+ *                     ValueElicitationPrompt = new Aws.Lex.Inputs.IntentSlotValueElicitationPromptArgs
+ *                     {
+ *                         MaxAttempts = 2,
+ *                         Message = 
+ *                         {
+ *                             
+ *                             {
+ *                                 { "content", "What type of flowers would you like to order?" },
+ *                                 { "contentType", "PlainText" },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 new Aws.Lex.Inputs.IntentSlotArgs
+ *                 {
+ *                     Description = "The date to pick up the flowers",
+ *                     Name = "PickupDate",
+ *                     Priority = 2,
+ *                     SampleUtterances = 
+ *                     {
+ *                         "I would like to order {FlowerType}",
+ *                     },
+ *                     SlotConstraint = "Required",
+ *                     SlotType = "AMAZON.DATE",
+ *                     SlotTypeVersion = "$LATEST",
+ *                     ValueElicitationPrompt = new Aws.Lex.Inputs.IntentSlotValueElicitationPromptArgs
+ *                     {
+ *                         MaxAttempts = 2,
+ *                         Message = 
+ *                         {
+ *                             
+ *                             {
+ *                                 { "content", "What day do you want the {FlowerType} to be picked up?" },
+ *                                 { "contentType", "PlainText" },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 new Aws.Lex.Inputs.IntentSlotArgs
+ *                 {
+ *                     Description = "The time to pick up the flowers",
+ *                     Name = "PickupTime",
+ *                     Priority = 3,
+ *                     SampleUtterances = 
+ *                     {
+ *                         "I would like to order {FlowerType}",
+ *                     },
+ *                     SlotConstraint = "Required",
+ *                     SlotType = "AMAZON.TIME",
+ *                     SlotTypeVersion = "$LATEST",
+ *                     ValueElicitationPrompt = new Aws.Lex.Inputs.IntentSlotValueElicitationPromptArgs
+ *                     {
+ *                         MaxAttempts = 2,
+ *                         Message = 
+ *                         {
+ *                             
+ *                             {
+ *                                 { "content", "Pick up the {FlowerType} at what time on {PickupDate}?" },
+ *                                 { "contentType", "PlainText" },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lex"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := lex.NewIntent(ctx, "orderFlowersIntent", &lex.IntentArgs{
+ * 			ConfirmationPrompt: &lex.IntentConfirmationPromptArgs{
+ * 				MaxAttempts: pulumi.Int(2),
+ * 				Messages: lex.IntentConfirmationPromptMessageArray{
+ * 					&lex.IntentConfirmationPromptMessageArgs{
+ * 						Content:     pulumi.String("Okay, your {FlowerType} will be ready for pickup by {PickupTime} on {PickupDate}.  Does this sound okay?"),
+ * 						ContentType: pulumi.String("PlainText"),
+ * 					},
+ * 				},
+ * 			},
+ * 			CreateVersion: pulumi.Bool(false),
+ * 			Description:   pulumi.String("Intent to order a bouquet of flowers for pick up"),
+ * 			FulfillmentActivity: &lex.IntentFulfillmentActivityArgs{
+ * 				Type: pulumi.String("ReturnIntent"),
+ * 			},
+ * 			Name: pulumi.String("OrderFlowers"),
+ * 			RejectionStatement: &lex.IntentRejectionStatementArgs{
+ * 				Messages: lex.IntentRejectionStatementMessageArray{
+ * 					&lex.IntentRejectionStatementMessageArgs{
+ * 						Content:     pulumi.String("Okay, I will not place your order."),
+ * 						ContentType: pulumi.String("PlainText"),
+ * 					},
+ * 				},
+ * 			},
+ * 			SampleUtterances: pulumi.StringArray{
+ * 				pulumi.String("I would like to order some flowers"),
+ * 				pulumi.String("I would like to pick up flowers"),
+ * 			},
+ * 			Slots: lex.IntentSlotArray{
+ * 				&lex.IntentSlotArgs{
+ * 					Description: pulumi.String("The type of flowers to pick up"),
+ * 					Name:        pulumi.String("FlowerType"),
+ * 					Priority:    pulumi.Int(1),
+ * 					SampleUtterances: pulumi.StringArray{
+ * 						pulumi.String("I would like to order {FlowerType}"),
+ * 					},
+ * 					SlotConstraint:  pulumi.String("Required"),
+ * 					SlotType:        pulumi.String("FlowerTypes"),
+ * 					SlotTypeVersion: pulumi.String(fmt.Sprintf("%v%v", "$", "LATEST")),
+ * 					ValueElicitationPrompt: &lex.IntentSlotValueElicitationPromptArgs{
+ * 						MaxAttempts: pulumi.Int(2),
+ * 						Message: []map[string]interface{}{
+ * 							map[string]interface{}{
+ * 								"content":     "What type of flowers would you like to order?",
+ * 								"contentType": "PlainText",
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				&lex.IntentSlotArgs{
+ * 					Description: pulumi.String("The date to pick up the flowers"),
+ * 					Name:        pulumi.String("PickupDate"),
+ * 					Priority:    pulumi.Int(2),
+ * 					SampleUtterances: pulumi.StringArray{
+ * 						pulumi.String("I would like to order {FlowerType}"),
+ * 					},
+ * 					SlotConstraint:  pulumi.String("Required"),
+ * 					SlotType:        pulumi.String("AMAZON.DATE"),
+ * 					SlotTypeVersion: pulumi.String(fmt.Sprintf("%v%v", "$", "LATEST")),
+ * 					ValueElicitationPrompt: &lex.IntentSlotValueElicitationPromptArgs{
+ * 						MaxAttempts: pulumi.Int(2),
+ * 						Message: []map[string]interface{}{
+ * 							map[string]interface{}{
+ * 								"content":     "What day do you want the {FlowerType} to be picked up?",
+ * 								"contentType": "PlainText",
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				&lex.IntentSlotArgs{
+ * 					Description: pulumi.String("The time to pick up the flowers"),
+ * 					Name:        pulumi.String("PickupTime"),
+ * 					Priority:    pulumi.Int(3),
+ * 					SampleUtterances: pulumi.StringArray{
+ * 						pulumi.String("I would like to order {FlowerType}"),
+ * 					},
+ * 					SlotConstraint:  pulumi.String("Required"),
+ * 					SlotType:        pulumi.String("AMAZON.TIME"),
+ * 					SlotTypeVersion: pulumi.String(fmt.Sprintf("%v%v", "$", "LATEST")),
+ * 					ValueElicitationPrompt: &lex.IntentSlotValueElicitationPromptArgs{
+ * 						MaxAttempts: pulumi.Int(2),
+ * 						Message: []map[string]interface{}{
+ * 							map[string]interface{}{
+ * 								"content":     "Pick up the {FlowerType} at what time on {PickupDate}?",
+ * 								"contentType": "PlainText",
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,6 +437,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:lex/intent:Intent order_flowers_intent OrderFlowers
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:lex/intent:Intent")
 public class Intent extends io.pulumi.resources.CustomResource {

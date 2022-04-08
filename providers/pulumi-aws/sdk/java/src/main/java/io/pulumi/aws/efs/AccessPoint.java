@@ -18,7 +18,60 @@ import javax.annotation.Nullable;
 /**
  * Provides an Elastic File System (EFS) access point.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.efs.AccessPoint("test", {fileSystemId: aws_efs_file_system.foo.id});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.efs.AccessPoint("test", file_system_id=aws_efs_file_system["foo"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Efs.AccessPoint("test", new Aws.Efs.AccessPointArgs
+ *         {
+ *             FileSystemId = aws_efs_file_system.Foo.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/efs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := efs.NewAccessPoint(ctx, "test", &efs.AccessPointArgs{
+ * 			FileSystemId: pulumi.Any(aws_efs_file_system.Foo.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +81,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:efs/accessPoint:AccessPoint test fsap-52a643fb
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:efs/accessPoint:AccessPoint")
 public class AccessPoint extends io.pulumi.resources.CustomResource {

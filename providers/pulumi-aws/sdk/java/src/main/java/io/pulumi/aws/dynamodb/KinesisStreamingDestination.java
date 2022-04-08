@@ -15,7 +15,117 @@ import javax.annotation.Nullable;
 /**
  * Enables a [Kinesis streaming destination](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/kds.html) for data replication of a DynamoDB table.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleTable = new aws.dynamodb.Table("exampleTable", {
+ *     hashKey: "id",
+ *     attributes: [{
+ *         name: "id",
+ *         type: "S",
+ *     }],
+ * });
+ * const exampleStream = new aws.kinesis.Stream("exampleStream", {shardCount: 1});
+ * const exampleKinesisStreamingDestination = new aws.dynamodb.KinesisStreamingDestination("exampleKinesisStreamingDestination", {
+ *     streamArn: exampleStream.arn,
+ *     tableName: exampleTable.name,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_table = aws.dynamodb.Table("exampleTable",
+ *     hash_key="id",
+ *     attributes=[aws.dynamodb.TableAttributeArgs(
+ *         name="id",
+ *         type="S",
+ *     )])
+ * example_stream = aws.kinesis.Stream("exampleStream", shard_count=1)
+ * example_kinesis_streaming_destination = aws.dynamodb.KinesisStreamingDestination("exampleKinesisStreamingDestination",
+ *     stream_arn=example_stream.arn,
+ *     table_name=example_table.name)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleTable = new Aws.DynamoDB.Table("exampleTable", new Aws.DynamoDB.TableArgs
+ *         {
+ *             HashKey = "id",
+ *             Attributes = 
+ *             {
+ *                 new Aws.DynamoDB.Inputs.TableAttributeArgs
+ *                 {
+ *                     Name = "id",
+ *                     Type = "S",
+ *                 },
+ *             },
+ *         });
+ *         var exampleStream = new Aws.Kinesis.Stream("exampleStream", new Aws.Kinesis.StreamArgs
+ *         {
+ *             ShardCount = 1,
+ *         });
+ *         var exampleKinesisStreamingDestination = new Aws.DynamoDB.KinesisStreamingDestination("exampleKinesisStreamingDestination", new Aws.DynamoDB.KinesisStreamingDestinationArgs
+ *         {
+ *             StreamArn = exampleStream.Arn,
+ *             TableName = exampleTable.Name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/dynamodb"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kinesis"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleTable, err := dynamodb.NewTable(ctx, "exampleTable", &dynamodb.TableArgs{
+ * 			HashKey: pulumi.String("id"),
+ * 			Attributes: dynamodb.TableAttributeArray{
+ * 				&dynamodb.TableAttributeArgs{
+ * 					Name: pulumi.String("id"),
+ * 					Type: pulumi.String("S"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleStream, err := kinesis.NewStream(ctx, "exampleStream", &kinesis.StreamArgs{
+ * 			ShardCount: pulumi.Int(1),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = dynamodb.NewKinesisStreamingDestination(ctx, "exampleKinesisStreamingDestination", &dynamodb.KinesisStreamingDestinationArgs{
+ * 			StreamArn: exampleStream.Arn,
+ * 			TableName: exampleTable.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +135,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:dynamodb/kinesisStreamingDestination:KinesisStreamingDestination example example,arn:aws:kinesis:us-east-1:111122223333:exampleStreamName
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:dynamodb/kinesisStreamingDestination:KinesisStreamingDestination")
 public class KinesisStreamingDestination extends io.pulumi.resources.CustomResource {

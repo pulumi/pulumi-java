@@ -17,7 +17,141 @@ import javax.annotation.Nullable;
 /**
  * Provides a Managed Scaling policy for EMR Cluster. With Amazon EMR versions 5.30.0 and later (except for Amazon EMR 6.0.0), you can enable EMR managed scaling to automatically increase or decrease the number of instances or units in your cluster based on workload. See [Using EMR Managed Scaling in Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-managed-scaling.html) for more information.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const sample = new aws.emr.Cluster("sample", {
+ *     releaseLabel: "emr-5.30.0",
+ *     masterInstanceGroup: {
+ *         instanceType: "m4.large",
+ *     },
+ *     coreInstanceGroup: {
+ *         instanceType: "c4.large",
+ *     },
+ * });
+ * // skip ...
+ * const samplepolicy = new aws.emr.ManagedScalingPolicy("samplepolicy", {
+ *     clusterId: sample.id,
+ *     computeLimits: [{
+ *         unitType: "Instances",
+ *         minimumCapacityUnits: 2,
+ *         maximumCapacityUnits: 10,
+ *         maximumOndemandCapacityUnits: 2,
+ *         maximumCoreCapacityUnits: 10,
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * sample = aws.emr.Cluster("sample",
+ *     release_label="emr-5.30.0",
+ *     master_instance_group=aws.emr.ClusterMasterInstanceGroupArgs(
+ *         instance_type="m4.large",
+ *     ),
+ *     core_instance_group=aws.emr.ClusterCoreInstanceGroupArgs(
+ *         instance_type="c4.large",
+ *     ))
+ * # skip ...
+ * samplepolicy = aws.emr.ManagedScalingPolicy("samplepolicy",
+ *     cluster_id=sample.id,
+ *     compute_limits=[aws.emr.ManagedScalingPolicyComputeLimitArgs(
+ *         unit_type="Instances",
+ *         minimum_capacity_units=2,
+ *         maximum_capacity_units=10,
+ *         maximum_ondemand_capacity_units=2,
+ *         maximum_core_capacity_units=10,
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sample = new Aws.Emr.Cluster("sample", new Aws.Emr.ClusterArgs
+ *         {
+ *             ReleaseLabel = "emr-5.30.0",
+ *             MasterInstanceGroup = new Aws.Emr.Inputs.ClusterMasterInstanceGroupArgs
+ *             {
+ *                 InstanceType = "m4.large",
+ *             },
+ *             CoreInstanceGroup = new Aws.Emr.Inputs.ClusterCoreInstanceGroupArgs
+ *             {
+ *                 InstanceType = "c4.large",
+ *             },
+ *         });
+ *         // skip ...
+ *         var samplepolicy = new Aws.Emr.ManagedScalingPolicy("samplepolicy", new Aws.Emr.ManagedScalingPolicyArgs
+ *         {
+ *             ClusterId = sample.Id,
+ *             ComputeLimits = 
+ *             {
+ *                 new Aws.Emr.Inputs.ManagedScalingPolicyComputeLimitArgs
+ *                 {
+ *                     UnitType = "Instances",
+ *                     MinimumCapacityUnits = 2,
+ *                     MaximumCapacityUnits = 10,
+ *                     MaximumOndemandCapacityUnits = 2,
+ *                     MaximumCoreCapacityUnits = 10,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/emr"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		sample, err := emr.NewCluster(ctx, "sample", &emr.ClusterArgs{
+ * 			ReleaseLabel: pulumi.String("emr-5.30.0"),
+ * 			MasterInstanceGroup: &emr.ClusterMasterInstanceGroupArgs{
+ * 				InstanceType: pulumi.String("m4.large"),
+ * 			},
+ * 			CoreInstanceGroup: &emr.ClusterCoreInstanceGroupArgs{
+ * 				InstanceType: pulumi.String("c4.large"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = emr.NewManagedScalingPolicy(ctx, "samplepolicy", &emr.ManagedScalingPolicyArgs{
+ * 			ClusterId: sample.ID(),
+ * 			ComputeLimits: emr.ManagedScalingPolicyComputeLimitArray{
+ * 				&emr.ManagedScalingPolicyComputeLimitArgs{
+ * 					UnitType:                     pulumi.String("Instances"),
+ * 					MinimumCapacityUnits:         pulumi.Int(2),
+ * 					MaximumCapacityUnits:         pulumi.Int(10),
+ * 					MaximumOndemandCapacityUnits: pulumi.Int(2),
+ * 					MaximumCoreCapacityUnits:     pulumi.Int(10),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +161,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:emr/managedScalingPolicy:ManagedScalingPolicy example j-123456ABCDEF
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:emr/managedScalingPolicy:ManagedScalingPolicy")
 public class ManagedScalingPolicy extends io.pulumi.resources.CustomResource {

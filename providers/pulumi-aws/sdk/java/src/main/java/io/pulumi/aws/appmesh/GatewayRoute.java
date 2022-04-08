@@ -17,7 +17,142 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS App Mesh gateway route resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.appmesh.GatewayRoute("example", {
+ *     meshName: "example-service-mesh",
+ *     virtualGatewayName: aws_appmesh_virtual_gateway.example.name,
+ *     spec: {
+ *         httpRoute: {
+ *             action: {
+ *                 target: {
+ *                     virtualService: {
+ *                         virtualServiceName: aws_appmesh_virtual_service.example.name,
+ *                     },
+ *                 },
+ *             },
+ *             match: {
+ *                 prefix: "/",
+ *             },
+ *         },
+ *     },
+ *     tags: {
+ *         Environment: "test",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.appmesh.GatewayRoute("example",
+ *     mesh_name="example-service-mesh",
+ *     virtual_gateway_name=aws_appmesh_virtual_gateway["example"]["name"],
+ *     spec=aws.appmesh.GatewayRouteSpecArgs(
+ *         http_route=aws.appmesh.GatewayRouteSpecHttpRouteArgs(
+ *             action=aws.appmesh.GatewayRouteSpecHttpRouteActionArgs(
+ *                 target=aws.appmesh.GatewayRouteSpecHttpRouteActionTargetArgs(
+ *                     virtual_service=aws.appmesh.GatewayRouteSpecHttpRouteActionTargetVirtualServiceArgs(
+ *                         virtual_service_name=aws_appmesh_virtual_service["example"]["name"],
+ *                     ),
+ *                 ),
+ *             ),
+ *             match=aws.appmesh.GatewayRouteSpecHttpRouteMatchArgs(
+ *                 prefix="/",
+ *             ),
+ *         ),
+ *     ),
+ *     tags={
+ *         "Environment": "test",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.AppMesh.GatewayRoute("example", new Aws.AppMesh.GatewayRouteArgs
+ *         {
+ *             MeshName = "example-service-mesh",
+ *             VirtualGatewayName = aws_appmesh_virtual_gateway.Example.Name,
+ *             Spec = new Aws.AppMesh.Inputs.GatewayRouteSpecArgs
+ *             {
+ *                 HttpRoute = new Aws.AppMesh.Inputs.GatewayRouteSpecHttpRouteArgs
+ *                 {
+ *                     Action = new Aws.AppMesh.Inputs.GatewayRouteSpecHttpRouteActionArgs
+ *                     {
+ *                         Target = new Aws.AppMesh.Inputs.GatewayRouteSpecHttpRouteActionTargetArgs
+ *                         {
+ *                             VirtualService = new Aws.AppMesh.Inputs.GatewayRouteSpecHttpRouteActionTargetVirtualServiceArgs
+ *                             {
+ *                                 VirtualServiceName = aws_appmesh_virtual_service.Example.Name,
+ *                             },
+ *                         },
+ *                     },
+ *                     Match = new Aws.AppMesh.Inputs.GatewayRouteSpecHttpRouteMatchArgs
+ *                     {
+ *                         Prefix = "/",
+ *                     },
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Environment", "test" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appmesh"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appmesh.NewGatewayRoute(ctx, "example", &appmesh.GatewayRouteArgs{
+ * 			MeshName:           pulumi.String("example-service-mesh"),
+ * 			VirtualGatewayName: pulumi.Any(aws_appmesh_virtual_gateway.Example.Name),
+ * 			Spec: &appmesh.GatewayRouteSpecArgs{
+ * 				HttpRoute: &appmesh.GatewayRouteSpecHttpRouteArgs{
+ * 					Action: &appmesh.GatewayRouteSpecHttpRouteActionArgs{
+ * 						Target: &appmesh.GatewayRouteSpecHttpRouteActionTargetArgs{
+ * 							VirtualService: &appmesh.GatewayRouteSpecHttpRouteActionTargetVirtualServiceArgs{
+ * 								VirtualServiceName: pulumi.Any(aws_appmesh_virtual_service.Example.Name),
+ * 							},
+ * 						},
+ * 					},
+ * 					Match: &appmesh.GatewayRouteSpecHttpRouteMatchArgs{
+ * 						Prefix: pulumi.String("/"),
+ * 					},
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Environment": pulumi.String("test"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,8 +162,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appmesh/gatewayRoute:GatewayRoute example mesh/gw1/example-gateway-route
  * ```
  * 
- *  [1]/docs/providers/aws/index.html
- * 
+ *  [1]/docs/providers/aws/index.html 
  */
 @ResourceType(type="aws:appmesh/gatewayRoute:GatewayRoute")
 public class GatewayRoute extends io.pulumi.resources.CustomResource {

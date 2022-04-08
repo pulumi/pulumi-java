@@ -16,7 +16,151 @@ import javax.annotation.Nullable;
 /**
  * Manages an Access Analyzer Analyzer. More information can be found in the [Access Analyzer User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Account Analyzer
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.accessanalyzer.Analyzer("example", {
+ *     analyzerName: "example",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.accessanalyzer.Analyzer("example", analyzer_name="example")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.AccessAnalyzer.Analyzer("example", new Aws.AccessAnalyzer.AnalyzerArgs
+ *         {
+ *             AnalyzerName = "example",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/accessanalyzer"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := accessanalyzer.NewAnalyzer(ctx, "example", &accessanalyzer.AnalyzerArgs{
+ * 			AnalyzerName: pulumi.String("example"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Organization Analyzer
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleOrganization = new aws.organizations.Organization("exampleOrganization", {awsServiceAccessPrincipals: ["access-analyzer.amazonaws.com"]});
+ * const exampleAnalyzer = new aws.accessanalyzer.Analyzer("exampleAnalyzer", {
+ *     analyzerName: "example",
+ *     type: "ORGANIZATION",
+ * }, {
+ *     dependsOn: [exampleOrganization],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_organization = aws.organizations.Organization("exampleOrganization", aws_service_access_principals=["access-analyzer.amazonaws.com"])
+ * example_analyzer = aws.accessanalyzer.Analyzer("exampleAnalyzer",
+ *     analyzer_name="example",
+ *     type="ORGANIZATION",
+ *     opts=pulumi.ResourceOptions(depends_on=[example_organization]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleOrganization = new Aws.Organizations.Organization("exampleOrganization", new Aws.Organizations.OrganizationArgs
+ *         {
+ *             AwsServiceAccessPrincipals = 
+ *             {
+ *                 "access-analyzer.amazonaws.com",
+ *             },
+ *         });
+ *         var exampleAnalyzer = new Aws.AccessAnalyzer.Analyzer("exampleAnalyzer", new Aws.AccessAnalyzer.AnalyzerArgs
+ *         {
+ *             AnalyzerName = "example",
+ *             Type = "ORGANIZATION",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 exampleOrganization,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/accessanalyzer"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleOrganization, err := organizations.NewOrganization(ctx, "exampleOrganization", &organizations.OrganizationArgs{
+ * 			AwsServiceAccessPrincipals: pulumi.StringArray{
+ * 				pulumi.String("access-analyzer.amazonaws.com"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = accessanalyzer.NewAnalyzer(ctx, "exampleAnalyzer", &accessanalyzer.AnalyzerArgs{
+ * 			AnalyzerName: pulumi.String("example"),
+ * 			Type:         pulumi.String("ORGANIZATION"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			exampleOrganization,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +170,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:accessanalyzer/analyzer:Analyzer example example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:accessanalyzer/analyzer:Analyzer")
 public class Analyzer extends io.pulumi.resources.CustomResource {

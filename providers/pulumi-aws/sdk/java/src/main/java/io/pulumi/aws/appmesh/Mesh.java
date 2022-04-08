@@ -17,7 +17,130 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS App Mesh service mesh resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const simple = new aws.appmesh.Mesh("simple", {});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * simple = aws.appmesh.Mesh("simple")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var simple = new Aws.AppMesh.Mesh("simple", new Aws.AppMesh.MeshArgs
+ *         {
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appmesh"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appmesh.NewMesh(ctx, "simple", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Egress Filter
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const simple = new aws.appmesh.Mesh("simple", {
+ *     spec: {
+ *         egressFilter: {
+ *             type: "ALLOW_ALL",
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * simple = aws.appmesh.Mesh("simple", spec=aws.appmesh.MeshSpecArgs(
+ *     egress_filter=aws.appmesh.MeshSpecEgressFilterArgs(
+ *         type="ALLOW_ALL",
+ *     ),
+ * ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var simple = new Aws.AppMesh.Mesh("simple", new Aws.AppMesh.MeshArgs
+ *         {
+ *             Spec = new Aws.AppMesh.Inputs.MeshSpecArgs
+ *             {
+ *                 EgressFilter = new Aws.AppMesh.Inputs.MeshSpecEgressFilterArgs
+ *                 {
+ *                     Type = "ALLOW_ALL",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appmesh"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appmesh.NewMesh(ctx, "simple", &appmesh.MeshArgs{
+ * 			Spec: &appmesh.MeshSpecArgs{
+ * 				EgressFilter: &appmesh.MeshSpecEgressFilterArgs{
+ * 					Type: pulumi.String("ALLOW_ALL"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +150,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appmesh/mesh:Mesh simple simpleapp
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:appmesh/mesh:Mesh")
 public class Mesh extends io.pulumi.resources.CustomResource {

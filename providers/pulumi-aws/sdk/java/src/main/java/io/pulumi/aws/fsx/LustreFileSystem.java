@@ -21,7 +21,78 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** `auto_import_policy`, `export_path`, `import_path` and `imported_file_chunk_size` are not supported with the `PERSISTENT_2` deployment type. Use `aws.fsx.DataRepositoryAssociation` instead.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.fsx.LustreFileSystem("example", {
+ *     importPath: `s3://${aws_s3_bucket.example.bucket}`,
+ *     storageCapacity: 1200,
+ *     subnetIds: [aws_subnet.example.id],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.fsx.LustreFileSystem("example",
+ *     import_path=f"s3://{aws_s3_bucket['example']['bucket']}",
+ *     storage_capacity=1200,
+ *     subnet_ids=[aws_subnet["example"]["id"]])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Fsx.LustreFileSystem("example", new Aws.Fsx.LustreFileSystemArgs
+ *         {
+ *             ImportPath = $"s3://{aws_s3_bucket.Example.Bucket}",
+ *             StorageCapacity = 1200,
+ *             SubnetIds = 
+ *             {
+ *                 aws_subnet.Example.Id,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/fsx"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := fsx.NewLustreFileSystem(ctx, "example", &fsx.LustreFileSystemArgs{
+ * 			ImportPath:      pulumi.String(fmt.Sprintf("%v%v", "s3://", aws_s3_bucket.Example.Bucket)),
+ * 			StorageCapacity: pulumi.Int(1200),
+ * 			SubnetIds: pulumi.String{
+ * 				aws_subnet.Example.Id,
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,18 +104,19 @@ import javax.annotation.Nullable;
  * 
  *  Certain resource arguments, like `security_group_ids`, do not have a FSx API method for reading the information after creation. If the argument is set in the provider configuration on an imported resource, this provider will always show a difference. To workaround this behavior, either omit the argument from the provider configuration or use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to hide the difference, e.g. terraform resource "aws_fsx_lustre_file_system" "example" {
  * 
- * # ... other configuration ...
+ *  # ... other configuration ...
  * 
  *  security_group_ids = [aws_security_group.example.id]
  * 
- * # There is no FSx API for reading security_group_ids
+ *  # There is no FSx API for reading security_group_ids
  * 
  *  lifecycle {
  * 
+ * 
+ * 
  *  ignore_changes = [security_group_ids]
  * 
- *  } }
- * 
+ *  } } 
  */
 @ResourceType(type="aws:fsx/lustreFileSystem:LustreFileSystem")
 public class LustreFileSystem extends io.pulumi.resources.CustomResource {
@@ -301,14 +373,14 @@ public class LustreFileSystem extends io.pulumi.resources.CustomResource {
         return this.ownerId;
     }
     /**
-     * - Describes the amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB, required for the `PERSISTENT_1` and `PERSISTENT_2` deployment_type. Valid values for `PERSISTENT_1` deployment_type and `SSD` storage_type are 50, 100, 200. Valid values for `PERSISTENT_1` deployment_type and `HDD` storage_type are 12, 40. Valid values for `PERSISTENT_2` deployment_type and `  SSD ` storage_type are 125, 250, 500, 1000.
+     * - Describes the amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB, required for the `PERSISTENT_1` and `PERSISTENT_2` deployment_type. Valid values for `PERSISTENT_1` deployment_type and `SSD` storage_type are 50, 100, 200. Valid values for `PERSISTENT_1` deployment_type and `HDD` storage_type are 12, 40. Valid values for `PERSISTENT_2` deployment_type and ` SSD` storage_type are 125, 250, 500, 1000.
      * 
      */
     @Export(name="perUnitStorageThroughput", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> perUnitStorageThroughput;
 
     /**
-     * @return - Describes the amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB, required for the `PERSISTENT_1` and `PERSISTENT_2` deployment_type. Valid values for `PERSISTENT_1` deployment_type and `SSD` storage_type are 50, 100, 200. Valid values for `PERSISTENT_1` deployment_type and `HDD` storage_type are 12, 40. Valid values for `PERSISTENT_2` deployment_type and `  SSD ` storage_type are 125, 250, 500, 1000.
+     * @return - Describes the amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB, required for the `PERSISTENT_1` and `PERSISTENT_2` deployment_type. Valid values for `PERSISTENT_1` deployment_type and `SSD` storage_type are 50, 100, 200. Valid values for `PERSISTENT_1` deployment_type and `HDD` storage_type are 12, 40. Valid values for `PERSISTENT_2` deployment_type and ` SSD` storage_type are 125, 250, 500, 1000.
      * 
      */
     public Output</* @Nullable */ Integer> getPerUnitStorageThroughput() {

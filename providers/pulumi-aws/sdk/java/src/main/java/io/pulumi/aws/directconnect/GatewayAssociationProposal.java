@@ -16,7 +16,71 @@ import javax.annotation.Nullable;
 /**
  * Manages a Direct Connect Gateway Association Proposal, typically for enabling cross-account associations. For single account associations, see the `aws.directconnect.GatewayAssociation` resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.directconnect.GatewayAssociationProposal("example", {
+ *     dxGatewayId: aws_dx_gateway.example.id,
+ *     dxGatewayOwnerAccountId: aws_dx_gateway.example.owner_account_id,
+ *     associatedGatewayId: aws_vpn_gateway.example.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.directconnect.GatewayAssociationProposal("example",
+ *     dx_gateway_id=aws_dx_gateway["example"]["id"],
+ *     dx_gateway_owner_account_id=aws_dx_gateway["example"]["owner_account_id"],
+ *     associated_gateway_id=aws_vpn_gateway["example"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.DirectConnect.GatewayAssociationProposal("example", new Aws.DirectConnect.GatewayAssociationProposalArgs
+ *         {
+ *             DxGatewayId = aws_dx_gateway.Example.Id,
+ *             DxGatewayOwnerAccountId = aws_dx_gateway.Example.Owner_account_id,
+ *             AssociatedGatewayId = aws_vpn_gateway.Example.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/directconnect"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := directconnect.NewGatewayAssociationProposal(ctx, "example", &directconnect.GatewayAssociationProposalArgs{
+ * 			DxGatewayId:             pulumi.Any(aws_dx_gateway.Example.Id),
+ * 			DxGatewayOwnerAccountId: pulumi.Any(aws_dx_gateway.Example.Owner_account_id),
+ * 			AssociatedGatewayId:     pulumi.Any(aws_vpn_gateway.Example.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,8 +96,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:directconnect/gatewayAssociationProposal:GatewayAssociationProposal example ac90e981-b718-4364-872d-65478c84fafe/abcd1234-dcba-5678-be23-cdef9876ab45/vgw-12345678
  * ```
  * 
- *  The latter case is useful when a previous proposal has been accepted and deleted by AWS. The `aws_dx_gateway_association_proposal` resource will then represent a pseudo-proposal for the same Direct Connect Gateway and associated gateway. If no previous proposal is available, use a tool like [`uuidgen`](http://manpages.ubuntu.com/manpages/bionic/man1/uuidgen.1.html) to generate a new random pseudo-proposal ID.
- * 
+ *  The latter case is useful when a previous proposal has been accepted and deleted by AWS. The `aws_dx_gateway_association_proposal` resource will then represent a pseudo-proposal for the same Direct Connect Gateway and associated gateway. If no previous proposal is available, use a tool like [`uuidgen`](http://manpages.ubuntu.com/manpages/bionic/man1/uuidgen.1.html) to generate a new random pseudo-proposal ID. 
  */
 @ResourceType(type="aws:directconnect/gatewayAssociationProposal:GatewayAssociationProposal")
 public class GatewayAssociationProposal extends io.pulumi.resources.CustomResource {

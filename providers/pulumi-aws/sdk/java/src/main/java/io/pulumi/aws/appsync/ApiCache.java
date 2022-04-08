@@ -17,7 +17,22 @@ import javax.annotation.Nullable;
 /**
  * Provides an AppSync API Cache.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleGraphQLApi = new aws.appsync.GraphQLApi("exampleGraphQLApi", {authenticationType: "API_KEY"});
+ * const exampleApiCache = new aws.appsync.ApiCache("exampleApiCache", {
+ *     apiId: exampleGraphQLApi.id,
+ *     expires: "2018-05-03T04:00:00Z",
+ * });
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +42,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appsync/apiCache:ApiCache example xxxxx
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:appsync/apiCache:ApiCache")
 public class ApiCache extends io.pulumi.resources.CustomResource {

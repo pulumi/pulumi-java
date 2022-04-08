@@ -18,7 +18,122 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const messenger = new aws.cloudwatch.EventBus("messenger", {});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * messenger = aws.cloudwatch.EventBus("messenger")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var messenger = new Aws.CloudWatch.EventBus("messenger", new Aws.CloudWatch.EventBusArgs
+ *         {
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudwatch.NewEventBus(ctx, "messenger", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const examplepartnerEventSource = aws.cloudwatch.getEventSource({
+ *     namePrefix: "aws.partner/examplepartner.com",
+ * });
+ * const examplepartnerEventBus = new aws.cloudwatch.EventBus("examplepartnerEventBus", {eventSourceName: examplepartnerEventSource.then(examplepartnerEventSource => examplepartnerEventSource.name)});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * examplepartner_event_source = aws.cloudwatch.get_event_source(name_prefix="aws.partner/examplepartner.com")
+ * examplepartner_event_bus = aws.cloudwatch.EventBus("examplepartnerEventBus", event_source_name=examplepartner_event_source.name)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var examplepartnerEventSource = Output.Create(Aws.CloudWatch.GetEventSource.InvokeAsync(new Aws.CloudWatch.GetEventSourceArgs
+ *         {
+ *             NamePrefix = "aws.partner/examplepartner.com",
+ *         }));
+ *         var examplepartnerEventBus = new Aws.CloudWatch.EventBus("examplepartnerEventBus", new Aws.CloudWatch.EventBusArgs
+ *         {
+ *             EventSourceName = examplepartnerEventSource.Apply(examplepartnerEventSource => examplepartnerEventSource.Name),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		opt0 := "aws.partner/examplepartner.com"
+ * 		examplepartnerEventSource, err := cloudwatch.GetEventSource(ctx, &cloudwatch.GetEventSourceArgs{
+ * 			NamePrefix: &opt0,
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudwatch.NewEventBus(ctx, "examplepartnerEventBus", &cloudwatch.EventBusArgs{
+ * 			EventSourceName: pulumi.String(examplepartnerEventSource.Name),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +143,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudwatch/eventBus:EventBus messenger chat-messages
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudwatch/eventBus:EventBus")
 public class EventBus extends io.pulumi.resources.CustomResource {

@@ -20,7 +20,85 @@ import javax.annotation.Nullable;
  * 
  * More information about parameter groups can be found in the [MemoryDB User Guide](https://docs.aws.amazon.com/memorydb/latest/devguide/parametergroups.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.memorydb.ParameterGroup("example", {
+ *     family: "memorydb_redis6",
+ *     parameters: [{
+ *         name: "activedefrag",
+ *         value: "yes",
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.memorydb.ParameterGroup("example",
+ *     family="memorydb_redis6",
+ *     parameters=[aws.memorydb.ParameterGroupParameterArgs(
+ *         name="activedefrag",
+ *         value="yes",
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.MemoryDb.ParameterGroup("example", new Aws.MemoryDb.ParameterGroupArgs
+ *         {
+ *             Family = "memorydb_redis6",
+ *             Parameters = 
+ *             {
+ *                 new Aws.MemoryDb.Inputs.ParameterGroupParameterArgs
+ *                 {
+ *                     Name = "activedefrag",
+ *                     Value = "yes",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/memorydb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := memorydb.NewParameterGroup(ctx, "example", &memorydb.ParameterGroupArgs{
+ * 			Family: pulumi.String("memorydb_redis6"),
+ * 			Parameters: memorydb.ParameterGroupParameterArray{
+ * 				&memorydb.ParameterGroupParameterArgs{
+ * 					Name:  pulumi.String("activedefrag"),
+ * 					Value: pulumi.String("yes"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +108,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:memorydb/parameterGroup:ParameterGroup example my-parameter-group
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:memorydb/parameterGroup:ParameterGroup")
 public class ParameterGroup extends io.pulumi.resources.CustomResource {

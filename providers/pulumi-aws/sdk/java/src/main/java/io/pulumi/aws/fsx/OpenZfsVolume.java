@@ -23,7 +23,60 @@ import javax.annotation.Nullable;
  * Manages an Amazon FSx for OpenZFS volume.
  * See the [FSx OpenZFS User Guide](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/what-is-fsx.html) for more information.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.fsx.OpenZfsVolume("test", {parentVolumeId: aws_fsx_openzfs_file_system.test.root_volume_id});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.fsx.OpenZfsVolume("test", parent_volume_id=aws_fsx_openzfs_file_system["test"]["root_volume_id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Fsx.OpenZfsVolume("test", new Aws.Fsx.OpenZfsVolumeArgs
+ *         {
+ *             ParentVolumeId = aws_fsx_openzfs_file_system.Test.Root_volume_id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/fsx"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := fsx.NewOpenZfsVolume(ctx, "test", &fsx.OpenZfsVolumeArgs{
+ * 			ParentVolumeId: pulumi.Any(aws_fsx_openzfs_file_system.Test.Root_volume_id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,6 +86,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:fsx/openZfsVolume:OpenZfsVolume example fsvol-543ab12b1ca672f33
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:fsx/openZfsVolume:OpenZfsVolume")
 public class OpenZfsVolume extends io.pulumi.resources.CustomResource {

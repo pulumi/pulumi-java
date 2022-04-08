@@ -15,7 +15,57 @@ import javax.annotation.Nullable;
 /**
  * Provides a SimpleDB domain resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const users = new aws.simpledb.Domain("users", {});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * users = aws.simpledb.Domain("users")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var users = new Aws.SimpleDB.Domain("users", new Aws.SimpleDB.DomainArgs
+ *         {
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/simpledb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := simpledb.NewDomain(ctx, "users", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +75,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:simpledb/domain:Domain users users
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:simpledb/domain:Domain")
 public class Domain extends io.pulumi.resources.CustomResource {

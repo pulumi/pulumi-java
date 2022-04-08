@@ -18,7 +18,7 @@ public final class TransitVirtualInterfaceState extends io.pulumi.resources.Reso
     public static final TransitVirtualInterfaceState Empty = new TransitVirtualInterfaceState();
 
     /**
-     * The address family for the BGP peer. ` ipv4  ` or `ipv6`.
+     * The address family for the BGP peer. `ipv4 ` or `ipv6`.
      * 
      */
     @Import(name="addressFamily")

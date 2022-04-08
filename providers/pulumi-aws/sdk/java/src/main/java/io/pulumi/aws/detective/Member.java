@@ -16,7 +16,25 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage an [Amazon Detective Member](https://docs.aws.amazon.com/detective/latest/APIReference/API_CreateMembers.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleGraph = new aws.detective.Graph("exampleGraph", {});
+ * const exampleMember = new aws.detective.Member("exampleMember", {
+ *     accountId: "AWS ACCOUNT ID",
+ *     email: "EMAIL",
+ *     graphArn: exampleGraph.id,
+ *     message: "Message of the invitation",
+ *     disableEmailNotification: true,
+ * });
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +44,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:detective/member:Member example arn:aws:detective:us-east-1:123456789101:graph:231684d34gh74g4bae1dbc7bd807d02d/123456789012
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:detective/member:Member")
 public class Member extends io.pulumi.resources.CustomResource {

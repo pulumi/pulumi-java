@@ -20,7 +20,104 @@ import javax.annotation.Nullable;
 /**
  * Provides a SageMaker endpoint configuration resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * Basic usage:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const ec = new aws.sagemaker.EndpointConfiguration("ec", {
+ *     productionVariants: [{
+ *         variantName: "variant-1",
+ *         modelName: aws_sagemaker_model.m.name,
+ *         initialInstanceCount: 1,
+ *         instanceType: "ml.t2.medium",
+ *     }],
+ *     tags: {
+ *         Name: "foo",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * ec = aws.sagemaker.EndpointConfiguration("ec",
+ *     production_variants=[aws.sagemaker.EndpointConfigurationProductionVariantArgs(
+ *         variant_name="variant-1",
+ *         model_name=aws_sagemaker_model["m"]["name"],
+ *         initial_instance_count=1,
+ *         instance_type="ml.t2.medium",
+ *     )],
+ *     tags={
+ *         "Name": "foo",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var ec = new Aws.Sagemaker.EndpointConfiguration("ec", new Aws.Sagemaker.EndpointConfigurationArgs
+ *         {
+ *             ProductionVariants = 
+ *             {
+ *                 new Aws.Sagemaker.Inputs.EndpointConfigurationProductionVariantArgs
+ *                 {
+ *                     VariantName = "variant-1",
+ *                     ModelName = aws_sagemaker_model.M.Name,
+ *                     InitialInstanceCount = 1,
+ *                     InstanceType = "ml.t2.medium",
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Name", "foo" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sagemaker.NewEndpointConfiguration(ctx, "ec", &sagemaker.EndpointConfigurationArgs{
+ * 			ProductionVariants: sagemaker.EndpointConfigurationProductionVariantArray{
+ * 				&sagemaker.EndpointConfigurationProductionVariantArgs{
+ * 					VariantName:          pulumi.String("variant-1"),
+ * 					ModelName:            pulumi.Any(aws_sagemaker_model.M.Name),
+ * 					InitialInstanceCount: pulumi.Int(1),
+ * 					InstanceType:         pulumi.String("ml.t2.medium"),
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("foo"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +127,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sagemaker/endpointConfiguration:EndpointConfiguration test_endpoint_config endpoint-config-foo
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sagemaker/endpointConfiguration:EndpointConfiguration")
 public class EndpointConfiguration extends io.pulumi.resources.CustomResource {

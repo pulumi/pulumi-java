@@ -16,20 +16,83 @@ import javax.annotation.Nullable;
 /**
  * Provides a Direct Connect BGP peer resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const peer = new aws.directconnect.BgpPeer("peer", {
+ *     virtualInterfaceId: aws_dx_private_virtual_interface.foo.id,
+ *     addressFamily: "ipv6",
+ *     bgpAsn: 65351,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * peer = aws.directconnect.BgpPeer("peer",
+ *     virtual_interface_id=aws_dx_private_virtual_interface["foo"]["id"],
+ *     address_family="ipv6",
+ *     bgp_asn=65351)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var peer = new Aws.DirectConnect.BgpPeer("peer", new Aws.DirectConnect.BgpPeerArgs
+ *         {
+ *             VirtualInterfaceId = aws_dx_private_virtual_interface.Foo.Id,
+ *             AddressFamily = "ipv6",
+ *             BgpAsn = 65351,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/directconnect"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := directconnect.NewBgpPeer(ctx, "peer", &directconnect.BgpPeerArgs{
+ * 			VirtualInterfaceId: pulumi.Any(aws_dx_private_virtual_interface.Foo.Id),
+ * 			AddressFamily:      pulumi.String("ipv6"),
+ * 			BgpAsn:             pulumi.Int(65351),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:directconnect/bgpPeer:BgpPeer")
 public class BgpPeer extends io.pulumi.resources.CustomResource {
     /**
-     * The address family for the BGP peer. ` ipv4  ` or `ipv6`.
+     * The address family for the BGP peer. `ipv4 ` or `ipv6`.
      * 
      */
     @Export(name="addressFamily", type=String.class, parameters={})
     private Output<String> addressFamily;
 
     /**
-     * @return The address family for the BGP peer. ` ipv4  ` or `ipv6`.
+     * @return The address family for the BGP peer. `ipv4 ` or `ipv6`.
      * 
      */
     public Output<String> getAddressFamily() {

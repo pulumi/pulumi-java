@@ -17,7 +17,80 @@ import javax.annotation.Nullable;
 /**
  * Provides a Gamelift Alias resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.gamelift.Alias("example", {
+ *     description: "Example Description",
+ *     routingStrategy: {
+ *         message: "Example Message",
+ *         type: "TERMINAL",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.gamelift.Alias("example",
+ *     description="Example Description",
+ *     routing_strategy=aws.gamelift.AliasRoutingStrategyArgs(
+ *         message="Example Message",
+ *         type="TERMINAL",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.GameLift.Alias("example", new Aws.GameLift.AliasArgs
+ *         {
+ *             Description = "Example Description",
+ *             RoutingStrategy = new Aws.GameLift.Inputs.AliasRoutingStrategyArgs
+ *             {
+ *                 Message = "Example Message",
+ *                 Type = "TERMINAL",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/gamelift"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := gamelift.NewAlias(ctx, "example", &gamelift.AliasArgs{
+ * 			Description: pulumi.String("Example Description"),
+ * 			RoutingStrategy: &gamelift.AliasRoutingStrategyArgs{
+ * 				Message: pulumi.String("Example Message"),
+ * 				Type:    pulumi.String("TERMINAL"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +100,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:gamelift/alias:Alias example <alias-id>
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:gamelift/alias:Alias")
 public class Alias extends io.pulumi.resources.CustomResource {

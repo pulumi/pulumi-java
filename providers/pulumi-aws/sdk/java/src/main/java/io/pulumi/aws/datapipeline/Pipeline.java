@@ -16,7 +16,57 @@ import javax.annotation.Nullable;
 /**
  * Provides a DataPipeline Pipeline resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const defaultPipeline = new aws.datapipeline.Pipeline("default", {});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default = aws.datapipeline.Pipeline("default")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Aws.DataPipeline.Pipeline("default", new Aws.DataPipeline.PipelineArgs
+ *         {
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/datapipeline"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datapipeline.NewPipeline(ctx, "default", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +76,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:datapipeline/pipeline:Pipeline default df-1234567890
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:datapipeline/pipeline:Pipeline")
 public class Pipeline extends io.pulumi.resources.CustomResource {

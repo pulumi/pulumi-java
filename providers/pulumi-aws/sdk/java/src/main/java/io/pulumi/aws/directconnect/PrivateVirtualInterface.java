@@ -18,7 +18,75 @@ import javax.annotation.Nullable;
 /**
  * Provides a Direct Connect private virtual interface resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const foo = new aws.directconnect.PrivateVirtualInterface("foo", {
+ *     addressFamily: "ipv4",
+ *     bgpAsn: 65352,
+ *     connectionId: "dxcon-zzzzzzzz",
+ *     vlan: 4094,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * foo = aws.directconnect.PrivateVirtualInterface("foo",
+ *     address_family="ipv4",
+ *     bgp_asn=65352,
+ *     connection_id="dxcon-zzzzzzzz",
+ *     vlan=4094)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var foo = new Aws.DirectConnect.PrivateVirtualInterface("foo", new Aws.DirectConnect.PrivateVirtualInterfaceArgs
+ *         {
+ *             AddressFamily = "ipv4",
+ *             BgpAsn = 65352,
+ *             ConnectionId = "dxcon-zzzzzzzz",
+ *             Vlan = 4094,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/directconnect"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := directconnect.NewPrivateVirtualInterface(ctx, "foo", &directconnect.PrivateVirtualInterfaceArgs{
+ * 			AddressFamily: pulumi.String("ipv4"),
+ * 			BgpAsn:        pulumi.Int(65352),
+ * 			ConnectionId:  pulumi.String("dxcon-zzzzzzzz"),
+ * 			Vlan:          pulumi.Int(4094),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,18 +96,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:directconnect/privateVirtualInterface:PrivateVirtualInterface test dxvif-33cc44dd
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:directconnect/privateVirtualInterface:PrivateVirtualInterface")
 public class PrivateVirtualInterface extends io.pulumi.resources.CustomResource {
     /**
-     * The address family for the BGP peer. ` ipv4  ` or `ipv6`.
+     * The address family for the BGP peer. `ipv4 ` or `ipv6`.
      * 
      */
     @Export(name="addressFamily", type=String.class, parameters={})
     private Output<String> addressFamily;
 
     /**
-     * @return The address family for the BGP peer. ` ipv4  ` or `ipv6`.
+     * @return The address family for the BGP peer. `ipv4 ` or `ipv6`.
      * 
      */
     public Output<String> getAddressFamily() {

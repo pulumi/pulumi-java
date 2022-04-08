@@ -19,7 +19,411 @@ import javax.annotation.Nullable;
 /**
  * Provides a CloudWatch Metric Stream resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-trustpolicy.html
+ * const metricStreamToFirehoseRole = new aws.iam.Role("metricStreamToFirehoseRole", {assumeRolePolicy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "streams.metrics.cloudwatch.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * `});
+ * const bucket = new aws.s3.Bucket("bucket", {acl: "private"});
+ * const firehoseToS3Role = new aws.iam.Role("firehoseToS3Role", {assumeRolePolicy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "firehose.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * `});
+ * const s3Stream = new aws.kinesis.FirehoseDeliveryStream("s3Stream", {
+ *     destination: "s3",
+ *     s3Configuration: {
+ *         roleArn: firehoseToS3Role.arn,
+ *         bucketArn: bucket.arn,
+ *     },
+ * });
+ * const main = new aws.cloudwatch.MetricStream("main", {
+ *     roleArn: metricStreamToFirehoseRole.arn,
+ *     firehoseArn: s3Stream.arn,
+ *     outputFormat: "json",
+ *     includeFilters: [
+ *         {
+ *             namespace: "AWS/EC2",
+ *         },
+ *         {
+ *             namespace: "AWS/EBS",
+ *         },
+ *     ],
+ * });
+ * // https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-trustpolicy.html
+ * const metricStreamToFirehoseRolePolicy = new aws.iam.RolePolicy("metricStreamToFirehoseRolePolicy", {
+ *     role: metricStreamToFirehoseRole.id,
+ *     policy: pulumi.interpolate`{
+ *     "Version": "2012-10-17",
+ *     "Statement": [
+ *         {
+ *             "Effect": "Allow",
+ *             "Action": [
+ *                 "firehose:PutRecord",
+ *                 "firehose:PutRecordBatch"
+ *             ],
+ *             "Resource": "${s3Stream.arn}"
+ *         }
+ *     ]
+ * }
+ * `,
+ * });
+ * const firehoseToS3RolePolicy = new aws.iam.RolePolicy("firehoseToS3RolePolicy", {
+ *     role: firehoseToS3Role.id,
+ *     policy: pulumi.interpolate`{
+ *     "Version": "2012-10-17",
+ *     "Statement": [
+ *         {
+ *             "Effect": "Allow",
+ *             "Action": [
+ *                 "s3:AbortMultipartUpload",
+ *                 "s3:GetBucketLocation",
+ *                 "s3:GetObject",
+ *                 "s3:ListBucket",
+ *                 "s3:ListBucketMultipartUploads",
+ *                 "s3:PutObject"
+ *             ],
+ *             "Resource": [
+ *                 "${bucket.arn}",
+ *                 "${bucket.arn}/*"
+ *             ]
+ *         }
+ *     ]
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-trustpolicy.html
+ * metric_stream_to_firehose_role = aws.iam.Role("metricStreamToFirehoseRole", assume_role_policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "streams.metrics.cloudwatch.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * """)
+ * bucket = aws.s3.Bucket("bucket", acl="private")
+ * firehose_to_s3_role = aws.iam.Role("firehoseToS3Role", assume_role_policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "firehose.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * """)
+ * s3_stream = aws.kinesis.FirehoseDeliveryStream("s3Stream",
+ *     destination="s3",
+ *     s3_configuration=aws.kinesis.FirehoseDeliveryStreamS3ConfigurationArgs(
+ *         role_arn=firehose_to_s3_role.arn,
+ *         bucket_arn=bucket.arn,
+ *     ))
+ * main = aws.cloudwatch.MetricStream("main",
+ *     role_arn=metric_stream_to_firehose_role.arn,
+ *     firehose_arn=s3_stream.arn,
+ *     output_format="json",
+ *     include_filters=[
+ *         aws.cloudwatch.MetricStreamIncludeFilterArgs(
+ *             namespace="AWS/EC2",
+ *         ),
+ *         aws.cloudwatch.MetricStreamIncludeFilterArgs(
+ *             namespace="AWS/EBS",
+ *         ),
+ *     ])
+ * # https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-trustpolicy.html
+ * metric_stream_to_firehose_role_policy = aws.iam.RolePolicy("metricStreamToFirehoseRolePolicy",
+ *     role=metric_stream_to_firehose_role.id,
+ *     policy=s3_stream.arn.apply(lambda arn: f"""{{
+ *     "Version": "2012-10-17",
+ *     "Statement": [
+ *         {{
+ *             "Effect": "Allow",
+ *             "Action": [
+ *                 "firehose:PutRecord",
+ *                 "firehose:PutRecordBatch"
+ *             ],
+ *             "Resource": "{arn}"
+ *         }}
+ *     ]
+ * }}
+ * """))
+ * firehose_to_s3_role_policy = aws.iam.RolePolicy("firehoseToS3RolePolicy",
+ *     role=firehose_to_s3_role.id,
+ *     policy=pulumi.Output.all(bucket.arn, bucket.arn).apply(lambda bucketArn, bucketArn1: f"""{{
+ *     "Version": "2012-10-17",
+ *     "Statement": [
+ *         {{
+ *             "Effect": "Allow",
+ *             "Action": [
+ *                 "s3:AbortMultipartUpload",
+ *                 "s3:GetBucketLocation",
+ *                 "s3:GetObject",
+ *                 "s3:ListBucket",
+ *                 "s3:ListBucketMultipartUploads",
+ *                 "s3:PutObject"
+ *             ],
+ *             "Resource": [
+ *                 "{bucket_arn}",
+ *                 "{bucket_arn1}/*"
+ *             ]
+ *         }}
+ *     ]
+ * }}
+ * """))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-trustpolicy.html
+ *         var metricStreamToFirehoseRole = new Aws.Iam.Role("metricStreamToFirehoseRole", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Action"": ""sts:AssumeRole"",
+ *       ""Principal"": {
+ *         ""Service"": ""streams.metrics.cloudwatch.amazonaws.com""
+ *       },
+ *       ""Effect"": ""Allow"",
+ *       ""Sid"": """"
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+ *         {
+ *             Acl = "private",
+ *         });
+ *         var firehoseToS3Role = new Aws.Iam.Role("firehoseToS3Role", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Action"": ""sts:AssumeRole"",
+ *       ""Principal"": {
+ *         ""Service"": ""firehose.amazonaws.com""
+ *       },
+ *       ""Effect"": ""Allow"",
+ *       ""Sid"": """"
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var s3Stream = new Aws.Kinesis.FirehoseDeliveryStream("s3Stream", new Aws.Kinesis.FirehoseDeliveryStreamArgs
+ *         {
+ *             Destination = "s3",
+ *             S3Configuration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamS3ConfigurationArgs
+ *             {
+ *                 RoleArn = firehoseToS3Role.Arn,
+ *                 BucketArn = bucket.Arn,
+ *             },
+ *         });
+ *         var main = new Aws.CloudWatch.MetricStream("main", new Aws.CloudWatch.MetricStreamArgs
+ *         {
+ *             RoleArn = metricStreamToFirehoseRole.Arn,
+ *             FirehoseArn = s3Stream.Arn,
+ *             OutputFormat = "json",
+ *             IncludeFilters = 
+ *             {
+ *                 new Aws.CloudWatch.Inputs.MetricStreamIncludeFilterArgs
+ *                 {
+ *                     Namespace = "AWS/EC2",
+ *                 },
+ *                 new Aws.CloudWatch.Inputs.MetricStreamIncludeFilterArgs
+ *                 {
+ *                     Namespace = "AWS/EBS",
+ *                 },
+ *             },
+ *         });
+ *         // https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-trustpolicy.html
+ *         var metricStreamToFirehoseRolePolicy = new Aws.Iam.RolePolicy("metricStreamToFirehoseRolePolicy", new Aws.Iam.RolePolicyArgs
+ *         {
+ *             Role = metricStreamToFirehoseRole.Id,
+ *             Policy = s3Stream.Arn.Apply(arn => @$"{{
+ *     ""Version"": ""2012-10-17"",
+ *     ""Statement"": [
+ *         {{
+ *             ""Effect"": ""Allow"",
+ *             ""Action"": [
+ *                 ""firehose:PutRecord"",
+ *                 ""firehose:PutRecordBatch""
+ *             ],
+ *             ""Resource"": ""{arn}""
+ *         }}
+ *     ]
+ * }}
+ * "),
+ *         });
+ *         var firehoseToS3RolePolicy = new Aws.Iam.RolePolicy("firehoseToS3RolePolicy", new Aws.Iam.RolePolicyArgs
+ *         {
+ *             Role = firehoseToS3Role.Id,
+ *             Policy = Output.Tuple(bucket.Arn, bucket.Arn).Apply(values =>
+ *             {
+ *                 var bucketArn = values.Item1;
+ *                 var bucketArn1 = values.Item2;
+ *                 return @$"{{
+ *     ""Version"": ""2012-10-17"",
+ *     ""Statement"": [
+ *         {{
+ *             ""Effect"": ""Allow"",
+ *             ""Action"": [
+ *                 ""s3:AbortMultipartUpload"",
+ *                 ""s3:GetBucketLocation"",
+ *                 ""s3:GetObject"",
+ *                 ""s3:ListBucket"",
+ *                 ""s3:ListBucketMultipartUploads"",
+ *                 ""s3:PutObject""
+ *             ],
+ *             ""Resource"": [
+ *                 ""{bucketArn}"",
+ *                 ""{bucketArn1}/*""
+ *             ]
+ *         }}
+ *     ]
+ * }}
+ * ";
+ *             }),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kinesis"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		metricStreamToFirehoseRole, err := iam.NewRole(ctx, "metricStreamToFirehoseRole", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"streams.metrics.cloudwatch.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		bucket, err := s3.NewBucket(ctx, "bucket", &s3.BucketArgs{
+ * 			Acl: pulumi.String("private"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		firehoseToS3Role, err := iam.NewRole(ctx, "firehoseToS3Role", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"firehose.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		s3Stream, err := kinesis.NewFirehoseDeliveryStream(ctx, "s3Stream", &kinesis.FirehoseDeliveryStreamArgs{
+ * 			Destination: pulumi.String("s3"),
+ * 			S3Configuration: &kinesis.FirehoseDeliveryStreamS3ConfigurationArgs{
+ * 				RoleArn:   firehoseToS3Role.Arn,
+ * 				BucketArn: bucket.Arn,
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudwatch.NewMetricStream(ctx, "main", &cloudwatch.MetricStreamArgs{
+ * 			RoleArn:      metricStreamToFirehoseRole.Arn,
+ * 			FirehoseArn:  s3Stream.Arn,
+ * 			OutputFormat: pulumi.String("json"),
+ * 			IncludeFilters: cloudwatch.MetricStreamIncludeFilterArray{
+ * 				&cloudwatch.MetricStreamIncludeFilterArgs{
+ * 					Namespace: pulumi.String("AWS/EC2"),
+ * 				},
+ * 				&cloudwatch.MetricStreamIncludeFilterArgs{
+ * 					Namespace: pulumi.String("AWS/EBS"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicy(ctx, "metricStreamToFirehoseRolePolicy", &iam.RolePolicyArgs{
+ * 			Role: metricStreamToFirehoseRole.ID(),
+ * 			Policy: s3Stream.Arn.ApplyT(func(arn string) (string, error) {
+ * 				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "        {\n", "            \"Effect\": \"Allow\",\n", "            \"Action\": [\n", "                \"firehose:PutRecord\",\n", "                \"firehose:PutRecordBatch\"\n", "            ],\n", "            \"Resource\": \"", arn, "\"\n", "        }\n", "    ]\n", "}\n"), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicy(ctx, "firehoseToS3RolePolicy", &iam.RolePolicyArgs{
+ * 			Role: firehoseToS3Role.ID(),
+ * 			Policy: pulumi.All(bucket.Arn, bucket.Arn).ApplyT(func(_args []interface{}) (string, error) {
+ * 				bucketArn := _args[0].(string)
+ * 				bucketArn1 := _args[1].(string)
+ * 				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "        {\n", "            \"Effect\": \"Allow\",\n", "            \"Action\": [\n", "                \"s3:AbortMultipartUpload\",\n", "                \"s3:GetBucketLocation\",\n", "                \"s3:GetObject\",\n", "                \"s3:ListBucket\",\n", "                \"s3:ListBucketMultipartUploads\",\n", "                \"s3:PutObject\"\n", "            ],\n", "            \"Resource\": [\n", "                \"", bucketArn, "\",\n", "                \"", bucketArn1, "/*\"\n", "            ]\n", "        }\n", "    ]\n", "}\n"), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +433,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudwatch/metricStream:MetricStream sample <name>
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudwatch/metricStream:MetricStream")
 public class MetricStream extends io.pulumi.resources.CustomResource {

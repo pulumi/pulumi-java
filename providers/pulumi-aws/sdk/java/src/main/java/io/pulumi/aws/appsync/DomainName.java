@@ -15,7 +15,67 @@ import javax.annotation.Nullable;
 /**
  * Provides an AppSync Domain Name.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.appsync.DomainName("example", {
+ *     domainName: "api.example.com",
+ *     certificateArn: aws_acm_certificate.example.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.appsync.DomainName("example",
+ *     domain_name="api.example.com",
+ *     certificate_arn=aws_acm_certificate["example"]["arn"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.AppSync.DomainName("example", new Aws.AppSync.DomainNameArgs
+ *         {
+ *             DomainName = "api.example.com",
+ *             CertificateArn = aws_acm_certificate.Example.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appsync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appsync.NewDomainName(ctx, "example", &appsync.DomainNameArgs{
+ * 			DomainName:     pulumi.String("api.example.com"),
+ * 			CertificateArn: pulumi.Any(aws_acm_certificate.Example.Arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +85,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appsync/domainName:DomainName example example.com
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:appsync/domainName:DomainName")
 public class DomainName extends io.pulumi.resources.CustomResource {

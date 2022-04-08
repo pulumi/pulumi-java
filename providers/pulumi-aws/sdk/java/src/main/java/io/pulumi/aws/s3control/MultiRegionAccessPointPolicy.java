@@ -16,7 +16,149 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage an S3 Multi-Region Access Point access control policy.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic Example
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const currentCallerIdentity = aws.getCallerIdentity({});
+ * const currentPartition = aws.getPartition({});
+ * const fooBucket = new aws.s3.Bucket("fooBucket", {});
+ * const exampleMultiRegionAccessPoint = new aws.s3control.MultiRegionAccessPoint("exampleMultiRegionAccessPoint", {details: {
+ *     name: "example",
+ *     regions: [{
+ *         bucket: fooBucket.id,
+ *     }],
+ * }});
+ * const exampleMultiRegionAccessPointPolicy = new aws.s3control.MultiRegionAccessPointPolicy("exampleMultiRegionAccessPointPolicy", {details: {
+ *     name: exampleMultiRegionAccessPoint.id.apply(id => id.split(":"))[1],
+ *     policy: pulumi.all([currentCallerIdentity, currentPartition, currentCallerIdentity, exampleMultiRegionAccessPoint.alias]).apply(([currentCallerIdentity, currentPartition, currentCallerIdentity1, alias]) => JSON.stringify({
+ *         Version: "2012-10-17",
+ *         Statement: [{
+ *             Sid: "Example",
+ *             Effect: "Allow",
+ *             Principal: {
+ *                 AWS: currentCallerIdentity.accountId,
+ *             },
+ *             Action: [
+ *                 "s3:GetObject",
+ *                 "s3:PutObject",
+ *             ],
+ *             Resource: `arn:${currentPartition.partition}:s3::${currentCallerIdentity1.accountId}:accesspoint/${alias}/object/*`,
+ *         }],
+ *     })),
+ * }});
+ * ```
+ * ```python
+ * import pulumi
+ * import json
+ * import pulumi_aws as aws
+ * 
+ * current_caller_identity = aws.get_caller_identity()
+ * current_partition = aws.get_partition()
+ * foo_bucket = aws.s3.Bucket("fooBucket")
+ * example_multi_region_access_point = aws.s3control.MultiRegionAccessPoint("exampleMultiRegionAccessPoint", details=aws.s3control.MultiRegionAccessPointDetailsArgs(
+ *     name="example",
+ *     regions=[aws.s3control.MultiRegionAccessPointDetailsRegionArgs(
+ *         bucket=foo_bucket.id,
+ *     )],
+ * ))
+ * example_multi_region_access_point_policy = aws.s3control.MultiRegionAccessPointPolicy("exampleMultiRegionAccessPointPolicy", details=aws.s3control.MultiRegionAccessPointPolicyDetailsArgs(
+ *     name=example_multi_region_access_point.id.apply(lambda id: id.split(":"))[1],
+ *     policy=example_multi_region_access_point.alias.apply(lambda alias: json.dumps({
+ *         "Version": "2012-10-17",
+ *         "Statement": [{
+ *             "Sid": "Example",
+ *             "Effect": "Allow",
+ *             "Principal": {
+ *                 "AWS": current_caller_identity.account_id,
+ *             },
+ *             "Action": [
+ *                 "s3:GetObject",
+ *                 "s3:PutObject",
+ *             ],
+ *             "Resource": f"arn:{current_partition.partition}:s3::{current_caller_identity.account_id}:accesspoint/{alias}/object/*",
+ *         }],
+ *     })),
+ * ))
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using System.Text.Json;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var currentCallerIdentity = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+ *         var currentPartition = Output.Create(Aws.GetPartition.InvokeAsync());
+ *         var fooBucket = new Aws.S3.Bucket("fooBucket", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var exampleMultiRegionAccessPoint = new Aws.S3Control.MultiRegionAccessPoint("exampleMultiRegionAccessPoint", new Aws.S3Control.MultiRegionAccessPointArgs
+ *         {
+ *             Details = new Aws.S3Control.Inputs.MultiRegionAccessPointDetailsArgs
+ *             {
+ *                 Name = "example",
+ *                 Regions = 
+ *                 {
+ *                     new Aws.S3Control.Inputs.MultiRegionAccessPointDetailsRegionArgs
+ *                     {
+ *                         Bucket = fooBucket.Id,
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var exampleMultiRegionAccessPointPolicy = new Aws.S3Control.MultiRegionAccessPointPolicy("exampleMultiRegionAccessPointPolicy", new Aws.S3Control.MultiRegionAccessPointPolicyArgs
+ *         {
+ *             Details = new Aws.S3Control.Inputs.MultiRegionAccessPointPolicyDetailsArgs
+ *             {
+ *                 Name = exampleMultiRegionAccessPoint.Id.Apply(id => id.Split(":"))[1],
+ *                 Policy = Output.Tuple(currentCallerIdentity, currentPartition, currentCallerIdentity, exampleMultiRegionAccessPoint.Alias).Apply(values =>
+ *                 {
+ *                     var currentCallerIdentity = values.Item1;
+ *                     var currentPartition = values.Item2;
+ *                     var currentCallerIdentity1 = values.Item3;
+ *                     var @alias = values.Item4;
+ *                     return JsonSerializer.Serialize(new Dictionary<string, object?>
+ *                     {
+ *                         { "Version", "2012-10-17" },
+ *                         { "Statement", new[]
+ *                             {
+ *                                 new Dictionary<string, object?>
+ *                                 {
+ *                                     { "Sid", "Example" },
+ *                                     { "Effect", "Allow" },
+ *                                     { "Principal", new Dictionary<string, object?>
+ *                                     {
+ *                                         { "AWS", currentCallerIdentity.AccountId },
+ *                                     } },
+ *                                     { "Action", new[]
+ *                                         {
+ *                                             "s3:GetObject",
+ *                                             "s3:PutObject",
+ *                                         }
+ *                                      },
+ *                                     { "Resource", $"arn:{currentPartition.Partition}:s3::{currentCallerIdentity1.AccountId}:accesspoint/{@alias}/object/*" },
+ *                                 },
+ *                             }
+ *                          },
+ *                     });
+ *                 }),
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +168,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:s3control/multiRegionAccessPointPolicy:MultiRegionAccessPointPolicy example 123456789012:example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:s3control/multiRegionAccessPointPolicy:MultiRegionAccessPointPolicy")
 public class MultiRegionAccessPointPolicy extends io.pulumi.resources.CustomResource {

@@ -18,7 +18,364 @@ import javax.annotation.Nullable;
 /**
  * Provides an Amplify Branch resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.amplify.App("example", {});
+ * const master = new aws.amplify.Branch("master", {
+ *     appId: example.id,
+ *     branchName: "master",
+ *     framework: "React",
+ *     stage: "PRODUCTION",
+ *     environmentVariables: {
+ *         REACT_APP_API_SERVER: "https://api.example.com",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.amplify.App("example")
+ * master = aws.amplify.Branch("master",
+ *     app_id=example.id,
+ *     branch_name="master",
+ *     framework="React",
+ *     stage="PRODUCTION",
+ *     environment_variables={
+ *         "REACT_APP_API_SERVER": "https://api.example.com",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Amplify.App("example", new Aws.Amplify.AppArgs
+ *         {
+ *         });
+ *         var master = new Aws.Amplify.Branch("master", new Aws.Amplify.BranchArgs
+ *         {
+ *             AppId = example.Id,
+ *             BranchName = "master",
+ *             Framework = "React",
+ *             Stage = "PRODUCTION",
+ *             EnvironmentVariables = 
+ *             {
+ *                 { "REACT_APP_API_SERVER", "https://api.example.com" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/amplify"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		example, err := amplify.NewApp(ctx, "example", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = amplify.NewBranch(ctx, "master", &amplify.BranchArgs{
+ * 			AppId:      example.ID(),
+ * 			BranchName: pulumi.String("master"),
+ * 			Framework:  pulumi.String("React"),
+ * 			Stage:      pulumi.String("PRODUCTION"),
+ * 			EnvironmentVariables: pulumi.StringMap{
+ * 				"REACT_APP_API_SERVER": pulumi.String("https://api.example.com"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Basic Authentication
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.amplify.App("example", {});
+ * const master = new aws.amplify.Branch("master", {
+ *     appId: example.id,
+ *     branchName: "master",
+ *     basicAuthConfig: [{
+ *         enableBasicAuth: true,
+ *         username: "username",
+ *         password: "password",
+ *     }],
+ * });
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Notifications
+ * 
+ * Amplify Console uses EventBridge (formerly known as CloudWatch Events) and SNS for email notifications.  To implement the same functionality, you need to set `enable_notification` in a `aws.amplify.Branch` resource, as well as creating an EventBridge Rule, an SNS topic, and SNS subscriptions.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.amplify.App("example", {});
+ * const master = new aws.amplify.Branch("master", {
+ *     appId: example.id,
+ *     branchName: "master",
+ *     enableNotification: true,
+ * });
+ * // EventBridge Rule for Amplify notifications
+ * const amplifyAppMasterEventRule = new aws.cloudwatch.EventRule("amplifyAppMasterEventRule", {
+ *     description: pulumi.interpolate`AWS Amplify build notifications for :  App: ${aws_amplify_app.app.id} Branch: ${master.branchName}`,
+ *     eventPattern: pulumi.all([example.id, master.branchName]).apply(([id, branchName]) => JSON.stringify({
+ *         detail: {
+ *             appId: [id],
+ *             branchName: [branchName],
+ *             jobStatus: [
+ *                 "SUCCEED",
+ *                 "FAILED",
+ *                 "STARTED",
+ *             ],
+ *         },
+ *         "detail-type": ["Amplify Deployment Status Change"],
+ *         source: ["aws.amplify"],
+ *     })),
+ * });
+ * const amplifyAppMasterTopic = new aws.sns.Topic("amplifyAppMasterTopic", {});
+ * const amplifyAppMasterEventTarget = new aws.cloudwatch.EventTarget("amplifyAppMasterEventTarget", {
+ *     rule: amplifyAppMasterEventRule.name,
+ *     arn: amplifyAppMasterTopic.arn,
+ *     inputTransformer: {
+ *         inputPaths: {
+ *             jobId: `$.detail.jobId`,
+ *             appId: `$.detail.appId`,
+ *             region: `$.region`,
+ *             branch: `$.detail.branchName`,
+ *             status: `$.detail.jobStatus`,
+ *         },
+ *         inputTemplate: "\"Build notification from the AWS Amplify Console for app: https://<branch>.<appId>.amplifyapp.com/. Your build status is <status>. Go to https://console.aws.amazon.com/amplify/home?region=<region>#<appId>/<branch>/<jobId> to view details on your build. \"",
+ *     },
+ * });
+ * // SNS Topic for Amplify notifications
+ * const amplifyAppMasterPolicyDocument = pulumi.all([master.arn, amplifyAppMasterTopic.arn]).apply(([masterArn, amplifyAppMasterTopicArn]) => aws.iam.getPolicyDocumentOutput({
+ *     statements: [{
+ *         sid: `Allow_Publish_Events ${masterArn}`,
+ *         effect: "Allow",
+ *         actions: ["SNS:Publish"],
+ *         principals: [{
+ *             type: "Service",
+ *             identifiers: ["events.amazonaws.com"],
+ *         }],
+ *         resources: [amplifyAppMasterTopicArn],
+ *     }],
+ * }));
+ * const amplifyAppMasterTopicPolicy = new aws.sns.TopicPolicy("amplifyAppMasterTopicPolicy", {
+ *     arn: amplifyAppMasterTopic.arn,
+ *     policy: amplifyAppMasterPolicyDocument.apply(amplifyAppMasterPolicyDocument => amplifyAppMasterPolicyDocument.json),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import json
+ * import pulumi_aws as aws
+ * 
+ * example = aws.amplify.App("example")
+ * master = aws.amplify.Branch("master",
+ *     app_id=example.id,
+ *     branch_name="master",
+ *     enable_notification=True)
+ * # EventBridge Rule for Amplify notifications
+ * amplify_app_master_event_rule = aws.cloudwatch.EventRule("amplifyAppMasterEventRule",
+ *     description=master.branch_name.apply(lambda branch_name: f"AWS Amplify build notifications for :  App: {aws_amplify_app['app']['id']} Branch: {branch_name}"),
+ *     event_pattern=pulumi.Output.all(example.id, master.branch_name).apply(lambda id, branch_name: json.dumps({
+ *         "detail": {
+ *             "appId": [id],
+ *             "branchName": [branch_name],
+ *             "jobStatus": [
+ *                 "SUCCEED",
+ *                 "FAILED",
+ *                 "STARTED",
+ *             ],
+ *         },
+ *         "detail-type": ["Amplify Deployment Status Change"],
+ *         "source": ["aws.amplify"],
+ *     })))
+ * amplify_app_master_topic = aws.sns.Topic("amplifyAppMasterTopic")
+ * amplify_app_master_event_target = aws.cloudwatch.EventTarget("amplifyAppMasterEventTarget",
+ *     rule=amplify_app_master_event_rule.name,
+ *     arn=amplify_app_master_topic.arn,
+ *     input_transformer=aws.cloudwatch.EventTargetInputTransformerArgs(
+ *         input_paths={
+ *             "jobId": "$.detail.jobId",
+ *             "appId": "$.detail.appId",
+ *             "region": "$.region",
+ *             "branch": "$.detail.branchName",
+ *             "status": "$.detail.jobStatus",
+ *         },
+ *         input_template="\"Build notification from the AWS Amplify Console for app: https://<branch>.<appId>.amplifyapp.com/. Your build status is <status>. Go to https://console.aws.amazon.com/amplify/home?region=<region>#<appId>/<branch>/<jobId> to view details on your build. \"",
+ *     ))
+ * # SNS Topic for Amplify notifications
+ * amplify_app_master_policy_document = pulumi.Output.all(master.arn, amplify_app_master_topic.arn).apply(lambda masterArn, amplifyAppMasterTopicArn: aws.iam.get_policy_document_output(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+ *     sid=f"Allow_Publish_Events {master_arn}",
+ *     effect="Allow",
+ *     actions=["SNS:Publish"],
+ *     principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+ *         type="Service",
+ *         identifiers=["events.amazonaws.com"],
+ *     )],
+ *     resources=[amplify_app_master_topic_arn],
+ * )]))
+ * amplify_app_master_topic_policy = aws.sns.TopicPolicy("amplifyAppMasterTopicPolicy",
+ *     arn=amplify_app_master_topic.arn,
+ *     policy=amplify_app_master_policy_document.json)
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using System.Text.Json;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Amplify.App("example", new Aws.Amplify.AppArgs
+ *         {
+ *         });
+ *         var master = new Aws.Amplify.Branch("master", new Aws.Amplify.BranchArgs
+ *         {
+ *             AppId = example.Id,
+ *             BranchName = "master",
+ *             EnableNotification = true,
+ *         });
+ *         // EventBridge Rule for Amplify notifications
+ *         var amplifyAppMasterEventRule = new Aws.CloudWatch.EventRule("amplifyAppMasterEventRule", new Aws.CloudWatch.EventRuleArgs
+ *         {
+ *             Description = master.BranchName.Apply(branchName => $"AWS Amplify build notifications for :  App: {aws_amplify_app.App.Id} Branch: {branchName}"),
+ *             EventPattern = Output.Tuple(example.Id, master.BranchName).Apply(values =>
+ *             {
+ *                 var id = values.Item1;
+ *                 var branchName = values.Item2;
+ *                 return JsonSerializer.Serialize(new Dictionary<string, object?>
+ *                 {
+ *                     { "detail", new Dictionary<string, object?>
+ *                     {
+ *                         { "appId", new[]
+ *                             {
+ *                                 id,
+ *                             }
+ *                          },
+ *                         { "branchName", new[]
+ *                             {
+ *                                 branchName,
+ *                             }
+ *                          },
+ *                         { "jobStatus", new[]
+ *                             {
+ *                                 "SUCCEED",
+ *                                 "FAILED",
+ *                                 "STARTED",
+ *                             }
+ *                          },
+ *                     } },
+ *                     { "detail-type", new[]
+ *                         {
+ *                             "Amplify Deployment Status Change",
+ *                         }
+ *                      },
+ *                     { "source", new[]
+ *                         {
+ *                             "aws.amplify",
+ *                         }
+ *                      },
+ *                 });
+ *             }),
+ *         });
+ *         var amplifyAppMasterTopic = new Aws.Sns.Topic("amplifyAppMasterTopic", new Aws.Sns.TopicArgs
+ *         {
+ *         });
+ *         var amplifyAppMasterEventTarget = new Aws.CloudWatch.EventTarget("amplifyAppMasterEventTarget", new Aws.CloudWatch.EventTargetArgs
+ *         {
+ *             Rule = amplifyAppMasterEventRule.Name,
+ *             Arn = amplifyAppMasterTopic.Arn,
+ *             InputTransformer = new Aws.CloudWatch.Inputs.EventTargetInputTransformerArgs
+ *             {
+ *                 InputPaths = 
+ *                 {
+ *                     { "jobId", "$.detail.jobId" },
+ *                     { "appId", "$.detail.appId" },
+ *                     { "region", "$.region" },
+ *                     { "branch", "$.detail.branchName" },
+ *                     { "status", "$.detail.jobStatus" },
+ *                 },
+ *                 InputTemplate = "\"Build notification from the AWS Amplify Console for app: https://<branch>.<appId>.amplifyapp.com/. Your build status is <status>. Go to https://console.aws.amazon.com/amplify/home?region=<region>#<appId>/<branch>/<jobId> to view details on your build. \"",
+ *             },
+ *         });
+ *         // SNS Topic for Amplify notifications
+ *         var amplifyAppMasterPolicyDocument = Output.Tuple(master.Arn, amplifyAppMasterTopic.Arn).Apply(values =>
+ *         {
+ *             var masterArn = values.Item1;
+ *             var amplifyAppMasterTopicArn = values.Item2;
+ *             return Aws.Iam.GetPolicyDocument.Invoke(new Aws.Iam.GetPolicyDocumentInvokeArgs
+ *             {
+ *                 Statements = 
+ *                 {
+ *                     new Aws.Iam.Inputs.GetPolicyDocumentStatementInputArgs
+ *                     {
+ *                         Sid = $"Allow_Publish_Events {masterArn}",
+ *                         Effect = "Allow",
+ *                         Actions = 
+ *                         {
+ *                             "SNS:Publish",
+ *                         },
+ *                         Principals = 
+ *                         {
+ *                             new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalInputArgs
+ *                             {
+ *                                 Type = "Service",
+ *                                 Identifiers = 
+ *                                 {
+ *                                     "events.amazonaws.com",
+ *                                 },
+ *                             },
+ *                         },
+ *                         Resources = 
+ *                         {
+ *                             amplifyAppMasterTopicArn,
+ *                         },
+ *                     },
+ *                 },
+ *             });
+ *         });
+ *         var amplifyAppMasterTopicPolicy = new Aws.Sns.TopicPolicy("amplifyAppMasterTopicPolicy", new Aws.Sns.TopicPolicyArgs
+ *         {
+ *             Arn = amplifyAppMasterTopic.Arn,
+ *             Policy = amplifyAppMasterPolicyDocument.Apply(amplifyAppMasterPolicyDocument => amplifyAppMasterPolicyDocument.Json),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +385,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:amplify/branch:Branch master d2ypk4k47z8u6/master
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:amplify/branch:Branch")
 public class Branch extends io.pulumi.resources.CustomResource {

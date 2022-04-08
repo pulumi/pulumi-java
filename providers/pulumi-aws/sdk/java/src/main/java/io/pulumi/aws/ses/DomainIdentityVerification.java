@@ -21,8 +21,124 @@ import javax.annotation.Nullable;
  * 
  * > **WARNING:** This resource implements a part of the verification workflow. It does not represent a real-world entity in AWS, therefore changing or deleting this resource on its own has no immediate effect.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ses.DomainIdentity("example", {domain: "example.com"});
+ * const exampleAmazonsesVerificationRecord = new aws.route53.Record("exampleAmazonsesVerificationRecord", {
+ *     zoneId: aws_route53_zone.example.zone_id,
+ *     name: pulumi.interpolate`_amazonses.${example.id}`,
+ *     type: "TXT",
+ *     ttl: "600",
+ *     records: [example.verificationToken],
+ * });
+ * const exampleVerification = new aws.ses.DomainIdentityVerification("exampleVerification", {domain: example.id}, {
+ *     dependsOn: [exampleAmazonsesVerificationRecord],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ses.DomainIdentity("example", domain="example.com")
+ * example_amazonses_verification_record = aws.route53.Record("exampleAmazonsesVerificationRecord",
+ *     zone_id=aws_route53_zone["example"]["zone_id"],
+ *     name=example.id.apply(lambda id: f"_amazonses.{id}"),
+ *     type="TXT",
+ *     ttl=600,
+ *     records=[example.verification_token])
+ * example_verification = aws.ses.DomainIdentityVerification("exampleVerification", domain=example.id,
+ * opts=pulumi.ResourceOptions(depends_on=[example_amazonses_verification_record]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ses.DomainIdentity("example", new Aws.Ses.DomainIdentityArgs
+ *         {
+ *             Domain = "example.com",
+ *         });
+ *         var exampleAmazonsesVerificationRecord = new Aws.Route53.Record("exampleAmazonsesVerificationRecord", new Aws.Route53.RecordArgs
+ *         {
+ *             ZoneId = aws_route53_zone.Example.Zone_id,
+ *             Name = example.Id.Apply(id => $"_amazonses.{id}"),
+ *             Type = "TXT",
+ *             Ttl = 600,
+ *             Records = 
+ *             {
+ *                 example.VerificationToken,
+ *             },
+ *         });
+ *         var exampleVerification = new Aws.Ses.DomainIdentityVerification("exampleVerification", new Aws.Ses.DomainIdentityVerificationArgs
+ *         {
+ *             Domain = example.Id,
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 exampleAmazonsesVerificationRecord,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ses"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		example, err := ses.NewDomainIdentity(ctx, "example", &ses.DomainIdentityArgs{
+ * 			Domain: pulumi.String("example.com"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleAmazonsesVerificationRecord, err := route53.NewRecord(ctx, "exampleAmazonsesVerificationRecord", &route53.RecordArgs{
+ * 			ZoneId: pulumi.Any(aws_route53_zone.Example.Zone_id),
+ * 			Name: example.ID().ApplyT(func(id string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "_amazonses.", id), nil
+ * 			}).(pulumi.StringOutput),
+ * 			Type: pulumi.String("TXT"),
+ * 			Ttl:  pulumi.Int(600),
+ * 			Records: pulumi.StringArray{
+ * 				example.VerificationToken,
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ses.NewDomainIdentityVerification(ctx, "exampleVerification", &ses.DomainIdentityVerificationArgs{
+ * 			Domain: example.ID(),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			exampleAmazonsesVerificationRecord,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:ses/domainIdentityVerification:DomainIdentityVerification")
 public class DomainIdentityVerification extends io.pulumi.resources.CustomResource {

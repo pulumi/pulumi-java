@@ -17,7 +17,68 @@ import javax.annotation.Nullable;
  * 
  * > **Tip:** A "resource" is either a Service Catalog portfolio or product.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic Usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.servicecatalog.TagOptionResourceAssociation("example", {
+ *     resourceId: "prod-dnigbtea24ste",
+ *     tagOptionId: "tag-pjtvyakdlyo3m",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.servicecatalog.TagOptionResourceAssociation("example",
+ *     resource_id="prod-dnigbtea24ste",
+ *     tag_option_id="tag-pjtvyakdlyo3m")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ServiceCatalog.TagOptionResourceAssociation("example", new Aws.ServiceCatalog.TagOptionResourceAssociationArgs
+ *         {
+ *             ResourceId = "prod-dnigbtea24ste",
+ *             TagOptionId = "tag-pjtvyakdlyo3m",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/servicecatalog"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicecatalog.NewTagOptionResourceAssociation(ctx, "example", &servicecatalog.TagOptionResourceAssociationArgs{
+ * 			ResourceId:  pulumi.String("prod-dnigbtea24ste"),
+ * 			TagOptionId: pulumi.String("tag-pjtvyakdlyo3m"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +88,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:servicecatalog/tagOptionResourceAssociation:TagOptionResourceAssociation example tag-pjtvyakdlyo3m:prod-dnigbtea24ste
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:servicecatalog/tagOptionResourceAssociation:TagOptionResourceAssociation")
 public class TagOptionResourceAssociation extends io.pulumi.resources.CustomResource {

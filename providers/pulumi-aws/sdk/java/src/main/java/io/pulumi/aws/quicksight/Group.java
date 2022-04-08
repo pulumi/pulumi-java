@@ -15,7 +15,62 @@ import javax.annotation.Nullable;
 /**
  * Resource for managing QuickSight Group
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.quicksight.Group("example", {
+ *     groupName: "tf-example",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.quicksight.Group("example", group_name="tf-example")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Quicksight.Group("example", new Aws.Quicksight.GroupArgs
+ *         {
+ *             GroupName = "tf-example",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/quicksight"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := quicksight.NewGroup(ctx, "example", &quicksight.GroupArgs{
+ * 			GroupName: pulumi.String("tf-example"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +80,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:quicksight/group:Group example 123456789123/default/tf-example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:quicksight/group:Group")
 public class Group extends io.pulumi.resources.CustomResource {

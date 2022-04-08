@@ -22,7 +22,267 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** Due to The behaviour of Amazon Connect you cannot delete queues.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.connect.Queue("test", {
+ *     description: "Example Description",
+ *     hoursOfOperationId: "12345678-1234-1234-1234-123456789012",
+ *     instanceId: "aaaaaaaa-bbbb-cccc-dddd-111111111111",
+ *     tags: {
+ *         Name: "Example Queue",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.connect.Queue("test",
+ *     description="Example Description",
+ *     hours_of_operation_id="12345678-1234-1234-1234-123456789012",
+ *     instance_id="aaaaaaaa-bbbb-cccc-dddd-111111111111",
+ *     tags={
+ *         "Name": "Example Queue",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Connect.Queue("test", new Aws.Connect.QueueArgs
+ *         {
+ *             Description = "Example Description",
+ *             HoursOfOperationId = "12345678-1234-1234-1234-123456789012",
+ *             InstanceId = "aaaaaaaa-bbbb-cccc-dddd-111111111111",
+ *             Tags = 
+ *             {
+ *                 { "Name", "Example Queue" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/connect"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := connect.NewQueue(ctx, "test", &connect.QueueArgs{
+ * 			Description:        pulumi.String("Example Description"),
+ * 			HoursOfOperationId: pulumi.String("12345678-1234-1234-1234-123456789012"),
+ * 			InstanceId:         pulumi.String("aaaaaaaa-bbbb-cccc-dddd-111111111111"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("Example Queue"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### With Quick Connect IDs
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.connect.Queue("test", {
+ *     description: "Example Description",
+ *     hoursOfOperationId: "12345678-1234-1234-1234-123456789012",
+ *     instanceId: "aaaaaaaa-bbbb-cccc-dddd-111111111111",
+ *     quickConnectIds: ["12345678-abcd-1234-abcd-123456789012"],
+ *     tags: {
+ *         Name: "Example Queue with Quick Connect IDs",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.connect.Queue("test",
+ *     description="Example Description",
+ *     hours_of_operation_id="12345678-1234-1234-1234-123456789012",
+ *     instance_id="aaaaaaaa-bbbb-cccc-dddd-111111111111",
+ *     quick_connect_ids=["12345678-abcd-1234-abcd-123456789012"],
+ *     tags={
+ *         "Name": "Example Queue with Quick Connect IDs",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Connect.Queue("test", new Aws.Connect.QueueArgs
+ *         {
+ *             Description = "Example Description",
+ *             HoursOfOperationId = "12345678-1234-1234-1234-123456789012",
+ *             InstanceId = "aaaaaaaa-bbbb-cccc-dddd-111111111111",
+ *             QuickConnectIds = 
+ *             {
+ *                 "12345678-abcd-1234-abcd-123456789012",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Name", "Example Queue with Quick Connect IDs" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/connect"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := connect.NewQueue(ctx, "test", &connect.QueueArgs{
+ * 			Description:        pulumi.String("Example Description"),
+ * 			HoursOfOperationId: pulumi.String("12345678-1234-1234-1234-123456789012"),
+ * 			InstanceId:         pulumi.String("aaaaaaaa-bbbb-cccc-dddd-111111111111"),
+ * 			QuickConnectIds: pulumi.StringArray{
+ * 				pulumi.String("12345678-abcd-1234-abcd-123456789012"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("Example Queue with Quick Connect IDs"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### With Outbound Caller Config
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.connect.Queue("test", {
+ *     description: "Example Description",
+ *     hoursOfOperationId: "12345678-1234-1234-1234-123456789012",
+ *     instanceId: "aaaaaaaa-bbbb-cccc-dddd-111111111111",
+ *     outboundCallerConfig: {
+ *         outboundCallerIdName: "example",
+ *         outboundCallerIdNumberId: "12345678-abcd-1234-abcd-123456789012",
+ *         outboundFlowId: "87654321-defg-1234-defg-987654321234",
+ *     },
+ *     tags: {
+ *         Name: "Example Queue with Outbound Caller Config",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.connect.Queue("test",
+ *     description="Example Description",
+ *     hours_of_operation_id="12345678-1234-1234-1234-123456789012",
+ *     instance_id="aaaaaaaa-bbbb-cccc-dddd-111111111111",
+ *     outbound_caller_config=aws.connect.QueueOutboundCallerConfigArgs(
+ *         outbound_caller_id_name="example",
+ *         outbound_caller_id_number_id="12345678-abcd-1234-abcd-123456789012",
+ *         outbound_flow_id="87654321-defg-1234-defg-987654321234",
+ *     ),
+ *     tags={
+ *         "Name": "Example Queue with Outbound Caller Config",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Connect.Queue("test", new Aws.Connect.QueueArgs
+ *         {
+ *             Description = "Example Description",
+ *             HoursOfOperationId = "12345678-1234-1234-1234-123456789012",
+ *             InstanceId = "aaaaaaaa-bbbb-cccc-dddd-111111111111",
+ *             OutboundCallerConfig = new Aws.Connect.Inputs.QueueOutboundCallerConfigArgs
+ *             {
+ *                 OutboundCallerIdName = "example",
+ *                 OutboundCallerIdNumberId = "12345678-abcd-1234-abcd-123456789012",
+ *                 OutboundFlowId = "87654321-defg-1234-defg-987654321234",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Name", "Example Queue with Outbound Caller Config" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/connect"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := connect.NewQueue(ctx, "test", &connect.QueueArgs{
+ * 			Description:        pulumi.String("Example Description"),
+ * 			HoursOfOperationId: pulumi.String("12345678-1234-1234-1234-123456789012"),
+ * 			InstanceId:         pulumi.String("aaaaaaaa-bbbb-cccc-dddd-111111111111"),
+ * 			OutboundCallerConfig: &connect.QueueOutboundCallerConfigArgs{
+ * 				OutboundCallerIdName:     pulumi.String("example"),
+ * 				OutboundCallerIdNumberId: pulumi.String("12345678-abcd-1234-abcd-123456789012"),
+ * 				OutboundFlowId:           pulumi.String("87654321-defg-1234-defg-987654321234"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("Example Queue with Outbound Caller Config"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,6 +292,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:connect/queue:Queue example f1288a1f-6193-445a-b47e-af739b2:c1d4e5f6-1b3c-1b3c-1b3c-c1d4e5f6c1d4e5
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:connect/queue:Queue")
 public class Queue extends io.pulumi.resources.CustomResource {

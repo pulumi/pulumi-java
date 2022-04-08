@@ -15,8 +15,105 @@ import javax.annotation.Nullable;
 /**
  * Associates a Direct Connect Connection with a LAG.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleConnection = new aws.directconnect.Connection("exampleConnection", {
+ *     bandwidth: "1Gbps",
+ *     location: "EqSe2-EQ",
+ * });
+ * const exampleLinkAggregationGroup = new aws.directconnect.LinkAggregationGroup("exampleLinkAggregationGroup", {
+ *     connectionsBandwidth: "1Gbps",
+ *     location: "EqSe2-EQ",
+ * });
+ * const exampleConnectionAssociation = new aws.directconnect.ConnectionAssociation("exampleConnectionAssociation", {
+ *     connectionId: exampleConnection.id,
+ *     lagId: exampleLinkAggregationGroup.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_connection = aws.directconnect.Connection("exampleConnection",
+ *     bandwidth="1Gbps",
+ *     location="EqSe2-EQ")
+ * example_link_aggregation_group = aws.directconnect.LinkAggregationGroup("exampleLinkAggregationGroup",
+ *     connections_bandwidth="1Gbps",
+ *     location="EqSe2-EQ")
+ * example_connection_association = aws.directconnect.ConnectionAssociation("exampleConnectionAssociation",
+ *     connection_id=example_connection.id,
+ *     lag_id=example_link_aggregation_group.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleConnection = new Aws.DirectConnect.Connection("exampleConnection", new Aws.DirectConnect.ConnectionArgs
+ *         {
+ *             Bandwidth = "1Gbps",
+ *             Location = "EqSe2-EQ",
+ *         });
+ *         var exampleLinkAggregationGroup = new Aws.DirectConnect.LinkAggregationGroup("exampleLinkAggregationGroup", new Aws.DirectConnect.LinkAggregationGroupArgs
+ *         {
+ *             ConnectionsBandwidth = "1Gbps",
+ *             Location = "EqSe2-EQ",
+ *         });
+ *         var exampleConnectionAssociation = new Aws.DirectConnect.ConnectionAssociation("exampleConnectionAssociation", new Aws.DirectConnect.ConnectionAssociationArgs
+ *         {
+ *             ConnectionId = exampleConnection.Id,
+ *             LagId = exampleLinkAggregationGroup.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/directconnect"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleConnection, err := directconnect.NewConnection(ctx, "exampleConnection", &directconnect.ConnectionArgs{
+ * 			Bandwidth: pulumi.String("1Gbps"),
+ * 			Location:  pulumi.String("EqSe2-EQ"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleLinkAggregationGroup, err := directconnect.NewLinkAggregationGroup(ctx, "exampleLinkAggregationGroup", &directconnect.LinkAggregationGroupArgs{
+ * 			ConnectionsBandwidth: pulumi.String("1Gbps"),
+ * 			Location:             pulumi.String("EqSe2-EQ"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = directconnect.NewConnectionAssociation(ctx, "exampleConnectionAssociation", &directconnect.ConnectionAssociationArgs{
+ * 			ConnectionId: exampleConnection.ID(),
+ * 			LagId:        exampleLinkAggregationGroup.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:directconnect/connectionAssociation:ConnectionAssociation")
 public class ConnectionAssociation extends io.pulumi.resources.CustomResource {

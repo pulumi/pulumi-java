@@ -19,7 +19,184 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const console = new aws.cloudwatch.EventRule("console", {
+ *     description: "Capture each AWS Console Sign In",
+ *     eventPattern: `{
+ *   "detail-type": [
+ *     "AWS Console Sign In via CloudTrail"
+ *   ]
+ * }
+ * `,
+ * });
+ * const awsLogins = new aws.sns.Topic("awsLogins", {});
+ * const sns = new aws.cloudwatch.EventTarget("sns", {
+ *     rule: console.name,
+ *     arn: awsLogins.arn,
+ * });
+ * const snsTopicPolicy = awsLogins.arn.apply(arn => aws.iam.getPolicyDocumentOutput({
+ *     statements: [{
+ *         effect: "Allow",
+ *         actions: ["SNS:Publish"],
+ *         principals: [{
+ *             type: "Service",
+ *             identifiers: ["events.amazonaws.com"],
+ *         }],
+ *         resources: [arn],
+ *     }],
+ * }));
+ * const _default = new aws.sns.TopicPolicy("default", {
+ *     arn: awsLogins.arn,
+ *     policy: snsTopicPolicy.apply(snsTopicPolicy => snsTopicPolicy.json),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * console = aws.cloudwatch.EventRule("console",
+ *     description="Capture each AWS Console Sign In",
+ *     event_pattern="""{
+ *   "detail-type": [
+ *     "AWS Console Sign In via CloudTrail"
+ *   ]
+ * }
+ * """)
+ * aws_logins = aws.sns.Topic("awsLogins")
+ * sns = aws.cloudwatch.EventTarget("sns",
+ *     rule=console.name,
+ *     arn=aws_logins.arn)
+ * sns_topic_policy = aws_logins.arn.apply(lambda arn: aws.iam.get_policy_document_output(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+ *     effect="Allow",
+ *     actions=["SNS:Publish"],
+ *     principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+ *         type="Service",
+ *         identifiers=["events.amazonaws.com"],
+ *     )],
+ *     resources=[arn],
+ * )]))
+ * default = aws.sns.TopicPolicy("default",
+ *     arn=aws_logins.arn,
+ *     policy=sns_topic_policy.json)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var console = new Aws.CloudWatch.EventRule("console", new Aws.CloudWatch.EventRuleArgs
+ *         {
+ *             Description = "Capture each AWS Console Sign In",
+ *             EventPattern = @"{
+ *   ""detail-type"": [
+ *     ""AWS Console Sign In via CloudTrail""
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var awsLogins = new Aws.Sns.Topic("awsLogins", new Aws.Sns.TopicArgs
+ *         {
+ *         });
+ *         var sns = new Aws.CloudWatch.EventTarget("sns", new Aws.CloudWatch.EventTargetArgs
+ *         {
+ *             Rule = console.Name,
+ *             Arn = awsLogins.Arn,
+ *         });
+ *         var snsTopicPolicy = awsLogins.Arn.Apply(arn => Aws.Iam.GetPolicyDocument.Invoke(new Aws.Iam.GetPolicyDocumentInvokeArgs
+ *         {
+ *             Statements = 
+ *             {
+ *                 new Aws.Iam.Inputs.GetPolicyDocumentStatementInputArgs
+ *                 {
+ *                     Effect = "Allow",
+ *                     Actions = 
+ *                     {
+ *                         "SNS:Publish",
+ *                     },
+ *                     Principals = 
+ *                     {
+ *                         new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalInputArgs
+ *                         {
+ *                             Type = "Service",
+ *                             Identifiers = 
+ *                             {
+ *                                 "events.amazonaws.com",
+ *                             },
+ *                         },
+ *                     },
+ *                     Resources = 
+ *                     {
+ *                         arn,
+ *                     },
+ *                 },
+ *             },
+ *         }));
+ *         var @default = new Aws.Sns.TopicPolicy("default", new Aws.Sns.TopicPolicyArgs
+ *         {
+ *             Arn = awsLogins.Arn,
+ *             Policy = snsTopicPolicy.Apply(snsTopicPolicy => snsTopicPolicy.Json),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		console, err := cloudwatch.NewEventRule(ctx, "console", &cloudwatch.EventRuleArgs{
+ * 			Description:  pulumi.String("Capture each AWS Console Sign In"),
+ * 			EventPattern: pulumi.String(fmt.Sprintf("%v%v%v%v%v", "{\n", "  \"detail-type\": [\n", "    \"AWS Console Sign In via CloudTrail\"\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		awsLogins, err := sns.NewTopic(ctx, "awsLogins", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudwatch.NewEventTarget(ctx, "sns", &cloudwatch.EventTargetArgs{
+ * 			Rule: console.Name,
+ * 			Arn:  awsLogins.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = sns.NewTopicPolicy(ctx, "default", &sns.TopicPolicyArgs{
+ * 			Arn: awsLogins.Arn,
+ * 			Policy: snsTopicPolicy.ApplyT(func(snsTopicPolicy iam.GetPolicyDocumentResult) (string, error) {
+ * 				return snsTopicPolicy.Json, nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +206,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudwatch/eventRule:EventRule console example-event-bus/capture-console-sign-in
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudwatch/eventRule:EventRule")
 public class EventRule extends io.pulumi.resources.CustomResource {

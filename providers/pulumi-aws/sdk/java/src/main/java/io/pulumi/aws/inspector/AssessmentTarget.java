@@ -15,7 +15,85 @@ import javax.annotation.Nullable;
 /**
  * Provides a Inspector assessment target
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const bar = new aws.inspector.ResourceGroup("bar", {tags: {
+ *     Name: "foo",
+ *     Env: "bar",
+ * }});
+ * const foo = new aws.inspector.AssessmentTarget("foo", {resourceGroupArn: bar.arn});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * bar = aws.inspector.ResourceGroup("bar", tags={
+ *     "Name": "foo",
+ *     "Env": "bar",
+ * })
+ * foo = aws.inspector.AssessmentTarget("foo", resource_group_arn=bar.arn)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bar = new Aws.Inspector.ResourceGroup("bar", new Aws.Inspector.ResourceGroupArgs
+ *         {
+ *             Tags = 
+ *             {
+ *                 { "Name", "foo" },
+ *                 { "Env", "bar" },
+ *             },
+ *         });
+ *         var foo = new Aws.Inspector.AssessmentTarget("foo", new Aws.Inspector.AssessmentTargetArgs
+ *         {
+ *             ResourceGroupArn = bar.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/inspector"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		bar, err := inspector.NewResourceGroup(ctx, "bar", &inspector.ResourceGroupArgs{
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("foo"),
+ * 				"Env":  pulumi.String("bar"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = inspector.NewAssessmentTarget(ctx, "foo", &inspector.AssessmentTargetArgs{
+ * 			ResourceGroupArn: bar.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +103,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:inspector/assessmentTarget:AssessmentTarget example arn:aws:inspector:us-east-1:123456789012:target/0-xxxxxxx
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:inspector/assessmentTarget:AssessmentTarget")
 public class AssessmentTarget extends io.pulumi.resources.CustomResource {

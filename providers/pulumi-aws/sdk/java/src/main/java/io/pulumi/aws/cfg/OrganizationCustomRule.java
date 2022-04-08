@@ -20,7 +20,140 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** The proper Lambda permission to allow the AWS Config service invoke the Lambda Function must be in place before the rule will successfully create or update. See also the `aws.lambda.Permission` resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const examplePermission = new aws.lambda.Permission("examplePermission", {
+ *     action: "lambda:InvokeFunction",
+ *     "function": aws_lambda_function.example.arn,
+ *     principal: "config.amazonaws.com",
+ * });
+ * const exampleOrganization = new aws.organizations.Organization("exampleOrganization", {
+ *     awsServiceAccessPrincipals: ["config-multiaccountsetup.amazonaws.com"],
+ *     featureSet: "ALL",
+ * });
+ * const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampleOrganizationCustomRule", {
+ *     lambdaFunctionArn: aws_lambda_function.example.arn,
+ *     triggerTypes: ["ConfigurationItemChangeNotification"],
+ * }, {
+ *     dependsOn: [
+ *         examplePermission,
+ *         exampleOrganization,
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_permission = aws.lambda_.Permission("examplePermission",
+ *     action="lambda:InvokeFunction",
+ *     function=aws_lambda_function["example"]["arn"],
+ *     principal="config.amazonaws.com")
+ * example_organization = aws.organizations.Organization("exampleOrganization",
+ *     aws_service_access_principals=["config-multiaccountsetup.amazonaws.com"],
+ *     feature_set="ALL")
+ * example_organization_custom_rule = aws.cfg.OrganizationCustomRule("exampleOrganizationCustomRule",
+ *     lambda_function_arn=aws_lambda_function["example"]["arn"],
+ *     trigger_types=["ConfigurationItemChangeNotification"],
+ *     opts=pulumi.ResourceOptions(depends_on=[
+ *             example_permission,
+ *             example_organization,
+ *         ]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var examplePermission = new Aws.Lambda.Permission("examplePermission", new Aws.Lambda.PermissionArgs
+ *         {
+ *             Action = "lambda:InvokeFunction",
+ *             Function = aws_lambda_function.Example.Arn,
+ *             Principal = "config.amazonaws.com",
+ *         });
+ *         var exampleOrganization = new Aws.Organizations.Organization("exampleOrganization", new Aws.Organizations.OrganizationArgs
+ *         {
+ *             AwsServiceAccessPrincipals = 
+ *             {
+ *                 "config-multiaccountsetup.amazonaws.com",
+ *             },
+ *             FeatureSet = "ALL",
+ *         });
+ *         var exampleOrganizationCustomRule = new Aws.Cfg.OrganizationCustomRule("exampleOrganizationCustomRule", new Aws.Cfg.OrganizationCustomRuleArgs
+ *         {
+ *             LambdaFunctionArn = aws_lambda_function.Example.Arn,
+ *             TriggerTypes = 
+ *             {
+ *                 "ConfigurationItemChangeNotification",
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 examplePermission,
+ *                 exampleOrganization,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cfg"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		examplePermission, err := lambda.NewPermission(ctx, "examplePermission", &lambda.PermissionArgs{
+ * 			Action:    pulumi.String("lambda:InvokeFunction"),
+ * 			Function:  pulumi.Any(aws_lambda_function.Example.Arn),
+ * 			Principal: pulumi.String("config.amazonaws.com"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleOrganization, err := organizations.NewOrganization(ctx, "exampleOrganization", &organizations.OrganizationArgs{
+ * 			AwsServiceAccessPrincipals: pulumi.StringArray{
+ * 				pulumi.String("config-multiaccountsetup.amazonaws.com"),
+ * 			},
+ * 			FeatureSet: pulumi.String("ALL"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cfg.NewOrganizationCustomRule(ctx, "exampleOrganizationCustomRule", &cfg.OrganizationCustomRuleArgs{
+ * 			LambdaFunctionArn: pulumi.Any(aws_lambda_function.Example.Arn),
+ * 			TriggerTypes: pulumi.StringArray{
+ * 				pulumi.String("ConfigurationItemChangeNotification"),
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			examplePermission,
+ * 			exampleOrganization,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +163,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cfg/organizationCustomRule:OrganizationCustomRule example example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cfg/organizationCustomRule:OrganizationCustomRule")
 public class OrganizationCustomRule extends io.pulumi.resources.CustomResource {

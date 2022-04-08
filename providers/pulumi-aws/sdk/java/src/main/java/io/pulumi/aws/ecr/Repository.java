@@ -19,7 +19,76 @@ import javax.annotation.Nullable;
 /**
  * Provides an Elastic Container Registry Repository.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const foo = new aws.ecr.Repository("foo", {
+ *     imageScanningConfiguration: {
+ *         scanOnPush: true,
+ *     },
+ *     imageTagMutability: "MUTABLE",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * foo = aws.ecr.Repository("foo",
+ *     image_scanning_configuration=aws.ecr.RepositoryImageScanningConfigurationArgs(
+ *         scan_on_push=True,
+ *     ),
+ *     image_tag_mutability="MUTABLE")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var foo = new Aws.Ecr.Repository("foo", new Aws.Ecr.RepositoryArgs
+ *         {
+ *             ImageScanningConfiguration = new Aws.Ecr.Inputs.RepositoryImageScanningConfigurationArgs
+ *             {
+ *                 ScanOnPush = true,
+ *             },
+ *             ImageTagMutability = "MUTABLE",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecr"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ecr.NewRepository(ctx, "foo", &ecr.RepositoryArgs{
+ * 			ImageScanningConfiguration: &ecr.RepositoryImageScanningConfigurationArgs{
+ * 				ScanOnPush: pulumi.Bool(true),
+ * 			},
+ * 			ImageTagMutability: pulumi.String("MUTABLE"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +98,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ecr/repository:Repository service test-service
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ecr/repository:Repository")
 public class Repository extends io.pulumi.resources.CustomResource {

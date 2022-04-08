@@ -18,7 +18,386 @@ import javax.annotation.Nullable;
 /**
  * Provides a S3 bucket object resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Encrypting with KMS Key
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const examplekms = new aws.kms.Key("examplekms", {
+ *     description: "KMS key 1",
+ *     deletionWindowInDays: 7,
+ * });
+ * const examplebucket = new aws.s3.Bucket("examplebucket", {acl: "private"});
+ * const examplebucketObject = new aws.s3.BucketObject("examplebucketObject", {
+ *     key: "someobject",
+ *     bucket: examplebucket.id,
+ *     source: new pulumi.asset.FileAsset("index.html"),
+ *     kmsKeyId: examplekms.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * examplekms = aws.kms.Key("examplekms",
+ *     description="KMS key 1",
+ *     deletion_window_in_days=7)
+ * examplebucket = aws.s3.Bucket("examplebucket", acl="private")
+ * examplebucket_object = aws.s3.BucketObject("examplebucketObject",
+ *     key="someobject",
+ *     bucket=examplebucket.id,
+ *     source=pulumi.FileAsset("index.html"),
+ *     kms_key_id=examplekms.arn)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var examplekms = new Aws.Kms.Key("examplekms", new Aws.Kms.KeyArgs
+ *         {
+ *             Description = "KMS key 1",
+ *             DeletionWindowInDays = 7,
+ *         });
+ *         var examplebucket = new Aws.S3.Bucket("examplebucket", new Aws.S3.BucketArgs
+ *         {
+ *             Acl = "private",
+ *         });
+ *         var examplebucketObject = new Aws.S3.BucketObject("examplebucketObject", new Aws.S3.BucketObjectArgs
+ *         {
+ *             Key = "someobject",
+ *             Bucket = examplebucket.Id,
+ *             Source = new FileAsset("index.html"),
+ *             KmsKeyId = examplekms.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kms"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		examplekms, err := kms.NewKey(ctx, "examplekms", &kms.KeyArgs{
+ * 			Description:          pulumi.String("KMS key 1"),
+ * 			DeletionWindowInDays: pulumi.Int(7),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		examplebucket, err := s3.NewBucket(ctx, "examplebucket", &s3.BucketArgs{
+ * 			Acl: pulumi.String("private"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewBucketObject(ctx, "examplebucketObject", &s3.BucketObjectArgs{
+ * 			Key:      pulumi.String("someobject"),
+ * 			Bucket:   examplebucket.ID(),
+ * 			Source:   pulumi.NewFileAsset("index.html"),
+ * 			KmsKeyId: examplekms.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Server Side Encryption with S3 Default Master Key
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const examplebucket = new aws.s3.Bucket("examplebucket", {acl: "private"});
+ * const examplebucketObject = new aws.s3.BucketObject("examplebucketObject", {
+ *     key: "someobject",
+ *     bucket: examplebucket.id,
+ *     source: new pulumi.asset.FileAsset("index.html"),
+ *     serverSideEncryption: "aws:kms",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * examplebucket = aws.s3.Bucket("examplebucket", acl="private")
+ * examplebucket_object = aws.s3.BucketObject("examplebucketObject",
+ *     key="someobject",
+ *     bucket=examplebucket.id,
+ *     source=pulumi.FileAsset("index.html"),
+ *     server_side_encryption="aws:kms")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var examplebucket = new Aws.S3.Bucket("examplebucket", new Aws.S3.BucketArgs
+ *         {
+ *             Acl = "private",
+ *         });
+ *         var examplebucketObject = new Aws.S3.BucketObject("examplebucketObject", new Aws.S3.BucketObjectArgs
+ *         {
+ *             Key = "someobject",
+ *             Bucket = examplebucket.Id,
+ *             Source = new FileAsset("index.html"),
+ *             ServerSideEncryption = "aws:kms",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		examplebucket, err := s3.NewBucket(ctx, "examplebucket", &s3.BucketArgs{
+ * 			Acl: pulumi.String("private"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewBucketObject(ctx, "examplebucketObject", &s3.BucketObjectArgs{
+ * 			Key:                  pulumi.String("someobject"),
+ * 			Bucket:               examplebucket.ID(),
+ * 			Source:               pulumi.NewFileAsset("index.html"),
+ * 			ServerSideEncryption: pulumi.String("aws:kms"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Server Side Encryption with AWS-Managed Key
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const examplebucket = new aws.s3.Bucket("examplebucket", {acl: "private"});
+ * const examplebucketObject = new aws.s3.BucketObject("examplebucketObject", {
+ *     key: "someobject",
+ *     bucket: examplebucket.id,
+ *     source: new pulumi.asset.FileAsset("index.html"),
+ *     serverSideEncryption: "AES256",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * examplebucket = aws.s3.Bucket("examplebucket", acl="private")
+ * examplebucket_object = aws.s3.BucketObject("examplebucketObject",
+ *     key="someobject",
+ *     bucket=examplebucket.id,
+ *     source=pulumi.FileAsset("index.html"),
+ *     server_side_encryption="AES256")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var examplebucket = new Aws.S3.Bucket("examplebucket", new Aws.S3.BucketArgs
+ *         {
+ *             Acl = "private",
+ *         });
+ *         var examplebucketObject = new Aws.S3.BucketObject("examplebucketObject", new Aws.S3.BucketObjectArgs
+ *         {
+ *             Key = "someobject",
+ *             Bucket = examplebucket.Id,
+ *             Source = new FileAsset("index.html"),
+ *             ServerSideEncryption = "AES256",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		examplebucket, err := s3.NewBucket(ctx, "examplebucket", &s3.BucketArgs{
+ * 			Acl: pulumi.String("private"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewBucketObject(ctx, "examplebucketObject", &s3.BucketObjectArgs{
+ * 			Key:                  pulumi.String("someobject"),
+ * 			Bucket:               examplebucket.ID(),
+ * 			Source:               pulumi.NewFileAsset("index.html"),
+ * 			ServerSideEncryption: pulumi.String("AES256"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### S3 Object Lock
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const examplebucket = new aws.s3.Bucket("examplebucket", {
+ *     acl: "private",
+ *     versioning: {
+ *         enabled: true,
+ *     },
+ *     objectLockConfiguration: {
+ *         objectLockEnabled: "Enabled",
+ *     },
+ * });
+ * const examplebucketObject = new aws.s3.BucketObject("examplebucketObject", {
+ *     key: "someobject",
+ *     bucket: examplebucket.id,
+ *     source: new pulumi.asset.FileAsset("important.txt"),
+ *     objectLockLegalHoldStatus: "ON",
+ *     objectLockMode: "GOVERNANCE",
+ *     objectLockRetainUntilDate: "2021-12-31T23:59:60Z",
+ *     forceDestroy: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * examplebucket = aws.s3.Bucket("examplebucket",
+ *     acl="private",
+ *     versioning=aws.s3.BucketVersioningArgs(
+ *         enabled=True,
+ *     ),
+ *     object_lock_configuration=aws.s3.BucketObjectLockConfigurationArgs(
+ *         object_lock_enabled="Enabled",
+ *     ))
+ * examplebucket_object = aws.s3.BucketObject("examplebucketObject",
+ *     key="someobject",
+ *     bucket=examplebucket.id,
+ *     source=pulumi.FileAsset("important.txt"),
+ *     object_lock_legal_hold_status="ON",
+ *     object_lock_mode="GOVERNANCE",
+ *     object_lock_retain_until_date="2021-12-31T23:59:60Z",
+ *     force_destroy=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var examplebucket = new Aws.S3.Bucket("examplebucket", new Aws.S3.BucketArgs
+ *         {
+ *             Acl = "private",
+ *             Versioning = new Aws.S3.Inputs.BucketVersioningArgs
+ *             {
+ *                 Enabled = true,
+ *             },
+ *             ObjectLockConfiguration = new Aws.S3.Inputs.BucketObjectLockConfigurationArgs
+ *             {
+ *                 ObjectLockEnabled = "Enabled",
+ *             },
+ *         });
+ *         var examplebucketObject = new Aws.S3.BucketObject("examplebucketObject", new Aws.S3.BucketObjectArgs
+ *         {
+ *             Key = "someobject",
+ *             Bucket = examplebucket.Id,
+ *             Source = new FileAsset("important.txt"),
+ *             ObjectLockLegalHoldStatus = "ON",
+ *             ObjectLockMode = "GOVERNANCE",
+ *             ObjectLockRetainUntilDate = "2021-12-31T23:59:60Z",
+ *             ForceDestroy = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		examplebucket, err := s3.NewBucket(ctx, "examplebucket", &s3.BucketArgs{
+ * 			Acl: pulumi.String("private"),
+ * 			Versioning: &s3.BucketVersioningArgs{
+ * 				Enabled: pulumi.Bool(true),
+ * 			},
+ * 			ObjectLockConfiguration: &s3.BucketObjectLockConfigurationArgs{
+ * 				ObjectLockEnabled: pulumi.String("Enabled"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewBucketObject(ctx, "examplebucketObject", &s3.BucketObjectArgs{
+ * 			Key:                       pulumi.String("someobject"),
+ * 			Bucket:                    examplebucket.ID(),
+ * 			Source:                    pulumi.NewFileAsset("important.txt"),
+ * 			ObjectLockLegalHoldStatus: pulumi.String("ON"),
+ * 			ObjectLockMode:            pulumi.String("GOVERNANCE"),
+ * 			ObjectLockRetainUntilDate: pulumi.String("2021-12-31T23:59:60Z"),
+ * 			ForceDestroy:              pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,6 +413,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:s3/bucketObject:BucketObject object s3://some-bucket-name/some/key.txt
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:s3/bucketObject:BucketObject")
 public class BucketObject extends io.pulumi.resources.CustomResource {

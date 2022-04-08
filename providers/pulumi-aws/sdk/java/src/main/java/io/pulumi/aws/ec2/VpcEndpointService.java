@@ -26,7 +26,137 @@ import javax.annotation.Nullable;
  * a VPC Endpoint Service resource and a VPC Endpoint Service Allowed Principal resource. Doing so will cause a conflict
  * and will overwrite the association.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Network Load Balancers
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ec2.VpcEndpointService("example", {
+ *     acceptanceRequired: false,
+ *     networkLoadBalancerArns: [aws_lb.example.arn],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ec2.VpcEndpointService("example",
+ *     acceptance_required=False,
+ *     network_load_balancer_arns=[aws_lb["example"]["arn"]])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ec2.VpcEndpointService("example", new Aws.Ec2.VpcEndpointServiceArgs
+ *         {
+ *             AcceptanceRequired = false,
+ *             NetworkLoadBalancerArns = 
+ *             {
+ *                 aws_lb.Example.Arn,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewVpcEndpointService(ctx, "example", &ec2.VpcEndpointServiceArgs{
+ * 			AcceptanceRequired: pulumi.Bool(false),
+ * 			NetworkLoadBalancerArns: pulumi.StringArray{
+ * 				pulumi.Any(aws_lb.Example.Arn),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Gateway Load Balancers
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ec2.VpcEndpointService("example", {
+ *     acceptanceRequired: false,
+ *     gatewayLoadBalancerArns: [aws_lb.example.arn],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ec2.VpcEndpointService("example",
+ *     acceptance_required=False,
+ *     gateway_load_balancer_arns=[aws_lb["example"]["arn"]])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ec2.VpcEndpointService("example", new Aws.Ec2.VpcEndpointServiceArgs
+ *         {
+ *             AcceptanceRequired = false,
+ *             GatewayLoadBalancerArns = 
+ *             {
+ *                 aws_lb.Example.Arn,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewVpcEndpointService(ctx, "example", &ec2.VpcEndpointServiceArgs{
+ * 			AcceptanceRequired: pulumi.Bool(false),
+ * 			GatewayLoadBalancerArns: pulumi.StringArray{
+ * 				pulumi.Any(aws_lb.Example.Arn),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,6 +166,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/vpcEndpointService:VpcEndpointService foo vpce-svc-0f97a19d3fa8220bc
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/vpcEndpointService:VpcEndpointService")
 public class VpcEndpointService extends io.pulumi.resources.CustomResource {

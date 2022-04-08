@@ -15,11 +15,72 @@ import javax.annotation.Nullable;
 /**
  * Provides a VPC DHCP Options Association resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const dnsResolver = new aws.ec2.VpcDhcpOptionsAssociation("dnsResolver", {
+ *     vpcId: aws_vpc.foo.id,
+ *     dhcpOptionsId: aws_vpc_dhcp_options.foo.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * dns_resolver = aws.ec2.VpcDhcpOptionsAssociation("dnsResolver",
+ *     vpc_id=aws_vpc["foo"]["id"],
+ *     dhcp_options_id=aws_vpc_dhcp_options["foo"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dnsResolver = new Aws.Ec2.VpcDhcpOptionsAssociation("dnsResolver", new Aws.Ec2.VpcDhcpOptionsAssociationArgs
+ *         {
+ *             VpcId = aws_vpc.Foo.Id,
+ *             DhcpOptionsId = aws_vpc_dhcp_options.Foo.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewVpcDhcpOptionsAssociation(ctx, "dnsResolver", &ec2.VpcDhcpOptionsAssociationArgs{
+ * 			VpcId:         pulumi.Any(aws_vpc.Foo.Id),
+ * 			DhcpOptionsId: pulumi.Any(aws_vpc_dhcp_options.Foo.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * ## Remarks
  * 
  * * You can only associate one DHCP Options Set to a given VPC ID.
  * * Removing the DHCP Options Association automatically sets AWS's `default` DHCP Options Set to the VPC.
+ * 
  * 
  * ## Import
  * 
@@ -29,6 +90,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/vpcDhcpOptionsAssociation:VpcDhcpOptionsAssociation imported vpc-0f001273ec18911b1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/vpcDhcpOptionsAssociation:VpcDhcpOptionsAssociation")
 public class VpcDhcpOptionsAssociation extends io.pulumi.resources.CustomResource {

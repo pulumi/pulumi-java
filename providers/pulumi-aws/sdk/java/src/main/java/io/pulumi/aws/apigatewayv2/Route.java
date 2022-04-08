@@ -20,7 +20,195 @@ import javax.annotation.Nullable;
  * Manages an Amazon API Gateway Version 2 route.
  * More information can be found in the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html) for [WebSocket](https://docs.aws.amazon.com/apigateway/latest/developerguide/websocket-api-develop-routes.html) and [HTTP](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-routes.html) APIs.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleApi = new aws.apigatewayv2.Api("exampleApi", {
+ *     protocolType: "WEBSOCKET",
+ *     routeSelectionExpression: `$request.body.action`,
+ * });
+ * const exampleRoute = new aws.apigatewayv2.Route("exampleRoute", {
+ *     apiId: exampleApi.id,
+ *     routeKey: `$default`,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_api = aws.apigatewayv2.Api("exampleApi",
+ *     protocol_type="WEBSOCKET",
+ *     route_selection_expression="$request.body.action")
+ * example_route = aws.apigatewayv2.Route("exampleRoute",
+ *     api_id=example_api.id,
+ *     route_key="$default")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleApi = new Aws.ApiGatewayV2.Api("exampleApi", new Aws.ApiGatewayV2.ApiArgs
+ *         {
+ *             ProtocolType = "WEBSOCKET",
+ *             RouteSelectionExpression = "$request.body.action",
+ *         });
+ *         var exampleRoute = new Aws.ApiGatewayV2.Route("exampleRoute", new Aws.ApiGatewayV2.RouteArgs
+ *         {
+ *             ApiId = exampleApi.Id,
+ *             RouteKey = "$default",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigatewayv2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleApi, err := apigatewayv2.NewApi(ctx, "exampleApi", &apigatewayv2.ApiArgs{
+ * 			ProtocolType:             pulumi.String("WEBSOCKET"),
+ * 			RouteSelectionExpression: pulumi.String(fmt.Sprintf("%v%v", "$", "request.body.action")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = apigatewayv2.NewRoute(ctx, "exampleRoute", &apigatewayv2.RouteArgs{
+ * 			ApiId:    exampleApi.ID(),
+ * 			RouteKey: pulumi.String(fmt.Sprintf("%v%v", "$", "default")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### HTTP Proxy Integration
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleApi = new aws.apigatewayv2.Api("exampleApi", {protocolType: "HTTP"});
+ * const exampleIntegration = new aws.apigatewayv2.Integration("exampleIntegration", {
+ *     apiId: exampleApi.id,
+ *     integrationType: "HTTP_PROXY",
+ *     integrationMethod: "ANY",
+ *     integrationUri: "https://example.com/{proxy}",
+ * });
+ * const exampleRoute = new aws.apigatewayv2.Route("exampleRoute", {
+ *     apiId: exampleApi.id,
+ *     routeKey: "ANY /example/{proxy+}",
+ *     target: pulumi.interpolate`integrations/${exampleIntegration.id}`,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_api = aws.apigatewayv2.Api("exampleApi", protocol_type="HTTP")
+ * example_integration = aws.apigatewayv2.Integration("exampleIntegration",
+ *     api_id=example_api.id,
+ *     integration_type="HTTP_PROXY",
+ *     integration_method="ANY",
+ *     integration_uri="https://example.com/{proxy}")
+ * example_route = aws.apigatewayv2.Route("exampleRoute",
+ *     api_id=example_api.id,
+ *     route_key="ANY /example/{proxy+}",
+ *     target=example_integration.id.apply(lambda id: f"integrations/{id}"))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleApi = new Aws.ApiGatewayV2.Api("exampleApi", new Aws.ApiGatewayV2.ApiArgs
+ *         {
+ *             ProtocolType = "HTTP",
+ *         });
+ *         var exampleIntegration = new Aws.ApiGatewayV2.Integration("exampleIntegration", new Aws.ApiGatewayV2.IntegrationArgs
+ *         {
+ *             ApiId = exampleApi.Id,
+ *             IntegrationType = "HTTP_PROXY",
+ *             IntegrationMethod = "ANY",
+ *             IntegrationUri = "https://example.com/{proxy}",
+ *         });
+ *         var exampleRoute = new Aws.ApiGatewayV2.Route("exampleRoute", new Aws.ApiGatewayV2.RouteArgs
+ *         {
+ *             ApiId = exampleApi.Id,
+ *             RouteKey = "ANY /example/{proxy+}",
+ *             Target = exampleIntegration.Id.Apply(id => $"integrations/{id}"),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigatewayv2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleApi, err := apigatewayv2.NewApi(ctx, "exampleApi", &apigatewayv2.ApiArgs{
+ * 			ProtocolType: pulumi.String("HTTP"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleIntegration, err := apigatewayv2.NewIntegration(ctx, "exampleIntegration", &apigatewayv2.IntegrationArgs{
+ * 			ApiId:             exampleApi.ID(),
+ * 			IntegrationType:   pulumi.String("HTTP_PROXY"),
+ * 			IntegrationMethod: pulumi.String("ANY"),
+ * 			IntegrationUri:    pulumi.String("https://example.com/{proxy}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = apigatewayv2.NewRoute(ctx, "exampleRoute", &apigatewayv2.RouteArgs{
+ * 			ApiId:    exampleApi.ID(),
+ * 			RouteKey: pulumi.String("ANY /example/{proxy+}"),
+ * 			Target: exampleIntegration.ID().ApplyT(func(id string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "integrations/", id), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +218,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:apigatewayv2/route:Route example aabbccddee/1122334
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:apigatewayv2/route:Route")
 public class Route extends io.pulumi.resources.CustomResource {

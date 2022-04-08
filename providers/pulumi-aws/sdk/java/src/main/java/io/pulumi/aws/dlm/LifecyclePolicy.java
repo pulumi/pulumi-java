@@ -17,7 +17,613 @@ import javax.annotation.Nullable;
 /**
  * Provides a [Data Lifecycle Manager (DLM) lifecycle policy](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html) for managing snapshots.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const dlmLifecycleRole = new aws.iam.Role("dlmLifecycleRole", {assumeRolePolicy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "dlm.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * `});
+ * const dlmLifecycle = new aws.iam.RolePolicy("dlmLifecycle", {
+ *     role: dlmLifecycleRole.id,
+ *     policy: `{
+ *    "Version": "2012-10-17",
+ *    "Statement": [
+ *       {
+ *          "Effect": "Allow",
+ *          "Action": [
+ *             "ec2:CreateSnapshot",
+ *             "ec2:CreateSnapshots",
+ *             "ec2:DeleteSnapshot",
+ *             "ec2:DescribeInstances",
+ *             "ec2:DescribeVolumes",
+ *             "ec2:DescribeSnapshots"
+ *          ],
+ *          "Resource": "*"
+ *       },
+ *       {
+ *          "Effect": "Allow",
+ *          "Action": [
+ *             "ec2:CreateTags"
+ *          ],
+ *          "Resource": "arn:aws:ec2:*::snapshot/*"
+ *       }
+ *    ]
+ * }
+ * `,
+ * });
+ * const example = new aws.dlm.LifecyclePolicy("example", {
+ *     description: "example DLM lifecycle policy",
+ *     executionRoleArn: dlmLifecycleRole.arn,
+ *     state: "ENABLED",
+ *     policyDetails: {
+ *         resourceTypes: ["VOLUME"],
+ *         schedules: [{
+ *             name: "2 weeks of daily snapshots",
+ *             createRule: {
+ *                 interval: 24,
+ *                 intervalUnit: "HOURS",
+ *                 times: ["23:45"],
+ *             },
+ *             retainRule: {
+ *                 count: 14,
+ *             },
+ *             tagsToAdd: {
+ *                 SnapshotCreator: "DLM",
+ *             },
+ *             copyTags: false,
+ *         }],
+ *         targetTags: {
+ *             Snapshot: "true",
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * dlm_lifecycle_role = aws.iam.Role("dlmLifecycleRole", assume_role_policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "dlm.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * """)
+ * dlm_lifecycle = aws.iam.RolePolicy("dlmLifecycle",
+ *     role=dlm_lifecycle_role.id,
+ *     policy="""{
+ *    "Version": "2012-10-17",
+ *    "Statement": [
+ *       {
+ *          "Effect": "Allow",
+ *          "Action": [
+ *             "ec2:CreateSnapshot",
+ *             "ec2:CreateSnapshots",
+ *             "ec2:DeleteSnapshot",
+ *             "ec2:DescribeInstances",
+ *             "ec2:DescribeVolumes",
+ *             "ec2:DescribeSnapshots"
+ *          ],
+ *          "Resource": "*"
+ *       },
+ *       {
+ *          "Effect": "Allow",
+ *          "Action": [
+ *             "ec2:CreateTags"
+ *          ],
+ *          "Resource": "arn:aws:ec2:*::snapshot/*"
+ *       }
+ *    ]
+ * }
+ * """)
+ * example = aws.dlm.LifecyclePolicy("example",
+ *     description="example DLM lifecycle policy",
+ *     execution_role_arn=dlm_lifecycle_role.arn,
+ *     state="ENABLED",
+ *     policy_details=aws.dlm.LifecyclePolicyPolicyDetailsArgs(
+ *         resource_types=["VOLUME"],
+ *         schedules=[aws.dlm.LifecyclePolicyPolicyDetailsScheduleArgs(
+ *             name="2 weeks of daily snapshots",
+ *             create_rule=aws.dlm.LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs(
+ *                 interval=24,
+ *                 interval_unit="HOURS",
+ *                 times=["23:45"],
+ *             ),
+ *             retain_rule=aws.dlm.LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs(
+ *                 count=14,
+ *             ),
+ *             tags_to_add={
+ *                 "SnapshotCreator": "DLM",
+ *             },
+ *             copy_tags=False,
+ *         )],
+ *         target_tags={
+ *             "Snapshot": "true",
+ *         },
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dlmLifecycleRole = new Aws.Iam.Role("dlmLifecycleRole", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Action"": ""sts:AssumeRole"",
+ *       ""Principal"": {
+ *         ""Service"": ""dlm.amazonaws.com""
+ *       },
+ *       ""Effect"": ""Allow"",
+ *       ""Sid"": """"
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var dlmLifecycle = new Aws.Iam.RolePolicy("dlmLifecycle", new Aws.Iam.RolePolicyArgs
+ *         {
+ *             Role = dlmLifecycleRole.Id,
+ *             Policy = @"{
+ *    ""Version"": ""2012-10-17"",
+ *    ""Statement"": [
+ *       {
+ *          ""Effect"": ""Allow"",
+ *          ""Action"": [
+ *             ""ec2:CreateSnapshot"",
+ *             ""ec2:CreateSnapshots"",
+ *             ""ec2:DeleteSnapshot"",
+ *             ""ec2:DescribeInstances"",
+ *             ""ec2:DescribeVolumes"",
+ *             ""ec2:DescribeSnapshots""
+ *          ],
+ *          ""Resource"": ""*""
+ *       },
+ *       {
+ *          ""Effect"": ""Allow"",
+ *          ""Action"": [
+ *             ""ec2:CreateTags""
+ *          ],
+ *          ""Resource"": ""arn:aws:ec2:*::snapshot/*""
+ *       }
+ *    ]
+ * }
+ * ",
+ *         });
+ *         var example = new Aws.Dlm.LifecyclePolicy("example", new Aws.Dlm.LifecyclePolicyArgs
+ *         {
+ *             Description = "example DLM lifecycle policy",
+ *             ExecutionRoleArn = dlmLifecycleRole.Arn,
+ *             State = "ENABLED",
+ *             PolicyDetails = new Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsArgs
+ *             {
+ *                 ResourceTypes = 
+ *                 {
+ *                     "VOLUME",
+ *                 },
+ *                 Schedules = 
+ *                 {
+ *                     new Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsScheduleArgs
+ *                     {
+ *                         Name = "2 weeks of daily snapshots",
+ *                         CreateRule = new Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs
+ *                         {
+ *                             Interval = 24,
+ *                             IntervalUnit = "HOURS",
+ *                             Times = 
+ *                             {
+ *                                 "23:45",
+ *                             },
+ *                         },
+ *                         RetainRule = new Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs
+ *                         {
+ *                             Count = 14,
+ *                         },
+ *                         TagsToAdd = 
+ *                         {
+ *                             { "SnapshotCreator", "DLM" },
+ *                         },
+ *                         CopyTags = false,
+ *                     },
+ *                 },
+ *                 TargetTags = 
+ *                 {
+ *                     { "Snapshot", "true" },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/dlm"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		dlmLifecycleRole, err := iam.NewRole(ctx, "dlmLifecycleRole", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"dlm.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicy(ctx, "dlmLifecycle", &iam.RolePolicyArgs{
+ * 			Role:   dlmLifecycleRole.ID(),
+ * 			Policy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "   \"Version\": \"2012-10-17\",\n", "   \"Statement\": [\n", "      {\n", "         \"Effect\": \"Allow\",\n", "         \"Action\": [\n", "            \"ec2:CreateSnapshot\",\n", "            \"ec2:CreateSnapshots\",\n", "            \"ec2:DeleteSnapshot\",\n", "            \"ec2:DescribeInstances\",\n", "            \"ec2:DescribeVolumes\",\n", "            \"ec2:DescribeSnapshots\"\n", "         ],\n", "         \"Resource\": \"*\"\n", "      },\n", "      {\n", "         \"Effect\": \"Allow\",\n", "         \"Action\": [\n", "            \"ec2:CreateTags\"\n", "         ],\n", "         \"Resource\": \"arn:aws:ec2:*::snapshot/*\"\n", "      }\n", "   ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = dlm.NewLifecyclePolicy(ctx, "example", &dlm.LifecyclePolicyArgs{
+ * 			Description:      pulumi.String("example DLM lifecycle policy"),
+ * 			ExecutionRoleArn: dlmLifecycleRole.Arn,
+ * 			State:            pulumi.String("ENABLED"),
+ * 			PolicyDetails: &dlm.LifecyclePolicyPolicyDetailsArgs{
+ * 				ResourceTypes: pulumi.StringArray{
+ * 					pulumi.String("VOLUME"),
+ * 				},
+ * 				Schedules: dlm.LifecyclePolicyPolicyDetailsScheduleArray{
+ * 					&dlm.LifecyclePolicyPolicyDetailsScheduleArgs{
+ * 						Name: pulumi.String("2 weeks of daily snapshots"),
+ * 						CreateRule: &dlm.LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs{
+ * 							Interval:     pulumi.Int(24),
+ * 							IntervalUnit: pulumi.String("HOURS"),
+ * 							Times: pulumi.String{
+ * 								"23:45",
+ * 							},
+ * 						},
+ * 						RetainRule: &dlm.LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs{
+ * 							Count: pulumi.Int(14),
+ * 						},
+ * 						TagsToAdd: pulumi.StringMap{
+ * 							"SnapshotCreator": pulumi.String("DLM"),
+ * 						},
+ * 						CopyTags: pulumi.Bool(false),
+ * 					},
+ * 				},
+ * 				TargetTags: pulumi.StringMap{
+ * 					"Snapshot": pulumi.String("true"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example Cross-Region Snapshot Copy Usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // ...other configuration...
+ * const dlmCrossRegionCopyCmk = new aws.kms.Key("dlmCrossRegionCopyCmk", {
+ *     description: "Example Alternate Region KMS Key",
+ *     policy: `{
+ *   "Version": "2012-10-17",
+ *   "Id": "dlm-cross-region-copy-cmk",
+ *   "Statement": [
+ *     {
+ *       "Sid": "Enable IAM User Permissions",
+ *       "Effect": "Allow",
+ *       "Principal": {
+ *         "AWS": "*"
+ *       },
+ *       "Action": "kms:*",
+ *       "Resource": "*"
+ *     }
+ *   ]
+ * }
+ * `,
+ * }, {
+ *     provider: aws.alternate,
+ * });
+ * const example = new aws.dlm.LifecyclePolicy("example", {
+ *     description: "example DLM lifecycle policy",
+ *     executionRoleArn: aws_iam_role.dlm_lifecycle_role.arn,
+ *     state: "ENABLED",
+ *     policyDetails: {
+ *         resourceTypes: ["VOLUME"],
+ *         schedules: [{
+ *             name: "2 weeks of daily snapshots",
+ *             createRule: {
+ *                 interval: 24,
+ *                 intervalUnit: "HOURS",
+ *                 times: ["23:45"],
+ *             },
+ *             retainRule: {
+ *                 count: 14,
+ *             },
+ *             tagsToAdd: {
+ *                 SnapshotCreator: "DLM",
+ *             },
+ *             copyTags: false,
+ *             crossRegionCopyRules: [{
+ *                 target: "us-west-2",
+ *                 encrypted: true,
+ *                 cmkArn: dlmCrossRegionCopyCmk.arn,
+ *                 copyTags: true,
+ *                 retainRule: {
+ *                     interval: 30,
+ *                     intervalUnit: "DAYS",
+ *                 },
+ *             }],
+ *         }],
+ *         targetTags: {
+ *             Snapshot: "true",
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # ...other configuration...
+ * dlm_cross_region_copy_cmk = aws.kms.Key("dlmCrossRegionCopyCmk",
+ *     description="Example Alternate Region KMS Key",
+ *     policy="""{
+ *   "Version": "2012-10-17",
+ *   "Id": "dlm-cross-region-copy-cmk",
+ *   "Statement": [
+ *     {
+ *       "Sid": "Enable IAM User Permissions",
+ *       "Effect": "Allow",
+ *       "Principal": {
+ *         "AWS": "*"
+ *       },
+ *       "Action": "kms:*",
+ *       "Resource": "*"
+ *     }
+ *   ]
+ * }
+ * """,
+ *     opts=pulumi.ResourceOptions(provider=aws["alternate"]))
+ * example = aws.dlm.LifecyclePolicy("example",
+ *     description="example DLM lifecycle policy",
+ *     execution_role_arn=aws_iam_role["dlm_lifecycle_role"]["arn"],
+ *     state="ENABLED",
+ *     policy_details=aws.dlm.LifecyclePolicyPolicyDetailsArgs(
+ *         resource_types=["VOLUME"],
+ *         schedules=[aws.dlm.LifecyclePolicyPolicyDetailsScheduleArgs(
+ *             name="2 weeks of daily snapshots",
+ *             create_rule=aws.dlm.LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs(
+ *                 interval=24,
+ *                 interval_unit="HOURS",
+ *                 times=["23:45"],
+ *             ),
+ *             retain_rule=aws.dlm.LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs(
+ *                 count=14,
+ *             ),
+ *             tags_to_add={
+ *                 "SnapshotCreator": "DLM",
+ *             },
+ *             copy_tags=False,
+ *             cross_region_copy_rules=[aws.dlm.LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs(
+ *                 target="us-west-2",
+ *                 encrypted=True,
+ *                 cmk_arn=dlm_cross_region_copy_cmk.arn,
+ *                 copy_tags=True,
+ *                 retain_rule=aws.dlm.LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs(
+ *                     interval=30,
+ *                     interval_unit="DAYS",
+ *                 ),
+ *             )],
+ *         )],
+ *         target_tags={
+ *             "Snapshot": "true",
+ *         },
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // ...other configuration...
+ *         var dlmCrossRegionCopyCmk = new Aws.Kms.Key("dlmCrossRegionCopyCmk", new Aws.Kms.KeyArgs
+ *         {
+ *             Description = "Example Alternate Region KMS Key",
+ *             Policy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Id"": ""dlm-cross-region-copy-cmk"",
+ *   ""Statement"": [
+ *     {
+ *       ""Sid"": ""Enable IAM User Permissions"",
+ *       ""Effect"": ""Allow"",
+ *       ""Principal"": {
+ *         ""AWS"": ""*""
+ *       },
+ *       ""Action"": ""kms:*"",
+ *       ""Resource"": ""*""
+ *     }
+ *   ]
+ * }
+ * ",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Alternate,
+ *         });
+ *         var example = new Aws.Dlm.LifecyclePolicy("example", new Aws.Dlm.LifecyclePolicyArgs
+ *         {
+ *             Description = "example DLM lifecycle policy",
+ *             ExecutionRoleArn = aws_iam_role.Dlm_lifecycle_role.Arn,
+ *             State = "ENABLED",
+ *             PolicyDetails = new Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsArgs
+ *             {
+ *                 ResourceTypes = 
+ *                 {
+ *                     "VOLUME",
+ *                 },
+ *                 Schedules = 
+ *                 {
+ *                     new Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsScheduleArgs
+ *                     {
+ *                         Name = "2 weeks of daily snapshots",
+ *                         CreateRule = new Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs
+ *                         {
+ *                             Interval = 24,
+ *                             IntervalUnit = "HOURS",
+ *                             Times = 
+ *                             {
+ *                                 "23:45",
+ *                             },
+ *                         },
+ *                         RetainRule = new Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs
+ *                         {
+ *                             Count = 14,
+ *                         },
+ *                         TagsToAdd = 
+ *                         {
+ *                             { "SnapshotCreator", "DLM" },
+ *                         },
+ *                         CopyTags = false,
+ *                         CrossRegionCopyRules = 
+ *                         {
+ *                             new Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs
+ *                             {
+ *                                 Target = "us-west-2",
+ *                                 Encrypted = true,
+ *                                 CmkArn = dlmCrossRegionCopyCmk.Arn,
+ *                                 CopyTags = true,
+ *                                 RetainRule = new Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs
+ *                                 {
+ *                                     Interval = 30,
+ *                                     IntervalUnit = "DAYS",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 TargetTags = 
+ *                 {
+ *                     { "Snapshot", "true" },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/dlm"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kms"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		dlmCrossRegionCopyCmk, err := kms.NewKey(ctx, "dlmCrossRegionCopyCmk", &kms.KeyArgs{
+ * 			Description: pulumi.String("Example Alternate Region KMS Key"),
+ * 			Policy:      pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Id\": \"dlm-cross-region-copy-cmk\",\n", "  \"Statement\": [\n", "    {\n", "      \"Sid\": \"Enable IAM User Permissions\",\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"AWS\": \"*\"\n", "      },\n", "      \"Action\": \"kms:*\",\n", "      \"Resource\": \"*\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		}, pulumi.Provider(aws.Alternate))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = dlm.NewLifecyclePolicy(ctx, "example", &dlm.LifecyclePolicyArgs{
+ * 			Description:      pulumi.String("example DLM lifecycle policy"),
+ * 			ExecutionRoleArn: pulumi.Any(aws_iam_role.Dlm_lifecycle_role.Arn),
+ * 			State:            pulumi.String("ENABLED"),
+ * 			PolicyDetails: &dlm.LifecyclePolicyPolicyDetailsArgs{
+ * 				ResourceTypes: pulumi.StringArray{
+ * 					pulumi.String("VOLUME"),
+ * 				},
+ * 				Schedules: dlm.LifecyclePolicyPolicyDetailsScheduleArray{
+ * 					&dlm.LifecyclePolicyPolicyDetailsScheduleArgs{
+ * 						Name: pulumi.String("2 weeks of daily snapshots"),
+ * 						CreateRule: &dlm.LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs{
+ * 							Interval:     pulumi.Int(24),
+ * 							IntervalUnit: pulumi.String("HOURS"),
+ * 							Times: pulumi.String{
+ * 								"23:45",
+ * 							},
+ * 						},
+ * 						RetainRule: &dlm.LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs{
+ * 							Count: pulumi.Int(14),
+ * 						},
+ * 						TagsToAdd: pulumi.StringMap{
+ * 							"SnapshotCreator": pulumi.String("DLM"),
+ * 						},
+ * 						CopyTags: pulumi.Bool(false),
+ * 						CrossRegionCopyRules: dlm.LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArray{
+ * 							&dlm.LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs{
+ * 								Target:    pulumi.String("us-west-2"),
+ * 								Encrypted: pulumi.Bool(true),
+ * 								CmkArn:    dlmCrossRegionCopyCmk.Arn,
+ * 								CopyTags:  pulumi.Bool(true),
+ * 								RetainRule: &dlm.LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs{
+ * 									Interval:     pulumi.Int(30),
+ * 									IntervalUnit: pulumi.String("DAYS"),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				TargetTags: pulumi.StringMap{
+ * 					"Snapshot": pulumi.String("true"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +633,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:dlm/lifecyclePolicy:LifecyclePolicy example policy-abcdef12345678901
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:dlm/lifecyclePolicy:LifecyclePolicy")
 public class LifecyclePolicy extends io.pulumi.resources.CustomResource {

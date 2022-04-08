@@ -15,8 +15,148 @@ import javax.annotation.Nullable;
 /**
  * Provides an IoT policy attachment.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * from "fs";
+ * 
+ * const pubsub = new aws.iot.Policy("pubsub", {policy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": [
+ *         "iot:*"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": "*"
+ *     }
+ *   ]
+ * }
+ * `});
+ * const cert = new aws.iot.Certificate("cert", {
+ *     csr: fs.readFileSync("csr.pem"),
+ *     active: true,
+ * });
+ * const att = new aws.iot.PolicyAttachment("att", {
+ *     policy: pubsub.name,
+ *     target: cert.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * pubsub = aws.iot.Policy("pubsub", policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": [
+ *         "iot:*"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": "*"
+ *     }
+ *   ]
+ * }
+ * """)
+ * cert = aws.iot.Certificate("cert",
+ *     csr=(lambda path: open(path).read())("csr.pem"),
+ *     active=True)
+ * att = aws.iot.PolicyAttachment("att",
+ *     policy=pubsub.name,
+ *     target=cert.arn)
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var pubsub = new Aws.Iot.Policy("pubsub", new Aws.Iot.PolicyArgs
+ *         {
+ *             Policy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Action"": [
+ *         ""iot:*""
+ *       ],
+ *       ""Effect"": ""Allow"",
+ *       ""Resource"": ""*""
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var cert = new Aws.Iot.Certificate("cert", new Aws.Iot.CertificateArgs
+ *         {
+ *             Csr = File.ReadAllText("csr.pem"),
+ *             Active = true,
+ *         });
+ *         var att = new Aws.Iot.PolicyAttachment("att", new Aws.Iot.PolicyAttachmentArgs
+ *         {
+ *             Policy = pubsub.Name,
+ *             Target = cert.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iot"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		pubsub, err := iot.NewPolicy(ctx, "pubsub", &iot.PolicyArgs{
+ * 			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"iot:*\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"*\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		cert, err := iot.NewCertificate(ctx, "cert", &iot.CertificateArgs{
+ * 			Csr:    readFileOrPanic("csr.pem"),
+ * 			Active: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iot.NewPolicyAttachment(ctx, "att", &iot.PolicyAttachmentArgs{
+ * 			Policy: pubsub.Name,
+ * 			Target: cert.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:iot/policyAttachment:PolicyAttachment")
 public class PolicyAttachment extends io.pulumi.resources.CustomResource {

@@ -14,6 +14,9 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * MSK SCRAM Secret Associations can be imported using the `id` e.g.,
@@ -22,6 +25,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:msk/scramSecretAssociation:ScramSecretAssociation example arn:aws:kafka:us-west-2:123456789012:cluster/example/279c0212-d057-4dba-9aa9-1c4e5a25bfc7-3
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:msk/scramSecretAssociation:ScramSecretAssociation")
 public class ScramSecretAssociation extends io.pulumi.resources.CustomResource {

@@ -16,7 +16,67 @@ import javax.annotation.Nullable;
 /**
  * Provides a CodeCommit Repository Resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.codecommit.Repository("test", {
+ *     description: "This is the Sample App Repository",
+ *     repositoryName: "MyTestRepository",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.codecommit.Repository("test",
+ *     description="This is the Sample App Repository",
+ *     repository_name="MyTestRepository")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.CodeCommit.Repository("test", new Aws.CodeCommit.RepositoryArgs
+ *         {
+ *             Description = "This is the Sample App Repository",
+ *             RepositoryName = "MyTestRepository",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/codecommit"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codecommit.NewRepository(ctx, "test", &codecommit.RepositoryArgs{
+ * 			Description:    pulumi.String("This is the Sample App Repository"),
+ * 			RepositoryName: pulumi.String("MyTestRepository"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +86,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:codecommit/repository:Repository imported ExistingRepo
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:codecommit/repository:Repository")
 public class Repository extends io.pulumi.resources.CustomResource {

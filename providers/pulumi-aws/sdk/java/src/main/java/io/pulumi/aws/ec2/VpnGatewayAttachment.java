@@ -20,12 +20,108 @@ import javax.annotation.Nullable;
  * resource can also automatically attach the Virtual Private Gateway it creates
  * to an existing VPC by setting the `vpc_id` attribute accordingly.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const network = new aws.ec2.Vpc("network", {cidrBlock: "10.0.0.0/16"});
+ * const vpn = new aws.ec2.VpnGateway("vpn", {tags: {
+ *     Name: "example-vpn-gateway",
+ * }});
+ * const vpnAttachment = new aws.ec2.VpnGatewayAttachment("vpnAttachment", {
+ *     vpcId: network.id,
+ *     vpnGatewayId: vpn.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * network = aws.ec2.Vpc("network", cidr_block="10.0.0.0/16")
+ * vpn = aws.ec2.VpnGateway("vpn", tags={
+ *     "Name": "example-vpn-gateway",
+ * })
+ * vpn_attachment = aws.ec2.VpnGatewayAttachment("vpnAttachment",
+ *     vpc_id=network.id,
+ *     vpn_gateway_id=vpn.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var network = new Aws.Ec2.Vpc("network", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.0.0.0/16",
+ *         });
+ *         var vpn = new Aws.Ec2.VpnGateway("vpn", new Aws.Ec2.VpnGatewayArgs
+ *         {
+ *             Tags = 
+ *             {
+ *                 { "Name", "example-vpn-gateway" },
+ *             },
+ *         });
+ *         var vpnAttachment = new Aws.Ec2.VpnGatewayAttachment("vpnAttachment", new Aws.Ec2.VpnGatewayAttachmentArgs
+ *         {
+ *             VpcId = network.Id,
+ *             VpnGatewayId = vpn.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		network, err := ec2.NewVpc(ctx, "network", &ec2.VpcArgs{
+ * 			CidrBlock: pulumi.String("10.0.0.0/16"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		vpn, err := ec2.NewVpnGateway(ctx, "vpn", &ec2.VpnGatewayArgs{
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("example-vpn-gateway"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewVpnGatewayAttachment(ctx, "vpnAttachment", &ec2.VpnGatewayAttachmentArgs{
+ * 			VpcId:        network.ID(),
+ * 			VpnGatewayId: vpn.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * See [Virtual Private Cloud](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Introduction.html)
+ * and [Virtual Private Gateway](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_VPN.html) user
+ * guides for more information.
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
- * This resource does not support importing.
- * 
+ * This resource does not support importing. 
  */
 @ResourceType(type="aws:ec2/vpnGatewayAttachment:VpnGatewayAttachment")
 public class VpnGatewayAttachment extends io.pulumi.resources.CustomResource {

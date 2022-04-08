@@ -32,7 +32,266 @@ import javax.annotation.Nullable;
  * Domain validation through E-Mail is also supported but should be avoided as it requires a manual step outside
  * of this provider.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create Certificate
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const cert = new aws.acm.Certificate("cert", {
+ *     domainName: "example.com",
+ *     tags: {
+ *         Environment: "test",
+ *     },
+ *     validationMethod: "DNS",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * cert = aws.acm.Certificate("cert",
+ *     domain_name="example.com",
+ *     tags={
+ *         "Environment": "test",
+ *     },
+ *     validation_method="DNS")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cert = new Aws.Acm.Certificate("cert", new Aws.Acm.CertificateArgs
+ *         {
+ *             DomainName = "example.com",
+ *             Tags = 
+ *             {
+ *                 { "Environment", "test" },
+ *             },
+ *             ValidationMethod = "DNS",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/acm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := acm.NewCertificate(ctx, "cert", &acm.CertificateArgs{
+ * 			DomainName: pulumi.String("example.com"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Environment": pulumi.String("test"),
+ * 			},
+ * 			ValidationMethod: pulumi.String("DNS"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Existing Certificate Body Import
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * as tls from "@pulumi/tls";
+ * 
+ * const examplePrivateKey = new tls.PrivateKey("examplePrivateKey", {algorithm: "RSA"});
+ * const exampleSelfSignedCert = new tls.SelfSignedCert("exampleSelfSignedCert", {
+ *     keyAlgorithm: "RSA",
+ *     privateKeyPem: examplePrivateKey.privateKeyPem,
+ *     subjects: [{
+ *         commonName: "example.com",
+ *         organization: "ACME Examples, Inc",
+ *     }],
+ *     validityPeriodHours: 12,
+ *     allowedUses: [
+ *         "key_encipherment",
+ *         "digital_signature",
+ *         "server_auth",
+ *     ],
+ * });
+ * const cert = new aws.acm.Certificate("cert", {
+ *     privateKey: examplePrivateKey.privateKeyPem,
+ *     certificateBody: exampleSelfSignedCert.certPem,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * import pulumi_tls as tls
+ * 
+ * example_private_key = tls.PrivateKey("examplePrivateKey", algorithm="RSA")
+ * example_self_signed_cert = tls.SelfSignedCert("exampleSelfSignedCert",
+ *     key_algorithm="RSA",
+ *     private_key_pem=example_private_key.private_key_pem,
+ *     subjects=[tls.SelfSignedCertSubjectArgs(
+ *         common_name="example.com",
+ *         organization="ACME Examples, Inc",
+ *     )],
+ *     validity_period_hours=12,
+ *     allowed_uses=[
+ *         "key_encipherment",
+ *         "digital_signature",
+ *         "server_auth",
+ *     ])
+ * cert = aws.acm.Certificate("cert",
+ *     private_key=example_private_key.private_key_pem,
+ *     certificate_body=example_self_signed_cert.cert_pem)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * using Tls = Pulumi.Tls;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var examplePrivateKey = new Tls.PrivateKey("examplePrivateKey", new Tls.PrivateKeyArgs
+ *         {
+ *             Algorithm = "RSA",
+ *         });
+ *         var exampleSelfSignedCert = new Tls.SelfSignedCert("exampleSelfSignedCert", new Tls.SelfSignedCertArgs
+ *         {
+ *             KeyAlgorithm = "RSA",
+ *             PrivateKeyPem = examplePrivateKey.PrivateKeyPem,
+ *             Subjects = 
+ *             {
+ *                 new Tls.Inputs.SelfSignedCertSubjectArgs
+ *                 {
+ *                     CommonName = "example.com",
+ *                     Organization = "ACME Examples, Inc",
+ *                 },
+ *             },
+ *             ValidityPeriodHours = 12,
+ *             AllowedUses = 
+ *             {
+ *                 "key_encipherment",
+ *                 "digital_signature",
+ *                 "server_auth",
+ *             },
+ *         });
+ *         var cert = new Aws.Acm.Certificate("cert", new Aws.Acm.CertificateArgs
+ *         {
+ *             PrivateKey = examplePrivateKey.PrivateKeyPem,
+ *             CertificateBody = exampleSelfSignedCert.CertPem,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/acm"
+ * 	"github.com/pulumi/pulumi-tls/sdk/v4/go/tls"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		examplePrivateKey, err := tls.NewPrivateKey(ctx, "examplePrivateKey", &tls.PrivateKeyArgs{
+ * 			Algorithm: pulumi.String("RSA"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleSelfSignedCert, err := tls.NewSelfSignedCert(ctx, "exampleSelfSignedCert", &tls.SelfSignedCertArgs{
+ * 			KeyAlgorithm:  pulumi.String("RSA"),
+ * 			PrivateKeyPem: examplePrivateKey.PrivateKeyPem,
+ * 			Subjects: SelfSignedCertSubjectArray{
+ * 				&SelfSignedCertSubjectArgs{
+ * 					CommonName:   pulumi.String("example.com"),
+ * 					Organization: pulumi.String("ACME Examples, Inc"),
+ * 				},
+ * 			},
+ * 			ValidityPeriodHours: pulumi.Int(12),
+ * 			AllowedUses: pulumi.StringArray{
+ * 				pulumi.String("key_encipherment"),
+ * 				pulumi.String("digital_signature"),
+ * 				pulumi.String("server_auth"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = acm.NewCertificate(ctx, "cert", &acm.CertificateArgs{
+ * 			PrivateKey:      examplePrivateKey.PrivateKeyPem,
+ * 			CertificateBody: exampleSelfSignedCert.CertPem,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Referencing domain_validation_options With for_each Based Resources
+ * 
+ * See the `aws.acm.CertificateValidation` resource for a full example of performing DNS validation.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example: aws.route53.Record[];
+ * for (const range of Object.entries(.reduce((__obj, dvo) => { ...__obj, [dvo.domainName]: {
+ *     name: dvo.resourceRecordName,
+ *     record: dvo.resourceRecordValue,
+ *     type: dvo.resourceRecordType,
+ * } })).map(([k, v]) => {key: k, value: v})) {
+ *     example.push(new aws.route53.Record(`example-${range.key}`, {
+ *         allowOverwrite: true,
+ *         name: range.value.name,
+ *         records: [range.value.record],
+ *         ttl: 60,
+ *         type: range.value.type,
+ *         zoneId: aws_route53_zone.example.zone_id,
+ *     }));
+ * }
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = []
+ * for range in [{"key": k, "value": v} for [k, v] in enumerate({dvo.domainName: {
+ *     name: dvo.resourceRecordName,
+ *     record: dvo.resourceRecordValue,
+ *     type: dvo.resourceRecordType,
+ * } for dvo in aws_acm_certificate.example.domain_validation_options})]:
+ *     example.append(aws.route53.Record(f"example-{range['key']}",
+ *         allow_overwrite=True,
+ *         name=range["value"]["name"],
+ *         records=[range["value"]["record"]],
+ *         ttl=60,
+ *         type=range["value"]["type"],
+ *         zone_id=aws_route53_zone["example"]["zone_id"]))
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -42,6 +301,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:acm/certificate:Certificate cert arn:aws:acm:eu-central-1:123456789012:certificate/7e7a28d2-163f-4b8f-b9cd-822f96c08d6a
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:acm/certificate:Certificate")
 public class Certificate extends io.pulumi.resources.CustomResource {

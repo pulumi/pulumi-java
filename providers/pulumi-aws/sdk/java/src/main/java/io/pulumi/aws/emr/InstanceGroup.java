@@ -24,7 +24,71 @@ import javax.annotation.Nullable;
  * web interface. Instance Groups are destroyed when the EMR Cluster is destroyed.
  * this provider will resize any Instance Group to zero when destroying the resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const task = new aws.emr.InstanceGroup("task", {
+ *     clusterId: aws_emr_cluster["tf-test-cluster"].id,
+ *     instanceCount: 1,
+ *     instanceType: "m5.xlarge",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * task = aws.emr.InstanceGroup("task",
+ *     cluster_id=aws_emr_cluster["tf-test-cluster"]["id"],
+ *     instance_count=1,
+ *     instance_type="m5.xlarge")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var task = new Aws.Emr.InstanceGroup("task", new Aws.Emr.InstanceGroupArgs
+ *         {
+ *             ClusterId = aws_emr_cluster.Tf_test_cluster.Id,
+ *             InstanceCount = 1,
+ *             InstanceType = "m5.xlarge",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/emr"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := emr.NewInstanceGroup(ctx, "task", &emr.InstanceGroupArgs{
+ * 			ClusterId:     pulumi.Any(aws_emr_cluster.Tf - test - cluster.Id),
+ * 			InstanceCount: pulumi.Int(1),
+ * 			InstanceType:  pulumi.String("m5.xlarge"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,6 +98,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:emr/instanceGroup:InstanceGroup task_greoup j-123456ABCDEF/ig-15EK4O09RZLNR
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:emr/instanceGroup:InstanceGroup")
 public class InstanceGroup extends io.pulumi.resources.CustomResource {

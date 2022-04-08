@@ -20,7 +20,71 @@ import javax.annotation.Nullable;
 /**
  * Manages an Image Builder Image.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.imagebuilder.Image("example", {
+ *     distributionConfigurationArn: aws_imagebuilder_distribution_configuration.example.arn,
+ *     imageRecipeArn: aws_imagebuilder_image_recipe.example.arn,
+ *     infrastructureConfigurationArn: aws_imagebuilder_infrastructure_configuration.example.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.imagebuilder.Image("example",
+ *     distribution_configuration_arn=aws_imagebuilder_distribution_configuration["example"]["arn"],
+ *     image_recipe_arn=aws_imagebuilder_image_recipe["example"]["arn"],
+ *     infrastructure_configuration_arn=aws_imagebuilder_infrastructure_configuration["example"]["arn"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ImageBuilder.Image("example", new Aws.ImageBuilder.ImageArgs
+ *         {
+ *             DistributionConfigurationArn = aws_imagebuilder_distribution_configuration.Example.Arn,
+ *             ImageRecipeArn = aws_imagebuilder_image_recipe.Example.Arn,
+ *             InfrastructureConfigurationArn = aws_imagebuilder_infrastructure_configuration.Example.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/imagebuilder"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := imagebuilder.NewImage(ctx, "example", &imagebuilder.ImageArgs{
+ * 			DistributionConfigurationArn:   pulumi.Any(aws_imagebuilder_distribution_configuration.Example.Arn),
+ * 			ImageRecipeArn:                 pulumi.Any(aws_imagebuilder_image_recipe.Example.Arn),
+ * 			InfrastructureConfigurationArn: pulumi.Any(aws_imagebuilder_infrastructure_configuration.Example.Arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +94,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:imagebuilder/image:Image example arn:aws:imagebuilder:us-east-1:123456789012:image/example/1.0.0/1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:imagebuilder/image:Image")
 public class Image extends io.pulumi.resources.CustomResource {

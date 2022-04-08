@@ -16,7 +16,121 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage AWS Secrets Manager secret policy.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleSecret = new aws.secretsmanager.Secret("exampleSecret", {});
+ * const exampleSecretPolicy = new aws.secretsmanager.SecretPolicy("exampleSecretPolicy", {
+ *     secretArn: exampleSecret.arn,
+ *     policy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ * 	{
+ * 	  "Sid": "EnableAnotherAWSAccountToReadTheSecret",
+ * 	  "Effect": "Allow",
+ * 	  "Principal": {
+ * 		"AWS": "arn:aws:iam::123456789012:root"
+ * 	  },
+ * 	  "Action": "secretsmanager:GetSecretValue",
+ * 	  "Resource": "*"
+ * 	}
+ *   ]
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_secret = aws.secretsmanager.Secret("exampleSecret")
+ * example_secret_policy = aws.secretsmanager.SecretPolicy("exampleSecretPolicy",
+ *     secret_arn=example_secret.arn,
+ *     policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ * 	{
+ * 	  "Sid": "EnableAnotherAWSAccountToReadTheSecret",
+ * 	  "Effect": "Allow",
+ * 	  "Principal": {
+ * 		"AWS": "arn:aws:iam::123456789012:root"
+ * 	  },
+ * 	  "Action": "secretsmanager:GetSecretValue",
+ * 	  "Resource": "*"
+ * 	}
+ *   ]
+ * }
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleSecret = new Aws.SecretsManager.Secret("exampleSecret", new Aws.SecretsManager.SecretArgs
+ *         {
+ *         });
+ *         var exampleSecretPolicy = new Aws.SecretsManager.SecretPolicy("exampleSecretPolicy", new Aws.SecretsManager.SecretPolicyArgs
+ *         {
+ *             SecretArn = exampleSecret.Arn,
+ *             Policy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ * 	{
+ * 	  ""Sid"": ""EnableAnotherAWSAccountToReadTheSecret"",
+ * 	  ""Effect"": ""Allow"",
+ * 	  ""Principal"": {
+ * 		""AWS"": ""arn:aws:iam::123456789012:root""
+ * 	  },
+ * 	  ""Action"": ""secretsmanager:GetSecretValue"",
+ * 	  ""Resource"": ""*""
+ * 	}
+ *   ]
+ * }
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/secretsmanager"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleSecret, err := secretsmanager.NewSecret(ctx, "exampleSecret", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = secretsmanager.NewSecretPolicy(ctx, "exampleSecretPolicy", &secretsmanager.SecretPolicyArgs{
+ * 			SecretArn: exampleSecret.Arn,
+ * 			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "	{\n", "	  \"Sid\": \"EnableAnotherAWSAccountToReadTheSecret\",\n", "	  \"Effect\": \"Allow\",\n", "	  \"Principal\": {\n", "		\"AWS\": \"arn:aws:iam::123456789012:root\"\n", "	  },\n", "	  \"Action\": \"secretsmanager:GetSecretValue\",\n", "	  \"Resource\": \"*\"\n", "	}\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +140,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:secretsmanager/secretPolicy:SecretPolicy example arn:aws:secretsmanager:us-east-1:123456789012:secret:example-123456
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:secretsmanager/secretPolicy:SecretPolicy")
 public class SecretPolicy extends io.pulumi.resources.CustomResource {

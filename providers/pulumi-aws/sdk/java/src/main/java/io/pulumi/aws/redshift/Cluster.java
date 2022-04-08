@@ -22,7 +22,84 @@ import javax.annotation.Nullable;
 /**
  * Provides a Redshift Cluster Resource.
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const defaultCluster = new aws.redshift.Cluster("default", {
+ *     clusterIdentifier: "tf-redshift-cluster",
+ *     clusterType: "single-node",
+ *     databaseName: "mydb",
+ *     masterPassword: "Mustbe8characters",
+ *     masterUsername: "foo",
+ *     nodeType: "dc1.large",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default = aws.redshift.Cluster("default",
+ *     cluster_identifier="tf-redshift-cluster",
+ *     cluster_type="single-node",
+ *     database_name="mydb",
+ *     master_password="Mustbe8characters",
+ *     master_username="foo",
+ *     node_type="dc1.large")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Aws.RedShift.Cluster("default", new Aws.RedShift.ClusterArgs
+ *         {
+ *             ClusterIdentifier = "tf-redshift-cluster",
+ *             ClusterType = "single-node",
+ *             DatabaseName = "mydb",
+ *             MasterPassword = "Mustbe8characters",
+ *             MasterUsername = "foo",
+ *             NodeType = "dc1.large",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/redshift"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := redshift.NewCluster(ctx, "default", &redshift.ClusterArgs{
+ * 			ClusterIdentifier: pulumi.String("tf-redshift-cluster"),
+ * 			ClusterType:       pulumi.String("single-node"),
+ * 			DatabaseName:      pulumi.String("mydb"),
+ * 			MasterPassword:    pulumi.String("Mustbe8characters"),
+ * 			MasterUsername:    pulumi.String("foo"),
+ * 			NodeType:          pulumi.String("dc1.large"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,6 +109,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:redshift/cluster:Cluster myprodcluster tf-redshift-cluster-12345
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:redshift/cluster:Cluster")
 public class Cluster extends io.pulumi.resources.CustomResource {

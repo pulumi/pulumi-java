@@ -25,7 +25,866 @@ import javax.annotation.Nullable;
  * For information about Lambda and how to use it, see [What is AWS Lambda?](http://docs.aws.amazon.com/lambda/latest/dg/welcome.html).
  * For information about event source mappings, see [CreateEventSourceMapping](http://docs.aws.amazon.com/lambda/latest/dg/API_CreateEventSourceMapping.html) in the API docs.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### DynamoDB
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.lambda.EventSourceMapping("example", {
+ *     eventSourceArn: aws_dynamodb_table.example.stream_arn,
+ *     functionName: aws_lambda_function.example.arn,
+ *     startingPosition: "LATEST",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.lambda_.EventSourceMapping("example",
+ *     event_source_arn=aws_dynamodb_table["example"]["stream_arn"],
+ *     function_name=aws_lambda_function["example"]["arn"],
+ *     starting_position="LATEST")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Lambda.EventSourceMapping("example", new Aws.Lambda.EventSourceMappingArgs
+ *         {
+ *             EventSourceArn = aws_dynamodb_table.Example.Stream_arn,
+ *             FunctionName = aws_lambda_function.Example.Arn,
+ *             StartingPosition = "LATEST",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := lambda.NewEventSourceMapping(ctx, "example", &lambda.EventSourceMappingArgs{
+ * 			EventSourceArn:   pulumi.Any(aws_dynamodb_table.Example.Stream_arn),
+ * 			FunctionName:     pulumi.Any(aws_lambda_function.Example.Arn),
+ * 			StartingPosition: pulumi.String("LATEST"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Kinesis
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.lambda.EventSourceMapping("example", {
+ *     eventSourceArn: aws_kinesis_stream.example.arn,
+ *     functionName: aws_lambda_function.example.arn,
+ *     startingPosition: "LATEST",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.lambda_.EventSourceMapping("example",
+ *     event_source_arn=aws_kinesis_stream["example"]["arn"],
+ *     function_name=aws_lambda_function["example"]["arn"],
+ *     starting_position="LATEST")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Lambda.EventSourceMapping("example", new Aws.Lambda.EventSourceMappingArgs
+ *         {
+ *             EventSourceArn = aws_kinesis_stream.Example.Arn,
+ *             FunctionName = aws_lambda_function.Example.Arn,
+ *             StartingPosition = "LATEST",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := lambda.NewEventSourceMapping(ctx, "example", &lambda.EventSourceMappingArgs{
+ * 			EventSourceArn:   pulumi.Any(aws_kinesis_stream.Example.Arn),
+ * 			FunctionName:     pulumi.Any(aws_lambda_function.Example.Arn),
+ * 			StartingPosition: pulumi.String("LATEST"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Managed Streaming for Apache Kafka (MSK)
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.lambda.EventSourceMapping("example", {
+ *     eventSourceArn: aws_msk_cluster.example.arn,
+ *     functionName: aws_lambda_function.example.arn,
+ *     topics: ["Example"],
+ *     startingPosition: "TRIM_HORIZON",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.lambda_.EventSourceMapping("example",
+ *     event_source_arn=aws_msk_cluster["example"]["arn"],
+ *     function_name=aws_lambda_function["example"]["arn"],
+ *     topics=["Example"],
+ *     starting_position="TRIM_HORIZON")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Lambda.EventSourceMapping("example", new Aws.Lambda.EventSourceMappingArgs
+ *         {
+ *             EventSourceArn = aws_msk_cluster.Example.Arn,
+ *             FunctionName = aws_lambda_function.Example.Arn,
+ *             Topics = 
+ *             {
+ *                 "Example",
+ *             },
+ *             StartingPosition = "TRIM_HORIZON",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := lambda.NewEventSourceMapping(ctx, "example", &lambda.EventSourceMappingArgs{
+ * 			EventSourceArn: pulumi.Any(aws_msk_cluster.Example.Arn),
+ * 			FunctionName:   pulumi.Any(aws_lambda_function.Example.Arn),
+ * 			Topics: pulumi.StringArray{
+ * 				pulumi.String("Example"),
+ * 			},
+ * 			StartingPosition: pulumi.String("TRIM_HORIZON"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Self Managed Apache Kafka
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.lambda.EventSourceMapping("example", {
+ *     functionName: aws_lambda_function.example.arn,
+ *     topics: ["Example"],
+ *     startingPosition: "TRIM_HORIZON",
+ *     selfManagedEventSource: {
+ *         endpoints: {
+ *             KAFKA_BOOTSTRAP_SERVERS: "kafka1.example.com:9092,kafka2.example.com:9092",
+ *         },
+ *     },
+ *     sourceAccessConfigurations: [
+ *         {
+ *             type: "VPC_SUBNET",
+ *             uri: "subnet:subnet-example1",
+ *         },
+ *         {
+ *             type: "VPC_SUBNET",
+ *             uri: "subnet:subnet-example2",
+ *         },
+ *         {
+ *             type: "VPC_SECURITY_GROUP",
+ *             uri: "security_group:sg-example",
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.lambda_.EventSourceMapping("example",
+ *     function_name=aws_lambda_function["example"]["arn"],
+ *     topics=["Example"],
+ *     starting_position="TRIM_HORIZON",
+ *     self_managed_event_source=aws.lambda..EventSourceMappingSelfManagedEventSourceArgs(
+ *         endpoints={
+ *             "KAFKA_BOOTSTRAP_SERVERS": "kafka1.example.com:9092,kafka2.example.com:9092",
+ *         },
+ *     ),
+ *     source_access_configurations=[
+ *         aws.lambda..EventSourceMappingSourceAccessConfigurationArgs(
+ *             type="VPC_SUBNET",
+ *             uri="subnet:subnet-example1",
+ *         ),
+ *         aws.lambda..EventSourceMappingSourceAccessConfigurationArgs(
+ *             type="VPC_SUBNET",
+ *             uri="subnet:subnet-example2",
+ *         ),
+ *         aws.lambda..EventSourceMappingSourceAccessConfigurationArgs(
+ *             type="VPC_SECURITY_GROUP",
+ *             uri="security_group:sg-example",
+ *         ),
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Lambda.EventSourceMapping("example", new Aws.Lambda.EventSourceMappingArgs
+ *         {
+ *             FunctionName = aws_lambda_function.Example.Arn,
+ *             Topics = 
+ *             {
+ *                 "Example",
+ *             },
+ *             StartingPosition = "TRIM_HORIZON",
+ *             SelfManagedEventSource = new Aws.Lambda.Inputs.EventSourceMappingSelfManagedEventSourceArgs
+ *             {
+ *                 Endpoints = 
+ *                 {
+ *                     { "KAFKA_BOOTSTRAP_SERVERS", "kafka1.example.com:9092,kafka2.example.com:9092" },
+ *                 },
+ *             },
+ *             SourceAccessConfigurations = 
+ *             {
+ *                 new Aws.Lambda.Inputs.EventSourceMappingSourceAccessConfigurationArgs
+ *                 {
+ *                     Type = "VPC_SUBNET",
+ *                     Uri = "subnet:subnet-example1",
+ *                 },
+ *                 new Aws.Lambda.Inputs.EventSourceMappingSourceAccessConfigurationArgs
+ *                 {
+ *                     Type = "VPC_SUBNET",
+ *                     Uri = "subnet:subnet-example2",
+ *                 },
+ *                 new Aws.Lambda.Inputs.EventSourceMappingSourceAccessConfigurationArgs
+ *                 {
+ *                     Type = "VPC_SECURITY_GROUP",
+ *                     Uri = "security_group:sg-example",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := lambda.NewEventSourceMapping(ctx, "example", &lambda.EventSourceMappingArgs{
+ * 			FunctionName: pulumi.Any(aws_lambda_function.Example.Arn),
+ * 			Topics: pulumi.StringArray{
+ * 				pulumi.String("Example"),
+ * 			},
+ * 			StartingPosition: pulumi.String("TRIM_HORIZON"),
+ * 			SelfManagedEventSource: &lambda.EventSourceMappingSelfManagedEventSourceArgs{
+ * 				Endpoints: pulumi.StringMap{
+ * 					"KAFKA_BOOTSTRAP_SERVERS": pulumi.String("kafka1.example.com:9092,kafka2.example.com:9092"),
+ * 				},
+ * 			},
+ * 			SourceAccessConfigurations: lambda.EventSourceMappingSourceAccessConfigurationArray{
+ * 				&lambda.EventSourceMappingSourceAccessConfigurationArgs{
+ * 					Type: pulumi.String("VPC_SUBNET"),
+ * 					Uri:  pulumi.String("subnet:subnet-example1"),
+ * 				},
+ * 				&lambda.EventSourceMappingSourceAccessConfigurationArgs{
+ * 					Type: pulumi.String("VPC_SUBNET"),
+ * 					Uri:  pulumi.String("subnet:subnet-example2"),
+ * 				},
+ * 				&lambda.EventSourceMappingSourceAccessConfigurationArgs{
+ * 					Type: pulumi.String("VPC_SECURITY_GROUP"),
+ * 					Uri:  pulumi.String("security_group:sg-example"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### SQS
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.lambda.EventSourceMapping("example", {
+ *     eventSourceArn: aws_sqs_queue.sqs_queue_test.arn,
+ *     functionName: aws_lambda_function.example.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.lambda_.EventSourceMapping("example",
+ *     event_source_arn=aws_sqs_queue["sqs_queue_test"]["arn"],
+ *     function_name=aws_lambda_function["example"]["arn"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Lambda.EventSourceMapping("example", new Aws.Lambda.EventSourceMappingArgs
+ *         {
+ *             EventSourceArn = aws_sqs_queue.Sqs_queue_test.Arn,
+ *             FunctionName = aws_lambda_function.Example.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := lambda.NewEventSourceMapping(ctx, "example", &lambda.EventSourceMappingArgs{
+ * 			EventSourceArn: pulumi.Any(aws_sqs_queue.Sqs_queue_test.Arn),
+ * 			FunctionName:   pulumi.Any(aws_lambda_function.Example.Arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### SQS with event filter
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.lambda.EventSourceMapping("example", {
+ *     eventSourceArn: aws_sqs_queue.sqs_queue_test.arn,
+ *     functionName: aws_lambda_function.example.arn,
+ *     filterCriteria: {
+ *         filters: [{
+ *             pattern: JSON.stringify({
+ *                 body: {
+ *                     Temperature: [{
+ *                         numeric: [
+ *                             ">",
+ *                             0,
+ *                             "<=",
+ *                             100,
+ *                         ],
+ *                     }],
+ *                     Location: ["New York"],
+ *                 },
+ *             }),
+ *         }],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import json
+ * import pulumi_aws as aws
+ * 
+ * example = aws.lambda_.EventSourceMapping("example",
+ *     event_source_arn=aws_sqs_queue["sqs_queue_test"]["arn"],
+ *     function_name=aws_lambda_function["example"]["arn"],
+ *     filter_criteria=aws.lambda..EventSourceMappingFilterCriteriaArgs(
+ *         filters=[aws.lambda..EventSourceMappingFilterCriteriaFilterArgs(
+ *             pattern=json.dumps({
+ *                 "body": {
+ *                     "Temperature": [{
+ *                         "numeric": [
+ *                             ">",
+ *                             0,
+ *                             "<=",
+ *                             100,
+ *                         ],
+ *                     }],
+ *                     "Location": ["New York"],
+ *                 },
+ *             }),
+ *         )],
+ *     ))
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using System.Text.Json;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Lambda.EventSourceMapping("example", new Aws.Lambda.EventSourceMappingArgs
+ *         {
+ *             EventSourceArn = aws_sqs_queue.Sqs_queue_test.Arn,
+ *             FunctionName = aws_lambda_function.Example.Arn,
+ *             FilterCriteria = new Aws.Lambda.Inputs.EventSourceMappingFilterCriteriaArgs
+ *             {
+ *                 Filters = 
+ *                 {
+ *                     new Aws.Lambda.Inputs.EventSourceMappingFilterCriteriaFilterArgs
+ *                     {
+ *                         Pattern = JsonSerializer.Serialize(new Dictionary<string, object?>
+ *                         {
+ *                             { "body", new Dictionary<string, object?>
+ *                             {
+ *                                 { "Temperature", new[]
+ *                                     {
+ *                                         new Dictionary<string, object?>
+ *                                         {
+ *                                             { "numeric", new[]
+ *                                                 {
+ *                                                     ">",
+ *                                                     0,
+ *                                                     "<=",
+ *                                                     100,
+ *                                                 }
+ *                                              },
+ *                                         },
+ *                                     }
+ *                                  },
+ *                                 { "Location", new[]
+ *                                     {
+ *                                         "New York",
+ *                                     }
+ *                                  },
+ *                             } },
+ *                         }),
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"encoding/json"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+ * 			"body": map[string]interface{}{
+ * 				"Temperature": []map[string]interface{}{
+ * 					map[string]interface{}{
+ * 						"numeric": []interface{}{
+ * 							">",
+ * 							0,
+ * 							"<=",
+ * 							100,
+ * 						},
+ * 					},
+ * 				},
+ * 				"Location": []string{
+ * 					"New York",
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		json0 := string(tmpJSON0)
+ * 		_, err := lambda.NewEventSourceMapping(ctx, "example", &lambda.EventSourceMappingArgs{
+ * 			EventSourceArn: pulumi.Any(aws_sqs_queue.Sqs_queue_test.Arn),
+ * 			FunctionName:   pulumi.Any(aws_lambda_function.Example.Arn),
+ * 			FilterCriteria: &lambda.EventSourceMappingFilterCriteriaArgs{
+ * 				Filters: lambda.EventSourceMappingFilterCriteriaFilterArray{
+ * 					&lambda.EventSourceMappingFilterCriteriaFilterArgs{
+ * 						Pattern: pulumi.String(json0),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Amazon MQ (ActiveMQ)
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.lambda.EventSourceMapping("example", {
+ *     batchSize: 10,
+ *     eventSourceArn: aws_mq_broker.example.arn,
+ *     enabled: true,
+ *     functionName: aws_lambda_function.example.arn,
+ *     queues: ["example"],
+ *     sourceAccessConfigurations: [{
+ *         type: "BASIC_AUTH",
+ *         uri: aws_secretsmanager_secret_version.example.arn,
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.lambda_.EventSourceMapping("example",
+ *     batch_size=10,
+ *     event_source_arn=aws_mq_broker["example"]["arn"],
+ *     enabled=True,
+ *     function_name=aws_lambda_function["example"]["arn"],
+ *     queues=["example"],
+ *     source_access_configurations=[aws.lambda..EventSourceMappingSourceAccessConfigurationArgs(
+ *         type="BASIC_AUTH",
+ *         uri=aws_secretsmanager_secret_version["example"]["arn"],
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Lambda.EventSourceMapping("example", new Aws.Lambda.EventSourceMappingArgs
+ *         {
+ *             BatchSize = 10,
+ *             EventSourceArn = aws_mq_broker.Example.Arn,
+ *             Enabled = true,
+ *             FunctionName = aws_lambda_function.Example.Arn,
+ *             Queues = 
+ *             {
+ *                 "example",
+ *             },
+ *             SourceAccessConfigurations = 
+ *             {
+ *                 new Aws.Lambda.Inputs.EventSourceMappingSourceAccessConfigurationArgs
+ *                 {
+ *                     Type = "BASIC_AUTH",
+ *                     Uri = aws_secretsmanager_secret_version.Example.Arn,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := lambda.NewEventSourceMapping(ctx, "example", &lambda.EventSourceMappingArgs{
+ * 			BatchSize:      pulumi.Int(10),
+ * 			EventSourceArn: pulumi.Any(aws_mq_broker.Example.Arn),
+ * 			Enabled:        pulumi.Bool(true),
+ * 			FunctionName:   pulumi.Any(aws_lambda_function.Example.Arn),
+ * 			Queues: pulumi.StringArray{
+ * 				pulumi.String("example"),
+ * 			},
+ * 			SourceAccessConfigurations: lambda.EventSourceMappingSourceAccessConfigurationArray{
+ * 				&lambda.EventSourceMappingSourceAccessConfigurationArgs{
+ * 					Type: pulumi.String("BASIC_AUTH"),
+ * 					Uri:  pulumi.Any(aws_secretsmanager_secret_version.Example.Arn),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Amazon MQ (RabbitMQ)
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.lambda.EventSourceMapping("example", {
+ *     batchSize: 1,
+ *     eventSourceArn: aws_mq_broker.example.arn,
+ *     enabled: true,
+ *     functionName: aws_lambda_function.example.arn,
+ *     queues: ["example"],
+ *     sourceAccessConfigurations: [
+ *         {
+ *             type: "VIRTUAL_HOST",
+ *             uri: "/example",
+ *         },
+ *         {
+ *             type: "BASIC_AUTH",
+ *             uri: aws_secretsmanager_secret_version.example.arn,
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.lambda_.EventSourceMapping("example",
+ *     batch_size=1,
+ *     event_source_arn=aws_mq_broker["example"]["arn"],
+ *     enabled=True,
+ *     function_name=aws_lambda_function["example"]["arn"],
+ *     queues=["example"],
+ *     source_access_configurations=[
+ *         aws.lambda..EventSourceMappingSourceAccessConfigurationArgs(
+ *             type="VIRTUAL_HOST",
+ *             uri="/example",
+ *         ),
+ *         aws.lambda..EventSourceMappingSourceAccessConfigurationArgs(
+ *             type="BASIC_AUTH",
+ *             uri=aws_secretsmanager_secret_version["example"]["arn"],
+ *         ),
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Lambda.EventSourceMapping("example", new Aws.Lambda.EventSourceMappingArgs
+ *         {
+ *             BatchSize = 1,
+ *             EventSourceArn = aws_mq_broker.Example.Arn,
+ *             Enabled = true,
+ *             FunctionName = aws_lambda_function.Example.Arn,
+ *             Queues = 
+ *             {
+ *                 "example",
+ *             },
+ *             SourceAccessConfigurations = 
+ *             {
+ *                 new Aws.Lambda.Inputs.EventSourceMappingSourceAccessConfigurationArgs
+ *                 {
+ *                     Type = "VIRTUAL_HOST",
+ *                     Uri = "/example",
+ *                 },
+ *                 new Aws.Lambda.Inputs.EventSourceMappingSourceAccessConfigurationArgs
+ *                 {
+ *                     Type = "BASIC_AUTH",
+ *                     Uri = aws_secretsmanager_secret_version.Example.Arn,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := lambda.NewEventSourceMapping(ctx, "example", &lambda.EventSourceMappingArgs{
+ * 			BatchSize:      pulumi.Int(1),
+ * 			EventSourceArn: pulumi.Any(aws_mq_broker.Example.Arn),
+ * 			Enabled:        pulumi.Bool(true),
+ * 			FunctionName:   pulumi.Any(aws_lambda_function.Example.Arn),
+ * 			Queues: pulumi.StringArray{
+ * 				pulumi.String("example"),
+ * 			},
+ * 			SourceAccessConfigurations: lambda.EventSourceMappingSourceAccessConfigurationArray{
+ * 				&lambda.EventSourceMappingSourceAccessConfigurationArgs{
+ * 					Type: pulumi.String("VIRTUAL_HOST"),
+ * 					Uri:  pulumi.String("/example"),
+ * 				},
+ * 				&lambda.EventSourceMappingSourceAccessConfigurationArgs{
+ * 					Type: pulumi.String("BASIC_AUTH"),
+ * 					Uri:  pulumi.Any(aws_secretsmanager_secret_version.Example.Arn),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Managed Streaming for Kafka (MSK)
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.lambda.EventSourceMapping("example", {
+ *     eventSourceArn: aws_msk_cluster.example.arn,
+ *     functionName: aws_lambda_function.example.arn,
+ *     topics: ["Example"],
+ *     startingPosition: "TRIM_HORIZON",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.lambda_.EventSourceMapping("example",
+ *     event_source_arn=aws_msk_cluster["example"]["arn"],
+ *     function_name=aws_lambda_function["example"]["arn"],
+ *     topics=["Example"],
+ *     starting_position="TRIM_HORIZON")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Lambda.EventSourceMapping("example", new Aws.Lambda.EventSourceMappingArgs
+ *         {
+ *             EventSourceArn = aws_msk_cluster.Example.Arn,
+ *             FunctionName = aws_lambda_function.Example.Arn,
+ *             Topics = 
+ *             {
+ *                 "Example",
+ *             },
+ *             StartingPosition = "TRIM_HORIZON",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := lambda.NewEventSourceMapping(ctx, "example", &lambda.EventSourceMappingArgs{
+ * 			EventSourceArn: pulumi.Any(aws_msk_cluster.Example.Arn),
+ * 			FunctionName:   pulumi.Any(aws_lambda_function.Example.Arn),
+ * 			Topics: pulumi.StringArray{
+ * 				pulumi.String("Example"),
+ * 			},
+ * 			StartingPosition: pulumi.String("TRIM_HORIZON"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,6 +894,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:lambda/eventSourceMapping:EventSourceMapping event_source_mapping 12345kxodurf3443
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:lambda/eventSourceMapping:EventSourceMapping")
 public class EventSourceMapping extends io.pulumi.resources.CustomResource {

@@ -17,7 +17,98 @@ import javax.annotation.Nullable;
 /**
  * Provides an Elastic MapReduce Studio.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.emr.Studio("example", {
+ *     authMode: "SSO",
+ *     defaultS3Location: `s3://${aws_s3_bucket.test.bucket}/test`,
+ *     engineSecurityGroupId: aws_security_group.test.id,
+ *     serviceRole: aws_iam_role.test.arn,
+ *     subnetIds: [aws_subnet.test.id],
+ *     userRole: aws_iam_role.test.arn,
+ *     vpcId: aws_vpc.test.id,
+ *     workspaceSecurityGroupId: aws_security_group.test.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.emr.Studio("example",
+ *     auth_mode="SSO",
+ *     default_s3_location=f"s3://{aws_s3_bucket['test']['bucket']}/test",
+ *     engine_security_group_id=aws_security_group["test"]["id"],
+ *     service_role=aws_iam_role["test"]["arn"],
+ *     subnet_ids=[aws_subnet["test"]["id"]],
+ *     user_role=aws_iam_role["test"]["arn"],
+ *     vpc_id=aws_vpc["test"]["id"],
+ *     workspace_security_group_id=aws_security_group["test"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Emr.Studio("example", new Aws.Emr.StudioArgs
+ *         {
+ *             AuthMode = "SSO",
+ *             DefaultS3Location = $"s3://{aws_s3_bucket.Test.Bucket}/test",
+ *             EngineSecurityGroupId = aws_security_group.Test.Id,
+ *             ServiceRole = aws_iam_role.Test.Arn,
+ *             SubnetIds = 
+ *             {
+ *                 aws_subnet.Test.Id,
+ *             },
+ *             UserRole = aws_iam_role.Test.Arn,
+ *             VpcId = aws_vpc.Test.Id,
+ *             WorkspaceSecurityGroupId = aws_security_group.Test.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/emr"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := emr.NewStudio(ctx, "example", &emr.StudioArgs{
+ * 			AuthMode:              pulumi.String("SSO"),
+ * 			DefaultS3Location:     pulumi.String(fmt.Sprintf("%v%v%v", "s3://", aws_s3_bucket.Test.Bucket, "/test")),
+ * 			EngineSecurityGroupId: pulumi.Any(aws_security_group.Test.Id),
+ * 			ServiceRole:           pulumi.Any(aws_iam_role.Test.Arn),
+ * 			SubnetIds: pulumi.StringArray{
+ * 				pulumi.Any(aws_subnet.Test.Id),
+ * 			},
+ * 			UserRole:                 pulumi.Any(aws_iam_role.Test.Arn),
+ * 			VpcId:                    pulumi.Any(aws_vpc.Test.Id),
+ * 			WorkspaceSecurityGroupId: pulumi.Any(aws_security_group.Test.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +118,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:emr/studio:Studio studio es-123456ABCDEF
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:emr/studio:Studio")
 public class Studio extends io.pulumi.resources.CustomResource {

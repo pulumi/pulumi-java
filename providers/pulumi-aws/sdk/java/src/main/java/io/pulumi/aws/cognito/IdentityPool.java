@@ -19,7 +19,182 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS Cognito Identity Pool.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * from "fs";
+ * 
+ * const _default = new aws.iam.SamlProvider("default", {samlMetadataDocument: fs.readFileSync("saml-metadata.xml")});
+ * const main = new aws.cognito.IdentityPool("main", {
+ *     identityPoolName: "identity pool",
+ *     allowUnauthenticatedIdentities: false,
+ *     allowClassicFlow: false,
+ *     cognitoIdentityProviders: [
+ *         {
+ *             clientId: "6lhlkkfbfb4q5kpp90urffae",
+ *             providerName: "cognito-idp.us-east-1.amazonaws.com/us-east-1_Tv0493apJ",
+ *             serverSideTokenCheck: false,
+ *         },
+ *         {
+ *             clientId: "7kodkvfqfb4qfkp39eurffae",
+ *             providerName: "cognito-idp.us-east-1.amazonaws.com/eu-west-1_Zr231apJu",
+ *             serverSideTokenCheck: false,
+ *         },
+ *     ],
+ *     supportedLoginProviders: {
+ *         "graph.facebook.com": "7346241598935552",
+ *         "accounts.google.com": "123456789012.apps.googleusercontent.com",
+ *     },
+ *     samlProviderArns: [_default.arn],
+ *     openidConnectProviderArns: ["arn:aws:iam::123456789012:oidc-provider/id.example.com"],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default = aws.iam.SamlProvider("default", saml_metadata_document=(lambda path: open(path).read())("saml-metadata.xml"))
+ * main = aws.cognito.IdentityPool("main",
+ *     identity_pool_name="identity pool",
+ *     allow_unauthenticated_identities=False,
+ *     allow_classic_flow=False,
+ *     cognito_identity_providers=[
+ *         aws.cognito.IdentityPoolCognitoIdentityProviderArgs(
+ *             client_id="6lhlkkfbfb4q5kpp90urffae",
+ *             provider_name="cognito-idp.us-east-1.amazonaws.com/us-east-1_Tv0493apJ",
+ *             server_side_token_check=False,
+ *         ),
+ *         aws.cognito.IdentityPoolCognitoIdentityProviderArgs(
+ *             client_id="7kodkvfqfb4qfkp39eurffae",
+ *             provider_name="cognito-idp.us-east-1.amazonaws.com/eu-west-1_Zr231apJu",
+ *             server_side_token_check=False,
+ *         ),
+ *     ],
+ *     supported_login_providers={
+ *         "graph.facebook.com": "7346241598935552",
+ *         "accounts.google.com": "123456789012.apps.googleusercontent.com",
+ *     },
+ *     saml_provider_arns=[default.arn],
+ *     openid_connect_provider_arns=["arn:aws:iam::123456789012:oidc-provider/id.example.com"])
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Aws.Iam.SamlProvider("default", new Aws.Iam.SamlProviderArgs
+ *         {
+ *             SamlMetadataDocument = File.ReadAllText("saml-metadata.xml"),
+ *         });
+ *         var main = new Aws.Cognito.IdentityPool("main", new Aws.Cognito.IdentityPoolArgs
+ *         {
+ *             IdentityPoolName = "identity pool",
+ *             AllowUnauthenticatedIdentities = false,
+ *             AllowClassicFlow = false,
+ *             CognitoIdentityProviders = 
+ *             {
+ *                 new Aws.Cognito.Inputs.IdentityPoolCognitoIdentityProviderArgs
+ *                 {
+ *                     ClientId = "6lhlkkfbfb4q5kpp90urffae",
+ *                     ProviderName = "cognito-idp.us-east-1.amazonaws.com/us-east-1_Tv0493apJ",
+ *                     ServerSideTokenCheck = false,
+ *                 },
+ *                 new Aws.Cognito.Inputs.IdentityPoolCognitoIdentityProviderArgs
+ *                 {
+ *                     ClientId = "7kodkvfqfb4qfkp39eurffae",
+ *                     ProviderName = "cognito-idp.us-east-1.amazonaws.com/eu-west-1_Zr231apJu",
+ *                     ServerSideTokenCheck = false,
+ *                 },
+ *             },
+ *             SupportedLoginProviders = 
+ *             {
+ *                 { "graph.facebook.com", "7346241598935552" },
+ *                 { "accounts.google.com", "123456789012.apps.googleusercontent.com" },
+ *             },
+ *             SamlProviderArns = 
+ *             {
+ *                 @default.Arn,
+ *             },
+ *             OpenidConnectProviderArns = 
+ *             {
+ *                 "arn:aws:iam::123456789012:oidc-provider/id.example.com",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iam.NewSamlProvider(ctx, "default", &iam.SamlProviderArgs{
+ * 			SamlMetadataDocument: readFileOrPanic("saml-metadata.xml"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cognito.NewIdentityPool(ctx, "main", &cognito.IdentityPoolArgs{
+ * 			IdentityPoolName:               pulumi.String("identity pool"),
+ * 			AllowUnauthenticatedIdentities: pulumi.Bool(false),
+ * 			AllowClassicFlow:               pulumi.Bool(false),
+ * 			CognitoIdentityProviders: cognito.IdentityPoolCognitoIdentityProviderArray{
+ * 				&cognito.IdentityPoolCognitoIdentityProviderArgs{
+ * 					ClientId:             pulumi.String("6lhlkkfbfb4q5kpp90urffae"),
+ * 					ProviderName:         pulumi.String("cognito-idp.us-east-1.amazonaws.com/us-east-1_Tv0493apJ"),
+ * 					ServerSideTokenCheck: pulumi.Bool(false),
+ * 				},
+ * 				&cognito.IdentityPoolCognitoIdentityProviderArgs{
+ * 					ClientId:             pulumi.String("7kodkvfqfb4qfkp39eurffae"),
+ * 					ProviderName:         pulumi.String("cognito-idp.us-east-1.amazonaws.com/eu-west-1_Zr231apJu"),
+ * 					ServerSideTokenCheck: pulumi.Bool(false),
+ * 				},
+ * 			},
+ * 			SupportedLoginProviders: pulumi.StringMap{
+ * 				"graph.facebook.com":  pulumi.String("7346241598935552"),
+ * 				"accounts.google.com": pulumi.String("123456789012.apps.googleusercontent.com"),
+ * 			},
+ * 			SamlProviderArns: pulumi.StringArray{
+ * 				_default.Arn,
+ * 			},
+ * 			OpenidConnectProviderArns: pulumi.StringArray{
+ * 				pulumi.String("arn:aws:iam::123456789012:oidc-provider/id.example.com"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +204,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cognito/identityPool:IdentityPool mypool <identity-pool-id>
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cognito/identityPool:IdentityPool")
 public class IdentityPool extends io.pulumi.resources.CustomResource {

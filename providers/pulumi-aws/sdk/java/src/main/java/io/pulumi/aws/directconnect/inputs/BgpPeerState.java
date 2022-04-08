@@ -16,7 +16,7 @@ public final class BgpPeerState extends io.pulumi.resources.ResourceArgs {
     public static final BgpPeerState Empty = new BgpPeerState();
 
     /**
-     * The address family for the BGP peer. ` ipv4  ` or `ipv6`.
+     * The address family for the BGP peer. `ipv4 ` or `ipv6`.
      * 
      */
     @Import(name="addressFamily")

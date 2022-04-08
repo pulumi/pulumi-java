@@ -15,7 +15,78 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to create a SES template.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const myTemplate = new aws.ses.Template("MyTemplate", {
+ *     html: "<h1>Hello {{name}},</h1><p>Your favorite animal is {{favoriteanimal}}.</p>",
+ *     subject: "Greetings, {{name}}!",
+ *     text: `Hello {{name}},
+ * Your favorite animal is {{favoriteanimal}}.`,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * my_template = aws.ses.Template("myTemplate",
+ *     html="<h1>Hello {{name}},</h1><p>Your favorite animal is {{favoriteanimal}}.</p>",
+ *     subject="Greetings, {{name}}!",
+ *     text="""Hello {{name}},
+ * Your favorite animal is {{favoriteanimal}}.
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myTemplate = new Aws.Ses.Template("myTemplate", new Aws.Ses.TemplateArgs
+ *         {
+ *             Html = "<h1>Hello {{name}},</h1><p>Your favorite animal is {{favoriteanimal}}.</p>",
+ *             Subject = "Greetings, {{name}}!",
+ *             Text = @"Hello {{name}},
+ * Your favorite animal is {{favoriteanimal}}.
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ses"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ses.NewTemplate(ctx, "myTemplate", &ses.TemplateArgs{
+ * 			Html:    pulumi.String("<h1>Hello {{name}},</h1><p>Your favorite animal is {{favoriteanimal}}.</p>"),
+ * 			Subject: pulumi.String("Greetings, {{name}}!"),
+ * 			Text: pulumi.String(fmt.Sprintf("%v%v", "Hello {{name}},\n", "Your favorite animal is {{favoriteanimal}}.\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +96,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ses/template:Template MyTemplate MyTemplate
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ses/template:Template")
 public class Template extends io.pulumi.resources.CustomResource {

@@ -18,7 +18,264 @@ import javax.annotation.Nullable;
 /**
  * Provides an IP address pool resource for IPAM.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * Basic usage:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const current = aws.getRegion({});
+ * const exampleVpcIpam = new aws.ec2.VpcIpam("exampleVpcIpam", {operatingRegions: [{
+ *     regionName: current.then(current => current.name),
+ * }]});
+ * const exampleVpcIpamPool = new aws.ec2.VpcIpamPool("exampleVpcIpamPool", {
+ *     addressFamily: "ipv4",
+ *     ipamScopeId: exampleVpcIpam.privateDefaultScopeId,
+ *     locale: current.then(current => current.name),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * current = aws.get_region()
+ * example_vpc_ipam = aws.ec2.VpcIpam("exampleVpcIpam", operating_regions=[aws.ec2.VpcIpamOperatingRegionArgs(
+ *     region_name=current.name,
+ * )])
+ * example_vpc_ipam_pool = aws.ec2.VpcIpamPool("exampleVpcIpamPool",
+ *     address_family="ipv4",
+ *     ipam_scope_id=example_vpc_ipam.private_default_scope_id,
+ *     locale=current.name)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var current = Output.Create(Aws.GetRegion.InvokeAsync());
+ *         var exampleVpcIpam = new Aws.Ec2.VpcIpam("exampleVpcIpam", new Aws.Ec2.VpcIpamArgs
+ *         {
+ *             OperatingRegions = 
+ *             {
+ *                 new Aws.Ec2.Inputs.VpcIpamOperatingRegionArgs
+ *                 {
+ *                     RegionName = current.Apply(current => current.Name),
+ *                 },
+ *             },
+ *         });
+ *         var exampleVpcIpamPool = new Aws.Ec2.VpcIpamPool("exampleVpcIpamPool", new Aws.Ec2.VpcIpamPoolArgs
+ *         {
+ *             AddressFamily = "ipv4",
+ *             IpamScopeId = exampleVpcIpam.PrivateDefaultScopeId,
+ *             Locale = current.Apply(current => current.Name),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		current, err := aws.GetRegion(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleVpcIpam, err := ec2.NewVpcIpam(ctx, "exampleVpcIpam", &ec2.VpcIpamArgs{
+ * 			OperatingRegions: ec2.VpcIpamOperatingRegionArray{
+ * 				&ec2.VpcIpamOperatingRegionArgs{
+ * 					RegionName: pulumi.String(current.Name),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewVpcIpamPool(ctx, "exampleVpcIpamPool", &ec2.VpcIpamPoolArgs{
+ * 			AddressFamily: pulumi.String("ipv4"),
+ * 			IpamScopeId:   exampleVpcIpam.PrivateDefaultScopeId,
+ * 			Locale:        pulumi.String(current.Name),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * Nested Pools:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const current = aws.getRegion({});
+ * const example = new aws.ec2.VpcIpam("example", {operatingRegions: [{
+ *     regionName: current.then(current => current.name),
+ * }]});
+ * const parent = new aws.ec2.VpcIpamPool("parent", {
+ *     addressFamily: "ipv4",
+ *     ipamScopeId: example.privateDefaultScopeId,
+ * });
+ * const parentTest = new aws.ec2.VpcIpamPoolCidr("parentTest", {
+ *     ipamPoolId: parent.id,
+ *     cidr: "172.2.0.0/16",
+ * });
+ * const child = new aws.ec2.VpcIpamPool("child", {
+ *     addressFamily: "ipv4",
+ *     ipamScopeId: example.privateDefaultScopeId,
+ *     locale: current.then(current => current.name),
+ *     sourceIpamPoolId: parent.id,
+ * });
+ * const childTest = new aws.ec2.VpcIpamPoolCidr("childTest", {
+ *     ipamPoolId: child.id,
+ *     cidr: "172.2.0.0/24",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * current = aws.get_region()
+ * example = aws.ec2.VpcIpam("example", operating_regions=[aws.ec2.VpcIpamOperatingRegionArgs(
+ *     region_name=current.name,
+ * )])
+ * parent = aws.ec2.VpcIpamPool("parent",
+ *     address_family="ipv4",
+ *     ipam_scope_id=example.private_default_scope_id)
+ * parent_test = aws.ec2.VpcIpamPoolCidr("parentTest",
+ *     ipam_pool_id=parent.id,
+ *     cidr="172.2.0.0/16")
+ * child = aws.ec2.VpcIpamPool("child",
+ *     address_family="ipv4",
+ *     ipam_scope_id=example.private_default_scope_id,
+ *     locale=current.name,
+ *     source_ipam_pool_id=parent.id)
+ * child_test = aws.ec2.VpcIpamPoolCidr("childTest",
+ *     ipam_pool_id=child.id,
+ *     cidr="172.2.0.0/24")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var current = Output.Create(Aws.GetRegion.InvokeAsync());
+ *         var example = new Aws.Ec2.VpcIpam("example", new Aws.Ec2.VpcIpamArgs
+ *         {
+ *             OperatingRegions = 
+ *             {
+ *                 new Aws.Ec2.Inputs.VpcIpamOperatingRegionArgs
+ *                 {
+ *                     RegionName = current.Apply(current => current.Name),
+ *                 },
+ *             },
+ *         });
+ *         var parent = new Aws.Ec2.VpcIpamPool("parent", new Aws.Ec2.VpcIpamPoolArgs
+ *         {
+ *             AddressFamily = "ipv4",
+ *             IpamScopeId = example.PrivateDefaultScopeId,
+ *         });
+ *         var parentTest = new Aws.Ec2.VpcIpamPoolCidr("parentTest", new Aws.Ec2.VpcIpamPoolCidrArgs
+ *         {
+ *             IpamPoolId = parent.Id,
+ *             Cidr = "172.2.0.0/16",
+ *         });
+ *         var child = new Aws.Ec2.VpcIpamPool("child", new Aws.Ec2.VpcIpamPoolArgs
+ *         {
+ *             AddressFamily = "ipv4",
+ *             IpamScopeId = example.PrivateDefaultScopeId,
+ *             Locale = current.Apply(current => current.Name),
+ *             SourceIpamPoolId = parent.Id,
+ *         });
+ *         var childTest = new Aws.Ec2.VpcIpamPoolCidr("childTest", new Aws.Ec2.VpcIpamPoolCidrArgs
+ *         {
+ *             IpamPoolId = child.Id,
+ *             Cidr = "172.2.0.0/24",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		current, err := aws.GetRegion(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		example, err := ec2.NewVpcIpam(ctx, "example", &ec2.VpcIpamArgs{
+ * 			OperatingRegions: ec2.VpcIpamOperatingRegionArray{
+ * 				&ec2.VpcIpamOperatingRegionArgs{
+ * 					RegionName: pulumi.String(current.Name),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		parent, err := ec2.NewVpcIpamPool(ctx, "parent", &ec2.VpcIpamPoolArgs{
+ * 			AddressFamily: pulumi.String("ipv4"),
+ * 			IpamScopeId:   example.PrivateDefaultScopeId,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewVpcIpamPoolCidr(ctx, "parentTest", &ec2.VpcIpamPoolCidrArgs{
+ * 			IpamPoolId: parent.ID(),
+ * 			Cidr:       pulumi.String("172.2.0.0/16"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		child, err := ec2.NewVpcIpamPool(ctx, "child", &ec2.VpcIpamPoolArgs{
+ * 			AddressFamily:    pulumi.String("ipv4"),
+ * 			IpamScopeId:      example.PrivateDefaultScopeId,
+ * 			Locale:           pulumi.String(current.Name),
+ * 			SourceIpamPoolId: parent.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewVpcIpamPoolCidr(ctx, "childTest", &ec2.VpcIpamPoolCidrArgs{
+ * 			IpamPoolId: child.ID(),
+ * 			Cidr:       pulumi.String("172.2.0.0/24"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +285,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/vpcIpamPool:VpcIpamPool example ipam-pool-0958f95207d978e1e
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/vpcIpamPool:VpcIpamPool")
 public class VpcIpamPool extends io.pulumi.resources.CustomResource {

@@ -13,6 +13,9 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * CloudSearch domain service access policies can be imported using the domain name, e.g.,
@@ -21,6 +24,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudsearch/domainServiceAccessPolicy:DomainServiceAccessPolicy example example-domain
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudsearch/domainServiceAccessPolicy:DomainServiceAccessPolicy")
 public class DomainServiceAccessPolicy extends io.pulumi.resources.CustomResource {

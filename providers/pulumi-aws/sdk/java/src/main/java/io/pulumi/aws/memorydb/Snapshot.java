@@ -20,7 +20,60 @@ import javax.annotation.Nullable;
  * 
  * More information about snapshot and restore can be found in the [MemoryDB User Guide](https://docs.aws.amazon.com/memorydb/latest/devguide/snapshots.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.memorydb.Snapshot("example", {clusterName: aws_memorydb_cluster.example.name});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.memorydb.Snapshot("example", cluster_name=aws_memorydb_cluster["example"]["name"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.MemoryDb.Snapshot("example", new Aws.MemoryDb.SnapshotArgs
+ *         {
+ *             ClusterName = aws_memorydb_cluster.Example.Name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/memorydb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := memorydb.NewSnapshot(ctx, "example", &memorydb.SnapshotArgs{
+ * 			ClusterName: pulumi.Any(aws_memorydb_cluster.Example.Name),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +83,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:memorydb/snapshot:Snapshot example my-snapshot
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:memorydb/snapshot:Snapshot")
 public class Snapshot extends io.pulumi.resources.CustomResource {

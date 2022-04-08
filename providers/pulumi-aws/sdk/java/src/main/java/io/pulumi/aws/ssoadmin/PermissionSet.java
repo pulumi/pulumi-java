@@ -18,6 +18,7 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** Updating this resource will automatically [Provision the Permission Set](https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_ProvisionPermissionSet.html) to apply the corresponding updates to all assigned accounts.
  * 
+ * 
  * ## Import
  * 
  * SSO Permission Sets can be imported using the `arn` and `instance_arn` separated by a comma (`,`) e.g.,
@@ -26,6 +27,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ssoadmin/permissionSet:PermissionSet example arn:aws:sso:::permissionSet/ssoins-2938j0x8920sbj72/ps-80383020jr9302rk,arn:aws:sso:::instance/ssoins-2938j0x8920sbj72
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ssoadmin/permissionSet:PermissionSet")
 public class PermissionSet extends io.pulumi.resources.CustomResource {

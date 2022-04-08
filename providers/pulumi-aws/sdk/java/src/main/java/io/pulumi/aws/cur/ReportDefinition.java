@@ -21,7 +21,109 @@ import javax.annotation.Nullable;
  * 
  * > *NOTE:* If AWS Organizations is enabled, only the master account can use this resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleCurReportDefinition = new aws.cur.ReportDefinition("example_cur_report_definition", {
+ *     additionalArtifacts: [
+ *         "REDSHIFT",
+ *         "QUICKSIGHT",
+ *     ],
+ *     additionalSchemaElements: ["RESOURCES"],
+ *     compression: "GZIP",
+ *     format: "textORcsv",
+ *     reportName: "example-cur-report-definition",
+ *     s3Bucket: "example-bucket-name",
+ *     s3Region: "us-east-1",
+ *     timeUnit: "HOURLY",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_cur_report_definition = aws.cur.ReportDefinition("exampleCurReportDefinition",
+ *     additional_artifacts=[
+ *         "REDSHIFT",
+ *         "QUICKSIGHT",
+ *     ],
+ *     additional_schema_elements=["RESOURCES"],
+ *     compression="GZIP",
+ *     format="textORcsv",
+ *     report_name="example-cur-report-definition",
+ *     s3_bucket="example-bucket-name",
+ *     s3_region="us-east-1",
+ *     time_unit="HOURLY")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleCurReportDefinition = new Aws.Cur.ReportDefinition("exampleCurReportDefinition", new Aws.Cur.ReportDefinitionArgs
+ *         {
+ *             AdditionalArtifacts = 
+ *             {
+ *                 "REDSHIFT",
+ *                 "QUICKSIGHT",
+ *             },
+ *             AdditionalSchemaElements = 
+ *             {
+ *                 "RESOURCES",
+ *             },
+ *             Compression = "GZIP",
+ *             Format = "textORcsv",
+ *             ReportName = "example-cur-report-definition",
+ *             S3Bucket = "example-bucket-name",
+ *             S3Region = "us-east-1",
+ *             TimeUnit = "HOURLY",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cur"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cur.NewReportDefinition(ctx, "exampleCurReportDefinition", &cur.ReportDefinitionArgs{
+ * 			AdditionalArtifacts: pulumi.StringArray{
+ * 				pulumi.String("REDSHIFT"),
+ * 				pulumi.String("QUICKSIGHT"),
+ * 			},
+ * 			AdditionalSchemaElements: pulumi.StringArray{
+ * 				pulumi.String("RESOURCES"),
+ * 			},
+ * 			Compression: pulumi.String("GZIP"),
+ * 			Format:      pulumi.String("textORcsv"),
+ * 			ReportName:  pulumi.String("example-cur-report-definition"),
+ * 			S3Bucket:    pulumi.String("example-bucket-name"),
+ * 			S3Region:    pulumi.String("us-east-1"),
+ * 			TimeUnit:    pulumi.String("HOURLY"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,6 +133,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cur/reportDefinition:ReportDefinition example_cur_report_definition example-cur-report-definition
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cur/reportDefinition:ReportDefinition")
 public class ReportDefinition extends io.pulumi.resources.CustomResource {

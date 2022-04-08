@@ -16,7 +16,73 @@ import javax.annotation.Nullable;
 /**
  * Provides an Amazon MSK Connect Worker Configuration Resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic configuration
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.mskconnect.WorkerConfiguration("example", {
+ *     propertiesFileContent: `key.converter=org.apache.kafka.connect.storage.StringConverter
+ * value.converter=org.apache.kafka.connect.storage.StringConverter
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.mskconnect.WorkerConfiguration("example", properties_file_content="""key.converter=org.apache.kafka.connect.storage.StringConverter
+ * value.converter=org.apache.kafka.connect.storage.StringConverter
+ * 
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.MskConnect.WorkerConfiguration("example", new Aws.MskConnect.WorkerConfigurationArgs
+ *         {
+ *             PropertiesFileContent = @"key.converter=org.apache.kafka.connect.storage.StringConverter
+ * value.converter=org.apache.kafka.connect.storage.StringConverter
+ * 
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/mskconnect"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := mskconnect.NewWorkerConfiguration(ctx, "example", &mskconnect.WorkerConfigurationArgs{
+ * 			PropertiesFileContent: pulumi.String(fmt.Sprintf("%v%v%v", "key.converter=org.apache.kafka.connect.storage.StringConverter\n", "value.converter=org.apache.kafka.connect.storage.StringConverter\n", "\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +92,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:mskconnect/workerConfiguration:WorkerConfiguration example 'arn:aws:kafkaconnect:eu-central-1:123456789012:worker-configuration/example/8848493b-7fcc-478c-a646-4a52634e3378-4'
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:mskconnect/workerConfiguration:WorkerConfiguration")
 public class WorkerConfiguration extends io.pulumi.resources.CustomResource {

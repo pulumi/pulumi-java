@@ -16,7 +16,76 @@ import javax.annotation.Nullable;
 /**
  * Manages the accepter's side of an EC2 Transit Gateway Peering Attachment.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ec2.TransitGatewayPeeringAttachmentAccepter("example", {
+ *     transitGatewayAttachmentId: aws_ec2_transit_gateway_peering_attachment.example.id,
+ *     tags: {
+ *         Name: "Example cross-account attachment",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ec2.TransitGatewayPeeringAttachmentAccepter("example",
+ *     transit_gateway_attachment_id=aws_ec2_transit_gateway_peering_attachment["example"]["id"],
+ *     tags={
+ *         "Name": "Example cross-account attachment",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ec2.TransitGatewayPeeringAttachmentAccepter("example", new Aws.Ec2.TransitGatewayPeeringAttachmentAccepterArgs
+ *         {
+ *             TransitGatewayAttachmentId = aws_ec2_transit_gateway_peering_attachment.Example.Id,
+ *             Tags = 
+ *             {
+ *                 { "Name", "Example cross-account attachment" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewTransitGatewayPeeringAttachmentAccepter(ctx, "example", &ec2.TransitGatewayPeeringAttachmentAccepterArgs{
+ * 			TransitGatewayAttachmentId: pulumi.Any(aws_ec2_transit_gateway_peering_attachment.Example.Id),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("Example cross-account attachment"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +95,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/transitGatewayPeeringAttachmentAccepter:TransitGatewayPeeringAttachmentAccepter example tgw-attach-12345678
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/transitGatewayPeeringAttachmentAccepter:TransitGatewayPeeringAttachmentAccepter")
 public class TransitGatewayPeeringAttachmentAccepter extends io.pulumi.resources.CustomResource {

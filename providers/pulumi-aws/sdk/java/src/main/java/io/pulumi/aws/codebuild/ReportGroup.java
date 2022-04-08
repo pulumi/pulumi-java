@@ -18,7 +18,186 @@ import javax.annotation.Nullable;
 /**
  * Provides a CodeBuild Report Groups Resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleKey = new aws.kms.Key("exampleKey", {
+ *     description: "my test kms key",
+ *     deletionWindowInDays: 7,
+ *     policy: `{
+ *   "Version": "2012-10-17",
+ *   "Id": "kms-tf-1",
+ *   "Statement": [
+ *     {
+ *       "Sid": "Enable IAM User Permissions",
+ *       "Effect": "Allow",
+ *       "Principal": {
+ *         "AWS": "*"
+ *       },
+ *       "Action": "kms:*",
+ *       "Resource": "*"
+ *     }
+ *   ]
+ * }
+ * `,
+ * });
+ * const exampleBucket = new aws.s3.Bucket("exampleBucket", {});
+ * const exampleReportGroup = new aws.codebuild.ReportGroup("exampleReportGroup", {
+ *     type: "TEST",
+ *     exportConfig: {
+ *         type: "S3",
+ *         s3Destination: {
+ *             bucket: exampleBucket.id,
+ *             encryptionDisabled: false,
+ *             encryptionKey: exampleKey.arn,
+ *             packaging: "NONE",
+ *             path: "/some",
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_key = aws.kms.Key("exampleKey",
+ *     description="my test kms key",
+ *     deletion_window_in_days=7,
+ *     policy="""{
+ *   "Version": "2012-10-17",
+ *   "Id": "kms-tf-1",
+ *   "Statement": [
+ *     {
+ *       "Sid": "Enable IAM User Permissions",
+ *       "Effect": "Allow",
+ *       "Principal": {
+ *         "AWS": "*"
+ *       },
+ *       "Action": "kms:*",
+ *       "Resource": "*"
+ *     }
+ *   ]
+ * }
+ * """)
+ * example_bucket = aws.s3.Bucket("exampleBucket")
+ * example_report_group = aws.codebuild.ReportGroup("exampleReportGroup",
+ *     type="TEST",
+ *     export_config=aws.codebuild.ReportGroupExportConfigArgs(
+ *         type="S3",
+ *         s3_destination=aws.codebuild.ReportGroupExportConfigS3DestinationArgs(
+ *             bucket=example_bucket.id,
+ *             encryption_disabled=False,
+ *             encryption_key=example_key.arn,
+ *             packaging="NONE",
+ *             path="/some",
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleKey = new Aws.Kms.Key("exampleKey", new Aws.Kms.KeyArgs
+ *         {
+ *             Description = "my test kms key",
+ *             DeletionWindowInDays = 7,
+ *             Policy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Id"": ""kms-tf-1"",
+ *   ""Statement"": [
+ *     {
+ *       ""Sid"": ""Enable IAM User Permissions"",
+ *       ""Effect"": ""Allow"",
+ *       ""Principal"": {
+ *         ""AWS"": ""*""
+ *       },
+ *       ""Action"": ""kms:*"",
+ *       ""Resource"": ""*""
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var exampleBucket = new Aws.S3.Bucket("exampleBucket", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var exampleReportGroup = new Aws.CodeBuild.ReportGroup("exampleReportGroup", new Aws.CodeBuild.ReportGroupArgs
+ *         {
+ *             Type = "TEST",
+ *             ExportConfig = new Aws.CodeBuild.Inputs.ReportGroupExportConfigArgs
+ *             {
+ *                 Type = "S3",
+ *                 S3Destination = new Aws.CodeBuild.Inputs.ReportGroupExportConfigS3DestinationArgs
+ *                 {
+ *                     Bucket = exampleBucket.Id,
+ *                     EncryptionDisabled = false,
+ *                     EncryptionKey = exampleKey.Arn,
+ *                     Packaging = "NONE",
+ *                     Path = "/some",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/codebuild"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kms"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleKey, err := kms.NewKey(ctx, "exampleKey", &kms.KeyArgs{
+ * 			Description:          pulumi.String("my test kms key"),
+ * 			DeletionWindowInDays: pulumi.Int(7),
+ * 			Policy:               pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Id\": \"kms-tf-1\",\n", "  \"Statement\": [\n", "    {\n", "      \"Sid\": \"Enable IAM User Permissions\",\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"AWS\": \"*\"\n", "      },\n", "      \"Action\": \"kms:*\",\n", "      \"Resource\": \"*\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleBucket, err := s3.NewBucket(ctx, "exampleBucket", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = codebuild.NewReportGroup(ctx, "exampleReportGroup", &codebuild.ReportGroupArgs{
+ * 			Type: pulumi.String("TEST"),
+ * 			ExportConfig: &codebuild.ReportGroupExportConfigArgs{
+ * 				Type: pulumi.String("S3"),
+ * 				S3Destination: &codebuild.ReportGroupExportConfigS3DestinationArgs{
+ * 					Bucket:             exampleBucket.ID(),
+ * 					EncryptionDisabled: pulumi.Bool(false),
+ * 					EncryptionKey:      exampleKey.Arn,
+ * 					Packaging:          pulumi.String("NONE"),
+ * 					Path:               pulumi.String("/some"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +207,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:codebuild/reportGroup:ReportGroup example arn:aws:codebuild:us-west-2:123456789:report-group/report-group-name
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:codebuild/reportGroup:ReportGroup")
 public class ReportGroup extends io.pulumi.resources.CustomResource {

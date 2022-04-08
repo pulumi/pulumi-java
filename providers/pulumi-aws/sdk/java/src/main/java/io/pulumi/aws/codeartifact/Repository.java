@@ -19,7 +19,288 @@ import javax.annotation.Nullable;
 /**
  * Provides a CodeArtifact Repository Resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleKey = new aws.kms.Key("exampleKey", {description: "domain key"});
+ * const exampleDomain = new aws.codeartifact.Domain("exampleDomain", {
+ *     domain: "example",
+ *     encryptionKey: exampleKey.arn,
+ * });
+ * const test = new aws.codeartifact.Repository("test", {
+ *     repository: "example",
+ *     domain: exampleDomain.domain,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_key = aws.kms.Key("exampleKey", description="domain key")
+ * example_domain = aws.codeartifact.Domain("exampleDomain",
+ *     domain="example",
+ *     encryption_key=example_key.arn)
+ * test = aws.codeartifact.Repository("test",
+ *     repository="example",
+ *     domain=example_domain.domain)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleKey = new Aws.Kms.Key("exampleKey", new Aws.Kms.KeyArgs
+ *         {
+ *             Description = "domain key",
+ *         });
+ *         var exampleDomain = new Aws.CodeArtifact.Domain("exampleDomain", new Aws.CodeArtifact.DomainArgs
+ *         {
+ *             Domain = "example",
+ *             EncryptionKey = exampleKey.Arn,
+ *         });
+ *         var test = new Aws.CodeArtifact.Repository("test", new Aws.CodeArtifact.RepositoryArgs
+ *         {
+ *             Repository = "example",
+ *             Domain = exampleDomain.DomainName,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/codeartifact"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kms"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleKey, err := kms.NewKey(ctx, "exampleKey", &kms.KeyArgs{
+ * 			Description: pulumi.String("domain key"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleDomain, err := codeartifact.NewDomain(ctx, "exampleDomain", &codeartifact.DomainArgs{
+ * 			Domain:        pulumi.String("example"),
+ * 			EncryptionKey: exampleKey.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = codeartifact.NewRepository(ctx, "test", &codeartifact.RepositoryArgs{
+ * 			Repository: pulumi.String("example"),
+ * 			Domain:     exampleDomain.Domain,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### With Upstream Repository
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const upstream = new aws.codeartifact.Repository("upstream", {
+ *     repository: "upstream",
+ *     domain: aws_codeartifact_domain.test.domain,
+ * });
+ * const test = new aws.codeartifact.Repository("test", {
+ *     repository: "example",
+ *     domain: aws_codeartifact_domain.example.domain,
+ *     upstreams: [{
+ *         repositoryName: upstream.repository,
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * upstream = aws.codeartifact.Repository("upstream",
+ *     repository="upstream",
+ *     domain=aws_codeartifact_domain["test"]["domain"])
+ * test = aws.codeartifact.Repository("test",
+ *     repository="example",
+ *     domain=aws_codeartifact_domain["example"]["domain"],
+ *     upstreams=[aws.codeartifact.RepositoryUpstreamArgs(
+ *         repository_name=upstream.repository,
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var upstream = new Aws.CodeArtifact.Repository("upstream", new Aws.CodeArtifact.RepositoryArgs
+ *         {
+ *             Repository = "upstream",
+ *             Domain = aws_codeartifact_domain.Test.Domain,
+ *         });
+ *         var test = new Aws.CodeArtifact.Repository("test", new Aws.CodeArtifact.RepositoryArgs
+ *         {
+ *             Repository = "example",
+ *             Domain = aws_codeartifact_domain.Example.Domain,
+ *             Upstreams = 
+ *             {
+ *                 new Aws.CodeArtifact.Inputs.RepositoryUpstreamArgs
+ *                 {
+ *                     RepositoryName = upstream.RepositoryName,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/codeartifact"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		upstream, err := codeartifact.NewRepository(ctx, "upstream", &codeartifact.RepositoryArgs{
+ * 			Repository: pulumi.String("upstream"),
+ * 			Domain:     pulumi.Any(aws_codeartifact_domain.Test.Domain),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = codeartifact.NewRepository(ctx, "test", &codeartifact.RepositoryArgs{
+ * 			Repository: pulumi.String("example"),
+ * 			Domain:     pulumi.Any(aws_codeartifact_domain.Example.Domain),
+ * 			Upstreams: codeartifact.RepositoryUpstreamArray{
+ * 				&codeartifact.RepositoryUpstreamArgs{
+ * 					RepositoryName: upstream.Repository,
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### With External Connection
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const upstream = new aws.codeartifact.Repository("upstream", {
+ *     repository: "upstream",
+ *     domain: aws_codeartifact_domain.test.domain,
+ * });
+ * const test = new aws.codeartifact.Repository("test", {
+ *     repository: "example",
+ *     domain: aws_codeartifact_domain.example.domain,
+ *     externalConnections: {
+ *         externalConnectionName: "public:npmjs",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * upstream = aws.codeartifact.Repository("upstream",
+ *     repository="upstream",
+ *     domain=aws_codeartifact_domain["test"]["domain"])
+ * test = aws.codeartifact.Repository("test",
+ *     repository="example",
+ *     domain=aws_codeartifact_domain["example"]["domain"],
+ *     external_connections=aws.codeartifact.RepositoryExternalConnectionsArgs(
+ *         external_connection_name="public:npmjs",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var upstream = new Aws.CodeArtifact.Repository("upstream", new Aws.CodeArtifact.RepositoryArgs
+ *         {
+ *             Repository = "upstream",
+ *             Domain = aws_codeartifact_domain.Test.Domain,
+ *         });
+ *         var test = new Aws.CodeArtifact.Repository("test", new Aws.CodeArtifact.RepositoryArgs
+ *         {
+ *             Repository = "example",
+ *             Domain = aws_codeartifact_domain.Example.Domain,
+ *             ExternalConnections = new Aws.CodeArtifact.Inputs.RepositoryExternalConnectionsArgs
+ *             {
+ *                 ExternalConnectionName = "public:npmjs",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/codeartifact"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codeartifact.NewRepository(ctx, "upstream", &codeartifact.RepositoryArgs{
+ * 			Repository: pulumi.String("upstream"),
+ * 			Domain:     pulumi.Any(aws_codeartifact_domain.Test.Domain),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = codeartifact.NewRepository(ctx, "test", &codeartifact.RepositoryArgs{
+ * 			Repository: pulumi.String("example"),
+ * 			Domain:     pulumi.Any(aws_codeartifact_domain.Example.Domain),
+ * 			ExternalConnections: &codeartifact.RepositoryExternalConnectionsArgs{
+ * 				ExternalConnectionName: pulumi.String("public:npmjs"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +310,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:codeartifact/repository:Repository example arn:aws:codeartifact:us-west-2:012345678912:repository/tf-acc-test-6968272603913957763/tf-acc-test-6968272603913957763
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:codeartifact/repository:Repository")
 public class Repository extends io.pulumi.resources.CustomResource {

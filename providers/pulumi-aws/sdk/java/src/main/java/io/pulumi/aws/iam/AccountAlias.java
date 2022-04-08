@@ -17,7 +17,62 @@ import javax.annotation.Nullable;
  * 
  * Manages the account alias for the AWS Account.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const alias = new aws.iam.AccountAlias("alias", {
+ *     accountAlias: "my-account-alias",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * alias = aws.iam.AccountAlias("alias", account_alias="my-account-alias")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @alias = new Aws.Iam.AccountAlias("alias", new Aws.Iam.AccountAliasArgs
+ *         {
+ *             AccountAlias = "my-account-alias",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iam.NewAccountAlias(ctx, "alias", &iam.AccountAliasArgs{
+ * 			AccountAlias: pulumi.String("my-account-alias"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +82,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:iam/accountAlias:AccountAlias alias my-account-alias
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:iam/accountAlias:AccountAlias")
 public class AccountAlias extends io.pulumi.resources.CustomResource {

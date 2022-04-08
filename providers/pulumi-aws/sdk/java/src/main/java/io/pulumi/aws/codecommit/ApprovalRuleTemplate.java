@@ -15,7 +15,98 @@ import javax.annotation.Nullable;
 /**
  * Provides a CodeCommit Approval Rule Template Resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.codecommit.ApprovalRuleTemplate("example", {
+ *     content: `{
+ *     "Version": "2018-11-08",
+ *     "DestinationReferences": ["refs/heads/master"],
+ *     "Statements": [{
+ *         "Type": "Approvers",
+ *         "NumberOfApprovalsNeeded": 2,
+ *         "ApprovalPoolMembers": ["arn:aws:sts::123456789012:assumed-role/CodeCommitReview/*"]
+ *     }]
+ * }
+ * `,
+ *     description: "This is an example approval rule template",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.codecommit.ApprovalRuleTemplate("example",
+ *     content="""{
+ *     "Version": "2018-11-08",
+ *     "DestinationReferences": ["refs/heads/master"],
+ *     "Statements": [{
+ *         "Type": "Approvers",
+ *         "NumberOfApprovalsNeeded": 2,
+ *         "ApprovalPoolMembers": ["arn:aws:sts::123456789012:assumed-role/CodeCommitReview/*"]
+ *     }]
+ * }
+ * 
+ * """,
+ *     description="This is an example approval rule template")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.CodeCommit.ApprovalRuleTemplate("example", new Aws.CodeCommit.ApprovalRuleTemplateArgs
+ *         {
+ *             Content = @"{
+ *     ""Version"": ""2018-11-08"",
+ *     ""DestinationReferences"": [""refs/heads/master""],
+ *     ""Statements"": [{
+ *         ""Type"": ""Approvers"",
+ *         ""NumberOfApprovalsNeeded"": 2,
+ *         ""ApprovalPoolMembers"": [""arn:aws:sts::123456789012:assumed-role/CodeCommitReview/*""]
+ *     }]
+ * }
+ * 
+ * ",
+ *             Description = "This is an example approval rule template",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/codecommit"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codecommit.NewApprovalRuleTemplate(ctx, "example", &codecommit.ApprovalRuleTemplateArgs{
+ * 			Content:     pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2018-11-08\",\n", "    \"DestinationReferences\": [\"refs/heads/master\"],\n", "    \"Statements\": [{\n", "        \"Type\": \"Approvers\",\n", "        \"NumberOfApprovalsNeeded\": 2,\n", "        \"ApprovalPoolMembers\": [\"arn:aws:sts::123456789012:assumed-role/CodeCommitReview/*\"]\n", "    }]\n", "}\n", "\n")),
+ * 			Description: pulumi.String("This is an example approval rule template"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +116,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:codecommit/approvalRuleTemplate:ApprovalRuleTemplate imported ExistingApprovalRuleTemplateName
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:codecommit/approvalRuleTemplate:ApprovalRuleTemplate")
 public class ApprovalRuleTemplate extends io.pulumi.resources.CustomResource {

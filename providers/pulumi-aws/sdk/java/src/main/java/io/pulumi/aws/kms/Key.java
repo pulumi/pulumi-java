@@ -18,7 +18,67 @@ import javax.annotation.Nullable;
 /**
  * Manages a single-Region or multi-Region primary KMS key.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const key = new aws.kms.Key("a", {
+ *     deletionWindowInDays: 10,
+ *     description: "KMS key 1",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * key = aws.kms.Key("key",
+ *     deletion_window_in_days=10,
+ *     description="KMS key 1")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var key = new Aws.Kms.Key("key", new Aws.Kms.KeyArgs
+ *         {
+ *             DeletionWindowInDays = 10,
+ *             Description = "KMS key 1",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kms"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := kms.NewKey(ctx, "key", &kms.KeyArgs{
+ * 			DeletionWindowInDays: pulumi.Int(10),
+ * 			Description:          pulumi.String("KMS key 1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +88,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:kms/key:Key a 1234abcd-12ab-34cd-56ef-1234567890ab
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:kms/key:Key")
 public class Key extends io.pulumi.resources.CustomResource {

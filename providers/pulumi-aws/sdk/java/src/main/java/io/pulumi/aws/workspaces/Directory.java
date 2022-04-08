@@ -22,7 +22,554 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** AWS WorkSpaces service requires [`workspaces_DefaultRole`](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspaces-access-control.html#create-default-role) IAM role to operate normally.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const workspaces = aws.iam.getPolicyDocument({
+ *     statements: [{
+ *         actions: ["sts:AssumeRole"],
+ *         principals: [{
+ *             type: "Service",
+ *             identifiers: ["workspaces.amazonaws.com"],
+ *         }],
+ *     }],
+ * });
+ * const workspacesDefault = new aws.iam.Role("workspacesDefault", {assumeRolePolicy: workspaces.then(workspaces => workspaces.json)});
+ * const workspacesDefaultServiceAccess = new aws.iam.RolePolicyAttachment("workspacesDefaultServiceAccess", {
+ *     role: workspacesDefault.name,
+ *     policyArn: "arn:aws:iam::aws:policy/AmazonWorkSpacesServiceAccess",
+ * });
+ * const workspacesDefaultSelfServiceAccess = new aws.iam.RolePolicyAttachment("workspacesDefaultSelfServiceAccess", {
+ *     role: workspacesDefault.name,
+ *     policyArn: "arn:aws:iam::aws:policy/AmazonWorkSpacesSelfServiceAccess",
+ * });
+ * const exampleVpc = new aws.ec2.Vpc("exampleVpc", {cidrBlock: "10.0.0.0/16"});
+ * const exampleC = new aws.ec2.Subnet("exampleC", {
+ *     vpcId: exampleVpc.id,
+ *     availabilityZone: "us-east-1c",
+ *     cidrBlock: "10.0.2.0/24",
+ * });
+ * const exampleD = new aws.ec2.Subnet("exampleD", {
+ *     vpcId: exampleVpc.id,
+ *     availabilityZone: "us-east-1d",
+ *     cidrBlock: "10.0.3.0/24",
+ * });
+ * const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
+ *     directoryId: exampleDirectoryservice / directoryDirectory.id,
+ *     subnetIds: [
+ *         exampleC.id,
+ *         exampleD.id,
+ *     ],
+ *     tags: {
+ *         Example: true,
+ *     },
+ *     selfServicePermissions: {
+ *         changeComputeType: true,
+ *         increaseVolumeSize: true,
+ *         rebuildWorkspace: true,
+ *         restartWorkspace: true,
+ *         switchRunningMode: true,
+ *     },
+ *     workspaceAccessProperties: {
+ *         deviceTypeAndroid: "ALLOW",
+ *         deviceTypeChromeos: "ALLOW",
+ *         deviceTypeIos: "ALLOW",
+ *         deviceTypeLinux: "DENY",
+ *         deviceTypeOsx: "ALLOW",
+ *         deviceTypeWeb: "DENY",
+ *         deviceTypeWindows: "DENY",
+ *         deviceTypeZeroclient: "DENY",
+ *     },
+ *     workspaceCreationProperties: {
+ *         customSecurityGroupId: aws_security_group.example.id,
+ *         defaultOu: "OU=AWS,DC=Workgroup,DC=Example,DC=com",
+ *         enableInternetAccess: true,
+ *         enableMaintenanceMode: true,
+ *         userEnabledAsLocalAdministrator: true,
+ *     },
+ * }, {
+ *     dependsOn: [
+ *         workspacesDefaultServiceAccess,
+ *         workspacesDefaultSelfServiceAccess,
+ *     ],
+ * });
+ * const exampleA = new aws.ec2.Subnet("exampleA", {
+ *     vpcId: exampleVpc.id,
+ *     availabilityZone: "us-east-1a",
+ *     cidrBlock: "10.0.0.0/24",
+ * });
+ * const exampleB = new aws.ec2.Subnet("exampleB", {
+ *     vpcId: exampleVpc.id,
+ *     availabilityZone: "us-east-1b",
+ *     cidrBlock: "10.0.1.0/24",
+ * });
+ * const exampleDirectoryservice_directoryDirectory = new aws.directoryservice.Directory("exampleDirectoryservice/directoryDirectory", {
+ *     name: "corp.example.com",
+ *     password: "#S1ncerely",
+ *     size: "Small",
+ *     vpcSettings: {
+ *         vpcId: exampleVpc.id,
+ *         subnetIds: [
+ *             exampleA.id,
+ *             exampleB.id,
+ *         ],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * workspaces = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+ *     actions=["sts:AssumeRole"],
+ *     principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+ *         type="Service",
+ *         identifiers=["workspaces.amazonaws.com"],
+ *     )],
+ * )])
+ * workspaces_default = aws.iam.Role("workspacesDefault", assume_role_policy=workspaces.json)
+ * workspaces_default_service_access = aws.iam.RolePolicyAttachment("workspacesDefaultServiceAccess",
+ *     role=workspaces_default.name,
+ *     policy_arn="arn:aws:iam::aws:policy/AmazonWorkSpacesServiceAccess")
+ * workspaces_default_self_service_access = aws.iam.RolePolicyAttachment("workspacesDefaultSelfServiceAccess",
+ *     role=workspaces_default.name,
+ *     policy_arn="arn:aws:iam::aws:policy/AmazonWorkSpacesSelfServiceAccess")
+ * example_vpc = aws.ec2.Vpc("exampleVpc", cidr_block="10.0.0.0/16")
+ * example_c = aws.ec2.Subnet("exampleC",
+ *     vpc_id=example_vpc.id,
+ *     availability_zone="us-east-1c",
+ *     cidr_block="10.0.2.0/24")
+ * example_d = aws.ec2.Subnet("exampleD",
+ *     vpc_id=example_vpc.id,
+ *     availability_zone="us-east-1d",
+ *     cidr_block="10.0.3.0/24")
+ * example_directory = aws.workspaces.Directory("exampleDirectory",
+ *     directory_id=example_directoryservice / directory_directory["id"],
+ *     subnet_ids=[
+ *         example_c.id,
+ *         example_d.id,
+ *     ],
+ *     tags={
+ *         "Example": "true",
+ *     },
+ *     self_service_permissions=aws.workspaces.DirectorySelfServicePermissionsArgs(
+ *         change_compute_type=True,
+ *         increase_volume_size=True,
+ *         rebuild_workspace=True,
+ *         restart_workspace=True,
+ *         switch_running_mode=True,
+ *     ),
+ *     workspace_access_properties=aws.workspaces.DirectoryWorkspaceAccessPropertiesArgs(
+ *         device_type_android="ALLOW",
+ *         device_type_chromeos="ALLOW",
+ *         device_type_ios="ALLOW",
+ *         device_type_linux="DENY",
+ *         device_type_osx="ALLOW",
+ *         device_type_web="DENY",
+ *         device_type_windows="DENY",
+ *         device_type_zeroclient="DENY",
+ *     ),
+ *     workspace_creation_properties=aws.workspaces.DirectoryWorkspaceCreationPropertiesArgs(
+ *         custom_security_group_id=aws_security_group["example"]["id"],
+ *         default_ou="OU=AWS,DC=Workgroup,DC=Example,DC=com",
+ *         enable_internet_access=True,
+ *         enable_maintenance_mode=True,
+ *         user_enabled_as_local_administrator=True,
+ *     ),
+ *     opts=pulumi.ResourceOptions(depends_on=[
+ *             workspaces_default_service_access,
+ *             workspaces_default_self_service_access,
+ *         ]))
+ * example_a = aws.ec2.Subnet("exampleA",
+ *     vpc_id=example_vpc.id,
+ *     availability_zone="us-east-1a",
+ *     cidr_block="10.0.0.0/24")
+ * example_b = aws.ec2.Subnet("exampleB",
+ *     vpc_id=example_vpc.id,
+ *     availability_zone="us-east-1b",
+ *     cidr_block="10.0.1.0/24")
+ * example_directoryservice_directory_directory = aws.directoryservice.Directory("exampleDirectoryservice/directoryDirectory",
+ *     name="corp.example.com",
+ *     password="#S1ncerely",
+ *     size="Small",
+ *     vpc_settings=aws.directoryservice.DirectoryVpcSettingsArgs(
+ *         vpc_id=example_vpc.id,
+ *         subnet_ids=[
+ *             example_a.id,
+ *             example_b.id,
+ *         ],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var workspaces = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+ *         {
+ *             Statements = 
+ *             {
+ *                 new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+ *                 {
+ *                     Actions = 
+ *                     {
+ *                         "sts:AssumeRole",
+ *                     },
+ *                     Principals = 
+ *                     {
+ *                         new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+ *                         {
+ *                             Type = "Service",
+ *                             Identifiers = 
+ *                             {
+ *                                 "workspaces.amazonaws.com",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         }));
+ *         var workspacesDefault = new Aws.Iam.Role("workspacesDefault", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = workspaces.Apply(workspaces => workspaces.Json),
+ *         });
+ *         var workspacesDefaultServiceAccess = new Aws.Iam.RolePolicyAttachment("workspacesDefaultServiceAccess", new Aws.Iam.RolePolicyAttachmentArgs
+ *         {
+ *             Role = workspacesDefault.Name,
+ *             PolicyArn = "arn:aws:iam::aws:policy/AmazonWorkSpacesServiceAccess",
+ *         });
+ *         var workspacesDefaultSelfServiceAccess = new Aws.Iam.RolePolicyAttachment("workspacesDefaultSelfServiceAccess", new Aws.Iam.RolePolicyAttachmentArgs
+ *         {
+ *             Role = workspacesDefault.Name,
+ *             PolicyArn = "arn:aws:iam::aws:policy/AmazonWorkSpacesSelfServiceAccess",
+ *         });
+ *         var exampleVpc = new Aws.Ec2.Vpc("exampleVpc", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.0.0.0/16",
+ *         });
+ *         var exampleC = new Aws.Ec2.Subnet("exampleC", new Aws.Ec2.SubnetArgs
+ *         {
+ *             VpcId = exampleVpc.Id,
+ *             AvailabilityZone = "us-east-1c",
+ *             CidrBlock = "10.0.2.0/24",
+ *         });
+ *         var exampleD = new Aws.Ec2.Subnet("exampleD", new Aws.Ec2.SubnetArgs
+ *         {
+ *             VpcId = exampleVpc.Id,
+ *             AvailabilityZone = "us-east-1d",
+ *             CidrBlock = "10.0.3.0/24",
+ *         });
+ *         var exampleDirectory = new Aws.Workspaces.Directory("exampleDirectory", new Aws.Workspaces.DirectoryArgs
+ *         {
+ *             DirectoryId = exampleDirectoryservice / directoryDirectory.Id,
+ *             SubnetIds = 
+ *             {
+ *                 exampleC.Id,
+ *                 exampleD.Id,
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Example", "true" },
+ *             },
+ *             SelfServicePermissions = new Aws.Workspaces.Inputs.DirectorySelfServicePermissionsArgs
+ *             {
+ *                 ChangeComputeType = true,
+ *                 IncreaseVolumeSize = true,
+ *                 RebuildWorkspace = true,
+ *                 RestartWorkspace = true,
+ *                 SwitchRunningMode = true,
+ *             },
+ *             WorkspaceAccessProperties = new Aws.Workspaces.Inputs.DirectoryWorkspaceAccessPropertiesArgs
+ *             {
+ *                 DeviceTypeAndroid = "ALLOW",
+ *                 DeviceTypeChromeos = "ALLOW",
+ *                 DeviceTypeIos = "ALLOW",
+ *                 DeviceTypeLinux = "DENY",
+ *                 DeviceTypeOsx = "ALLOW",
+ *                 DeviceTypeWeb = "DENY",
+ *                 DeviceTypeWindows = "DENY",
+ *                 DeviceTypeZeroclient = "DENY",
+ *             },
+ *             WorkspaceCreationProperties = new Aws.Workspaces.Inputs.DirectoryWorkspaceCreationPropertiesArgs
+ *             {
+ *                 CustomSecurityGroupId = aws_security_group.Example.Id,
+ *                 DefaultOu = "OU=AWS,DC=Workgroup,DC=Example,DC=com",
+ *                 EnableInternetAccess = true,
+ *                 EnableMaintenanceMode = true,
+ *                 UserEnabledAsLocalAdministrator = true,
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 workspacesDefaultServiceAccess,
+ *                 workspacesDefaultSelfServiceAccess,
+ *             },
+ *         });
+ *         var exampleA = new Aws.Ec2.Subnet("exampleA", new Aws.Ec2.SubnetArgs
+ *         {
+ *             VpcId = exampleVpc.Id,
+ *             AvailabilityZone = "us-east-1a",
+ *             CidrBlock = "10.0.0.0/24",
+ *         });
+ *         var exampleB = new Aws.Ec2.Subnet("exampleB", new Aws.Ec2.SubnetArgs
+ *         {
+ *             VpcId = exampleVpc.Id,
+ *             AvailabilityZone = "us-east-1b",
+ *             CidrBlock = "10.0.1.0/24",
+ *         });
+ *         var exampleDirectoryservice_directoryDirectory = new Aws.DirectoryService.Directory("exampleDirectoryservice/directoryDirectory", new Aws.DirectoryService.DirectoryArgs
+ *         {
+ *             Name = "corp.example.com",
+ *             Password = "#S1ncerely",
+ *             Size = "Small",
+ *             VpcSettings = new Aws.DirectoryService.Inputs.DirectoryVpcSettingsArgs
+ *             {
+ *                 VpcId = exampleVpc.Id,
+ *                 SubnetIds = 
+ *                 {
+ *                     exampleA.Id,
+ *                     exampleB.Id,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/directoryservice"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/workspaces"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		workspaces, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+ * 			Statements: []iam.GetPolicyDocumentStatement{
+ * 				iam.GetPolicyDocumentStatement{
+ * 					Actions: []string{
+ * 						"sts:AssumeRole",
+ * 					},
+ * 					Principals: []iam.GetPolicyDocumentStatementPrincipal{
+ * 						iam.GetPolicyDocumentStatementPrincipal{
+ * 							Type: "Service",
+ * 							Identifiers: []string{
+ * 								"workspaces.amazonaws.com",
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		workspacesDefault, err := iam.NewRole(ctx, "workspacesDefault", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.String(workspaces.Json),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		workspacesDefaultServiceAccess, err := iam.NewRolePolicyAttachment(ctx, "workspacesDefaultServiceAccess", &iam.RolePolicyAttachmentArgs{
+ * 			Role:      workspacesDefault.Name,
+ * 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonWorkSpacesServiceAccess"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		workspacesDefaultSelfServiceAccess, err := iam.NewRolePolicyAttachment(ctx, "workspacesDefaultSelfServiceAccess", &iam.RolePolicyAttachmentArgs{
+ * 			Role:      workspacesDefault.Name,
+ * 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonWorkSpacesSelfServiceAccess"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleVpc, err := ec2.NewVpc(ctx, "exampleVpc", &ec2.VpcArgs{
+ * 			CidrBlock: pulumi.String("10.0.0.0/16"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleC, err := ec2.NewSubnet(ctx, "exampleC", &ec2.SubnetArgs{
+ * 			VpcId:            exampleVpc.ID(),
+ * 			AvailabilityZone: pulumi.String("us-east-1c"),
+ * 			CidrBlock:        pulumi.String("10.0.2.0/24"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleD, err := ec2.NewSubnet(ctx, "exampleD", &ec2.SubnetArgs{
+ * 			VpcId:            exampleVpc.ID(),
+ * 			AvailabilityZone: pulumi.String("us-east-1d"),
+ * 			CidrBlock:        pulumi.String("10.0.3.0/24"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = workspaces.NewDirectory(ctx, "exampleDirectory", &workspaces.DirectoryArgs{
+ * 			DirectoryId: exampleDirectoryservice / directoryDirectory.Id,
+ * 			SubnetIds: pulumi.StringArray{
+ * 				exampleC.ID(),
+ * 				exampleD.ID(),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Example": pulumi.String("true"),
+ * 			},
+ * 			SelfServicePermissions: &workspaces.DirectorySelfServicePermissionsArgs{
+ * 				ChangeComputeType:  pulumi.Bool(true),
+ * 				IncreaseVolumeSize: pulumi.Bool(true),
+ * 				RebuildWorkspace:   pulumi.Bool(true),
+ * 				RestartWorkspace:   pulumi.Bool(true),
+ * 				SwitchRunningMode:  pulumi.Bool(true),
+ * 			},
+ * 			WorkspaceAccessProperties: &workspaces.DirectoryWorkspaceAccessPropertiesArgs{
+ * 				DeviceTypeAndroid:    pulumi.String("ALLOW"),
+ * 				DeviceTypeChromeos:   pulumi.String("ALLOW"),
+ * 				DeviceTypeIos:        pulumi.String("ALLOW"),
+ * 				DeviceTypeLinux:      pulumi.String("DENY"),
+ * 				DeviceTypeOsx:        pulumi.String("ALLOW"),
+ * 				DeviceTypeWeb:        pulumi.String("DENY"),
+ * 				DeviceTypeWindows:    pulumi.String("DENY"),
+ * 				DeviceTypeZeroclient: pulumi.String("DENY"),
+ * 			},
+ * 			WorkspaceCreationProperties: &workspaces.DirectoryWorkspaceCreationPropertiesArgs{
+ * 				CustomSecurityGroupId:           pulumi.Any(aws_security_group.Example.Id),
+ * 				DefaultOu:                       pulumi.String("OU=AWS,DC=Workgroup,DC=Example,DC=com"),
+ * 				EnableInternetAccess:            pulumi.Bool(true),
+ * 				EnableMaintenanceMode:           pulumi.Bool(true),
+ * 				UserEnabledAsLocalAdministrator: pulumi.Bool(true),
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			workspacesDefaultServiceAccess,
+ * 			workspacesDefaultSelfServiceAccess,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleA, err := ec2.NewSubnet(ctx, "exampleA", &ec2.SubnetArgs{
+ * 			VpcId:            exampleVpc.ID(),
+ * 			AvailabilityZone: pulumi.String("us-east-1a"),
+ * 			CidrBlock:        pulumi.String("10.0.0.0/24"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleB, err := ec2.NewSubnet(ctx, "exampleB", &ec2.SubnetArgs{
+ * 			VpcId:            exampleVpc.ID(),
+ * 			AvailabilityZone: pulumi.String("us-east-1b"),
+ * 			CidrBlock:        pulumi.String("10.0.1.0/24"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = directoryservice.NewDirectory(ctx, "exampleDirectoryservice/directoryDirectory", &directoryservice.DirectoryArgs{
+ * 			Name:     pulumi.String("corp.example.com"),
+ * 			Password: pulumi.String("#S1ncerely"),
+ * 			Size:     pulumi.String("Small"),
+ * 			VpcSettings: &directoryservice.DirectoryVpcSettingsArgs{
+ * 				VpcId: exampleVpc.ID(),
+ * 				SubnetIds: pulumi.StringArray{
+ * 					exampleA.ID(),
+ * 					exampleB.ID(),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### IP Groups
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleIpGroup = new aws.workspaces.IpGroup("exampleIpGroup", {});
+ * const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
+ *     directoryId: aws_directory_service_directory.example.id,
+ *     ipGroupIds: [exampleIpGroup.id],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_ip_group = aws.workspaces.IpGroup("exampleIpGroup")
+ * example_directory = aws.workspaces.Directory("exampleDirectory",
+ *     directory_id=aws_directory_service_directory["example"]["id"],
+ *     ip_group_ids=[example_ip_group.id])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleIpGroup = new Aws.Workspaces.IpGroup("exampleIpGroup", new Aws.Workspaces.IpGroupArgs
+ *         {
+ *         });
+ *         var exampleDirectory = new Aws.Workspaces.Directory("exampleDirectory", new Aws.Workspaces.DirectoryArgs
+ *         {
+ *             DirectoryId = aws_directory_service_directory.Example.Id,
+ *             IpGroupIds = 
+ *             {
+ *                 exampleIpGroup.Id,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/workspaces"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleIpGroup, err := workspaces.NewIpGroup(ctx, "exampleIpGroup", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = workspaces.NewDirectory(ctx, "exampleDirectory", &workspaces.DirectoryArgs{
+ * 			DirectoryId: pulumi.Any(aws_directory_service_directory.Example.Id),
+ * 			IpGroupIds: pulumi.StringArray{
+ * 				exampleIpGroup.ID(),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,6 +579,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:workspaces/directory:Directory main d-4444444444
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:workspaces/directory:Directory")
 public class Directory extends io.pulumi.resources.CustomResource {

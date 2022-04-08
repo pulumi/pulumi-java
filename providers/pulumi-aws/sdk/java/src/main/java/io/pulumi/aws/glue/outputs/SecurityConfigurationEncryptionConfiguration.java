@@ -14,7 +14,7 @@ public final class SecurityConfigurationEncryptionConfiguration {
     private final SecurityConfigurationEncryptionConfigurationCloudwatchEncryption cloudwatchEncryption;
     private final SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption jobBookmarksEncryption;
     /**
-     * A ` s3_encryption  ` block as described below, which contains encryption configuration for S3 data.
+     * A `s3_encryption ` block as described below, which contains encryption configuration for S3 data.
      * 
      */
     private final SecurityConfigurationEncryptionConfigurationS3Encryption s3Encryption;
@@ -36,7 +36,7 @@ public final class SecurityConfigurationEncryptionConfiguration {
         return this.jobBookmarksEncryption;
     }
     /**
-     * A ` s3_encryption  ` block as described below, which contains encryption configuration for S3 data.
+     * A `s3_encryption ` block as described below, which contains encryption configuration for S3 data.
      * 
     */
     public SecurityConfigurationEncryptionConfigurationS3Encryption getS3Encryption() {

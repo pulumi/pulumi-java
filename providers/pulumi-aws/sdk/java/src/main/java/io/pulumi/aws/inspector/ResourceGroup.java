@@ -16,8 +16,75 @@ import javax.annotation.Nullable;
 /**
  * Provides an Amazon Inspector resource group resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.inspector.ResourceGroup("example", {
+ *     tags: {
+ *         Env: "bar",
+ *         Name: "foo",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.inspector.ResourceGroup("example", tags={
+ *     "Env": "bar",
+ *     "Name": "foo",
+ * })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Inspector.ResourceGroup("example", new Aws.Inspector.ResourceGroupArgs
+ *         {
+ *             Tags = 
+ *             {
+ *                 { "Env", "bar" },
+ *                 { "Name", "foo" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/inspector"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := inspector.NewResourceGroup(ctx, "example", &inspector.ResourceGroupArgs{
+ * 			Tags: pulumi.StringMap{
+ * 				"Env":  pulumi.String("bar"),
+ * 				"Name": pulumi.String("foo"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:inspector/resourceGroup:ResourceGroup")
 public class ResourceGroup extends io.pulumi.resources.CustomResource {

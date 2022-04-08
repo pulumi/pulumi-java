@@ -15,8 +15,62 @@ import javax.annotation.Nullable;
 /**
  * Provides a confirmation of the creation of the specified hosted connection on an interconnect.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const confirmation = new aws.directconnect.ConnectionConfirmation("confirmation", {
+ *     connectionId: "dxcon-ffabc123",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * confirmation = aws.directconnect.ConnectionConfirmation("confirmation", connection_id="dxcon-ffabc123")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var confirmation = new Aws.DirectConnect.ConnectionConfirmation("confirmation", new Aws.DirectConnect.ConnectionConfirmationArgs
+ *         {
+ *             ConnectionId = "dxcon-ffabc123",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/directconnect"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := directconnect.NewConnectionConfirmation(ctx, "confirmation", &directconnect.ConnectionConfirmationArgs{
+ * 			ConnectionId: pulumi.String("dxcon-ffabc123"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:directconnect/connectionConfirmation:ConnectionConfirmation")
 public class ConnectionConfirmation extends io.pulumi.resources.CustomResource {

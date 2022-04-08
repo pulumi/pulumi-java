@@ -20,8 +20,106 @@ import javax.annotation.Nullable;
 /**
  * Imports a disk image from S3 as a Snapshot.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ebs.SnapshotImport("example", {
+ *     diskContainer: {
+ *         format: "VHD",
+ *         userBucket: {
+ *             s3Bucket: "disk-images",
+ *             s3Key: "source.vhd",
+ *         },
+ *     },
+ *     roleName: "disk-image-import",
+ *     tags: {
+ *         Name: "HelloWorld",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ebs.SnapshotImport("example",
+ *     disk_container=aws.ebs.SnapshotImportDiskContainerArgs(
+ *         format="VHD",
+ *         user_bucket=aws.ebs.SnapshotImportDiskContainerUserBucketArgs(
+ *             s3_bucket="disk-images",
+ *             s3_key="source.vhd",
+ *         ),
+ *     ),
+ *     role_name="disk-image-import",
+ *     tags={
+ *         "Name": "HelloWorld",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ebs.SnapshotImport("example", new Aws.Ebs.SnapshotImportArgs
+ *         {
+ *             DiskContainer = new Aws.Ebs.Inputs.SnapshotImportDiskContainerArgs
+ *             {
+ *                 Format = "VHD",
+ *                 UserBucket = new Aws.Ebs.Inputs.SnapshotImportDiskContainerUserBucketArgs
+ *                 {
+ *                     S3Bucket = "disk-images",
+ *                     S3Key = "source.vhd",
+ *                 },
+ *             },
+ *             RoleName = "disk-image-import",
+ *             Tags = 
+ *             {
+ *                 { "Name", "HelloWorld" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ebs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ebs.NewSnapshotImport(ctx, "example", &ebs.SnapshotImportArgs{
+ * 			DiskContainer: &ebs.SnapshotImportDiskContainerArgs{
+ * 				Format: pulumi.String("VHD"),
+ * 				UserBucket: &ebs.SnapshotImportDiskContainerUserBucketArgs{
+ * 					S3Bucket: pulumi.String("disk-images"),
+ * 					S3Key:    pulumi.String("source.vhd"),
+ * 				},
+ * 			},
+ * 			RoleName: pulumi.String("disk-image-import"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("HelloWorld"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:ebs/snapshotImport:SnapshotImport")
 public class SnapshotImport extends io.pulumi.resources.CustomResource {

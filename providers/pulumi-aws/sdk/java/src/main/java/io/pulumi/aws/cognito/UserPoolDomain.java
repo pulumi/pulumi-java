@@ -15,7 +15,214 @@ import javax.annotation.Nullable;
 /**
  * Provides a Cognito User Pool Domain resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Amazon Cognito domain
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.cognito.UserPool("example", {});
+ * const main = new aws.cognito.UserPoolDomain("main", {
+ *     domain: "example-domain",
+ *     userPoolId: example.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.cognito.UserPool("example")
+ * main = aws.cognito.UserPoolDomain("main",
+ *     domain="example-domain",
+ *     user_pool_id=example.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Cognito.UserPool("example", new Aws.Cognito.UserPoolArgs
+ *         {
+ *         });
+ *         var main = new Aws.Cognito.UserPoolDomain("main", new Aws.Cognito.UserPoolDomainArgs
+ *         {
+ *             Domain = "example-domain",
+ *             UserPoolId = example.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		example, err := cognito.NewUserPool(ctx, "example", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cognito.NewUserPoolDomain(ctx, "main", &cognito.UserPoolDomainArgs{
+ * 			Domain:     pulumi.String("example-domain"),
+ * 			UserPoolId: example.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Custom Cognito domain
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleUserPool = new aws.cognito.UserPool("exampleUserPool", {});
+ * const main = new aws.cognito.UserPoolDomain("main", {
+ *     domain: "example-domain.example.com",
+ *     certificateArn: aws_acm_certificate.cert.arn,
+ *     userPoolId: exampleUserPool.id,
+ * });
+ * const exampleZone = aws.route53.getZone({
+ *     name: "example.com",
+ * });
+ * const auth_cognito_A = new aws.route53.Record("auth-cognito-A", {
+ *     name: main.domain,
+ *     type: "A",
+ *     zoneId: exampleZone.then(exampleZone => exampleZone.zoneId),
+ *     aliases: [{
+ *         evaluateTargetHealth: false,
+ *         name: main.cloudfrontDistributionArn,
+ *         zoneId: "Z2FDTNDATAQYW2",
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_user_pool = aws.cognito.UserPool("exampleUserPool")
+ * main = aws.cognito.UserPoolDomain("main",
+ *     domain="example-domain.example.com",
+ *     certificate_arn=aws_acm_certificate["cert"]["arn"],
+ *     user_pool_id=example_user_pool.id)
+ * example_zone = aws.route53.get_zone(name="example.com")
+ * auth_cognito__a = aws.route53.Record("auth-cognito-A",
+ *     name=main.domain,
+ *     type="A",
+ *     zone_id=example_zone.zone_id,
+ *     aliases=[aws.route53.RecordAliasArgs(
+ *         evaluate_target_health=False,
+ *         name=main.cloudfront_distribution_arn,
+ *         zone_id="Z2FDTNDATAQYW2",
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleUserPool = new Aws.Cognito.UserPool("exampleUserPool", new Aws.Cognito.UserPoolArgs
+ *         {
+ *         });
+ *         var main = new Aws.Cognito.UserPoolDomain("main", new Aws.Cognito.UserPoolDomainArgs
+ *         {
+ *             Domain = "example-domain.example.com",
+ *             CertificateArn = aws_acm_certificate.Cert.Arn,
+ *             UserPoolId = exampleUserPool.Id,
+ *         });
+ *         var exampleZone = Output.Create(Aws.Route53.GetZone.InvokeAsync(new Aws.Route53.GetZoneArgs
+ *         {
+ *             Name = "example.com",
+ *         }));
+ *         var auth_cognito_A = new Aws.Route53.Record("auth-cognito-A", new Aws.Route53.RecordArgs
+ *         {
+ *             Name = main.Domain,
+ *             Type = "A",
+ *             ZoneId = exampleZone.Apply(exampleZone => exampleZone.ZoneId),
+ *             Aliases = 
+ *             {
+ *                 new Aws.Route53.Inputs.RecordAliasArgs
+ *                 {
+ *                     EvaluateTargetHealth = false,
+ *                     Name = main.CloudfrontDistributionArn,
+ *                     ZoneId = "Z2FDTNDATAQYW2",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleUserPool, err := cognito.NewUserPool(ctx, "exampleUserPool", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		main, err := cognito.NewUserPoolDomain(ctx, "main", &cognito.UserPoolDomainArgs{
+ * 			Domain:         pulumi.String("example-domain.example.com"),
+ * 			CertificateArn: pulumi.Any(aws_acm_certificate.Cert.Arn),
+ * 			UserPoolId:     exampleUserPool.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		opt0 := "example.com"
+ * 		exampleZone, err := route53.LookupZone(ctx, &route53.LookupZoneArgs{
+ * 			Name: &opt0,
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = route53.NewRecord(ctx, "auth-cognito-A", &route53.RecordArgs{
+ * 			Name:   main.Domain,
+ * 			Type:   pulumi.String("A"),
+ * 			ZoneId: pulumi.String(exampleZone.ZoneId),
+ * 			Aliases: route53.RecordAliasArray{
+ * 				&route53.RecordAliasArgs{
+ * 					EvaluateTargetHealth: pulumi.Bool(false),
+ * 					Name:                 main.CloudfrontDistributionArn,
+ * 					ZoneId:               pulumi.String("Z2FDTNDATAQYW2"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +232,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cognito/userPoolDomain:UserPoolDomain main <domain>
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cognito/userPoolDomain:UserPoolDomain")
 public class UserPoolDomain extends io.pulumi.resources.CustomResource {

@@ -18,7 +18,123 @@ import javax.annotation.Nullable;
 /**
  * Provides an IP access control group in AWS WorkSpaces Service
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const contractors = new aws.workspaces.IpGroup("contractors", {
+ *     description: "Contractors IP access control group",
+ *     rules: [
+ *         {
+ *             description: "NY",
+ *             source: "150.24.14.0/24",
+ *         },
+ *         {
+ *             description: "LA",
+ *             source: "125.191.14.85/32",
+ *         },
+ *         {
+ *             description: "STL",
+ *             source: "44.98.100.0/24",
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * contractors = aws.workspaces.IpGroup("contractors",
+ *     description="Contractors IP access control group",
+ *     rules=[
+ *         aws.workspaces.IpGroupRuleArgs(
+ *             description="NY",
+ *             source="150.24.14.0/24",
+ *         ),
+ *         aws.workspaces.IpGroupRuleArgs(
+ *             description="LA",
+ *             source="125.191.14.85/32",
+ *         ),
+ *         aws.workspaces.IpGroupRuleArgs(
+ *             description="STL",
+ *             source="44.98.100.0/24",
+ *         ),
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var contractors = new Aws.Workspaces.IpGroup("contractors", new Aws.Workspaces.IpGroupArgs
+ *         {
+ *             Description = "Contractors IP access control group",
+ *             Rules = 
+ *             {
+ *                 new Aws.Workspaces.Inputs.IpGroupRuleArgs
+ *                 {
+ *                     Description = "NY",
+ *                     Source = "150.24.14.0/24",
+ *                 },
+ *                 new Aws.Workspaces.Inputs.IpGroupRuleArgs
+ *                 {
+ *                     Description = "LA",
+ *                     Source = "125.191.14.85/32",
+ *                 },
+ *                 new Aws.Workspaces.Inputs.IpGroupRuleArgs
+ *                 {
+ *                     Description = "STL",
+ *                     Source = "44.98.100.0/24",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/workspaces"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := workspaces.NewIpGroup(ctx, "contractors", &workspaces.IpGroupArgs{
+ * 			Description: pulumi.String("Contractors IP access control group"),
+ * 			Rules: workspaces.IpGroupRuleArray{
+ * 				&workspaces.IpGroupRuleArgs{
+ * 					Description: pulumi.String("NY"),
+ * 					Source:      pulumi.String("150.24.14.0/24"),
+ * 				},
+ * 				&workspaces.IpGroupRuleArgs{
+ * 					Description: pulumi.String("LA"),
+ * 					Source:      pulumi.String("125.191.14.85/32"),
+ * 				},
+ * 				&workspaces.IpGroupRuleArgs{
+ * 					Description: pulumi.String("STL"),
+ * 					Source:      pulumi.String("44.98.100.0/24"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +144,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:workspaces/ipGroup:IpGroup example wsipg-488lrtl3k
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:workspaces/ipGroup:IpGroup")
 public class IpGroup extends io.pulumi.resources.CustomResource {

@@ -16,7 +16,164 @@ import javax.annotation.Nullable;
 /**
  * Provides a S3 bucket [metrics configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html) resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Add metrics configuration for entire S3 bucket
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.s3.Bucket("example", {});
+ * const example_entire_bucket = new aws.s3.BucketMetric("example-entire-bucket", {bucket: example.bucket});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.s3.Bucket("example")
+ * example_entire_bucket = aws.s3.BucketMetric("example-entire-bucket", bucket=example.bucket)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.S3.Bucket("example", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var example_entire_bucket = new Aws.S3.BucketMetric("example-entire-bucket", new Aws.S3.BucketMetricArgs
+ *         {
+ *             Bucket = example.BucketName,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		example, err := s3.NewBucket(ctx, "example", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewBucketMetric(ctx, "example-entire-bucket", &s3.BucketMetricArgs{
+ * 			Bucket: example.Bucket,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Add metrics configuration with S3 bucket object filter
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.s3.Bucket("example", {});
+ * const example_filtered = new aws.s3.BucketMetric("example-filtered", {
+ *     bucket: example.bucket,
+ *     filter: {
+ *         prefix: "documents/",
+ *         tags: {
+ *             priority: "high",
+ *             "class": "blue",
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.s3.Bucket("example")
+ * example_filtered = aws.s3.BucketMetric("example-filtered",
+ *     bucket=example.bucket,
+ *     filter=aws.s3.BucketMetricFilterArgs(
+ *         prefix="documents/",
+ *         tags={
+ *             "priority": "high",
+ *             "class": "blue",
+ *         },
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.S3.Bucket("example", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var example_filtered = new Aws.S3.BucketMetric("example-filtered", new Aws.S3.BucketMetricArgs
+ *         {
+ *             Bucket = example.BucketName,
+ *             Filter = new Aws.S3.Inputs.BucketMetricFilterArgs
+ *             {
+ *                 Prefix = "documents/",
+ *                 Tags = 
+ *                 {
+ *                     { "priority", "high" },
+ *                     { "class", "blue" },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		example, err := s3.NewBucket(ctx, "example", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewBucketMetric(ctx, "example-filtered", &s3.BucketMetricArgs{
+ * 			Bucket: example.Bucket,
+ * 			Filter: &s3.BucketMetricFilterArgs{
+ * 				Prefix: pulumi.String("documents/"),
+ * 				Tags: pulumi.StringMap{
+ * 					"priority": pulumi.String("high"),
+ * 					"class":    pulumi.String("blue"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +183,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:s3/bucketMetric:BucketMetric my-bucket-entire-bucket my-bucket:EntireBucket
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:s3/bucketMetric:BucketMetric")
 public class BucketMetric extends io.pulumi.resources.CustomResource {

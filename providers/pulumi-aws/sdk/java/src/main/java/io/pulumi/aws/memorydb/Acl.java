@@ -19,7 +19,75 @@ import javax.annotation.Nullable;
  * 
  * More information about users and ACL-s can be found in the [MemoryDB User Guide](https://docs.aws.amazon.com/memorydb/latest/devguide/clusters.acls.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.memorydb.Acl("example", {
+ *     userNames: [
+ *         "my-user-1",
+ *         "my-user-2",
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.memorydb.Acl("example", user_names=[
+ *     "my-user-1",
+ *     "my-user-2",
+ * ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.MemoryDb.Acl("example", new Aws.MemoryDb.AclArgs
+ *         {
+ *             UserNames = 
+ *             {
+ *                 "my-user-1",
+ *                 "my-user-2",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/memorydb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := memorydb.NewAcl(ctx, "example", &memorydb.AclArgs{
+ * 			UserNames: pulumi.StringArray{
+ * 				pulumi.String("my-user-1"),
+ * 				pulumi.String("my-user-2"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +97,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:memorydb/acl:Acl example my-acl
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:memorydb/acl:Acl")
 public class Acl extends io.pulumi.resources.CustomResource {

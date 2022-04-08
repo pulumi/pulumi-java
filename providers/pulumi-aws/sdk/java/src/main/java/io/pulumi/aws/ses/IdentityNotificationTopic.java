@@ -16,7 +16,75 @@ import javax.annotation.Nullable;
 /**
  * Resource for managing SES Identity Notification Topics
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.ses.IdentityNotificationTopic("test", {
+ *     topicArn: aws_sns_topic.example.arn,
+ *     notificationType: "Bounce",
+ *     identity: aws_ses_domain_identity.example.domain,
+ *     includeOriginalHeaders: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.ses.IdentityNotificationTopic("test",
+ *     topic_arn=aws_sns_topic["example"]["arn"],
+ *     notification_type="Bounce",
+ *     identity=aws_ses_domain_identity["example"]["domain"],
+ *     include_original_headers=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Ses.IdentityNotificationTopic("test", new Aws.Ses.IdentityNotificationTopicArgs
+ *         {
+ *             TopicArn = aws_sns_topic.Example.Arn,
+ *             NotificationType = "Bounce",
+ *             Identity = aws_ses_domain_identity.Example.Domain,
+ *             IncludeOriginalHeaders = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ses"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ses.NewIdentityNotificationTopic(ctx, "test", &ses.IdentityNotificationTopicArgs{
+ * 			TopicArn:               pulumi.Any(aws_sns_topic.Example.Arn),
+ * 			NotificationType:       pulumi.String("Bounce"),
+ * 			Identity:               pulumi.Any(aws_ses_domain_identity.Example.Domain),
+ * 			IncludeOriginalHeaders: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +94,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ses/identityNotificationTopic:IdentityNotificationTopic test 'example.com|Bounce'
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ses/identityNotificationTopic:IdentityNotificationTopic")
 public class IdentityNotificationTopic extends io.pulumi.resources.CustomResource {

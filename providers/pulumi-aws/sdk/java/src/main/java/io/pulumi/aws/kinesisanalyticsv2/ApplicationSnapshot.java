@@ -17,7 +17,67 @@ import javax.annotation.Nullable;
  * Manages a Kinesis Analytics v2 Application Snapshot.
  * Snapshots are the AWS implementation of [Flink Savepoints](https://ci.apache.org/projects/flink/flink-docs-release-1.11/ops/state/savepoints.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.kinesisanalyticsv2.ApplicationSnapshot("example", {
+ *     applicationName: aws_kinesisanalyticsv2_application.example.name,
+ *     snapshotName: "example-snapshot",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.kinesisanalyticsv2.ApplicationSnapshot("example",
+ *     application_name=aws_kinesisanalyticsv2_application["example"]["name"],
+ *     snapshot_name="example-snapshot")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.KinesisAnalyticsV2.ApplicationSnapshot("example", new Aws.KinesisAnalyticsV2.ApplicationSnapshotArgs
+ *         {
+ *             ApplicationName = aws_kinesisanalyticsv2_application.Example.Name,
+ *             SnapshotName = "example-snapshot",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kinesisanalyticsv2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := kinesisanalyticsv2.NewApplicationSnapshot(ctx, "example", &kinesisanalyticsv2.ApplicationSnapshotArgs{
+ * 			ApplicationName: pulumi.Any(aws_kinesisanalyticsv2_application.Example.Name),
+ * 			SnapshotName:    pulumi.String("example-snapshot"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +87,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:kinesisanalyticsv2/applicationSnapshot:ApplicationSnapshot example example-application/example-snapshot
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:kinesisanalyticsv2/applicationSnapshot:ApplicationSnapshot")
 public class ApplicationSnapshot extends io.pulumi.resources.CustomResource {

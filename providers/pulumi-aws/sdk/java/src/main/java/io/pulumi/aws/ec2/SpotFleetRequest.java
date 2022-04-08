@@ -20,6 +20,9 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * Spot Fleet Requests can be imported using `id`, e.g.,
@@ -28,6 +31,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/spotFleetRequest:SpotFleetRequest fleet sfr-005e9ec8-5546-4c31-b317-31a62325411e
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/spotFleetRequest:SpotFleetRequest")
 public class SpotFleetRequest extends io.pulumi.resources.CustomResource {

@@ -18,7 +18,118 @@ import javax.annotation.Nullable;
 /**
  * Manages an RDS database instance snapshot. For managing RDS database cluster snapshots, see the `aws.rds.ClusterSnapshot` resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const bar = new aws.rds.Instance("bar", {
+ *     allocatedStorage: 10,
+ *     engine: "mysql",
+ *     engineVersion: "5.6.21",
+ *     instanceClass: "db.t2.micro",
+ *     name: "baz",
+ *     password: "barbarbarbar",
+ *     username: "foo",
+ *     maintenanceWindow: "Fri:09:00-Fri:09:30",
+ *     backupRetentionPeriod: 0,
+ *     parameterGroupName: "default.mysql5.6",
+ * });
+ * const test = new aws.rds.Snapshot("test", {
+ *     dbInstanceIdentifier: bar.id,
+ *     dbSnapshotIdentifier: "testsnapshot1234",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * bar = aws.rds.Instance("bar",
+ *     allocated_storage=10,
+ *     engine="mysql",
+ *     engine_version="5.6.21",
+ *     instance_class="db.t2.micro",
+ *     name="baz",
+ *     password="barbarbarbar",
+ *     username="foo",
+ *     maintenance_window="Fri:09:00-Fri:09:30",
+ *     backup_retention_period=0,
+ *     parameter_group_name="default.mysql5.6")
+ * test = aws.rds.Snapshot("test",
+ *     db_instance_identifier=bar.id,
+ *     db_snapshot_identifier="testsnapshot1234")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bar = new Aws.Rds.Instance("bar", new Aws.Rds.InstanceArgs
+ *         {
+ *             AllocatedStorage = 10,
+ *             Engine = "mysql",
+ *             EngineVersion = "5.6.21",
+ *             InstanceClass = "db.t2.micro",
+ *             Name = "baz",
+ *             Password = "barbarbarbar",
+ *             Username = "foo",
+ *             MaintenanceWindow = "Fri:09:00-Fri:09:30",
+ *             BackupRetentionPeriod = 0,
+ *             ParameterGroupName = "default.mysql5.6",
+ *         });
+ *         var test = new Aws.Rds.Snapshot("test", new Aws.Rds.SnapshotArgs
+ *         {
+ *             DbInstanceIdentifier = bar.Id,
+ *             DbSnapshotIdentifier = "testsnapshot1234",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/rds"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		bar, err := rds.NewInstance(ctx, "bar", &rds.InstanceArgs{
+ * 			AllocatedStorage:      pulumi.Int(10),
+ * 			Engine:                pulumi.String("mysql"),
+ * 			EngineVersion:         pulumi.String("5.6.21"),
+ * 			InstanceClass:         pulumi.String("db.t2.micro"),
+ * 			Name:                  pulumi.String("baz"),
+ * 			Password:              pulumi.String("barbarbarbar"),
+ * 			Username:              pulumi.String("foo"),
+ * 			MaintenanceWindow:     pulumi.String("Fri:09:00-Fri:09:30"),
+ * 			BackupRetentionPeriod: pulumi.Int(0),
+ * 			ParameterGroupName:    pulumi.String("default.mysql5.6"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = rds.NewSnapshot(ctx, "test", &rds.SnapshotArgs{
+ * 			DbInstanceIdentifier: bar.ID(),
+ * 			DbSnapshotIdentifier: pulumi.String("testsnapshot1234"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +139,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:rds/snapshot:Snapshot example my-snapshot
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:rds/snapshot:Snapshot")
 public class Snapshot extends io.pulumi.resources.CustomResource {

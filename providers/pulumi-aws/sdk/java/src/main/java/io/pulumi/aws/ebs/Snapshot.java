@@ -18,7 +18,108 @@ import javax.annotation.Nullable;
 /**
  * Creates a Snapshot of an EBS Volume.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ebs.Volume("example", {
+ *     availabilityZone: "us-west-2a",
+ *     size: 40,
+ *     tags: {
+ *         Name: "HelloWorld",
+ *     },
+ * });
+ * const exampleSnapshot = new aws.ebs.Snapshot("exampleSnapshot", {
+ *     volumeId: example.id,
+ *     tags: {
+ *         Name: "HelloWorld_snap",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ebs.Volume("example",
+ *     availability_zone="us-west-2a",
+ *     size=40,
+ *     tags={
+ *         "Name": "HelloWorld",
+ *     })
+ * example_snapshot = aws.ebs.Snapshot("exampleSnapshot",
+ *     volume_id=example.id,
+ *     tags={
+ *         "Name": "HelloWorld_snap",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ebs.Volume("example", new Aws.Ebs.VolumeArgs
+ *         {
+ *             AvailabilityZone = "us-west-2a",
+ *             Size = 40,
+ *             Tags = 
+ *             {
+ *                 { "Name", "HelloWorld" },
+ *             },
+ *         });
+ *         var exampleSnapshot = new Aws.Ebs.Snapshot("exampleSnapshot", new Aws.Ebs.SnapshotArgs
+ *         {
+ *             VolumeId = example.Id,
+ *             Tags = 
+ *             {
+ *                 { "Name", "HelloWorld_snap" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ebs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		example, err := ebs.NewVolume(ctx, "example", &ebs.VolumeArgs{
+ * 			AvailabilityZone: pulumi.String("us-west-2a"),
+ * 			Size:             pulumi.Int(40),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("HelloWorld"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ebs.NewSnapshot(ctx, "exampleSnapshot", &ebs.SnapshotArgs{
+ * 			VolumeId: example.ID(),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("HelloWorld_snap"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +129,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ebs/snapshot:Snapshot id snap-049df61146c4d7901
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ebs/snapshot:Snapshot")
 public class Snapshot extends io.pulumi.resources.CustomResource {

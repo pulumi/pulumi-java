@@ -454,7 +454,6 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      * @Deprecated
      * Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates.
-     * 
      */
     @Deprecated /* Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates. */
     @Import(name="securityGroups")

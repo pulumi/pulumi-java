@@ -16,7 +16,160 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage an S3 Multi-Region Access Point associated with specified buckets.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Multiple AWS Buckets in Different Regions
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const primaryRegion = new aws.Provider("primaryRegion", {region: "us-east-1"});
+ * const secondaryRegion = new aws.Provider("secondaryRegion", {region: "us-west-2"});
+ * const fooBucket = new aws.s3.Bucket("fooBucket", {}, {
+ *     provider: aws.primary_region,
+ * });
+ * const barBucket = new aws.s3.Bucket("barBucket", {}, {
+ *     provider: aws.secondary_region,
+ * });
+ * const example = new aws.s3control.MultiRegionAccessPoint("example", {details: {
+ *     name: "example",
+ *     regions: [
+ *         {
+ *             bucket: fooBucket.id,
+ *         },
+ *         {
+ *             bucket: barBucket.id,
+ *         },
+ *     ],
+ * }});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * import pulumi_pulumi as pulumi
+ * 
+ * primary_region = pulumi.providers.Aws("primaryRegion", region="us-east-1")
+ * secondary_region = pulumi.providers.Aws("secondaryRegion", region="us-west-2")
+ * foo_bucket = aws.s3.Bucket("fooBucket", opts=pulumi.ResourceOptions(provider=aws["primary_region"]))
+ * bar_bucket = aws.s3.Bucket("barBucket", opts=pulumi.ResourceOptions(provider=aws["secondary_region"]))
+ * example = aws.s3control.MultiRegionAccessPoint("example", details=aws.s3control.MultiRegionAccessPointDetailsArgs(
+ *     name="example",
+ *     regions=[
+ *         aws.s3control.MultiRegionAccessPointDetailsRegionArgs(
+ *             bucket=foo_bucket.id,
+ *         ),
+ *         aws.s3control.MultiRegionAccessPointDetailsRegionArgs(
+ *             bucket=bar_bucket.id,
+ *         ),
+ *     ],
+ * ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primaryRegion = new Aws.Provider("primaryRegion", new Aws.ProviderArgs
+ *         {
+ *             Region = "us-east-1",
+ *         });
+ *         var secondaryRegion = new Aws.Provider("secondaryRegion", new Aws.ProviderArgs
+ *         {
+ *             Region = "us-west-2",
+ *         });
+ *         var fooBucket = new Aws.S3.Bucket("fooBucket", new Aws.S3.BucketArgs
+ *         {
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Primary_region,
+ *         });
+ *         var barBucket = new Aws.S3.Bucket("barBucket", new Aws.S3.BucketArgs
+ *         {
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Secondary_region,
+ *         });
+ *         var example = new Aws.S3Control.MultiRegionAccessPoint("example", new Aws.S3Control.MultiRegionAccessPointArgs
+ *         {
+ *             Details = new Aws.S3Control.Inputs.MultiRegionAccessPointDetailsArgs
+ *             {
+ *                 Name = "example",
+ *                 Regions = 
+ *                 {
+ *                     new Aws.S3Control.Inputs.MultiRegionAccessPointDetailsRegionArgs
+ *                     {
+ *                         Bucket = fooBucket.Id,
+ *                     },
+ *                     new Aws.S3Control.Inputs.MultiRegionAccessPointDetailsRegionArgs
+ *                     {
+ *                         Bucket = barBucket.Id,
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/providers"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3control"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := providers.Newaws(ctx, "primaryRegion", &providers.awsArgs{
+ * 			Region: "us-east-1",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = providers.Newaws(ctx, "secondaryRegion", &providers.awsArgs{
+ * 			Region: "us-west-2",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		fooBucket, err := s3.NewBucket(ctx, "fooBucket", nil, pulumi.Provider(aws.Primary_region))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		barBucket, err := s3.NewBucket(ctx, "barBucket", nil, pulumi.Provider(aws.Secondary_region))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3control.NewMultiRegionAccessPoint(ctx, "example", &s3control.MultiRegionAccessPointArgs{
+ * 			Details: &s3control.MultiRegionAccessPointDetailsArgs{
+ * 				Name: pulumi.String("example"),
+ * 				Regions: s3control.MultiRegionAccessPointDetailsRegionArray{
+ * 					&s3control.MultiRegionAccessPointDetailsRegionArgs{
+ * 						Bucket: fooBucket.ID(),
+ * 					},
+ * 					&s3control.MultiRegionAccessPointDetailsRegionArgs{
+ * 						Bucket: barBucket.ID(),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +179,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:s3control/multiRegionAccessPoint:MultiRegionAccessPoint example 123456789012:example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:s3control/multiRegionAccessPoint:MultiRegionAccessPoint")
 public class MultiRegionAccessPoint extends io.pulumi.resources.CustomResource {

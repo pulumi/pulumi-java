@@ -18,7 +18,143 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** If both AWS accounts are in the same Organization and [RAM Sharing with AWS Organizations is enabled](https://docs.aws.amazon.com/ram/latest/userguide/getting-started-sharing.html#getting-started-sharing-orgs), this resource is not necessary as RAM Resource Share invitations are not used.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * This configuration provides an example of using multiple AWS providers to configure two different AWS accounts. In the _sender_ account, the configuration creates a `aws.ram.ResourceShare` and uses a data source in the _receiver_ account to create a `aws.ram.PrincipalAssociation` resource with the _receiver's_ account ID. In the _receiver_ account, the configuration accepts the invitation to share resources with the `aws.ram.ResourceShareAccepter`.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const alternate = new aws.Provider("alternate", {profile: "profile1"});
+ * const senderShare = new aws.ram.ResourceShare("senderShare", {
+ *     allowExternalPrincipals: true,
+ *     tags: {
+ *         Name: "tf-test-resource-share",
+ *     },
+ * }, {
+ *     provider: aws.alternate,
+ * });
+ * const receiver = aws.getCallerIdentity({});
+ * const senderInvite = new aws.ram.PrincipalAssociation("senderInvite", {
+ *     principal: receiver.then(receiver => receiver.accountId),
+ *     resourceShareArn: senderShare.arn,
+ * }, {
+ *     provider: aws.alternate,
+ * });
+ * const receiverAccept = new aws.ram.ResourceShareAccepter("receiverAccept", {shareArn: senderInvite.resourceShareArn});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * import pulumi_pulumi as pulumi
+ * 
+ * alternate = pulumi.providers.Aws("alternate", profile="profile1")
+ * sender_share = aws.ram.ResourceShare("senderShare",
+ *     allow_external_principals=True,
+ *     tags={
+ *         "Name": "tf-test-resource-share",
+ *     },
+ *     opts=pulumi.ResourceOptions(provider=aws["alternate"]))
+ * receiver = aws.get_caller_identity()
+ * sender_invite = aws.ram.PrincipalAssociation("senderInvite",
+ *     principal=receiver.account_id,
+ *     resource_share_arn=sender_share.arn,
+ *     opts=pulumi.ResourceOptions(provider=aws["alternate"]))
+ * receiver_accept = aws.ram.ResourceShareAccepter("receiverAccept", share_arn=sender_invite.resource_share_arn)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var alternate = new Aws.Provider("alternate", new Aws.ProviderArgs
+ *         {
+ *             Profile = "profile1",
+ *         });
+ *         var senderShare = new Aws.Ram.ResourceShare("senderShare", new Aws.Ram.ResourceShareArgs
+ *         {
+ *             AllowExternalPrincipals = true,
+ *             Tags = 
+ *             {
+ *                 { "Name", "tf-test-resource-share" },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Alternate,
+ *         });
+ *         var receiver = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+ *         var senderInvite = new Aws.Ram.PrincipalAssociation("senderInvite", new Aws.Ram.PrincipalAssociationArgs
+ *         {
+ *             Principal = receiver.Apply(receiver => receiver.AccountId),
+ *             ResourceShareArn = senderShare.Arn,
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Alternate,
+ *         });
+ *         var receiverAccept = new Aws.Ram.ResourceShareAccepter("receiverAccept", new Aws.Ram.ResourceShareAccepterArgs
+ *         {
+ *             ShareArn = senderInvite.ResourceShareArn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/providers"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ram"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := providers.Newaws(ctx, "alternate", &providers.awsArgs{
+ * 			Profile: "profile1",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		senderShare, err := ram.NewResourceShare(ctx, "senderShare", &ram.ResourceShareArgs{
+ * 			AllowExternalPrincipals: pulumi.Bool(true),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("tf-test-resource-share"),
+ * 			},
+ * 		}, pulumi.Provider(aws.Alternate))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		receiver, err := aws.GetCallerIdentity(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		senderInvite, err := ram.NewPrincipalAssociation(ctx, "senderInvite", &ram.PrincipalAssociationArgs{
+ * 			Principal:        pulumi.String(receiver.AccountId),
+ * 			ResourceShareArn: senderShare.Arn,
+ * 		}, pulumi.Provider(aws.Alternate))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ram.NewResourceShareAccepter(ctx, "receiverAccept", &ram.ResourceShareAccepterArgs{
+ * 			ShareArn: senderInvite.ResourceShareArn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +164,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ram/resourceShareAccepter:ResourceShareAccepter example arn:aws:ram:us-east-1:123456789012:resource-share/c4b56393-e8d9-89d9-6dc9-883752de4767
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ram/resourceShareAccepter:ResourceShareAccepter")
 public class ResourceShareAccepter extends io.pulumi.resources.CustomResource {

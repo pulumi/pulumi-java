@@ -13,7 +13,126 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const defaultCluster = new aws.redshift.Cluster("defaultCluster", {
+ *     clusterIdentifier: "tf-redshift-cluster",
+ *     databaseName: "mydb",
+ *     masterUsername: "foo",
+ *     masterPassword: "Mustbe8characters",
+ *     nodeType: "dc1.large",
+ *     clusterType: "single-node",
+ * });
+ * const defaultSnapshotSchedule = new aws.redshift.SnapshotSchedule("defaultSnapshotSchedule", {
+ *     identifier: "tf-redshift-snapshot-schedule",
+ *     definitions: ["rate(12 hours)"],
+ * });
+ * const defaultSnapshotScheduleAssociation = new aws.redshift.SnapshotScheduleAssociation("defaultSnapshotScheduleAssociation", {
+ *     clusterIdentifier: defaultCluster.id,
+ *     scheduleIdentifier: defaultSnapshotSchedule.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default_cluster = aws.redshift.Cluster("defaultCluster",
+ *     cluster_identifier="tf-redshift-cluster",
+ *     database_name="mydb",
+ *     master_username="foo",
+ *     master_password="Mustbe8characters",
+ *     node_type="dc1.large",
+ *     cluster_type="single-node")
+ * default_snapshot_schedule = aws.redshift.SnapshotSchedule("defaultSnapshotSchedule",
+ *     identifier="tf-redshift-snapshot-schedule",
+ *     definitions=["rate(12 hours)"])
+ * default_snapshot_schedule_association = aws.redshift.SnapshotScheduleAssociation("defaultSnapshotScheduleAssociation",
+ *     cluster_identifier=default_cluster.id,
+ *     schedule_identifier=default_snapshot_schedule.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultCluster = new Aws.RedShift.Cluster("defaultCluster", new Aws.RedShift.ClusterArgs
+ *         {
+ *             ClusterIdentifier = "tf-redshift-cluster",
+ *             DatabaseName = "mydb",
+ *             MasterUsername = "foo",
+ *             MasterPassword = "Mustbe8characters",
+ *             NodeType = "dc1.large",
+ *             ClusterType = "single-node",
+ *         });
+ *         var defaultSnapshotSchedule = new Aws.RedShift.SnapshotSchedule("defaultSnapshotSchedule", new Aws.RedShift.SnapshotScheduleArgs
+ *         {
+ *             Identifier = "tf-redshift-snapshot-schedule",
+ *             Definitions = 
+ *             {
+ *                 "rate(12 hours)",
+ *             },
+ *         });
+ *         var defaultSnapshotScheduleAssociation = new Aws.RedShift.SnapshotScheduleAssociation("defaultSnapshotScheduleAssociation", new Aws.RedShift.SnapshotScheduleAssociationArgs
+ *         {
+ *             ClusterIdentifier = defaultCluster.Id,
+ *             ScheduleIdentifier = defaultSnapshotSchedule.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/redshift"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultCluster, err := redshift.NewCluster(ctx, "defaultCluster", &redshift.ClusterArgs{
+ * 			ClusterIdentifier: pulumi.String("tf-redshift-cluster"),
+ * 			DatabaseName:      pulumi.String("mydb"),
+ * 			MasterUsername:    pulumi.String("foo"),
+ * 			MasterPassword:    pulumi.String("Mustbe8characters"),
+ * 			NodeType:          pulumi.String("dc1.large"),
+ * 			ClusterType:       pulumi.String("single-node"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultSnapshotSchedule, err := redshift.NewSnapshotSchedule(ctx, "defaultSnapshotSchedule", &redshift.SnapshotScheduleArgs{
+ * 			Identifier: pulumi.String("tf-redshift-snapshot-schedule"),
+ * 			Definitions: pulumi.StringArray{
+ * 				pulumi.String("rate(12 hours)"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = redshift.NewSnapshotScheduleAssociation(ctx, "defaultSnapshotScheduleAssociation", &redshift.SnapshotScheduleAssociationArgs{
+ * 			ClusterIdentifier:  defaultCluster.ID(),
+ * 			ScheduleIdentifier: defaultSnapshotSchedule.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -23,6 +142,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:redshift/snapshotScheduleAssociation:SnapshotScheduleAssociation default tf-redshift-cluster/tf-redshift-snapshot-schedule
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:redshift/snapshotScheduleAssociation:SnapshotScheduleAssociation")
 public class SnapshotScheduleAssociation extends io.pulumi.resources.CustomResource {

@@ -18,7 +18,79 @@ import javax.annotation.Nullable;
  * 
  * The `aws.ec2.VpcIpv6CidrBlockAssociation` resource allows IPv6 CIDR blocks to be added to the VPC.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const testVpc = new aws.ec2.Vpc("testVpc", {cidrBlock: "10.0.0.0/16"});
+ * const testVpcIpv6CidrBlockAssociation = new aws.ec2.VpcIpv6CidrBlockAssociation("testVpcIpv6CidrBlockAssociation", {
+ *     ipv6IpamPoolId: aws_vpc_ipam_pool.test.id,
+ *     vpcId: testVpc.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_vpc = aws.ec2.Vpc("testVpc", cidr_block="10.0.0.0/16")
+ * test_vpc_ipv6_cidr_block_association = aws.ec2.VpcIpv6CidrBlockAssociation("testVpcIpv6CidrBlockAssociation",
+ *     ipv6_ipam_pool_id=aws_vpc_ipam_pool["test"]["id"],
+ *     vpc_id=test_vpc.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testVpc = new Aws.Ec2.Vpc("testVpc", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.0.0.0/16",
+ *         });
+ *         var testVpcIpv6CidrBlockAssociation = new Aws.Ec2.VpcIpv6CidrBlockAssociation("testVpcIpv6CidrBlockAssociation", new Aws.Ec2.VpcIpv6CidrBlockAssociationArgs
+ *         {
+ *             Ipv6IpamPoolId = aws_vpc_ipam_pool.Test.Id,
+ *             VpcId = testVpc.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		testVpc, err := ec2.NewVpc(ctx, "testVpc", &ec2.VpcArgs{
+ * 			CidrBlock: pulumi.String("10.0.0.0/16"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewVpcIpv6CidrBlockAssociation(ctx, "testVpcIpv6CidrBlockAssociation", &ec2.VpcIpv6CidrBlockAssociationArgs{
+ * 			Ipv6IpamPoolId: pulumi.Any(aws_vpc_ipam_pool.Test.Id),
+ * 			VpcId:          testVpc.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +100,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/vpcIpv6CidrBlockAssociation:VpcIpv6CidrBlockAssociation example vpc-cidr-assoc-xxxxxxxx
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/vpcIpv6CidrBlockAssociation:VpcIpv6CidrBlockAssociation")
 public class VpcIpv6CidrBlockAssociation extends io.pulumi.resources.CustomResource {

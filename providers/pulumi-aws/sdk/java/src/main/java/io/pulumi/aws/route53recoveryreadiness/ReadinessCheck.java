@@ -16,7 +16,67 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS Route 53 Recovery Readiness Readiness Check.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.route53recoveryreadiness.ReadinessCheck("example", {
+ *     readinessCheckName: my_cw_alarm_check,
+ *     resourceSetName: my_cw_alarm_set,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.route53recoveryreadiness.ReadinessCheck("example",
+ *     readiness_check_name=my_cw_alarm_check,
+ *     resource_set_name=my_cw_alarm_set)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Route53RecoveryReadiness.ReadinessCheck("example", new Aws.Route53RecoveryReadiness.ReadinessCheckArgs
+ *         {
+ *             ReadinessCheckName = my_cw_alarm_check,
+ *             ResourceSetName = my_cw_alarm_set,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53recoveryreadiness"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := route53recoveryreadiness.NewReadinessCheck(ctx, "example", &route53recoveryreadiness.ReadinessCheckArgs{
+ * 			ReadinessCheckName: pulumi.Any(my_cw_alarm_check),
+ * 			ResourceSetName:    pulumi.Any(my_cw_alarm_set),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +86,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:route53recoveryreadiness/readinessCheck:ReadinessCheck my-cw-alarm-check
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:route53recoveryreadiness/readinessCheck:ReadinessCheck")
 public class ReadinessCheck extends io.pulumi.resources.CustomResource {

@@ -15,10 +15,77 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * Provides an Traffic mirror filter.\
+ * Provides an Traffic mirror filter.  
  * Read [limits and considerations](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html) for traffic mirroring
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * To create a basic traffic mirror filter
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const foo = new aws.ec2.TrafficMirrorFilter("foo", {
+ *     description: "traffic mirror filter - example",
+ *     networkServices: ["amazon-dns"],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * foo = aws.ec2.TrafficMirrorFilter("foo",
+ *     description="traffic mirror filter - example",
+ *     network_services=["amazon-dns"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var foo = new Aws.Ec2.TrafficMirrorFilter("foo", new Aws.Ec2.TrafficMirrorFilterArgs
+ *         {
+ *             Description = "traffic mirror filter - example",
+ *             NetworkServices = 
+ *             {
+ *                 "amazon-dns",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewTrafficMirrorFilter(ctx, "foo", &ec2.TrafficMirrorFilterArgs{
+ * 			Description: pulumi.String("traffic mirror filter - example"),
+ * 			NetworkServices: pulumi.StringArray{
+ * 				pulumi.String("amazon-dns"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +95,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/trafficMirrorFilter:TrafficMirrorFilter foo tmf-0fbb93ddf38198f64
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/trafficMirrorFilter:TrafficMirrorFilter")
 public class TrafficMirrorFilter extends io.pulumi.resources.CustomResource {

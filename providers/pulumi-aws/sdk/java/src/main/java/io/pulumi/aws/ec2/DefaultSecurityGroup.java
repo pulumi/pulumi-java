@@ -30,10 +30,244 @@ import javax.annotation.Nullable;
  * 
  * For more information about default security groups, see the AWS documentation on [Default Security Groups][aws-default-security-groups]. To manage normal security groups, see the `aws.ec2.SecurityGroup` resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * The following config gives the default security group the same rules that AWS provides by default but under management by this provider. This means that any ingress or egress rules added or changed will be detected as drift.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const mainvpc = new aws.ec2.Vpc("mainvpc", {cidrBlock: "10.1.0.0/16"});
+ * const _default = new aws.ec2.DefaultSecurityGroup("default", {
+ *     vpcId: mainvpc.id,
+ *     ingress: [{
+ *         protocol: -1,
+ *         self: true,
+ *         fromPort: 0,
+ *         toPort: 0,
+ *     }],
+ *     egress: [{
+ *         fromPort: 0,
+ *         toPort: 0,
+ *         protocol: "-1",
+ *         cidrBlocks: ["0.0.0.0/0"],
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * mainvpc = aws.ec2.Vpc("mainvpc", cidr_block="10.1.0.0/16")
+ * default = aws.ec2.DefaultSecurityGroup("default",
+ *     vpc_id=mainvpc.id,
+ *     ingress=[aws.ec2.DefaultSecurityGroupIngressArgs(
+ *         protocol="-1",
+ *         self=True,
+ *         from_port=0,
+ *         to_port=0,
+ *     )],
+ *     egress=[aws.ec2.DefaultSecurityGroupEgressArgs(
+ *         from_port=0,
+ *         to_port=0,
+ *         protocol="-1",
+ *         cidr_blocks=["0.0.0.0/0"],
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var mainvpc = new Aws.Ec2.Vpc("mainvpc", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.1.0.0/16",
+ *         });
+ *         var @default = new Aws.Ec2.DefaultSecurityGroup("default", new Aws.Ec2.DefaultSecurityGroupArgs
+ *         {
+ *             VpcId = mainvpc.Id,
+ *             Ingress = 
+ *             {
+ *                 new Aws.Ec2.Inputs.DefaultSecurityGroupIngressArgs
+ *                 {
+ *                     Protocol = "-1",
+ *                     Self = true,
+ *                     FromPort = 0,
+ *                     ToPort = 0,
+ *                 },
+ *             },
+ *             Egress = 
+ *             {
+ *                 new Aws.Ec2.Inputs.DefaultSecurityGroupEgressArgs
+ *                 {
+ *                     FromPort = 0,
+ *                     ToPort = 0,
+ *                     Protocol = "-1",
+ *                     CidrBlocks = 
+ *                     {
+ *                         "0.0.0.0/0",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		mainvpc, err := ec2.NewVpc(ctx, "mainvpc", &ec2.VpcArgs{
+ * 			CidrBlock: pulumi.String("10.1.0.0/16"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewDefaultSecurityGroup(ctx, "default", &ec2.DefaultSecurityGroupArgs{
+ * 			VpcId: mainvpc.ID(),
+ * 			Ingress: ec2.DefaultSecurityGroupIngressArray{
+ * 				&ec2.DefaultSecurityGroupIngressArgs{
+ * 					Protocol: pulumi.String("-1"),
+ * 					Self:     pulumi.Bool(true),
+ * 					FromPort: pulumi.Int(0),
+ * 					ToPort:   pulumi.Int(0),
+ * 				},
+ * 			},
+ * 			Egress: ec2.DefaultSecurityGroupEgressArray{
+ * 				&ec2.DefaultSecurityGroupEgressArgs{
+ * 					FromPort: pulumi.Int(0),
+ * 					ToPort:   pulumi.Int(0),
+ * 					Protocol: pulumi.String("-1"),
+ * 					CidrBlocks: pulumi.StringArray{
+ * 						pulumi.String("0.0.0.0/0"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example Config To Deny All Egress Traffic, Allowing Ingress
+ * 
+ * The following denies all Egress traffic by omitting any `egress` rules, while including the default `ingress` rule to allow all traffic.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const mainvpc = new aws.ec2.Vpc("mainvpc", {cidrBlock: "10.1.0.0/16"});
+ * const _default = new aws.ec2.DefaultSecurityGroup("default", {
+ *     vpcId: mainvpc.id,
+ *     ingress: [{
+ *         protocol: -1,
+ *         self: true,
+ *         fromPort: 0,
+ *         toPort: 0,
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * mainvpc = aws.ec2.Vpc("mainvpc", cidr_block="10.1.0.0/16")
+ * default = aws.ec2.DefaultSecurityGroup("default",
+ *     vpc_id=mainvpc.id,
+ *     ingress=[aws.ec2.DefaultSecurityGroupIngressArgs(
+ *         protocol="-1",
+ *         self=True,
+ *         from_port=0,
+ *         to_port=0,
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var mainvpc = new Aws.Ec2.Vpc("mainvpc", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.1.0.0/16",
+ *         });
+ *         var @default = new Aws.Ec2.DefaultSecurityGroup("default", new Aws.Ec2.DefaultSecurityGroupArgs
+ *         {
+ *             VpcId = mainvpc.Id,
+ *             Ingress = 
+ *             {
+ *                 new Aws.Ec2.Inputs.DefaultSecurityGroupIngressArgs
+ *                 {
+ *                     Protocol = "-1",
+ *                     Self = true,
+ *                     FromPort = 0,
+ *                     ToPort = 0,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		mainvpc, err := ec2.NewVpc(ctx, "mainvpc", &ec2.VpcArgs{
+ * 			CidrBlock: pulumi.String("10.1.0.0/16"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewDefaultSecurityGroup(ctx, "default", &ec2.DefaultSecurityGroupArgs{
+ * 			VpcId: mainvpc.ID(),
+ * 			Ingress: ec2.DefaultSecurityGroupIngressArray{
+ * 				&ec2.DefaultSecurityGroupIngressArgs{
+ * 					Protocol: pulumi.String("-1"),
+ * 					Self:     pulumi.Bool(true),
+ * 					FromPort: pulumi.Int(0),
+ * 					ToPort:   pulumi.Int(0),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
  * ### Removing `aws.ec2.DefaultSecurityGroup` From Your Configuration
  * 
  * Removing this resource from your configuration will remove it from your statefile and management, but will not destroy the Security Group. All ingress or egress rules will be left as they are at the time of removal. You can resume managing them via the AWS Console.
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -43,6 +277,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/defaultSecurityGroup:DefaultSecurityGroup default_sg sg-903004f8
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/defaultSecurityGroup:DefaultSecurityGroup")
 public class DefaultSecurityGroup extends io.pulumi.resources.CustomResource {

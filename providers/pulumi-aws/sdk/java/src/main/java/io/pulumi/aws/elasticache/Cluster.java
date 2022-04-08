@@ -38,7 +38,209 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** Any attribute changes that re-create the resource will be applied immediately, regardless of the value of `apply_immediately`.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Memcached Cluster
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.elasticache.Cluster("example", {
+ *     engine: "memcached",
+ *     nodeType: "cache.m4.large",
+ *     numCacheNodes: 2,
+ *     parameterGroupName: "default.memcached1.4",
+ *     port: 11211,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.elasticache.Cluster("example",
+ *     engine="memcached",
+ *     node_type="cache.m4.large",
+ *     num_cache_nodes=2,
+ *     parameter_group_name="default.memcached1.4",
+ *     port=11211)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ElastiCache.Cluster("example", new Aws.ElastiCache.ClusterArgs
+ *         {
+ *             Engine = "memcached",
+ *             NodeType = "cache.m4.large",
+ *             NumCacheNodes = 2,
+ *             ParameterGroupName = "default.memcached1.4",
+ *             Port = 11211,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticache"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := elasticache.NewCluster(ctx, "example", &elasticache.ClusterArgs{
+ * 			Engine:             pulumi.String("memcached"),
+ * 			NodeType:           pulumi.String("cache.m4.large"),
+ * 			NumCacheNodes:      pulumi.Int(2),
+ * 			ParameterGroupName: pulumi.String("default.memcached1.4"),
+ * 			Port:               pulumi.Int(11211),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Redis Instance
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.elasticache.Cluster("example", {
+ *     engine: "redis",
+ *     engineVersion: "3.2.10",
+ *     nodeType: "cache.m4.large",
+ *     numCacheNodes: 1,
+ *     parameterGroupName: "default.redis3.2",
+ *     port: 6379,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.elasticache.Cluster("example",
+ *     engine="redis",
+ *     engine_version="3.2.10",
+ *     node_type="cache.m4.large",
+ *     num_cache_nodes=1,
+ *     parameter_group_name="default.redis3.2",
+ *     port=6379)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ElastiCache.Cluster("example", new Aws.ElastiCache.ClusterArgs
+ *         {
+ *             Engine = "redis",
+ *             EngineVersion = "3.2.10",
+ *             NodeType = "cache.m4.large",
+ *             NumCacheNodes = 1,
+ *             ParameterGroupName = "default.redis3.2",
+ *             Port = 6379,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticache"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := elasticache.NewCluster(ctx, "example", &elasticache.ClusterArgs{
+ * 			Engine:             pulumi.String("redis"),
+ * 			EngineVersion:      pulumi.String("3.2.10"),
+ * 			NodeType:           pulumi.String("cache.m4.large"),
+ * 			NumCacheNodes:      pulumi.Int(1),
+ * 			ParameterGroupName: pulumi.String("default.redis3.2"),
+ * 			Port:               pulumi.Int(6379),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Redis Cluster Mode Disabled Read Replica Instance
+ * 
+ * These inherit their settings from the replication group.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const replica = new aws.elasticache.Cluster("replica", {replicationGroupId: aws_elasticache_replication_group.example.id});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * replica = aws.elasticache.Cluster("replica", replication_group_id=aws_elasticache_replication_group["example"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var replica = new Aws.ElastiCache.Cluster("replica", new Aws.ElastiCache.ClusterArgs
+ *         {
+ *             ReplicationGroupId = aws_elasticache_replication_group.Example.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticache"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := elasticache.NewCluster(ctx, "replica", &elasticache.ClusterArgs{
+ * 			ReplicationGroupId: pulumi.Any(aws_elasticache_replication_group.Example.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -48,6 +250,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:elasticache/cluster:Cluster my_cluster my_cluster
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:elasticache/cluster:Cluster")
 public class Cluster extends io.pulumi.resources.CustomResource {

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * See https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl
-     * 
      */
     @EnumType
     public enum CannedAcl {

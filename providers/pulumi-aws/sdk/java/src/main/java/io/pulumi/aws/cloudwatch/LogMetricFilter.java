@@ -16,7 +16,97 @@ import javax.annotation.Nullable;
 /**
  * Provides a CloudWatch Log Metric Filter resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const dada = new aws.cloudwatch.LogGroup("dada", {});
+ * const yada = new aws.cloudwatch.LogMetricFilter("yada", {
+ *     pattern: "",
+ *     logGroupName: dada.name,
+ *     metricTransformation: {
+ *         name: "EventCount",
+ *         namespace: "YourNamespace",
+ *         value: "1",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * dada = aws.cloudwatch.LogGroup("dada")
+ * yada = aws.cloudwatch.LogMetricFilter("yada",
+ *     pattern="",
+ *     log_group_name=dada.name,
+ *     metric_transformation=aws.cloudwatch.LogMetricFilterMetricTransformationArgs(
+ *         name="EventCount",
+ *         namespace="YourNamespace",
+ *         value="1",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dada = new Aws.CloudWatch.LogGroup("dada", new Aws.CloudWatch.LogGroupArgs
+ *         {
+ *         });
+ *         var yada = new Aws.CloudWatch.LogMetricFilter("yada", new Aws.CloudWatch.LogMetricFilterArgs
+ *         {
+ *             Pattern = "",
+ *             LogGroupName = dada.Name,
+ *             MetricTransformation = new Aws.CloudWatch.Inputs.LogMetricFilterMetricTransformationArgs
+ *             {
+ *                 Name = "EventCount",
+ *                 Namespace = "YourNamespace",
+ *                 Value = "1",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		dada, err := cloudwatch.NewLogGroup(ctx, "dada", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudwatch.NewLogMetricFilter(ctx, "yada", &cloudwatch.LogMetricFilterArgs{
+ * 			Pattern:      pulumi.String(""),
+ * 			LogGroupName: dada.Name,
+ * 			MetricTransformation: &cloudwatch.LogMetricFilterMetricTransformationArgs{
+ * 				Name:      pulumi.String("EventCount"),
+ * 				Namespace: pulumi.String("YourNamespace"),
+ * 				Value:     pulumi.String("1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +116,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudwatch/logMetricFilter:LogMetricFilter test /aws/lambda/function:test
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudwatch/logMetricFilter:LogMetricFilter")
 public class LogMetricFilter extends io.pulumi.resources.CustomResource {

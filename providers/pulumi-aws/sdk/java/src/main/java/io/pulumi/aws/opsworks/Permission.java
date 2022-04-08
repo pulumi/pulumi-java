@@ -16,8 +16,79 @@ import javax.annotation.Nullable;
 /**
  * Provides an OpsWorks permission resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const myStackPermission = new aws.opsworks.Permission("myStackPermission", {
+ *     allowSsh: true,
+ *     allowSudo: true,
+ *     level: "iam_only",
+ *     userArn: aws_iam_user.user.arn,
+ *     stackId: aws_opsworks_stack.stack.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * my_stack_permission = aws.opsworks.Permission("myStackPermission",
+ *     allow_ssh=True,
+ *     allow_sudo=True,
+ *     level="iam_only",
+ *     user_arn=aws_iam_user["user"]["arn"],
+ *     stack_id=aws_opsworks_stack["stack"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myStackPermission = new Aws.OpsWorks.Permission("myStackPermission", new Aws.OpsWorks.PermissionArgs
+ *         {
+ *             AllowSsh = true,
+ *             AllowSudo = true,
+ *             Level = "iam_only",
+ *             UserArn = aws_iam_user.User.Arn,
+ *             StackId = aws_opsworks_stack.Stack.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/opsworks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := opsworks.NewPermission(ctx, "myStackPermission", &opsworks.PermissionArgs{
+ * 			AllowSsh:  pulumi.Bool(true),
+ * 			AllowSudo: pulumi.Bool(true),
+ * 			Level:     pulumi.String("iam_only"),
+ * 			UserArn:   pulumi.Any(aws_iam_user.User.Arn),
+ * 			StackId:   pulumi.Any(aws_opsworks_stack.Stack.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:opsworks/permission:Permission")
 public class Permission extends io.pulumi.resources.CustomResource {

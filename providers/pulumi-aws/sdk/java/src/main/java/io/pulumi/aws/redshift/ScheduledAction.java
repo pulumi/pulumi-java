@@ -15,7 +15,320 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Pause Cluster Action
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleRole = new aws.iam.Role("exampleRole", {assumeRolePolicy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": [
+ *           "scheduler.redshift.amazonaws.com"
+ *         ]
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * `});
+ * const examplePolicy = new aws.iam.Policy("examplePolicy", {policy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *       {
+ *           "Sid": "VisualEditor0",
+ *           "Effect": "Allow",
+ *           "Action": [
+ *               "redshift:PauseCluster",
+ *               "redshift:ResumeCluster",
+ *               "redshift:ResizeCluster"
+ *           ],
+ *           "Resource": "*"
+ *       }
+ *   ]
+ * }
+ * `});
+ * const exampleRolePolicyAttachment = new aws.iam.RolePolicyAttachment("exampleRolePolicyAttachment", {
+ *     policyArn: examplePolicy.arn,
+ *     role: exampleRole.name,
+ * });
+ * const exampleScheduledAction = new aws.redshift.ScheduledAction("exampleScheduledAction", {
+ *     schedule: "cron(00 23 * * ? *)",
+ *     iamRole: exampleRole.arn,
+ *     targetAction: {
+ *         pauseCluster: {
+ *             clusterIdentifier: "tf-redshift001",
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_role = aws.iam.Role("exampleRole", assume_role_policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": [
+ *           "scheduler.redshift.amazonaws.com"
+ *         ]
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * """)
+ * example_policy = aws.iam.Policy("examplePolicy", policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *       {
+ *           "Sid": "VisualEditor0",
+ *           "Effect": "Allow",
+ *           "Action": [
+ *               "redshift:PauseCluster",
+ *               "redshift:ResumeCluster",
+ *               "redshift:ResizeCluster"
+ *           ],
+ *           "Resource": "*"
+ *       }
+ *   ]
+ * }
+ * """)
+ * example_role_policy_attachment = aws.iam.RolePolicyAttachment("exampleRolePolicyAttachment",
+ *     policy_arn=example_policy.arn,
+ *     role=example_role.name)
+ * example_scheduled_action = aws.redshift.ScheduledAction("exampleScheduledAction",
+ *     schedule="cron(00 23 * * ? *)",
+ *     iam_role=example_role.arn,
+ *     target_action=aws.redshift.ScheduledActionTargetActionArgs(
+ *         pause_cluster=aws.redshift.ScheduledActionTargetActionPauseClusterArgs(
+ *             cluster_identifier="tf-redshift001",
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleRole = new Aws.Iam.Role("exampleRole", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Action"": ""sts:AssumeRole"",
+ *       ""Principal"": {
+ *         ""Service"": [
+ *           ""scheduler.redshift.amazonaws.com""
+ *         ]
+ *       },
+ *       ""Effect"": ""Allow"",
+ *       ""Sid"": """"
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var examplePolicy = new Aws.Iam.Policy("examplePolicy", new Aws.Iam.PolicyArgs
+ *         {
+ *             Policy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *       {
+ *           ""Sid"": ""VisualEditor0"",
+ *           ""Effect"": ""Allow"",
+ *           ""Action"": [
+ *               ""redshift:PauseCluster"",
+ *               ""redshift:ResumeCluster"",
+ *               ""redshift:ResizeCluster""
+ *           ],
+ *           ""Resource"": ""*""
+ *       }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var exampleRolePolicyAttachment = new Aws.Iam.RolePolicyAttachment("exampleRolePolicyAttachment", new Aws.Iam.RolePolicyAttachmentArgs
+ *         {
+ *             PolicyArn = examplePolicy.Arn,
+ *             Role = exampleRole.Name,
+ *         });
+ *         var exampleScheduledAction = new Aws.RedShift.ScheduledAction("exampleScheduledAction", new Aws.RedShift.ScheduledActionArgs
+ *         {
+ *             Schedule = "cron(00 23 * * ? *)",
+ *             IamRole = exampleRole.Arn,
+ *             TargetAction = new Aws.RedShift.Inputs.ScheduledActionTargetActionArgs
+ *             {
+ *                 PauseCluster = new Aws.RedShift.Inputs.ScheduledActionTargetActionPauseClusterArgs
+ *                 {
+ *                     ClusterIdentifier = "tf-redshift001",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/redshift"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleRole, err := iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": [\n", "          \"scheduler.redshift.amazonaws.com\"\n", "        ]\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		examplePolicy, err := iam.NewPolicy(ctx, "examplePolicy", &iam.PolicyArgs{
+ * 			Policy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "      {\n", "          \"Sid\": \"VisualEditor0\",\n", "          \"Effect\": \"Allow\",\n", "          \"Action\": [\n", "              \"redshift:PauseCluster\",\n", "              \"redshift:ResumeCluster\",\n", "              \"redshift:ResizeCluster\"\n", "          ],\n", "          \"Resource\": \"*\"\n", "      }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicyAttachment(ctx, "exampleRolePolicyAttachment", &iam.RolePolicyAttachmentArgs{
+ * 			PolicyArn: examplePolicy.Arn,
+ * 			Role:      exampleRole.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = redshift.NewScheduledAction(ctx, "exampleScheduledAction", &redshift.ScheduledActionArgs{
+ * 			Schedule: pulumi.String("cron(00 23 * * ? *)"),
+ * 			IamRole:  exampleRole.Arn,
+ * 			TargetAction: &redshift.ScheduledActionTargetActionArgs{
+ * 				PauseCluster: &redshift.ScheduledActionTargetActionPauseClusterArgs{
+ * 					ClusterIdentifier: pulumi.String("tf-redshift001"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Resize Cluster Action
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.redshift.ScheduledAction("example", {
+ *     schedule: "cron(00 23 * * ? *)",
+ *     iamRole: aws_iam_role.example.arn,
+ *     targetAction: {
+ *         resizeCluster: {
+ *             clusterIdentifier: "tf-redshift001",
+ *             clusterType: "multi-node",
+ *             nodeType: "dc1.large",
+ *             numberOfNodes: 2,
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.redshift.ScheduledAction("example",
+ *     schedule="cron(00 23 * * ? *)",
+ *     iam_role=aws_iam_role["example"]["arn"],
+ *     target_action=aws.redshift.ScheduledActionTargetActionArgs(
+ *         resize_cluster=aws.redshift.ScheduledActionTargetActionResizeClusterArgs(
+ *             cluster_identifier="tf-redshift001",
+ *             cluster_type="multi-node",
+ *             node_type="dc1.large",
+ *             number_of_nodes=2,
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.RedShift.ScheduledAction("example", new Aws.RedShift.ScheduledActionArgs
+ *         {
+ *             Schedule = "cron(00 23 * * ? *)",
+ *             IamRole = aws_iam_role.Example.Arn,
+ *             TargetAction = new Aws.RedShift.Inputs.ScheduledActionTargetActionArgs
+ *             {
+ *                 ResizeCluster = new Aws.RedShift.Inputs.ScheduledActionTargetActionResizeClusterArgs
+ *                 {
+ *                     ClusterIdentifier = "tf-redshift001",
+ *                     ClusterType = "multi-node",
+ *                     NodeType = "dc1.large",
+ *                     NumberOfNodes = 2,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/redshift"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := redshift.NewScheduledAction(ctx, "example", &redshift.ScheduledActionArgs{
+ * 			Schedule: pulumi.String("cron(00 23 * * ? *)"),
+ * 			IamRole:  pulumi.Any(aws_iam_role.Example.Arn),
+ * 			TargetAction: &redshift.ScheduledActionTargetActionArgs{
+ * 				ResizeCluster: &redshift.ScheduledActionTargetActionResizeClusterArgs{
+ * 					ClusterIdentifier: pulumi.String("tf-redshift001"),
+ * 					ClusterType:       pulumi.String("multi-node"),
+ * 					NodeType:          pulumi.String("dc1.large"),
+ * 					NumberOfNodes:     pulumi.Int(2),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +338,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:redshift/scheduledAction:ScheduledAction example tf-redshift-scheduled-action
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:redshift/scheduledAction:ScheduledAction")
 public class ScheduledAction extends io.pulumi.resources.CustomResource {

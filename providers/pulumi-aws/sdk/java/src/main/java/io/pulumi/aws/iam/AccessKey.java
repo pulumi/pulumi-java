@@ -15,7 +15,209 @@ import javax.annotation.Nullable;
 /**
  * Provides an IAM access key. This is a set of credentials that allow API requests to be made as an IAM user.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const lbUser = new aws.iam.User("lbUser", {path: "/system/"});
+ * const lbAccessKey = new aws.iam.AccessKey("lbAccessKey", {
+ *     user: lbUser.name,
+ *     pgpKey: "keybase:some_person_that_exists",
+ * });
+ * const lbRo = new aws.iam.UserPolicy("lbRo", {
+ *     user: lbUser.name,
+ *     policy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": [
+ *         "ec2:Describe*"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": "*"
+ *     }
+ *   ]
+ * }
+ * `,
+ * });
+ * export const secret = lbAccessKey.encryptedSecret;
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * lb_user = aws.iam.User("lbUser", path="/system/")
+ * lb_access_key = aws.iam.AccessKey("lbAccessKey",
+ *     user=lb_user.name,
+ *     pgp_key="keybase:some_person_that_exists")
+ * lb_ro = aws.iam.UserPolicy("lbRo",
+ *     user=lb_user.name,
+ *     policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": [
+ *         "ec2:Describe*"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": "*"
+ *     }
+ *   ]
+ * }
+ * """)
+ * pulumi.export("secret", lb_access_key.encrypted_secret)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var lbUser = new Aws.Iam.User("lbUser", new Aws.Iam.UserArgs
+ *         {
+ *             Path = "/system/",
+ *         });
+ *         var lbAccessKey = new Aws.Iam.AccessKey("lbAccessKey", new Aws.Iam.AccessKeyArgs
+ *         {
+ *             User = lbUser.Name,
+ *             PgpKey = "keybase:some_person_that_exists",
+ *         });
+ *         var lbRo = new Aws.Iam.UserPolicy("lbRo", new Aws.Iam.UserPolicyArgs
+ *         {
+ *             User = lbUser.Name,
+ *             Policy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Action"": [
+ *         ""ec2:Describe*""
+ *       ],
+ *       ""Effect"": ""Allow"",
+ *       ""Resource"": ""*""
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         this.Secret = lbAccessKey.EncryptedSecret;
+ *     }
+ * 
+ *     [Output("secret")]
+ *     public Output<string> Secret { get; set; }
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		lbUser, err := iam.NewUser(ctx, "lbUser", &iam.UserArgs{
+ * 			Path: pulumi.String("/system/"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		lbAccessKey, err := iam.NewAccessKey(ctx, "lbAccessKey", &iam.AccessKeyArgs{
+ * 			User:   lbUser.Name,
+ * 			PgpKey: pulumi.String("keybase:some_person_that_exists"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewUserPolicy(ctx, "lbRo", &iam.UserPolicyArgs{
+ * 			User:   lbUser.Name,
+ * 			Policy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"ec2:Describe*\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"*\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("secret", lbAccessKey.EncryptedSecret)
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const testUser = new aws.iam.User("testUser", {path: "/test/"});
+ * const testAccessKey = new aws.iam.AccessKey("testAccessKey", {user: testUser.name});
+ * export const awsIamSmtpPasswordV4 = testAccessKey.sesSmtpPasswordV4;
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_user = aws.iam.User("testUser", path="/test/")
+ * test_access_key = aws.iam.AccessKey("testAccessKey", user=test_user.name)
+ * pulumi.export("awsIamSmtpPasswordV4", test_access_key.ses_smtp_password_v4)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testUser = new Aws.Iam.User("testUser", new Aws.Iam.UserArgs
+ *         {
+ *             Path = "/test/",
+ *         });
+ *         var testAccessKey = new Aws.Iam.AccessKey("testAccessKey", new Aws.Iam.AccessKeyArgs
+ *         {
+ *             User = testUser.Name,
+ *         });
+ *         this.AwsIamSmtpPasswordV4 = testAccessKey.SesSmtpPasswordV4;
+ *     }
+ * 
+ *     [Output("awsIamSmtpPasswordV4")]
+ *     public Output<string> AwsIamSmtpPasswordV4 { get; set; }
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		testUser, err := iam.NewUser(ctx, "testUser", &iam.UserArgs{
+ * 			Path: pulumi.String("/test/"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		testAccessKey, err := iam.NewAccessKey(ctx, "testAccessKey", &iam.AccessKeyArgs{
+ * 			User: testUser.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("awsIamSmtpPasswordV4", testAccessKey.SesSmtpPasswordV4)
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,8 +227,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:iam/accessKey:AccessKey example AKIA1234567890
  * ```
  * 
- *  Resource attributes such as `encrypted_secret`, `key_fingerprint`, `pgp_key`, `secret`, `ses_smtp_password_v4`, and `encrypted_ses_smtp_password_v4` are not available for imported resources as this information cannot be read from the IAM API.
- * 
+ *  Resource attributes such as `encrypted_secret`, `key_fingerprint`, `pgp_key`, `secret`, `ses_smtp_password_v4`, and `encrypted_ses_smtp_password_v4` are not available for imported resources as this information cannot be read from the IAM API. 
  */
 @ResourceType(type="aws:iam/accessKey:AccessKey")
 public class AccessKey extends io.pulumi.resources.CustomResource {

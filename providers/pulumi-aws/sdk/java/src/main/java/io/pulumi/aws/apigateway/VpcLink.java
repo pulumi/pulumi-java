@@ -19,7 +19,110 @@ import javax.annotation.Nullable;
  * > **Note:** Amazon API Gateway Version 1 VPC Links enable private integrations that connect REST APIs to private resources in a VPC.
  * To enable private integration for HTTP APIs, use the `Amazon API Gateway Version 2 VPC Link` resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleLoadBalancer = new aws.lb.LoadBalancer("exampleLoadBalancer", {
+ *     internal: true,
+ *     loadBalancerType: "network",
+ *     subnetMappings: [{
+ *         subnetId: "12345",
+ *     }],
+ * });
+ * const exampleVpcLink = new aws.apigateway.VpcLink("exampleVpcLink", {
+ *     description: "example description",
+ *     targetArn: [exampleLoadBalancer.arn],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_load_balancer = aws.lb.LoadBalancer("exampleLoadBalancer",
+ *     internal=True,
+ *     load_balancer_type="network",
+ *     subnet_mappings=[aws.lb.LoadBalancerSubnetMappingArgs(
+ *         subnet_id="12345",
+ *     )])
+ * example_vpc_link = aws.apigateway.VpcLink("exampleVpcLink",
+ *     description="example description",
+ *     target_arn=[example_load_balancer.arn])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleLoadBalancer = new Aws.LB.LoadBalancer("exampleLoadBalancer", new Aws.LB.LoadBalancerArgs
+ *         {
+ *             Internal = true,
+ *             LoadBalancerType = "network",
+ *             SubnetMappings = 
+ *             {
+ *                 new Aws.LB.Inputs.LoadBalancerSubnetMappingArgs
+ *                 {
+ *                     SubnetId = "12345",
+ *                 },
+ *             },
+ *         });
+ *         var exampleVpcLink = new Aws.ApiGateway.VpcLink("exampleVpcLink", new Aws.ApiGateway.VpcLinkArgs
+ *         {
+ *             Description = "example description",
+ *             TargetArn = 
+ *             {
+ *                 exampleLoadBalancer.Arn,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigateway"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleLoadBalancer, err := lb.NewLoadBalancer(ctx, "exampleLoadBalancer", &lb.LoadBalancerArgs{
+ * 			Internal:         pulumi.Bool(true),
+ * 			LoadBalancerType: pulumi.String("network"),
+ * 			SubnetMappings: lb.LoadBalancerSubnetMappingArray{
+ * 				&lb.LoadBalancerSubnetMappingArgs{
+ * 					SubnetId: pulumi.String("12345"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = apigateway.NewVpcLink(ctx, "exampleVpcLink", &apigateway.VpcLinkArgs{
+ * 			Description: pulumi.String("example description"),
+ * 			TargetArn: pulumi.String{
+ * 				exampleLoadBalancer.Arn,
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +132,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:apigateway/vpcLink:VpcLink example <vpc_link_id>
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:apigateway/vpcLink:VpcLink")
 public class VpcLink extends io.pulumi.resources.CustomResource {

@@ -19,7 +19,115 @@ import javax.annotation.Nullable;
 /**
  * Creates a Signer Signing Profile. A signing profile contains information about the code signing configuration parameters that can be used by a given code signing user.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const testSp = new aws.signer.SigningProfile("test_sp", {
+ *     platformId: "AWSLambda-SHA384-ECDSA",
+ * });
+ * const prodSp = new aws.signer.SigningProfile("prod_sp", {
+ *     namePrefix: "prod_sp_",
+ *     platformId: "AWSLambda-SHA384-ECDSA",
+ *     signatureValidityPeriod: {
+ *         type: "YEARS",
+ *         value: 5,
+ *     },
+ *     tags: {
+ *         tag1: "value1",
+ *         tag2: "value2",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_sp = aws.signer.SigningProfile("testSp", platform_id="AWSLambda-SHA384-ECDSA")
+ * prod_sp = aws.signer.SigningProfile("prodSp",
+ *     name_prefix="prod_sp_",
+ *     platform_id="AWSLambda-SHA384-ECDSA",
+ *     signature_validity_period=aws.signer.SigningProfileSignatureValidityPeriodArgs(
+ *         type="YEARS",
+ *         value=5,
+ *     ),
+ *     tags={
+ *         "tag1": "value1",
+ *         "tag2": "value2",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testSp = new Aws.Signer.SigningProfile("testSp", new Aws.Signer.SigningProfileArgs
+ *         {
+ *             PlatformId = "AWSLambda-SHA384-ECDSA",
+ *         });
+ *         var prodSp = new Aws.Signer.SigningProfile("prodSp", new Aws.Signer.SigningProfileArgs
+ *         {
+ *             NamePrefix = "prod_sp_",
+ *             PlatformId = "AWSLambda-SHA384-ECDSA",
+ *             SignatureValidityPeriod = new Aws.Signer.Inputs.SigningProfileSignatureValidityPeriodArgs
+ *             {
+ *                 Type = "YEARS",
+ *                 Value = 5,
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "tag1", "value1" },
+ *                 { "tag2", "value2" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/signer"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := signer.NewSigningProfile(ctx, "testSp", &signer.SigningProfileArgs{
+ * 			PlatformId: pulumi.String("AWSLambda-SHA384-ECDSA"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = signer.NewSigningProfile(ctx, "prodSp", &signer.SigningProfileArgs{
+ * 			NamePrefix: pulumi.String("prod_sp_"),
+ * 			PlatformId: pulumi.String("AWSLambda-SHA384-ECDSA"),
+ * 			SignatureValidityPeriod: &signer.SigningProfileSignatureValidityPeriodArgs{
+ * 				Type:  pulumi.String("YEARS"),
+ * 				Value: pulumi.Int(5),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"tag1": pulumi.String("value1"),
+ * 				"tag2": pulumi.String("value2"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +137,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:signer/signingProfile:SigningProfile test_signer_signing_profile test_sp_DdW3Mk1foYL88fajut4mTVFGpuwfd4ACO6ANL0D1uIj7lrn8adK
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:signer/signingProfile:SigningProfile")
 public class SigningProfile extends io.pulumi.resources.CustomResource {

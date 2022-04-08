@@ -18,7 +18,327 @@ import javax.annotation.Nullable;
 /**
  * Provides a Step Function State Machine resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic (Standard Workflow)
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // ...
+ * const sfnStateMachine = new aws.sfn.StateMachine("sfnStateMachine", {
+ *     roleArn: aws_iam_role.iam_for_sfn.arn,
+ *     definition: `{
+ *   "Comment": "A Hello World example of the Amazon States Language using an AWS Lambda Function",
+ *   "StartAt": "HelloWorld",
+ *   "States": {
+ *     "HelloWorld": {
+ *       "Type": "Task",
+ *       "Resource": "${aws_lambda_function.lambda.arn}",
+ *       "End": true
+ *     }
+ *   }
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # ...
+ * sfn_state_machine = aws.sfn.StateMachine("sfnStateMachine",
+ *     role_arn=aws_iam_role["iam_for_sfn"]["arn"],
+ *     definition=f"""{{
+ *   "Comment": "A Hello World example of the Amazon States Language using an AWS Lambda Function",
+ *   "StartAt": "HelloWorld",
+ *   "States": {{
+ *     "HelloWorld": {{
+ *       "Type": "Task",
+ *       "Resource": "{aws_lambda_function["lambda"]["arn"]}",
+ *       "End": true
+ *     }}
+ *   }}
+ * }}
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // ...
+ *         var sfnStateMachine = new Aws.Sfn.StateMachine("sfnStateMachine", new Aws.Sfn.StateMachineArgs
+ *         {
+ *             RoleArn = aws_iam_role.Iam_for_sfn.Arn,
+ *             Definition = @$"{{
+ *   ""Comment"": ""A Hello World example of the Amazon States Language using an AWS Lambda Function"",
+ *   ""StartAt"": ""HelloWorld"",
+ *   ""States"": {{
+ *     ""HelloWorld"": {{
+ *       ""Type"": ""Task"",
+ *       ""Resource"": ""{aws_lambda_function.Lambda.Arn}"",
+ *       ""End"": true
+ *     }}
+ *   }}
+ * }}
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sfn"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sfn.NewStateMachine(ctx, "sfnStateMachine", &sfn.StateMachineArgs{
+ * 			RoleArn:    pulumi.Any(aws_iam_role.Iam_for_sfn.Arn),
+ * 			Definition: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Comment\": \"A Hello World example of the Amazon States Language using an AWS Lambda Function\",\n", "  \"StartAt\": \"HelloWorld\",\n", "  \"States\": {\n", "    \"HelloWorld\": {\n", "      \"Type\": \"Task\",\n", "      \"Resource\": \"", aws_lambda_function.Lambda.Arn, "\",\n", "      \"End\": true\n", "    }\n", "  }\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Basic (Express Workflow)
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // ...
+ * const sfnStateMachine = new aws.sfn.StateMachine("sfnStateMachine", {
+ *     roleArn: aws_iam_role.iam_for_sfn.arn,
+ *     type: "EXPRESS",
+ *     definition: `{
+ *   "Comment": "A Hello World example of the Amazon States Language using an AWS Lambda Function",
+ *   "StartAt": "HelloWorld",
+ *   "States": {
+ *     "HelloWorld": {
+ *       "Type": "Task",
+ *       "Resource": "${aws_lambda_function.lambda.arn}",
+ *       "End": true
+ *     }
+ *   }
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # ...
+ * sfn_state_machine = aws.sfn.StateMachine("sfnStateMachine",
+ *     role_arn=aws_iam_role["iam_for_sfn"]["arn"],
+ *     type="EXPRESS",
+ *     definition=f"""{{
+ *   "Comment": "A Hello World example of the Amazon States Language using an AWS Lambda Function",
+ *   "StartAt": "HelloWorld",
+ *   "States": {{
+ *     "HelloWorld": {{
+ *       "Type": "Task",
+ *       "Resource": "{aws_lambda_function["lambda"]["arn"]}",
+ *       "End": true
+ *     }}
+ *   }}
+ * }}
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // ...
+ *         var sfnStateMachine = new Aws.Sfn.StateMachine("sfnStateMachine", new Aws.Sfn.StateMachineArgs
+ *         {
+ *             RoleArn = aws_iam_role.Iam_for_sfn.Arn,
+ *             Type = "EXPRESS",
+ *             Definition = @$"{{
+ *   ""Comment"": ""A Hello World example of the Amazon States Language using an AWS Lambda Function"",
+ *   ""StartAt"": ""HelloWorld"",
+ *   ""States"": {{
+ *     ""HelloWorld"": {{
+ *       ""Type"": ""Task"",
+ *       ""Resource"": ""{aws_lambda_function.Lambda.Arn}"",
+ *       ""End"": true
+ *     }}
+ *   }}
+ * }}
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sfn"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sfn.NewStateMachine(ctx, "sfnStateMachine", &sfn.StateMachineArgs{
+ * 			RoleArn:    pulumi.Any(aws_iam_role.Iam_for_sfn.Arn),
+ * 			Type:       pulumi.String("EXPRESS"),
+ * 			Definition: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Comment\": \"A Hello World example of the Amazon States Language using an AWS Lambda Function\",\n", "  \"StartAt\": \"HelloWorld\",\n", "  \"States\": {\n", "    \"HelloWorld\": {\n", "      \"Type\": \"Task\",\n", "      \"Resource\": \"", aws_lambda_function.Lambda.Arn, "\",\n", "      \"End\": true\n", "    }\n", "  }\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Logging
+ * 
+ * > *NOTE:* See the [AWS Step Functions Developer Guide](https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html) for more information about enabling Step Function logging.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // ...
+ * const sfnStateMachine = new aws.sfn.StateMachine("sfnStateMachine", {
+ *     roleArn: aws_iam_role.iam_for_sfn.arn,
+ *     definition: `{
+ *   "Comment": "A Hello World example of the Amazon States Language using an AWS Lambda Function",
+ *   "StartAt": "HelloWorld",
+ *   "States": {
+ *     "HelloWorld": {
+ *       "Type": "Task",
+ *       "Resource": "${aws_lambda_function.lambda.arn}",
+ *       "End": true
+ *     }
+ *   }
+ * }
+ * `,
+ *     loggingConfiguration: {
+ *         logDestination: `${aws_cloudwatch_log_group.log_group_for_sfn.arn}:*`,
+ *         includeExecutionData: true,
+ *         level: "ERROR",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # ...
+ * sfn_state_machine = aws.sfn.StateMachine("sfnStateMachine",
+ *     role_arn=aws_iam_role["iam_for_sfn"]["arn"],
+ *     definition=f"""{{
+ *   "Comment": "A Hello World example of the Amazon States Language using an AWS Lambda Function",
+ *   "StartAt": "HelloWorld",
+ *   "States": {{
+ *     "HelloWorld": {{
+ *       "Type": "Task",
+ *       "Resource": "{aws_lambda_function["lambda"]["arn"]}",
+ *       "End": true
+ *     }}
+ *   }}
+ * }}
+ * """,
+ *     logging_configuration=aws.sfn.StateMachineLoggingConfigurationArgs(
+ *         log_destination=f"{aws_cloudwatch_log_group['log_group_for_sfn']['arn']}:*",
+ *         include_execution_data=True,
+ *         level="ERROR",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // ...
+ *         var sfnStateMachine = new Aws.Sfn.StateMachine("sfnStateMachine", new Aws.Sfn.StateMachineArgs
+ *         {
+ *             RoleArn = aws_iam_role.Iam_for_sfn.Arn,
+ *             Definition = @$"{{
+ *   ""Comment"": ""A Hello World example of the Amazon States Language using an AWS Lambda Function"",
+ *   ""StartAt"": ""HelloWorld"",
+ *   ""States"": {{
+ *     ""HelloWorld"": {{
+ *       ""Type"": ""Task"",
+ *       ""Resource"": ""{aws_lambda_function.Lambda.Arn}"",
+ *       ""End"": true
+ *     }}
+ *   }}
+ * }}
+ * ",
+ *             LoggingConfiguration = new Aws.Sfn.Inputs.StateMachineLoggingConfigurationArgs
+ *             {
+ *                 LogDestination = $"{aws_cloudwatch_log_group.Log_group_for_sfn.Arn}:*",
+ *                 IncludeExecutionData = true,
+ *                 Level = "ERROR",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sfn"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sfn.NewStateMachine(ctx, "sfnStateMachine", &sfn.StateMachineArgs{
+ * 			RoleArn:    pulumi.Any(aws_iam_role.Iam_for_sfn.Arn),
+ * 			Definition: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Comment\": \"A Hello World example of the Amazon States Language using an AWS Lambda Function\",\n", "  \"StartAt\": \"HelloWorld\",\n", "  \"States\": {\n", "    \"HelloWorld\": {\n", "      \"Type\": \"Task\",\n", "      \"Resource\": \"", aws_lambda_function.Lambda.Arn, "\",\n", "      \"End\": true\n", "    }\n", "  }\n", "}\n")),
+ * 			LoggingConfiguration: &sfn.StateMachineLoggingConfigurationArgs{
+ * 				LogDestination:       pulumi.String(fmt.Sprintf("%v%v", aws_cloudwatch_log_group.Log_group_for_sfn.Arn, ":*")),
+ * 				IncludeExecutionData: pulumi.Bool(true),
+ * 				Level:                pulumi.String("ERROR"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +348,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sfn/stateMachine:StateMachine foo arn:aws:states:eu-west-1:123456789098:stateMachine:bar
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sfn/stateMachine:StateMachine")
 public class StateMachine extends io.pulumi.resources.CustomResource {

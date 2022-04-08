@@ -15,7 +15,287 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage a CloudWatch log resource policy.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Elasticsearch Log Publishing
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const elasticsearch-log-publishing-policyPolicyDocument = aws.iam.getPolicyDocument({
+ *     statements: [{
+ *         actions: [
+ *             "logs:CreateLogStream",
+ *             "logs:PutLogEvents",
+ *             "logs:PutLogEventsBatch",
+ *         ],
+ *         resources: ["arn:aws:logs:*"],
+ *         principals: [{
+ *             identifiers: ["es.amazonaws.com"],
+ *             type: "Service",
+ *         }],
+ *     }],
+ * });
+ * const elasticsearch_log_publishing_policyLogResourcePolicy = new aws.cloudwatch.LogResourcePolicy("elasticsearch-log-publishing-policyLogResourcePolicy", {
+ *     policyDocument: elasticsearch_log_publishing_policyPolicyDocument.then(elasticsearch_log_publishing_policyPolicyDocument => elasticsearch_log_publishing_policyPolicyDocument.json),
+ *     policyName: "elasticsearch-log-publishing-policy",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * elasticsearch_log_publishing_policy_policy_document = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+ *     actions=[
+ *         "logs:CreateLogStream",
+ *         "logs:PutLogEvents",
+ *         "logs:PutLogEventsBatch",
+ *     ],
+ *     resources=["arn:aws:logs:*"],
+ *     principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+ *         identifiers=["es.amazonaws.com"],
+ *         type="Service",
+ *     )],
+ * )])
+ * elasticsearch_log_publishing_policy_log_resource_policy = aws.cloudwatch.LogResourcePolicy("elasticsearch-log-publishing-policyLogResourcePolicy",
+ *     policy_document=elasticsearch_log_publishing_policy_policy_document.json,
+ *     policy_name="elasticsearch-log-publishing-policy")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var elasticsearch_log_publishing_policyPolicyDocument = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+ *         {
+ *             Statements = 
+ *             {
+ *                 new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+ *                 {
+ *                     Actions = 
+ *                     {
+ *                         "logs:CreateLogStream",
+ *                         "logs:PutLogEvents",
+ *                         "logs:PutLogEventsBatch",
+ *                     },
+ *                     Resources = 
+ *                     {
+ *                         "arn:aws:logs:*",
+ *                     },
+ *                     Principals = 
+ *                     {
+ *                         new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+ *                         {
+ *                             Identifiers = 
+ *                             {
+ *                                 "es.amazonaws.com",
+ *                             },
+ *                             Type = "Service",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         }));
+ *         var elasticsearch_log_publishing_policyLogResourcePolicy = new Aws.CloudWatch.LogResourcePolicy("elasticsearch-log-publishing-policyLogResourcePolicy", new Aws.CloudWatch.LogResourcePolicyArgs
+ *         {
+ *             PolicyDocument = elasticsearch_log_publishing_policyPolicyDocument.Apply(elasticsearch_log_publishing_policyPolicyDocument => elasticsearch_log_publishing_policyPolicyDocument.Json),
+ *             PolicyName = "elasticsearch-log-publishing-policy",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		elasticsearch_log_publishing_policyPolicyDocument, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+ * 			Statements: []iam.GetPolicyDocumentStatement{
+ * 				iam.GetPolicyDocumentStatement{
+ * 					Actions: []string{
+ * 						"logs:CreateLogStream",
+ * 						"logs:PutLogEvents",
+ * 						"logs:PutLogEventsBatch",
+ * 					},
+ * 					Resources: []string{
+ * 						"arn:aws:logs:*",
+ * 					},
+ * 					Principals: []iam.GetPolicyDocumentStatementPrincipal{
+ * 						iam.GetPolicyDocumentStatementPrincipal{
+ * 							Identifiers: []string{
+ * 								"es.amazonaws.com",
+ * 							},
+ * 							Type: "Service",
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudwatch.NewLogResourcePolicy(ctx, "elasticsearch-log-publishing-policyLogResourcePolicy", &cloudwatch.LogResourcePolicyArgs{
+ * 			PolicyDocument: pulumi.String(elasticsearch_log_publishing_policyPolicyDocument.Json),
+ * 			PolicyName:     pulumi.String("elasticsearch-log-publishing-policy"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Route53 Query Logging
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const route53-query-logging-policyPolicyDocument = aws.iam.getPolicyDocument({
+ *     statements: [{
+ *         actions: [
+ *             "logs:CreateLogStream",
+ *             "logs:PutLogEvents",
+ *         ],
+ *         resources: ["arn:aws:logs:*:*:log-group:/aws/route53/*"],
+ *         principals: [{
+ *             identifiers: ["route53.amazonaws.com"],
+ *             type: "Service",
+ *         }],
+ *     }],
+ * });
+ * const route53_query_logging_policyLogResourcePolicy = new aws.cloudwatch.LogResourcePolicy("route53-query-logging-policyLogResourcePolicy", {
+ *     policyDocument: route53_query_logging_policyPolicyDocument.then(route53_query_logging_policyPolicyDocument => route53_query_logging_policyPolicyDocument.json),
+ *     policyName: "route53-query-logging-policy",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * route53_query_logging_policy_policy_document = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+ *     actions=[
+ *         "logs:CreateLogStream",
+ *         "logs:PutLogEvents",
+ *     ],
+ *     resources=["arn:aws:logs:*:*:log-group:/aws/route53/*"],
+ *     principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+ *         identifiers=["route53.amazonaws.com"],
+ *         type="Service",
+ *     )],
+ * )])
+ * route53_query_logging_policy_log_resource_policy = aws.cloudwatch.LogResourcePolicy("route53-query-logging-policyLogResourcePolicy",
+ *     policy_document=route53_query_logging_policy_policy_document.json,
+ *     policy_name="route53-query-logging-policy")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var route53_query_logging_policyPolicyDocument = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+ *         {
+ *             Statements = 
+ *             {
+ *                 new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+ *                 {
+ *                     Actions = 
+ *                     {
+ *                         "logs:CreateLogStream",
+ *                         "logs:PutLogEvents",
+ *                     },
+ *                     Resources = 
+ *                     {
+ *                         "arn:aws:logs:*:*:log-group:/aws/route53/*",
+ *                     },
+ *                     Principals = 
+ *                     {
+ *                         new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+ *                         {
+ *                             Identifiers = 
+ *                             {
+ *                                 "route53.amazonaws.com",
+ *                             },
+ *                             Type = "Service",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         }));
+ *         var route53_query_logging_policyLogResourcePolicy = new Aws.CloudWatch.LogResourcePolicy("route53-query-logging-policyLogResourcePolicy", new Aws.CloudWatch.LogResourcePolicyArgs
+ *         {
+ *             PolicyDocument = route53_query_logging_policyPolicyDocument.Apply(route53_query_logging_policyPolicyDocument => route53_query_logging_policyPolicyDocument.Json),
+ *             PolicyName = "route53-query-logging-policy",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		route53_query_logging_policyPolicyDocument, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+ * 			Statements: []iam.GetPolicyDocumentStatement{
+ * 				iam.GetPolicyDocumentStatement{
+ * 					Actions: []string{
+ * 						"logs:CreateLogStream",
+ * 						"logs:PutLogEvents",
+ * 					},
+ * 					Resources: []string{
+ * 						"arn:aws:logs:*:*:log-group:/aws/route53/*",
+ * 					},
+ * 					Principals: []iam.GetPolicyDocumentStatementPrincipal{
+ * 						iam.GetPolicyDocumentStatementPrincipal{
+ * 							Identifiers: []string{
+ * 								"route53.amazonaws.com",
+ * 							},
+ * 							Type: "Service",
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudwatch.NewLogResourcePolicy(ctx, "route53-query-logging-policyLogResourcePolicy", &cloudwatch.LogResourcePolicyArgs{
+ * 			PolicyDocument: pulumi.String(route53_query_logging_policyPolicyDocument.Json),
+ * 			PolicyName:     pulumi.String("route53-query-logging-policy"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +305,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudwatch/logResourcePolicy:LogResourcePolicy MyPolicy MyPolicy
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudwatch/logResourcePolicy:LogResourcePolicy")
 public class LogResourcePolicy extends io.pulumi.resources.CustomResource {

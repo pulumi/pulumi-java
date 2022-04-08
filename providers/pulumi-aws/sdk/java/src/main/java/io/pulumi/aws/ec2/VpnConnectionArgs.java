@@ -173,7 +173,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `  2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 `.
+     * List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
      * 
      */
     @Import(name="tunnel1Phase1DhGroupNumbers")
@@ -371,7 +371,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `  2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 `.
+     * List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
      * 
      */
     @Import(name="tunnel2Phase1DhGroupNumbers")

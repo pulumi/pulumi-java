@@ -16,7 +16,68 @@ import javax.annotation.Nullable;
 /**
  * Manages a Service Catalog Tag Option.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic Usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.servicecatalog.TagOption("example", {
+ *     key: "nyckel",
+ *     value: "värde",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.servicecatalog.TagOption("example",
+ *     key="nyckel",
+ *     value="värde")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ServiceCatalog.TagOption("example", new Aws.ServiceCatalog.TagOptionArgs
+ *         {
+ *             Key = "nyckel",
+ *             Value = "värde",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/servicecatalog"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicecatalog.NewTagOption(ctx, "example", &servicecatalog.TagOptionArgs{
+ * 			Key:   pulumi.String("nyckel"),
+ * 			Value: pulumi.String("värde"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +87,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:servicecatalog/tagOption:TagOption example tag-pjtvagohlyo3m
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:servicecatalog/tagOption:TagOption")
 public class TagOption extends io.pulumi.resources.CustomResource {

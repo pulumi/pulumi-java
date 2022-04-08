@@ -15,7 +15,152 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS Backup vault policy resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleVault = new aws.backup.Vault("exampleVault", {});
+ * const exampleVaultPolicy = new aws.backup.VaultPolicy("exampleVaultPolicy", {
+ *     backupVaultName: exampleVault.name,
+ *     policy: pulumi.interpolate`{
+ *   "Version": "2012-10-17",
+ *   "Id": "default",
+ *   "Statement": [
+ *     {
+ *       "Sid": "default",
+ *       "Effect": "Allow",
+ *       "Principal": {
+ *         "AWS": "*"
+ *       },
+ *       "Action": [
+ * 		"backup:DescribeBackupVault",
+ * 		"backup:DeleteBackupVault",
+ * 		"backup:PutBackupVaultAccessPolicy",
+ * 		"backup:DeleteBackupVaultAccessPolicy",
+ * 		"backup:GetBackupVaultAccessPolicy",
+ * 		"backup:StartBackupJob",
+ * 		"backup:GetBackupVaultNotifications",
+ * 		"backup:PutBackupVaultNotifications"
+ *       ],
+ *       "Resource": "${exampleVault.arn}"
+ *     }
+ *   ]
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_vault = aws.backup.Vault("exampleVault")
+ * example_vault_policy = aws.backup.VaultPolicy("exampleVaultPolicy",
+ *     backup_vault_name=example_vault.name,
+ *     policy=example_vault.arn.apply(lambda arn: f"""{{
+ *   "Version": "2012-10-17",
+ *   "Id": "default",
+ *   "Statement": [
+ *     {{
+ *       "Sid": "default",
+ *       "Effect": "Allow",
+ *       "Principal": {{
+ *         "AWS": "*"
+ *       }},
+ *       "Action": [
+ * 		"backup:DescribeBackupVault",
+ * 		"backup:DeleteBackupVault",
+ * 		"backup:PutBackupVaultAccessPolicy",
+ * 		"backup:DeleteBackupVaultAccessPolicy",
+ * 		"backup:GetBackupVaultAccessPolicy",
+ * 		"backup:StartBackupJob",
+ * 		"backup:GetBackupVaultNotifications",
+ * 		"backup:PutBackupVaultNotifications"
+ *       ],
+ *       "Resource": "{arn}"
+ *     }}
+ *   ]
+ * }}
+ * """))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleVault = new Aws.Backup.Vault("exampleVault", new Aws.Backup.VaultArgs
+ *         {
+ *         });
+ *         var exampleVaultPolicy = new Aws.Backup.VaultPolicy("exampleVaultPolicy", new Aws.Backup.VaultPolicyArgs
+ *         {
+ *             BackupVaultName = exampleVault.Name,
+ *             Policy = exampleVault.Arn.Apply(arn => @$"{{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Id"": ""default"",
+ *   ""Statement"": [
+ *     {{
+ *       ""Sid"": ""default"",
+ *       ""Effect"": ""Allow"",
+ *       ""Principal"": {{
+ *         ""AWS"": ""*""
+ *       }},
+ *       ""Action"": [
+ * 		""backup:DescribeBackupVault"",
+ * 		""backup:DeleteBackupVault"",
+ * 		""backup:PutBackupVaultAccessPolicy"",
+ * 		""backup:DeleteBackupVaultAccessPolicy"",
+ * 		""backup:GetBackupVaultAccessPolicy"",
+ * 		""backup:StartBackupJob"",
+ * 		""backup:GetBackupVaultNotifications"",
+ * 		""backup:PutBackupVaultNotifications""
+ *       ],
+ *       ""Resource"": ""{arn}""
+ *     }}
+ *   ]
+ * }}
+ * "),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/backup"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleVault, err := backup.NewVault(ctx, "exampleVault", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = backup.NewVaultPolicy(ctx, "exampleVaultPolicy", &backup.VaultPolicyArgs{
+ * 			BackupVaultName: exampleVault.Name,
+ * 			Policy: exampleVault.Arn.ApplyT(func(arn string) (string, error) {
+ * 				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Id\": \"default\",\n", "  \"Statement\": [\n", "    {\n", "      \"Sid\": \"default\",\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"AWS\": \"*\"\n", "      },\n", "      \"Action\": [\n", "		\"backup:DescribeBackupVault\",\n", "		\"backup:DeleteBackupVault\",\n", "		\"backup:PutBackupVaultAccessPolicy\",\n", "		\"backup:DeleteBackupVaultAccessPolicy\",\n", "		\"backup:GetBackupVaultAccessPolicy\",\n", "		\"backup:StartBackupJob\",\n", "		\"backup:GetBackupVaultNotifications\",\n", "		\"backup:PutBackupVaultNotifications\"\n", "      ],\n", "      \"Resource\": \"", arn, "\"\n", "    }\n", "  ]\n", "}\n"), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +170,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:backup/vaultPolicy:VaultPolicy test TestVault
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:backup/vaultPolicy:VaultPolicy")
 public class VaultPolicy extends io.pulumi.resources.CustomResource {

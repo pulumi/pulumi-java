@@ -15,8 +15,62 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to designate the active SES receipt rule set
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const main = new aws.ses.ActiveReceiptRuleSet("main", {
+ *     ruleSetName: "primary-rules",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * main = aws.ses.ActiveReceiptRuleSet("main", rule_set_name="primary-rules")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var main = new Aws.Ses.ActiveReceiptRuleSet("main", new Aws.Ses.ActiveReceiptRuleSetArgs
+ *         {
+ *             RuleSetName = "primary-rules",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ses"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ses.NewActiveReceiptRuleSet(ctx, "main", &ses.ActiveReceiptRuleSetArgs{
+ * 			RuleSetName: pulumi.String("primary-rules"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:ses/activeReceiptRuleSet:ActiveReceiptRuleSet")
 public class ActiveReceiptRuleSet extends io.pulumi.resources.CustomResource {

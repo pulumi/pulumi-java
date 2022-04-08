@@ -20,7 +20,112 @@ import javax.annotation.Nullable;
 /**
  * Provides a SageMaker Feature Group resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * Basic usage:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.sagemaker.FeatureGroup("example", {
+ *     featureGroupName: "example",
+ *     recordIdentifierFeatureName: "example",
+ *     eventTimeFeatureName: "example",
+ *     roleArn: aws_iam_role.test.arn,
+ *     featureDefinitions: [{
+ *         featureName: "example",
+ *         featureType: "String",
+ *     }],
+ *     onlineStoreConfig: {
+ *         enableOnlineStore: true,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.sagemaker.FeatureGroup("example",
+ *     feature_group_name="example",
+ *     record_identifier_feature_name="example",
+ *     event_time_feature_name="example",
+ *     role_arn=aws_iam_role["test"]["arn"],
+ *     feature_definitions=[aws.sagemaker.FeatureGroupFeatureDefinitionArgs(
+ *         feature_name="example",
+ *         feature_type="String",
+ *     )],
+ *     online_store_config=aws.sagemaker.FeatureGroupOnlineStoreConfigArgs(
+ *         enable_online_store=True,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Sagemaker.FeatureGroup("example", new Aws.Sagemaker.FeatureGroupArgs
+ *         {
+ *             FeatureGroupName = "example",
+ *             RecordIdentifierFeatureName = "example",
+ *             EventTimeFeatureName = "example",
+ *             RoleArn = aws_iam_role.Test.Arn,
+ *             FeatureDefinitions = 
+ *             {
+ *                 new Aws.Sagemaker.Inputs.FeatureGroupFeatureDefinitionArgs
+ *                 {
+ *                     FeatureName = "example",
+ *                     FeatureType = "String",
+ *                 },
+ *             },
+ *             OnlineStoreConfig = new Aws.Sagemaker.Inputs.FeatureGroupOnlineStoreConfigArgs
+ *             {
+ *                 EnableOnlineStore = true,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sagemaker.NewFeatureGroup(ctx, "example", &sagemaker.FeatureGroupArgs{
+ * 			FeatureGroupName:            pulumi.String("example"),
+ * 			RecordIdentifierFeatureName: pulumi.String("example"),
+ * 			EventTimeFeatureName:        pulumi.String("example"),
+ * 			RoleArn:                     pulumi.Any(aws_iam_role.Test.Arn),
+ * 			FeatureDefinitions: sagemaker.FeatureGroupFeatureDefinitionArray{
+ * 				&sagemaker.FeatureGroupFeatureDefinitionArgs{
+ * 					FeatureName: pulumi.String("example"),
+ * 					FeatureType: pulumi.String("String"),
+ * 				},
+ * 			},
+ * 			OnlineStoreConfig: &sagemaker.FeatureGroupOnlineStoreConfigArgs{
+ * 				EnableOnlineStore: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +135,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sagemaker/featureGroup:FeatureGroup test_feature_group feature_group-foo
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sagemaker/featureGroup:FeatureGroup")
 public class FeatureGroup extends io.pulumi.resources.CustomResource {

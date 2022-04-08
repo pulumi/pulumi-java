@@ -19,7 +19,116 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS Backup plan resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.backup.Plan("example", {
+ *     rules: [{
+ *         ruleName: "tf_example_backup_rule",
+ *         targetVaultName: aws_backup_vault.test.name,
+ *         schedule: "cron(0 12 * * ? *)",
+ *     }],
+ *     advancedBackupSettings: [{
+ *         backupOptions: {
+ *             WindowsVSS: "enabled",
+ *         },
+ *         resourceType: "EC2",
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.backup.Plan("example",
+ *     rules=[aws.backup.PlanRuleArgs(
+ *         rule_name="tf_example_backup_rule",
+ *         target_vault_name=aws_backup_vault["test"]["name"],
+ *         schedule="cron(0 12 * * ? *)",
+ *     )],
+ *     advanced_backup_settings=[aws.backup.PlanAdvancedBackupSettingArgs(
+ *         backup_options={
+ *             "WindowsVSS": "enabled",
+ *         },
+ *         resource_type="EC2",
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Backup.Plan("example", new Aws.Backup.PlanArgs
+ *         {
+ *             Rules = 
+ *             {
+ *                 new Aws.Backup.Inputs.PlanRuleArgs
+ *                 {
+ *                     RuleName = "tf_example_backup_rule",
+ *                     TargetVaultName = aws_backup_vault.Test.Name,
+ *                     Schedule = "cron(0 12 * * ? *)",
+ *                 },
+ *             },
+ *             AdvancedBackupSettings = 
+ *             {
+ *                 new Aws.Backup.Inputs.PlanAdvancedBackupSettingArgs
+ *                 {
+ *                     BackupOptions = 
+ *                     {
+ *                         { "WindowsVSS", "enabled" },
+ *                     },
+ *                     ResourceType = "EC2",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/backup"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := backup.NewPlan(ctx, "example", &backup.PlanArgs{
+ * 			Rules: backup.PlanRuleArray{
+ * 				&backup.PlanRuleArgs{
+ * 					RuleName:        pulumi.String("tf_example_backup_rule"),
+ * 					TargetVaultName: pulumi.Any(aws_backup_vault.Test.Name),
+ * 					Schedule:        pulumi.String("cron(0 12 * * ? *)"),
+ * 				},
+ * 			},
+ * 			AdvancedBackupSettings: backup.PlanAdvancedBackupSettingArray{
+ * 				&backup.PlanAdvancedBackupSettingArgs{
+ * 					BackupOptions: pulumi.StringMap{
+ * 						"WindowsVSS": pulumi.String("enabled"),
+ * 					},
+ * 					ResourceType: pulumi.String("EC2"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +138,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:backup/plan:Plan test <id>
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:backup/plan:Plan")
 public class Plan extends io.pulumi.resources.CustomResource {

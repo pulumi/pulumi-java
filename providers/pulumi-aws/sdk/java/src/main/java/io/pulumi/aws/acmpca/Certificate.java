@@ -16,12 +16,50 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to issue a certificate using AWS Certificate Manager Private Certificate Authority (ACM PCA).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * as tls from "@pulumi/tls";
+ * 
+ * const exampleCertificateAuthority = new aws.acmpca.CertificateAuthority("exampleCertificateAuthority", {
+ *     privateCertificateConfiguration: [{
+ *         keyAlgorithm: "RSA_4096",
+ *         signingAlgorithm: "SHA512WITHRSA",
+ *         subject: [{
+ *             commonName: "example.com",
+ *         }],
+ *     }],
+ *     permanentDeletionTimeInDays: 7,
+ * });
+ * const key = new tls.PrivateKey("key", {algorithm: "RSA"});
+ * const csr = new tls.CertRequest("csr", {
+ *     keyAlgorithm: "RSA",
+ *     privateKeyPem: key.privateKeyPem,
+ *     subjects: [{
+ *         commonName: "example",
+ *     }],
+ * });
+ * const exampleCertificate = new aws.acmpca.Certificate("exampleCertificate", {
+ *     certificateAuthorityArn: exampleCertificateAuthority.arn,
+ *     certificateSigningRequest: csr.certRequestPem,
+ *     signingAlgorithm: "SHA256WITHRSA",
+ *     validity: {
+ *         type: "YEARS",
+ *         value: 1,
+ *     },
+ * });
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
- * `aws_acmpca_certificate` can not be imported at this time.
- * 
+ * `aws_acmpca_certificate` can not be imported at this time. 
  */
 @ResourceType(type="aws:acmpca/certificate:Certificate")
 public class Certificate extends io.pulumi.resources.CustomResource {

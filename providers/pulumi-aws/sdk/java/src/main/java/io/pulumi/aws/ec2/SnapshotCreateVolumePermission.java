@@ -15,8 +15,99 @@ import javax.annotation.Nullable;
 /**
  * Adds permission to create volumes off of a given EBS Snapshot.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ebs.Volume("example", {
+ *     availabilityZone: "us-west-2a",
+ *     size: 40,
+ * });
+ * const exampleSnapshot = new aws.ebs.Snapshot("exampleSnapshot", {volumeId: example.id});
+ * const examplePerm = new aws.ec2.SnapshotCreateVolumePermission("examplePerm", {
+ *     snapshotId: exampleSnapshot.id,
+ *     accountId: "12345678",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ebs.Volume("example",
+ *     availability_zone="us-west-2a",
+ *     size=40)
+ * example_snapshot = aws.ebs.Snapshot("exampleSnapshot", volume_id=example.id)
+ * example_perm = aws.ec2.SnapshotCreateVolumePermission("examplePerm",
+ *     snapshot_id=example_snapshot.id,
+ *     account_id="12345678")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ebs.Volume("example", new Aws.Ebs.VolumeArgs
+ *         {
+ *             AvailabilityZone = "us-west-2a",
+ *             Size = 40,
+ *         });
+ *         var exampleSnapshot = new Aws.Ebs.Snapshot("exampleSnapshot", new Aws.Ebs.SnapshotArgs
+ *         {
+ *             VolumeId = example.Id,
+ *         });
+ *         var examplePerm = new Aws.Ec2.SnapshotCreateVolumePermission("examplePerm", new Aws.Ec2.SnapshotCreateVolumePermissionArgs
+ *         {
+ *             SnapshotId = exampleSnapshot.Id,
+ *             AccountId = "12345678",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ebs"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		example, err := ebs.NewVolume(ctx, "example", &ebs.VolumeArgs{
+ * 			AvailabilityZone: pulumi.String("us-west-2a"),
+ * 			Size:             pulumi.Int(40),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleSnapshot, err := ebs.NewSnapshot(ctx, "exampleSnapshot", &ebs.SnapshotArgs{
+ * 			VolumeId: example.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewSnapshotCreateVolumePermission(ctx, "examplePerm", &ec2.SnapshotCreateVolumePermissionArgs{
+ * 			SnapshotId: exampleSnapshot.ID(),
+ * 			AccountId:  pulumi.String("12345678"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:ec2/snapshotCreateVolumePermission:SnapshotCreateVolumePermission")
 public class SnapshotCreateVolumePermission extends io.pulumi.resources.CustomResource {

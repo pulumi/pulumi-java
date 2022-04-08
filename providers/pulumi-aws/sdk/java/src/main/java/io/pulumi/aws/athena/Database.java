@@ -17,8 +17,77 @@ import javax.annotation.Nullable;
 /**
  * Provides an Athena database.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const hogeBucket = new aws.s3.Bucket("hogeBucket", {});
+ * const hogeDatabase = new aws.athena.Database("hogeDatabase", {
+ *     name: "database_name",
+ *     bucket: hogeBucket.bucket,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * hoge_bucket = aws.s3.Bucket("hogeBucket")
+ * hoge_database = aws.athena.Database("hogeDatabase",
+ *     name="database_name",
+ *     bucket=hoge_bucket.bucket)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var hogeBucket = new Aws.S3.Bucket("hogeBucket", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var hogeDatabase = new Aws.Athena.Database("hogeDatabase", new Aws.Athena.DatabaseArgs
+ *         {
+ *             Name = "database_name",
+ *             Bucket = hogeBucket.BucketName,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/athena"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		hogeBucket, err := s3.NewBucket(ctx, "hogeBucket", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = athena.NewDatabase(ctx, "hogeDatabase", &athena.DatabaseArgs{
+ * 			Name:   pulumi.String("database_name"),
+ * 			Bucket: hogeBucket.Bucket,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:athena/database:Database")
 public class Database extends io.pulumi.resources.CustomResource {

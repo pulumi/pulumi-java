@@ -24,7 +24,131 @@ import javax.annotation.Nullable;
 /**
  * Provides an SES receipt rule resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // Add a header to the email and store it in S3
+ * const store = new aws.ses.ReceiptRule("store", {
+ *     addHeaderActions: [{
+ *         headerName: "Custom-Header",
+ *         headerValue: "Added by SES",
+ *         position: 1,
+ *     }],
+ *     enabled: true,
+ *     recipients: ["karen@example.com"],
+ *     ruleSetName: "default-rule-set",
+ *     s3Actions: [{
+ *         bucketName: "emails",
+ *         position: 2,
+ *     }],
+ *     scanEnabled: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # Add a header to the email and store it in S3
+ * store = aws.ses.ReceiptRule("store",
+ *     add_header_actions=[aws.ses.ReceiptRuleAddHeaderActionArgs(
+ *         header_name="Custom-Header",
+ *         header_value="Added by SES",
+ *         position=1,
+ *     )],
+ *     enabled=True,
+ *     recipients=["karen@example.com"],
+ *     rule_set_name="default-rule-set",
+ *     s3_actions=[aws.ses.ReceiptRuleS3ActionArgs(
+ *         bucket_name="emails",
+ *         position=2,
+ *     )],
+ *     scan_enabled=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // Add a header to the email and store it in S3
+ *         var store = new Aws.Ses.ReceiptRule("store", new Aws.Ses.ReceiptRuleArgs
+ *         {
+ *             AddHeaderActions = 
+ *             {
+ *                 new Aws.Ses.Inputs.ReceiptRuleAddHeaderActionArgs
+ *                 {
+ *                     HeaderName = "Custom-Header",
+ *                     HeaderValue = "Added by SES",
+ *                     Position = 1,
+ *                 },
+ *             },
+ *             Enabled = true,
+ *             Recipients = 
+ *             {
+ *                 "karen@example.com",
+ *             },
+ *             RuleSetName = "default-rule-set",
+ *             S3Actions = 
+ *             {
+ *                 new Aws.Ses.Inputs.ReceiptRuleS3ActionArgs
+ *                 {
+ *                     BucketName = "emails",
+ *                     Position = 2,
+ *                 },
+ *             },
+ *             ScanEnabled = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ses"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ses.NewReceiptRule(ctx, "store", &ses.ReceiptRuleArgs{
+ * 			AddHeaderActions: ses.ReceiptRuleAddHeaderActionArray{
+ * 				&ses.ReceiptRuleAddHeaderActionArgs{
+ * 					HeaderName:  pulumi.String("Custom-Header"),
+ * 					HeaderValue: pulumi.String("Added by SES"),
+ * 					Position:    pulumi.Int(1),
+ * 				},
+ * 			},
+ * 			Enabled: pulumi.Bool(true),
+ * 			Recipients: pulumi.StringArray{
+ * 				pulumi.String("karen@example.com"),
+ * 			},
+ * 			RuleSetName: pulumi.String("default-rule-set"),
+ * 			S3Actions: ses.ReceiptRuleS3ActionArray{
+ * 				&ses.ReceiptRuleS3ActionArgs{
+ * 					BucketName: pulumi.String("emails"),
+ * 					Position:   pulumi.Int(2),
+ * 				},
+ * 			},
+ * 			ScanEnabled: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,6 +158,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ses/receiptRule:ReceiptRule my_rule my_rule_set:my_rule
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ses/receiptRule:ReceiptRule")
 public class ReceiptRule extends io.pulumi.resources.CustomResource {

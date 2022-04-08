@@ -16,7 +16,71 @@ import javax.annotation.Nullable;
 /**
  * Manages an API Gateway Request Validator.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.apigateway.RequestValidator("example", {
+ *     restApi: aws_api_gateway_rest_api.example.id,
+ *     validateRequestBody: true,
+ *     validateRequestParameters: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.apigateway.RequestValidator("example",
+ *     rest_api=aws_api_gateway_rest_api["example"]["id"],
+ *     validate_request_body=True,
+ *     validate_request_parameters=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ApiGateway.RequestValidator("example", new Aws.ApiGateway.RequestValidatorArgs
+ *         {
+ *             RestApi = aws_api_gateway_rest_api.Example.Id,
+ *             ValidateRequestBody = true,
+ *             ValidateRequestParameters = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apigateway.NewRequestValidator(ctx, "example", &apigateway.RequestValidatorArgs{
+ * 			RestApi:                   pulumi.Any(aws_api_gateway_rest_api.Example.Id),
+ * 			ValidateRequestBody:       pulumi.Bool(true),
+ * 			ValidateRequestParameters: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +90,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:apigateway/requestValidator:RequestValidator example 12345abcde/67890fghij
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:apigateway/requestValidator:RequestValidator")
 public class RequestValidator extends io.pulumi.resources.CustomResource {

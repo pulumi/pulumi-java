@@ -21,7 +21,104 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** `aws.alb.ListenerCertificate` is known as `aws.lb.ListenerCertificate`. The functionality is identical.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleCertificate = new aws.acm.Certificate("exampleCertificate", {});
+ * // ...
+ * const frontEndLoadBalancer = new aws.lb.LoadBalancer("frontEndLoadBalancer", {});
+ * // ...
+ * const frontEndListener = new aws.lb.Listener("frontEndListener", {});
+ * // ...
+ * const exampleListenerCertificate = new aws.lb.ListenerCertificate("exampleListenerCertificate", {
+ *     listenerArn: frontEndListener.arn,
+ *     certificateArn: exampleCertificate.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_certificate = aws.acm.Certificate("exampleCertificate")
+ * # ...
+ * front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
+ * # ...
+ * front_end_listener = aws.lb.Listener("frontEndListener")
+ * # ...
+ * example_listener_certificate = aws.lb.ListenerCertificate("exampleListenerCertificate",
+ *     listener_arn=front_end_listener.arn,
+ *     certificate_arn=example_certificate.arn)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleCertificate = new Aws.Acm.Certificate("exampleCertificate", new Aws.Acm.CertificateArgs
+ *         {
+ *         });
+ *         // ...
+ *         var frontEndLoadBalancer = new Aws.LB.LoadBalancer("frontEndLoadBalancer", new Aws.LB.LoadBalancerArgs
+ *         {
+ *         });
+ *         // ...
+ *         var frontEndListener = new Aws.LB.Listener("frontEndListener", new Aws.LB.ListenerArgs
+ *         {
+ *         });
+ *         // ...
+ *         var exampleListenerCertificate = new Aws.LB.ListenerCertificate("exampleListenerCertificate", new Aws.LB.ListenerCertificateArgs
+ *         {
+ *             ListenerArn = frontEndListener.Arn,
+ *             CertificateArn = exampleCertificate.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/acm"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleCertificate, err := acm.NewCertificate(ctx, "exampleCertificate", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = lb.NewLoadBalancer(ctx, "frontEndLoadBalancer", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		frontEndListener, err := lb.NewListener(ctx, "frontEndListener", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = lb.NewListenerCertificate(ctx, "exampleListenerCertificate", &lb.ListenerCertificateArgs{
+ * 			ListenerArn:    frontEndListener.Arn,
+ * 			CertificateArn: exampleCertificate.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,6 +128,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:lb/listenerCertificate:ListenerCertificate example arn:aws:elasticloadbalancing:us-west-2:123456789012:listener/app/test/8e4497da625e2d8a/9ab28ade35828f96/67b3d2d36dd7c26b_arn:aws:iam::123456789012:server-certificate/tf-acc-test-6453083910015726063
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:lb/listenerCertificate:ListenerCertificate")
 public class ListenerCertificate extends io.pulumi.resources.CustomResource {

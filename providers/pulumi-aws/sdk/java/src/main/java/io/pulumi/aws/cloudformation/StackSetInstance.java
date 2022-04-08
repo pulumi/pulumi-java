@@ -22,7 +22,275 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** To retain the Stack during resource destroy, ensure `retain_stack` has been set to `true` in the state first. This must be completed _before_ a deployment that would destroy the resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.cloudformation.StackSetInstance("example", {
+ *     accountId: "123456789012",
+ *     region: "us-east-1",
+ *     stackSetName: aws_cloudformation_stack_set.example.name,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.cloudformation.StackSetInstance("example",
+ *     account_id="123456789012",
+ *     region="us-east-1",
+ *     stack_set_name=aws_cloudformation_stack_set["example"]["name"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.CloudFormation.StackSetInstance("example", new Aws.CloudFormation.StackSetInstanceArgs
+ *         {
+ *             AccountId = "123456789012",
+ *             Region = "us-east-1",
+ *             StackSetName = aws_cloudformation_stack_set.Example.Name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudformation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudformation.NewStackSetInstance(ctx, "example", &cloudformation.StackSetInstanceArgs{
+ * 			AccountId:    pulumi.String("123456789012"),
+ * 			Region:       pulumi.String("us-east-1"),
+ * 			StackSetName: pulumi.Any(aws_cloudformation_stack_set.Example.Name),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example IAM Setup in Target Account
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const aWSCloudFormationStackSetExecutionRoleAssumeRolePolicy = aws.iam.getPolicyDocument({
+ *     statements: [{
+ *         actions: ["sts:AssumeRole"],
+ *         effect: "Allow",
+ *         principals: [{
+ *             identifiers: [aws_iam_role.AWSCloudFormationStackSetAdministrationRole.arn],
+ *             type: "AWS",
+ *         }],
+ *     }],
+ * });
+ * const aWSCloudFormationStackSetExecutionRole = new aws.iam.Role("aWSCloudFormationStackSetExecutionRole", {assumeRolePolicy: aWSCloudFormationStackSetExecutionRoleAssumeRolePolicy.then(aWSCloudFormationStackSetExecutionRoleAssumeRolePolicy => aWSCloudFormationStackSetExecutionRoleAssumeRolePolicy.json)});
+ * const aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument = aws.iam.getPolicyDocument({
+ *     statements: [{
+ *         actions: [
+ *             "cloudformation:*",
+ *             "s3:*",
+ *             "sns:*",
+ *         ],
+ *         effect: "Allow",
+ *         resources: ["*"],
+ *     }],
+ * });
+ * const aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyRolePolicy = new aws.iam.RolePolicy("aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyRolePolicy", {
+ *     policy: aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument.then(aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument => aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument.json),
+ *     role: aWSCloudFormationStackSetExecutionRole.name,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * a_ws_cloud_formation_stack_set_execution_role_assume_role_policy = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+ *     actions=["sts:AssumeRole"],
+ *     effect="Allow",
+ *     principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+ *         identifiers=[aws_iam_role["AWSCloudFormationStackSetAdministrationRole"]["arn"]],
+ *         type="AWS",
+ *     )],
+ * )])
+ * a_ws_cloud_formation_stack_set_execution_role = aws.iam.Role("aWSCloudFormationStackSetExecutionRole", assume_role_policy=a_ws_cloud_formation_stack_set_execution_role_assume_role_policy.json)
+ * a_ws_cloud_formation_stack_set_execution_role_minimum_execution_policy_policy_document = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+ *     actions=[
+ *         "cloudformation:*",
+ *         "s3:*",
+ *         "sns:*",
+ *     ],
+ *     effect="Allow",
+ *     resources=["*"],
+ * )])
+ * a_ws_cloud_formation_stack_set_execution_role_minimum_execution_policy_role_policy = aws.iam.RolePolicy("aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyRolePolicy",
+ *     policy=a_ws_cloud_formation_stack_set_execution_role_minimum_execution_policy_policy_document.json,
+ *     role=a_ws_cloud_formation_stack_set_execution_role.name)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var aWSCloudFormationStackSetExecutionRoleAssumeRolePolicy = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+ *         {
+ *             Statements = 
+ *             {
+ *                 new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+ *                 {
+ *                     Actions = 
+ *                     {
+ *                         "sts:AssumeRole",
+ *                     },
+ *                     Effect = "Allow",
+ *                     Principals = 
+ *                     {
+ *                         new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+ *                         {
+ *                             Identifiers = 
+ *                             {
+ *                                 aws_iam_role.AWSCloudFormationStackSetAdministrationRole.Arn,
+ *                             },
+ *                             Type = "AWS",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         }));
+ *         var aWSCloudFormationStackSetExecutionRole = new Aws.Iam.Role("aWSCloudFormationStackSetExecutionRole", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = aWSCloudFormationStackSetExecutionRoleAssumeRolePolicy.Apply(aWSCloudFormationStackSetExecutionRoleAssumeRolePolicy => aWSCloudFormationStackSetExecutionRoleAssumeRolePolicy.Json),
+ *         });
+ *         var aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+ *         {
+ *             Statements = 
+ *             {
+ *                 new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+ *                 {
+ *                     Actions = 
+ *                     {
+ *                         "cloudformation:*",
+ *                         "s3:*",
+ *                         "sns:*",
+ *                     },
+ *                     Effect = "Allow",
+ *                     Resources = 
+ *                     {
+ *                         "*",
+ *                     },
+ *                 },
+ *             },
+ *         }));
+ *         var aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyRolePolicy = new Aws.Iam.RolePolicy("aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyRolePolicy", new Aws.Iam.RolePolicyArgs
+ *         {
+ *             Policy = aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument.Apply(aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument => aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument.Json),
+ *             Role = aWSCloudFormationStackSetExecutionRole.Name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example Deployment across Organizations account
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.cloudformation.StackSetInstance("example", {
+ *     deploymentTargets: {
+ *         organizationalUnitIds: [aws_organizations_organization.example.roots[0].id],
+ *     },
+ *     region: "us-east-1",
+ *     stackSetName: aws_cloudformation_stack_set.example.name,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.cloudformation.StackSetInstance("example",
+ *     deployment_targets=aws.cloudformation.StackSetInstanceDeploymentTargetsArgs(
+ *         organizational_unit_ids=[aws_organizations_organization["example"]["roots"][0]["id"]],
+ *     ),
+ *     region="us-east-1",
+ *     stack_set_name=aws_cloudformation_stack_set["example"]["name"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.CloudFormation.StackSetInstance("example", new Aws.CloudFormation.StackSetInstanceArgs
+ *         {
+ *             DeploymentTargets = new Aws.CloudFormation.Inputs.StackSetInstanceDeploymentTargetsArgs
+ *             {
+ *                 OrganizationalUnitIds = 
+ *                 {
+ *                     aws_organizations_organization.Example.Roots[0].Id,
+ *                 },
+ *             },
+ *             Region = "us-east-1",
+ *             StackSetName = aws_cloudformation_stack_set.Example.Name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudformation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudformation.NewStackSetInstance(ctx, "example", &cloudformation.StackSetInstanceArgs{
+ * 			DeploymentTargets: &cloudformation.StackSetInstanceDeploymentTargetsArgs{
+ * 				OrganizationalUnitIds: pulumi.StringArray{
+ * 					pulumi.Any(aws_organizations_organization.Example.Roots[0].Id),
+ * 				},
+ * 			},
+ * 			Region:       pulumi.String("us-east-1"),
+ * 			StackSetName: pulumi.Any(aws_cloudformation_stack_set.Example.Name),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,6 +300,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudformation/stackSetInstance:StackSetInstance example example,123456789012,us-east-1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudformation/stackSetInstance:StackSetInstance")
 public class StackSetInstance extends io.pulumi.resources.CustomResource {

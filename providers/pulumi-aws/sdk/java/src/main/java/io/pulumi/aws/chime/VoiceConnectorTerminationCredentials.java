@@ -19,7 +19,157 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** Voice Connector Termination Credentials requires a Voice Connector Termination to be present. Use of `depends_on` (as shown below) is recommended to avoid race conditions.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const defaultVoiceConnector = new aws.chime.VoiceConnector("defaultVoiceConnector", {requireEncryption: true});
+ * const defaultVoiceConnectorTermination = new aws.chime.VoiceConnectorTermination("defaultVoiceConnectorTermination", {
+ *     disabled: true,
+ *     cpsLimit: 1,
+ *     cidrAllowLists: ["50.35.78.96/31"],
+ *     callingRegions: [
+ *         "US",
+ *         "CA",
+ *     ],
+ *     voiceConnectorId: defaultVoiceConnector.id,
+ * });
+ * const defaultVoiceConnectorTerminationCredentials = new aws.chime.VoiceConnectorTerminationCredentials("defaultVoiceConnectorTerminationCredentials", {
+ *     voiceConnectorId: defaultVoiceConnector.id,
+ *     credentials: [{
+ *         username: "test",
+ *         password: "test!",
+ *     }],
+ * }, {
+ *     dependsOn: [defaultVoiceConnectorTermination],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default_voice_connector = aws.chime.VoiceConnector("defaultVoiceConnector", require_encryption=True)
+ * default_voice_connector_termination = aws.chime.VoiceConnectorTermination("defaultVoiceConnectorTermination",
+ *     disabled=True,
+ *     cps_limit=1,
+ *     cidr_allow_lists=["50.35.78.96/31"],
+ *     calling_regions=[
+ *         "US",
+ *         "CA",
+ *     ],
+ *     voice_connector_id=default_voice_connector.id)
+ * default_voice_connector_termination_credentials = aws.chime.VoiceConnectorTerminationCredentials("defaultVoiceConnectorTerminationCredentials",
+ *     voice_connector_id=default_voice_connector.id,
+ *     credentials=[aws.chime.VoiceConnectorTerminationCredentialsCredentialArgs(
+ *         username="test",
+ *         password="test!",
+ *     )],
+ *     opts=pulumi.ResourceOptions(depends_on=[default_voice_connector_termination]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultVoiceConnector = new Aws.Chime.VoiceConnector("defaultVoiceConnector", new Aws.Chime.VoiceConnectorArgs
+ *         {
+ *             RequireEncryption = true,
+ *         });
+ *         var defaultVoiceConnectorTermination = new Aws.Chime.VoiceConnectorTermination("defaultVoiceConnectorTermination", new Aws.Chime.VoiceConnectorTerminationArgs
+ *         {
+ *             Disabled = true,
+ *             CpsLimit = 1,
+ *             CidrAllowLists = 
+ *             {
+ *                 "50.35.78.96/31",
+ *             },
+ *             CallingRegions = 
+ *             {
+ *                 "US",
+ *                 "CA",
+ *             },
+ *             VoiceConnectorId = defaultVoiceConnector.Id,
+ *         });
+ *         var defaultVoiceConnectorTerminationCredentials = new Aws.Chime.VoiceConnectorTerminationCredentials("defaultVoiceConnectorTerminationCredentials", new Aws.Chime.VoiceConnectorTerminationCredentialsArgs
+ *         {
+ *             VoiceConnectorId = defaultVoiceConnector.Id,
+ *             Credentials = 
+ *             {
+ *                 new Aws.Chime.Inputs.VoiceConnectorTerminationCredentialsCredentialArgs
+ *                 {
+ *                     Username = "test",
+ *                     Password = "test!",
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 defaultVoiceConnectorTermination,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/chime"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultVoiceConnector, err := chime.NewVoiceConnector(ctx, "defaultVoiceConnector", &chime.VoiceConnectorArgs{
+ * 			RequireEncryption: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultVoiceConnectorTermination, err := chime.NewVoiceConnectorTermination(ctx, "defaultVoiceConnectorTermination", &chime.VoiceConnectorTerminationArgs{
+ * 			Disabled: pulumi.Bool(true),
+ * 			CpsLimit: pulumi.Int(1),
+ * 			CidrAllowLists: pulumi.StringArray{
+ * 				pulumi.String("50.35.78.96/31"),
+ * 			},
+ * 			CallingRegions: pulumi.StringArray{
+ * 				pulumi.String("US"),
+ * 				pulumi.String("CA"),
+ * 			},
+ * 			VoiceConnectorId: defaultVoiceConnector.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = chime.NewVoiceConnectorTerminationCredentials(ctx, "defaultVoiceConnectorTerminationCredentials", &chime.VoiceConnectorTerminationCredentialsArgs{
+ * 			VoiceConnectorId: defaultVoiceConnector.ID(),
+ * 			Credentials: chime.VoiceConnectorTerminationCredentialsCredentialArray{
+ * 				&chime.VoiceConnectorTerminationCredentialsCredentialArgs{
+ * 					Username: pulumi.String("test"),
+ * 					Password: pulumi.String("test!"),
+ * 				},
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			defaultVoiceConnectorTermination,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +179,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:chime/voiceConnectorTerminationCredentials:VoiceConnectorTerminationCredentials default abcdef1ghij2klmno3pqr4
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:chime/voiceConnectorTerminationCredentials:VoiceConnectorTerminationCredentials")
 public class VoiceConnectorTerminationCredentials extends io.pulumi.resources.CustomResource {

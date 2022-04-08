@@ -17,7 +17,75 @@ import javax.annotation.Nullable;
 /**
  * Provides a CloudWatch Log Group resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const yada = new aws.cloudwatch.LogGroup("yada", {
+ *     tags: {
+ *         Application: "serviceA",
+ *         Environment: "production",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * yada = aws.cloudwatch.LogGroup("yada", tags={
+ *     "Application": "serviceA",
+ *     "Environment": "production",
+ * })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var yada = new Aws.CloudWatch.LogGroup("yada", new Aws.CloudWatch.LogGroupArgs
+ *         {
+ *             Tags = 
+ *             {
+ *                 { "Application", "serviceA" },
+ *                 { "Environment", "production" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudwatch.NewLogGroup(ctx, "yada", &cloudwatch.LogGroupArgs{
+ * 			Tags: pulumi.StringMap{
+ * 				"Application": pulumi.String("serviceA"),
+ * 				"Environment": pulumi.String("production"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +95,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudwatch/logGroup:LogGroup test_group yada
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudwatch/logGroup:LogGroup")
 public class LogGroup extends io.pulumi.resources.CustomResource {

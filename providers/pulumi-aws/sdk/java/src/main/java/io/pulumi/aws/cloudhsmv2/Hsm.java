@@ -15,7 +15,83 @@ import javax.annotation.Nullable;
 /**
  * Creates an HSM module in Amazon CloudHSM v2 cluster.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * The following example below creates an HSM module in CloudHSM cluster.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const cluster = aws.cloudhsmv2.getCluster({
+ *     clusterId: _var.cloudhsm_cluster_id,
+ * });
+ * const cloudhsmV2Hsm = new aws.cloudhsmv2.Hsm("cloudhsmV2Hsm", {
+ *     subnetId: cluster.then(cluster => cluster.subnetIds?[0]),
+ *     clusterId: cluster.then(cluster => cluster.clusterId),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * cluster = aws.cloudhsmv2.get_cluster(cluster_id=var["cloudhsm_cluster_id"])
+ * cloudhsm_v2_hsm = aws.cloudhsmv2.Hsm("cloudhsmV2Hsm",
+ *     subnet_id=cluster.subnet_ids[0],
+ *     cluster_id=cluster.cluster_id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cluster = Output.Create(Aws.CloudHsmV2.GetCluster.InvokeAsync(new Aws.CloudHsmV2.GetClusterArgs
+ *         {
+ *             ClusterId = @var.Cloudhsm_cluster_id,
+ *         }));
+ *         var cloudhsmV2Hsm = new Aws.CloudHsmV2.Hsm("cloudhsmV2Hsm", new Aws.CloudHsmV2.HsmArgs
+ *         {
+ *             SubnetId = cluster.Apply(cluster => cluster.SubnetIds?[0]),
+ *             ClusterId = cluster.Apply(cluster => cluster.ClusterId),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudhsmv2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		cluster, err := cloudhsmv2.LookupCluster(ctx, &cloudhsmv2.LookupClusterArgs{
+ * 			ClusterId: _var.Cloudhsm_cluster_id,
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudhsmv2.NewHsm(ctx, "cloudhsmV2Hsm", &cloudhsmv2.HsmArgs{
+ * 			SubnetId:  pulumi.String(cluster.SubnetIds[0]),
+ * 			ClusterId: pulumi.String(cluster.ClusterId),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +101,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudhsmv2/hsm:Hsm bar hsm-quo8dahtaca
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudhsmv2/hsm:Hsm")
 public class Hsm extends io.pulumi.resources.CustomResource {

@@ -21,7 +21,364 @@ import javax.annotation.Nullable;
 /**
  * Provides a Batch Job Definition resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.batch.JobDefinition("test", {
+ *     containerProperties: `{
+ * 	"command": ["ls", "-la"],
+ * 	"image": "busybox",
+ * 	"memory": 1024,
+ * 	"vcpus": 1,
+ * 	"volumes": [
+ *       {
+ *         "host": {
+ *           "sourcePath": "/tmp"
+ *         },
+ *         "name": "tmp"
+ *       }
+ *     ],
+ * 	"environment": [
+ * 		{"name": "VARNAME", "value": "VARVAL"}
+ * 	],
+ * 	"mountPoints": [
+ * 		{
+ *           "sourceVolume": "tmp",
+ *           "containerPath": "/tmp",
+ *           "readOnly": false
+ *         }
+ * 	],
+ *     "ulimits": [
+ *       {
+ *         "hardLimit": 1024,
+ *         "name": "nofile",
+ *         "softLimit": 1024
+ *       }
+ *     ]
+ * }
+ * `,
+ *     type: "container",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.batch.JobDefinition("test",
+ *     container_properties="""{
+ * 	"command": ["ls", "-la"],
+ * 	"image": "busybox",
+ * 	"memory": 1024,
+ * 	"vcpus": 1,
+ * 	"volumes": [
+ *       {
+ *         "host": {
+ *           "sourcePath": "/tmp"
+ *         },
+ *         "name": "tmp"
+ *       }
+ *     ],
+ * 	"environment": [
+ * 		{"name": "VARNAME", "value": "VARVAL"}
+ * 	],
+ * 	"mountPoints": [
+ * 		{
+ *           "sourceVolume": "tmp",
+ *           "containerPath": "/tmp",
+ *           "readOnly": false
+ *         }
+ * 	],
+ *     "ulimits": [
+ *       {
+ *         "hardLimit": 1024,
+ *         "name": "nofile",
+ *         "softLimit": 1024
+ *       }
+ *     ]
+ * }
+ * 
+ * """,
+ *     type="container")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Batch.JobDefinition("test", new Aws.Batch.JobDefinitionArgs
+ *         {
+ *             ContainerProperties = @"{
+ * 	""command"": [""ls"", ""-la""],
+ * 	""image"": ""busybox"",
+ * 	""memory"": 1024,
+ * 	""vcpus"": 1,
+ * 	""volumes"": [
+ *       {
+ *         ""host"": {
+ *           ""sourcePath"": ""/tmp""
+ *         },
+ *         ""name"": ""tmp""
+ *       }
+ *     ],
+ * 	""environment"": [
+ * 		{""name"": ""VARNAME"", ""value"": ""VARVAL""}
+ * 	],
+ * 	""mountPoints"": [
+ * 		{
+ *           ""sourceVolume"": ""tmp"",
+ *           ""containerPath"": ""/tmp"",
+ *           ""readOnly"": false
+ *         }
+ * 	],
+ *     ""ulimits"": [
+ *       {
+ *         ""hardLimit"": 1024,
+ *         ""name"": ""nofile"",
+ *         ""softLimit"": 1024
+ *       }
+ *     ]
+ * }
+ * 
+ * ",
+ *             Type = "container",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/batch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := batch.NewJobDefinition(ctx, "test", &batch.JobDefinitionArgs{
+ * 			ContainerProperties: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "	\"command\": [\"ls\", \"-la\"],\n", "	\"image\": \"busybox\",\n", "	\"memory\": 1024,\n", "	\"vcpus\": 1,\n", "	\"volumes\": [\n", "      {\n", "        \"host\": {\n", "          \"sourcePath\": \"/tmp\"\n", "        },\n", "        \"name\": \"tmp\"\n", "      }\n", "    ],\n", "	\"environment\": [\n", "		{\"name\": \"VARNAME\", \"value\": \"VARVAL\"}\n", "	],\n", "	\"mountPoints\": [\n", "		{\n", "          \"sourceVolume\": \"tmp\",\n", "          \"containerPath\": \"/tmp\",\n", "          \"readOnly\": false\n", "        }\n", "	],\n", "    \"ulimits\": [\n", "      {\n", "        \"hardLimit\": 1024,\n", "        \"name\": \"nofile\",\n", "        \"softLimit\": 1024\n", "      }\n", "    ]\n", "}\n", "\n")),
+ * 			Type: pulumi.String("container"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Fargate Platform Capability
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const assumeRolePolicy = aws.iam.getPolicyDocument({
+ *     statements: [{
+ *         actions: ["sts:AssumeRole"],
+ *         principals: [{
+ *             type: "Service",
+ *             identifiers: ["ecs-tasks.amazonaws.com"],
+ *         }],
+ *     }],
+ * });
+ * const ecsTaskExecutionRole = new aws.iam.Role("ecsTaskExecutionRole", {assumeRolePolicy: assumeRolePolicy.then(assumeRolePolicy => assumeRolePolicy.json)});
+ * const ecsTaskExecutionRolePolicy = new aws.iam.RolePolicyAttachment("ecsTaskExecutionRolePolicy", {
+ *     role: ecsTaskExecutionRole.name,
+ *     policyArn: "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy",
+ * });
+ * const test = new aws.batch.JobDefinition("test", {
+ *     type: "container",
+ *     platformCapabilities: ["FARGATE"],
+ *     containerProperties: pulumi.interpolate`{
+ *   "command": ["echo", "test"],
+ *   "image": "busybox",
+ *   "fargatePlatformConfiguration": {
+ *     "platformVersion": "LATEST"
+ *   },
+ *   "resourceRequirements": [
+ *     {"type": "VCPU", "value": "0.25"},
+ *     {"type": "MEMORY", "value": "512"}
+ *   ],
+ *   "executionRoleArn": "${ecsTaskExecutionRole.arn}"
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * assume_role_policy = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+ *     actions=["sts:AssumeRole"],
+ *     principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+ *         type="Service",
+ *         identifiers=["ecs-tasks.amazonaws.com"],
+ *     )],
+ * )])
+ * ecs_task_execution_role = aws.iam.Role("ecsTaskExecutionRole", assume_role_policy=assume_role_policy.json)
+ * ecs_task_execution_role_policy = aws.iam.RolePolicyAttachment("ecsTaskExecutionRolePolicy",
+ *     role=ecs_task_execution_role.name,
+ *     policy_arn="arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy")
+ * test = aws.batch.JobDefinition("test",
+ *     type="container",
+ *     platform_capabilities=["FARGATE"],
+ *     container_properties=ecs_task_execution_role.arn.apply(lambda arn: f"""{{
+ *   "command": ["echo", "test"],
+ *   "image": "busybox",
+ *   "fargatePlatformConfiguration": {{
+ *     "platformVersion": "LATEST"
+ *   }},
+ *   "resourceRequirements": [
+ *     {{"type": "VCPU", "value": "0.25"}},
+ *     {{"type": "MEMORY", "value": "512"}}
+ *   ],
+ *   "executionRoleArn": "{arn}"
+ * }}
+ * """))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var assumeRolePolicy = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+ *         {
+ *             Statements = 
+ *             {
+ *                 new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+ *                 {
+ *                     Actions = 
+ *                     {
+ *                         "sts:AssumeRole",
+ *                     },
+ *                     Principals = 
+ *                     {
+ *                         new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+ *                         {
+ *                             Type = "Service",
+ *                             Identifiers = 
+ *                             {
+ *                                 "ecs-tasks.amazonaws.com",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         }));
+ *         var ecsTaskExecutionRole = new Aws.Iam.Role("ecsTaskExecutionRole", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = assumeRolePolicy.Apply(assumeRolePolicy => assumeRolePolicy.Json),
+ *         });
+ *         var ecsTaskExecutionRolePolicy = new Aws.Iam.RolePolicyAttachment("ecsTaskExecutionRolePolicy", new Aws.Iam.RolePolicyAttachmentArgs
+ *         {
+ *             Role = ecsTaskExecutionRole.Name,
+ *             PolicyArn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy",
+ *         });
+ *         var test = new Aws.Batch.JobDefinition("test", new Aws.Batch.JobDefinitionArgs
+ *         {
+ *             Type = "container",
+ *             PlatformCapabilities = 
+ *             {
+ *                 "FARGATE",
+ *             },
+ *             ContainerProperties = ecsTaskExecutionRole.Arn.Apply(arn => @$"{{
+ *   ""command"": [""echo"", ""test""],
+ *   ""image"": ""busybox"",
+ *   ""fargatePlatformConfiguration"": {{
+ *     ""platformVersion"": ""LATEST""
+ *   }},
+ *   ""resourceRequirements"": [
+ *     {{""type"": ""VCPU"", ""value"": ""0.25""}},
+ *     {{""type"": ""MEMORY"", ""value"": ""512""}}
+ *   ],
+ *   ""executionRoleArn"": ""{arn}""
+ * }}
+ * "),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/batch"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		assumeRolePolicy, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+ * 			Statements: []iam.GetPolicyDocumentStatement{
+ * 				iam.GetPolicyDocumentStatement{
+ * 					Actions: []string{
+ * 						"sts:AssumeRole",
+ * 					},
+ * 					Principals: []iam.GetPolicyDocumentStatementPrincipal{
+ * 						iam.GetPolicyDocumentStatementPrincipal{
+ * 							Type: "Service",
+ * 							Identifiers: []string{
+ * 								"ecs-tasks.amazonaws.com",
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ecsTaskExecutionRole, err := iam.NewRole(ctx, "ecsTaskExecutionRole", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.String(assumeRolePolicy.Json),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicyAttachment(ctx, "ecsTaskExecutionRolePolicy", &iam.RolePolicyAttachmentArgs{
+ * 			Role:      ecsTaskExecutionRole.Name,
+ * 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = batch.NewJobDefinition(ctx, "test", &batch.JobDefinitionArgs{
+ * 			Type: pulumi.String("container"),
+ * 			PlatformCapabilities: pulumi.StringArray{
+ * 				pulumi.String("FARGATE"),
+ * 			},
+ * 			ContainerProperties: ecsTaskExecutionRole.Arn.ApplyT(func(arn string) (string, error) {
+ * 				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"command\": [\"echo\", \"test\"],\n", "  \"image\": \"busybox\",\n", "  \"fargatePlatformConfiguration\": {\n", "    \"platformVersion\": \"LATEST\"\n", "  },\n", "  \"resourceRequirements\": [\n", "    {\"type\": \"VCPU\", \"value\": \"0.25\"},\n", "    {\"type\": \"MEMORY\", \"value\": \"512\"}\n", "  ],\n", "  \"executionRoleArn\": \"", arn, "\"\n", "}\n"), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,6 +388,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:batch/jobDefinition:JobDefinition test arn:aws:batch:us-east-1:123456789012:job-definition/sample
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:batch/jobDefinition:JobDefinition")
 public class JobDefinition extends io.pulumi.resources.CustomResource {

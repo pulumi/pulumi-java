@@ -16,7 +16,67 @@ import javax.annotation.Nullable;
 /**
  * Creates and manages an AWS XRay Group.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.xray.Group("example", {
+ *     filterExpression: "responsetime > 5",
+ *     groupName: "example",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.xray.Group("example",
+ *     filter_expression="responsetime > 5",
+ *     group_name="example")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Xray.Group("example", new Aws.Xray.GroupArgs
+ *         {
+ *             FilterExpression = "responsetime > 5",
+ *             GroupName = "example",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/xray"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := xray.NewGroup(ctx, "example", &xray.GroupArgs{
+ * 			FilterExpression: pulumi.String("responsetime > 5"),
+ * 			GroupName:        pulumi.String("example"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +86,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:xray/group:Group example arn:aws:xray:us-west-2:1234567890:group/example-group/TNGX7SW5U6QY36T4ZMOUA3HVLBYCZTWDIOOXY3CJAXTHSS3YCWUA
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:xray/group:Group")
 public class Group extends io.pulumi.resources.CustomResource {

@@ -18,7 +18,568 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.cloudwatch.EventConnection("test", {
+ *     authParameters: {
+ *         apiKey: {
+ *             key: "x-signature",
+ *             value: "1234",
+ *         },
+ *     },
+ *     authorizationType: "API_KEY",
+ *     description: "A connection description",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.cloudwatch.EventConnection("test",
+ *     auth_parameters=aws.cloudwatch.EventConnectionAuthParametersArgs(
+ *         api_key=aws.cloudwatch.EventConnectionAuthParametersApiKeyArgs(
+ *             key="x-signature",
+ *             value="1234",
+ *         ),
+ *     ),
+ *     authorization_type="API_KEY",
+ *     description="A connection description")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.CloudWatch.EventConnection("test", new Aws.CloudWatch.EventConnectionArgs
+ *         {
+ *             AuthParameters = new Aws.CloudWatch.Inputs.EventConnectionAuthParametersArgs
+ *             {
+ *                 ApiKey = new Aws.CloudWatch.Inputs.EventConnectionAuthParametersApiKeyArgs
+ *                 {
+ *                     Key = "x-signature",
+ *                     Value = "1234",
+ *                 },
+ *             },
+ *             AuthorizationType = "API_KEY",
+ *             Description = "A connection description",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudwatch.NewEventConnection(ctx, "test", &cloudwatch.EventConnectionArgs{
+ * 			AuthParameters: &cloudwatch.EventConnectionAuthParametersArgs{
+ * 				ApiKey: &cloudwatch.EventConnectionAuthParametersApiKeyArgs{
+ * 					Key:   pulumi.String("x-signature"),
+ * 					Value: pulumi.String("1234"),
+ * 				},
+ * 			},
+ * 			AuthorizationType: pulumi.String("API_KEY"),
+ * 			Description:       pulumi.String("A connection description"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Basic Authorization
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.cloudwatch.EventConnection("test", {
+ *     authParameters: {
+ *         basic: {
+ *             password: "Pass1234!",
+ *             username: "user",
+ *         },
+ *     },
+ *     authorizationType: "BASIC",
+ *     description: "A connection description",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.cloudwatch.EventConnection("test",
+ *     auth_parameters=aws.cloudwatch.EventConnectionAuthParametersArgs(
+ *         basic=aws.cloudwatch.EventConnectionAuthParametersBasicArgs(
+ *             password="Pass1234!",
+ *             username="user",
+ *         ),
+ *     ),
+ *     authorization_type="BASIC",
+ *     description="A connection description")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.CloudWatch.EventConnection("test", new Aws.CloudWatch.EventConnectionArgs
+ *         {
+ *             AuthParameters = new Aws.CloudWatch.Inputs.EventConnectionAuthParametersArgs
+ *             {
+ *                 Basic = new Aws.CloudWatch.Inputs.EventConnectionAuthParametersBasicArgs
+ *                 {
+ *                     Password = "Pass1234!",
+ *                     Username = "user",
+ *                 },
+ *             },
+ *             AuthorizationType = "BASIC",
+ *             Description = "A connection description",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudwatch.NewEventConnection(ctx, "test", &cloudwatch.EventConnectionArgs{
+ * 			AuthParameters: &cloudwatch.EventConnectionAuthParametersArgs{
+ * 				Basic: &cloudwatch.EventConnectionAuthParametersBasicArgs{
+ * 					Password: pulumi.String("Pass1234!"),
+ * 					Username: pulumi.String("user"),
+ * 				},
+ * 			},
+ * 			AuthorizationType: pulumi.String("BASIC"),
+ * 			Description:       pulumi.String("A connection description"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### OAuth Authorization
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.cloudwatch.EventConnection("test", {
+ *     authParameters: {
+ *         oauth: {
+ *             authorizationEndpoint: "https://auth.url.com/endpoint",
+ *             clientParameters: {
+ *                 clientId: "1234567890",
+ *                 clientSecret: "Pass1234!",
+ *             },
+ *             httpMethod: "GET",
+ *             oauthHttpParameters: {
+ *                 bodies: [{
+ *                     isValueSecret: false,
+ *                     key: "body-parameter-key",
+ *                     value: "body-parameter-value",
+ *                 }],
+ *                 headers: [{
+ *                     isValueSecret: false,
+ *                     key: "header-parameter-key",
+ *                     value: "header-parameter-value",
+ *                 }],
+ *                 queryStrings: [{
+ *                     isValueSecret: false,
+ *                     key: "query-string-parameter-key",
+ *                     value: "query-string-parameter-value",
+ *                 }],
+ *             },
+ *         },
+ *     },
+ *     authorizationType: "OAUTH_CLIENT_CREDENTIALS",
+ *     description: "A connection description",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.cloudwatch.EventConnection("test",
+ *     auth_parameters=aws.cloudwatch.EventConnectionAuthParametersArgs(
+ *         oauth=aws.cloudwatch.EventConnectionAuthParametersOauthArgs(
+ *             authorization_endpoint="https://auth.url.com/endpoint",
+ *             client_parameters=aws.cloudwatch.EventConnectionAuthParametersOauthClientParametersArgs(
+ *                 client_id="1234567890",
+ *                 client_secret="Pass1234!",
+ *             ),
+ *             http_method="GET",
+ *             oauth_http_parameters=aws.cloudwatch.EventConnectionAuthParametersOauthOauthHttpParametersArgs(
+ *                 body=[{
+ *                     "isValueSecret": False,
+ *                     "key": "body-parameter-key",
+ *                     "value": "body-parameter-value",
+ *                 }],
+ *                 header=[{
+ *                     "isValueSecret": False,
+ *                     "key": "header-parameter-key",
+ *                     "value": "header-parameter-value",
+ *                 }],
+ *                 query_string=[{
+ *                     "isValueSecret": False,
+ *                     "key": "query-string-parameter-key",
+ *                     "value": "query-string-parameter-value",
+ *                 }],
+ *             ),
+ *         ),
+ *     ),
+ *     authorization_type="OAUTH_CLIENT_CREDENTIALS",
+ *     description="A connection description")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.CloudWatch.EventConnection("test", new Aws.CloudWatch.EventConnectionArgs
+ *         {
+ *             AuthParameters = new Aws.CloudWatch.Inputs.EventConnectionAuthParametersArgs
+ *             {
+ *                 Oauth = new Aws.CloudWatch.Inputs.EventConnectionAuthParametersOauthArgs
+ *                 {
+ *                     AuthorizationEndpoint = "https://auth.url.com/endpoint",
+ *                     ClientParameters = new Aws.CloudWatch.Inputs.EventConnectionAuthParametersOauthClientParametersArgs
+ *                     {
+ *                         ClientId = "1234567890",
+ *                         ClientSecret = "Pass1234!",
+ *                     },
+ *                     HttpMethod = "GET",
+ *                     OauthHttpParameters = new Aws.CloudWatch.Inputs.EventConnectionAuthParametersOauthOauthHttpParametersArgs
+ *                     {
+ *                         Body = 
+ *                         {
+ *                             
+ *                             {
+ *                                 { "isValueSecret", false },
+ *                                 { "key", "body-parameter-key" },
+ *                                 { "value", "body-parameter-value" },
+ *                             },
+ *                         },
+ *                         Header = 
+ *                         {
+ *                             
+ *                             {
+ *                                 { "isValueSecret", false },
+ *                                 { "key", "header-parameter-key" },
+ *                                 { "value", "header-parameter-value" },
+ *                             },
+ *                         },
+ *                         QueryString = 
+ *                         {
+ *                             
+ *                             {
+ *                                 { "isValueSecret", false },
+ *                                 { "key", "query-string-parameter-key" },
+ *                                 { "value", "query-string-parameter-value" },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             AuthorizationType = "OAUTH_CLIENT_CREDENTIALS",
+ *             Description = "A connection description",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudwatch.NewEventConnection(ctx, "test", &cloudwatch.EventConnectionArgs{
+ * 			AuthParameters: &cloudwatch.EventConnectionAuthParametersArgs{
+ * 				Oauth: &cloudwatch.EventConnectionAuthParametersOauthArgs{
+ * 					AuthorizationEndpoint: pulumi.String("https://auth.url.com/endpoint"),
+ * 					ClientParameters: &cloudwatch.EventConnectionAuthParametersOauthClientParametersArgs{
+ * 						ClientId:     pulumi.String("1234567890"),
+ * 						ClientSecret: pulumi.String("Pass1234!"),
+ * 					},
+ * 					HttpMethod: pulumi.String("GET"),
+ * 					OauthHttpParameters: &cloudwatch.EventConnectionAuthParametersOauthOauthHttpParametersArgs{
+ * 						Body: []map[string]interface{}{
+ * 							map[string]interface{}{
+ * 								"isValueSecret": false,
+ * 								"key":           "body-parameter-key",
+ * 								"value":         "body-parameter-value",
+ * 							},
+ * 						},
+ * 						Header: []map[string]interface{}{
+ * 							map[string]interface{}{
+ * 								"isValueSecret": false,
+ * 								"key":           "header-parameter-key",
+ * 								"value":         "header-parameter-value",
+ * 							},
+ * 						},
+ * 						QueryString: []map[string]interface{}{
+ * 							map[string]interface{}{
+ * 								"isValueSecret": false,
+ * 								"key":           "query-string-parameter-key",
+ * 								"value":         "query-string-parameter-value",
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			AuthorizationType: pulumi.String("OAUTH_CLIENT_CREDENTIALS"),
+ * 			Description:       pulumi.String("A connection description"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Invocation Http Parameters
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.cloudwatch.EventConnection("test", {
+ *     authParameters: {
+ *         basic: {
+ *             password: "Pass1234!",
+ *             username: "user",
+ *         },
+ *         invocationHttpParameters: {
+ *             bodies: [
+ *                 {
+ *                     isValueSecret: false,
+ *                     key: "body-parameter-key",
+ *                     value: "body-parameter-value",
+ *                 },
+ *                 {
+ *                     isValueSecret: true,
+ *                     key: "body-parameter-key2",
+ *                     value: "body-parameter-value2",
+ *                 },
+ *             ],
+ *             headers: [{
+ *                 isValueSecret: false,
+ *                 key: "header-parameter-key",
+ *                 value: "header-parameter-value",
+ *             }],
+ *             queryStrings: [{
+ *                 isValueSecret: false,
+ *                 key: "query-string-parameter-key",
+ *                 value: "query-string-parameter-value",
+ *             }],
+ *         },
+ *     },
+ *     authorizationType: "BASIC",
+ *     description: "A connection description",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.cloudwatch.EventConnection("test",
+ *     auth_parameters=aws.cloudwatch.EventConnectionAuthParametersArgs(
+ *         basic=aws.cloudwatch.EventConnectionAuthParametersBasicArgs(
+ *             password="Pass1234!",
+ *             username="user",
+ *         ),
+ *         invocation_http_parameters=aws.cloudwatch.EventConnectionAuthParametersInvocationHttpParametersArgs(
+ *             body=[
+ *                 {
+ *                     "isValueSecret": False,
+ *                     "key": "body-parameter-key",
+ *                     "value": "body-parameter-value",
+ *                 },
+ *                 {
+ *                     "isValueSecret": True,
+ *                     "key": "body-parameter-key2",
+ *                     "value": "body-parameter-value2",
+ *                 },
+ *             ],
+ *             header=[{
+ *                 "isValueSecret": False,
+ *                 "key": "header-parameter-key",
+ *                 "value": "header-parameter-value",
+ *             }],
+ *             query_string=[{
+ *                 "isValueSecret": False,
+ *                 "key": "query-string-parameter-key",
+ *                 "value": "query-string-parameter-value",
+ *             }],
+ *         ),
+ *     ),
+ *     authorization_type="BASIC",
+ *     description="A connection description")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.CloudWatch.EventConnection("test", new Aws.CloudWatch.EventConnectionArgs
+ *         {
+ *             AuthParameters = new Aws.CloudWatch.Inputs.EventConnectionAuthParametersArgs
+ *             {
+ *                 Basic = new Aws.CloudWatch.Inputs.EventConnectionAuthParametersBasicArgs
+ *                 {
+ *                     Password = "Pass1234!",
+ *                     Username = "user",
+ *                 },
+ *                 InvocationHttpParameters = new Aws.CloudWatch.Inputs.EventConnectionAuthParametersInvocationHttpParametersArgs
+ *                 {
+ *                     Body = 
+ *                     {
+ *                         
+ *                         {
+ *                             { "isValueSecret", false },
+ *                             { "key", "body-parameter-key" },
+ *                             { "value", "body-parameter-value" },
+ *                         },
+ *                         
+ *                         {
+ *                             { "isValueSecret", true },
+ *                             { "key", "body-parameter-key2" },
+ *                             { "value", "body-parameter-value2" },
+ *                         },
+ *                     },
+ *                     Header = 
+ *                     {
+ *                         
+ *                         {
+ *                             { "isValueSecret", false },
+ *                             { "key", "header-parameter-key" },
+ *                             { "value", "header-parameter-value" },
+ *                         },
+ *                     },
+ *                     QueryString = 
+ *                     {
+ *                         
+ *                         {
+ *                             { "isValueSecret", false },
+ *                             { "key", "query-string-parameter-key" },
+ *                             { "value", "query-string-parameter-value" },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             AuthorizationType = "BASIC",
+ *             Description = "A connection description",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudwatch.NewEventConnection(ctx, "test", &cloudwatch.EventConnectionArgs{
+ * 			AuthParameters: &cloudwatch.EventConnectionAuthParametersArgs{
+ * 				Basic: &cloudwatch.EventConnectionAuthParametersBasicArgs{
+ * 					Password: pulumi.String("Pass1234!"),
+ * 					Username: pulumi.String("user"),
+ * 				},
+ * 				InvocationHttpParameters: &cloudwatch.EventConnectionAuthParametersInvocationHttpParametersArgs{
+ * 					Body: []interface{}{
+ * 						map[string]interface{}{
+ * 							"isValueSecret": false,
+ * 							"key":           "body-parameter-key",
+ * 							"value":         "body-parameter-value",
+ * 						},
+ * 						map[string]interface{}{
+ * 							"isValueSecret": true,
+ * 							"key":           "body-parameter-key2",
+ * 							"value":         "body-parameter-value2",
+ * 						},
+ * 					},
+ * 					Header: []map[string]interface{}{
+ * 						map[string]interface{}{
+ * 							"isValueSecret": false,
+ * 							"key":           "header-parameter-key",
+ * 							"value":         "header-parameter-value",
+ * 						},
+ * 					},
+ * 					QueryString: []map[string]interface{}{
+ * 						map[string]interface{}{
+ * 							"isValueSecret": false,
+ * 							"key":           "query-string-parameter-key",
+ * 							"value":         "query-string-parameter-value",
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			AuthorizationType: pulumi.String("BASIC"),
+ * 			Description:       pulumi.String("A connection description"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +589,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudwatch/eventConnection:EventConnection test ngrok-connection
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudwatch/eventConnection:EventConnection")
 public class EventConnection extends io.pulumi.resources.CustomResource {

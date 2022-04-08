@@ -21,8 +21,60 @@ import javax.annotation.Nullable;
 /**
  * Provides an OpsWorks Ruby on Rails application layer resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const app = new aws.opsworks.RailsAppLayer("app", {stackId: aws_opsworks_stack.main.id});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * app = aws.opsworks.RailsAppLayer("app", stack_id=aws_opsworks_stack["main"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var app = new Aws.OpsWorks.RailsAppLayer("app", new Aws.OpsWorks.RailsAppLayerArgs
+ *         {
+ *             StackId = aws_opsworks_stack.Main.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/opsworks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := opsworks.NewRailsAppLayer(ctx, "app", &opsworks.RailsAppLayerArgs{
+ * 			StackId: pulumi.Any(aws_opsworks_stack.Main.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:opsworks/railsAppLayer:RailsAppLayer")
 public class RailsAppLayer extends io.pulumi.resources.CustomResource {

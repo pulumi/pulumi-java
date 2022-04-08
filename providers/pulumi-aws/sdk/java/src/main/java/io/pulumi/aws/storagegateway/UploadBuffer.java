@@ -17,7 +17,165 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** The Storage Gateway API provides no method to remove an upload buffer disk. Destroying this resource does not perform any Storage Gateway actions.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Cached and VTL Gateway Type
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const testLocalDisk = aws.storagegateway.getLocalDisk({
+ *     diskNode: aws_volume_attachment.test.device_name,
+ *     gatewayArn: aws_storagegateway_gateway.test.arn,
+ * });
+ * const testUploadBuffer = new aws.storagegateway.UploadBuffer("testUploadBuffer", {
+ *     diskPath: testLocalDisk.then(testLocalDisk => testLocalDisk.diskPath),
+ *     gatewayArn: aws_storagegateway_gateway.test.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_local_disk = aws.storagegateway.get_local_disk(disk_node=aws_volume_attachment["test"]["device_name"],
+ *     gateway_arn=aws_storagegateway_gateway["test"]["arn"])
+ * test_upload_buffer = aws.storagegateway.UploadBuffer("testUploadBuffer",
+ *     disk_path=test_local_disk.disk_path,
+ *     gateway_arn=aws_storagegateway_gateway["test"]["arn"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testLocalDisk = Output.Create(Aws.StorageGateway.GetLocalDisk.InvokeAsync(new Aws.StorageGateway.GetLocalDiskArgs
+ *         {
+ *             DiskNode = aws_volume_attachment.Test.Device_name,
+ *             GatewayArn = aws_storagegateway_gateway.Test.Arn,
+ *         }));
+ *         var testUploadBuffer = new Aws.StorageGateway.UploadBuffer("testUploadBuffer", new Aws.StorageGateway.UploadBufferArgs
+ *         {
+ *             DiskPath = testLocalDisk.Apply(testLocalDisk => testLocalDisk.DiskPath),
+ *             GatewayArn = aws_storagegateway_gateway.Test.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/storagegateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		opt0 := aws_volume_attachment.Test.Device_name
+ * 		testLocalDisk, err := storagegateway.GetLocalDisk(ctx, &storagegateway.GetLocalDiskArgs{
+ * 			DiskNode:   &opt0,
+ * 			GatewayArn: aws_storagegateway_gateway.Test.Arn,
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = storagegateway.NewUploadBuffer(ctx, "testUploadBuffer", &storagegateway.UploadBufferArgs{
+ * 			DiskPath:   pulumi.String(testLocalDisk.DiskPath),
+ * 			GatewayArn: pulumi.Any(aws_storagegateway_gateway.Test.Arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Stored Gateway Type
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = aws.storagegateway.getLocalDisk({
+ *     diskNode: aws_volume_attachment.test.device_name,
+ *     gatewayArn: aws_storagegateway_gateway.test.arn,
+ * });
+ * const example = new aws.storagegateway.UploadBuffer("example", {
+ *     diskId: data.aws_storagegateway_local_disk.example.id,
+ *     gatewayArn: aws_storagegateway_gateway.example.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.storagegateway.get_local_disk(disk_node=aws_volume_attachment["test"]["device_name"],
+ *     gateway_arn=aws_storagegateway_gateway["test"]["arn"])
+ * example = aws.storagegateway.UploadBuffer("example",
+ *     disk_id=data["aws_storagegateway_local_disk"]["example"]["id"],
+ *     gateway_arn=aws_storagegateway_gateway["example"]["arn"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = Output.Create(Aws.StorageGateway.GetLocalDisk.InvokeAsync(new Aws.StorageGateway.GetLocalDiskArgs
+ *         {
+ *             DiskNode = aws_volume_attachment.Test.Device_name,
+ *             GatewayArn = aws_storagegateway_gateway.Test.Arn,
+ *         }));
+ *         var example = new Aws.StorageGateway.UploadBuffer("example", new Aws.StorageGateway.UploadBufferArgs
+ *         {
+ *             DiskId = data.Aws_storagegateway_local_disk.Example.Id,
+ *             GatewayArn = aws_storagegateway_gateway.Example.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/storagegateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		opt0 := aws_volume_attachment.Test.Device_name
+ * 		_, err := storagegateway.GetLocalDisk(ctx, &storagegateway.GetLocalDiskArgs{
+ * 			DiskNode:   &opt0,
+ * 			GatewayArn: aws_storagegateway_gateway.Test.Arn,
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = storagegateway.NewUploadBuffer(ctx, "example", &storagegateway.UploadBufferArgs{
+ * 			DiskId:     pulumi.Any(data.Aws_storagegateway_local_disk.Example.Id),
+ * 			GatewayArn: pulumi.Any(aws_storagegateway_gateway.Example.Arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +185,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:storagegateway/uploadBuffer:UploadBuffer example arn:aws:storagegateway:us-east-1:123456789012:gateway/sgw-12345678:pci-0000:03:00.0-scsi-0:0:0:0
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:storagegateway/uploadBuffer:UploadBuffer")
 public class UploadBuffer extends io.pulumi.resources.CustomResource {

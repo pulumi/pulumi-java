@@ -15,7 +15,68 @@ import javax.annotation.Nullable;
 /**
  * Manages a Service Catalog Product Portfolio Association.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic Usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.servicecatalog.ProductPortfolioAssociation("example", {
+ *     portfolioId: "port-68656c6c6f",
+ *     productId: "prod-dnigbtea24ste",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.servicecatalog.ProductPortfolioAssociation("example",
+ *     portfolio_id="port-68656c6c6f",
+ *     product_id="prod-dnigbtea24ste")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ServiceCatalog.ProductPortfolioAssociation("example", new Aws.ServiceCatalog.ProductPortfolioAssociationArgs
+ *         {
+ *             PortfolioId = "port-68656c6c6f",
+ *             ProductId = "prod-dnigbtea24ste",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/servicecatalog"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicecatalog.NewProductPortfolioAssociation(ctx, "example", &servicecatalog.ProductPortfolioAssociationArgs{
+ * 			PortfolioId: pulumi.String("port-68656c6c6f"),
+ * 			ProductId:   pulumi.String("prod-dnigbtea24ste"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +86,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:servicecatalog/productPortfolioAssociation:ProductPortfolioAssociation example en:port-68656c6c6f:prod-dnigbtea24ste
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:servicecatalog/productPortfolioAssociation:ProductPortfolioAssociation")
 public class ProductPortfolioAssociation extends io.pulumi.resources.CustomResource {

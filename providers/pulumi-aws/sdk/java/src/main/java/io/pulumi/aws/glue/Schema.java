@@ -17,7 +17,79 @@ import javax.annotation.Nullable;
 /**
  * Provides a Glue Schema resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.glue.Schema("example", {
+ *     schemaName: "example",
+ *     registryArn: aws_glue_registry.test.arn,
+ *     dataFormat: "AVRO",
+ *     compatibility: "NONE",
+ *     schemaDefinition: "{\"type\": \"record\", \"name\": \"r1\", \"fields\": [ {\"name\": \"f1\", \"type\": \"int\"}, {\"name\": \"f2\", \"type\": \"string\"} ]}",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.glue.Schema("example",
+ *     schema_name="example",
+ *     registry_arn=aws_glue_registry["test"]["arn"],
+ *     data_format="AVRO",
+ *     compatibility="NONE",
+ *     schema_definition="{\"type\": \"record\", \"name\": \"r1\", \"fields\": [ {\"name\": \"f1\", \"type\": \"int\"}, {\"name\": \"f2\", \"type\": \"string\"} ]}")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Glue.Schema("example", new Aws.Glue.SchemaArgs
+ *         {
+ *             SchemaName = "example",
+ *             RegistryArn = aws_glue_registry.Test.Arn,
+ *             DataFormat = "AVRO",
+ *             Compatibility = "NONE",
+ *             SchemaDefinition = "{\"type\": \"record\", \"name\": \"r1\", \"fields\": [ {\"name\": \"f1\", \"type\": \"int\"}, {\"name\": \"f2\", \"type\": \"string\"} ]}",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glue"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := glue.NewSchema(ctx, "example", &glue.SchemaArgs{
+ * 			SchemaName:       pulumi.String("example"),
+ * 			RegistryArn:      pulumi.Any(aws_glue_registry.Test.Arn),
+ * 			DataFormat:       pulumi.String("AVRO"),
+ * 			Compatibility:    pulumi.String("NONE"),
+ * 			SchemaDefinition: pulumi.String("{\"type\": \"record\", \"name\": \"r1\", \"fields\": [ {\"name\": \"f1\", \"type\": \"int\"}, {\"name\": \"f2\", \"type\": \"string\"} ]}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +99,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:glue/schema:Schema example arn:aws:glue:us-west-2:123456789012:schema/example/example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:glue/schema:Schema")
 public class Schema extends io.pulumi.resources.CustomResource {

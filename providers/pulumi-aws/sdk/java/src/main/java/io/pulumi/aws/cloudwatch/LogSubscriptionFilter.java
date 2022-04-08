@@ -15,7 +15,79 @@ import javax.annotation.Nullable;
 /**
  * Provides a CloudWatch Logs subscription filter resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const testLambdafunctionLogfilter = new aws.cloudwatch.LogSubscriptionFilter("testLambdafunctionLogfilter", {
+ *     roleArn: aws_iam_role.iam_for_lambda.arn,
+ *     logGroup: "/aws/lambda/example_lambda_name",
+ *     filterPattern: "logtype test",
+ *     destinationArn: aws_kinesis_stream.test_logstream.arn,
+ *     distribution: "Random",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_lambdafunction_logfilter = aws.cloudwatch.LogSubscriptionFilter("testLambdafunctionLogfilter",
+ *     role_arn=aws_iam_role["iam_for_lambda"]["arn"],
+ *     log_group="/aws/lambda/example_lambda_name",
+ *     filter_pattern="logtype test",
+ *     destination_arn=aws_kinesis_stream["test_logstream"]["arn"],
+ *     distribution="Random")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testLambdafunctionLogfilter = new Aws.CloudWatch.LogSubscriptionFilter("testLambdafunctionLogfilter", new Aws.CloudWatch.LogSubscriptionFilterArgs
+ *         {
+ *             RoleArn = aws_iam_role.Iam_for_lambda.Arn,
+ *             LogGroup = "/aws/lambda/example_lambda_name",
+ *             FilterPattern = "logtype test",
+ *             DestinationArn = aws_kinesis_stream.Test_logstream.Arn,
+ *             Distribution = "Random",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudwatch.NewLogSubscriptionFilter(ctx, "testLambdafunctionLogfilter", &cloudwatch.LogSubscriptionFilterArgs{
+ * 			RoleArn:        pulumi.Any(aws_iam_role.Iam_for_lambda.Arn),
+ * 			LogGroup:       pulumi.Any("/aws/lambda/example_lambda_name"),
+ * 			FilterPattern:  pulumi.String("logtype test"),
+ * 			DestinationArn: pulumi.Any(aws_kinesis_stream.Test_logstream.Arn),
+ * 			Distribution:   pulumi.String("Random"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +97,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudwatch/logSubscriptionFilter:LogSubscriptionFilter test_lambdafunction_logfilter /aws/lambda/example_lambda_name|test_lambdafunction_logfilter
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudwatch/logSubscriptionFilter:LogSubscriptionFilter")
 public class LogSubscriptionFilter extends io.pulumi.resources.CustomResource {

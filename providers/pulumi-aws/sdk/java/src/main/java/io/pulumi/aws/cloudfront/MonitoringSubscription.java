@@ -16,7 +16,85 @@ import javax.annotation.Nullable;
 /**
  * Provides a CloudFront real-time log configuration resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.cloudfront.MonitoringSubscription("example", {
+ *     distributionId: aws_cloudfront_distribution.example.id,
+ *     monitoringSubscription: {
+ *         realtimeMetricsSubscriptionConfig: {
+ *             realtimeMetricsSubscriptionStatus: "Enabled",
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.cloudfront.MonitoringSubscription("example",
+ *     distribution_id=aws_cloudfront_distribution["example"]["id"],
+ *     monitoring_subscription=aws.cloudfront.MonitoringSubscriptionMonitoringSubscriptionArgs(
+ *         realtime_metrics_subscription_config=aws.cloudfront.MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs(
+ *             realtime_metrics_subscription_status="Enabled",
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.CloudFront.MonitoringSubscription("example", new Aws.CloudFront.MonitoringSubscriptionArgs
+ *         {
+ *             DistributionId = aws_cloudfront_distribution.Example.Id,
+ *             MonitoringSubscription = new Aws.CloudFront.Inputs.MonitoringSubscriptionMonitoringSubscriptionArgs
+ *             {
+ *                 RealtimeMetricsSubscriptionConfig = new Aws.CloudFront.Inputs.MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs
+ *                 {
+ *                     RealtimeMetricsSubscriptionStatus = "Enabled",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudfront"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudfront.NewMonitoringSubscription(ctx, "example", &cloudfront.MonitoringSubscriptionArgs{
+ * 			DistributionId: pulumi.Any(aws_cloudfront_distribution.Example.Id),
+ * 			MonitoringSubscription: &cloudfront.MonitoringSubscriptionMonitoringSubscriptionArgs{
+ * 				RealtimeMetricsSubscriptionConfig: &cloudfront.MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs{
+ * 					RealtimeMetricsSubscriptionStatus: pulumi.String("Enabled"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +104,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudfront/monitoringSubscription:MonitoringSubscription example E3QYSUHO4VYRGB
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudfront/monitoringSubscription:MonitoringSubscription")
 public class MonitoringSubscription extends io.pulumi.resources.CustomResource {

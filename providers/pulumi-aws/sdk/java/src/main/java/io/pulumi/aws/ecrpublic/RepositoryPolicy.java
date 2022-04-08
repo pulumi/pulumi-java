@@ -19,7 +19,159 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** This resource can only be used with `us-east-1` region.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleRepository = new aws.ecrpublic.Repository("exampleRepository", {repositoryName: "Example"});
+ * const exampleRepositoryPolicy = new aws.ecrpublic.RepositoryPolicy("exampleRepositoryPolicy", {
+ *     repositoryName: exampleRepository.repositoryName,
+ *     policy: `{
+ *     "Version": "2008-10-17",
+ *     "Statement": [
+ *         {
+ *             "Sid": "new policy",
+ *             "Effect": "Allow",
+ *             "Principal": "*",
+ *             "Action": [
+ *                 "ecr:GetDownloadUrlForLayer",
+ *                 "ecr:BatchGetImage",
+ *                 "ecr:BatchCheckLayerAvailability",
+ *                 "ecr:PutImage",
+ *                 "ecr:InitiateLayerUpload",
+ *                 "ecr:UploadLayerPart",
+ *                 "ecr:CompleteLayerUpload",
+ *                 "ecr:DescribeRepositories",
+ *                 "ecr:GetRepositoryPolicy",
+ *                 "ecr:ListImages",
+ *                 "ecr:DeleteRepository",
+ *                 "ecr:BatchDeleteImage",
+ *                 "ecr:SetRepositoryPolicy",
+ *                 "ecr:DeleteRepositoryPolicy"
+ *             ]
+ *         }
+ *     ]
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_repository = aws.ecrpublic.Repository("exampleRepository", repository_name="Example")
+ * example_repository_policy = aws.ecrpublic.RepositoryPolicy("exampleRepositoryPolicy",
+ *     repository_name=example_repository.repository_name,
+ *     policy="""{
+ *     "Version": "2008-10-17",
+ *     "Statement": [
+ *         {
+ *             "Sid": "new policy",
+ *             "Effect": "Allow",
+ *             "Principal": "*",
+ *             "Action": [
+ *                 "ecr:GetDownloadUrlForLayer",
+ *                 "ecr:BatchGetImage",
+ *                 "ecr:BatchCheckLayerAvailability",
+ *                 "ecr:PutImage",
+ *                 "ecr:InitiateLayerUpload",
+ *                 "ecr:UploadLayerPart",
+ *                 "ecr:CompleteLayerUpload",
+ *                 "ecr:DescribeRepositories",
+ *                 "ecr:GetRepositoryPolicy",
+ *                 "ecr:ListImages",
+ *                 "ecr:DeleteRepository",
+ *                 "ecr:BatchDeleteImage",
+ *                 "ecr:SetRepositoryPolicy",
+ *                 "ecr:DeleteRepositoryPolicy"
+ *             ]
+ *         }
+ *     ]
+ * }
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleRepository = new Aws.EcrPublic.Repository("exampleRepository", new Aws.EcrPublic.RepositoryArgs
+ *         {
+ *             RepositoryName = "Example",
+ *         });
+ *         var exampleRepositoryPolicy = new Aws.EcrPublic.RepositoryPolicy("exampleRepositoryPolicy", new Aws.EcrPublic.RepositoryPolicyArgs
+ *         {
+ *             RepositoryName = exampleRepository.RepositoryName,
+ *             Policy = @"{
+ *     ""Version"": ""2008-10-17"",
+ *     ""Statement"": [
+ *         {
+ *             ""Sid"": ""new policy"",
+ *             ""Effect"": ""Allow"",
+ *             ""Principal"": ""*"",
+ *             ""Action"": [
+ *                 ""ecr:GetDownloadUrlForLayer"",
+ *                 ""ecr:BatchGetImage"",
+ *                 ""ecr:BatchCheckLayerAvailability"",
+ *                 ""ecr:PutImage"",
+ *                 ""ecr:InitiateLayerUpload"",
+ *                 ""ecr:UploadLayerPart"",
+ *                 ""ecr:CompleteLayerUpload"",
+ *                 ""ecr:DescribeRepositories"",
+ *                 ""ecr:GetRepositoryPolicy"",
+ *                 ""ecr:ListImages"",
+ *                 ""ecr:DeleteRepository"",
+ *                 ""ecr:BatchDeleteImage"",
+ *                 ""ecr:SetRepositoryPolicy"",
+ *                 ""ecr:DeleteRepositoryPolicy""
+ *             ]
+ *         }
+ *     ]
+ * }
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecrpublic"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleRepository, err := ecrpublic.NewRepository(ctx, "exampleRepository", &ecrpublic.RepositoryArgs{
+ * 			RepositoryName: pulumi.String("Example"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ecrpublic.NewRepositoryPolicy(ctx, "exampleRepositoryPolicy", &ecrpublic.RepositoryPolicyArgs{
+ * 			RepositoryName: exampleRepository.RepositoryName,
+ * 			Policy:         pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2008-10-17\",\n", "    \"Statement\": [\n", "        {\n", "            \"Sid\": \"new policy\",\n", "            \"Effect\": \"Allow\",\n", "            \"Principal\": \"*\",\n", "            \"Action\": [\n", "                \"ecr:GetDownloadUrlForLayer\",\n", "                \"ecr:BatchGetImage\",\n", "                \"ecr:BatchCheckLayerAvailability\",\n", "                \"ecr:PutImage\",\n", "                \"ecr:InitiateLayerUpload\",\n", "                \"ecr:UploadLayerPart\",\n", "                \"ecr:CompleteLayerUpload\",\n", "                \"ecr:DescribeRepositories\",\n", "                \"ecr:GetRepositoryPolicy\",\n", "                \"ecr:ListImages\",\n", "                \"ecr:DeleteRepository\",\n", "                \"ecr:BatchDeleteImage\",\n", "                \"ecr:SetRepositoryPolicy\",\n", "                \"ecr:DeleteRepositoryPolicy\"\n", "            ]\n", "        }\n", "    ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +181,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ecrpublic/repositoryPolicy:RepositoryPolicy example example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ecrpublic/repositoryPolicy:RepositoryPolicy")
 public class RepositoryPolicy extends io.pulumi.resources.CustomResource {

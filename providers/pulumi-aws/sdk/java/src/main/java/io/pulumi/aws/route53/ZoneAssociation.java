@@ -19,7 +19,140 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** This provider provides both this standalone Zone VPC Association resource and exclusive VPC associations defined in-line in the `aws.route53.Zone` resource via `vpc` configuration blocks. At this time, you cannot use those in-line VPC associations in conjunction with this resource and the same zone ID otherwise it will cause a perpetual difference in plan output. You can optionally use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) in the `aws.route53.Zone` resource to manage additional associations via this resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const primary = new aws.ec2.Vpc("primary", {
+ *     cidrBlock: "10.6.0.0/16",
+ *     enableDnsHostnames: true,
+ *     enableDnsSupport: true,
+ * });
+ * const secondaryVpc = new aws.ec2.Vpc("secondaryVpc", {
+ *     cidrBlock: "10.7.0.0/16",
+ *     enableDnsHostnames: true,
+ *     enableDnsSupport: true,
+ * });
+ * const example = new aws.route53.Zone("example", {vpcs: [{
+ *     vpcId: primary.id,
+ * }]});
+ * const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondaryZoneAssociation", {
+ *     zoneId: example.zoneId,
+ *     vpcId: secondaryVpc.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * primary = aws.ec2.Vpc("primary",
+ *     cidr_block="10.6.0.0/16",
+ *     enable_dns_hostnames=True,
+ *     enable_dns_support=True)
+ * secondary_vpc = aws.ec2.Vpc("secondaryVpc",
+ *     cidr_block="10.7.0.0/16",
+ *     enable_dns_hostnames=True,
+ *     enable_dns_support=True)
+ * example = aws.route53.Zone("example", vpcs=[aws.route53.ZoneVpcArgs(
+ *     vpc_id=primary.id,
+ * )])
+ * secondary_zone_association = aws.route53.ZoneAssociation("secondaryZoneAssociation",
+ *     zone_id=example.zone_id,
+ *     vpc_id=secondary_vpc.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Aws.Ec2.Vpc("primary", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.6.0.0/16",
+ *             EnableDnsHostnames = true,
+ *             EnableDnsSupport = true,
+ *         });
+ *         var secondaryVpc = new Aws.Ec2.Vpc("secondaryVpc", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.7.0.0/16",
+ *             EnableDnsHostnames = true,
+ *             EnableDnsSupport = true,
+ *         });
+ *         var example = new Aws.Route53.Zone("example", new Aws.Route53.ZoneArgs
+ *         {
+ *             Vpcs = 
+ *             {
+ *                 new Aws.Route53.Inputs.ZoneVpcArgs
+ *                 {
+ *                     VpcId = primary.Id,
+ *                 },
+ *             },
+ *         });
+ *         var secondaryZoneAssociation = new Aws.Route53.ZoneAssociation("secondaryZoneAssociation", new Aws.Route53.ZoneAssociationArgs
+ *         {
+ *             ZoneId = example.ZoneId,
+ *             VpcId = secondaryVpc.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		primary, err := ec2.NewVpc(ctx, "primary", &ec2.VpcArgs{
+ * 			CidrBlock:          pulumi.String("10.6.0.0/16"),
+ * 			EnableDnsHostnames: pulumi.Bool(true),
+ * 			EnableDnsSupport:   pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		secondaryVpc, err := ec2.NewVpc(ctx, "secondaryVpc", &ec2.VpcArgs{
+ * 			CidrBlock:          pulumi.String("10.7.0.0/16"),
+ * 			EnableDnsHostnames: pulumi.Bool(true),
+ * 			EnableDnsSupport:   pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		example, err := route53.NewZone(ctx, "example", &route53.ZoneArgs{
+ * 			Vpcs: route53.ZoneVpcArray{
+ * 				&route53.ZoneVpcArgs{
+ * 					VpcId: primary.ID(),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = route53.NewZoneAssociation(ctx, "secondaryZoneAssociation", &route53.ZoneAssociationArgs{
+ * 			ZoneId: example.ZoneId,
+ * 			VpcId:  secondaryVpc.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,6 +168,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:route53/zoneAssociation:ZoneAssociation example Z123456ABCDEFG:vpc-12345678:us-east-2
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:route53/zoneAssociation:ZoneAssociation")
 public class ZoneAssociation extends io.pulumi.resources.CustomResource {

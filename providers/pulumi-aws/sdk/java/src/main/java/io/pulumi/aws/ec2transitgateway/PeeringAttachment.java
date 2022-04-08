@@ -17,7 +17,176 @@ import javax.annotation.Nullable;
  * Manages an EC2 Transit Gateway Peering Attachment.
  * For examples of custom route table association and propagation, see the [EC2 Transit Gateway Networking Examples Guide](https://docs.aws.amazon.com/vpc/latest/tgw/TGW_Scenarios.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const local = new aws.Provider("local", {region: "us-east-1"});
+ * const peer = new aws.Provider("peer", {region: "us-west-2"});
+ * const peerRegion = aws.getRegion({});
+ * const localTransitGateway = new aws.ec2transitgateway.TransitGateway("localTransitGateway", {tags: {
+ *     Name: "Local TGW",
+ * }}, {
+ *     provider: aws.local,
+ * });
+ * const peerTransitGateway = new aws.ec2transitgateway.TransitGateway("peerTransitGateway", {tags: {
+ *     Name: "Peer TGW",
+ * }}, {
+ *     provider: aws.peer,
+ * });
+ * const example = new aws.ec2transitgateway.PeeringAttachment("example", {
+ *     peerAccountId: peerTransitGateway.ownerId,
+ *     peerRegion: peerRegion.then(peerRegion => peerRegion.name),
+ *     peerTransitGatewayId: peerTransitGateway.id,
+ *     transitGatewayId: localTransitGateway.id,
+ *     tags: {
+ *         Name: "TGW Peering Requestor",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * import pulumi_pulumi as pulumi
+ * 
+ * local = pulumi.providers.Aws("local", region="us-east-1")
+ * peer = pulumi.providers.Aws("peer", region="us-west-2")
+ * peer_region = aws.get_region()
+ * local_transit_gateway = aws.ec2transitgateway.TransitGateway("localTransitGateway", tags={
+ *     "Name": "Local TGW",
+ * },
+ * opts=pulumi.ResourceOptions(provider=aws["local"]))
+ * peer_transit_gateway = aws.ec2transitgateway.TransitGateway("peerTransitGateway", tags={
+ *     "Name": "Peer TGW",
+ * },
+ * opts=pulumi.ResourceOptions(provider=aws["peer"]))
+ * example = aws.ec2transitgateway.PeeringAttachment("example",
+ *     peer_account_id=peer_transit_gateway.owner_id,
+ *     peer_region=peer_region.name,
+ *     peer_transit_gateway_id=peer_transit_gateway.id,
+ *     transit_gateway_id=local_transit_gateway.id,
+ *     tags={
+ *         "Name": "TGW Peering Requestor",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var local = new Aws.Provider("local", new Aws.ProviderArgs
+ *         {
+ *             Region = "us-east-1",
+ *         });
+ *         var peer = new Aws.Provider("peer", new Aws.ProviderArgs
+ *         {
+ *             Region = "us-west-2",
+ *         });
+ *         var peerRegion = Output.Create(Aws.GetRegion.InvokeAsync());
+ *         var localTransitGateway = new Aws.Ec2TransitGateway.TransitGateway("localTransitGateway", new Aws.Ec2TransitGateway.TransitGatewayArgs
+ *         {
+ *             Tags = 
+ *             {
+ *                 { "Name", "Local TGW" },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Local,
+ *         });
+ *         var peerTransitGateway = new Aws.Ec2TransitGateway.TransitGateway("peerTransitGateway", new Aws.Ec2TransitGateway.TransitGatewayArgs
+ *         {
+ *             Tags = 
+ *             {
+ *                 { "Name", "Peer TGW" },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Peer,
+ *         });
+ *         var example = new Aws.Ec2TransitGateway.PeeringAttachment("example", new Aws.Ec2TransitGateway.PeeringAttachmentArgs
+ *         {
+ *             PeerAccountId = peerTransitGateway.OwnerId,
+ *             PeerRegion = peerRegion.Apply(peerRegion => peerRegion.Name),
+ *             PeerTransitGatewayId = peerTransitGateway.Id,
+ *             TransitGatewayId = localTransitGateway.Id,
+ *             Tags = 
+ *             {
+ *                 { "Name", "TGW Peering Requestor" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2transitgateway"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/providers"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := providers.Newaws(ctx, "local", &providers.awsArgs{
+ * 			Region: "us-east-1",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = providers.Newaws(ctx, "peer", &providers.awsArgs{
+ * 			Region: "us-west-2",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		peerRegion, err := aws.GetRegion(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		localTransitGateway, err := ec2transitgateway.NewTransitGateway(ctx, "localTransitGateway", &ec2transitgateway.TransitGatewayArgs{
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("Local TGW"),
+ * 			},
+ * 		}, pulumi.Provider(aws.Local))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		peerTransitGateway, err := ec2transitgateway.NewTransitGateway(ctx, "peerTransitGateway", &ec2transitgateway.TransitGatewayArgs{
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("Peer TGW"),
+ * 			},
+ * 		}, pulumi.Provider(aws.Peer))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2transitgateway.NewPeeringAttachment(ctx, "example", &ec2transitgateway.PeeringAttachmentArgs{
+ * 			PeerAccountId:        peerTransitGateway.OwnerId,
+ * 			PeerRegion:           pulumi.String(peerRegion.Name),
+ * 			PeerTransitGatewayId: peerTransitGateway.ID(),
+ * 			TransitGatewayId:     localTransitGateway.ID(),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("TGW Peering Requestor"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +196,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2transitgateway/peeringAttachment:PeeringAttachment example tgw-attach-12345678
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2transitgateway/peeringAttachment:PeeringAttachment")
 public class PeeringAttachment extends io.pulumi.resources.CustomResource {

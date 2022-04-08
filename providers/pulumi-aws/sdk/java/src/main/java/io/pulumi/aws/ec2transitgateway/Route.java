@@ -16,7 +16,135 @@ import javax.annotation.Nullable;
 /**
  * Manages an EC2 Transit Gateway Route.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Standard usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ec2transitgateway.Route("example", {
+ *     destinationCidrBlock: "0.0.0.0/0",
+ *     transitGatewayAttachmentId: aws_ec2_transit_gateway_vpc_attachment.example.id,
+ *     transitGatewayRouteTableId: aws_ec2_transit_gateway.example.association_default_route_table_id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ec2transitgateway.Route("example",
+ *     destination_cidr_block="0.0.0.0/0",
+ *     transit_gateway_attachment_id=aws_ec2_transit_gateway_vpc_attachment["example"]["id"],
+ *     transit_gateway_route_table_id=aws_ec2_transit_gateway["example"]["association_default_route_table_id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ec2TransitGateway.Route("example", new Aws.Ec2TransitGateway.RouteArgs
+ *         {
+ *             DestinationCidrBlock = "0.0.0.0/0",
+ *             TransitGatewayAttachmentId = aws_ec2_transit_gateway_vpc_attachment.Example.Id,
+ *             TransitGatewayRouteTableId = aws_ec2_transit_gateway.Example.Association_default_route_table_id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2transitgateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2transitgateway.NewRoute(ctx, "example", &ec2transitgateway.RouteArgs{
+ * 			DestinationCidrBlock:       pulumi.String("0.0.0.0/0"),
+ * 			TransitGatewayAttachmentId: pulumi.Any(aws_ec2_transit_gateway_vpc_attachment.Example.Id),
+ * 			TransitGatewayRouteTableId: pulumi.Any(aws_ec2_transit_gateway.Example.Association_default_route_table_id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Blackhole route
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ec2transitgateway.Route("example", {
+ *     destinationCidrBlock: "0.0.0.0/0",
+ *     blackhole: true,
+ *     transitGatewayRouteTableId: aws_ec2_transit_gateway.example.association_default_route_table_id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ec2transitgateway.Route("example",
+ *     destination_cidr_block="0.0.0.0/0",
+ *     blackhole=True,
+ *     transit_gateway_route_table_id=aws_ec2_transit_gateway["example"]["association_default_route_table_id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ec2TransitGateway.Route("example", new Aws.Ec2TransitGateway.RouteArgs
+ *         {
+ *             DestinationCidrBlock = "0.0.0.0/0",
+ *             Blackhole = true,
+ *             TransitGatewayRouteTableId = aws_ec2_transit_gateway.Example.Association_default_route_table_id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2transitgateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2transitgateway.NewRoute(ctx, "example", &ec2transitgateway.RouteArgs{
+ * 			DestinationCidrBlock:       pulumi.String("0.0.0.0/0"),
+ * 			Blackhole:                  pulumi.Bool(true),
+ * 			TransitGatewayRouteTableId: pulumi.Any(aws_ec2_transit_gateway.Example.Association_default_route_table_id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +154,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2transitgateway/route:Route example tgw-rtb-12345678_0.0.0.0/0
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2transitgateway/route:Route")
 public class Route extends io.pulumi.resources.CustomResource {

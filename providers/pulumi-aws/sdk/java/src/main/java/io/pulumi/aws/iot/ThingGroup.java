@@ -20,7 +20,124 @@ import javax.annotation.Nullable;
 /**
  * Manages an AWS IoT Thing Group.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const parent = new aws.iot.ThingGroup("parent", {});
+ * const example = new aws.iot.ThingGroup("example", {
+ *     parentGroupName: parent.name,
+ *     properties: {
+ *         attributePayload: {
+ *             attributes: {
+ *                 One: "11111",
+ *                 Two: "TwoTwo",
+ *             },
+ *         },
+ *         description: "This is my thing group",
+ *     },
+ *     tags: {
+ *         terraform: "true",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * parent = aws.iot.ThingGroup("parent")
+ * example = aws.iot.ThingGroup("example",
+ *     parent_group_name=parent.name,
+ *     properties=aws.iot.ThingGroupPropertiesArgs(
+ *         attribute_payload=aws.iot.ThingGroupPropertiesAttributePayloadArgs(
+ *             attributes={
+ *                 "One": "11111",
+ *                 "Two": "TwoTwo",
+ *             },
+ *         ),
+ *         description="This is my thing group",
+ *     ),
+ *     tags={
+ *         "terraform": "true",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var parent = new Aws.Iot.ThingGroup("parent", new Aws.Iot.ThingGroupArgs
+ *         {
+ *         });
+ *         var example = new Aws.Iot.ThingGroup("example", new Aws.Iot.ThingGroupArgs
+ *         {
+ *             ParentGroupName = parent.Name,
+ *             Properties = new Aws.Iot.Inputs.ThingGroupPropertiesArgs
+ *             {
+ *                 AttributePayload = new Aws.Iot.Inputs.ThingGroupPropertiesAttributePayloadArgs
+ *                 {
+ *                     Attributes = 
+ *                     {
+ *                         { "One", "11111" },
+ *                         { "Two", "TwoTwo" },
+ *                     },
+ *                 },
+ *                 Description = "This is my thing group",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "terraform", "true" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iot"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		parent, err := iot.NewThingGroup(ctx, "parent", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iot.NewThingGroup(ctx, "example", &iot.ThingGroupArgs{
+ * 			ParentGroupName: parent.Name,
+ * 			Properties: &iot.ThingGroupPropertiesArgs{
+ * 				AttributePayload: &iot.ThingGroupPropertiesAttributePayloadArgs{
+ * 					Attributes: pulumi.StringMap{
+ * 						"One": pulumi.String("11111"),
+ * 						"Two": pulumi.String("TwoTwo"),
+ * 					},
+ * 				},
+ * 				Description: pulumi.String("This is my thing group"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"terraform": pulumi.String("true"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +147,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:iot/thingGroup:ThingGroup example example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:iot/thingGroup:ThingGroup")
 public class ThingGroup extends io.pulumi.resources.CustomResource {

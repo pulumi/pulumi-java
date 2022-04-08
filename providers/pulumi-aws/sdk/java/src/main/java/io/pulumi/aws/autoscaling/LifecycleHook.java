@@ -28,7 +28,157 @@ import javax.annotation.Nullable;
  * `aws.autoscaling.Group`,
  * but take care to not duplicate those hooks with this resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const foobarGroup = new aws.autoscaling.Group("foobarGroup", {
+ *     availabilityZones: ["us-west-2a"],
+ *     healthCheckType: "EC2",
+ *     terminationPolicies: ["OldestInstance"],
+ *     tags: [{
+ *         key: "Foo",
+ *         value: "foo-bar",
+ *         propagateAtLaunch: true,
+ *     }],
+ * });
+ * const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobarLifecycleHook", {
+ *     autoscalingGroupName: foobarGroup.name,
+ *     defaultResult: "CONTINUE",
+ *     heartbeatTimeout: 2000,
+ *     lifecycleTransition: "autoscaling:EC2_INSTANCE_LAUNCHING",
+ *     notificationMetadata: `{
+ *   "foo": "bar"
+ * }
+ * `,
+ *     notificationTargetArn: "arn:aws:sqs:us-east-1:444455556666:queue1*",
+ *     roleArn: "arn:aws:iam::123456789012:role/S3Access",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * foobar_group = aws.autoscaling.Group("foobarGroup",
+ *     availability_zones=["us-west-2a"],
+ *     health_check_type="EC2",
+ *     termination_policies=["OldestInstance"],
+ *     tags=[aws.autoscaling.GroupTagArgs(
+ *         key="Foo",
+ *         value="foo-bar",
+ *         propagate_at_launch=True,
+ *     )])
+ * foobar_lifecycle_hook = aws.autoscaling.LifecycleHook("foobarLifecycleHook",
+ *     autoscaling_group_name=foobar_group.name,
+ *     default_result="CONTINUE",
+ *     heartbeat_timeout=2000,
+ *     lifecycle_transition="autoscaling:EC2_INSTANCE_LAUNCHING",
+ *     notification_metadata="""{
+ *   "foo": "bar"
+ * }
+ * """,
+ *     notification_target_arn="arn:aws:sqs:us-east-1:444455556666:queue1*",
+ *     role_arn="arn:aws:iam::123456789012:role/S3Access")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var foobarGroup = new Aws.AutoScaling.Group("foobarGroup", new Aws.AutoScaling.GroupArgs
+ *         {
+ *             AvailabilityZones = 
+ *             {
+ *                 "us-west-2a",
+ *             },
+ *             HealthCheckType = "EC2",
+ *             TerminationPolicies = 
+ *             {
+ *                 "OldestInstance",
+ *             },
+ *             Tags = 
+ *             {
+ *                 new Aws.AutoScaling.Inputs.GroupTagArgs
+ *                 {
+ *                     Key = "Foo",
+ *                     Value = "foo-bar",
+ *                     PropagateAtLaunch = true,
+ *                 },
+ *             },
+ *         });
+ *         var foobarLifecycleHook = new Aws.AutoScaling.LifecycleHook("foobarLifecycleHook", new Aws.AutoScaling.LifecycleHookArgs
+ *         {
+ *             AutoscalingGroupName = foobarGroup.Name,
+ *             DefaultResult = "CONTINUE",
+ *             HeartbeatTimeout = 2000,
+ *             LifecycleTransition = "autoscaling:EC2_INSTANCE_LAUNCHING",
+ *             NotificationMetadata = @"{
+ *   ""foo"": ""bar""
+ * }
+ * ",
+ *             NotificationTargetArn = "arn:aws:sqs:us-east-1:444455556666:queue1*",
+ *             RoleArn = "arn:aws:iam::123456789012:role/S3Access",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/autoscaling"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		foobarGroup, err := autoscaling.NewGroup(ctx, "foobarGroup", &autoscaling.GroupArgs{
+ * 			AvailabilityZones: pulumi.StringArray{
+ * 				pulumi.String("us-west-2a"),
+ * 			},
+ * 			HealthCheckType: pulumi.String("EC2"),
+ * 			TerminationPolicies: pulumi.StringArray{
+ * 				pulumi.String("OldestInstance"),
+ * 			},
+ * 			Tags: autoscaling.GroupTagArray{
+ * 				&autoscaling.GroupTagArgs{
+ * 					Key:               pulumi.String("Foo"),
+ * 					Value:             pulumi.String("foo-bar"),
+ * 					PropagateAtLaunch: pulumi.Bool(true),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = autoscaling.NewLifecycleHook(ctx, "foobarLifecycleHook", &autoscaling.LifecycleHookArgs{
+ * 			AutoscalingGroupName:  foobarGroup.Name,
+ * 			DefaultResult:         pulumi.String("CONTINUE"),
+ * 			HeartbeatTimeout:      pulumi.Int(2000),
+ * 			LifecycleTransition:   pulumi.String("autoscaling:EC2_INSTANCE_LAUNCHING"),
+ * 			NotificationMetadata:  pulumi.String(fmt.Sprintf("%v%v%v", "{\n", "  \"foo\": \"bar\"\n", "}\n")),
+ * 			NotificationTargetArn: pulumi.String("arn:aws:sqs:us-east-1:444455556666:queue1*"),
+ * 			RoleArn:               pulumi.String("arn:aws:iam::123456789012:role/S3Access"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,6 +188,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:autoscaling/lifecycleHook:LifecycleHook test-lifecycle-hook asg-name/lifecycle-hook-name
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:autoscaling/lifecycleHook:LifecycleHook")
 public class LifecycleHook extends io.pulumi.resources.CustomResource {

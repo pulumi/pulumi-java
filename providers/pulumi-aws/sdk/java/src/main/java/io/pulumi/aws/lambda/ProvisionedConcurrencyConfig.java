@@ -16,7 +16,135 @@ import javax.annotation.Nullable;
 /**
  * Manages a Lambda Provisioned Concurrency Configuration.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Alias Name
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.lambda.ProvisionedConcurrencyConfig("example", {
+ *     functionName: aws_lambda_alias.example.function_name,
+ *     provisionedConcurrentExecutions: 1,
+ *     qualifier: aws_lambda_alias.example.name,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.lambda_.ProvisionedConcurrencyConfig("example",
+ *     function_name=aws_lambda_alias["example"]["function_name"],
+ *     provisioned_concurrent_executions=1,
+ *     qualifier=aws_lambda_alias["example"]["name"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Lambda.ProvisionedConcurrencyConfig("example", new Aws.Lambda.ProvisionedConcurrencyConfigArgs
+ *         {
+ *             FunctionName = aws_lambda_alias.Example.Function_name,
+ *             ProvisionedConcurrentExecutions = 1,
+ *             Qualifier = aws_lambda_alias.Example.Name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := lambda.NewProvisionedConcurrencyConfig(ctx, "example", &lambda.ProvisionedConcurrencyConfigArgs{
+ * 			FunctionName:                    pulumi.Any(aws_lambda_alias.Example.Function_name),
+ * 			ProvisionedConcurrentExecutions: pulumi.Int(1),
+ * 			Qualifier:                       pulumi.Any(aws_lambda_alias.Example.Name),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Function Version
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.lambda.ProvisionedConcurrencyConfig("example", {
+ *     functionName: aws_lambda_function.example.function_name,
+ *     provisionedConcurrentExecutions: 1,
+ *     qualifier: aws_lambda_function.example.version,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.lambda_.ProvisionedConcurrencyConfig("example",
+ *     function_name=aws_lambda_function["example"]["function_name"],
+ *     provisioned_concurrent_executions=1,
+ *     qualifier=aws_lambda_function["example"]["version"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Lambda.ProvisionedConcurrencyConfig("example", new Aws.Lambda.ProvisionedConcurrencyConfigArgs
+ *         {
+ *             FunctionName = aws_lambda_function.Example.Function_name,
+ *             ProvisionedConcurrentExecutions = 1,
+ *             Qualifier = aws_lambda_function.Example.Version,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := lambda.NewProvisionedConcurrencyConfig(ctx, "example", &lambda.ProvisionedConcurrencyConfigArgs{
+ * 			FunctionName:                    pulumi.Any(aws_lambda_function.Example.Function_name),
+ * 			ProvisionedConcurrentExecutions: pulumi.Int(1),
+ * 			Qualifier:                       pulumi.Any(aws_lambda_function.Example.Version),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +154,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:lambda/provisionedConcurrencyConfig:ProvisionedConcurrencyConfig example my_function:production
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:lambda/provisionedConcurrencyConfig:ProvisionedConcurrencyConfig")
 public class ProvisionedConcurrencyConfig extends io.pulumi.resources.CustomResource {

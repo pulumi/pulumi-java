@@ -18,7 +18,236 @@ import javax.annotation.Nullable;
 /**
  * Provides an [S3 Intelligent-Tiering](https://docs.aws.amazon.com/AmazonS3/latest/userguide/intelligent-tiering.html) configuration resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Add intelligent tiering configuration for entire S3 bucket
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.s3.Bucket("example", {});
+ * const example_entire_bucket = new aws.s3.BucketIntelligentTieringConfiguration("example-entire-bucket", {
+ *     bucket: example.bucket,
+ *     tierings: [
+ *         {
+ *             accessTier: "DEEP_ARCHIVE_ACCESS",
+ *             days: 180,
+ *         },
+ *         {
+ *             accessTier: "ARCHIVE_ACCESS",
+ *             days: 125,
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.s3.Bucket("example")
+ * example_entire_bucket = aws.s3.BucketIntelligentTieringConfiguration("example-entire-bucket",
+ *     bucket=example.bucket,
+ *     tierings=[
+ *         aws.s3.BucketIntelligentTieringConfigurationTieringArgs(
+ *             access_tier="DEEP_ARCHIVE_ACCESS",
+ *             days=180,
+ *         ),
+ *         aws.s3.BucketIntelligentTieringConfigurationTieringArgs(
+ *             access_tier="ARCHIVE_ACCESS",
+ *             days=125,
+ *         ),
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.S3.Bucket("example", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var example_entire_bucket = new Aws.S3.BucketIntelligentTieringConfiguration("example-entire-bucket", new Aws.S3.BucketIntelligentTieringConfigurationArgs
+ *         {
+ *             Bucket = example.BucketName,
+ *             Tierings = 
+ *             {
+ *                 new Aws.S3.Inputs.BucketIntelligentTieringConfigurationTieringArgs
+ *                 {
+ *                     AccessTier = "DEEP_ARCHIVE_ACCESS",
+ *                     Days = 180,
+ *                 },
+ *                 new Aws.S3.Inputs.BucketIntelligentTieringConfigurationTieringArgs
+ *                 {
+ *                     AccessTier = "ARCHIVE_ACCESS",
+ *                     Days = 125,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		example, err := s3.NewBucket(ctx, "example", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewBucketIntelligentTieringConfiguration(ctx, "example-entire-bucket", &s3.BucketIntelligentTieringConfigurationArgs{
+ * 			Bucket: example.Bucket,
+ * 			Tierings: s3.BucketIntelligentTieringConfigurationTieringArray{
+ * 				&s3.BucketIntelligentTieringConfigurationTieringArgs{
+ * 					AccessTier: pulumi.String("DEEP_ARCHIVE_ACCESS"),
+ * 					Days:       pulumi.Int(180),
+ * 				},
+ * 				&s3.BucketIntelligentTieringConfigurationTieringArgs{
+ * 					AccessTier: pulumi.String("ARCHIVE_ACCESS"),
+ * 					Days:       pulumi.Int(125),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Add intelligent tiering configuration with S3 bucket object filter
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.s3.Bucket("example", {});
+ * const example_filtered = new aws.s3.BucketIntelligentTieringConfiguration("example-filtered", {
+ *     bucket: example.bucket,
+ *     status: "Disabled",
+ *     filter: {
+ *         prefix: "documents/",
+ *         tags: {
+ *             priority: "high",
+ *             "class": "blue",
+ *         },
+ *     },
+ *     tierings: [{
+ *         accessTier: "ARCHIVE_ACCESS",
+ *         days: 125,
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.s3.Bucket("example")
+ * example_filtered = aws.s3.BucketIntelligentTieringConfiguration("example-filtered",
+ *     bucket=example.bucket,
+ *     status="Disabled",
+ *     filter=aws.s3.BucketIntelligentTieringConfigurationFilterArgs(
+ *         prefix="documents/",
+ *         tags={
+ *             "priority": "high",
+ *             "class": "blue",
+ *         },
+ *     ),
+ *     tierings=[aws.s3.BucketIntelligentTieringConfigurationTieringArgs(
+ *         access_tier="ARCHIVE_ACCESS",
+ *         days=125,
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.S3.Bucket("example", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var example_filtered = new Aws.S3.BucketIntelligentTieringConfiguration("example-filtered", new Aws.S3.BucketIntelligentTieringConfigurationArgs
+ *         {
+ *             Bucket = example.BucketName,
+ *             Status = "Disabled",
+ *             Filter = new Aws.S3.Inputs.BucketIntelligentTieringConfigurationFilterArgs
+ *             {
+ *                 Prefix = "documents/",
+ *                 Tags = 
+ *                 {
+ *                     { "priority", "high" },
+ *                     { "class", "blue" },
+ *                 },
+ *             },
+ *             Tierings = 
+ *             {
+ *                 new Aws.S3.Inputs.BucketIntelligentTieringConfigurationTieringArgs
+ *                 {
+ *                     AccessTier = "ARCHIVE_ACCESS",
+ *                     Days = 125,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		example, err := s3.NewBucket(ctx, "example", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewBucketIntelligentTieringConfiguration(ctx, "example-filtered", &s3.BucketIntelligentTieringConfigurationArgs{
+ * 			Bucket: example.Bucket,
+ * 			Status: pulumi.String("Disabled"),
+ * 			Filter: &s3.BucketIntelligentTieringConfigurationFilterArgs{
+ * 				Prefix: pulumi.String("documents/"),
+ * 				Tags: pulumi.StringMap{
+ * 					"priority": pulumi.String("high"),
+ * 					"class":    pulumi.String("blue"),
+ * 				},
+ * 			},
+ * 			Tierings: s3.BucketIntelligentTieringConfigurationTieringArray{
+ * 				&s3.BucketIntelligentTieringConfigurationTieringArgs{
+ * 					AccessTier: pulumi.String("ARCHIVE_ACCESS"),
+ * 					Days:       pulumi.Int(125),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +257,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:s3/bucketIntelligentTieringConfiguration:BucketIntelligentTieringConfiguration my-bucket-entire-bucket my-bucket:EntireBucket
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:s3/bucketIntelligentTieringConfiguration:BucketIntelligentTieringConfiguration")
 public class BucketIntelligentTieringConfiguration extends io.pulumi.resources.CustomResource {

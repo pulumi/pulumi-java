@@ -16,7 +16,91 @@ import javax.annotation.Nullable;
 /**
  * Provides a Security Hub member resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleAccount = new aws.securityhub.Account("exampleAccount", {});
+ * const exampleMember = new aws.securityhub.Member("exampleMember", {
+ *     accountId: "123456789012",
+ *     email: "example@example.com",
+ *     invite: true,
+ * }, {
+ *     dependsOn: [exampleAccount],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_account = aws.securityhub.Account("exampleAccount")
+ * example_member = aws.securityhub.Member("exampleMember",
+ *     account_id="123456789012",
+ *     email="example@example.com",
+ *     invite=True,
+ *     opts=pulumi.ResourceOptions(depends_on=[example_account]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleAccount = new Aws.SecurityHub.Account("exampleAccount", new Aws.SecurityHub.AccountArgs
+ *         {
+ *         });
+ *         var exampleMember = new Aws.SecurityHub.Member("exampleMember", new Aws.SecurityHub.MemberArgs
+ *         {
+ *             AccountId = "123456789012",
+ *             Email = "example@example.com",
+ *             Invite = true,
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 exampleAccount,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/securityhub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleAccount, err := securityhub.NewAccount(ctx, "exampleAccount", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = securityhub.NewMember(ctx, "exampleMember", &securityhub.MemberArgs{
+ * 			AccountId: pulumi.String("123456789012"),
+ * 			Email:     pulumi.String("example@example.com"),
+ * 			Invite:    pulumi.Bool(true),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			exampleAccount,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +110,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:securityhub/member:Member example 123456789012
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:securityhub/member:Member")
 public class Member extends io.pulumi.resources.CustomResource {

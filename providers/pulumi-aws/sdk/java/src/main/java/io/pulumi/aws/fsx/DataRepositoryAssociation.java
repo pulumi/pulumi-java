@@ -21,7 +21,189 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** Data Repository Associations are only compatible with AWS FSx for Lustre File Systems and `PERSISTENT_2` deployment type.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleBucket = new aws.s3.Bucket("exampleBucket", {acl: "private"});
+ * const exampleLustreFileSystem = new aws.fsx.LustreFileSystem("exampleLustreFileSystem", {
+ *     storageCapacity: 1200,
+ *     subnetIds: [aws_subnet.example.id],
+ *     deploymentType: "PERSISTENT_2",
+ *     perUnitStorageThroughput: 125,
+ * });
+ * const exampleDataRepositoryAssociation = new aws.fsx.DataRepositoryAssociation("exampleDataRepositoryAssociation", {
+ *     fileSystemId: exampleLustreFileSystem.id,
+ *     dataRepositoryPath: pulumi.interpolate`s3://${exampleBucket.id}`,
+ *     fileSystemPath: "/my-bucket",
+ *     s3: {
+ *         autoExportPolicy: {
+ *             events: [
+ *                 "NEW",
+ *                 "CHANGED",
+ *                 "DELETED",
+ *             ],
+ *         },
+ *         autoImportPolicy: {
+ *             events: [
+ *                 "NEW",
+ *                 "CHANGED",
+ *                 "DELETED",
+ *             ],
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_bucket = aws.s3.Bucket("exampleBucket", acl="private")
+ * example_lustre_file_system = aws.fsx.LustreFileSystem("exampleLustreFileSystem",
+ *     storage_capacity=1200,
+ *     subnet_ids=[aws_subnet["example"]["id"]],
+ *     deployment_type="PERSISTENT_2",
+ *     per_unit_storage_throughput=125)
+ * example_data_repository_association = aws.fsx.DataRepositoryAssociation("exampleDataRepositoryAssociation",
+ *     file_system_id=example_lustre_file_system.id,
+ *     data_repository_path=example_bucket.id.apply(lambda id: f"s3://{id}"),
+ *     file_system_path="/my-bucket",
+ *     s3=aws.fsx.DataRepositoryAssociationS3Args(
+ *         auto_export_policy=aws.fsx.DataRepositoryAssociationS3AutoExportPolicyArgs(
+ *             events=[
+ *                 "NEW",
+ *                 "CHANGED",
+ *                 "DELETED",
+ *             ],
+ *         ),
+ *         auto_import_policy=aws.fsx.DataRepositoryAssociationS3AutoImportPolicyArgs(
+ *             events=[
+ *                 "NEW",
+ *                 "CHANGED",
+ *                 "DELETED",
+ *             ],
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleBucket = new Aws.S3.Bucket("exampleBucket", new Aws.S3.BucketArgs
+ *         {
+ *             Acl = "private",
+ *         });
+ *         var exampleLustreFileSystem = new Aws.Fsx.LustreFileSystem("exampleLustreFileSystem", new Aws.Fsx.LustreFileSystemArgs
+ *         {
+ *             StorageCapacity = 1200,
+ *             SubnetIds = 
+ *             {
+ *                 aws_subnet.Example.Id,
+ *             },
+ *             DeploymentType = "PERSISTENT_2",
+ *             PerUnitStorageThroughput = 125,
+ *         });
+ *         var exampleDataRepositoryAssociation = new Aws.Fsx.DataRepositoryAssociation("exampleDataRepositoryAssociation", new Aws.Fsx.DataRepositoryAssociationArgs
+ *         {
+ *             FileSystemId = exampleLustreFileSystem.Id,
+ *             DataRepositoryPath = exampleBucket.Id.Apply(id => $"s3://{id}"),
+ *             FileSystemPath = "/my-bucket",
+ *             S3 = new Aws.Fsx.Inputs.DataRepositoryAssociationS3Args
+ *             {
+ *                 AutoExportPolicy = new Aws.Fsx.Inputs.DataRepositoryAssociationS3AutoExportPolicyArgs
+ *                 {
+ *                     Events = 
+ *                     {
+ *                         "NEW",
+ *                         "CHANGED",
+ *                         "DELETED",
+ *                     },
+ *                 },
+ *                 AutoImportPolicy = new Aws.Fsx.Inputs.DataRepositoryAssociationS3AutoImportPolicyArgs
+ *                 {
+ *                     Events = 
+ *                     {
+ *                         "NEW",
+ *                         "CHANGED",
+ *                         "DELETED",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/fsx"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleBucket, err := s3.NewBucket(ctx, "exampleBucket", &s3.BucketArgs{
+ * 			Acl: pulumi.String("private"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleLustreFileSystem, err := fsx.NewLustreFileSystem(ctx, "exampleLustreFileSystem", &fsx.LustreFileSystemArgs{
+ * 			StorageCapacity: pulumi.Int(1200),
+ * 			SubnetIds: pulumi.String{
+ * 				aws_subnet.Example.Id,
+ * 			},
+ * 			DeploymentType:           pulumi.String("PERSISTENT_2"),
+ * 			PerUnitStorageThroughput: pulumi.Int(125),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = fsx.NewDataRepositoryAssociation(ctx, "exampleDataRepositoryAssociation", &fsx.DataRepositoryAssociationArgs{
+ * 			FileSystemId: exampleLustreFileSystem.ID(),
+ * 			DataRepositoryPath: exampleBucket.ID().ApplyT(func(id string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "s3://", id), nil
+ * 			}).(pulumi.StringOutput),
+ * 			FileSystemPath: pulumi.String("/my-bucket"),
+ * 			S3: &fsx.DataRepositoryAssociationS3Args{
+ * 				AutoExportPolicy: &fsx.DataRepositoryAssociationS3AutoExportPolicyArgs{
+ * 					Events: pulumi.StringArray{
+ * 						pulumi.String("NEW"),
+ * 						pulumi.String("CHANGED"),
+ * 						pulumi.String("DELETED"),
+ * 					},
+ * 				},
+ * 				AutoImportPolicy: &fsx.DataRepositoryAssociationS3AutoImportPolicyArgs{
+ * 					Events: pulumi.StringArray{
+ * 						pulumi.String("NEW"),
+ * 						pulumi.String("CHANGED"),
+ * 						pulumi.String("DELETED"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,6 +213,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:fsx/dataRepositoryAssociation:DataRepositoryAssociation example dra-0b1cfaeca11088b10
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:fsx/dataRepositoryAssociation:DataRepositoryAssociation")
 public class DataRepositoryAssociation extends io.pulumi.resources.CustomResource {

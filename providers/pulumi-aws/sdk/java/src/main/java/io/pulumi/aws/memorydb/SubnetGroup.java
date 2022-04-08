@@ -19,7 +19,101 @@ import javax.annotation.Nullable;
  * 
  * More information about subnet groups can be found in the [MemoryDB User Guide](https://docs.aws.amazon.com/memorydb/latest/devguide/subnetgroups.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleVpc = new aws.ec2.Vpc("exampleVpc", {cidrBlock: "10.0.0.0/16"});
+ * const exampleSubnet = new aws.ec2.Subnet("exampleSubnet", {
+ *     vpcId: exampleVpc.id,
+ *     cidrBlock: "10.0.0.0/24",
+ *     availabilityZone: "us-west-2a",
+ * });
+ * const exampleSubnetGroup = new aws.memorydb.SubnetGroup("exampleSubnetGroup", {subnetIds: [exampleSubnet.id]});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_vpc = aws.ec2.Vpc("exampleVpc", cidr_block="10.0.0.0/16")
+ * example_subnet = aws.ec2.Subnet("exampleSubnet",
+ *     vpc_id=example_vpc.id,
+ *     cidr_block="10.0.0.0/24",
+ *     availability_zone="us-west-2a")
+ * example_subnet_group = aws.memorydb.SubnetGroup("exampleSubnetGroup", subnet_ids=[example_subnet.id])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleVpc = new Aws.Ec2.Vpc("exampleVpc", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.0.0.0/16",
+ *         });
+ *         var exampleSubnet = new Aws.Ec2.Subnet("exampleSubnet", new Aws.Ec2.SubnetArgs
+ *         {
+ *             VpcId = exampleVpc.Id,
+ *             CidrBlock = "10.0.0.0/24",
+ *             AvailabilityZone = "us-west-2a",
+ *         });
+ *         var exampleSubnetGroup = new Aws.MemoryDb.SubnetGroup("exampleSubnetGroup", new Aws.MemoryDb.SubnetGroupArgs
+ *         {
+ *             SubnetIds = 
+ *             {
+ *                 exampleSubnet.Id,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/memorydb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleVpc, err := ec2.NewVpc(ctx, "exampleVpc", &ec2.VpcArgs{
+ * 			CidrBlock: pulumi.String("10.0.0.0/16"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleSubnet, err := ec2.NewSubnet(ctx, "exampleSubnet", &ec2.SubnetArgs{
+ * 			VpcId:            exampleVpc.ID(),
+ * 			CidrBlock:        pulumi.String("10.0.0.0/24"),
+ * 			AvailabilityZone: pulumi.String("us-west-2a"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = memorydb.NewSubnetGroup(ctx, "exampleSubnetGroup", &memorydb.SubnetGroupArgs{
+ * 			SubnetIds: pulumi.StringArray{
+ * 				exampleSubnet.ID(),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +123,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:memorydb/subnetGroup:SubnetGroup example my-subnet-group
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:memorydb/subnetGroup:SubnetGroup")
 public class SubnetGroup extends io.pulumi.resources.CustomResource {

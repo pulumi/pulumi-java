@@ -17,7 +17,71 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage an S3 Outposts Endpoint.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.s3outposts.Endpoint("example", {
+ *     outpostId: data.aws_outposts_outpost.example.id,
+ *     securityGroupId: aws_security_group.example.id,
+ *     subnetId: aws_subnet.example.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.s3outposts.Endpoint("example",
+ *     outpost_id=data["aws_outposts_outpost"]["example"]["id"],
+ *     security_group_id=aws_security_group["example"]["id"],
+ *     subnet_id=aws_subnet["example"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.S3Outposts.Endpoint("example", new Aws.S3Outposts.EndpointArgs
+ *         {
+ *             OutpostId = data.Aws_outposts_outpost.Example.Id,
+ *             SecurityGroupId = aws_security_group.Example.Id,
+ *             SubnetId = aws_subnet.Example.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3outposts"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := s3outposts.NewEndpoint(ctx, "example", &s3outposts.EndpointArgs{
+ * 			OutpostId:       pulumi.Any(data.Aws_outposts_outpost.Example.Id),
+ * 			SecurityGroupId: pulumi.Any(aws_security_group.Example.Id),
+ * 			SubnetId:        pulumi.Any(aws_subnet.Example.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +91,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:s3outposts/endpoint:Endpoint example arn:aws:s3-outposts:us-east-1:123456789012:outpost/op-12345678/endpoint/0123456789abcdef,sg-12345678,subnet-12345678
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:s3outposts/endpoint:Endpoint")
 public class Endpoint extends io.pulumi.resources.CustomResource {

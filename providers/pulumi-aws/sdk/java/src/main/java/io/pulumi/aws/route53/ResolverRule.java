@@ -18,7 +18,162 @@ import javax.annotation.Nullable;
 /**
  * Provides a Route53 Resolver rule.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### System rule
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const sys = new aws.route53.ResolverRule("sys", {
+ *     domainName: "subdomain.example.com",
+ *     ruleType: "SYSTEM",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * sys = aws.route53.ResolverRule("sys",
+ *     domain_name="subdomain.example.com",
+ *     rule_type="SYSTEM")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sys = new Aws.Route53.ResolverRule("sys", new Aws.Route53.ResolverRuleArgs
+ *         {
+ *             DomainName = "subdomain.example.com",
+ *             RuleType = "SYSTEM",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := route53.NewResolverRule(ctx, "sys", &route53.ResolverRuleArgs{
+ * 			DomainName: pulumi.String("subdomain.example.com"),
+ * 			RuleType:   pulumi.String("SYSTEM"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Forward rule
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const fwd = new aws.route53.ResolverRule("fwd", {
+ *     domainName: "example.com",
+ *     ruleType: "FORWARD",
+ *     resolverEndpointId: aws_route53_resolver_endpoint.foo.id,
+ *     targetIps: [{
+ *         ip: "123.45.67.89",
+ *     }],
+ *     tags: {
+ *         Environment: "Prod",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * fwd = aws.route53.ResolverRule("fwd",
+ *     domain_name="example.com",
+ *     rule_type="FORWARD",
+ *     resolver_endpoint_id=aws_route53_resolver_endpoint["foo"]["id"],
+ *     target_ips=[aws.route53.ResolverRuleTargetIpArgs(
+ *         ip="123.45.67.89",
+ *     )],
+ *     tags={
+ *         "Environment": "Prod",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var fwd = new Aws.Route53.ResolverRule("fwd", new Aws.Route53.ResolverRuleArgs
+ *         {
+ *             DomainName = "example.com",
+ *             RuleType = "FORWARD",
+ *             ResolverEndpointId = aws_route53_resolver_endpoint.Foo.Id,
+ *             TargetIps = 
+ *             {
+ *                 new Aws.Route53.Inputs.ResolverRuleTargetIpArgs
+ *                 {
+ *                     Ip = "123.45.67.89",
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Environment", "Prod" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := route53.NewResolverRule(ctx, "fwd", &route53.ResolverRuleArgs{
+ * 			DomainName:         pulumi.String("example.com"),
+ * 			RuleType:           pulumi.String("FORWARD"),
+ * 			ResolverEndpointId: pulumi.Any(aws_route53_resolver_endpoint.Foo.Id),
+ * 			TargetIps: route53.ResolverRuleTargetIpArray{
+ * 				&route53.ResolverRuleTargetIpArgs{
+ * 					Ip: pulumi.String("123.45.67.89"),
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Environment": pulumi.String("Prod"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +183,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:route53/resolverRule:ResolverRule sys rslvr-rr-0123456789abcdef0
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:route53/resolverRule:ResolverRule")
 public class ResolverRule extends io.pulumi.resources.CustomResource {

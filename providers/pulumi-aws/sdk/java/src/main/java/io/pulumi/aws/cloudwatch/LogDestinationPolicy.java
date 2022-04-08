@@ -16,7 +16,159 @@ import javax.annotation.Nullable;
 /**
  * Provides a CloudWatch Logs destination policy resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const testDestination = new aws.cloudwatch.LogDestination("testDestination", {
+ *     roleArn: aws_iam_role.iam_for_cloudwatch.arn,
+ *     targetArn: aws_kinesis_stream.kinesis_for_cloudwatch.arn,
+ * });
+ * const testDestinationPolicyPolicyDocument = aws.iam.getPolicyDocumentOutput({
+ *     statements: [{
+ *         effect: "Allow",
+ *         principals: [{
+ *             type: "AWS",
+ *             identifiers: ["123456789012"],
+ *         }],
+ *         actions: ["logs:PutSubscriptionFilter"],
+ *         resources: [testDestination.arn],
+ *     }],
+ * });
+ * const testDestinationPolicyLogDestinationPolicy = new aws.cloudwatch.LogDestinationPolicy("testDestinationPolicyLogDestinationPolicy", {
+ *     destinationName: testDestination.name,
+ *     accessPolicy: testDestinationPolicyPolicyDocument.apply(testDestinationPolicyPolicyDocument => testDestinationPolicyPolicyDocument.json),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_destination = aws.cloudwatch.LogDestination("testDestination",
+ *     role_arn=aws_iam_role["iam_for_cloudwatch"]["arn"],
+ *     target_arn=aws_kinesis_stream["kinesis_for_cloudwatch"]["arn"])
+ * test_destination_policy_policy_document = aws.iam.get_policy_document_output(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+ *     effect="Allow",
+ *     principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+ *         type="AWS",
+ *         identifiers=["123456789012"],
+ *     )],
+ *     actions=["logs:PutSubscriptionFilter"],
+ *     resources=[test_destination.arn],
+ * )])
+ * test_destination_policy_log_destination_policy = aws.cloudwatch.LogDestinationPolicy("testDestinationPolicyLogDestinationPolicy",
+ *     destination_name=test_destination.name,
+ *     access_policy=test_destination_policy_policy_document.json)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testDestination = new Aws.CloudWatch.LogDestination("testDestination", new Aws.CloudWatch.LogDestinationArgs
+ *         {
+ *             RoleArn = aws_iam_role.Iam_for_cloudwatch.Arn,
+ *             TargetArn = aws_kinesis_stream.Kinesis_for_cloudwatch.Arn,
+ *         });
+ *         var testDestinationPolicyPolicyDocument = Aws.Iam.GetPolicyDocument.Invoke(new Aws.Iam.GetPolicyDocumentInvokeArgs
+ *         {
+ *             Statements = 
+ *             {
+ *                 new Aws.Iam.Inputs.GetPolicyDocumentStatementInputArgs
+ *                 {
+ *                     Effect = "Allow",
+ *                     Principals = 
+ *                     {
+ *                         new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalInputArgs
+ *                         {
+ *                             Type = "AWS",
+ *                             Identifiers = 
+ *                             {
+ *                                 "123456789012",
+ *                             },
+ *                         },
+ *                     },
+ *                     Actions = 
+ *                     {
+ *                         "logs:PutSubscriptionFilter",
+ *                     },
+ *                     Resources = 
+ *                     {
+ *                         testDestination.Arn,
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var testDestinationPolicyLogDestinationPolicy = new Aws.CloudWatch.LogDestinationPolicy("testDestinationPolicyLogDestinationPolicy", new Aws.CloudWatch.LogDestinationPolicyArgs
+ *         {
+ *             DestinationName = testDestination.Name,
+ *             AccessPolicy = testDestinationPolicyPolicyDocument.Apply(testDestinationPolicyPolicyDocument => testDestinationPolicyPolicyDocument.Json),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		testDestination, err := cloudwatch.NewLogDestination(ctx, "testDestination", &cloudwatch.LogDestinationArgs{
+ * 			RoleArn:   pulumi.Any(aws_iam_role.Iam_for_cloudwatch.Arn),
+ * 			TargetArn: pulumi.Any(aws_kinesis_stream.Kinesis_for_cloudwatch.Arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		testDestinationPolicyPolicyDocument := iam.GetPolicyDocumentOutput(ctx, iam.GetPolicyDocumentOutputArgs{
+ * 			Statements: iam.GetPolicyDocumentStatementArray{
+ * 				&iam.GetPolicyDocumentStatementArgs{
+ * 					Effect: pulumi.String("Allow"),
+ * 					Principals: iam.GetPolicyDocumentStatementPrincipalArray{
+ * 						&iam.GetPolicyDocumentStatementPrincipalArgs{
+ * 							Type: pulumi.String("AWS"),
+ * 							Identifiers: pulumi.StringArray{
+ * 								pulumi.String("123456789012"),
+ * 							},
+ * 						},
+ * 					},
+ * 					Actions: pulumi.StringArray{
+ * 						pulumi.String("logs:PutSubscriptionFilter"),
+ * 					},
+ * 					Resources: pulumi.StringArray{
+ * 						testDestination.Arn,
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		_, err = cloudwatch.NewLogDestinationPolicy(ctx, "testDestinationPolicyLogDestinationPolicy", &cloudwatch.LogDestinationPolicyArgs{
+ * 			DestinationName: testDestination.Name,
+ * 			AccessPolicy: testDestinationPolicyPolicyDocument.ApplyT(func(testDestinationPolicyPolicyDocument iam.GetPolicyDocumentResult) (string, error) {
+ * 				return testDestinationPolicyPolicyDocument.Json, nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +178,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudwatch/logDestinationPolicy:LogDestinationPolicy test_destination_policy test_destination
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudwatch/logDestinationPolicy:LogDestinationPolicy")
 public class LogDestinationPolicy extends io.pulumi.resources.CustomResource {

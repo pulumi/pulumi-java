@@ -17,7 +17,129 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS Backup Region Settings resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.backup.RegionSettings("test", {
+ *     resourceTypeManagementPreference: {
+ *         DynamoDB: true,
+ *         EFS: true,
+ *     },
+ *     resourceTypeOptInPreference: {
+ *         Aurora: true,
+ *         DocumentDB: true,
+ *         DynamoDB: true,
+ *         EBS: true,
+ *         EC2: true,
+ *         EFS: true,
+ *         FSx: true,
+ *         Neptune: true,
+ *         RDS: true,
+ *         "Storage Gateway": true,
+ *         VirtualMachine: true,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.backup.RegionSettings("test",
+ *     resource_type_management_preference={
+ *         "DynamoDB": True,
+ *         "EFS": True,
+ *     },
+ *     resource_type_opt_in_preference={
+ *         "Aurora": True,
+ *         "DocumentDB": True,
+ *         "DynamoDB": True,
+ *         "EBS": True,
+ *         "EC2": True,
+ *         "EFS": True,
+ *         "FSx": True,
+ *         "Neptune": True,
+ *         "RDS": True,
+ *         "Storage Gateway": True,
+ *         "VirtualMachine": True,
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Backup.RegionSettings("test", new Aws.Backup.RegionSettingsArgs
+ *         {
+ *             ResourceTypeManagementPreference = 
+ *             {
+ *                 { "DynamoDB", true },
+ *                 { "EFS", true },
+ *             },
+ *             ResourceTypeOptInPreference = 
+ *             {
+ *                 { "Aurora", true },
+ *                 { "DocumentDB", true },
+ *                 { "DynamoDB", true },
+ *                 { "EBS", true },
+ *                 { "EC2", true },
+ *                 { "EFS", true },
+ *                 { "FSx", true },
+ *                 { "Neptune", true },
+ *                 { "RDS", true },
+ *                 { "Storage Gateway", true },
+ *                 { "VirtualMachine", true },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/backup"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := backup.NewRegionSettings(ctx, "test", &backup.RegionSettingsArgs{
+ * 			ResourceTypeManagementPreference: pulumi.BoolMap{
+ * 				"DynamoDB": pulumi.Bool(true),
+ * 				"EFS":      pulumi.Bool(true),
+ * 			},
+ * 			ResourceTypeOptInPreference: pulumi.BoolMap{
+ * 				"Aurora":          pulumi.Bool(true),
+ * 				"DocumentDB":      pulumi.Bool(true),
+ * 				"DynamoDB":        pulumi.Bool(true),
+ * 				"EBS":             pulumi.Bool(true),
+ * 				"EC2":             pulumi.Bool(true),
+ * 				"EFS":             pulumi.Bool(true),
+ * 				"FSx":             pulumi.Bool(true),
+ * 				"Neptune":         pulumi.Bool(true),
+ * 				"RDS":             pulumi.Bool(true),
+ * 				"Storage Gateway": pulumi.Bool(true),
+ * 				"VirtualMachine":  pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +149,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:backup/regionSettings:RegionSettings test us-west-2
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:backup/regionSettings:RegionSettings")
 public class RegionSettings extends io.pulumi.resources.CustomResource {

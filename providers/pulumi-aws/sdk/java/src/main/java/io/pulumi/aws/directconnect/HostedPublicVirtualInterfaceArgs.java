@@ -17,7 +17,7 @@ public final class HostedPublicVirtualInterfaceArgs extends io.pulumi.resources.
     public static final HostedPublicVirtualInterfaceArgs Empty = new HostedPublicVirtualInterfaceArgs();
 
     /**
-     * The address family for the BGP peer. ` ipv4  ` or `ipv6`.
+     * The address family for the BGP peer. `ipv4 ` or `ipv6`.
      * 
      */
     @Import(name="addressFamily", required=true)

@@ -243,7 +243,6 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
      * 
      * @Deprecated
      * Use the parameter "instance_interruption_behavior" instead.
-     * 
      */
     @Deprecated /* Use the parameter ""instance_interruption_behavior"" instead. */
     @Import(name="instanceInterruptionBehaviour")

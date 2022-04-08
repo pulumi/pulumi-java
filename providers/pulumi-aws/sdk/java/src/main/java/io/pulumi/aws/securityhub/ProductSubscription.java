@@ -15,7 +15,90 @@ import javax.annotation.Nullable;
 /**
  * Subscribes to a Security Hub product.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleAccount = new aws.securityhub.Account("exampleAccount", {});
+ * const current = aws.getRegion({});
+ * const exampleProductSubscription = new aws.securityhub.ProductSubscription("exampleProductSubscription", {productArn: current.then(current => `arn:aws:securityhub:${current.name}:733251395267:product/alertlogic/althreatmanagement`)}, {
+ *     dependsOn: [exampleAccount],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_account = aws.securityhub.Account("exampleAccount")
+ * current = aws.get_region()
+ * example_product_subscription = aws.securityhub.ProductSubscription("exampleProductSubscription", product_arn=f"arn:aws:securityhub:{current.name}:733251395267:product/alertlogic/althreatmanagement",
+ * opts=pulumi.ResourceOptions(depends_on=[example_account]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleAccount = new Aws.SecurityHub.Account("exampleAccount", new Aws.SecurityHub.AccountArgs
+ *         {
+ *         });
+ *         var current = Output.Create(Aws.GetRegion.InvokeAsync());
+ *         var exampleProductSubscription = new Aws.SecurityHub.ProductSubscription("exampleProductSubscription", new Aws.SecurityHub.ProductSubscriptionArgs
+ *         {
+ *             ProductArn = current.Apply(current => $"arn:aws:securityhub:{current.Name}:733251395267:product/alertlogic/althreatmanagement"),
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 exampleAccount,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/securityhub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleAccount, err := securityhub.NewAccount(ctx, "exampleAccount", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		current, err := aws.GetRegion(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = securityhub.NewProductSubscription(ctx, "exampleProductSubscription", &securityhub.ProductSubscriptionArgs{
+ * 			ProductArn: pulumi.String(fmt.Sprintf("%v%v%v", "arn:aws:securityhub:", current.Name, ":733251395267:product/alertlogic/althreatmanagement")),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			exampleAccount,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +108,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:securityhub/productSubscription:ProductSubscription example arn:aws:securityhub:eu-west-1:733251395267:product/alertlogic/althreatmanagement,arn:aws:securityhub:eu-west-1:123456789012:product-subscription/alertlogic/althreatmanagement
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:securityhub/productSubscription:ProductSubscription")
 public class ProductSubscription extends io.pulumi.resources.CustomResource {

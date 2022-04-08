@@ -16,7 +16,90 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage an [AWS Organizations policy](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.organizations.Policy("example", {
+ *     content: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": {
+ *     "Effect": "Allow",
+ *     "Action": "*",
+ *     "Resource": "*"
+ *   }
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.organizations.Policy("example", content="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": {
+ *     "Effect": "Allow",
+ *     "Action": "*",
+ *     "Resource": "*"
+ *   }
+ * }
+ * 
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Organizations.Policy("example", new Aws.Organizations.PolicyArgs
+ *         {
+ *             Content = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": {
+ *     ""Effect"": ""Allow"",
+ *     ""Action"": ""*"",
+ *     ""Resource"": ""*""
+ *   }
+ * }
+ * 
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := organizations.NewPolicy(ctx, "example", &organizations.PolicyArgs{
+ * 			Content: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": {\n", "    \"Effect\": \"Allow\",\n", "    \"Action\": \"*\",\n", "    \"Resource\": \"*\"\n", "  }\n", "}\n", "\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +109,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:organizations/policy:Policy example p-12345678
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:organizations/policy:Policy")
 public class Policy extends io.pulumi.resources.CustomResource {

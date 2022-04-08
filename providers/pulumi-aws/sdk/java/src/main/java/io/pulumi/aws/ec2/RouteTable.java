@@ -37,7 +37,190 @@ import javax.annotation.Nullable;
  * `propagating_vgws`. Omit this argument when defining route propagation using
  * the separate resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ec2.RouteTable("example", {
+ *     vpcId: aws_vpc.example.id,
+ *     routes: [
+ *         {
+ *             cidrBlock: "10.0.1.0/24",
+ *             gatewayId: aws_internet_gateway.example.id,
+ *         },
+ *         {
+ *             ipv6CidrBlock: "::/0",
+ *             egressOnlyGatewayId: aws_egress_only_internet_gateway.example.id,
+ *         },
+ *     ],
+ *     tags: {
+ *         Name: "example",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ec2.RouteTable("example",
+ *     vpc_id=aws_vpc["example"]["id"],
+ *     routes=[
+ *         aws.ec2.RouteTableRouteArgs(
+ *             cidr_block="10.0.1.0/24",
+ *             gateway_id=aws_internet_gateway["example"]["id"],
+ *         ),
+ *         aws.ec2.RouteTableRouteArgs(
+ *             ipv6_cidr_block="::/0",
+ *             egress_only_gateway_id=aws_egress_only_internet_gateway["example"]["id"],
+ *         ),
+ *     ],
+ *     tags={
+ *         "Name": "example",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ec2.RouteTable("example", new Aws.Ec2.RouteTableArgs
+ *         {
+ *             VpcId = aws_vpc.Example.Id,
+ *             Routes = 
+ *             {
+ *                 new Aws.Ec2.Inputs.RouteTableRouteArgs
+ *                 {
+ *                     CidrBlock = "10.0.1.0/24",
+ *                     GatewayId = aws_internet_gateway.Example.Id,
+ *                 },
+ *                 new Aws.Ec2.Inputs.RouteTableRouteArgs
+ *                 {
+ *                     Ipv6CidrBlock = "::/0",
+ *                     EgressOnlyGatewayId = aws_egress_only_internet_gateway.Example.Id,
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Name", "example" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewRouteTable(ctx, "example", &ec2.RouteTableArgs{
+ * 			VpcId: pulumi.Any(aws_vpc.Example.Id),
+ * 			Routes: ec2.RouteTableRouteArray{
+ * 				&ec2.RouteTableRouteArgs{
+ * 					CidrBlock: pulumi.String("10.0.1.0/24"),
+ * 					GatewayId: pulumi.Any(aws_internet_gateway.Example.Id),
+ * 				},
+ * 				&ec2.RouteTableRouteArgs{
+ * 					Ipv6CidrBlock:       pulumi.String("::/0"),
+ * 					EgressOnlyGatewayId: pulumi.Any(aws_egress_only_internet_gateway.Example.Id),
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("example"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * To subsequently remove all managed routes:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ec2.RouteTable("example", {
+ *     vpcId: aws_vpc.example.id,
+ *     routes: [],
+ *     tags: {
+ *         Name: "example",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ec2.RouteTable("example",
+ *     vpc_id=aws_vpc["example"]["id"],
+ *     routes=[],
+ *     tags={
+ *         "Name": "example",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ec2.RouteTable("example", new Aws.Ec2.RouteTableArgs
+ *         {
+ *             VpcId = aws_vpc.Example.Id,
+ *             Routes = {},
+ *             Tags = 
+ *             {
+ *                 { "Name", "example" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewRouteTable(ctx, "example", &ec2.RouteTableArgs{
+ * 			VpcId:  pulumi.Any(aws_vpc.Example.Id),
+ * 			Routes: ec2.RouteTableRouteArray{},
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("example"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -47,6 +230,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/routeTable:RouteTable public_rt rtb-4e616f6d69
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/routeTable:RouteTable")
 public class RouteTable extends io.pulumi.resources.CustomResource {

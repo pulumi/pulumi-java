@@ -18,10 +18,284 @@ import javax.annotation.Nullable;
 /**
  * Provides an SNS topic resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic Example
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const userUpdates = new aws.sns.Topic("user_updates", {});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * user_updates = aws.sns.Topic("userUpdates")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var userUpdates = new Aws.Sns.Topic("userUpdates", new Aws.Sns.TopicArgs
+ *         {
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sns.NewTopic(ctx, "userUpdates", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example with Delivery Policy
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const userUpdates = new aws.sns.Topic("user_updates", {
+ *     deliveryPolicy: `{
+ *   "http": {
+ *     "defaultHealthyRetryPolicy": {
+ *       "minDelayTarget": 20,
+ *       "maxDelayTarget": 20,
+ *       "numRetries": 3,
+ *       "numMaxDelayRetries": 0,
+ *       "numNoDelayRetries": 0,
+ *       "numMinDelayRetries": 0,
+ *       "backoffFunction": "linear"
+ *     },
+ *     "disableSubscriptionOverrides": false,
+ *     "defaultThrottlePolicy": {
+ *       "maxReceivesPerSecond": 1
+ *     }
+ *   }
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * user_updates = aws.sns.Topic("userUpdates", delivery_policy="""{
+ *   "http": {
+ *     "defaultHealthyRetryPolicy": {
+ *       "minDelayTarget": 20,
+ *       "maxDelayTarget": 20,
+ *       "numRetries": 3,
+ *       "numMaxDelayRetries": 0,
+ *       "numNoDelayRetries": 0,
+ *       "numMinDelayRetries": 0,
+ *       "backoffFunction": "linear"
+ *     },
+ *     "disableSubscriptionOverrides": false,
+ *     "defaultThrottlePolicy": {
+ *       "maxReceivesPerSecond": 1
+ *     }
+ *   }
+ * }
+ * 
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var userUpdates = new Aws.Sns.Topic("userUpdates", new Aws.Sns.TopicArgs
+ *         {
+ *             DeliveryPolicy = @"{
+ *   ""http"": {
+ *     ""defaultHealthyRetryPolicy"": {
+ *       ""minDelayTarget"": 20,
+ *       ""maxDelayTarget"": 20,
+ *       ""numRetries"": 3,
+ *       ""numMaxDelayRetries"": 0,
+ *       ""numNoDelayRetries"": 0,
+ *       ""numMinDelayRetries"": 0,
+ *       ""backoffFunction"": ""linear""
+ *     },
+ *     ""disableSubscriptionOverrides"": false,
+ *     ""defaultThrottlePolicy"": {
+ *       ""maxReceivesPerSecond"": 1
+ *     }
+ *   }
+ * }
+ * 
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sns.NewTopic(ctx, "userUpdates", &sns.TopicArgs{
+ * 			DeliveryPolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"http\": {\n", "    \"defaultHealthyRetryPolicy\": {\n", "      \"minDelayTarget\": 20,\n", "      \"maxDelayTarget\": 20,\n", "      \"numRetries\": 3,\n", "      \"numMaxDelayRetries\": 0,\n", "      \"numNoDelayRetries\": 0,\n", "      \"numMinDelayRetries\": 0,\n", "      \"backoffFunction\": \"linear\"\n", "    },\n", "    \"disableSubscriptionOverrides\": false,\n", "    \"defaultThrottlePolicy\": {\n", "      \"maxReceivesPerSecond\": 1\n", "    }\n", "  }\n", "}\n", "\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example with Server-side encryption (SSE)
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const userUpdates = new aws.sns.Topic("user_updates", {
+ *     kmsMasterKeyId: "alias/aws/sns",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * user_updates = aws.sns.Topic("userUpdates", kms_master_key_id="alias/aws/sns")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var userUpdates = new Aws.Sns.Topic("userUpdates", new Aws.Sns.TopicArgs
+ *         {
+ *             KmsMasterKeyId = "alias/aws/sns",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sns.NewTopic(ctx, "userUpdates", &sns.TopicArgs{
+ * 			KmsMasterKeyId: pulumi.String("alias/aws/sns"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example with First-In-First-Out (FIFO)
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const userUpdates = new aws.sns.Topic("user_updates", {
+ *     contentBasedDeduplication: true,
+ *     fifoTopic: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * user_updates = aws.sns.Topic("userUpdates",
+ *     content_based_deduplication=True,
+ *     fifo_topic=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var userUpdates = new Aws.Sns.Topic("userUpdates", new Aws.Sns.TopicArgs
+ *         {
+ *             ContentBasedDeduplication = true,
+ *             FifoTopic = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sns.NewTopic(ctx, "userUpdates", &sns.TopicArgs{
+ * 			ContentBasedDeduplication: pulumi.Bool(true),
+ * 			FifoTopic:                 pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * ## Message Delivery Status Arguments
  * 
  * The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role_arn` arguments are used to give Amazon SNS write access to use CloudWatch Logs on your behalf. The `<endpoint>_success_feedback_sample_rate` argument is for specifying the sample rate percentage (0-100) of successfully delivered messages. After you configure the  `<endpoint>_failure_feedback_role_arn` argument, then all failed message deliveries generate CloudWatch Logs.
+ * 
  * 
  * ## Import
  * 
@@ -31,6 +305,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sns/topic:Topic user_updates arn:aws:sns:us-west-2:0123456789012:my-topic
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sns/topic:Topic")
 public class Topic extends io.pulumi.resources.CustomResource {

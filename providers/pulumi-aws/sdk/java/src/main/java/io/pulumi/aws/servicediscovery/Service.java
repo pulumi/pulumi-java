@@ -20,7 +20,270 @@ import javax.annotation.Nullable;
 /**
  * Provides a Service Discovery Service resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleVpc = new aws.ec2.Vpc("exampleVpc", {
+ *     cidrBlock: "10.0.0.0/16",
+ *     enableDnsSupport: true,
+ *     enableDnsHostnames: true,
+ * });
+ * const examplePrivateDnsNamespace = new aws.servicediscovery.PrivateDnsNamespace("examplePrivateDnsNamespace", {
+ *     description: "example",
+ *     vpc: exampleVpc.id,
+ * });
+ * const exampleService = new aws.servicediscovery.Service("exampleService", {
+ *     dnsConfig: {
+ *         namespaceId: examplePrivateDnsNamespace.id,
+ *         dnsRecords: [{
+ *             ttl: 10,
+ *             type: "A",
+ *         }],
+ *         routingPolicy: "MULTIVALUE",
+ *     },
+ *     healthCheckCustomConfig: {
+ *         failureThreshold: 1,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_vpc = aws.ec2.Vpc("exampleVpc",
+ *     cidr_block="10.0.0.0/16",
+ *     enable_dns_support=True,
+ *     enable_dns_hostnames=True)
+ * example_private_dns_namespace = aws.servicediscovery.PrivateDnsNamespace("examplePrivateDnsNamespace",
+ *     description="example",
+ *     vpc=example_vpc.id)
+ * example_service = aws.servicediscovery.Service("exampleService",
+ *     dns_config=aws.servicediscovery.ServiceDnsConfigArgs(
+ *         namespace_id=example_private_dns_namespace.id,
+ *         dns_records=[aws.servicediscovery.ServiceDnsConfigDnsRecordArgs(
+ *             ttl=10,
+ *             type="A",
+ *         )],
+ *         routing_policy="MULTIVALUE",
+ *     ),
+ *     health_check_custom_config=aws.servicediscovery.ServiceHealthCheckCustomConfigArgs(
+ *         failure_threshold=1,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleVpc = new Aws.Ec2.Vpc("exampleVpc", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.0.0.0/16",
+ *             EnableDnsSupport = true,
+ *             EnableDnsHostnames = true,
+ *         });
+ *         var examplePrivateDnsNamespace = new Aws.ServiceDiscovery.PrivateDnsNamespace("examplePrivateDnsNamespace", new Aws.ServiceDiscovery.PrivateDnsNamespaceArgs
+ *         {
+ *             Description = "example",
+ *             Vpc = exampleVpc.Id,
+ *         });
+ *         var exampleService = new Aws.ServiceDiscovery.Service("exampleService", new Aws.ServiceDiscovery.ServiceArgs
+ *         {
+ *             DnsConfig = new Aws.ServiceDiscovery.Inputs.ServiceDnsConfigArgs
+ *             {
+ *                 NamespaceId = examplePrivateDnsNamespace.Id,
+ *                 DnsRecords = 
+ *                 {
+ *                     new Aws.ServiceDiscovery.Inputs.ServiceDnsConfigDnsRecordArgs
+ *                     {
+ *                         Ttl = 10,
+ *                         Type = "A",
+ *                     },
+ *                 },
+ *                 RoutingPolicy = "MULTIVALUE",
+ *             },
+ *             HealthCheckCustomConfig = new Aws.ServiceDiscovery.Inputs.ServiceHealthCheckCustomConfigArgs
+ *             {
+ *                 FailureThreshold = 1,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/servicediscovery"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleVpc, err := ec2.NewVpc(ctx, "exampleVpc", &ec2.VpcArgs{
+ * 			CidrBlock:          pulumi.String("10.0.0.0/16"),
+ * 			EnableDnsSupport:   pulumi.Bool(true),
+ * 			EnableDnsHostnames: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		examplePrivateDnsNamespace, err := servicediscovery.NewPrivateDnsNamespace(ctx, "examplePrivateDnsNamespace", &servicediscovery.PrivateDnsNamespaceArgs{
+ * 			Description: pulumi.String("example"),
+ * 			Vpc:         exampleVpc.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = servicediscovery.NewService(ctx, "exampleService", &servicediscovery.ServiceArgs{
+ * 			DnsConfig: &servicediscovery.ServiceDnsConfigArgs{
+ * 				NamespaceId: examplePrivateDnsNamespace.ID(),
+ * 				DnsRecords: servicediscovery.ServiceDnsConfigDnsRecordArray{
+ * 					&servicediscovery.ServiceDnsConfigDnsRecordArgs{
+ * 						Ttl:  pulumi.Int(10),
+ * 						Type: pulumi.String("A"),
+ * 					},
+ * 				},
+ * 				RoutingPolicy: pulumi.String("MULTIVALUE"),
+ * 			},
+ * 			HealthCheckCustomConfig: &servicediscovery.ServiceHealthCheckCustomConfigArgs{
+ * 				FailureThreshold: pulumi.Int(1),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const examplePublicDnsNamespace = new aws.servicediscovery.PublicDnsNamespace("examplePublicDnsNamespace", {description: "example"});
+ * const exampleService = new aws.servicediscovery.Service("exampleService", {
+ *     dnsConfig: {
+ *         namespaceId: examplePublicDnsNamespace.id,
+ *         dnsRecords: [{
+ *             ttl: 10,
+ *             type: "A",
+ *         }],
+ *     },
+ *     healthCheckConfig: {
+ *         failureThreshold: 10,
+ *         resourcePath: "path",
+ *         type: "HTTP",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_public_dns_namespace = aws.servicediscovery.PublicDnsNamespace("examplePublicDnsNamespace", description="example")
+ * example_service = aws.servicediscovery.Service("exampleService",
+ *     dns_config=aws.servicediscovery.ServiceDnsConfigArgs(
+ *         namespace_id=example_public_dns_namespace.id,
+ *         dns_records=[aws.servicediscovery.ServiceDnsConfigDnsRecordArgs(
+ *             ttl=10,
+ *             type="A",
+ *         )],
+ *     ),
+ *     health_check_config=aws.servicediscovery.ServiceHealthCheckConfigArgs(
+ *         failure_threshold=10,
+ *         resource_path="path",
+ *         type="HTTP",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var examplePublicDnsNamespace = new Aws.ServiceDiscovery.PublicDnsNamespace("examplePublicDnsNamespace", new Aws.ServiceDiscovery.PublicDnsNamespaceArgs
+ *         {
+ *             Description = "example",
+ *         });
+ *         var exampleService = new Aws.ServiceDiscovery.Service("exampleService", new Aws.ServiceDiscovery.ServiceArgs
+ *         {
+ *             DnsConfig = new Aws.ServiceDiscovery.Inputs.ServiceDnsConfigArgs
+ *             {
+ *                 NamespaceId = examplePublicDnsNamespace.Id,
+ *                 DnsRecords = 
+ *                 {
+ *                     new Aws.ServiceDiscovery.Inputs.ServiceDnsConfigDnsRecordArgs
+ *                     {
+ *                         Ttl = 10,
+ *                         Type = "A",
+ *                     },
+ *                 },
+ *             },
+ *             HealthCheckConfig = new Aws.ServiceDiscovery.Inputs.ServiceHealthCheckConfigArgs
+ *             {
+ *                 FailureThreshold = 10,
+ *                 ResourcePath = "path",
+ *                 Type = "HTTP",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/servicediscovery"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		examplePublicDnsNamespace, err := servicediscovery.NewPublicDnsNamespace(ctx, "examplePublicDnsNamespace", &servicediscovery.PublicDnsNamespaceArgs{
+ * 			Description: pulumi.String("example"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = servicediscovery.NewService(ctx, "exampleService", &servicediscovery.ServiceArgs{
+ * 			DnsConfig: &servicediscovery.ServiceDnsConfigArgs{
+ * 				NamespaceId: examplePublicDnsNamespace.ID(),
+ * 				DnsRecords: servicediscovery.ServiceDnsConfigDnsRecordArray{
+ * 					&servicediscovery.ServiceDnsConfigDnsRecordArgs{
+ * 						Ttl:  pulumi.Int(10),
+ * 						Type: pulumi.String("A"),
+ * 					},
+ * 				},
+ * 			},
+ * 			HealthCheckConfig: &servicediscovery.ServiceHealthCheckConfigArgs{
+ * 				FailureThreshold: pulumi.Int(10),
+ * 				ResourcePath:     pulumi.String("path"),
+ * 				Type:             pulumi.String("HTTP"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +293,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:servicediscovery/service:Service example 0123456789
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:servicediscovery/service:Service")
 public class Service extends io.pulumi.resources.CustomResource {

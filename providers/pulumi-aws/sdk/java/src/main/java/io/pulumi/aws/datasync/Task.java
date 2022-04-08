@@ -19,7 +19,160 @@ import javax.annotation.Nullable;
 /**
  * Manages an AWS DataSync Task, which represents a configuration for synchronization. Starting an execution of these DataSync Tasks (actually synchronizing files) is performed outside of this resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### With Scheduling
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.datasync.Task("example", {
+ *     destinationLocationArn: aws_datasync_location_s3.destination.arn,
+ *     sourceLocationArn: aws_datasync_location_nfs.source.arn,
+ *     schedule: {
+ *         scheduleExpression: "cron(0 12 ? * SUN,WED *)",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.datasync.Task("example",
+ *     destination_location_arn=aws_datasync_location_s3["destination"]["arn"],
+ *     source_location_arn=aws_datasync_location_nfs["source"]["arn"],
+ *     schedule=aws.datasync.TaskScheduleArgs(
+ *         schedule_expression="cron(0 12 ? * SUN,WED *)",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.DataSync.Task("example", new Aws.DataSync.TaskArgs
+ *         {
+ *             DestinationLocationArn = aws_datasync_location_s3.Destination.Arn,
+ *             SourceLocationArn = aws_datasync_location_nfs.Source.Arn,
+ *             Schedule = new Aws.DataSync.Inputs.TaskScheduleArgs
+ *             {
+ *                 ScheduleExpression = "cron(0 12 ? * SUN,WED *)",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/datasync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datasync.NewTask(ctx, "example", &datasync.TaskArgs{
+ * 			DestinationLocationArn: pulumi.Any(aws_datasync_location_s3.Destination.Arn),
+ * 			SourceLocationArn:      pulumi.Any(aws_datasync_location_nfs.Source.Arn),
+ * 			Schedule: &datasync.TaskScheduleArgs{
+ * 				ScheduleExpression: pulumi.String("cron(0 12 ? * SUN,WED *)"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### With Filtering
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.datasync.Task("example", {
+ *     destinationLocationArn: aws_datasync_location_s3.destination.arn,
+ *     sourceLocationArn: aws_datasync_location_nfs.source.arn,
+ *     excludes: {
+ *         filterType: "SIMPLE_PATTERN",
+ *         value: "/folder1|/folder2",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.datasync.Task("example",
+ *     destination_location_arn=aws_datasync_location_s3["destination"]["arn"],
+ *     source_location_arn=aws_datasync_location_nfs["source"]["arn"],
+ *     excludes=aws.datasync.TaskExcludesArgs(
+ *         filter_type="SIMPLE_PATTERN",
+ *         value="/folder1|/folder2",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.DataSync.Task("example", new Aws.DataSync.TaskArgs
+ *         {
+ *             DestinationLocationArn = aws_datasync_location_s3.Destination.Arn,
+ *             SourceLocationArn = aws_datasync_location_nfs.Source.Arn,
+ *             Excludes = new Aws.DataSync.Inputs.TaskExcludesArgs
+ *             {
+ *                 FilterType = "SIMPLE_PATTERN",
+ *                 Value = "/folder1|/folder2",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/datasync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datasync.NewTask(ctx, "example", &datasync.TaskArgs{
+ * 			DestinationLocationArn: pulumi.Any(aws_datasync_location_s3.Destination.Arn),
+ * 			SourceLocationArn:      pulumi.Any(aws_datasync_location_nfs.Source.Arn),
+ * 			Excludes: &datasync.TaskExcludesArgs{
+ * 				FilterType: pulumi.String("SIMPLE_PATTERN"),
+ * 				Value:      pulumi.String("/folder1|/folder2"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +182,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:datasync/task:Task example arn:aws:datasync:us-east-1:123456789012:task/task-12345678901234567
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:datasync/task:Task")
 public class Task extends io.pulumi.resources.CustomResource {

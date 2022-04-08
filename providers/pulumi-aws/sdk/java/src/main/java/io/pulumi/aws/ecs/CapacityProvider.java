@@ -19,7 +19,136 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** Associating an ECS Capacity Provider to an Auto Scaling Group will automatically add the `AmazonECSManaged` tag to the Auto Scaling Group. This tag should be included in the `aws.autoscaling.Group` resource configuration to prevent the provider from removing it in subsequent executions as well as ensuring the `AmazonECSManaged` tag is propagated to all EC2 Instances in the Auto Scaling Group if `min_size` is above 0 on creation. Any EC2 Instances in the Auto Scaling Group without this tag must be manually be updated, otherwise they may cause unexpected scaling behavior and metrics.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // ... other configuration, including potentially other tags ...
+ * const testGroup = new aws.autoscaling.Group("testGroup", {tags: [{
+ *     key: "AmazonECSManaged",
+ *     value: true,
+ *     propagateAtLaunch: true,
+ * }]});
+ * const testCapacityProvider = new aws.ecs.CapacityProvider("testCapacityProvider", {autoScalingGroupProvider: {
+ *     autoScalingGroupArn: testGroup.arn,
+ *     managedTerminationProtection: "ENABLED",
+ *     managedScaling: {
+ *         maximumScalingStepSize: 1000,
+ *         minimumScalingStepSize: 1,
+ *         status: "ENABLED",
+ *         targetCapacity: 10,
+ *     },
+ * }});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # ... other configuration, including potentially other tags ...
+ * test_group = aws.autoscaling.Group("testGroup", tags=[aws.autoscaling.GroupTagArgs(
+ *     key="AmazonECSManaged",
+ *     value="true",
+ *     propagate_at_launch=True,
+ * )])
+ * test_capacity_provider = aws.ecs.CapacityProvider("testCapacityProvider", auto_scaling_group_provider=aws.ecs.CapacityProviderAutoScalingGroupProviderArgs(
+ *     auto_scaling_group_arn=test_group.arn,
+ *     managed_termination_protection="ENABLED",
+ *     managed_scaling=aws.ecs.CapacityProviderAutoScalingGroupProviderManagedScalingArgs(
+ *         maximum_scaling_step_size=1000,
+ *         minimum_scaling_step_size=1,
+ *         status="ENABLED",
+ *         target_capacity=10,
+ *     ),
+ * ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // ... other configuration, including potentially other tags ...
+ *         var testGroup = new Aws.AutoScaling.Group("testGroup", new Aws.AutoScaling.GroupArgs
+ *         {
+ *             Tags = 
+ *             {
+ *                 new Aws.AutoScaling.Inputs.GroupTagArgs
+ *                 {
+ *                     Key = "AmazonECSManaged",
+ *                     Value = "true",
+ *                     PropagateAtLaunch = true,
+ *                 },
+ *             },
+ *         });
+ *         var testCapacityProvider = new Aws.Ecs.CapacityProvider("testCapacityProvider", new Aws.Ecs.CapacityProviderArgs
+ *         {
+ *             AutoScalingGroupProvider = new Aws.Ecs.Inputs.CapacityProviderAutoScalingGroupProviderArgs
+ *             {
+ *                 AutoScalingGroupArn = testGroup.Arn,
+ *                 ManagedTerminationProtection = "ENABLED",
+ *                 ManagedScaling = new Aws.Ecs.Inputs.CapacityProviderAutoScalingGroupProviderManagedScalingArgs
+ *                 {
+ *                     MaximumScalingStepSize = 1000,
+ *                     MinimumScalingStepSize = 1,
+ *                     Status = "ENABLED",
+ *                     TargetCapacity = 10,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/autoscaling"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		testGroup, err := autoscaling.NewGroup(ctx, "testGroup", &autoscaling.GroupArgs{
+ * 			Tags: autoscaling.GroupTagArray{
+ * 				&autoscaling.GroupTagArgs{
+ * 					Key:               pulumi.String("AmazonECSManaged"),
+ * 					Value:             pulumi.String("true"),
+ * 					PropagateAtLaunch: pulumi.Bool(true),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ecs.NewCapacityProvider(ctx, "testCapacityProvider", &ecs.CapacityProviderArgs{
+ * 			AutoScalingGroupProvider: &ecs.CapacityProviderAutoScalingGroupProviderArgs{
+ * 				AutoScalingGroupArn:          testGroup.Arn,
+ * 				ManagedTerminationProtection: pulumi.String("ENABLED"),
+ * 				ManagedScaling: &ecs.CapacityProviderAutoScalingGroupProviderManagedScalingArgs{
+ * 					MaximumScalingStepSize: pulumi.Int(1000),
+ * 					MinimumScalingStepSize: pulumi.Int(1),
+ * 					Status:                 pulumi.String("ENABLED"),
+ * 					TargetCapacity:         pulumi.Int(10),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +158,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ecs/capacityProvider:CapacityProvider example example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ecs/capacityProvider:CapacityProvider")
 public class CapacityProvider extends io.pulumi.resources.CustomResource {

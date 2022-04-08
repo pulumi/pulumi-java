@@ -22,7 +22,102 @@ import javax.annotation.Nullable;
 /**
  * Resource for managing QuickSight Data Source
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const defaultDataSource = new aws.quicksight.DataSource("default", {
+ *     dataSourceId: "example-id",
+ *     parameters: {
+ *         s3: {
+ *             manifestFileLocation: {
+ *                 bucket: "my-bucket",
+ *                 key: "path/to/manifest.json",
+ *             },
+ *         },
+ *     },
+ *     type: "S3",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default = aws.quicksight.DataSource("default",
+ *     data_source_id="example-id",
+ *     parameters=aws.quicksight.DataSourceParametersArgs(
+ *         s3=aws.quicksight.DataSourceParametersS3Args(
+ *             manifest_file_location=aws.quicksight.DataSourceParametersS3ManifestFileLocationArgs(
+ *                 bucket="my-bucket",
+ *                 key="path/to/manifest.json",
+ *             ),
+ *         ),
+ *     ),
+ *     type="S3")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Aws.Quicksight.DataSource("default", new Aws.Quicksight.DataSourceArgs
+ *         {
+ *             DataSourceId = "example-id",
+ *             Parameters = new Aws.Quicksight.Inputs.DataSourceParametersArgs
+ *             {
+ *                 S3 = new Aws.Quicksight.Inputs.DataSourceParametersS3Args
+ *                 {
+ *                     ManifestFileLocation = new Aws.Quicksight.Inputs.DataSourceParametersS3ManifestFileLocationArgs
+ *                     {
+ *                         Bucket = "my-bucket",
+ *                         Key = "path/to/manifest.json",
+ *                     },
+ *                 },
+ *             },
+ *             Type = "S3",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/quicksight"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := quicksight.NewDataSource(ctx, "default", &quicksight.DataSourceArgs{
+ * 			DataSourceId: pulumi.String("example-id"),
+ * 			Parameters: &quicksight.DataSourceParametersArgs{
+ * 				S3: &quicksight.DataSourceParametersS3Args{
+ * 					ManifestFileLocation: &quicksight.DataSourceParametersS3ManifestFileLocationArgs{
+ * 						Bucket: pulumi.String("my-bucket"),
+ * 						Key:    pulumi.String("path/to/manifest.json"),
+ * 					},
+ * 				},
+ * 			},
+ * 			Type: pulumi.String("S3"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,6 +127,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:quicksight/dataSource:DataSource example 123456789123/my-data-source-id
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:quicksight/dataSource:DataSource")
 public class DataSource extends io.pulumi.resources.CustomResource {

@@ -15,8 +15,108 @@ import javax.annotation.Nullable;
 /**
  * Attaches Principal to AWS IoT Thing.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * from "fs";
+ * 
+ * const example = new aws.iot.Thing("example", {});
+ * const cert = new aws.iot.Certificate("cert", {
+ *     csr: fs.readFileSync("csr.pem"),
+ *     active: true,
+ * });
+ * const att = new aws.iot.ThingPrincipalAttachment("att", {
+ *     principal: cert.arn,
+ *     thing: example.name,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.iot.Thing("example")
+ * cert = aws.iot.Certificate("cert",
+ *     csr=(lambda path: open(path).read())("csr.pem"),
+ *     active=True)
+ * att = aws.iot.ThingPrincipalAttachment("att",
+ *     principal=cert.arn,
+ *     thing=example.name)
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Iot.Thing("example", new Aws.Iot.ThingArgs
+ *         {
+ *         });
+ *         var cert = new Aws.Iot.Certificate("cert", new Aws.Iot.CertificateArgs
+ *         {
+ *             Csr = File.ReadAllText("csr.pem"),
+ *             Active = true,
+ *         });
+ *         var att = new Aws.Iot.ThingPrincipalAttachment("att", new Aws.Iot.ThingPrincipalAttachmentArgs
+ *         {
+ *             Principal = cert.Arn,
+ *             Thing = example.Name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iot"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		example, err := iot.NewThing(ctx, "example", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		cert, err := iot.NewCertificate(ctx, "cert", &iot.CertificateArgs{
+ * 			Csr:    readFileOrPanic("csr.pem"),
+ * 			Active: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iot.NewThingPrincipalAttachment(ctx, "att", &iot.ThingPrincipalAttachmentArgs{
+ * 			Principal: cert.Arn,
+ * 			Thing:     example.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:iot/thingPrincipalAttachment:ThingPrincipalAttachment")
 public class ThingPrincipalAttachment extends io.pulumi.resources.CustomResource {

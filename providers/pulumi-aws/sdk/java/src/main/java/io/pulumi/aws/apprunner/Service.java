@@ -20,7 +20,274 @@ import javax.annotation.Nullable;
 /**
  * Manages an App Runner Service.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Service with a Code Repository Source
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.apprunner.Service("example", {
+ *     serviceName: "example",
+ *     sourceConfiguration: {
+ *         authenticationConfiguration: {
+ *             connectionArn: aws_apprunner_connection.example.arn,
+ *         },
+ *         codeRepository: {
+ *             codeConfiguration: {
+ *                 codeConfigurationValues: {
+ *                     buildCommand: "python setup.py develop",
+ *                     port: "8000",
+ *                     runtime: "PYTHON_3",
+ *                     startCommand: "python runapp.py",
+ *                 },
+ *                 configurationSource: "API",
+ *             },
+ *             repositoryUrl: "https://github.com/example/my-example-python-app",
+ *             sourceCodeVersion: {
+ *                 type: "BRANCH",
+ *                 value: "main",
+ *             },
+ *         },
+ *     },
+ *     tags: {
+ *         Name: "example-apprunner-service",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.apprunner.Service("example",
+ *     service_name="example",
+ *     source_configuration=aws.apprunner.ServiceSourceConfigurationArgs(
+ *         authentication_configuration=aws.apprunner.ServiceSourceConfigurationAuthenticationConfigurationArgs(
+ *             connection_arn=aws_apprunner_connection["example"]["arn"],
+ *         ),
+ *         code_repository=aws.apprunner.ServiceSourceConfigurationCodeRepositoryArgs(
+ *             code_configuration=aws.apprunner.ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs(
+ *                 code_configuration_values=aws.apprunner.ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs(
+ *                     build_command="python setup.py develop",
+ *                     port="8000",
+ *                     runtime="PYTHON_3",
+ *                     start_command="python runapp.py",
+ *                 ),
+ *                 configuration_source="API",
+ *             ),
+ *             repository_url="https://github.com/example/my-example-python-app",
+ *             source_code_version=aws.apprunner.ServiceSourceConfigurationCodeRepositorySourceCodeVersionArgs(
+ *                 type="BRANCH",
+ *                 value="main",
+ *             ),
+ *         ),
+ *     ),
+ *     tags={
+ *         "Name": "example-apprunner-service",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.AppRunner.Service("example", new Aws.AppRunner.ServiceArgs
+ *         {
+ *             ServiceName = "example",
+ *             SourceConfiguration = new Aws.AppRunner.Inputs.ServiceSourceConfigurationArgs
+ *             {
+ *                 AuthenticationConfiguration = new Aws.AppRunner.Inputs.ServiceSourceConfigurationAuthenticationConfigurationArgs
+ *                 {
+ *                     ConnectionArn = aws_apprunner_connection.Example.Arn,
+ *                 },
+ *                 CodeRepository = new Aws.AppRunner.Inputs.ServiceSourceConfigurationCodeRepositoryArgs
+ *                 {
+ *                     CodeConfiguration = new Aws.AppRunner.Inputs.ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs
+ *                     {
+ *                         CodeConfigurationValues = new Aws.AppRunner.Inputs.ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs
+ *                         {
+ *                             BuildCommand = "python setup.py develop",
+ *                             Port = "8000",
+ *                             Runtime = "PYTHON_3",
+ *                             StartCommand = "python runapp.py",
+ *                         },
+ *                         ConfigurationSource = "API",
+ *                     },
+ *                     RepositoryUrl = "https://github.com/example/my-example-python-app",
+ *                     SourceCodeVersion = new Aws.AppRunner.Inputs.ServiceSourceConfigurationCodeRepositorySourceCodeVersionArgs
+ *                     {
+ *                         Type = "BRANCH",
+ *                         Value = "main",
+ *                     },
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Name", "example-apprunner-service" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apprunner"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apprunner.NewService(ctx, "example", &apprunner.ServiceArgs{
+ * 			ServiceName: pulumi.String("example"),
+ * 			SourceConfiguration: &apprunner.ServiceSourceConfigurationArgs{
+ * 				AuthenticationConfiguration: &apprunner.ServiceSourceConfigurationAuthenticationConfigurationArgs{
+ * 					ConnectionArn: pulumi.Any(aws_apprunner_connection.Example.Arn),
+ * 				},
+ * 				CodeRepository: &apprunner.ServiceSourceConfigurationCodeRepositoryArgs{
+ * 					CodeConfiguration: &apprunner.ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs{
+ * 						CodeConfigurationValues: &apprunner.ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs{
+ * 							BuildCommand: pulumi.String("python setup.py develop"),
+ * 							Port:         pulumi.String("8000"),
+ * 							Runtime:      pulumi.String("PYTHON_3"),
+ * 							StartCommand: pulumi.String("python runapp.py"),
+ * 						},
+ * 						ConfigurationSource: pulumi.String("API"),
+ * 					},
+ * 					RepositoryUrl: pulumi.String("https://github.com/example/my-example-python-app"),
+ * 					SourceCodeVersion: &apprunner.ServiceSourceConfigurationCodeRepositorySourceCodeVersionArgs{
+ * 						Type:  pulumi.String("BRANCH"),
+ * 						Value: pulumi.String("main"),
+ * 					},
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("example-apprunner-service"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Service with an Image Repository Source
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.apprunner.Service("example", {
+ *     serviceName: "example",
+ *     sourceConfiguration: {
+ *         imageRepository: {
+ *             imageConfiguration: {
+ *                 port: "8000",
+ *             },
+ *             imageIdentifier: "public.ecr.aws/jg/hello:latest",
+ *             imageRepositoryType: "ECR_PUBLIC",
+ *         },
+ *     },
+ *     tags: {
+ *         Name: "example-apprunner-service",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.apprunner.Service("example",
+ *     service_name="example",
+ *     source_configuration=aws.apprunner.ServiceSourceConfigurationArgs(
+ *         image_repository=aws.apprunner.ServiceSourceConfigurationImageRepositoryArgs(
+ *             image_configuration=aws.apprunner.ServiceSourceConfigurationImageRepositoryImageConfigurationArgs(
+ *                 port="8000",
+ *             ),
+ *             image_identifier="public.ecr.aws/jg/hello:latest",
+ *             image_repository_type="ECR_PUBLIC",
+ *         ),
+ *     ),
+ *     tags={
+ *         "Name": "example-apprunner-service",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.AppRunner.Service("example", new Aws.AppRunner.ServiceArgs
+ *         {
+ *             ServiceName = "example",
+ *             SourceConfiguration = new Aws.AppRunner.Inputs.ServiceSourceConfigurationArgs
+ *             {
+ *                 ImageRepository = new Aws.AppRunner.Inputs.ServiceSourceConfigurationImageRepositoryArgs
+ *                 {
+ *                     ImageConfiguration = new Aws.AppRunner.Inputs.ServiceSourceConfigurationImageRepositoryImageConfigurationArgs
+ *                     {
+ *                         Port = "8000",
+ *                     },
+ *                     ImageIdentifier = "public.ecr.aws/jg/hello:latest",
+ *                     ImageRepositoryType = "ECR_PUBLIC",
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Name", "example-apprunner-service" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apprunner"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apprunner.NewService(ctx, "example", &apprunner.ServiceArgs{
+ * 			ServiceName: pulumi.String("example"),
+ * 			SourceConfiguration: &apprunner.ServiceSourceConfigurationArgs{
+ * 				ImageRepository: &apprunner.ServiceSourceConfigurationImageRepositoryArgs{
+ * 					ImageConfiguration: &apprunner.ServiceSourceConfigurationImageRepositoryImageConfigurationArgs{
+ * 						Port: pulumi.String("8000"),
+ * 					},
+ * 					ImageIdentifier:     pulumi.String("public.ecr.aws/jg/hello:latest"),
+ * 					ImageRepositoryType: pulumi.String("ECR_PUBLIC"),
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("example-apprunner-service"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +297,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:apprunner/service:Service example arn:aws:apprunner:us-east-1:1234567890:service/example/0a03292a89764e5882c41d8f991c82fe
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:apprunner/service:Service")
 public class Service extends io.pulumi.resources.CustomResource {

@@ -15,7 +15,67 @@ import javax.annotation.Nullable;
 /**
  * Resource for managing QuickSight Group Membership
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.quicksight.GroupMembership("example", {
+ *     groupName: "all-access-users",
+ *     memberName: "john_smith",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.quicksight.GroupMembership("example",
+ *     group_name="all-access-users",
+ *     member_name="john_smith")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Quicksight.GroupMembership("example", new Aws.Quicksight.GroupMembershipArgs
+ *         {
+ *             GroupName = "all-access-users",
+ *             MemberName = "john_smith",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/quicksight"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := quicksight.NewGroupMembership(ctx, "example", &quicksight.GroupMembershipArgs{
+ * 			GroupName:  pulumi.String("all-access-users"),
+ * 			MemberName: pulumi.String("john_smith"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +85,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:quicksight/groupMembership:GroupMembership example 123456789123/default/all-access-users/john_smith
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:quicksight/groupMembership:GroupMembership")
 public class GroupMembership extends io.pulumi.resources.CustomResource {

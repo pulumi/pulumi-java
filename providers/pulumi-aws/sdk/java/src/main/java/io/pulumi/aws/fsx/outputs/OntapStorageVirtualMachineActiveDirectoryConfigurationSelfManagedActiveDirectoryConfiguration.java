@@ -30,7 +30,6 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
     /**
      * @Deprecated
      * use 'organizational_unit_distinguished_name' instead
-     * 
      */
         @Deprecated /* use 'organizational_unit_distinguished_name' instead */
     private final @Nullable String organizationalUnitDistinguidshedName;
@@ -92,7 +91,6 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
     /**
      * @Deprecated
      * use 'organizational_unit_distinguished_name' instead
-     * 
     */
     @Deprecated /* use 'organizational_unit_distinguished_name' instead */
     public Optional<String> getOrganizationalUnitDistinguidshedName() {

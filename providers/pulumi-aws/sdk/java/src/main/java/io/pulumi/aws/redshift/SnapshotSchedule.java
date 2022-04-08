@@ -16,7 +16,72 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const defaultSnapshotSchedule = new aws.redshift.SnapshotSchedule("default", {
+ *     definitions: ["rate(12 hours)"],
+ *     identifier: "tf-redshift-snapshot-schedule",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default = aws.redshift.SnapshotSchedule("default",
+ *     definitions=["rate(12 hours)"],
+ *     identifier="tf-redshift-snapshot-schedule")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Aws.RedShift.SnapshotSchedule("default", new Aws.RedShift.SnapshotScheduleArgs
+ *         {
+ *             Definitions = 
+ *             {
+ *                 "rate(12 hours)",
+ *             },
+ *             Identifier = "tf-redshift-snapshot-schedule",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/redshift"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := redshift.NewSnapshotSchedule(ctx, "default", &redshift.SnapshotScheduleArgs{
+ * 			Definitions: pulumi.StringArray{
+ * 				pulumi.String("rate(12 hours)"),
+ * 			},
+ * 			Identifier: pulumi.String("tf-redshift-snapshot-schedule"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +91,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:redshift/snapshotSchedule:SnapshotSchedule default tf-redshift-snapshot-schedule
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:redshift/snapshotSchedule:SnapshotSchedule")
 public class SnapshotSchedule extends io.pulumi.resources.CustomResource {

@@ -17,7 +17,120 @@ import javax.annotation.Nullable;
 /**
  * Provides an SES configuration set resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.ses.ConfigurationSet("test", {});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.ses.ConfigurationSet("test")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Ses.ConfigurationSet("test", new Aws.Ses.ConfigurationSetArgs
+ *         {
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ses"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ses.NewConfigurationSet(ctx, "test", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Require TLS Connections
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.ses.ConfigurationSet("test", {
+ *     deliveryOptions: {
+ *         tlsPolicy: "Require",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.ses.ConfigurationSet("test", delivery_options=aws.ses.ConfigurationSetDeliveryOptionsArgs(
+ *     tls_policy="Require",
+ * ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Ses.ConfigurationSet("test", new Aws.Ses.ConfigurationSetArgs
+ *         {
+ *             DeliveryOptions = new Aws.Ses.Inputs.ConfigurationSetDeliveryOptionsArgs
+ *             {
+ *                 TlsPolicy = "Require",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ses"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ses.NewConfigurationSet(ctx, "test", &ses.ConfigurationSetArgs{
+ * 			DeliveryOptions: &ses.ConfigurationSetDeliveryOptionsArgs{
+ * 				TlsPolicy: pulumi.String("Require"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,9 +140,9 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ses/confgurationSet:ConfgurationSet test some-configuration-set-test
  * ```
  * 
+ *  
  * @Deprecated
  * aws.ses.ConfgurationSet has been deprecated in favor of aws.ses.ConfigurationSet
- * 
  */
 @Deprecated /* aws.ses.ConfgurationSet has been deprecated in favor of aws.ses.ConfigurationSet */
 @ResourceType(type="aws:ses/confgurationSet:ConfgurationSet")

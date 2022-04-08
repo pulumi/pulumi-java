@@ -15,8 +15,371 @@ import javax.annotation.Nullable;
 /**
  * Associates a certificate with an AWS Certificate Manager Private Certificate Authority (ACM PCA Certificate Authority). An ACM PCA Certificate Authority is unable to issue certificates until it has a certificate associated with it. A root level ACM PCA Certificate Authority is able to self-sign its own root certificate.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Self-Signed Root Certificate Authority Certificate
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleCertificateAuthority = new aws.acmpca.CertificateAuthority("exampleCertificateAuthority", {
+ *     type: "ROOT",
+ *     certificateAuthorityConfiguration: {
+ *         keyAlgorithm: "RSA_4096",
+ *         signingAlgorithm: "SHA512WITHRSA",
+ *         subject: {
+ *             commonName: "example.com",
+ *         },
+ *     },
+ * });
+ * const current = aws.getPartition({});
+ * const exampleCertificate = new aws.acmpca.Certificate("exampleCertificate", {
+ *     certificateAuthorityArn: exampleCertificateAuthority.arn,
+ *     certificateSigningRequest: exampleCertificateAuthority.certificateSigningRequest,
+ *     signingAlgorithm: "SHA512WITHRSA",
+ *     templateArn: current.then(current => `arn:${current.partition}:acm-pca:::template/RootCACertificate/V1`),
+ *     validity: {
+ *         type: "YEARS",
+ *         value: 1,
+ *     },
+ * });
+ * const exampleCertificateAuthorityCertificate = new aws.acmpca.CertificateAuthorityCertificate("exampleCertificateAuthorityCertificate", {
+ *     certificateAuthorityArn: exampleCertificateAuthority.arn,
+ *     certificate: exampleCertificate.certificate,
+ *     certificateChain: exampleCertificate.certificateChain,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_certificate_authority = aws.acmpca.CertificateAuthority("exampleCertificateAuthority",
+ *     type="ROOT",
+ *     certificate_authority_configuration=aws.acmpca.CertificateAuthorityCertificateAuthorityConfigurationArgs(
+ *         key_algorithm="RSA_4096",
+ *         signing_algorithm="SHA512WITHRSA",
+ *         subject=aws.acmpca.CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs(
+ *             common_name="example.com",
+ *         ),
+ *     ))
+ * current = aws.get_partition()
+ * example_certificate = aws.acmpca.Certificate("exampleCertificate",
+ *     certificate_authority_arn=example_certificate_authority.arn,
+ *     certificate_signing_request=example_certificate_authority.certificate_signing_request,
+ *     signing_algorithm="SHA512WITHRSA",
+ *     template_arn=f"arn:{current.partition}:acm-pca:::template/RootCACertificate/V1",
+ *     validity=aws.acmpca.CertificateValidityArgs(
+ *         type="YEARS",
+ *         value="1",
+ *     ))
+ * example_certificate_authority_certificate = aws.acmpca.CertificateAuthorityCertificate("exampleCertificateAuthorityCertificate",
+ *     certificate_authority_arn=example_certificate_authority.arn,
+ *     certificate=example_certificate.certificate,
+ *     certificate_chain=example_certificate.certificate_chain)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleCertificateAuthority = new Aws.Acmpca.CertificateAuthority("exampleCertificateAuthority", new Aws.Acmpca.CertificateAuthorityArgs
+ *         {
+ *             Type = "ROOT",
+ *             CertificateAuthorityConfiguration = new Aws.Acmpca.Inputs.CertificateAuthorityCertificateAuthorityConfigurationArgs
+ *             {
+ *                 KeyAlgorithm = "RSA_4096",
+ *                 SigningAlgorithm = "SHA512WITHRSA",
+ *                 Subject = new Aws.Acmpca.Inputs.CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs
+ *                 {
+ *                     CommonName = "example.com",
+ *                 },
+ *             },
+ *         });
+ *         var current = Output.Create(Aws.GetPartition.InvokeAsync());
+ *         var exampleCertificate = new Aws.Acmpca.Certificate("exampleCertificate", new Aws.Acmpca.CertificateArgs
+ *         {
+ *             CertificateAuthorityArn = exampleCertificateAuthority.Arn,
+ *             CertificateSigningRequest = exampleCertificateAuthority.CertificateSigningRequest,
+ *             SigningAlgorithm = "SHA512WITHRSA",
+ *             TemplateArn = current.Apply(current => $"arn:{current.Partition}:acm-pca:::template/RootCACertificate/V1"),
+ *             Validity = new Aws.Acmpca.Inputs.CertificateValidityArgs
+ *             {
+ *                 Type = "YEARS",
+ *                 Value = "1",
+ *             },
+ *         });
+ *         var exampleCertificateAuthorityCertificate = new Aws.Acmpca.CertificateAuthorityCertificate("exampleCertificateAuthorityCertificate", new Aws.Acmpca.CertificateAuthorityCertificateArgs
+ *         {
+ *             CertificateAuthorityArn = exampleCertificateAuthority.Arn,
+ *             Certificate = exampleCertificate.Certificate,
+ *             CertificateChain = exampleCertificate.CertificateChain,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/acmpca"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleCertificateAuthority, err := acmpca.NewCertificateAuthority(ctx, "exampleCertificateAuthority", &acmpca.CertificateAuthorityArgs{
+ * 			Type: pulumi.String("ROOT"),
+ * 			CertificateAuthorityConfiguration: &acmpca.CertificateAuthorityCertificateAuthorityConfigurationArgs{
+ * 				KeyAlgorithm:     pulumi.String("RSA_4096"),
+ * 				SigningAlgorithm: pulumi.String("SHA512WITHRSA"),
+ * 				Subject: &acmpca.CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs{
+ * 					CommonName: pulumi.String("example.com"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		current, err := aws.GetPartition(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleCertificate, err := acmpca.NewCertificate(ctx, "exampleCertificate", &acmpca.CertificateArgs{
+ * 			CertificateAuthorityArn:   exampleCertificateAuthority.Arn,
+ * 			CertificateSigningRequest: exampleCertificateAuthority.CertificateSigningRequest,
+ * 			SigningAlgorithm:          pulumi.String("SHA512WITHRSA"),
+ * 			TemplateArn:               pulumi.String(fmt.Sprintf("%v%v%v", "arn:", current.Partition, ":acm-pca:::template/RootCACertificate/V1")),
+ * 			Validity: &acmpca.CertificateValidityArgs{
+ * 				Type:  pulumi.String("YEARS"),
+ * 				Value: pulumi.String("1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = acmpca.NewCertificateAuthorityCertificate(ctx, "exampleCertificateAuthorityCertificate", &acmpca.CertificateAuthorityCertificateArgs{
+ * 			CertificateAuthorityArn: exampleCertificateAuthority.Arn,
+ * 			Certificate:             exampleCertificate.Certificate,
+ * 			CertificateChain:        exampleCertificate.CertificateChain,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Certificate for Subordinate Certificate Authority
+ * 
+ * Note that the certificate for the subordinate certificate authority must be issued by the root certificate authority using a signing request from the subordinate certificate authority.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const subordinateCertificateAuthority = new aws.acmpca.CertificateAuthority("subordinateCertificateAuthority", {
+ *     type: "SUBORDINATE",
+ *     certificateAuthorityConfiguration: {
+ *         keyAlgorithm: "RSA_2048",
+ *         signingAlgorithm: "SHA512WITHRSA",
+ *         subject: {
+ *             commonName: "sub.example.com",
+ *         },
+ *     },
+ * });
+ * const rootCertificateAuthority = new aws.acmpca.CertificateAuthority("rootCertificateAuthority", {});
+ * // ...
+ * const current = aws.getPartition({});
+ * const subordinateCertificate = new aws.acmpca.Certificate("subordinateCertificate", {
+ *     certificateAuthorityArn: rootCertificateAuthority.arn,
+ *     certificateSigningRequest: subordinateCertificateAuthority.certificateSigningRequest,
+ *     signingAlgorithm: "SHA512WITHRSA",
+ *     templateArn: current.then(current => `arn:${current.partition}:acm-pca:::template/SubordinateCACertificate_PathLen0/V1`),
+ *     validity: {
+ *         type: "YEARS",
+ *         value: 1,
+ *     },
+ * });
+ * const subordinateCertificateAuthorityCertificate = new aws.acmpca.CertificateAuthorityCertificate("subordinateCertificateAuthorityCertificate", {
+ *     certificateAuthorityArn: subordinateCertificateAuthority.arn,
+ *     certificate: subordinateCertificate.certificate,
+ *     certificateChain: subordinateCertificate.certificateChain,
+ * });
+ * const rootCertificateAuthorityCertificate = new aws.acmpca.CertificateAuthorityCertificate("rootCertificateAuthorityCertificate", {});
+ * // ...
+ * const rootCertificate = new aws.acmpca.Certificate("rootCertificate", {});
+ * // ...
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * subordinate_certificate_authority = aws.acmpca.CertificateAuthority("subordinateCertificateAuthority",
+ *     type="SUBORDINATE",
+ *     certificate_authority_configuration=aws.acmpca.CertificateAuthorityCertificateAuthorityConfigurationArgs(
+ *         key_algorithm="RSA_2048",
+ *         signing_algorithm="SHA512WITHRSA",
+ *         subject=aws.acmpca.CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs(
+ *             common_name="sub.example.com",
+ *         ),
+ *     ))
+ * root_certificate_authority = aws.acmpca.CertificateAuthority("rootCertificateAuthority")
+ * # ...
+ * current = aws.get_partition()
+ * subordinate_certificate = aws.acmpca.Certificate("subordinateCertificate",
+ *     certificate_authority_arn=root_certificate_authority.arn,
+ *     certificate_signing_request=subordinate_certificate_authority.certificate_signing_request,
+ *     signing_algorithm="SHA512WITHRSA",
+ *     template_arn=f"arn:{current.partition}:acm-pca:::template/SubordinateCACertificate_PathLen0/V1",
+ *     validity=aws.acmpca.CertificateValidityArgs(
+ *         type="YEARS",
+ *         value="1",
+ *     ))
+ * subordinate_certificate_authority_certificate = aws.acmpca.CertificateAuthorityCertificate("subordinateCertificateAuthorityCertificate",
+ *     certificate_authority_arn=subordinate_certificate_authority.arn,
+ *     certificate=subordinate_certificate.certificate,
+ *     certificate_chain=subordinate_certificate.certificate_chain)
+ * root_certificate_authority_certificate = aws.acmpca.CertificateAuthorityCertificate("rootCertificateAuthorityCertificate")
+ * # ...
+ * root_certificate = aws.acmpca.Certificate("rootCertificate")
+ * # ...
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var subordinateCertificateAuthority = new Aws.Acmpca.CertificateAuthority("subordinateCertificateAuthority", new Aws.Acmpca.CertificateAuthorityArgs
+ *         {
+ *             Type = "SUBORDINATE",
+ *             CertificateAuthorityConfiguration = new Aws.Acmpca.Inputs.CertificateAuthorityCertificateAuthorityConfigurationArgs
+ *             {
+ *                 KeyAlgorithm = "RSA_2048",
+ *                 SigningAlgorithm = "SHA512WITHRSA",
+ *                 Subject = new Aws.Acmpca.Inputs.CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs
+ *                 {
+ *                     CommonName = "sub.example.com",
+ *                 },
+ *             },
+ *         });
+ *         var rootCertificateAuthority = new Aws.Acmpca.CertificateAuthority("rootCertificateAuthority", new Aws.Acmpca.CertificateAuthorityArgs
+ *         {
+ *         });
+ *         // ...
+ *         var current = Output.Create(Aws.GetPartition.InvokeAsync());
+ *         var subordinateCertificate = new Aws.Acmpca.Certificate("subordinateCertificate", new Aws.Acmpca.CertificateArgs
+ *         {
+ *             CertificateAuthorityArn = rootCertificateAuthority.Arn,
+ *             CertificateSigningRequest = subordinateCertificateAuthority.CertificateSigningRequest,
+ *             SigningAlgorithm = "SHA512WITHRSA",
+ *             TemplateArn = current.Apply(current => $"arn:{current.Partition}:acm-pca:::template/SubordinateCACertificate_PathLen0/V1"),
+ *             Validity = new Aws.Acmpca.Inputs.CertificateValidityArgs
+ *             {
+ *                 Type = "YEARS",
+ *                 Value = "1",
+ *             },
+ *         });
+ *         var subordinateCertificateAuthorityCertificate = new Aws.Acmpca.CertificateAuthorityCertificate("subordinateCertificateAuthorityCertificate", new Aws.Acmpca.CertificateAuthorityCertificateArgs
+ *         {
+ *             CertificateAuthorityArn = subordinateCertificateAuthority.Arn,
+ *             Certificate = subordinateCertificate.Certificate,
+ *             CertificateChain = subordinateCertificate.CertificateChain,
+ *         });
+ *         var rootCertificateAuthorityCertificate = new Aws.Acmpca.CertificateAuthorityCertificate("rootCertificateAuthorityCertificate", new Aws.Acmpca.CertificateAuthorityCertificateArgs
+ *         {
+ *         });
+ *         // ...
+ *         var rootCertificate = new Aws.Acmpca.Certificate("rootCertificate", new Aws.Acmpca.CertificateArgs
+ *         {
+ *         });
+ *         // ...
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/acmpca"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		subordinateCertificateAuthority, err := acmpca.NewCertificateAuthority(ctx, "subordinateCertificateAuthority", &acmpca.CertificateAuthorityArgs{
+ * 			Type: pulumi.String("SUBORDINATE"),
+ * 			CertificateAuthorityConfiguration: &acmpca.CertificateAuthorityCertificateAuthorityConfigurationArgs{
+ * 				KeyAlgorithm:     pulumi.String("RSA_2048"),
+ * 				SigningAlgorithm: pulumi.String("SHA512WITHRSA"),
+ * 				Subject: &acmpca.CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs{
+ * 					CommonName: pulumi.String("sub.example.com"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		rootCertificateAuthority, err := acmpca.NewCertificateAuthority(ctx, "rootCertificateAuthority", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		current, err := aws.GetPartition(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		subordinateCertificate, err := acmpca.NewCertificate(ctx, "subordinateCertificate", &acmpca.CertificateArgs{
+ * 			CertificateAuthorityArn:   rootCertificateAuthority.Arn,
+ * 			CertificateSigningRequest: subordinateCertificateAuthority.CertificateSigningRequest,
+ * 			SigningAlgorithm:          pulumi.String("SHA512WITHRSA"),
+ * 			TemplateArn:               pulumi.String(fmt.Sprintf("%v%v%v", "arn:", current.Partition, ":acm-pca:::template/SubordinateCACertificate_PathLen0/V1")),
+ * 			Validity: &acmpca.CertificateValidityArgs{
+ * 				Type:  pulumi.String("YEARS"),
+ * 				Value: pulumi.String("1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = acmpca.NewCertificateAuthorityCertificate(ctx, "subordinateCertificateAuthorityCertificate", &acmpca.CertificateAuthorityCertificateArgs{
+ * 			CertificateAuthorityArn: subordinateCertificateAuthority.Arn,
+ * 			Certificate:             subordinateCertificate.Certificate,
+ * 			CertificateChain:        subordinateCertificate.CertificateChain,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = acmpca.NewCertificateAuthorityCertificate(ctx, "rootCertificateAuthorityCertificate", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = acmpca.NewCertificate(ctx, "rootCertificate", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:acmpca/certificateAuthorityCertificate:CertificateAuthorityCertificate")
 public class CertificateAuthorityCertificate extends io.pulumi.resources.CustomResource {

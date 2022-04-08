@@ -19,7 +19,202 @@ import javax.annotation.Nullable;
 /**
  * Provides a Sagemaker Workteam resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Cognito Usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.sagemaker.Workteam("example", {
+ *     workteamName: "example",
+ *     workforceName: aws_sagemaker_workforce.example.id,
+ *     description: "example",
+ *     memberDefinitions: [{
+ *         cognitoMemberDefinition: {
+ *             clientId: aws_cognito_user_pool_client.example.id,
+ *             userPool: aws_cognito_user_pool_domain.example.user_pool_id,
+ *             userGroup: aws_cognito_user_group.example.id,
+ *         },
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.sagemaker.Workteam("example",
+ *     workteam_name="example",
+ *     workforce_name=aws_sagemaker_workforce["example"]["id"],
+ *     description="example",
+ *     member_definitions=[aws.sagemaker.WorkteamMemberDefinitionArgs(
+ *         cognito_member_definition=aws.sagemaker.WorkteamMemberDefinitionCognitoMemberDefinitionArgs(
+ *             client_id=aws_cognito_user_pool_client["example"]["id"],
+ *             user_pool=aws_cognito_user_pool_domain["example"]["user_pool_id"],
+ *             user_group=aws_cognito_user_group["example"]["id"],
+ *         ),
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Sagemaker.Workteam("example", new Aws.Sagemaker.WorkteamArgs
+ *         {
+ *             WorkteamName = "example",
+ *             WorkforceName = aws_sagemaker_workforce.Example.Id,
+ *             Description = "example",
+ *             MemberDefinitions = 
+ *             {
+ *                 new Aws.Sagemaker.Inputs.WorkteamMemberDefinitionArgs
+ *                 {
+ *                     CognitoMemberDefinition = new Aws.Sagemaker.Inputs.WorkteamMemberDefinitionCognitoMemberDefinitionArgs
+ *                     {
+ *                         ClientId = aws_cognito_user_pool_client.Example.Id,
+ *                         UserPool = aws_cognito_user_pool_domain.Example.User_pool_id,
+ *                         UserGroup = aws_cognito_user_group.Example.Id,
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sagemaker.NewWorkteam(ctx, "example", &sagemaker.WorkteamArgs{
+ * 			WorkteamName:  pulumi.String("example"),
+ * 			WorkforceName: pulumi.Any(aws_sagemaker_workforce.Example.Id),
+ * 			Description:   pulumi.String("example"),
+ * 			MemberDefinitions: sagemaker.WorkteamMemberDefinitionArray{
+ * 				&sagemaker.WorkteamMemberDefinitionArgs{
+ * 					CognitoMemberDefinition: &sagemaker.WorkteamMemberDefinitionCognitoMemberDefinitionArgs{
+ * 						ClientId:  pulumi.Any(aws_cognito_user_pool_client.Example.Id),
+ * 						UserPool:  pulumi.Any(aws_cognito_user_pool_domain.Example.User_pool_id),
+ * 						UserGroup: pulumi.Any(aws_cognito_user_group.Example.Id),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Oidc Usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.sagemaker.Workteam("example", {
+ *     workteamName: "example",
+ *     workforceName: aws_sagemaker_workforce.example.id,
+ *     description: "example",
+ *     memberDefinitions: [{
+ *         oidcMemberDefinition: {
+ *             groups: ["example"],
+ *         },
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.sagemaker.Workteam("example",
+ *     workteam_name="example",
+ *     workforce_name=aws_sagemaker_workforce["example"]["id"],
+ *     description="example",
+ *     member_definitions=[aws.sagemaker.WorkteamMemberDefinitionArgs(
+ *         oidc_member_definition=aws.sagemaker.WorkteamMemberDefinitionOidcMemberDefinitionArgs(
+ *             groups=["example"],
+ *         ),
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Sagemaker.Workteam("example", new Aws.Sagemaker.WorkteamArgs
+ *         {
+ *             WorkteamName = "example",
+ *             WorkforceName = aws_sagemaker_workforce.Example.Id,
+ *             Description = "example",
+ *             MemberDefinitions = 
+ *             {
+ *                 new Aws.Sagemaker.Inputs.WorkteamMemberDefinitionArgs
+ *                 {
+ *                     OidcMemberDefinition = new Aws.Sagemaker.Inputs.WorkteamMemberDefinitionOidcMemberDefinitionArgs
+ *                     {
+ *                         Groups = 
+ *                         {
+ *                             "example",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sagemaker.NewWorkteam(ctx, "example", &sagemaker.WorkteamArgs{
+ * 			WorkteamName:  pulumi.String("example"),
+ * 			WorkforceName: pulumi.Any(aws_sagemaker_workforce.Example.Id),
+ * 			Description:   pulumi.String("example"),
+ * 			MemberDefinitions: sagemaker.WorkteamMemberDefinitionArray{
+ * 				&sagemaker.WorkteamMemberDefinitionArgs{
+ * 					OidcMemberDefinition: &sagemaker.WorkteamMemberDefinitionOidcMemberDefinitionArgs{
+ * 						Groups: pulumi.StringArray{
+ * 							pulumi.String("example"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +224,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sagemaker/workteam:Workteam example example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sagemaker/workteam:Workteam")
 public class Workteam extends io.pulumi.resources.CustomResource {

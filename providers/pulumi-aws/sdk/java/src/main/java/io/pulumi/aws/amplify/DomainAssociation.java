@@ -18,7 +18,163 @@ import javax.annotation.Nullable;
 /**
  * Provides an Amplify Domain Association resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleApp = new aws.amplify.App("exampleApp", {customRules: [{
+ *     source: "https://example.com",
+ *     status: "302",
+ *     target: "https://www.example.com",
+ * }]});
+ * const master = new aws.amplify.Branch("master", {
+ *     appId: exampleApp.id,
+ *     branchName: "master",
+ * });
+ * const exampleDomainAssociation = new aws.amplify.DomainAssociation("exampleDomainAssociation", {
+ *     appId: exampleApp.id,
+ *     domainName: "example.com",
+ *     subDomains: [
+ *         {
+ *             branchName: master.branchName,
+ *             prefix: "",
+ *         },
+ *         {
+ *             branchName: master.branchName,
+ *             prefix: "www",
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_app = aws.amplify.App("exampleApp", custom_rules=[aws.amplify.AppCustomRuleArgs(
+ *     source="https://example.com",
+ *     status="302",
+ *     target="https://www.example.com",
+ * )])
+ * master = aws.amplify.Branch("master",
+ *     app_id=example_app.id,
+ *     branch_name="master")
+ * example_domain_association = aws.amplify.DomainAssociation("exampleDomainAssociation",
+ *     app_id=example_app.id,
+ *     domain_name="example.com",
+ *     sub_domains=[
+ *         aws.amplify.DomainAssociationSubDomainArgs(
+ *             branch_name=master.branch_name,
+ *             prefix="",
+ *         ),
+ *         aws.amplify.DomainAssociationSubDomainArgs(
+ *             branch_name=master.branch_name,
+ *             prefix="www",
+ *         ),
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleApp = new Aws.Amplify.App("exampleApp", new Aws.Amplify.AppArgs
+ *         {
+ *             CustomRules = 
+ *             {
+ *                 new Aws.Amplify.Inputs.AppCustomRuleArgs
+ *                 {
+ *                     Source = "https://example.com",
+ *                     Status = "302",
+ *                     Target = "https://www.example.com",
+ *                 },
+ *             },
+ *         });
+ *         var master = new Aws.Amplify.Branch("master", new Aws.Amplify.BranchArgs
+ *         {
+ *             AppId = exampleApp.Id,
+ *             BranchName = "master",
+ *         });
+ *         var exampleDomainAssociation = new Aws.Amplify.DomainAssociation("exampleDomainAssociation", new Aws.Amplify.DomainAssociationArgs
+ *         {
+ *             AppId = exampleApp.Id,
+ *             DomainName = "example.com",
+ *             SubDomains = 
+ *             {
+ *                 new Aws.Amplify.Inputs.DomainAssociationSubDomainArgs
+ *                 {
+ *                     BranchName = master.BranchName,
+ *                     Prefix = "",
+ *                 },
+ *                 new Aws.Amplify.Inputs.DomainAssociationSubDomainArgs
+ *                 {
+ *                     BranchName = master.BranchName,
+ *                     Prefix = "www",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/amplify"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleApp, err := amplify.NewApp(ctx, "exampleApp", &amplify.AppArgs{
+ * 			CustomRules: amplify.AppCustomRuleArray{
+ * 				&amplify.AppCustomRuleArgs{
+ * 					Source: pulumi.String("https://example.com"),
+ * 					Status: pulumi.String("302"),
+ * 					Target: pulumi.String("https://www.example.com"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		master, err := amplify.NewBranch(ctx, "master", &amplify.BranchArgs{
+ * 			AppId:      exampleApp.ID(),
+ * 			BranchName: pulumi.String("master"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = amplify.NewDomainAssociation(ctx, "exampleDomainAssociation", &amplify.DomainAssociationArgs{
+ * 			AppId:      exampleApp.ID(),
+ * 			DomainName: pulumi.String("example.com"),
+ * 			SubDomains: amplify.DomainAssociationSubDomainArray{
+ * 				&amplify.DomainAssociationSubDomainArgs{
+ * 					BranchName: master.BranchName,
+ * 					Prefix:     pulumi.String(""),
+ * 				},
+ * 				&amplify.DomainAssociationSubDomainArgs{
+ * 					BranchName: master.BranchName,
+ * 					Prefix:     pulumi.String("www"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +184,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:amplify/domainAssociation:DomainAssociation app d2ypk4k47z8u6/example.com
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:amplify/domainAssociation:DomainAssociation")
 public class DomainAssociation extends io.pulumi.resources.CustomResource {

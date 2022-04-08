@@ -91,7 +91,6 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      * @Deprecated
      * use `ipv6_addresses` attribute instead
-     * 
      */
     @Deprecated /* use `ipv6_addresses` attribute instead */
     @Import(name="ipv6Address")

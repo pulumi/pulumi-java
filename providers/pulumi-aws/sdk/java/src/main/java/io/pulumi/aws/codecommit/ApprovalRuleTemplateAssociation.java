@@ -15,7 +15,67 @@ import javax.annotation.Nullable;
 /**
  * Associates a CodeCommit Approval Rule Template with a Repository.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.codecommit.ApprovalRuleTemplateAssociation("example", {
+ *     approvalRuleTemplateName: aws_codecommit_approval_rule_template.example.name,
+ *     repositoryName: aws_codecommit_repository.example.repository_name,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.codecommit.ApprovalRuleTemplateAssociation("example",
+ *     approval_rule_template_name=aws_codecommit_approval_rule_template["example"]["name"],
+ *     repository_name=aws_codecommit_repository["example"]["repository_name"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.CodeCommit.ApprovalRuleTemplateAssociation("example", new Aws.CodeCommit.ApprovalRuleTemplateAssociationArgs
+ *         {
+ *             ApprovalRuleTemplateName = aws_codecommit_approval_rule_template.Example.Name,
+ *             RepositoryName = aws_codecommit_repository.Example.Repository_name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/codecommit"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codecommit.NewApprovalRuleTemplateAssociation(ctx, "example", &codecommit.ApprovalRuleTemplateAssociationArgs{
+ * 			ApprovalRuleTemplateName: pulumi.Any(aws_codecommit_approval_rule_template.Example.Name),
+ * 			RepositoryName:           pulumi.Any(aws_codecommit_repository.Example.Repository_name),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +85,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:codecommit/approvalRuleTemplateAssociation:ApprovalRuleTemplateAssociation example approver-rule-for-example,MyExampleRepo
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:codecommit/approvalRuleTemplateAssociation:ApprovalRuleTemplateAssociation")
 public class ApprovalRuleTemplateAssociation extends io.pulumi.resources.CustomResource {

@@ -23,7 +23,110 @@ import javax.annotation.Nullable;
  * 
  * For more details, see the [Amazon Kinesis Documentation](https://aws.amazon.com/documentation/kinesis/).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const testStream = new aws.kinesis.Stream("test_stream", {
+ *     retentionPeriod: 48,
+ *     shardCount: 1,
+ *     shardLevelMetrics: [
+ *         "IncomingBytes",
+ *         "OutgoingBytes",
+ *     ],
+ *     streamModeDetails: {
+ *         streamMode: "PROVISIONED",
+ *     },
+ *     tags: {
+ *         Environment: "test",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_stream = aws.kinesis.Stream("testStream",
+ *     retention_period=48,
+ *     shard_count=1,
+ *     shard_level_metrics=[
+ *         "IncomingBytes",
+ *         "OutgoingBytes",
+ *     ],
+ *     stream_mode_details=aws.kinesis.StreamStreamModeDetailsArgs(
+ *         stream_mode="PROVISIONED",
+ *     ),
+ *     tags={
+ *         "Environment": "test",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testStream = new Aws.Kinesis.Stream("testStream", new Aws.Kinesis.StreamArgs
+ *         {
+ *             RetentionPeriod = 48,
+ *             ShardCount = 1,
+ *             ShardLevelMetrics = 
+ *             {
+ *                 "IncomingBytes",
+ *                 "OutgoingBytes",
+ *             },
+ *             StreamModeDetails = new Aws.Kinesis.Inputs.StreamStreamModeDetailsArgs
+ *             {
+ *                 StreamMode = "PROVISIONED",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Environment", "test" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kinesis"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := kinesis.NewStream(ctx, "testStream", &kinesis.StreamArgs{
+ * 			RetentionPeriod: pulumi.Int(48),
+ * 			ShardCount:      pulumi.Int(1),
+ * 			ShardLevelMetrics: pulumi.StringArray{
+ * 				pulumi.String("IncomingBytes"),
+ * 				pulumi.String("OutgoingBytes"),
+ * 			},
+ * 			StreamModeDetails: &kinesis.StreamStreamModeDetailsArgs{
+ * 				StreamMode: pulumi.String("PROVISIONED"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Environment": pulumi.String("test"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,8 +136,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:kinesis/stream:Stream test_stream kinesis-test
  * ```
  * 
- *  [1]https://aws.amazon.com/documentation/kinesis/ [2]https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html [3]https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html
- * 
+ *  [1]https://aws.amazon.com/documentation/kinesis/ [2]https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html [3]https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html 
  */
 @ResourceType(type="aws:kinesis/stream:Stream")
 public class Stream extends io.pulumi.resources.CustomResource {

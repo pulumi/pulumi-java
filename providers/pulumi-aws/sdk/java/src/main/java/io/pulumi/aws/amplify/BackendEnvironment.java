@@ -15,7 +15,84 @@ import javax.annotation.Nullable;
 /**
  * Provides an Amplify Backend Environment resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleApp = new aws.amplify.App("exampleApp", {});
+ * const exampleBackendEnvironment = new aws.amplify.BackendEnvironment("exampleBackendEnvironment", {
+ *     appId: exampleApp.id,
+ *     environmentName: "example",
+ *     deploymentArtifacts: "app-example-deployment",
+ *     stackName: "amplify-app-example",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_app = aws.amplify.App("exampleApp")
+ * example_backend_environment = aws.amplify.BackendEnvironment("exampleBackendEnvironment",
+ *     app_id=example_app.id,
+ *     environment_name="example",
+ *     deployment_artifacts="app-example-deployment",
+ *     stack_name="amplify-app-example")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleApp = new Aws.Amplify.App("exampleApp", new Aws.Amplify.AppArgs
+ *         {
+ *         });
+ *         var exampleBackendEnvironment = new Aws.Amplify.BackendEnvironment("exampleBackendEnvironment", new Aws.Amplify.BackendEnvironmentArgs
+ *         {
+ *             AppId = exampleApp.Id,
+ *             EnvironmentName = "example",
+ *             DeploymentArtifacts = "app-example-deployment",
+ *             StackName = "amplify-app-example",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/amplify"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleApp, err := amplify.NewApp(ctx, "exampleApp", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = amplify.NewBackendEnvironment(ctx, "exampleBackendEnvironment", &amplify.BackendEnvironmentArgs{
+ * 			AppId:               exampleApp.ID(),
+ * 			EnvironmentName:     pulumi.String("example"),
+ * 			DeploymentArtifacts: pulumi.String("app-example-deployment"),
+ * 			StackName:           pulumi.String("amplify-app-example"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +102,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:amplify/backendEnvironment:BackendEnvironment example d2ypk4k47z8u6/example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:amplify/backendEnvironment:BackendEnvironment")
 public class BackendEnvironment extends io.pulumi.resources.CustomResource {

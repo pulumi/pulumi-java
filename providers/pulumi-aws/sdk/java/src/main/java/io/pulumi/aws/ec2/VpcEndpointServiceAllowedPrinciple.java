@@ -21,8 +21,77 @@ import javax.annotation.Nullable;
  * a VPC Endpoint Service resource and a VPC Endpoint Service Allowed Principal resource. Doing so will cause a conflict
  * and will overwrite the association.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * Basic usage:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const current = aws.getCallerIdentity({});
+ * const allowMeToFoo = new aws.ec2.VpcEndpointServiceAllowedPrinciple("allowMeToFoo", {
+ *     vpcEndpointServiceId: aws_vpc_endpoint_service.foo.id,
+ *     principalArn: current.then(current => current.arn),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * current = aws.get_caller_identity()
+ * allow_me_to_foo = aws.ec2.VpcEndpointServiceAllowedPrinciple("allowMeToFoo",
+ *     vpc_endpoint_service_id=aws_vpc_endpoint_service["foo"]["id"],
+ *     principal_arn=current.arn)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var current = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+ *         var allowMeToFoo = new Aws.Ec2.VpcEndpointServiceAllowedPrinciple("allowMeToFoo", new Aws.Ec2.VpcEndpointServiceAllowedPrincipleArgs
+ *         {
+ *             VpcEndpointServiceId = aws_vpc_endpoint_service.Foo.Id,
+ *             PrincipalArn = current.Apply(current => current.Arn),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		current, err := aws.GetCallerIdentity(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewVpcEndpointServiceAllowedPrinciple(ctx, "allowMeToFoo", &ec2.VpcEndpointServiceAllowedPrincipleArgs{
+ * 			VpcEndpointServiceId: pulumi.Any(aws_vpc_endpoint_service.Foo.Id),
+ * 			PrincipalArn:         pulumi.String(current.Arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:ec2/vpcEndpointServiceAllowedPrinciple:VpcEndpointServiceAllowedPrinciple")
 public class VpcEndpointServiceAllowedPrinciple extends io.pulumi.resources.CustomResource {

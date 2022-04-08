@@ -22,7 +22,98 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** The DataSync Agents must be available before creating this resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.datasync.LocationHdfs("example", {
+ *     agentArns: [aws_datasync_agent.example.arn],
+ *     authenticationType: "SIMPLE",
+ *     simpleUser: "example",
+ *     nameNodes: [{
+ *         hostname: aws_instance.example.private_dns,
+ *         port: 80,
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.datasync.LocationHdfs("example",
+ *     agent_arns=[aws_datasync_agent["example"]["arn"]],
+ *     authentication_type="SIMPLE",
+ *     simple_user="example",
+ *     name_nodes=[aws.datasync.LocationHdfsNameNodeArgs(
+ *         hostname=aws_instance["example"]["private_dns"],
+ *         port=80,
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.DataSync.LocationHdfs("example", new Aws.DataSync.LocationHdfsArgs
+ *         {
+ *             AgentArns = 
+ *             {
+ *                 aws_datasync_agent.Example.Arn,
+ *             },
+ *             AuthenticationType = "SIMPLE",
+ *             SimpleUser = "example",
+ *             NameNodes = 
+ *             {
+ *                 new Aws.DataSync.Inputs.LocationHdfsNameNodeArgs
+ *                 {
+ *                     Hostname = aws_instance.Example.Private_dns,
+ *                     Port = 80,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/datasync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datasync.NewLocationHdfs(ctx, "example", &datasync.LocationHdfsArgs{
+ * 			AgentArns: pulumi.StringArray{
+ * 				pulumi.Any(aws_datasync_agent.Example.Arn),
+ * 			},
+ * 			AuthenticationType: pulumi.String("SIMPLE"),
+ * 			SimpleUser:         pulumi.String("example"),
+ * 			NameNodes: datasync.LocationHdfsNameNodeArray{
+ * 				&datasync.LocationHdfsNameNodeArgs{
+ * 					Hostname: pulumi.Any(aws_instance.Example.Private_dns),
+ * 					Port:     pulumi.Int(80),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,6 +123,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:datasync/locationHdfs:LocationHdfs example arn:aws:datasync:us-east-1:123456789012:location/loc-12345678901234567
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:datasync/locationHdfs:LocationHdfs")
 public class LocationHdfs extends io.pulumi.resources.CustomResource {

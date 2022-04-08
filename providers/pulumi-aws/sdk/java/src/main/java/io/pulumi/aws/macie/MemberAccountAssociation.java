@@ -19,8 +19,62 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** Before using Amazon Macie for the first time it must be enabled manually. Instructions are [here](https://docs.aws.amazon.com/macie/latest/userguide/macie-setting-up.html#macie-setting-up-enable).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.macie.MemberAccountAssociation("example", {
+ *     memberAccountId: "123456789012",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.macie.MemberAccountAssociation("example", member_account_id="123456789012")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Macie.MemberAccountAssociation("example", new Aws.Macie.MemberAccountAssociationArgs
+ *         {
+ *             MemberAccountId = "123456789012",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/macie"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := macie.NewMemberAccountAssociation(ctx, "example", &macie.MemberAccountAssociationArgs{
+ * 			MemberAccountId: pulumi.String("123456789012"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:macie/memberAccountAssociation:MemberAccountAssociation")
 public class MemberAccountAssociation extends io.pulumi.resources.CustomResource {

@@ -17,7 +17,80 @@ import javax.annotation.Nullable;
 /**
  * Manages an AWS DataSync FSx Windows Location.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.datasync.LocationFsxWindows("example", {
+ *     fsxFilesystemArn: aws_fsx_windows_file_system.example.arn,
+ *     user: "SomeUser",
+ *     password: "SuperSecretPassw0rd",
+ *     securityGroupArns: [aws_security_group.example.arn],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.datasync.LocationFsxWindows("example",
+ *     fsx_filesystem_arn=aws_fsx_windows_file_system["example"]["arn"],
+ *     user="SomeUser",
+ *     password="SuperSecretPassw0rd",
+ *     security_group_arns=[aws_security_group["example"]["arn"]])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.DataSync.LocationFsxWindows("example", new Aws.DataSync.LocationFsxWindowsArgs
+ *         {
+ *             FsxFilesystemArn = aws_fsx_windows_file_system.Example.Arn,
+ *             User = "SomeUser",
+ *             Password = "SuperSecretPassw0rd",
+ *             SecurityGroupArns = 
+ *             {
+ *                 aws_security_group.Example.Arn,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/datasync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datasync.NewLocationFsxWindows(ctx, "example", &datasync.LocationFsxWindowsArgs{
+ * 			FsxFilesystemArn: pulumi.Any(aws_fsx_windows_file_system.Example.Arn),
+ * 			User:             pulumi.String("SomeUser"),
+ * 			Password:         pulumi.String("SuperSecretPassw0rd"),
+ * 			SecurityGroupArns: pulumi.StringArray{
+ * 				pulumi.Any(aws_security_group.Example.Arn),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +100,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:datasync/locationFsxWindows:LocationFsxWindows example arn:aws:datasync:us-west-2:123456789012:location/loc-12345678901234567#arn:aws:fsx:us-west-2:476956259333:file-system/fs-08e04cd442c1bb94a
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:datasync/locationFsxWindows:LocationFsxWindows")
 public class LocationFsxWindows extends io.pulumi.resources.CustomResource {

@@ -21,6 +21,9 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * ECS Task Sets can be imported via the `task_set_id`, `service`, and `cluster` separated by commas (`,`) e.g.
@@ -29,6 +32,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ecs/taskSet:TaskSet example ecs-svc/7177320696926227436,arn:aws:ecs:us-west-2:123456789101:service/example/example-1234567890,arn:aws:ecs:us-west-2:123456789101:cluster/example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ecs/taskSet:TaskSet")
 public class TaskSet extends io.pulumi.resources.CustomResource {

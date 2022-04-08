@@ -16,7 +16,135 @@ import javax.annotation.Nullable;
  * Allows you to set a policy of an SQS Queue
  * while referencing ARN of the queue within the policy.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const queue = new aws.sqs.Queue("queue", {});
+ * const test = new aws.sqs.QueuePolicy("test", {
+ *     queueUrl: queue.id,
+ *     policy: pulumi.interpolate`{
+ *   "Version": "2012-10-17",
+ *   "Id": "sqspolicy",
+ *   "Statement": [
+ *     {
+ *       "Sid": "First",
+ *       "Effect": "Allow",
+ *       "Principal": "*",
+ *       "Action": "sqs:SendMessage",
+ *       "Resource": "${queue.arn}",
+ *       "Condition": {
+ *         "ArnEquals": {
+ *           "aws:SourceArn": "${aws_sns_topic.example.arn}"
+ *         }
+ *       }
+ *     }
+ *   ]
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * queue = aws.sqs.Queue("queue")
+ * test = aws.sqs.QueuePolicy("test",
+ *     queue_url=queue.id,
+ *     policy=queue.arn.apply(lambda arn: f"""{{
+ *   "Version": "2012-10-17",
+ *   "Id": "sqspolicy",
+ *   "Statement": [
+ *     {{
+ *       "Sid": "First",
+ *       "Effect": "Allow",
+ *       "Principal": "*",
+ *       "Action": "sqs:SendMessage",
+ *       "Resource": "{arn}",
+ *       "Condition": {{
+ *         "ArnEquals": {{
+ *           "aws:SourceArn": "{aws_sns_topic["example"]["arn"]}"
+ *         }}
+ *       }}
+ *     }}
+ *   ]
+ * }}
+ * """))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var queue = new Aws.Sqs.Queue("queue", new Aws.Sqs.QueueArgs
+ *         {
+ *         });
+ *         var test = new Aws.Sqs.QueuePolicy("test", new Aws.Sqs.QueuePolicyArgs
+ *         {
+ *             QueueUrl = queue.Id,
+ *             Policy = queue.Arn.Apply(arn => @$"{{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Id"": ""sqspolicy"",
+ *   ""Statement"": [
+ *     {{
+ *       ""Sid"": ""First"",
+ *       ""Effect"": ""Allow"",
+ *       ""Principal"": ""*"",
+ *       ""Action"": ""sqs:SendMessage"",
+ *       ""Resource"": ""{arn}"",
+ *       ""Condition"": {{
+ *         ""ArnEquals"": {{
+ *           ""aws:SourceArn"": ""{aws_sns_topic.Example.Arn}""
+ *         }}
+ *       }}
+ *     }}
+ *   ]
+ * }}
+ * "),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sqs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		queue, err := sqs.NewQueue(ctx, "queue", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = sqs.NewQueuePolicy(ctx, "test", &sqs.QueuePolicyArgs{
+ * 			QueueUrl: queue.ID(),
+ * 			Policy: queue.Arn.ApplyT(func(arn string) (string, error) {
+ * 				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Id\": \"sqspolicy\",\n", "  \"Statement\": [\n", "    {\n", "      \"Sid\": \"First\",\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": \"*\",\n", "      \"Action\": \"sqs:SendMessage\",\n", "      \"Resource\": \"", arn, "\",\n", "      \"Condition\": {\n", "        \"ArnEquals\": {\n", "          \"aws:SourceArn\": \"", aws_sns_topic.Example.Arn, "\"\n", "        }\n", "      }\n", "    }\n", "  ]\n", "}\n"), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +154,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sqs/queuePolicy:QueuePolicy test https://queue.amazonaws.com/0123456789012/myqueue
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sqs/queuePolicy:QueuePolicy")
 public class QueuePolicy extends io.pulumi.resources.CustomResource {

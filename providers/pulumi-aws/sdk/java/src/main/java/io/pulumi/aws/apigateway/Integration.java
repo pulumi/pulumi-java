@@ -19,10 +19,727 @@ import javax.annotation.Nullable;
 /**
  * Provides an HTTP Method Integration for an API Gateway Integration.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const myDemoAPI = new aws.apigateway.RestApi("myDemoAPI", {description: "This is my API for demonstration purposes"});
+ * const myDemoResource = new aws.apigateway.Resource("myDemoResource", {
+ *     restApi: myDemoAPI.id,
+ *     parentId: myDemoAPI.rootResourceId,
+ *     pathPart: "mydemoresource",
+ * });
+ * const myDemoMethod = new aws.apigateway.Method("myDemoMethod", {
+ *     restApi: myDemoAPI.id,
+ *     resourceId: myDemoResource.id,
+ *     httpMethod: "GET",
+ *     authorization: "NONE",
+ * });
+ * const myDemoIntegration = new aws.apigateway.Integration("myDemoIntegration", {
+ *     restApi: myDemoAPI.id,
+ *     resourceId: myDemoResource.id,
+ *     httpMethod: myDemoMethod.httpMethod,
+ *     type: "MOCK",
+ *     cacheKeyParameters: ["method.request.path.param"],
+ *     cacheNamespace: "foobar",
+ *     timeoutMilliseconds: 29000,
+ *     requestParameters: {
+ *         "integration.request.header.X-Authorization": "'static'",
+ *     },
+ *     requestTemplates: {
+ *         "application/xml": `{
+ *    "body" : $input.json('$')
+ * }
+ * `,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * my_demo_api = aws.apigateway.RestApi("myDemoAPI", description="This is my API for demonstration purposes")
+ * my_demo_resource = aws.apigateway.Resource("myDemoResource",
+ *     rest_api=my_demo_api.id,
+ *     parent_id=my_demo_api.root_resource_id,
+ *     path_part="mydemoresource")
+ * my_demo_method = aws.apigateway.Method("myDemoMethod",
+ *     rest_api=my_demo_api.id,
+ *     resource_id=my_demo_resource.id,
+ *     http_method="GET",
+ *     authorization="NONE")
+ * my_demo_integration = aws.apigateway.Integration("myDemoIntegration",
+ *     rest_api=my_demo_api.id,
+ *     resource_id=my_demo_resource.id,
+ *     http_method=my_demo_method.http_method,
+ *     type="MOCK",
+ *     cache_key_parameters=["method.request.path.param"],
+ *     cache_namespace="foobar",
+ *     timeout_milliseconds=29000,
+ *     request_parameters={
+ *         "integration.request.header.X-Authorization": "'static'",
+ *     },
+ *     request_templates={
+ *         "application/xml": """{
+ *    "body" : $input.json('$')
+ * }
+ * """,
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myDemoAPI = new Aws.ApiGateway.RestApi("myDemoAPI", new Aws.ApiGateway.RestApiArgs
+ *         {
+ *             Description = "This is my API for demonstration purposes",
+ *         });
+ *         var myDemoResource = new Aws.ApiGateway.Resource("myDemoResource", new Aws.ApiGateway.ResourceArgs
+ *         {
+ *             RestApi = myDemoAPI.Id,
+ *             ParentId = myDemoAPI.RootResourceId,
+ *             PathPart = "mydemoresource",
+ *         });
+ *         var myDemoMethod = new Aws.ApiGateway.Method("myDemoMethod", new Aws.ApiGateway.MethodArgs
+ *         {
+ *             RestApi = myDemoAPI.Id,
+ *             ResourceId = myDemoResource.Id,
+ *             HttpMethod = "GET",
+ *             Authorization = "NONE",
+ *         });
+ *         var myDemoIntegration = new Aws.ApiGateway.Integration("myDemoIntegration", new Aws.ApiGateway.IntegrationArgs
+ *         {
+ *             RestApi = myDemoAPI.Id,
+ *             ResourceId = myDemoResource.Id,
+ *             HttpMethod = myDemoMethod.HttpMethod,
+ *             Type = "MOCK",
+ *             CacheKeyParameters = 
+ *             {
+ *                 "method.request.path.param",
+ *             },
+ *             CacheNamespace = "foobar",
+ *             TimeoutMilliseconds = 29000,
+ *             RequestParameters = 
+ *             {
+ *                 { "integration.request.header.X-Authorization", "'static'" },
+ *             },
+ *             RequestTemplates = 
+ *             {
+ *                 { "application/xml", @"{
+ *    ""body"" : $input.json('$')
+ * }
+ * " },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		myDemoAPI, err := apigateway.NewRestApi(ctx, "myDemoAPI", &apigateway.RestApiArgs{
+ * 			Description: pulumi.String("This is my API for demonstration purposes"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		myDemoResource, err := apigateway.NewResource(ctx, "myDemoResource", &apigateway.ResourceArgs{
+ * 			RestApi:  myDemoAPI.ID(),
+ * 			ParentId: myDemoAPI.RootResourceId,
+ * 			PathPart: pulumi.String("mydemoresource"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		myDemoMethod, err := apigateway.NewMethod(ctx, "myDemoMethod", &apigateway.MethodArgs{
+ * 			RestApi:       myDemoAPI.ID(),
+ * 			ResourceId:    myDemoResource.ID(),
+ * 			HttpMethod:    pulumi.String("GET"),
+ * 			Authorization: pulumi.String("NONE"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = apigateway.NewIntegration(ctx, "myDemoIntegration", &apigateway.IntegrationArgs{
+ * 			RestApi:    myDemoAPI.ID(),
+ * 			ResourceId: myDemoResource.ID(),
+ * 			HttpMethod: myDemoMethod.HttpMethod,
+ * 			Type:       pulumi.String("MOCK"),
+ * 			CacheKeyParameters: pulumi.StringArray{
+ * 				pulumi.String("method.request.path.param"),
+ * 			},
+ * 			CacheNamespace:      pulumi.String("foobar"),
+ * 			TimeoutMilliseconds: pulumi.Int(29000),
+ * 			RequestParameters: pulumi.StringMap{
+ * 				"integration.request.header.X-Authorization": pulumi.String("'static'"),
+ * 			},
+ * 			RequestTemplates: pulumi.StringMap{
+ * 				"application/xml": pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v", "{\n", "   \"body\" : ", "$", "input.json('", "$", "')\n", "}\n")),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * ## Lambda integration
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const config = new pulumi.Config();
+ * const myregion = config.requireObject("myregion");
+ * const accountId = config.requireObject("accountId");
+ * // API Gateway
+ * const api = new aws.apigateway.RestApi("api", {});
+ * const resource = new aws.apigateway.Resource("resource", {
+ *     pathPart: "resource",
+ *     parentId: api.rootResourceId,
+ *     restApi: api.id,
+ * });
+ * const method = new aws.apigateway.Method("method", {
+ *     restApi: api.id,
+ *     resourceId: resource.id,
+ *     httpMethod: "GET",
+ *     authorization: "NONE",
+ * });
+ * // IAM
+ * const role = new aws.iam.Role("role", {assumeRolePolicy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "lambda.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * `});
+ * const lambda = new aws.lambda.Function("lambda", {
+ *     code: new pulumi.asset.FileArchive("lambda.zip"),
+ *     role: role.arn,
+ *     handler: "lambda.lambda_handler",
+ *     runtime: "python3.6",
+ * });
+ * const integration = new aws.apigateway.Integration("integration", {
+ *     restApi: api.id,
+ *     resourceId: resource.id,
+ *     httpMethod: method.httpMethod,
+ *     integrationHttpMethod: "POST",
+ *     type: "AWS_PROXY",
+ *     uri: lambda.invokeArn,
+ * });
+ * // Lambda
+ * const apigwLambda = new aws.lambda.Permission("apigwLambda", {
+ *     action: "lambda:InvokeFunction",
+ *     "function": lambda.name,
+ *     principal: "apigateway.amazonaws.com",
+ *     sourceArn: pulumi.interpolate`arn:aws:execute-api:${myregion}:${accountId}:${api.id}/*{@literal /}${method.httpMethod}${resource.path}`,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * config = pulumi.Config()
+ * myregion = config.require_object("myregion")
+ * account_id = config.require_object("accountId")
+ * # API Gateway
+ * api = aws.apigateway.RestApi("api")
+ * resource = aws.apigateway.Resource("resource",
+ *     path_part="resource",
+ *     parent_id=api.root_resource_id,
+ *     rest_api=api.id)
+ * method = aws.apigateway.Method("method",
+ *     rest_api=api.id,
+ *     resource_id=resource.id,
+ *     http_method="GET",
+ *     authorization="NONE")
+ * # IAM
+ * role = aws.iam.Role("role", assume_role_policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "lambda.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * """)
+ * lambda_ = aws.lambda_.Function("lambda",
+ *     code=pulumi.FileArchive("lambda.zip"),
+ *     role=role.arn,
+ *     handler="lambda.lambda_handler",
+ *     runtime="python3.6")
+ * integration = aws.apigateway.Integration("integration",
+ *     rest_api=api.id,
+ *     resource_id=resource.id,
+ *     http_method=method.http_method,
+ *     integration_http_method="POST",
+ *     type="AWS_PROXY",
+ *     uri=lambda_.invoke_arn)
+ * # Lambda
+ * apigw_lambda = aws.lambda_.Permission("apigwLambda",
+ *     action="lambda:InvokeFunction",
+ *     function=lambda_.name,
+ *     principal="apigateway.amazonaws.com",
+ *     source_arn=pulumi.Output.all(api.id, method.http_method, resource.path).apply(lambda id, http_method, path: f"arn:aws:execute-api:{myregion}:{account_id}:{id}/*{@literal /}{http_method}{path}"))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var myregion = config.RequireObject<dynamic>("myregion");
+ *         var accountId = config.RequireObject<dynamic>("accountId");
+ *         // API Gateway
+ *         var api = new Aws.ApiGateway.RestApi("api", new Aws.ApiGateway.RestApiArgs
+ *         {
+ *         });
+ *         var resource = new Aws.ApiGateway.Resource("resource", new Aws.ApiGateway.ResourceArgs
+ *         {
+ *             PathPart = "resource",
+ *             ParentId = api.RootResourceId,
+ *             RestApi = api.Id,
+ *         });
+ *         var method = new Aws.ApiGateway.Method("method", new Aws.ApiGateway.MethodArgs
+ *         {
+ *             RestApi = api.Id,
+ *             ResourceId = resource.Id,
+ *             HttpMethod = "GET",
+ *             Authorization = "NONE",
+ *         });
+ *         // IAM
+ *         var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Action"": ""sts:AssumeRole"",
+ *       ""Principal"": {
+ *         ""Service"": ""lambda.amazonaws.com""
+ *       },
+ *       ""Effect"": ""Allow"",
+ *       ""Sid"": """"
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var lambda = new Aws.Lambda.Function("lambda", new Aws.Lambda.FunctionArgs
+ *         {
+ *             Code = new FileArchive("lambda.zip"),
+ *             Role = role.Arn,
+ *             Handler = "lambda.lambda_handler",
+ *             Runtime = "python3.6",
+ *         });
+ *         var integration = new Aws.ApiGateway.Integration("integration", new Aws.ApiGateway.IntegrationArgs
+ *         {
+ *             RestApi = api.Id,
+ *             ResourceId = resource.Id,
+ *             HttpMethod = method.HttpMethod,
+ *             IntegrationHttpMethod = "POST",
+ *             Type = "AWS_PROXY",
+ *             Uri = lambda.InvokeArn,
+ *         });
+ *         // Lambda
+ *         var apigwLambda = new Aws.Lambda.Permission("apigwLambda", new Aws.Lambda.PermissionArgs
+ *         {
+ *             Action = "lambda:InvokeFunction",
+ *             Function = lambda.Name,
+ *             Principal = "apigateway.amazonaws.com",
+ *             SourceArn = Output.Tuple(api.Id, method.HttpMethod, resource.Path).Apply(values =>
+ *             {
+ *                 var id = values.Item1;
+ *                 var httpMethod = values.Item2;
+ *                 var path = values.Item3;
+ *                 return $"arn:aws:execute-api:{myregion}:{accountId}:{id}/*{@literal /}{httpMethod}{path}";
+ *             }),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigateway"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		cfg := config.New(ctx, "")
+ * 		myregion := cfg.RequireObject("myregion")
+ * 		accountId := cfg.RequireObject("accountId")
+ * 		api, err := apigateway.NewRestApi(ctx, "api", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		resource, err := apigateway.NewResource(ctx, "resource", &apigateway.ResourceArgs{
+ * 			PathPart: pulumi.String("resource"),
+ * 			ParentId: api.RootResourceId,
+ * 			RestApi:  api.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		method, err := apigateway.NewMethod(ctx, "method", &apigateway.MethodArgs{
+ * 			RestApi:       api.ID(),
+ * 			ResourceId:    resource.ID(),
+ * 			HttpMethod:    pulumi.String("GET"),
+ * 			Authorization: pulumi.String("NONE"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"lambda.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		lambda, err := lambda.NewFunction(ctx, "lambda", &lambda.FunctionArgs{
+ * 			Code:    pulumi.NewFileArchive("lambda.zip"),
+ * 			Role:    role.Arn,
+ * 			Handler: pulumi.String("lambda.lambda_handler"),
+ * 			Runtime: pulumi.String("python3.6"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = apigateway.NewIntegration(ctx, "integration", &apigateway.IntegrationArgs{
+ * 			RestApi:               api.ID(),
+ * 			ResourceId:            resource.ID(),
+ * 			HttpMethod:            method.HttpMethod,
+ * 			IntegrationHttpMethod: pulumi.String("POST"),
+ * 			Type:                  pulumi.String("AWS_PROXY"),
+ * 			Uri:                   lambda.InvokeArn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = lambda.NewPermission(ctx, "apigwLambda", &lambda.PermissionArgs{
+ * 			Action:    pulumi.String("lambda:InvokeFunction"),
+ * 			Function:  lambda.Name,
+ * 			Principal: pulumi.String("apigateway.amazonaws.com"),
+ * 			SourceArn: pulumi.All(api.ID(), method.HttpMethod, resource.Path).ApplyT(func(_args []interface{}) (string, error) {
+ * 				id := _args[0].(string)
+ * 				httpMethod := _args[1].(string)
+ * 				path := _args[2].(string)
+ * 				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v", "arn:aws:execute-api:", myregion, ":", accountId, ":", id, "/*{@literal /}", httpMethod, path), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * ## VPC Link
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const config = new pulumi.Config();
+ * const name = config.requireObject("name");
+ * const subnetId = config.requireObject("subnetId");
+ * const testLoadBalancer = new aws.lb.LoadBalancer("testLoadBalancer", {
+ *     internal: true,
+ *     loadBalancerType: "network",
+ *     subnets: [subnetId],
+ * });
+ * const testVpcLink = new aws.apigateway.VpcLink("testVpcLink", {targetArn: [testLoadBalancer.arn]});
+ * const testRestApi = new aws.apigateway.RestApi("testRestApi", {});
+ * const testResource = new aws.apigateway.Resource("testResource", {
+ *     restApi: testRestApi.id,
+ *     parentId: testRestApi.rootResourceId,
+ *     pathPart: "test",
+ * });
+ * const testMethod = new aws.apigateway.Method("testMethod", {
+ *     restApi: testRestApi.id,
+ *     resourceId: testResource.id,
+ *     httpMethod: "GET",
+ *     authorization: "NONE",
+ *     requestModels: {
+ *         "application/json": "Error",
+ *     },
+ * });
+ * const testIntegration = new aws.apigateway.Integration("testIntegration", {
+ *     restApi: testRestApi.id,
+ *     resourceId: testResource.id,
+ *     httpMethod: testMethod.httpMethod,
+ *     requestTemplates: {
+ *         "application/json": "",
+ *         "application/xml": `#set($inputRoot = $input.path('$'))
+ * { }`,
+ *     },
+ *     requestParameters: {
+ *         "integration.request.header.X-Authorization": "'static'",
+ *         "integration.request.header.X-Foo": "'Bar'",
+ *     },
+ *     type: "HTTP",
+ *     uri: "https://www.google.de",
+ *     integrationHttpMethod: "GET",
+ *     passthroughBehavior: "WHEN_NO_MATCH",
+ *     contentHandling: "CONVERT_TO_TEXT",
+ *     connectionType: "VPC_LINK",
+ *     connectionId: testVpcLink.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * config = pulumi.Config()
+ * name = config.require_object("name")
+ * subnet_id = config.require_object("subnetId")
+ * test_load_balancer = aws.lb.LoadBalancer("testLoadBalancer",
+ *     internal=True,
+ *     load_balancer_type="network",
+ *     subnets=[subnet_id])
+ * test_vpc_link = aws.apigateway.VpcLink("testVpcLink", target_arn=[test_load_balancer.arn])
+ * test_rest_api = aws.apigateway.RestApi("testRestApi")
+ * test_resource = aws.apigateway.Resource("testResource",
+ *     rest_api=test_rest_api.id,
+ *     parent_id=test_rest_api.root_resource_id,
+ *     path_part="test")
+ * test_method = aws.apigateway.Method("testMethod",
+ *     rest_api=test_rest_api.id,
+ *     resource_id=test_resource.id,
+ *     http_method="GET",
+ *     authorization="NONE",
+ *     request_models={
+ *         "application/json": "Error",
+ *     })
+ * test_integration = aws.apigateway.Integration("testIntegration",
+ *     rest_api=test_rest_api.id,
+ *     resource_id=test_resource.id,
+ *     http_method=test_method.http_method,
+ *     request_templates={
+ *         "application/json": "",
+ *         "application/xml": """#set($inputRoot = $input.path('$'))
+ * { }""",
+ *     },
+ *     request_parameters={
+ *         "integration.request.header.X-Authorization": "'static'",
+ *         "integration.request.header.X-Foo": "'Bar'",
+ *     },
+ *     type="HTTP",
+ *     uri="https://www.google.de",
+ *     integration_http_method="GET",
+ *     passthrough_behavior="WHEN_NO_MATCH",
+ *     content_handling="CONVERT_TO_TEXT",
+ *     connection_type="VPC_LINK",
+ *     connection_id=test_vpc_link.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var name = config.RequireObject<dynamic>("name");
+ *         var subnetId = config.RequireObject<dynamic>("subnetId");
+ *         var testLoadBalancer = new Aws.LB.LoadBalancer("testLoadBalancer", new Aws.LB.LoadBalancerArgs
+ *         {
+ *             Internal = true,
+ *             LoadBalancerType = "network",
+ *             Subnets = 
+ *             {
+ *                 subnetId,
+ *             },
+ *         });
+ *         var testVpcLink = new Aws.ApiGateway.VpcLink("testVpcLink", new Aws.ApiGateway.VpcLinkArgs
+ *         {
+ *             TargetArn = 
+ *             {
+ *                 testLoadBalancer.Arn,
+ *             },
+ *         });
+ *         var testRestApi = new Aws.ApiGateway.RestApi("testRestApi", new Aws.ApiGateway.RestApiArgs
+ *         {
+ *         });
+ *         var testResource = new Aws.ApiGateway.Resource("testResource", new Aws.ApiGateway.ResourceArgs
+ *         {
+ *             RestApi = testRestApi.Id,
+ *             ParentId = testRestApi.RootResourceId,
+ *             PathPart = "test",
+ *         });
+ *         var testMethod = new Aws.ApiGateway.Method("testMethod", new Aws.ApiGateway.MethodArgs
+ *         {
+ *             RestApi = testRestApi.Id,
+ *             ResourceId = testResource.Id,
+ *             HttpMethod = "GET",
+ *             Authorization = "NONE",
+ *             RequestModels = 
+ *             {
+ *                 { "application/json", "Error" },
+ *             },
+ *         });
+ *         var testIntegration = new Aws.ApiGateway.Integration("testIntegration", new Aws.ApiGateway.IntegrationArgs
+ *         {
+ *             RestApi = testRestApi.Id,
+ *             ResourceId = testResource.Id,
+ *             HttpMethod = testMethod.HttpMethod,
+ *             RequestTemplates = 
+ *             {
+ *                 { "application/json", "" },
+ *                 { "application/xml", @"#set($inputRoot = $input.path('$'))
+ * { }" },
+ *             },
+ *             RequestParameters = 
+ *             {
+ *                 { "integration.request.header.X-Authorization", "'static'" },
+ *                 { "integration.request.header.X-Foo", "'Bar'" },
+ *             },
+ *             Type = "HTTP",
+ *             Uri = "https://www.google.de",
+ *             IntegrationHttpMethod = "GET",
+ *             PassthroughBehavior = "WHEN_NO_MATCH",
+ *             ContentHandling = "CONVERT_TO_TEXT",
+ *             ConnectionType = "VPC_LINK",
+ *             ConnectionId = testVpcLink.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigateway"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		cfg := config.New(ctx, "")
+ * 		name := cfg.RequireObject("name")
+ * 		subnetId := cfg.RequireObject("subnetId")
+ * 		testLoadBalancer, err := lb.NewLoadBalancer(ctx, "testLoadBalancer", &lb.LoadBalancerArgs{
+ * 			Internal:         pulumi.Bool(true),
+ * 			LoadBalancerType: pulumi.String("network"),
+ * 			Subnets: pulumi.StringArray{
+ * 				pulumi.Any(subnetId),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		testVpcLink, err := apigateway.NewVpcLink(ctx, "testVpcLink", &apigateway.VpcLinkArgs{
+ * 			TargetArn: pulumi.String{
+ * 				testLoadBalancer.Arn,
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		testRestApi, err := apigateway.NewRestApi(ctx, "testRestApi", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		testResource, err := apigateway.NewResource(ctx, "testResource", &apigateway.ResourceArgs{
+ * 			RestApi:  testRestApi.ID(),
+ * 			ParentId: testRestApi.RootResourceId,
+ * 			PathPart: pulumi.String("test"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		testMethod, err := apigateway.NewMethod(ctx, "testMethod", &apigateway.MethodArgs{
+ * 			RestApi:       testRestApi.ID(),
+ * 			ResourceId:    testResource.ID(),
+ * 			HttpMethod:    pulumi.String("GET"),
+ * 			Authorization: pulumi.String("NONE"),
+ * 			RequestModels: pulumi.StringMap{
+ * 				"application/json": pulumi.String("Error"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = apigateway.NewIntegration(ctx, "testIntegration", &apigateway.IntegrationArgs{
+ * 			RestApi:    testRestApi.ID(),
+ * 			ResourceId: testResource.ID(),
+ * 			HttpMethod: testMethod.HttpMethod,
+ * 			RequestTemplates: pulumi.StringMap{
+ * 				"application/json": pulumi.String(""),
+ * 				"application/xml":  pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v", "#set(", "$", "inputRoot = ", "$", "input.path('", "$", "'))\n{ }")),
+ * 			},
+ * 			RequestParameters: pulumi.StringMap{
+ * 				"integration.request.header.X-Authorization": pulumi.String("'static'"),
+ * 				"integration.request.header.X-Foo":           pulumi.String("'Bar'"),
+ * 			},
+ * 			Type:                  pulumi.String("HTTP"),
+ * 			Uri:                   pulumi.String("https://www.google.de"),
+ * 			IntegrationHttpMethod: pulumi.String("GET"),
+ * 			PassthroughBehavior:   pulumi.String("WHEN_NO_MATCH"),
+ * 			ContentHandling:       pulumi.String("CONVERT_TO_TEXT"),
+ * 			ConnectionType:        pulumi.String("VPC_LINK"),
+ * 			ConnectionId:          testVpcLink.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * 
  * ## Import
  * 
@@ -32,6 +749,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:apigateway/integration:Integration example 12345abcde/67890fghij/GET
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:apigateway/integration:Integration")
 public class Integration extends io.pulumi.resources.CustomResource {

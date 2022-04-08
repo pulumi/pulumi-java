@@ -16,7 +16,57 @@ import javax.annotation.Nullable;
 /**
  * Provides a Route 53 Resolver DNS Firewall rule group resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.route53.ResolverFirewallRuleGroup("example", {});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.route53.ResolverFirewallRuleGroup("example")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Route53.ResolverFirewallRuleGroup("example", new Aws.Route53.ResolverFirewallRuleGroupArgs
+ *         {
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := route53.NewResolverFirewallRuleGroup(ctx, "example", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +76,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:route53/resolverFirewallRuleGroup:ResolverFirewallRuleGroup example rslvr-frg-0123456789abcdef
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:route53/resolverFirewallRuleGroup:ResolverFirewallRuleGroup")
 public class ResolverFirewallRuleGroup extends io.pulumi.resources.CustomResource {

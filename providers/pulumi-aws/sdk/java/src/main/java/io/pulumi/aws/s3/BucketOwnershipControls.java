@@ -16,7 +16,85 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage S3 Bucket Ownership Controls. For more information, see the [S3 Developer Guide](https://docs.aws.amazon.com/AmazonS3/latest/dev/about-object-ownership.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleBucket = new aws.s3.Bucket("exampleBucket", {});
+ * const exampleBucketOwnershipControls = new aws.s3.BucketOwnershipControls("exampleBucketOwnershipControls", {
+ *     bucket: exampleBucket.id,
+ *     rule: {
+ *         objectOwnership: "BucketOwnerPreferred",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_bucket = aws.s3.Bucket("exampleBucket")
+ * example_bucket_ownership_controls = aws.s3.BucketOwnershipControls("exampleBucketOwnershipControls",
+ *     bucket=example_bucket.id,
+ *     rule=aws.s3.BucketOwnershipControlsRuleArgs(
+ *         object_ownership="BucketOwnerPreferred",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleBucket = new Aws.S3.Bucket("exampleBucket", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var exampleBucketOwnershipControls = new Aws.S3.BucketOwnershipControls("exampleBucketOwnershipControls", new Aws.S3.BucketOwnershipControlsArgs
+ *         {
+ *             Bucket = exampleBucket.Id,
+ *             Rule = new Aws.S3.Inputs.BucketOwnershipControlsRuleArgs
+ *             {
+ *                 ObjectOwnership = "BucketOwnerPreferred",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleBucket, err := s3.NewBucket(ctx, "exampleBucket", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewBucketOwnershipControls(ctx, "exampleBucketOwnershipControls", &s3.BucketOwnershipControlsArgs{
+ * 			Bucket: exampleBucket.ID(),
+ * 			Rule: &s3.BucketOwnershipControlsRuleArgs{
+ * 				ObjectOwnership: pulumi.String("BucketOwnerPreferred"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +104,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:s3/bucketOwnershipControls:BucketOwnershipControls example my-bucket
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:s3/bucketOwnershipControls:BucketOwnershipControls")
 public class BucketOwnershipControls extends io.pulumi.resources.CustomResource {

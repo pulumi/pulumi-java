@@ -18,7 +18,178 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource-based access control mechanism for a KMS customer master key.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const key = new aws.kms.Key("key", {});
+ * const role = new aws.iam.Role("role", {assumeRolePolicy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "lambda.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * `});
+ * const grant = new aws.kms.Grant("grant", {
+ *     keyId: key.keyId,
+ *     granteePrincipal: role.arn,
+ *     operations: [
+ *         "Encrypt",
+ *         "Decrypt",
+ *         "GenerateDataKey",
+ *     ],
+ *     constraints: [{
+ *         encryptionContextEquals: {
+ *             Department: "Finance",
+ *         },
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * key = aws.kms.Key("key")
+ * role = aws.iam.Role("role", assume_role_policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "lambda.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * """)
+ * grant = aws.kms.Grant("grant",
+ *     key_id=key.key_id,
+ *     grantee_principal=role.arn,
+ *     operations=[
+ *         "Encrypt",
+ *         "Decrypt",
+ *         "GenerateDataKey",
+ *     ],
+ *     constraints=[aws.kms.GrantConstraintArgs(
+ *         encryption_context_equals={
+ *             "Department": "Finance",
+ *         },
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var key = new Aws.Kms.Key("key", new Aws.Kms.KeyArgs
+ *         {
+ *         });
+ *         var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Action"": ""sts:AssumeRole"",
+ *       ""Principal"": {
+ *         ""Service"": ""lambda.amazonaws.com""
+ *       },
+ *       ""Effect"": ""Allow"",
+ *       ""Sid"": """"
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var grant = new Aws.Kms.Grant("grant", new Aws.Kms.GrantArgs
+ *         {
+ *             KeyId = key.KeyId,
+ *             GranteePrincipal = role.Arn,
+ *             Operations = 
+ *             {
+ *                 "Encrypt",
+ *                 "Decrypt",
+ *                 "GenerateDataKey",
+ *             },
+ *             Constraints = 
+ *             {
+ *                 new Aws.Kms.Inputs.GrantConstraintArgs
+ *                 {
+ *                     EncryptionContextEquals = 
+ *                     {
+ *                         { "Department", "Finance" },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kms"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		key, err := kms.NewKey(ctx, "key", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"lambda.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = kms.NewGrant(ctx, "grant", &kms.GrantArgs{
+ * 			KeyId:            key.KeyId,
+ * 			GranteePrincipal: role.Arn,
+ * 			Operations: pulumi.StringArray{
+ * 				pulumi.String("Encrypt"),
+ * 				pulumi.String("Decrypt"),
+ * 				pulumi.String("GenerateDataKey"),
+ * 			},
+ * 			Constraints: kms.GrantConstraintArray{
+ * 				&kms.GrantConstraintArgs{
+ * 					EncryptionContextEquals: pulumi.StringMap{
+ * 						"Department": pulumi.String("Finance"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +199,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:kms/grant:Grant test 1234abcd-12ab-34cd-56ef-1234567890ababcde1237f76e4ba7987489ac329fbfba6ad343d6f7075dbd1ef191f0120514
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:kms/grant:Grant")
 public class Grant extends io.pulumi.resources.CustomResource {

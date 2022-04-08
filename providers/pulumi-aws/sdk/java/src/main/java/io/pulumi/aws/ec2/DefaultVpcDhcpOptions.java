@@ -26,7 +26,73 @@ import javax.annotation.Nullable;
  * this provider does not _create_ this resource, but instead "adopts" it
  * into management.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * Basic usage with tags:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const defaultDefaultVpcDhcpOptions = new aws.ec2.DefaultVpcDhcpOptions("default", {
+ *     tags: {
+ *         Name: "Default DHCP Option Set",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default = aws.ec2.DefaultVpcDhcpOptions("default", tags={
+ *     "Name": "Default DHCP Option Set",
+ * })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Aws.Ec2.DefaultVpcDhcpOptions("default", new Aws.Ec2.DefaultVpcDhcpOptionsArgs
+ *         {
+ *             Tags = 
+ *             {
+ *                 { "Name", "Default DHCP Option Set" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewDefaultVpcDhcpOptions(ctx, "default", &ec2.DefaultVpcDhcpOptionsArgs{
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("Default DHCP Option Set"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,6 +102,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/defaultVpcDhcpOptions:DefaultVpcDhcpOptions default_options dopt-d9070ebb
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/defaultVpcDhcpOptions:DefaultVpcDhcpOptions")
 public class DefaultVpcDhcpOptions extends io.pulumi.resources.CustomResource {

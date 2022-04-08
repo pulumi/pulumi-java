@@ -17,7 +17,132 @@ import javax.annotation.Nullable;
 /**
  * Provides a Batch Scheduling Policy resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.batch.SchedulingPolicy("example", {
+ *     fairSharePolicy: {
+ *         computeReservation: 1,
+ *         shareDecaySeconds: 3600,
+ *         shareDistributions: [
+ *             {
+ *                 shareIdentifier: "A1*",
+ *                 weightFactor: 0.1,
+ *             },
+ *             {
+ *                 shareIdentifier: "A2",
+ *                 weightFactor: 0.2,
+ *             },
+ *         ],
+ *     },
+ *     tags: {
+ *         Name: "Example Batch Scheduling Policy",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.batch.SchedulingPolicy("example",
+ *     fair_share_policy=aws.batch.SchedulingPolicyFairSharePolicyArgs(
+ *         compute_reservation=1,
+ *         share_decay_seconds=3600,
+ *         share_distributions=[
+ *             aws.batch.SchedulingPolicyFairSharePolicyShareDistributionArgs(
+ *                 share_identifier="A1*",
+ *                 weight_factor=0.1,
+ *             ),
+ *             aws.batch.SchedulingPolicyFairSharePolicyShareDistributionArgs(
+ *                 share_identifier="A2",
+ *                 weight_factor=0.2,
+ *             ),
+ *         ],
+ *     ),
+ *     tags={
+ *         "Name": "Example Batch Scheduling Policy",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Batch.SchedulingPolicy("example", new Aws.Batch.SchedulingPolicyArgs
+ *         {
+ *             FairSharePolicy = new Aws.Batch.Inputs.SchedulingPolicyFairSharePolicyArgs
+ *             {
+ *                 ComputeReservation = 1,
+ *                 ShareDecaySeconds = 3600,
+ *                 ShareDistributions = 
+ *                 {
+ *                     new Aws.Batch.Inputs.SchedulingPolicyFairSharePolicyShareDistributionArgs
+ *                     {
+ *                         ShareIdentifier = "A1*",
+ *                         WeightFactor = 0.1,
+ *                     },
+ *                     new Aws.Batch.Inputs.SchedulingPolicyFairSharePolicyShareDistributionArgs
+ *                     {
+ *                         ShareIdentifier = "A2",
+ *                         WeightFactor = 0.2,
+ *                     },
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Name", "Example Batch Scheduling Policy" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/batch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := batch.NewSchedulingPolicy(ctx, "example", &batch.SchedulingPolicyArgs{
+ * 			FairSharePolicy: &batch.SchedulingPolicyFairSharePolicyArgs{
+ * 				ComputeReservation: pulumi.Int(1),
+ * 				ShareDecaySeconds:  pulumi.Int(3600),
+ * 				ShareDistributions: batch.SchedulingPolicyFairSharePolicyShareDistributionArray{
+ * 					&batch.SchedulingPolicyFairSharePolicyShareDistributionArgs{
+ * 						ShareIdentifier: pulumi.String("A1*"),
+ * 						WeightFactor:    pulumi.Float64(0.1),
+ * 					},
+ * 					&batch.SchedulingPolicyFairSharePolicyShareDistributionArgs{
+ * 						ShareIdentifier: pulumi.String("A2"),
+ * 						WeightFactor:    pulumi.Float64(0.2),
+ * 					},
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("Example Batch Scheduling Policy"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +152,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:batch/schedulingPolicy:SchedulingPolicy test_policy arn:aws:batch:us-east-1:123456789012:scheduling-policy/sample
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:batch/schedulingPolicy:SchedulingPolicy")
 public class SchedulingPolicy extends io.pulumi.resources.CustomResource {

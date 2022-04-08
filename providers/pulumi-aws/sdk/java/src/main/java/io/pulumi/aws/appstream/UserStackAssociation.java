@@ -16,7 +16,99 @@ import javax.annotation.Nullable;
 /**
  * Manages an AppStream User Stack association.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const testStack = new aws.appstream.Stack("testStack", {});
+ * const testUser = new aws.appstream.User("testUser", {
+ *     authenticationType: "USERPOOL",
+ *     userName: "EMAIL",
+ * });
+ * const testUserStackAssociation = new aws.appstream.UserStackAssociation("testUserStackAssociation", {
+ *     authenticationType: testUser.authenticationType,
+ *     stackName: testStack.name,
+ *     userName: testUser.userName,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_stack = aws.appstream.Stack("testStack")
+ * test_user = aws.appstream.User("testUser",
+ *     authentication_type="USERPOOL",
+ *     user_name="EMAIL")
+ * test_user_stack_association = aws.appstream.UserStackAssociation("testUserStackAssociation",
+ *     authentication_type=test_user.authentication_type,
+ *     stack_name=test_stack.name,
+ *     user_name=test_user.user_name)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testStack = new Aws.AppStream.Stack("testStack", new Aws.AppStream.StackArgs
+ *         {
+ *         });
+ *         var testUser = new Aws.AppStream.User("testUser", new Aws.AppStream.UserArgs
+ *         {
+ *             AuthenticationType = "USERPOOL",
+ *             UserName = "EMAIL",
+ *         });
+ *         var testUserStackAssociation = new Aws.AppStream.UserStackAssociation("testUserStackAssociation", new Aws.AppStream.UserStackAssociationArgs
+ *         {
+ *             AuthenticationType = testUser.AuthenticationType,
+ *             StackName = testStack.Name,
+ *             UserName = testUser.UserName,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appstream"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		testStack, err := appstream.NewStack(ctx, "testStack", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		testUser, err := appstream.NewUser(ctx, "testUser", &appstream.UserArgs{
+ * 			AuthenticationType: pulumi.String("USERPOOL"),
+ * 			UserName:           pulumi.String("EMAIL"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = appstream.NewUserStackAssociation(ctx, "testUserStackAssociation", &appstream.UserStackAssociationArgs{
+ * 			AuthenticationType: testUser.AuthenticationType,
+ * 			StackName:          testStack.Name,
+ * 			UserName:           testUser.UserName,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +118,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appstream/userStackAssociation:UserStackAssociation example userName/auhtenticationType/stackName
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:appstream/userStackAssociation:UserStackAssociation")
 public class UserStackAssociation extends io.pulumi.resources.CustomResource {

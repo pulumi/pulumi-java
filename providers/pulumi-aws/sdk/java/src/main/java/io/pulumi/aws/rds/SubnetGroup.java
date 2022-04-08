@@ -17,7 +17,89 @@ import javax.annotation.Nullable;
 /**
  * Provides an RDS DB subnet group resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const _default = new aws.rds.SubnetGroup("default", {
+ *     subnetIds: [
+ *         aws_subnet.frontend.id,
+ *         aws_subnet.backend.id,
+ *     ],
+ *     tags: {
+ *         Name: "My DB subnet group",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default = aws.rds.SubnetGroup("default",
+ *     subnet_ids=[
+ *         aws_subnet["frontend"]["id"],
+ *         aws_subnet["backend"]["id"],
+ *     ],
+ *     tags={
+ *         "Name": "My DB subnet group",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Aws.Rds.SubnetGroup("default", new Aws.Rds.SubnetGroupArgs
+ *         {
+ *             SubnetIds = 
+ *             {
+ *                 aws_subnet.Frontend.Id,
+ *                 aws_subnet.Backend.Id,
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Name", "My DB subnet group" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/rds"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := rds.NewSubnetGroup(ctx, "default", &rds.SubnetGroupArgs{
+ * 			SubnetIds: pulumi.StringArray{
+ * 				pulumi.Any(aws_subnet.Frontend.Id),
+ * 				pulumi.Any(aws_subnet.Backend.Id),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("My DB subnet group"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +109,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:rds/subnetGroup:SubnetGroup default production-subnet-group
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:rds/subnetGroup:SubnetGroup")
 public class SubnetGroup extends io.pulumi.resources.CustomResource {

@@ -16,7 +16,76 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to create a VPC VPN Gateway.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const vpnGw = new aws.ec2.VpnGateway("vpnGw", {
+ *     vpcId: aws_vpc.main.id,
+ *     tags: {
+ *         Name: "main",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * vpn_gw = aws.ec2.VpnGateway("vpnGw",
+ *     vpc_id=aws_vpc["main"]["id"],
+ *     tags={
+ *         "Name": "main",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var vpnGw = new Aws.Ec2.VpnGateway("vpnGw", new Aws.Ec2.VpnGatewayArgs
+ *         {
+ *             VpcId = aws_vpc.Main.Id,
+ *             Tags = 
+ *             {
+ *                 { "Name", "main" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewVpnGateway(ctx, "vpnGw", &ec2.VpnGatewayArgs{
+ * 			VpcId: pulumi.Any(aws_vpc.Main.Id),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("main"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +95,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/vpnGateway:VpnGateway testvpngateway vgw-9a4cacf3
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/vpnGateway:VpnGateway")
 public class VpnGateway extends io.pulumi.resources.CustomResource {

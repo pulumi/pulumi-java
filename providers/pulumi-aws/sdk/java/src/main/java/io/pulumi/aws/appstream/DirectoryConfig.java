@@ -17,7 +17,89 @@ import javax.annotation.Nullable;
 /**
  * Provides an AppStream Directory Config.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.appstream.DirectoryConfig("example", {
+ *     directoryName: "NAME OF DIRECTORY",
+ *     organizationalUnitDistinguishedNames: ["DISTINGUISHED NAME"],
+ *     serviceAccountCredentials: {
+ *         accountName: "NAME OF ACCOUNT",
+ *         accountPassword: "PASSWORD OF ACCOUNT",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.appstream.DirectoryConfig("example",
+ *     directory_name="NAME OF DIRECTORY",
+ *     organizational_unit_distinguished_names=["DISTINGUISHED NAME"],
+ *     service_account_credentials=aws.appstream.DirectoryConfigServiceAccountCredentialsArgs(
+ *         account_name="NAME OF ACCOUNT",
+ *         account_password="PASSWORD OF ACCOUNT",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.AppStream.DirectoryConfig("example", new Aws.AppStream.DirectoryConfigArgs
+ *         {
+ *             DirectoryName = "NAME OF DIRECTORY",
+ *             OrganizationalUnitDistinguishedNames = 
+ *             {
+ *                 "DISTINGUISHED NAME",
+ *             },
+ *             ServiceAccountCredentials = new Aws.AppStream.Inputs.DirectoryConfigServiceAccountCredentialsArgs
+ *             {
+ *                 AccountName = "NAME OF ACCOUNT",
+ *                 AccountPassword = "PASSWORD OF ACCOUNT",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appstream"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appstream.NewDirectoryConfig(ctx, "example", &appstream.DirectoryConfigArgs{
+ * 			DirectoryName: pulumi.String("NAME OF DIRECTORY"),
+ * 			OrganizationalUnitDistinguishedNames: pulumi.StringArray{
+ * 				pulumi.String("DISTINGUISHED NAME"),
+ * 			},
+ * 			ServiceAccountCredentials: &appstream.DirectoryConfigServiceAccountCredentialsArgs{
+ * 				AccountName:     pulumi.String("NAME OF ACCOUNT"),
+ * 				AccountPassword: pulumi.String("PASSWORD OF ACCOUNT"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +109,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appstream/directoryConfig:DirectoryConfig example directoryNameExample
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:appstream/directoryConfig:DirectoryConfig")
 public class DirectoryConfig extends io.pulumi.resources.CustomResource {

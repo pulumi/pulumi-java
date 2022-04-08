@@ -20,7 +20,80 @@ import javax.annotation.Nullable;
 /**
  * Manages an AWS Storage Gateway NFS File Share.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.storagegateway.NfsFileShare("example", {
+ *     clientLists: ["0.0.0.0/0"],
+ *     gatewayArn: aws_storagegateway_gateway.example.arn,
+ *     locationArn: aws_s3_bucket.example.arn,
+ *     roleArn: aws_iam_role.example.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.storagegateway.NfsFileShare("example",
+ *     client_lists=["0.0.0.0/0"],
+ *     gateway_arn=aws_storagegateway_gateway["example"]["arn"],
+ *     location_arn=aws_s3_bucket["example"]["arn"],
+ *     role_arn=aws_iam_role["example"]["arn"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.StorageGateway.NfsFileShare("example", new Aws.StorageGateway.NfsFileShareArgs
+ *         {
+ *             ClientLists = 
+ *             {
+ *                 "0.0.0.0/0",
+ *             },
+ *             GatewayArn = aws_storagegateway_gateway.Example.Arn,
+ *             LocationArn = aws_s3_bucket.Example.Arn,
+ *             RoleArn = aws_iam_role.Example.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/storagegateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storagegateway.NewNfsFileShare(ctx, "example", &storagegateway.NfsFileShareArgs{
+ * 			ClientLists: pulumi.StringArray{
+ * 				pulumi.String("0.0.0.0/0"),
+ * 			},
+ * 			GatewayArn:  pulumi.Any(aws_storagegateway_gateway.Example.Arn),
+ * 			LocationArn: pulumi.Any(aws_s3_bucket.Example.Arn),
+ * 			RoleArn:     pulumi.Any(aws_iam_role.Example.Arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +103,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:storagegateway/nfsFileShare:NfsFileShare example arn:aws:storagegateway:us-east-1:123456789012:share/share-12345678
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:storagegateway/nfsFileShare:NfsFileShare")
 public class NfsFileShare extends io.pulumi.resources.CustomResource {

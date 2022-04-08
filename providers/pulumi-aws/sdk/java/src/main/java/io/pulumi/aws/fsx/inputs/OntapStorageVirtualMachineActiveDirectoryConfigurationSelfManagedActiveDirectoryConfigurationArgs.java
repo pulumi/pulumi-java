@@ -51,7 +51,6 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
     /**
      * @Deprecated
      * use 'organizational_unit_distinguished_name' instead
-     * 
      */
     @Deprecated /* use 'organizational_unit_distinguished_name' instead */
     @Import(name="organizationalUnitDistinguidshedName")

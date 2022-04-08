@@ -21,8 +21,60 @@ import javax.annotation.Nullable;
 /**
  * Provides an OpsWorks MySQL layer resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const db = new aws.opsworks.MysqlLayer("db", {stackId: aws_opsworks_stack.main.id});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * db = aws.opsworks.MysqlLayer("db", stack_id=aws_opsworks_stack["main"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var db = new Aws.OpsWorks.MysqlLayer("db", new Aws.OpsWorks.MysqlLayerArgs
+ *         {
+ *             StackId = aws_opsworks_stack.Main.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/opsworks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := opsworks.NewMysqlLayer(ctx, "db", &opsworks.MysqlLayerArgs{
+ * 			StackId: pulumi.Any(aws_opsworks_stack.Main.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:opsworks/mysqlLayer:MysqlLayer")
 public class MysqlLayer extends io.pulumi.resources.CustomResource {

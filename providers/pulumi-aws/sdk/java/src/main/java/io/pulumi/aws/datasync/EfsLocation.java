@@ -19,7 +19,86 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** The EFS File System must have a mounted EFS Mount Target before creating this resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.datasync.EfsLocation("example", {
+ *     efsFileSystemArn: aws_efs_mount_target.example.file_system_arn,
+ *     ec2Config: {
+ *         securityGroupArns: [aws_security_group.example.arn],
+ *         subnetArn: aws_subnet.example.arn,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.datasync.EfsLocation("example",
+ *     efs_file_system_arn=aws_efs_mount_target["example"]["file_system_arn"],
+ *     ec2_config=aws.datasync.EfsLocationEc2ConfigArgs(
+ *         security_group_arns=[aws_security_group["example"]["arn"]],
+ *         subnet_arn=aws_subnet["example"]["arn"],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.DataSync.EfsLocation("example", new Aws.DataSync.EfsLocationArgs
+ *         {
+ *             EfsFileSystemArn = aws_efs_mount_target.Example.File_system_arn,
+ *             Ec2Config = new Aws.DataSync.Inputs.EfsLocationEc2ConfigArgs
+ *             {
+ *                 SecurityGroupArns = 
+ *                 {
+ *                     aws_security_group.Example.Arn,
+ *                 },
+ *                 SubnetArn = aws_subnet.Example.Arn,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/datasync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datasync.NewEfsLocation(ctx, "example", &datasync.EfsLocationArgs{
+ * 			EfsFileSystemArn: pulumi.Any(aws_efs_mount_target.Example.File_system_arn),
+ * 			Ec2Config: &datasync.EfsLocationEc2ConfigArgs{
+ * 				SecurityGroupArns: pulumi.StringArray{
+ * 					pulumi.Any(aws_security_group.Example.Arn),
+ * 				},
+ * 				SubnetArn: pulumi.Any(aws_subnet.Example.Arn),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +108,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:datasync/efsLocation:EfsLocation example arn:aws:datasync:us-east-1:123456789012:location/loc-12345678901234567
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:datasync/efsLocation:EfsLocation")
 public class EfsLocation extends io.pulumi.resources.CustomResource {

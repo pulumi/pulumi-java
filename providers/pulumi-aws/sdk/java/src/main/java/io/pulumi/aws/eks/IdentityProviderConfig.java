@@ -17,7 +17,84 @@ import javax.annotation.Nullable;
 /**
  * Manages an EKS Identity Provider Configuration.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.eks.IdentityProviderConfig("example", {
+ *     clusterName: aws_eks_cluster.example.name,
+ *     oidc: {
+ *         clientId: "your client_id",
+ *         identityProviderConfigName: "example",
+ *         issuerUrl: "your issuer_url",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.eks.IdentityProviderConfig("example",
+ *     cluster_name=aws_eks_cluster["example"]["name"],
+ *     oidc=aws.eks.IdentityProviderConfigOidcArgs(
+ *         client_id="your client_id",
+ *         identity_provider_config_name="example",
+ *         issuer_url="your issuer_url",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Eks.IdentityProviderConfig("example", new Aws.Eks.IdentityProviderConfigArgs
+ *         {
+ *             ClusterName = aws_eks_cluster.Example.Name,
+ *             Oidc = new Aws.Eks.Inputs.IdentityProviderConfigOidcArgs
+ *             {
+ *                 ClientId = "your client_id",
+ *                 IdentityProviderConfigName = "example",
+ *                 IssuerUrl = "your issuer_url",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/eks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := eks.NewIdentityProviderConfig(ctx, "example", &eks.IdentityProviderConfigArgs{
+ * 			ClusterName: pulumi.Any(aws_eks_cluster.Example.Name),
+ * 			Oidc: &eks.IdentityProviderConfigOidcArgs{
+ * 				ClientId:                   pulumi.String("your client_id"),
+ * 				IdentityProviderConfigName: pulumi.String("example"),
+ * 				IssuerUrl:                  pulumi.String("your issuer_url"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +104,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:eks/identityProviderConfig:IdentityProviderConfig my_identity_provider_config my_cluster:my_identity_provider_config
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:eks/identityProviderConfig:IdentityProviderConfig")
 public class IdentityProviderConfig extends io.pulumi.resources.CustomResource {

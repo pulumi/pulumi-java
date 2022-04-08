@@ -17,7 +17,89 @@ import javax.annotation.Nullable;
 /**
  * Provides a WAF Regional SQL Injection Match Set Resource for use with Application Load Balancer.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const sqlInjectionMatchSet = new aws.wafregional.SqlInjectionMatchSet("sql_injection_match_set", {
+ *     sqlInjectionMatchTuples: [{
+ *         fieldToMatch: {
+ *             type: "QUERY_STRING",
+ *         },
+ *         textTransformation: "URL_DECODE",
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * sql_injection_match_set = aws.wafregional.SqlInjectionMatchSet("sqlInjectionMatchSet", sql_injection_match_tuples=[aws.wafregional.SqlInjectionMatchSetSqlInjectionMatchTupleArgs(
+ *     field_to_match=aws.wafregional.SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs(
+ *         type="QUERY_STRING",
+ *     ),
+ *     text_transformation="URL_DECODE",
+ * )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sqlInjectionMatchSet = new Aws.WafRegional.SqlInjectionMatchSet("sqlInjectionMatchSet", new Aws.WafRegional.SqlInjectionMatchSetArgs
+ *         {
+ *             SqlInjectionMatchTuples = 
+ *             {
+ *                 new Aws.WafRegional.Inputs.SqlInjectionMatchSetSqlInjectionMatchTupleArgs
+ *                 {
+ *                     FieldToMatch = new Aws.WafRegional.Inputs.SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs
+ *                     {
+ *                         Type = "QUERY_STRING",
+ *                     },
+ *                     TextTransformation = "URL_DECODE",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/wafregional"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := wafregional.NewSqlInjectionMatchSet(ctx, "sqlInjectionMatchSet", &wafregional.SqlInjectionMatchSetArgs{
+ * 			SqlInjectionMatchTuples: wafregional.SqlInjectionMatchSetSqlInjectionMatchTupleArray{
+ * 				&wafregional.SqlInjectionMatchSetSqlInjectionMatchTupleArgs{
+ * 					FieldToMatch: &wafregional.SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs{
+ * 						Type: pulumi.String("QUERY_STRING"),
+ * 					},
+ * 					TextTransformation: pulumi.String("URL_DECODE"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +109,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:wafregional/sqlInjectionMatchSet:SqlInjectionMatchSet sql_injection_match_set a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:wafregional/sqlInjectionMatchSet:SqlInjectionMatchSet")
 public class SqlInjectionMatchSet extends io.pulumi.resources.CustomResource {

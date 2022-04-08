@@ -15,7 +15,71 @@ import javax.annotation.Nullable;
 /**
  * Provides a subnet CIDR reservation resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ec2.SubnetCidrReservation("example", {
+ *     cidrBlock: "10.0.0.16/28",
+ *     reservationType: "prefix",
+ *     subnetId: aws_subnet.example.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ec2.SubnetCidrReservation("example",
+ *     cidr_block="10.0.0.16/28",
+ *     reservation_type="prefix",
+ *     subnet_id=aws_subnet["example"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ec2.SubnetCidrReservation("example", new Aws.Ec2.SubnetCidrReservationArgs
+ *         {
+ *             CidrBlock = "10.0.0.16/28",
+ *             ReservationType = "prefix",
+ *             SubnetId = aws_subnet.Example.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewSubnetCidrReservation(ctx, "example", &ec2.SubnetCidrReservationArgs{
+ * 			CidrBlock:       pulumi.String("10.0.0.16/28"),
+ * 			ReservationType: pulumi.String("prefix"),
+ * 			SubnetId:        pulumi.Any(aws_subnet.Example.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +89,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/subnetCidrReservation:SubnetCidrReservation example subnet-01llsxvsxabqiymcz:scr-4mnvz6wb7otksjcs9
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/subnetCidrReservation:SubnetCidrReservation")
 public class SubnetCidrReservation extends io.pulumi.resources.CustomResource {

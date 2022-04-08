@@ -16,7 +16,81 @@ import javax.annotation.Nullable;
 /**
  * Provides a Pinpoint Baidu Channel resource.
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const app = new aws.pinpoint.App("app", {});
+ * const channel = new aws.pinpoint.BaiduChannel("channel", {
+ *     applicationId: app.applicationId,
+ *     apiKey: "",
+ *     secretKey: "",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * app = aws.pinpoint.App("app")
+ * channel = aws.pinpoint.BaiduChannel("channel",
+ *     application_id=app.application_id,
+ *     api_key="",
+ *     secret_key="")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var app = new Aws.Pinpoint.App("app", new Aws.Pinpoint.AppArgs
+ *         {
+ *         });
+ *         var channel = new Aws.Pinpoint.BaiduChannel("channel", new Aws.Pinpoint.BaiduChannelArgs
+ *         {
+ *             ApplicationId = app.ApplicationId,
+ *             ApiKey = "",
+ *             SecretKey = "",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/pinpoint"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		app, err := pinpoint.NewApp(ctx, "app", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = pinpoint.NewBaiduChannel(ctx, "channel", &pinpoint.BaiduChannelArgs{
+ * 			ApplicationId: app.ApplicationId,
+ * 			ApiKey:        pulumi.String(""),
+ * 			SecretKey:     pulumi.String(""),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +100,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:pinpoint/baiduChannel:BaiduChannel channel application-id
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:pinpoint/baiduChannel:BaiduChannel")
 public class BaiduChannel extends io.pulumi.resources.CustomResource {

@@ -17,7 +17,67 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** The Storage Gateway API provides no method to remove a cache disk. Destroying this resource does not perform any Storage Gateway actions.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.storagegateway.Cache("example", {
+ *     diskId: data.aws_storagegateway_local_disk.example.id,
+ *     gatewayArn: aws_storagegateway_gateway.example.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.storagegateway.Cache("example",
+ *     disk_id=data["aws_storagegateway_local_disk"]["example"]["id"],
+ *     gateway_arn=aws_storagegateway_gateway["example"]["arn"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.StorageGateway.Cache("example", new Aws.StorageGateway.CacheArgs
+ *         {
+ *             DiskId = data.Aws_storagegateway_local_disk.Example.Id,
+ *             GatewayArn = aws_storagegateway_gateway.Example.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/storagegateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storagegateway.NewCache(ctx, "example", &storagegateway.CacheArgs{
+ * 			DiskId:     pulumi.Any(data.Aws_storagegateway_local_disk.Example.Id),
+ * 			GatewayArn: pulumi.Any(aws_storagegateway_gateway.Example.Arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +87,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:storagegateway/cache:Cache example arn:aws:storagegateway:us-east-1:123456789012:gateway/sgw-12345678:pci-0000:03:00.0-scsi-0:0:0:0
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:storagegateway/cache:Cache")
 public class Cache extends io.pulumi.resources.CustomResource {

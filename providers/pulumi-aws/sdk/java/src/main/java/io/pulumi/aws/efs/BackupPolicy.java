@@ -17,7 +17,85 @@ import javax.annotation.Nullable;
  * Provides an Elastic File System (EFS) Backup Policy resource.
  * Backup policies turn automatic backups on or off for an existing file system.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const fs = new aws.efs.FileSystem("fs", {});
+ * const policy = new aws.efs.BackupPolicy("policy", {
+ *     fileSystemId: fs.id,
+ *     backupPolicy: {
+ *         status: "ENABLED",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * fs = aws.efs.FileSystem("fs")
+ * policy = aws.efs.BackupPolicy("policy",
+ *     file_system_id=fs.id,
+ *     backup_policy=aws.efs.BackupPolicyBackupPolicyArgs(
+ *         status="ENABLED",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var fs = new Aws.Efs.FileSystem("fs", new Aws.Efs.FileSystemArgs
+ *         {
+ *         });
+ *         var policy = new Aws.Efs.BackupPolicy("policy", new Aws.Efs.BackupPolicyArgs
+ *         {
+ *             FileSystemId = fs.Id,
+ *             BackupPolicy = new Aws.Efs.Inputs.BackupPolicyBackupPolicyArgs
+ *             {
+ *                 Status = "ENABLED",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/efs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		fs, err := efs.NewFileSystem(ctx, "fs", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = efs.NewBackupPolicy(ctx, "policy", &efs.BackupPolicyArgs{
+ * 			FileSystemId: fs.ID(),
+ * 			BackupPolicy: &efs.BackupPolicyBackupPolicyArgs{
+ * 				Status: pulumi.String("ENABLED"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +105,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:efs/backupPolicy:BackupPolicy example fs-6fa144c6
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:efs/backupPolicy:BackupPolicy")
 public class BackupPolicy extends io.pulumi.resources.CustomResource {

@@ -24,7 +24,6 @@ public final class ProjectSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      * @Deprecated
      * Use the aws_codebuild_source_credential resource instead
-     * 
      */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     @Import(name="auth")

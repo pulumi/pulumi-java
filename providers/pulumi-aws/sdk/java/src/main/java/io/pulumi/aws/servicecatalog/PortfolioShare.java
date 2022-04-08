@@ -24,7 +24,72 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** You can't share a shared resource, including portfolios that contain a shared product.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic Usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.servicecatalog.PortfolioShare("example", {
+ *     principalId: "012128675309",
+ *     portfolioId: aws_servicecatalog_portfolio.example.id,
+ *     type: "ACCOUNT",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.servicecatalog.PortfolioShare("example",
+ *     principal_id="012128675309",
+ *     portfolio_id=aws_servicecatalog_portfolio["example"]["id"],
+ *     type="ACCOUNT")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ServiceCatalog.PortfolioShare("example", new Aws.ServiceCatalog.PortfolioShareArgs
+ *         {
+ *             PrincipalId = "012128675309",
+ *             PortfolioId = aws_servicecatalog_portfolio.Example.Id,
+ *             Type = "ACCOUNT",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/servicecatalog"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicecatalog.NewPortfolioShare(ctx, "example", &servicecatalog.PortfolioShareArgs{
+ * 			PrincipalId: pulumi.String("012128675309"),
+ * 			PortfolioId: pulumi.Any(aws_servicecatalog_portfolio.Example.Id),
+ * 			Type:        pulumi.String("ACCOUNT"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,6 +99,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:servicecatalog/portfolioShare:PortfolioShare example port-12344321:ACCOUNT:123456789012
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:servicecatalog/portfolioShare:PortfolioShare")
 public class PortfolioShare extends io.pulumi.resources.CustomResource {

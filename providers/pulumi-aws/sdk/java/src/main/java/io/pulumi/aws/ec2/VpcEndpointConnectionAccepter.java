@@ -15,7 +15,134 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to accept a pending VPC Endpoint Connection accept request to VPC Endpoint Service.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Accept cross-account request
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleVpcEndpointService = new aws.ec2.VpcEndpointService("exampleVpcEndpointService", {
+ *     acceptanceRequired: false,
+ *     networkLoadBalancerArns: [aws_lb.example.arn],
+ * });
+ * const exampleVpcEndpoint = new aws.ec2.VpcEndpoint("exampleVpcEndpoint", {
+ *     vpcId: aws_vpc.test_alternate.id,
+ *     serviceName: aws_vpc_endpoint_service.test.service_name,
+ *     vpcEndpointType: "Interface",
+ *     privateDnsEnabled: false,
+ *     securityGroupIds: [aws_security_group.test.id],
+ * }, {
+ *     provider: "aws.alternate",
+ * });
+ * const exampleVpcEndpointConnectionAccepter = new aws.ec2.VpcEndpointConnectionAccepter("exampleVpcEndpointConnectionAccepter", {
+ *     vpcEndpointServiceId: exampleVpcEndpointService.id,
+ *     vpcEndpointId: exampleVpcEndpoint.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_vpc_endpoint_service = aws.ec2.VpcEndpointService("exampleVpcEndpointService",
+ *     acceptance_required=False,
+ *     network_load_balancer_arns=[aws_lb["example"]["arn"]])
+ * example_vpc_endpoint = aws.ec2.VpcEndpoint("exampleVpcEndpoint",
+ *     vpc_id=aws_vpc["test_alternate"]["id"],
+ *     service_name=aws_vpc_endpoint_service["test"]["service_name"],
+ *     vpc_endpoint_type="Interface",
+ *     private_dns_enabled=False,
+ *     security_group_ids=[aws_security_group["test"]["id"]],
+ *     opts=pulumi.ResourceOptions(provider="aws.alternate"))
+ * example_vpc_endpoint_connection_accepter = aws.ec2.VpcEndpointConnectionAccepter("exampleVpcEndpointConnectionAccepter",
+ *     vpc_endpoint_service_id=example_vpc_endpoint_service.id,
+ *     vpc_endpoint_id=example_vpc_endpoint.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleVpcEndpointService = new Aws.Ec2.VpcEndpointService("exampleVpcEndpointService", new Aws.Ec2.VpcEndpointServiceArgs
+ *         {
+ *             AcceptanceRequired = false,
+ *             NetworkLoadBalancerArns = 
+ *             {
+ *                 aws_lb.Example.Arn,
+ *             },
+ *         });
+ *         var exampleVpcEndpoint = new Aws.Ec2.VpcEndpoint("exampleVpcEndpoint", new Aws.Ec2.VpcEndpointArgs
+ *         {
+ *             VpcId = aws_vpc.Test_alternate.Id,
+ *             ServiceName = aws_vpc_endpoint_service.Test.Service_name,
+ *             VpcEndpointType = "Interface",
+ *             PrivateDnsEnabled = false,
+ *             SecurityGroupIds = 
+ *             {
+ *                 aws_security_group.Test.Id,
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = "aws.alternate",
+ *         });
+ *         var exampleVpcEndpointConnectionAccepter = new Aws.Ec2.VpcEndpointConnectionAccepter("exampleVpcEndpointConnectionAccepter", new Aws.Ec2.VpcEndpointConnectionAccepterArgs
+ *         {
+ *             VpcEndpointServiceId = exampleVpcEndpointService.Id,
+ *             VpcEndpointId = exampleVpcEndpoint.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleVpcEndpointService, err := ec2.NewVpcEndpointService(ctx, "exampleVpcEndpointService", &ec2.VpcEndpointServiceArgs{
+ * 			AcceptanceRequired: pulumi.Bool(false),
+ * 			NetworkLoadBalancerArns: pulumi.StringArray{
+ * 				pulumi.Any(aws_lb.Example.Arn),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleVpcEndpoint, err := ec2.NewVpcEndpoint(ctx, "exampleVpcEndpoint", &ec2.VpcEndpointArgs{
+ * 			VpcId:             pulumi.Any(aws_vpc.Test_alternate.Id),
+ * 			ServiceName:       pulumi.Any(aws_vpc_endpoint_service.Test.Service_name),
+ * 			VpcEndpointType:   pulumi.String("Interface"),
+ * 			PrivateDnsEnabled: pulumi.Bool(false),
+ * 			SecurityGroupIds: pulumi.StringArray{
+ * 				pulumi.Any(aws_security_group.Test.Id),
+ * 			},
+ * 		}, pulumi.Provider("aws.alternate"))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewVpcEndpointConnectionAccepter(ctx, "exampleVpcEndpointConnectionAccepter", &ec2.VpcEndpointConnectionAccepterArgs{
+ * 			VpcEndpointServiceId: exampleVpcEndpointService.ID(),
+ * 			VpcEndpointId:        exampleVpcEndpoint.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +152,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/vpcEndpointConnectionAccepter:VpcEndpointConnectionAccepter foo vpce-svc-0f97a19d3fa8220bc_vpce-010601a6db371e263
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/vpcEndpointConnectionAccepter:VpcEndpointConnectionAccepter")
 public class VpcEndpointConnectionAccepter extends io.pulumi.resources.CustomResource {
