@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configurations of Source connector of the flow.
- * 
  */
 public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of source connector profile
-     * 
      */
     @Import(name="connectorProfileName")
       private final @Nullable Output<String> connectorProfileName;
@@ -34,7 +32,6 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
 
     /**
      * Type of source connector
-     * 
      */
     @Import(name="connectorType", required=true)
       private final Output<FlowConnectorType> connectorType;
@@ -45,7 +42,6 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
 
     /**
      * Configuration for scheduled incremental data pull
-     * 
      */
     @Import(name="incrementalPullConfig")
       private final @Nullable Output<FlowIncrementalPullConfigArgs> incrementalPullConfig;
@@ -56,7 +52,6 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
 
     /**
      * Source connector details required to query a connector
-     * 
      */
     @Import(name="sourceConnectorProperties", required=true)
       private final Output<FlowSourceConnectorPropertiesArgs> sourceConnectorProperties;

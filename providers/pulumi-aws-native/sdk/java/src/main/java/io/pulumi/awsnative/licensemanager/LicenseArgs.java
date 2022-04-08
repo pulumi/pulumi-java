@@ -22,7 +22,6 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Beneficiary of the license.
-     * 
      */
     @Import(name="beneficiary")
       private final @Nullable Output<String> beneficiary;
@@ -47,7 +46,6 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Home region for the created license.
-     * 
      */
     @Import(name="homeRegion", required=true)
       private final Output<String> homeRegion;
@@ -72,7 +70,6 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name for the created license.
-     * 
      */
     @Import(name="licenseName")
       private final @Nullable Output<String> licenseName;
@@ -83,7 +80,6 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Product name for the created license.
-     * 
      */
     @Import(name="productName", required=true)
       private final Output<String> productName;
@@ -94,7 +90,6 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ProductSKU of the license.
-     * 
      */
     @Import(name="productSKU")
       private final @Nullable Output<String> productSKU;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class StudioComponentLicenseServiceConfiguration {
     /**
      * <p>The endpoint of the license service that is accessed by the studio component resource.</p>
-     * 
      */
     private final @Nullable String endpoint;
 
@@ -24,7 +23,6 @@ public final class StudioComponentLicenseServiceConfiguration {
 
     /**
      * <p>The endpoint of the license service that is accessed by the studio component resource.</p>
-     * 
     */
     public Optional<String> getEndpoint() {
         return Optional.ofNullable(this.endpoint);

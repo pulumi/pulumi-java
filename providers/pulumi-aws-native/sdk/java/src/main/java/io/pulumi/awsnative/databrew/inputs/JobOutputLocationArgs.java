@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Output location
- * 
  */
 public final class JobOutputLocationArgs extends io.pulumi.resources.ResourceArgs {
 

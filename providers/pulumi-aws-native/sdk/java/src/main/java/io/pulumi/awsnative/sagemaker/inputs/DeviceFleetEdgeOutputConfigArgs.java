@@ -16,7 +16,6 @@ public final class DeviceFleetEdgeOutputConfigArgs extends io.pulumi.resources.R
 
     /**
      * The KMS key id used for encryption on the S3 bucket
-     * 
      */
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
@@ -27,7 +26,6 @@ public final class DeviceFleetEdgeOutputConfigArgs extends io.pulumi.resources.R
 
     /**
      * The Amazon Simple Storage (S3) bucket URI
-     * 
      */
     @Import(name="s3OutputLocation", required=true)
       private final Output<String> s3OutputLocation;

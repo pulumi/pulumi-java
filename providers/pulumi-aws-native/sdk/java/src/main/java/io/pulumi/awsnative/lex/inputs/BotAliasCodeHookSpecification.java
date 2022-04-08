@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Contains information about code hooks that Amazon Lex calls during a conversation.
- * 
  */
 public final class BotAliasCodeHookSpecification extends io.pulumi.resources.InvokeArgs {
 

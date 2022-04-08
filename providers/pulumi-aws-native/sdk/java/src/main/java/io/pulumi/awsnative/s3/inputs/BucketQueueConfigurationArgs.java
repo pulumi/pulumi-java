@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Amazon Simple Queue Service queues to publish messages to and the events for which to publish messages.
- * 
  */
 public final class BucketQueueConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class BucketQueueConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * The Amazon S3 bucket event about which you want to publish messages to Amazon SQS.
-     * 
      */
     @Import(name="event", required=true)
       private final Output<String> event;
@@ -32,7 +30,6 @@ public final class BucketQueueConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * The filtering rules that determine which objects trigger notifications.
-     * 
      */
     @Import(name="filter")
       private final @Nullable Output<BucketNotificationFilterArgs> filter;
@@ -43,7 +40,6 @@ public final class BucketQueueConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * The Amazon Resource Name (ARN) of the Amazon SQS queue to which Amazon S3 publishes a message when it detects events of the specified type.
-     * 
      */
     @Import(name="queue", required=true)
       private final Output<String> queue;

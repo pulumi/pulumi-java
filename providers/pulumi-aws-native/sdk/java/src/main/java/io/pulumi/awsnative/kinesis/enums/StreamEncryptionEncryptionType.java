@@ -9,8 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The encryption type to use. The only valid value is KMS.
-     * 
+     * The encryption type to use. The only valid value is KMS. 
      */
     @EnumType
     public enum StreamEncryptionEncryptionType {

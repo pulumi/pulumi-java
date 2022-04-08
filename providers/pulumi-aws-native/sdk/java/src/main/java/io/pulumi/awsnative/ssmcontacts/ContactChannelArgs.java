@@ -18,7 +18,6 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The details that SSM Incident Manager uses when trying to engage the contact channel.
-     * 
      */
     @Import(name="channelAddress")
       private final @Nullable Output<String> channelAddress;
@@ -29,7 +28,6 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The device name. String of 6 to 50 alphabetical, numeric, dash, and underscore characters.
-     * 
      */
     @Import(name="channelName")
       private final @Nullable Output<String> channelName;
@@ -40,7 +38,6 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Device type, which specify notification channel. Currently supported values: “SMS”, “VOICE”, “EMAIL”, “CHATBOT.
-     * 
      */
     @Import(name="channelType")
       private final @Nullable Output<ContactChannelChannelType> channelType;
@@ -51,7 +48,6 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ARN of the contact resource
-     * 
      */
     @Import(name="contactId")
       private final @Nullable Output<String> contactId;
@@ -62,7 +58,6 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If you want to activate the channel at a later time, you can choose to defer activation. SSM Incident Manager can't engage your contact channel until it has been activated.
-     * 
      */
     @Import(name="deferActivation")
       private final @Nullable Output<Boolean> deferActivation;

@@ -20,78 +20,63 @@ import javax.annotation.Nullable;
 public final class GetIPAMPoolResult {
     /**
      * The default netmask length for allocations made from this pool. This value is used when the netmask length of an allocation isn't specified.
-     * 
      */
     private final @Nullable Integer allocationDefaultNetmaskLength;
     /**
      * The maximum allowed netmask length for allocations made from this pool.
-     * 
      */
     private final @Nullable Integer allocationMaxNetmaskLength;
     /**
      * The minimum allowed netmask length for allocations made from this pool.
-     * 
      */
     private final @Nullable Integer allocationMinNetmaskLength;
     /**
      * When specified, an allocation will not be allowed unless a resource has a matching set of tags.
-     * 
      */
     private final @Nullable List<IPAMPoolTag> allocationResourceTags;
     /**
      * The Amazon Resource Name (ARN) of the IPAM Pool.
-     * 
      */
     private final @Nullable String arn;
     /**
      * Determines what to do if IPAM discovers resources that haven't been assigned an allocation. If set to true, an allocation will be made automatically.
-     * 
      */
     private final @Nullable Boolean autoImport;
     private final @Nullable String description;
     /**
      * The Amazon Resource Name (ARN) of the IPAM this pool is a part of.
-     * 
      */
     private final @Nullable String ipamArn;
     /**
      * Id of the IPAM Pool.
-     * 
      */
     private final @Nullable String ipamPoolId;
     /**
      * The Amazon Resource Name (ARN) of the scope this pool is a part of.
-     * 
      */
     private final @Nullable String ipamScopeArn;
     /**
      * Determines whether this scope contains publicly routable space or space for a private network
-     * 
      */
     private final @Nullable IPAMPoolIpamScopeType ipamScopeType;
     /**
      * The depth of this pool in the source pool hierarchy.
-     * 
      */
     private final @Nullable Integer poolDepth;
     /**
      * A list of cidrs representing the address space available for allocation in this pool.
-     * 
      */
     private final @Nullable List<IPAMPoolProvisionedCidr> provisionedCidrs;
     /**
      * The state of this pool. This can be one of the following values: "create-in-progress", "create-complete", "modify-in-progress", "modify-complete", "delete-in-progress", or "delete-complete"
-     * 
      */
     private final @Nullable IPAMPoolState state;
     /**
      * An explanation of how the pool arrived at it current state.
-     * 
      */
     private final @Nullable String stateMessage;
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     private final @Nullable List<IPAMPoolTag> tags;
 
@@ -133,42 +118,36 @@ public final class GetIPAMPoolResult {
 
     /**
      * The default netmask length for allocations made from this pool. This value is used when the netmask length of an allocation isn't specified.
-     * 
     */
     public Optional<Integer> getAllocationDefaultNetmaskLength() {
         return Optional.ofNullable(this.allocationDefaultNetmaskLength);
     }
     /**
      * The maximum allowed netmask length for allocations made from this pool.
-     * 
     */
     public Optional<Integer> getAllocationMaxNetmaskLength() {
         return Optional.ofNullable(this.allocationMaxNetmaskLength);
     }
     /**
      * The minimum allowed netmask length for allocations made from this pool.
-     * 
     */
     public Optional<Integer> getAllocationMinNetmaskLength() {
         return Optional.ofNullable(this.allocationMinNetmaskLength);
     }
     /**
      * When specified, an allocation will not be allowed unless a resource has a matching set of tags.
-     * 
     */
     public List<IPAMPoolTag> getAllocationResourceTags() {
         return this.allocationResourceTags == null ? List.of() : this.allocationResourceTags;
     }
     /**
      * The Amazon Resource Name (ARN) of the IPAM Pool.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Determines what to do if IPAM discovers resources that haven't been assigned an allocation. If set to true, an allocation will be made automatically.
-     * 
     */
     public Optional<Boolean> getAutoImport() {
         return Optional.ofNullable(this.autoImport);
@@ -178,63 +157,54 @@ public final class GetIPAMPoolResult {
     }
     /**
      * The Amazon Resource Name (ARN) of the IPAM this pool is a part of.
-     * 
     */
     public Optional<String> getIpamArn() {
         return Optional.ofNullable(this.ipamArn);
     }
     /**
      * Id of the IPAM Pool.
-     * 
     */
     public Optional<String> getIpamPoolId() {
         return Optional.ofNullable(this.ipamPoolId);
     }
     /**
      * The Amazon Resource Name (ARN) of the scope this pool is a part of.
-     * 
     */
     public Optional<String> getIpamScopeArn() {
         return Optional.ofNullable(this.ipamScopeArn);
     }
     /**
      * Determines whether this scope contains publicly routable space or space for a private network
-     * 
     */
     public Optional<IPAMPoolIpamScopeType> getIpamScopeType() {
         return Optional.ofNullable(this.ipamScopeType);
     }
     /**
      * The depth of this pool in the source pool hierarchy.
-     * 
     */
     public Optional<Integer> getPoolDepth() {
         return Optional.ofNullable(this.poolDepth);
     }
     /**
      * A list of cidrs representing the address space available for allocation in this pool.
-     * 
     */
     public List<IPAMPoolProvisionedCidr> getProvisionedCidrs() {
         return this.provisionedCidrs == null ? List.of() : this.provisionedCidrs;
     }
     /**
      * The state of this pool. This can be one of the following values: "create-in-progress", "create-complete", "modify-in-progress", "modify-complete", "delete-in-progress", or "delete-complete"
-     * 
     */
     public Optional<IPAMPoolState> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * An explanation of how the pool arrived at it current state.
-     * 
     */
     public Optional<String> getStateMessage() {
         return Optional.ofNullable(this.stateMessage);
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
     */
     public List<IPAMPoolTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

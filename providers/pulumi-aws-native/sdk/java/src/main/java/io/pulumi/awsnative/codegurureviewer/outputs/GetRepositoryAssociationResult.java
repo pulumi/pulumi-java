@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class GetRepositoryAssociationResult {
     /**
      * The Amazon Resource Name (ARN) of the repository association.
-     * 
      */
     private final @Nullable String associationArn;
 
@@ -24,7 +23,6 @@ public final class GetRepositoryAssociationResult {
 
     /**
      * The Amazon Resource Name (ARN) of the repository association.
-     * 
     */
     public Optional<String> getAssociationArn() {
         return Optional.ofNullable(this.associationArn);

@@ -23,7 +23,6 @@ import javax.annotation.Nullable;
 
 /**
  * Connector specific properties needed to create connector profile - currently not needed for Amplitude, Trendmicro, Googleanalytics and Singular
- * 
  */
 public final class ConnectorProfilePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 

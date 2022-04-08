@@ -22,7 +22,6 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of endpoint objects.
-     * 
      */
     @Import(name="endpointConfigurations")
       private final @Nullable Output<List<EndpointGroupEndpointConfigurationArgs>> endpointConfigurations;
@@ -33,7 +32,6 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the AWS Region where the endpoint group is located
-     * 
      */
     @Import(name="endpointGroupRegion", required=true)
       private final Output<String> endpointGroupRegion;
@@ -44,7 +42,6 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time in seconds between each health check for an endpoint. Must be a value of 10 or 30
-     * 
      */
     @Import(name="healthCheckIntervalSeconds")
       private final @Nullable Output<Integer> healthCheckIntervalSeconds;
@@ -62,7 +59,6 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The port that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
-     * 
      */
     @Import(name="healthCheckPort")
       private final @Nullable Output<Integer> healthCheckPort;
@@ -73,7 +69,6 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The protocol that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
-     * 
      */
     @Import(name="healthCheckProtocol")
       private final @Nullable Output<EndpointGroupHealthCheckProtocol> healthCheckProtocol;
@@ -84,7 +79,6 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the listener
-     * 
      */
     @Import(name="listenerArn", required=true)
       private final Output<String> listenerArn;
@@ -102,7 +96,6 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of consecutive health checks required to set the state of the endpoint to unhealthy.
-     * 
      */
     @Import(name="thresholdCount")
       private final @Nullable Output<Integer> thresholdCount;
@@ -113,7 +106,6 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The percentage of traffic to sent to an AWS Region
-     * 
      */
     @Import(name="trafficDialPercentage")
       private final @Nullable Output<Double> trafficDialPercentage;

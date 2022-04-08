@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A parameter to set when starting the SSM automation document.
- * 
  */
 public final class ResponsePlanSsmParameter extends io.pulumi.resources.InvokeArgs {
 

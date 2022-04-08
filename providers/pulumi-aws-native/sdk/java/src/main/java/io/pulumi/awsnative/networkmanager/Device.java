@@ -16,160 +16,137 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::NetworkManager::Device type describes a device.
- * 
  */
 @ResourceType(type="aws-native:networkmanager:Device")
 public class Device extends io.pulumi.resources.CustomResource {
     /**
      * The description of the device.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the device.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The Amazon Resource Name (ARN) of the device.
-     * 
      */
     @Export(name="deviceArn", type=String.class, parameters={})
     private Output<String> deviceArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the device.
-     * 
      */
     public Output<String> getDeviceArn() {
         return this.deviceArn;
     }
     /**
      * The ID of the device.
-     * 
      */
     @Export(name="deviceId", type=String.class, parameters={})
     private Output<String> deviceId;
 
     /**
      * @return The ID of the device.
-     * 
      */
     public Output<String> getDeviceId() {
         return this.deviceId;
     }
     /**
      * The ID of the global network.
-     * 
      */
     @Export(name="globalNetworkId", type=String.class, parameters={})
     private Output<String> globalNetworkId;
 
     /**
      * @return The ID of the global network.
-     * 
      */
     public Output<String> getGlobalNetworkId() {
         return this.globalNetworkId;
     }
     /**
      * The site location.
-     * 
      */
     @Export(name="location", type=DeviceLocation.class, parameters={})
     private Output</* @Nullable */ DeviceLocation> location;
 
     /**
      * @return The site location.
-     * 
      */
     public Output</* @Nullable */ DeviceLocation> getLocation() {
         return this.location;
     }
     /**
      * The device model
-     * 
      */
     @Export(name="model", type=String.class, parameters={})
     private Output</* @Nullable */ String> model;
 
     /**
      * @return The device model
-     * 
      */
     public Output</* @Nullable */ String> getModel() {
         return this.model;
     }
     /**
      * The device serial number.
-     * 
      */
     @Export(name="serialNumber", type=String.class, parameters={})
     private Output</* @Nullable */ String> serialNumber;
 
     /**
      * @return The device serial number.
-     * 
      */
     public Output</* @Nullable */ String> getSerialNumber() {
         return this.serialNumber;
     }
     /**
      * The site ID.
-     * 
      */
     @Export(name="siteId", type=String.class, parameters={})
     private Output</* @Nullable */ String> siteId;
 
     /**
      * @return The site ID.
-     * 
      */
     public Output</* @Nullable */ String> getSiteId() {
         return this.siteId;
     }
     /**
      * The tags for the device.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DeviceTag.class})
     private Output</* @Nullable */ List<DeviceTag>> tags;
 
     /**
      * @return The tags for the device.
-     * 
      */
     public Output</* @Nullable */ List<DeviceTag>> getTags() {
         return this.tags;
     }
     /**
      * The device type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**
      * @return The device type.
-     * 
      */
     public Output</* @Nullable */ String> getType() {
         return this.type;
     }
     /**
      * The device vendor.
-     * 
      */
     @Export(name="vendor", type=String.class, parameters={})
     private Output</* @Nullable */ String> vendor;
 
     /**
      * @return The device vendor.
-     * 
      */
     public Output</* @Nullable */ String> getVendor() {
         return this.vendor;

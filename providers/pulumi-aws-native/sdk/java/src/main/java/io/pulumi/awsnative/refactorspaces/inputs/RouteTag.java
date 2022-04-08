@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A label for tagging Environment resource
- * 
  */
 public final class RouteTag extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class RouteTag extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A string used to identify this tag
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -29,7 +27,6 @@ public final class RouteTag extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A string containing the value for the tag
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

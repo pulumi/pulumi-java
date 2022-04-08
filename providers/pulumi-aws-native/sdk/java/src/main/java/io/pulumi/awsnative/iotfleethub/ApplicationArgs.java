@@ -18,7 +18,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Application Description, should be between 1 and 2048 characters.
-     * 
      */
     @Import(name="applicationDescription")
       private final @Nullable Output<String> applicationDescription;
@@ -29,7 +28,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Application Name, should be between 1 and 256 characters.
-     * 
      */
     @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
@@ -40,7 +38,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ARN of the role that the web application assumes when it interacts with AWS IoT Core. For more info on configuring this attribute, see https://docs.aws.amazon.com/iot/latest/apireference/API_iotfleethub_CreateApplication.html#API_iotfleethub_CreateApplication_RequestSyntax
-     * 
      */
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
@@ -51,7 +48,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of key-value pairs that contain metadata for the application.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ApplicationTagArgs>> tags;

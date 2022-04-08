@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Sqli Match Statement.
- * 
  */
 public final class WebACLSqliMatchStatement extends io.pulumi.resources.InvokeArgs {
 

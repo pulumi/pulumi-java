@@ -18,47 +18,38 @@ import javax.annotation.Nullable;
 public final class GetChannelResult {
     /**
      * Channel ARN is automatically generated on creation and assigned as the unique identifier.
-     * 
      */
     private final @Nullable String arn;
     /**
      * Whether the channel is authorized.
-     * 
      */
     private final @Nullable Boolean authorized;
     /**
      * Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software.
-     * 
      */
     private final @Nullable String ingestEndpoint;
     /**
      * Channel latency mode.
-     * 
      */
     private final @Nullable ChannelLatencyMode latencyMode;
     /**
      * Channel
-     * 
      */
     private final @Nullable String name;
     /**
      * Channel Playback URL.
-     * 
      */
     private final @Nullable String playbackUrl;
     /**
      * Recording Configuration ARN. A value other than an empty string indicates that recording is enabled. Default: “” (recording is disabled).
-     * 
      */
     private final @Nullable String recordingConfigurationArn;
     /**
      * A list of key-value pairs that contain metadata for the asset model.
-     * 
      */
     private final @Nullable List<ChannelTag> tags;
     /**
      * Channel type, which determines the allowable resolution and bitrate. If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately.
-     * 
      */
     private final @Nullable ChannelType type;
 
@@ -86,63 +77,54 @@ public final class GetChannelResult {
 
     /**
      * Channel ARN is automatically generated on creation and assigned as the unique identifier.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Whether the channel is authorized.
-     * 
     */
     public Optional<Boolean> getAuthorized() {
         return Optional.ofNullable(this.authorized);
     }
     /**
      * Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software.
-     * 
     */
     public Optional<String> getIngestEndpoint() {
         return Optional.ofNullable(this.ingestEndpoint);
     }
     /**
      * Channel latency mode.
-     * 
     */
     public Optional<ChannelLatencyMode> getLatencyMode() {
         return Optional.ofNullable(this.latencyMode);
     }
     /**
      * Channel
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Channel Playback URL.
-     * 
     */
     public Optional<String> getPlaybackUrl() {
         return Optional.ofNullable(this.playbackUrl);
     }
     /**
      * Recording Configuration ARN. A value other than an empty string indicates that recording is enabled. Default: “” (recording is disabled).
-     * 
     */
     public Optional<String> getRecordingConfigurationArn() {
         return Optional.ofNullable(this.recordingConfigurationArn);
     }
     /**
      * A list of key-value pairs that contain metadata for the asset model.
-     * 
     */
     public List<ChannelTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * Channel type, which determines the allowable resolution and bitrate. If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately.
-     * 
     */
     public Optional<ChannelType> getType() {
         return Optional.ofNullable(this.type);

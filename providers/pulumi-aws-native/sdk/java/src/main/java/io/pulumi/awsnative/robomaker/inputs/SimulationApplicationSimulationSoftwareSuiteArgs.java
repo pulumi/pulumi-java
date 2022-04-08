@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information about a simulation software suite.
- * 
  */
 public final class SimulationApplicationSimulationSoftwareSuiteArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SimulationApplicationSimulationSoftwareSuiteArgs extends io.p
 
     /**
      * The name of the simulation software suite.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<SimulationApplicationSimulationSoftwareSuiteName> name;
@@ -32,7 +30,6 @@ public final class SimulationApplicationSimulationSoftwareSuiteArgs extends io.p
 
     /**
      * The version of the simulation software suite.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<SimulationApplicationSimulationSoftwareSuiteVersion> version;

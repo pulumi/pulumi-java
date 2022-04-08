@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * The set of parameters for this mitigation action. You can specify only one type of parameter (in other words, you can apply only one action for each defined mitigation action).
- * 
  */
 public final class MitigationActionActionParamsArgs extends io.pulumi.resources.ResourceArgs {
 

@@ -18,7 +18,6 @@ public final class DatasetFilesLimit extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Maximum number of files
-     * 
      */
     @Import(name="maxFiles", required=true)
       private final Integer maxFiles;
@@ -29,7 +28,6 @@ public final class DatasetFilesLimit extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Order
-     * 
      */
     @Import(name="order")
       private final @Nullable DatasetFilesLimitOrder order;
@@ -40,7 +38,6 @@ public final class DatasetFilesLimit extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Ordered by
-     * 
      */
     @Import(name="orderedBy")
       private final @Nullable DatasetFilesLimitOrderedBy orderedBy;

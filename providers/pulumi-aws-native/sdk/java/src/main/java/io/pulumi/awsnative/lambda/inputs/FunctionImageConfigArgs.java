@@ -17,7 +17,6 @@ public final class FunctionImageConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Command.
-     * 
      */
     @Import(name="command")
       private final @Nullable Output<List<String>> command;
@@ -28,7 +27,6 @@ public final class FunctionImageConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * EntryPoint.
-     * 
      */
     @Import(name="entryPoint")
       private final @Nullable Output<List<String>> entryPoint;
@@ -39,7 +37,6 @@ public final class FunctionImageConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * WorkingDirectory.
-     * 
      */
     @Import(name="workingDirectory")
       private final @Nullable Output<String> workingDirectory;

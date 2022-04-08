@@ -14,7 +14,6 @@ public final class GetTransitGatewayMulticastDomainArgs extends io.pulumi.resour
 
     /**
      * The ID of the transit gateway multicast domain.
-     * 
      */
     @Import(name="transitGatewayMulticastDomainId", required=true)
       private final String transitGatewayMulticastDomainId;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The sensitivity of anomalous behavior evaluation. Can be Low, Medium, or High.
-     * 
      */
     @EnumType
     public enum SecurityProfileMachineLearningDetectionConfigConfidenceLevel {

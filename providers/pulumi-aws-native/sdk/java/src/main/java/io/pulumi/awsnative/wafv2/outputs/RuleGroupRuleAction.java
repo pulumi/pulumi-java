@@ -16,22 +16,18 @@ import javax.annotation.Nullable;
 public final class RuleGroupRuleAction {
     /**
      * Allow traffic towards application.
-     * 
      */
     private final @Nullable RuleGroupRuleActionAllowProperties allow;
     /**
      * Block traffic towards application.
-     * 
      */
     private final @Nullable RuleGroupRuleActionBlockProperties block;
     /**
      * Checks valid token exists with request.
-     * 
      */
     private final @Nullable RuleGroupRuleActionCaptchaProperties captcha;
     /**
      * Count traffic towards application.
-     * 
      */
     private final @Nullable RuleGroupRuleActionCountProperties count;
 
@@ -49,28 +45,24 @@ public final class RuleGroupRuleAction {
 
     /**
      * Allow traffic towards application.
-     * 
     */
     public Optional<RuleGroupRuleActionAllowProperties> getAllow() {
         return Optional.ofNullable(this.allow);
     }
     /**
      * Block traffic towards application.
-     * 
     */
     public Optional<RuleGroupRuleActionBlockProperties> getBlock() {
         return Optional.ofNullable(this.block);
     }
     /**
      * Checks valid token exists with request.
-     * 
     */
     public Optional<RuleGroupRuleActionCaptchaProperties> getCaptcha() {
         return Optional.ofNullable(this.captcha);
     }
     /**
      * Count traffic towards application.
-     * 
     */
     public Optional<RuleGroupRuleActionCountProperties> getCount() {
         return Optional.ofNullable(this.count);

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The class of storage used to store the object.
-     * 
      */
     @EnumType
     public enum BucketNoncurrentVersionTransitionStorageClass {

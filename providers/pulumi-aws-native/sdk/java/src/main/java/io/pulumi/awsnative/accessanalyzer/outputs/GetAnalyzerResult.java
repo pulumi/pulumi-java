@@ -17,12 +17,10 @@ public final class GetAnalyzerResult {
     private final @Nullable List<AnalyzerArchiveRule> archiveRules;
     /**
      * Amazon Resource Name (ARN) of the analyzer
-     * 
      */
     private final @Nullable String arn;
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     private final @Nullable List<AnalyzerTag> tags;
 
@@ -41,14 +39,12 @@ public final class GetAnalyzerResult {
     }
     /**
      * Amazon Resource Name (ARN) of the analyzer
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
     */
     public List<AnalyzerTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

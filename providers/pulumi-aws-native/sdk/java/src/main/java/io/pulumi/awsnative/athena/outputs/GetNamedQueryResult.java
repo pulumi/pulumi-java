@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class GetNamedQueryResult {
     /**
      * The unique ID of the query.
-     * 
      */
     private final @Nullable String namedQueryId;
 
@@ -24,7 +23,6 @@ public final class GetNamedQueryResult {
 
     /**
      * The unique ID of the query.
-     * 
     */
     public Optional<String> getNamedQueryId() {
         return Optional.ofNullable(this.namedQueryId);

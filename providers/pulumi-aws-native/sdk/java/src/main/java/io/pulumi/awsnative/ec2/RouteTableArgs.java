@@ -18,7 +18,6 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Any tags assigned to the route table.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<RouteTableTagArgs>> tags;
@@ -29,7 +28,6 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the VPC.
-     * 
      */
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;

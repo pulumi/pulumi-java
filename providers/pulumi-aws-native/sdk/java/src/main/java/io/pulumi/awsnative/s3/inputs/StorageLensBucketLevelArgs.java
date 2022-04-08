@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Bucket-level metrics configurations.
- * 
  */
 public final class StorageLensBucketLevelArgs extends io.pulumi.resources.ResourceArgs {
 

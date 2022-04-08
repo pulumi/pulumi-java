@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * An endpoint for ingesting source content for a Channel.
- * 
  */
 public final class ChannelIngestEndpoint extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ChannelIngestEndpoint extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The system generated unique identifier for the IngestEndpoint
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -31,7 +29,6 @@ public final class ChannelIngestEndpoint extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The system generated password for ingest authentication.
-     * 
      */
     @Import(name="password")
       private final @Nullable String password;
@@ -42,7 +39,6 @@ public final class ChannelIngestEndpoint extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The ingest URL to which the source stream should be sent.
-     * 
      */
     @Import(name="url")
       private final @Nullable String url;
@@ -53,7 +49,6 @@ public final class ChannelIngestEndpoint extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The system generated username for ingest authentication.
-     * 
      */
     @Import(name="username")
       private final @Nullable String username;

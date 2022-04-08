@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of AWS::Wisdom::AssistantAssociation Resource Type
- * 
  */
 @ResourceType(type="aws-native:wisdom:AssistantAssociation")
 public class AssistantAssociation extends io.pulumi.resources.CustomResource {

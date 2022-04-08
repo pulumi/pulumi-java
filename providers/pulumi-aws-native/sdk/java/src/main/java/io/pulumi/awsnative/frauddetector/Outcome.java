@@ -15,90 +15,77 @@ import javax.annotation.Nullable;
 
 /**
  * An outcome for rule evaluation.
- * 
  */
 @ResourceType(type="aws-native:frauddetector:Outcome")
 public class Outcome extends io.pulumi.resources.CustomResource {
     /**
      * The outcome ARN.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The outcome ARN.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The timestamp when the outcome was created.
-     * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
      * @return The timestamp when the outcome was created.
-     * 
      */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
     /**
      * The outcome description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The outcome description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The timestamp when the outcome was last updated.
-     * 
      */
     @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
      * @return The timestamp when the outcome was last updated.
-     * 
      */
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
      * The name of the outcome.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the outcome.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Tags associated with this outcome.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={OutcomeTag.class})
     private Output</* @Nullable */ List<OutcomeTag>> tags;
 
     /**
      * @return Tags associated with this outcome.
-     * 
      */
     public Output</* @Nullable */ List<OutcomeTag>> getTags() {
         return this.tags;

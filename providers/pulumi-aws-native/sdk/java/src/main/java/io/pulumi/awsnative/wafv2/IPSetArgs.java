@@ -20,7 +20,6 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of IPAddresses.
-     * 
      */
     @Import(name="addresses", required=true)
       private final Output<List<String>> addresses;

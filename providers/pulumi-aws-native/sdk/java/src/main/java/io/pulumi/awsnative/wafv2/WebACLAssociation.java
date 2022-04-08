@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Associates WebACL to Application Load Balancer, CloudFront or API Gateway.
- * 
  */
 @ResourceType(type="aws-native:wafv2:WebACLAssociation")
 public class WebACLAssociation extends io.pulumi.resources.CustomResource {

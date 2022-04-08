@@ -16,7 +16,219 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for Activity
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myActivity = new AwsNative.StepFunctions.Activity("myActivity", new AwsNative.StepFunctions.ActivityArgs
+ *         {
+ *             Name = "myActivity",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.StepFunctions.Inputs.ActivityTagsEntryArgs
+ *                 {
+ *                     Key = "keyname1",
+ *                     Value = "value1",
+ *                 },
+ *                 new AwsNative.StepFunctions.Inputs.ActivityTagsEntryArgs
+ *                 {
+ *                     Key = "keyname2",
+ *                     Value = "value2",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/stepfunctions"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := stepfunctions.NewActivity(ctx, "myActivity", &stepfunctions.ActivityArgs{
+ * 			Name: pulumi.String("myActivity"),
+ * 			Tags: []stepfunctions.ActivityTagsEntryArgs{
+ * 				&stepfunctions.ActivityTagsEntryArgs{
+ * 					Key:   pulumi.String("keyname1"),
+ * 					Value: pulumi.String("value1"),
+ * 				},
+ * 				&stepfunctions.ActivityTagsEntryArgs{
+ * 					Key:   pulumi.String("keyname2"),
+ * 					Value: pulumi.String("value2"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myActivity = new aws_native.stepfunctions.Activity("myActivity", {
+ *     name: "myActivity",
+ *     tags: [
+ *         {
+ *             key: "keyname1",
+ *             value: "value1",
+ *         },
+ *         {
+ *             key: "keyname2",
+ *             value: "value2",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_activity = aws_native.stepfunctions.Activity("myActivity",
+ *     name="myActivity",
+ *     tags=[
+ *         aws_native.stepfunctions.ActivityTagsEntryArgs(
+ *             key="keyname1",
+ *             value="value1",
+ *         ),
+ *         aws_native.stepfunctions.ActivityTagsEntryArgs(
+ *             key="keyname2",
+ *             value="value2",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myActivity = new AwsNative.StepFunctions.Activity("myActivity", new AwsNative.StepFunctions.ActivityArgs
+ *         {
+ *             Name = "myActivity",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.StepFunctions.Inputs.ActivityTagsEntryArgs
+ *                 {
+ *                     Key = "keyname1",
+ *                     Value = "value1",
+ *                 },
+ *                 new AwsNative.StepFunctions.Inputs.ActivityTagsEntryArgs
+ *                 {
+ *                     Key = "keyname2",
+ *                     Value = "value2",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/stepfunctions"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := stepfunctions.NewActivity(ctx, "myActivity", &stepfunctions.ActivityArgs{
+ * 			Name: pulumi.String("myActivity"),
+ * 			Tags: []stepfunctions.ActivityTagsEntryArgs{
+ * 				&stepfunctions.ActivityTagsEntryArgs{
+ * 					Key:   pulumi.String("keyname1"),
+ * 					Value: pulumi.String("value1"),
+ * 				},
+ * 				&stepfunctions.ActivityTagsEntryArgs{
+ * 					Key:   pulumi.String("keyname2"),
+ * 					Value: pulumi.String("value2"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myActivity = new aws_native.stepfunctions.Activity("myActivity", {
+ *     name: "myActivity",
+ *     tags: [
+ *         {
+ *             key: "keyname1",
+ *             value: "value1",
+ *         },
+ *         {
+ *             key: "keyname2",
+ *             value: "value2",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_activity = aws_native.stepfunctions.Activity("myActivity",
+ *     name="myActivity",
+ *     tags=[
+ *         aws_native.stepfunctions.ActivityTagsEntryArgs(
+ *             key="keyname1",
+ *             value="value1",
+ *         ),
+ *         aws_native.stepfunctions.ActivityTagsEntryArgs(
+ *             key="keyname2",
+ *             value="value2",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:stepfunctions:Activity")

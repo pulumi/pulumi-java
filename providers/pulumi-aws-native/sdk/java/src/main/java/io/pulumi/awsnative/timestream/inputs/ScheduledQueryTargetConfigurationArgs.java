@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Configuration of target store where scheduled query results are written to.
- * 
  */
 public final class ScheduledQueryTargetConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 

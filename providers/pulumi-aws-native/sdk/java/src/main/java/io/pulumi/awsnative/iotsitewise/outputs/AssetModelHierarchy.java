@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class AssetModelHierarchy {
     /**
      * The ID of the asset model. All assets in this hierarchy must be instances of the child AssetModelId asset model.
-     * 
      */
     private final String childAssetModelId;
     /**
      * Customer provided ID for hierarchy.
-     * 
      */
     private final String logicalId;
     /**
      * The name of the asset model hierarchy.
-     * 
      */
     private final String name;
 
@@ -37,21 +34,18 @@ public final class AssetModelHierarchy {
 
     /**
      * The ID of the asset model. All assets in this hierarchy must be instances of the child AssetModelId asset model.
-     * 
     */
     public String getChildAssetModelId() {
         return this.childAssetModelId;
     }
     /**
      * Customer provided ID for hierarchy.
-     * 
     */
     public String getLogicalId() {
         return this.logicalId;
     }
     /**
      * The name of the asset model hierarchy.
-     * 
     */
     public String getName() {
         return this.name;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information required to publish the Amazon SNS message.
- * 
  */
 public final class DetectorModelSnsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class DetectorModelSnsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The ARN of the Amazon SNS target where the message is sent.
-     * 
      */
     @Import(name="targetArn", required=true)
       private final Output<String> targetArn;

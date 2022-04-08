@@ -26,7 +26,6 @@ public final class FlowZendeskDestinationProperties extends io.pulumi.resources.
 
     /**
      * List of fields used as ID when performing a write operation.
-     * 
      */
     @Import(name="idFieldNames")
       private final @Nullable List<String> idFieldNames;

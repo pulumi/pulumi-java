@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Trigger settings of the flow.
- * 
  */
 public final class FlowTriggerConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class FlowTriggerConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Details required based on the type of trigger
-     * 
      */
     @Import(name="triggerProperties")
       private final @Nullable Output<FlowScheduledTriggerPropertiesArgs> triggerProperties;
@@ -32,7 +30,6 @@ public final class FlowTriggerConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Trigger type of the flow
-     * 
      */
     @Import(name="triggerType", required=true)
       private final Output<FlowTriggerType> triggerType;

@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ResourceSetR53ResourceRecord {
     /**
      * The DNS target domain name.
-     * 
      */
     private final @Nullable String domainName;
     /**
      * The Resource Record set id.
-     * 
      */
     private final @Nullable String recordSetId;
 
@@ -32,14 +30,12 @@ public final class ResourceSetR53ResourceRecord {
 
     /**
      * The DNS target domain name.
-     * 
     */
     public Optional<String> getDomainName() {
         return Optional.ofNullable(this.domainName);
     }
     /**
      * The Resource Record set id.
-     * 
     */
     public Optional<String> getRecordSetId() {
         return Optional.ofNullable(this.recordSetId);

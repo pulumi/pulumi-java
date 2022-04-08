@@ -16,80 +16,69 @@ import javax.annotation.Nullable;
 
 /**
  * Schema for the AWS Route53 Recovery Readiness ResourceSet Resource and API.
- * 
  */
 @ResourceType(type="aws-native:route53recoveryreadiness:ResourceSet")
 public class ResourceSet extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the resource set.
-     * 
      */
     @Export(name="resourceSetArn", type=String.class, parameters={})
     private Output<String> resourceSetArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the resource set.
-     * 
      */
     public Output<String> getResourceSetArn() {
         return this.resourceSetArn;
     }
     /**
      * The name of the resource set to create.
-     * 
      */
     @Export(name="resourceSetName", type=String.class, parameters={})
     private Output<String> resourceSetName;
 
     /**
      * @return The name of the resource set to create.
-     * 
      */
     public Output<String> getResourceSetName() {
         return this.resourceSetName;
     }
     /**
-     * The resource type of the resources in the resource set. Enter one of the following values for resource type:
+     * The resource type of the resources in the resource set. Enter one of the following values for resource type: 
      * 
      * AWS: :AutoScaling: :AutoScalingGroup, AWS: :CloudWatch: :Alarm, AWS: :EC2: :CustomerGateway, AWS: :DynamoDB: :Table, AWS: :EC2: :Volume, AWS: :ElasticLoadBalancing: :LoadBalancer, AWS: :ElasticLoadBalancingV2: :LoadBalancer, AWS: :MSK: :Cluster, AWS: :RDS: :DBCluster, AWS: :Route53: :HealthCheck, AWS: :SQS: :Queue, AWS: :SNS: :Topic, AWS: :SNS: :Subscription, AWS: :EC2: :VPC, AWS: :EC2: :VPNConnection, AWS: :EC2: :VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource
-     * 
      */
     @Export(name="resourceSetType", type=String.class, parameters={})
     private Output<String> resourceSetType;
 
     /**
-     * @return The resource type of the resources in the resource set. Enter one of the following values for resource type:
+     * @return The resource type of the resources in the resource set. Enter one of the following values for resource type: 
      * 
      * AWS: :AutoScaling: :AutoScalingGroup, AWS: :CloudWatch: :Alarm, AWS: :EC2: :CustomerGateway, AWS: :DynamoDB: :Table, AWS: :EC2: :Volume, AWS: :ElasticLoadBalancing: :LoadBalancer, AWS: :ElasticLoadBalancingV2: :LoadBalancer, AWS: :MSK: :Cluster, AWS: :RDS: :DBCluster, AWS: :Route53: :HealthCheck, AWS: :SQS: :Queue, AWS: :SNS: :Topic, AWS: :SNS: :Subscription, AWS: :EC2: :VPC, AWS: :EC2: :VPNConnection, AWS: :EC2: :VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource
-     * 
      */
     public Output<String> getResourceSetType() {
         return this.resourceSetType;
     }
     /**
      * A list of resource objects in the resource set.
-     * 
      */
     @Export(name="resources", type=List.class, parameters={ResourceSetResource.class})
     private Output<List<ResourceSetResource>> resources;
 
     /**
      * @return A list of resource objects in the resource set.
-     * 
      */
     public Output<List<ResourceSetResource>> getResources() {
         return this.resources;
     }
     /**
      * A tag to associate with the parameters for a resource set.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ResourceSetTag.class})
     private Output</* @Nullable */ List<ResourceSetTag>> tags;
 
     /**
      * @return A tag to associate with the parameters for a resource set.
-     * 
      */
     public Output</* @Nullable */ List<ResourceSetTag>> getTags() {
         return this.tags;

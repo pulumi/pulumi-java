@@ -18,35 +18,173 @@ import javax.annotation.Nullable;
 /**
  * The resource schema for creating an Amazon Connect Customer Profiles Integration.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var integration = new AwsNative.CustomerProfiles.Integration("integration", new AwsNative.CustomerProfiles.IntegrationArgs
+ *         {
+ *             DomainName = "ExampleDomain",
+ *             ObjectTypeName = "CTR",
+ *             Uri = "arn:aws:connect:us-east-1:123456789012:instance/11111111-1111-1111-1111-111111111111",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/customerprofiles"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := customerprofiles.NewIntegration(ctx, "integration", &customerprofiles.IntegrationArgs{
+ * 			DomainName:     pulumi.String("ExampleDomain"),
+ * 			ObjectTypeName: pulumi.String("CTR"),
+ * 			Uri:            pulumi.String("arn:aws:connect:us-east-1:123456789012:instance/11111111-1111-1111-1111-111111111111"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const integration = new aws_native.customerprofiles.Integration("integration", {
+ *     domainName: "ExampleDomain",
+ *     objectTypeName: "CTR",
+ *     uri: "arn:aws:connect:us-east-1:123456789012:instance/11111111-1111-1111-1111-111111111111",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * integration = aws_native.customerprofiles.Integration("integration",
+ *     domain_name="ExampleDomain",
+ *     object_type_name="CTR",
+ *     uri="arn:aws:connect:us-east-1:123456789012:instance/11111111-1111-1111-1111-111111111111")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testIntegration = new AwsNative.CustomerProfiles.Integration("testIntegration", new AwsNative.CustomerProfiles.IntegrationArgs
+ *         {
+ *             DomainName = "ExampleDomain",
+ *             ObjectTypeName = "CTR",
+ *             Uri = "arn:aws:connect:us-east-1:123456789012:instance/11111111-1111-1111-1111-111111111111",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/customerprofiles"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := customerprofiles.NewIntegration(ctx, "testIntegration", &customerprofiles.IntegrationArgs{
+ * 			DomainName:     pulumi.String("ExampleDomain"),
+ * 			ObjectTypeName: pulumi.String("CTR"),
+ * 			Uri:            pulumi.String("arn:aws:connect:us-east-1:123456789012:instance/11111111-1111-1111-1111-111111111111"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const testIntegration = new aws_native.customerprofiles.Integration("testIntegration", {
+ *     domainName: "ExampleDomain",
+ *     objectTypeName: "CTR",
+ *     uri: "arn:aws:connect:us-east-1:123456789012:instance/11111111-1111-1111-1111-111111111111",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * test_integration = aws_native.customerprofiles.Integration("testIntegration",
+ *     domain_name="ExampleDomain",
+ *     object_type_name="CTR",
+ *     uri="arn:aws:connect:us-east-1:123456789012:instance/11111111-1111-1111-1111-111111111111")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:customerprofiles:Integration")
 public class Integration extends io.pulumi.resources.CustomResource {
     /**
      * The time of this integration got created
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return The time of this integration got created
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * The unique name of the domain.
-     * 
      */
     @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
      * @return The unique name of the domain.
-     * 
      */
     public Output<String> getDomainName() {
         return this.domainName;
@@ -59,70 +197,60 @@ public class Integration extends io.pulumi.resources.CustomResource {
     }
     /**
      * The time of this integration got last updated at
-     * 
      */
     @Export(name="lastUpdatedAt", type=String.class, parameters={})
     private Output<String> lastUpdatedAt;
 
     /**
      * @return The time of this integration got last updated at
-     * 
      */
     public Output<String> getLastUpdatedAt() {
         return this.lastUpdatedAt;
     }
     /**
      * The name of the ObjectType defined for the 3rd party data in Profile Service
-     * 
      */
     @Export(name="objectTypeName", type=String.class, parameters={})
     private Output</* @Nullable */ String> objectTypeName;
 
     /**
      * @return The name of the ObjectType defined for the 3rd party data in Profile Service
-     * 
      */
     public Output</* @Nullable */ String> getObjectTypeName() {
         return this.objectTypeName;
     }
     /**
      * The mapping between 3rd party event types and ObjectType names
-     * 
      */
     @Export(name="objectTypeNames", type=List.class, parameters={IntegrationObjectTypeMapping.class})
     private Output</* @Nullable */ List<IntegrationObjectTypeMapping>> objectTypeNames;
 
     /**
      * @return The mapping between 3rd party event types and ObjectType names
-     * 
      */
     public Output</* @Nullable */ List<IntegrationObjectTypeMapping>> getObjectTypeNames() {
         return this.objectTypeNames;
     }
     /**
      * The tags (keys and values) associated with the integration
-     * 
      */
     @Export(name="tags", type=List.class, parameters={IntegrationTag.class})
     private Output</* @Nullable */ List<IntegrationTag>> tags;
 
     /**
      * @return The tags (keys and values) associated with the integration
-     * 
      */
     public Output</* @Nullable */ List<IntegrationTag>> getTags() {
         return this.tags;
     }
     /**
      * The URI of the S3 bucket or any other type of data source.
-     * 
      */
     @Export(name="uri", type=String.class, parameters={})
     private Output</* @Nullable */ String> uri;
 
     /**
      * @return The URI of the S3 bucket or any other type of data source.
-     * 
      */
     public Output</* @Nullable */ String> getUri() {
         return this.uri;

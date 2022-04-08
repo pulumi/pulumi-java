@@ -16,7 +16,6 @@ public final class BasePathMappingArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The base path name that callers of the API must provide in the URL after the domain name.
-     * 
      */
     @Import(name="basePath")
       private final @Nullable Output<String> basePath;
@@ -27,7 +26,6 @@ public final class BasePathMappingArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The DomainName of an AWS::ApiGateway::DomainName resource.
-     * 
      */
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
@@ -38,7 +36,6 @@ public final class BasePathMappingArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The ID of the API.
-     * 
      */
     @Import(name="restApiId")
       private final @Nullable Output<String> restApiId;
@@ -49,7 +46,6 @@ public final class BasePathMappingArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the API's stage.
-     * 
      */
     @Import(name="stage")
       private final @Nullable Output<String> stage;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container for the transition rule that describes when noncurrent objects transition to the STANDARD_IA, ONEZONE_IA, INTELLIGENT_TIERING, GLACIER_IR, GLACIER, or DEEP_ARCHIVE storage class. If your bucket is versioning-enabled (or versioning is suspended), you can set this action to request that Amazon S3 transition noncurrent object versions to the STANDARD_IA, ONEZONE_IA, INTELLIGENT_TIERING, GLACIER_IR, GLACIER, or DEEP_ARCHIVE storage class at a specific period in the object's lifetime.
- * 
  */
 public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resou
 
     /**
      * Specified the number of newer noncurrent and current versions that must exists before performing the associated action
-     * 
      */
     @Import(name="newerNoncurrentVersions")
       private final @Nullable Output<Integer> newerNoncurrentVersions;
@@ -32,7 +30,6 @@ public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resou
 
     /**
      * The class of storage used to store the object.
-     * 
      */
     @Import(name="storageClass", required=true)
       private final Output<BucketNoncurrentVersionTransitionStorageClass> storageClass;
@@ -43,7 +40,6 @@ public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resou
 
     /**
      * Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action.
-     * 
      */
     @Import(name="transitionInDays", required=true)
       private final Output<Integer> transitionInDays;

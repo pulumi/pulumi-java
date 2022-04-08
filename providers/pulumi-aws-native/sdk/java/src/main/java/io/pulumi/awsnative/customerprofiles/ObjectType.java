@@ -20,175 +20,503 @@ import javax.annotation.Nullable;
 /**
  * An ObjectType resource of Amazon Connect Customer Profiles
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var objectType = new AwsNative.CustomerProfiles.ObjectType("objectType", new AwsNative.CustomerProfiles.ObjectTypeArgs
+ *         {
+ *             DomainName = "ExampleDomain",
+ *             ObjectTypeName = "ExampleObjectType",
+ *             AllowProfileCreation = false,
+ *             Description = "Description Example",
+ *             ExpirationDays = 1,
+ *             Fields = 
+ *             {
+ *                 new AwsNative.CustomerProfiles.Inputs.ObjectTypeFieldMapArgs
+ *                 {
+ *                     Name = "email",
+ *                     ObjectTypeField = new AwsNative.CustomerProfiles.Inputs.ObjectTypeFieldArgs
+ *                     {
+ *                         Source = "_source.email",
+ *                         Target = "_profile.BusinessEmail",
+ *                         ContentType = "EMAIL_ADDRESS",
+ *                     },
+ *                 },
+ *             },
+ *             Keys = 
+ *             {
+ *                 new AwsNative.CustomerProfiles.Inputs.ObjectTypeKeyMapArgs
+ *                 {
+ *                     Name = "_email",
+ *                     ObjectTypeKeyList = 
+ *                     {
+ *                         new AwsNative.CustomerProfiles.Inputs.ObjectTypeKeyArgs
+ *                         {
+ *                             FieldNames = 
+ *                             {
+ *                                 "email",
+ *                             },
+ *                             StandardIdentifiers = 
+ *                             {
+ *                                 "PROFILE",
+ *                                 "UNIQUE",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/customerprofiles"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := customerprofiles.NewObjectType(ctx, "objectType", &customerprofiles.ObjectTypeArgs{
+ * 			DomainName:           pulumi.String("ExampleDomain"),
+ * 			ObjectTypeName:       pulumi.String("ExampleObjectType"),
+ * 			AllowProfileCreation: pulumi.Bool(false),
+ * 			Description:          pulumi.String("Description Example"),
+ * 			ExpirationDays:       pulumi.Int(1),
+ * 			Fields: []customerprofiles.ObjectTypeFieldMapArgs{
+ * 				&customerprofiles.ObjectTypeFieldMapArgs{
+ * 					Name: pulumi.String("email"),
+ * 					ObjectTypeField: &customerprofiles.ObjectTypeFieldArgs{
+ * 						Source:      pulumi.String("_source.email"),
+ * 						Target:      pulumi.String("_profile.BusinessEmail"),
+ * 						ContentType: "EMAIL_ADDRESS",
+ * 					},
+ * 				},
+ * 			},
+ * 			Keys: []customerprofiles.ObjectTypeKeyMapArgs{
+ * 				&customerprofiles.ObjectTypeKeyMapArgs{
+ * 					Name: pulumi.String("_email"),
+ * 					ObjectTypeKeyList: customerprofiles.ObjectTypeKeyArray{
+ * 						&customerprofiles.ObjectTypeKeyArgs{
+ * 							FieldNames: pulumi.StringArray{
+ * 								pulumi.String("email"),
+ * 							},
+ * 							StandardIdentifiers: customerprofiles.ObjectTypeKeyStandardIdentifiersItemArray{
+ * 								"PROFILE",
+ * 								"UNIQUE",
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const objectType = new aws_native.customerprofiles.ObjectType("objectType", {
+ *     domainName: "ExampleDomain",
+ *     objectTypeName: "ExampleObjectType",
+ *     allowProfileCreation: false,
+ *     description: "Description Example",
+ *     expirationDays: 1,
+ *     fields: [{
+ *         name: "email",
+ *         objectTypeField: {
+ *             source: "_source.email",
+ *             target: "_profile.BusinessEmail",
+ *             contentType: "EMAIL_ADDRESS",
+ *         },
+ *     }],
+ *     keys: [{
+ *         name: "_email",
+ *         objectTypeKeyList: [{
+ *             fieldNames: ["email"],
+ *             standardIdentifiers: [
+ *                 "PROFILE",
+ *                 "UNIQUE",
+ *             ],
+ *         }],
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * object_type = aws_native.customerprofiles.ObjectType("objectType",
+ *     domain_name="ExampleDomain",
+ *     object_type_name="ExampleObjectType",
+ *     allow_profile_creation=False,
+ *     description="Description Example",
+ *     expiration_days=1,
+ *     fields=[aws_native.customerprofiles.ObjectTypeFieldMapArgs(
+ *         name="email",
+ *         object_type_field=aws_native.customerprofiles.ObjectTypeFieldArgs(
+ *             source="_source.email",
+ *             target="_profile.BusinessEmail",
+ *             content_type="EMAIL_ADDRESS",
+ *         ),
+ *     )],
+ *     keys=[aws_native.customerprofiles.ObjectTypeKeyMapArgs(
+ *         name="_email",
+ *         object_type_key_list=[aws_native.customerprofiles.ObjectTypeKeyArgs(
+ *             field_names=["email"],
+ *             standard_identifiers=[
+ *                 "PROFILE",
+ *                 "UNIQUE",
+ *             ],
+ *         )],
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var objectType = new AwsNative.CustomerProfiles.ObjectType("objectType", new AwsNative.CustomerProfiles.ObjectTypeArgs
+ *         {
+ *             DomainName = "ExampleDomain",
+ *             ObjectTypeName = "ExampleObjectType",
+ *             AllowProfileCreation = false,
+ *             Description = "Description Example",
+ *             ExpirationDays = 1,
+ *             Fields = 
+ *             {
+ *                 new AwsNative.CustomerProfiles.Inputs.ObjectTypeFieldMapArgs
+ *                 {
+ *                     Name = "email",
+ *                     ObjectTypeField = new AwsNative.CustomerProfiles.Inputs.ObjectTypeFieldArgs
+ *                     {
+ *                         Source = "_source.email",
+ *                         Target = "_profile.BusinessEmail",
+ *                         ContentType = "EMAIL_ADDRESS",
+ *                     },
+ *                 },
+ *             },
+ *             Keys = 
+ *             {
+ *                 new AwsNative.CustomerProfiles.Inputs.ObjectTypeKeyMapArgs
+ *                 {
+ *                     Name = "_email",
+ *                     ObjectTypeKeyList = 
+ *                     {
+ *                         new AwsNative.CustomerProfiles.Inputs.ObjectTypeKeyArgs
+ *                         {
+ *                             FieldNames = 
+ *                             {
+ *                                 "email",
+ *                             },
+ *                             StandardIdentifiers = 
+ *                             {
+ *                                 "PROFILE",
+ *                                 "UNIQUE",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/customerprofiles"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := customerprofiles.NewObjectType(ctx, "objectType", &customerprofiles.ObjectTypeArgs{
+ * 			DomainName:           pulumi.String("ExampleDomain"),
+ * 			ObjectTypeName:       pulumi.String("ExampleObjectType"),
+ * 			AllowProfileCreation: pulumi.Bool(false),
+ * 			Description:          pulumi.String("Description Example"),
+ * 			ExpirationDays:       pulumi.Int(1),
+ * 			Fields: []customerprofiles.ObjectTypeFieldMapArgs{
+ * 				&customerprofiles.ObjectTypeFieldMapArgs{
+ * 					Name: pulumi.String("email"),
+ * 					ObjectTypeField: &customerprofiles.ObjectTypeFieldArgs{
+ * 						Source:      pulumi.String("_source.email"),
+ * 						Target:      pulumi.String("_profile.BusinessEmail"),
+ * 						ContentType: "EMAIL_ADDRESS",
+ * 					},
+ * 				},
+ * 			},
+ * 			Keys: []customerprofiles.ObjectTypeKeyMapArgs{
+ * 				&customerprofiles.ObjectTypeKeyMapArgs{
+ * 					Name: pulumi.String("_email"),
+ * 					ObjectTypeKeyList: customerprofiles.ObjectTypeKeyArray{
+ * 						&customerprofiles.ObjectTypeKeyArgs{
+ * 							FieldNames: pulumi.StringArray{
+ * 								pulumi.String("email"),
+ * 							},
+ * 							StandardIdentifiers: customerprofiles.ObjectTypeKeyStandardIdentifiersItemArray{
+ * 								"PROFILE",
+ * 								"UNIQUE",
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const objectType = new aws_native.customerprofiles.ObjectType("objectType", {
+ *     domainName: "ExampleDomain",
+ *     objectTypeName: "ExampleObjectType",
+ *     allowProfileCreation: false,
+ *     description: "Description Example",
+ *     expirationDays: 1,
+ *     fields: [{
+ *         name: "email",
+ *         objectTypeField: {
+ *             source: "_source.email",
+ *             target: "_profile.BusinessEmail",
+ *             contentType: "EMAIL_ADDRESS",
+ *         },
+ *     }],
+ *     keys: [{
+ *         name: "_email",
+ *         objectTypeKeyList: [{
+ *             fieldNames: ["email"],
+ *             standardIdentifiers: [
+ *                 "PROFILE",
+ *                 "UNIQUE",
+ *             ],
+ *         }],
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * object_type = aws_native.customerprofiles.ObjectType("objectType",
+ *     domain_name="ExampleDomain",
+ *     object_type_name="ExampleObjectType",
+ *     allow_profile_creation=False,
+ *     description="Description Example",
+ *     expiration_days=1,
+ *     fields=[aws_native.customerprofiles.ObjectTypeFieldMapArgs(
+ *         name="email",
+ *         object_type_field=aws_native.customerprofiles.ObjectTypeFieldArgs(
+ *             source="_source.email",
+ *             target="_profile.BusinessEmail",
+ *             content_type="EMAIL_ADDRESS",
+ *         ),
+ *     )],
+ *     keys=[aws_native.customerprofiles.ObjectTypeKeyMapArgs(
+ *         name="_email",
+ *         object_type_key_list=[aws_native.customerprofiles.ObjectTypeKeyArgs(
+ *             field_names=["email"],
+ *             standard_identifiers=[
+ *                 "PROFILE",
+ *                 "UNIQUE",
+ *             ],
+ *         )],
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:customerprofiles:ObjectType")
 public class ObjectType extends io.pulumi.resources.CustomResource {
     /**
      * Indicates whether a profile should be created when data is received.
-     * 
      */
     @Export(name="allowProfileCreation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowProfileCreation;
 
     /**
      * @return Indicates whether a profile should be created when data is received.
-     * 
      */
     public Output</* @Nullable */ Boolean> getAllowProfileCreation() {
         return this.allowProfileCreation;
     }
     /**
      * The time of this integration got created.
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return The time of this integration got created.
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Description of the profile object type.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description of the profile object type.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The unique name of the domain.
-     * 
      */
     @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
      * @return The unique name of the domain.
-     * 
      */
     public Output<String> getDomainName() {
         return this.domainName;
     }
     /**
      * The default encryption key
-     * 
      */
     @Export(name="encryptionKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> encryptionKey;
 
     /**
      * @return The default encryption key
-     * 
      */
     public Output</* @Nullable */ String> getEncryptionKey() {
         return this.encryptionKey;
     }
     /**
      * The default number of days until the data within the domain expires.
-     * 
      */
     @Export(name="expirationDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> expirationDays;
 
     /**
      * @return The default number of days until the data within the domain expires.
-     * 
      */
     public Output</* @Nullable */ Integer> getExpirationDays() {
         return this.expirationDays;
     }
     /**
      * A list of the name and ObjectType field.
-     * 
      */
     @Export(name="fields", type=List.class, parameters={ObjectTypeFieldMap.class})
     private Output</* @Nullable */ List<ObjectTypeFieldMap>> fields;
 
     /**
      * @return A list of the name and ObjectType field.
-     * 
      */
     public Output</* @Nullable */ List<ObjectTypeFieldMap>> getFields() {
         return this.fields;
     }
     /**
      * A list of unique keys that can be used to map data to the profile.
-     * 
      */
     @Export(name="keys", type=List.class, parameters={ObjectTypeKeyMap.class})
     private Output</* @Nullable */ List<ObjectTypeKeyMap>> keys;
 
     /**
      * @return A list of unique keys that can be used to map data to the profile.
-     * 
      */
     public Output</* @Nullable */ List<ObjectTypeKeyMap>> getKeys() {
         return this.keys;
     }
     /**
      * The time of this integration got last updated at.
-     * 
      */
     @Export(name="lastUpdatedAt", type=String.class, parameters={})
     private Output<String> lastUpdatedAt;
 
     /**
      * @return The time of this integration got last updated at.
-     * 
      */
     public Output<String> getLastUpdatedAt() {
         return this.lastUpdatedAt;
     }
     /**
      * The name of the profile object type.
-     * 
      */
     @Export(name="objectTypeName", type=String.class, parameters={})
     private Output</* @Nullable */ String> objectTypeName;
 
     /**
      * @return The name of the profile object type.
-     * 
      */
     public Output</* @Nullable */ String> getObjectTypeName() {
         return this.objectTypeName;
     }
     /**
      * The tags (keys and values) associated with the integration.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ObjectTypeTag.class})
     private Output</* @Nullable */ List<ObjectTypeTag>> tags;
 
     /**
      * @return The tags (keys and values) associated with the integration.
-     * 
      */
     public Output</* @Nullable */ List<ObjectTypeTag>> getTags() {
         return this.tags;
     }
     /**
      * A unique identifier for the object template.
-     * 
      */
     @Export(name="templateId", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateId;
 
     /**
      * @return A unique identifier for the object template.
-     * 
      */
     public Output</* @Nullable */ String> getTemplateId() {
         return this.templateId;

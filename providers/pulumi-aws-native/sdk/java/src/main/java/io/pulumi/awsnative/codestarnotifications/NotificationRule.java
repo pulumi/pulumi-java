@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::CodeStarNotifications::NotificationRule
- * 
  */
 @ResourceType(type="aws-native:codestarnotifications:NotificationRule")
 public class NotificationRule extends io.pulumi.resources.CustomResource {

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class EventSourceMappingSelfManagedEventSource {
     /**
      * The endpoints for a self-managed event source.
-     * 
      */
     private final @Nullable EventSourceMappingEndpoints endpoints;
 
@@ -24,7 +23,6 @@ public final class EventSourceMappingSelfManagedEventSource {
 
     /**
      * The endpoints for a self-managed event source.
-     * 
     */
     public Optional<EventSourceMappingEndpoints> getEndpoints() {
         return Optional.ofNullable(this.endpoints);

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A key-value pair to associate with a resource.
- * 
  */
 public final class ParameterGroupTag extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ParameterGroupTag extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The key for the tag. May not be null.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -29,7 +27,6 @@ public final class ParameterGroupTag extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The tag's value. May be null.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

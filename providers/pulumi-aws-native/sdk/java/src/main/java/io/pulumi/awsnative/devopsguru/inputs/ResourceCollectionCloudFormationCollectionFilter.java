@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * CloudFormation resource for DevOps Guru to monitor
- * 
  */
 public final class ResourceCollectionCloudFormationCollectionFilter extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ResourceCollectionCloudFormationCollectionFilter extends io.p
 
     /**
      * An array of CloudFormation stack names.
-     * 
      */
     @Import(name="stackNames")
       private final @Nullable List<String> stackNames;

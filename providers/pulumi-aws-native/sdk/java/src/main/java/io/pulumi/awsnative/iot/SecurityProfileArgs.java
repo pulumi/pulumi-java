@@ -21,7 +21,6 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.
-     * 
      */
     @Import(name="additionalMetricsToRetainV2")
       private final @Nullable Output<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2;
@@ -32,7 +31,6 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Specifies the destinations to which alerts are sent.
-     * 
      */
     @Import(name="alertTargets")
       private final @Nullable Output<Object> alertTargets;
@@ -43,7 +41,6 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Specifies the behaviors that, when violated by a device (thing), cause an alert.
-     * 
      */
     @Import(name="behaviors")
       private final @Nullable Output<List<SecurityProfileBehaviorArgs>> behaviors;
@@ -54,7 +51,6 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A description of the security profile.
-     * 
      */
     @Import(name="securityProfileDescription")
       private final @Nullable Output<String> securityProfileDescription;
@@ -65,7 +61,6 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A unique identifier for the security profile.
-     * 
      */
     @Import(name="securityProfileName")
       private final @Nullable Output<String> securityProfileName;
@@ -76,7 +71,6 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Metadata that can be used to manage the security profile.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<SecurityProfileTagArgs>> tags;
@@ -87,7 +81,6 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A set of target ARNs that the security profile is attached to.
-     * 
      */
     @Import(name="targetArns")
       private final @Nullable Output<List<String>> targetArns;

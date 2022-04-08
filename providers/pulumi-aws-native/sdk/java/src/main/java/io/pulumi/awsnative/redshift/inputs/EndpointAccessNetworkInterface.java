@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a network interface.
- * 
  */
 public final class EndpointAccessNetworkInterface extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EndpointAccessNetworkInterface extends io.pulumi.resources.In
 
     /**
      * The Availability Zone.
-     * 
      */
     @Import(name="availabilityZone")
       private final @Nullable String availabilityZone;
@@ -31,7 +29,6 @@ public final class EndpointAccessNetworkInterface extends io.pulumi.resources.In
 
     /**
      * The network interface identifier.
-     * 
      */
     @Import(name="networkInterfaceId")
       private final @Nullable String networkInterfaceId;
@@ -42,7 +39,6 @@ public final class EndpointAccessNetworkInterface extends io.pulumi.resources.In
 
     /**
      * The IPv4 address of the network interface within the subnet.
-     * 
      */
     @Import(name="privateIpAddress")
       private final @Nullable String privateIpAddress;
@@ -53,7 +49,6 @@ public final class EndpointAccessNetworkInterface extends io.pulumi.resources.In
 
     /**
      * The subnet identifier.
-     * 
      */
     @Import(name="subnetId")
       private final @Nullable String subnetId;

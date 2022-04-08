@@ -21,7 +21,6 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The composite asset models that are part of this asset model. Composite asset models are asset models that contain specific properties.
-     * 
      */
     @Import(name="assetModelCompositeModels")
       private final @Nullable Output<List<AssetModelCompositeModelArgs>> assetModelCompositeModels;
@@ -32,7 +31,6 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description for the asset model.
-     * 
      */
     @Import(name="assetModelDescription")
       private final @Nullable Output<String> assetModelDescription;
@@ -43,7 +41,6 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.
-     * 
      */
     @Import(name="assetModelHierarchies")
       private final @Nullable Output<List<AssetModelHierarchyArgs>> assetModelHierarchies;
@@ -54,7 +51,6 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A unique, friendly name for the asset model.
-     * 
      */
     @Import(name="assetModelName")
       private final @Nullable Output<String> assetModelName;
@@ -65,7 +61,6 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The property definitions of the asset model. You can specify up to 200 properties per asset model.
-     * 
      */
     @Import(name="assetModelProperties")
       private final @Nullable Output<List<AssetModelPropertyArgs>> assetModelProperties;
@@ -76,7 +71,6 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of key-value pairs that contain metadata for the asset model.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<AssetModelTagArgs>> tags;

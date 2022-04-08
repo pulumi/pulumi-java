@@ -14,7 +14,6 @@ public final class GetVpcConnectorArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Amazon Resource Name (ARN) of this VPC connector.
-     * 
      */
     @Import(name="vpcConnectorArn", required=true)
       private final String vpcConnectorArn;

@@ -20,17 +20,14 @@ public final class GetIndexResult {
     private final @Nullable String arn;
     /**
      * Capacity units
-     * 
      */
     private final @Nullable IndexCapacityUnitsConfiguration capacityUnits;
     /**
      * A description for the index
-     * 
      */
     private final @Nullable String description;
     /**
      * Document metadata configurations
-     * 
      */
     private final @Nullable List<IndexDocumentMetadataConfiguration> documentMetadataConfigurations;
     private final @Nullable String id;
@@ -38,7 +35,6 @@ public final class GetIndexResult {
     private final @Nullable String roleArn;
     /**
      * Tags for labeling the index
-     * 
      */
     private final @Nullable List<IndexTag> tags;
     private final @Nullable IndexUserContextPolicy userContextPolicy;
@@ -73,21 +69,18 @@ public final class GetIndexResult {
     }
     /**
      * Capacity units
-     * 
     */
     public Optional<IndexCapacityUnitsConfiguration> getCapacityUnits() {
         return Optional.ofNullable(this.capacityUnits);
     }
     /**
      * A description for the index
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Document metadata configurations
-     * 
     */
     public List<IndexDocumentMetadataConfiguration> getDocumentMetadataConfigurations() {
         return this.documentMetadataConfigurations == null ? List.of() : this.documentMetadataConfigurations;
@@ -103,7 +96,6 @@ public final class GetIndexResult {
     }
     /**
      * Tags for labeling the index
-     * 
     */
     public List<IndexTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

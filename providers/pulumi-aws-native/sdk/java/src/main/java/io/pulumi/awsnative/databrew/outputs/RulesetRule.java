@@ -21,7 +21,6 @@ public final class RulesetRule {
     private final @Nullable Boolean disabled;
     /**
      * Name of the rule
-     * 
      */
     private final String name;
     private final @Nullable List<RulesetSubstitutionValue> substitutionMap;
@@ -54,7 +53,6 @@ public final class RulesetRule {
     }
     /**
      * Name of the rule
-     * 
     */
     public String getName() {
         return this.name;

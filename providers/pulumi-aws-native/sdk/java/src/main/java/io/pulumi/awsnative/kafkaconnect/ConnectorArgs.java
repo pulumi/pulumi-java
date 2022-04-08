@@ -32,7 +32,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The configuration for the connector.
-     * 
      */
     @Import(name="connectorConfiguration", required=true)
       private final Output<Object> connectorConfiguration;
@@ -43,7 +42,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A summary description of the connector.
-     * 
      */
     @Import(name="connectorDescription")
       private final @Nullable Output<String> connectorDescription;
@@ -54,7 +52,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the connector.
-     * 
      */
     @Import(name="connectorName")
       private final @Nullable Output<String> connectorName;
@@ -86,7 +83,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The version of Kafka Connect. It has to be compatible with both the Kafka cluster's version and the plugins.
-     * 
      */
     @Import(name="kafkaConnectVersion", required=true)
       private final Output<String> kafkaConnectVersion;
@@ -104,7 +100,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of plugins to use with the connector.
-     * 
      */
     @Import(name="plugins", required=true)
       private final Output<List<ConnectorPluginArgs>> plugins;
@@ -115,7 +110,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the IAM role used by the connector to access Amazon S3 objects and other external resources.
-     * 
      */
     @Import(name="serviceExecutionRoleArn", required=true)
       private final Output<String> serviceExecutionRoleArn;

@@ -25,7 +25,6 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * Specifies settings for logging access in this stage.
-     * 
      */
     @Import(name="accessLogSetting")
       private final @Nullable Output<DeploymentAccessLogSettingArgs> accessLogSetting;
@@ -36,7 +35,6 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * Indicates whether cache clustering is enabled for the stage.
-     * 
      */
     @Import(name="cacheClusterEnabled")
       private final @Nullable Output<Boolean> cacheClusterEnabled;
@@ -47,7 +45,6 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * The size of the stage's cache cluster.
-     * 
      */
     @Import(name="cacheClusterSize")
       private final @Nullable Output<String> cacheClusterSize;
@@ -57,8 +54,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
     }
 
     /**
-     * The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
-     * 
+     * The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses. 
      */
     @Import(name="cacheDataEncrypted")
       private final @Nullable Output<Boolean> cacheDataEncrypted;
@@ -68,8 +64,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
     }
 
     /**
-     * The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
-     * 
+     * The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses. 
      */
     @Import(name="cacheTtlInSeconds")
       private final @Nullable Output<Integer> cacheTtlInSeconds;
@@ -80,7 +75,6 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.
-     * 
      */
     @Import(name="cachingEnabled")
       private final @Nullable Output<Boolean> cachingEnabled;
@@ -91,7 +85,6 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * Specifies settings for the canary deployment in this stage.
-     * 
      */
     @Import(name="canarySetting")
       private final @Nullable Output<DeploymentCanarySettingArgs> canarySetting;
@@ -101,8 +94,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
     }
 
     /**
-     * The identifier of the client certificate that API Gateway uses to call your integration endpoints in the stage.
-     * 
+     * The identifier of the client certificate that API Gateway uses to call your integration endpoints in the stage. 
      */
     @Import(name="clientCertificateId")
       private final @Nullable Output<String> clientCertificateId;
@@ -112,8 +104,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
     }
 
     /**
-     * Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs.
-     * 
+     * Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs. 
      */
     @Import(name="dataTraceEnabled")
       private final @Nullable Output<Boolean> dataTraceEnabled;
@@ -124,7 +115,6 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * A description of the purpose of the stage.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -135,7 +125,6 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * The version identifier of the API documentation snapshot.
-     * 
      */
     @Import(name="documentationVersion")
       private final @Nullable Output<String> documentationVersion;
@@ -145,8 +134,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
     }
 
     /**
-     * The logging level for this method. For valid values, see the loggingLevel property of the Stage resource in the Amazon API Gateway API Reference.
-     * 
+     * The logging level for this method. For valid values, see the loggingLevel property of the Stage resource in the Amazon API Gateway API Reference. 
      */
     @Import(name="loggingLevel")
       private final @Nullable Output<String> loggingLevel;
@@ -157,7 +145,6 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * Configures settings for all of the stage's methods.
-     * 
      */
     @Import(name="methodSettings")
       private final @Nullable Output<List<DeploymentMethodSettingArgs>> methodSettings;
@@ -168,7 +155,6 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage.
-     * 
      */
     @Import(name="metricsEnabled")
       private final @Nullable Output<Boolean> metricsEnabled;
@@ -179,7 +165,6 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * An array of arbitrary tags (key-value pairs) to associate with the stage.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<DeploymentTagArgs>> tags;
@@ -190,7 +175,6 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
-     * 
      */
     @Import(name="throttlingBurstLimit")
       private final @Nullable Output<Integer> throttlingBurstLimit;
@@ -201,7 +185,6 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
-     * 
      */
     @Import(name="throttlingRateLimit")
       private final @Nullable Output<Double> throttlingRateLimit;
@@ -212,7 +195,6 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
 
     /**
      * Specifies whether active tracing with X-ray is enabled for this stage.
-     * 
      */
     @Import(name="tracingEnabled")
       private final @Nullable Output<Boolean> tracingEnabled;
@@ -222,8 +204,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
     }
 
     /**
-     * A map that defines the stage variables. Variable names must consist of alphanumeric characters, and the values must match the following regular expression: [A-Za-z0-9-._~:/?#&=,]+.
-     * 
+     * A map that defines the stage variables. Variable names must consist of alphanumeric characters, and the values must match the following regular expression: [A-Za-z0-9-._~:/?#&=,]+. 
      */
     @Import(name="variables")
       private final @Nullable Output<Object> variables;

@@ -17,7 +17,6 @@ public final class SchedulingPolicyFairsharePolicy {
     private final @Nullable Double shareDecaySeconds;
     /**
      * List of Share Attributes
-     * 
      */
     private final @Nullable List<SchedulingPolicyShareAttributes> shareDistribution;
 
@@ -39,7 +38,6 @@ public final class SchedulingPolicyFairsharePolicy {
     }
     /**
      * List of Share Attributes
-     * 
     */
     public List<SchedulingPolicyShareAttributes> getShareDistribution() {
         return this.shareDistribution == null ? List.of() : this.shareDistribution;

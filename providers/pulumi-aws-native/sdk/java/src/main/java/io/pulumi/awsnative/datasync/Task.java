@@ -20,35 +20,165 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for AWS::DataSync::Task.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var agent = new AwsNative.DataSync.Task("agent", new AwsNative.DataSync.TaskArgs
+ *         {
+ *             SourceLocationArn = "arn:aws:datasync:us-east-2:111222333444:location/loc-07db7abfc326c50s3",
+ *             DestinationLocationArn = "arn:aws:datasync:us-east-2:111222333444:location/loc-18ec8bcgd437d61t4",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/datasync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datasync.NewTask(ctx, "agent", &datasync.TaskArgs{
+ * 			SourceLocationArn:      pulumi.String("arn:aws:datasync:us-east-2:111222333444:location/loc-07db7abfc326c50s3"),
+ * 			DestinationLocationArn: pulumi.String("arn:aws:datasync:us-east-2:111222333444:location/loc-18ec8bcgd437d61t4"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const agent = new aws_native.datasync.Task("agent", {
+ *     sourceLocationArn: "arn:aws:datasync:us-east-2:111222333444:location/loc-07db7abfc326c50s3",
+ *     destinationLocationArn: "arn:aws:datasync:us-east-2:111222333444:location/loc-18ec8bcgd437d61t4",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * agent = aws_native.datasync.Task("agent",
+ *     source_location_arn="arn:aws:datasync:us-east-2:111222333444:location/loc-07db7abfc326c50s3",
+ *     destination_location_arn="arn:aws:datasync:us-east-2:111222333444:location/loc-18ec8bcgd437d61t4")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var task = new AwsNative.DataSync.Task("task", new AwsNative.DataSync.TaskArgs
+ *         {
+ *             SourceLocationArn = "arn:aws:datasync:us-east-2:111222333444:location/loc-07db7abfc326c50s3",
+ *             DestinationLocationArn = "arn:aws:datasync:us-east-2:111222333444:location/loc-18ec8bcgd437d61t4",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/datasync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datasync.NewTask(ctx, "task", &datasync.TaskArgs{
+ * 			SourceLocationArn:      pulumi.String("arn:aws:datasync:us-east-2:111222333444:location/loc-07db7abfc326c50s3"),
+ * 			DestinationLocationArn: pulumi.String("arn:aws:datasync:us-east-2:111222333444:location/loc-18ec8bcgd437d61t4"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const task = new aws_native.datasync.Task("task", {
+ *     sourceLocationArn: "arn:aws:datasync:us-east-2:111222333444:location/loc-07db7abfc326c50s3",
+ *     destinationLocationArn: "arn:aws:datasync:us-east-2:111222333444:location/loc-18ec8bcgd437d61t4",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * task = aws_native.datasync.Task("task",
+ *     source_location_arn="arn:aws:datasync:us-east-2:111222333444:location/loc-07db7abfc326c50s3",
+ *     destination_location_arn="arn:aws:datasync:us-east-2:111222333444:location/loc-18ec8bcgd437d61t4")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:datasync:Task")
 public class Task extends io.pulumi.resources.CustomResource {
     /**
      * The ARN of the Amazon CloudWatch log group that is used to monitor and log events in the task.
-     * 
      */
     @Export(name="cloudWatchLogGroupArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudWatchLogGroupArn;
 
     /**
      * @return The ARN of the Amazon CloudWatch log group that is used to monitor and log events in the task.
-     * 
      */
     public Output</* @Nullable */ String> getCloudWatchLogGroupArn() {
         return this.cloudWatchLogGroupArn;
     }
     /**
      * The ARN of an AWS storage resource's location.
-     * 
      */
     @Export(name="destinationLocationArn", type=String.class, parameters={})
     private Output<String> destinationLocationArn;
 
     /**
      * @return The ARN of an AWS storage resource's location.
-     * 
      */
     public Output<String> getDestinationLocationArn() {
         return this.destinationLocationArn;
@@ -61,28 +191,24 @@ public class Task extends io.pulumi.resources.CustomResource {
     }
     /**
      * Errors that AWS DataSync encountered during execution of the task. You can use this error code to help troubleshoot issues.
-     * 
      */
     @Export(name="errorCode", type=String.class, parameters={})
     private Output<String> errorCode;
 
     /**
      * @return Errors that AWS DataSync encountered during execution of the task. You can use this error code to help troubleshoot issues.
-     * 
      */
     public Output<String> getErrorCode() {
         return this.errorCode;
     }
     /**
      * Detailed description of an error that was encountered during the task execution.
-     * 
      */
     @Export(name="errorDetail", type=String.class, parameters={})
     private Output<String> errorDetail;
 
     /**
      * @return Detailed description of an error that was encountered during the task execution.
-     * 
      */
     public Output<String> getErrorDetail() {
         return this.errorDetail;
@@ -101,14 +227,12 @@ public class Task extends io.pulumi.resources.CustomResource {
     }
     /**
      * The name of a task. This value is a text reference that is used to identify the task in the console.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of a task. This value is a text reference that is used to identify the task in the console.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
@@ -127,14 +251,12 @@ public class Task extends io.pulumi.resources.CustomResource {
     }
     /**
      * The ARN of the source location for the task.
-     * 
      */
     @Export(name="sourceLocationArn", type=String.class, parameters={})
     private Output<String> sourceLocationArn;
 
     /**
      * @return The ARN of the source location for the task.
-     * 
      */
     public Output<String> getSourceLocationArn() {
         return this.sourceLocationArn;
@@ -147,42 +269,36 @@ public class Task extends io.pulumi.resources.CustomResource {
     }
     /**
      * The status of the task that was described.
-     * 
      */
     @Export(name="status", type=TaskStatus.class, parameters={})
     private Output<TaskStatus> status;
 
     /**
      * @return The status of the task that was described.
-     * 
      */
     public Output<TaskStatus> getStatus() {
         return this.status;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={TaskTag.class})
     private Output</* @Nullable */ List<TaskTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<TaskTag>> getTags() {
         return this.tags;
     }
     /**
      * The ARN of the task.
-     * 
      */
     @Export(name="taskArn", type=String.class, parameters={})
     private Output<String> taskArn;
 
     /**
      * @return The ARN of the task.
-     * 
      */
     public Output<String> getTaskArn() {
         return this.taskArn;

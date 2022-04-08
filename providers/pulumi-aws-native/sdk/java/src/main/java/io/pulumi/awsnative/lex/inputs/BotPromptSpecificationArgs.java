@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Prompts the user to confirm the intent.
- * 
  */
 public final class BotPromptSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class BotPromptSpecificationArgs extends io.pulumi.resources.Resour
 
     /**
      * Indicates whether the user can interrupt a speech prompt from the bot.
-     * 
      */
     @Import(name="allowInterrupt")
       private final @Nullable Output<Boolean> allowInterrupt;

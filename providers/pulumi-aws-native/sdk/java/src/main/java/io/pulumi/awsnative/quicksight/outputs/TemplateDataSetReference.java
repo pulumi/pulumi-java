@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class TemplateDataSetReference {
     /**
      * <p>Dataset Amazon Resource Name (ARN).</p>
-     * 
      */
     private final String dataSetArn;
     /**
      * <p>Dataset placeholder.</p>
-     * 
      */
     private final String dataSetPlaceholder;
 
@@ -30,14 +28,12 @@ public final class TemplateDataSetReference {
 
     /**
      * <p>Dataset Amazon Resource Name (ARN).</p>
-     * 
     */
     public String getDataSetArn() {
         return this.dataSetArn;
     }
     /**
      * <p>Dataset placeholder.</p>
-     * 
     */
     public String getDataSetPlaceholder() {
         return this.dataSetPlaceholder;

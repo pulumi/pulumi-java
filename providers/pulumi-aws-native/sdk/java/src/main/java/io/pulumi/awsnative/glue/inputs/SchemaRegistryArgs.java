@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Identifier for the registry which the schema is part of.
- * 
  */
 public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Amazon Resource Name for the Registry.
-     * 
      */
     @Import(name="arn")
       private final @Nullable Output<String> arn;
@@ -31,7 +29,6 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the registry in which the schema will be created.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

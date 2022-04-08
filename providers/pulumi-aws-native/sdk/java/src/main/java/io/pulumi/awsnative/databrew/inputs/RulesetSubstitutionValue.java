@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A key-value pair to associate expression's substitution variable names with their values
- * 
  */
 public final class RulesetSubstitutionValue extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class RulesetSubstitutionValue extends io.pulumi.resources.InvokeAr
 
     /**
      * Value or column name
-     * 
      */
     @Import(name="value", required=true)
       private final String value;
@@ -29,7 +27,6 @@ public final class RulesetSubstitutionValue extends io.pulumi.resources.InvokeAr
 
     /**
      * Variable name
-     * 
      */
     @Import(name="valueReference", required=true)
       private final String valueReference;

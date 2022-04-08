@@ -24,7 +24,6 @@ import javax.annotation.Nullable;
 
 /**
  * The actions to be performed.
- * 
  */
 public final class DetectorModelAction extends io.pulumi.resources.InvokeArgs {
 

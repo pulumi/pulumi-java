@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The log pattern set.
- * 
  */
 public final class ApplicationLogPatternSet extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ApplicationLogPatternSet extends io.pulumi.resources.InvokeAr
 
     /**
      * The log patterns of a set.
-     * 
      */
     @Import(name="logPatterns", required=true)
       private final List<ApplicationLogPattern> logPatterns;
@@ -31,7 +29,6 @@ public final class ApplicationLogPatternSet extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the log pattern set.
-     * 
      */
     @Import(name="patternSetName", required=true)
       private final String patternSetName;

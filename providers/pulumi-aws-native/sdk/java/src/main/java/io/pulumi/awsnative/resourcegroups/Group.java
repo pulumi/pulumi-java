@@ -17,20 +17,17 @@ import javax.annotation.Nullable;
 
 /**
  * Schema for ResourceGroups::Group
- * 
  */
 @ResourceType(type="aws-native:resourcegroups:Group")
 public class Group extends io.pulumi.resources.CustomResource {
     /**
      * The Resource Group ARN.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Resource Group ARN.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
@@ -43,28 +40,24 @@ public class Group extends io.pulumi.resources.CustomResource {
     }
     /**
      * The description of the resource group
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the resource group
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The name of the resource group
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource group
-     * 
      */
     public Output<String> getName() {
         return this.name;

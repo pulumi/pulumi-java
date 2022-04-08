@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class GetVPCDHCPOptionsAssociationResult {
     /**
      * The ID of the VPC DHCPOptions Association.
-     * 
      */
     private final @Nullable String id;
 
@@ -24,7 +23,6 @@ public final class GetVPCDHCPOptionsAssociationResult {
 
     /**
      * The ID of the VPC DHCPOptions Association.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);

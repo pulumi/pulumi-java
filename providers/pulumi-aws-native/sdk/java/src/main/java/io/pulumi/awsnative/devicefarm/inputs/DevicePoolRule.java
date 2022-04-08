@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a condition for a device pool.
- * 
  */
 public final class DevicePoolRule extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class DevicePoolRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The rule's stringified attribute.
-     * 
      */
     @Import(name="attribute")
       private final @Nullable DevicePoolRuleAttribute attribute;
@@ -33,7 +31,6 @@ public final class DevicePoolRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies how Device Farm compares the rule's attribute to the value.
-     * 
      */
     @Import(name="operator")
       private final @Nullable DevicePoolRuleOperator operator;
@@ -44,7 +41,6 @@ public final class DevicePoolRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The rule's value.
-     * 
      */
     @Import(name="value")
       private final @Nullable String value;

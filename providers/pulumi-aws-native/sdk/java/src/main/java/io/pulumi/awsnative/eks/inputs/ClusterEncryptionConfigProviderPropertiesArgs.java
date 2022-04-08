@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The encryption provider for the cluster.
- * 
  */
 public final class ClusterEncryptionConfigProviderPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ClusterEncryptionConfigProviderPropertiesArgs extends io.pulu
 
     /**
      * Amazon Resource Name (ARN) or alias of the KMS key. The KMS key must be symmetric, created in the same region as the cluster, and if the KMS key was created in a different account, the user must have access to the KMS key.
-     * 
      */
     @Import(name="keyArn")
       private final @Nullable Output<String> keyArn;

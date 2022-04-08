@@ -16,12 +16,10 @@ import javax.annotation.Nullable;
 public final class BotFulfillmentUpdateResponseSpecification {
     /**
      * Determines whether the user can interrupt an update message while it is playing.
-     * 
      */
     private final @Nullable Boolean allowInterrupt;
     /**
      * The frequency that a message is sent to the user. When the period ends, Amazon Lex chooses a message from the message groups and plays it to the user. If the fulfillment Lambda returns before the first period ends, an update message is not played to the user.
-     * 
      */
     private final Integer frequencyInSeconds;
     private final List<BotMessageGroup> messageGroups;
@@ -38,14 +36,12 @@ public final class BotFulfillmentUpdateResponseSpecification {
 
     /**
      * Determines whether the user can interrupt an update message while it is playing.
-     * 
     */
     public Optional<Boolean> getAllowInterrupt() {
         return Optional.ofNullable(this.allowInterrupt);
     }
     /**
      * The frequency that a message is sent to the user. When the period ends, Amazon Lex chooses a message from the message groups and plays it to the user. If the fulfillment Lambda returns before the first period ends, an update message is not played to the user.
-     * 
     */
     public Integer getFrequencyInSeconds() {
         return this.frequencyInSeconds;

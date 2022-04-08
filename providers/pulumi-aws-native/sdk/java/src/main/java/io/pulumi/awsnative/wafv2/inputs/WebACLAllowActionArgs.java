@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Allow traffic towards application.
- * 
  */
 public final class WebACLAllowActionArgs extends io.pulumi.resources.ResourceArgs {
 

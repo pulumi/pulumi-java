@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Account-level metrics configurations.
- * 
  */
 public final class StorageLensAccountLevelArgs extends io.pulumi.resources.ResourceArgs {
 

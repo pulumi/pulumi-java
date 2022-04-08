@@ -16,62 +16,53 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::SageMaker::AppImageConfig
- * 
  */
 @ResourceType(type="aws-native:sagemaker:AppImageConfig")
 public class AppImageConfig extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the AppImageConfig.
-     * 
      */
     @Export(name="appImageConfigArn", type=String.class, parameters={})
     private Output<String> appImageConfigArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the AppImageConfig.
-     * 
      */
     public Output<String> getAppImageConfigArn() {
         return this.appImageConfigArn;
     }
     /**
      * The Name of the AppImageConfig.
-     * 
      */
     @Export(name="appImageConfigName", type=String.class, parameters={})
     private Output<String> appImageConfigName;
 
     /**
      * @return The Name of the AppImageConfig.
-     * 
      */
     public Output<String> getAppImageConfigName() {
         return this.appImageConfigName;
     }
     /**
      * The KernelGatewayImageConfig.
-     * 
      */
     @Export(name="kernelGatewayImageConfig", type=AppImageConfigKernelGatewayImageConfig.class, parameters={})
     private Output</* @Nullable */ AppImageConfigKernelGatewayImageConfig> kernelGatewayImageConfig;
 
     /**
      * @return The KernelGatewayImageConfig.
-     * 
      */
     public Output</* @Nullable */ AppImageConfigKernelGatewayImageConfig> getKernelGatewayImageConfig() {
         return this.kernelGatewayImageConfig;
     }
     /**
      * A list of tags to apply to the AppImageConfig.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={AppImageConfigTag.class})
     private Output</* @Nullable */ List<AppImageConfigTag>> tags;
 
     /**
      * @return A list of tags to apply to the AppImageConfig.
-     * 
      */
     public Output</* @Nullable */ List<AppImageConfigTag>> getTags() {
         return this.tags;

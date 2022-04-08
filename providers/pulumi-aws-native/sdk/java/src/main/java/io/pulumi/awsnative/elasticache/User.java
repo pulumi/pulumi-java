@@ -16,118 +16,101 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::ElastiCache::User
- * 
  */
 @ResourceType(type="aws-native:elasticache:User")
 public class User extends io.pulumi.resources.CustomResource {
     /**
      * Access permissions string used for this user account.
-     * 
      */
     @Export(name="accessString", type=String.class, parameters={})
     private Output</* @Nullable */ String> accessString;
 
     /**
      * @return Access permissions string used for this user account.
-     * 
      */
     public Output</* @Nullable */ String> getAccessString() {
         return this.accessString;
     }
     /**
      * The Amazon Resource Name (ARN) of the user account.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the user account.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * Must be redis.
-     * 
      */
     @Export(name="engine", type=UserEngine.class, parameters={})
     private Output<UserEngine> engine;
 
     /**
      * @return Must be redis.
-     * 
      */
     public Output<UserEngine> getEngine() {
         return this.engine;
     }
     /**
      * Indicates a password is not required for this user account.
-     * 
      */
     @Export(name="noPasswordRequired", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> noPasswordRequired;
 
     /**
      * @return Indicates a password is not required for this user account.
-     * 
      */
     public Output</* @Nullable */ Boolean> getNoPasswordRequired() {
         return this.noPasswordRequired;
     }
     /**
      * Passwords used for this user account. You can create up to two passwords for each user.
-     * 
      */
     @Export(name="passwords", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> passwords;
 
     /**
      * @return Passwords used for this user account. You can create up to two passwords for each user.
-     * 
      */
     public Output</* @Nullable */ List<String>> getPasswords() {
         return this.passwords;
     }
     /**
      * Indicates the user status. Can be "active", "modifying" or "deleting".
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return Indicates the user status. Can be "active", "modifying" or "deleting".
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * The ID of the user.
-     * 
      */
     @Export(name="userId", type=String.class, parameters={})
     private Output<String> userId;
 
     /**
      * @return The ID of the user.
-     * 
      */
     public Output<String> getUserId() {
         return this.userId;
     }
     /**
      * The username of the user.
-     * 
      */
     @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**
      * @return The username of the user.
-     * 
      */
     public Output<String> getUserName() {
         return this.userName;

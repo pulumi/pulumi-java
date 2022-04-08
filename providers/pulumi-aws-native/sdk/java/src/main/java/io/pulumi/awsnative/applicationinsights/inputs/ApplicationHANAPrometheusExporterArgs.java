@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The HANA DB Prometheus Exporter settings.
- * 
  */
 public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
 
     /**
      * A flag which indicates agreeing to install SAP HANA DB client.
-     * 
      */
     @Import(name="agreeToInstallHANADBClient", required=true)
       private final Output<Boolean> agreeToInstallHANADBClient;
@@ -32,7 +30,6 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
 
     /**
      * The HANA DB port.
-     * 
      */
     @Import(name="hANAPort", required=true)
       private final Output<String> hANAPort;
@@ -43,7 +40,6 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
 
     /**
      * HANA DB SID.
-     * 
      */
     @Import(name="hANASID", required=true)
       private final Output<String> hANASID;
@@ -57,7 +53,6 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
      *   "username": "<>",
      *   "password": "<>"
      * }.
-     * 
      */
     @Import(name="hANASecretName", required=true)
       private final Output<String> hANASecretName;
@@ -68,7 +63,6 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
 
     /**
      * Prometheus exporter port.
-     * 
      */
     @Import(name="prometheusPort")
       private final @Nullable Output<String> prometheusPort;

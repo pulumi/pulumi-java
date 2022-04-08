@@ -18,20 +18,17 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::IVS::RecordingConfiguration
- * 
  */
 @ResourceType(type="aws-native:ivs:RecordingConfiguration")
 public class RecordingConfiguration extends io.pulumi.resources.CustomResource {
     /**
      * Recording Configuration ARN is automatically generated on creation and assigned as the unique identifier.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Recording Configuration ARN is automatically generated on creation and assigned as the unique identifier.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
@@ -44,42 +41,36 @@ public class RecordingConfiguration extends io.pulumi.resources.CustomResource {
     }
     /**
      * Recording Configuration Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Recording Configuration Name.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * Recording Configuration State.
-     * 
      */
     @Export(name="state", type=RecordingConfigurationState.class, parameters={})
     private Output<RecordingConfigurationState> state;
 
     /**
      * @return Recording Configuration State.
-     * 
      */
     public Output<RecordingConfigurationState> getState() {
         return this.state;
     }
     /**
      * A list of key-value pairs that contain metadata for the asset model.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={RecordingConfigurationTag.class})
     private Output</* @Nullable */ List<RecordingConfigurationTag>> tags;
 
     /**
      * @return A list of key-value pairs that contain metadata for the asset model.
-     * 
      */
     public Output</* @Nullable */ List<RecordingConfigurationTag>> getTags() {
         return this.tags;

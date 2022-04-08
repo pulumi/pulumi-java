@@ -15,62 +15,53 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::Route53Resolver::ResolverConfig.
- * 
  */
 @ResourceType(type="aws-native:route53resolver:ResolverConfig")
 public class ResolverConfig extends io.pulumi.resources.CustomResource {
     /**
      * ResolverAutodefinedReverseStatus, possible values are ENABLING, ENABLED, DISABLING AND DISABLED.
-     * 
      */
     @Export(name="autodefinedReverse", type=ResolverConfigAutodefinedReverse.class, parameters={})
     private Output<ResolverConfigAutodefinedReverse> autodefinedReverse;
 
     /**
      * @return ResolverAutodefinedReverseStatus, possible values are ENABLING, ENABLED, DISABLING AND DISABLED.
-     * 
      */
     public Output<ResolverConfigAutodefinedReverse> getAutodefinedReverse() {
         return this.autodefinedReverse;
     }
     /**
      * Represents the desired status of AutodefinedReverse. The only supported value on creation is DISABLE. Deletion of this resource will return AutodefinedReverse to its default value (ENABLED).
-     * 
      */
     @Export(name="autodefinedReverseFlag", type=ResolverConfigAutodefinedReverseFlag.class, parameters={})
     private Output<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag;
 
     /**
      * @return Represents the desired status of AutodefinedReverse. The only supported value on creation is DISABLE. Deletion of this resource will return AutodefinedReverse to its default value (ENABLED).
-     * 
      */
     public Output<ResolverConfigAutodefinedReverseFlag> getAutodefinedReverseFlag() {
         return this.autodefinedReverseFlag;
     }
     /**
      * AccountId
-     * 
      */
     @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
      * @return AccountId
-     * 
      */
     public Output<String> getOwnerId() {
         return this.ownerId;
     }
     /**
      * ResourceId
-     * 
      */
     @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**
      * @return ResourceId
-     * 
      */
     public Output<String> getResourceId() {
         return this.resourceId;

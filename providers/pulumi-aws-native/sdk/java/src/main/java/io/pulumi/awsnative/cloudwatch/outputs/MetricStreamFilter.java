@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class MetricStreamFilter {
     /**
      * Only metrics with Namespace matching this value will be streamed.
-     * 
      */
     private final String namespace;
 
@@ -22,7 +21,6 @@ public final class MetricStreamFilter {
 
     /**
      * Only metrics with Namespace matching this value will be streamed.
-     * 
     */
     public String getNamespace() {
         return this.namespace;

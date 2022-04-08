@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class BotSampleValue {
     /**
      * The value that can be used for a slot type.
-     * 
      */
     private final String value;
 
@@ -22,7 +21,6 @@ public final class BotSampleValue {
 
     /**
      * The value that can be used for a slot type.
-     * 
     */
     public String getValue() {
         return this.value;

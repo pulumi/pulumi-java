@@ -15,7 +15,6 @@ public final class RobotApplicationSourceConfig extends io.pulumi.resources.Invo
 
     /**
      * The architecture of robot application.
-     * 
      */
     @Import(name="architecture", required=true)
       private final RobotApplicationSourceConfigArchitecture architecture;
@@ -26,7 +25,6 @@ public final class RobotApplicationSourceConfig extends io.pulumi.resources.Invo
 
     /**
      * The Arn of the S3Bucket that stores the robot application source.
-     * 
      */
     @Import(name="s3Bucket", required=true)
       private final String s3Bucket;
@@ -37,7 +35,6 @@ public final class RobotApplicationSourceConfig extends io.pulumi.resources.Invo
 
     /**
      * The s3 key of robot application source.
-     * 
      */
     @Import(name="s3Key", required=true)
       private final String s3Key;

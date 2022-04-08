@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Helps to configure online certificate status protocol (OCSP) responder for your certificate authority
- * 
  */
 public final class CertificateAuthorityOcspConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 

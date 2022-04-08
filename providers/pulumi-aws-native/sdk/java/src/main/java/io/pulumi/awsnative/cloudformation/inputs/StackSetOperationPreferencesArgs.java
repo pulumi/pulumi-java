@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The user-specified preferences for how AWS CloudFormation performs a stack set operation.
- * 
  */
 public final class StackSetOperationPreferencesArgs extends io.pulumi.resources.ResourceArgs {
 

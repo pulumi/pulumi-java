@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
  * <p>Amazon Redshift parameters. The <code>ClusterId</code> field can be blank if
  *             <code>Host</code> and <code>Port</code> are both set. The <code>Host</code> and
  *             <code>Port</code> fields can be blank if the <code>ClusterId</code> field is set.</p>
- * 
  */
 public final class DataSourceRedshiftParameters extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class DataSourceRedshiftParameters extends io.pulumi.resources.Invo
     /**
      * <p>Cluster ID. This field can be blank if the <code>Host</code> and <code>Port</code> are
      *             provided.</p>
-     * 
      */
     @Import(name="clusterId")
       private final @Nullable String clusterId;
@@ -35,7 +33,6 @@ public final class DataSourceRedshiftParameters extends io.pulumi.resources.Invo
 
     /**
      * <p>Database.</p>
-     * 
      */
     @Import(name="database", required=true)
       private final String database;
@@ -46,7 +43,6 @@ public final class DataSourceRedshiftParameters extends io.pulumi.resources.Invo
 
     /**
      * <p>Host. This field can be blank if <code>ClusterId</code> is provided.</p>
-     * 
      */
     @Import(name="host")
       private final @Nullable String host;
@@ -57,7 +53,6 @@ public final class DataSourceRedshiftParameters extends io.pulumi.resources.Invo
 
     /**
      * <p>Port. This field can be blank if the <code>ClusterId</code> is provided.</p>
-     * 
      */
     @Import(name="port")
       private final @Nullable Double port;

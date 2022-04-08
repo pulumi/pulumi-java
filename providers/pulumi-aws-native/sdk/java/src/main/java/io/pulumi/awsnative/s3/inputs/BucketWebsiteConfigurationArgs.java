@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies website configuration parameters for an Amazon S3 bucket.
- * 
  */
 public final class BucketWebsiteConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class BucketWebsiteConfigurationArgs extends io.pulumi.resources.Re
 
     /**
      * The name of the error document for the website.
-     * 
      */
     @Import(name="errorDocument")
       private final @Nullable Output<String> errorDocument;
@@ -34,7 +32,6 @@ public final class BucketWebsiteConfigurationArgs extends io.pulumi.resources.Re
 
     /**
      * The name of the index document for the website.
-     * 
      */
     @Import(name="indexDocument")
       private final @Nullable Output<String> indexDocument;

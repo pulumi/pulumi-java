@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * <p>The type of KMS key that is used to encrypt studio data.</p>
-     * 
      */
     @EnumType
     public enum StudioEncryptionConfigurationKeyType {

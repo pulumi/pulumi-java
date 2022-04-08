@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * <p>Error information for the data source creation or update.</p>
- * 
  */
 public final class DataSourceErrorInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DataSourceErrorInfoArgs extends io.pulumi.resources.ResourceA
 
     /**
      * <p>Error message.</p>
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;

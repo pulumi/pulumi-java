@@ -14,7 +14,6 @@ public final class GetRecoveryGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the recovery group to create.
-     * 
      */
     @Import(name="recoveryGroupName", required=true)
       private final String recoveryGroupName;

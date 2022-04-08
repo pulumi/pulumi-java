@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A message in plain text format.
- * 
  */
 public final class BotPlainTextMessageArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class BotPlainTextMessageArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The message to send to the user.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

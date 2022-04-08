@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Configuration Source
-     * 
      */
     @EnumType
     public enum ServiceCodeConfigurationConfigurationSource {

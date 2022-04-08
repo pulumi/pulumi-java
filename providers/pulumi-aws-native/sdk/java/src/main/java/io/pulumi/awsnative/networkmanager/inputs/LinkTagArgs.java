@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A key-value pair to associate with a link resource.
- * 
  */
 public final class LinkTagArgs extends io.pulumi.resources.ResourceArgs {
 

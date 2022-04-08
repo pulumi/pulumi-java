@@ -13,90 +13,77 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::EC2::TransitGatewayMulticastDomainAssociation type
- * 
  */
 @ResourceType(type="aws-native:ec2:TransitGatewayMulticastDomainAssociation")
 public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resources.CustomResource {
     /**
      * The ID of the resource.
-     * 
      */
     @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**
      * @return The ID of the resource.
-     * 
      */
     public Output<String> getResourceId() {
         return this.resourceId;
     }
     /**
      * The type of resource, for example a VPC attachment.
-     * 
      */
     @Export(name="resourceType", type=String.class, parameters={})
     private Output<String> resourceType;
 
     /**
      * @return The type of resource, for example a VPC attachment.
-     * 
      */
     public Output<String> getPropResourceType() {
         return this.resourceType;
     }
     /**
      * The state of the subnet association.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The state of the subnet association.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The IDs of the subnets to associate with the transit gateway multicast domain.
-     * 
      */
     @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**
      * @return The IDs of the subnets to associate with the transit gateway multicast domain.
-     * 
      */
     public Output<String> getSubnetId() {
         return this.subnetId;
     }
     /**
      * The ID of the transit gateway attachment.
-     * 
      */
     @Export(name="transitGatewayAttachmentId", type=String.class, parameters={})
     private Output<String> transitGatewayAttachmentId;
 
     /**
      * @return The ID of the transit gateway attachment.
-     * 
      */
     public Output<String> getTransitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
     /**
      * The ID of the transit gateway multicast domain.
-     * 
      */
     @Export(name="transitGatewayMulticastDomainId", type=String.class, parameters={})
     private Output<String> transitGatewayMulticastDomainId;
 
     /**
      * @return The ID of the transit gateway multicast domain.
-     * 
      */
     public Output<String> getTransitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;

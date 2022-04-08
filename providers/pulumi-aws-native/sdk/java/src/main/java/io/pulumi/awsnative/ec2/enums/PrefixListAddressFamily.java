@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Ip Version of Prefix List.
-     * 
      */
     @EnumType
     public enum PrefixListAddressFamily {

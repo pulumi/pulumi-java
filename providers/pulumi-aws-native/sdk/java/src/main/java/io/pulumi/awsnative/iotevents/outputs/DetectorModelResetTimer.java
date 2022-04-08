@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class DetectorModelResetTimer {
     /**
      * The name of the timer to reset.
-     * 
      */
     private final String timerName;
 
@@ -22,7 +21,6 @@ public final class DetectorModelResetTimer {
 
     /**
      * The name of the timer to reset.
-     * 
     */
     public String getTimerName() {
         return this.timerName;

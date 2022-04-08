@@ -19,133 +19,407 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::IVS::Channel
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var channel = new AwsNative.IVS.Channel("channel", new AwsNative.IVS.ChannelArgs
+ *         {
+ *             Name = "MyChannel",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.IVS.Inputs.ChannelTagArgs
+ *                 {
+ *                     Key = "MyKey",
+ *                     Value = "MyValue",
+ *                 },
+ *             },
+ *         });
+ *         var streamKey = new AwsNative.IVS.StreamKey("streamKey", new AwsNative.IVS.StreamKeyArgs
+ *         {
+ *             ChannelArn = channel.Id,
+ *             Tags = 
+ *             {
+ *                 new AwsNative.IVS.Inputs.StreamKeyTagArgs
+ *                 {
+ *                     Key = "MyKey",
+ *                     Value = "MyValue",
+ *                 },
+ *             },
+ *         });
+ *         this.ChannelArn = channel.Id;
+ *         this.ChannelIngestEndpoint = channel.Ingest_endpoint;
+ *         this.ChannelPlaybackUrl = channel.Playback_url;
+ *         this.StreamKeyArn = streamKey.Id;
+ *     }
+ * 
+ *     [Output("channelArn")]
+ *     public Output<string> ChannelArn { get; set; }
+ *     [Output("channelIngestEndpoint")]
+ *     public Output<string> ChannelIngestEndpoint { get; set; }
+ *     [Output("channelPlaybackUrl")]
+ *     public Output<string> ChannelPlaybackUrl { get; set; }
+ *     [Output("streamKeyArn")]
+ *     public Output<string> StreamKeyArn { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ivs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		channel, err := ivs.NewChannel(ctx, "channel", &ivs.ChannelArgs{
+ * 			Name: pulumi.String("MyChannel"),
+ * 			Tags: []ivs.ChannelTagArgs{
+ * 				&ivs.ChannelTagArgs{
+ * 					Key:   pulumi.String("MyKey"),
+ * 					Value: pulumi.String("MyValue"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		streamKey, err := ivs.NewStreamKey(ctx, "streamKey", &ivs.StreamKeyArgs{
+ * 			ChannelArn: channel.ID(),
+ * 			Tags: []ivs.StreamKeyTagArgs{
+ * 				&ivs.StreamKeyTagArgs{
+ * 					Key:   pulumi.String("MyKey"),
+ * 					Value: pulumi.String("MyValue"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("channelArn", channel.ID())
+ * 		ctx.Export("channelIngestEndpoint", channel.Ingest_endpoint)
+ * 		ctx.Export("channelPlaybackUrl", channel.Playback_url)
+ * 		ctx.Export("streamKeyArn", streamKey.ID())
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const channel = new aws_native.ivs.Channel("channel", {
+ *     name: "MyChannel",
+ *     tags: [{
+ *         key: "MyKey",
+ *         value: "MyValue",
+ *     }],
+ * });
+ * const streamKey = new aws_native.ivs.StreamKey("streamKey", {
+ *     channelArn: channel.id,
+ *     tags: [{
+ *         key: "MyKey",
+ *         value: "MyValue",
+ *     }],
+ * });
+ * export const channelArn = channel.id;
+ * export const channelIngestEndpoint = channel.ingestEndpoint;
+ * export const channelPlaybackUrl = channel.playbackUrl;
+ * export const streamKeyArn = streamKey.id;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * channel = aws_native.ivs.Channel("channel",
+ *     name="MyChannel",
+ *     tags=[aws_native.ivs.ChannelTagArgs(
+ *         key="MyKey",
+ *         value="MyValue",
+ *     )])
+ * stream_key = aws_native.ivs.StreamKey("streamKey",
+ *     channel_arn=channel.id,
+ *     tags=[aws_native.ivs.StreamKeyTagArgs(
+ *         key="MyKey",
+ *         value="MyValue",
+ *     )])
+ * pulumi.export("channelArn", channel.id)
+ * pulumi.export("channelIngestEndpoint", channel.ingest_endpoint)
+ * pulumi.export("channelPlaybackUrl", channel.playback_url)
+ * pulumi.export("streamKeyArn", stream_key.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var channel = new AwsNative.IVS.Channel("channel", new AwsNative.IVS.ChannelArgs
+ *         {
+ *             Name = "MyChannel",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.IVS.Inputs.ChannelTagArgs
+ *                 {
+ *                     Key = "MyKey",
+ *                     Value = "MyValue",
+ *                 },
+ *             },
+ *         });
+ *         var streamKey = new AwsNative.IVS.StreamKey("streamKey", new AwsNative.IVS.StreamKeyArgs
+ *         {
+ *             ChannelArn = channel.Id,
+ *             Tags = 
+ *             {
+ *                 new AwsNative.IVS.Inputs.StreamKeyTagArgs
+ *                 {
+ *                     Key = "MyKey",
+ *                     Value = "MyValue",
+ *                 },
+ *             },
+ *         });
+ *         this.ChannelArn = channel.Id;
+ *         this.ChannelIngestEndpoint = channel.Ingest_endpoint;
+ *         this.ChannelPlaybackUrl = channel.Playback_url;
+ *         this.StreamKeyArn = streamKey.Id;
+ *     }
+ * 
+ *     [Output("channelArn")]
+ *     public Output<string> ChannelArn { get; set; }
+ *     [Output("channelIngestEndpoint")]
+ *     public Output<string> ChannelIngestEndpoint { get; set; }
+ *     [Output("channelPlaybackUrl")]
+ *     public Output<string> ChannelPlaybackUrl { get; set; }
+ *     [Output("streamKeyArn")]
+ *     public Output<string> StreamKeyArn { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ivs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		channel, err := ivs.NewChannel(ctx, "channel", &ivs.ChannelArgs{
+ * 			Name: pulumi.String("MyChannel"),
+ * 			Tags: []ivs.ChannelTagArgs{
+ * 				&ivs.ChannelTagArgs{
+ * 					Key:   pulumi.String("MyKey"),
+ * 					Value: pulumi.String("MyValue"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		streamKey, err := ivs.NewStreamKey(ctx, "streamKey", &ivs.StreamKeyArgs{
+ * 			ChannelArn: channel.ID(),
+ * 			Tags: []ivs.StreamKeyTagArgs{
+ * 				&ivs.StreamKeyTagArgs{
+ * 					Key:   pulumi.String("MyKey"),
+ * 					Value: pulumi.String("MyValue"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("channelArn", channel.ID())
+ * 		ctx.Export("channelIngestEndpoint", channel.Ingest_endpoint)
+ * 		ctx.Export("channelPlaybackUrl", channel.Playback_url)
+ * 		ctx.Export("streamKeyArn", streamKey.ID())
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const channel = new aws_native.ivs.Channel("channel", {
+ *     name: "MyChannel",
+ *     tags: [{
+ *         key: "MyKey",
+ *         value: "MyValue",
+ *     }],
+ * });
+ * const streamKey = new aws_native.ivs.StreamKey("streamKey", {
+ *     channelArn: channel.id,
+ *     tags: [{
+ *         key: "MyKey",
+ *         value: "MyValue",
+ *     }],
+ * });
+ * export const channelArn = channel.id;
+ * export const channelIngestEndpoint = channel.ingestEndpoint;
+ * export const channelPlaybackUrl = channel.playbackUrl;
+ * export const streamKeyArn = streamKey.id;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * channel = aws_native.ivs.Channel("channel",
+ *     name="MyChannel",
+ *     tags=[aws_native.ivs.ChannelTagArgs(
+ *         key="MyKey",
+ *         value="MyValue",
+ *     )])
+ * stream_key = aws_native.ivs.StreamKey("streamKey",
+ *     channel_arn=channel.id,
+ *     tags=[aws_native.ivs.StreamKeyTagArgs(
+ *         key="MyKey",
+ *         value="MyValue",
+ *     )])
+ * pulumi.export("channelArn", channel.id)
+ * pulumi.export("channelIngestEndpoint", channel.ingest_endpoint)
+ * pulumi.export("channelPlaybackUrl", channel.playback_url)
+ * pulumi.export("streamKeyArn", stream_key.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:ivs:Channel")
 public class Channel extends io.pulumi.resources.CustomResource {
     /**
      * Channel ARN is automatically generated on creation and assigned as the unique identifier.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Channel ARN is automatically generated on creation and assigned as the unique identifier.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * Whether the channel is authorized.
-     * 
      */
     @Export(name="authorized", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> authorized;
 
     /**
      * @return Whether the channel is authorized.
-     * 
      */
     public Output</* @Nullable */ Boolean> getAuthorized() {
         return this.authorized;
     }
     /**
      * Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software.
-     * 
      */
     @Export(name="ingestEndpoint", type=String.class, parameters={})
     private Output<String> ingestEndpoint;
 
     /**
      * @return Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software.
-     * 
      */
     public Output<String> getIngestEndpoint() {
         return this.ingestEndpoint;
     }
     /**
      * Channel latency mode.
-     * 
      */
     @Export(name="latencyMode", type=ChannelLatencyMode.class, parameters={})
     private Output</* @Nullable */ ChannelLatencyMode> latencyMode;
 
     /**
      * @return Channel latency mode.
-     * 
      */
     public Output</* @Nullable */ ChannelLatencyMode> getLatencyMode() {
         return this.latencyMode;
     }
     /**
      * Channel
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Channel
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * Channel Playback URL.
-     * 
      */
     @Export(name="playbackUrl", type=String.class, parameters={})
     private Output<String> playbackUrl;
 
     /**
      * @return Channel Playback URL.
-     * 
      */
     public Output<String> getPlaybackUrl() {
         return this.playbackUrl;
     }
     /**
      * Recording Configuration ARN. A value other than an empty string indicates that recording is enabled. Default: “” (recording is disabled).
-     * 
      */
     @Export(name="recordingConfigurationArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> recordingConfigurationArn;
 
     /**
      * @return Recording Configuration ARN. A value other than an empty string indicates that recording is enabled. Default: “” (recording is disabled).
-     * 
      */
     public Output</* @Nullable */ String> getRecordingConfigurationArn() {
         return this.recordingConfigurationArn;
     }
     /**
      * A list of key-value pairs that contain metadata for the asset model.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ChannelTag.class})
     private Output</* @Nullable */ List<ChannelTag>> tags;
 
     /**
      * @return A list of key-value pairs that contain metadata for the asset model.
-     * 
      */
     public Output</* @Nullable */ List<ChannelTag>> getTags() {
         return this.tags;
     }
     /**
      * Channel type, which determines the allowable resolution and bitrate. If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately.
-     * 
      */
     @Export(name="type", type=ChannelType.class, parameters={})
     private Output</* @Nullable */ ChannelType> type;
 
     /**
      * @return Channel type, which determines the allowable resolution and bitrate. If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately.
-     * 
      */
     public Output</* @Nullable */ ChannelType> getType() {
         return this.type;

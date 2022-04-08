@@ -14,7 +14,6 @@ public final class GetRulesetArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the Ruleset
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

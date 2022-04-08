@@ -20,7 +20,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The names of the instances attached to the load balancer.
-     * 
      */
     @Import(name="attachedInstances")
       private final @Nullable Output<List<String>> attachedInstances;
@@ -31,7 +30,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The path you provided to perform the load balancer health check. If you didn't specify a health check path, Lightsail uses the root path of your website (e.g., "/").
-     * 
      */
     @Import(name="healthCheckPath")
       private final @Nullable Output<String> healthCheckPath;
@@ -42,7 +40,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The instance port where you're creating your load balancer.
-     * 
      */
     @Import(name="instancePort", required=true)
       private final Output<Integer> instancePort;
@@ -53,7 +50,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The IP address type for the load balancer. The possible values are ipv4 for IPv4 only, and dualstack for IPv4 and IPv6. The default value is dualstack.
-     * 
      */
     @Import(name="ipAddressType")
       private final @Nullable Output<String> ipAddressType;
@@ -64,7 +60,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of your load balancer.
-     * 
      */
     @Import(name="loadBalancerName")
       private final @Nullable Output<String> loadBalancerName;
@@ -75,7 +70,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration option to enable session stickiness.
-     * 
      */
     @Import(name="sessionStickinessEnabled")
       private final @Nullable Output<Boolean> sessionStickinessEnabled;
@@ -86,7 +80,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration option to adjust session stickiness cookie duration parameter.
-     * 
      */
     @Import(name="sessionStickinessLBCookieDurationSeconds")
       private final @Nullable Output<String> sessionStickinessLBCookieDurationSeconds;
@@ -97,7 +90,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<LoadBalancerTagArgs>> tags;

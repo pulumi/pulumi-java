@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of AWS::Location::PlaceIndex Resource Type
- * 
  */
 @ResourceType(type="aws-native:location:PlaceIndex")
 public class PlaceIndex extends io.pulumi.resources.CustomResource {

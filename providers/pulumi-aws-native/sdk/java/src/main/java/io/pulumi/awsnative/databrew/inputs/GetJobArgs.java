@@ -14,7 +14,6 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Job name
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

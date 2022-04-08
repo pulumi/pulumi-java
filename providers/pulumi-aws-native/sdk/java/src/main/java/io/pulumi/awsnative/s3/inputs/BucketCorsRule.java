@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A set of origins and methods (cross-origin access that you want to allow). You can add up to 100 rules to the configuration.
- * 
  */
 public final class BucketCorsRule extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class BucketCorsRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Headers that are specified in the Access-Control-Request-Headers header.
-     * 
      */
     @Import(name="allowedHeaders")
       private final @Nullable List<String> allowedHeaders;
@@ -34,7 +32,6 @@ public final class BucketCorsRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An HTTP method that you allow the origin to execute.
-     * 
      */
     @Import(name="allowedMethods", required=true)
       private final List<BucketCorsRuleAllowedMethodsItem> allowedMethods;
@@ -45,7 +42,6 @@ public final class BucketCorsRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * One or more origins you want customers to be able to access the bucket from.
-     * 
      */
     @Import(name="allowedOrigins", required=true)
       private final List<String> allowedOrigins;
@@ -56,7 +52,6 @@ public final class BucketCorsRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * One or more headers in the response that you want customers to be able to access from their applications (for example, from a JavaScript XMLHttpRequest object).
-     * 
      */
     @Import(name="exposedHeaders")
       private final @Nullable List<String> exposedHeaders;
@@ -67,7 +62,6 @@ public final class BucketCorsRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A unique identifier for this rule.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -78,7 +72,6 @@ public final class BucketCorsRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The time in seconds that your browser is to cache the preflight response for the specified resource.
-     * 
      */
     @Import(name="maxAge")
       private final @Nullable Integer maxAge;

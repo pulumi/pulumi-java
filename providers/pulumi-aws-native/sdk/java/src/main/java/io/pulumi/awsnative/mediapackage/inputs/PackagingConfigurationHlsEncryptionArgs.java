@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * An HTTP Live Streaming (HLS) encryption configuration.
- * 
  */
 public final class PackagingConfigurationHlsEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class PackagingConfigurationHlsEncryptionArgs extends io.pulumi.res
 
     /**
      * An HTTP Live Streaming (HLS) encryption configuration.
-     * 
      */
     @Import(name="constantInitializationVector")
       private final @Nullable Output<String> constantInitializationVector;
@@ -33,7 +31,6 @@ public final class PackagingConfigurationHlsEncryptionArgs extends io.pulumi.res
 
     /**
      * The encryption method to use.
-     * 
      */
     @Import(name="encryptionMethod")
       private final @Nullable Output<PackagingConfigurationHlsEncryptionEncryptionMethod> encryptionMethod;

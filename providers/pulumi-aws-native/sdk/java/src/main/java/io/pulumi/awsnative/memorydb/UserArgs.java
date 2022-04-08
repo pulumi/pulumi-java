@@ -19,7 +19,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Access permissions string used for this user account.
-     * 
      */
     @Import(name="accessString", required=true)
       private final Output<String> accessString;
@@ -37,7 +36,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this user.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<UserTagArgs>> tags;
@@ -48,7 +46,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the user.
-     * 
      */
     @Import(name="userName")
       private final @Nullable Output<String> userName;

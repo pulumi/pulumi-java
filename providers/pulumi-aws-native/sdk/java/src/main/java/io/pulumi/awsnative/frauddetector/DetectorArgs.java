@@ -23,7 +23,6 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The models to associate with this detector.
-     * 
      */
     @Import(name="associatedModels")
       private final @Nullable Output<List<DetectorModelArgs>> associatedModels;
@@ -34,7 +33,6 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the detector.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -45,7 +43,6 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the detector
-     * 
      */
     @Import(name="detectorId", required=true)
       private final Output<String> detectorId;
@@ -56,7 +53,6 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The desired detector version status for the detector
-     * 
      */
     @Import(name="detectorVersionStatus")
       private final @Nullable Output<DetectorVersionStatus> detectorVersionStatus;
@@ -67,7 +63,6 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The event type to associate this detector with.
-     * 
      */
     @Import(name="eventType", required=true)
       private final Output<DetectorEventTypeArgs> eventType;
@@ -92,7 +87,6 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tags associated with this detector.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<DetectorTagArgs>> tags;

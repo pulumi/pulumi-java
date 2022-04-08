@@ -14,76 +14,65 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::ApiGateway::RequestValidator
- * 
  */
 @ResourceType(type="aws-native:apigateway:RequestValidator")
 public class RequestValidator extends io.pulumi.resources.CustomResource {
     /**
      * Name of the request validator.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Name of the request validator.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * ID of the request validator.
-     * 
      */
     @Export(name="requestValidatorId", type=String.class, parameters={})
     private Output<String> requestValidatorId;
 
     /**
      * @return ID of the request validator.
-     * 
      */
     public Output<String> getRequestValidatorId() {
         return this.requestValidatorId;
     }
     /**
      * The identifier of the targeted API entity.
-     * 
      */
     @Export(name="restApiId", type=String.class, parameters={})
     private Output<String> restApiId;
 
     /**
      * @return The identifier of the targeted API entity.
-     * 
      */
     public Output<String> getRestApiId() {
         return this.restApiId;
     }
     /**
-     * Indicates whether to validate the request body according to the configured schema for the targeted API and method.
-     * 
+     * Indicates whether to validate the request body according to the configured schema for the targeted API and method. 
      */
     @Export(name="validateRequestBody", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> validateRequestBody;
 
     /**
-     * @return Indicates whether to validate the request body according to the configured schema for the targeted API and method.
-     * 
+     * @return Indicates whether to validate the request body according to the configured schema for the targeted API and method. 
      */
     public Output</* @Nullable */ Boolean> getValidateRequestBody() {
         return this.validateRequestBody;
     }
     /**
      * Indicates whether to validate request parameters.
-     * 
      */
     @Export(name="validateRequestParameters", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> validateRequestParameters;
 
     /**
      * @return Indicates whether to validate request parameters.
-     * 
      */
     public Output</* @Nullable */ Boolean> getValidateRequestParameters() {
         return this.validateRequestParameters;

@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class TransitGatewayConnectTag {
     /**
      * The key of the tag. Constraints: Tag keys are case-sensitive and accept a maximum of 127 Unicode characters. May not begin with aws:.
-     * 
      */
     private final @Nullable String key;
     /**
      * The value of the tag. Constraints: Tag values are case-sensitive and accept a maximum of 255 Unicode characters.
-     * 
      */
     private final @Nullable String value;
 
@@ -32,14 +30,12 @@ public final class TransitGatewayConnectTag {
 
     /**
      * The key of the tag. Constraints: Tag keys are case-sensitive and accept a maximum of 127 Unicode characters. May not begin with aws:.
-     * 
     */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
     /**
      * The value of the tag. Constraints: Tag values are case-sensitive and accept a maximum of 255 Unicode characters.
-     * 
     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);

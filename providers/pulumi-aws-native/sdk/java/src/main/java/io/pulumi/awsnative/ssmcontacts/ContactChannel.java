@@ -15,90 +15,77 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::SSMContacts::ContactChannel
- * 
  */
 @ResourceType(type="aws-native:ssmcontacts:ContactChannel")
 public class ContactChannel extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the engagement to a contact channel.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the engagement to a contact channel.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The details that SSM Incident Manager uses when trying to engage the contact channel.
-     * 
      */
     @Export(name="channelAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> channelAddress;
 
     /**
      * @return The details that SSM Incident Manager uses when trying to engage the contact channel.
-     * 
      */
     public Output</* @Nullable */ String> getChannelAddress() {
         return this.channelAddress;
     }
     /**
      * The device name. String of 6 to 50 alphabetical, numeric, dash, and underscore characters.
-     * 
      */
     @Export(name="channelName", type=String.class, parameters={})
     private Output</* @Nullable */ String> channelName;
 
     /**
      * @return The device name. String of 6 to 50 alphabetical, numeric, dash, and underscore characters.
-     * 
      */
     public Output</* @Nullable */ String> getChannelName() {
         return this.channelName;
     }
     /**
      * Device type, which specify notification channel. Currently supported values: “SMS”, “VOICE”, “EMAIL”, “CHATBOT.
-     * 
      */
     @Export(name="channelType", type=ContactChannelChannelType.class, parameters={})
     private Output</* @Nullable */ ContactChannelChannelType> channelType;
 
     /**
      * @return Device type, which specify notification channel. Currently supported values: “SMS”, “VOICE”, “EMAIL”, “CHATBOT.
-     * 
      */
     public Output</* @Nullable */ ContactChannelChannelType> getChannelType() {
         return this.channelType;
     }
     /**
      * ARN of the contact resource
-     * 
      */
     @Export(name="contactId", type=String.class, parameters={})
     private Output</* @Nullable */ String> contactId;
 
     /**
      * @return ARN of the contact resource
-     * 
      */
     public Output</* @Nullable */ String> getContactId() {
         return this.contactId;
     }
     /**
      * If you want to activate the channel at a later time, you can choose to defer activation. SSM Incident Manager can't engage your contact channel until it has been activated.
-     * 
      */
     @Export(name="deferActivation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deferActivation;
 
     /**
      * @return If you want to activate the channel at a later time, you can choose to defer activation. SSM Incident Manager can't engage your contact channel until it has been activated.
-     * 
      */
     public Output</* @Nullable */ Boolean> getDeferActivation() {
         return this.deferActivation;

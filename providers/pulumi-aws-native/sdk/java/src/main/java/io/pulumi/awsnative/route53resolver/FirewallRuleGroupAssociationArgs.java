@@ -20,7 +20,6 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
 
     /**
      * FirewallRuleGroupId
-     * 
      */
     @Import(name="firewallRuleGroupId", required=true)
       private final Output<String> firewallRuleGroupId;
@@ -31,7 +30,6 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
 
     /**
      * MutationProtectionStatus
-     * 
      */
     @Import(name="mutationProtection")
       private final @Nullable Output<FirewallRuleGroupAssociationMutationProtection> mutationProtection;
@@ -42,7 +40,6 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
 
     /**
      * FirewallRuleGroupAssociationName
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -53,7 +50,6 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
 
     /**
      * Priority
-     * 
      */
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
@@ -64,7 +60,6 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
 
     /**
      * Tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<FirewallRuleGroupAssociationTagArgs>> tags;
@@ -75,7 +70,6 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
 
     /**
      * VpcId
-     * 
      */
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;

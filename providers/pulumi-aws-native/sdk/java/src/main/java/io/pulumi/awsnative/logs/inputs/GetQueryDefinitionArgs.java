@@ -14,7 +14,6 @@ public final class GetQueryDefinitionArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Unique identifier of a query definition
-     * 
      */
     @Import(name="queryDefinitionId", required=true)
       private final String queryDefinitionId;

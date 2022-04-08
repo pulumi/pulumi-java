@@ -17,118 +17,101 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type Definition for AWS::S3Outposts::Endpoint
- * 
  */
 @ResourceType(type="aws-native:s3outposts:Endpoint")
 public class Endpoint extends io.pulumi.resources.CustomResource {
     /**
      * The type of access for the on-premise network connectivity for the Outpost endpoint. To access endpoint from an on-premises network, you must specify the access type and provide the customer owned Ipv4 pool.
-     * 
      */
     @Export(name="accessType", type=EndpointAccessType.class, parameters={})
     private Output</* @Nullable */ EndpointAccessType> accessType;
 
     /**
      * @return The type of access for the on-premise network connectivity for the Outpost endpoint. To access endpoint from an on-premises network, you must specify the access type and provide the customer owned Ipv4 pool.
-     * 
      */
     public Output</* @Nullable */ EndpointAccessType> getAccessType() {
         return this.accessType;
     }
     /**
      * The Amazon Resource Name (ARN) of the endpoint.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the endpoint.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The VPC CIDR committed by this endpoint.
-     * 
      */
     @Export(name="cidrBlock", type=String.class, parameters={})
     private Output<String> cidrBlock;
 
     /**
      * @return The VPC CIDR committed by this endpoint.
-     * 
      */
     public Output<String> getCidrBlock() {
         return this.cidrBlock;
     }
     /**
      * The time the endpoint was created.
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return The time the endpoint was created.
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * The ID of the customer-owned IPv4 pool for the Endpoint. IP addresses will be allocated from this pool for the endpoint.
-     * 
      */
     @Export(name="customerOwnedIpv4Pool", type=String.class, parameters={})
     private Output</* @Nullable */ String> customerOwnedIpv4Pool;
 
     /**
      * @return The ID of the customer-owned IPv4 pool for the Endpoint. IP addresses will be allocated from this pool for the endpoint.
-     * 
      */
     public Output</* @Nullable */ String> getCustomerOwnedIpv4Pool() {
         return this.customerOwnedIpv4Pool;
     }
     /**
      * The network interfaces of the endpoint.
-     * 
      */
     @Export(name="networkInterfaces", type=List.class, parameters={EndpointNetworkInterface.class})
     private Output<List<EndpointNetworkInterface>> networkInterfaces;
 
     /**
      * @return The network interfaces of the endpoint.
-     * 
      */
     public Output<List<EndpointNetworkInterface>> getNetworkInterfaces() {
         return this.networkInterfaces;
     }
     /**
      * The id of the customer outpost on which the bucket resides.
-     * 
      */
     @Export(name="outpostId", type=String.class, parameters={})
     private Output<String> outpostId;
 
     /**
      * @return The id of the customer outpost on which the bucket resides.
-     * 
      */
     public Output<String> getOutpostId() {
         return this.outpostId;
     }
     /**
      * The ID of the security group to use with the endpoint.
-     * 
      */
     @Export(name="securityGroupId", type=String.class, parameters={})
     private Output<String> securityGroupId;
 
     /**
      * @return The ID of the security group to use with the endpoint.
-     * 
      */
     public Output<String> getSecurityGroupId() {
         return this.securityGroupId;
@@ -141,14 +124,12 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
     }
     /**
      * The ID of the subnet in the selected VPC. The subnet must belong to the Outpost.
-     * 
      */
     @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**
      * @return The ID of the subnet in the selected VPC. The subnet must belong to the Outpost.
-     * 
      */
     public Output<String> getSubnetId() {
         return this.subnetId;

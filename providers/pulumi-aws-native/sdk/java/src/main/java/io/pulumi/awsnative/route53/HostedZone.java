@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::Route53::HostedZone.
- * 
  */
 @ResourceType(type="aws-native:route53:HostedZone")
 public class HostedZone extends io.pulumi.resources.CustomResource {
@@ -32,7 +31,6 @@ public class HostedZone extends io.pulumi.resources.CustomResource {
      * Adds, edits, or deletes tags for a health check or a hosted zone.
      * 
      * For information about using tags for cost allocation, see Using Cost Allocation Tags in the AWS Billing and Cost Management User Guide.
-     * 
      */
     @Export(name="hostedZoneTags", type=List.class, parameters={HostedZoneTag.class})
     private Output</* @Nullable */ List<HostedZoneTag>> hostedZoneTags;
@@ -41,7 +39,6 @@ public class HostedZone extends io.pulumi.resources.CustomResource {
      * @return Adds, edits, or deletes tags for a health check or a hosted zone.
      * 
      * For information about using tags for cost allocation, see Using Cost Allocation Tags in the AWS Billing and Cost Management User Guide.
-     * 
      */
     public Output</* @Nullable */ List<HostedZoneTag>> getHostedZoneTags() {
         return this.hostedZoneTags;
@@ -50,7 +47,6 @@ public class HostedZone extends io.pulumi.resources.CustomResource {
      * The name of the domain. Specify a fully qualified domain name, for example, www.example.com. The trailing dot is optional; Amazon Route 53 assumes that the domain name is fully qualified. This means that Route 53 treats www.example.com (without a trailing dot) and www.example.com. (with a trailing dot) as identical.
      * 
      * If you're creating a public hosted zone, this is the name you have registered with your DNS registrar. If your domain name is registered with a registrar other than Route 53, change the name servers for your domain to the set of NameServers that are returned by the Fn::GetAtt intrinsic function.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
@@ -59,7 +55,6 @@ public class HostedZone extends io.pulumi.resources.CustomResource {
      * @return The name of the domain. Specify a fully qualified domain name, for example, www.example.com. The trailing dot is optional; Amazon Route 53 assumes that the domain name is fully qualified. This means that Route 53 treats www.example.com (without a trailing dot) and www.example.com. (with a trailing dot) as identical.
      * 
      * If you're creating a public hosted zone, this is the name you have registered with your DNS registrar. If your domain name is registered with a registrar other than Route 53, change the name servers for your domain to the set of NameServers that are returned by the Fn::GetAtt intrinsic function.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
@@ -78,14 +73,12 @@ public class HostedZone extends io.pulumi.resources.CustomResource {
     }
     /**
      * A complex type that contains information about the VPCs that are associated with the specified hosted zone.
-     * 
      */
     @Export(name="vPCs", type=List.class, parameters={HostedZoneVPC.class})
     private Output</* @Nullable */ List<HostedZoneVPC>> vPCs;
 
     /**
      * @return A complex type that contains information about the VPCs that are associated with the specified hosted zone.
-     * 
      */
     public Output</* @Nullable */ List<HostedZoneVPC>> getVPCs() {
         return this.vPCs;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * When entering this state, perform these `actions` if the `condition` is `TRUE`.
- * 
  */
 public final class DetectorModelOnEnterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DetectorModelOnEnterArgs extends io.pulumi.resources.Resource
 
     /**
      * Specifies the `actions` that are performed when the state is entered and the `condition` is `TRUE`.
-     * 
      */
     @Import(name="events")
       private final @Nullable Output<List<DetectorModelEventArgs>> events;

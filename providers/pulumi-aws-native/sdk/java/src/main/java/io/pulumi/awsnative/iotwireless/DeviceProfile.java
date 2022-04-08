@@ -16,62 +16,53 @@ import javax.annotation.Nullable;
 
 /**
  * Device Profile's resource schema demonstrating some basic constructs and validation rules.
- * 
  */
 @ResourceType(type="aws-native:iotwireless:DeviceProfile")
 public class DeviceProfile extends io.pulumi.resources.CustomResource {
     /**
      * Service profile Arn. Returned after successful create.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Service profile Arn. Returned after successful create.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * LoRaWANDeviceProfile supports all LoRa specific attributes for service profile for CreateDeviceProfile operation
-     * 
      */
     @Export(name="loRaWAN", type=DeviceProfileLoRaWANDeviceProfile.class, parameters={})
     private Output</* @Nullable */ DeviceProfileLoRaWANDeviceProfile> loRaWAN;
 
     /**
      * @return LoRaWANDeviceProfile supports all LoRa specific attributes for service profile for CreateDeviceProfile operation
-     * 
      */
     public Output</* @Nullable */ DeviceProfileLoRaWANDeviceProfile> getLoRaWAN() {
         return this.loRaWAN;
     }
     /**
      * Name of service profile
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Name of service profile
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * A list of key-value pairs that contain metadata for the device profile.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DeviceProfileTag.class})
     private Output</* @Nullable */ List<DeviceProfileTag>> tags;
 
     /**
      * @return A list of key-value pairs that contain metadata for the device profile.
-     * 
      */
     public Output</* @Nullable */ List<DeviceProfileTag>> getTags() {
         return this.tags;

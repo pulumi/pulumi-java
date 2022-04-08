@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Specifies object key name filtering rules.
- * 
  */
 public final class BucketNotificationFilter extends io.pulumi.resources.InvokeArgs {
 

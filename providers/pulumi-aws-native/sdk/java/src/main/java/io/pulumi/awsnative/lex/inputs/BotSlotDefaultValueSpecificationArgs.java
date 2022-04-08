@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A list of values that Amazon Lex should use as the default value for a slot.
- * 
  */
 public final class BotSlotDefaultValueSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BotSlotDefaultValueSpecificationArgs extends io.pulumi.resour
 
     /**
      * A list of slot default values
-     * 
      */
     @Import(name="defaultValueList", required=true)
       private final Output<List<BotSlotDefaultValueArgs>> defaultValueList;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Code Configuration
- * 
  */
 public final class ServiceCodeConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class ServiceCodeConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * Configuration Source
-     * 
      */
     @Import(name="configurationSource", required=true)
       private final Output<ServiceCodeConfigurationConfigurationSource> configurationSource;

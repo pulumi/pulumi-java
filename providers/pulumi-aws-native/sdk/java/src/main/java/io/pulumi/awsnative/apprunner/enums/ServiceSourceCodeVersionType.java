@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Source Code Version Type
-     * 
      */
     @EnumType
     public enum ServiceSourceCodeVersionType {

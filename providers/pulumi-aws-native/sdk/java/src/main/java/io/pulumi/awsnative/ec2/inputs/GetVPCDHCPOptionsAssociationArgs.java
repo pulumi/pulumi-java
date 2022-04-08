@@ -14,7 +14,6 @@ public final class GetVPCDHCPOptionsAssociationArgs extends io.pulumi.resources.
 
     /**
      * The ID of the DHCP options set, or default to associate no DHCP options with the VPC.
-     * 
      */
     @Import(name="dhcpOptionsId", required=true)
       private final String dhcpOptionsId;
@@ -25,7 +24,6 @@ public final class GetVPCDHCPOptionsAssociationArgs extends io.pulumi.resources.
 
     /**
      * The ID of the VPC.
-     * 
      */
     @Import(name="vpcId", required=true)
       private final String vpcId;

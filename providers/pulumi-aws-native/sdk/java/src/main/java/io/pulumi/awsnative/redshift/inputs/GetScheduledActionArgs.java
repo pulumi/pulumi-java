@@ -14,7 +14,6 @@ public final class GetScheduledActionArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the scheduled action. The name must be unique within an account.
-     * 
      */
     @Import(name="scheduledActionName", required=true)
       private final String scheduledActionName;

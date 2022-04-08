@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Parameters to define a mitigation action that enables AWS IoT logging at a specified level of detail.
- * 
  */
 public final class MitigationActionEnableIoTLoggingParamsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MitigationActionEnableIoTLoggingParamsArgs extends io.pulumi.
 
     /**
      *  Specifies which types of information are logged.
-     * 
      */
     @Import(name="logLevel", required=true)
       private final Output<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel;
@@ -31,7 +29,6 @@ public final class MitigationActionEnableIoTLoggingParamsArgs extends io.pulumi.
 
     /**
      *  The ARN of the IAM role used for logging.
-     * 
      */
     @Import(name="roleArnForLogging", required=true)
       private final Output<String> roleArnForLogging;

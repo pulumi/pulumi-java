@@ -16,33 +16,27 @@ import javax.annotation.Nullable;
 public final class GetLocationSMBResult {
     /**
      * The Amazon Resource Names (ARNs) of agents to use for a Simple Message Block (SMB) location.
-     * 
      */
     private final @Nullable List<String> agentArns;
     /**
      * The name of the Windows domain that the SMB server belongs to.
-     * 
      */
     private final @Nullable String domain;
     /**
      * The Amazon Resource Name (ARN) of the SMB location that is created.
-     * 
      */
     private final @Nullable String locationArn;
     /**
      * The URL of the SMB location that was described.
-     * 
      */
     private final @Nullable String locationUri;
     private final @Nullable LocationSMBMountOptions mountOptions;
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     private final @Nullable List<LocationSMBTag> tags;
     /**
      * The user who can mount the share, has the permissions to access files and folders in the SMB share.
-     * 
      */
     private final @Nullable String user;
 
@@ -66,28 +60,24 @@ public final class GetLocationSMBResult {
 
     /**
      * The Amazon Resource Names (ARNs) of agents to use for a Simple Message Block (SMB) location.
-     * 
     */
     public List<String> getAgentArns() {
         return this.agentArns == null ? List.of() : this.agentArns;
     }
     /**
      * The name of the Windows domain that the SMB server belongs to.
-     * 
     */
     public Optional<String> getDomain() {
         return Optional.ofNullable(this.domain);
     }
     /**
      * The Amazon Resource Name (ARN) of the SMB location that is created.
-     * 
     */
     public Optional<String> getLocationArn() {
         return Optional.ofNullable(this.locationArn);
     }
     /**
      * The URL of the SMB location that was described.
-     * 
     */
     public Optional<String> getLocationUri() {
         return Optional.ofNullable(this.locationUri);
@@ -97,14 +87,12 @@ public final class GetLocationSMBResult {
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
     */
     public List<LocationSMBTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The user who can mount the share, has the permissions to access files and folders in the SMB share.
-     * 
     */
     public Optional<String> getUser() {
         return Optional.ofNullable(this.user);

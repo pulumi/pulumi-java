@@ -20,77 +20,206 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for AWS::DataBrew::Dataset.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testDataBrewDataset = new AwsNative.DataBrew.Dataset("testDataBrewDataset", new AwsNative.DataBrew.DatasetArgs
+ *         {
+ *             Name = "cf-test-dataset1",
+ *             Input = new AwsNative.DataBrew.Inputs.DatasetInputArgs
+ *             {
+ *                 S3InputDefinition = new AwsNative.DataBrew.Inputs.DatasetS3LocationArgs
+ *                 {
+ *                     Bucket = "test-location",
+ *                     Key = "test.xlsx",
+ *                 },
+ *             },
+ *             FormatOptions = new AwsNative.DataBrew.Inputs.DatasetFormatOptionsArgs
+ *             {
+ *                 Excel = new AwsNative.DataBrew.Inputs.DatasetExcelOptionsArgs
+ *                 {
+ *                     SheetNames = 
+ *                     {
+ *                         "test",
+ *                     },
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.DataBrew.Inputs.DatasetTagArgs
+ *                 {
+ *                     Key = "key00AtCreate",
+ *                     Value = "value001AtCreate",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/databrew"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databrew.NewDataset(ctx, "testDataBrewDataset", &databrew.DatasetArgs{
+ * 			Name: pulumi.String("cf-test-dataset1"),
+ * 			Input: &databrew.DatasetInputArgs{
+ * 				S3InputDefinition: &databrew.DatasetS3LocationArgs{
+ * 					Bucket: pulumi.String("test-location"),
+ * 					Key:    pulumi.String("test.xlsx"),
+ * 				},
+ * 			},
+ * 			FormatOptions: &databrew.DatasetFormatOptionsArgs{
+ * 				Excel: &databrew.DatasetExcelOptionsArgs{
+ * 					SheetNames: pulumi.StringArray{
+ * 						pulumi.String("test"),
+ * 					},
+ * 				},
+ * 			},
+ * 			Tags: []databrew.DatasetTagArgs{
+ * 				&databrew.DatasetTagArgs{
+ * 					Key:   pulumi.String("key00AtCreate"),
+ * 					Value: pulumi.String("value001AtCreate"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const testDataBrewDataset = new aws_native.databrew.Dataset("testDataBrewDataset", {
+ *     name: "cf-test-dataset1",
+ *     input: {
+ *         s3InputDefinition: {
+ *             bucket: "test-location",
+ *             key: "test.xlsx",
+ *         },
+ *     },
+ *     formatOptions: {
+ *         excel: {
+ *             sheetNames: ["test"],
+ *         },
+ *     },
+ *     tags: [{
+ *         key: "key00AtCreate",
+ *         value: "value001AtCreate",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * test_data_brew_dataset = aws_native.databrew.Dataset("testDataBrewDataset",
+ *     name="cf-test-dataset1",
+ *     input=aws_native.databrew.DatasetInputArgs(
+ *         s3_input_definition=aws_native.databrew.DatasetS3LocationArgs(
+ *             bucket="test-location",
+ *             key="test.xlsx",
+ *         ),
+ *     ),
+ *     format_options=aws_native.databrew.DatasetFormatOptionsArgs(
+ *         excel=aws_native.databrew.DatasetExcelOptionsArgs(
+ *             sheet_names=["test"],
+ *         ),
+ *     ),
+ *     tags=[aws_native.databrew.DatasetTagArgs(
+ *         key="key00AtCreate",
+ *         value="value001AtCreate",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:databrew:Dataset")
 public class Dataset extends io.pulumi.resources.CustomResource {
     /**
      * Dataset format
-     * 
      */
     @Export(name="format", type=DatasetFormat.class, parameters={})
     private Output</* @Nullable */ DatasetFormat> format;
 
     /**
      * @return Dataset format
-     * 
      */
     public Output</* @Nullable */ DatasetFormat> getFormat() {
         return this.format;
     }
     /**
      * Format options for dataset
-     * 
      */
     @Export(name="formatOptions", type=DatasetFormatOptions.class, parameters={})
     private Output</* @Nullable */ DatasetFormatOptions> formatOptions;
 
     /**
      * @return Format options for dataset
-     * 
      */
     public Output</* @Nullable */ DatasetFormatOptions> getFormatOptions() {
         return this.formatOptions;
     }
     /**
      * Input
-     * 
      */
     @Export(name="input", type=DatasetInput.class, parameters={})
     private Output<DatasetInput> input;
 
     /**
      * @return Input
-     * 
      */
     public Output<DatasetInput> getInput() {
         return this.input;
     }
     /**
      * Dataset name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Dataset name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * PathOptions
-     * 
      */
     @Export(name="pathOptions", type=DatasetPathOptions.class, parameters={})
     private Output</* @Nullable */ DatasetPathOptions> pathOptions;
 
     /**
      * @return PathOptions
-     * 
      */
     public Output</* @Nullable */ DatasetPathOptions> getPathOptions() {
         return this.pathOptions;

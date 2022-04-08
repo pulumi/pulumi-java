@@ -16,22 +16,18 @@ import javax.annotation.Nullable;
 public final class GetEventIntegrationResult {
     /**
      * The associations with the event integration.
-     * 
      */
     private final @Nullable List<EventIntegrationAssociation> associations;
     /**
      * The event integration description.
-     * 
      */
     private final @Nullable String description;
     /**
      * The Amazon Resource Name (ARN) of the event integration.
-     * 
      */
     private final @Nullable String eventIntegrationArn;
     /**
      * The tags (keys and values) associated with the event integration.
-     * 
      */
     private final @Nullable List<EventIntegrationTag> tags;
 
@@ -49,28 +45,24 @@ public final class GetEventIntegrationResult {
 
     /**
      * The associations with the event integration.
-     * 
     */
     public List<EventIntegrationAssociation> getAssociations() {
         return this.associations == null ? List.of() : this.associations;
     }
     /**
      * The event integration description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The Amazon Resource Name (ARN) of the event integration.
-     * 
     */
     public Optional<String> getEventIntegrationArn() {
         return Optional.ofNullable(this.eventIntegrationArn);
     }
     /**
      * The tags (keys and values) associated with the event integration.
-     * 
     */
     public List<EventIntegrationTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

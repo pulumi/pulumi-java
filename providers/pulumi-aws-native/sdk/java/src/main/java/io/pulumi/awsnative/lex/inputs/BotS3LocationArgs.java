@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * S3 location of bot definitions zip file, if it's not defined inline in CloudFormation.
- * 
  */
 public final class BotS3LocationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BotS3LocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
-     * 
      */
     @Import(name="s3Bucket", required=true)
       private final Output<String> s3Bucket;
@@ -31,7 +29,6 @@ public final class BotS3LocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon S3 key of the deployment package.
-     * 
      */
     @Import(name="s3ObjectKey", required=true)
       private final Output<String> s3ObjectKey;
@@ -42,7 +39,6 @@ public final class BotS3LocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * For versioned objects, the version of the deployment package object to use. If not specified, the current object version will be used.
-     * 
      */
     @Import(name="s3ObjectVersion")
       private final @Nullable Output<String> s3ObjectVersion;

@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class GetAppImageConfigResult {
     /**
      * The Amazon Resource Name (ARN) of the AppImageConfig.
-     * 
      */
     private final @Nullable String appImageConfigArn;
     /**
      * The KernelGatewayImageConfig.
-     * 
      */
     private final @Nullable AppImageConfigKernelGatewayImageConfig kernelGatewayImageConfig;
 
@@ -33,14 +31,12 @@ public final class GetAppImageConfigResult {
 
     /**
      * The Amazon Resource Name (ARN) of the AppImageConfig.
-     * 
     */
     public Optional<String> getAppImageConfigArn() {
         return Optional.ofNullable(this.appImageConfigArn);
     }
     /**
      * The KernelGatewayImageConfig.
-     * 
     */
     public Optional<AppImageConfigKernelGatewayImageConfig> getKernelGatewayImageConfig() {
         return Optional.ofNullable(this.kernelGatewayImageConfig);

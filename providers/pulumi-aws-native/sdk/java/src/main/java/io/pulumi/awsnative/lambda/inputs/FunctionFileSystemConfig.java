@@ -14,7 +14,6 @@ public final class FunctionFileSystemConfig extends io.pulumi.resources.InvokeAr
 
     /**
      * The Amazon Resource Name (ARN) of the Amazon EFS access point that provides access to the file system.
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;
@@ -25,7 +24,6 @@ public final class FunctionFileSystemConfig extends io.pulumi.resources.InvokeAr
 
     /**
      * The path where the function can access the file system, starting with /mnt/.
-     * 
      */
     @Import(name="localMountPath", required=true)
       private final String localMountPath;

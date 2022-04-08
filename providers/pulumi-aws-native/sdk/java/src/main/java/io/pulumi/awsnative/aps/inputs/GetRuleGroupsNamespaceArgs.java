@@ -14,7 +14,6 @@ public final class GetRuleGroupsNamespaceArgs extends io.pulumi.resources.Invoke
 
     /**
      * The RuleGroupsNamespace ARN.
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

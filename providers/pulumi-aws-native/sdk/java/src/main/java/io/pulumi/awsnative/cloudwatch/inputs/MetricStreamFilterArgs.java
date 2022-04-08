@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * This structure defines the metrics that will be streamed.
- * 
  */
 public final class MetricStreamFilterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class MetricStreamFilterArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Only metrics with Namespace matching this value will be streamed.
-     * 
      */
     @Import(name="namespace", required=true)
       private final Output<String> namespace;

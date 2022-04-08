@@ -18,7 +18,6 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
 
     /**
      * The 12-digit account ID of the account authorized to aggregate data.
-     * 
      */
     @Import(name="authorizedAccountId", required=true)
       private final Output<String> authorizedAccountId;
@@ -29,7 +28,6 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
 
     /**
      * The region authorized to collect aggregated data.
-     * 
      */
     @Import(name="authorizedAwsRegion", required=true)
       private final Output<String> authorizedAwsRegion;
@@ -40,7 +38,6 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
 
     /**
      * The tags for the AggregationAuthorization.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<AggregationAuthorizationTagArgs>> tags;

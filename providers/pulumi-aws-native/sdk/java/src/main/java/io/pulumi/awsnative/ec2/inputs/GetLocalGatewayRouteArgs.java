@@ -14,7 +14,6 @@ public final class GetLocalGatewayRouteArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The CIDR block used for destination matches.
-     * 
      */
     @Import(name="destinationCidrBlock", required=true)
       private final String destinationCidrBlock;
@@ -25,7 +24,6 @@ public final class GetLocalGatewayRouteArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The ID of the local gateway route table.
-     * 
      */
     @Import(name="localGatewayRouteTableId", required=true)
       private final String localGatewayRouteTableId;

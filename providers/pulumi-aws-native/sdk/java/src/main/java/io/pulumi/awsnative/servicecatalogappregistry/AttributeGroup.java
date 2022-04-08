@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Schema for AWS::ServiceCatalogAppRegistry::AttributeGroup.
- * 
  */
 @ResourceType(type="aws-native:servicecatalogappregistry:AttributeGroup")
 public class AttributeGroup extends io.pulumi.resources.CustomResource {
@@ -32,29 +31,25 @@ public class AttributeGroup extends io.pulumi.resources.CustomResource {
         return this.attributes;
     }
     /**
-     * The description of the attribute group.
-     * 
+     * The description of the attribute group. 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The description of the attribute group.
-     * 
+     * @return The description of the attribute group. 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
-     * The name of the attribute group.
-     * 
+     * The name of the attribute group. 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The name of the attribute group.
-     * 
+     * @return The name of the attribute group. 
      */
     public Output<String> getName() {
         return this.name;

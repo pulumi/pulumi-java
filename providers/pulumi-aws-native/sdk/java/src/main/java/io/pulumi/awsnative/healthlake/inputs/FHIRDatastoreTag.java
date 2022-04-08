@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A key-value pair. A tag consists of a tag key and a tag value. Tag keys and tag values are both required, but tag values can be empty (null) strings.
- * 
  */
 public final class FHIRDatastoreTag extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class FHIRDatastoreTag extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The key of the tag.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -29,7 +27,6 @@ public final class FHIRDatastoreTag extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The value of the tag.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

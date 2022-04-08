@@ -16,7 +16,6 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ImageUri.
-     * 
      */
     @Import(name="imageUri")
       private final @Nullable Output<String> imageUri;
@@ -27,7 +26,6 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
-     * 
      */
     @Import(name="s3Bucket")
       private final @Nullable Output<String> s3Bucket;
@@ -38,7 +36,6 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon S3 key of the deployment package.
-     * 
      */
     @Import(name="s3Key")
       private final @Nullable Output<String> s3Key;
@@ -49,7 +46,6 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * For versioned objects, the version of the deployment package object to use.
-     * 
      */
     @Import(name="s3ObjectVersion")
       private final @Nullable Output<String> s3ObjectVersion;
@@ -60,7 +56,6 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The source code of your Lambda function. If you include your function source inline with this parameter, AWS CloudFormation places it in a file named index and zips it to create a deployment package..
-     * 
      */
     @Import(name="zipFile")
       private final @Nullable Output<String> zipFile;

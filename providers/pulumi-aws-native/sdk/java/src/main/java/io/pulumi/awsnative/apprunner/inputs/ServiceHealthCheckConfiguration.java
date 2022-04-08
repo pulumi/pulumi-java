@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Health check configuration
- * 
  */
 public final class ServiceHealthCheckConfiguration extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ServiceHealthCheckConfiguration extends io.pulumi.resources.I
 
     /**
      * Health check Healthy Threshold
-     * 
      */
     @Import(name="healthyThreshold")
       private final @Nullable Integer healthyThreshold;
@@ -33,7 +31,6 @@ public final class ServiceHealthCheckConfiguration extends io.pulumi.resources.I
 
     /**
      * Health check Interval
-     * 
      */
     @Import(name="interval")
       private final @Nullable Integer interval;
@@ -44,7 +41,6 @@ public final class ServiceHealthCheckConfiguration extends io.pulumi.resources.I
 
     /**
      * Health check Path
-     * 
      */
     @Import(name="path")
       private final @Nullable String path;
@@ -55,7 +51,6 @@ public final class ServiceHealthCheckConfiguration extends io.pulumi.resources.I
 
     /**
      * Health Check Protocol
-     * 
      */
     @Import(name="protocol")
       private final @Nullable ServiceHealthCheckConfigurationProtocol protocol;
@@ -66,7 +61,6 @@ public final class ServiceHealthCheckConfiguration extends io.pulumi.resources.I
 
     /**
      * Health check Timeout
-     * 
      */
     @Import(name="timeout")
       private final @Nullable Integer timeout;
@@ -77,7 +71,6 @@ public final class ServiceHealthCheckConfiguration extends io.pulumi.resources.I
 
     /**
      * Health check Unhealthy Threshold
-     * 
      */
     @Import(name="unhealthyThreshold")
       private final @Nullable Integer unhealthyThreshold;

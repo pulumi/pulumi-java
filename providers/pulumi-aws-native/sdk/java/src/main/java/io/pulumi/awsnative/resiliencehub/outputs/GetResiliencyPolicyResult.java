@@ -17,29 +17,24 @@ import javax.annotation.Nullable;
 public final class GetResiliencyPolicyResult {
     /**
      * Data Location Constraint of the Policy.
-     * 
      */
     private final @Nullable ResiliencyPolicyDataLocationConstraint dataLocationConstraint;
     private final @Nullable ResiliencyPolicyPolicyMap policy;
     /**
      * Amazon Resource Name (ARN) of the Resiliency Policy.
-     * 
      */
     private final @Nullable String policyArn;
     /**
      * Description of Resiliency Policy.
-     * 
      */
     private final @Nullable String policyDescription;
     /**
      * Name of Resiliency Policy.
-     * 
      */
     private final @Nullable String policyName;
     private final @Nullable ResiliencyPolicyTagMap tags;
     /**
      * Resiliency Policy Tier.
-     * 
      */
     private final @Nullable ResiliencyPolicyTier tier;
 
@@ -63,7 +58,6 @@ public final class GetResiliencyPolicyResult {
 
     /**
      * Data Location Constraint of the Policy.
-     * 
     */
     public Optional<ResiliencyPolicyDataLocationConstraint> getDataLocationConstraint() {
         return Optional.ofNullable(this.dataLocationConstraint);
@@ -73,21 +67,18 @@ public final class GetResiliencyPolicyResult {
     }
     /**
      * Amazon Resource Name (ARN) of the Resiliency Policy.
-     * 
     */
     public Optional<String> getPolicyArn() {
         return Optional.ofNullable(this.policyArn);
     }
     /**
      * Description of Resiliency Policy.
-     * 
     */
     public Optional<String> getPolicyDescription() {
         return Optional.ofNullable(this.policyDescription);
     }
     /**
      * Name of Resiliency Policy.
-     * 
     */
     public Optional<String> getPolicyName() {
         return Optional.ofNullable(this.policyName);
@@ -97,7 +88,6 @@ public final class GetResiliencyPolicyResult {
     }
     /**
      * Resiliency Policy Tier.
-     * 
     */
     public Optional<ResiliencyPolicyTier> getTier() {
         return Optional.ofNullable(this.tier);

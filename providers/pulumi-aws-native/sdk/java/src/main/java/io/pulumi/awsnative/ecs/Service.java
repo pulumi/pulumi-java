@@ -28,7 +28,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::ECS::Service
- * 
  */
 @ResourceType(type="aws-native:ecs:Service")
 public class Service extends io.pulumi.resources.CustomResource {

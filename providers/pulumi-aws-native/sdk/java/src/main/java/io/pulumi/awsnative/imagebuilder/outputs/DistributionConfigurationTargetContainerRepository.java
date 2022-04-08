@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class DistributionConfigurationTargetContainerRepository {
     /**
      * The repository name of target container repository.
-     * 
      */
     private final @Nullable String repositoryName;
     /**
      * The service of target container repository.
-     * 
      */
     private final @Nullable DistributionConfigurationTargetContainerRepositoryService service;
 
@@ -33,14 +31,12 @@ public final class DistributionConfigurationTargetContainerRepository {
 
     /**
      * The repository name of target container repository.
-     * 
     */
     public Optional<String> getRepositoryName() {
         return Optional.ofNullable(this.repositoryName);
     }
     /**
      * The service of target container repository.
-     * 
     */
     public Optional<DistributionConfigurationTargetContainerRepositoryService> getService() {
         return Optional.ofNullable(this.service);

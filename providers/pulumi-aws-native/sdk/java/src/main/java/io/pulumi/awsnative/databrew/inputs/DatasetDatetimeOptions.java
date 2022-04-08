@@ -16,7 +16,6 @@ public final class DatasetDatetimeOptions extends io.pulumi.resources.InvokeArgs
 
     /**
      * Date/time format of a date parameter
-     * 
      */
     @Import(name="format", required=true)
       private final String format;
@@ -27,7 +26,6 @@ public final class DatasetDatetimeOptions extends io.pulumi.resources.InvokeArgs
 
     /**
      * Locale code for a date parameter
-     * 
      */
     @Import(name="localeCode")
       private final @Nullable String localeCode;
@@ -38,7 +36,6 @@ public final class DatasetDatetimeOptions extends io.pulumi.resources.InvokeArgs
 
     /**
      * Timezone offset
-     * 
      */
     @Import(name="timezoneOffset")
       private final @Nullable String timezoneOffset;

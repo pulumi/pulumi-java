@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class WorkflowStepDeleteStepDetailsProperties {
     /**
      * The name of the step, used as an identifier.
-     * 
      */
     private final @Nullable String name;
 
@@ -24,7 +23,6 @@ public final class WorkflowStepDeleteStepDetailsProperties {
 
     /**
      * The name of the step, used as an identifier.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

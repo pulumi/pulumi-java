@@ -16,48 +16,41 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for SSO PermissionSet
- * 
  */
 @ResourceType(type="aws-native:sso:PermissionSet")
 public class PermissionSet extends io.pulumi.resources.CustomResource {
     /**
      * The permission set description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The permission set description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The inline policy to put in permission set.
-     * 
      */
     @Export(name="inlinePolicy", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> inlinePolicy;
 
     /**
      * @return The inline policy to put in permission set.
-     * 
      */
     public Output</* @Nullable */ Object> getInlinePolicy() {
         return this.inlinePolicy;
     }
     /**
      * The sso instance arn that the permission set is owned.
-     * 
      */
     @Export(name="instanceArn", type=String.class, parameters={})
     private Output<String> instanceArn;
 
     /**
      * @return The sso instance arn that the permission set is owned.
-     * 
      */
     public Output<String> getInstanceArn() {
         return this.instanceArn;
@@ -70,56 +63,48 @@ public class PermissionSet extends io.pulumi.resources.CustomResource {
     }
     /**
      * The name you want to assign to this permission set.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name you want to assign to this permission set.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The permission set that the policy will be attached to
-     * 
      */
     @Export(name="permissionSetArn", type=String.class, parameters={})
     private Output<String> permissionSetArn;
 
     /**
      * @return The permission set that the policy will be attached to
-     * 
      */
     public Output<String> getPermissionSetArn() {
         return this.permissionSetArn;
     }
     /**
      * The relay state URL that redirect links to any service in the AWS Management Console.
-     * 
      */
     @Export(name="relayStateType", type=String.class, parameters={})
     private Output</* @Nullable */ String> relayStateType;
 
     /**
      * @return The relay state URL that redirect links to any service in the AWS Management Console.
-     * 
      */
     public Output</* @Nullable */ String> getRelayStateType() {
         return this.relayStateType;
     }
     /**
      * The length of time that a user can be signed in to an AWS account.
-     * 
      */
     @Export(name="sessionDuration", type=String.class, parameters={})
     private Output</* @Nullable */ String> sessionDuration;
 
     /**
      * @return The length of time that a user can be signed in to an AWS account.
-     * 
      */
     public Output</* @Nullable */ String> getSessionDuration() {
         return this.sessionDuration;

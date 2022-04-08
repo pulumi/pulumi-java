@@ -18,146 +18,125 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::ImageBuilder::ImageRecipe
- * 
  */
 @ResourceType(type="aws-native:imagebuilder:ImageRecipe")
 public class ImageRecipe extends io.pulumi.resources.CustomResource {
     /**
      * Specify additional settings and launch scripts for your build instances.
-     * 
      */
     @Export(name="additionalInstanceConfiguration", type=ImageRecipeAdditionalInstanceConfiguration.class, parameters={})
     private Output</* @Nullable */ ImageRecipeAdditionalInstanceConfiguration> additionalInstanceConfiguration;
 
     /**
      * @return Specify additional settings and launch scripts for your build instances.
-     * 
      */
     public Output</* @Nullable */ ImageRecipeAdditionalInstanceConfiguration> getAdditionalInstanceConfiguration() {
         return this.additionalInstanceConfiguration;
     }
     /**
      * The Amazon Resource Name (ARN) of the image recipe.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the image recipe.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The block device mappings to apply when creating images from this recipe.
-     * 
      */
     @Export(name="blockDeviceMappings", type=List.class, parameters={ImageRecipeInstanceBlockDeviceMapping.class})
     private Output</* @Nullable */ List<ImageRecipeInstanceBlockDeviceMapping>> blockDeviceMappings;
 
     /**
      * @return The block device mappings to apply when creating images from this recipe.
-     * 
      */
     public Output</* @Nullable */ List<ImageRecipeInstanceBlockDeviceMapping>> getBlockDeviceMappings() {
         return this.blockDeviceMappings;
     }
     /**
      * The components of the image recipe.
-     * 
      */
     @Export(name="components", type=List.class, parameters={ImageRecipeComponentConfiguration.class})
     private Output<List<ImageRecipeComponentConfiguration>> components;
 
     /**
      * @return The components of the image recipe.
-     * 
      */
     public Output<List<ImageRecipeComponentConfiguration>> getComponents() {
         return this.components;
     }
     /**
      * The description of the image recipe.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the image recipe.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The name of the image recipe.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the image recipe.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The parent image of the image recipe.
-     * 
      */
     @Export(name="parentImage", type=String.class, parameters={})
     private Output<String> parentImage;
 
     /**
      * @return The parent image of the image recipe.
-     * 
      */
     public Output<String> getParentImage() {
         return this.parentImage;
     }
     /**
      * The tags of the image recipe.
-     * 
      */
     @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
     /**
      * @return The tags of the image recipe.
-     * 
      */
     public Output</* @Nullable */ Object> getTags() {
         return this.tags;
     }
     /**
      * The version of the image recipe.
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
      * @return The version of the image recipe.
-     * 
      */
     public Output<String> getVersion() {
         return this.version;
     }
     /**
      * The working directory to be used during build and test workflows.
-     * 
      */
     @Export(name="workingDirectory", type=String.class, parameters={})
     private Output</* @Nullable */ String> workingDirectory;
 
     /**
      * @return The working directory to be used during build and test workflows.
-     * 
      */
     public Output</* @Nullable */ String> getWorkingDirectory() {
         return this.workingDirectory;

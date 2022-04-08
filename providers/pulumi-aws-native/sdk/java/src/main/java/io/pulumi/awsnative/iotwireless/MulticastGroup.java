@@ -16,118 +16,101 @@ import javax.annotation.Nullable;
 
 /**
  * Create and manage Multicast groups.
- * 
  */
 @ResourceType(type="aws-native:iotwireless:MulticastGroup")
 public class MulticastGroup extends io.pulumi.resources.CustomResource {
     /**
      * Multicast group arn. Returned after successful create.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Multicast group arn. Returned after successful create.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * Wireless device to associate. Only for update request.
-     * 
      */
     @Export(name="associateWirelessDevice", type=String.class, parameters={})
     private Output</* @Nullable */ String> associateWirelessDevice;
 
     /**
      * @return Wireless device to associate. Only for update request.
-     * 
      */
     public Output</* @Nullable */ String> getAssociateWirelessDevice() {
         return this.associateWirelessDevice;
     }
     /**
      * Multicast group description
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Multicast group description
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Wireless device to disassociate. Only for update request.
-     * 
      */
     @Export(name="disassociateWirelessDevice", type=String.class, parameters={})
     private Output</* @Nullable */ String> disassociateWirelessDevice;
 
     /**
      * @return Wireless device to disassociate. Only for update request.
-     * 
      */
     public Output</* @Nullable */ String> getDisassociateWirelessDevice() {
         return this.disassociateWirelessDevice;
     }
     /**
      * Multicast group LoRaWAN
-     * 
      */
     @Export(name="loRaWAN", type=MulticastGroupLoRaWAN.class, parameters={})
     private Output<MulticastGroupLoRaWAN> loRaWAN;
 
     /**
      * @return Multicast group LoRaWAN
-     * 
      */
     public Output<MulticastGroupLoRaWAN> getLoRaWAN() {
         return this.loRaWAN;
     }
     /**
      * Name of Multicast group
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Name of Multicast group
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * Multicast group status. Returned after successful read.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return Multicast group status. Returned after successful read.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * A list of key-value pairs that contain metadata for the Multicast group.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={MulticastGroupTag.class})
     private Output</* @Nullable */ List<MulticastGroupTag>> tags;
 
     /**
      * @return A list of key-value pairs that contain metadata for the Multicast group.
-     * 
      */
     public Output</* @Nullable */ List<MulticastGroupTag>> getTags() {
         return this.tags;

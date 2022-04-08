@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Describes the versioning state of an Amazon S3 bucket.
- * 
  */
 public final class BucketVersioningConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class BucketVersioningConfigurationArgs extends io.pulumi.resources
 
     /**
      * The versioning state of the bucket.
-     * 
      */
     @Import(name="status", required=true)
       private final Output<BucketVersioningConfigurationStatus> status;

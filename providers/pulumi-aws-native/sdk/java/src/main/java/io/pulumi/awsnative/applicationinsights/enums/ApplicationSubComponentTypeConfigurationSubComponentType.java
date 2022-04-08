@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The sub component type.
-     * 
      */
     @EnumType
     public enum ApplicationSubComponentTypeConfigurationSubComponentType {

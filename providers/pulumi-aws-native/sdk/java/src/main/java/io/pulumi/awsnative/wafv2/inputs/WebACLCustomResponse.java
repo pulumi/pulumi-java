@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Custom response.
- * 
  */
 public final class WebACLCustomResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class WebACLCustomResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Custom response body key.
-     * 
      */
     @Import(name="customResponseBodyKey")
       private final @Nullable String customResponseBodyKey;
@@ -41,7 +39,6 @@ public final class WebACLCustomResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Collection of HTTP headers.
-     * 
      */
     @Import(name="responseHeaders")
       private final @Nullable List<WebACLCustomHTTPHeader> responseHeaders;

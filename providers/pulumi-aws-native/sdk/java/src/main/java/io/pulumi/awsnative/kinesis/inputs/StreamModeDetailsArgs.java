@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * When specified, enables or updates the mode of stream. Default is PROVISIONED.
- * 
  */
 public final class StreamModeDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class StreamModeDetailsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The mode of the stream
-     * 
      */
     @Import(name="streamMode", required=true)
       private final Output<StreamModeDetailsStreamMode> streamMode;

@@ -22,7 +22,6 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The authorization mechanism that the proxy uses.
-     * 
      */
     @Import(name="auth", required=true)
       private final Output<List<DBProxyAuthFormatArgs>> auth;
@@ -33,7 +32,6 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.
-     * 
      */
     @Import(name="dBProxyName")
       private final @Nullable Output<String> dBProxyName;
@@ -44,7 +42,6 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether the proxy includes detailed information about SQL statements in its logs.
-     * 
      */
     @Import(name="debugLogging")
       private final @Nullable Output<Boolean> debugLogging;
@@ -55,7 +52,6 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The kinds of databases that the proxy can connect to.
-     * 
      */
     @Import(name="engineFamily", required=true)
       private final Output<DBProxyEngineFamily> engineFamily;
@@ -66,7 +62,6 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of seconds that a connection to the proxy can be inactive before the proxy disconnects it.
-     * 
      */
     @Import(name="idleClientTimeout")
       private final @Nullable Output<Integer> idleClientTimeout;
@@ -77,7 +72,6 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A Boolean parameter that specifies whether Transport Layer Security (TLS) encryption is required for connections to the proxy.
-     * 
      */
     @Import(name="requireTLS")
       private final @Nullable Output<Boolean> requireTLS;
@@ -88,7 +82,6 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the IAM role that the proxy uses to access secrets in AWS Secrets Manager.
-     * 
      */
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
@@ -99,7 +92,6 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional set of key-value pairs to associate arbitrary data of your choosing with the proxy.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<DBProxyTagFormatArgs>> tags;
@@ -110,7 +102,6 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * VPC security group IDs to associate with the new proxy.
-     * 
      */
     @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
@@ -121,7 +112,6 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * VPC subnet IDs to associate with the new proxy.
-     * 
      */
     @Import(name="vpcSubnetIds", required=true)
       private final Output<List<String>> vpcSubnetIds;

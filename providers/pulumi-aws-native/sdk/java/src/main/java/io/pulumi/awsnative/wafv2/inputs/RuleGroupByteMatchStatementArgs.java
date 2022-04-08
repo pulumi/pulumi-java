@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Byte Match statement.
- * 
  */
 public final class RuleGroupByteMatchStatementArgs extends io.pulumi.resources.ResourceArgs {
 

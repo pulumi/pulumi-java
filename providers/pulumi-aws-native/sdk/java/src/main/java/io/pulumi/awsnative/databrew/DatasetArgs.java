@@ -22,7 +22,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Dataset format
-     * 
      */
     @Import(name="format")
       private final @Nullable Output<DatasetFormat> format;
@@ -33,7 +32,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Format options for dataset
-     * 
      */
     @Import(name="formatOptions")
       private final @Nullable Output<DatasetFormatOptionsArgs> formatOptions;
@@ -44,7 +42,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Input
-     * 
      */
     @Import(name="input", required=true)
       private final Output<DatasetInputArgs> input;
@@ -55,7 +52,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Dataset name
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -66,7 +62,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * PathOptions
-     * 
      */
     @Import(name="pathOptions")
       private final @Nullable Output<DatasetPathOptionsArgs> pathOptions;

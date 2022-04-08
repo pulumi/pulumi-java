@@ -16,62 +16,53 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::DataSync::LocationSMB.
- * 
  */
 @ResourceType(type="aws-native:datasync:LocationSMB")
 public class LocationSMB extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Names (ARNs) of agents to use for a Simple Message Block (SMB) location.
-     * 
      */
     @Export(name="agentArns", type=List.class, parameters={String.class})
     private Output<List<String>> agentArns;
 
     /**
      * @return The Amazon Resource Names (ARNs) of agents to use for a Simple Message Block (SMB) location.
-     * 
      */
     public Output<List<String>> getAgentArns() {
         return this.agentArns;
     }
     /**
      * The name of the Windows domain that the SMB server belongs to.
-     * 
      */
     @Export(name="domain", type=String.class, parameters={})
     private Output</* @Nullable */ String> domain;
 
     /**
      * @return The name of the Windows domain that the SMB server belongs to.
-     * 
      */
     public Output</* @Nullable */ String> getDomain() {
         return this.domain;
     }
     /**
      * The Amazon Resource Name (ARN) of the SMB location that is created.
-     * 
      */
     @Export(name="locationArn", type=String.class, parameters={})
     private Output<String> locationArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the SMB location that is created.
-     * 
      */
     public Output<String> getLocationArn() {
         return this.locationArn;
     }
     /**
      * The URL of the SMB location that was described.
-     * 
      */
     @Export(name="locationUri", type=String.class, parameters={})
     private Output<String> locationUri;
 
     /**
      * @return The URL of the SMB location that was described.
-     * 
      */
     public Output<String> getLocationUri() {
         return this.locationUri;
@@ -84,70 +75,60 @@ public class LocationSMB extends io.pulumi.resources.CustomResource {
     }
     /**
      * The password of the user who can mount the share and has the permissions to access files and folders in the SMB share.
-     * 
      */
     @Export(name="password", type=String.class, parameters={})
     private Output<String> password;
 
     /**
      * @return The password of the user who can mount the share and has the permissions to access files and folders in the SMB share.
-     * 
      */
     public Output<String> getPassword() {
         return this.password;
     }
     /**
      * The name of the SMB server. This value is the IP address or Domain Name Service (DNS) name of the SMB server.
-     * 
      */
     @Export(name="serverHostname", type=String.class, parameters={})
     private Output<String> serverHostname;
 
     /**
      * @return The name of the SMB server. This value is the IP address or Domain Name Service (DNS) name of the SMB server.
-     * 
      */
     public Output<String> getServerHostname() {
         return this.serverHostname;
     }
     /**
      * The subdirectory in the SMB file system that is used to read data from the SMB source location or write data to the SMB destination
-     * 
      */
     @Export(name="subdirectory", type=String.class, parameters={})
     private Output<String> subdirectory;
 
     /**
      * @return The subdirectory in the SMB file system that is used to read data from the SMB source location or write data to the SMB destination
-     * 
      */
     public Output<String> getSubdirectory() {
         return this.subdirectory;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={LocationSMBTag.class})
     private Output</* @Nullable */ List<LocationSMBTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<LocationSMBTag>> getTags() {
         return this.tags;
     }
     /**
      * The user who can mount the share, has the permissions to access files and folders in the SMB share.
-     * 
      */
     @Export(name="user", type=String.class, parameters={})
     private Output<String> user;
 
     /**
      * @return The user who can mount the share, has the permissions to access files and folders in the SMB share.
-     * 
      */
     public Output<String> getUser() {
         return this.user;

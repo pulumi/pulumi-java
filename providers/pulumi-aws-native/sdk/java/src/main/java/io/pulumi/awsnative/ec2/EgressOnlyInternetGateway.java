@@ -13,20 +13,17 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::EC2::EgressOnlyInternetGateway
- * 
  */
 @ResourceType(type="aws-native:ec2:EgressOnlyInternetGateway")
 public class EgressOnlyInternetGateway extends io.pulumi.resources.CustomResource {
     /**
      * The ID of the VPC for which to create the egress-only internet gateway.
-     * 
      */
     @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**
      * @return The ID of the VPC for which to create the egress-only internet gateway.
-     * 
      */
     public Output<String> getVpcId() {
         return this.vpcId;

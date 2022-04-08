@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::WorkSpaces::ConnectionAlias
- * 
  */
 @ResourceType(type="aws-native:workspaces:ConnectionAlias")
 public class ConnectionAlias extends io.pulumi.resources.CustomResource {

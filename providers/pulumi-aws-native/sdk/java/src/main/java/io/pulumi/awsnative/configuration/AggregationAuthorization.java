@@ -15,62 +15,53 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Config::AggregationAuthorization
- * 
  */
 @ResourceType(type="aws-native:configuration:AggregationAuthorization")
 public class AggregationAuthorization extends io.pulumi.resources.CustomResource {
     /**
      * The ARN of the AggregationAuthorization.
-     * 
      */
     @Export(name="aggregationAuthorizationArn", type=String.class, parameters={})
     private Output<String> aggregationAuthorizationArn;
 
     /**
      * @return The ARN of the AggregationAuthorization.
-     * 
      */
     public Output<String> getAggregationAuthorizationArn() {
         return this.aggregationAuthorizationArn;
     }
     /**
      * The 12-digit account ID of the account authorized to aggregate data.
-     * 
      */
     @Export(name="authorizedAccountId", type=String.class, parameters={})
     private Output<String> authorizedAccountId;
 
     /**
      * @return The 12-digit account ID of the account authorized to aggregate data.
-     * 
      */
     public Output<String> getAuthorizedAccountId() {
         return this.authorizedAccountId;
     }
     /**
      * The region authorized to collect aggregated data.
-     * 
      */
     @Export(name="authorizedAwsRegion", type=String.class, parameters={})
     private Output<String> authorizedAwsRegion;
 
     /**
      * @return The region authorized to collect aggregated data.
-     * 
      */
     public Output<String> getAuthorizedAwsRegion() {
         return this.authorizedAwsRegion;
     }
     /**
      * The tags for the AggregationAuthorization.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={AggregationAuthorizationTag.class})
     private Output</* @Nullable */ List<AggregationAuthorizationTag>> tags;
 
     /**
      * @return The tags for the AggregationAuthorization.
-     * 
      */
     public Output</* @Nullable */ List<AggregationAuthorizationTag>> getTags() {
         return this.tags;

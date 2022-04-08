@@ -17,29 +17,24 @@ import javax.annotation.Nullable;
 public final class GetAssetResult {
     /**
      * The ARN of the asset
-     * 
      */
     private final @Nullable String assetArn;
     private final @Nullable List<AssetHierarchy> assetHierarchies;
     /**
      * The ID of the asset
-     * 
      */
     private final @Nullable String assetId;
     /**
      * The ID of the asset model from which to create the asset.
-     * 
      */
     private final @Nullable String assetModelId;
     /**
      * A unique, friendly name for the asset.
-     * 
      */
     private final @Nullable String assetName;
     private final @Nullable List<AssetProperty> assetProperties;
     /**
      * A list of key-value pairs that contain metadata for the asset.
-     * 
      */
     private final @Nullable List<AssetTag> tags;
 
@@ -63,7 +58,6 @@ public final class GetAssetResult {
 
     /**
      * The ARN of the asset
-     * 
     */
     public Optional<String> getAssetArn() {
         return Optional.ofNullable(this.assetArn);
@@ -73,21 +67,18 @@ public final class GetAssetResult {
     }
     /**
      * The ID of the asset
-     * 
     */
     public Optional<String> getAssetId() {
         return Optional.ofNullable(this.assetId);
     }
     /**
      * The ID of the asset model from which to create the asset.
-     * 
     */
     public Optional<String> getAssetModelId() {
         return Optional.ofNullable(this.assetModelId);
     }
     /**
      * A unique, friendly name for the asset.
-     * 
     */
     public Optional<String> getAssetName() {
         return Optional.ofNullable(this.assetName);
@@ -97,7 +88,6 @@ public final class GetAssetResult {
     }
     /**
      * A list of key-value pairs that contain metadata for the asset.
-     * 
     */
     public List<AssetTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

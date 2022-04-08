@@ -13,7 +13,211 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::SES::Template
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var templateName = config.Require("templateName");
+ *         var subjectPart = config.Require("subjectPart");
+ *         var textPart = config.Require("textPart");
+ *         var htmlPart = config.Require("htmlPart");
+ *         var template = new AwsNative.SES.Template("template", new AwsNative.SES.TemplateArgs
+ *         {
+ *             Template = new AwsNative.SES.Inputs.TemplateArgs
+ *             {
+ *                 TemplateName = templateName,
+ *                 SubjectPart = subjectPart,
+ *                 TextPart = textPart,
+ *                 HtmlPart = htmlPart,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ses"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		cfg := config.New(ctx, "")
+ * 		templateName := cfg.Require("templateName")
+ * 		subjectPart := cfg.Require("subjectPart")
+ * 		textPart := cfg.Require("textPart")
+ * 		htmlPart := cfg.Require("htmlPart")
+ * 		_, err := ses.NewTemplate(ctx, "template", &ses.TemplateArgs{
+ * 			Template: &ses.TemplateArgs{
+ * 				TemplateName: pulumi.String(templateName),
+ * 				SubjectPart:  pulumi.String(subjectPart),
+ * 				TextPart:     pulumi.String(textPart),
+ * 				HtmlPart:     pulumi.String(htmlPart),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const config = new pulumi.Config();
+ * const templateName = config.require("templateName");
+ * const subjectPart = config.require("subjectPart");
+ * const textPart = config.require("textPart");
+ * const htmlPart = config.require("htmlPart");
+ * const template = new aws_native.ses.Template("template", {template: {
+ *     templateName: templateName,
+ *     subjectPart: subjectPart,
+ *     textPart: textPart,
+ *     htmlPart: htmlPart,
+ * }});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * config = pulumi.Config()
+ * template_name = config.require("templateName")
+ * subject_part = config.require("subjectPart")
+ * text_part = config.require("textPart")
+ * html_part = config.require("htmlPart")
+ * template = aws_native.ses.Template("template", template=aws_native.ses.TemplateArgs(
+ *     template_name=template_name,
+ *     subject_part=subject_part,
+ *     text_part=text_part,
+ *     html_part=html_part,
+ * ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var templateName = config.Require("templateName");
+ *         var subjectPart = config.Require("subjectPart");
+ *         var textPart = config.Require("textPart");
+ *         var htmlPart = config.Require("htmlPart");
+ *         var template = new AwsNative.SES.Template("template", new AwsNative.SES.TemplateArgs
+ *         {
+ *             Template = new AwsNative.SES.Inputs.TemplateArgs
+ *             {
+ *                 TemplateName = templateName,
+ *                 SubjectPart = subjectPart,
+ *                 TextPart = textPart,
+ *                 HtmlPart = htmlPart,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ses"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		cfg := config.New(ctx, "")
+ * 		templateName := cfg.Require("templateName")
+ * 		subjectPart := cfg.Require("subjectPart")
+ * 		textPart := cfg.Require("textPart")
+ * 		htmlPart := cfg.Require("htmlPart")
+ * 		_, err := ses.NewTemplate(ctx, "template", &ses.TemplateArgs{
+ * 			Template: &ses.TemplateArgs{
+ * 				TemplateName: pulumi.String(templateName),
+ * 				SubjectPart:  pulumi.String(subjectPart),
+ * 				TextPart:     pulumi.String(textPart),
+ * 				HtmlPart:     pulumi.String(htmlPart),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const config = new pulumi.Config();
+ * const templateName = config.require("templateName");
+ * const subjectPart = config.require("subjectPart");
+ * const textPart = config.require("textPart");
+ * const htmlPart = config.require("htmlPart");
+ * const template = new aws_native.ses.Template("template", {template: {
+ *     templateName: templateName,
+ *     subjectPart: subjectPart,
+ *     textPart: textPart,
+ *     htmlPart: htmlPart,
+ * }});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * config = pulumi.Config()
+ * template_name = config.require("templateName")
+ * subject_part = config.require("subjectPart")
+ * text_part = config.require("textPart")
+ * html_part = config.require("htmlPart")
+ * template = aws_native.ses.Template("template", template=aws_native.ses.TemplateArgs(
+ *     template_name=template_name,
+ *     subject_part=subject_part,
+ *     text_part=text_part,
+ *     html_part=html_part,
+ * ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:ses:Template")

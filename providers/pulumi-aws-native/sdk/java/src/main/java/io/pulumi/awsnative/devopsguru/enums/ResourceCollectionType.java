@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of ResourceCollection
-     * 
      */
     @EnumType
     public enum ResourceCollectionType {

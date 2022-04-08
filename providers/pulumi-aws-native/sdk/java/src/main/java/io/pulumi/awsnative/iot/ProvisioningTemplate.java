@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a fleet provisioning template.
- * 
  */
 @ResourceType(type="aws-native:iot:ProvisioningTemplate")
 public class ProvisioningTemplate extends io.pulumi.resources.CustomResource {

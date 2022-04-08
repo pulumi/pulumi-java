@@ -18,7 +18,6 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The RuleGroupsNamespace data.
-     * 
      */
     @Import(name="data", required=true)
       private final Output<String> data;
@@ -29,7 +28,6 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The RuleGroupsNamespace name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -40,7 +38,6 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<RuleGroupsNamespaceTagArgs>> tags;
@@ -51,7 +48,6 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Required to identify a specific APS Workspace associated with this RuleGroupsNamespace.
-     * 
      */
     @Import(name="workspace", required=true)
       private final Output<String> workspace;

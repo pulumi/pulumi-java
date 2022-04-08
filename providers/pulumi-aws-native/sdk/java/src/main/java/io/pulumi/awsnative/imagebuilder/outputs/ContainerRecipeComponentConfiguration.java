@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ContainerRecipeComponentConfiguration {
     /**
      * The Amazon Resource Name (ARN) of the component.
-     * 
      */
     private final @Nullable String componentArn;
 
@@ -24,7 +23,6 @@ public final class ContainerRecipeComponentConfiguration {
 
     /**
      * The Amazon Resource Name (ARN) of the component.
-     * 
     */
     public Optional<String> getComponentArn() {
         return Optional.ofNullable(this.componentArn);

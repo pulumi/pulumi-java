@@ -14,7 +14,6 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name for the database which the table to be created belongs to.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final String databaseName;
@@ -25,7 +24,6 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name for the table. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the table name.
-     * 
      */
     @Import(name="tableName", required=true)
       private final String tableName;

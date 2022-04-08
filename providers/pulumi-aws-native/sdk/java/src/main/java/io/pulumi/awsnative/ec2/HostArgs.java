@@ -16,7 +16,6 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID.
-     * 
      */
     @Import(name="autoPlacement")
       private final @Nullable Output<String> autoPlacement;
@@ -27,7 +26,6 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Availability Zone in which to allocate the Dedicated Host.
-     * 
      */
     @Import(name="availabilityZone", required=true)
       private final Output<String> availabilityZone;
@@ -38,7 +36,6 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether to enable or disable host recovery for the Dedicated Host. Host recovery is disabled by default.
-     * 
      */
     @Import(name="hostRecovery")
       private final @Nullable Output<String> hostRecovery;
@@ -49,7 +46,6 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the instance type to be supported by the Dedicated Hosts. If you specify an instance type, the Dedicated Hosts support instances of the specified instance type only.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;

@@ -18,90 +18,77 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::ApiGateway::UsagePlan
- * 
  */
 @ResourceType(type="aws-native:apigateway:UsagePlan")
 public class UsagePlan extends io.pulumi.resources.CustomResource {
     /**
      * The API stages to associate with this usage plan.
-     * 
      */
     @Export(name="apiStages", type=List.class, parameters={UsagePlanApiStage.class})
     private Output</* @Nullable */ List<UsagePlanApiStage>> apiStages;
 
     /**
      * @return The API stages to associate with this usage plan.
-     * 
      */
     public Output</* @Nullable */ List<UsagePlanApiStage>> getApiStages() {
         return this.apiStages;
     }
     /**
      * A description of the usage plan.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description of the usage plan.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Configures the number of requests that users can make within a given interval.
-     * 
      */
     @Export(name="quota", type=UsagePlanQuotaSettings.class, parameters={})
     private Output</* @Nullable */ UsagePlanQuotaSettings> quota;
 
     /**
      * @return Configures the number of requests that users can make within a given interval.
-     * 
      */
     public Output</* @Nullable */ UsagePlanQuotaSettings> getQuota() {
         return this.quota;
     }
     /**
      * An array of arbitrary tags (key-value pairs) to associate with the usage plan.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={UsagePlanTag.class})
     private Output</* @Nullable */ List<UsagePlanTag>> tags;
 
     /**
      * @return An array of arbitrary tags (key-value pairs) to associate with the usage plan.
-     * 
      */
     public Output</* @Nullable */ List<UsagePlanTag>> getTags() {
         return this.tags;
     }
     /**
      * Configures the overall request rate (average requests per second) and burst capacity.
-     * 
      */
     @Export(name="throttle", type=UsagePlanThrottleSettings.class, parameters={})
     private Output</* @Nullable */ UsagePlanThrottleSettings> throttle;
 
     /**
      * @return Configures the overall request rate (average requests per second) and burst capacity.
-     * 
      */
     public Output</* @Nullable */ UsagePlanThrottleSettings> getThrottle() {
         return this.throttle;
     }
     /**
      * A name for the usage plan.
-     * 
      */
     @Export(name="usagePlanName", type=String.class, parameters={})
     private Output</* @Nullable */ String> usagePlanName;
 
     /**
      * @return A name for the usage plan.
-     * 
      */
     public Output</* @Nullable */ String> getUsagePlanName() {
         return this.usagePlanName;

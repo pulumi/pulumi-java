@@ -19,7 +19,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Access permissions string used for this user account.
-     * 
      */
     @Import(name="accessString")
       private final @Nullable Output<String> accessString;
@@ -30,7 +29,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Must be redis.
-     * 
      */
     @Import(name="engine", required=true)
       private final Output<UserEngine> engine;
@@ -41,7 +39,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates a password is not required for this user account.
-     * 
      */
     @Import(name="noPasswordRequired")
       private final @Nullable Output<Boolean> noPasswordRequired;
@@ -52,7 +49,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Passwords used for this user account. You can create up to two passwords for each user.
-     * 
      */
     @Import(name="passwords")
       private final @Nullable Output<List<String>> passwords;
@@ -63,7 +59,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the user.
-     * 
      */
     @Import(name="userId", required=true)
       private final Output<String> userId;
@@ -74,7 +69,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The username of the user.
-     * 
      */
     @Import(name="userName")
       private final @Nullable Output<String> userName;

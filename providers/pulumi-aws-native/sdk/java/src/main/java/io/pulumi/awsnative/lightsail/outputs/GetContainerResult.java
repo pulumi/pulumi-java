@@ -20,37 +20,30 @@ public final class GetContainerResult {
     private final @Nullable String containerArn;
     /**
      * Describes a container deployment configuration of an Amazon Lightsail container service.
-     * 
      */
     private final @Nullable ContainerServiceDeployment containerServiceDeployment;
     /**
      * A Boolean value to indicate whether the container service is disabled.
-     * 
      */
     private final @Nullable Boolean isDisabled;
     /**
      * The power specification for the container service.
-     * 
      */
     private final @Nullable String power;
     /**
      * The public domain names to use with the container service, such as example.com and www.example.com.
-     * 
      */
     private final @Nullable List<ContainerPublicDomainName> publicDomainNames;
     /**
      * The scale specification for the container service.
-     * 
      */
     private final @Nullable Integer scale;
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     private final @Nullable List<ContainerTag> tags;
     /**
      * The publicly accessible URL of the container service.
-     * 
      */
     private final @Nullable String url;
 
@@ -79,49 +72,42 @@ public final class GetContainerResult {
     }
     /**
      * Describes a container deployment configuration of an Amazon Lightsail container service.
-     * 
     */
     public Optional<ContainerServiceDeployment> getContainerServiceDeployment() {
         return Optional.ofNullable(this.containerServiceDeployment);
     }
     /**
      * A Boolean value to indicate whether the container service is disabled.
-     * 
     */
     public Optional<Boolean> getIsDisabled() {
         return Optional.ofNullable(this.isDisabled);
     }
     /**
      * The power specification for the container service.
-     * 
     */
     public Optional<String> getPower() {
         return Optional.ofNullable(this.power);
     }
     /**
      * The public domain names to use with the container service, such as example.com and www.example.com.
-     * 
     */
     public List<ContainerPublicDomainName> getPublicDomainNames() {
         return this.publicDomainNames == null ? List.of() : this.publicDomainNames;
     }
     /**
      * The scale specification for the container service.
-     * 
     */
     public Optional<Integer> getScale() {
         return Optional.ofNullable(this.scale);
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
     */
     public List<ContainerTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The publicly accessible URL of the container service.
-     * 
     */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);

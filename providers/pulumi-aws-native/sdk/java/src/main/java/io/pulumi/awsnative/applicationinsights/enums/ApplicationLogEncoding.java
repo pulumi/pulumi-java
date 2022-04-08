@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of encoding of the logs to be monitored.
-     * 
      */
     @EnumType
     public enum ApplicationLogEncoding {

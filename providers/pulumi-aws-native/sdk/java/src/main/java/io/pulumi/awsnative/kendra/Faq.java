@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * A Kendra FAQ resource
- * 
  */
 @ResourceType(type="aws-native:kendra:Faq")
 public class Faq extends io.pulumi.resources.CustomResource {
@@ -29,98 +28,84 @@ public class Faq extends io.pulumi.resources.CustomResource {
     }
     /**
      * FAQ description
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return FAQ description
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * FAQ file format
-     * 
      */
     @Export(name="fileFormat", type=FaqFileFormat.class, parameters={})
     private Output</* @Nullable */ FaqFileFormat> fileFormat;
 
     /**
      * @return FAQ file format
-     * 
      */
     public Output</* @Nullable */ FaqFileFormat> getFileFormat() {
         return this.fileFormat;
     }
     /**
      * Index ID
-     * 
      */
     @Export(name="indexId", type=String.class, parameters={})
     private Output<String> indexId;
 
     /**
      * @return Index ID
-     * 
      */
     public Output<String> getIndexId() {
         return this.indexId;
     }
     /**
      * FAQ name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return FAQ name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * FAQ role ARN
-     * 
      */
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
      * @return FAQ role ARN
-     * 
      */
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
     /**
      * FAQ S3 path
-     * 
      */
     @Export(name="s3Path", type=FaqS3Path.class, parameters={})
     private Output<FaqS3Path> s3Path;
 
     /**
      * @return FAQ S3 path
-     * 
      */
     public Output<FaqS3Path> getS3Path() {
         return this.s3Path;
     }
     /**
      * Tags for labeling the FAQ
-     * 
      */
     @Export(name="tags", type=List.class, parameters={FaqTag.class})
     private Output</* @Nullable */ List<FaqTag>> tags;
 
     /**
      * @return Tags for labeling the FAQ
-     * 
      */
     public Output</* @Nullable */ List<FaqTag>> getTags() {
         return this.tags;

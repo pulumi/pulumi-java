@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies whether Amazon S3 replicates modifications on replicas.
-     * 
      */
     @EnumType
     public enum BucketReplicaModificationsStatus {

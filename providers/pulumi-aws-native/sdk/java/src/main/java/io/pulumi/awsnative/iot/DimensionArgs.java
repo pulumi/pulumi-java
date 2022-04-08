@@ -19,7 +19,6 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A unique identifier for the dimension.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -30,7 +29,6 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the value or list of values for the dimension.
-     * 
      */
     @Import(name="stringValues", required=true)
       private final Output<List<String>> stringValues;
@@ -41,7 +39,6 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Metadata that can be used to manage the dimension.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<DimensionTagArgs>> tags;
@@ -52,7 +49,6 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the type of the dimension.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<DimensionType> type;

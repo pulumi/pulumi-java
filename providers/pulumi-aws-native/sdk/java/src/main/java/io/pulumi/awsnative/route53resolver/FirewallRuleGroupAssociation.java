@@ -18,188 +18,161 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::Route53Resolver::FirewallRuleGroupAssociation.
- * 
  */
 @ResourceType(type="aws-native:route53resolver:FirewallRuleGroupAssociation")
 public class FirewallRuleGroupAssociation extends io.pulumi.resources.CustomResource {
     /**
      * Arn
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Arn
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * Rfc3339TimeString
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return Rfc3339TimeString
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * The id of the creator request.
-     * 
      */
     @Export(name="creatorRequestId", type=String.class, parameters={})
     private Output<String> creatorRequestId;
 
     /**
      * @return The id of the creator request.
-     * 
      */
     public Output<String> getCreatorRequestId() {
         return this.creatorRequestId;
     }
     /**
      * FirewallRuleGroupId
-     * 
      */
     @Export(name="firewallRuleGroupId", type=String.class, parameters={})
     private Output<String> firewallRuleGroupId;
 
     /**
      * @return FirewallRuleGroupId
-     * 
      */
     public Output<String> getFirewallRuleGroupId() {
         return this.firewallRuleGroupId;
     }
     /**
      * ServicePrincipal
-     * 
      */
     @Export(name="managedOwnerName", type=String.class, parameters={})
     private Output<String> managedOwnerName;
 
     /**
      * @return ServicePrincipal
-     * 
      */
     public Output<String> getManagedOwnerName() {
         return this.managedOwnerName;
     }
     /**
      * Rfc3339TimeString
-     * 
      */
     @Export(name="modificationTime", type=String.class, parameters={})
     private Output<String> modificationTime;
 
     /**
      * @return Rfc3339TimeString
-     * 
      */
     public Output<String> getModificationTime() {
         return this.modificationTime;
     }
     /**
      * MutationProtectionStatus
-     * 
      */
     @Export(name="mutationProtection", type=FirewallRuleGroupAssociationMutationProtection.class, parameters={})
     private Output</* @Nullable */ FirewallRuleGroupAssociationMutationProtection> mutationProtection;
 
     /**
      * @return MutationProtectionStatus
-     * 
      */
     public Output</* @Nullable */ FirewallRuleGroupAssociationMutationProtection> getMutationProtection() {
         return this.mutationProtection;
     }
     /**
      * FirewallRuleGroupAssociationName
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return FirewallRuleGroupAssociationName
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * Priority
-     * 
      */
     @Export(name="priority", type=Integer.class, parameters={})
     private Output<Integer> priority;
 
     /**
      * @return Priority
-     * 
      */
     public Output<Integer> getPriority() {
         return this.priority;
     }
     /**
      * ResolverFirewallRuleGroupAssociation, possible values are COMPLETE, DELETING, UPDATING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
-     * 
      */
     @Export(name="status", type=FirewallRuleGroupAssociationStatus.class, parameters={})
     private Output<FirewallRuleGroupAssociationStatus> status;
 
     /**
      * @return ResolverFirewallRuleGroupAssociation, possible values are COMPLETE, DELETING, UPDATING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
-     * 
      */
     public Output<FirewallRuleGroupAssociationStatus> getStatus() {
         return this.status;
     }
     /**
      * FirewallDomainListAssociationStatus
-     * 
      */
     @Export(name="statusMessage", type=String.class, parameters={})
     private Output<String> statusMessage;
 
     /**
      * @return FirewallDomainListAssociationStatus
-     * 
      */
     public Output<String> getStatusMessage() {
         return this.statusMessage;
     }
     /**
      * Tags
-     * 
      */
     @Export(name="tags", type=List.class, parameters={FirewallRuleGroupAssociationTag.class})
     private Output</* @Nullable */ List<FirewallRuleGroupAssociationTag>> tags;
 
     /**
      * @return Tags
-     * 
      */
     public Output</* @Nullable */ List<FirewallRuleGroupAssociationTag>> getTags() {
         return this.tags;
     }
     /**
      * VpcId
-     * 
      */
     @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**
      * @return VpcId
-     * 
      */
     public Output<String> getVpcId() {
         return this.vpcId;

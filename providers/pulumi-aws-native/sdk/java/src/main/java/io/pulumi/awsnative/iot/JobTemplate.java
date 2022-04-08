@@ -20,20 +20,17 @@ import javax.annotation.Nullable;
 
 /**
  * Job templates enable you to preconfigure jobs so that you can deploy them to multiple sets of target devices.
- * 
  */
 @ResourceType(type="aws-native:iot:JobTemplate")
 public class JobTemplate extends io.pulumi.resources.CustomResource {
     /**
      * The criteria that determine when and how a job abort takes place.
-     * 
      */
     @Export(name="abortConfig", type=AbortConfigProperties.class, parameters={})
     private Output</* @Nullable */ AbortConfigProperties> abortConfig;
 
     /**
      * @return The criteria that determine when and how a job abort takes place.
-     * 
      */
     public Output</* @Nullable */ AbortConfigProperties> getAbortConfig() {
         return this.abortConfig;
@@ -46,56 +43,48 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
     }
     /**
      * A description of the Job Template.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return A description of the Job Template.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The job document. Required if you don't specify a value for documentSource.
-     * 
      */
     @Export(name="document", type=String.class, parameters={})
     private Output</* @Nullable */ String> document;
 
     /**
      * @return The job document. Required if you don't specify a value for documentSource.
-     * 
      */
     public Output</* @Nullable */ String> getDocument() {
         return this.document;
     }
     /**
      * An S3 link to the job document to use in the template. Required if you don't specify a value for document.
-     * 
      */
     @Export(name="documentSource", type=String.class, parameters={})
     private Output</* @Nullable */ String> documentSource;
 
     /**
      * @return An S3 link to the job document to use in the template. Required if you don't specify a value for document.
-     * 
      */
     public Output</* @Nullable */ String> getDocumentSource() {
         return this.documentSource;
     }
     /**
      * Optional for copying a JobTemplate from a pre-existing Job configuration.
-     * 
      */
     @Export(name="jobArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> jobArn;
 
     /**
      * @return Optional for copying a JobTemplate from a pre-existing Job configuration.
-     * 
      */
     public Output</* @Nullable */ String> getJobArn() {
         return this.jobArn;
@@ -108,14 +97,12 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
     }
     /**
      * Allows you to create a staged rollout of a job.
-     * 
      */
     @Export(name="jobExecutionsRolloutConfig", type=JobExecutionsRolloutConfigProperties.class, parameters={})
     private Output</* @Nullable */ JobExecutionsRolloutConfigProperties> jobExecutionsRolloutConfig;
 
     /**
      * @return Allows you to create a staged rollout of a job.
-     * 
      */
     public Output</* @Nullable */ JobExecutionsRolloutConfigProperties> getJobExecutionsRolloutConfig() {
         return this.jobExecutionsRolloutConfig;
@@ -128,42 +115,36 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
     }
     /**
      * Configuration for pre-signed S3 URLs.
-     * 
      */
     @Export(name="presignedUrlConfig", type=PresignedUrlConfigProperties.class, parameters={})
     private Output</* @Nullable */ PresignedUrlConfigProperties> presignedUrlConfig;
 
     /**
      * @return Configuration for pre-signed S3 URLs.
-     * 
      */
     public Output</* @Nullable */ PresignedUrlConfigProperties> getPresignedUrlConfig() {
         return this.presignedUrlConfig;
     }
     /**
      * Metadata that can be used to manage the JobTemplate.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={JobTemplateTag.class})
     private Output</* @Nullable */ List<JobTemplateTag>> tags;
 
     /**
      * @return Metadata that can be used to manage the JobTemplate.
-     * 
      */
     public Output</* @Nullable */ List<JobTemplateTag>> getTags() {
         return this.tags;
     }
     /**
      * Specifies the amount of time each device has to finish its execution of the job.
-     * 
      */
     @Export(name="timeoutConfig", type=TimeoutConfigProperties.class, parameters={})
     private Output</* @Nullable */ TimeoutConfigProperties> timeoutConfig;
 
     /**
      * @return Specifies the amount of time each device has to finish its execution of the job.
-     * 
      */
     public Output</* @Nullable */ TimeoutConfigProperties> getTimeoutConfig() {
         return this.timeoutConfig;

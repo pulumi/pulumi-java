@@ -14,7 +14,6 @@ public final class BotAliasCloudWatchLogGroupLogDestination extends io.pulumi.re
 
     /**
      * A string used to identify this tag
-     * 
      */
     @Import(name="cloudWatchLogGroupArn", required=true)
       private final String cloudWatchLogGroupArn;
@@ -25,7 +24,6 @@ public final class BotAliasCloudWatchLogGroupLogDestination extends io.pulumi.re
 
     /**
      * A string containing the value for the tag
-     * 
      */
     @Import(name="logPrefix", required=true)
       private final String logPrefix;

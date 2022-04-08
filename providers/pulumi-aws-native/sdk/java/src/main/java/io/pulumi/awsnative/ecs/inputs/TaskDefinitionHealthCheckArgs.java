@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The health check command and associated configuration parameters for the container.
- * 
  */
 public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
 
     /**
      * A string array representing the command that the container runs to determine if it is healthy.
-     * 
      */
     @Import(name="command")
       private final @Nullable Output<List<String>> command;
@@ -33,7 +31,6 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
 
     /**
      * The time period in seconds between each health check execution. You may specify between 5 and 300 seconds. The default value is 30 seconds.
-     * 
      */
     @Import(name="interval")
       private final @Nullable Output<Integer> interval;
@@ -44,7 +41,6 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
 
     /**
      * The number of times to retry a failed health check before the container is considered unhealthy. You may specify between 1 and 10 retries. The default value is three retries.
-     * 
      */
     @Import(name="retries")
       private final @Nullable Output<Integer> retries;
@@ -55,7 +51,6 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
 
     /**
      * The optional grace period within which to provide containers time to bootstrap before failed health checks count towards the maximum number of retries. You may specify between 0 and 300 seconds. The startPeriod is disabled by default.
-     * 
      */
     @Import(name="startPeriod")
       private final @Nullable Output<Integer> startPeriod;
@@ -66,7 +61,6 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
 
     /**
      * The time period in seconds to wait for a health check to succeed before it is considered a failure. You may specify between 2 and 60 seconds. The default value is 5 seconds.
-     * 
      */
     @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class DataSourceAmazonOpenSearchParameters {
     /**
      * <p>The Amazon OpenSearch Service domain.</p>
-     * 
      */
     private final String domain;
 
@@ -22,7 +21,6 @@ public final class DataSourceAmazonOpenSearchParameters {
 
     /**
      * <p>The Amazon OpenSearch Service domain.</p>
-     * 
     */
     public String getDomain() {
         return this.domain;

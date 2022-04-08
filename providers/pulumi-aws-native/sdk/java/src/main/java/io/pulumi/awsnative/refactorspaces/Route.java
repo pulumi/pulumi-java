@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of AWS::RefactorSpaces::Route Resource Type
- * 
  */
 @ResourceType(type="aws-native:refactorspaces:Route")
 public class Route extends io.pulumi.resources.CustomResource {
@@ -65,14 +64,12 @@ public class Route extends io.pulumi.resources.CustomResource {
     }
     /**
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={RouteTag.class})
     private Output</* @Nullable */ List<RouteTag>> tags;
 
     /**
      * @return Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
-     * 
      */
     public Output</* @Nullable */ List<RouteTag>> getTags() {
         return this.tags;

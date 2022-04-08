@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Specifies a time limit for how long the monitoring job is allowed to run.
- * 
  */
 public final class MonitoringScheduleStoppingCondition extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MonitoringScheduleStoppingCondition extends io.pulumi.resourc
 
     /**
      * The maximum runtime allowed in seconds.
-     * 
      */
     @Import(name="maxRuntimeInSeconds", required=true)
       private final Integer maxRuntimeInSeconds;

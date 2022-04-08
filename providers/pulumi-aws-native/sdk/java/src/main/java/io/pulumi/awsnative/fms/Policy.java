@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Creates an AWS Firewall Manager policy.
- * 
  */
 @ResourceType(type="aws-native:fms:Policy")
 public class Policy extends io.pulumi.resources.CustomResource {

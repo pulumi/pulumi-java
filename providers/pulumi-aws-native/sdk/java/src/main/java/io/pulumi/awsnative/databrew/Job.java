@@ -28,7 +28,135 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for AWS::DataBrew::Job.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myDataBrewProfileJob = new AwsNative.DataBrew.Job("myDataBrewProfileJob", new AwsNative.DataBrew.JobArgs
+ *         {
+ *             Type = "PROFILE",
+ *             Name = "job-test",
+ *             DatasetName = "dataset-test",
+ *             RoleArn = "arn:aws:iam::1234567891011:role/PassRoleAdmin",
+ *             JobSample = new AwsNative.DataBrew.Inputs.JobSampleArgs
+ *             {
+ *                 Mode = "FULL_DATASET",
+ *             },
+ *             OutputLocation = new AwsNative.DataBrew.Inputs.JobOutputLocationArgs
+ *             {
+ *                 Bucket = "test-output",
+ *                 Key = "job-output.json",
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.DataBrew.Inputs.JobTagArgs
+ *                 {
+ *                     Key = "key00AtCreate",
+ *                     Value = "value001AtCreate",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/databrew"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databrew.NewJob(ctx, "myDataBrewProfileJob", &databrew.JobArgs{
+ * 			Type:        "PROFILE",
+ * 			Name:        pulumi.String("job-test"),
+ * 			DatasetName: pulumi.String("dataset-test"),
+ * 			RoleArn:     pulumi.String("arn:aws:iam::1234567891011:role/PassRoleAdmin"),
+ * 			JobSample: &databrew.JobSampleArgs{
+ * 				Mode: "FULL_DATASET",
+ * 			},
+ * 			OutputLocation: &databrew.JobOutputLocationArgs{
+ * 				Bucket: pulumi.String("test-output"),
+ * 				Key:    pulumi.String("job-output.json"),
+ * 			},
+ * 			Tags: []databrew.JobTagArgs{
+ * 				&databrew.JobTagArgs{
+ * 					Key:   pulumi.String("key00AtCreate"),
+ * 					Value: pulumi.String("value001AtCreate"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myDataBrewProfileJob = new aws_native.databrew.Job("myDataBrewProfileJob", {
+ *     type: "PROFILE",
+ *     name: "job-test",
+ *     datasetName: "dataset-test",
+ *     roleArn: "arn:aws:iam::1234567891011:role/PassRoleAdmin",
+ *     jobSample: {
+ *         mode: "FULL_DATASET",
+ *     },
+ *     outputLocation: {
+ *         bucket: "test-output",
+ *         key: "job-output.json",
+ *     },
+ *     tags: [{
+ *         key: "key00AtCreate",
+ *         value: "value001AtCreate",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_data_brew_profile_job = aws_native.databrew.Job("myDataBrewProfileJob",
+ *     type="PROFILE",
+ *     name="job-test",
+ *     dataset_name="dataset-test",
+ *     role_arn="arn:aws:iam::1234567891011:role/PassRoleAdmin",
+ *     job_sample=aws_native.databrew.JobSampleArgs(
+ *         mode="FULL_DATASET",
+ *     ),
+ *     output_location=aws_native.databrew.JobOutputLocationArgs(
+ *         bucket="test-output",
+ *         key="job-output.json",
+ *     ),
+ *     tags=[aws_native.databrew.JobTagArgs(
+ *         key="key00AtCreate",
+ *         value="value001AtCreate",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:databrew:Job")
@@ -47,126 +175,108 @@ public class Job extends io.pulumi.resources.CustomResource {
     }
     /**
      * Dataset name
-     * 
      */
     @Export(name="datasetName", type=String.class, parameters={})
     private Output</* @Nullable */ String> datasetName;
 
     /**
      * @return Dataset name
-     * 
      */
     public Output</* @Nullable */ String> getDatasetName() {
         return this.datasetName;
     }
     /**
      * Encryption Key Arn
-     * 
      */
     @Export(name="encryptionKeyArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> encryptionKeyArn;
 
     /**
      * @return Encryption Key Arn
-     * 
      */
     public Output</* @Nullable */ String> getEncryptionKeyArn() {
         return this.encryptionKeyArn;
     }
     /**
      * Encryption mode
-     * 
      */
     @Export(name="encryptionMode", type=JobEncryptionMode.class, parameters={})
     private Output</* @Nullable */ JobEncryptionMode> encryptionMode;
 
     /**
      * @return Encryption mode
-     * 
      */
     public Output</* @Nullable */ JobEncryptionMode> getEncryptionMode() {
         return this.encryptionMode;
     }
     /**
      * Job Sample
-     * 
      */
     @Export(name="jobSample", type=JobSample.class, parameters={})
     private Output</* @Nullable */ JobSample> jobSample;
 
     /**
      * @return Job Sample
-     * 
      */
     public Output</* @Nullable */ JobSample> getJobSample() {
         return this.jobSample;
     }
     /**
      * Log subscription
-     * 
      */
     @Export(name="logSubscription", type=JobLogSubscription.class, parameters={})
     private Output</* @Nullable */ JobLogSubscription> logSubscription;
 
     /**
      * @return Log subscription
-     * 
      */
     public Output</* @Nullable */ JobLogSubscription> getLogSubscription() {
         return this.logSubscription;
     }
     /**
      * Max capacity
-     * 
      */
     @Export(name="maxCapacity", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxCapacity;
 
     /**
      * @return Max capacity
-     * 
      */
     public Output</* @Nullable */ Integer> getMaxCapacity() {
         return this.maxCapacity;
     }
     /**
      * Max retries
-     * 
      */
     @Export(name="maxRetries", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxRetries;
 
     /**
      * @return Max retries
-     * 
      */
     public Output</* @Nullable */ Integer> getMaxRetries() {
         return this.maxRetries;
     }
     /**
      * Job name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Job name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Output location
-     * 
      */
     @Export(name="outputLocation", type=JobOutputLocation.class, parameters={})
     private Output</* @Nullable */ JobOutputLocation> outputLocation;
 
     /**
      * @return Output location
-     * 
      */
     public Output</* @Nullable */ JobOutputLocation> getOutputLocation() {
         return this.outputLocation;
@@ -179,28 +289,24 @@ public class Job extends io.pulumi.resources.CustomResource {
     }
     /**
      * Profile Job configuration
-     * 
      */
     @Export(name="profileConfiguration", type=JobProfileConfiguration.class, parameters={})
     private Output</* @Nullable */ JobProfileConfiguration> profileConfiguration;
 
     /**
      * @return Profile Job configuration
-     * 
      */
     public Output</* @Nullable */ JobProfileConfiguration> getProfileConfiguration() {
         return this.profileConfiguration;
     }
     /**
      * Project name
-     * 
      */
     @Export(name="projectName", type=String.class, parameters={})
     private Output</* @Nullable */ String> projectName;
 
     /**
      * @return Project name
-     * 
      */
     public Output</* @Nullable */ String> getProjectName() {
         return this.projectName;
@@ -213,14 +319,12 @@ public class Job extends io.pulumi.resources.CustomResource {
     }
     /**
      * Role arn
-     * 
      */
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
      * @return Role arn
-     * 
      */
     public Output<String> getRoleArn() {
         return this.roleArn;
@@ -233,42 +337,36 @@ public class Job extends io.pulumi.resources.CustomResource {
     }
     /**
      * Timeout
-     * 
      */
     @Export(name="timeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> timeout;
 
     /**
      * @return Timeout
-     * 
      */
     public Output</* @Nullable */ Integer> getTimeout() {
         return this.timeout;
     }
     /**
      * Job type
-     * 
      */
     @Export(name="type", type=JobType.class, parameters={})
     private Output<JobType> type;
 
     /**
      * @return Job type
-     * 
      */
     public Output<JobType> getType() {
         return this.type;
     }
     /**
      * Data quality rules configuration
-     * 
      */
     @Export(name="validationConfigurations", type=List.class, parameters={JobValidationConfiguration.class})
     private Output</* @Nullable */ List<JobValidationConfiguration>> validationConfigurations;
 
     /**
      * @return Data quality rules configuration
-     * 
      */
     public Output</* @Nullable */ List<JobValidationConfiguration>> getValidationConfigurations() {
         return this.validationConfigurations;

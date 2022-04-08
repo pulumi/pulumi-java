@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Config::StoredQuery
- * 
  */
 @ResourceType(type="aws-native:configuration:StoredQuery")
 public class StoredQuery extends io.pulumi.resources.CustomResource {
@@ -51,14 +50,12 @@ public class StoredQuery extends io.pulumi.resources.CustomResource {
     }
     /**
      * The tags for the stored query.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={StoredQueryTag.class})
     private Output</* @Nullable */ List<StoredQueryTag>> tags;
 
     /**
      * @return The tags for the stored query.
-     * 
      */
     public Output</* @Nullable */ List<StoredQueryTag>> getTags() {
         return this.tags;

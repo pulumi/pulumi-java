@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class TemplateColumnGroupColumnSchema {
     /**
      * <p>The name of the column group's column schema.</p>
-     * 
      */
     private final @Nullable String name;
 
@@ -24,7 +23,6 @@ public final class TemplateColumnGroupColumnSchema {
 
     /**
      * <p>The name of the column group's column schema.</p>
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

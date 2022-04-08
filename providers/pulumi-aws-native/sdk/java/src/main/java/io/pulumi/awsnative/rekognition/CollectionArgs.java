@@ -25,7 +25,6 @@ public final class CollectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<CollectionTagArgs>> tags;

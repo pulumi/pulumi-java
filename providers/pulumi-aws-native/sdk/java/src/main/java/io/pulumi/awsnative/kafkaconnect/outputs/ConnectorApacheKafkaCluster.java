@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class ConnectorApacheKafkaCluster {
     /**
      * The bootstrap servers string of the Apache Kafka cluster.
-     * 
      */
     private final String bootstrapServers;
     private final ConnectorVpc vpc;
@@ -27,7 +26,6 @@ public final class ConnectorApacheKafkaCluster {
 
     /**
      * The bootstrap servers string of the Apache Kafka cluster.
-     * 
     */
     public String getBootstrapServers() {
         return this.bootstrapServers;

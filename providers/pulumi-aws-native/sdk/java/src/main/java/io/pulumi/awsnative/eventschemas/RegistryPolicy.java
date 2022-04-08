@@ -15,7 +15,417 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::EventSchemas::RegistryPolicy
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var registryPolicy = new AwsNative.EventSchemas.RegistryPolicy("registryPolicy", new AwsNative.EventSchemas.RegistryPolicyArgs
+ *         {
+ *             RegistryName = "registryName",
+ *             Policy = 
+ *             {
+ *                 { "version", "2012-10-17" },
+ *                 { "statement", 
+ *                 {
+ *                     { "sid", 1 },
+ *                     { "effect", "Allow" },
+ *                     { "principal", 
+ *                     {
+ *                         { "aws", "arn:aws:iam::012345678901:user/TestAccountForRegistryPolicy" },
+ *                     } },
+ *                     { "action", 
+ *                     {
+ *                         "schemas:DescribeRegistry",
+ *                         "schemas:CreateSchema",
+ *                     } },
+ *                     { "resource", "registryArn" },
+ *                 } },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/eventschemas"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := eventschemas.NewRegistryPolicy(ctx, "registryPolicy", &eventschemas.RegistryPolicyArgs{
+ * 			RegistryName: pulumi.String("registryName"),
+ * 			Policy: pulumi.Any{
+ * 				Version: "2012-10-17",
+ * 				Statement: map[string]interface{}{
+ * 					"sid":    1,
+ * 					"effect": "Allow",
+ * 					"principal": map[string]interface{}{
+ * 						"aws": "arn:aws:iam::012345678901:user/TestAccountForRegistryPolicy",
+ * 					},
+ * 					"action": []string{
+ * 						"schemas:DescribeRegistry",
+ * 						"schemas:CreateSchema",
+ * 					},
+ * 					"resource": "registryArn",
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const registryPolicy = new aws_native.eventschemas.RegistryPolicy("registryPolicy", {
+ *     registryName: "registryName",
+ *     policy: {
+ *         version: "2012-10-17",
+ *         statement: {
+ *             sid: 1,
+ *             effect: "Allow",
+ *             principal: {
+ *                 aws: "arn:aws:iam::012345678901:user/TestAccountForRegistryPolicy",
+ *             },
+ *             action: [
+ *                 "schemas:DescribeRegistry",
+ *                 "schemas:CreateSchema",
+ *             ],
+ *             resource: "registryArn",
+ *         },
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * registry_policy = aws_native.eventschemas.RegistryPolicy("registryPolicy",
+ *     registry_name="registryName",
+ *     policy={
+ *         "version": "2012-10-17",
+ *         "statement": {
+ *             "sid": 1,
+ *             "effect": "Allow",
+ *             "principal": {
+ *                 "aws": "arn:aws:iam::012345678901:user/TestAccountForRegistryPolicy",
+ *             },
+ *             "action": [
+ *                 "schemas:DescribeRegistry",
+ *                 "schemas:CreateSchema",
+ *             ],
+ *             "resource": "registryArn",
+ *         },
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var registryPolicy = new AwsNative.EventSchemas.RegistryPolicy("registryPolicy", new AwsNative.EventSchemas.RegistryPolicyArgs
+ *         {
+ *             RegistryName = "MyRegistry",
+ *             Policy = 
+ *             {
+ *                 { "version", "2012-10-17" },
+ *                 { "statement", 
+ *                 {
+ *                     
+ *                     {
+ *                         { "sid", "Test" },
+ *                         { "effect", "Allow" },
+ *                         { "action", 
+ *                         {
+ *                             "schemas:*",
+ *                         } },
+ *                         { "principal", 
+ *                         {
+ *                             { "aws", 
+ *                             {
+ *                                 "109876543210",
+ *                             } },
+ *                         } },
+ *                         { "resource", 
+ *                         {
+ *                             "arn:aws:schemas:us-east-1:012345678901:registry/MyRegistry",
+ *                             "arn:aws:schemas:us-east-1:012345678901:schema/MyRegistry*",
+ *                         } },
+ *                     },
+ *                 } },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/eventschemas"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := eventschemas.NewRegistryPolicy(ctx, "registryPolicy", &eventschemas.RegistryPolicyArgs{
+ * 			RegistryName: pulumi.String("MyRegistry"),
+ * 			Policy: pulumi.Any{
+ * 				Version: "2012-10-17",
+ * 				Statement: []map[string]interface{}{
+ * 					map[string]interface{}{
+ * 						"sid":    "Test",
+ * 						"effect": "Allow",
+ * 						"action": []string{
+ * 							"schemas:*",
+ * 						},
+ * 						"principal": map[string]interface{}{
+ * 							"aws": []string{
+ * 								"109876543210",
+ * 							},
+ * 						},
+ * 						"resource": []string{
+ * 							"arn:aws:schemas:us-east-1:012345678901:registry/MyRegistry",
+ * 							"arn:aws:schemas:us-east-1:012345678901:schema/MyRegistry*",
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const registryPolicy = new aws_native.eventschemas.RegistryPolicy("registryPolicy", {
+ *     registryName: "MyRegistry",
+ *     policy: {
+ *         version: "2012-10-17",
+ *         statement: [{
+ *             sid: "Test",
+ *             effect: "Allow",
+ *             action: ["schemas:*"],
+ *             principal: {
+ *                 aws: ["109876543210"],
+ *             },
+ *             resource: [
+ *                 "arn:aws:schemas:us-east-1:012345678901:registry/MyRegistry",
+ *                 "arn:aws:schemas:us-east-1:012345678901:schema/MyRegistry*",
+ *             ],
+ *         }],
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * registry_policy = aws_native.eventschemas.RegistryPolicy("registryPolicy",
+ *     registry_name="MyRegistry",
+ *     policy={
+ *         "version": "2012-10-17",
+ *         "statement": [{
+ *             "sid": "Test",
+ *             "effect": "Allow",
+ *             "action": ["schemas:*"],
+ *             "principal": {
+ *                 "aws": ["109876543210"],
+ *             },
+ *             "resource": [
+ *                 "arn:aws:schemas:us-east-1:012345678901:registry/MyRegistry",
+ *                 "arn:aws:schemas:us-east-1:012345678901:schema/MyRegistry*",
+ *             ],
+ *         }],
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var registryPolicy = new AwsNative.EventSchemas.RegistryPolicy("registryPolicy", new AwsNative.EventSchemas.RegistryPolicyArgs
+ *         {
+ *             RegistryName = "MyRegistry",
+ *             Policy = 
+ *             {
+ *                 { "version", "2012-10-17" },
+ *                 { "statement", 
+ *                 {
+ *                     
+ *                     {
+ *                         { "sid", "Test" },
+ *                         { "effect", "Allow" },
+ *                         { "action", 
+ *                         {
+ *                             "schemas:*",
+ *                         } },
+ *                         { "principal", 
+ *                         {
+ *                             { "aws", 
+ *                             {
+ *                                 "109876543210",
+ *                             } },
+ *                         } },
+ *                         { "resource", 
+ *                         {
+ *                             "arn:aws:schemas:us-east-1:012345678901:registry/MyRegistry",
+ *                             "arn:aws:schemas:us-east-1:012345678901:schema/MyRegistry*",
+ *                         } },
+ *                     },
+ *                 } },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/eventschemas"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := eventschemas.NewRegistryPolicy(ctx, "registryPolicy", &eventschemas.RegistryPolicyArgs{
+ * 			RegistryName: pulumi.String("MyRegistry"),
+ * 			Policy: pulumi.Any{
+ * 				Version: "2012-10-17",
+ * 				Statement: []map[string]interface{}{
+ * 					map[string]interface{}{
+ * 						"sid":    "Test",
+ * 						"effect": "Allow",
+ * 						"action": []string{
+ * 							"schemas:*",
+ * 						},
+ * 						"principal": map[string]interface{}{
+ * 							"aws": []string{
+ * 								"109876543210",
+ * 							},
+ * 						},
+ * 						"resource": []string{
+ * 							"arn:aws:schemas:us-east-1:012345678901:registry/MyRegistry",
+ * 							"arn:aws:schemas:us-east-1:012345678901:schema/MyRegistry*",
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const registryPolicy = new aws_native.eventschemas.RegistryPolicy("registryPolicy", {
+ *     registryName: "MyRegistry",
+ *     policy: {
+ *         version: "2012-10-17",
+ *         statement: [{
+ *             sid: "Test",
+ *             effect: "Allow",
+ *             action: ["schemas:*"],
+ *             principal: {
+ *                 aws: ["109876543210"],
+ *             },
+ *             resource: [
+ *                 "arn:aws:schemas:us-east-1:012345678901:registry/MyRegistry",
+ *                 "arn:aws:schemas:us-east-1:012345678901:schema/MyRegistry*",
+ *             ],
+ *         }],
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * registry_policy = aws_native.eventschemas.RegistryPolicy("registryPolicy",
+ *     registry_name="MyRegistry",
+ *     policy={
+ *         "version": "2012-10-17",
+ *         "statement": [{
+ *             "sid": "Test",
+ *             "effect": "Allow",
+ *             "action": ["schemas:*"],
+ *             "principal": {
+ *                 "aws": ["109876543210"],
+ *             },
+ *             "resource": [
+ *                 "arn:aws:schemas:us-east-1:012345678901:registry/MyRegistry",
+ *                 "arn:aws:schemas:us-east-1:012345678901:schema/MyRegistry*",
+ *             ],
+ *         }],
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:eventschemas:RegistryPolicy")

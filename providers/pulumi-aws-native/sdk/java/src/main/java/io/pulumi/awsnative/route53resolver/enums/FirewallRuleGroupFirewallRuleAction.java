@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Rule Action
-     * 
      */
     @EnumType
     public enum FirewallRuleGroupFirewallRuleAction {

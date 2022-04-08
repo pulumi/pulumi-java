@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Information about a source configuration.
- * 
  */
 public final class SimulationApplicationSourceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SimulationApplicationSourceConfigArgs extends io.pulumi.resou
 
     /**
      * The target processor architecture for the application.
-     * 
      */
     @Import(name="architecture", required=true)
       private final Output<SimulationApplicationSourceConfigArchitecture> architecture;
@@ -31,7 +29,6 @@ public final class SimulationApplicationSourceConfigArgs extends io.pulumi.resou
 
     /**
      * The Amazon S3 bucket name.
-     * 
      */
     @Import(name="s3Bucket", required=true)
       private final Output<String> s3Bucket;
@@ -42,7 +39,6 @@ public final class SimulationApplicationSourceConfigArgs extends io.pulumi.resou
 
     /**
      * The s3 object key.
-     * 
      */
     @Import(name="s3Key", required=true)
       private final Output<String> s3Key;

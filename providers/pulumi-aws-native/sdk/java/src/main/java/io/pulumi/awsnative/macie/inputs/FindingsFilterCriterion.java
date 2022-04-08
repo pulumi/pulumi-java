@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * Map of filter criteria.
- * 
  */
 public final class FindingsFilterCriterion extends io.pulumi.resources.InvokeArgs {
 

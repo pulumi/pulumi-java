@@ -16,62 +16,53 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::SES::ContactList.
- * 
  */
 @ResourceType(type="aws-native:ses:ContactList")
 public class ContactList extends io.pulumi.resources.CustomResource {
     /**
      * The name of the contact list.
-     * 
      */
     @Export(name="contactListName", type=String.class, parameters={})
     private Output</* @Nullable */ String> contactListName;
 
     /**
      * @return The name of the contact list.
-     * 
      */
     public Output</* @Nullable */ String> getContactListName() {
         return this.contactListName;
     }
     /**
      * The description of the contact list.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the contact list.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The tags (keys and values) associated with the contact list.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ContactListTag.class})
     private Output</* @Nullable */ List<ContactListTag>> tags;
 
     /**
      * @return The tags (keys and values) associated with the contact list.
-     * 
      */
     public Output</* @Nullable */ List<ContactListTag>> getTags() {
         return this.tags;
     }
     /**
      * The topics associated with the contact list.
-     * 
      */
     @Export(name="topics", type=List.class, parameters={ContactListTopic.class})
     private Output</* @Nullable */ List<ContactListTopic>> topics;
 
     /**
      * @return The topics associated with the contact list.
-     * 
      */
     public Output</* @Nullable */ List<ContactListTopic>> getTopics() {
         return this.topics;

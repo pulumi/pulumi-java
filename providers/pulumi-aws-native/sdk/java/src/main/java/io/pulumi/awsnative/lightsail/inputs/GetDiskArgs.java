@@ -14,7 +14,6 @@ public final class GetDiskArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The names to use for your new Lightsail disk.
-     * 
      */
     @Import(name="diskName", required=true)
       private final String diskName;

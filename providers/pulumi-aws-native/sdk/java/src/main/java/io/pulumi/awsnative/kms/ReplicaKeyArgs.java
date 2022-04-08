@@ -21,7 +21,6 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -32,7 +31,6 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -43,7 +41,6 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The key policy that authorizes use of the CMK. The key policy must observe the following rules.
-     * 
      */
     @Import(name="keyPolicy", required=true)
       private final Output<Object> keyPolicy;
@@ -54,7 +51,6 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
-     * 
      */
     @Import(name="pendingWindowInDays")
       private final @Nullable Output<Integer> pendingWindowInDays;
@@ -65,7 +61,6 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identifies the primary CMK to create a replica of. Specify the Amazon Resource Name (ARN) of the CMK. You cannot specify an alias or key ID. For help finding the ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
-     * 
      */
     @Import(name="primaryKeyArn", required=true)
       private final Output<String> primaryKeyArn;
@@ -76,7 +71,6 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ReplicaKeyTagArgs>> tags;

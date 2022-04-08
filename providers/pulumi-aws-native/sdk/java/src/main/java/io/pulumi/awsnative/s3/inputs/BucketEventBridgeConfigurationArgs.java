@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Describes the Amazon EventBridge notification configuration for an Amazon S3 bucket.
- * 
  */
 public final class BucketEventBridgeConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class BucketEventBridgeConfigurationArgs extends io.pulumi.resource
 
     /**
      * Specifies whether to send notifications to Amazon EventBridge when events occur in an Amazon S3 bucket.
-     * 
      */
     @Import(name="eventBridgeEnabled", required=true)
       private final Output<Boolean> eventBridgeEnabled;

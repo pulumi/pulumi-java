@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A range of IP addresses and port settings that allow inbound traffic to connect to server processes on an Amazon GameLift hosting resource. New game sessions that are started on the fleet are assigned an IP address/port number combination, which must fall into the fleet's allowed ranges. For fleets created with a custom game server, the ranges reflect the server's game session assignments. For Realtime Servers fleets, Amazon GameLift automatically opens two port ranges, one for TCP messaging and one for UDP, for use by the Realtime servers.
- * 
  */
 public final class FleetIpPermission extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class FleetIpPermission extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A starting value for a range of allowed port numbers.
-     * 
      */
     @Import(name="fromPort", required=true)
       private final Integer fromPort;
@@ -31,7 +29,6 @@ public final class FleetIpPermission extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A range of allowed IP addresses. This value must be expressed in CIDR notation. Example: "000.000.000.000/[subnet mask]" or optionally the shortened version "0.0.0.0/[subnet mask]".
-     * 
      */
     @Import(name="ipRange", required=true)
       private final String ipRange;
@@ -42,7 +39,6 @@ public final class FleetIpPermission extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The network communication protocol used by the fleet.
-     * 
      */
     @Import(name="protocol", required=true)
       private final FleetIpPermissionProtocol protocol;
@@ -53,7 +49,6 @@ public final class FleetIpPermission extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than FromPort.
-     * 
      */
     @Import(name="toPort", required=true)
       private final Integer toPort;

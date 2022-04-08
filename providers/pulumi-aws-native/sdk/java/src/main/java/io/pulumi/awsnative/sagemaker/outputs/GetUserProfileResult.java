@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class GetUserProfileResult {
     /**
      * The user profile Amazon Resource Name (ARN).
-     * 
      */
     private final @Nullable String userProfileArn;
     /**
      * A collection of settings.
-     * 
      */
     private final @Nullable UserProfileUserSettings userSettings;
 
@@ -33,14 +31,12 @@ public final class GetUserProfileResult {
 
     /**
      * The user profile Amazon Resource Name (ARN).
-     * 
     */
     public Optional<String> getUserProfileArn() {
         return Optional.ofNullable(this.userProfileArn);
     }
     /**
      * A collection of settings.
-     * 
     */
     public Optional<UserProfileUserSettings> getUserSettings() {
         return Optional.ofNullable(this.userSettings);

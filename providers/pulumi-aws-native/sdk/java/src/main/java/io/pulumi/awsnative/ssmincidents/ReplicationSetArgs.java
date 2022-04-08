@@ -25,7 +25,6 @@ public final class ReplicationSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ReplicationSet configuration.
-     * 
      */
     @Import(name="regions", required=true)
       private final Output<List<ReplicationSetReplicationRegionArgs>> regions;

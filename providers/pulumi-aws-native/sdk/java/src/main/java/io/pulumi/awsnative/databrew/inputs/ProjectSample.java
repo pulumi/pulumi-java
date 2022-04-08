@@ -17,7 +17,6 @@ public final class ProjectSample extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Sample size
-     * 
      */
     @Import(name="size")
       private final @Nullable Integer size;
@@ -28,7 +27,6 @@ public final class ProjectSample extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Sample type
-     * 
      */
     @Import(name="type", required=true)
       private final ProjectSampleType type;

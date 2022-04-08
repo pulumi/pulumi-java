@@ -19,62 +19,53 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Lightsail::Disk
- * 
  */
 @ResourceType(type="aws-native:lightsail:Disk")
 public class Disk extends io.pulumi.resources.CustomResource {
     /**
      * An array of objects representing the add-ons to enable for the new instance.
-     * 
      */
     @Export(name="addOns", type=List.class, parameters={DiskAddOn.class})
     private Output</* @Nullable */ List<DiskAddOn>> addOns;
 
     /**
      * @return An array of objects representing the add-ons to enable for the new instance.
-     * 
      */
     public Output</* @Nullable */ List<DiskAddOn>> getAddOns() {
         return this.addOns;
     }
     /**
      * Name of the attached Lightsail Instance
-     * 
      */
     @Export(name="attachedTo", type=String.class, parameters={})
     private Output<String> attachedTo;
 
     /**
      * @return Name of the attached Lightsail Instance
-     * 
      */
     public Output<String> getAttachedTo() {
         return this.attachedTo;
     }
     /**
      * Attachment State of the Lightsail disk
-     * 
      */
     @Export(name="attachmentState", type=String.class, parameters={})
     private Output<String> attachmentState;
 
     /**
      * @return Attachment State of the Lightsail disk
-     * 
      */
     public Output<String> getAttachmentState() {
         return this.attachmentState;
     }
     /**
      * The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
-     * 
      */
     @Export(name="availabilityZone", type=String.class, parameters={})
     private Output</* @Nullable */ String> availabilityZone;
 
     /**
      * @return The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
-     * 
      */
     public Output</* @Nullable */ String> getAvailabilityZone() {
         return this.availabilityZone;
@@ -87,42 +78,36 @@ public class Disk extends io.pulumi.resources.CustomResource {
     }
     /**
      * The names to use for your new Lightsail disk.
-     * 
      */
     @Export(name="diskName", type=String.class, parameters={})
     private Output<String> diskName;
 
     /**
      * @return The names to use for your new Lightsail disk.
-     * 
      */
     public Output<String> getDiskName() {
         return this.diskName;
     }
     /**
      * Iops of the Lightsail disk
-     * 
      */
     @Export(name="iops", type=Integer.class, parameters={})
     private Output<Integer> iops;
 
     /**
      * @return Iops of the Lightsail disk
-     * 
      */
     public Output<Integer> getIops() {
         return this.iops;
     }
     /**
      * Check is Disk is attached state
-     * 
      */
     @Export(name="isAttached", type=Boolean.class, parameters={})
     private Output<Boolean> isAttached;
 
     /**
      * @return Check is Disk is attached state
-     * 
      */
     public Output<Boolean> getIsAttached() {
         return this.isAttached;
@@ -135,84 +120,72 @@ public class Disk extends io.pulumi.resources.CustomResource {
     }
     /**
      * Path of the  attached Disk
-     * 
      */
     @Export(name="path", type=String.class, parameters={})
     private Output<String> path;
 
     /**
      * @return Path of the  attached Disk
-     * 
      */
     public Output<String> getPath() {
         return this.path;
     }
     /**
      * Resource type of Lightsail instance.
-     * 
      */
     @Export(name="resourceType", type=String.class, parameters={})
     private Output<String> resourceType;
 
     /**
      * @return Resource type of Lightsail instance.
-     * 
      */
     public Output<String> getPropResourceType() {
         return this.resourceType;
     }
     /**
      * Size of the Lightsail disk
-     * 
      */
     @Export(name="sizeInGb", type=Integer.class, parameters={})
     private Output<Integer> sizeInGb;
 
     /**
      * @return Size of the Lightsail disk
-     * 
      */
     public Output<Integer> getSizeInGb() {
         return this.sizeInGb;
     }
     /**
      * State of the Lightsail disk
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return State of the Lightsail disk
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Support code to help identify any issues
-     * 
      */
     @Export(name="supportCode", type=String.class, parameters={})
     private Output<String> supportCode;
 
     /**
      * @return Support code to help identify any issues
-     * 
      */
     public Output<String> getSupportCode() {
         return this.supportCode;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DiskTag.class})
     private Output</* @Nullable */ List<DiskTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<DiskTag>> getTags() {
         return this.tags;

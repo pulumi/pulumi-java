@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Choice for mode of webserver access including over public internet or via private VPC endpoint.
-     * 
      */
     @EnumType
     public enum EnvironmentWebserverAccessMode {

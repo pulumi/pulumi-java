@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The HA cluster Prometheus Exporter settings.
- * 
  */
 public final class ApplicationHAClusterPrometheusExporterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ApplicationHAClusterPrometheusExporterArgs extends io.pulumi.
 
     /**
      * Prometheus exporter port.
-     * 
      */
     @Import(name="prometheusPort")
       private final @Nullable Output<String> prometheusPort;

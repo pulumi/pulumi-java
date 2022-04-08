@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Image Configuration
- * 
  */
 public final class ServiceImageConfiguration extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ServiceImageConfiguration extends io.pulumi.resources.InvokeA
 
     /**
      * Port
-     * 
      */
     @Import(name="port")
       private final @Nullable String port;
@@ -40,7 +38,6 @@ public final class ServiceImageConfiguration extends io.pulumi.resources.InvokeA
 
     /**
      * Start Command
-     * 
      */
     @Import(name="startCommand")
       private final @Nullable String startCommand;

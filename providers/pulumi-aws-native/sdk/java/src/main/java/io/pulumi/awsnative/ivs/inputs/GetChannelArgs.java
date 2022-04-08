@@ -14,7 +14,6 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Channel ARN is automatically generated on creation and assigned as the unique identifier.
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

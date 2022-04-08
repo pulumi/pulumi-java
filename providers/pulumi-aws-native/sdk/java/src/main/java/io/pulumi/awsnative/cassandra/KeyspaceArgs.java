@@ -18,7 +18,6 @@ public final class KeyspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name for Cassandra keyspace
-     * 
      */
     @Import(name="keyspaceName")
       private final @Nullable Output<String> keyspaceName;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information about where and how to store the results of a monitoring job.
- * 
  */
 public final class ModelBiasJobDefinitionS3OutputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ModelBiasJobDefinitionS3OutputArgs extends io.pulumi.resource
 
     /**
      * The local path to the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job. LocalPath is an absolute path for the output data.
-     * 
      */
     @Import(name="localPath", required=true)
       private final Output<String> localPath;
@@ -32,7 +30,6 @@ public final class ModelBiasJobDefinitionS3OutputArgs extends io.pulumi.resource
 
     /**
      * Whether to upload the results of the monitoring job continuously or after the job completes.
-     * 
      */
     @Import(name="s3UploadMode")
       private final @Nullable Output<ModelBiasJobDefinitionS3OutputS3UploadMode> s3UploadMode;
@@ -43,7 +40,6 @@ public final class ModelBiasJobDefinitionS3OutputArgs extends io.pulumi.resource
 
     /**
      * A URI that identifies the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job.
-     * 
      */
     @Import(name="s3Uri", required=true)
       private final Output<String> s3Uri;

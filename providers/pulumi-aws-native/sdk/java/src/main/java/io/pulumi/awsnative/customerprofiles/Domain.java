@@ -17,105 +17,241 @@ import javax.annotation.Nullable;
 /**
  * A domain defined for 3rd party data source in Profile Service
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var domain = new AwsNative.CustomerProfiles.Domain("domain", new AwsNative.CustomerProfiles.DomainArgs
+ *         {
+ *             DomainName = "ExampleDomain",
+ *             DefaultEncryptionKey = "arn:aws:kms:us-east-1:123456789012:key/1988472d-6b77-4bb6-ae39-efce5EXAMPLE",
+ *             DeadLetterQueueUrl = "arn:aws:sqs:us-east-1:123456789012:DLQName",
+ *             DefaultExpirationDays = 6,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/customerprofiles"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := customerprofiles.NewDomain(ctx, "domain", &customerprofiles.DomainArgs{
+ * 			DomainName:            pulumi.String("ExampleDomain"),
+ * 			DefaultEncryptionKey:  pulumi.String("arn:aws:kms:us-east-1:123456789012:key/1988472d-6b77-4bb6-ae39-efce5EXAMPLE"),
+ * 			DeadLetterQueueUrl:    pulumi.String("arn:aws:sqs:us-east-1:123456789012:DLQName"),
+ * 			DefaultExpirationDays: pulumi.Int(6),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const domain = new aws_native.customerprofiles.Domain("domain", {
+ *     domainName: "ExampleDomain",
+ *     defaultEncryptionKey: "arn:aws:kms:us-east-1:123456789012:key/1988472d-6b77-4bb6-ae39-efce5EXAMPLE",
+ *     deadLetterQueueUrl: "arn:aws:sqs:us-east-1:123456789012:DLQName",
+ *     defaultExpirationDays: 6,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * domain = aws_native.customerprofiles.Domain("domain",
+ *     domain_name="ExampleDomain",
+ *     default_encryption_key="arn:aws:kms:us-east-1:123456789012:key/1988472d-6b77-4bb6-ae39-efce5EXAMPLE",
+ *     dead_letter_queue_url="arn:aws:sqs:us-east-1:123456789012:DLQName",
+ *     default_expiration_days=6)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var domain = new AwsNative.CustomerProfiles.Domain("domain", new AwsNative.CustomerProfiles.DomainArgs
+ *         {
+ *             DomainName = "ExampleDomain",
+ *             DefaultEncryptionKey = "arn:aws:kms:us-east-1:123456789012:key/1988472d-6b77-4bb6-ae39-efce5EXAMPLE",
+ *             DeadLetterQueueUrl = "arn:aws:sqs:us-east-1:123456789012:DLQName",
+ *             DefaultExpirationDays = 6,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/customerprofiles"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := customerprofiles.NewDomain(ctx, "domain", &customerprofiles.DomainArgs{
+ * 			DomainName:            pulumi.String("ExampleDomain"),
+ * 			DefaultEncryptionKey:  pulumi.String("arn:aws:kms:us-east-1:123456789012:key/1988472d-6b77-4bb6-ae39-efce5EXAMPLE"),
+ * 			DeadLetterQueueUrl:    pulumi.String("arn:aws:sqs:us-east-1:123456789012:DLQName"),
+ * 			DefaultExpirationDays: pulumi.Int(6),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const domain = new aws_native.customerprofiles.Domain("domain", {
+ *     domainName: "ExampleDomain",
+ *     defaultEncryptionKey: "arn:aws:kms:us-east-1:123456789012:key/1988472d-6b77-4bb6-ae39-efce5EXAMPLE",
+ *     deadLetterQueueUrl: "arn:aws:sqs:us-east-1:123456789012:DLQName",
+ *     defaultExpirationDays: 6,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * domain = aws_native.customerprofiles.Domain("domain",
+ *     domain_name="ExampleDomain",
+ *     default_encryption_key="arn:aws:kms:us-east-1:123456789012:key/1988472d-6b77-4bb6-ae39-efce5EXAMPLE",
+ *     dead_letter_queue_url="arn:aws:sqs:us-east-1:123456789012:DLQName",
+ *     default_expiration_days=6)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:customerprofiles:Domain")
 public class Domain extends io.pulumi.resources.CustomResource {
     /**
      * The time of this integration got created
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return The time of this integration got created
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * The URL of the SQS dead letter queue
-     * 
      */
     @Export(name="deadLetterQueueUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> deadLetterQueueUrl;
 
     /**
      * @return The URL of the SQS dead letter queue
-     * 
      */
     public Output</* @Nullable */ String> getDeadLetterQueueUrl() {
         return this.deadLetterQueueUrl;
     }
     /**
      * The default encryption key
-     * 
      */
     @Export(name="defaultEncryptionKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultEncryptionKey;
 
     /**
      * @return The default encryption key
-     * 
      */
     public Output</* @Nullable */ String> getDefaultEncryptionKey() {
         return this.defaultEncryptionKey;
     }
     /**
      * The default number of days until the data within the domain expires.
-     * 
      */
     @Export(name="defaultExpirationDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> defaultExpirationDays;
 
     /**
      * @return The default number of days until the data within the domain expires.
-     * 
      */
     public Output</* @Nullable */ Integer> getDefaultExpirationDays() {
         return this.defaultExpirationDays;
     }
     /**
      * The unique name of the domain.
-     * 
      */
     @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
      * @return The unique name of the domain.
-     * 
      */
     public Output<String> getDomainName() {
         return this.domainName;
     }
     /**
      * The time of this integration got last updated at
-     * 
      */
     @Export(name="lastUpdatedAt", type=String.class, parameters={})
     private Output<String> lastUpdatedAt;
 
     /**
      * @return The time of this integration got last updated at
-     * 
      */
     public Output<String> getLastUpdatedAt() {
         return this.lastUpdatedAt;
     }
     /**
      * The tags (keys and values) associated with the domain
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DomainTag.class})
     private Output</* @Nullable */ List<DomainTag>> tags;
 
     /**
      * @return The tags (keys and values) associated with the domain
-     * 
      */
     public Output</* @Nullable */ List<DomainTag>> getTags() {
         return this.tags;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The image tag mutability setting for the repository.
-     * 
      */
     @EnumType
     public enum RepositoryImageTagMutability {

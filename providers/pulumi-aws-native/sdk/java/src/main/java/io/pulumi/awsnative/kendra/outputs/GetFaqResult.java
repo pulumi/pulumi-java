@@ -17,7 +17,6 @@ public final class GetFaqResult {
     private final @Nullable String id;
     /**
      * Tags for labeling the FAQ
-     * 
      */
     private final @Nullable List<FaqTag> tags;
 
@@ -39,7 +38,6 @@ public final class GetFaqResult {
     }
     /**
      * Tags for labeling the FAQ
-     * 
     */
     public List<FaqTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

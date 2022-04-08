@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A value that determines whether tasks should be queued before executing the tasks.
-     * 
      */
     @EnumType
     public enum TaskOptionsTaskQueueing {

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The kind of extension
-     * 
      */
     @EnumType
     public enum TypeActivationType {

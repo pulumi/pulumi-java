@@ -23,7 +23,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of objects representing the add-ons to enable for the new instance.
-     * 
      */
     @Import(name="addOns")
       private final @Nullable Output<List<InstanceAddOnArgs>> addOns;
@@ -34,7 +33,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
-     * 
      */
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
@@ -45,7 +43,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID for a virtual private server image (e.g., app_wordpress_4_4 or app_lamp_7_0 ). Use the get blueprints operation to return a list of available images (or blueprints ).
-     * 
      */
     @Import(name="blueprintId", required=true)
       private final Output<String> blueprintId;
@@ -56,7 +53,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The bundle of specification information for your virtual private server (or instance ), including the pricing plan (e.g., micro_1_0 ).
-     * 
      */
     @Import(name="bundleId", required=true)
       private final Output<String> bundleId;
@@ -74,7 +70,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The names to use for your new Lightsail instance.
-     * 
      */
     @Import(name="instanceName")
       private final @Nullable Output<String> instanceName;
@@ -85,7 +80,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of your key pair.
-     * 
      */
     @Import(name="keyPairName")
       private final @Nullable Output<String> keyPairName;
@@ -117,7 +111,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<InstanceTagArgs>> tags;
@@ -128,7 +121,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A launch script you can create that configures a server with additional user data. For example, you might want to run apt-get -y update.
-     * 
      */
     @Import(name="userData")
       private final @Nullable Output<String> userData;

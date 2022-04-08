@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class GetAlertResult {
     /**
      * ARN assigned to the alert.
-     * 
      */
     private final @Nullable String arn;
 
@@ -24,7 +23,6 @@ public final class GetAlertResult {
 
     /**
      * ARN assigned to the alert.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);

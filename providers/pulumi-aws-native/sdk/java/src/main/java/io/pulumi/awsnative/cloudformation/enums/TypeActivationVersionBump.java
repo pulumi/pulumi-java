@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Manually updates a previously-enabled type to a new major or minor version, if available. You can also use this parameter to update the value of AutoUpdateEnabled
-     * 
      */
     @EnumType
     public enum TypeActivationVersionBump {

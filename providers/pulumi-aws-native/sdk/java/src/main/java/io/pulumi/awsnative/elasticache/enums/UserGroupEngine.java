@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Must be redis.
-     * 
      */
     @EnumType
     public enum UserGroupEngine {

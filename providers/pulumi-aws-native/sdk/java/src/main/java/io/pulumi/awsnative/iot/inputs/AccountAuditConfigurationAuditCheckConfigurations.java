@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies which audit checks are enabled and disabled for this account.
- * 
  */
 public final class AccountAuditConfigurationAuditCheckConfigurations extends io.pulumi.resources.InvokeArgs {
 

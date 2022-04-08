@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of AWS::AmplifyUIBuilder::Theme Resource Type
- * 
  */
 @ResourceType(type="aws-native:amplifyuibuilder:Theme")
 public class Theme extends io.pulumi.resources.CustomResource {

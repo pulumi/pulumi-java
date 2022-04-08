@@ -15,7 +15,6 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
 
     /**
      * The Access Key portion of the credentials.
-     * 
      */
     @Import(name="accessKeyId", required=true)
       private final Output<String> accessKeyId;
@@ -26,7 +25,6 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
 
     /**
      * The encryption keys used to encrypt data.
-     * 
      */
     @Import(name="datakey", required=true)
       private final Output<String> datakey;
@@ -37,7 +35,6 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
 
     /**
      * The secret key used to sign requests.
-     * 
      */
     @Import(name="secretAccessKey", required=true)
       private final Output<String> secretAccessKey;
@@ -48,7 +45,6 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
 
     /**
      * The identiﬁer for the user.
-     * 
      */
     @Import(name="userId", required=true)
       private final Output<String> userId;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of key that is used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
-     * 
      */
     @EnumType
     public enum FlowEntitlementEncryptionKeyType {

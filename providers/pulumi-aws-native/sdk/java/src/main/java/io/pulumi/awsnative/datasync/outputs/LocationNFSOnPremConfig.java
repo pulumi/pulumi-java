@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class LocationNFSOnPremConfig {
     /**
      * ARN(s) of the agent(s) to use for an NFS location.
-     * 
      */
     private final List<String> agentArns;
 
@@ -23,7 +22,6 @@ public final class LocationNFSOnPremConfig {
 
     /**
      * ARN(s) of the agent(s) to use for an NFS location.
-     * 
     */
     public List<String> getAgentArns() {
         return this.agentArns;

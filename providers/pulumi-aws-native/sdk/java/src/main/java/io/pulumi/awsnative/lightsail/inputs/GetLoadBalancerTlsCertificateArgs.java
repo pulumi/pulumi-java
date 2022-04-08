@@ -14,7 +14,6 @@ public final class GetLoadBalancerTlsCertificateArgs extends io.pulumi.resources
 
     /**
      * The SSL/TLS certificate name.
-     * 
      */
     @Import(name="certificateName", required=true)
       private final String certificateName;
@@ -25,7 +24,6 @@ public final class GetLoadBalancerTlsCertificateArgs extends io.pulumi.resources
 
     /**
      * The name of your load balancer.
-     * 
      */
     @Import(name="loadBalancerName", required=true)
       private final String loadBalancerName;

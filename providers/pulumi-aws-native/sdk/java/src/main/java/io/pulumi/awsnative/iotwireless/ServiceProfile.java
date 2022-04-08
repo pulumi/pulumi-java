@@ -16,62 +16,53 @@ import javax.annotation.Nullable;
 
 /**
  * An example resource schema demonstrating some basic constructs and validation rules.
- * 
  */
 @ResourceType(type="aws-native:iotwireless:ServiceProfile")
 public class ServiceProfile extends io.pulumi.resources.CustomResource {
     /**
      * Service profile Arn. Returned after successful create.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Service profile Arn. Returned after successful create.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * LoRaWAN supports all LoRa specific attributes for service profile for CreateServiceProfile operation
-     * 
      */
     @Export(name="loRaWAN", type=ServiceProfileLoRaWANServiceProfile.class, parameters={})
     private Output</* @Nullable */ ServiceProfileLoRaWANServiceProfile> loRaWAN;
 
     /**
      * @return LoRaWAN supports all LoRa specific attributes for service profile for CreateServiceProfile operation
-     * 
      */
     public Output</* @Nullable */ ServiceProfileLoRaWANServiceProfile> getLoRaWAN() {
         return this.loRaWAN;
     }
     /**
      * Name of service profile
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Name of service profile
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * A list of key-value pairs that contain metadata for the service profile.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ServiceProfileTag.class})
     private Output</* @Nullable */ List<ServiceProfileTag>> tags;
 
     /**
      * @return A list of key-value pairs that contain metadata for the service profile.
-     * 
      */
     public Output</* @Nullable */ List<ServiceProfileTag>> getTags() {
         return this.tags;

@@ -21,7 +21,6 @@ public final class GetHostedZoneResult {
      * Adds, edits, or deletes tags for a health check or a hosted zone.
      * 
      * For information about using tags for cost allocation, see Using Cost Allocation Tags in the AWS Billing and Cost Management User Guide.
-     * 
      */
     private final @Nullable List<HostedZoneTag> hostedZoneTags;
     private final @Nullable String id;
@@ -29,7 +28,6 @@ public final class GetHostedZoneResult {
     private final @Nullable HostedZoneQueryLoggingConfig queryLoggingConfig;
     /**
      * A complex type that contains information about the VPCs that are associated with the specified hosted zone.
-     * 
      */
     private final @Nullable List<HostedZoneVPC> vPCs;
 
@@ -56,7 +54,6 @@ public final class GetHostedZoneResult {
      * Adds, edits, or deletes tags for a health check or a hosted zone.
      * 
      * For information about using tags for cost allocation, see Using Cost Allocation Tags in the AWS Billing and Cost Management User Guide.
-     * 
     */
     public List<HostedZoneTag> getHostedZoneTags() {
         return this.hostedZoneTags == null ? List.of() : this.hostedZoneTags;
@@ -72,7 +69,6 @@ public final class GetHostedZoneResult {
     }
     /**
      * A complex type that contains information about the VPCs that are associated with the specified hosted zone.
-     * 
     */
     public List<HostedZoneVPC> getVPCs() {
         return this.vPCs == null ? List.of() : this.vPCs;

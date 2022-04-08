@@ -19,7 +19,6 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of encryption that is used on the content ingested from this source.
-     * 
      */
     @Import(name="decryption")
       private final @Nullable Output<FlowSourceEncryptionArgs> decryption;
@@ -30,7 +29,6 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description for the source. This value is not used or seen outside of the current AWS Elemental MediaConnect account.
-     * 
      */
     @Import(name="description", required=true)
       private final Output<String> description;
@@ -41,7 +39,6 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account. The entitlement is set by the content originator and the ARN is generated as part of the originator's flow.
-     * 
      */
     @Import(name="entitlementArn")
       private final @Nullable Output<String> entitlementArn;
@@ -52,7 +49,6 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ARN of the flow.
-     * 
      */
     @Import(name="flowArn")
       private final @Nullable Output<String> flowArn;
@@ -63,7 +59,6 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The port that the flow will be listening on for incoming content.
-     * 
      */
     @Import(name="ingestPort")
       private final @Nullable Output<Integer> ingestPort;
@@ -74,7 +69,6 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The smoothing max bitrate for RIST, RTP, and RTP-FEC streams.
-     * 
      */
     @Import(name="maxBitrate")
       private final @Nullable Output<Integer> maxBitrate;
@@ -85,7 +79,6 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
-     * 
      */
     @Import(name="maxLatency")
       private final @Nullable Output<Integer> maxLatency;
@@ -96,7 +89,6 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the source.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -107,7 +99,6 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The protocol that is used by the source.
-     * 
      */
     @Import(name="protocol")
       private final @Nullable Output<FlowSourceProtocol> protocol;
@@ -118,7 +109,6 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
-     * 
      */
     @Import(name="streamId")
       private final @Nullable Output<String> streamId;
@@ -129,7 +119,6 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the VPC Interface this Source is configured with.
-     * 
      */
     @Import(name="vpcInterfaceName")
       private final @Nullable Output<String> vpcInterfaceName;
@@ -140,7 +129,6 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The range of IP addresses that should be allowed to contribute content to your source. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
-     * 
      */
     @Import(name="whitelistCidr")
       private final @Nullable Output<String> whitelistCidr;

@@ -13,62 +13,53 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::Athena::PreparedStatement
- * 
  */
 @ResourceType(type="aws-native:athena:PreparedStatement")
 public class PreparedStatement extends io.pulumi.resources.CustomResource {
     /**
      * The description of the prepared statement.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the prepared statement.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The query string for the prepared statement.
-     * 
      */
     @Export(name="queryStatement", type=String.class, parameters={})
     private Output<String> queryStatement;
 
     /**
      * @return The query string for the prepared statement.
-     * 
      */
     public Output<String> getQueryStatement() {
         return this.queryStatement;
     }
     /**
      * The name of the prepared statement.
-     * 
      */
     @Export(name="statementName", type=String.class, parameters={})
     private Output<String> statementName;
 
     /**
      * @return The name of the prepared statement.
-     * 
      */
     public Output<String> getStatementName() {
         return this.statementName;
     }
     /**
      * The name of the workgroup to which the prepared statement belongs.
-     * 
      */
     @Export(name="workGroup", type=String.class, parameters={})
     private Output<String> workGroup;
 
     /**
      * @return The name of the workgroup to which the prepared statement belongs.
-     * 
      */
     public Output<String> getWorkGroup() {
         return this.workGroup;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Override a RuleGroup or ManagedRuleGroup behavior. This can only be applied to Rule that has RuleGroupReferenceStatement or ManagedRuleGroupReferenceStatement.
- * 
  */
 public final class WebACLOverrideAction extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class WebACLOverrideAction extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Count traffic towards application.
-     * 
      */
     @Import(name="count")
       private final @Nullable Object count;
@@ -31,7 +29,6 @@ public final class WebACLOverrideAction extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Keep the RuleGroup or ManagedRuleGroup behavior as is.
-     * 
      */
     @Import(name="none")
       private final @Nullable Object none;

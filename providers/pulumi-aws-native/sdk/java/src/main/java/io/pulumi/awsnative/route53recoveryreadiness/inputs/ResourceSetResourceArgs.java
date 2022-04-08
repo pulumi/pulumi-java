@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The resource element of a ResourceSet
- * 
  */
 public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The component identifier of the resource, generated when DNS target resource is used.
-     * 
      */
     @Import(name="componentId")
       private final @Nullable Output<String> componentId;
@@ -40,7 +38,6 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * A list of recovery group Amazon Resource Names (ARNs) and cell ARNs that this resource is contained within.
-     * 
      */
     @Import(name="readinessScopes")
       private final @Nullable Output<List<String>> readinessScopes;
@@ -51,7 +48,6 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The Amazon Resource Name (ARN) of the AWS resource.
-     * 
      */
     @Import(name="resourceArn")
       private final @Nullable Output<String> resourceArn;

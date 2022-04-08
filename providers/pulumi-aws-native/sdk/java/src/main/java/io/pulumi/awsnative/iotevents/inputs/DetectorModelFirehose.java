@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Sends information about the detector model instance and the event that triggered the action to an Amazon Kinesis Data Firehose delivery stream.
- * 
  */
 public final class DetectorModelFirehose extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DetectorModelFirehose extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the Kinesis Data Firehose delivery stream where the data is written.
-     * 
      */
     @Import(name="deliveryStreamName", required=true)
       private final String deliveryStreamName;
@@ -39,7 +37,6 @@ public final class DetectorModelFirehose extends io.pulumi.resources.InvokeArgs 
 
     /**
      * A character separator that is used to separate records written to the Kinesis Data Firehose delivery stream. Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
-     * 
      */
     @Import(name="separator")
       private final @Nullable String separator;

@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class AnalysisSourceTemplate {
     /**
      * <p>The Amazon Resource Name (ARN) of the source template of an analysis.</p>
-     * 
      */
     private final String arn;
     /**
      * <p>The dataset references of the source template of an analysis.</p>
-     * 
      */
     private final List<AnalysisDataSetReference> dataSetReferences;
 
@@ -32,14 +30,12 @@ public final class AnalysisSourceTemplate {
 
     /**
      * <p>The Amazon Resource Name (ARN) of the source template of an analysis.</p>
-     * 
     */
     public String getArn() {
         return this.arn;
     }
     /**
      * <p>The dataset references of the source template of an analysis.</p>
-     * 
     */
     public List<AnalysisDataSetReference> getDataSetReferences() {
         return this.dataSetReferences;

@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class DataIntegrationScheduleConfig {
     /**
      * The start date for objects to import in the first flow run. Epoch or ISO timestamp format is supported.
-     * 
      */
     private final String firstExecutionFrom;
     /**
      * The name of the object to pull from the data source.
-     * 
      */
     private final String object;
     /**
      * How often the data should be pulled from data source.
-     * 
      */
     private final String scheduleExpression;
 
@@ -37,21 +34,18 @@ public final class DataIntegrationScheduleConfig {
 
     /**
      * The start date for objects to import in the first flow run. Epoch or ISO timestamp format is supported.
-     * 
     */
     public String getFirstExecutionFrom() {
         return this.firstExecutionFrom;
     }
     /**
      * The name of the object to pull from the data source.
-     * 
     */
     public String getObject() {
         return this.object;
     }
     /**
      * How often the data should be pulled from data source.
-     * 
     */
     public String getScheduleExpression() {
         return this.scheduleExpression;

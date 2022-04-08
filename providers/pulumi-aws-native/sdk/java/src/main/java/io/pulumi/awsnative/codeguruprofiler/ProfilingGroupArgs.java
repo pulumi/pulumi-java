@@ -21,7 +21,6 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The agent permissions attached to this profiling group.
-     * 
      */
     @Import(name="agentPermissions")
       private final @Nullable Output<AgentPermissionsPropertiesArgs> agentPermissions;
@@ -32,7 +31,6 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration for Notification Channels for Anomaly Detection feature in CodeGuru Profiler which enables customers to detect anomalies in the application profile for those methods that represent the highest proportion of CPU time or latency
-     * 
      */
     @Import(name="anomalyDetectionNotificationConfiguration")
       private final @Nullable Output<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration;
@@ -43,7 +41,6 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The compute platform of the profiling group.
-     * 
      */
     @Import(name="computePlatform")
       private final @Nullable Output<ProfilingGroupComputePlatform> computePlatform;
@@ -54,7 +51,6 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the profiling group.
-     * 
      */
     @Import(name="profilingGroupName")
       private final @Nullable Output<String> profilingGroupName;
@@ -65,7 +61,6 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags associated with a profiling group.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ProfilingGroupTagArgs>> tags;

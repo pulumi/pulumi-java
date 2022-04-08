@@ -14,7 +14,6 @@ public final class GetInternetGatewayArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * ID of internet gateway.
-     * 
      */
     @Import(name="internetGatewayId", required=true)
       private final String internetGatewayId;

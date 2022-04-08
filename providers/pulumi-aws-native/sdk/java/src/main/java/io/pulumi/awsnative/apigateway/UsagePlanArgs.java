@@ -21,7 +21,6 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The API stages to associate with this usage plan.
-     * 
      */
     @Import(name="apiStages")
       private final @Nullable Output<List<UsagePlanApiStageArgs>> apiStages;
@@ -32,7 +31,6 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description of the usage plan.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -43,7 +41,6 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configures the number of requests that users can make within a given interval.
-     * 
      */
     @Import(name="quota")
       private final @Nullable Output<UsagePlanQuotaSettingsArgs> quota;
@@ -54,7 +51,6 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of arbitrary tags (key-value pairs) to associate with the usage plan.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<UsagePlanTagArgs>> tags;
@@ -65,7 +61,6 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configures the overall request rate (average requests per second) and burst capacity.
-     * 
      */
     @Import(name="throttle")
       private final @Nullable Output<UsagePlanThrottleSettingsArgs> throttle;
@@ -76,7 +71,6 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A name for the usage plan.
-     * 
      */
     @Import(name="usagePlanName")
       private final @Nullable Output<String> usagePlanName;

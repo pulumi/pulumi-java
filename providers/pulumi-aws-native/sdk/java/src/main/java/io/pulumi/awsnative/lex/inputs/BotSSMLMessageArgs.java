@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A message in Speech Synthesis Markup Language (SSML).
- * 
  */
 public final class BotSSMLMessageArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class BotSSMLMessageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SSML text that defines the prompt.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

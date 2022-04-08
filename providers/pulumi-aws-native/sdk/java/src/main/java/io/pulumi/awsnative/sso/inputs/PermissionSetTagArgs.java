@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The metadata that you apply to the permission set to help you categorize and organize them.
- * 
  */
 public final class PermissionSetTagArgs extends io.pulumi.resources.ResourceArgs {
 

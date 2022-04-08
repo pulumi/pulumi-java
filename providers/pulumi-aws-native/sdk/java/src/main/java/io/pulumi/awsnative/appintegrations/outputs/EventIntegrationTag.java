@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class EventIntegrationTag {
     /**
      * A key to identify the tag.
-     * 
      */
     private final String key;
     /**
      * Corresponding tag value for the key.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class EventIntegrationTag {
 
     /**
      * A key to identify the tag.
-     * 
     */
     public String getKey() {
         return this.key;
     }
     /**
      * Corresponding tag value for the key.
-     * 
     */
     public String getValue() {
         return this.value;

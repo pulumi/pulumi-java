@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Whether to include the notebook cell output when sharing the notebook. The default is Disabled.
-     * 
      */
     @EnumType
     public enum DomainSharingSettingsNotebookOutputOption {

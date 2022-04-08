@@ -15,7 +15,6 @@ public final class GetStudioSessionMappingArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the user or group. For more information, see UserName and DisplayName in the AWS SSO Identity Store API Reference. Either IdentityName or IdentityId must be specified.
-     * 
      */
     @Import(name="identityName", required=true)
       private final String identityName;
@@ -26,7 +25,6 @@ public final class GetStudioSessionMappingArgs extends io.pulumi.resources.Invok
 
     /**
      * Specifies whether the identity to map to the Studio is a user or a group.
-     * 
      */
     @Import(name="identityType", required=true)
       private final StudioSessionMappingIdentityType identityType;
@@ -37,7 +35,6 @@ public final class GetStudioSessionMappingArgs extends io.pulumi.resources.Invok
 
     /**
      * The ID of the Amazon EMR Studio to which the user or group will be mapped.
-     * 
      */
     @Import(name="studioId", required=true)
       private final String studioId;

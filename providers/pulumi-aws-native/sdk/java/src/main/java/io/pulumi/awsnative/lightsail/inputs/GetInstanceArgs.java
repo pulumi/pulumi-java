@@ -14,7 +14,6 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The names to use for your new Lightsail instance.
-     * 
      */
     @Import(name="instanceName", required=true)
       private final String instanceName;

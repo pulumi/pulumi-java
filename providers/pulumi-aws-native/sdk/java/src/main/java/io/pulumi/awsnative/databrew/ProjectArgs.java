@@ -19,7 +19,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Dataset name
-     * 
      */
     @Import(name="datasetName", required=true)
       private final Output<String> datasetName;
@@ -30,7 +29,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Project name
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -41,7 +39,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Recipe name
-     * 
      */
     @Import(name="recipeName", required=true)
       private final Output<String> recipeName;
@@ -52,7 +49,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Role arn
-     * 
      */
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
@@ -63,7 +59,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sample
-     * 
      */
     @Import(name="sample")
       private final @Nullable Output<ProjectSampleArgs> sample;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class AccessPointVpcConfiguration {
     /**
      * Virtual Private Cloud (VPC) Id from which AccessPoint will allow requests.
-     * 
      */
     private final @Nullable String vpcId;
 
@@ -24,7 +23,6 @@ public final class AccessPointVpcConfiguration {
 
     /**
      * Virtual Private Cloud (VPC) Id from which AccessPoint will allow requests.
-     * 
     */
     public Optional<String> getVpcId() {
         return Optional.ofNullable(this.vpcId);

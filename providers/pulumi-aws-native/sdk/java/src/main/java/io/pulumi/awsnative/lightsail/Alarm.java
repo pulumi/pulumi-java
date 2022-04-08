@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Lightsail::Alarm
- * 
  */
 @ResourceType(type="aws-native:lightsail:Alarm")
 public class Alarm extends io.pulumi.resources.CustomResource {
@@ -29,168 +28,144 @@ public class Alarm extends io.pulumi.resources.CustomResource {
     }
     /**
      * The name for the alarm. Specify the name of an existing alarm to update, and overwrite the previous configuration of the alarm.
-     * 
      */
     @Export(name="alarmName", type=String.class, parameters={})
     private Output<String> alarmName;
 
     /**
      * @return The name for the alarm. Specify the name of an existing alarm to update, and overwrite the previous configuration of the alarm.
-     * 
      */
     public Output<String> getAlarmName() {
         return this.alarmName;
     }
     /**
      * The arithmetic operation to use when comparing the specified statistic to the threshold. The specified statistic value is used as the first operand.
-     * 
      */
     @Export(name="comparisonOperator", type=String.class, parameters={})
     private Output<String> comparisonOperator;
 
     /**
      * @return The arithmetic operation to use when comparing the specified statistic to the threshold. The specified statistic value is used as the first operand.
-     * 
      */
     public Output<String> getComparisonOperator() {
         return this.comparisonOperator;
     }
     /**
      * The contact protocols to use for the alarm, such as Email, SMS (text messaging), or both.
-     * 
      */
     @Export(name="contactProtocols", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> contactProtocols;
 
     /**
      * @return The contact protocols to use for the alarm, such as Email, SMS (text messaging), or both.
-     * 
      */
     public Output</* @Nullable */ List<String>> getContactProtocols() {
         return this.contactProtocols;
     }
     /**
      * The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an "M out of N" alarm, this value (datapointsToAlarm) is the M.
-     * 
      */
     @Export(name="datapointsToAlarm", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> datapointsToAlarm;
 
     /**
      * @return The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an "M out of N" alarm, this value (datapointsToAlarm) is the M.
-     * 
      */
     public Output</* @Nullable */ Integer> getDatapointsToAlarm() {
         return this.datapointsToAlarm;
     }
     /**
      * The number of most recent periods over which data is compared to the specified threshold. If you are setting an "M out of N" alarm, this value (evaluationPeriods) is the N.
-     * 
      */
     @Export(name="evaluationPeriods", type=Integer.class, parameters={})
     private Output<Integer> evaluationPeriods;
 
     /**
      * @return The number of most recent periods over which data is compared to the specified threshold. If you are setting an "M out of N" alarm, this value (evaluationPeriods) is the N.
-     * 
      */
     public Output<Integer> getEvaluationPeriods() {
         return this.evaluationPeriods;
     }
     /**
      * The name of the metric to associate with the alarm.
-     * 
      */
     @Export(name="metricName", type=String.class, parameters={})
     private Output<String> metricName;
 
     /**
      * @return The name of the metric to associate with the alarm.
-     * 
      */
     public Output<String> getMetricName() {
         return this.metricName;
     }
     /**
      * The validation status of the SSL/TLS certificate.
-     * 
      */
     @Export(name="monitoredResourceName", type=String.class, parameters={})
     private Output<String> monitoredResourceName;
 
     /**
      * @return The validation status of the SSL/TLS certificate.
-     * 
      */
     public Output<String> getMonitoredResourceName() {
         return this.monitoredResourceName;
     }
     /**
      * Indicates whether the alarm is enabled. Notifications are enabled by default if you don't specify this parameter.
-     * 
      */
     @Export(name="notificationEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> notificationEnabled;
 
     /**
      * @return Indicates whether the alarm is enabled. Notifications are enabled by default if you don't specify this parameter.
-     * 
      */
     public Output</* @Nullable */ Boolean> getNotificationEnabled() {
         return this.notificationEnabled;
     }
     /**
      * The alarm states that trigger a notification.
-     * 
      */
     @Export(name="notificationTriggers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> notificationTriggers;
 
     /**
      * @return The alarm states that trigger a notification.
-     * 
      */
     public Output</* @Nullable */ List<String>> getNotificationTriggers() {
         return this.notificationTriggers;
     }
     /**
      * The current state of the alarm.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The current state of the alarm.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The value against which the specified statistic is compared.
-     * 
      */
     @Export(name="threshold", type=Double.class, parameters={})
     private Output<Double> threshold;
 
     /**
      * @return The value against which the specified statistic is compared.
-     * 
      */
     public Output<Double> getThreshold() {
         return this.threshold;
     }
     /**
      * Sets how this alarm will handle missing data points.
-     * 
      */
     @Export(name="treatMissingData", type=String.class, parameters={})
     private Output</* @Nullable */ String> treatMissingData;
 
     /**
      * @return Sets how this alarm will handle missing data points.
-     * 
      */
     public Output</* @Nullable */ String> getTreatMissingData() {
         return this.treatMissingData;

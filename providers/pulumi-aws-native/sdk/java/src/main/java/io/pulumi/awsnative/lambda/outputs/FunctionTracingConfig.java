@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class FunctionTracingConfig {
     /**
      * The tracing mode.
-     * 
      */
     private final @Nullable FunctionTracingConfigMode mode;
 
@@ -24,7 +23,6 @@ public final class FunctionTracingConfig {
 
     /**
      * The tracing mode.
-     * 
     */
     public Optional<FunctionTracingConfigMode> getMode() {
         return Optional.ofNullable(this.mode);

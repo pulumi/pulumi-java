@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Condition expressions applied to the step action
- * 
  */
 public final class RecipeConditionExpression extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RecipeConditionExpression extends io.pulumi.resources.InvokeA
 
     /**
      * Input condition to be applied to the target column
-     * 
      */
     @Import(name="condition", required=true)
       private final String condition;
@@ -31,7 +29,6 @@ public final class RecipeConditionExpression extends io.pulumi.resources.InvokeA
 
     /**
      * Name of the target column
-     * 
      */
     @Import(name="targetColumn", required=true)
       private final String targetColumn;
@@ -42,7 +39,6 @@ public final class RecipeConditionExpression extends io.pulumi.resources.InvokeA
 
     /**
      * Value of the condition
-     * 
      */
     @Import(name="value")
       private final @Nullable String value;

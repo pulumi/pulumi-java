@@ -14,7 +14,6 @@ public final class GetDocumentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A name for the Systems Manager document.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

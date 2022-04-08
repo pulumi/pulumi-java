@@ -15,76 +15,65 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::MemoryDB::ACL
- * 
  */
 @ResourceType(type="aws-native:memorydb:ACL")
 public class ACL extends io.pulumi.resources.CustomResource {
     /**
      * The name of the acl.
-     * 
      */
     @Export(name="aCLName", type=String.class, parameters={})
     private Output<String> aCLName;
 
     /**
      * @return The name of the acl.
-     * 
      */
     public Output<String> getACLName() {
         return this.aCLName;
     }
     /**
      * The Amazon Resource Name (ARN) of the acl.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the acl.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * Indicates acl status. Can be "creating", "active", "modifying", "deleting".
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return Indicates acl status. Can be "creating", "active", "modifying", "deleting".
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * An array of key-value pairs to apply to this cluster.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ACLTag.class})
     private Output</* @Nullable */ List<ACLTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this cluster.
-     * 
      */
     public Output</* @Nullable */ List<ACLTag>> getTags() {
         return this.tags;
     }
     /**
      * List of users associated to this acl.
-     * 
      */
     @Export(name="userNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> userNames;
 
     /**
      * @return List of users associated to this acl.
-     * 
      */
     public Output</* @Nullable */ List<String>> getUserNames() {
         return this.userNames;

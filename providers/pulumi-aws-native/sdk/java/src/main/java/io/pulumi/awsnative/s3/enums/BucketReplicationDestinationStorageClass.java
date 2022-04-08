@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The storage class to use when replicating objects, such as S3 Standard or reduced redundancy.
-     * 
      */
     @EnumType
     public enum BucketReplicationDestinationStorageClass {

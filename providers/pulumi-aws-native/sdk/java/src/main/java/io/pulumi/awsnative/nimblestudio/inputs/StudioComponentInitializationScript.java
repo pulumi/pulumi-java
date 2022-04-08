@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * <p>Initialization scripts for studio components.</p>
- * 
  */
 public final class StudioComponentInitializationScript extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class StudioComponentInitializationScript extends io.pulumi.resourc
 
     /**
      * <p>The version number of the protocol that is used by the launch profile. The only valid version is "2021-03-31".</p>
-     * 
      */
     @Import(name="launchProfileProtocolVersion")
       private final @Nullable String launchProfileProtocolVersion;
@@ -47,7 +45,6 @@ public final class StudioComponentInitializationScript extends io.pulumi.resourc
 
     /**
      * <p>The initialization script.</p>
-     * 
      */
     @Import(name="script")
       private final @Nullable String script;

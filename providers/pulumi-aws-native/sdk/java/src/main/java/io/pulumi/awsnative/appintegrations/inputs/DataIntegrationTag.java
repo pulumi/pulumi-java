@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A label for tagging DataIntegration resources
- * 
  */
 public final class DataIntegrationTag extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DataIntegrationTag extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A key to identify the tag.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -29,7 +27,6 @@ public final class DataIntegrationTag extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Corresponding tag value for the key.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

@@ -17,118 +17,101 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::MediaConnect::FlowEntitlement
- * 
  */
 @ResourceType(type="aws-native:mediaconnect:FlowEntitlement")
 public class FlowEntitlement extends io.pulumi.resources.CustomResource {
     /**
      * Percentage from 0-100 of the data transfer cost to be billed to the subscriber.
-     * 
      */
     @Export(name="dataTransferSubscriberFeePercent", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> dataTransferSubscriberFeePercent;
 
     /**
      * @return Percentage from 0-100 of the data transfer cost to be billed to the subscriber.
-     * 
      */
     public Output</* @Nullable */ Integer> getDataTransferSubscriberFeePercent() {
         return this.dataTransferSubscriberFeePercent;
     }
     /**
      * A description of the entitlement.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return A description of the entitlement.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The type of encryption that will be used on the output that is associated with this entitlement.
-     * 
      */
     @Export(name="encryption", type=FlowEntitlementEncryption.class, parameters={})
     private Output</* @Nullable */ FlowEntitlementEncryption> encryption;
 
     /**
      * @return The type of encryption that will be used on the output that is associated with this entitlement.
-     * 
      */
     public Output</* @Nullable */ FlowEntitlementEncryption> getEncryption() {
         return this.encryption;
     }
     /**
      * The ARN of the entitlement.
-     * 
      */
     @Export(name="entitlementArn", type=String.class, parameters={})
     private Output<String> entitlementArn;
 
     /**
      * @return The ARN of the entitlement.
-     * 
      */
     public Output<String> getEntitlementArn() {
         return this.entitlementArn;
     }
     /**
      *  An indication of whether the entitlement is enabled.
-     * 
      */
     @Export(name="entitlementStatus", type=FlowEntitlementEntitlementStatus.class, parameters={})
     private Output</* @Nullable */ FlowEntitlementEntitlementStatus> entitlementStatus;
 
     /**
      * @return  An indication of whether the entitlement is enabled.
-     * 
      */
     public Output</* @Nullable */ FlowEntitlementEntitlementStatus> getEntitlementStatus() {
         return this.entitlementStatus;
     }
     /**
      * The ARN of the flow.
-     * 
      */
     @Export(name="flowArn", type=String.class, parameters={})
     private Output<String> flowArn;
 
     /**
      * @return The ARN of the flow.
-     * 
      */
     public Output<String> getFlowArn() {
         return this.flowArn;
     }
     /**
      * The name of the entitlement.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the entitlement.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The AWS account IDs that you want to share your content with. The receiving accounts (subscribers) will be allowed to create their own flow using your content as the source.
-     * 
      */
     @Export(name="subscribers", type=List.class, parameters={String.class})
     private Output<List<String>> subscribers;
 
     /**
      * @return The AWS account IDs that you want to share your content with. The receiving accounts (subscribers) will be allowed to create their own flow using your content as the source.
-     * 
      */
     public Output<List<String>> getSubscribers() {
         return this.subscribers;

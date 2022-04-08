@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration for ExecuteCommand.
- * 
  */
 public final class ClusterExecuteCommandConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 

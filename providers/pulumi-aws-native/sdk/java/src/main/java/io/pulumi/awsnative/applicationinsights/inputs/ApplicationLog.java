@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A log to be monitored for the component.
- * 
  */
 public final class ApplicationLog extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ApplicationLog extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of encoding of the logs to be monitored.
-     * 
      */
     @Import(name="encoding")
       private final @Nullable ApplicationLogEncoding encoding;
@@ -32,7 +30,6 @@ public final class ApplicationLog extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The CloudWatch log group name to be associated to the monitored log.
-     * 
      */
     @Import(name="logGroupName")
       private final @Nullable String logGroupName;
@@ -43,7 +40,6 @@ public final class ApplicationLog extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The path of the logs to be monitored.
-     * 
      */
     @Import(name="logPath")
       private final @Nullable String logPath;
@@ -54,7 +50,6 @@ public final class ApplicationLog extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The log type decides the log patterns against which Application Insights analyzes the log.
-     * 
      */
     @Import(name="logType", required=true)
       private final String logType;
@@ -65,7 +60,6 @@ public final class ApplicationLog extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the log pattern set.
-     * 
      */
     @Import(name="patternSet")
       private final @Nullable String patternSet;

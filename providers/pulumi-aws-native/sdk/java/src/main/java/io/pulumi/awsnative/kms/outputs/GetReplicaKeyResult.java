@@ -18,23 +18,19 @@ public final class GetReplicaKeyResult {
     private final @Nullable String arn;
     /**
      * A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
-     * 
      */
     private final @Nullable String description;
     /**
      * Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
-     * 
      */
     private final @Nullable Boolean enabled;
     private final @Nullable String keyId;
     /**
      * The key policy that authorizes use of the CMK. The key policy must observe the following rules.
-     * 
      */
     private final @Nullable Object keyPolicy;
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     private final @Nullable List<ReplicaKeyTag> tags;
 
@@ -59,14 +55,12 @@ public final class GetReplicaKeyResult {
     }
     /**
      * A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
-     * 
     */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
@@ -76,14 +70,12 @@ public final class GetReplicaKeyResult {
     }
     /**
      * The key policy that authorizes use of the CMK. The key policy must observe the following rules.
-     * 
     */
     public Optional<Object> getKeyPolicy() {
         return Optional.ofNullable(this.keyPolicy);
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
     */
     public List<ReplicaKeyTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

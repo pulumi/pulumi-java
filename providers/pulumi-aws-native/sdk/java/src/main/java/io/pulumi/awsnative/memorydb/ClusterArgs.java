@@ -21,7 +21,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Access Control List to associate with the cluster.
-     * 
      */
     @Import(name="aCLName", required=true)
       private final Output<String> aCLName;
@@ -34,7 +33,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * A flag that enables automatic minor version upgrade when set to true.
      * 
      * You cannot modify the value of AutoMinorVersionUpgrade after the cluster is created. To enable AutoMinorVersionUpgrade on a cluster you must set AutoMinorVersionUpgrade to true when you create a cluster.
-     * 
      */
     @Import(name="autoMinorVersionUpgrade")
       private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
@@ -45,7 +43,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The cluster endpoint.
-     * 
      */
     @Import(name="clusterEndpoint")
       private final @Nullable Output<ClusterEndpointArgs> clusterEndpoint;
@@ -56,7 +53,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the cluster. This value must be unique as it also serves as the cluster identifier.
-     * 
      */
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
@@ -67,7 +63,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional description of the cluster.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -78,7 +73,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Redis engine version used by the cluster.
-     * 
      */
     @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
@@ -89,7 +83,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user-supplied name of a final cluster snapshot. This is the unique name that identifies the snapshot. MemoryDB creates the snapshot, and then deletes the cluster immediately afterward.
-     * 
      */
     @Import(name="finalSnapshotName")
       private final @Nullable Output<String> finalSnapshotName;
@@ -100,7 +93,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the KMS key used to encrypt the cluster.
-     * 
      */
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
@@ -111,7 +103,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period.
-     * 
      */
     @Import(name="maintenanceWindow")
       private final @Nullable Output<String> maintenanceWindow;
@@ -122,7 +113,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The compute and memory capacity of the nodes in the cluster.
-     * 
      */
     @Import(name="nodeType", required=true)
       private final Output<String> nodeType;
@@ -133,7 +123,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of replicas to apply to each shard. The limit is 5.
-     * 
      */
     @Import(name="numReplicasPerShard")
       private final @Nullable Output<Integer> numReplicasPerShard;
@@ -144,7 +133,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of shards the cluster will contain.
-     * 
      */
     @Import(name="numShards")
       private final @Nullable Output<Integer> numShards;
@@ -155,7 +143,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the parameter group associated with the cluster.
-     * 
      */
     @Import(name="parameterGroupName")
       private final @Nullable Output<String> parameterGroupName;
@@ -166,7 +153,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The port number on which each member of the cluster accepts connections.
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Integer> port;
@@ -177,7 +163,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * One or more Amazon VPC security groups associated with this cluster.
-     * 
      */
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
@@ -188,7 +173,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of Amazon Resource Names (ARN) that uniquely identify the RDB snapshot files stored in Amazon S3. The snapshot files are used to populate the new cluster. The Amazon S3 object name in the ARN cannot contain any commas.
-     * 
      */
     @Import(name="snapshotArns")
       private final @Nullable Output<List<String>> snapshotArns;
@@ -199,7 +183,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of a snapshot from which to restore data into the new cluster. The snapshot status changes to restoring while the new cluster is being created.
-     * 
      */
     @Import(name="snapshotName")
       private final @Nullable Output<String> snapshotName;
@@ -210,7 +193,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of days for which MemoryDB retains automatic snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, a snapshot that was taken today is retained for 5 days before being deleted.
-     * 
      */
     @Import(name="snapshotRetentionLimit")
       private final @Nullable Output<Integer> snapshotRetentionLimit;
@@ -221,7 +203,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The daily time range (in UTC) during which MemoryDB begins taking a daily snapshot of your cluster.
-     * 
      */
     @Import(name="snapshotWindow")
       private final @Nullable Output<String> snapshotWindow;
@@ -232,7 +213,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (SNS) topic to which notifications are sent.
-     * 
      */
     @Import(name="snsTopicArn")
       private final @Nullable Output<String> snsTopicArn;
@@ -243,7 +223,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The status of the Amazon SNS notification topic. Notifications are sent only if the status is enabled.
-     * 
      */
     @Import(name="snsTopicStatus")
       private final @Nullable Output<String> snsTopicStatus;
@@ -254,7 +233,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the subnet group to be used for the cluster.
-     * 
      */
     @Import(name="subnetGroupName")
       private final @Nullable Output<String> subnetGroupName;
@@ -267,7 +245,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * A flag that enables in-transit encryption when set to true.
      * 
      * You cannot modify the value of TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you must set TransitEncryptionEnabled to true when you create a cluster.
-     * 
      */
     @Import(name="tLSEnabled")
       private final @Nullable Output<Boolean> tLSEnabled;
@@ -278,7 +255,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this cluster.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ClusterTagArgs>> tags;

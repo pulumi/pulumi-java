@@ -14,7 +14,6 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Unique identifier for representing FinSpace Environment
-     * 
      */
     @Import(name="environmentId", required=true)
       private final String environmentId;

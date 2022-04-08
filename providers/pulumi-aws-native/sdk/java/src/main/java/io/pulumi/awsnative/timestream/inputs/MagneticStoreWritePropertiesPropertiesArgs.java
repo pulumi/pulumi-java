@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties that determine whether magnetic store writes are enabled.
- * 
  */
 public final class MagneticStoreWritePropertiesPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class MagneticStoreWritePropertiesPropertiesArgs extends io.pulumi.
 
     /**
      * Boolean flag indicating whether magnetic store writes are enabled.
-     * 
      */
     @Import(name="enableMagneticStoreWrites", required=true)
       private final Output<Boolean> enableMagneticStoreWrites;
@@ -32,7 +30,6 @@ public final class MagneticStoreWritePropertiesPropertiesArgs extends io.pulumi.
 
     /**
      * Location to store information about records that were asynchronously rejected during magnetic store writes.
-     * 
      */
     @Import(name="magneticStoreRejectedDataLocation")
       private final @Nullable Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs> magneticStoreRejectedDataLocation;

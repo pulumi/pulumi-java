@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The default retention period that you want to apply to new objects placed in the specified bucket.
- * 
  */
 public final class BucketDefaultRetention extends io.pulumi.resources.InvokeArgs {
 

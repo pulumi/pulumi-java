@@ -14,17 +14,14 @@ public final class ContactListTopic {
     private final String defaultSubscriptionStatus;
     /**
      * The description of the topic.
-     * 
      */
     private final @Nullable String description;
     /**
      * The display name of the topic.
-     * 
      */
     private final String displayName;
     /**
      * The name of the topic.
-     * 
      */
     private final String topicName;
 
@@ -45,21 +42,18 @@ public final class ContactListTopic {
     }
     /**
      * The description of the topic.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name of the topic.
-     * 
     */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The name of the topic.
-     * 
     */
     public String getTopicName() {
         return this.topicName;

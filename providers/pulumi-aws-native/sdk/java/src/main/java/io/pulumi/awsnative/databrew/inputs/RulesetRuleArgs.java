@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Data quality rule for a target resource (dataset)
- * 
  */
 public final class RulesetRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -46,7 +45,6 @@ public final class RulesetRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the rule
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

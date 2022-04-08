@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 public final class JobValidationConfiguration {
     /**
      * Arn of the Ruleset
-     * 
      */
     private final String rulesetArn;
     private final @Nullable JobValidationMode validationMode;
@@ -29,7 +28,6 @@ public final class JobValidationConfiguration {
 
     /**
      * Arn of the Ruleset
-     * 
     */
     public String getRulesetArn() {
         return this.rulesetArn;

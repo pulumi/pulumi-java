@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class AlertSNSConfiguration {
     /**
      * ARN of an IAM role that LookoutMetrics should assume to access the SNS topic.
-     * 
      */
     private final String roleArn;
     /**
      * ARN of an SNS topic to send alert notifications to.
-     * 
      */
     private final String snsTopicArn;
 
@@ -30,14 +28,12 @@ public final class AlertSNSConfiguration {
 
     /**
      * ARN of an IAM role that LookoutMetrics should assume to access the SNS topic.
-     * 
     */
     public String getRoleArn() {
         return this.roleArn;
     }
     /**
      * ARN of an SNS topic to send alert notifications to.
-     * 
     */
     public String getSnsTopicArn() {
         return this.snsTopicArn;

@@ -24,7 +24,6 @@ public final class GetDataSourceResult {
     private final @Nullable String schedule;
     /**
      * Tags for labeling the data source
-     * 
      */
     private final @Nullable List<DataSourceTag> tags;
 
@@ -76,7 +75,6 @@ public final class GetDataSourceResult {
     }
     /**
      * Tags for labeling the data source
-     * 
     */
     public List<DataSourceTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

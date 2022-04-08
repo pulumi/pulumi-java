@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Disk associated with the Instance.
- * 
  */
 public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Instance attached to the disk.
-     * 
      */
     @Import(name="attachedTo")
       private final @Nullable Output<String> attachedTo;
@@ -33,7 +31,6 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Attachment state of the disk.
-     * 
      */
     @Import(name="attachmentState")
       private final @Nullable Output<String> attachmentState;
@@ -44,7 +41,6 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The names to use for your new Lightsail disk.
-     * 
      */
     @Import(name="diskName", required=true)
       private final Output<String> diskName;
@@ -55,7 +51,6 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IOPS of disk.
-     * 
      */
     @Import(name="iOPS")
       private final @Nullable Output<Integer> iOPS;
@@ -66,7 +61,6 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Is the Attached disk is the system disk of the Instance.
-     * 
      */
     @Import(name="isSystemDisk")
       private final @Nullable Output<Boolean> isSystemDisk;
@@ -77,7 +71,6 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Path of the disk attached to the instance.
-     * 
      */
     @Import(name="path", required=true)
       private final Output<String> path;
@@ -88,7 +81,6 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Size of the disk attached to the Instance.
-     * 
      */
     @Import(name="sizeInGb")
       private final @Nullable Output<String> sizeInGb;

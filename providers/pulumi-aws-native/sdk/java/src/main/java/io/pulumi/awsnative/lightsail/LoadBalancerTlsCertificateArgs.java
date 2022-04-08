@@ -18,7 +18,6 @@ public final class LoadBalancerTlsCertificateArgs extends io.pulumi.resources.Re
 
     /**
      * An array of strings listing alternative domains and subdomains for your SSL/TLS certificate.
-     * 
      */
     @Import(name="certificateAlternativeNames")
       private final @Nullable Output<List<String>> certificateAlternativeNames;
@@ -29,7 +28,6 @@ public final class LoadBalancerTlsCertificateArgs extends io.pulumi.resources.Re
 
     /**
      * The domain name (e.g., example.com ) for your SSL/TLS certificate.
-     * 
      */
     @Import(name="certificateDomainName", required=true)
       private final Output<String> certificateDomainName;
@@ -40,7 +38,6 @@ public final class LoadBalancerTlsCertificateArgs extends io.pulumi.resources.Re
 
     /**
      * The SSL/TLS certificate name.
-     * 
      */
     @Import(name="certificateName", required=true)
       private final Output<String> certificateName;
@@ -51,7 +48,6 @@ public final class LoadBalancerTlsCertificateArgs extends io.pulumi.resources.Re
 
     /**
      * When true, the SSL/TLS certificate is attached to the Lightsail load balancer.
-     * 
      */
     @Import(name="isAttached")
       private final @Nullable Output<Boolean> isAttached;
@@ -62,7 +58,6 @@ public final class LoadBalancerTlsCertificateArgs extends io.pulumi.resources.Re
 
     /**
      * The name of your load balancer.
-     * 
      */
     @Import(name="loadBalancerName", required=true)
       private final Output<String> loadBalancerName;

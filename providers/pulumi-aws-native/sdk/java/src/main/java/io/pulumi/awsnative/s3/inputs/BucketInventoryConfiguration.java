@@ -29,7 +29,6 @@ public final class BucketInventoryConfiguration extends io.pulumi.resources.Invo
 
     /**
      * Specifies whether the inventory is enabled or disabled.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;
@@ -40,7 +39,6 @@ public final class BucketInventoryConfiguration extends io.pulumi.resources.Invo
 
     /**
      * The ID used to identify the inventory configuration.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -51,7 +49,6 @@ public final class BucketInventoryConfiguration extends io.pulumi.resources.Invo
 
     /**
      * Object versions to include in the inventory list.
-     * 
      */
     @Import(name="includedObjectVersions", required=true)
       private final BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions;
@@ -62,7 +59,6 @@ public final class BucketInventoryConfiguration extends io.pulumi.resources.Invo
 
     /**
      * Contains the optional fields that are included in the inventory results.
-     * 
      */
     @Import(name="optionalFields")
       private final @Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields;
@@ -73,7 +69,6 @@ public final class BucketInventoryConfiguration extends io.pulumi.resources.Invo
 
     /**
      * The prefix that is prepended to all inventory results.
-     * 
      */
     @Import(name="prefix")
       private final @Nullable String prefix;
@@ -84,7 +79,6 @@ public final class BucketInventoryConfiguration extends io.pulumi.resources.Invo
 
     /**
      * Specifies the schedule for generating inventory results.
-     * 
      */
     @Import(name="scheduleFrequency", required=true)
       private final BucketInventoryConfigurationScheduleFrequency scheduleFrequency;

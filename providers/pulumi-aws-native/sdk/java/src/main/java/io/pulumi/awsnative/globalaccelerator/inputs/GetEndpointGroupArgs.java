@@ -14,7 +14,6 @@ public final class GetEndpointGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the endpoint group
-     * 
      */
     @Import(name="endpointGroupArn", required=true)
       private final String endpointGroupArn;

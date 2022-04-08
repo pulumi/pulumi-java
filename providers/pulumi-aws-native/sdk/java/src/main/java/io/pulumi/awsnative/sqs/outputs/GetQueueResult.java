@@ -18,77 +18,62 @@ import javax.annotation.Nullable;
 public final class GetQueueResult {
     /**
      * Amazon Resource Name (ARN) of the queue.
-     * 
      */
     private final @Nullable String arn;
     /**
      * For first-in-first-out (FIFO) queues, specifies whether to enable content-based deduplication. During the deduplication interval, Amazon SQS treats messages that are sent with identical content as duplicates and delivers only one copy of the message.
-     * 
      */
     private final @Nullable Boolean contentBasedDeduplication;
     /**
      * Specifies whether message deduplication occurs at the message group or queue level. Valid values are messageGroup and queue.
-     * 
      */
     private final @Nullable String deduplicationScope;
     /**
      * The time in seconds for which the delivery of all messages in the queue is delayed. You can specify an integer value of 0 to 900 (15 minutes). The default value is 0.
-     * 
      */
     private final @Nullable Integer delaySeconds;
     /**
      * Specifies whether the FIFO queue throughput quota applies to the entire queue or per message group. Valid values are perQueue and perMessageGroupId. The perMessageGroupId value is allowed only when the value for DeduplicationScope is messageGroup.
-     * 
      */
     private final @Nullable String fifoThroughputLimit;
     /**
      * The length of time in seconds for which Amazon SQS can reuse a data key to encrypt or decrypt messages before calling AWS KMS again. The value must be an integer between 60 (1 minute) and 86,400 (24 hours). The default is 300 (5 minutes).
-     * 
      */
     private final @Nullable Integer kmsDataKeyReusePeriodSeconds;
     /**
      * The ID of an AWS managed customer master key (CMK) for Amazon SQS or a custom CMK. To use the AWS managed CMK for Amazon SQS, specify the (default) alias alias/aws/sqs.
-     * 
      */
     private final @Nullable String kmsMasterKeyId;
     /**
      * The limit of how many bytes that a message can contain before Amazon SQS rejects it. You can specify an integer value from 1,024 bytes (1 KiB) to 262,144 bytes (256 KiB). The default value is 262,144 (256 KiB).
-     * 
      */
     private final @Nullable Integer maximumMessageSize;
     /**
      * The number of seconds that Amazon SQS retains a message. You can specify an integer value from 60 seconds (1 minute) to 1,209,600 seconds (14 days). The default value is 345,600 seconds (4 days).
-     * 
      */
     private final @Nullable Integer messageRetentionPeriod;
     /**
      * URL of the source queue.
-     * 
      */
     private final @Nullable String queueUrl;
     /**
      * Specifies the duration, in seconds, that the ReceiveMessage action call waits until a message is in the queue in order to include it in the response, rather than returning an empty response if a message isn't yet available. You can specify an integer from 1 to 20. Short polling is used as the default or when you specify 0 for this property.
-     * 
      */
     private final @Nullable Integer receiveMessageWaitTimeSeconds;
     /**
      * The string that includes the parameters for the permissions for the dead-letter queue redrive permission and which source queues can specify dead-letter queues as a JSON object.
-     * 
      */
     private final @Nullable Object redriveAllowPolicy;
     /**
      * A string that includes the parameters for the dead-letter queue functionality (redrive policy) of the source queue.
-     * 
      */
     private final @Nullable Object redrivePolicy;
     /**
      * The tags that you attach to this queue.
-     * 
      */
     private final @Nullable List<QueueTag> tags;
     /**
      * The length of time during which a message will be unavailable after a message is delivered from the queue. This blocks other components from receiving the same message and gives the initial component time to process and delete the message from the queue. Values must be from 0 to 43,200 seconds (12 hours). If you don't specify a value, AWS CloudFormation uses the default value of 30 seconds.
-     * 
      */
     private final @Nullable Integer visibilityTimeout;
 
@@ -128,105 +113,90 @@ public final class GetQueueResult {
 
     /**
      * Amazon Resource Name (ARN) of the queue.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * For first-in-first-out (FIFO) queues, specifies whether to enable content-based deduplication. During the deduplication interval, Amazon SQS treats messages that are sent with identical content as duplicates and delivers only one copy of the message.
-     * 
     */
     public Optional<Boolean> getContentBasedDeduplication() {
         return Optional.ofNullable(this.contentBasedDeduplication);
     }
     /**
      * Specifies whether message deduplication occurs at the message group or queue level. Valid values are messageGroup and queue.
-     * 
     */
     public Optional<String> getDeduplicationScope() {
         return Optional.ofNullable(this.deduplicationScope);
     }
     /**
      * The time in seconds for which the delivery of all messages in the queue is delayed. You can specify an integer value of 0 to 900 (15 minutes). The default value is 0.
-     * 
     */
     public Optional<Integer> getDelaySeconds() {
         return Optional.ofNullable(this.delaySeconds);
     }
     /**
      * Specifies whether the FIFO queue throughput quota applies to the entire queue or per message group. Valid values are perQueue and perMessageGroupId. The perMessageGroupId value is allowed only when the value for DeduplicationScope is messageGroup.
-     * 
     */
     public Optional<String> getFifoThroughputLimit() {
         return Optional.ofNullable(this.fifoThroughputLimit);
     }
     /**
      * The length of time in seconds for which Amazon SQS can reuse a data key to encrypt or decrypt messages before calling AWS KMS again. The value must be an integer between 60 (1 minute) and 86,400 (24 hours). The default is 300 (5 minutes).
-     * 
     */
     public Optional<Integer> getKmsDataKeyReusePeriodSeconds() {
         return Optional.ofNullable(this.kmsDataKeyReusePeriodSeconds);
     }
     /**
      * The ID of an AWS managed customer master key (CMK) for Amazon SQS or a custom CMK. To use the AWS managed CMK for Amazon SQS, specify the (default) alias alias/aws/sqs.
-     * 
     */
     public Optional<String> getKmsMasterKeyId() {
         return Optional.ofNullable(this.kmsMasterKeyId);
     }
     /**
      * The limit of how many bytes that a message can contain before Amazon SQS rejects it. You can specify an integer value from 1,024 bytes (1 KiB) to 262,144 bytes (256 KiB). The default value is 262,144 (256 KiB).
-     * 
     */
     public Optional<Integer> getMaximumMessageSize() {
         return Optional.ofNullable(this.maximumMessageSize);
     }
     /**
      * The number of seconds that Amazon SQS retains a message. You can specify an integer value from 60 seconds (1 minute) to 1,209,600 seconds (14 days). The default value is 345,600 seconds (4 days).
-     * 
     */
     public Optional<Integer> getMessageRetentionPeriod() {
         return Optional.ofNullable(this.messageRetentionPeriod);
     }
     /**
      * URL of the source queue.
-     * 
     */
     public Optional<String> getQueueUrl() {
         return Optional.ofNullable(this.queueUrl);
     }
     /**
      * Specifies the duration, in seconds, that the ReceiveMessage action call waits until a message is in the queue in order to include it in the response, rather than returning an empty response if a message isn't yet available. You can specify an integer from 1 to 20. Short polling is used as the default or when you specify 0 for this property.
-     * 
     */
     public Optional<Integer> getReceiveMessageWaitTimeSeconds() {
         return Optional.ofNullable(this.receiveMessageWaitTimeSeconds);
     }
     /**
      * The string that includes the parameters for the permissions for the dead-letter queue redrive permission and which source queues can specify dead-letter queues as a JSON object.
-     * 
     */
     public Optional<Object> getRedriveAllowPolicy() {
         return Optional.ofNullable(this.redriveAllowPolicy);
     }
     /**
      * A string that includes the parameters for the dead-letter queue functionality (redrive policy) of the source queue.
-     * 
     */
     public Optional<Object> getRedrivePolicy() {
         return Optional.ofNullable(this.redrivePolicy);
     }
     /**
      * The tags that you attach to this queue.
-     * 
     */
     public List<QueueTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The length of time during which a message will be unavailable after a message is delivered from the queue. This blocks other components from receiving the same message and gives the initial component time to process and delete the message from the queue. Values must be from 0 to 43,200 seconds (12 hours). If you don't specify a value, AWS CloudFormation uses the default value of 30 seconds.
-     * 
     */
     public Optional<Integer> getVisibilityTimeout() {
         return Optional.ofNullable(this.visibilityTimeout);

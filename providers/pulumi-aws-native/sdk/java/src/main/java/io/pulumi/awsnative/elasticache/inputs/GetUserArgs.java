@@ -14,7 +14,6 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ID of the user.
-     * 
      */
     @Import(name="userId", required=true)
       private final String userId;

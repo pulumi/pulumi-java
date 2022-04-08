@@ -14,90 +14,77 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::MediaConnect::FlowVpcInterface
- * 
  */
 @ResourceType(type="aws-native:mediaconnect:FlowVpcInterface")
 public class FlowVpcInterface extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
-     * 
      */
     @Export(name="flowArn", type=String.class, parameters={})
     private Output<String> flowArn;
 
     /**
      * @return The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
-     * 
      */
     public Output<String> getFlowArn() {
         return this.flowArn;
     }
     /**
      * Immutable and has to be a unique against other VpcInterfaces in this Flow.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Immutable and has to be a unique against other VpcInterfaces in this Flow.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * IDs of the network interfaces created in customer's account by MediaConnect.
-     * 
      */
     @Export(name="networkInterfaceIds", type=List.class, parameters={String.class})
     private Output<List<String>> networkInterfaceIds;
 
     /**
      * @return IDs of the network interfaces created in customer's account by MediaConnect.
-     * 
      */
     public Output<List<String>> getNetworkInterfaceIds() {
         return this.networkInterfaceIds;
     }
     /**
      * Role Arn MediaConnect can assumes to create ENIs in customer's account.
-     * 
      */
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
      * @return Role Arn MediaConnect can assumes to create ENIs in customer's account.
-     * 
      */
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
     /**
      * Security Group IDs to be used on ENI.
-     * 
      */
     @Export(name="securityGroupIds", type=List.class, parameters={String.class})
     private Output<List<String>> securityGroupIds;
 
     /**
      * @return Security Group IDs to be used on ENI.
-     * 
      */
     public Output<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
     /**
      * Subnet must be in the AZ of the Flow
-     * 
      */
     @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**
      * @return Subnet must be in the AZ of the Flow
-     * 
      */
     public Output<String> getSubnetId() {
         return this.subnetId;

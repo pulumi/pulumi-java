@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A enumeration value that specifies how frequently finding updates are published.
-     * 
      */
     @EnumType
     public enum SessionFindingPublishingFrequency {

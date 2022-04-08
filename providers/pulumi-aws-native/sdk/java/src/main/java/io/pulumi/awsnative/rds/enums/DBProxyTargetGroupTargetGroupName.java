@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The identifier for the DBProxyTargetGroup
-     * 
      */
     @EnumType
     public enum DBProxyTargetGroupTargetGroupName {

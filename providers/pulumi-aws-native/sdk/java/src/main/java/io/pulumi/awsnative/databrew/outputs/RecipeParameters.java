@@ -47,7 +47,6 @@ public final class RecipeParameters {
     private final @Nullable String includeInSplit;
     /**
      * Input
-     * 
      */
     private final @Nullable RecipeParametersInputProperties input;
     private final @Nullable String interval;
@@ -417,7 +416,6 @@ public final class RecipeParameters {
     }
     /**
      * Input
-     * 
     */
     public Optional<RecipeParametersInputProperties> getInput() {
         return Optional.ofNullable(this.input);

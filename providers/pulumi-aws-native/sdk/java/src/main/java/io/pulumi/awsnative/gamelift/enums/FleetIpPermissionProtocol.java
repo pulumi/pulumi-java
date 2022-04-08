@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The network communication protocol used by the fleet.
-     * 
      */
     @EnumType
     public enum FleetIpPermissionProtocol {

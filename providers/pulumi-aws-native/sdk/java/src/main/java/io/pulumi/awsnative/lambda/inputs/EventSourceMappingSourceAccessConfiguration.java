@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration used by AWS Lambda to access event source
- * 
  */
 public final class EventSourceMappingSourceAccessConfiguration extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class EventSourceMappingSourceAccessConfiguration extends io.pulumi
 
     /**
      * The type of source access configuration.
-     * 
      */
     @Import(name="type")
       private final @Nullable EventSourceMappingSourceAccessConfigurationType type;
@@ -32,7 +30,6 @@ public final class EventSourceMappingSourceAccessConfiguration extends io.pulumi
 
     /**
      * The URI for the source access configuration resource.
-     * 
      */
     @Import(name="uRI")
       private final @Nullable String uRI;

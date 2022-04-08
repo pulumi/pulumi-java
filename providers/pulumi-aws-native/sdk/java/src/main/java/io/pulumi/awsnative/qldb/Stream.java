@@ -17,7 +17,243 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for AWS::QLDB::Stream.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myQLDBStream = new AwsNative.QLDB.Stream("myQLDBStream", new AwsNative.QLDB.StreamArgs
+ *         {
+ *             ExclusiveEndTime = "2020-05-29T22:59:59Z",
+ *             InclusiveStartTime = "2020-05-29T00:00:00Z",
+ *             KinesisConfiguration = new AwsNative.QLDB.Inputs.StreamKinesisConfigurationArgs
+ *             {
+ *                 AggregationEnabled = true,
+ *                 StreamArn = "arn:aws:kinesis:us-east-1:123456789012:stream/stream-for-qldb",
+ *             },
+ *             LedgerName = "exampleLedger",
+ *             RoleArn = "arn:aws:iam::123456789012:role/my-kinesis-stream-role",
+ *             StreamName = "exampleLedger-stream",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.QLDB.Inputs.StreamTagArgs
+ *                 {
+ *                     Key = "Domain",
+ *                     Value = "Test",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/qldb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := qldb.NewStream(ctx, "myQLDBStream", &qldb.StreamArgs{
+ * 			ExclusiveEndTime:   pulumi.String("2020-05-29T22:59:59Z"),
+ * 			InclusiveStartTime: pulumi.String("2020-05-29T00:00:00Z"),
+ * 			KinesisConfiguration: &qldb.StreamKinesisConfigurationArgs{
+ * 				AggregationEnabled: pulumi.Bool(true),
+ * 				StreamArn:          pulumi.String("arn:aws:kinesis:us-east-1:123456789012:stream/stream-for-qldb"),
+ * 			},
+ * 			LedgerName: pulumi.String("exampleLedger"),
+ * 			RoleArn:    pulumi.String("arn:aws:iam::123456789012:role/my-kinesis-stream-role"),
+ * 			StreamName: pulumi.String("exampleLedger-stream"),
+ * 			Tags: []qldb.StreamTagArgs{
+ * 				&qldb.StreamTagArgs{
+ * 					Key:   pulumi.String("Domain"),
+ * 					Value: pulumi.String("Test"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myQLDBStream = new aws_native.qldb.Stream("myQLDBStream", {
+ *     exclusiveEndTime: "2020-05-29T22:59:59Z",
+ *     inclusiveStartTime: "2020-05-29T00:00:00Z",
+ *     kinesisConfiguration: {
+ *         aggregationEnabled: true,
+ *         streamArn: "arn:aws:kinesis:us-east-1:123456789012:stream/stream-for-qldb",
+ *     },
+ *     ledgerName: "exampleLedger",
+ *     roleArn: "arn:aws:iam::123456789012:role/my-kinesis-stream-role",
+ *     streamName: "exampleLedger-stream",
+ *     tags: [{
+ *         key: "Domain",
+ *         value: "Test",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_qldb_stream = aws_native.qldb.Stream("myQLDBStream",
+ *     exclusive_end_time="2020-05-29T22:59:59Z",
+ *     inclusive_start_time="2020-05-29T00:00:00Z",
+ *     kinesis_configuration=aws_native.qldb.StreamKinesisConfigurationArgs(
+ *         aggregation_enabled=True,
+ *         stream_arn="arn:aws:kinesis:us-east-1:123456789012:stream/stream-for-qldb",
+ *     ),
+ *     ledger_name="exampleLedger",
+ *     role_arn="arn:aws:iam::123456789012:role/my-kinesis-stream-role",
+ *     stream_name="exampleLedger-stream",
+ *     tags=[aws_native.qldb.StreamTagArgs(
+ *         key="Domain",
+ *         value="Test",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myQLDBStream = new AwsNative.QLDB.Stream("myQLDBStream", new AwsNative.QLDB.StreamArgs
+ *         {
+ *             ExclusiveEndTime = "2020-05-29T22:59:59Z",
+ *             InclusiveStartTime = "2020-05-29T00:00:00Z",
+ *             KinesisConfiguration = new AwsNative.QLDB.Inputs.StreamKinesisConfigurationArgs
+ *             {
+ *                 AggregationEnabled = true,
+ *                 StreamArn = "arn:aws:kinesis:us-east-1:123456789012:stream/stream-for-qldb",
+ *             },
+ *             LedgerName = "exampleLedger",
+ *             RoleArn = "arn:aws:iam::123456789012:role/my-kinesis-stream-role",
+ *             StreamName = "exampleLedger-stream",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.QLDB.Inputs.StreamTagArgs
+ *                 {
+ *                     Key = "Domain",
+ *                     Value = "Test",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/qldb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := qldb.NewStream(ctx, "myQLDBStream", &qldb.StreamArgs{
+ * 			ExclusiveEndTime:   pulumi.String("2020-05-29T22:59:59Z"),
+ * 			InclusiveStartTime: pulumi.String("2020-05-29T00:00:00Z"),
+ * 			KinesisConfiguration: &qldb.StreamKinesisConfigurationArgs{
+ * 				AggregationEnabled: pulumi.Bool(true),
+ * 				StreamArn:          pulumi.String("arn:aws:kinesis:us-east-1:123456789012:stream/stream-for-qldb"),
+ * 			},
+ * 			LedgerName: pulumi.String("exampleLedger"),
+ * 			RoleArn:    pulumi.String("arn:aws:iam::123456789012:role/my-kinesis-stream-role"),
+ * 			StreamName: pulumi.String("exampleLedger-stream"),
+ * 			Tags: []qldb.StreamTagArgs{
+ * 				&qldb.StreamTagArgs{
+ * 					Key:   pulumi.String("Domain"),
+ * 					Value: pulumi.String("Test"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myQLDBStream = new aws_native.qldb.Stream("myQLDBStream", {
+ *     exclusiveEndTime: "2020-05-29T22:59:59Z",
+ *     inclusiveStartTime: "2020-05-29T00:00:00Z",
+ *     kinesisConfiguration: {
+ *         aggregationEnabled: true,
+ *         streamArn: "arn:aws:kinesis:us-east-1:123456789012:stream/stream-for-qldb",
+ *     },
+ *     ledgerName: "exampleLedger",
+ *     roleArn: "arn:aws:iam::123456789012:role/my-kinesis-stream-role",
+ *     streamName: "exampleLedger-stream",
+ *     tags: [{
+ *         key: "Domain",
+ *         value: "Test",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_qldb_stream = aws_native.qldb.Stream("myQLDBStream",
+ *     exclusive_end_time="2020-05-29T22:59:59Z",
+ *     inclusive_start_time="2020-05-29T00:00:00Z",
+ *     kinesis_configuration=aws_native.qldb.StreamKinesisConfigurationArgs(
+ *         aggregation_enabled=True,
+ *         stream_arn="arn:aws:kinesis:us-east-1:123456789012:stream/stream-for-qldb",
+ *     ),
+ *     ledger_name="exampleLedger",
+ *     role_arn="arn:aws:iam::123456789012:role/my-kinesis-stream-role",
+ *     stream_name="exampleLedger-stream",
+ *     tags=[aws_native.qldb.StreamTagArgs(
+ *         key="Domain",
+ *         value="Test",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:qldb:Stream")
@@ -66,14 +302,12 @@ public class Stream extends io.pulumi.resources.CustomResource {
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={StreamTag.class})
     private Output</* @Nullable */ List<StreamTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<StreamTag>> getTags() {
         return this.tags;

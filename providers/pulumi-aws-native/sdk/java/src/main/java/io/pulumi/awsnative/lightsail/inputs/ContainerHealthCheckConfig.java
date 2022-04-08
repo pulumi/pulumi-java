@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the health check configuration of an Amazon Lightsail container service.
- * 
  */
 public final class ContainerHealthCheckConfig extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ContainerHealthCheckConfig extends io.pulumi.resources.Invoke
 
     /**
      * The number of consecutive health checks successes required before moving the container to the Healthy state. The default value is 2.
-     * 
      */
     @Import(name="healthyThreshold")
       private final @Nullable Integer healthyThreshold;
@@ -32,7 +30,6 @@ public final class ContainerHealthCheckConfig extends io.pulumi.resources.Invoke
 
     /**
      * The approximate interval, in seconds, between health checks of an individual container. You can specify between 5 and 300 seconds. The default value is 5.
-     * 
      */
     @Import(name="intervalSeconds")
       private final @Nullable Integer intervalSeconds;
@@ -43,7 +40,6 @@ public final class ContainerHealthCheckConfig extends io.pulumi.resources.Invoke
 
     /**
      * The path on the container on which to perform the health check. The default value is /.
-     * 
      */
     @Import(name="path")
       private final @Nullable String path;
@@ -54,7 +50,6 @@ public final class ContainerHealthCheckConfig extends io.pulumi.resources.Invoke
 
     /**
      * The HTTP codes to use when checking for a successful response from a container. You can specify values between 200 and 499. You can specify multiple values (for example, 200,202) or a range of values (for example, 200-299).
-     * 
      */
     @Import(name="successCodes")
       private final @Nullable String successCodes;
@@ -65,7 +60,6 @@ public final class ContainerHealthCheckConfig extends io.pulumi.resources.Invoke
 
     /**
      * The amount of time, in seconds, during which no response means a failed health check. You can specify between 2 and 60 seconds. The default value is 2.
-     * 
      */
     @Import(name="timeoutSeconds")
       private final @Nullable Integer timeoutSeconds;
@@ -76,7 +70,6 @@ public final class ContainerHealthCheckConfig extends io.pulumi.resources.Invoke
 
     /**
      * The number of consecutive health check failures required before moving the container to the Unhealthy state. The default value is 2.
-     * 
      */
     @Import(name="unhealthyThreshold")
       private final @Nullable Integer unhealthyThreshold;

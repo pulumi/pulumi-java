@@ -26,7 +26,6 @@ public final class DetectorEntityTypeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The time when the entity type was created.
-     * 
      */
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
@@ -37,7 +36,6 @@ public final class DetectorEntityTypeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -55,7 +53,6 @@ public final class DetectorEntityTypeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The time when the entity type was last updated.
-     * 
      */
     @Import(name="lastUpdatedTime")
       private final @Nullable Output<String> lastUpdatedTime;
@@ -73,7 +70,6 @@ public final class DetectorEntityTypeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Tags associated with this entity type.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<DetectorTagArgs>> tags;

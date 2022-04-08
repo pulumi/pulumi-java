@@ -14,7 +14,6 @@ public final class EventIntegrationMetadata extends io.pulumi.resources.InvokeAr
 
     /**
      * A key to identify the metadata.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -25,7 +24,6 @@ public final class EventIntegrationMetadata extends io.pulumi.resources.InvokeAr
 
     /**
      * Corresponding metadata value for the key.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

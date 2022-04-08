@@ -14,34 +14,29 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type Definition for AWS::S3Outposts::BucketPolicy
- * 
  */
 @ResourceType(type="aws-native:s3outposts:BucketPolicy")
 public class BucketPolicy extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the specified bucket.
-     * 
      */
     @Export(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
     /**
      * @return The Amazon Resource Name (ARN) of the specified bucket.
-     * 
      */
     public Output<String> getBucket() {
         return this.bucket;
     }
     /**
      * A policy document containing permissions to add to the specified bucket.
-     * 
      */
     @Export(name="policyDocument", type=Object.class, parameters={})
     private Output<Object> policyDocument;
 
     /**
      * @return A policy document containing permissions to add to the specified bucket.
-     * 
      */
     public Output<Object> getPolicyDocument() {
         return this.policyDocument;

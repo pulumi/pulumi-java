@@ -36,7 +36,6 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <p>Errors associated with the analysis.</p>
-     * 
      */
     @Import(name="errors")
       private final @Nullable Output<List<AnalysisErrorArgs>> errors;
@@ -47,7 +46,6 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <p>The descriptive name of the analysis.</p>
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -70,7 +68,6 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
      *             principal listed by Amazon Resource Name (ARN). </p>
      * 
      *         <p>To specify no permissions, omit <code>Permissions</code>.</p>
-     * 
      */
     @Import(name="permissions")
       private final @Nullable Output<List<AnalysisResourcePermissionArgs>> permissions;
@@ -89,7 +86,6 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
      *             analysis.</p>
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<AnalysisTagArgs>> tags;
@@ -100,7 +96,6 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <p>The ARN of the theme of the analysis.</p>
-     * 
      */
     @Import(name="themeArn")
       private final @Nullable Output<String> themeArn;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Tag is a key-value pair associated with accelerator.
- * 
  */
 public final class AcceleratorTag extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AcceleratorTag extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Key of the tag. Value can be 1 to 127 characters.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -29,7 +27,6 @@ public final class AcceleratorTag extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Value for the tag. Value can be 1 to 255 characters.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

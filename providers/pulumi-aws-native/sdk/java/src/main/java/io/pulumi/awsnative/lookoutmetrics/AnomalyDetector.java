@@ -16,48 +16,41 @@ import javax.annotation.Nullable;
 
 /**
  * An Amazon Lookout for Metrics Detector
- * 
  */
 @ResourceType(type="aws-native:lookoutmetrics:AnomalyDetector")
 public class AnomalyDetector extends io.pulumi.resources.CustomResource {
     /**
      * Configuration options for the AnomalyDetector
-     * 
      */
     @Export(name="anomalyDetectorConfig", type=AnomalyDetectorConfig.class, parameters={})
     private Output<AnomalyDetectorConfig> anomalyDetectorConfig;
 
     /**
      * @return Configuration options for the AnomalyDetector
-     * 
      */
     public Output<AnomalyDetectorConfig> getAnomalyDetectorConfig() {
         return this.anomalyDetectorConfig;
     }
     /**
      * A description for the AnomalyDetector.
-     * 
      */
     @Export(name="anomalyDetectorDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> anomalyDetectorDescription;
 
     /**
      * @return A description for the AnomalyDetector.
-     * 
      */
     public Output</* @Nullable */ String> getAnomalyDetectorDescription() {
         return this.anomalyDetectorDescription;
     }
     /**
      * Name for the Amazon Lookout for Metrics Anomaly Detector
-     * 
      */
     @Export(name="anomalyDetectorName", type=String.class, parameters={})
     private Output</* @Nullable */ String> anomalyDetectorName;
 
     /**
      * @return Name for the Amazon Lookout for Metrics Anomaly Detector
-     * 
      */
     public Output</* @Nullable */ String> getAnomalyDetectorName() {
         return this.anomalyDetectorName;
@@ -70,28 +63,24 @@ public class AnomalyDetector extends io.pulumi.resources.CustomResource {
     }
     /**
      * KMS key used to encrypt the AnomalyDetector data
-     * 
      */
     @Export(name="kmsKeyArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyArn;
 
     /**
      * @return KMS key used to encrypt the AnomalyDetector data
-     * 
      */
     public Output</* @Nullable */ String> getKmsKeyArn() {
         return this.kmsKeyArn;
     }
     /**
      * List of metric sets for anomaly detection
-     * 
      */
     @Export(name="metricSetList", type=List.class, parameters={AnomalyDetectorMetricSet.class})
     private Output<List<AnomalyDetectorMetricSet>> metricSetList;
 
     /**
      * @return List of metric sets for anomaly detection
-     * 
      */
     public Output<List<AnomalyDetectorMetricSet>> getMetricSetList() {
         return this.metricSetList;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Port of the Instance.
- * 
  */
 public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Access Direction for Protocol of the Instance(inbound/outbound).
-     * 
      */
     @Import(name="accessDirection")
       private final @Nullable Output<String> accessDirection;
@@ -33,7 +31,6 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Access From Protocol of the Instance.
-     * 
      */
     @Import(name="accessFrom")
       private final @Nullable Output<String> accessFrom;
@@ -44,7 +41,6 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Access Type Protocol of the Instance.
-     * 
      */
     @Import(name="accessType")
       private final @Nullable Output<String> accessType;
@@ -69,7 +65,6 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * CommonName for Protocol of the Instance.
-     * 
      */
     @Import(name="commonName")
       private final @Nullable Output<String> commonName;
@@ -80,7 +75,6 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * From Port of the Instance.
-     * 
      */
     @Import(name="fromPort")
       private final @Nullable Output<Integer> fromPort;
@@ -98,7 +92,6 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Port Protocol of the Instance.
-     * 
      */
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
@@ -109,7 +102,6 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * To Port of the Instance.
-     * 
      */
     @Import(name="toPort")
       private final @Nullable Output<Integer> toPort;

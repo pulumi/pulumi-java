@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of AWS::RefactorSpaces::Environment Resource Type
- * 
  */
 @ResourceType(type="aws-native:refactorspaces:Environment")
 public class Environment extends io.pulumi.resources.CustomResource {
@@ -52,14 +51,12 @@ public class Environment extends io.pulumi.resources.CustomResource {
     }
     /**
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={EnvironmentTag.class})
     private Output</* @Nullable */ List<EnvironmentTag>> tags;
 
     /**
      * @return Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
-     * 
      */
     public Output</* @Nullable */ List<EnvironmentTag>> getTags() {
         return this.tags;

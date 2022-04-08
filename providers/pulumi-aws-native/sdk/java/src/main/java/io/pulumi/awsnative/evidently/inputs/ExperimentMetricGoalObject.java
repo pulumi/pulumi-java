@@ -24,7 +24,6 @@ public final class ExperimentMetricGoalObject extends io.pulumi.resources.Invoke
 
     /**
      * The JSON path to reference the entity id in the event.
-     * 
      */
     @Import(name="entityIdKey", required=true)
       private final String entityIdKey;
@@ -35,7 +34,6 @@ public final class ExperimentMetricGoalObject extends io.pulumi.resources.Invoke
 
     /**
      * Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn't.
-     * 
      */
     @Import(name="eventPattern", required=true)
       private final String eventPattern;
@@ -60,7 +58,6 @@ public final class ExperimentMetricGoalObject extends io.pulumi.resources.Invoke
 
     /**
      * The JSON path to reference the numerical metric value in the event.
-     * 
      */
     @Import(name="valueKey", required=true)
       private final String valueKey;

@@ -16,7 +16,6 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
 
     /**
      * The name of the Amazon S3 bucket associated with Redshift.
-     * 
      */
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
@@ -27,7 +26,6 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
 
     /**
      * The object key for the destination bucket in which Amazon AppFlow will place the ﬁles.
-     * 
      */
     @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
@@ -38,7 +36,6 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
 
     /**
      * The JDBC URL of the Amazon Redshift cluster.
-     * 
      */
     @Import(name="databaseUrl", required=true)
       private final Output<String> databaseUrl;
@@ -49,7 +46,6 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
 
     /**
      * The Amazon Resource Name (ARN) of the IAM role.
-     * 
      */
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;

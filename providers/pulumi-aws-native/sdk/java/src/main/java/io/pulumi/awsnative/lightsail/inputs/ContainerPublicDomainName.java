@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The public domain name to use with the container service, such as example.com and www.example.com.
- * 
  */
 public final class ContainerPublicDomainName extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class ContainerPublicDomainName extends io.pulumi.resources.InvokeA
 
     /**
      * An object that describes the configuration for the containers of the deployment.
-     * 
      */
     @Import(name="domainNames")
       private final @Nullable List<String> domainNames;

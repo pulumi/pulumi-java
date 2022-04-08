@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specify the document format for the request. The document format can be either JSON or YAML. JSON is the default format.
-     * 
      */
     @EnumType
     public enum DocumentFormat {

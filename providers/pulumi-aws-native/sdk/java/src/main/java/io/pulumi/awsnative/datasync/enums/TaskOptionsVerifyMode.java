@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A value that determines whether a data integrity verification should be performed at the end of a task execution after all data and metadata have been transferred.
-     * 
      */
     @EnumType
     public enum TaskOptionsVerifyMode {

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::CloudFront::Function
- * 
  */
 @ResourceType(type="aws-native:cloudfront:Function")
 public class Function extends io.pulumi.resources.CustomResource {

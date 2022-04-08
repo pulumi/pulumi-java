@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Information about the order in which events are evaluated and how actions are executed.
-     * 
      */
     @EnumType
     public enum DetectorModelEvaluationMethod {

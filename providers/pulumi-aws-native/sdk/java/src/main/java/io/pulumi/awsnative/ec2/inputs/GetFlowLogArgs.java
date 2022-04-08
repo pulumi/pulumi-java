@@ -14,7 +14,6 @@ public final class GetFlowLogArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Flow Log ID
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

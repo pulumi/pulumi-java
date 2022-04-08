@@ -13,48 +13,41 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::NetworkManager::LinkAssociation type associates a link to a device. The device and link must be in the same global network and the same site.
- * 
  */
 @ResourceType(type="aws-native:networkmanager:LinkAssociation")
 public class LinkAssociation extends io.pulumi.resources.CustomResource {
     /**
      * The ID of the device
-     * 
      */
     @Export(name="deviceId", type=String.class, parameters={})
     private Output<String> deviceId;
 
     /**
      * @return The ID of the device
-     * 
      */
     public Output<String> getDeviceId() {
         return this.deviceId;
     }
     /**
      * The ID of the global network.
-     * 
      */
     @Export(name="globalNetworkId", type=String.class, parameters={})
     private Output<String> globalNetworkId;
 
     /**
      * @return The ID of the global network.
-     * 
      */
     public Output<String> getGlobalNetworkId() {
         return this.globalNetworkId;
     }
     /**
      * The ID of the link
-     * 
      */
     @Export(name="linkId", type=String.class, parameters={})
     private Output<String> linkId;
 
     /**
      * @return The ID of the link
-     * 
      */
     public Output<String> getLinkId() {
         return this.linkId;

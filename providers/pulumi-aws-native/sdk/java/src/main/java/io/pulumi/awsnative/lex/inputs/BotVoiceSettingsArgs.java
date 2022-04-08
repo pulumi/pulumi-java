@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Settings for using an Amazon Polly voice to communicate with a user.
- * 
  */
 public final class BotVoiceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class BotVoiceSettingsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The Amazon Polly voice ID that Amazon Lex uses for voice interaction with the user.
-     * 
      */
     @Import(name="voiceId", required=true)
       private final Output<String> voiceId;

@@ -16,7 +16,6 @@ public final class AccessPointVpcConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * Virtual Private Cloud (VPC) Id from which AccessPoint will allow requests.
-     * 
      */
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;

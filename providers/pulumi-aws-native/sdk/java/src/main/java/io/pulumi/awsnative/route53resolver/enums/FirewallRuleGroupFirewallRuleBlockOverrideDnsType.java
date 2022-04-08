@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * BlockOverrideDnsType
-     * 
      */
     @EnumType
     public enum FirewallRuleGroupFirewallRuleBlockOverrideDnsType {

@@ -18,105 +18,363 @@ import javax.annotation.Nullable;
 /**
  * Scheduled audits can be used to specify the checks you want to perform during an audit and how often the audit should be run.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myScheduledAudit = new AwsNative.IoT.ScheduledAudit("myScheduledAudit", new AwsNative.IoT.ScheduledAuditArgs
+ *         {
+ *             ScheduledAuditName = "MyScheduledAudit",
+ *             DayOfWeek = "MON",
+ *             Frequency = "WEEKLY",
+ *             TargetCheckNames = 
+ *             {
+ *                 "AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK",
+ *                 "CA_CERTIFICATE_EXPIRING_CHECK",
+ *                 "CA_CERTIFICATE_KEY_QUALITY_CHECK",
+ *                 "CONFLICTING_CLIENT_IDS_CHECK",
+ *                 "DEVICE_CERTIFICATE_EXPIRING_CHECK",
+ *                 "DEVICE_CERTIFICATE_KEY_QUALITY_CHECK",
+ *                 "DEVICE_CERTIFICATE_SHARED_CHECK",
+ *                 "IOT_POLICY_OVERLY_PERMISSIVE_CHECK",
+ *                 "IOT_ROLE_ALIAS_ALLOWS_ACCESS_TO_UNUSED_SERVICES_CHECK",
+ *                 "IOT_ROLE_ALIAS_OVERLY_PERMISSIVE_CHECK",
+ *                 "LOGGING_DISABLED_CHECK",
+ *                 "REVOKED_CA_CERTIFICATE_STILL_ACTIVE_CHECK",
+ *                 "REVOKED_DEVICE_CERTIFICATE_STILL_ACTIVE_CHECK",
+ *                 "UNAUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iot"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iot.NewScheduledAudit(ctx, "myScheduledAudit", &iot.ScheduledAuditArgs{
+ * 			ScheduledAuditName: pulumi.String("MyScheduledAudit"),
+ * 			DayOfWeek:          "MON",
+ * 			Frequency:          "WEEKLY",
+ * 			TargetCheckNames: pulumi.StringArray{
+ * 				pulumi.String("AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK"),
+ * 				pulumi.String("CA_CERTIFICATE_EXPIRING_CHECK"),
+ * 				pulumi.String("CA_CERTIFICATE_KEY_QUALITY_CHECK"),
+ * 				pulumi.String("CONFLICTING_CLIENT_IDS_CHECK"),
+ * 				pulumi.String("DEVICE_CERTIFICATE_EXPIRING_CHECK"),
+ * 				pulumi.String("DEVICE_CERTIFICATE_KEY_QUALITY_CHECK"),
+ * 				pulumi.String("DEVICE_CERTIFICATE_SHARED_CHECK"),
+ * 				pulumi.String("IOT_POLICY_OVERLY_PERMISSIVE_CHECK"),
+ * 				pulumi.String("IOT_ROLE_ALIAS_ALLOWS_ACCESS_TO_UNUSED_SERVICES_CHECK"),
+ * 				pulumi.String("IOT_ROLE_ALIAS_OVERLY_PERMISSIVE_CHECK"),
+ * 				pulumi.String("LOGGING_DISABLED_CHECK"),
+ * 				pulumi.String("REVOKED_CA_CERTIFICATE_STILL_ACTIVE_CHECK"),
+ * 				pulumi.String("REVOKED_DEVICE_CERTIFICATE_STILL_ACTIVE_CHECK"),
+ * 				pulumi.String("UNAUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myScheduledAudit = new aws_native.iot.ScheduledAudit("myScheduledAudit", {
+ *     scheduledAuditName: "MyScheduledAudit",
+ *     dayOfWeek: "MON",
+ *     frequency: "WEEKLY",
+ *     targetCheckNames: [
+ *         "AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK",
+ *         "CA_CERTIFICATE_EXPIRING_CHECK",
+ *         "CA_CERTIFICATE_KEY_QUALITY_CHECK",
+ *         "CONFLICTING_CLIENT_IDS_CHECK",
+ *         "DEVICE_CERTIFICATE_EXPIRING_CHECK",
+ *         "DEVICE_CERTIFICATE_KEY_QUALITY_CHECK",
+ *         "DEVICE_CERTIFICATE_SHARED_CHECK",
+ *         "IOT_POLICY_OVERLY_PERMISSIVE_CHECK",
+ *         "IOT_ROLE_ALIAS_ALLOWS_ACCESS_TO_UNUSED_SERVICES_CHECK",
+ *         "IOT_ROLE_ALIAS_OVERLY_PERMISSIVE_CHECK",
+ *         "LOGGING_DISABLED_CHECK",
+ *         "REVOKED_CA_CERTIFICATE_STILL_ACTIVE_CHECK",
+ *         "REVOKED_DEVICE_CERTIFICATE_STILL_ACTIVE_CHECK",
+ *         "UNAUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK",
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_scheduled_audit = aws_native.iot.ScheduledAudit("myScheduledAudit",
+ *     scheduled_audit_name="MyScheduledAudit",
+ *     day_of_week="MON",
+ *     frequency="WEEKLY",
+ *     target_check_names=[
+ *         "AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK",
+ *         "CA_CERTIFICATE_EXPIRING_CHECK",
+ *         "CA_CERTIFICATE_KEY_QUALITY_CHECK",
+ *         "CONFLICTING_CLIENT_IDS_CHECK",
+ *         "DEVICE_CERTIFICATE_EXPIRING_CHECK",
+ *         "DEVICE_CERTIFICATE_KEY_QUALITY_CHECK",
+ *         "DEVICE_CERTIFICATE_SHARED_CHECK",
+ *         "IOT_POLICY_OVERLY_PERMISSIVE_CHECK",
+ *         "IOT_ROLE_ALIAS_ALLOWS_ACCESS_TO_UNUSED_SERVICES_CHECK",
+ *         "IOT_ROLE_ALIAS_OVERLY_PERMISSIVE_CHECK",
+ *         "LOGGING_DISABLED_CHECK",
+ *         "REVOKED_CA_CERTIFICATE_STILL_ACTIVE_CHECK",
+ *         "REVOKED_DEVICE_CERTIFICATE_STILL_ACTIVE_CHECK",
+ *         "UNAUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK",
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myScheduledAudit = new AwsNative.IoT.ScheduledAudit("myScheduledAudit", new AwsNative.IoT.ScheduledAuditArgs
+ *         {
+ *             ScheduledAuditName = "MyScheduledAudit",
+ *             DayOfWeek = "MON",
+ *             Frequency = "WEEKLY",
+ *             TargetCheckNames = 
+ *             {
+ *                 "AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK",
+ *                 "CA_CERTIFICATE_EXPIRING_CHECK",
+ *                 "CA_CERTIFICATE_KEY_QUALITY_CHECK",
+ *                 "CONFLICTING_CLIENT_IDS_CHECK",
+ *                 "DEVICE_CERTIFICATE_EXPIRING_CHECK",
+ *                 "DEVICE_CERTIFICATE_KEY_QUALITY_CHECK",
+ *                 "DEVICE_CERTIFICATE_SHARED_CHECK",
+ *                 "IOT_POLICY_OVERLY_PERMISSIVE_CHECK",
+ *                 "IOT_ROLE_ALIAS_ALLOWS_ACCESS_TO_UNUSED_SERVICES_CHECK",
+ *                 "IOT_ROLE_ALIAS_OVERLY_PERMISSIVE_CHECK",
+ *                 "LOGGING_DISABLED_CHECK",
+ *                 "REVOKED_CA_CERTIFICATE_STILL_ACTIVE_CHECK",
+ *                 "REVOKED_DEVICE_CERTIFICATE_STILL_ACTIVE_CHECK",
+ *                 "UNAUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iot"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iot.NewScheduledAudit(ctx, "myScheduledAudit", &iot.ScheduledAuditArgs{
+ * 			ScheduledAuditName: pulumi.String("MyScheduledAudit"),
+ * 			DayOfWeek:          "MON",
+ * 			Frequency:          "WEEKLY",
+ * 			TargetCheckNames: pulumi.StringArray{
+ * 				pulumi.String("AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK"),
+ * 				pulumi.String("CA_CERTIFICATE_EXPIRING_CHECK"),
+ * 				pulumi.String("CA_CERTIFICATE_KEY_QUALITY_CHECK"),
+ * 				pulumi.String("CONFLICTING_CLIENT_IDS_CHECK"),
+ * 				pulumi.String("DEVICE_CERTIFICATE_EXPIRING_CHECK"),
+ * 				pulumi.String("DEVICE_CERTIFICATE_KEY_QUALITY_CHECK"),
+ * 				pulumi.String("DEVICE_CERTIFICATE_SHARED_CHECK"),
+ * 				pulumi.String("IOT_POLICY_OVERLY_PERMISSIVE_CHECK"),
+ * 				pulumi.String("IOT_ROLE_ALIAS_ALLOWS_ACCESS_TO_UNUSED_SERVICES_CHECK"),
+ * 				pulumi.String("IOT_ROLE_ALIAS_OVERLY_PERMISSIVE_CHECK"),
+ * 				pulumi.String("LOGGING_DISABLED_CHECK"),
+ * 				pulumi.String("REVOKED_CA_CERTIFICATE_STILL_ACTIVE_CHECK"),
+ * 				pulumi.String("REVOKED_DEVICE_CERTIFICATE_STILL_ACTIVE_CHECK"),
+ * 				pulumi.String("UNAUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myScheduledAudit = new aws_native.iot.ScheduledAudit("myScheduledAudit", {
+ *     scheduledAuditName: "MyScheduledAudit",
+ *     dayOfWeek: "MON",
+ *     frequency: "WEEKLY",
+ *     targetCheckNames: [
+ *         "AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK",
+ *         "CA_CERTIFICATE_EXPIRING_CHECK",
+ *         "CA_CERTIFICATE_KEY_QUALITY_CHECK",
+ *         "CONFLICTING_CLIENT_IDS_CHECK",
+ *         "DEVICE_CERTIFICATE_EXPIRING_CHECK",
+ *         "DEVICE_CERTIFICATE_KEY_QUALITY_CHECK",
+ *         "DEVICE_CERTIFICATE_SHARED_CHECK",
+ *         "IOT_POLICY_OVERLY_PERMISSIVE_CHECK",
+ *         "IOT_ROLE_ALIAS_ALLOWS_ACCESS_TO_UNUSED_SERVICES_CHECK",
+ *         "IOT_ROLE_ALIAS_OVERLY_PERMISSIVE_CHECK",
+ *         "LOGGING_DISABLED_CHECK",
+ *         "REVOKED_CA_CERTIFICATE_STILL_ACTIVE_CHECK",
+ *         "REVOKED_DEVICE_CERTIFICATE_STILL_ACTIVE_CHECK",
+ *         "UNAUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK",
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_scheduled_audit = aws_native.iot.ScheduledAudit("myScheduledAudit",
+ *     scheduled_audit_name="MyScheduledAudit",
+ *     day_of_week="MON",
+ *     frequency="WEEKLY",
+ *     target_check_names=[
+ *         "AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK",
+ *         "CA_CERTIFICATE_EXPIRING_CHECK",
+ *         "CA_CERTIFICATE_KEY_QUALITY_CHECK",
+ *         "CONFLICTING_CLIENT_IDS_CHECK",
+ *         "DEVICE_CERTIFICATE_EXPIRING_CHECK",
+ *         "DEVICE_CERTIFICATE_KEY_QUALITY_CHECK",
+ *         "DEVICE_CERTIFICATE_SHARED_CHECK",
+ *         "IOT_POLICY_OVERLY_PERMISSIVE_CHECK",
+ *         "IOT_ROLE_ALIAS_ALLOWS_ACCESS_TO_UNUSED_SERVICES_CHECK",
+ *         "IOT_ROLE_ALIAS_OVERLY_PERMISSIVE_CHECK",
+ *         "LOGGING_DISABLED_CHECK",
+ *         "REVOKED_CA_CERTIFICATE_STILL_ACTIVE_CHECK",
+ *         "REVOKED_DEVICE_CERTIFICATE_STILL_ACTIVE_CHECK",
+ *         "UNAUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK",
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:iot:ScheduledAudit")
 public class ScheduledAudit extends io.pulumi.resources.CustomResource {
     /**
      * The day of the month on which the scheduled audit takes place. Can be 1 through 31 or LAST. This field is required if the frequency parameter is set to MONTHLY.
-     * 
      */
     @Export(name="dayOfMonth", type=String.class, parameters={})
     private Output</* @Nullable */ String> dayOfMonth;
 
     /**
      * @return The day of the month on which the scheduled audit takes place. Can be 1 through 31 or LAST. This field is required if the frequency parameter is set to MONTHLY.
-     * 
      */
     public Output</* @Nullable */ String> getDayOfMonth() {
         return this.dayOfMonth;
     }
     /**
      * The day of the week on which the scheduled audit takes place. Can be one of SUN, MON, TUE,WED, THU, FRI, or SAT. This field is required if the frequency parameter is set to WEEKLY or BIWEEKLY.
-     * 
      */
     @Export(name="dayOfWeek", type=ScheduledAuditDayOfWeek.class, parameters={})
     private Output</* @Nullable */ ScheduledAuditDayOfWeek> dayOfWeek;
 
     /**
      * @return The day of the week on which the scheduled audit takes place. Can be one of SUN, MON, TUE,WED, THU, FRI, or SAT. This field is required if the frequency parameter is set to WEEKLY or BIWEEKLY.
-     * 
      */
     public Output</* @Nullable */ ScheduledAuditDayOfWeek> getDayOfWeek() {
         return this.dayOfWeek;
     }
     /**
      * How often the scheduled audit takes place. Can be one of DAILY, WEEKLY, BIWEEKLY, or MONTHLY.
-     * 
      */
     @Export(name="frequency", type=ScheduledAuditFrequency.class, parameters={})
     private Output<ScheduledAuditFrequency> frequency;
 
     /**
      * @return How often the scheduled audit takes place. Can be one of DAILY, WEEKLY, BIWEEKLY, or MONTHLY.
-     * 
      */
     public Output<ScheduledAuditFrequency> getFrequency() {
         return this.frequency;
     }
     /**
      * The ARN (Amazon resource name) of the scheduled audit.
-     * 
      */
     @Export(name="scheduledAuditArn", type=String.class, parameters={})
     private Output<String> scheduledAuditArn;
 
     /**
      * @return The ARN (Amazon resource name) of the scheduled audit.
-     * 
      */
     public Output<String> getScheduledAuditArn() {
         return this.scheduledAuditArn;
     }
     /**
      * The name you want to give to the scheduled audit.
-     * 
      */
     @Export(name="scheduledAuditName", type=String.class, parameters={})
     private Output</* @Nullable */ String> scheduledAuditName;
 
     /**
      * @return The name you want to give to the scheduled audit.
-     * 
      */
     public Output</* @Nullable */ String> getScheduledAuditName() {
         return this.scheduledAuditName;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ScheduledAuditTag.class})
     private Output</* @Nullable */ List<ScheduledAuditTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<ScheduledAuditTag>> getTags() {
         return this.tags;
     }
     /**
      * Which checks are performed during the scheduled audit. Checks must be enabled for your account.
-     * 
      */
     @Export(name="targetCheckNames", type=List.class, parameters={String.class})
     private Output<List<String>> targetCheckNames;
 
     /**
      * @return Which checks are performed during the scheduled audit. Checks must be enabled for your account.
-     * 
      */
     public Output<List<String>> getTargetCheckNames() {
         return this.targetCheckNames;

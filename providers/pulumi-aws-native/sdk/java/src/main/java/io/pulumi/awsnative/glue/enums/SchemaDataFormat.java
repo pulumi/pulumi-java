@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Data format name to use for the schema. Accepted values: 'AVRO', 'JSON', 'PROTOBUF'
-     * 
      */
     @EnumType
     public enum SchemaDataFormat {

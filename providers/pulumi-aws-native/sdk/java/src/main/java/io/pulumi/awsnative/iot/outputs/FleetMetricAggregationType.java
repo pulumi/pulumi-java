@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class FleetMetricAggregationType {
     /**
      * Fleet Indexing aggregation type names such as Statistics, Percentiles and Cardinality
-     * 
      */
     private final String name;
     /**
      * Fleet Indexing aggregation type values
-     * 
      */
     private final List<String> values;
 
@@ -31,14 +29,12 @@ public final class FleetMetricAggregationType {
 
     /**
      * Fleet Indexing aggregation type names such as Statistics, Percentiles and Cardinality
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Fleet Indexing aggregation type values
-     * 
     */
     public List<String> getValues() {
         return this.values;

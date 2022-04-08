@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::AppStream::ApplicationEntitlementAssociation
- * 
  */
 @ResourceType(type="aws-native:appstream:ApplicationEntitlementAssociation")
 public class ApplicationEntitlementAssociation extends io.pulumi.resources.CustomResource {

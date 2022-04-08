@@ -16,17 +16,14 @@ import javax.annotation.Nullable;
 public final class GetCertificateAuthorityResult {
     /**
      * The Amazon Resource Name (ARN) of the certificate authority.
-     * 
      */
     private final @Nullable String arn;
     /**
      * The base64 PEM-encoded certificate signing request (CSR) for your certificate authority certificate.
-     * 
      */
     private final @Nullable String certificateSigningRequest;
     /**
      * Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions.
-     * 
      */
     private final @Nullable CertificateAuthorityRevocationConfiguration revocationConfiguration;
     private final @Nullable List<CertificateAuthorityTag> tags;
@@ -45,21 +42,18 @@ public final class GetCertificateAuthorityResult {
 
     /**
      * The Amazon Resource Name (ARN) of the certificate authority.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The base64 PEM-encoded certificate signing request (CSR) for your certificate authority certificate.
-     * 
     */
     public Optional<String> getCertificateSigningRequest() {
         return Optional.ofNullable(this.certificateSigningRequest);
     }
     /**
      * Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions.
-     * 
     */
     public Optional<CertificateAuthorityRevocationConfiguration> getRevocationConfiguration() {
         return Optional.ofNullable(this.revocationConfiguration);

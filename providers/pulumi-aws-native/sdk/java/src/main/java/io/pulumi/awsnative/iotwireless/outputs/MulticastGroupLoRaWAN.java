@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class MulticastGroupLoRaWAN {
     /**
      * Multicast group LoRaWAN DL Class
-     * 
      */
     private final String dlClass;
     /**
      * Multicast group number of devices in group. Returned after successful read.
-     * 
      */
     private final @Nullable Integer numberOfDevicesInGroup;
     /**
      * Multicast group number of devices requested. Returned after successful read.
-     * 
      */
     private final @Nullable Integer numberOfDevicesRequested;
     /**
      * Multicast group LoRaWAN RF region
-     * 
      */
     private final String rfRegion;
 
@@ -47,28 +43,24 @@ public final class MulticastGroupLoRaWAN {
 
     /**
      * Multicast group LoRaWAN DL Class
-     * 
     */
     public String getDlClass() {
         return this.dlClass;
     }
     /**
      * Multicast group number of devices in group. Returned after successful read.
-     * 
     */
     public Optional<Integer> getNumberOfDevicesInGroup() {
         return Optional.ofNullable(this.numberOfDevicesInGroup);
     }
     /**
      * Multicast group number of devices requested. Returned after successful read.
-     * 
     */
     public Optional<Integer> getNumberOfDevicesRequested() {
         return Optional.ofNullable(this.numberOfDevicesRequested);
     }
     /**
      * Multicast group LoRaWAN RF region
-     * 
     */
     public String getRfRegion() {
         return this.rfRegion;

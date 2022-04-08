@@ -24,54 +24,45 @@ import javax.annotation.Nullable;
 public final class GetDataSetResult {
     /**
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
-     * 
      */
     private final @Nullable String arn;
     /**
      * <p>Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is supported.</p>
-     * 
      */
     private final @Nullable List<DataSetColumnGroup> columnGroups;
     private final @Nullable List<DataSetColumnLevelPermissionRule> columnLevelPermissionRules;
     /**
      * <p>The amount of SPICE capacity used by this dataset. This is 0 if the dataset isn't
      *             imported into SPICE.</p>
-     * 
      */
     private final @Nullable Double consumedSpiceCapacityInBytes;
     /**
      * <p>The time that this dataset was created.</p>
-     * 
      */
     private final @Nullable String createdTime;
     private final @Nullable DataSetImportMode importMode;
     /**
      * <p>The last time that this dataset was updated.</p>
-     * 
      */
     private final @Nullable String lastUpdatedTime;
     private final @Nullable DataSetLogicalTableMap logicalTableMap;
     /**
      * <p>The display name for the dataset.</p>
-     * 
      */
     private final @Nullable String name;
     /**
      * <p>The list of columns after all transforms. These columns are available in templates,
      *             analyses, and dashboards.</p>
-     * 
      */
     private final @Nullable List<DataSetOutputColumn> outputColumns;
     /**
      * <p>A list of resource permissions on the dataset.</p>
-     * 
      */
     private final @Nullable List<DataSetResourcePermission> permissions;
     private final @Nullable DataSetPhysicalTableMap physicalTableMap;
     private final @Nullable DataSetRowLevelPermissionDataSet rowLevelPermissionDataSet;
     /**
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.</p>
-     * 
      */
     private final @Nullable List<DataSetTag> tags;
 
@@ -109,14 +100,12 @@ public final class GetDataSetResult {
 
     /**
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * <p>Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is supported.</p>
-     * 
     */
     public List<DataSetColumnGroup> getColumnGroups() {
         return this.columnGroups == null ? List.of() : this.columnGroups;
@@ -127,14 +116,12 @@ public final class GetDataSetResult {
     /**
      * <p>The amount of SPICE capacity used by this dataset. This is 0 if the dataset isn't
      *             imported into SPICE.</p>
-     * 
     */
     public Optional<Double> getConsumedSpiceCapacityInBytes() {
         return Optional.ofNullable(this.consumedSpiceCapacityInBytes);
     }
     /**
      * <p>The time that this dataset was created.</p>
-     * 
     */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
@@ -144,7 +131,6 @@ public final class GetDataSetResult {
     }
     /**
      * <p>The last time that this dataset was updated.</p>
-     * 
     */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
@@ -154,7 +140,6 @@ public final class GetDataSetResult {
     }
     /**
      * <p>The display name for the dataset.</p>
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
@@ -162,14 +147,12 @@ public final class GetDataSetResult {
     /**
      * <p>The list of columns after all transforms. These columns are available in templates,
      *             analyses, and dashboards.</p>
-     * 
     */
     public List<DataSetOutputColumn> getOutputColumns() {
         return this.outputColumns == null ? List.of() : this.outputColumns;
     }
     /**
      * <p>A list of resource permissions on the dataset.</p>
-     * 
     */
     public List<DataSetResourcePermission> getPermissions() {
         return this.permissions == null ? List.of() : this.permissions;
@@ -182,7 +165,6 @@ public final class GetDataSetResult {
     }
     /**
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.</p>
-     * 
     */
     public List<DataSetTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

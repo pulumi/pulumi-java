@@ -16,7 +16,6 @@ public final class GetTaskDefinitionResult {
     private final @Nullable List<TaskDefinitionTag> tags;
     /**
      * The Amazon Resource Name (ARN) of the Amazon ECS task definition
-     * 
      */
     private final @Nullable String taskDefinitionArn;
 
@@ -33,7 +32,6 @@ public final class GetTaskDefinitionResult {
     }
     /**
      * The Amazon Resource Name (ARN) of the Amazon ECS task definition
-     * 
     */
     public Optional<String> getTaskDefinitionArn() {
         return Optional.ofNullable(this.taskDefinitionArn);

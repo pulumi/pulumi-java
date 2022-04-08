@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the Amazon Redshift event severity to be published by the event notification subscription.
-     * 
      */
     @EnumType
     public enum EventSubscriptionSeverity {

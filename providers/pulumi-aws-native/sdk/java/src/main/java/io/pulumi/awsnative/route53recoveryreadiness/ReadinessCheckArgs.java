@@ -18,7 +18,6 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the ReadinessCheck to create.
-     * 
      */
     @Import(name="readinessCheckName")
       private final @Nullable Output<String> readinessCheckName;
@@ -29,7 +28,6 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource set to check.
-     * 
      */
     @Import(name="resourceSetName")
       private final @Nullable Output<String> resourceSetName;
@@ -40,7 +38,6 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A collection of tags associated with a resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ReadinessCheckTagArgs>> tags;

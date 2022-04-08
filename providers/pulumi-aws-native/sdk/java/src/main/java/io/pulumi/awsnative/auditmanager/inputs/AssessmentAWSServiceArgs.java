@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * An AWS service such as Amazon S3, AWS CloudTrail, and so on.
- * 
  */
 public final class AssessmentAWSServiceArgs extends io.pulumi.resources.ResourceArgs {
 

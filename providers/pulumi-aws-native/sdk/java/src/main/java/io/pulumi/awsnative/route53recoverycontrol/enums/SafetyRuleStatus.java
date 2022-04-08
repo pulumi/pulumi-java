@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The deployment status of the routing control. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
-     * 
      */
     @EnumType
     public enum SafetyRuleStatus {

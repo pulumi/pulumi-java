@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The instance type that the image version runs on.
-     * 
      */
     @EnumType
     public enum AppResourceSpecInstanceType {

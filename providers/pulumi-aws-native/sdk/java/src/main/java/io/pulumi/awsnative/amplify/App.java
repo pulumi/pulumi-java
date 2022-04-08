@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::Amplify::App resource creates Apps in the Amplify Console. An App is a collection of branches.
- * 
  */
 @ResourceType(type="aws-native:amplify:App")
 public class App extends io.pulumi.resources.CustomResource {

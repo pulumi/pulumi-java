@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * The rule configuration for an assertion rule or gating rule. This is the criteria that you set for specific assertion controls (routing controls) or gating controls. This configuration specifies how many controls must be enabled after a transaction completes.
- * 
  */
 public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.Resource
 
     /**
      * Logical negation of the rule. If the rule would usually evaluate true, it's evaluated as false, and vice versa.
-     * 
      */
     @Import(name="inverted", required=true)
       private final Output<Boolean> inverted;
@@ -32,7 +30,6 @@ public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.Resource
 
     /**
      * The value of N, when you specify an ATLEAST rule type. That is, Threshold is the number of controls that must be set when you specify an ATLEAST type.
-     * 
      */
     @Import(name="threshold", required=true)
       private final Output<Integer> threshold;

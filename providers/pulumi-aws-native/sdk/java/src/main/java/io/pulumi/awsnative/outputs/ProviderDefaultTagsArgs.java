@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 public final class ProviderDefaultTagsArgs {
     /**
      * A group of tags to set across all resources.
-     * 
      */
     private final @Nullable Output<Map<String,String>> tags;
 
@@ -25,7 +24,6 @@ public final class ProviderDefaultTagsArgs {
 
     /**
      * A group of tags to set across all resources.
-     * 
     */
     public @Nullable Output<Map<String,String>> getTags() {
         return this.tags;

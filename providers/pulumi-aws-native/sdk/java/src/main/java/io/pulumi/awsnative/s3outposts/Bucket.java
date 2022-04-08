@@ -16,76 +16,65 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type Definition for AWS::S3Outposts::Bucket
- * 
  */
 @ResourceType(type="aws-native:s3outposts:Bucket")
 public class Bucket extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the specified bucket.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the specified bucket.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * A name for the bucket.
-     * 
      */
     @Export(name="bucketName", type=String.class, parameters={})
     private Output<String> bucketName;
 
     /**
      * @return A name for the bucket.
-     * 
      */
     public Output<String> getBucketName() {
         return this.bucketName;
     }
     /**
      * Rules that define how Amazon S3Outposts manages objects during their lifetime.
-     * 
      */
     @Export(name="lifecycleConfiguration", type=BucketLifecycleConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketLifecycleConfiguration> lifecycleConfiguration;
 
     /**
      * @return Rules that define how Amazon S3Outposts manages objects during their lifetime.
-     * 
      */
     public Output</* @Nullable */ BucketLifecycleConfiguration> getLifecycleConfiguration() {
         return this.lifecycleConfiguration;
     }
     /**
      * The id of the customer outpost on which the bucket resides.
-     * 
      */
     @Export(name="outpostId", type=String.class, parameters={})
     private Output<String> outpostId;
 
     /**
      * @return The id of the customer outpost on which the bucket resides.
-     * 
      */
     public Output<String> getOutpostId() {
         return this.outpostId;
     }
     /**
      * An arbitrary set of tags (key-value pairs) for this S3Outposts bucket.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={BucketTag.class})
     private Output</* @Nullable */ List<BucketTag>> tags;
 
     /**
      * @return An arbitrary set of tags (key-value pairs) for this S3Outposts bucket.
-     * 
      */
     public Output</* @Nullable */ List<BucketTag>> getTags() {
         return this.tags;

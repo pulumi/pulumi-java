@@ -18,7 +18,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The IDs of the assets to be associated to the project.
-     * 
      */
     @Import(name="assetIds")
       private final @Nullable Output<List<String>> assetIds;
@@ -29,7 +28,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the portal in which to create the project.
-     * 
      */
     @Import(name="portalId", required=true)
       private final Output<String> portalId;
@@ -40,7 +38,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description for the project.
-     * 
      */
     @Import(name="projectDescription")
       private final @Nullable Output<String> projectDescription;
@@ -51,7 +48,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A friendly name for the project.
-     * 
      */
     @Import(name="projectName")
       private final @Nullable Output<String> projectName;
@@ -62,7 +58,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of key-value pairs that contain metadata for the project.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ProjectTagArgs>> tags;

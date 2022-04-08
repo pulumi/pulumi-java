@@ -13,76 +13,65 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::EC2::Host
- * 
  */
 @ResourceType(type="aws-native:ec2:Host")
 public class Host extends io.pulumi.resources.CustomResource {
     /**
      * Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID.
-     * 
      */
     @Export(name="autoPlacement", type=String.class, parameters={})
     private Output</* @Nullable */ String> autoPlacement;
 
     /**
      * @return Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID.
-     * 
      */
     public Output</* @Nullable */ String> getAutoPlacement() {
         return this.autoPlacement;
     }
     /**
      * The Availability Zone in which to allocate the Dedicated Host.
-     * 
      */
     @Export(name="availabilityZone", type=String.class, parameters={})
     private Output<String> availabilityZone;
 
     /**
      * @return The Availability Zone in which to allocate the Dedicated Host.
-     * 
      */
     public Output<String> getAvailabilityZone() {
         return this.availabilityZone;
     }
     /**
      * Id of the host created.
-     * 
      */
     @Export(name="hostId", type=String.class, parameters={})
     private Output<String> hostId;
 
     /**
      * @return Id of the host created.
-     * 
      */
     public Output<String> getHostId() {
         return this.hostId;
     }
     /**
      * Indicates whether to enable or disable host recovery for the Dedicated Host. Host recovery is disabled by default.
-     * 
      */
     @Export(name="hostRecovery", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostRecovery;
 
     /**
      * @return Indicates whether to enable or disable host recovery for the Dedicated Host. Host recovery is disabled by default.
-     * 
      */
     public Output</* @Nullable */ String> getHostRecovery() {
         return this.hostRecovery;
     }
     /**
      * Specifies the instance type to be supported by the Dedicated Hosts. If you specify an instance type, the Dedicated Hosts support instances of the specified instance type only.
-     * 
      */
     @Export(name="instanceType", type=String.class, parameters={})
     private Output<String> instanceType;
 
     /**
      * @return Specifies the instance type to be supported by the Dedicated Hosts. If you specify an instance type, the Dedicated Hosts support instances of the specified instance type only.
-     * 
      */
     public Output<String> getInstanceType() {
         return this.instanceType;

@@ -14,7 +14,6 @@ public final class GetOrganizationConformancePackArgs extends io.pulumi.resource
 
     /**
      * The name of the organization conformance pack.
-     * 
      */
     @Import(name="organizationConformancePackName", required=true)
       private final String organizationConformancePackName;

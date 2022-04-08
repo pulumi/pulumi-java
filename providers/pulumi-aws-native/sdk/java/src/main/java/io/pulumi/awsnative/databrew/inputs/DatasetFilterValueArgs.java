@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A key-value pair to associate expression variable names with their values
- * 
  */
 public final class DatasetFilterValueArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class DatasetFilterValueArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Variable name
-     * 
      */
     @Import(name="valueReference", required=true)
       private final Output<String> valueReference;

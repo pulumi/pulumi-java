@@ -19,7 +19,6 @@ public final class ServiceProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * LoRaWAN supports all LoRa specific attributes for service profile for CreateServiceProfile operation
-     * 
      */
     @Import(name="loRaWAN")
       private final @Nullable Output<ServiceProfileLoRaWANServiceProfileArgs> loRaWAN;
@@ -30,7 +29,6 @@ public final class ServiceProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of service profile
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -41,7 +39,6 @@ public final class ServiceProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of key-value pairs that contain metadata for the service profile.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ServiceProfileTagArgs>> tags;

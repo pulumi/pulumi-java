@@ -14,7 +14,6 @@ public final class GetObjectTypeArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The unique name of the domain.
-     * 
      */
     @Import(name="domainName", required=true)
       private final String domainName;
@@ -25,7 +24,6 @@ public final class GetObjectTypeArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the profile object type.
-     * 
      */
     @Import(name="objectTypeName", required=true)
       private final String objectTypeName;

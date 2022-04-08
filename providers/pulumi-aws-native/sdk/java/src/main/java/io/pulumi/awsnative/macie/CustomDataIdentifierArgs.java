@@ -18,7 +18,6 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
 
     /**
      * Description of custom data identifier.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -29,7 +28,6 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
 
     /**
      * Words to be ignored.
-     * 
      */
     @Import(name="ignoreWords")
       private final @Nullable Output<List<String>> ignoreWords;
@@ -40,7 +38,6 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
 
     /**
      * Keywords to be matched against.
-     * 
      */
     @Import(name="keywords")
       private final @Nullable Output<List<String>> keywords;
@@ -51,7 +48,6 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
 
     /**
      * Maximum match distance.
-     * 
      */
     @Import(name="maximumMatchDistance")
       private final @Nullable Output<Integer> maximumMatchDistance;
@@ -62,7 +58,6 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of custom data identifier.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -73,7 +68,6 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
 
     /**
      * Regular expression for custom data identifier.
-     * 
      */
     @Import(name="regex", required=true)
       private final Output<String> regex;

@@ -17,7 +17,6 @@ public final class MemberInvitationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * When set to true, invitation emails are not sent to the member accounts. Member accounts must still accept the invitation before they are added to the behavior graph. Updating this field has no effect.
-     * 
      */
     @Import(name="disableEmailNotification")
       private final @Nullable Output<Boolean> disableEmailNotification;
@@ -28,7 +27,6 @@ public final class MemberInvitationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The ARN of the graph to which the member account will be invited
-     * 
      */
     @Import(name="graphArn", required=true)
       private final Output<String> graphArn;
@@ -39,7 +37,6 @@ public final class MemberInvitationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The root email address for the account to be invited, for validation. Updating this field has no effect.
-     * 
      */
     @Import(name="memberEmailAddress", required=true)
       private final Output<String> memberEmailAddress;
@@ -50,7 +47,6 @@ public final class MemberInvitationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The AWS account ID to be invited to join the graph as a member
-     * 
      */
     @Import(name="memberId", required=true)
       private final Output<String> memberId;
@@ -61,7 +57,6 @@ public final class MemberInvitationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A message to be included in the email invitation sent to the invited account. Updating this field has no effect.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;

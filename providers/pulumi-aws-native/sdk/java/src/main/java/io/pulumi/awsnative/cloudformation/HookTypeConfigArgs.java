@@ -17,7 +17,6 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The configuration data for the extension, in this account and region.
-     * 
      */
     @Import(name="configuration")
       private final @Nullable Output<String> configuration;
@@ -28,7 +27,6 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An alias by which to refer to this extension configuration data.
-     * 
      */
     @Import(name="configurationAlias")
       private final @Nullable Output<HookTypeConfigConfigurationAlias> configurationAlias;
@@ -39,7 +37,6 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the type version.
-     * 
      */
     @Import(name="typeArn")
       private final @Nullable Output<String> typeArn;
@@ -52,7 +49,6 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the type being registered.
      * 
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
-     * 
      */
     @Import(name="typeName")
       private final @Nullable Output<String> typeName;

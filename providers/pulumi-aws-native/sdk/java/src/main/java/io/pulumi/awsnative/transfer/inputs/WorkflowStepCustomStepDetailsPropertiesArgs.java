@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details for a step that invokes a lambda function.
- * 
  */
 public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
 
     /**
      * The name of the step, used as an identifier.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -32,7 +30,6 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
 
     /**
      * The ARN for the lambda function that is being called.
-     * 
      */
     @Import(name="target")
       private final @Nullable Output<String> target;
@@ -43,7 +40,6 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
 
     /**
      * Timeout, in seconds, for the step.
-     * 
      */
     @Import(name="timeoutSeconds")
       private final @Nullable Output<Integer> timeoutSeconds;

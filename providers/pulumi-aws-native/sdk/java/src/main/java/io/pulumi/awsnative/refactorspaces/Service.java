@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of AWS::RefactorSpaces::Service Resource Type
- * 
  */
 @ResourceType(type="aws-native:refactorspaces:Service")
 public class Service extends io.pulumi.resources.CustomResource {
@@ -72,14 +71,12 @@ public class Service extends io.pulumi.resources.CustomResource {
     }
     /**
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ServiceTag.class})
     private Output</* @Nullable */ List<ServiceTag>> tags;
 
     /**
      * @return Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
-     * 
      */
     public Output</* @Nullable */ List<ServiceTag>> getTags() {
         return this.tags;

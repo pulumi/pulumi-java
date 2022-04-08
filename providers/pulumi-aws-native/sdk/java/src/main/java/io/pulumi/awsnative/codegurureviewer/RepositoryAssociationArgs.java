@@ -19,7 +19,6 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the S3 bucket associated with an associated S3 repository. It must start with `codeguru-reviewer-`.
-     * 
      */
     @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
@@ -30,7 +29,6 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
 
     /**
      * The Amazon Resource Name (ARN) of an AWS CodeStar Connections connection.
-     * 
      */
     @Import(name="connectionArn")
       private final @Nullable Output<String> connectionArn;
@@ -41,7 +39,6 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
 
     /**
      * Name of the repository to be associated.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -52,7 +49,6 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
 
     /**
      * The owner of the repository. For a Bitbucket repository, this is the username for the account that owns the repository.
-     * 
      */
     @Import(name="owner")
       private final @Nullable Output<String> owner;
@@ -63,7 +59,6 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
 
     /**
      * The tags associated with a repository association.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<RepositoryAssociationTagArgs>> tags;
@@ -74,7 +69,6 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
 
     /**
      * The type of repository to be associated.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<RepositoryAssociationType> type;

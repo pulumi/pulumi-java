@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The level of event to log.
-     * 
      */
     @EnumType
     public enum ApplicationEventLevel {

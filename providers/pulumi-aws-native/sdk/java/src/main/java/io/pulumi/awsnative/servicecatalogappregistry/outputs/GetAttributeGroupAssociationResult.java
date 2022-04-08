@@ -13,13 +13,11 @@ import javax.annotation.Nullable;
 public final class GetAttributeGroupAssociationResult {
     /**
      * The name or the Id of the Application.
-     * 
      */
     private final @Nullable String application;
     private final @Nullable String applicationArn;
     /**
      * The name or the Id of the AttributeGroup.
-     * 
      */
     private final @Nullable String attributeGroup;
     private final @Nullable String attributeGroupArn;
@@ -41,7 +39,6 @@ public final class GetAttributeGroupAssociationResult {
 
     /**
      * The name or the Id of the Application.
-     * 
     */
     public Optional<String> getApplication() {
         return Optional.ofNullable(this.application);
@@ -51,7 +48,6 @@ public final class GetAttributeGroupAssociationResult {
     }
     /**
      * The name or the Id of the AttributeGroup.
-     * 
     */
     public Optional<String> getAttributeGroup() {
         return Optional.ofNullable(this.attributeGroup);

@@ -17,7 +17,6 @@ public final class AttributesItemProperties extends io.pulumi.resources.InvokeAr
 
     /**
      * Name of the dataset field
-     * 
      */
     @Import(name="attributeName")
       private final @Nullable String attributeName;
@@ -28,7 +27,6 @@ public final class AttributesItemProperties extends io.pulumi.resources.InvokeAr
 
     /**
      * Data type of the field
-     * 
      */
     @Import(name="attributeType")
       private final @Nullable DatasetAttributesItemPropertiesAttributeType attributeType;

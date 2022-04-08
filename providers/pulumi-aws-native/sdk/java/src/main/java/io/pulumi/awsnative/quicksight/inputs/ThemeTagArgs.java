@@ -12,7 +12,6 @@ import java.util.Objects;
 /**
  * <p>The key or keys of the key-value pairs for the resource tag or tags assigned to the
  *             resource.</p>
- * 
  */
 public final class ThemeTagArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ThemeTagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <p>Tag key.</p>
-     * 
      */
     @Import(name="key", required=true)
       private final Output<String> key;
@@ -31,7 +29,6 @@ public final class ThemeTagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <p>Tag value.</p>
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

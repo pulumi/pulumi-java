@@ -15,76 +15,65 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Lambda::CodeSigningConfig.
- * 
  */
 @ResourceType(type="aws-native:lambda:CodeSigningConfig")
 public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
     /**
      * When the CodeSigningConfig is later on attached to a function, the function code will be expected to be signed by profiles from this list
-     * 
      */
     @Export(name="allowedPublishers", type=CodeSigningConfigAllowedPublishers.class, parameters={})
     private Output<CodeSigningConfigAllowedPublishers> allowedPublishers;
 
     /**
      * @return When the CodeSigningConfig is later on attached to a function, the function code will be expected to be signed by profiles from this list
-     * 
      */
     public Output<CodeSigningConfigAllowedPublishers> getAllowedPublishers() {
         return this.allowedPublishers;
     }
     /**
      * A unique Arn for CodeSigningConfig resource
-     * 
      */
     @Export(name="codeSigningConfigArn", type=String.class, parameters={})
     private Output<String> codeSigningConfigArn;
 
     /**
      * @return A unique Arn for CodeSigningConfig resource
-     * 
      */
     public Output<String> getCodeSigningConfigArn() {
         return this.codeSigningConfigArn;
     }
     /**
      * A unique identifier for CodeSigningConfig resource
-     * 
      */
     @Export(name="codeSigningConfigId", type=String.class, parameters={})
     private Output<String> codeSigningConfigId;
 
     /**
      * @return A unique identifier for CodeSigningConfig resource
-     * 
      */
     public Output<String> getCodeSigningConfigId() {
         return this.codeSigningConfigId;
     }
     /**
      * Policies to control how to act if a signature is invalid
-     * 
      */
     @Export(name="codeSigningPolicies", type=CodeSigningConfigCodeSigningPolicies.class, parameters={})
     private Output</* @Nullable */ CodeSigningConfigCodeSigningPolicies> codeSigningPolicies;
 
     /**
      * @return Policies to control how to act if a signature is invalid
-     * 
      */
     public Output</* @Nullable */ CodeSigningConfigCodeSigningPolicies> getCodeSigningPolicies() {
         return this.codeSigningPolicies;
     }
     /**
      * A description of the CodeSigningConfig
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description of the CodeSigningConfig
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;

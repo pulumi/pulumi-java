@@ -15,22 +15,18 @@ import javax.annotation.Nullable;
 public final class GetConnectionResult {
     /**
      * The Amazon Resource Name (ARN) of the  connection. The ARN is used as the connection reference when the connection is shared between AWS services.
-     * 
      */
     private final @Nullable String connectionArn;
     /**
      * The current status of the connection.
-     * 
      */
     private final @Nullable String connectionStatus;
     /**
      * The name of the external provider where your third-party code repository is configured. For Bitbucket, this is the account ID of the owner of the Bitbucket repository.
-     * 
      */
     private final @Nullable String ownerAccountId;
     /**
      * Specifies the tags applied to a connection.
-     * 
      */
     private final @Nullable List<ConnectionTag> tags;
 
@@ -48,28 +44,24 @@ public final class GetConnectionResult {
 
     /**
      * The Amazon Resource Name (ARN) of the  connection. The ARN is used as the connection reference when the connection is shared between AWS services.
-     * 
     */
     public Optional<String> getConnectionArn() {
         return Optional.ofNullable(this.connectionArn);
     }
     /**
      * The current status of the connection.
-     * 
     */
     public Optional<String> getConnectionStatus() {
         return Optional.ofNullable(this.connectionStatus);
     }
     /**
      * The name of the external provider where your third-party code repository is configured. For Bitbucket, this is the account ID of the owner of the Bitbucket repository.
-     * 
     */
     public Optional<String> getOwnerAccountId() {
         return Optional.ofNullable(this.ownerAccountId);
     }
     /**
      * Specifies the tags applied to a connection.
-     * 
     */
     public List<ConnectionTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

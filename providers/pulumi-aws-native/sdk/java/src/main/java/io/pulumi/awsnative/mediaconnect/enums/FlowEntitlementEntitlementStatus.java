@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      *  An indication of whether the entitlement is enabled.
-     * 
      */
     @EnumType
     public enum FlowEntitlementEntitlementStatus {

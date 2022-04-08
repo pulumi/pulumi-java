@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration object that specifies the monitoring schedule and defines the monitoring job.
- * 
  */
 public final class MonitoringScheduleConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -30,7 +29,6 @@ public final class MonitoringScheduleConfigArgs extends io.pulumi.resources.Reso
 
     /**
      * Name of the job definition
-     * 
      */
     @Import(name="monitoringJobDefinitionName")
       private final @Nullable Output<String> monitoringJobDefinitionName;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A key-value pair to apply to the resource
- * 
  */
 public final class TableTagArgs extends io.pulumi.resources.ResourceArgs {
 

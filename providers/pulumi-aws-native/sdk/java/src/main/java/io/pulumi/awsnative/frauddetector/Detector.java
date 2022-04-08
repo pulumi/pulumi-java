@@ -20,132 +20,113 @@ import javax.annotation.Nullable;
 
 /**
  * A resource schema for a Detector in Amazon Fraud Detector.
- * 
  */
 @ResourceType(type="aws-native:frauddetector:Detector")
 public class Detector extends io.pulumi.resources.CustomResource {
     /**
      * The ARN of the detector.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The ARN of the detector.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The models to associate with this detector.
-     * 
      */
     @Export(name="associatedModels", type=List.class, parameters={DetectorModel.class})
     private Output</* @Nullable */ List<DetectorModel>> associatedModels;
 
     /**
      * @return The models to associate with this detector.
-     * 
      */
     public Output</* @Nullable */ List<DetectorModel>> getAssociatedModels() {
         return this.associatedModels;
     }
     /**
      * The time when the detector was created.
-     * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
      * @return The time when the detector was created.
-     * 
      */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
     /**
      * The description of the detector.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the detector.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The ID of the detector
-     * 
      */
     @Export(name="detectorId", type=String.class, parameters={})
     private Output<String> detectorId;
 
     /**
      * @return The ID of the detector
-     * 
      */
     public Output<String> getDetectorId() {
         return this.detectorId;
     }
     /**
      * The active version ID of the detector
-     * 
      */
     @Export(name="detectorVersionId", type=String.class, parameters={})
     private Output<String> detectorVersionId;
 
     /**
      * @return The active version ID of the detector
-     * 
      */
     public Output<String> getDetectorVersionId() {
         return this.detectorVersionId;
     }
     /**
      * The desired detector version status for the detector
-     * 
      */
     @Export(name="detectorVersionStatus", type=DetectorVersionStatus.class, parameters={})
     private Output</* @Nullable */ DetectorVersionStatus> detectorVersionStatus;
 
     /**
      * @return The desired detector version status for the detector
-     * 
      */
     public Output</* @Nullable */ DetectorVersionStatus> getDetectorVersionStatus() {
         return this.detectorVersionStatus;
     }
     /**
      * The event type to associate this detector with.
-     * 
      */
     @Export(name="eventType", type=DetectorEventType.class, parameters={})
     private Output<DetectorEventType> eventType;
 
     /**
      * @return The event type to associate this detector with.
-     * 
      */
     public Output<DetectorEventType> getEventType() {
         return this.eventType;
     }
     /**
      * The time when the detector was last updated.
-     * 
      */
     @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
      * @return The time when the detector was last updated.
-     * 
      */
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
@@ -164,14 +145,12 @@ public class Detector extends io.pulumi.resources.CustomResource {
     }
     /**
      * Tags associated with this detector.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DetectorTag.class})
     private Output</* @Nullable */ List<DetectorTag>> tags;
 
     /**
      * @return Tags associated with this detector.
-     * 
      */
     public Output</* @Nullable */ List<DetectorTag>> getTags() {
         return this.tags;

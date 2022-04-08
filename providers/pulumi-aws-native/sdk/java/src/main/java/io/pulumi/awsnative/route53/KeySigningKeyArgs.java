@@ -17,7 +17,6 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique string (ID) used to identify a hosted zone.
-     * 
      */
     @Import(name="hostedZoneId", required=true)
       private final Output<String> hostedZoneId;
@@ -28,7 +27,6 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon resource name (ARN) for a customer managed key (CMK) in AWS Key Management Service (KMS). The KeyManagementServiceArn must be unique for each key signing key (KSK) in a single hosted zone.
-     * 
      */
     @Import(name="keyManagementServiceArn", required=true)
       private final Output<String> keyManagementServiceArn;
@@ -39,7 +37,6 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -50,7 +47,6 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.
-     * 
      */
     @Import(name="status", required=true)
       private final Output<KeySigningKeyStatus> status;

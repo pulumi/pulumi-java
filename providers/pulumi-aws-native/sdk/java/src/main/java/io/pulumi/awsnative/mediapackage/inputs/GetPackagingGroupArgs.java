@@ -14,7 +14,6 @@ public final class GetPackagingGroupArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The ID of the PackagingGroup.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

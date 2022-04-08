@@ -22,7 +22,6 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether to automatically create tasks using this task definition for all gateways with the specified current version. If false, the task must me created by calling CreateWirelessGatewayTask.
-     * 
      */
     @Import(name="autoCreateTasks", required=true)
       private final Output<Boolean> autoCreateTasks;
@@ -33,7 +32,6 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of task definitions.
-     * 
      */
     @Import(name="loRaWANUpdateGatewayTaskEntry")
       private final @Nullable Output<TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs> loRaWANUpdateGatewayTaskEntry;
@@ -44,7 +42,6 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the new resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -55,7 +52,6 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of key-value pairs that contain metadata for the destination.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<TaskDefinitionTagArgs>> tags;
@@ -66,7 +62,6 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A filter to list only the wireless gateway task definitions that use this task definition type
-     * 
      */
     @Import(name="taskDefinitionType")
       private final @Nullable Output<TaskDefinitionType> taskDefinitionType;
@@ -77,7 +72,6 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Information about the gateways to update.
-     * 
      */
     @Import(name="update")
       private final @Nullable Output<TaskDefinitionUpdateWirelessGatewayTaskCreateArgs> update;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The account type to use when starting the SSM automation document.
-     * 
      */
     @EnumType
     public enum ResponsePlanSsmAutomationTargetAccount {

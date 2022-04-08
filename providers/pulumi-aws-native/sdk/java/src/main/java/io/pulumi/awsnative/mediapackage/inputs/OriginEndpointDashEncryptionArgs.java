@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A Dynamic Adaptive Streaming over HTTP (DASH) encryption configuration.
- * 
  */
 public final class OriginEndpointDashEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class OriginEndpointDashEncryptionArgs extends io.pulumi.resources.
 
     /**
      * Time (in seconds) between each encryption key rotation.
-     * 
      */
     @Import(name="keyRotationIntervalSeconds")
       private final @Nullable Output<Integer> keyRotationIntervalSeconds;

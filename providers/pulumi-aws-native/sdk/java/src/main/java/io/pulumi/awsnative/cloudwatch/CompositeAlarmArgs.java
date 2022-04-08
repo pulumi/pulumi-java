@@ -18,7 +18,6 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether actions should be executed during any changes to the alarm state. The default is TRUE.
-     * 
      */
     @Import(name="actionsEnabled")
       private final @Nullable Output<Boolean> actionsEnabled;
@@ -29,7 +28,6 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of actions to execute when this alarm transitions into an ALARM state from any other state. Specify each action as an Amazon Resource Name (ARN).
-     * 
      */
     @Import(name="alarmActions")
       private final @Nullable Output<List<String>> alarmActions;
@@ -40,7 +38,6 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the alarm
-     * 
      */
     @Import(name="alarmDescription")
       private final @Nullable Output<String> alarmDescription;
@@ -51,7 +48,6 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Composite Alarm
-     * 
      */
     @Import(name="alarmName", required=true)
       private final Output<String> alarmName;
@@ -62,7 +58,6 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Expression which aggregates the state of other Alarms (Metric or Composite Alarms)
-     * 
      */
     @Import(name="alarmRule", required=true)
       private final Output<String> alarmRule;
@@ -73,7 +68,6 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The actions to execute when this alarm transitions to the INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
-     * 
      */
     @Import(name="insufficientDataActions")
       private final @Nullable Output<List<String>> insufficientDataActions;
@@ -84,7 +78,6 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The actions to execute when this alarm transitions to the OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
-     * 
      */
     @Import(name="oKActions")
       private final @Nullable Output<List<String>> oKActions;

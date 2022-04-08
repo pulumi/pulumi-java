@@ -17,7 +17,6 @@ public final class ExtensionResourceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Dictionary of the extension resource properties.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<Map<String,Object>> properties;
@@ -28,7 +27,6 @@ public final class ExtensionResourceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * CloudFormation type name.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

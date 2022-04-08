@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
  *             prefixed with <code>#</code>, for example #37BFF5. For more information, see <a href="https://docs.aws.amazon.com/quicksight/latest/user/themes-in-quicksight.html">Using Themes in Amazon QuickSight</a> in the <i>Amazon QuickSight User
  *                 Guide.</i>
  *         </p>
- * 
  */
 public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
 
     /**
      * <p>This color is that applies to selected states and buttons.</p>
-     * 
      */
     @Import(name="accent")
       private final @Nullable Output<String> accent;
@@ -36,7 +34,6 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
     /**
      * <p>The foreground color that applies to any text or other elements that appear over the
      *             accent color.</p>
-     * 
      */
     @Import(name="accentForeground")
       private final @Nullable Output<String> accentForeground;
@@ -47,7 +44,6 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
 
     /**
      * <p>The color that applies to error messages.</p>
-     * 
      */
     @Import(name="danger")
       private final @Nullable Output<String> danger;
@@ -59,7 +55,6 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
     /**
      * <p>The foreground color that applies to any text or other elements that appear over the
      *             error color.</p>
-     * 
      */
     @Import(name="dangerForeground")
       private final @Nullable Output<String> dangerForeground;
@@ -71,7 +66,6 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
     /**
      * <p>The color that applies to the names of fields that are identified as
      *             dimensions.</p>
-     * 
      */
     @Import(name="dimension")
       private final @Nullable Output<String> dimension;
@@ -83,7 +77,6 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
     /**
      * <p>The foreground color that applies to any text or other elements that appear over the
      *             dimension color.</p>
-     * 
      */
     @Import(name="dimensionForeground")
       private final @Nullable Output<String> dimensionForeground;
@@ -94,7 +87,6 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
 
     /**
      * <p>The color that applies to the names of fields that are identified as measures.</p>
-     * 
      */
     @Import(name="measure")
       private final @Nullable Output<String> measure;
@@ -106,7 +98,6 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
     /**
      * <p>The foreground color that applies to any text or other elements that appear over the
      *             measure color.</p>
-     * 
      */
     @Import(name="measureForeground")
       private final @Nullable Output<String> measureForeground;
@@ -117,7 +108,6 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
 
     /**
      * <p>The background color that applies to visuals and other high emphasis UI.</p>
-     * 
      */
     @Import(name="primaryBackground")
       private final @Nullable Output<String> primaryBackground;
@@ -129,7 +119,6 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
     /**
      * <p>The color of text and other foreground elements that appear over the primary
      *             background regions, such as grid lines, borders, table banding, icons, and so on.</p>
-     * 
      */
     @Import(name="primaryForeground")
       private final @Nullable Output<String> primaryForeground;
@@ -140,7 +129,6 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
 
     /**
      * <p>The background color that applies to the sheet background and sheet controls.</p>
-     * 
      */
     @Import(name="secondaryBackground")
       private final @Nullable Output<String> secondaryBackground;
@@ -152,7 +140,6 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
     /**
      * <p>The foreground color that applies to any sheet title, sheet control text, or UI that
      *             appears over the secondary background.</p>
-     * 
      */
     @Import(name="secondaryForeground")
       private final @Nullable Output<String> secondaryForeground;
@@ -164,7 +151,6 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
     /**
      * <p>The color that applies to success messages, for example the check mark for a
      *             successful download.</p>
-     * 
      */
     @Import(name="success")
       private final @Nullable Output<String> success;
@@ -176,7 +162,6 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
     /**
      * <p>The foreground color that applies to any text or other elements that appear over the
      *             success color.</p>
-     * 
      */
     @Import(name="successForeground")
       private final @Nullable Output<String> successForeground;
@@ -187,7 +172,6 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
 
     /**
      * <p>This color that applies to warning and informational messages.</p>
-     * 
      */
     @Import(name="warning")
       private final @Nullable Output<String> warning;
@@ -199,7 +183,6 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
     /**
      * <p>The foreground color that applies to any text or other elements that appear over the
      *             warning color.</p>
-     * 
      */
     @Import(name="warningForeground")
       private final @Nullable Output<String> warningForeground;

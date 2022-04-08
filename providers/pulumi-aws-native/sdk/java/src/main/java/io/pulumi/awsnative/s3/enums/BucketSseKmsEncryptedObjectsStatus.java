@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies whether Amazon S3 replicates objects created with server-side encryption using a customer master key (CMK) stored in AWS Key Management Service.
-     * 
      */
     @EnumType
     public enum BucketSseKmsEncryptedObjectsStatus {

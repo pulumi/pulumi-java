@@ -14,7 +14,6 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of Addon
-     * 
      */
     @Import(name="addonName", required=true)
       private final String addonName;
@@ -25,7 +24,6 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of Cluster
-     * 
      */
     @Import(name="clusterName", required=true)
       private final String clusterName;

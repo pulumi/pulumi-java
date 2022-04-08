@@ -15,7 +15,6 @@ public final class LicenseValidityDateFormatArgs extends io.pulumi.resources.Res
 
     /**
      * Validity begin date for the license.
-     * 
      */
     @Import(name="begin", required=true)
       private final Output<String> begin;
@@ -26,7 +25,6 @@ public final class LicenseValidityDateFormatArgs extends io.pulumi.resources.Res
 
     /**
      * Validity begin date for the license.
-     * 
      */
     @Import(name="end", required=true)
       private final Output<String> end;

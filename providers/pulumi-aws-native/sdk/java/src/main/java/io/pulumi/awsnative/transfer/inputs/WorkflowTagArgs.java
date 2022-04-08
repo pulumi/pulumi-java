@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Creates a key-value pair for a specific resource.
- * 
  */
 public final class WorkflowTagArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class WorkflowTagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name assigned to the tag that you create.
-     * 
      */
     @Import(name="key", required=true)
       private final Output<String> key;
@@ -30,7 +28,6 @@ public final class WorkflowTagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Contains one or more values that you assigned to the key name you create.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

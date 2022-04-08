@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Recording Destination Configuration.
- * 
  */
 public final class RecordingConfigurationDestinationConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 

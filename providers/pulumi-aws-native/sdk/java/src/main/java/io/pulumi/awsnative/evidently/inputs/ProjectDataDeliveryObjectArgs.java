@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Destinations for data.
- * 
  */
 public final class ProjectDataDeliveryObjectArgs extends io.pulumi.resources.ResourceArgs {
 

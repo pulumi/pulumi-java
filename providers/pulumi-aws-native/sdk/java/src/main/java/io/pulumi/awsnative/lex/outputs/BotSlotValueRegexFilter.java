@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class BotSlotValueRegexFilter {
     /**
      * Regex pattern
-     * 
      */
     private final String pattern;
 
@@ -22,7 +21,6 @@ public final class BotSlotValueRegexFilter {
 
     /**
      * Regex pattern
-     * 
     */
     public String getPattern() {
         return this.pattern;

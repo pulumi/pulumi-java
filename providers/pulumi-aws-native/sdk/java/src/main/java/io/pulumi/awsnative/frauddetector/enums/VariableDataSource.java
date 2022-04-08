@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The source of the data.
-     * 
      */
     @EnumType
     public enum VariableDataSource {

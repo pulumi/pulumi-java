@@ -28,7 +28,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A user-generated string that you use to identify your cluster. If you don't specify a name, AWS CloudFormation generates a unique physical ID for the name.
-     * 
      */
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;

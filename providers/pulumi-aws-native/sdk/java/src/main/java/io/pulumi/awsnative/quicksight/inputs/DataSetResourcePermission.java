@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * <p>Permission for the resource.</p>
- * 
  */
 public final class DataSetResourcePermission extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class DataSetResourcePermission extends io.pulumi.resources.InvokeA
 
     /**
      * <p>The IAM action to grant or revoke permissions on.</p>
-     * 
      */
     @Import(name="actions", required=true)
       private final List<String> actions;
@@ -44,7 +42,6 @@ public final class DataSetResourcePermission extends io.pulumi.resources.InvokeA
      *                     (This is less common.) </p>
      *             </li>
      *          </ul>
-     * 
      */
     @Import(name="principal", required=true)
       private final String principal;

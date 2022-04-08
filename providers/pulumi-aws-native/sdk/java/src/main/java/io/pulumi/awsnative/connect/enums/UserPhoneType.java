@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The phone type.
-     * 
      */
     @EnumType
     public enum UserPhoneType {

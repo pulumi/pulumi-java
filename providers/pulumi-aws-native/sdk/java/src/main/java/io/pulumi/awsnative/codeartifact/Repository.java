@@ -16,146 +16,125 @@ import javax.annotation.Nullable;
 
 /**
  * The resource schema to create a CodeArtifact repository.
- * 
  */
 @ResourceType(type="aws-native:codeartifact:Repository")
 public class Repository extends io.pulumi.resources.CustomResource {
     /**
      * The ARN of the repository.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The ARN of the repository.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * A text description of the repository.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A text description of the repository.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The name of the domain that contains the repository.
-     * 
      */
     @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
      * @return The name of the domain that contains the repository.
-     * 
      */
     public Output<String> getDomainName() {
         return this.domainName;
     }
     /**
      * The 12-digit account ID of the AWS account that owns the domain.
-     * 
      */
     @Export(name="domainOwner", type=String.class, parameters={})
     private Output<String> domainOwner;
 
     /**
      * @return The 12-digit account ID of the AWS account that owns the domain.
-     * 
      */
     public Output<String> getDomainOwner() {
         return this.domainOwner;
     }
     /**
      * A list of external connections associated with the repository.
-     * 
      */
     @Export(name="externalConnections", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> externalConnections;
 
     /**
      * @return A list of external connections associated with the repository.
-     * 
      */
     public Output</* @Nullable */ List<String>> getExternalConnections() {
         return this.externalConnections;
     }
     /**
      * The name of the repository. This is used for GetAtt
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the repository. This is used for GetAtt
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The access control resource policy on the provided repository.
-     * 
      */
     @Export(name="permissionsPolicyDocument", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> permissionsPolicyDocument;
 
     /**
      * @return The access control resource policy on the provided repository.
-     * 
      */
     public Output</* @Nullable */ Object> getPermissionsPolicyDocument() {
         return this.permissionsPolicyDocument;
     }
     /**
      * The name of the repository.
-     * 
      */
     @Export(name="repositoryName", type=String.class, parameters={})
     private Output<String> repositoryName;
 
     /**
      * @return The name of the repository.
-     * 
      */
     public Output<String> getRepositoryName() {
         return this.repositoryName;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={RepositoryTag.class})
     private Output</* @Nullable */ List<RepositoryTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<RepositoryTag>> getTags() {
         return this.tags;
     }
     /**
      * A list of upstream repositories associated with the repository.
-     * 
      */
     @Export(name="upstreams", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> upstreams;
 
     /**
      * @return A list of upstream repositories associated with the repository.
-     * 
      */
     public Output</* @Nullable */ List<String>> getUpstreams() {
         return this.upstreams;

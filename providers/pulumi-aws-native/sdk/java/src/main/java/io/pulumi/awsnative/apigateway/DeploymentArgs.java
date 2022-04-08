@@ -18,7 +18,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies settings for the canary deployment.
-     * 
      */
     @Import(name="deploymentCanarySettings")
       private final @Nullable Output<DeploymentCanarySettingsArgs> deploymentCanarySettings;
@@ -29,7 +28,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description of the purpose of the API Gateway deployment.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -39,8 +37,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ID of the RestApi resource to deploy.
-     * 
+     * The ID of the RestApi resource to deploy. 
      */
     @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
@@ -51,7 +48,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configures the stage that API Gateway creates with this deployment.
-     * 
      */
     @Import(name="stageDescription")
       private final @Nullable Output<DeploymentStageDescriptionArgs> stageDescription;
@@ -62,7 +58,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A name for the stage that API Gateway creates with this deployment. Use only alphanumeric characters.
-     * 
      */
     @Import(name="stageName")
       private final @Nullable Output<String> stageName;

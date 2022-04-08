@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class WebACLOverrideAction {
     /**
      * Count traffic towards application.
-     * 
      */
     private final @Nullable Object count;
     /**
      * Keep the RuleGroup or ManagedRuleGroup behavior as is.
-     * 
      */
     private final @Nullable Object none;
 
@@ -32,14 +30,12 @@ public final class WebACLOverrideAction {
 
     /**
      * Count traffic towards application.
-     * 
     */
     public Optional<Object> getCount() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Keep the RuleGroup or ManagedRuleGroup behavior as is.
-     * 
     */
     public Optional<Object> getNone() {
         return Optional.ofNullable(this.none);

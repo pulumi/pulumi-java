@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Backup::BackupPlan
- * 
  */
 @ResourceType(type="aws-native:backup:BackupPlan")
 public class BackupPlan extends io.pulumi.resources.CustomResource {

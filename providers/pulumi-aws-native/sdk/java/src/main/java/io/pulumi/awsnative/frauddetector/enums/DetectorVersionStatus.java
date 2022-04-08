@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The desired detector version status for the detector
-     * 
      */
     @EnumType
     public enum DetectorVersionStatus {

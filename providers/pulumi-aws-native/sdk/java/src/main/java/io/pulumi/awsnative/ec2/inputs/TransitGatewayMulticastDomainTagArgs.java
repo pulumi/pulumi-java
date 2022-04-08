@@ -16,7 +16,6 @@ public final class TransitGatewayMulticastDomainTagArgs extends io.pulumi.resour
 
     /**
      * The key of the tag. Constraints: Tag keys are case-sensitive and accept a maximum of 127 Unicode characters. May not begin with aws:.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -27,7 +26,6 @@ public final class TransitGatewayMulticastDomainTagArgs extends io.pulumi.resour
 
     /**
      * The value of the tag. Constraints: Tag values are case-sensitive and accept a maximum of 255 Unicode characters.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

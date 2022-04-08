@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class BucketNoncurrentVersionTransition {
     /**
      * Specified the number of newer noncurrent and current versions that must exists before performing the associated action
-     * 
      */
     private final @Nullable Integer newerNoncurrentVersions;
     /**
      * The class of storage used to store the object.
-     * 
      */
     private final BucketNoncurrentVersionTransitionStorageClass storageClass;
     /**
      * Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action.
-     * 
      */
     private final Integer transitionInDays;
 
@@ -40,21 +37,18 @@ public final class BucketNoncurrentVersionTransition {
 
     /**
      * Specified the number of newer noncurrent and current versions that must exists before performing the associated action
-     * 
     */
     public Optional<Integer> getNewerNoncurrentVersions() {
         return Optional.ofNullable(this.newerNoncurrentVersions);
     }
     /**
      * The class of storage used to store the object.
-     * 
     */
     public BucketNoncurrentVersionTransitionStorageClass getStorageClass() {
         return this.storageClass;
     }
     /**
      * Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action.
-     * 
     */
     public Integer getTransitionInDays() {
         return this.transitionInDays;

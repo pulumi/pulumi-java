@@ -19,161 +19,2977 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::IAM::Role
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var botRuntimeRole = new AwsNative.IAM.Role("botRuntimeRole", new AwsNative.IAM.RoleArgs
+ *         {
+ *             AssumeRolePolicyDocument = 
+ *             {
+ *                 { "version", "2012-10-17" },
+ *                 { "statement", 
+ *                 {
+ *                     
+ *                     {
+ *                         { "effect", "Allow" },
+ *                         { "principal", 
+ *                         {
+ *                             { "service", 
+ *                             {
+ *                                 "lexv2.amazonaws.com",
+ *                             } },
+ *                         } },
+ *                         { "action", 
+ *                         {
+ *                             "sts:AssumeRole",
+ *                         } },
+ *                     },
+ *                 } },
+ *             },
+ *             Path = "/",
+ *             Policies = 
+ *             {
+ *                 new AwsNative.IAM.Inputs.RolePolicyArgs
+ *                 {
+ *                     PolicyName = "LexRuntimeRolePolicy",
+ *                     PolicyDocument = 
+ *                     {
+ *                         { "version", "2012-10-17" },
+ *                         { "statement", 
+ *                         {
+ *                             
+ *                             {
+ *                                 { "effect", "Allow" },
+ *                                 { "action", 
+ *                                 {
+ *                                     "polly:SynthesizeSpeech",
+ *                                     "comprehend:DetectSentiment",
+ *                                 } },
+ *                                 { "resource", "*" },
+ *                             },
+ *                         } },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var orderFlowersTemplateBot = new AwsNative.Lex.Bot("orderFlowersTemplateBot", new AwsNative.Lex.BotArgs
+ *         {
+ *             Name = "OrderFlowersWithCFN",
+ *             RoleArn = botRuntimeRole.Arn,
+ *             DataPrivacy = new AwsNative.Lex.Inputs.DataPrivacyPropertiesArgs
+ *             {
+ *                 ChildDirected = false,
+ *             },
+ *             IdleSessionTTLInSeconds = 300,
+ *             Description = "How to create a OrderFlowers bot with AWS CloudFormation",
+ *             AutoBuildBotLocales = false,
+ *             BotLocales = 
+ *             {
+ *                 new AwsNative.Lex.Inputs.BotLocaleArgs
+ *                 {
+ *                     LocaleId = "en_US",
+ *                     Description = "Book a trip bot Locale",
+ *                     NluConfidenceThreshold = 0.4,
+ *                     VoiceSettings = new AwsNative.Lex.Inputs.BotVoiceSettingsArgs
+ *                     {
+ *                         VoiceId = "Ivy",
+ *                     },
+ *                     SlotTypes = 
+ *                     {
+ *                         new AwsNative.Lex.Inputs.BotSlotTypeArgs
+ *                         {
+ *                             Name = "FlowerTypes",
+ *                             Description = "Slot Type description",
+ *                             SlotTypeValues = 
+ *                             {
+ *                                 new AwsNative.Lex.Inputs.BotSlotTypeValueArgs
+ *                                 {
+ *                                     SampleValue = new AwsNative.Lex.Inputs.BotSampleValueArgs
+ *                                     {
+ *                                         Value = "lilies",
+ *                                     },
+ *                                 },
+ *                                 new AwsNative.Lex.Inputs.BotSlotTypeValueArgs
+ *                                 {
+ *                                     SampleValue = new AwsNative.Lex.Inputs.BotSampleValueArgs
+ *                                     {
+ *                                         Value = "roses",
+ *                                     },
+ *                                 },
+ *                                 new AwsNative.Lex.Inputs.BotSlotTypeValueArgs
+ *                                 {
+ *                                     SampleValue = new AwsNative.Lex.Inputs.BotSampleValueArgs
+ *                                     {
+ *                                         Value = "tulips",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             ValueSelectionSetting = new AwsNative.Lex.Inputs.BotSlotValueSelectionSettingArgs
+ *                             {
+ *                                 ResolutionStrategy = "ORIGINAL_VALUE",
+ *                             },
+ *                         },
+ *                     },
+ *                     Intents = 
+ *                     {
+ *                         new AwsNative.Lex.Inputs.BotIntentArgs
+ *                         {
+ *                             Name = "OrderFlowers",
+ *                             Description = "Intent to order a bouquet of flowers for pick up",
+ *                             SampleUtterances = 
+ *                             {
+ *                                 new AwsNative.Lex.Inputs.BotSampleUtteranceArgs
+ *                                 {
+ *                                     Utterance = "I would like to pick up flowers",
+ *                                 },
+ *                                 new AwsNative.Lex.Inputs.BotSampleUtteranceArgs
+ *                                 {
+ *                                     Utterance = "I would like to order some flowers",
+ *                                 },
+ *                             },
+ *                             IntentConfirmationSetting = new AwsNative.Lex.Inputs.BotIntentConfirmationSettingArgs
+ *                             {
+ *                                 PromptSpecification = new AwsNative.Lex.Inputs.BotPromptSpecificationArgs
+ *                                 {
+ *                                     MessageGroupsList = 
+ *                                     {
+ *                                         new AwsNative.Lex.Inputs.BotMessageGroupArgs
+ *                                         {
+ *                                             Message = new AwsNative.Lex.Inputs.BotMessageArgs
+ *                                             {
+ *                                                 PlainTextMessage = new AwsNative.Lex.Inputs.BotPlainTextMessageArgs
+ *                                                 {
+ *                                                     Value = "Okay, your {FlowerType} will be ready for pickup by {PickupTime} on {PickupDate}.  Does this sound okay?",
+ *                                                 },
+ *                                             },
+ *                                         },
+ *                                     },
+ *                                     MaxRetries = 3,
+ *                                     AllowInterrupt = false,
+ *                                 },
+ *                                 DeclinationResponse = new AwsNative.Lex.Inputs.BotResponseSpecificationArgs
+ *                                 {
+ *                                     MessageGroupsList = 
+ *                                     {
+ *                                         new AwsNative.Lex.Inputs.BotMessageGroupArgs
+ *                                         {
+ *                                             Message = new AwsNative.Lex.Inputs.BotMessageArgs
+ *                                             {
+ *                                                 PlainTextMessage = new AwsNative.Lex.Inputs.BotPlainTextMessageArgs
+ *                                                 {
+ *                                                     Value = "Okay, I will not place your order.",
+ *                                                 },
+ *                                             },
+ *                                         },
+ *                                     },
+ *                                     AllowInterrupt = false,
+ *                                 },
+ *                             },
+ *                             Slots = 
+ *                             {
+ *                                 new AwsNative.Lex.Inputs.BotSlotArgs
+ *                                 {
+ *                                     Name = "FlowerType",
+ *                                     Description = "something",
+ *                                     SlotTypeName = "FlowerTypes",
+ *                                     ValueElicitationSetting = new AwsNative.Lex.Inputs.BotSlotValueElicitationSettingArgs
+ *                                     {
+ *                                         SlotConstraint = "Required",
+ *                                         PromptSpecification = new AwsNative.Lex.Inputs.BotPromptSpecificationArgs
+ *                                         {
+ *                                             MessageGroupsList = 
+ *                                             {
+ *                                                 new AwsNative.Lex.Inputs.BotMessageGroupArgs
+ *                                                 {
+ *                                                     Message = new AwsNative.Lex.Inputs.BotMessageArgs
+ *                                                     {
+ *                                                         PlainTextMessage = new AwsNative.Lex.Inputs.BotPlainTextMessageArgs
+ *                                                         {
+ *                                                             Value = "What type of flowers would you like to order?",
+ *                                                         },
+ *                                                     },
+ *                                                 },
+ *                                             },
+ *                                             MaxRetries = 3,
+ *                                             AllowInterrupt = false,
+ *                                         },
+ *                                     },
+ *                                 },
+ *                                 new AwsNative.Lex.Inputs.BotSlotArgs
+ *                                 {
+ *                                     Name = "PickUpDate",
+ *                                     Description = "something",
+ *                                     SlotTypeName = "AMAZON.Date",
+ *                                     ValueElicitationSetting = new AwsNative.Lex.Inputs.BotSlotValueElicitationSettingArgs
+ *                                     {
+ *                                         SlotConstraint = "Required",
+ *                                         PromptSpecification = new AwsNative.Lex.Inputs.BotPromptSpecificationArgs
+ *                                         {
+ *                                             MessageGroupsList = 
+ *                                             {
+ *                                                 new AwsNative.Lex.Inputs.BotMessageGroupArgs
+ *                                                 {
+ *                                                     Message = new AwsNative.Lex.Inputs.BotMessageArgs
+ *                                                     {
+ *                                                         PlainTextMessage = new AwsNative.Lex.Inputs.BotPlainTextMessageArgs
+ *                                                         {
+ *                                                             Value = "What day do you want the {FlowerType} to be picked up?",
+ *                                                         },
+ *                                                     },
+ *                                                 },
+ *                                             },
+ *                                             MaxRetries = 3,
+ *                                             AllowInterrupt = false,
+ *                                         },
+ *                                     },
+ *                                 },
+ *                                 new AwsNative.Lex.Inputs.BotSlotArgs
+ *                                 {
+ *                                     Name = "PickUpTime",
+ *                                     Description = "something",
+ *                                     SlotTypeName = "AMAZON.Time",
+ *                                     ValueElicitationSetting = new AwsNative.Lex.Inputs.BotSlotValueElicitationSettingArgs
+ *                                     {
+ *                                         SlotConstraint = "Required",
+ *                                         PromptSpecification = new AwsNative.Lex.Inputs.BotPromptSpecificationArgs
+ *                                         {
+ *                                             MessageGroupsList = 
+ *                                             {
+ *                                                 new AwsNative.Lex.Inputs.BotMessageGroupArgs
+ *                                                 {
+ *                                                     Message = new AwsNative.Lex.Inputs.BotMessageArgs
+ *                                                     {
+ *                                                         PlainTextMessage = new AwsNative.Lex.Inputs.BotPlainTextMessageArgs
+ *                                                         {
+ *                                                             Value = "At what time do you want the {FlowerType} to be picked up?",
+ *                                                         },
+ *                                                     },
+ *                                                 },
+ *                                             },
+ *                                             MaxRetries = 3,
+ *                                             AllowInterrupt = false,
+ *                                         },
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                         new AwsNative.Lex.Inputs.BotIntentArgs
+ *                         {
+ *                             Name = "FallbackIntent",
+ *                             Description = "Default intent when no other intent matches",
+ *                             ParentIntentSignature = "AMAZON.FallbackIntent",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 botRuntimeRole,
+ *             },
+ *         });
+ *         var orderFlowersTemplateBotVersionWithCFN = new AwsNative.Lex.BotVersion("orderFlowersTemplateBotVersionWithCFN", new AwsNative.Lex.BotVersionArgs
+ *         {
+ *             BotId = orderFlowersTemplateBot.Id,
+ *             BotVersionLocaleSpecification = 
+ *             {
+ *                 new AwsNative.Lex.Inputs.BotVersionLocaleSpecificationArgs
+ *                 {
+ *                     LocaleId = "en_US",
+ *                     BotVersionLocaleDetails = new AwsNative.Lex.Inputs.BotVersionLocaleDetailsArgs
+ *                     {
+ *                         SourceBotVersion = "DRAFT",
+ *                     },
+ *                 },
+ *             },
+ *             Description = "OrderFlowers Version",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 orderFlowersTemplateBot,
+ *             },
+ *         });
+ *         var firstBotAliasWithCFN = new AwsNative.Lex.BotAlias("firstBotAliasWithCFN", new AwsNative.Lex.BotAliasArgs
+ *         {
+ *             BotId = orderFlowersTemplateBot.Id,
+ *             BotAliasName = "OrderFlowersVersion1Alias",
+ *             BotVersion = orderFlowersTemplateBotVersionWithCFN.Bot_version,
+ *             SentimentAnalysisSettings = new AwsNative.Lex.Inputs.SentimentAnalysisSettingsPropertiesArgs
+ *             {
+ *                 DetectSentiment = true,
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 orderFlowersTemplateBotVersionWithCFN,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/lex"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		botRuntimeRole, err := iam.NewRole(ctx, "botRuntimeRole", &iam.RoleArgs{
+ * 			AssumeRolePolicyDocument: pulumi.Any{
+ * 				Version: "2012-10-17",
+ * 				Statement: []map[string]interface{}{
+ * 					map[string]interface{}{
+ * 						"effect": "Allow",
+ * 						"principal": map[string]interface{}{
+ * 							"service": []string{
+ * 								"lexv2.amazonaws.com",
+ * 							},
+ * 						},
+ * 						"action": []string{
+ * 							"sts:AssumeRole",
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Path: pulumi.String("/"),
+ * 			Policies: []iam.RolePolicyArgs{
+ * 				&iam.RolePolicyArgs{
+ * 					PolicyName: pulumi.String("LexRuntimeRolePolicy"),
+ * 					PolicyDocument: pulumi.String{
+ * 						Version: "2012-10-17",
+ * 						Statement: []map[string]interface{}{
+ * 							map[string]interface{}{
+ * 								"effect": "Allow",
+ * 								"action": []string{
+ * 									"polly:SynthesizeSpeech",
+ * 									"comprehend:DetectSentiment",
+ * 								},
+ * 								"resource": "*",
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		orderFlowersTemplateBot, err := lex.NewBot(ctx, "orderFlowersTemplateBot", &lex.BotArgs{
+ * 			Name:    pulumi.String("OrderFlowersWithCFN"),
+ * 			RoleArn: botRuntimeRole.Arn,
+ * 			DataPrivacy: &lex.DataPrivacyPropertiesArgs{
+ * 				ChildDirected: pulumi.Bool(false),
+ * 			},
+ * 			IdleSessionTTLInSeconds: pulumi.Int(300),
+ * 			Description:             pulumi.String("How to create a OrderFlowers bot with AWS CloudFormation"),
+ * 			AutoBuildBotLocales:     pulumi.Bool(false),
+ * 			BotLocales: []lex.BotLocaleArgs{
+ * 				&lex.BotLocaleArgs{
+ * 					LocaleId:               pulumi.String("en_US"),
+ * 					Description:            pulumi.String("Book a trip bot Locale"),
+ * 					NluConfidenceThreshold: pulumi.Float64(0.4),
+ * 					VoiceSettings: &lex.BotVoiceSettingsArgs{
+ * 						VoiceId: pulumi.String("Ivy"),
+ * 					},
+ * 					SlotTypes: lex.BotSlotTypeArray{
+ * 						&lex.BotSlotTypeArgs{
+ * 							Name:        pulumi.String("FlowerTypes"),
+ * 							Description: pulumi.String("Slot Type description"),
+ * 							SlotTypeValues: lex.BotSlotTypeValueArray{
+ * 								&lex.BotSlotTypeValueArgs{
+ * 									SampleValue: &lex.BotSampleValueArgs{
+ * 										Value: pulumi.String("lilies"),
+ * 									},
+ * 								},
+ * 								&lex.BotSlotTypeValueArgs{
+ * 									SampleValue: &lex.BotSampleValueArgs{
+ * 										Value: pulumi.String("roses"),
+ * 									},
+ * 								},
+ * 								&lex.BotSlotTypeValueArgs{
+ * 									SampleValue: &lex.BotSampleValueArgs{
+ * 										Value: pulumi.String("tulips"),
+ * 									},
+ * 								},
+ * 							},
+ * 							ValueSelectionSetting: &lex.BotSlotValueSelectionSettingArgs{
+ * 								ResolutionStrategy: "ORIGINAL_VALUE",
+ * 							},
+ * 						},
+ * 					},
+ * 					Intents: lex.BotIntentArray{
+ * 						&lex.BotIntentArgs{
+ * 							Name:        pulumi.String("OrderFlowers"),
+ * 							Description: pulumi.String("Intent to order a bouquet of flowers for pick up"),
+ * 							SampleUtterances: lex.BotSampleUtteranceArray{
+ * 								&lex.BotSampleUtteranceArgs{
+ * 									Utterance: pulumi.String("I would like to pick up flowers"),
+ * 								},
+ * 								&lex.BotSampleUtteranceArgs{
+ * 									Utterance: pulumi.String("I would like to order some flowers"),
+ * 								},
+ * 							},
+ * 							IntentConfirmationSetting: &lex.BotIntentConfirmationSettingArgs{
+ * 								PromptSpecification: &lex.BotPromptSpecificationArgs{
+ * 									MessageGroupsList: lex.BotMessageGroupArray{
+ * 										&lex.BotMessageGroupArgs{
+ * 											Message: &lex.BotMessageArgs{
+ * 												PlainTextMessage: &lex.BotPlainTextMessageArgs{
+ * 													Value: pulumi.String("Okay, your {FlowerType} will be ready for pickup by {PickupTime} on {PickupDate}.  Does this sound okay?"),
+ * 												},
+ * 											},
+ * 										},
+ * 									},
+ * 									MaxRetries:     pulumi.Int(3),
+ * 									AllowInterrupt: pulumi.Bool(false),
+ * 								},
+ * 								DeclinationResponse: &lex.BotResponseSpecificationArgs{
+ * 									MessageGroupsList: lex.BotMessageGroupArray{
+ * 										&lex.BotMessageGroupArgs{
+ * 											Message: &lex.BotMessageArgs{
+ * 												PlainTextMessage: &lex.BotPlainTextMessageArgs{
+ * 													Value: pulumi.String("Okay, I will not place your order."),
+ * 												},
+ * 											},
+ * 										},
+ * 									},
+ * 									AllowInterrupt: pulumi.Bool(false),
+ * 								},
+ * 							},
+ * 							Slots: lex.BotSlotArray{
+ * 								&lex.BotSlotArgs{
+ * 									Name:         pulumi.String("FlowerType"),
+ * 									Description:  pulumi.String("something"),
+ * 									SlotTypeName: pulumi.String("FlowerTypes"),
+ * 									ValueElicitationSetting: &lex.BotSlotValueElicitationSettingArgs{
+ * 										SlotConstraint: "Required",
+ * 										PromptSpecification: &lex.BotPromptSpecificationArgs{
+ * 											MessageGroupsList: lex.BotMessageGroupArray{
+ * 												&lex.BotMessageGroupArgs{
+ * 													Message: &lex.BotMessageArgs{
+ * 														PlainTextMessage: &lex.BotPlainTextMessageArgs{
+ * 															Value: pulumi.String("What type of flowers would you like to order?"),
+ * 														},
+ * 													},
+ * 												},
+ * 											},
+ * 											MaxRetries:     pulumi.Int(3),
+ * 											AllowInterrupt: pulumi.Bool(false),
+ * 										},
+ * 									},
+ * 								},
+ * 								&lex.BotSlotArgs{
+ * 									Name:         pulumi.String("PickUpDate"),
+ * 									Description:  pulumi.String("something"),
+ * 									SlotTypeName: pulumi.String("AMAZON.Date"),
+ * 									ValueElicitationSetting: &lex.BotSlotValueElicitationSettingArgs{
+ * 										SlotConstraint: "Required",
+ * 										PromptSpecification: &lex.BotPromptSpecificationArgs{
+ * 											MessageGroupsList: lex.BotMessageGroupArray{
+ * 												&lex.BotMessageGroupArgs{
+ * 													Message: &lex.BotMessageArgs{
+ * 														PlainTextMessage: &lex.BotPlainTextMessageArgs{
+ * 															Value: pulumi.String("What day do you want the {FlowerType} to be picked up?"),
+ * 														},
+ * 													},
+ * 												},
+ * 											},
+ * 											MaxRetries:     pulumi.Int(3),
+ * 											AllowInterrupt: pulumi.Bool(false),
+ * 										},
+ * 									},
+ * 								},
+ * 								&lex.BotSlotArgs{
+ * 									Name:         pulumi.String("PickUpTime"),
+ * 									Description:  pulumi.String("something"),
+ * 									SlotTypeName: pulumi.String("AMAZON.Time"),
+ * 									ValueElicitationSetting: &lex.BotSlotValueElicitationSettingArgs{
+ * 										SlotConstraint: "Required",
+ * 										PromptSpecification: &lex.BotPromptSpecificationArgs{
+ * 											MessageGroupsList: lex.BotMessageGroupArray{
+ * 												&lex.BotMessageGroupArgs{
+ * 													Message: &lex.BotMessageArgs{
+ * 														PlainTextMessage: &lex.BotPlainTextMessageArgs{
+ * 															Value: pulumi.String("At what time do you want the {FlowerType} to be picked up?"),
+ * 														},
+ * 													},
+ * 												},
+ * 											},
+ * 											MaxRetries:     pulumi.Int(3),
+ * 											AllowInterrupt: pulumi.Bool(false),
+ * 										},
+ * 									},
+ * 								},
+ * 							},
+ * 						},
+ * 						&lex.BotIntentArgs{
+ * 							Name:                  pulumi.String("FallbackIntent"),
+ * 							Description:           pulumi.String("Default intent when no other intent matches"),
+ * 							ParentIntentSignature: pulumi.String("AMAZON.FallbackIntent"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			botRuntimeRole,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		orderFlowersTemplateBotVersionWithCFN, err := lex.NewBotVersion(ctx, "orderFlowersTemplateBotVersionWithCFN", &lex.BotVersionArgs{
+ * 			BotId: orderFlowersTemplateBot.ID(),
+ * 			BotVersionLocaleSpecification: lex.BotVersionLocaleSpecificationArray{
+ * 				&lex.BotVersionLocaleSpecificationArgs{
+ * 					LocaleId: pulumi.String("en_US"),
+ * 					BotVersionLocaleDetails: &lex.BotVersionLocaleDetailsArgs{
+ * 						SourceBotVersion: pulumi.String("DRAFT"),
+ * 					},
+ * 				},
+ * 			},
+ * 			Description: pulumi.String("OrderFlowers Version"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			orderFlowersTemplateBot,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = lex.NewBotAlias(ctx, "firstBotAliasWithCFN", &lex.BotAliasArgs{
+ * 			BotId:        orderFlowersTemplateBot.ID(),
+ * 			BotAliasName: pulumi.String("OrderFlowersVersion1Alias"),
+ * 			BotVersion:   orderFlowersTemplateBotVersionWithCFN.Bot_version,
+ * 			SentimentAnalysisSettings: &lex.SentimentAnalysisSettingsPropertiesArgs{
+ * 				DetectSentiment: pulumi.Bool(true),
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			orderFlowersTemplateBotVersionWithCFN,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const botRuntimeRole = new aws_native.iam.Role("botRuntimeRole", {
+ *     assumeRolePolicyDocument: {
+ *         version: "2012-10-17",
+ *         statement: [{
+ *             effect: "Allow",
+ *             principal: {
+ *                 service: ["lexv2.amazonaws.com"],
+ *             },
+ *             action: ["sts:AssumeRole"],
+ *         }],
+ *     },
+ *     path: "/",
+ *     policies: [{
+ *         policyName: "LexRuntimeRolePolicy",
+ *         policyDocument: {
+ *             version: "2012-10-17",
+ *             statement: [{
+ *                 effect: "Allow",
+ *                 action: [
+ *                     "polly:SynthesizeSpeech",
+ *                     "comprehend:DetectSentiment",
+ *                 ],
+ *                 resource: "*",
+ *             }],
+ *         },
+ *     }],
+ * });
+ * const orderFlowersTemplateBot = new aws_native.lex.Bot("orderFlowersTemplateBot", {
+ *     name: "OrderFlowersWithCFN",
+ *     roleArn: botRuntimeRole.arn,
+ *     dataPrivacy: {
+ *         childDirected: false,
+ *     },
+ *     idleSessionTTLInSeconds: 300,
+ *     description: "How to create a OrderFlowers bot with AWS CloudFormation",
+ *     autoBuildBotLocales: false,
+ *     botLocales: [{
+ *         localeId: "en_US",
+ *         description: "Book a trip bot Locale",
+ *         nluConfidenceThreshold: 0.4,
+ *         voiceSettings: {
+ *             voiceId: "Ivy",
+ *         },
+ *         slotTypes: [{
+ *             name: "FlowerTypes",
+ *             description: "Slot Type description",
+ *             slotTypeValues: [
+ *                 {
+ *                     sampleValue: {
+ *                         value: "lilies",
+ *                     },
+ *                 },
+ *                 {
+ *                     sampleValue: {
+ *                         value: "roses",
+ *                     },
+ *                 },
+ *                 {
+ *                     sampleValue: {
+ *                         value: "tulips",
+ *                     },
+ *                 },
+ *             ],
+ *             valueSelectionSetting: {
+ *                 resolutionStrategy: "ORIGINAL_VALUE",
+ *             },
+ *         }],
+ *         intents: [
+ *             {
+ *                 name: "OrderFlowers",
+ *                 description: "Intent to order a bouquet of flowers for pick up",
+ *                 sampleUtterances: [
+ *                     {
+ *                         utterance: "I would like to pick up flowers",
+ *                     },
+ *                     {
+ *                         utterance: "I would like to order some flowers",
+ *                     },
+ *                 ],
+ *                 intentConfirmationSetting: {
+ *                     promptSpecification: {
+ *                         messageGroupsList: [{
+ *                             message: {
+ *                                 plainTextMessage: {
+ *                                     value: "Okay, your {FlowerType} will be ready for pickup by {PickupTime} on {PickupDate}.  Does this sound okay?",
+ *                                 },
+ *                             },
+ *                         }],
+ *                         maxRetries: 3,
+ *                         allowInterrupt: false,
+ *                     },
+ *                     declinationResponse: {
+ *                         messageGroupsList: [{
+ *                             message: {
+ *                                 plainTextMessage: {
+ *                                     value: "Okay, I will not place your order.",
+ *                                 },
+ *                             },
+ *                         }],
+ *                         allowInterrupt: false,
+ *                     },
+ *                 },
+ *                 slots: [
+ *                     {
+ *                         name: "FlowerType",
+ *                         description: "something",
+ *                         slotTypeName: "FlowerTypes",
+ *                         valueElicitationSetting: {
+ *                             slotConstraint: "Required",
+ *                             promptSpecification: {
+ *                                 messageGroupsList: [{
+ *                                     message: {
+ *                                         plainTextMessage: {
+ *                                             value: "What type of flowers would you like to order?",
+ *                                         },
+ *                                     },
+ *                                 }],
+ *                                 maxRetries: 3,
+ *                                 allowInterrupt: false,
+ *                             },
+ *                         },
+ *                     },
+ *                     {
+ *                         name: "PickUpDate",
+ *                         description: "something",
+ *                         slotTypeName: "AMAZON.Date",
+ *                         valueElicitationSetting: {
+ *                             slotConstraint: "Required",
+ *                             promptSpecification: {
+ *                                 messageGroupsList: [{
+ *                                     message: {
+ *                                         plainTextMessage: {
+ *                                             value: "What day do you want the {FlowerType} to be picked up?",
+ *                                         },
+ *                                     },
+ *                                 }],
+ *                                 maxRetries: 3,
+ *                                 allowInterrupt: false,
+ *                             },
+ *                         },
+ *                     },
+ *                     {
+ *                         name: "PickUpTime",
+ *                         description: "something",
+ *                         slotTypeName: "AMAZON.Time",
+ *                         valueElicitationSetting: {
+ *                             slotConstraint: "Required",
+ *                             promptSpecification: {
+ *                                 messageGroupsList: [{
+ *                                     message: {
+ *                                         plainTextMessage: {
+ *                                             value: "At what time do you want the {FlowerType} to be picked up?",
+ *                                         },
+ *                                     },
+ *                                 }],
+ *                                 maxRetries: 3,
+ *                                 allowInterrupt: false,
+ *                             },
+ *                         },
+ *                     },
+ *                 ],
+ *             },
+ *             {
+ *                 name: "FallbackIntent",
+ *                 description: "Default intent when no other intent matches",
+ *                 parentIntentSignature: "AMAZON.FallbackIntent",
+ *             },
+ *         ],
+ *     }],
+ * }, {
+ *     dependsOn: [botRuntimeRole],
+ * });
+ * const orderFlowersTemplateBotVersionWithCFN = new aws_native.lex.BotVersion("orderFlowersTemplateBotVersionWithCFN", {
+ *     botId: orderFlowersTemplateBot.id,
+ *     botVersionLocaleSpecification: [{
+ *         localeId: "en_US",
+ *         botVersionLocaleDetails: {
+ *             sourceBotVersion: "DRAFT",
+ *         },
+ *     }],
+ *     description: "OrderFlowers Version",
+ * }, {
+ *     dependsOn: [orderFlowersTemplateBot],
+ * });
+ * const firstBotAliasWithCFN = new aws_native.lex.BotAlias("firstBotAliasWithCFN", {
+ *     botId: orderFlowersTemplateBot.id,
+ *     botAliasName: "OrderFlowersVersion1Alias",
+ *     botVersion: orderFlowersTemplateBotVersionWithCFN.botVersion,
+ *     sentimentAnalysisSettings: {
+ *         detectSentiment: true,
+ *     },
+ * }, {
+ *     dependsOn: [orderFlowersTemplateBotVersionWithCFN],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * bot_runtime_role = aws_native.iam.Role("botRuntimeRole",
+ *     assume_role_policy_document={
+ *         "version": "2012-10-17",
+ *         "statement": [{
+ *             "effect": "Allow",
+ *             "principal": {
+ *                 "service": ["lexv2.amazonaws.com"],
+ *             },
+ *             "action": ["sts:AssumeRole"],
+ *         }],
+ *     },
+ *     path="/",
+ *     policies=[aws_native.iam.RolePolicyArgs(
+ *         policy_name="LexRuntimeRolePolicy",
+ *         policy_document={
+ *             "version": "2012-10-17",
+ *             "statement": [{
+ *                 "effect": "Allow",
+ *                 "action": [
+ *                     "polly:SynthesizeSpeech",
+ *                     "comprehend:DetectSentiment",
+ *                 ],
+ *                 "resource": "*",
+ *             }],
+ *         },
+ *     )])
+ * order_flowers_template_bot = aws_native.lex.Bot("orderFlowersTemplateBot",
+ *     name="OrderFlowersWithCFN",
+ *     role_arn=bot_runtime_role.arn,
+ *     data_privacy=aws_native.lex.DataPrivacyPropertiesArgs(
+ *         child_directed=False,
+ *     ),
+ *     idle_session_ttl_in_seconds=300,
+ *     description="How to create a OrderFlowers bot with AWS CloudFormation",
+ *     auto_build_bot_locales=False,
+ *     bot_locales=[aws_native.lex.BotLocaleArgs(
+ *         locale_id="en_US",
+ *         description="Book a trip bot Locale",
+ *         nlu_confidence_threshold=0.4,
+ *         voice_settings=aws_native.lex.BotVoiceSettingsArgs(
+ *             voice_id="Ivy",
+ *         ),
+ *         slot_types=[aws_native.lex.BotSlotTypeArgs(
+ *             name="FlowerTypes",
+ *             description="Slot Type description",
+ *             slot_type_values=[
+ *                 aws_native.lex.BotSlotTypeValueArgs(
+ *                     sample_value=aws_native.lex.BotSampleValueArgs(
+ *                         value="lilies",
+ *                     ),
+ *                 ),
+ *                 aws_native.lex.BotSlotTypeValueArgs(
+ *                     sample_value=aws_native.lex.BotSampleValueArgs(
+ *                         value="roses",
+ *                     ),
+ *                 ),
+ *                 aws_native.lex.BotSlotTypeValueArgs(
+ *                     sample_value=aws_native.lex.BotSampleValueArgs(
+ *                         value="tulips",
+ *                     ),
+ *                 ),
+ *             ],
+ *             value_selection_setting=aws_native.lex.BotSlotValueSelectionSettingArgs(
+ *                 resolution_strategy="ORIGINAL_VALUE",
+ *             ),
+ *         )],
+ *         intents=[
+ *             aws_native.lex.BotIntentArgs(
+ *                 name="OrderFlowers",
+ *                 description="Intent to order a bouquet of flowers for pick up",
+ *                 sample_utterances=[
+ *                     aws_native.lex.BotSampleUtteranceArgs(
+ *                         utterance="I would like to pick up flowers",
+ *                     ),
+ *                     aws_native.lex.BotSampleUtteranceArgs(
+ *                         utterance="I would like to order some flowers",
+ *                     ),
+ *                 ],
+ *                 intent_confirmation_setting=aws_native.lex.BotIntentConfirmationSettingArgs(
+ *                     prompt_specification=aws_native.lex.BotPromptSpecificationArgs(
+ *                         message_groups_list=[aws_native.lex.BotMessageGroupArgs(
+ *                             message=aws_native.lex.BotMessageArgs(
+ *                                 plain_text_message=aws_native.lex.BotPlainTextMessageArgs(
+ *                                     value="Okay, your {FlowerType} will be ready for pickup by {PickupTime} on {PickupDate}.  Does this sound okay?",
+ *                                 ),
+ *                             ),
+ *                         )],
+ *                         max_retries=3,
+ *                         allow_interrupt=False,
+ *                     ),
+ *                     declination_response=aws_native.lex.BotResponseSpecificationArgs(
+ *                         message_groups_list=[aws_native.lex.BotMessageGroupArgs(
+ *                             message=aws_native.lex.BotMessageArgs(
+ *                                 plain_text_message=aws_native.lex.BotPlainTextMessageArgs(
+ *                                     value="Okay, I will not place your order.",
+ *                                 ),
+ *                             ),
+ *                         )],
+ *                         allow_interrupt=False,
+ *                     ),
+ *                 ),
+ *                 slots=[
+ *                     aws_native.lex.BotSlotArgs(
+ *                         name="FlowerType",
+ *                         description="something",
+ *                         slot_type_name="FlowerTypes",
+ *                         value_elicitation_setting=aws_native.lex.BotSlotValueElicitationSettingArgs(
+ *                             slot_constraint="Required",
+ *                             prompt_specification=aws_native.lex.BotPromptSpecificationArgs(
+ *                                 message_groups_list=[aws_native.lex.BotMessageGroupArgs(
+ *                                     message=aws_native.lex.BotMessageArgs(
+ *                                         plain_text_message=aws_native.lex.BotPlainTextMessageArgs(
+ *                                             value="What type of flowers would you like to order?",
+ *                                         ),
+ *                                     ),
+ *                                 )],
+ *                                 max_retries=3,
+ *                                 allow_interrupt=False,
+ *                             ),
+ *                         ),
+ *                     ),
+ *                     aws_native.lex.BotSlotArgs(
+ *                         name="PickUpDate",
+ *                         description="something",
+ *                         slot_type_name="AMAZON.Date",
+ *                         value_elicitation_setting=aws_native.lex.BotSlotValueElicitationSettingArgs(
+ *                             slot_constraint="Required",
+ *                             prompt_specification=aws_native.lex.BotPromptSpecificationArgs(
+ *                                 message_groups_list=[aws_native.lex.BotMessageGroupArgs(
+ *                                     message=aws_native.lex.BotMessageArgs(
+ *                                         plain_text_message=aws_native.lex.BotPlainTextMessageArgs(
+ *                                             value="What day do you want the {FlowerType} to be picked up?",
+ *                                         ),
+ *                                     ),
+ *                                 )],
+ *                                 max_retries=3,
+ *                                 allow_interrupt=False,
+ *                             ),
+ *                         ),
+ *                     ),
+ *                     aws_native.lex.BotSlotArgs(
+ *                         name="PickUpTime",
+ *                         description="something",
+ *                         slot_type_name="AMAZON.Time",
+ *                         value_elicitation_setting=aws_native.lex.BotSlotValueElicitationSettingArgs(
+ *                             slot_constraint="Required",
+ *                             prompt_specification=aws_native.lex.BotPromptSpecificationArgs(
+ *                                 message_groups_list=[aws_native.lex.BotMessageGroupArgs(
+ *                                     message=aws_native.lex.BotMessageArgs(
+ *                                         plain_text_message=aws_native.lex.BotPlainTextMessageArgs(
+ *                                             value="At what time do you want the {FlowerType} to be picked up?",
+ *                                         ),
+ *                                     ),
+ *                                 )],
+ *                                 max_retries=3,
+ *                                 allow_interrupt=False,
+ *                             ),
+ *                         ),
+ *                     ),
+ *                 ],
+ *             ),
+ *             aws_native.lex.BotIntentArgs(
+ *                 name="FallbackIntent",
+ *                 description="Default intent when no other intent matches",
+ *                 parent_intent_signature="AMAZON.FallbackIntent",
+ *             ),
+ *         ],
+ *     )],
+ *     opts=pulumi.ResourceOptions(depends_on=[bot_runtime_role]))
+ * order_flowers_template_bot_version_with_cfn = aws_native.lex.BotVersion("orderFlowersTemplateBotVersionWithCFN",
+ *     bot_id=order_flowers_template_bot.id,
+ *     bot_version_locale_specification=[aws_native.lex.BotVersionLocaleSpecificationArgs(
+ *         locale_id="en_US",
+ *         bot_version_locale_details=aws_native.lex.BotVersionLocaleDetailsArgs(
+ *             source_bot_version="DRAFT",
+ *         ),
+ *     )],
+ *     description="OrderFlowers Version",
+ *     opts=pulumi.ResourceOptions(depends_on=[order_flowers_template_bot]))
+ * first_bot_alias_with_cfn = aws_native.lex.BotAlias("firstBotAliasWithCFN",
+ *     bot_id=order_flowers_template_bot.id,
+ *     bot_alias_name="OrderFlowersVersion1Alias",
+ *     bot_version=order_flowers_template_bot_version_with_cfn.bot_version,
+ *     sentiment_analysis_settings=aws_native.lex.SentimentAnalysisSettingsPropertiesArgs(
+ *         detect_sentiment=True,
+ *     ),
+ *     opts=pulumi.ResourceOptions(depends_on=[order_flowers_template_bot_version_with_cfn]))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var botRuntimeRole = new AwsNative.IAM.Role("botRuntimeRole", new AwsNative.IAM.RoleArgs
+ *         {
+ *             AssumeRolePolicyDocument = 
+ *             {
+ *                 { "version", "2012-10-17" },
+ *                 { "statement", 
+ *                 {
+ *                     
+ *                     {
+ *                         { "effect", "Allow" },
+ *                         { "principal", 
+ *                         {
+ *                             { "service", 
+ *                             {
+ *                                 "lexv2.amazonaws.com",
+ *                             } },
+ *                         } },
+ *                         { "action", 
+ *                         {
+ *                             "sts:AssumeRole",
+ *                         } },
+ *                     },
+ *                 } },
+ *             },
+ *             Path = "/",
+ *             Policies = 
+ *             {
+ *                 new AwsNative.IAM.Inputs.RolePolicyArgs
+ *                 {
+ *                     PolicyName = "LexRuntimeRolePolicy",
+ *                     PolicyDocument = 
+ *                     {
+ *                         { "version", "2012-10-17" },
+ *                         { "statement", 
+ *                         {
+ *                             
+ *                             {
+ *                                 { "effect", "Allow" },
+ *                                 { "action", 
+ *                                 {
+ *                                     "polly:SynthesizeSpeech",
+ *                                     "comprehend:DetectSentiment",
+ *                                 } },
+ *                                 { "resource", "*" },
+ *                             },
+ *                         } },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var bookTripTemplateBot = new AwsNative.Lex.Bot("bookTripTemplateBot", new AwsNative.Lex.BotArgs
+ *         {
+ *             Name = "BookTripWithCFN",
+ *             RoleArn = botRuntimeRole.Arn,
+ *             DataPrivacy = new AwsNative.Lex.Inputs.DataPrivacyPropertiesArgs
+ *             {
+ *                 ChildDirected = false,
+ *             },
+ *             IdleSessionTTLInSeconds = 300,
+ *             Description = "How to create a BookTrip bot with CFN",
+ *             AutoBuildBotLocales = false,
+ *             BotLocales = 
+ *             {
+ *                 new AwsNative.Lex.Inputs.BotLocaleArgs
+ *                 {
+ *                     LocaleId = "en_US",
+ *                     Description = "Book a trip bot Locale",
+ *                     NluConfidenceThreshold = 0.4,
+ *                     VoiceSettings = new AwsNative.Lex.Inputs.BotVoiceSettingsArgs
+ *                     {
+ *                         VoiceId = "Ivy",
+ *                     },
+ *                     SlotTypes = 
+ *                     {
+ *                         new AwsNative.Lex.Inputs.BotSlotTypeArgs
+ *                         {
+ *                             Name = "CarTypeValues",
+ *                             Description = "Slot Type description",
+ *                             SlotTypeValues = 
+ *                             {
+ *                                 new AwsNative.Lex.Inputs.BotSlotTypeValueArgs
+ *                                 {
+ *                                     SampleValue = new AwsNative.Lex.Inputs.BotSampleValueArgs
+ *                                     {
+ *                                         Value = "economy",
+ *                                     },
+ *                                 },
+ *                                 new AwsNative.Lex.Inputs.BotSlotTypeValueArgs
+ *                                 {
+ *                                     SampleValue = new AwsNative.Lex.Inputs.BotSampleValueArgs
+ *                                     {
+ *                                         Value = "standard",
+ *                                     },
+ *                                 },
+ *                                 new AwsNative.Lex.Inputs.BotSlotTypeValueArgs
+ *                                 {
+ *                                     SampleValue = new AwsNative.Lex.Inputs.BotSampleValueArgs
+ *                                     {
+ *                                         Value = "midsize",
+ *                                     },
+ *                                 },
+ *                                 new AwsNative.Lex.Inputs.BotSlotTypeValueArgs
+ *                                 {
+ *                                     SampleValue = new AwsNative.Lex.Inputs.BotSampleValueArgs
+ *                                     {
+ *                                         Value = "full size",
+ *                                     },
+ *                                 },
+ *                                 new AwsNative.Lex.Inputs.BotSlotTypeValueArgs
+ *                                 {
+ *                                     SampleValue = new AwsNative.Lex.Inputs.BotSampleValueArgs
+ *                                     {
+ *                                         Value = "luxury",
+ *                                     },
+ *                                 },
+ *                                 new AwsNative.Lex.Inputs.BotSlotTypeValueArgs
+ *                                 {
+ *                                     SampleValue = new AwsNative.Lex.Inputs.BotSampleValueArgs
+ *                                     {
+ *                                         Value = "minivan",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             ValueSelectionSetting = new AwsNative.Lex.Inputs.BotSlotValueSelectionSettingArgs
+ *                             {
+ *                                 ResolutionStrategy = "ORIGINAL_VALUE",
+ *                             },
+ *                         },
+ *                         new AwsNative.Lex.Inputs.BotSlotTypeArgs
+ *                         {
+ *                             Name = "RoomTypeValues",
+ *                             Description = "Slot Type description",
+ *                             SlotTypeValues = 
+ *                             {
+ *                                 new AwsNative.Lex.Inputs.BotSlotTypeValueArgs
+ *                                 {
+ *                                     SampleValue = new AwsNative.Lex.Inputs.BotSampleValueArgs
+ *                                     {
+ *                                         Value = "queen",
+ *                                     },
+ *                                 },
+ *                                 new AwsNative.Lex.Inputs.BotSlotTypeValueArgs
+ *                                 {
+ *                                     SampleValue = new AwsNative.Lex.Inputs.BotSampleValueArgs
+ *                                     {
+ *                                         Value = "king",
+ *                                     },
+ *                                 },
+ *                                 new AwsNative.Lex.Inputs.BotSlotTypeValueArgs
+ *                                 {
+ *                                     SampleValue = new AwsNative.Lex.Inputs.BotSampleValueArgs
+ *                                     {
+ *                                         Value = "deluxe",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             ValueSelectionSetting = new AwsNative.Lex.Inputs.BotSlotValueSelectionSettingArgs
+ *                             {
+ *                                 ResolutionStrategy = "ORIGINAL_VALUE",
+ *                             },
+ *                         },
+ *                     },
+ *                     Intents = 
+ *                     {
+ *                         new AwsNative.Lex.Inputs.BotIntentArgs
+ *                         {
+ *                             Name = "BookCar",
+ *                             Description = "Intent to book a car on StayBooker",
+ *                             SampleUtterances = 
+ *                             {
+ *                                 new AwsNative.Lex.Inputs.BotSampleUtteranceArgs
+ *                                 {
+ *                                     Utterance = "Book a car",
+ *                                 },
+ *                                 new AwsNative.Lex.Inputs.BotSampleUtteranceArgs
+ *                                 {
+ *                                     Utterance = "Reserve a car",
+ *                                 },
+ *                                 new AwsNative.Lex.Inputs.BotSampleUtteranceArgs
+ *                                 {
+ *                                     Utterance = "Make a car reservation",
+ *                                 },
+ *                             },
+ *                             IntentConfirmationSetting = new AwsNative.Lex.Inputs.BotIntentConfirmationSettingArgs
+ *                             {
+ *                                 PromptSpecification = new AwsNative.Lex.Inputs.BotPromptSpecificationArgs
+ *                                 {
+ *                                     MessageGroupsList = 
+ *                                     {
+ *                                         new AwsNative.Lex.Inputs.BotMessageGroupArgs
+ *                                         {
+ *                                             Message = new AwsNative.Lex.Inputs.BotMessageArgs
+ *                                             {
+ *                                                 PlainTextMessage = new AwsNative.Lex.Inputs.BotPlainTextMessageArgs
+ *                                                 {
+ *                                                     Value = "Okay, I have you down for a {CarType} rental in {PickUpCity} from {PickUpDate} to {ReturnDate}.  Should I book the reservation?",
+ *                                                 },
+ *                                             },
+ *                                         },
+ *                                     },
+ *                                     MaxRetries = 3,
+ *                                     AllowInterrupt = false,
+ *                                 },
+ *                                 DeclinationResponse = new AwsNative.Lex.Inputs.BotResponseSpecificationArgs
+ *                                 {
+ *                                     MessageGroupsList = 
+ *                                     {
+ *                                         new AwsNative.Lex.Inputs.BotMessageGroupArgs
+ *                                         {
+ *                                             Message = new AwsNative.Lex.Inputs.BotMessageArgs
+ *                                             {
+ *                                                 PlainTextMessage = new AwsNative.Lex.Inputs.BotPlainTextMessageArgs
+ *                                                 {
+ *                                                     Value = "Okay, I have cancelled your reservation in progress.",
+ *                                                 },
+ *                                             },
+ *                                         },
+ *                                     },
+ *                                     AllowInterrupt = false,
+ *                                 },
+ *                             },
+ *                             Slots = 
+ *                             {
+ *                                 new AwsNative.Lex.Inputs.BotSlotArgs
+ *                                 {
+ *                                     Name = "PickUpCity",
+ *                                     Description = "something",
+ *                                     SlotTypeName = "AMAZON.City",
+ *                                     ValueElicitationSetting = new AwsNative.Lex.Inputs.BotSlotValueElicitationSettingArgs
+ *                                     {
+ *                                         SlotConstraint = "Required",
+ *                                         PromptSpecification = new AwsNative.Lex.Inputs.BotPromptSpecificationArgs
+ *                                         {
+ *                                             MessageGroupsList = 
+ *                                             {
+ *                                                 new AwsNative.Lex.Inputs.BotMessageGroupArgs
+ *                                                 {
+ *                                                     Message = new AwsNative.Lex.Inputs.BotMessageArgs
+ *                                                     {
+ *                                                         PlainTextMessage = new AwsNative.Lex.Inputs.BotPlainTextMessageArgs
+ *                                                         {
+ *                                                             Value = "In what city do you need to rent a car?",
+ *                                                         },
+ *                                                     },
+ *                                                 },
+ *                                             },
+ *                                             MaxRetries = 3,
+ *                                             AllowInterrupt = false,
+ *                                         },
+ *                                     },
+ *                                 },
+ *                                 new AwsNative.Lex.Inputs.BotSlotArgs
+ *                                 {
+ *                                     Name = "PickUpDate",
+ *                                     Description = "something",
+ *                                     SlotTypeName = "AMAZON.Date",
+ *                                     ValueElicitationSetting = new AwsNative.Lex.Inputs.BotSlotValueElicitationSettingArgs
+ *                                     {
+ *                                         SlotConstraint = "Required",
+ *                                         PromptSpecification = new AwsNative.Lex.Inputs.BotPromptSpecificationArgs
+ *                                         {
+ *                                             MessageGroupsList = 
+ *                                             {
+ *                                                 new AwsNative.Lex.Inputs.BotMessageGroupArgs
+ *                                                 {
+ *                                                     Message = new AwsNative.Lex.Inputs.BotMessageArgs
+ *                                                     {
+ *                                                         PlainTextMessage = new AwsNative.Lex.Inputs.BotPlainTextMessageArgs
+ *                                                         {
+ *                                                             Value = "What day do you want to start your rental?",
+ *                                                         },
+ *                                                     },
+ *                                                 },
+ *                                             },
+ *                                             MaxRetries = 3,
+ *                                             AllowInterrupt = false,
+ *                                         },
+ *                                     },
+ *                                 },
+ *                                 new AwsNative.Lex.Inputs.BotSlotArgs
+ *                                 {
+ *                                     Name = "ReturnDate",
+ *                                     Description = "something",
+ *                                     SlotTypeName = "AMAZON.Date",
+ *                                     ValueElicitationSetting = new AwsNative.Lex.Inputs.BotSlotValueElicitationSettingArgs
+ *                                     {
+ *                                         SlotConstraint = "Required",
+ *                                         PromptSpecification = new AwsNative.Lex.Inputs.BotPromptSpecificationArgs
+ *                                         {
+ *                                             MessageGroupsList = 
+ *                                             {
+ *                                                 new AwsNative.Lex.Inputs.BotMessageGroupArgs
+ *                                                 {
+ *                                                     Message = new AwsNative.Lex.Inputs.BotMessageArgs
+ *                                                     {
+ *                                                         PlainTextMessage = new AwsNative.Lex.Inputs.BotPlainTextMessageArgs
+ *                                                         {
+ *                                                             Value = "What day do you want to return the car?",
+ *                                                         },
+ *                                                     },
+ *                                                 },
+ *                                             },
+ *                                             MaxRetries = 3,
+ *                                             AllowInterrupt = false,
+ *                                         },
+ *                                     },
+ *                                 },
+ *                                 new AwsNative.Lex.Inputs.BotSlotArgs
+ *                                 {
+ *                                     Name = "DriverAge",
+ *                                     Description = "something",
+ *                                     SlotTypeName = "AMAZON.Number",
+ *                                     ValueElicitationSetting = new AwsNative.Lex.Inputs.BotSlotValueElicitationSettingArgs
+ *                                     {
+ *                                         SlotConstraint = "Required",
+ *                                         PromptSpecification = new AwsNative.Lex.Inputs.BotPromptSpecificationArgs
+ *                                         {
+ *                                             MessageGroupsList = 
+ *                                             {
+ *                                                 new AwsNative.Lex.Inputs.BotMessageGroupArgs
+ *                                                 {
+ *                                                     Message = new AwsNative.Lex.Inputs.BotMessageArgs
+ *                                                     {
+ *                                                         PlainTextMessage = new AwsNative.Lex.Inputs.BotPlainTextMessageArgs
+ *                                                         {
+ *                                                             Value = "How old is the driver for this rental?",
+ *                                                         },
+ *                                                     },
+ *                                                 },
+ *                                             },
+ *                                             MaxRetries = 3,
+ *                                             AllowInterrupt = false,
+ *                                         },
+ *                                     },
+ *                                 },
+ *                                 new AwsNative.Lex.Inputs.BotSlotArgs
+ *                                 {
+ *                                     Name = "CarType",
+ *                                     Description = "something",
+ *                                     SlotTypeName = "CarTypeValues",
+ *                                     ValueElicitationSetting = new AwsNative.Lex.Inputs.BotSlotValueElicitationSettingArgs
+ *                                     {
+ *                                         SlotConstraint = "Required",
+ *                                         PromptSpecification = new AwsNative.Lex.Inputs.BotPromptSpecificationArgs
+ *                                         {
+ *                                             MessageGroupsList = 
+ *                                             {
+ *                                                 new AwsNative.Lex.Inputs.BotMessageGroupArgs
+ *                                                 {
+ *                                                     Message = new AwsNative.Lex.Inputs.BotMessageArgs
+ *                                                     {
+ *                                                         PlainTextMessage = new AwsNative.Lex.Inputs.BotPlainTextMessageArgs
+ *                                                         {
+ *                                                             Value = "What type of car would you like to rent?  Our most popular options are economy, midsize, and luxury",
+ *                                                         },
+ *                                                     },
+ *                                                 },
+ *                                             },
+ *                                             MaxRetries = 3,
+ *                                             AllowInterrupt = false,
+ *                                         },
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                         
+ *                         {
+ *                             
+ *                             {
+ *                                 { "name", "BookHotel" },
+ *                                 { "description", "Intent to book a hotel on StayBooker" },
+ *                                 { "sampleUtterances", 
+ *                                 {
+ *                                     
+ *                                     {
+ *                                         { "utterance", "Book a hotel" },
+ *                                     },
+ *                                     
+ *                                     {
+ *                                         { "utterance", "I want a make hotel reservations" },
+ *                                     },
+ *                                     
+ *                                     {
+ *                                         { "utterance", "Book a {Nights} night stay in {Location}" },
+ *                                     },
+ *                                 } },
+ *                                 { "intentConfirmationSetting", 
+ *                                 {
+ *                                     { "promptSpecification", 
+ *                                     {
+ *                                         { "messageGroupsList", 
+ *                                         {
+ *                                             
+ *                                             {
+ *                                                 { "message", 
+ *                                                 {
+ *                                                     { "plainTextMessage", 
+ *                                                     {
+ *                                                         { "value", "Okay, I have you down for a {Nights} night stay in {Location} starting {CheckInDate}.  Shall I book the reservation?" },
+ *                                                     } },
+ *                                                 } },
+ *                                             },
+ *                                         } },
+ *                                         { "maxRetries", 3 },
+ *                                         { "allowInterrupt", false },
+ *                                     } },
+ *                                     { "declinationResponse", 
+ *                                     {
+ *                                         { "messageGroupsList", 
+ *                                         {
+ *                                             
+ *                                             {
+ *                                                 { "message", 
+ *                                                 {
+ *                                                     { "plainTextMessage", 
+ *                                                     {
+ *                                                         { "value", "Okay, I have cancelled your reservation in progress." },
+ *                                                     } },
+ *                                                 } },
+ *                                             },
+ *                                         } },
+ *                                         { "allowInterrupt", true },
+ *                                     } },
+ *                                 } },
+ *                                 { "slots", 
+ *                                 {
+ *                                     
+ *                                     {
+ *                                         { "name", "Location" },
+ *                                         { "description", "something" },
+ *                                         { "slotTypeName", "AMAZON.City" },
+ *                                         { "valueElicitationSetting", 
+ *                                         {
+ *                                             { "slotConstraint", "Required" },
+ *                                             { "promptSpecification", 
+ *                                             {
+ *                                                 { "messageGroupsList", 
+ *                                                 {
+ *                                                     
+ *                                                     {
+ *                                                         { "message", 
+ *                                                         {
+ *                                                             { "plainTextMessage", 
+ *                                                             {
+ *                                                                 { "value", "What city will you be staying in?" },
+ *                                                             } },
+ *                                                         } },
+ *                                                     },
+ *                                                 } },
+ *                                                 { "maxRetries", 3 },
+ *                                                 { "allowInterrupt", false },
+ *                                             } },
+ *                                         } },
+ *                                     },
+ *                                     
+ *                                     {
+ *                                         { "name", "CheckInDate" },
+ *                                         { "description", "something" },
+ *                                         { "slotTypeName", "AMAZON.Date" },
+ *                                         { "valueElicitationSetting", 
+ *                                         {
+ *                                             { "slotConstraint", "Required" },
+ *                                             { "promptSpecification", 
+ *                                             {
+ *                                                 { "messageGroupsList", 
+ *                                                 {
+ *                                                     
+ *                                                     {
+ *                                                         { "message", 
+ *                                                         {
+ *                                                             { "plainTextMessage", 
+ *                                                             {
+ *                                                                 { "value", "What day do you want to check in?" },
+ *                                                             } },
+ *                                                         } },
+ *                                                     },
+ *                                                 } },
+ *                                                 { "maxRetries", 3 },
+ *                                                 { "allowInterrupt", false },
+ *                                             } },
+ *                                         } },
+ *                                     },
+ *                                     
+ *                                     {
+ *                                         { "name", "Nights" },
+ *                                         { "description", "something" },
+ *                                         { "slotTypeName", "AMAZON.Number" },
+ *                                         { "valueElicitationSetting", 
+ *                                         {
+ *                                             { "slotConstraint", "Required" },
+ *                                             { "promptSpecification", 
+ *                                             {
+ *                                                 { "messageGroupsList", 
+ *                                                 {
+ *                                                     
+ *                                                     {
+ *                                                         { "message", 
+ *                                                         {
+ *                                                             { "plainTextMessage", 
+ *                                                             {
+ *                                                                 { "value", "How many nights will you be staying?" },
+ *                                                             } },
+ *                                                         } },
+ *                                                     },
+ *                                                 } },
+ *                                                 { "maxRetries", 3 },
+ *                                                 { "allowInterrupt", false },
+ *                                             } },
+ *                                         } },
+ *                                     },
+ *                                     
+ *                                     {
+ *                                         { "name", "RoomType" },
+ *                                         { "description", "something" },
+ *                                         { "slotTypeName", "RoomTypeValues" },
+ *                                         { "valueElicitationSetting", 
+ *                                         {
+ *                                             { "slotConstraint", "Required" },
+ *                                             { "promptSpecification", 
+ *                                             {
+ *                                                 { "messageGroupsList", 
+ *                                                 {
+ *                                                     
+ *                                                     {
+ *                                                         { "message", 
+ *                                                         {
+ *                                                             { "plainTextMessage", 
+ *                                                             {
+ *                                                                 { "value", "What type of room would you like, queen, king or deluxe?" },
+ *                                                             } },
+ *                                                         } },
+ *                                                     },
+ *                                                 } },
+ *                                                 { "maxRetries", 3 },
+ *                                                 { "allowInterrupt", false },
+ *                                             } },
+ *                                         } },
+ *                                     },
+ *                                 } },
+ *                             },
+ *                             
+ *                             {
+ *                                 { "name", "FallbackIntent" },
+ *                                 { "description", "Default intent when no other intent matches" },
+ *                                 { "parentIntentSignature", "AMAZON.FallbackIntent" },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 botRuntimeRole,
+ *             },
+ *         });
+ *         var bookTripBotVersionWithCFN = new AwsNative.Lex.BotVersion("bookTripBotVersionWithCFN", new AwsNative.Lex.BotVersionArgs
+ *         {
+ *             BotId = bookTripTemplateBot.Id,
+ *             BotVersionLocaleSpecification = 
+ *             {
+ *                 new AwsNative.Lex.Inputs.BotVersionLocaleSpecificationArgs
+ *                 {
+ *                     LocaleId = "en_US",
+ *                     BotVersionLocaleDetails = new AwsNative.Lex.Inputs.BotVersionLocaleDetailsArgs
+ *                     {
+ *                         SourceBotVersion = "DRAFT",
+ *                     },
+ *                 },
+ *             },
+ *             Description = "BookTrip Version",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 bookTripTemplateBot,
+ *             },
+ *         });
+ *         var firstBotAliasWithCFN = new AwsNative.Lex.BotAlias("firstBotAliasWithCFN", new AwsNative.Lex.BotAliasArgs
+ *         {
+ *             BotId = bookTripTemplateBot.Id,
+ *             BotAliasName = "BookTripVersion1Alias",
+ *             BotVersion = bookTripBotVersionWithCFN.Bot_version,
+ *             SentimentAnalysisSettings = new AwsNative.Lex.Inputs.SentimentAnalysisSettingsPropertiesArgs
+ *             {
+ *                 DetectSentiment = true,
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 bookTripBotVersionWithCFN,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/lex"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		botRuntimeRole, err := iam.NewRole(ctx, "botRuntimeRole", &iam.RoleArgs{
+ * 			AssumeRolePolicyDocument: pulumi.Any{
+ * 				Version: "2012-10-17",
+ * 				Statement: []map[string]interface{}{
+ * 					map[string]interface{}{
+ * 						"effect": "Allow",
+ * 						"principal": map[string]interface{}{
+ * 							"service": []string{
+ * 								"lexv2.amazonaws.com",
+ * 							},
+ * 						},
+ * 						"action": []string{
+ * 							"sts:AssumeRole",
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Path: pulumi.String("/"),
+ * 			Policies: []iam.RolePolicyArgs{
+ * 				&iam.RolePolicyArgs{
+ * 					PolicyName: pulumi.String("LexRuntimeRolePolicy"),
+ * 					PolicyDocument: pulumi.String{
+ * 						Version: "2012-10-17",
+ * 						Statement: []map[string]interface{}{
+ * 							map[string]interface{}{
+ * 								"effect": "Allow",
+ * 								"action": []string{
+ * 									"polly:SynthesizeSpeech",
+ * 									"comprehend:DetectSentiment",
+ * 								},
+ * 								"resource": "*",
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		bookTripTemplateBot, err := lex.NewBot(ctx, "bookTripTemplateBot", &lex.BotArgs{
+ * 			Name:    pulumi.String("BookTripWithCFN"),
+ * 			RoleArn: botRuntimeRole.Arn,
+ * 			DataPrivacy: &lex.DataPrivacyPropertiesArgs{
+ * 				ChildDirected: pulumi.Bool(false),
+ * 			},
+ * 			IdleSessionTTLInSeconds: pulumi.Int(300),
+ * 			Description:             pulumi.String("How to create a BookTrip bot with CFN"),
+ * 			AutoBuildBotLocales:     pulumi.Bool(false),
+ * 			BotLocales: []lex.BotLocaleArgs{
+ * 				&lex.BotLocaleArgs{
+ * 					LocaleId:               pulumi.String("en_US"),
+ * 					Description:            pulumi.String("Book a trip bot Locale"),
+ * 					NluConfidenceThreshold: pulumi.Float64(0.4),
+ * 					VoiceSettings: &lex.BotVoiceSettingsArgs{
+ * 						VoiceId: pulumi.String("Ivy"),
+ * 					},
+ * 					SlotTypes: lex.BotSlotTypeArray{
+ * 						&lex.BotSlotTypeArgs{
+ * 							Name:        pulumi.String("CarTypeValues"),
+ * 							Description: pulumi.String("Slot Type description"),
+ * 							SlotTypeValues: lex.BotSlotTypeValueArray{
+ * 								&lex.BotSlotTypeValueArgs{
+ * 									SampleValue: &lex.BotSampleValueArgs{
+ * 										Value: pulumi.String("economy"),
+ * 									},
+ * 								},
+ * 								&lex.BotSlotTypeValueArgs{
+ * 									SampleValue: &lex.BotSampleValueArgs{
+ * 										Value: pulumi.String("standard"),
+ * 									},
+ * 								},
+ * 								&lex.BotSlotTypeValueArgs{
+ * 									SampleValue: &lex.BotSampleValueArgs{
+ * 										Value: pulumi.String("midsize"),
+ * 									},
+ * 								},
+ * 								&lex.BotSlotTypeValueArgs{
+ * 									SampleValue: &lex.BotSampleValueArgs{
+ * 										Value: pulumi.String("full size"),
+ * 									},
+ * 								},
+ * 								&lex.BotSlotTypeValueArgs{
+ * 									SampleValue: &lex.BotSampleValueArgs{
+ * 										Value: pulumi.String("luxury"),
+ * 									},
+ * 								},
+ * 								&lex.BotSlotTypeValueArgs{
+ * 									SampleValue: &lex.BotSampleValueArgs{
+ * 										Value: pulumi.String("minivan"),
+ * 									},
+ * 								},
+ * 							},
+ * 							ValueSelectionSetting: &lex.BotSlotValueSelectionSettingArgs{
+ * 								ResolutionStrategy: "ORIGINAL_VALUE",
+ * 							},
+ * 						},
+ * 						&lex.BotSlotTypeArgs{
+ * 							Name:        pulumi.String("RoomTypeValues"),
+ * 							Description: pulumi.String("Slot Type description"),
+ * 							SlotTypeValues: lex.BotSlotTypeValueArray{
+ * 								&lex.BotSlotTypeValueArgs{
+ * 									SampleValue: &lex.BotSampleValueArgs{
+ * 										Value: pulumi.String("queen"),
+ * 									},
+ * 								},
+ * 								&lex.BotSlotTypeValueArgs{
+ * 									SampleValue: &lex.BotSampleValueArgs{
+ * 										Value: pulumi.String("king"),
+ * 									},
+ * 								},
+ * 								&lex.BotSlotTypeValueArgs{
+ * 									SampleValue: &lex.BotSampleValueArgs{
+ * 										Value: pulumi.String("deluxe"),
+ * 									},
+ * 								},
+ * 							},
+ * 							ValueSelectionSetting: &lex.BotSlotValueSelectionSettingArgs{
+ * 								ResolutionStrategy: "ORIGINAL_VALUE",
+ * 							},
+ * 						},
+ * 					},
+ * 					Intents: lex.BotIntentArray{
+ * 						&lex.BotIntentArgs{
+ * 							Name:        pulumi.String("BookCar"),
+ * 							Description: pulumi.String("Intent to book a car on StayBooker"),
+ * 							SampleUtterances: lex.BotSampleUtteranceArray{
+ * 								&lex.BotSampleUtteranceArgs{
+ * 									Utterance: pulumi.String("Book a car"),
+ * 								},
+ * 								&lex.BotSampleUtteranceArgs{
+ * 									Utterance: pulumi.String("Reserve a car"),
+ * 								},
+ * 								&lex.BotSampleUtteranceArgs{
+ * 									Utterance: pulumi.String("Make a car reservation"),
+ * 								},
+ * 							},
+ * 							IntentConfirmationSetting: &lex.BotIntentConfirmationSettingArgs{
+ * 								PromptSpecification: &lex.BotPromptSpecificationArgs{
+ * 									MessageGroupsList: lex.BotMessageGroupArray{
+ * 										&lex.BotMessageGroupArgs{
+ * 											Message: &lex.BotMessageArgs{
+ * 												PlainTextMessage: &lex.BotPlainTextMessageArgs{
+ * 													Value: pulumi.String("Okay, I have you down for a {CarType} rental in {PickUpCity} from {PickUpDate} to {ReturnDate}.  Should I book the reservation?"),
+ * 												},
+ * 											},
+ * 										},
+ * 									},
+ * 									MaxRetries:     pulumi.Int(3),
+ * 									AllowInterrupt: pulumi.Bool(false),
+ * 								},
+ * 								DeclinationResponse: &lex.BotResponseSpecificationArgs{
+ * 									MessageGroupsList: lex.BotMessageGroupArray{
+ * 										&lex.BotMessageGroupArgs{
+ * 											Message: &lex.BotMessageArgs{
+ * 												PlainTextMessage: &lex.BotPlainTextMessageArgs{
+ * 													Value: pulumi.String("Okay, I have cancelled your reservation in progress."),
+ * 												},
+ * 											},
+ * 										},
+ * 									},
+ * 									AllowInterrupt: pulumi.Bool(false),
+ * 								},
+ * 							},
+ * 							Slots: lex.BotSlotArray{
+ * 								&lex.BotSlotArgs{
+ * 									Name:         pulumi.String("PickUpCity"),
+ * 									Description:  pulumi.String("something"),
+ * 									SlotTypeName: pulumi.String("AMAZON.City"),
+ * 									ValueElicitationSetting: &lex.BotSlotValueElicitationSettingArgs{
+ * 										SlotConstraint: "Required",
+ * 										PromptSpecification: &lex.BotPromptSpecificationArgs{
+ * 											MessageGroupsList: lex.BotMessageGroupArray{
+ * 												&lex.BotMessageGroupArgs{
+ * 													Message: &lex.BotMessageArgs{
+ * 														PlainTextMessage: &lex.BotPlainTextMessageArgs{
+ * 															Value: pulumi.String("In what city do you need to rent a car?"),
+ * 														},
+ * 													},
+ * 												},
+ * 											},
+ * 											MaxRetries:     pulumi.Int(3),
+ * 											AllowInterrupt: pulumi.Bool(false),
+ * 										},
+ * 									},
+ * 								},
+ * 								&lex.BotSlotArgs{
+ * 									Name:         pulumi.String("PickUpDate"),
+ * 									Description:  pulumi.String("something"),
+ * 									SlotTypeName: pulumi.String("AMAZON.Date"),
+ * 									ValueElicitationSetting: &lex.BotSlotValueElicitationSettingArgs{
+ * 										SlotConstraint: "Required",
+ * 										PromptSpecification: &lex.BotPromptSpecificationArgs{
+ * 											MessageGroupsList: lex.BotMessageGroupArray{
+ * 												&lex.BotMessageGroupArgs{
+ * 													Message: &lex.BotMessageArgs{
+ * 														PlainTextMessage: &lex.BotPlainTextMessageArgs{
+ * 															Value: pulumi.String("What day do you want to start your rental?"),
+ * 														},
+ * 													},
+ * 												},
+ * 											},
+ * 											MaxRetries:     pulumi.Int(3),
+ * 											AllowInterrupt: pulumi.Bool(false),
+ * 										},
+ * 									},
+ * 								},
+ * 								&lex.BotSlotArgs{
+ * 									Name:         pulumi.String("ReturnDate"),
+ * 									Description:  pulumi.String("something"),
+ * 									SlotTypeName: pulumi.String("AMAZON.Date"),
+ * 									ValueElicitationSetting: &lex.BotSlotValueElicitationSettingArgs{
+ * 										SlotConstraint: "Required",
+ * 										PromptSpecification: &lex.BotPromptSpecificationArgs{
+ * 											MessageGroupsList: lex.BotMessageGroupArray{
+ * 												&lex.BotMessageGroupArgs{
+ * 													Message: &lex.BotMessageArgs{
+ * 														PlainTextMessage: &lex.BotPlainTextMessageArgs{
+ * 															Value: pulumi.String("What day do you want to return the car?"),
+ * 														},
+ * 													},
+ * 												},
+ * 											},
+ * 											MaxRetries:     pulumi.Int(3),
+ * 											AllowInterrupt: pulumi.Bool(false),
+ * 										},
+ * 									},
+ * 								},
+ * 								&lex.BotSlotArgs{
+ * 									Name:         pulumi.String("DriverAge"),
+ * 									Description:  pulumi.String("something"),
+ * 									SlotTypeName: pulumi.String("AMAZON.Number"),
+ * 									ValueElicitationSetting: &lex.BotSlotValueElicitationSettingArgs{
+ * 										SlotConstraint: "Required",
+ * 										PromptSpecification: &lex.BotPromptSpecificationArgs{
+ * 											MessageGroupsList: lex.BotMessageGroupArray{
+ * 												&lex.BotMessageGroupArgs{
+ * 													Message: &lex.BotMessageArgs{
+ * 														PlainTextMessage: &lex.BotPlainTextMessageArgs{
+ * 															Value: pulumi.String("How old is the driver for this rental?"),
+ * 														},
+ * 													},
+ * 												},
+ * 											},
+ * 											MaxRetries:     pulumi.Int(3),
+ * 											AllowInterrupt: pulumi.Bool(false),
+ * 										},
+ * 									},
+ * 								},
+ * 								&lex.BotSlotArgs{
+ * 									Name:         pulumi.String("CarType"),
+ * 									Description:  pulumi.String("something"),
+ * 									SlotTypeName: pulumi.String("CarTypeValues"),
+ * 									ValueElicitationSetting: &lex.BotSlotValueElicitationSettingArgs{
+ * 										SlotConstraint: "Required",
+ * 										PromptSpecification: &lex.BotPromptSpecificationArgs{
+ * 											MessageGroupsList: lex.BotMessageGroupArray{
+ * 												&lex.BotMessageGroupArgs{
+ * 													Message: &lex.BotMessageArgs{
+ * 														PlainTextMessage: &lex.BotPlainTextMessageArgs{
+ * 															Value: pulumi.String("What type of car would you like to rent?  Our most popular options are economy, midsize, and luxury"),
+ * 														},
+ * 													},
+ * 												},
+ * 											},
+ * 											MaxRetries:     pulumi.Int(3),
+ * 											AllowInterrupt: pulumi.Bool(false),
+ * 										},
+ * 									},
+ * 								},
+ * 							},
+ * 						},
+ * 						lex.BotIntentArgs{
+ * 							map[string]interface{}{
+ * 								"name":        "BookHotel",
+ * 								"description": "Intent to book a hotel on StayBooker",
+ * 								"sampleUtterances": []map[string]interface{}{
+ * 									map[string]interface{}{
+ * 										"utterance": "Book a hotel",
+ * 									},
+ * 									map[string]interface{}{
+ * 										"utterance": "I want a make hotel reservations",
+ * 									},
+ * 									map[string]interface{}{
+ * 										"utterance": "Book a {Nights} night stay in {Location}",
+ * 									},
+ * 								},
+ * 								"intentConfirmationSetting": map[string]interface{}{
+ * 									"promptSpecification": map[string]interface{}{
+ * 										"messageGroupsList": []map[string]interface{}{
+ * 											map[string]interface{}{
+ * 												"message": map[string]interface{}{
+ * 													"plainTextMessage": map[string]interface{}{
+ * 														"value": "Okay, I have you down for a {Nights} night stay in {Location} starting {CheckInDate}.  Shall I book the reservation?",
+ * 													},
+ * 												},
+ * 											},
+ * 										},
+ * 										"maxRetries":     3,
+ * 										"allowInterrupt": false,
+ * 									},
+ * 									"declinationResponse": map[string]interface{}{
+ * 										"messageGroupsList": []map[string]interface{}{
+ * 											map[string]interface{}{
+ * 												"message": map[string]interface{}{
+ * 													"plainTextMessage": map[string]interface{}{
+ * 														"value": "Okay, I have cancelled your reservation in progress.",
+ * 													},
+ * 												},
+ * 											},
+ * 										},
+ * 										"allowInterrupt": true,
+ * 									},
+ * 								},
+ * 								"slots": []map[string]interface{}{
+ * 									map[string]interface{}{
+ * 										"name":         "Location",
+ * 										"description":  "something",
+ * 										"slotTypeName": "AMAZON.City",
+ * 										"valueElicitationSetting": map[string]interface{}{
+ * 											"slotConstraint": "Required",
+ * 											"promptSpecification": map[string]interface{}{
+ * 												"messageGroupsList": []map[string]interface{}{
+ * 													map[string]interface{}{
+ * 														"message": map[string]interface{}{
+ * 															"plainTextMessage": map[string]interface{}{
+ * 																"value": "What city will you be staying in?",
+ * 															},
+ * 														},
+ * 													},
+ * 												},
+ * 												"maxRetries":     3,
+ * 												"allowInterrupt": false,
+ * 											},
+ * 										},
+ * 									},
+ * 									map[string]interface{}{
+ * 										"name":         "CheckInDate",
+ * 										"description":  "something",
+ * 										"slotTypeName": "AMAZON.Date",
+ * 										"valueElicitationSetting": map[string]interface{}{
+ * 											"slotConstraint": "Required",
+ * 											"promptSpecification": map[string]interface{}{
+ * 												"messageGroupsList": []map[string]interface{}{
+ * 													map[string]interface{}{
+ * 														"message": map[string]interface{}{
+ * 															"plainTextMessage": map[string]interface{}{
+ * 																"value": "What day do you want to check in?",
+ * 															},
+ * 														},
+ * 													},
+ * 												},
+ * 												"maxRetries":     3,
+ * 												"allowInterrupt": false,
+ * 											},
+ * 										},
+ * 									},
+ * 									map[string]interface{}{
+ * 										"name":         "Nights",
+ * 										"description":  "something",
+ * 										"slotTypeName": "AMAZON.Number",
+ * 										"valueElicitationSetting": map[string]interface{}{
+ * 											"slotConstraint": "Required",
+ * 											"promptSpecification": map[string]interface{}{
+ * 												"messageGroupsList": []map[string]interface{}{
+ * 													map[string]interface{}{
+ * 														"message": map[string]interface{}{
+ * 															"plainTextMessage": map[string]interface{}{
+ * 																"value": "How many nights will you be staying?",
+ * 															},
+ * 														},
+ * 													},
+ * 												},
+ * 												"maxRetries":     3,
+ * 												"allowInterrupt": false,
+ * 											},
+ * 										},
+ * 									},
+ * 									map[string]interface{}{
+ * 										"name":         "RoomType",
+ * 										"description":  "something",
+ * 										"slotTypeName": "RoomTypeValues",
+ * 										"valueElicitationSetting": map[string]interface{}{
+ * 											"slotConstraint": "Required",
+ * 											"promptSpecification": map[string]interface{}{
+ * 												"messageGroupsList": []map[string]interface{}{
+ * 													map[string]interface{}{
+ * 														"message": map[string]interface{}{
+ * 															"plainTextMessage": map[string]interface{}{
+ * 																"value": "What type of room would you like, queen, king or deluxe?",
+ * 															},
+ * 														},
+ * 													},
+ * 												},
+ * 												"maxRetries":     3,
+ * 												"allowInterrupt": false,
+ * 											},
+ * 										},
+ * 									},
+ * 								},
+ * 							},
+ * 							map[string]interface{}{
+ * 								"name":                  "FallbackIntent",
+ * 								"description":           "Default intent when no other intent matches",
+ * 								"parentIntentSignature": "AMAZON.FallbackIntent",
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			botRuntimeRole,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		bookTripBotVersionWithCFN, err := lex.NewBotVersion(ctx, "bookTripBotVersionWithCFN", &lex.BotVersionArgs{
+ * 			BotId: bookTripTemplateBot.ID(),
+ * 			BotVersionLocaleSpecification: lex.BotVersionLocaleSpecificationArray{
+ * 				&lex.BotVersionLocaleSpecificationArgs{
+ * 					LocaleId: pulumi.String("en_US"),
+ * 					BotVersionLocaleDetails: &lex.BotVersionLocaleDetailsArgs{
+ * 						SourceBotVersion: pulumi.String("DRAFT"),
+ * 					},
+ * 				},
+ * 			},
+ * 			Description: pulumi.String("BookTrip Version"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			bookTripTemplateBot,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = lex.NewBotAlias(ctx, "firstBotAliasWithCFN", &lex.BotAliasArgs{
+ * 			BotId:        bookTripTemplateBot.ID(),
+ * 			BotAliasName: pulumi.String("BookTripVersion1Alias"),
+ * 			BotVersion:   bookTripBotVersionWithCFN.Bot_version,
+ * 			SentimentAnalysisSettings: &lex.SentimentAnalysisSettingsPropertiesArgs{
+ * 				DetectSentiment: pulumi.Bool(true),
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			bookTripBotVersionWithCFN,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const botRuntimeRole = new aws_native.iam.Role("botRuntimeRole", {
+ *     assumeRolePolicyDocument: {
+ *         version: "2012-10-17",
+ *         statement: [{
+ *             effect: "Allow",
+ *             principal: {
+ *                 service: ["lexv2.amazonaws.com"],
+ *             },
+ *             action: ["sts:AssumeRole"],
+ *         }],
+ *     },
+ *     path: "/",
+ *     policies: [{
+ *         policyName: "LexRuntimeRolePolicy",
+ *         policyDocument: {
+ *             version: "2012-10-17",
+ *             statement: [{
+ *                 effect: "Allow",
+ *                 action: [
+ *                     "polly:SynthesizeSpeech",
+ *                     "comprehend:DetectSentiment",
+ *                 ],
+ *                 resource: "*",
+ *             }],
+ *         },
+ *     }],
+ * });
+ * const bookTripTemplateBot = new aws_native.lex.Bot("bookTripTemplateBot", {
+ *     name: "BookTripWithCFN",
+ *     roleArn: botRuntimeRole.arn,
+ *     dataPrivacy: {
+ *         childDirected: false,
+ *     },
+ *     idleSessionTTLInSeconds: 300,
+ *     description: "How to create a BookTrip bot with CFN",
+ *     autoBuildBotLocales: false,
+ *     botLocales: [{
+ *         localeId: "en_US",
+ *         description: "Book a trip bot Locale",
+ *         nluConfidenceThreshold: 0.4,
+ *         voiceSettings: {
+ *             voiceId: "Ivy",
+ *         },
+ *         slotTypes: [
+ *             {
+ *                 name: "CarTypeValues",
+ *                 description: "Slot Type description",
+ *                 slotTypeValues: [
+ *                     {
+ *                         sampleValue: {
+ *                             value: "economy",
+ *                         },
+ *                     },
+ *                     {
+ *                         sampleValue: {
+ *                             value: "standard",
+ *                         },
+ *                     },
+ *                     {
+ *                         sampleValue: {
+ *                             value: "midsize",
+ *                         },
+ *                     },
+ *                     {
+ *                         sampleValue: {
+ *                             value: "full size",
+ *                         },
+ *                     },
+ *                     {
+ *                         sampleValue: {
+ *                             value: "luxury",
+ *                         },
+ *                     },
+ *                     {
+ *                         sampleValue: {
+ *                             value: "minivan",
+ *                         },
+ *                     },
+ *                 ],
+ *                 valueSelectionSetting: {
+ *                     resolutionStrategy: "ORIGINAL_VALUE",
+ *                 },
+ *             },
+ *             {
+ *                 name: "RoomTypeValues",
+ *                 description: "Slot Type description",
+ *                 slotTypeValues: [
+ *                     {
+ *                         sampleValue: {
+ *                             value: "queen",
+ *                         },
+ *                     },
+ *                     {
+ *                         sampleValue: {
+ *                             value: "king",
+ *                         },
+ *                     },
+ *                     {
+ *                         sampleValue: {
+ *                             value: "deluxe",
+ *                         },
+ *                     },
+ *                 ],
+ *                 valueSelectionSetting: {
+ *                     resolutionStrategy: "ORIGINAL_VALUE",
+ *                 },
+ *             },
+ *         ],
+ *         intents: [
+ *             {
+ *                 name: "BookCar",
+ *                 description: "Intent to book a car on StayBooker",
+ *                 sampleUtterances: [
+ *                     {
+ *                         utterance: "Book a car",
+ *                     },
+ *                     {
+ *                         utterance: "Reserve a car",
+ *                     },
+ *                     {
+ *                         utterance: "Make a car reservation",
+ *                     },
+ *                 ],
+ *                 intentConfirmationSetting: {
+ *                     promptSpecification: {
+ *                         messageGroupsList: [{
+ *                             message: {
+ *                                 plainTextMessage: {
+ *                                     value: "Okay, I have you down for a {CarType} rental in {PickUpCity} from {PickUpDate} to {ReturnDate}.  Should I book the reservation?",
+ *                                 },
+ *                             },
+ *                         }],
+ *                         maxRetries: 3,
+ *                         allowInterrupt: false,
+ *                     },
+ *                     declinationResponse: {
+ *                         messageGroupsList: [{
+ *                             message: {
+ *                                 plainTextMessage: {
+ *                                     value: "Okay, I have cancelled your reservation in progress.",
+ *                                 },
+ *                             },
+ *                         }],
+ *                         allowInterrupt: false,
+ *                     },
+ *                 },
+ *                 slots: [
+ *                     {
+ *                         name: "PickUpCity",
+ *                         description: "something",
+ *                         slotTypeName: "AMAZON.City",
+ *                         valueElicitationSetting: {
+ *                             slotConstraint: "Required",
+ *                             promptSpecification: {
+ *                                 messageGroupsList: [{
+ *                                     message: {
+ *                                         plainTextMessage: {
+ *                                             value: "In what city do you need to rent a car?",
+ *                                         },
+ *                                     },
+ *                                 }],
+ *                                 maxRetries: 3,
+ *                                 allowInterrupt: false,
+ *                             },
+ *                         },
+ *                     },
+ *                     {
+ *                         name: "PickUpDate",
+ *                         description: "something",
+ *                         slotTypeName: "AMAZON.Date",
+ *                         valueElicitationSetting: {
+ *                             slotConstraint: "Required",
+ *                             promptSpecification: {
+ *                                 messageGroupsList: [{
+ *                                     message: {
+ *                                         plainTextMessage: {
+ *                                             value: "What day do you want to start your rental?",
+ *                                         },
+ *                                     },
+ *                                 }],
+ *                                 maxRetries: 3,
+ *                                 allowInterrupt: false,
+ *                             },
+ *                         },
+ *                     },
+ *                     {
+ *                         name: "ReturnDate",
+ *                         description: "something",
+ *                         slotTypeName: "AMAZON.Date",
+ *                         valueElicitationSetting: {
+ *                             slotConstraint: "Required",
+ *                             promptSpecification: {
+ *                                 messageGroupsList: [{
+ *                                     message: {
+ *                                         plainTextMessage: {
+ *                                             value: "What day do you want to return the car?",
+ *                                         },
+ *                                     },
+ *                                 }],
+ *                                 maxRetries: 3,
+ *                                 allowInterrupt: false,
+ *                             },
+ *                         },
+ *                     },
+ *                     {
+ *                         name: "DriverAge",
+ *                         description: "something",
+ *                         slotTypeName: "AMAZON.Number",
+ *                         valueElicitationSetting: {
+ *                             slotConstraint: "Required",
+ *                             promptSpecification: {
+ *                                 messageGroupsList: [{
+ *                                     message: {
+ *                                         plainTextMessage: {
+ *                                             value: "How old is the driver for this rental?",
+ *                                         },
+ *                                     },
+ *                                 }],
+ *                                 maxRetries: 3,
+ *                                 allowInterrupt: false,
+ *                             },
+ *                         },
+ *                     },
+ *                     {
+ *                         name: "CarType",
+ *                         description: "something",
+ *                         slotTypeName: "CarTypeValues",
+ *                         valueElicitationSetting: {
+ *                             slotConstraint: "Required",
+ *                             promptSpecification: {
+ *                                 messageGroupsList: [{
+ *                                     message: {
+ *                                         plainTextMessage: {
+ *                                             value: "What type of car would you like to rent?  Our most popular options are economy, midsize, and luxury",
+ *                                         },
+ *                                     },
+ *                                 }],
+ *                                 maxRetries: 3,
+ *                                 allowInterrupt: false,
+ *                             },
+ *                         },
+ *                     },
+ *                 ],
+ *             },
+ *             [
+ *                 {
+ *                     name: "BookHotel",
+ *                     description: "Intent to book a hotel on StayBooker",
+ *                     sampleUtterances: [
+ *                         {
+ *                             utterance: "Book a hotel",
+ *                         },
+ *                         {
+ *                             utterance: "I want a make hotel reservations",
+ *                         },
+ *                         {
+ *                             utterance: "Book a {Nights} night stay in {Location}",
+ *                         },
+ *                     ],
+ *                     intentConfirmationSetting: {
+ *                         promptSpecification: {
+ *                             messageGroupsList: [{
+ *                                 message: {
+ *                                     plainTextMessage: {
+ *                                         value: "Okay, I have you down for a {Nights} night stay in {Location} starting {CheckInDate}.  Shall I book the reservation?",
+ *                                     },
+ *                                 },
+ *                             }],
+ *                             maxRetries: 3,
+ *                             allowInterrupt: false,
+ *                         },
+ *                         declinationResponse: {
+ *                             messageGroupsList: [{
+ *                                 message: {
+ *                                     plainTextMessage: {
+ *                                         value: "Okay, I have cancelled your reservation in progress.",
+ *                                     },
+ *                                 },
+ *                             }],
+ *                             allowInterrupt: true,
+ *                         },
+ *                     },
+ *                     slots: [
+ *                         {
+ *                             name: "Location",
+ *                             description: "something",
+ *                             slotTypeName: "AMAZON.City",
+ *                             valueElicitationSetting: {
+ *                                 slotConstraint: "Required",
+ *                                 promptSpecification: {
+ *                                     messageGroupsList: [{
+ *                                         message: {
+ *                                             plainTextMessage: {
+ *                                                 value: "What city will you be staying in?",
+ *                                             },
+ *                                         },
+ *                                     }],
+ *                                     maxRetries: 3,
+ *                                     allowInterrupt: false,
+ *                                 },
+ *                             },
+ *                         },
+ *                         {
+ *                             name: "CheckInDate",
+ *                             description: "something",
+ *                             slotTypeName: "AMAZON.Date",
+ *                             valueElicitationSetting: {
+ *                                 slotConstraint: "Required",
+ *                                 promptSpecification: {
+ *                                     messageGroupsList: [{
+ *                                         message: {
+ *                                             plainTextMessage: {
+ *                                                 value: "What day do you want to check in?",
+ *                                             },
+ *                                         },
+ *                                     }],
+ *                                     maxRetries: 3,
+ *                                     allowInterrupt: false,
+ *                                 },
+ *                             },
+ *                         },
+ *                         {
+ *                             name: "Nights",
+ *                             description: "something",
+ *                             slotTypeName: "AMAZON.Number",
+ *                             valueElicitationSetting: {
+ *                                 slotConstraint: "Required",
+ *                                 promptSpecification: {
+ *                                     messageGroupsList: [{
+ *                                         message: {
+ *                                             plainTextMessage: {
+ *                                                 value: "How many nights will you be staying?",
+ *                                             },
+ *                                         },
+ *                                     }],
+ *                                     maxRetries: 3,
+ *                                     allowInterrupt: false,
+ *                                 },
+ *                             },
+ *                         },
+ *                         {
+ *                             name: "RoomType",
+ *                             description: "something",
+ *                             slotTypeName: "RoomTypeValues",
+ *                             valueElicitationSetting: {
+ *                                 slotConstraint: "Required",
+ *                                 promptSpecification: {
+ *                                     messageGroupsList: [{
+ *                                         message: {
+ *                                             plainTextMessage: {
+ *                                                 value: "What type of room would you like, queen, king or deluxe?",
+ *                                             },
+ *                                         },
+ *                                     }],
+ *                                     maxRetries: 3,
+ *                                     allowInterrupt: false,
+ *                                 },
+ *                             },
+ *                         },
+ *                     ],
+ *                 },
+ *                 {
+ *                     name: "FallbackIntent",
+ *                     description: "Default intent when no other intent matches",
+ *                     parentIntentSignature: "AMAZON.FallbackIntent",
+ *                 },
+ *             ],
+ *         ],
+ *     }],
+ * }, {
+ *     dependsOn: [botRuntimeRole],
+ * });
+ * const bookTripBotVersionWithCFN = new aws_native.lex.BotVersion("bookTripBotVersionWithCFN", {
+ *     botId: bookTripTemplateBot.id,
+ *     botVersionLocaleSpecification: [{
+ *         localeId: "en_US",
+ *         botVersionLocaleDetails: {
+ *             sourceBotVersion: "DRAFT",
+ *         },
+ *     }],
+ *     description: "BookTrip Version",
+ * }, {
+ *     dependsOn: [bookTripTemplateBot],
+ * });
+ * const firstBotAliasWithCFN = new aws_native.lex.BotAlias("firstBotAliasWithCFN", {
+ *     botId: bookTripTemplateBot.id,
+ *     botAliasName: "BookTripVersion1Alias",
+ *     botVersion: bookTripBotVersionWithCFN.botVersion,
+ *     sentimentAnalysisSettings: {
+ *         detectSentiment: true,
+ *     },
+ * }, {
+ *     dependsOn: [bookTripBotVersionWithCFN],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * bot_runtime_role = aws_native.iam.Role("botRuntimeRole",
+ *     assume_role_policy_document={
+ *         "version": "2012-10-17",
+ *         "statement": [{
+ *             "effect": "Allow",
+ *             "principal": {
+ *                 "service": ["lexv2.amazonaws.com"],
+ *             },
+ *             "action": ["sts:AssumeRole"],
+ *         }],
+ *     },
+ *     path="/",
+ *     policies=[aws_native.iam.RolePolicyArgs(
+ *         policy_name="LexRuntimeRolePolicy",
+ *         policy_document={
+ *             "version": "2012-10-17",
+ *             "statement": [{
+ *                 "effect": "Allow",
+ *                 "action": [
+ *                     "polly:SynthesizeSpeech",
+ *                     "comprehend:DetectSentiment",
+ *                 ],
+ *                 "resource": "*",
+ *             }],
+ *         },
+ *     )])
+ * book_trip_template_bot = aws_native.lex.Bot("bookTripTemplateBot",
+ *     name="BookTripWithCFN",
+ *     role_arn=bot_runtime_role.arn,
+ *     data_privacy=aws_native.lex.DataPrivacyPropertiesArgs(
+ *         child_directed=False,
+ *     ),
+ *     idle_session_ttl_in_seconds=300,
+ *     description="How to create a BookTrip bot with CFN",
+ *     auto_build_bot_locales=False,
+ *     bot_locales=[aws_native.lex.BotLocaleArgs(
+ *         locale_id="en_US",
+ *         description="Book a trip bot Locale",
+ *         nlu_confidence_threshold=0.4,
+ *         voice_settings=aws_native.lex.BotVoiceSettingsArgs(
+ *             voice_id="Ivy",
+ *         ),
+ *         slot_types=[
+ *             aws_native.lex.BotSlotTypeArgs(
+ *                 name="CarTypeValues",
+ *                 description="Slot Type description",
+ *                 slot_type_values=[
+ *                     aws_native.lex.BotSlotTypeValueArgs(
+ *                         sample_value=aws_native.lex.BotSampleValueArgs(
+ *                             value="economy",
+ *                         ),
+ *                     ),
+ *                     aws_native.lex.BotSlotTypeValueArgs(
+ *                         sample_value=aws_native.lex.BotSampleValueArgs(
+ *                             value="standard",
+ *                         ),
+ *                     ),
+ *                     aws_native.lex.BotSlotTypeValueArgs(
+ *                         sample_value=aws_native.lex.BotSampleValueArgs(
+ *                             value="midsize",
+ *                         ),
+ *                     ),
+ *                     aws_native.lex.BotSlotTypeValueArgs(
+ *                         sample_value=aws_native.lex.BotSampleValueArgs(
+ *                             value="full size",
+ *                         ),
+ *                     ),
+ *                     aws_native.lex.BotSlotTypeValueArgs(
+ *                         sample_value=aws_native.lex.BotSampleValueArgs(
+ *                             value="luxury",
+ *                         ),
+ *                     ),
+ *                     aws_native.lex.BotSlotTypeValueArgs(
+ *                         sample_value=aws_native.lex.BotSampleValueArgs(
+ *                             value="minivan",
+ *                         ),
+ *                     ),
+ *                 ],
+ *                 value_selection_setting=aws_native.lex.BotSlotValueSelectionSettingArgs(
+ *                     resolution_strategy="ORIGINAL_VALUE",
+ *                 ),
+ *             ),
+ *             aws_native.lex.BotSlotTypeArgs(
+ *                 name="RoomTypeValues",
+ *                 description="Slot Type description",
+ *                 slot_type_values=[
+ *                     aws_native.lex.BotSlotTypeValueArgs(
+ *                         sample_value=aws_native.lex.BotSampleValueArgs(
+ *                             value="queen",
+ *                         ),
+ *                     ),
+ *                     aws_native.lex.BotSlotTypeValueArgs(
+ *                         sample_value=aws_native.lex.BotSampleValueArgs(
+ *                             value="king",
+ *                         ),
+ *                     ),
+ *                     aws_native.lex.BotSlotTypeValueArgs(
+ *                         sample_value=aws_native.lex.BotSampleValueArgs(
+ *                             value="deluxe",
+ *                         ),
+ *                     ),
+ *                 ],
+ *                 value_selection_setting=aws_native.lex.BotSlotValueSelectionSettingArgs(
+ *                     resolution_strategy="ORIGINAL_VALUE",
+ *                 ),
+ *             ),
+ *         ],
+ *         intents=[
+ *             aws_native.lex.BotIntentArgs(
+ *                 name="BookCar",
+ *                 description="Intent to book a car on StayBooker",
+ *                 sample_utterances=[
+ *                     aws_native.lex.BotSampleUtteranceArgs(
+ *                         utterance="Book a car",
+ *                     ),
+ *                     aws_native.lex.BotSampleUtteranceArgs(
+ *                         utterance="Reserve a car",
+ *                     ),
+ *                     aws_native.lex.BotSampleUtteranceArgs(
+ *                         utterance="Make a car reservation",
+ *                     ),
+ *                 ],
+ *                 intent_confirmation_setting=aws_native.lex.BotIntentConfirmationSettingArgs(
+ *                     prompt_specification=aws_native.lex.BotPromptSpecificationArgs(
+ *                         message_groups_list=[aws_native.lex.BotMessageGroupArgs(
+ *                             message=aws_native.lex.BotMessageArgs(
+ *                                 plain_text_message=aws_native.lex.BotPlainTextMessageArgs(
+ *                                     value="Okay, I have you down for a {CarType} rental in {PickUpCity} from {PickUpDate} to {ReturnDate}.  Should I book the reservation?",
+ *                                 ),
+ *                             ),
+ *                         )],
+ *                         max_retries=3,
+ *                         allow_interrupt=False,
+ *                     ),
+ *                     declination_response=aws_native.lex.BotResponseSpecificationArgs(
+ *                         message_groups_list=[aws_native.lex.BotMessageGroupArgs(
+ *                             message=aws_native.lex.BotMessageArgs(
+ *                                 plain_text_message=aws_native.lex.BotPlainTextMessageArgs(
+ *                                     value="Okay, I have cancelled your reservation in progress.",
+ *                                 ),
+ *                             ),
+ *                         )],
+ *                         allow_interrupt=False,
+ *                     ),
+ *                 ),
+ *                 slots=[
+ *                     aws_native.lex.BotSlotArgs(
+ *                         name="PickUpCity",
+ *                         description="something",
+ *                         slot_type_name="AMAZON.City",
+ *                         value_elicitation_setting=aws_native.lex.BotSlotValueElicitationSettingArgs(
+ *                             slot_constraint="Required",
+ *                             prompt_specification=aws_native.lex.BotPromptSpecificationArgs(
+ *                                 message_groups_list=[aws_native.lex.BotMessageGroupArgs(
+ *                                     message=aws_native.lex.BotMessageArgs(
+ *                                         plain_text_message=aws_native.lex.BotPlainTextMessageArgs(
+ *                                             value="In what city do you need to rent a car?",
+ *                                         ),
+ *                                     ),
+ *                                 )],
+ *                                 max_retries=3,
+ *                                 allow_interrupt=False,
+ *                             ),
+ *                         ),
+ *                     ),
+ *                     aws_native.lex.BotSlotArgs(
+ *                         name="PickUpDate",
+ *                         description="something",
+ *                         slot_type_name="AMAZON.Date",
+ *                         value_elicitation_setting=aws_native.lex.BotSlotValueElicitationSettingArgs(
+ *                             slot_constraint="Required",
+ *                             prompt_specification=aws_native.lex.BotPromptSpecificationArgs(
+ *                                 message_groups_list=[aws_native.lex.BotMessageGroupArgs(
+ *                                     message=aws_native.lex.BotMessageArgs(
+ *                                         plain_text_message=aws_native.lex.BotPlainTextMessageArgs(
+ *                                             value="What day do you want to start your rental?",
+ *                                         ),
+ *                                     ),
+ *                                 )],
+ *                                 max_retries=3,
+ *                                 allow_interrupt=False,
+ *                             ),
+ *                         ),
+ *                     ),
+ *                     aws_native.lex.BotSlotArgs(
+ *                         name="ReturnDate",
+ *                         description="something",
+ *                         slot_type_name="AMAZON.Date",
+ *                         value_elicitation_setting=aws_native.lex.BotSlotValueElicitationSettingArgs(
+ *                             slot_constraint="Required",
+ *                             prompt_specification=aws_native.lex.BotPromptSpecificationArgs(
+ *                                 message_groups_list=[aws_native.lex.BotMessageGroupArgs(
+ *                                     message=aws_native.lex.BotMessageArgs(
+ *                                         plain_text_message=aws_native.lex.BotPlainTextMessageArgs(
+ *                                             value="What day do you want to return the car?",
+ *                                         ),
+ *                                     ),
+ *                                 )],
+ *                                 max_retries=3,
+ *                                 allow_interrupt=False,
+ *                             ),
+ *                         ),
+ *                     ),
+ *                     aws_native.lex.BotSlotArgs(
+ *                         name="DriverAge",
+ *                         description="something",
+ *                         slot_type_name="AMAZON.Number",
+ *                         value_elicitation_setting=aws_native.lex.BotSlotValueElicitationSettingArgs(
+ *                             slot_constraint="Required",
+ *                             prompt_specification=aws_native.lex.BotPromptSpecificationArgs(
+ *                                 message_groups_list=[aws_native.lex.BotMessageGroupArgs(
+ *                                     message=aws_native.lex.BotMessageArgs(
+ *                                         plain_text_message=aws_native.lex.BotPlainTextMessageArgs(
+ *                                             value="How old is the driver for this rental?",
+ *                                         ),
+ *                                     ),
+ *                                 )],
+ *                                 max_retries=3,
+ *                                 allow_interrupt=False,
+ *                             ),
+ *                         ),
+ *                     ),
+ *                     aws_native.lex.BotSlotArgs(
+ *                         name="CarType",
+ *                         description="something",
+ *                         slot_type_name="CarTypeValues",
+ *                         value_elicitation_setting=aws_native.lex.BotSlotValueElicitationSettingArgs(
+ *                             slot_constraint="Required",
+ *                             prompt_specification=aws_native.lex.BotPromptSpecificationArgs(
+ *                                 message_groups_list=[aws_native.lex.BotMessageGroupArgs(
+ *                                     message=aws_native.lex.BotMessageArgs(
+ *                                         plain_text_message=aws_native.lex.BotPlainTextMessageArgs(
+ *                                             value="What type of car would you like to rent?  Our most popular options are economy, midsize, and luxury",
+ *                                         ),
+ *                                     ),
+ *                                 )],
+ *                                 max_retries=3,
+ *                                 allow_interrupt=False,
+ *                             ),
+ *                         ),
+ *                     ),
+ *                 ],
+ *             ),
+ *             [
+ *                 {
+ *                     "name": "BookHotel",
+ *                     "description": "Intent to book a hotel on StayBooker",
+ *                     "sampleUtterances": [
+ *                         {
+ *                             "utterance": "Book a hotel",
+ *                         },
+ *                         {
+ *                             "utterance": "I want a make hotel reservations",
+ *                         },
+ *                         {
+ *                             "utterance": "Book a {Nights} night stay in {Location}",
+ *                         },
+ *                     ],
+ *                     "intentConfirmationSetting": {
+ *                         "promptSpecification": {
+ *                             "messageGroupsList": [{
+ *                                 "message": {
+ *                                     "plainTextMessage": {
+ *                                         "value": "Okay, I have you down for a {Nights} night stay in {Location} starting {CheckInDate}.  Shall I book the reservation?",
+ *                                     },
+ *                                 },
+ *                             }],
+ *                             "maxRetries": 3,
+ *                             "allowInterrupt": False,
+ *                         },
+ *                         "declinationResponse": {
+ *                             "messageGroupsList": [{
+ *                                 "message": {
+ *                                     "plainTextMessage": {
+ *                                         "value": "Okay, I have cancelled your reservation in progress.",
+ *                                     },
+ *                                 },
+ *                             }],
+ *                             "allowInterrupt": True,
+ *                         },
+ *                     },
+ *                     "slots": [
+ *                         {
+ *                             "name": "Location",
+ *                             "description": "something",
+ *                             "slotTypeName": "AMAZON.City",
+ *                             "valueElicitationSetting": {
+ *                                 "slotConstraint": "Required",
+ *                                 "promptSpecification": {
+ *                                     "messageGroupsList": [{
+ *                                         "message": {
+ *                                             "plainTextMessage": {
+ *                                                 "value": "What city will you be staying in?",
+ *                                             },
+ *                                         },
+ *                                     }],
+ *                                     "maxRetries": 3,
+ *                                     "allowInterrupt": False,
+ *                                 },
+ *                             },
+ *                         },
+ *                         {
+ *                             "name": "CheckInDate",
+ *                             "description": "something",
+ *                             "slotTypeName": "AMAZON.Date",
+ *                             "valueElicitationSetting": {
+ *                                 "slotConstraint": "Required",
+ *                                 "promptSpecification": {
+ *                                     "messageGroupsList": [{
+ *                                         "message": {
+ *                                             "plainTextMessage": {
+ *                                                 "value": "What day do you want to check in?",
+ *                                             },
+ *                                         },
+ *                                     }],
+ *                                     "maxRetries": 3,
+ *                                     "allowInterrupt": False,
+ *                                 },
+ *                             },
+ *                         },
+ *                         {
+ *                             "name": "Nights",
+ *                             "description": "something",
+ *                             "slotTypeName": "AMAZON.Number",
+ *                             "valueElicitationSetting": {
+ *                                 "slotConstraint": "Required",
+ *                                 "promptSpecification": {
+ *                                     "messageGroupsList": [{
+ *                                         "message": {
+ *                                             "plainTextMessage": {
+ *                                                 "value": "How many nights will you be staying?",
+ *                                             },
+ *                                         },
+ *                                     }],
+ *                                     "maxRetries": 3,
+ *                                     "allowInterrupt": False,
+ *                                 },
+ *                             },
+ *                         },
+ *                         {
+ *                             "name": "RoomType",
+ *                             "description": "something",
+ *                             "slotTypeName": "RoomTypeValues",
+ *                             "valueElicitationSetting": {
+ *                                 "slotConstraint": "Required",
+ *                                 "promptSpecification": {
+ *                                     "messageGroupsList": [{
+ *                                         "message": {
+ *                                             "plainTextMessage": {
+ *                                                 "value": "What type of room would you like, queen, king or deluxe?",
+ *                                             },
+ *                                         },
+ *                                     }],
+ *                                     "maxRetries": 3,
+ *                                     "allowInterrupt": False,
+ *                                 },
+ *                             },
+ *                         },
+ *                     ],
+ *                 },
+ *                 {
+ *                     "name": "FallbackIntent",
+ *                     "description": "Default intent when no other intent matches",
+ *                     "parentIntentSignature": "AMAZON.FallbackIntent",
+ *                 },
+ *             ],
+ *         ],
+ *     )],
+ *     opts=pulumi.ResourceOptions(depends_on=[bot_runtime_role]))
+ * book_trip_bot_version_with_cfn = aws_native.lex.BotVersion("bookTripBotVersionWithCFN",
+ *     bot_id=book_trip_template_bot.id,
+ *     bot_version_locale_specification=[aws_native.lex.BotVersionLocaleSpecificationArgs(
+ *         locale_id="en_US",
+ *         bot_version_locale_details=aws_native.lex.BotVersionLocaleDetailsArgs(
+ *             source_bot_version="DRAFT",
+ *         ),
+ *     )],
+ *     description="BookTrip Version",
+ *     opts=pulumi.ResourceOptions(depends_on=[book_trip_template_bot]))
+ * first_bot_alias_with_cfn = aws_native.lex.BotAlias("firstBotAliasWithCFN",
+ *     bot_id=book_trip_template_bot.id,
+ *     bot_alias_name="BookTripVersion1Alias",
+ *     bot_version=book_trip_bot_version_with_cfn.bot_version,
+ *     sentiment_analysis_settings=aws_native.lex.SentimentAnalysisSettingsPropertiesArgs(
+ *         detect_sentiment=True,
+ *     ),
+ *     opts=pulumi.ResourceOptions(depends_on=[book_trip_bot_version_with_cfn]))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:iam:Role")
 public class Role extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) for the role.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) for the role.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The trust policy that is associated with this role.
-     * 
      */
     @Export(name="assumeRolePolicyDocument", type=Object.class, parameters={})
     private Output<Object> assumeRolePolicyDocument;
 
     /**
      * @return The trust policy that is associated with this role.
-     * 
      */
     public Output<Object> getAssumeRolePolicyDocument() {
         return this.assumeRolePolicyDocument;
     }
     /**
      * A description of the role that you provide.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description of the role that you provide.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
-     * A list of Amazon Resource Names (ARNs) of the IAM managed policies that you want to attach to the role.
-     * 
+     * A list of Amazon Resource Names (ARNs) of the IAM managed policies that you want to attach to the role. 
      */
     @Export(name="managedPolicyArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> managedPolicyArns;
 
     /**
-     * @return A list of Amazon Resource Names (ARNs) of the IAM managed policies that you want to attach to the role.
-     * 
+     * @return A list of Amazon Resource Names (ARNs) of the IAM managed policies that you want to attach to the role. 
      */
     public Output</* @Nullable */ List<String>> getManagedPolicyArns() {
         return this.managedPolicyArns;
     }
     /**
-     * The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
-     * 
+     * The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours. 
      */
     @Export(name="maxSessionDuration", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxSessionDuration;
 
     /**
-     * @return The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
-     * 
+     * @return The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours. 
      */
     public Output</* @Nullable */ Integer> getMaxSessionDuration() {
         return this.maxSessionDuration;
     }
     /**
      * The path to the role.
-     * 
      */
     @Export(name="path", type=String.class, parameters={})
     private Output</* @Nullable */ String> path;
 
     /**
      * @return The path to the role.
-     * 
      */
     public Output</* @Nullable */ String> getPath() {
         return this.path;
     }
     /**
      * The ARN of the policy used to set the permissions boundary for the role.
-     * 
      */
     @Export(name="permissionsBoundary", type=String.class, parameters={})
     private Output</* @Nullable */ String> permissionsBoundary;
 
     /**
      * @return The ARN of the policy used to set the permissions boundary for the role.
-     * 
      */
     public Output</* @Nullable */ String> getPermissionsBoundary() {
         return this.permissionsBoundary;
     }
     /**
-     * Adds or updates an inline policy document that is embedded in the specified IAM role.
-     * 
+     * Adds or updates an inline policy document that is embedded in the specified IAM role. 
      */
     @Export(name="policies", type=List.class, parameters={RolePolicy.class})
     private Output</* @Nullable */ List<RolePolicy>> policies;
 
     /**
-     * @return Adds or updates an inline policy document that is embedded in the specified IAM role.
-     * 
+     * @return Adds or updates an inline policy document that is embedded in the specified IAM role. 
      */
     public Output</* @Nullable */ List<RolePolicy>> getPolicies() {
         return this.policies;
     }
     /**
      * The stable and unique string identifying the role.
-     * 
      */
     @Export(name="roleId", type=String.class, parameters={})
     private Output<String> roleId;
 
     /**
      * @return The stable and unique string identifying the role.
-     * 
      */
     public Output<String> getRoleId() {
         return this.roleId;
     }
     /**
      * A name for the IAM role, up to 64 characters in length.
-     * 
      */
     @Export(name="roleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleName;
 
     /**
      * @return A name for the IAM role, up to 64 characters in length.
-     * 
      */
     public Output</* @Nullable */ String> getRoleName() {
         return this.roleName;
     }
     /**
      * A list of tags that are attached to the role.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={RoleTag.class})
     private Output</* @Nullable */ List<RoleTag>> tags;
 
     /**
      * @return A list of tags that are attached to the role.
-     * 
      */
     public Output</* @Nullable */ List<RoleTag>> getTags() {
         return this.tags;

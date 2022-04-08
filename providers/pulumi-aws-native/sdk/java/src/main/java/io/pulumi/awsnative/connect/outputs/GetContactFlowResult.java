@@ -16,37 +16,30 @@ import javax.annotation.Nullable;
 public final class GetContactFlowResult {
     /**
      * The identifier of the contact flow (ARN).
-     * 
      */
     private final @Nullable String contactFlowArn;
     /**
      * The content of the contact flow in JSON format.
-     * 
      */
     private final @Nullable String content;
     /**
      * The description of the contact flow.
-     * 
      */
     private final @Nullable String description;
     /**
      * The identifier of the Amazon Connect instance (ARN).
-     * 
      */
     private final @Nullable String instanceArn;
     /**
      * The name of the contact flow.
-     * 
      */
     private final @Nullable String name;
     /**
      * The state of the contact flow.
-     * 
      */
     private final @Nullable ContactFlowState state;
     /**
      * One or more tags.
-     * 
      */
     private final @Nullable List<ContactFlowTag> tags;
 
@@ -70,49 +63,42 @@ public final class GetContactFlowResult {
 
     /**
      * The identifier of the contact flow (ARN).
-     * 
     */
     public Optional<String> getContactFlowArn() {
         return Optional.ofNullable(this.contactFlowArn);
     }
     /**
      * The content of the contact flow in JSON format.
-     * 
     */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }
     /**
      * The description of the contact flow.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The identifier of the Amazon Connect instance (ARN).
-     * 
     */
     public Optional<String> getInstanceArn() {
         return Optional.ofNullable(this.instanceArn);
     }
     /**
      * The name of the contact flow.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The state of the contact flow.
-     * 
     */
     public Optional<ContactFlowState> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * One or more tags.
-     * 
     */
     public List<ContactFlowTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

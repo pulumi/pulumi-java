@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A regular expression used to validate the value of a slot.
- * 
  */
 public final class BotSlotValueRegexFilterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class BotSlotValueRegexFilterArgs extends io.pulumi.resources.Resou
 
     /**
      * Regex pattern
-     * 
      */
     @Import(name="pattern", required=true)
       private final Output<String> pattern;

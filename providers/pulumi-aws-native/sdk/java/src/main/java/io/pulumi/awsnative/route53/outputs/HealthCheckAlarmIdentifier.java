@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class HealthCheckAlarmIdentifier {
     /**
      * The name of the CloudWatch alarm that you want Amazon Route 53 health checkers to use to determine whether this health check is healthy.
-     * 
      */
     private final String name;
     /**
      * For the CloudWatch alarm that you want Route 53 health checkers to use to determine whether this health check is healthy, the region that the alarm was created in.
-     * 
      */
     private final String region;
 
@@ -30,14 +28,12 @@ public final class HealthCheckAlarmIdentifier {
 
     /**
      * The name of the CloudWatch alarm that you want Amazon Route 53 health checkers to use to determine whether this health check is healthy.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * For the CloudWatch alarm that you want Route 53 health checkers to use to determine whether this health check is healthy, the region that the alarm was created in.
-     * 
     */
     public String getRegion() {
         return this.region;

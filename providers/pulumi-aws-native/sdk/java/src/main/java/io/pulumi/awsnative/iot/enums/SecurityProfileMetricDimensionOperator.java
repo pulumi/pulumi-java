@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Defines how the dimensionValues of a dimension are interpreted.
-     * 
      */
     @EnumType
     public enum SecurityProfileMetricDimensionOperator {

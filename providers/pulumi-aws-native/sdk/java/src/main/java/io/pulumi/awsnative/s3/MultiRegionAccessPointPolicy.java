@@ -15,48 +15,41 @@ import javax.annotation.Nullable;
 
 /**
  * The policy to be attached to a Multi Region Access Point
- * 
  */
 @ResourceType(type="aws-native:s3:MultiRegionAccessPointPolicy")
 public class MultiRegionAccessPointPolicy extends io.pulumi.resources.CustomResource {
     /**
      * The name of the Multi Region Access Point to apply policy
-     * 
      */
     @Export(name="mrapName", type=String.class, parameters={})
     private Output<String> mrapName;
 
     /**
      * @return The name of the Multi Region Access Point to apply policy
-     * 
      */
     public Output<String> getMrapName() {
         return this.mrapName;
     }
     /**
      * Policy document to apply to a Multi Region Access Point
-     * 
      */
     @Export(name="policy", type=Object.class, parameters={})
     private Output<Object> policy;
 
     /**
      * @return Policy document to apply to a Multi Region Access Point
-     * 
      */
     public Output<Object> getPolicy() {
         return this.policy;
     }
     /**
      * The Policy Status associated with this Multi Region Access Point
-     * 
      */
     @Export(name="policyStatus", type=PolicyStatusProperties.class, parameters={})
     private Output<PolicyStatusProperties> policyStatus;
 
     /**
      * @return The Policy Status associated with this Multi Region Access Point
-     * 
      */
     public Output<PolicyStatusProperties> getPolicyStatus() {
         return this.policyStatus;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Prompts that Amazon Lex sends to the user to confirm the completion of an intent.
- * 
  */
 public final class BotIntentConfirmationSettingArgs extends io.pulumi.resources.ResourceArgs {
 

@@ -13,48 +13,41 @@ import javax.annotation.Nullable;
 
 /**
  * Associates a gateway with a route table. The gateway and route table must be in the same VPC. This association causes the incoming traffic to the gateway to be routed according to the routes in the route table.
- * 
  */
 @ResourceType(type="aws-native:ec2:GatewayRouteTableAssociation")
 public class GatewayRouteTableAssociation extends io.pulumi.resources.CustomResource {
     /**
      * The route table association ID.
-     * 
      */
     @Export(name="associationId", type=String.class, parameters={})
     private Output<String> associationId;
 
     /**
      * @return The route table association ID.
-     * 
      */
     public Output<String> getAssociationId() {
         return this.associationId;
     }
     /**
      * The ID of the gateway.
-     * 
      */
     @Export(name="gatewayId", type=String.class, parameters={})
     private Output<String> gatewayId;
 
     /**
      * @return The ID of the gateway.
-     * 
      */
     public Output<String> getGatewayId() {
         return this.gatewayId;
     }
     /**
      * The ID of the route table.
-     * 
      */
     @Export(name="routeTableId", type=String.class, parameters={})
     private Output<String> routeTableId;
 
     /**
      * @return The ID of the route table.
-     * 
      */
     public Output<String> getRouteTableId() {
         return this.routeTableId;

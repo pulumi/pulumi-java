@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The content of the email, composed of a subject line, an HTML part, and a text-only part
- * 
  */
 public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The HTML body of the email.
-     * 
      */
     @Import(name="htmlPart")
       private final @Nullable Output<String> htmlPart;
@@ -31,7 +29,6 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The subject line of the email.
-     * 
      */
     @Import(name="subjectPart", required=true)
       private final Output<String> subjectPart;
@@ -42,7 +39,6 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the template.
-     * 
      */
     @Import(name="templateName")
       private final @Nullable Output<String> templateName;
@@ -53,7 +49,6 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The email body that is visible to recipients whose email clients do not display HTML content.
-     * 
      */
     @Import(name="textPart")
       private final @Nullable Output<String> textPart;

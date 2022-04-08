@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * An object that represents additional parameters when enabling or modifying the automatic snapshot add-on
- * 
  */
 public final class DiskAutoSnapshotAddOn extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DiskAutoSnapshotAddOn extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The daily time when an automatic snapshot will be created.
-     * 
      */
     @Import(name="snapshotTimeOfDay")
       private final @Nullable String snapshotTimeOfDay;

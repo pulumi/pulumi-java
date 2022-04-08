@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for searching a Amazon Kendra index specified for the intent.
- * 
  */
 public final class BotKendraConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -35,7 +34,6 @@ public final class BotKendraConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * Determines whether the AMAZON.KendraSearchIntent intent uses a custom query string to query the Amazon Kendra index.
-     * 
      */
     @Import(name="queryFilterStringEnabled")
       private final @Nullable Output<Boolean> queryFilterStringEnabled;

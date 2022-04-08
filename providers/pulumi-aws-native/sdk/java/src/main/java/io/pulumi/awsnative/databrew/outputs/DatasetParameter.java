@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 public final class DatasetParameter {
     /**
      * Add the value of this parameter as a column in a dataset.
-     * 
      */
     private final @Nullable Boolean createColumn;
     private final @Nullable DatasetDatetimeOptions datetimeOptions;
@@ -25,7 +24,6 @@ public final class DatasetParameter {
     private final String name;
     /**
      * Parameter type
-     * 
      */
     private final DatasetParameterType type;
 
@@ -45,7 +43,6 @@ public final class DatasetParameter {
 
     /**
      * Add the value of this parameter as a column in a dataset.
-     * 
     */
     public Optional<Boolean> getCreateColumn() {
         return Optional.ofNullable(this.createColumn);
@@ -61,7 +58,6 @@ public final class DatasetParameter {
     }
     /**
      * Parameter type
-     * 
     */
     public DatasetParameterType getType() {
         return this.type;

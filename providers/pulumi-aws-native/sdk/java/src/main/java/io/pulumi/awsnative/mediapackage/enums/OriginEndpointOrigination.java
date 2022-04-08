@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Control whether origination of video is allowed for this OriginEndpoint. If set to ALLOW, the OriginEndpoint may by requested, pursuant to any other form of access control. If set to DENY, the OriginEndpoint may not be requested. This can be helpful for Live to VOD harvesting, or for temporarily disabling origination
-     * 
      */
     @EnumType
     public enum OriginEndpointOrigination {

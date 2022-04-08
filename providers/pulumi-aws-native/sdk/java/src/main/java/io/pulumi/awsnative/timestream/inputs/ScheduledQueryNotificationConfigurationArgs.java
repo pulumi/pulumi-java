@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Notification configuration for the scheduled query. A notification is sent by Timestream when a query run finishes, when the state is updated or when you delete it.
- * 
  */
 public final class ScheduledQueryNotificationConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 

@@ -14,7 +14,6 @@ public final class GetAppMonitorArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A name for the app monitor
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

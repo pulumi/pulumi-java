@@ -17,105 +17,241 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::Connect::HoursOfOperation
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var hoursOfOperation = new AwsNative.Connect.HoursOfOperation("hoursOfOperation", new AwsNative.Connect.HoursOfOperationArgs
+ *         {
+ *             Name = "ExampleHoursOfOperation",
+ *             Description = "hours of operation created using cfn",
+ *             InstanceArn = "arn:aws:connect:region-name:aws-account-id:instance/instance-arn",
+ *             TimeZone = "Pacific/Midway",
+ *             Config = 
+ *             {
+ *                 new AwsNative.Connect.Inputs.HoursOfOperationConfigArgs
+ *                 {
+ *                     Day = "SUNDAY",
+ *                     EndTime = new AwsNative.Connect.Inputs.HoursOfOperationTimeSliceArgs
+ *                     {
+ *                         Hours = 11,
+ *                         Minutes = 59,
+ *                     },
+ *                     StartTime = new AwsNative.Connect.Inputs.HoursOfOperationTimeSliceArgs
+ *                     {
+ *                         Hours = 10,
+ *                         Minutes = 1,
+ *                     },
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.Connect.Inputs.HoursOfOperationTagArgs
+ *                 {
+ *                     Key = "tagKey",
+ *                     Value = "tagValue",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/connect"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := connect.NewHoursOfOperation(ctx, "hoursOfOperation", &connect.HoursOfOperationArgs{
+ * 			Name:        pulumi.String("ExampleHoursOfOperation"),
+ * 			Description: pulumi.String("hours of operation created using cfn"),
+ * 			InstanceArn: pulumi.String("arn:aws:connect:region-name:aws-account-id:instance/instance-arn"),
+ * 			TimeZone:    pulumi.String("Pacific/Midway"),
+ * 			Config: connect.HoursOfOperationConfigArray{
+ * 				&connect.HoursOfOperationConfigArgs{
+ * 					Day: "SUNDAY",
+ * 					EndTime: &connect.HoursOfOperationTimeSliceArgs{
+ * 						Hours:   pulumi.Int(11),
+ * 						Minutes: pulumi.Int(59),
+ * 					},
+ * 					StartTime: &connect.HoursOfOperationTimeSliceArgs{
+ * 						Hours:   pulumi.Int(10),
+ * 						Minutes: pulumi.Int(1),
+ * 					},
+ * 				},
+ * 			},
+ * 			Tags: []connect.HoursOfOperationTagArgs{
+ * 				&connect.HoursOfOperationTagArgs{
+ * 					Key:   pulumi.String("tagKey"),
+ * 					Value: pulumi.String("tagValue"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const hoursOfOperation = new aws_native.connect.HoursOfOperation("hoursOfOperation", {
+ *     name: "ExampleHoursOfOperation",
+ *     description: "hours of operation created using cfn",
+ *     instanceArn: "arn:aws:connect:region-name:aws-account-id:instance/instance-arn",
+ *     timeZone: "Pacific/Midway",
+ *     config: [{
+ *         day: "SUNDAY",
+ *         endTime: {
+ *             hours: 11,
+ *             minutes: 59,
+ *         },
+ *         startTime: {
+ *             hours: 10,
+ *             minutes: 1,
+ *         },
+ *     }],
+ *     tags: [{
+ *         key: "tagKey",
+ *         value: "tagValue",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * hours_of_operation = aws_native.connect.HoursOfOperation("hoursOfOperation",
+ *     name="ExampleHoursOfOperation",
+ *     description="hours of operation created using cfn",
+ *     instance_arn="arn:aws:connect:region-name:aws-account-id:instance/instance-arn",
+ *     time_zone="Pacific/Midway",
+ *     config=[aws_native.connect.HoursOfOperationConfigArgs(
+ *         day="SUNDAY",
+ *         end_time=aws_native.connect.HoursOfOperationTimeSliceArgs(
+ *             hours=11,
+ *             minutes=59,
+ *         ),
+ *         start_time=aws_native.connect.HoursOfOperationTimeSliceArgs(
+ *             hours=10,
+ *             minutes=1,
+ *         ),
+ *     )],
+ *     tags=[aws_native.connect.HoursOfOperationTagArgs(
+ *         key="tagKey",
+ *         value="tagValue",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:connect:HoursOfOperation")
 public class HoursOfOperation extends io.pulumi.resources.CustomResource {
     /**
      * Configuration information for the hours of operation: day, start time, and end time.
-     * 
      */
     @Export(name="config", type=List.class, parameters={HoursOfOperationConfig.class})
     private Output<List<HoursOfOperationConfig>> config;
 
     /**
      * @return Configuration information for the hours of operation: day, start time, and end time.
-     * 
      */
     public Output<List<HoursOfOperationConfig>> getConfig() {
         return this.config;
     }
     /**
      * The description of the hours of operation.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the hours of operation.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The Amazon Resource Name (ARN) for the hours of operation.
-     * 
      */
     @Export(name="hoursOfOperationArn", type=String.class, parameters={})
     private Output<String> hoursOfOperationArn;
 
     /**
      * @return The Amazon Resource Name (ARN) for the hours of operation.
-     * 
      */
     public Output<String> getHoursOfOperationArn() {
         return this.hoursOfOperationArn;
     }
     /**
      * The identifier of the Amazon Connect instance.
-     * 
      */
     @Export(name="instanceArn", type=String.class, parameters={})
     private Output<String> instanceArn;
 
     /**
      * @return The identifier of the Amazon Connect instance.
-     * 
      */
     public Output<String> getInstanceArn() {
         return this.instanceArn;
     }
     /**
      * The name of the hours of operation.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the hours of operation.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * One or more tags.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={HoursOfOperationTag.class})
     private Output</* @Nullable */ List<HoursOfOperationTag>> tags;
 
     /**
      * @return One or more tags.
-     * 
      */
     public Output</* @Nullable */ List<HoursOfOperationTag>> getTags() {
         return this.tags;
     }
     /**
      * The time zone of the hours of operation.
-     * 
      */
     @Export(name="timeZone", type=String.class, parameters={})
     private Output<String> timeZone;
 
     /**
      * @return The time zone of the hours of operation.
-     * 
      */
     public Output<String> getTimeZone() {
         return this.timeZone;

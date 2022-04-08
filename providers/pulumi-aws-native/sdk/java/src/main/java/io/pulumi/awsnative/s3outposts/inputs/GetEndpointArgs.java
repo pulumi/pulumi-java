@@ -14,7 +14,6 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the endpoint.
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

@@ -16,62 +16,53 @@ import javax.annotation.Nullable;
 
 /**
  * Publishes new or first hook version to AWS CloudFormation Registry.
- * 
  */
 @ResourceType(type="aws-native:cloudformation:HookVersion")
 public class HookVersion extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the type, here the HookVersion. This is used to uniquely identify a HookVersion resource
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the type, here the HookVersion. This is used to uniquely identify a HookVersion resource
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The Amazon Resource Name (ARN) of the IAM execution role to use to register the type. If your resource type calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account. CloudFormation then assumes that execution role to provide your resource type with the appropriate credentials.
-     * 
      */
     @Export(name="executionRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> executionRoleArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the IAM execution role to use to register the type. If your resource type calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account. CloudFormation then assumes that execution role to provide your resource type with the appropriate credentials.
-     * 
      */
     public Output</* @Nullable */ String> getExecutionRoleArn() {
         return this.executionRoleArn;
     }
     /**
      * Indicates if this type version is the current default version
-     * 
      */
     @Export(name="isDefaultVersion", type=Boolean.class, parameters={})
     private Output<Boolean> isDefaultVersion;
 
     /**
      * @return Indicates if this type version is the current default version
-     * 
      */
     public Output<Boolean> getIsDefaultVersion() {
         return this.isDefaultVersion;
     }
     /**
      * Specifies logging configuration information for a type.
-     * 
      */
     @Export(name="loggingConfig", type=HookVersionLoggingConfig.class, parameters={})
     private Output</* @Nullable */ HookVersionLoggingConfig> loggingConfig;
 
     /**
      * @return Specifies logging configuration information for a type.
-     * 
      */
     public Output</* @Nullable */ HookVersionLoggingConfig> getLoggingConfig() {
         return this.loggingConfig;
@@ -80,7 +71,6 @@ public class HookVersion extends io.pulumi.resources.CustomResource {
      * A url to the S3 bucket containing the schema handler package that contains the schema, event handlers, and associated files for the type you want to register.
      * 
      * For information on generating a schema handler package for the type you want to register, see submit in the CloudFormation CLI User Guide.
-     * 
      */
     @Export(name="schemaHandlerPackage", type=String.class, parameters={})
     private Output<String> schemaHandlerPackage;
@@ -89,21 +79,18 @@ public class HookVersion extends io.pulumi.resources.CustomResource {
      * @return A url to the S3 bucket containing the schema handler package that contains the schema, event handlers, and associated files for the type you want to register.
      * 
      * For information on generating a schema handler package for the type you want to register, see submit in the CloudFormation CLI User Guide.
-     * 
      */
     public Output<String> getSchemaHandlerPackage() {
         return this.schemaHandlerPackage;
     }
     /**
      * The Amazon Resource Name (ARN) of the type without the versionID.
-     * 
      */
     @Export(name="typeArn", type=String.class, parameters={})
     private Output<String> typeArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the type without the versionID.
-     * 
      */
     public Output<String> getTypeArn() {
         return this.typeArn;
@@ -112,7 +99,6 @@ public class HookVersion extends io.pulumi.resources.CustomResource {
      * The name of the type being registered.
      * 
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
-     * 
      */
     @Export(name="typeName", type=String.class, parameters={})
     private Output<String> typeName;
@@ -121,21 +107,18 @@ public class HookVersion extends io.pulumi.resources.CustomResource {
      * @return The name of the type being registered.
      * 
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
-     * 
      */
     public Output<String> getTypeName() {
         return this.typeName;
     }
     /**
      * The ID of the version of the type represented by this hook instance.
-     * 
      */
     @Export(name="versionId", type=String.class, parameters={})
     private Output<String> versionId;
 
     /**
      * @return The ID of the version of the type represented by this hook instance.
-     * 
      */
     public Output<String> getVersionId() {
         return this.versionId;
@@ -148,7 +131,6 @@ public class HookVersion extends io.pulumi.resources.CustomResource {
      * PRIVATE: The type is only visible and usable within the account in which it is registered. Currently, AWS CloudFormation marks any types you register as PRIVATE.
      * 
      * PUBLIC: The type is publically visible and usable within any Amazon account.
-     * 
      */
     @Export(name="visibility", type=HookVersionVisibility.class, parameters={})
     private Output<HookVersionVisibility> visibility;
@@ -161,7 +143,6 @@ public class HookVersion extends io.pulumi.resources.CustomResource {
      * PRIVATE: The type is only visible and usable within the account in which it is registered. Currently, AWS CloudFormation marks any types you register as PRIVATE.
      * 
      * PUBLIC: The type is publically visible and usable within any Amazon account.
-     * 
      */
     public Output<HookVersionVisibility> getVisibility() {
         return this.visibility;

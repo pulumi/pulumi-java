@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Path options for dataset
- * 
  */
 public final class DatasetPathOptionsArgs extends io.pulumi.resources.ResourceArgs {
 

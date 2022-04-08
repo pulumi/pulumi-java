@@ -14,7 +14,6 @@ public final class GetPlaybackKeyPairArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Key-pair identifier.
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

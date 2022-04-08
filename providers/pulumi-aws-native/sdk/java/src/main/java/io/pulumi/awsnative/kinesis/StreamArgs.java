@@ -21,7 +21,6 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Kinesis stream.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -32,7 +31,6 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of hours for the data records that are stored in shards to remain accessible.
-     * 
      */
     @Import(name="retentionPeriodHours")
       private final @Nullable Output<Integer> retentionPeriodHours;
@@ -43,7 +41,6 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of shards that the stream uses. Required when StreamMode = PROVISIONED is passed.
-     * 
      */
     @Import(name="shardCount")
       private final @Nullable Output<Integer> shardCount;
@@ -54,7 +51,6 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * When specified, enables or updates server-side encryption using an AWS KMS key for a specified stream.
-     * 
      */
     @Import(name="streamEncryption")
       private final @Nullable Output<StreamEncryptionArgs> streamEncryption;
@@ -65,7 +61,6 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The mode in which the stream is running.
-     * 
      */
     @Import(name="streamModeDetails")
       private final @Nullable Output<StreamModeDetailsArgs> streamModeDetails;
@@ -76,7 +71,6 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An arbitrary set of tags (key–value pairs) to associate with the Kinesis stream.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<StreamTagArgs>> tags;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains information for a user identity in an access policy.
- * 
  */
 public final class AccessPolicyUserArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AccessPolicyUserArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The AWS SSO ID of the user.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;

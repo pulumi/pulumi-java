@@ -26,7 +26,6 @@ import javax.annotation.Nullable;
 
 /**
  * An example resource schema demonstrating some basic constructs and validation rules.
- * 
  */
 @ResourceType(type="aws-native:opensearchservice:Domain")
 public class Domain extends io.pulumi.resources.CustomResource {
@@ -140,14 +139,12 @@ public class Domain extends io.pulumi.resources.CustomResource {
     }
     /**
      * An arbitrary set of tags (key-value pairs) for this Domain.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DomainTag.class})
     private Output</* @Nullable */ List<DomainTag>> tags;
 
     /**
      * @return An arbitrary set of tags (key-value pairs) for this Domain.
-     * 
      */
     public Output</* @Nullable */ List<DomainTag>> getTags() {
         return this.tags;

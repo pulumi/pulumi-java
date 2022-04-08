@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The user ID (UID) of the file's owner.
-     * 
      */
     @EnumType
     public enum TaskOptionsUid {

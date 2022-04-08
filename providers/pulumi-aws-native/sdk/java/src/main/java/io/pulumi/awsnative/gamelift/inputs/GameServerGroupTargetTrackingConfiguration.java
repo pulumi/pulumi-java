@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Settings for a target-based scaling policy applied to Auto Scaling group.
- * 
  */
 public final class GameServerGroupTargetTrackingConfiguration extends io.pulumi.resources.InvokeArgs {
 

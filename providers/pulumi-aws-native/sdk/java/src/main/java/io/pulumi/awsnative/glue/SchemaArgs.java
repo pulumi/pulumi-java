@@ -29,7 +29,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Compatibility setting for the schema.
-     * 
      */
     @Import(name="compatibility", required=true)
       private final Output<SchemaCompatibility> compatibility;
@@ -40,7 +39,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Data format name to use for the schema. Accepted values: 'AVRO', 'JSON', 'PROTOBUF'
-     * 
      */
     @Import(name="dataFormat", required=true)
       private final Output<SchemaDataFormat> dataFormat;
@@ -51,7 +49,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description of the schema. If description is not provided, there will not be any default value for this.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -62,7 +59,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the schema.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -80,7 +76,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Definition for the initial schema version in plain-text.
-     * 
      */
     @Import(name="schemaDefinition", required=true)
       private final Output<String> schemaDefinition;
@@ -91,7 +86,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of tags to tag the schema
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<SchemaTagArgs>> tags;

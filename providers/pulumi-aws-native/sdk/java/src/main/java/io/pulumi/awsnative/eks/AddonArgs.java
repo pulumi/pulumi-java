@@ -19,7 +19,6 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of Addon
-     * 
      */
     @Import(name="addonName")
       private final @Nullable Output<String> addonName;
@@ -30,7 +29,6 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Version of Addon
-     * 
      */
     @Import(name="addonVersion")
       private final @Nullable Output<String> addonVersion;
@@ -41,7 +39,6 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of Cluster
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -52,7 +49,6 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resolve parameter value conflicts
-     * 
      */
     @Import(name="resolveConflicts")
       private final @Nullable Output<AddonResolveConflicts> resolveConflicts;
@@ -63,7 +59,6 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IAM role to bind to the add-on's service account
-     * 
      */
     @Import(name="serviceAccountRoleArn")
       private final @Nullable Output<String> serviceAccountRoleArn;
@@ -74,7 +69,6 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<AddonTagArgs>> tags;

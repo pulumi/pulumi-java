@@ -13,22 +13,18 @@ import javax.annotation.Nullable;
 public final class Template {
     /**
      * The HTML body of the email.
-     * 
      */
     private final @Nullable String htmlPart;
     /**
      * The subject line of the email.
-     * 
      */
     private final String subjectPart;
     /**
      * The name of the template.
-     * 
      */
     private final @Nullable String templateName;
     /**
      * The email body that is visible to recipients whose email clients do not display HTML content.
-     * 
      */
     private final @Nullable String textPart;
 
@@ -46,28 +42,24 @@ public final class Template {
 
     /**
      * The HTML body of the email.
-     * 
     */
     public Optional<String> getHtmlPart() {
         return Optional.ofNullable(this.htmlPart);
     }
     /**
      * The subject line of the email.
-     * 
     */
     public String getSubjectPart() {
         return this.subjectPart;
     }
     /**
      * The name of the template.
-     * 
     */
     public Optional<String> getTemplateName() {
         return Optional.ofNullable(this.templateName);
     }
     /**
      * The email body that is visible to recipients whose email clients do not display HTML content.
-     * 
     */
     public Optional<String> getTextPart() {
         return Optional.ofNullable(this.textPart);

@@ -17,7 +17,6 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
 
     /**
      * Database table name
-     * 
      */
     @Import(name="databaseTableName")
       private final @Nullable Output<String> databaseTableName;
@@ -28,7 +27,6 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
 
     /**
      * Glue connection name
-     * 
      */
     @Import(name="glueConnectionName", required=true)
       private final Output<String> glueConnectionName;
@@ -39,7 +37,6 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
 
     /**
      * Custom SQL to run against the provided AWS Glue connection. This SQL will be used as the input for DataBrew projects and jobs.
-     * 
      */
     @Import(name="queryString")
       private final @Nullable Output<String> queryString;

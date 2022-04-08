@@ -19,7 +19,6 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The content of the contact flow module in JSON format.
-     * 
      */
     @Import(name="content", required=true)
       private final Output<String> content;
@@ -30,7 +29,6 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The description of the contact flow module.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -41,7 +39,6 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The identifier of the Amazon Connect instance (ARN).
-     * 
      */
     @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
@@ -52,7 +49,6 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the contact flow module.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -63,7 +59,6 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The state of the contact flow module.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<ContactFlowModuleState> state;
@@ -74,7 +69,6 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * One or more tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ContactFlowModuleTagArgs>> tags;

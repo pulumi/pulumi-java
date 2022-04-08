@@ -28,7 +28,6 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Contains the reason a monitoring job failed, if it failed.
-     * 
      */
     @Import(name="failureReason")
       private final @Nullable Output<String> failureReason;
@@ -39,7 +38,6 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Describes metadata on the last execution to run, if there was one.
-     * 
      */
     @Import(name="lastMonitoringExecutionSummary")
       private final @Nullable Output<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary;
@@ -64,7 +62,6 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The status of a schedule job.
-     * 
      */
     @Import(name="monitoringScheduleStatus")
       private final @Nullable Output<MonitoringScheduleStatus> monitoringScheduleStatus;
@@ -75,7 +72,6 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<MonitoringScheduleTagArgs>> tags;

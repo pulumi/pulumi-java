@@ -17,20 +17,17 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::IoTSiteWise::Asset
- * 
  */
 @ResourceType(type="aws-native:iotsitewise:Asset")
 public class Asset extends io.pulumi.resources.CustomResource {
     /**
      * The ARN of the asset
-     * 
      */
     @Export(name="assetArn", type=String.class, parameters={})
     private Output<String> assetArn;
 
     /**
      * @return The ARN of the asset
-     * 
      */
     public Output<String> getAssetArn() {
         return this.assetArn;
@@ -43,42 +40,36 @@ public class Asset extends io.pulumi.resources.CustomResource {
     }
     /**
      * The ID of the asset
-     * 
      */
     @Export(name="assetId", type=String.class, parameters={})
     private Output<String> assetId;
 
     /**
      * @return The ID of the asset
-     * 
      */
     public Output<String> getAssetId() {
         return this.assetId;
     }
     /**
      * The ID of the asset model from which to create the asset.
-     * 
      */
     @Export(name="assetModelId", type=String.class, parameters={})
     private Output<String> assetModelId;
 
     /**
      * @return The ID of the asset model from which to create the asset.
-     * 
      */
     public Output<String> getAssetModelId() {
         return this.assetModelId;
     }
     /**
      * A unique, friendly name for the asset.
-     * 
      */
     @Export(name="assetName", type=String.class, parameters={})
     private Output<String> assetName;
 
     /**
      * @return A unique, friendly name for the asset.
-     * 
      */
     public Output<String> getAssetName() {
         return this.assetName;
@@ -91,14 +82,12 @@ public class Asset extends io.pulumi.resources.CustomResource {
     }
     /**
      * A list of key-value pairs that contain metadata for the asset.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={AssetTag.class})
     private Output</* @Nullable */ List<AssetTag>> tags;
 
     /**
      * @return A list of key-value pairs that contain metadata for the asset.
-     * 
      */
     public Output</* @Nullable */ List<AssetTag>> getTags() {
         return this.tags;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * <p>The theme display options for sheets. </p>
- * 
  */
 public final class ThemeSheetStyleArgs extends io.pulumi.resources.ResourceArgs {
 

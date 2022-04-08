@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The encryption method to use.
-     * 
      */
     @EnumType
     public enum OriginEndpointHlsEncryptionEncryptionMethod {

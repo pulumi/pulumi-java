@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class HostedZoneTag {
     /**
      * The key name of the tag.
-     * 
      */
     private final String key;
     /**
      * The value for the tag.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class HostedZoneTag {
 
     /**
      * The key name of the tag.
-     * 
     */
     public String getKey() {
         return this.key;
     }
     /**
      * The value for the tag.
-     * 
     */
     public String getValue() {
         return this.value;

@@ -18,20 +18,17 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Schema of AWS::EC2::IPAMScope Type
- * 
  */
 @ResourceType(type="aws-native:ec2:IPAMScope")
 public class IPAMScope extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the IPAM scope.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the IPAM scope.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
@@ -44,98 +41,84 @@ public class IPAMScope extends io.pulumi.resources.CustomResource {
     }
     /**
      * The Amazon Resource Name (ARN) of the IPAM this scope is a part of.
-     * 
      */
     @Export(name="ipamArn", type=String.class, parameters={})
     private Output<String> ipamArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the IPAM this scope is a part of.
-     * 
      */
     public Output<String> getIpamArn() {
         return this.ipamArn;
     }
     /**
      * The Id of the IPAM this scope is a part of.
-     * 
      */
     @Export(name="ipamId", type=String.class, parameters={})
     private Output<String> ipamId;
 
     /**
      * @return The Id of the IPAM this scope is a part of.
-     * 
      */
     public Output<String> getIpamId() {
         return this.ipamId;
     }
     /**
      * Id of the IPAM scope.
-     * 
      */
     @Export(name="ipamScopeId", type=String.class, parameters={})
     private Output<String> ipamScopeId;
 
     /**
      * @return Id of the IPAM scope.
-     * 
      */
     public Output<String> getIpamScopeId() {
         return this.ipamScopeId;
     }
     /**
      * Determines whether this scope contains publicly routable space or space for a private network
-     * 
      */
     @Export(name="ipamScopeType", type=IPAMScopeIpamScopeType.class, parameters={})
     private Output<IPAMScopeIpamScopeType> ipamScopeType;
 
     /**
      * @return Determines whether this scope contains publicly routable space or space for a private network
-     * 
      */
     public Output<IPAMScopeIpamScopeType> getIpamScopeType() {
         return this.ipamScopeType;
     }
     /**
      * Is this one of the default scopes created with the IPAM.
-     * 
      */
     @Export(name="isDefault", type=Boolean.class, parameters={})
     private Output<Boolean> isDefault;
 
     /**
      * @return Is this one of the default scopes created with the IPAM.
-     * 
      */
     public Output<Boolean> getIsDefault() {
         return this.isDefault;
     }
     /**
      * The number of pools that currently exist in this scope.
-     * 
      */
     @Export(name="poolCount", type=Integer.class, parameters={})
     private Output<Integer> poolCount;
 
     /**
      * @return The number of pools that currently exist in this scope.
-     * 
      */
     public Output<Integer> getPoolCount() {
         return this.poolCount;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={IPAMScopeTag.class})
     private Output</* @Nullable */ List<IPAMScopeTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<IPAMScopeTag>> getTags() {
         return this.tags;

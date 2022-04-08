@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * An example resource schema demonstrating some basic constructs and validation rules.
- * 
  */
 @ResourceType(type="aws-native:licensemanager:Grant")
 public class Grant extends io.pulumi.resources.CustomResource {
@@ -26,56 +25,48 @@ public class Grant extends io.pulumi.resources.CustomResource {
     }
     /**
      * Arn of the grant.
-     * 
      */
     @Export(name="grantArn", type=String.class, parameters={})
     private Output<String> grantArn;
 
     /**
      * @return Arn of the grant.
-     * 
      */
     public Output<String> getGrantArn() {
         return this.grantArn;
     }
     /**
      * Name for the created Grant.
-     * 
      */
     @Export(name="grantName", type=String.class, parameters={})
     private Output</* @Nullable */ String> grantName;
 
     /**
      * @return Name for the created Grant.
-     * 
      */
     public Output</* @Nullable */ String> getGrantName() {
         return this.grantName;
     }
     /**
      * Home region for the created grant.
-     * 
      */
     @Export(name="homeRegion", type=String.class, parameters={})
     private Output</* @Nullable */ String> homeRegion;
 
     /**
      * @return Home region for the created grant.
-     * 
      */
     public Output</* @Nullable */ String> getHomeRegion() {
         return this.homeRegion;
     }
     /**
      * License Arn for the grant.
-     * 
      */
     @Export(name="licenseArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> licenseArn;
 
     /**
      * @return License Arn for the grant.
-     * 
      */
     public Output</* @Nullable */ String> getLicenseArn() {
         return this.licenseArn;
@@ -94,14 +85,12 @@ public class Grant extends io.pulumi.resources.CustomResource {
     }
     /**
      * The version of the grant.
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
      * @return The version of the grant.
-     * 
      */
     public Output<String> getVersion() {
         return this.version;

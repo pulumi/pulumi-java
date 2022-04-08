@@ -16,63 +16,597 @@ import javax.annotation.Nullable;
 /**
  * A module that has been registered in the CloudFormation registry.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var moduleVersion1 = new AwsNative.CloudFormation.ModuleVersion("moduleVersion1", new AwsNative.CloudFormation.ModuleVersionArgs
+ *         {
+ *             ModuleName = "My::Sample::Test::MODULE",
+ *             ModulePackage = "s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip",
+ *         });
+ *         var moduleVersion2 = new AwsNative.CloudFormation.ModuleVersion("moduleVersion2", new AwsNative.CloudFormation.ModuleVersionArgs
+ *         {
+ *             ModuleName = "My::Sample::Test::MODULE",
+ *             ModulePackage = "s3://my-sample-moduleversion-bucket/sample-module-package-v2.zip",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 moduleVersion1,
+ *             },
+ *         });
+ *         var moduleDefaultVersion = new AwsNative.CloudFormation.ModuleDefaultVersion("moduleDefaultVersion", new AwsNative.CloudFormation.ModuleDefaultVersionArgs
+ *         {
+ *             Arn = moduleVersion2.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cloudformation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		moduleVersion1, err := cloudformation.NewModuleVersion(ctx, "moduleVersion1", &cloudformation.ModuleVersionArgs{
+ * 			ModuleName:    pulumi.String("My::Sample::Test::MODULE"),
+ * 			ModulePackage: pulumi.String("s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		moduleVersion2, err := cloudformation.NewModuleVersion(ctx, "moduleVersion2", &cloudformation.ModuleVersionArgs{
+ * 			ModuleName:    pulumi.String("My::Sample::Test::MODULE"),
+ * 			ModulePackage: pulumi.String("s3://my-sample-moduleversion-bucket/sample-module-package-v2.zip"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			moduleVersion1,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudformation.NewModuleDefaultVersion(ctx, "moduleDefaultVersion", &cloudformation.ModuleDefaultVersionArgs{
+ * 			Arn: moduleVersion2.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const moduleVersion1 = new aws_native.cloudformation.ModuleVersion("moduleVersion1", {
+ *     moduleName: "My::Sample::Test::MODULE",
+ *     modulePackage: "s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip",
+ * });
+ * const moduleVersion2 = new aws_native.cloudformation.ModuleVersion("moduleVersion2", {
+ *     moduleName: "My::Sample::Test::MODULE",
+ *     modulePackage: "s3://my-sample-moduleversion-bucket/sample-module-package-v2.zip",
+ * }, {
+ *     dependsOn: [moduleVersion1],
+ * });
+ * const moduleDefaultVersion = new aws_native.cloudformation.ModuleDefaultVersion("moduleDefaultVersion", {arn: moduleVersion2.id});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * module_version1 = aws_native.cloudformation.ModuleVersion("moduleVersion1",
+ *     module_name="My::Sample::Test::MODULE",
+ *     module_package="s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip")
+ * module_version2 = aws_native.cloudformation.ModuleVersion("moduleVersion2",
+ *     module_name="My::Sample::Test::MODULE",
+ *     module_package="s3://my-sample-moduleversion-bucket/sample-module-package-v2.zip",
+ *     opts=pulumi.ResourceOptions(depends_on=[module_version1]))
+ * module_default_version = aws_native.cloudformation.ModuleDefaultVersion("moduleDefaultVersion", arn=module_version2.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var moduleVersion1 = new AwsNative.CloudFormation.ModuleVersion("moduleVersion1", new AwsNative.CloudFormation.ModuleVersionArgs
+ *         {
+ *             ModuleName = "My::Sample::Test::MODULE",
+ *             ModulePackage = "s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip",
+ *         });
+ *         var moduleVersion2 = new AwsNative.CloudFormation.ModuleVersion("moduleVersion2", new AwsNative.CloudFormation.ModuleVersionArgs
+ *         {
+ *             ModuleName = "My::Sample::Test::MODULE",
+ *             ModulePackage = "s3://my-sample-moduleversion-bucket/sample-module-package-v2.zip",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 moduleVersion1,
+ *             },
+ *         });
+ *         var moduleDefaultVersion = new AwsNative.CloudFormation.ModuleDefaultVersion("moduleDefaultVersion", new AwsNative.CloudFormation.ModuleDefaultVersionArgs
+ *         {
+ *             Arn = moduleVersion2.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cloudformation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		moduleVersion1, err := cloudformation.NewModuleVersion(ctx, "moduleVersion1", &cloudformation.ModuleVersionArgs{
+ * 			ModuleName:    pulumi.String("My::Sample::Test::MODULE"),
+ * 			ModulePackage: pulumi.String("s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		moduleVersion2, err := cloudformation.NewModuleVersion(ctx, "moduleVersion2", &cloudformation.ModuleVersionArgs{
+ * 			ModuleName:    pulumi.String("My::Sample::Test::MODULE"),
+ * 			ModulePackage: pulumi.String("s3://my-sample-moduleversion-bucket/sample-module-package-v2.zip"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			moduleVersion1,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudformation.NewModuleDefaultVersion(ctx, "moduleDefaultVersion", &cloudformation.ModuleDefaultVersionArgs{
+ * 			Arn: moduleVersion2.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const moduleVersion1 = new aws_native.cloudformation.ModuleVersion("moduleVersion1", {
+ *     moduleName: "My::Sample::Test::MODULE",
+ *     modulePackage: "s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip",
+ * });
+ * const moduleVersion2 = new aws_native.cloudformation.ModuleVersion("moduleVersion2", {
+ *     moduleName: "My::Sample::Test::MODULE",
+ *     modulePackage: "s3://my-sample-moduleversion-bucket/sample-module-package-v2.zip",
+ * }, {
+ *     dependsOn: [moduleVersion1],
+ * });
+ * const moduleDefaultVersion = new aws_native.cloudformation.ModuleDefaultVersion("moduleDefaultVersion", {arn: moduleVersion2.id});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * module_version1 = aws_native.cloudformation.ModuleVersion("moduleVersion1",
+ *     module_name="My::Sample::Test::MODULE",
+ *     module_package="s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip")
+ * module_version2 = aws_native.cloudformation.ModuleVersion("moduleVersion2",
+ *     module_name="My::Sample::Test::MODULE",
+ *     module_package="s3://my-sample-moduleversion-bucket/sample-module-package-v2.zip",
+ *     opts=pulumi.ResourceOptions(depends_on=[module_version1]))
+ * module_default_version = aws_native.cloudformation.ModuleDefaultVersion("moduleDefaultVersion", arn=module_version2.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var moduleVersion = new AwsNative.CloudFormation.ModuleVersion("moduleVersion", new AwsNative.CloudFormation.ModuleVersionArgs
+ *         {
+ *             ModuleName = "My::Sample::Test::MODULE",
+ *             ModulePackage = "s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cloudformation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudformation.NewModuleVersion(ctx, "moduleVersion", &cloudformation.ModuleVersionArgs{
+ * 			ModuleName:    pulumi.String("My::Sample::Test::MODULE"),
+ * 			ModulePackage: pulumi.String("s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const moduleVersion = new aws_native.cloudformation.ModuleVersion("moduleVersion", {
+ *     moduleName: "My::Sample::Test::MODULE",
+ *     modulePackage: "s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * module_version = aws_native.cloudformation.ModuleVersion("moduleVersion",
+ *     module_name="My::Sample::Test::MODULE",
+ *     module_package="s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var moduleVersion = new AwsNative.CloudFormation.ModuleVersion("moduleVersion", new AwsNative.CloudFormation.ModuleVersionArgs
+ *         {
+ *             ModuleName = "My::Sample::Test::MODULE",
+ *             ModulePackage = "s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cloudformation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudformation.NewModuleVersion(ctx, "moduleVersion", &cloudformation.ModuleVersionArgs{
+ * 			ModuleName:    pulumi.String("My::Sample::Test::MODULE"),
+ * 			ModulePackage: pulumi.String("s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const moduleVersion = new aws_native.cloudformation.ModuleVersion("moduleVersion", {
+ *     moduleName: "My::Sample::Test::MODULE",
+ *     modulePackage: "s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * module_version = aws_native.cloudformation.ModuleVersion("moduleVersion",
+ *     module_name="My::Sample::Test::MODULE",
+ *     module_package="s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var moduleVersion1 = new AwsNative.CloudFormation.ModuleVersion("moduleVersion1", new AwsNative.CloudFormation.ModuleVersionArgs
+ *         {
+ *             ModuleName = "My::Sample::Test::MODULE",
+ *             ModulePackage = "s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip",
+ *         });
+ *         var moduleVersion2 = new AwsNative.CloudFormation.ModuleVersion("moduleVersion2", new AwsNative.CloudFormation.ModuleVersionArgs
+ *         {
+ *             ModuleName = "My::Sample::Test::MODULE",
+ *             ModulePackage = "s3://my-sample-moduleversion-bucket/sample-module-package-v2.zip",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 moduleVersion1,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cloudformation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		moduleVersion1, err := cloudformation.NewModuleVersion(ctx, "moduleVersion1", &cloudformation.ModuleVersionArgs{
+ * 			ModuleName:    pulumi.String("My::Sample::Test::MODULE"),
+ * 			ModulePackage: pulumi.String("s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudformation.NewModuleVersion(ctx, "moduleVersion2", &cloudformation.ModuleVersionArgs{
+ * 			ModuleName:    pulumi.String("My::Sample::Test::MODULE"),
+ * 			ModulePackage: pulumi.String("s3://my-sample-moduleversion-bucket/sample-module-package-v2.zip"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			moduleVersion1,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const moduleVersion1 = new aws_native.cloudformation.ModuleVersion("moduleVersion1", {
+ *     moduleName: "My::Sample::Test::MODULE",
+ *     modulePackage: "s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip",
+ * });
+ * const moduleVersion2 = new aws_native.cloudformation.ModuleVersion("moduleVersion2", {
+ *     moduleName: "My::Sample::Test::MODULE",
+ *     modulePackage: "s3://my-sample-moduleversion-bucket/sample-module-package-v2.zip",
+ * }, {
+ *     dependsOn: [moduleVersion1],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * module_version1 = aws_native.cloudformation.ModuleVersion("moduleVersion1",
+ *     module_name="My::Sample::Test::MODULE",
+ *     module_package="s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip")
+ * module_version2 = aws_native.cloudformation.ModuleVersion("moduleVersion2",
+ *     module_name="My::Sample::Test::MODULE",
+ *     module_package="s3://my-sample-moduleversion-bucket/sample-module-package-v2.zip",
+ *     opts=pulumi.ResourceOptions(depends_on=[module_version1]))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var moduleVersion1 = new AwsNative.CloudFormation.ModuleVersion("moduleVersion1", new AwsNative.CloudFormation.ModuleVersionArgs
+ *         {
+ *             ModuleName = "My::Sample::Test::MODULE",
+ *             ModulePackage = "s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip",
+ *         });
+ *         var moduleVersion2 = new AwsNative.CloudFormation.ModuleVersion("moduleVersion2", new AwsNative.CloudFormation.ModuleVersionArgs
+ *         {
+ *             ModuleName = "My::Sample::Test::MODULE",
+ *             ModulePackage = "s3://my-sample-moduleversion-bucket/sample-module-package-v2.zip",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 moduleVersion1,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cloudformation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		moduleVersion1, err := cloudformation.NewModuleVersion(ctx, "moduleVersion1", &cloudformation.ModuleVersionArgs{
+ * 			ModuleName:    pulumi.String("My::Sample::Test::MODULE"),
+ * 			ModulePackage: pulumi.String("s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudformation.NewModuleVersion(ctx, "moduleVersion2", &cloudformation.ModuleVersionArgs{
+ * 			ModuleName:    pulumi.String("My::Sample::Test::MODULE"),
+ * 			ModulePackage: pulumi.String("s3://my-sample-moduleversion-bucket/sample-module-package-v2.zip"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			moduleVersion1,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const moduleVersion1 = new aws_native.cloudformation.ModuleVersion("moduleVersion1", {
+ *     moduleName: "My::Sample::Test::MODULE",
+ *     modulePackage: "s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip",
+ * });
+ * const moduleVersion2 = new aws_native.cloudformation.ModuleVersion("moduleVersion2", {
+ *     moduleName: "My::Sample::Test::MODULE",
+ *     modulePackage: "s3://my-sample-moduleversion-bucket/sample-module-package-v2.zip",
+ * }, {
+ *     dependsOn: [moduleVersion1],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * module_version1 = aws_native.cloudformation.ModuleVersion("moduleVersion1",
+ *     module_name="My::Sample::Test::MODULE",
+ *     module_package="s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip")
+ * module_version2 = aws_native.cloudformation.ModuleVersion("moduleVersion2",
+ *     module_name="My::Sample::Test::MODULE",
+ *     module_package="s3://my-sample-moduleversion-bucket/sample-module-package-v2.zip",
+ *     opts=pulumi.ResourceOptions(depends_on=[module_version1]))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:cloudformation:ModuleVersion")
 public class ModuleVersion extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the module.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the module.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The description of the registered module.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return The description of the registered module.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The URL of a page providing detailed documentation for this module.
-     * 
      */
     @Export(name="documentationUrl", type=String.class, parameters={})
     private Output<String> documentationUrl;
 
     /**
      * @return The URL of a page providing detailed documentation for this module.
-     * 
      */
     public Output<String> getDocumentationUrl() {
         return this.documentationUrl;
     }
     /**
      * Indicator of whether this module version is the current default version
-     * 
      */
     @Export(name="isDefaultVersion", type=Boolean.class, parameters={})
     private Output<Boolean> isDefaultVersion;
 
     /**
      * @return Indicator of whether this module version is the current default version
-     * 
      */
     public Output<Boolean> getIsDefaultVersion() {
         return this.isDefaultVersion;
@@ -81,7 +615,6 @@ public class ModuleVersion extends io.pulumi.resources.CustomResource {
      * The name of the module being registered.
      * 
      * Recommended module naming pattern: company_or_organization::service::type::MODULE.
-     * 
      */
     @Export(name="moduleName", type=String.class, parameters={})
     private Output<String> moduleName;
@@ -90,63 +623,54 @@ public class ModuleVersion extends io.pulumi.resources.CustomResource {
      * @return The name of the module being registered.
      * 
      * Recommended module naming pattern: company_or_organization::service::type::MODULE.
-     * 
      */
     public Output<String> getModuleName() {
         return this.moduleName;
     }
     /**
      * The url to the S3 bucket containing the schema and template fragment for the module you want to register.
-     * 
      */
     @Export(name="modulePackage", type=String.class, parameters={})
     private Output<String> modulePackage;
 
     /**
      * @return The url to the S3 bucket containing the schema and template fragment for the module you want to register.
-     * 
      */
     public Output<String> getModulePackage() {
         return this.modulePackage;
     }
     /**
      * The schema defining input parameters to and resources generated by the module.
-     * 
      */
     @Export(name="schema", type=String.class, parameters={})
     private Output<String> schema;
 
     /**
      * @return The schema defining input parameters to and resources generated by the module.
-     * 
      */
     public Output<String> getSchema() {
         return this.schema;
     }
     /**
      * The time that the specified module version was registered.
-     * 
      */
     @Export(name="timeCreated", type=String.class, parameters={})
     private Output<String> timeCreated;
 
     /**
      * @return The time that the specified module version was registered.
-     * 
      */
     public Output<String> getTimeCreated() {
         return this.timeCreated;
     }
     /**
      * The version ID of the module represented by this module instance.
-     * 
      */
     @Export(name="versionId", type=String.class, parameters={})
     private Output<String> versionId;
 
     /**
      * @return The version ID of the module represented by this module instance.
-     * 
      */
     public Output<String> getVersionId() {
         return this.versionId;
@@ -157,7 +681,6 @@ public class ModuleVersion extends io.pulumi.resources.CustomResource {
      * The only allowed value at present is:
      * 
      * PRIVATE: The type is only visible and usable within the account in which it is registered. Currently, AWS CloudFormation marks any types you register as PRIVATE.
-     * 
      */
     @Export(name="visibility", type=ModuleVersionVisibility.class, parameters={})
     private Output<ModuleVersionVisibility> visibility;
@@ -168,7 +691,6 @@ public class ModuleVersion extends io.pulumi.resources.CustomResource {
      * The only allowed value at present is:
      * 
      * PRIVATE: The type is only visible and usable within the account in which it is registered. Currently, AWS CloudFormation marks any types you register as PRIVATE.
-     * 
      */
     public Output<ModuleVersionVisibility> getVisibility() {
         return this.visibility;

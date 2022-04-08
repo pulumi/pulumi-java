@@ -23,7 +23,6 @@ import javax.annotation.Nullable;
 
 /**
  * Version: None. Resource Type definition for AWS::DynamoDB::GlobalTable
- * 
  */
 @ResourceType(type="aws-native:dynamodb:GlobalTable")
 public class GlobalTable extends io.pulumi.resources.CustomResource {

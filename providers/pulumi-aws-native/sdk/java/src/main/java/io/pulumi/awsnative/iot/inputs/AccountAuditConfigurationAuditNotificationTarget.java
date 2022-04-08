@@ -17,7 +17,6 @@ public final class AccountAuditConfigurationAuditNotificationTarget extends io.p
 
     /**
      * True if notifications to the target are enabled.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
@@ -28,7 +27,6 @@ public final class AccountAuditConfigurationAuditNotificationTarget extends io.p
 
     /**
      * The ARN of the role that grants permission to send notifications to the target.
-     * 
      */
     @Import(name="roleArn")
       private final @Nullable String roleArn;
@@ -39,7 +37,6 @@ public final class AccountAuditConfigurationAuditNotificationTarget extends io.p
 
     /**
      * The ARN of the target (SNS topic) to which audit notifications are sent.
-     * 
      */
     @Import(name="targetArn")
       private final @Nullable String targetArn;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Network Load Balancer resource that a DNS target resource points to.
- * 
  */
 public final class ResourceSetNLBResourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ResourceSetNLBResourceArgs extends io.pulumi.resources.Resour
 
     /**
      * A Network Load Balancer resource Amazon Resource Name (ARN).
-     * 
      */
     @Import(name="arn")
       private final @Nullable Output<String> arn;

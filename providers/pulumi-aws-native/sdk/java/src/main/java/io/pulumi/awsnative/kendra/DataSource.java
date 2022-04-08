@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Kendra DataSource
- * 
  */
 @ResourceType(type="aws-native:kendra:DataSource")
 public class DataSource extends io.pulumi.resources.CustomResource {
@@ -65,14 +64,12 @@ public class DataSource extends io.pulumi.resources.CustomResource {
     }
     /**
      * Tags for labeling the data source
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DataSourceTag.class})
     private Output</* @Nullable */ List<DataSourceTag>> tags;
 
     /**
      * @return Tags for labeling the data source
-     * 
      */
     public Output</* @Nullable */ List<DataSourceTag>> getTags() {
         return this.tags;

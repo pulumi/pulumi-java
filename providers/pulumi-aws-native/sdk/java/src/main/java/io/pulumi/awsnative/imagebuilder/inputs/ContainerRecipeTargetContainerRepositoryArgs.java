@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The container repository where the output container image is stored.
- * 
  */
 public final class ContainerRecipeTargetContainerRepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ContainerRecipeTargetContainerRepositoryArgs extends io.pulum
 
     /**
      * The name of the container repository where the output container image is stored. This name is prefixed by the repository location.
-     * 
      */
     @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
@@ -32,7 +30,6 @@ public final class ContainerRecipeTargetContainerRepositoryArgs extends io.pulum
 
     /**
      * Specifies the service in which this image was registered.
-     * 
      */
     @Import(name="service")
       private final @Nullable Output<ContainerRecipeTargetContainerRepositoryService> service;

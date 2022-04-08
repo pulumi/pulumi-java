@@ -15,7 +15,6 @@ public final class RecipeStep {
     private final RecipeAction action;
     /**
      * Condition expressions applied to the step action
-     * 
      */
     private final @Nullable List<RecipeConditionExpression> conditionExpressions;
 
@@ -32,7 +31,6 @@ public final class RecipeStep {
     }
     /**
      * Condition expressions applied to the step action
-     * 
     */
     public List<RecipeConditionExpression> getConditionExpressions() {
         return this.conditionExpressions == null ? List.of() : this.conditionExpressions;

@@ -15,7 +15,6 @@ public final class ConnectorProfileZendeskConnectorProfilePropertiesArgs extends
 
     /**
      * The location of the Zendesk resource
-     * 
      */
     @Import(name="instanceUrl", required=true)
       private final Output<String> instanceUrl;

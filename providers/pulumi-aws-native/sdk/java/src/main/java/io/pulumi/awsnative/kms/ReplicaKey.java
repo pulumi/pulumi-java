@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::KMS::ReplicaKey resource specifies a multi-region replica customer master key (CMK) in AWS Key Management Service (AWS KMS).
- * 
  */
 @ResourceType(type="aws-native:kms:ReplicaKey")
 public class ReplicaKey extends io.pulumi.resources.CustomResource {
@@ -30,28 +29,24 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
     }
     /**
      * A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
-     * 
      */
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
      * @return Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
@@ -64,56 +59,48 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
     }
     /**
      * The key policy that authorizes use of the CMK. The key policy must observe the following rules.
-     * 
      */
     @Export(name="keyPolicy", type=Object.class, parameters={})
     private Output<Object> keyPolicy;
 
     /**
      * @return The key policy that authorizes use of the CMK. The key policy must observe the following rules.
-     * 
      */
     public Output<Object> getKeyPolicy() {
         return this.keyPolicy;
     }
     /**
      * Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
-     * 
      */
     @Export(name="pendingWindowInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> pendingWindowInDays;
 
     /**
      * @return Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
-     * 
      */
     public Output</* @Nullable */ Integer> getPendingWindowInDays() {
         return this.pendingWindowInDays;
     }
     /**
      * Identifies the primary CMK to create a replica of. Specify the Amazon Resource Name (ARN) of the CMK. You cannot specify an alias or key ID. For help finding the ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
-     * 
      */
     @Export(name="primaryKeyArn", type=String.class, parameters={})
     private Output<String> primaryKeyArn;
 
     /**
      * @return Identifies the primary CMK to create a replica of. Specify the Amazon Resource Name (ARN) of the CMK. You cannot specify an alias or key ID. For help finding the ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
-     * 
      */
     public Output<String> getPrimaryKeyArn() {
         return this.primaryKeyArn;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ReplicaKeyTag.class})
     private Output</* @Nullable */ List<ReplicaKeyTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<ReplicaKeyTag>> getTags() {
         return this.tags;

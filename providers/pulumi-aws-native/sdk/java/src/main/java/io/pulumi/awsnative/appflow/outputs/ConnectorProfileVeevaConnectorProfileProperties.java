@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ConnectorProfileVeevaConnectorProfileProperties {
     /**
      * The location of the Veeva resource
-     * 
      */
     private final String instanceUrl;
 
@@ -22,7 +21,6 @@ public final class ConnectorProfileVeevaConnectorProfileProperties {
 
     /**
      * The location of the Veeva resource
-     * 
     */
     public String getInstanceUrl() {
         return this.instanceUrl;

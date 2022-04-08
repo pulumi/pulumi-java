@@ -17,118 +17,101 @@ import javax.annotation.Nullable;
 
 /**
  * Enable a resource that has been published in the CloudFormation Registry.
- * 
  */
 @ResourceType(type="aws-native:cloudformation:TypeActivation")
 public class TypeActivation extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the extension.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the extension.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * Whether to automatically update the extension in this account and region when a new minor version is published by the extension publisher. Major versions released by the publisher must be manually updated.
-     * 
      */
     @Export(name="autoUpdate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoUpdate;
 
     /**
      * @return Whether to automatically update the extension in this account and region when a new minor version is published by the extension publisher. Major versions released by the publisher must be manually updated.
-     * 
      */
     public Output</* @Nullable */ Boolean> getAutoUpdate() {
         return this.autoUpdate;
     }
     /**
      * The Amazon Resource Name (ARN) of the IAM execution role to use to register the type. If your resource type calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account. CloudFormation then assumes that execution role to provide your resource type with the appropriate credentials.
-     * 
      */
     @Export(name="executionRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> executionRoleArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the IAM execution role to use to register the type. If your resource type calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account. CloudFormation then assumes that execution role to provide your resource type with the appropriate credentials.
-     * 
      */
     public Output</* @Nullable */ String> getExecutionRoleArn() {
         return this.executionRoleArn;
     }
     /**
      * Specifies logging configuration information for a type.
-     * 
      */
     @Export(name="loggingConfig", type=TypeActivationLoggingConfig.class, parameters={})
     private Output</* @Nullable */ TypeActivationLoggingConfig> loggingConfig;
 
     /**
      * @return Specifies logging configuration information for a type.
-     * 
      */
     public Output</* @Nullable */ TypeActivationLoggingConfig> getLoggingConfig() {
         return this.loggingConfig;
     }
     /**
      * The Major Version of the type you want to enable
-     * 
      */
     @Export(name="majorVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> majorVersion;
 
     /**
      * @return The Major Version of the type you want to enable
-     * 
      */
     public Output</* @Nullable */ String> getMajorVersion() {
         return this.majorVersion;
     }
     /**
      * The Amazon Resource Number (ARN) assigned to the public extension upon publication
-     * 
      */
     @Export(name="publicTypeArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicTypeArn;
 
     /**
      * @return The Amazon Resource Number (ARN) assigned to the public extension upon publication
-     * 
      */
     public Output</* @Nullable */ String> getPublicTypeArn() {
         return this.publicTypeArn;
     }
     /**
      * The publisher id assigned by CloudFormation for publishing in this region.
-     * 
      */
     @Export(name="publisherId", type=String.class, parameters={})
     private Output</* @Nullable */ String> publisherId;
 
     /**
      * @return The publisher id assigned by CloudFormation for publishing in this region.
-     * 
      */
     public Output</* @Nullable */ String> getPublisherId() {
         return this.publisherId;
     }
     /**
      * The kind of extension
-     * 
      */
     @Export(name="type", type=TypeActivationType.class, parameters={})
     private Output</* @Nullable */ TypeActivationType> type;
 
     /**
      * @return The kind of extension
-     * 
      */
     public Output</* @Nullable */ TypeActivationType> getType() {
         return this.type;
@@ -137,7 +120,6 @@ public class TypeActivation extends io.pulumi.resources.CustomResource {
      * The name of the type being registered.
      * 
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
-     * 
      */
     @Export(name="typeName", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeName;
@@ -146,35 +128,30 @@ public class TypeActivation extends io.pulumi.resources.CustomResource {
      * @return The name of the type being registered.
      * 
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
-     * 
      */
     public Output</* @Nullable */ String> getTypeName() {
         return this.typeName;
     }
     /**
      * An alias to assign to the public extension in this account and region. If you specify an alias for the extension, you must then use the alias to refer to the extension in your templates.
-     * 
      */
     @Export(name="typeNameAlias", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeNameAlias;
 
     /**
      * @return An alias to assign to the public extension in this account and region. If you specify an alias for the extension, you must then use the alias to refer to the extension in your templates.
-     * 
      */
     public Output</* @Nullable */ String> getTypeNameAlias() {
         return this.typeNameAlias;
     }
     /**
      * Manually updates a previously-enabled type to a new major or minor version, if available. You can also use this parameter to update the value of AutoUpdateEnabled
-     * 
      */
     @Export(name="versionBump", type=TypeActivationVersionBump.class, parameters={})
     private Output</* @Nullable */ TypeActivationVersionBump> versionBump;
 
     /**
      * @return Manually updates a previously-enabled type to a new major or minor version, if available. You can also use this parameter to update the value of AutoUpdateEnabled
-     * 
      */
     public Output</* @Nullable */ TypeActivationVersionBump> getVersionBump() {
         return this.versionBump;

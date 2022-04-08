@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class DataSourceSnowflakeParameters {
     /**
      * <p>Database.</p>
-     * 
      */
     private final String database;
     /**
      * <p>Host.</p>
-     * 
      */
     private final String host;
     /**
      * <p>Warehouse.</p>
-     * 
      */
     private final String warehouse;
 
@@ -37,21 +34,18 @@ public final class DataSourceSnowflakeParameters {
 
     /**
      * <p>Database.</p>
-     * 
     */
     public String getDatabase() {
         return this.database;
     }
     /**
      * <p>Host.</p>
-     * 
     */
     public String getHost() {
         return this.host;
     }
     /**
      * <p>Warehouse.</p>
-     * 
     */
     public String getWarehouse() {
         return this.warehouse;

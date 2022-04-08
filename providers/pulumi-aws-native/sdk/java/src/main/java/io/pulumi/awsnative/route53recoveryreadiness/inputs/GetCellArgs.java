@@ -14,7 +14,6 @@ public final class GetCellArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the cell to create.
-     * 
      */
     @Import(name="cellName", required=true)
       private final String cellName;

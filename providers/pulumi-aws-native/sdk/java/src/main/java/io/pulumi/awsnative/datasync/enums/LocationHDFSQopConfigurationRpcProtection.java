@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Configuration for RPC Protection.
-     * 
      */
     @EnumType
     public enum LocationHDFSQopConfigurationRpcProtection {

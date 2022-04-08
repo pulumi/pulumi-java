@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class SimulationApplicationRenderingEngine {
     /**
      * The name of the rendering engine.
-     * 
      */
     private final SimulationApplicationRenderingEngineName name;
     /**
      * The version of the rendering engine.
-     * 
      */
     private final String version;
 
@@ -31,14 +29,12 @@ public final class SimulationApplicationRenderingEngine {
 
     /**
      * The name of the rendering engine.
-     * 
     */
     public SimulationApplicationRenderingEngineName getName() {
         return this.name;
     }
     /**
      * The version of the rendering engine.
-     * 
     */
     public String getVersion() {
         return this.version;

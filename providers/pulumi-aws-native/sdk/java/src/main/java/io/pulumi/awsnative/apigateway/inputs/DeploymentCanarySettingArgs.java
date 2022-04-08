@@ -18,7 +18,6 @@ public final class DeploymentCanarySettingArgs extends io.pulumi.resources.Resou
 
     /**
      * The percent (0-100) of traffic diverted to a canary deployment.
-     * 
      */
     @Import(name="percentTraffic")
       private final @Nullable Output<Double> percentTraffic;
@@ -28,8 +27,7 @@ public final class DeploymentCanarySettingArgs extends io.pulumi.resources.Resou
     }
 
     /**
-     * Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values.
-     * 
+     * Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values. 
      */
     @Import(name="stageVariableOverrides")
       private final @Nullable Output<Object> stageVariableOverrides;
@@ -40,7 +38,6 @@ public final class DeploymentCanarySettingArgs extends io.pulumi.resources.Resou
 
     /**
      * Whether the canary deployment uses the stage cache or not.
-     * 
      */
     @Import(name="useStageCache")
       private final @Nullable Output<Boolean> useStageCache;

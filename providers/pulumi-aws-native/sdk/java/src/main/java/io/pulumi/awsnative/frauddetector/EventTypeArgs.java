@@ -21,7 +21,6 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the event type.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -53,7 +52,6 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name for the event type
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -64,7 +62,6 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tags associated with this event type.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<EventTypeTagArgs>> tags;

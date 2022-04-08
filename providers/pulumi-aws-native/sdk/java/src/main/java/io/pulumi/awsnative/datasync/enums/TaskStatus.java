@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The status of the task that was described.
-     * 
      */
     @EnumType
     public enum TaskStatus {

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Summary of information about monitoring job
- * 
  */
 public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
 
     /**
      * The time at which the monitoring job was created.
-     * 
      */
     @Import(name="creationTime", required=true)
       private final Output<String> creationTime;
@@ -39,7 +37,6 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
 
     /**
      * Contains the reason a monitoring job failed, if it failed.
-     * 
      */
     @Import(name="failureReason")
       private final @Nullable Output<String> failureReason;
@@ -50,7 +47,6 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
 
     /**
      * A timestamp that indicates the last time the monitoring job was modified.
-     * 
      */
     @Import(name="lastModifiedTime", required=true)
       private final Output<String> lastModifiedTime;
@@ -61,7 +57,6 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
 
     /**
      * The status of the monitoring job.
-     * 
      */
     @Import(name="monitoringExecutionStatus", required=true)
       private final Output<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus;
@@ -79,7 +74,6 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
 
     /**
      * The Amazon Resource Name (ARN) of the monitoring job.
-     * 
      */
     @Import(name="processingJobArn")
       private final @Nullable Output<String> processingJobArn;
@@ -90,7 +84,6 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
 
     /**
      * The time the monitoring job was scheduled.
-     * 
      */
     @Import(name="scheduledTime", required=true)
       private final Output<String> scheduledTime;

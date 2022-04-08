@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for scheduled incremental data pull
- * 
  */
 public final class FlowIncrementalPullConfig extends io.pulumi.resources.InvokeArgs {
 

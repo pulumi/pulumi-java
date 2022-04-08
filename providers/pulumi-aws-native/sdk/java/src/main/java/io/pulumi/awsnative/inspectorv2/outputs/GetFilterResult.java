@@ -15,27 +15,22 @@ import javax.annotation.Nullable;
 public final class GetFilterResult {
     /**
      * Findings filter ARN.
-     * 
      */
     private final @Nullable String arn;
     /**
      * Findings filter description.
-     * 
      */
     private final @Nullable String description;
     /**
      * Findings filter action.
-     * 
      */
     private final @Nullable FilterAction filterAction;
     /**
      * Findings filter criteria.
-     * 
      */
     private final @Nullable FilterCriteria filterCriteria;
     /**
      * Findings filter name.
-     * 
      */
     private final @Nullable String name;
 
@@ -55,35 +50,30 @@ public final class GetFilterResult {
 
     /**
      * Findings filter ARN.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Findings filter description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Findings filter action.
-     * 
     */
     public Optional<FilterAction> getFilterAction() {
         return Optional.ofNullable(this.filterAction);
     }
     /**
      * Findings filter criteria.
-     * 
     */
     public Optional<FilterCriteria> getFilterCriteria() {
         return Optional.ofNullable(this.filterCriteria);
     }
     /**
      * Findings filter name.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

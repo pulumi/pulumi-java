@@ -18,7 +18,6 @@ public final class ResourceDefaultVersionArgs extends io.pulumi.resources.Resour
      * The name of the type being registered.
      * 
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
-     * 
      */
     @Import(name="typeName")
       private final @Nullable Output<String> typeName;
@@ -29,7 +28,6 @@ public final class ResourceDefaultVersionArgs extends io.pulumi.resources.Resour
 
     /**
      * The Amazon Resource Name (ARN) of the type version.
-     * 
      */
     @Import(name="typeVersionArn")
       private final @Nullable Output<String> typeVersionArn;
@@ -40,7 +38,6 @@ public final class ResourceDefaultVersionArgs extends io.pulumi.resources.Resour
 
     /**
      * The ID of an existing version of the resource to set as the default.
-     * 
      */
     @Import(name="versionId")
       private final @Nullable Output<String> versionId;

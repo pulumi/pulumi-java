@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::LookoutVision::Project type creates an Amazon Lookout for Vision project. A project is a grouping of the resources needed to create and manage a Lookout for Vision model.
- * 
  */
 @ResourceType(type="aws-native:lookoutvision:Project")
 public class Project extends io.pulumi.resources.CustomResource {

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The criteria that determine when and how a job abort takes place.
- * 
  */
 public final class AbortConfigPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 

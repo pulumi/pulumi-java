@@ -14,7 +14,6 @@ public final class GetReportPlanArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An Amazon Resource Name (ARN) that uniquely identifies a resource. The format of the ARN depends on the resource type.
-     * 
      */
     @Import(name="reportPlanArn", required=true)
       private final String reportPlanArn;

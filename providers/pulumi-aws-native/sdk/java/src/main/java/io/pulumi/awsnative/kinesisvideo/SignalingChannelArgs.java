@@ -20,7 +20,6 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The period of time a signaling channel retains undelivered messages before they are discarded.
-     * 
      */
     @Import(name="messageTtlSeconds")
       private final @Nullable Output<Integer> messageTtlSeconds;
@@ -31,7 +30,6 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the Kinesis Video Signaling Channel.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -42,7 +40,6 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<SignalingChannelTagArgs>> tags;
@@ -53,7 +50,6 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The type of the Kinesis Video Signaling Channel to create. Currently, SINGLE_MASTER is the only supported channel type.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<SignalingChannelType> type;

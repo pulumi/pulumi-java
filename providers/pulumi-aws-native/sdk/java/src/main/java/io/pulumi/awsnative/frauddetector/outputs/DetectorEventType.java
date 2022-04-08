@@ -19,17 +19,14 @@ import javax.annotation.Nullable;
 public final class DetectorEventType {
     /**
      * The ARN of the event type.
-     * 
      */
     private final @Nullable String arn;
     /**
      * The time when the event type was created.
-     * 
      */
     private final @Nullable String createdTime;
     /**
      * The description of the event type.
-     * 
      */
     private final @Nullable String description;
     private final @Nullable List<DetectorEntityType> entityTypes;
@@ -38,17 +35,14 @@ public final class DetectorEventType {
     private final @Nullable List<DetectorLabel> labels;
     /**
      * The time when the event type was last updated.
-     * 
      */
     private final @Nullable String lastUpdatedTime;
     /**
      * The name for the event type
-     * 
      */
     private final @Nullable String name;
     /**
      * Tags associated with this event type.
-     * 
      */
     private final @Nullable List<DetectorTag> tags;
 
@@ -78,21 +72,18 @@ public final class DetectorEventType {
 
     /**
      * The ARN of the event type.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The time when the event type was created.
-     * 
     */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * The description of the event type.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
@@ -111,21 +102,18 @@ public final class DetectorEventType {
     }
     /**
      * The time when the event type was last updated.
-     * 
     */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * The name for the event type
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Tags associated with this event type.
-     * 
     */
     public List<DetectorTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

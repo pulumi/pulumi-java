@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Structure that contains X.500 extensions for a Certificate.
- * 
  */
 public final class CertificateExtensionsArgs extends io.pulumi.resources.ResourceArgs {
 

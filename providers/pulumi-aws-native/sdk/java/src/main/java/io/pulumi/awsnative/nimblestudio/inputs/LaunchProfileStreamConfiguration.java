@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * <p>A configuration for a streaming session.</p>
- * 
  */
 public final class LaunchProfileStreamConfiguration extends io.pulumi.resources.InvokeArgs {
 
@@ -33,7 +32,6 @@ public final class LaunchProfileStreamConfiguration extends io.pulumi.resources.
     /**
      * <p>The EC2 instance types that users can select from when launching a streaming session
      *             with this launch profile.</p>
-     * 
      */
     @Import(name="ec2InstanceTypes", required=true)
       private final List<LaunchProfileStreamingInstanceType> ec2InstanceTypes;
@@ -47,7 +45,6 @@ public final class LaunchProfileStreamConfiguration extends io.pulumi.resources.
      *             stopped or terminated. After this point, Nimble Studio automatically terminates or
      *             stops the session. The default length of time is 690 minutes, and the maximum length of
      *             time is 30 days.</p>
-     * 
      */
     @Import(name="maxSessionLengthInMinutes")
       private final @Nullable Double maxSessionLengthInMinutes;
@@ -67,7 +64,6 @@ public final class LaunchProfileStreamConfiguration extends io.pulumi.resources.
      *             StopStreamingSession to stop sessions in the READY state. If the time that a session
      *             stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will
      *             automatically be stopped by AWS (instead of terminated).</p>
-     * 
      */
     @Import(name="maxStoppedSessionLengthInMinutes")
       private final @Nullable Double maxStoppedSessionLengthInMinutes;
@@ -86,7 +82,6 @@ public final class LaunchProfileStreamConfiguration extends io.pulumi.resources.
     /**
      * <p>The streaming images that users can select from when launching a streaming session
      *             with this launch profile.</p>
-     * 
      */
     @Import(name="streamingImageIds", required=true)
       private final List<String> streamingImageIds;

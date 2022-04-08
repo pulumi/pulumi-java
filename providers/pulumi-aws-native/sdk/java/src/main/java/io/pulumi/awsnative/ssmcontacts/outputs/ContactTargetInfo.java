@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class ContactTargetInfo {
     /**
      * The Amazon Resource Name (ARN) of the contact.
-     * 
      */
     private final String contactId;
     /**
      * A Boolean value determining if the contact's acknowledgement stops the progress of stages in the plan.
-     * 
      */
     private final Boolean isEssential;
 
@@ -31,14 +29,12 @@ public final class ContactTargetInfo {
 
     /**
      * The Amazon Resource Name (ARN) of the contact.
-     * 
     */
     public String getContactId() {
         return this.contactId;
     }
     /**
      * A Boolean value determining if the contact's acknowledgement stops the progress of stages in the plan.
-     * 
     */
     public Boolean getIsEssential() {
         return this.isEssential;

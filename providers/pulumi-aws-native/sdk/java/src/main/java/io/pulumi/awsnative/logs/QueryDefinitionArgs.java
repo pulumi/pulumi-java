@@ -17,7 +17,6 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optionally define specific log groups as part of your query definition
-     * 
      */
     @Import(name="logGroupNames")
       private final @Nullable Output<List<String>> logGroupNames;
@@ -28,7 +27,6 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A name for the saved query definition
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -39,7 +37,6 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The query string to use for this definition
-     * 
      */
     @Import(name="queryString", required=true)
       private final Output<String> queryString;

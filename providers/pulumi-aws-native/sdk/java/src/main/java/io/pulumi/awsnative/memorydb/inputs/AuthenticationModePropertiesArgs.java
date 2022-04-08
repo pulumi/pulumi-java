@@ -18,7 +18,6 @@ public final class AuthenticationModePropertiesArgs extends io.pulumi.resources.
 
     /**
      * Passwords used for this user account. You can create up to two passwords for each user.
-     * 
      */
     @Import(name="passwords")
       private final @Nullable Output<List<String>> passwords;
@@ -29,7 +28,6 @@ public final class AuthenticationModePropertiesArgs extends io.pulumi.resources.
 
     /**
      * Type of authentication strategy for this user.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<UserAuthenticationModePropertiesType> type;

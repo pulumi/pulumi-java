@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Object Lock rule in place for the specified object.
- * 
  */
 public final class BucketObjectLockRuleArgs extends io.pulumi.resources.ResourceArgs {
 

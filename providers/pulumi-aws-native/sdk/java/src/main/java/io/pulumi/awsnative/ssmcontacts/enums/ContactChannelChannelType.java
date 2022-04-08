@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Device type, which specify notification channel. Currently supported values: “SMS”, “VOICE”, “EMAIL”, “CHATBOT.
-     * 
      */
     @EnumType
     public enum ContactChannelChannelType {

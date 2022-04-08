@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Configuration for Data Transfer Protection.
-     * 
      */
     @EnumType
     public enum LocationHDFSQopConfigurationDataTransferProtection {

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of source that will be generating the events.
-     * 
      */
     @EnumType
     public enum EventSubscriptionSourceType {

@@ -14,7 +14,6 @@ public final class GetMitigationActionArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * A unique identifier for the mitigation action.
-     * 
      */
     @Import(name="actionName", required=true)
       private final String actionName;

@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class OriginEndpointCmafEncryption {
     /**
      * An optional 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with the key for encrypting blocks. If you don't specify a value, then MediaPackage creates the constant initialization vector (IV).
-     * 
      */
     private final @Nullable String constantInitializationVector;
     /**
      * Time (in seconds) between each encryption key rotation.
-     * 
      */
     private final @Nullable Integer keyRotationIntervalSeconds;
     private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
@@ -37,14 +35,12 @@ public final class OriginEndpointCmafEncryption {
 
     /**
      * An optional 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with the key for encrypting blocks. If you don't specify a value, then MediaPackage creates the constant initialization vector (IV).
-     * 
     */
     public Optional<String> getConstantInitializationVector() {
         return Optional.ofNullable(this.constantInitializationVector);
     }
     /**
      * Time (in seconds) between each encryption key rotation.
-     * 
     */
     public Optional<Integer> getKeyRotationIntervalSeconds() {
         return Optional.ofNullable(this.keyRotationIntervalSeconds);

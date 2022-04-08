@@ -16,7 +16,6 @@ public final class GetCollectionResult {
     private final @Nullable String arn;
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     private final @Nullable List<CollectionTag> tags;
 
@@ -33,7 +32,6 @@ public final class GetCollectionResult {
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
     */
     public List<CollectionTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

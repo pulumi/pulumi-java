@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of AWS::Location::RouteCalculator Resource Type
- * 
  */
 @ResourceType(type="aws-native:location:RouteCalculator")
 public class RouteCalculator extends io.pulumi.resources.CustomResource {

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The dimension of a metric.
- * 
  */
 public final class SecurityProfileMetricDimension extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SecurityProfileMetricDimension extends io.pulumi.resources.In
 
     /**
      * A unique identifier for the dimension.
-     * 
      */
     @Import(name="dimensionName", required=true)
       private final String dimensionName;
@@ -32,7 +30,6 @@ public final class SecurityProfileMetricDimension extends io.pulumi.resources.In
 
     /**
      * Defines how the dimensionValues of a dimension are interpreted.
-     * 
      */
     @Import(name="operator")
       private final @Nullable SecurityProfileMetricDimensionOperator operator;

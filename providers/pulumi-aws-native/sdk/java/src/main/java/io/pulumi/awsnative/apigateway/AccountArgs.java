@@ -16,7 +16,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon Resource Name (ARN) of an IAM role that has write access to CloudWatch Logs in your account.
-     * 
      */
     @Import(name="cloudWatchRoleArn")
       private final @Nullable Output<String> cloudWatchRoleArn;

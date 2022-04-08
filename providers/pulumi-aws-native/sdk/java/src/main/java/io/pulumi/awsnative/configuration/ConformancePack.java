@@ -16,91 +16,221 @@ import javax.annotation.Nullable;
 /**
  * A conformance pack is a collection of AWS Config rules and remediation actions that can be easily deployed as a single entity in an account and a region or across an entire AWS Organization.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var conformancePack = new AwsNative.Configuration.ConformancePack("conformancePack", new AwsNative.Configuration.ConformancePackArgs
+ *         {
+ *             ConformancePackName = "ConformancePackName",
+ *             DeliveryS3Bucket = "DeliveryS3Bucket",
+ *             TemplateS3Uri = "s3://bucketname/prefix",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/configuration"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := configuration.NewConformancePack(ctx, "conformancePack", &configuration.ConformancePackArgs{
+ * 			ConformancePackName: pulumi.String("ConformancePackName"),
+ * 			DeliveryS3Bucket:    pulumi.String("DeliveryS3Bucket"),
+ * 			TemplateS3Uri:       pulumi.String("s3://bucketname/prefix"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const conformancePack = new aws_native.configuration.ConformancePack("conformancePack", {
+ *     conformancePackName: "ConformancePackName",
+ *     deliveryS3Bucket: "DeliveryS3Bucket",
+ *     templateS3Uri: "s3://bucketname/prefix",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * conformance_pack = aws_native.configuration.ConformancePack("conformancePack",
+ *     conformance_pack_name="ConformancePackName",
+ *     delivery_s3_bucket="DeliveryS3Bucket",
+ *     template_s3_uri="s3://bucketname/prefix")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cloudFormationCanaryPack = new AwsNative.Configuration.ConformancePack("cloudFormationCanaryPack", new AwsNative.Configuration.ConformancePackArgs
+ *         {
+ *             ConformancePackName = "ConformancePackName",
+ *             DeliveryS3Bucket = "DeliveryS3Bucket",
+ *             TemplateS3Uri = "s3://bucketname/prefix",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/configuration"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := configuration.NewConformancePack(ctx, "cloudFormationCanaryPack", &configuration.ConformancePackArgs{
+ * 			ConformancePackName: pulumi.String("ConformancePackName"),
+ * 			DeliveryS3Bucket:    pulumi.String("DeliveryS3Bucket"),
+ * 			TemplateS3Uri:       pulumi.String("s3://bucketname/prefix"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const cloudFormationCanaryPack = new aws_native.configuration.ConformancePack("cloudFormationCanaryPack", {
+ *     conformancePackName: "ConformancePackName",
+ *     deliveryS3Bucket: "DeliveryS3Bucket",
+ *     templateS3Uri: "s3://bucketname/prefix",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * cloud_formation_canary_pack = aws_native.configuration.ConformancePack("cloudFormationCanaryPack",
+ *     conformance_pack_name="ConformancePackName",
+ *     delivery_s3_bucket="DeliveryS3Bucket",
+ *     template_s3_uri="s3://bucketname/prefix")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:configuration:ConformancePack")
 public class ConformancePack extends io.pulumi.resources.CustomResource {
     /**
      * A list of ConformancePackInputParameter objects.
-     * 
      */
     @Export(name="conformancePackInputParameters", type=List.class, parameters={ConformancePackInputParameter.class})
     private Output</* @Nullable */ List<ConformancePackInputParameter>> conformancePackInputParameters;
 
     /**
      * @return A list of ConformancePackInputParameter objects.
-     * 
      */
     public Output</* @Nullable */ List<ConformancePackInputParameter>> getConformancePackInputParameters() {
         return this.conformancePackInputParameters;
     }
     /**
      * Name of the conformance pack which will be assigned as the unique identifier.
-     * 
      */
     @Export(name="conformancePackName", type=String.class, parameters={})
     private Output<String> conformancePackName;
 
     /**
      * @return Name of the conformance pack which will be assigned as the unique identifier.
-     * 
      */
     public Output<String> getConformancePackName() {
         return this.conformancePackName;
     }
     /**
      * AWS Config stores intermediate files while processing conformance pack template.
-     * 
      */
     @Export(name="deliveryS3Bucket", type=String.class, parameters={})
     private Output</* @Nullable */ String> deliveryS3Bucket;
 
     /**
      * @return AWS Config stores intermediate files while processing conformance pack template.
-     * 
      */
     public Output</* @Nullable */ String> getDeliveryS3Bucket() {
         return this.deliveryS3Bucket;
     }
     /**
      * The prefix for delivery S3 bucket.
-     * 
      */
     @Export(name="deliveryS3KeyPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> deliveryS3KeyPrefix;
 
     /**
      * @return The prefix for delivery S3 bucket.
-     * 
      */
     public Output</* @Nullable */ String> getDeliveryS3KeyPrefix() {
         return this.deliveryS3KeyPrefix;
     }
     /**
      * A string containing full conformance pack template body. You can only specify one of the template body or template S3Uri fields.
-     * 
      */
     @Export(name="templateBody", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateBody;
 
     /**
      * @return A string containing full conformance pack template body. You can only specify one of the template body or template S3Uri fields.
-     * 
      */
     public Output</* @Nullable */ String> getTemplateBody() {
         return this.templateBody;
     }
     /**
      * Location of file containing the template body which points to the conformance pack template that is located in an Amazon S3 bucket. You can only specify one of the template body or template S3Uri fields.
-     * 
      */
     @Export(name="templateS3Uri", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateS3Uri;
 
     /**
      * @return Location of file containing the template body which points to the conformance pack template that is located in an Amazon S3 bucket. You can only specify one of the template body or template S3Uri fields.
-     * 
      */
     public Output</* @Nullable */ String> getTemplateS3Uri() {
         return this.templateS3Uri;

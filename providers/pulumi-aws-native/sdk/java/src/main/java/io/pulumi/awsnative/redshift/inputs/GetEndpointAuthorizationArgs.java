@@ -14,7 +14,6 @@ public final class GetEndpointAuthorizationArgs extends io.pulumi.resources.Invo
 
     /**
      * The target AWS account ID to grant or revoke access for.
-     * 
      */
     @Import(name="account", required=true)
       private final String account;
@@ -25,7 +24,6 @@ public final class GetEndpointAuthorizationArgs extends io.pulumi.resources.Invo
 
     /**
      * The cluster identifier.
-     * 
      */
     @Import(name="clusterIdentifier", required=true)
       private final String clusterIdentifier;

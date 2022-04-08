@@ -22,272 +22,233 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Lambda::EventSourceMapping
- * 
  */
 @ResourceType(type="aws-native:lambda:EventSourceMapping")
 public class EventSourceMapping extends io.pulumi.resources.CustomResource {
     /**
      * The maximum number of items to retrieve in a single batch.
-     * 
      */
     @Export(name="batchSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> batchSize;
 
     /**
      * @return The maximum number of items to retrieve in a single batch.
-     * 
      */
     public Output</* @Nullable */ Integer> getBatchSize() {
         return this.batchSize;
     }
     /**
      * (Streams) If the function returns an error, split the batch in two and retry.
-     * 
      */
     @Export(name="bisectBatchOnFunctionError", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> bisectBatchOnFunctionError;
 
     /**
      * @return (Streams) If the function returns an error, split the batch in two and retry.
-     * 
      */
     public Output</* @Nullable */ Boolean> getBisectBatchOnFunctionError() {
         return this.bisectBatchOnFunctionError;
     }
     /**
      * (Streams) An Amazon SQS queue or Amazon SNS topic destination for discarded records.
-     * 
      */
     @Export(name="destinationConfig", type=EventSourceMappingDestinationConfig.class, parameters={})
     private Output</* @Nullable */ EventSourceMappingDestinationConfig> destinationConfig;
 
     /**
      * @return (Streams) An Amazon SQS queue or Amazon SNS topic destination for discarded records.
-     * 
      */
     public Output</* @Nullable */ EventSourceMappingDestinationConfig> getDestinationConfig() {
         return this.destinationConfig;
     }
     /**
      * Disables the event source mapping to pause polling and invocation.
-     * 
      */
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
      * @return Disables the event source mapping to pause polling and invocation.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
     /**
      * The Amazon Resource Name (ARN) of the event source.
-     * 
      */
     @Export(name="eventSourceArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventSourceArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the event source.
-     * 
      */
     public Output</* @Nullable */ String> getEventSourceArn() {
         return this.eventSourceArn;
     }
     /**
      * The filter criteria to control event filtering.
-     * 
      */
     @Export(name="filterCriteria", type=FilterCriteriaProperties.class, parameters={})
     private Output</* @Nullable */ FilterCriteriaProperties> filterCriteria;
 
     /**
      * @return The filter criteria to control event filtering.
-     * 
      */
     public Output</* @Nullable */ FilterCriteriaProperties> getFilterCriteria() {
         return this.filterCriteria;
     }
     /**
      * The name of the Lambda function.
-     * 
      */
     @Export(name="functionName", type=String.class, parameters={})
     private Output<String> functionName;
 
     /**
      * @return The name of the Lambda function.
-     * 
      */
     public Output<String> getFunctionName() {
         return this.functionName;
     }
     /**
      * (Streams) A list of response types supported by the function.
-     * 
      */
     @Export(name="functionResponseTypes", type=List.class, parameters={EventSourceMappingFunctionResponseTypesItem.class})
     private Output</* @Nullable */ List<EventSourceMappingFunctionResponseTypesItem>> functionResponseTypes;
 
     /**
      * @return (Streams) A list of response types supported by the function.
-     * 
      */
     public Output</* @Nullable */ List<EventSourceMappingFunctionResponseTypesItem>> getFunctionResponseTypes() {
         return this.functionResponseTypes;
     }
     /**
      * (Streams) The maximum amount of time to gather records before invoking the function, in seconds.
-     * 
      */
     @Export(name="maximumBatchingWindowInSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maximumBatchingWindowInSeconds;
 
     /**
      * @return (Streams) The maximum amount of time to gather records before invoking the function, in seconds.
-     * 
      */
     public Output</* @Nullable */ Integer> getMaximumBatchingWindowInSeconds() {
         return this.maximumBatchingWindowInSeconds;
     }
     /**
      * (Streams) The maximum age of a record that Lambda sends to a function for processing.
-     * 
      */
     @Export(name="maximumRecordAgeInSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maximumRecordAgeInSeconds;
 
     /**
      * @return (Streams) The maximum age of a record that Lambda sends to a function for processing.
-     * 
      */
     public Output</* @Nullable */ Integer> getMaximumRecordAgeInSeconds() {
         return this.maximumRecordAgeInSeconds;
     }
     /**
      * (Streams) The maximum number of times to retry when the function returns an error.
-     * 
      */
     @Export(name="maximumRetryAttempts", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maximumRetryAttempts;
 
     /**
      * @return (Streams) The maximum number of times to retry when the function returns an error.
-     * 
      */
     public Output</* @Nullable */ Integer> getMaximumRetryAttempts() {
         return this.maximumRetryAttempts;
     }
     /**
      * (Streams) The number of batches to process from each shard concurrently.
-     * 
      */
     @Export(name="parallelizationFactor", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> parallelizationFactor;
 
     /**
      * @return (Streams) The number of batches to process from each shard concurrently.
-     * 
      */
     public Output</* @Nullable */ Integer> getParallelizationFactor() {
         return this.parallelizationFactor;
     }
     /**
      * (ActiveMQ) A list of ActiveMQ queues.
-     * 
      */
     @Export(name="queues", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> queues;
 
     /**
      * @return (ActiveMQ) A list of ActiveMQ queues.
-     * 
      */
     public Output</* @Nullable */ List<String>> getQueues() {
         return this.queues;
     }
     /**
      * Self-managed event source endpoints.
-     * 
      */
     @Export(name="selfManagedEventSource", type=EventSourceMappingSelfManagedEventSource.class, parameters={})
     private Output</* @Nullable */ EventSourceMappingSelfManagedEventSource> selfManagedEventSource;
 
     /**
      * @return Self-managed event source endpoints.
-     * 
      */
     public Output</* @Nullable */ EventSourceMappingSelfManagedEventSource> getSelfManagedEventSource() {
         return this.selfManagedEventSource;
     }
     /**
      * A list of SourceAccessConfiguration.
-     * 
      */
     @Export(name="sourceAccessConfigurations", type=List.class, parameters={EventSourceMappingSourceAccessConfiguration.class})
     private Output</* @Nullable */ List<EventSourceMappingSourceAccessConfiguration>> sourceAccessConfigurations;
 
     /**
      * @return A list of SourceAccessConfiguration.
-     * 
      */
     public Output</* @Nullable */ List<EventSourceMappingSourceAccessConfiguration>> getSourceAccessConfigurations() {
         return this.sourceAccessConfigurations;
     }
     /**
      * The position in a stream from which to start reading. Required for Amazon Kinesis and Amazon DynamoDB Streams sources.
-     * 
      */
     @Export(name="startingPosition", type=String.class, parameters={})
     private Output</* @Nullable */ String> startingPosition;
 
     /**
      * @return The position in a stream from which to start reading. Required for Amazon Kinesis and Amazon DynamoDB Streams sources.
-     * 
      */
     public Output</* @Nullable */ String> getStartingPosition() {
         return this.startingPosition;
     }
     /**
      * With StartingPosition set to AT_TIMESTAMP, the time from which to start reading, in Unix time seconds.
-     * 
      */
     @Export(name="startingPositionTimestamp", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> startingPositionTimestamp;
 
     /**
      * @return With StartingPosition set to AT_TIMESTAMP, the time from which to start reading, in Unix time seconds.
-     * 
      */
     public Output</* @Nullable */ Double> getStartingPositionTimestamp() {
         return this.startingPositionTimestamp;
     }
     /**
      * (Kafka) A list of Kafka topics.
-     * 
      */
     @Export(name="topics", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> topics;
 
     /**
      * @return (Kafka) A list of Kafka topics.
-     * 
      */
     public Output</* @Nullable */ List<String>> getTopics() {
         return this.topics;
     }
     /**
      * (Streams) Tumbling window (non-overlapping time window) duration to perform aggregations.
-     * 
      */
     @Export(name="tumblingWindowInSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> tumblingWindowInSeconds;
 
     /**
      * @return (Streams) Tumbling window (non-overlapping time window) duration to perform aggregations.
-     * 
      */
     public Output</* @Nullable */ Integer> getTumblingWindowInSeconds() {
         return this.tumblingWindowInSeconds;

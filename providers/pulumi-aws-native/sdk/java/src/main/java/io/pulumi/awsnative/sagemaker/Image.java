@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::SageMaker::Image
- * 
  */
 @ResourceType(type="aws-native:sagemaker:Image")
 public class Image extends io.pulumi.resources.CustomResource {
@@ -51,14 +50,12 @@ public class Image extends io.pulumi.resources.CustomResource {
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ImageTag.class})
     private Output</* @Nullable */ List<ImageTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<ImageTag>> getTags() {
         return this.tags;

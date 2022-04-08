@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class AccessPolicyIamUser {
     /**
      * The ARN of the IAM user.
-     * 
      */
     private final @Nullable String arn;
 
@@ -24,7 +23,6 @@ public final class AccessPolicyIamUser {
 
     /**
      * The ARN of the IAM user.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);

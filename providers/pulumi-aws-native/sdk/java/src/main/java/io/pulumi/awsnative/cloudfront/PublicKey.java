@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::CloudFront::PublicKey
- * 
  */
 @ResourceType(type="aws-native:cloudfront:PublicKey")
 public class PublicKey extends io.pulumi.resources.CustomResource {

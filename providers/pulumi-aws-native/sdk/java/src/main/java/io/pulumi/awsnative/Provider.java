@@ -13,48 +13,41 @@ import javax.annotation.Nullable;
 
 /**
  * The provider type for the AWS native package. By default, resources use package-wide configuration settings, however an explicit `Provider` instance may be created and passed during resource construction to achieve fine-grained programmatic control over provider settings. See the [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
- * 
  */
 @ResourceType(type="pulumi:providers:aws-native")
 public class Provider extends io.pulumi.resources.ProviderResource {
     /**
      * The profile for API operations. If not set, the default profile created with `aws configure` will be used.
-     * 
      */
     @Export(name="profile", type=String.class, parameters={})
     private Output</* @Nullable */ String> profile;
 
     /**
      * @return The profile for API operations. If not set, the default profile created with `aws configure` will be used.
-     * 
      */
     public Output</* @Nullable */ String> getProfile() {
         return this.profile;
     }
     /**
      * The region where AWS operations will take place. Examples are `us-east-1`, `us-west-2`, etc.
-     * 
      */
     @Export(name="region", type=String.class, parameters={})
     private Output</* @Nullable */ String> region;
 
     /**
      * @return The region where AWS operations will take place. Examples are `us-east-1`, `us-west-2`, etc.
-     * 
      */
     public Output</* @Nullable */ String> getRegion() {
         return this.region;
     }
     /**
      * The path to the shared credentials file. If not set this defaults to `~/.aws/credentials`.
-     * 
      */
     @Export(name="sharedCredentialsFile", type=String.class, parameters={})
     private Output</* @Nullable */ String> sharedCredentialsFile;
 
     /**
      * @return The path to the shared credentials file. If not set this defaults to `~/.aws/credentials`.
-     * 
      */
     public Output</* @Nullable */ String> getSharedCredentialsFile() {
         return this.sharedCredentialsFile;

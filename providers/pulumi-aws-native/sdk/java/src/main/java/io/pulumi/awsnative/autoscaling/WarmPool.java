@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::AutoScaling::WarmPool.
- * 
  */
 @ResourceType(type="aws-native:autoscaling:WarmPool")
 public class WarmPool extends io.pulumi.resources.CustomResource {

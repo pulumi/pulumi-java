@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of resource for which to create the flow log. For example, if you specified a VPC ID for the ResourceId property, specify VPC for this property.
-     * 
      */
     @EnumType
     public enum FlowLogResourceType {

@@ -14,90 +14,77 @@ import javax.annotation.Nullable;
 
 /**
  * Test and Publish a resource that has been registered in the CloudFormation Registry.
- * 
  */
 @ResourceType(type="aws-native:cloudformation:PublicTypeVersion")
 public class PublicTypeVersion extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Number (ARN) of the extension.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output</* @Nullable */ String> arn;
 
     /**
      * @return The Amazon Resource Number (ARN) of the extension.
-     * 
      */
     public Output</* @Nullable */ String> getArn() {
         return this.arn;
     }
     /**
      * A url to the S3 bucket where logs for the testType run will be available
-     * 
      */
     @Export(name="logDeliveryBucket", type=String.class, parameters={})
     private Output</* @Nullable */ String> logDeliveryBucket;
 
     /**
      * @return A url to the S3 bucket where logs for the testType run will be available
-     * 
      */
     public Output</* @Nullable */ String> getLogDeliveryBucket() {
         return this.logDeliveryBucket;
     }
     /**
      * The Amazon Resource Number (ARN) assigned to the public extension upon publication
-     * 
      */
     @Export(name="publicTypeArn", type=String.class, parameters={})
     private Output<String> publicTypeArn;
 
     /**
      * @return The Amazon Resource Number (ARN) assigned to the public extension upon publication
-     * 
      */
     public Output<String> getPublicTypeArn() {
         return this.publicTypeArn;
     }
     /**
      * The version number of a public third-party extension
-     * 
      */
     @Export(name="publicVersionNumber", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicVersionNumber;
 
     /**
      * @return The version number of a public third-party extension
-     * 
      */
     public Output</* @Nullable */ String> getPublicVersionNumber() {
         return this.publicVersionNumber;
     }
     /**
      * The publisher id assigned by CloudFormation for publishing in this region.
-     * 
      */
     @Export(name="publisherId", type=String.class, parameters={})
     private Output<String> publisherId;
 
     /**
      * @return The publisher id assigned by CloudFormation for publishing in this region.
-     * 
      */
     public Output<String> getPublisherId() {
         return this.publisherId;
     }
     /**
      * The kind of extension
-     * 
      */
     @Export(name="type", type=PublicTypeVersionType.class, parameters={})
     private Output</* @Nullable */ PublicTypeVersionType> type;
 
     /**
      * @return The kind of extension
-     * 
      */
     public Output</* @Nullable */ PublicTypeVersionType> getType() {
         return this.type;
@@ -106,7 +93,6 @@ public class PublicTypeVersion extends io.pulumi.resources.CustomResource {
      * The name of the type being registered.
      * 
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
-     * 
      */
     @Export(name="typeName", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeName;
@@ -115,21 +101,18 @@ public class PublicTypeVersion extends io.pulumi.resources.CustomResource {
      * @return The name of the type being registered.
      * 
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
-     * 
      */
     public Output</* @Nullable */ String> getTypeName() {
         return this.typeName;
     }
     /**
      * The Amazon Resource Number (ARN) of the extension with the versionId.
-     * 
      */
     @Export(name="typeVersionArn", type=String.class, parameters={})
     private Output<String> typeVersionArn;
 
     /**
      * @return The Amazon Resource Number (ARN) of the extension with the versionId.
-     * 
      */
     public Output<String> getTypeVersionArn() {
         return this.typeVersionArn;

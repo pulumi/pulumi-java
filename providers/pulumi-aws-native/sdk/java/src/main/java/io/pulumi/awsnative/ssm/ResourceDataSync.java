@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::SSM::ResourceDataSync
- * 
  */
 @ResourceType(type="aws-native:ssm:ResourceDataSync")
 public class ResourceDataSync extends io.pulumi.resources.CustomResource {

@@ -18,7 +18,6 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
 
     /**
      * The metadata associated with the client.
-     * 
      */
     @Import(name="clientAssociationMetadata")
       private final @Nullable List<EventIntegrationMetadata> clientAssociationMetadata;
@@ -29,7 +28,6 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
 
     /**
      * The identifier for the client that is associated with the event integration.
-     * 
      */
     @Import(name="clientId")
       private final @Nullable String clientId;
@@ -40,7 +38,6 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
 
     /**
      * The name of the Eventbridge rule.
-     * 
      */
     @Import(name="eventBridgeRuleName")
       private final @Nullable String eventBridgeRuleName;
@@ -51,7 +48,6 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
 
     /**
      * The Amazon Resource Name (ARN) for the event integration association.
-     * 
      */
     @Import(name="eventIntegrationAssociationArn")
       private final @Nullable String eventIntegrationAssociationArn;
@@ -62,7 +58,6 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
 
     /**
      * The identifier for the event integration association.
-     * 
      */
     @Import(name="eventIntegrationAssociationId")
       private final @Nullable String eventIntegrationAssociationId;

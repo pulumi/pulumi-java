@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The NFS mount options that DataSync can use to mount your NFS share.
- * 
  */
 public final class LocationNFSMountOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class LocationNFSMountOptionsArgs extends io.pulumi.resources.Resou
 
     /**
      * The specific NFS version that you want DataSync to use to mount your NFS share.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<LocationNFSMountOptionsVersion> version;

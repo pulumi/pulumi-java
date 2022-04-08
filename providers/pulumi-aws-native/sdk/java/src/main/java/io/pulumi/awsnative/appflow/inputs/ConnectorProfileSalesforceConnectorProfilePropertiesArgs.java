@@ -17,7 +17,6 @@ public final class ConnectorProfileSalesforceConnectorProfilePropertiesArgs exte
 
     /**
      * The location of the Salesforce resource
-     * 
      */
     @Import(name="instanceUrl")
       private final @Nullable Output<String> instanceUrl;

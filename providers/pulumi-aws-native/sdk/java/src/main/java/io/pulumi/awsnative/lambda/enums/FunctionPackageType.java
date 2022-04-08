@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * PackageType.
-     * 
      */
     @EnumType
     public enum FunctionPackageType {

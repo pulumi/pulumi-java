@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * An alias by which to refer to this extension configuration data.
-     * 
      */
     @EnumType
     public enum HookTypeConfigConfigurationAlias {

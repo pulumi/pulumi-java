@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Current resource capacity settings in a specified fleet or location. The location value might refer to a fleet's remote location or its home Region.
- * 
  */
 public final class FleetLocationCapacity extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class FleetLocationCapacity extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The number of EC2 instances you want to maintain in the specified fleet location. This value must fall between the minimum and maximum size limits.
-     * 
      */
     @Import(name="desiredEC2Instances", required=true)
       private final Integer desiredEC2Instances;
@@ -29,7 +27,6 @@ public final class FleetLocationCapacity extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The maximum value that is allowed for the fleet's instance count for a location. When creating a new fleet, GameLift automatically sets this value to "1". Once the fleet is active, you can change this value.
-     * 
      */
     @Import(name="maxSize", required=true)
       private final Integer maxSize;
@@ -40,7 +37,6 @@ public final class FleetLocationCapacity extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The minimum value allowed for the fleet's instance count for a location. When creating a new fleet, GameLift automatically sets this value to "0". After the fleet is active, you can change this value.
-     * 
      */
     @Import(name="minSize", required=true)
       private final Integer minSize;

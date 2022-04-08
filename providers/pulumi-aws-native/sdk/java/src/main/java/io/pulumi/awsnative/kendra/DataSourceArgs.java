@@ -62,7 +62,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tags for labeling the data source
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<DataSourceTagArgs>> tags;

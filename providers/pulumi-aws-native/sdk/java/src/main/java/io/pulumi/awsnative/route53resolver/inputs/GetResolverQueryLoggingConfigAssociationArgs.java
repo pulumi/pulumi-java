@@ -14,7 +14,6 @@ public final class GetResolverQueryLoggingConfigAssociationArgs extends io.pulum
 
     /**
      * Id
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

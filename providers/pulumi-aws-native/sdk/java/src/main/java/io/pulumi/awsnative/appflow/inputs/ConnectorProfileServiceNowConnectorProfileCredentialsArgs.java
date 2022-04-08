@@ -15,7 +15,6 @@ public final class ConnectorProfileServiceNowConnectorProfileCredentialsArgs ext
 
     /**
      * The password that corresponds to the username.
-     * 
      */
     @Import(name="password", required=true)
       private final Output<String> password;
@@ -26,7 +25,6 @@ public final class ConnectorProfileServiceNowConnectorProfileCredentialsArgs ext
 
     /**
      * The name of the user.
-     * 
      */
     @Import(name="username", required=true)
       private final Output<String> username;

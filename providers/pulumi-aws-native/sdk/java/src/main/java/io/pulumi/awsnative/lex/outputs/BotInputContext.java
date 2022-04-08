@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class BotInputContext {
     /**
      * The name of the context.
-     * 
      */
     private final String name;
 
@@ -22,7 +21,6 @@ public final class BotInputContext {
 
     /**
      * The name of the context.
-     * 
     */
     public String getName() {
         return this.name;

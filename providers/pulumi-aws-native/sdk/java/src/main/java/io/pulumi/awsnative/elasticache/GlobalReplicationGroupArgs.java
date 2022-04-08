@@ -21,7 +21,6 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
 
     /**
      * AutomaticFailoverEnabled
-     * 
      */
     @Import(name="automaticFailoverEnabled")
       private final @Nullable Output<Boolean> automaticFailoverEnabled;
@@ -32,7 +31,6 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
 
     /**
      * The cache node type of the Global Datastore
-     * 
      */
     @Import(name="cacheNodeType")
       private final @Nullable Output<String> cacheNodeType;
@@ -43,7 +41,6 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
 
     /**
      * Cache parameter group name to use for the new engine version. This parameter cannot be modified independently.
-     * 
      */
     @Import(name="cacheParameterGroupName")
       private final @Nullable Output<String> cacheParameterGroupName;
@@ -54,7 +51,6 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
 
     /**
      * The engine version of the Global Datastore.
-     * 
      */
     @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
@@ -65,7 +61,6 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
 
     /**
      * Indicates the number of node groups in the Global Datastore.
-     * 
      */
     @Import(name="globalNodeGroupCount")
       private final @Nullable Output<Integer> globalNodeGroupCount;
@@ -76,7 +71,6 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
 
     /**
      * The optional description of the Global Datastore
-     * 
      */
     @Import(name="globalReplicationGroupDescription")
       private final @Nullable Output<String> globalReplicationGroupDescription;
@@ -86,8 +80,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
     }
 
     /**
-     * The suffix name of a Global Datastore. Amazon ElastiCache automatically applies a prefix to the Global Datastore ID when it is created. Each AWS Region has its own prefix.
-     * 
+     * The suffix name of a Global Datastore. Amazon ElastiCache automatically applies a prefix to the Global Datastore ID when it is created. Each AWS Region has its own prefix. 
      */
     @Import(name="globalReplicationGroupIdSuffix")
       private final @Nullable Output<String> globalReplicationGroupIdSuffix;
@@ -98,7 +91,6 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
 
     /**
      * The replication groups that comprise the Global Datastore.
-     * 
      */
     @Import(name="members", required=true)
       private final Output<List<GlobalReplicationGroupMemberArgs>> members;
@@ -108,8 +100,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
     }
 
     /**
-     * Describes the replication group IDs, the AWS regions where they are stored and the shard configuration for each that comprise the Global Datastore
-     * 
+     * Describes the replication group IDs, the AWS regions where they are stored and the shard configuration for each that comprise the Global Datastore 
      */
     @Import(name="regionalConfigurations")
       private final @Nullable Output<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations;

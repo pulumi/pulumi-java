@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Visibility Metric of the WebACL.
- * 
  */
 public final class WebACLVisibilityConfig extends io.pulumi.resources.InvokeArgs {
 

@@ -14,7 +14,6 @@ public final class GetDNSSECArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The unique string (ID) used to identify a hosted zone.
-     * 
      */
     @Import(name="hostedZoneId", required=true)
       private final String hostedZoneId;

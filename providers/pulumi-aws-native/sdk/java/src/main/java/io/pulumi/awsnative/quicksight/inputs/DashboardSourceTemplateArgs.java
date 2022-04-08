@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * <p>Dashboard source template.</p>
- * 
  */
 public final class DashboardSourceTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DashboardSourceTemplateArgs extends io.pulumi.resources.Resou
 
     /**
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
-     * 
      */
     @Import(name="arn", required=true)
       private final Output<String> arn;
@@ -32,7 +30,6 @@ public final class DashboardSourceTemplateArgs extends io.pulumi.resources.Resou
 
     /**
      * <p>Dataset references.</p>
-     * 
      */
     @Import(name="dataSetReferences", required=true)
       private final Output<List<DashboardDataSetReferenceArgs>> dataSetReferences;

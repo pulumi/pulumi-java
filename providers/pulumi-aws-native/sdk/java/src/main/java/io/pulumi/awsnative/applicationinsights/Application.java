@@ -19,146 +19,125 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::ApplicationInsights::Application
- * 
  */
 @ResourceType(type="aws-native:applicationinsights:Application")
 public class Application extends io.pulumi.resources.CustomResource {
     /**
      * The ARN of the ApplicationInsights application.
-     * 
      */
     @Export(name="applicationARN", type=String.class, parameters={})
     private Output<String> applicationARN;
 
     /**
      * @return The ARN of the ApplicationInsights application.
-     * 
      */
     public Output<String> getApplicationARN() {
         return this.applicationARN;
     }
     /**
      * If set to true, application will be configured with recommended monitoring configuration.
-     * 
      */
     @Export(name="autoConfigurationEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoConfigurationEnabled;
 
     /**
      * @return If set to true, application will be configured with recommended monitoring configuration.
-     * 
      */
     public Output</* @Nullable */ Boolean> getAutoConfigurationEnabled() {
         return this.autoConfigurationEnabled;
     }
     /**
      * Indicates whether Application Insights can listen to CloudWatch events for the application resources.
-     * 
      */
     @Export(name="cWEMonitorEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> cWEMonitorEnabled;
 
     /**
      * @return Indicates whether Application Insights can listen to CloudWatch events for the application resources.
-     * 
      */
     public Output</* @Nullable */ Boolean> getCWEMonitorEnabled() {
         return this.cWEMonitorEnabled;
     }
     /**
      * The monitoring settings of the components.
-     * 
      */
     @Export(name="componentMonitoringSettings", type=List.class, parameters={ApplicationComponentMonitoringSetting.class})
     private Output</* @Nullable */ List<ApplicationComponentMonitoringSetting>> componentMonitoringSettings;
 
     /**
      * @return The monitoring settings of the components.
-     * 
      */
     public Output</* @Nullable */ List<ApplicationComponentMonitoringSetting>> getComponentMonitoringSettings() {
         return this.componentMonitoringSettings;
     }
     /**
      * The custom grouped components.
-     * 
      */
     @Export(name="customComponents", type=List.class, parameters={ApplicationCustomComponent.class})
     private Output</* @Nullable */ List<ApplicationCustomComponent>> customComponents;
 
     /**
      * @return The custom grouped components.
-     * 
      */
     public Output</* @Nullable */ List<ApplicationCustomComponent>> getCustomComponents() {
         return this.customComponents;
     }
     /**
      * The log pattern sets.
-     * 
      */
     @Export(name="logPatternSets", type=List.class, parameters={ApplicationLogPatternSet.class})
     private Output</* @Nullable */ List<ApplicationLogPatternSet>> logPatternSets;
 
     /**
      * @return The log pattern sets.
-     * 
      */
     public Output</* @Nullable */ List<ApplicationLogPatternSet>> getLogPatternSets() {
         return this.logPatternSets;
     }
     /**
      * When set to true, creates opsItems for any problems detected on an application.
-     * 
      */
     @Export(name="opsCenterEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> opsCenterEnabled;
 
     /**
      * @return When set to true, creates opsItems for any problems detected on an application.
-     * 
      */
     public Output</* @Nullable */ Boolean> getOpsCenterEnabled() {
         return this.opsCenterEnabled;
     }
     /**
      * The SNS topic provided to Application Insights that is associated to the created opsItem.
-     * 
      */
     @Export(name="opsItemSNSTopicArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> opsItemSNSTopicArn;
 
     /**
      * @return The SNS topic provided to Application Insights that is associated to the created opsItem.
-     * 
      */
     public Output</* @Nullable */ String> getOpsItemSNSTopicArn() {
         return this.opsItemSNSTopicArn;
     }
     /**
      * The name of the resource group.
-     * 
      */
     @Export(name="resourceGroupName", type=String.class, parameters={})
     private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
-     * 
      */
     public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
     /**
      * The tags of Application Insights application.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ApplicationTag.class})
     private Output</* @Nullable */ List<ApplicationTag>> tags;
 
     /**
      * @return The tags of Application Insights application.
-     * 
      */
     public Output</* @Nullable */ List<ApplicationTag>> getTags() {
         return this.tags;

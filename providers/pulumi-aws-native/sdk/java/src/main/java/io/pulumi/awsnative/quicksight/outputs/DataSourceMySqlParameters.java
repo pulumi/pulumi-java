@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class DataSourceMySqlParameters {
     /**
      * <p>Database.</p>
-     * 
      */
     private final String database;
     /**
      * <p>Host.</p>
-     * 
      */
     private final String host;
     /**
      * <p>Port.</p>
-     * 
      */
     private final Double port;
 
@@ -38,21 +35,18 @@ public final class DataSourceMySqlParameters {
 
     /**
      * <p>Database.</p>
-     * 
     */
     public String getDatabase() {
         return this.database;
     }
     /**
      * <p>Host.</p>
-     * 
     */
     public String getHost() {
         return this.host;
     }
     /**
      * <p>Port.</p>
-     * 
     */
     public Double getPort() {
         return this.port;

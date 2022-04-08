@@ -17,7 +17,229 @@ import javax.annotation.Nullable;
 /**
  * The AWS::IoTEvents::Input resource creates an input. To monitor your devices and processes, they must have a way to get telemetry data into AWS IoT Events. This is done by sending messages as *inputs* to AWS IoT Events. For more information, see [How to Use AWS IoT Events](https://docs.aws.amazon.com/iotevents/latest/developerguide/how-to-use-iotevents.html) in the *AWS IoT Events Developer Guide*.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myInput = new AwsNative.IoTEvents.Input("myInput", new AwsNative.IoTEvents.InputArgs
+ *         {
+ *             InputName = "myInput",
+ *             InputDescription = "My Input created by CloudFormation",
+ *             InputDefinition = new AwsNative.IoTEvents.Inputs.InputDefinitionArgs
+ *             {
+ *                 Attributes = 
+ *                 {
+ *                     new AwsNative.IoTEvents.Inputs.InputAttributeArgs
+ *                     {
+ *                         JsonPath = "foo",
+ *                     },
+ *                     new AwsNative.IoTEvents.Inputs.InputAttributeArgs
+ *                     {
+ *                         JsonPath = "bar",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iotevents"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iotevents.NewInput(ctx, "myInput", &iotevents.InputArgs{
+ * 			InputName:        pulumi.String("myInput"),
+ * 			InputDescription: pulumi.String("My Input created by CloudFormation"),
+ * 			InputDefinition: &iotevents.InputDefinitionArgs{
+ * 				Attributes: iotevents.InputAttributeArray{
+ * 					&iotevents.InputAttributeArgs{
+ * 						JsonPath: pulumi.String("foo"),
+ * 					},
+ * 					&iotevents.InputAttributeArgs{
+ * 						JsonPath: pulumi.String("bar"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myInput = new aws_native.iotevents.Input("myInput", {
+ *     inputName: "myInput",
+ *     inputDescription: "My Input created by CloudFormation",
+ *     inputDefinition: {
+ *         attributes: [
+ *             {
+ *                 jsonPath: "foo",
+ *             },
+ *             {
+ *                 jsonPath: "bar",
+ *             },
+ *         ],
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_input = aws_native.iotevents.Input("myInput",
+ *     input_name="myInput",
+ *     input_description="My Input created by CloudFormation",
+ *     input_definition=aws_native.iotevents.InputDefinitionArgs(
+ *         attributes=[
+ *             aws_native.iotevents.InputAttributeArgs(
+ *                 json_path="foo",
+ *             ),
+ *             aws_native.iotevents.InputAttributeArgs(
+ *                 json_path="bar",
+ *             ),
+ *         ],
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myInput = new AwsNative.IoTEvents.Input("myInput", new AwsNative.IoTEvents.InputArgs
+ *         {
+ *             InputName = "myInput",
+ *             InputDescription = "My Input created by CloudFormation",
+ *             InputDefinition = new AwsNative.IoTEvents.Inputs.InputDefinitionArgs
+ *             {
+ *                 Attributes = 
+ *                 {
+ *                     new AwsNative.IoTEvents.Inputs.InputAttributeArgs
+ *                     {
+ *                         JsonPath = "foo",
+ *                     },
+ *                     new AwsNative.IoTEvents.Inputs.InputAttributeArgs
+ *                     {
+ *                         JsonPath = "bar",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iotevents"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iotevents.NewInput(ctx, "myInput", &iotevents.InputArgs{
+ * 			InputName:        pulumi.String("myInput"),
+ * 			InputDescription: pulumi.String("My Input created by CloudFormation"),
+ * 			InputDefinition: &iotevents.InputDefinitionArgs{
+ * 				Attributes: iotevents.InputAttributeArray{
+ * 					&iotevents.InputAttributeArgs{
+ * 						JsonPath: pulumi.String("foo"),
+ * 					},
+ * 					&iotevents.InputAttributeArgs{
+ * 						JsonPath: pulumi.String("bar"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myInput = new aws_native.iotevents.Input("myInput", {
+ *     inputName: "myInput",
+ *     inputDescription: "My Input created by CloudFormation",
+ *     inputDefinition: {
+ *         attributes: [
+ *             {
+ *                 jsonPath: "foo",
+ *             },
+ *             {
+ *                 jsonPath: "bar",
+ *             },
+ *         ],
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_input = aws_native.iotevents.Input("myInput",
+ *     input_name="myInput",
+ *     input_description="My Input created by CloudFormation",
+ *     input_definition=aws_native.iotevents.InputDefinitionArgs(
+ *         attributes=[
+ *             aws_native.iotevents.InputAttributeArgs(
+ *                 json_path="foo",
+ *             ),
+ *             aws_native.iotevents.InputAttributeArgs(
+ *                 json_path="bar",
+ *             ),
+ *         ],
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:iotevents:Input")
@@ -30,28 +252,24 @@ public class Input extends io.pulumi.resources.CustomResource {
     }
     /**
      * A brief description of the input.
-     * 
      */
     @Export(name="inputDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> inputDescription;
 
     /**
      * @return A brief description of the input.
-     * 
      */
     public Output</* @Nullable */ String> getInputDescription() {
         return this.inputDescription;
     }
     /**
      * The name of the input.
-     * 
      */
     @Export(name="inputName", type=String.class, parameters={})
     private Output</* @Nullable */ String> inputName;
 
     /**
      * @return The name of the input.
-     * 
      */
     public Output</* @Nullable */ String> getInputName() {
         return this.inputName;
@@ -60,7 +278,6 @@ public class Input extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
-     * 
      */
     @Export(name="tags", type=List.class, parameters={InputTag.class})
     private Output</* @Nullable */ List<InputTag>> tags;
@@ -69,7 +286,6 @@ public class Input extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
-     * 
      */
     public Output</* @Nullable */ List<InputTag>> getTags() {
         return this.tags;

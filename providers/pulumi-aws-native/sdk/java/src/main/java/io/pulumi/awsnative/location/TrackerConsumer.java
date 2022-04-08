@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of AWS::Location::TrackerConsumer Resource Type
- * 
  */
 @ResourceType(type="aws-native:location:TrackerConsumer")
 public class TrackerConsumer extends io.pulumi.resources.CustomResource {

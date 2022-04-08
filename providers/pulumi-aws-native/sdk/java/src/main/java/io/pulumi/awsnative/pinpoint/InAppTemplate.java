@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Pinpoint::InAppTemplate
- * 
  */
 @ResourceType(type="aws-native:pinpoint:InAppTemplate")
 public class InAppTemplate extends io.pulumi.resources.CustomResource {

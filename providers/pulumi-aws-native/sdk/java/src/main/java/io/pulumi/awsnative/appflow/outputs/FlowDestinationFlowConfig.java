@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class FlowDestinationFlowConfig {
     /**
      * Name of destination connector profile
-     * 
      */
     private final @Nullable String connectorProfileName;
     /**
      * Destination connector type
-     * 
      */
     private final FlowConnectorType connectorType;
     /**
      * Destination connector details
-     * 
      */
     private final FlowDestinationConnectorProperties destinationConnectorProperties;
 
@@ -41,21 +38,18 @@ public final class FlowDestinationFlowConfig {
 
     /**
      * Name of destination connector profile
-     * 
     */
     public Optional<String> getConnectorProfileName() {
         return Optional.ofNullable(this.connectorProfileName);
     }
     /**
      * Destination connector type
-     * 
     */
     public FlowConnectorType getConnectorType() {
         return this.connectorType;
     }
     /**
      * Destination connector details
-     * 
     */
     public FlowDestinationConnectorProperties getDestinationConnectorProperties() {
         return this.destinationConnectorProperties;

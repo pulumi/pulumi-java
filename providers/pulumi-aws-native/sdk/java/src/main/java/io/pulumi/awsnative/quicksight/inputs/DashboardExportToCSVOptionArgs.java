@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * <p>Export to .csv option.</p>
- * 
  */
 public final class DashboardExportToCSVOptionArgs extends io.pulumi.resources.ResourceArgs {
 

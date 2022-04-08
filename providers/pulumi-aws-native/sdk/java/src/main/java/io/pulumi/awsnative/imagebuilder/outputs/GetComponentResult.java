@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class GetComponentResult {
     /**
      * The Amazon Resource Name (ARN) of the component.
-     * 
      */
     private final @Nullable String arn;
     /**
      * The encryption status of the component.
-     * 
      */
     private final @Nullable Boolean encrypted;
     /**
-     * The type of the component denotes whether the component is used to build the image or only to test it.
-     * 
+     * The type of the component denotes whether the component is used to build the image or only to test it. 
      */
     private final @Nullable ComponentType type;
 
@@ -41,21 +38,18 @@ public final class GetComponentResult {
 
     /**
      * The Amazon Resource Name (ARN) of the component.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The encryption status of the component.
-     * 
     */
     public Optional<Boolean> getEncrypted() {
         return Optional.ofNullable(this.encrypted);
     }
     /**
-     * The type of the component denotes whether the component is used to build the image or only to test it.
-     * 
+     * The type of the component denotes whether the component is used to build the image or only to test it. 
     */
     public Optional<ComponentType> getType() {
         return Optional.ofNullable(this.type);

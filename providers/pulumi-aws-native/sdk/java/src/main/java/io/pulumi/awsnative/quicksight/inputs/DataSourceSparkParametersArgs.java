@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * <p>Spark parameters.</p>
- * 
  */
 public final class DataSourceSparkParametersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DataSourceSparkParametersArgs extends io.pulumi.resources.Res
 
     /**
      * <p>Host.</p>
-     * 
      */
     @Import(name="host", required=true)
       private final Output<String> host;
@@ -31,7 +29,6 @@ public final class DataSourceSparkParametersArgs extends io.pulumi.resources.Res
 
     /**
      * <p>Port.</p>
-     * 
      */
     @Import(name="port", required=true)
       private final Output<Double> port;

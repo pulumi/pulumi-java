@@ -14,7 +14,6 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Amazon Resource Name (ARN) of the App.
-     * 
      */
     @Import(name="appArn", required=true)
       private final String appArn;

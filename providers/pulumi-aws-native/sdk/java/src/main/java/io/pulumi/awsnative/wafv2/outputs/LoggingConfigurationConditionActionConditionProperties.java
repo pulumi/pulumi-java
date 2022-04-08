@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class LoggingConfigurationConditionActionConditionProperties {
     /**
      * Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.
-     * 
      */
     private final LoggingConfigurationConditionActionConditionPropertiesAction action;
 
@@ -22,7 +21,6 @@ public final class LoggingConfigurationConditionActionConditionProperties {
 
     /**
      * Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.
-     * 
     */
     public LoggingConfigurationConditionActionConditionPropertiesAction getAction() {
         return this.action;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The name of the rendering engine.
-     * 
      */
     @EnumType
     public enum SimulationApplicationRenderingEngineName {

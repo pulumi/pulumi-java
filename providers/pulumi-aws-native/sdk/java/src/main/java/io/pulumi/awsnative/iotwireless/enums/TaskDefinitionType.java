@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A filter to list only the wireless gateway task definitions that use this task definition type
-     * 
      */
     @EnumType
     public enum TaskDefinitionType {

@@ -13,48 +13,41 @@ import javax.annotation.Nullable;
 
 /**
  * A snapshot of the documentation of an API.
- * 
  */
 @ResourceType(type="aws-native:apigateway:DocumentationVersion")
 public class DocumentationVersion extends io.pulumi.resources.CustomResource {
     /**
      * The description of the API documentation snapshot.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the API documentation snapshot.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The version identifier of the API documentation snapshot.
-     * 
      */
     @Export(name="documentationVersion", type=String.class, parameters={})
     private Output<String> documentationVersion;
 
     /**
      * @return The version identifier of the API documentation snapshot.
-     * 
      */
     public Output<String> getDocumentationVersion() {
         return this.documentationVersion;
     }
     /**
      * The identifier of the API.
-     * 
      */
     @Export(name="restApiId", type=String.class, parameters={})
     private Output<String> restApiId;
 
     /**
      * @return The identifier of the API.
-     * 
      */
     public Output<String> getRestApiId() {
         return this.restApiId;

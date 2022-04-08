@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The ReplicationSet regional configuration.
- * 
  */
 public final class ReplicationSetReplicationRegion extends io.pulumi.resources.InvokeArgs {
 

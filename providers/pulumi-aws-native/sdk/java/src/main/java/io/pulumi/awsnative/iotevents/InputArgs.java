@@ -26,7 +26,6 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A brief description of the input.
-     * 
      */
     @Import(name="inputDescription")
       private final @Nullable Output<String> inputDescription;
@@ -37,7 +36,6 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the input.
-     * 
      */
     @Import(name="inputName")
       private final @Nullable Output<String> inputName;
@@ -50,7 +48,6 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<InputTagArgs>> tags;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Writes to the DynamoDB table that you created. The default action payload contains all attribute-value pairs that have the information about the detector model instance and the event that triggered the action. You can also customize the [payload](https://docs.aws.amazon.com/iotevents/latest/apireference/API_Payload.html). One column of the DynamoDB table receives all attribute-value pairs in the payload that you specify. For more information, see [Actions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-event-actions.html) in *AWS IoT Events Developer Guide*.
- * 
  */
 public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the hash key (also called the partition key).
-     * 
      */
     @Import(name="hashKeyField", required=true)
       private final String hashKeyField;
@@ -38,7 +36,6 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
      * * `NUMBER` - The hash key is a number.
      * 
      * If you don't specify `hashKeyType`, the default value is `STRING`.
-     * 
      */
     @Import(name="hashKeyType")
       private final @Nullable String hashKeyType;
@@ -49,7 +46,6 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The value of the hash key (also called the partition key).
-     * 
      */
     @Import(name="hashKeyValue", required=true)
       private final String hashKeyValue;
@@ -68,7 +64,6 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
      * * `DELETE` - Delete an existing item of the DynamoDB table. This item's partition key must match the specified hash key. If you specified a range key, the range key must match the item's sort key.
      * 
      * If you don't specify this parameter, AWS IoT Events triggers the `INSERT` operation.
-     * 
      */
     @Import(name="operation")
       private final @Nullable String operation;
@@ -88,7 +83,6 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
      * The name of the DynamoDB column that receives the action payload.
      * 
      * If you don't specify this parameter, the name of the DynamoDB column is `payload`.
-     * 
      */
     @Import(name="payloadField")
       private final @Nullable String payloadField;
@@ -99,7 +93,6 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the range key (also called the sort key).
-     * 
      */
     @Import(name="rangeKeyField")
       private final @Nullable String rangeKeyField;
@@ -116,7 +109,6 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
      * * `NUMBER` - The range key is number.
      * 
      * If you don't specify `rangeKeyField`, the default value is `STRING`.
-     * 
      */
     @Import(name="rangeKeyType")
       private final @Nullable String rangeKeyType;
@@ -127,7 +119,6 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The value of the range key (also called the sort key).
-     * 
      */
     @Import(name="rangeKeyValue")
       private final @Nullable String rangeKeyValue;
@@ -138,7 +129,6 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the DynamoDB table.
-     * 
      */
     @Import(name="tableName", required=true)
       private final String tableName;

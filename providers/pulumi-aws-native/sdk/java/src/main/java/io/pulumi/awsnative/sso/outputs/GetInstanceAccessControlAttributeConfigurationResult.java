@@ -16,7 +16,6 @@ public final class GetInstanceAccessControlAttributeConfigurationResult {
     private final @Nullable List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes;
     /**
      * The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.
-     * 
      */
     private final @Nullable InstanceAccessControlAttributeConfigurationProperties instanceAccessControlAttributeConfiguration;
 
@@ -33,7 +32,6 @@ public final class GetInstanceAccessControlAttributeConfigurationResult {
     }
     /**
      * The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.
-     * 
     */
     public Optional<InstanceAccessControlAttributeConfigurationProperties> getInstanceAccessControlAttributeConfiguration() {
         return Optional.ofNullable(this.instanceAccessControlAttributeConfiguration);

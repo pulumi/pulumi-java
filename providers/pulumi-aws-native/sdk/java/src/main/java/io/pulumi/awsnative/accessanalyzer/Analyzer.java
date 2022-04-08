@@ -17,21 +17,391 @@ import javax.annotation.Nullable;
 /**
  * The AWS::AccessAnalyzer::Analyzer type specifies an analyzer of the user's account
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var analyzer = new AwsNative.AccessAnalyzer.Analyzer("analyzer", new AwsNative.AccessAnalyzer.AnalyzerArgs
+ *         {
+ *             AnalyzerName = "DevAccountAnalyzer",
+ *             ArchiveRules = 
+ *             {
+ *                 new AwsNative.AccessAnalyzer.Inputs.AnalyzerArchiveRuleArgs
+ *                 {
+ *                     Filter = 
+ *                     {
+ *                         new AwsNative.AccessAnalyzer.Inputs.AnalyzerFilterArgs
+ *                         {
+ *                             Eq = 
+ *                             {
+ *                                 "123456789012",
+ *                             },
+ *                             Property = "principal.AWS",
+ *                         },
+ *                     },
+ *                     RuleName = "ArchiveTrustedAccountAccess",
+ *                 },
+ *                 new AwsNative.AccessAnalyzer.Inputs.AnalyzerArchiveRuleArgs
+ *                 {
+ *                     Filter = 
+ *                     {
+ *                         new AwsNative.AccessAnalyzer.Inputs.AnalyzerFilterArgs
+ *                         {
+ *                             Contains = 
+ *                             {
+ *                                 "arn:aws:s3:::docs-bucket",
+ *                                 "arn:aws:s3:::clients-bucket",
+ *                             },
+ *                             Property = "resource",
+ *                         },
+ *                     },
+ *                     RuleName = "ArchivePublicS3BucketsAccess",
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.AccessAnalyzer.Inputs.AnalyzerTagArgs
+ *                 {
+ *                     Key = "Kind",
+ *                     Value = "Dev",
+ *                 },
+ *             },
+ *             Type = "ACCOUNT",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/accessanalyzer"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := accessanalyzer.NewAnalyzer(ctx, "analyzer", &accessanalyzer.AnalyzerArgs{
+ * 			AnalyzerName: pulumi.String("DevAccountAnalyzer"),
+ * 			ArchiveRules: []accessanalyzer.AnalyzerArchiveRuleArgs{
+ * 				&accessanalyzer.AnalyzerArchiveRuleArgs{
+ * 					Filter: []accessanalyzer.AnalyzerFilterArgs{
+ * 						&accessanalyzer.AnalyzerFilterArgs{
+ * 							Eq: pulumi.StringArray{
+ * 								pulumi.String("123456789012"),
+ * 							},
+ * 							Property: pulumi.String("principal.AWS"),
+ * 						},
+ * 					},
+ * 					RuleName: pulumi.String("ArchiveTrustedAccountAccess"),
+ * 				},
+ * 				&accessanalyzer.AnalyzerArchiveRuleArgs{
+ * 					Filter: []accessanalyzer.AnalyzerFilterArgs{
+ * 						&accessanalyzer.AnalyzerFilterArgs{
+ * 							Contains: pulumi.StringArray{
+ * 								pulumi.String("arn:aws:s3:::docs-bucket"),
+ * 								pulumi.String("arn:aws:s3:::clients-bucket"),
+ * 							},
+ * 							Property: pulumi.String("resource"),
+ * 						},
+ * 					},
+ * 					RuleName: pulumi.String("ArchivePublicS3BucketsAccess"),
+ * 				},
+ * 			},
+ * 			Tags: []accessanalyzer.AnalyzerTagArgs{
+ * 				&accessanalyzer.AnalyzerTagArgs{
+ * 					Key:   pulumi.String("Kind"),
+ * 					Value: pulumi.String("Dev"),
+ * 				},
+ * 			},
+ * 			Type: pulumi.String("ACCOUNT"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const analyzer = new aws_native.accessanalyzer.Analyzer("analyzer", {
+ *     analyzerName: "DevAccountAnalyzer",
+ *     archiveRules: [
+ *         {
+ *             filter: [{
+ *                 eq: ["123456789012"],
+ *                 property: "principal.AWS",
+ *             }],
+ *             ruleName: "ArchiveTrustedAccountAccess",
+ *         },
+ *         {
+ *             filter: [{
+ *                 contains: [
+ *                     "arn:aws:s3:::docs-bucket",
+ *                     "arn:aws:s3:::clients-bucket",
+ *                 ],
+ *                 property: "resource",
+ *             }],
+ *             ruleName: "ArchivePublicS3BucketsAccess",
+ *         },
+ *     ],
+ *     tags: [{
+ *         key: "Kind",
+ *         value: "Dev",
+ *     }],
+ *     type: "ACCOUNT",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * analyzer = aws_native.accessanalyzer.Analyzer("analyzer",
+ *     analyzer_name="DevAccountAnalyzer",
+ *     archive_rules=[
+ *         aws_native.accessanalyzer.AnalyzerArchiveRuleArgs(
+ *             filter=[aws_native.accessanalyzer.AnalyzerFilterArgs(
+ *                 eq=["123456789012"],
+ *                 property="principal.AWS",
+ *             )],
+ *             rule_name="ArchiveTrustedAccountAccess",
+ *         ),
+ *         aws_native.accessanalyzer.AnalyzerArchiveRuleArgs(
+ *             filter=[aws_native.accessanalyzer.AnalyzerFilterArgs(
+ *                 contains=[
+ *                     "arn:aws:s3:::docs-bucket",
+ *                     "arn:aws:s3:::clients-bucket",
+ *                 ],
+ *                 property="resource",
+ *             )],
+ *             rule_name="ArchivePublicS3BucketsAccess",
+ *         ),
+ *     ],
+ *     tags=[aws_native.accessanalyzer.AnalyzerTagArgs(
+ *         key="Kind",
+ *         value="Dev",
+ *     )],
+ *     type="ACCOUNT")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var analyzer = new AwsNative.AccessAnalyzer.Analyzer("analyzer", new AwsNative.AccessAnalyzer.AnalyzerArgs
+ *         {
+ *             AnalyzerName = "MyAccountAnalyzer",
+ *             Type = "ACCOUNT",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.AccessAnalyzer.Inputs.AnalyzerTagArgs
+ *                 {
+ *                     Key = "Kind",
+ *                     Value = "Dev",
+ *                 },
+ *             },
+ *             ArchiveRules = 
+ *             {
+ *                 new AwsNative.AccessAnalyzer.Inputs.AnalyzerArchiveRuleArgs
+ *                 {
+ *                     RuleName = "ArchiveTrustedAccountAccess",
+ *                     Filter = 
+ *                     {
+ *                         new AwsNative.AccessAnalyzer.Inputs.AnalyzerFilterArgs
+ *                         {
+ *                             Property = "principal.AWS",
+ *                             Eq = 
+ *                             {
+ *                                 "123456789012",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 new AwsNative.AccessAnalyzer.Inputs.AnalyzerArchiveRuleArgs
+ *                 {
+ *                     RuleName = "ArchivePublicS3BucketsAccess",
+ *                     Filter = 
+ *                     {
+ *                         new AwsNative.AccessAnalyzer.Inputs.AnalyzerFilterArgs
+ *                         {
+ *                             Property = "resource",
+ *                             Contains = 
+ *                             {
+ *                                 "arn:aws:s3:::docs-bucket",
+ *                                 "arn:aws:s3:::clients-bucket",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/accessanalyzer"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := accessanalyzer.NewAnalyzer(ctx, "analyzer", &accessanalyzer.AnalyzerArgs{
+ * 			AnalyzerName: pulumi.String("MyAccountAnalyzer"),
+ * 			Type:         pulumi.String("ACCOUNT"),
+ * 			Tags: []accessanalyzer.AnalyzerTagArgs{
+ * 				&accessanalyzer.AnalyzerTagArgs{
+ * 					Key:   pulumi.String("Kind"),
+ * 					Value: pulumi.String("Dev"),
+ * 				},
+ * 			},
+ * 			ArchiveRules: []accessanalyzer.AnalyzerArchiveRuleArgs{
+ * 				&accessanalyzer.AnalyzerArchiveRuleArgs{
+ * 					RuleName: pulumi.String("ArchiveTrustedAccountAccess"),
+ * 					Filter: []accessanalyzer.AnalyzerFilterArgs{
+ * 						&accessanalyzer.AnalyzerFilterArgs{
+ * 							Property: pulumi.String("principal.AWS"),
+ * 							Eq: pulumi.StringArray{
+ * 								pulumi.String("123456789012"),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				&accessanalyzer.AnalyzerArchiveRuleArgs{
+ * 					RuleName: pulumi.String("ArchivePublicS3BucketsAccess"),
+ * 					Filter: []accessanalyzer.AnalyzerFilterArgs{
+ * 						&accessanalyzer.AnalyzerFilterArgs{
+ * 							Property: pulumi.String("resource"),
+ * 							Contains: pulumi.StringArray{
+ * 								pulumi.String("arn:aws:s3:::docs-bucket"),
+ * 								pulumi.String("arn:aws:s3:::clients-bucket"),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const analyzer = new aws_native.accessanalyzer.Analyzer("analyzer", {
+ *     analyzerName: "MyAccountAnalyzer",
+ *     type: "ACCOUNT",
+ *     tags: [{
+ *         key: "Kind",
+ *         value: "Dev",
+ *     }],
+ *     archiveRules: [
+ *         {
+ *             ruleName: "ArchiveTrustedAccountAccess",
+ *             filter: [{
+ *                 property: "principal.AWS",
+ *                 eq: ["123456789012"],
+ *             }],
+ *         },
+ *         {
+ *             ruleName: "ArchivePublicS3BucketsAccess",
+ *             filter: [{
+ *                 property: "resource",
+ *                 contains: [
+ *                     "arn:aws:s3:::docs-bucket",
+ *                     "arn:aws:s3:::clients-bucket",
+ *                 ],
+ *             }],
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * analyzer = aws_native.accessanalyzer.Analyzer("analyzer",
+ *     analyzer_name="MyAccountAnalyzer",
+ *     type="ACCOUNT",
+ *     tags=[aws_native.accessanalyzer.AnalyzerTagArgs(
+ *         key="Kind",
+ *         value="Dev",
+ *     )],
+ *     archive_rules=[
+ *         aws_native.accessanalyzer.AnalyzerArchiveRuleArgs(
+ *             rule_name="ArchiveTrustedAccountAccess",
+ *             filter=[aws_native.accessanalyzer.AnalyzerFilterArgs(
+ *                 property="principal.AWS",
+ *                 eq=["123456789012"],
+ *             )],
+ *         ),
+ *         aws_native.accessanalyzer.AnalyzerArchiveRuleArgs(
+ *             rule_name="ArchivePublicS3BucketsAccess",
+ *             filter=[aws_native.accessanalyzer.AnalyzerFilterArgs(
+ *                 property="resource",
+ *                 contains=[
+ *                     "arn:aws:s3:::docs-bucket",
+ *                     "arn:aws:s3:::clients-bucket",
+ *                 ],
+ *             )],
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:accessanalyzer:Analyzer")
 public class Analyzer extends io.pulumi.resources.CustomResource {
     /**
      * Analyzer name
-     * 
      */
     @Export(name="analyzerName", type=String.class, parameters={})
     private Output</* @Nullable */ String> analyzerName;
 
     /**
      * @return Analyzer name
-     * 
      */
     public Output</* @Nullable */ String> getAnalyzerName() {
         return this.analyzerName;
@@ -44,42 +414,36 @@ public class Analyzer extends io.pulumi.resources.CustomResource {
     }
     /**
      * Amazon Resource Name (ARN) of the analyzer
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Amazon Resource Name (ARN) of the analyzer
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={AnalyzerTag.class})
     private Output</* @Nullable */ List<AnalyzerTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<AnalyzerTag>> getTags() {
         return this.tags;
     }
     /**
      * The type of the analyzer, must be ACCOUNT or ORGANIZATION
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the analyzer, must be ACCOUNT or ORGANIZATION
-     * 
      */
     public Output<String> getType() {
         return this.type;

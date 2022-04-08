@@ -16,7 +16,6 @@ public final class BucketLoggingConfiguration extends io.pulumi.resources.Invoke
 
     /**
      * The name of an Amazon S3 bucket where Amazon S3 store server access log files. You can store log files in any bucket that you own. By default, logs are stored in the bucket where the LoggingConfiguration property is defined.
-     * 
      */
     @Import(name="destinationBucketName")
       private final @Nullable String destinationBucketName;

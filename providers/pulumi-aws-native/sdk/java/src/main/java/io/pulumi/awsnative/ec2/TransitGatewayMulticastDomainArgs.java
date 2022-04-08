@@ -19,7 +19,6 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
 
     /**
      * The options for the transit gateway multicast domain.
-     * 
      */
     @Import(name="options")
       private final @Nullable Output<OptionsPropertiesArgs> options;
@@ -30,7 +29,6 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
 
     /**
      * The tags for the transit gateway multicast domain.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<TransitGatewayMulticastDomainTagArgs>> tags;
@@ -41,7 +39,6 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
 
     /**
      * The ID of the transit gateway.
-     * 
      */
     @Import(name="transitGatewayId", required=true)
       private final Output<String> transitGatewayId;

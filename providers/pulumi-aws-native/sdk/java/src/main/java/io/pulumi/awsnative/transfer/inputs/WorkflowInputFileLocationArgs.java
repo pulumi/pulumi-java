@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies the location for the file being copied. Only applicable for the Copy type of workflow steps.
- * 
  */
 public final class WorkflowInputFileLocationArgs extends io.pulumi.resources.ResourceArgs {
 

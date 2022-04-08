@@ -19,7 +19,6 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This value is used to complete unqualified DNS hostnames.
-     * 
      */
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
@@ -30,7 +29,6 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The IPv4 addresses of up to four domain name servers, or AmazonProvidedDNS.
-     * 
      */
     @Import(name="domainNameServers")
       private final @Nullable Output<List<String>> domainNameServers;
@@ -41,7 +39,6 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The IPv4 addresses of up to four NetBIOS name servers.
-     * 
      */
     @Import(name="netbiosNameServers")
       private final @Nullable Output<List<String>> netbiosNameServers;
@@ -52,7 +49,6 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The NetBIOS node type (1, 2, 4, or 8).
-     * 
      */
     @Import(name="netbiosNodeType")
       private final @Nullable Output<Integer> netbiosNodeType;
@@ -63,7 +59,6 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The IPv4 addresses of up to four Network Time Protocol (NTP) servers.
-     * 
      */
     @Import(name="ntpServers")
       private final @Nullable Output<List<String>> ntpServers;
@@ -74,7 +69,6 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Any tags assigned to the DHCP options set.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<DHCPOptionsTagArgs>> tags;

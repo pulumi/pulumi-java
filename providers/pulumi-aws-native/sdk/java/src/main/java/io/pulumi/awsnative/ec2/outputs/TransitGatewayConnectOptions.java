@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class TransitGatewayConnectOptions {
     /**
      * The tunnel protocol.
-     * 
      */
     private final @Nullable String protocol;
 
@@ -24,7 +23,6 @@ public final class TransitGatewayConnectOptions {
 
     /**
      * The tunnel protocol.
-     * 
     */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);

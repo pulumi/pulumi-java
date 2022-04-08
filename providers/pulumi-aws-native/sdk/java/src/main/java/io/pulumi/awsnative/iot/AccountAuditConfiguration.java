@@ -15,20 +15,17 @@ import javax.annotation.Nullable;
 
 /**
  * Configures the Device Defender audit settings for this account. Settings include how audit notifications are sent and which audit checks are enabled or disabled.
- * 
  */
 @ResourceType(type="aws-native:iot:AccountAuditConfiguration")
 public class AccountAuditConfiguration extends io.pulumi.resources.CustomResource {
     /**
      * Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
-     * 
      */
     @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
      * @return Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
-     * 
      */
     public Output<String> getAccountId() {
         return this.accountId;
@@ -47,14 +44,12 @@ public class AccountAuditConfiguration extends io.pulumi.resources.CustomResourc
     }
     /**
      * The ARN of the role that grants permission to AWS IoT to access information about your devices, policies, certificates and other items as required when performing an audit.
-     * 
      */
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
      * @return The ARN of the role that grants permission to AWS IoT to access information about your devices, policies, certificates and other items as required when performing an audit.
-     * 
      */
     public Output<String> getRoleArn() {
         return this.roleArn;

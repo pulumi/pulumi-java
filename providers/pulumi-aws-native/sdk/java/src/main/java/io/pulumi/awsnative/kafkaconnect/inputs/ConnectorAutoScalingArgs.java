@@ -12,8 +12,7 @@ import java.util.Objects;
 
 
 /**
- * Details about auto scaling of a connector.
- * 
+ * Details about auto scaling of a connector. 
  */
 public final class ConnectorAutoScalingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
 
     /**
      * The maximum number of workers for a connector.
-     * 
      */
     @Import(name="maxWorkerCount", required=true)
       private final Output<Integer> maxWorkerCount;
@@ -32,7 +30,6 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
 
     /**
      * Specifies how many MSK Connect Units (MCU) as the minimum scaling unit.
-     * 
      */
     @Import(name="mcuCount", required=true)
       private final Output<Integer> mcuCount;
@@ -43,7 +40,6 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
 
     /**
      * The minimum number of workers for a connector.
-     * 
      */
     @Import(name="minWorkerCount", required=true)
       private final Output<Integer> minWorkerCount;

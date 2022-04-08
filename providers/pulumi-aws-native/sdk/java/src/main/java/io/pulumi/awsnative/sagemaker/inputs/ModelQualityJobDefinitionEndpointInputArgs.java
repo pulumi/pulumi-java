@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The endpoint for a monitoring job.
- * 
  */
 public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
 
     /**
      * Monitoring end time offset, e.g. PT0H
-     * 
      */
     @Import(name="endTimeOffset")
       private final @Nullable Output<String> endTimeOffset;
@@ -41,7 +39,6 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
 
     /**
      * Index or JSONpath to locate predicted label(s)
-     * 
      */
     @Import(name="inferenceAttribute")
       private final @Nullable Output<String> inferenceAttribute;
@@ -52,7 +49,6 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
 
     /**
      * Path to the filesystem where the endpoint data is available to the container.
-     * 
      */
     @Import(name="localPath", required=true)
       private final Output<String> localPath;
@@ -63,7 +59,6 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
 
     /**
      * Index or JSONpath to locate probabilities
-     * 
      */
     @Import(name="probabilityAttribute")
       private final @Nullable Output<String> probabilityAttribute;
@@ -81,7 +76,6 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
 
     /**
      * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
-     * 
      */
     @Import(name="s3DataDistributionType")
       private final @Nullable Output<ModelQualityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType;
@@ -92,7 +86,6 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
 
     /**
      * Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
-     * 
      */
     @Import(name="s3InputMode")
       private final @Nullable Output<ModelQualityJobDefinitionEndpointInputS3InputMode> s3InputMode;
@@ -103,7 +96,6 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
 
     /**
      * Monitoring start time offset, e.g. -PT1H
-     * 
      */
     @Import(name="startTimeOffset")
       private final @Nullable Output<String> startTimeOffset;

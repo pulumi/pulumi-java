@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Edition of index
-     * 
      */
     @EnumType
     public enum IndexEdition {

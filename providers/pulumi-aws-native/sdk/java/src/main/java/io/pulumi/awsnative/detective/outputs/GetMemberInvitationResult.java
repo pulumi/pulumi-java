@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class GetMemberInvitationResult {
     /**
      * When set to true, invitation emails are not sent to the member accounts. Member accounts must still accept the invitation before they are added to the behavior graph. Updating this field has no effect.
-     * 
      */
     private final @Nullable Boolean disableEmailNotification;
     /**
      * The root email address for the account to be invited, for validation. Updating this field has no effect.
-     * 
      */
     private final @Nullable String memberEmailAddress;
     /**
      * A message to be included in the email invitation sent to the invited account. Updating this field has no effect.
-     * 
      */
     private final @Nullable String message;
 
@@ -40,21 +37,18 @@ public final class GetMemberInvitationResult {
 
     /**
      * When set to true, invitation emails are not sent to the member accounts. Member accounts must still accept the invitation before they are added to the behavior graph. Updating this field has no effect.
-     * 
     */
     public Optional<Boolean> getDisableEmailNotification() {
         return Optional.ofNullable(this.disableEmailNotification);
     }
     /**
      * The root email address for the account to be invited, for validation. Updating this field has no effect.
-     * 
     */
     public Optional<String> getMemberEmailAddress() {
         return Optional.ofNullable(this.memberEmailAddress);
     }
     /**
      * A message to be included in the email invitation sent to the invited account. Updating this field has no effect.
-     * 
     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);

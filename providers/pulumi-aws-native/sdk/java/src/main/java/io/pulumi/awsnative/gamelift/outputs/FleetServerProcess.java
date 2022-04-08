@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 public final class FleetServerProcess {
     /**
      * The number of server processes that use this configuration to run concurrently on an instance.
-     * 
      */
     private final Integer concurrentExecutions;
     /**
@@ -23,12 +22,10 @@ public final class FleetServerProcess {
      * Windows (for custom game builds only): C:\game. Example: "C:\game\MyGame\server.exe"
      * 
      * Linux: /local/game. Examples: "/local/game/MyGame/server.exe" or "/local/game/MyRealtimeScript.js"
-     * 
      */
     private final String launchPath;
     /**
      * An optional list of parameters to pass to the server executable or Realtime script on launch.
-     * 
      */
     private final @Nullable String parameters;
 
@@ -44,7 +41,6 @@ public final class FleetServerProcess {
 
     /**
      * The number of server processes that use this configuration to run concurrently on an instance.
-     * 
     */
     public Integer getConcurrentExecutions() {
         return this.concurrentExecutions;
@@ -55,14 +51,12 @@ public final class FleetServerProcess {
      * Windows (for custom game builds only): C:\game. Example: "C:\game\MyGame\server.exe"
      * 
      * Linux: /local/game. Examples: "/local/game/MyGame/server.exe" or "/local/game/MyRealtimeScript.js"
-     * 
     */
     public String getLaunchPath() {
         return this.launchPath;
     }
     /**
      * An optional list of parameters to pass to the server executable or Realtime script on launch.
-     * 
     */
     public Optional<String> getParameters() {
         return Optional.ofNullable(this.parameters);

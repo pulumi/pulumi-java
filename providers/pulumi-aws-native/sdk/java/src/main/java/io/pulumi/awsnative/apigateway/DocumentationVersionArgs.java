@@ -16,7 +16,6 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
 
     /**
      * The description of the API documentation snapshot.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -27,7 +26,6 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
 
     /**
      * The version identifier of the API documentation snapshot.
-     * 
      */
     @Import(name="documentationVersion", required=true)
       private final Output<String> documentationVersion;
@@ -38,7 +36,6 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
 
     /**
      * The identifier of the API.
-     * 
      */
     @Import(name="restApiId", required=true)
       private final Output<String> restApiId;

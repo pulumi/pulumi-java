@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::EC2::SubnetNetworkAclAssociation
- * 
  */
 @ResourceType(type="aws-native:ec2:SubnetNetworkAclAssociation")
 public class SubnetNetworkAclAssociation extends io.pulumi.resources.CustomResource {
@@ -25,28 +24,24 @@ public class SubnetNetworkAclAssociation extends io.pulumi.resources.CustomResou
     }
     /**
      * The ID of the network ACL
-     * 
      */
     @Export(name="networkAclId", type=String.class, parameters={})
     private Output<String> networkAclId;
 
     /**
      * @return The ID of the network ACL
-     * 
      */
     public Output<String> getNetworkAclId() {
         return this.networkAclId;
     }
     /**
      * The ID of the subnet
-     * 
      */
     @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**
      * @return The ID of the subnet
-     * 
      */
     public Output<String> getSubnetId() {
         return this.subnetId;

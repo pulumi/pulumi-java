@@ -14,7 +14,6 @@ public final class GetSigningProfileArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The Amazon Resource Name (ARN) of the specified signing profile.
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

@@ -14,7 +14,6 @@ public final class GetTaskDefinitionArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The ID of the new wireless gateway task definition
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

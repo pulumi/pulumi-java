@@ -21,7 +21,6 @@ public final class GetLaunchProfileArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * <p>The studio ID. </p>
-     * 
      */
     @Import(name="studioId", required=true)
       private final String studioId;

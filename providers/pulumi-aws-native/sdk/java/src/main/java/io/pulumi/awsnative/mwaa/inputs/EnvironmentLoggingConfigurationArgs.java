@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Logging configuration for the environment.
- * 
  */
 public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 

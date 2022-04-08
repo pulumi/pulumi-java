@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of usage plan key. Currently, the only valid key type is API_KEY.
-     * 
      */
     @EnumType
     public enum UsagePlanKeyKeyType {

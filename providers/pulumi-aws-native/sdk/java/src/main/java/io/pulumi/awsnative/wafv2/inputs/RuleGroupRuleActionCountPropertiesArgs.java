@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Count traffic towards application.
- * 
  */
 public final class RuleGroupRuleActionCountPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 

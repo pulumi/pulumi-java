@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class AccessPointVpcConfiguration {
     /**
      * If this field is specified, this access point will only allow connections from the specified VPC ID.
-     * 
      */
     private final @Nullable String vpcId;
 
@@ -24,7 +23,6 @@ public final class AccessPointVpcConfiguration {
 
     /**
      * If this field is specified, this access point will only allow connections from the specified VPC ID.
-     * 
     */
     public Optional<String> getVpcId() {
         return Optional.ofNullable(this.vpcId);

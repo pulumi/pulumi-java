@@ -15,22 +15,18 @@ import javax.annotation.Nullable;
 public final class GetRuleGroupsNamespaceResult {
     /**
      * The RuleGroupsNamespace ARN.
-     * 
      */
     private final @Nullable String arn;
     /**
      * The RuleGroupsNamespace data.
-     * 
      */
     private final @Nullable String data;
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     private final @Nullable List<RuleGroupsNamespaceTag> tags;
     /**
      * Required to identify a specific APS Workspace associated with this RuleGroupsNamespace.
-     * 
      */
     private final @Nullable String workspace;
 
@@ -48,28 +44,24 @@ public final class GetRuleGroupsNamespaceResult {
 
     /**
      * The RuleGroupsNamespace ARN.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The RuleGroupsNamespace data.
-     * 
     */
     public Optional<String> getData() {
         return Optional.ofNullable(this.data);
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
     */
     public List<RuleGroupsNamespaceTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * Required to identify a specific APS Workspace associated with this RuleGroupsNamespace.
-     * 
     */
     public Optional<String> getWorkspace() {
         return Optional.ofNullable(this.workspace);

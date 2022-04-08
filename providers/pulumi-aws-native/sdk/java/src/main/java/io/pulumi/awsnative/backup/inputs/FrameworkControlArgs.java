@@ -19,7 +19,6 @@ public final class FrameworkControlArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A list of ParameterName and ParameterValue pairs.
-     * 
      */
     @Import(name="controlInputParameters")
       private final @Nullable Output<List<FrameworkControlInputParameterArgs>> controlInputParameters;
@@ -30,7 +29,6 @@ public final class FrameworkControlArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of a control. This name is between 1 and 256 characters.
-     * 
      */
     @Import(name="controlName", required=true)
       private final Output<String> controlName;
@@ -41,7 +39,6 @@ public final class FrameworkControlArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The scope of a control. The control scope defines what the control will evaluate. Three examples of control scopes are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
-     * 
      */
     @Import(name="controlScope")
       private final @Nullable Output<FrameworkControlControlScopePropertiesArgs> controlScope;

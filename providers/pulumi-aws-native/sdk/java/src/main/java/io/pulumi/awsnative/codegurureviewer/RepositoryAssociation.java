@@ -17,105 +17,739 @@ import javax.annotation.Nullable;
 /**
  * This resource schema represents the RepositoryAssociation resource in the Amazon CodeGuru Reviewer service.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myRepositoryAssociation = new AwsNative.CodeGuruReviewer.RepositoryAssociation("myRepositoryAssociation", new AwsNative.CodeGuruReviewer.RepositoryAssociationArgs
+ *         {
+ *             Name = "MyRepository",
+ *             Type = "CodeCommit",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/codegurureviewer"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codegurureviewer.NewRepositoryAssociation(ctx, "myRepositoryAssociation", &codegurureviewer.RepositoryAssociationArgs{
+ * 			Name: pulumi.String("MyRepository"),
+ * 			Type: "CodeCommit",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myRepositoryAssociation = new aws_native.codegurureviewer.RepositoryAssociation("myRepositoryAssociation", {
+ *     name: "MyRepository",
+ *     type: "CodeCommit",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_repository_association = aws_native.codegurureviewer.RepositoryAssociation("myRepositoryAssociation",
+ *     name="MyRepository",
+ *     type="CodeCommit")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myRepositoryAssociation = new AwsNative.CodeGuruReviewer.RepositoryAssociation("myRepositoryAssociation", new AwsNative.CodeGuruReviewer.RepositoryAssociationArgs
+ *         {
+ *             Name = "MyRepository",
+ *             Type = "CodeCommit",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/codegurureviewer"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codegurureviewer.NewRepositoryAssociation(ctx, "myRepositoryAssociation", &codegurureviewer.RepositoryAssociationArgs{
+ * 			Name: pulumi.String("MyRepository"),
+ * 			Type: "CodeCommit",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myRepositoryAssociation = new aws_native.codegurureviewer.RepositoryAssociation("myRepositoryAssociation", {
+ *     name: "MyRepository",
+ *     type: "CodeCommit",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_repository_association = aws_native.codegurureviewer.RepositoryAssociation("myRepositoryAssociation",
+ *     name="MyRepository",
+ *     type="CodeCommit")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myRepositoryAssociation = new AwsNative.CodeGuruReviewer.RepositoryAssociation("myRepositoryAssociation", new AwsNative.CodeGuruReviewer.RepositoryAssociationArgs
+ *         {
+ *             Name = "MyBitbucketRepoName",
+ *             Type = "Bitbucket",
+ *             ConnectionArn = "arn:aws:codestar-connections:us-west-2:123456789012:connection/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+ *             Owner = "MyOwnerName",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/codegurureviewer"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codegurureviewer.NewRepositoryAssociation(ctx, "myRepositoryAssociation", &codegurureviewer.RepositoryAssociationArgs{
+ * 			Name:          pulumi.String("MyBitbucketRepoName"),
+ * 			Type:          "Bitbucket",
+ * 			ConnectionArn: pulumi.String("arn:aws:codestar-connections:us-west-2:123456789012:connection/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"),
+ * 			Owner:         pulumi.String("MyOwnerName"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myRepositoryAssociation = new aws_native.codegurureviewer.RepositoryAssociation("myRepositoryAssociation", {
+ *     name: "MyBitbucketRepoName",
+ *     type: "Bitbucket",
+ *     connectionArn: "arn:aws:codestar-connections:us-west-2:123456789012:connection/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+ *     owner: "MyOwnerName",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_repository_association = aws_native.codegurureviewer.RepositoryAssociation("myRepositoryAssociation",
+ *     name="MyBitbucketRepoName",
+ *     type="Bitbucket",
+ *     connection_arn="arn:aws:codestar-connections:us-west-2:123456789012:connection/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+ *     owner="MyOwnerName")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myRepositoryAssociation = new AwsNative.CodeGuruReviewer.RepositoryAssociation("myRepositoryAssociation", new AwsNative.CodeGuruReviewer.RepositoryAssociationArgs
+ *         {
+ *             Name = "MyBitbucketRepoName",
+ *             Type = "Bitbucket",
+ *             ConnectionArn = "arn:aws:codestar-connections:us-west-2:123456789012:connection/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+ *             Owner = "MyOwnerName",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/codegurureviewer"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codegurureviewer.NewRepositoryAssociation(ctx, "myRepositoryAssociation", &codegurureviewer.RepositoryAssociationArgs{
+ * 			Name:          pulumi.String("MyBitbucketRepoName"),
+ * 			Type:          "Bitbucket",
+ * 			ConnectionArn: pulumi.String("arn:aws:codestar-connections:us-west-2:123456789012:connection/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"),
+ * 			Owner:         pulumi.String("MyOwnerName"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myRepositoryAssociation = new aws_native.codegurureviewer.RepositoryAssociation("myRepositoryAssociation", {
+ *     name: "MyBitbucketRepoName",
+ *     type: "Bitbucket",
+ *     connectionArn: "arn:aws:codestar-connections:us-west-2:123456789012:connection/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+ *     owner: "MyOwnerName",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_repository_association = aws_native.codegurureviewer.RepositoryAssociation("myRepositoryAssociation",
+ *     name="MyBitbucketRepoName",
+ *     type="Bitbucket",
+ *     connection_arn="arn:aws:codestar-connections:us-west-2:123456789012:connection/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+ *     owner="MyOwnerName")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myRepositoryAssociation = new AwsNative.CodeGuruReviewer.RepositoryAssociation("myRepositoryAssociation", new AwsNative.CodeGuruReviewer.RepositoryAssociationArgs
+ *         {
+ *             Name = "MyGitHubEnterpriseRepoName",
+ *             Type = "GitHubEnterpriseServer",
+ *             ConnectionArn = "arn:aws:codestar-connections:us-west-2:123456789012:connection/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+ *             Owner = "MyOwnerName",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/codegurureviewer"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codegurureviewer.NewRepositoryAssociation(ctx, "myRepositoryAssociation", &codegurureviewer.RepositoryAssociationArgs{
+ * 			Name:          pulumi.String("MyGitHubEnterpriseRepoName"),
+ * 			Type:          "GitHubEnterpriseServer",
+ * 			ConnectionArn: pulumi.String("arn:aws:codestar-connections:us-west-2:123456789012:connection/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"),
+ * 			Owner:         pulumi.String("MyOwnerName"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myRepositoryAssociation = new aws_native.codegurureviewer.RepositoryAssociation("myRepositoryAssociation", {
+ *     name: "MyGitHubEnterpriseRepoName",
+ *     type: "GitHubEnterpriseServer",
+ *     connectionArn: "arn:aws:codestar-connections:us-west-2:123456789012:connection/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+ *     owner: "MyOwnerName",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_repository_association = aws_native.codegurureviewer.RepositoryAssociation("myRepositoryAssociation",
+ *     name="MyGitHubEnterpriseRepoName",
+ *     type="GitHubEnterpriseServer",
+ *     connection_arn="arn:aws:codestar-connections:us-west-2:123456789012:connection/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+ *     owner="MyOwnerName")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myRepositoryAssociation = new AwsNative.CodeGuruReviewer.RepositoryAssociation("myRepositoryAssociation", new AwsNative.CodeGuruReviewer.RepositoryAssociationArgs
+ *         {
+ *             Name = "MyGitHubEnterpriseRepoName",
+ *             Type = "GitHubEnterpriseServer",
+ *             ConnectionArn = "arn:aws:codestar-connections:us-west-2:123456789012:connection/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+ *             Owner = "MyOwnerName",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/codegurureviewer"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codegurureviewer.NewRepositoryAssociation(ctx, "myRepositoryAssociation", &codegurureviewer.RepositoryAssociationArgs{
+ * 			Name:          pulumi.String("MyGitHubEnterpriseRepoName"),
+ * 			Type:          "GitHubEnterpriseServer",
+ * 			ConnectionArn: pulumi.String("arn:aws:codestar-connections:us-west-2:123456789012:connection/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"),
+ * 			Owner:         pulumi.String("MyOwnerName"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myRepositoryAssociation = new aws_native.codegurureviewer.RepositoryAssociation("myRepositoryAssociation", {
+ *     name: "MyGitHubEnterpriseRepoName",
+ *     type: "GitHubEnterpriseServer",
+ *     connectionArn: "arn:aws:codestar-connections:us-west-2:123456789012:connection/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+ *     owner: "MyOwnerName",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_repository_association = aws_native.codegurureviewer.RepositoryAssociation("myRepositoryAssociation",
+ *     name="MyGitHubEnterpriseRepoName",
+ *     type="GitHubEnterpriseServer",
+ *     connection_arn="arn:aws:codestar-connections:us-west-2:123456789012:connection/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+ *     owner="MyOwnerName")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myRepositoryAssociation = new AwsNative.CodeGuruReviewer.RepositoryAssociation("myRepositoryAssociation", new AwsNative.CodeGuruReviewer.RepositoryAssociationArgs
+ *         {
+ *             Name = "MyRepository",
+ *             Type = "CodeCommit",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.CodeGuruReviewer.Inputs.RepositoryAssociationTagArgs
+ *                 {
+ *                     Key = "tag1-key",
+ *                     Value = "tag1-value",
+ *                 },
+ *                 new AwsNative.CodeGuruReviewer.Inputs.RepositoryAssociationTagArgs
+ *                 {
+ *                     Key = "tag2-key",
+ *                     Value = "tag2-value",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/codegurureviewer"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codegurureviewer.NewRepositoryAssociation(ctx, "myRepositoryAssociation", &codegurureviewer.RepositoryAssociationArgs{
+ * 			Name: pulumi.String("MyRepository"),
+ * 			Type: "CodeCommit",
+ * 			Tags: []codegurureviewer.RepositoryAssociationTagArgs{
+ * 				&codegurureviewer.RepositoryAssociationTagArgs{
+ * 					Key:   pulumi.String("tag1-key"),
+ * 					Value: pulumi.String("tag1-value"),
+ * 				},
+ * 				&codegurureviewer.RepositoryAssociationTagArgs{
+ * 					Key:   pulumi.String("tag2-key"),
+ * 					Value: pulumi.String("tag2-value"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myRepositoryAssociation = new aws_native.codegurureviewer.RepositoryAssociation("myRepositoryAssociation", {
+ *     name: "MyRepository",
+ *     type: "CodeCommit",
+ *     tags: [
+ *         {
+ *             key: "tag1-key",
+ *             value: "tag1-value",
+ *         },
+ *         {
+ *             key: "tag2-key",
+ *             value: "tag2-value",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_repository_association = aws_native.codegurureviewer.RepositoryAssociation("myRepositoryAssociation",
+ *     name="MyRepository",
+ *     type="CodeCommit",
+ *     tags=[
+ *         aws_native.codegurureviewer.RepositoryAssociationTagArgs(
+ *             key="tag1-key",
+ *             value="tag1-value",
+ *         ),
+ *         aws_native.codegurureviewer.RepositoryAssociationTagArgs(
+ *             key="tag2-key",
+ *             value="tag2-value",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myRepositoryAssociation = new AwsNative.CodeGuruReviewer.RepositoryAssociation("myRepositoryAssociation", new AwsNative.CodeGuruReviewer.RepositoryAssociationArgs
+ *         {
+ *             Name = "MyRepository",
+ *             Type = "CodeCommit",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.CodeGuruReviewer.Inputs.RepositoryAssociationTagArgs
+ *                 {
+ *                     Key = "tag1-key",
+ *                     Value = "tag1-value",
+ *                 },
+ *                 new AwsNative.CodeGuruReviewer.Inputs.RepositoryAssociationTagArgs
+ *                 {
+ *                     Key = "tag2-key",
+ *                     Value = "tag2-value",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/codegurureviewer"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codegurureviewer.NewRepositoryAssociation(ctx, "myRepositoryAssociation", &codegurureviewer.RepositoryAssociationArgs{
+ * 			Name: pulumi.String("MyRepository"),
+ * 			Type: "CodeCommit",
+ * 			Tags: []codegurureviewer.RepositoryAssociationTagArgs{
+ * 				&codegurureviewer.RepositoryAssociationTagArgs{
+ * 					Key:   pulumi.String("tag1-key"),
+ * 					Value: pulumi.String("tag1-value"),
+ * 				},
+ * 				&codegurureviewer.RepositoryAssociationTagArgs{
+ * 					Key:   pulumi.String("tag2-key"),
+ * 					Value: pulumi.String("tag2-value"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myRepositoryAssociation = new aws_native.codegurureviewer.RepositoryAssociation("myRepositoryAssociation", {
+ *     name: "MyRepository",
+ *     type: "CodeCommit",
+ *     tags: [
+ *         {
+ *             key: "tag1-key",
+ *             value: "tag1-value",
+ *         },
+ *         {
+ *             key: "tag2-key",
+ *             value: "tag2-value",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_repository_association = aws_native.codegurureviewer.RepositoryAssociation("myRepositoryAssociation",
+ *     name="MyRepository",
+ *     type="CodeCommit",
+ *     tags=[
+ *         aws_native.codegurureviewer.RepositoryAssociationTagArgs(
+ *             key="tag1-key",
+ *             value="tag1-value",
+ *         ),
+ *         aws_native.codegurureviewer.RepositoryAssociationTagArgs(
+ *             key="tag2-key",
+ *             value="tag2-value",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:codegurureviewer:RepositoryAssociation")
 public class RepositoryAssociation extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the repository association.
-     * 
      */
     @Export(name="associationArn", type=String.class, parameters={})
     private Output<String> associationArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the repository association.
-     * 
      */
     public Output<String> getAssociationArn() {
         return this.associationArn;
     }
     /**
      * The name of the S3 bucket associated with an associated S3 repository. It must start with `codeguru-reviewer-`.
-     * 
      */
     @Export(name="bucketName", type=String.class, parameters={})
     private Output</* @Nullable */ String> bucketName;
 
     /**
      * @return The name of the S3 bucket associated with an associated S3 repository. It must start with `codeguru-reviewer-`.
-     * 
      */
     public Output</* @Nullable */ String> getBucketName() {
         return this.bucketName;
     }
     /**
      * The Amazon Resource Name (ARN) of an AWS CodeStar Connections connection.
-     * 
      */
     @Export(name="connectionArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectionArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of an AWS CodeStar Connections connection.
-     * 
      */
     public Output</* @Nullable */ String> getConnectionArn() {
         return this.connectionArn;
     }
     /**
      * Name of the repository to be associated.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the repository to be associated.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The owner of the repository. For a Bitbucket repository, this is the username for the account that owns the repository.
-     * 
      */
     @Export(name="owner", type=String.class, parameters={})
     private Output</* @Nullable */ String> owner;
 
     /**
      * @return The owner of the repository. For a Bitbucket repository, this is the username for the account that owns the repository.
-     * 
      */
     public Output</* @Nullable */ String> getOwner() {
         return this.owner;
     }
     /**
      * The tags associated with a repository association.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={RepositoryAssociationTag.class})
     private Output</* @Nullable */ List<RepositoryAssociationTag>> tags;
 
     /**
      * @return The tags associated with a repository association.
-     * 
      */
     public Output</* @Nullable */ List<RepositoryAssociationTag>> getTags() {
         return this.tags;
     }
     /**
      * The type of repository to be associated.
-     * 
      */
     @Export(name="type", type=RepositoryAssociationType.class, parameters={})
     private Output<RepositoryAssociationType> type;
 
     /**
      * @return The type of repository to be associated.
-     * 
      */
     public Output<RepositoryAssociationType> getType() {
         return this.type;

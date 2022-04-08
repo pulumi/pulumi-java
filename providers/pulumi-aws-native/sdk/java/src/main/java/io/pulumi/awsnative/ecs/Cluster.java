@@ -18,20 +18,17 @@ import javax.annotation.Nullable;
 
 /**
  * Create an Elastic Container Service (ECS) cluster.
- * 
  */
 @ResourceType(type="aws-native:ecs:Cluster")
 public class Cluster extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the Amazon ECS cluster, such as arn:aws:ecs:us-east-2:123456789012:cluster/MyECSCluster.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the Amazon ECS cluster, such as arn:aws:ecs:us-east-2:123456789012:cluster/MyECSCluster.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
@@ -44,14 +41,12 @@ public class Cluster extends io.pulumi.resources.CustomResource {
     }
     /**
      * A user-generated string that you use to identify your cluster. If you don't specify a name, AWS CloudFormation generates a unique physical ID for the name.
-     * 
      */
     @Export(name="clusterName", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterName;
 
     /**
      * @return A user-generated string that you use to identify your cluster. If you don't specify a name, AWS CloudFormation generates a unique physical ID for the name.
-     * 
      */
     public Output</* @Nullable */ String> getClusterName() {
         return this.clusterName;

@@ -14,48 +14,41 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::Route53Resolver::ResolverDNSSECConfig.
- * 
  */
 @ResourceType(type="aws-native:route53resolver:ResolverDNSSECConfig")
 public class ResolverDNSSECConfig extends io.pulumi.resources.CustomResource {
     /**
      * AccountId
-     * 
      */
     @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
      * @return AccountId
-     * 
      */
     public Output<String> getOwnerId() {
         return this.ownerId;
     }
     /**
      * ResourceId
-     * 
      */
     @Export(name="resourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceId;
 
     /**
      * @return ResourceId
-     * 
      */
     public Output</* @Nullable */ String> getResourceId() {
         return this.resourceId;
     }
     /**
      * ResolverDNSSECValidationStatus, possible values are ENABLING, ENABLED, DISABLING AND DISABLED.
-     * 
      */
     @Export(name="validationStatus", type=ResolverDNSSECConfigValidationStatus.class, parameters={})
     private Output<ResolverDNSSECConfigValidationStatus> validationStatus;
 
     /**
      * @return ResolverDNSSECValidationStatus, possible values are ENABLING, ENABLED, DISABLING AND DISABLED.
-     * 
      */
     public Output<ResolverDNSSECConfigValidationStatus> getValidationStatus() {
         return this.validationStatus;

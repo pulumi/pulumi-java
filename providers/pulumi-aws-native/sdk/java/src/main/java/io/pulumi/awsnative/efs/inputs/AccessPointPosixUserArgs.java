@@ -17,7 +17,6 @@ public final class AccessPointPosixUserArgs extends io.pulumi.resources.Resource
 
     /**
      * The POSIX group ID used for all file system operations using this access point.
-     * 
      */
     @Import(name="gid", required=true)
       private final Output<String> gid;
@@ -28,7 +27,6 @@ public final class AccessPointPosixUserArgs extends io.pulumi.resources.Resource
 
     /**
      * Secondary POSIX group IDs used for all file system operations using this access point.
-     * 
      */
     @Import(name="secondaryGids")
       private final @Nullable Output<List<String>> secondaryGids;
@@ -39,7 +37,6 @@ public final class AccessPointPosixUserArgs extends io.pulumi.resources.Resource
 
     /**
      * The POSIX user ID used for all file system operations using this access point.
-     * 
      */
     @Import(name="uid", required=true)
       private final Output<String> uid;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
-     * 
      */
     @EnumType
     public enum ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType {

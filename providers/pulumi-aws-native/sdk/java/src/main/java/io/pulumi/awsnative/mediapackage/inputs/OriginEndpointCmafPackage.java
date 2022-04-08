@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * A Common Media Application Format (CMAF) packaging configuration.
- * 
  */
 public final class OriginEndpointCmafPackage extends io.pulumi.resources.InvokeArgs {
 
@@ -32,7 +31,6 @@ public final class OriginEndpointCmafPackage extends io.pulumi.resources.InvokeA
 
     /**
      * A list of HLS manifest configurations
-     * 
      */
     @Import(name="hlsManifests")
       private final @Nullable List<OriginEndpointHlsManifest> hlsManifests;
@@ -43,7 +41,6 @@ public final class OriginEndpointCmafPackage extends io.pulumi.resources.InvokeA
 
     /**
      * Duration (in seconds) of each segment. Actual segments will be rounded to the nearest multiple of the source segment duration.
-     * 
      */
     @Import(name="segmentDurationSeconds")
       private final @Nullable Integer segmentDurationSeconds;
@@ -54,7 +51,6 @@ public final class OriginEndpointCmafPackage extends io.pulumi.resources.InvokeA
 
     /**
      * An optional custom string that is prepended to the name of each segment. If not specified, it defaults to the ChannelId.
-     * 
      */
     @Import(name="segmentPrefix")
       private final @Nullable String segmentPrefix;

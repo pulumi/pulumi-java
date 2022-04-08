@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * An example resource schema demonstrating some basic constructs and validation rules.
- * 
  */
 @ResourceType(type="aws-native:budgets:BudgetsAction")
 public class BudgetsAction extends io.pulumi.resources.CustomResource {

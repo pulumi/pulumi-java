@@ -16,7 +16,6 @@ public final class ServiceCodeRepository {
     private final @Nullable ServiceCodeConfiguration codeConfiguration;
     /**
      * Repository Url
-     * 
      */
     private final String repositoryUrl;
     private final ServiceSourceCodeVersion sourceCodeVersion;
@@ -36,7 +35,6 @@ public final class ServiceCodeRepository {
     }
     /**
      * Repository Url
-     * 
     */
     public String getRepositoryUrl() {
         return this.repositoryUrl;

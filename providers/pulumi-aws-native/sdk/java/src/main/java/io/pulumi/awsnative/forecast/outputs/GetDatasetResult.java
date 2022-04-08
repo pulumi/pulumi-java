@@ -20,17 +20,14 @@ public final class GetDatasetResult {
     private final @Nullable String arn;
     /**
      * Frequency of data collection. This parameter is required for RELATED_TIME_SERIES
-     * 
      */
     private final @Nullable String dataFrequency;
     /**
      * The dataset type
-     * 
      */
     private final @Nullable DatasetType datasetType;
     /**
      * The domain associated with the dataset
-     * 
      */
     private final @Nullable DatasetDomain domain;
     private final @Nullable EncryptionConfigProperties encryptionConfig;
@@ -60,21 +57,18 @@ public final class GetDatasetResult {
     }
     /**
      * Frequency of data collection. This parameter is required for RELATED_TIME_SERIES
-     * 
     */
     public Optional<String> getDataFrequency() {
         return Optional.ofNullable(this.dataFrequency);
     }
     /**
      * The dataset type
-     * 
     */
     public Optional<DatasetType> getDatasetType() {
         return Optional.ofNullable(this.datasetType);
     }
     /**
      * The domain associated with the dataset
-     * 
     */
     public Optional<DatasetDomain> getDomain() {
         return Optional.ofNullable(this.domain);

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ConnectorProfileTrendmicroConnectorProfileCredentials {
     /**
      * The Secret Access Key portion of the credentials.
-     * 
      */
     private final String apiSecretKey;
 
@@ -22,7 +21,6 @@ public final class ConnectorProfileTrendmicroConnectorProfileCredentials {
 
     /**
      * The Secret Access Key portion of the credentials.
-     * 
     */
     public String getApiSecretKey() {
         return this.apiSecretKey;

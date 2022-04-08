@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ConnectorProfileZendeskConnectorProfileProperties {
     /**
      * The location of the Zendesk resource
-     * 
      */
     private final String instanceUrl;
 
@@ -22,7 +21,6 @@ public final class ConnectorProfileZendeskConnectorProfileProperties {
 
     /**
      * The location of the Zendesk resource
-     * 
     */
     public String getInstanceUrl() {
         return this.instanceUrl;

@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class MitigationActionEnableIoTLoggingParams {
     /**
      *  Specifies which types of information are logged.
-     * 
      */
     private final MitigationActionEnableIoTLoggingParamsLogLevel logLevel;
     /**
      *  The ARN of the IAM role used for logging.
-     * 
      */
     private final String roleArnForLogging;
 
@@ -31,14 +29,12 @@ public final class MitigationActionEnableIoTLoggingParams {
 
     /**
      *  Specifies which types of information are logged.
-     * 
     */
     public MitigationActionEnableIoTLoggingParamsLogLevel getLogLevel() {
         return this.logLevel;
     }
     /**
      *  The ARN of the IAM role used for logging.
-     * 
     */
     public String getRoleArnForLogging() {
         return this.roleArnForLogging;

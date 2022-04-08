@@ -17,13 +17,11 @@ import javax.annotation.Nullable;
 public final class GetGroupResult {
     /**
      * The Resource Group ARN.
-     * 
      */
     private final @Nullable String arn;
     private final @Nullable List<GroupConfigurationItem> configuration;
     /**
      * The description of the resource group
-     * 
      */
     private final @Nullable String description;
     private final @Nullable GroupResourceQuery resourceQuery;
@@ -48,7 +46,6 @@ public final class GetGroupResult {
 
     /**
      * The Resource Group ARN.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
@@ -58,7 +55,6 @@ public final class GetGroupResult {
     }
     /**
      * The description of the resource group
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);

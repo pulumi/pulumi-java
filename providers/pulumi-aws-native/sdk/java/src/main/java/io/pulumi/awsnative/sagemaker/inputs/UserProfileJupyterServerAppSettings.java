@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The JupyterServer app settings.
- * 
  */
 public final class UserProfileJupyterServerAppSettings extends io.pulumi.resources.InvokeArgs {
 

@@ -18,7 +18,6 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends io.pulumi.re
 
     /**
      * The ID of the local gateway route table.
-     * 
      */
     @Import(name="localGatewayRouteTableId", required=true)
       private final Output<String> localGatewayRouteTableId;
@@ -29,7 +28,6 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends io.pulumi.re
 
     /**
      * The tags for the association.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<LocalGatewayRouteTableVPCAssociationTagArgs>> tags;
@@ -40,7 +38,6 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends io.pulumi.re
 
     /**
      * The ID of the VPC.
-     * 
      */
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Custom response.
- * 
  */
 public final class RuleGroupCustomResponseArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class RuleGroupCustomResponseArgs extends io.pulumi.resources.Resou
 
     /**
      * Custom response body key.
-     * 
      */
     @Import(name="customResponseBodyKey")
       private final @Nullable Output<String> customResponseBodyKey;
@@ -41,7 +39,6 @@ public final class RuleGroupCustomResponseArgs extends io.pulumi.resources.Resou
 
     /**
      * Collection of HTTP headers.
-     * 
      */
     @Import(name="responseHeaders")
       private final @Nullable Output<List<RuleGroupCustomHTTPHeaderArgs>> responseHeaders;

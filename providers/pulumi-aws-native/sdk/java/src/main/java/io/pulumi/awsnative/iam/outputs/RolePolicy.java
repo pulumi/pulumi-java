@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class RolePolicy {
     /**
      * The policy document.
-     * 
      */
     private final String policyDocument;
     /**
      * The friendly name (not ARN) identifying the policy.
-     * 
      */
     private final String policyName;
 
@@ -30,14 +28,12 @@ public final class RolePolicy {
 
     /**
      * The policy document.
-     * 
     */
     public String getPolicyDocument() {
         return this.policyDocument;
     }
     /**
      * The friendly name (not ARN) identifying the policy.
-     * 
     */
     public String getPolicyName() {
         return this.policyName;

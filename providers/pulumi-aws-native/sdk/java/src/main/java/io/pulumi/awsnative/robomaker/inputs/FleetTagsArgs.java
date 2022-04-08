@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * A key-value pair to associate with a resource.
- * 
  */
 public final class FleetTagsArgs extends io.pulumi.resources.ResourceArgs {
 

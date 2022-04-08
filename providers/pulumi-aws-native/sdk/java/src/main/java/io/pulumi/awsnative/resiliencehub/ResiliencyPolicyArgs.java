@@ -20,7 +20,6 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Data Location Constraint of the Policy.
-     * 
      */
     @Import(name="dataLocationConstraint")
       private final @Nullable Output<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint;
@@ -38,7 +37,6 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Description of Resiliency Policy.
-     * 
      */
     @Import(name="policyDescription")
       private final @Nullable Output<String> policyDescription;
@@ -49,7 +47,6 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of Resiliency Policy.
-     * 
      */
     @Import(name="policyName", required=true)
       private final Output<String> policyName;
@@ -67,7 +64,6 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resiliency Policy Tier.
-     * 
      */
     @Import(name="tier", required=true)
       private final Output<ResiliencyPolicyTier> tier;

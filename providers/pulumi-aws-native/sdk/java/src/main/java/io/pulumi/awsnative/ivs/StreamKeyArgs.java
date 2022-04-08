@@ -18,7 +18,6 @@ public final class StreamKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Channel ARN for the stream.
-     * 
      */
     @Import(name="channelArn", required=true)
       private final Output<String> channelArn;
@@ -29,7 +28,6 @@ public final class StreamKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of key-value pairs that contain metadata for the asset model.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<StreamKeyTagArgs>> tags;

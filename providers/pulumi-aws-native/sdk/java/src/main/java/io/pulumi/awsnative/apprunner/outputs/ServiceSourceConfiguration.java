@@ -17,7 +17,6 @@ public final class ServiceSourceConfiguration {
     private final @Nullable ServiceAuthenticationConfiguration authenticationConfiguration;
     /**
      * Auto Deployment enabled
-     * 
      */
     private final @Nullable Boolean autoDeploymentsEnabled;
     private final @Nullable ServiceCodeRepository codeRepository;
@@ -40,7 +39,6 @@ public final class ServiceSourceConfiguration {
     }
     /**
      * Auto Deployment enabled
-     * 
     */
     public Optional<Boolean> getAutoDeploymentsEnabled() {
         return Optional.ofNullable(this.autoDeploymentsEnabled);

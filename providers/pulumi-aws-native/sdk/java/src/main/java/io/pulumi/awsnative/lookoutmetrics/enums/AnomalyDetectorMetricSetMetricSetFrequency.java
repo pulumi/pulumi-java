@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A frequency period to aggregate the data
-     * 
      */
     @EnumType
     public enum AnomalyDetectorMetricSetMetricSetFrequency {

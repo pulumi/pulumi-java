@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of addresses in the IPSet, use IPV4 for IPV4 IP addresses, IPV6 for IPV6 address.
-     * 
      */
     @EnumType
     public enum IPSetIPAddressVersion {

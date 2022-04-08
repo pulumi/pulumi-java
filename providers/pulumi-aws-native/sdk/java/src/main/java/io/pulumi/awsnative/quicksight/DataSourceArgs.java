@@ -33,7 +33,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      *             existing data source. If the <code>AlternateDataSourceParameters</code> list is null,
      *             the <code>Credentials</code> originally used with this <code>DataSourceParameters</code>
      *             are automatically allowed.</p>
-     * 
      */
     @Import(name="alternateDataSourceParameters")
       private final @Nullable Output<List<DataSourceParametersArgs>> alternateDataSourceParameters;
@@ -79,7 +78,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <p>A display name for the data source.</p>
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -90,7 +88,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <p>A list of resource permissions on the data source.</p>
-     * 
      */
     @Import(name="permissions")
       private final @Nullable Output<List<DataSourceResourcePermissionArgs>> permissions;
@@ -108,7 +105,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.</p>
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<DataSourceTagArgs>> tags;

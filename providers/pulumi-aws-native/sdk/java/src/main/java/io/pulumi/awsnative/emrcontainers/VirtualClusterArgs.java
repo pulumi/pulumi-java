@@ -19,7 +19,6 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Container provider of the virtual cluster.
-     * 
      */
     @Import(name="containerProvider", required=true)
       private final Output<VirtualClusterContainerProviderArgs> containerProvider;
@@ -30,7 +29,6 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the virtual cluster.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -41,7 +39,6 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this virtual cluster.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<VirtualClusterTagArgs>> tags;

@@ -16,37 +16,30 @@ import javax.annotation.Nullable;
 public final class GetRepositoryResult {
     /**
      * The ARN of the repository.
-     * 
      */
     private final @Nullable String arn;
     /**
      * A text description of the repository.
-     * 
      */
     private final @Nullable String description;
     /**
      * A list of external connections associated with the repository.
-     * 
      */
     private final @Nullable List<String> externalConnections;
     /**
      * The name of the repository. This is used for GetAtt
-     * 
      */
     private final @Nullable String name;
     /**
      * The access control resource policy on the provided repository.
-     * 
      */
     private final @Nullable Object permissionsPolicyDocument;
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     private final @Nullable List<RepositoryTag> tags;
     /**
      * A list of upstream repositories associated with the repository.
-     * 
      */
     private final @Nullable List<String> upstreams;
 
@@ -70,49 +63,42 @@ public final class GetRepositoryResult {
 
     /**
      * The ARN of the repository.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * A text description of the repository.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A list of external connections associated with the repository.
-     * 
     */
     public List<String> getExternalConnections() {
         return this.externalConnections == null ? List.of() : this.externalConnections;
     }
     /**
      * The name of the repository. This is used for GetAtt
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The access control resource policy on the provided repository.
-     * 
     */
     public Optional<Object> getPermissionsPolicyDocument() {
         return Optional.ofNullable(this.permissionsPolicyDocument);
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
     */
     public List<RepositoryTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * A list of upstream repositories associated with the repository.
-     * 
     */
     public List<String> getUpstreams() {
         return this.upstreams == null ? List.of() : this.upstreams;

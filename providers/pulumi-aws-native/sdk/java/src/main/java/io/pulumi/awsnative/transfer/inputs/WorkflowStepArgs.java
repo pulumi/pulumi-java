@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The basic building block of a workflow.
- * 
  */
 public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Details for a step that performs a file copy.
-     * 
      */
     @Import(name="copyStepDetails")
       private final @Nullable Output<WorkflowStepCopyStepDetailsPropertiesArgs> copyStepDetails;
@@ -35,7 +33,6 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Details for a step that invokes a lambda function.
-     * 
      */
     @Import(name="customStepDetails")
       private final @Nullable Output<WorkflowStepCustomStepDetailsPropertiesArgs> customStepDetails;
@@ -46,7 +43,6 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Details for a step that deletes the file.
-     * 
      */
     @Import(name="deleteStepDetails")
       private final @Nullable Output<WorkflowStepDeleteStepDetailsPropertiesArgs> deleteStepDetails;
@@ -57,7 +53,6 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Details for a step that creates one or more tags.
-     * 
      */
     @Import(name="tagStepDetails")
       private final @Nullable Output<WorkflowStepTagStepDetailsPropertiesArgs> tagStepDetails;

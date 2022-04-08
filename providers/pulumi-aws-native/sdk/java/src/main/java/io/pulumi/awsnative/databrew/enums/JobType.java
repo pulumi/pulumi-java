@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Job type
-     * 
      */
     @EnumType
     public enum JobType {

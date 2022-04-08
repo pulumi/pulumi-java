@@ -18,7 +18,6 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The target architecture of the robot.
-     * 
      */
     @Import(name="architecture", required=true)
       private final Output<RobotArchitecture> architecture;
@@ -29,7 +28,6 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the fleet.
-     * 
      */
     @Import(name="fleet")
       private final @Nullable Output<String> fleet;
@@ -40,7 +38,6 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Greengrass group id.
-     * 
      */
     @Import(name="greengrassGroupId", required=true)
       private final Output<String> greengrassGroupId;
@@ -51,7 +48,6 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name for the robot.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

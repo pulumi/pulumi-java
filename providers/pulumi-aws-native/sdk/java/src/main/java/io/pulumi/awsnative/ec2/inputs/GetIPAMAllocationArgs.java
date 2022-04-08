@@ -21,7 +21,6 @@ public final class GetIPAMAllocationArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Id of the allocation.
-     * 
      */
     @Import(name="ipamPoolAllocationId", required=true)
       private final String ipamPoolAllocationId;
@@ -32,7 +31,6 @@ public final class GetIPAMAllocationArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Id of the IPAM Pool.
-     * 
      */
     @Import(name="ipamPoolId", required=true)
       private final String ipamPoolId;

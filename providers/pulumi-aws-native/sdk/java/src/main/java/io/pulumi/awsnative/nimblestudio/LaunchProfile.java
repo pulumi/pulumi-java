@@ -16,20 +16,17 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a launch profile which delegates access to a collection of studio components to studio users
- * 
  */
 @ResourceType(type="aws-native:nimblestudio:LaunchProfile")
 public class LaunchProfile extends io.pulumi.resources.CustomResource {
     /**
      * <p>The description.</p>
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return <p>The description.</p>
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
@@ -37,7 +34,6 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
     /**
      * <p>Specifies the IDs of the EC2 subnets where streaming sessions will be accessible from.
      *             These subnets must support the specified instance types. </p>
-     * 
      */
     @Export(name="ec2SubnetIds", type=List.class, parameters={String.class})
     private Output<List<String>> ec2SubnetIds;
@@ -45,7 +41,6 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
     /**
      * @return <p>Specifies the IDs of the EC2 subnets where streaming sessions will be accessible from.
      *             These subnets must support the specified instance types. </p>
-     * 
      */
     public Output<List<String>> getEc2SubnetIds() {
         return this.ec2SubnetIds;
@@ -59,7 +54,6 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
     /**
      * <p>The version number of the protocol that is used by the launch profile. The only valid
      *             version is "2021-03-31".</p>
-     * 
      */
     @Export(name="launchProfileProtocolVersions", type=List.class, parameters={String.class})
     private Output<List<String>> launchProfileProtocolVersions;
@@ -67,21 +61,18 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
     /**
      * @return <p>The version number of the protocol that is used by the launch profile. The only valid
      *             version is "2021-03-31".</p>
-     * 
      */
     public Output<List<String>> getLaunchProfileProtocolVersions() {
         return this.launchProfileProtocolVersions;
     }
     /**
      * <p>The name for the launch profile.</p>
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return <p>The name for the launch profile.</p>
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -95,7 +86,6 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
     /**
      * <p>Unique identifiers for a collection of studio components that can be used with this
      *             launch profile.</p>
-     * 
      */
     @Export(name="studioComponentIds", type=List.class, parameters={String.class})
     private Output<List<String>> studioComponentIds;
@@ -103,21 +93,18 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
     /**
      * @return <p>Unique identifiers for a collection of studio components that can be used with this
      *             launch profile.</p>
-     * 
      */
     public Output<List<String>> getStudioComponentIds() {
         return this.studioComponentIds;
     }
     /**
      * <p>The studio ID. </p>
-     * 
      */
     @Export(name="studioId", type=String.class, parameters={})
     private Output<String> studioId;
 
     /**
      * @return <p>The studio ID. </p>
-     * 
      */
     public Output<String> getStudioId() {
         return this.studioId;

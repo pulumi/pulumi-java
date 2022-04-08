@@ -14,48 +14,41 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Lightsail::StaticIp
- * 
  */
 @ResourceType(type="aws-native:lightsail:StaticIp")
 public class StaticIp extends io.pulumi.resources.CustomResource {
     /**
      * The instance where the static IP is attached.
-     * 
      */
     @Export(name="attachedTo", type=String.class, parameters={})
     private Output</* @Nullable */ String> attachedTo;
 
     /**
      * @return The instance where the static IP is attached.
-     * 
      */
     public Output</* @Nullable */ String> getAttachedTo() {
         return this.attachedTo;
     }
     /**
      * The static IP address.
-     * 
      */
     @Export(name="ipAddress", type=String.class, parameters={})
     private Output<String> ipAddress;
 
     /**
      * @return The static IP address.
-     * 
      */
     public Output<String> getIpAddress() {
         return this.ipAddress;
     }
     /**
      * A Boolean value indicating whether the static IP is attached.
-     * 
      */
     @Export(name="isAttached", type=Boolean.class, parameters={})
     private Output<Boolean> isAttached;
 
     /**
      * @return A Boolean value indicating whether the static IP is attached.
-     * 
      */
     public Output<Boolean> getIsAttached() {
         return this.isAttached;
@@ -68,14 +61,12 @@ public class StaticIp extends io.pulumi.resources.CustomResource {
     }
     /**
      * The name of the static IP address.
-     * 
      */
     @Export(name="staticIpName", type=String.class, parameters={})
     private Output<String> staticIpName;
 
     /**
      * @return The name of the static IP address.
-     * 
      */
     public Output<String> getStaticIpName() {
         return this.staticIpName;

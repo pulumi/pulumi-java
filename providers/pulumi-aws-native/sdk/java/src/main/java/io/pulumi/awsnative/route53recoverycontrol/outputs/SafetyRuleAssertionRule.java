@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class SafetyRuleAssertionRule {
     /**
      * The routing controls that are part of transactions that are evaluated to determine if a request to change a routing control state is allowed. For example, you might include three routing controls, one for each of three AWS Regions.
-     * 
      */
     private final List<String> assertedControls;
     /**
      * An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail. This helps prevent "flapping" of state. The wait period is 5000 ms by default, but you can choose a custom value.
-     * 
      */
     private final Integer waitPeriodMs;
 
@@ -32,14 +30,12 @@ public final class SafetyRuleAssertionRule {
 
     /**
      * The routing controls that are part of transactions that are evaluated to determine if a request to change a routing control state is allowed. For example, you might include three routing controls, one for each of three AWS Regions.
-     * 
     */
     public List<String> getAssertedControls() {
         return this.assertedControls;
     }
     /**
      * An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail. This helps prevent "flapping" of state. The wait period is 5000 ms by default, but you can choose a custom value.
-     * 
     */
     public Integer getWaitPeriodMs() {
         return this.waitPeriodMs;

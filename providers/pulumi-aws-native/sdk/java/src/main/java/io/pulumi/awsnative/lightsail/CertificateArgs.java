@@ -18,7 +18,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name for the certificate.
-     * 
      */
     @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
@@ -29,7 +28,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The domain name (e.g., example.com ) for the certificate.
-     * 
      */
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
@@ -40,7 +38,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of strings that specify the alternate domains (e.g., example2.com) and subdomains (e.g., blog.example.com) for the certificate.
-     * 
      */
     @Import(name="subjectAlternativeNames")
       private final @Nullable Output<List<String>> subjectAlternativeNames;
@@ -51,7 +48,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<CertificateTagArgs>> tags;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the type of the dimension.
-     * 
      */
     @EnumType
     public enum DimensionType {

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::EC2::TransitGatewayVpcAttachment
- * 
  */
 @ResourceType(type="aws-native:ec2:TransitGatewayVpcAttachment")
 public class TransitGatewayVpcAttachment extends io.pulumi.resources.CustomResource {
@@ -28,14 +27,12 @@ public class TransitGatewayVpcAttachment extends io.pulumi.resources.CustomResou
     }
     /**
      * The options for the transit gateway vpc attachment.
-     * 
      */
     @Export(name="options", type=OptionsProperties.class, parameters={})
     private Output</* @Nullable */ OptionsProperties> options;
 
     /**
      * @return The options for the transit gateway vpc attachment.
-     * 
      */
     public Output</* @Nullable */ OptionsProperties> getOptions() {
         return this.options;

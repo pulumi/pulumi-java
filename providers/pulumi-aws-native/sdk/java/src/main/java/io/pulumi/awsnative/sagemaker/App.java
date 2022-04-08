@@ -17,104 +17,89 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::SageMaker::App
- * 
  */
 @ResourceType(type="aws-native:sagemaker:App")
 public class App extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the app.
-     * 
      */
     @Export(name="appArn", type=String.class, parameters={})
     private Output<String> appArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the app.
-     * 
      */
     public Output<String> getAppArn() {
         return this.appArn;
     }
     /**
      * The name of the app.
-     * 
      */
     @Export(name="appName", type=String.class, parameters={})
     private Output<String> appName;
 
     /**
      * @return The name of the app.
-     * 
      */
     public Output<String> getAppName() {
         return this.appName;
     }
     /**
      * The type of app.
-     * 
      */
     @Export(name="appType", type=AppType.class, parameters={})
     private Output<AppType> appType;
 
     /**
      * @return The type of app.
-     * 
      */
     public Output<AppType> getAppType() {
         return this.appType;
     }
     /**
      * The domain ID.
-     * 
      */
     @Export(name="domainId", type=String.class, parameters={})
     private Output<String> domainId;
 
     /**
      * @return The domain ID.
-     * 
      */
     public Output<String> getDomainId() {
         return this.domainId;
     }
     /**
      * The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.
-     * 
      */
     @Export(name="resourceSpec", type=AppResourceSpec.class, parameters={})
     private Output</* @Nullable */ AppResourceSpec> resourceSpec;
 
     /**
      * @return The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.
-     * 
      */
     public Output</* @Nullable */ AppResourceSpec> getResourceSpec() {
         return this.resourceSpec;
     }
     /**
      * A list of tags to apply to the app.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={AppTag.class})
     private Output</* @Nullable */ List<AppTag>> tags;
 
     /**
      * @return A list of tags to apply to the app.
-     * 
      */
     public Output</* @Nullable */ List<AppTag>> getTags() {
         return this.tags;
     }
     /**
      * The user profile name.
-     * 
      */
     @Export(name="userProfileName", type=String.class, parameters={})
     private Output<String> userProfileName;
 
     /**
      * @return The user profile name.
-     * 
      */
     public Output<String> getUserProfileName() {
         return this.userProfileName;

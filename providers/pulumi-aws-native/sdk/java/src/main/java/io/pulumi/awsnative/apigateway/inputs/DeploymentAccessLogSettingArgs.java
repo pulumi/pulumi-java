@@ -15,8 +15,7 @@ public final class DeploymentAccessLogSettingArgs extends io.pulumi.resources.Re
     public static final DeploymentAccessLogSettingArgs Empty = new DeploymentAccessLogSettingArgs();
 
     /**
-     * The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-.
-     * 
+     * The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-. 
      */
     @Import(name="destinationArn")
       private final @Nullable Output<String> destinationArn;
@@ -26,8 +25,7 @@ public final class DeploymentAccessLogSettingArgs extends io.pulumi.resources.Re
     }
 
     /**
-     * A single line format of the access logs of data, as specified by selected $context variables. The format must include at least $context.requestId.
-     * 
+     * A single line format of the access logs of data, as specified by selected $context variables. The format must include at least $context.requestId. 
      */
     @Import(name="format")
       private final @Nullable Output<String> format;

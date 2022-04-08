@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The version of a bot used for a bot locale.
- * 
  */
 public final class BotVersionLocaleDetailsArgs extends io.pulumi.resources.ResourceArgs {
 

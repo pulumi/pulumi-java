@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * The targets for the experiment.
- * 
  */
 public final class ExperimentTemplateTargetMapArgs extends io.pulumi.resources.ResourceArgs {
 

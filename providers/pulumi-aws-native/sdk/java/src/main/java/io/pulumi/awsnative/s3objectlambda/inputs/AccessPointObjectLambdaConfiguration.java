@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration to be applied to this Object lambda Access Point. It specifies Supporting Access Point, Transformation Configurations. Customers can also set if they like to enable Cloudwatch metrics for accesses to this Object lambda Access Point. Default setting for Cloudwatch metrics is disable.
- * 
  */
 public final class AccessPointObjectLambdaConfiguration extends io.pulumi.resources.InvokeArgs {
 

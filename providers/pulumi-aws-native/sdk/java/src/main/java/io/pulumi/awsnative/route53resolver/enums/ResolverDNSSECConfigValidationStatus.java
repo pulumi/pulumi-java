@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * ResolverDNSSECValidationStatus, possible values are ENABLING, ENABLED, DISABLING AND DISABLED.
-     * 
      */
     @EnumType
     public enum ResolverDNSSECConfigValidationStatus {

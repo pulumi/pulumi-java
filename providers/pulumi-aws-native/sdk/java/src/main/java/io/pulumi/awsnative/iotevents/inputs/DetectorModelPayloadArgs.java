@@ -13,7 +13,6 @@ import java.util.Objects;
  * Information needed to configure the payload.
  * 
  * By default, AWS IoT Events generates a standard payload in JSON for any action. This action payload contains all attribute-value pairs that have the information about the detector model instance and the event triggered the action. To configure the action payload, you can use `contentExpression`.
- * 
  */
 public final class DetectorModelPayloadArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DetectorModelPayloadArgs extends io.pulumi.resources.Resource
 
     /**
      * The content of the payload. You can use a string expression that includes quoted strings (`'<string>'`), variables (`$variable.<variable-name>`), input values (`$input.<input-name>.<path-to-datum>`), string concatenations, and quoted strings that contain `${}` as the content. The recommended maximum size of a content expression is 1 KB.
-     * 
      */
     @Import(name="contentExpression", required=true)
       private final Output<String> contentExpression;
@@ -32,7 +30,6 @@ public final class DetectorModelPayloadArgs extends io.pulumi.resources.Resource
 
     /**
      * The value of the payload type can be either `STRING` or `JSON`.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * <p>Amazon Aurora with PostgreSQL compatibility parameters.</p>
- * 
  */
 public final class DataSourceAuroraPostgreSqlParameters extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class DataSourceAuroraPostgreSqlParameters extends io.pulumi.resour
 
     /**
      * <p>Database.</p>
-     * 
      */
     @Import(name="database", required=true)
       private final String database;
@@ -30,7 +28,6 @@ public final class DataSourceAuroraPostgreSqlParameters extends io.pulumi.resour
 
     /**
      * <p>Host.</p>
-     * 
      */
     @Import(name="host", required=true)
       private final String host;
@@ -41,7 +38,6 @@ public final class DataSourceAuroraPostgreSqlParameters extends io.pulumi.resour
 
     /**
      * <p>Port.</p>
-     * 
      */
     @Import(name="port", required=true)
       private final Double port;

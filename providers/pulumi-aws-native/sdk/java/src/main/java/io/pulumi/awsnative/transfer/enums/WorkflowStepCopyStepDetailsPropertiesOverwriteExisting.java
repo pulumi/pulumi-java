@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A flag that indicates whether or not to overwrite an existing file of the same name. The default is FALSE.
-     * 
      */
     @EnumType
     public enum WorkflowStepCopyStepDetailsPropertiesOverwriteExisting {

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The specific NFS version that you want DataSync to use to mount your NFS share.
-     * 
      */
     @EnumType
     public enum LocationNFSMountOptionsVersion {

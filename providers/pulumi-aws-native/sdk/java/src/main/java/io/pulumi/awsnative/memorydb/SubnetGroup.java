@@ -15,76 +15,65 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::MemoryDB::SubnetGroup resource creates an Amazon MemoryDB Subnet Group.
- * 
  */
 @ResourceType(type="aws-native:memorydb:SubnetGroup")
 public class SubnetGroup extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the subnet group.
-     * 
      */
     @Export(name="aRN", type=String.class, parameters={})
     private Output<String> aRN;
 
     /**
      * @return The Amazon Resource Name (ARN) of the subnet group.
-     * 
      */
     public Output<String> getARN() {
         return this.aRN;
     }
     /**
      * An optional description of the subnet group.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return An optional description of the subnet group.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.
-     * 
      */
     @Export(name="subnetGroupName", type=String.class, parameters={})
     private Output<String> subnetGroupName;
 
     /**
      * @return The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.
-     * 
      */
     public Output<String> getSubnetGroupName() {
         return this.subnetGroupName;
     }
     /**
      * A list of VPC subnet IDs for the subnet group.
-     * 
      */
     @Export(name="subnetIds", type=List.class, parameters={String.class})
     private Output<List<String>> subnetIds;
 
     /**
      * @return A list of VPC subnet IDs for the subnet group.
-     * 
      */
     public Output<List<String>> getSubnetIds() {
         return this.subnetIds;
     }
     /**
      * An array of key-value pairs to apply to this subnet group.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={SubnetGroupTag.class})
     private Output</* @Nullable */ List<SubnetGroupTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this subnet group.
-     * 
      */
     public Output</* @Nullable */ List<SubnetGroupTag>> getTags() {
         return this.tags;

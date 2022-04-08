@@ -18,7 +18,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Schedule cron
-     * 
      */
     @Import(name="cronExpression", required=true)
       private final Output<String> cronExpression;
@@ -36,7 +35,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Schedule Name
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

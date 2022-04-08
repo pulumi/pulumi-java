@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of AWS::Location::Tracker Resource Type
- * 
  */
 @ResourceType(type="aws-native:location:Tracker")
 public class Tracker extends io.pulumi.resources.CustomResource {

@@ -16,12 +16,10 @@ public final class GetVirtualClusterResult {
     private final @Nullable String arn;
     /**
      * Id of the virtual cluster.
-     * 
      */
     private final @Nullable String id;
     /**
      * An array of key-value pairs to apply to this virtual cluster.
-     * 
      */
     private final @Nullable List<VirtualClusterTag> tags;
 
@@ -40,14 +38,12 @@ public final class GetVirtualClusterResult {
     }
     /**
      * Id of the virtual cluster.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * An array of key-value pairs to apply to this virtual cluster.
-     * 
     */
     public List<VirtualClusterTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

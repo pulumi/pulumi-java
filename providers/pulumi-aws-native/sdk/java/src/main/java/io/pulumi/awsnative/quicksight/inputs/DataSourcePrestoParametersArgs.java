@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * <p>Presto parameters.</p>
- * 
  */
 public final class DataSourcePrestoParametersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DataSourcePrestoParametersArgs extends io.pulumi.resources.Re
 
     /**
      * <p>Catalog.</p>
-     * 
      */
     @Import(name="catalog", required=true)
       private final Output<String> catalog;
@@ -31,7 +29,6 @@ public final class DataSourcePrestoParametersArgs extends io.pulumi.resources.Re
 
     /**
      * <p>Host.</p>
-     * 
      */
     @Import(name="host", required=true)
       private final Output<String> host;
@@ -42,7 +39,6 @@ public final class DataSourcePrestoParametersArgs extends io.pulumi.resources.Re
 
     /**
      * <p>Port.</p>
-     * 
      */
     @Import(name="port", required=true)
       private final Output<Double> port;

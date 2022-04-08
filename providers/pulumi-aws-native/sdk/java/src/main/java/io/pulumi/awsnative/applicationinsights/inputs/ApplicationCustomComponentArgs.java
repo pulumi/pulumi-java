@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The custom grouped component.
- * 
  */
 public final class ApplicationCustomComponentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ApplicationCustomComponentArgs extends io.pulumi.resources.Re
 
     /**
      * The name of the component.
-     * 
      */
     @Import(name="componentName", required=true)
       private final Output<String> componentName;
@@ -31,7 +29,6 @@ public final class ApplicationCustomComponentArgs extends io.pulumi.resources.Re
 
     /**
      * The list of resource ARNs that belong to the component.
-     * 
      */
     @Import(name="resourceList", required=true)
       private final Output<List<String>> resourceList;

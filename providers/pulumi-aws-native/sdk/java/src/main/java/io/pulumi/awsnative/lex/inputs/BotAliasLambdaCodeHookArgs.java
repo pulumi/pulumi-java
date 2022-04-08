@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Contains information about code hooks that Amazon Lex calls during a conversation.
- * 
  */
 public final class BotAliasLambdaCodeHookArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class BotAliasLambdaCodeHookArgs extends io.pulumi.resources.Resour
 
     /**
      * The version of the request-response that you want Amazon Lex to use to invoke your Lambda function.
-     * 
      */
     @Import(name="codeHookInterfaceVersion", required=true)
       private final Output<String> codeHookInterfaceVersion;
@@ -30,7 +28,6 @@ public final class BotAliasLambdaCodeHookArgs extends io.pulumi.resources.Resour
 
     /**
      * The Amazon Resource Name (ARN) of the Lambda function.
-     * 
      */
     @Import(name="lambdaArn", required=true)
       private final Output<String> lambdaArn;

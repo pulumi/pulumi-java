@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Data Location Constraint of the Policy.
-     * 
      */
     @EnumType
     public enum ResiliencyPolicyDataLocationConstraint {

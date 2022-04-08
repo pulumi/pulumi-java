@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for SSO InstanceAccessControlAttributeConfiguration
- * 
  */
 @ResourceType(type="aws-native:sso:InstanceAccessControlAttributeConfiguration")
 public class InstanceAccessControlAttributeConfiguration extends io.pulumi.resources.CustomResource {
@@ -28,28 +27,24 @@ public class InstanceAccessControlAttributeConfiguration extends io.pulumi.resou
     }
     /**
      * The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.
-     * 
      */
     @Export(name="instanceAccessControlAttributeConfiguration", type=InstanceAccessControlAttributeConfigurationProperties.class, parameters={})
     private Output</* @Nullable */ InstanceAccessControlAttributeConfigurationProperties> instanceAccessControlAttributeConfiguration;
 
     /**
      * @return The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.
-     * 
      */
     public Output</* @Nullable */ InstanceAccessControlAttributeConfigurationProperties> getInstanceAccessControlAttributeConfiguration() {
         return this.instanceAccessControlAttributeConfiguration;
     }
     /**
      * The ARN of the AWS SSO instance under which the operation will be executed.
-     * 
      */
     @Export(name="instanceArn", type=String.class, parameters={})
     private Output<String> instanceArn;
 
     /**
      * @return The ARN of the AWS SSO instance under which the operation will be executed.
-     * 
      */
     public Output<String> getInstanceArn() {
         return this.instanceArn;

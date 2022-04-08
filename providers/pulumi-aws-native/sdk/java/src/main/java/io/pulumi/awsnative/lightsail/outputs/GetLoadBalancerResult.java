@@ -16,28 +16,23 @@ import javax.annotation.Nullable;
 public final class GetLoadBalancerResult {
     /**
      * The names of the instances attached to the load balancer.
-     * 
      */
     private final @Nullable List<String> attachedInstances;
     /**
      * The path you provided to perform the load balancer health check. If you didn't specify a health check path, Lightsail uses the root path of your website (e.g., "/").
-     * 
      */
     private final @Nullable String healthCheckPath;
     private final @Nullable String loadBalancerArn;
     /**
      * Configuration option to enable session stickiness.
-     * 
      */
     private final @Nullable Boolean sessionStickinessEnabled;
     /**
      * Configuration option to adjust session stickiness cookie duration parameter.
-     * 
      */
     private final @Nullable String sessionStickinessLBCookieDurationSeconds;
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     private final @Nullable List<LoadBalancerTag> tags;
 
@@ -59,14 +54,12 @@ public final class GetLoadBalancerResult {
 
     /**
      * The names of the instances attached to the load balancer.
-     * 
     */
     public List<String> getAttachedInstances() {
         return this.attachedInstances == null ? List.of() : this.attachedInstances;
     }
     /**
      * The path you provided to perform the load balancer health check. If you didn't specify a health check path, Lightsail uses the root path of your website (e.g., "/").
-     * 
     */
     public Optional<String> getHealthCheckPath() {
         return Optional.ofNullable(this.healthCheckPath);
@@ -76,21 +69,18 @@ public final class GetLoadBalancerResult {
     }
     /**
      * Configuration option to enable session stickiness.
-     * 
     */
     public Optional<Boolean> getSessionStickinessEnabled() {
         return Optional.ofNullable(this.sessionStickinessEnabled);
     }
     /**
      * Configuration option to adjust session stickiness cookie duration parameter.
-     * 
     */
     public Optional<String> getSessionStickinessLBCookieDurationSeconds() {
         return Optional.ofNullable(this.sessionStickinessLBCookieDurationSeconds);
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
     */
     public List<LoadBalancerTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

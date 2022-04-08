@@ -9,8 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * How to handle logs that satisfy the filter's conditions and requirement.
-     * 
+     * How to handle logs that satisfy the filter's conditions and requirement. 
      */
     @EnumType
     public enum LoggingConfigurationFilterBehavior {

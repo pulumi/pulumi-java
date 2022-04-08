@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A file metadata value that shows the last time a file was accessed (that is, when the file was read or written to).
-     * 
      */
     @EnumType
     public enum TaskOptionsAtime {

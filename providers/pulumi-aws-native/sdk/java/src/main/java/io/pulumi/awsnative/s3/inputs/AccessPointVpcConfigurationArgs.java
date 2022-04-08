@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Virtual Private Cloud (VPC) configuration for a bucket access point.
- * 
  */
 public final class AccessPointVpcConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AccessPointVpcConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * If this field is specified, this access point will only allow connections from the specified VPC ID.
-     * 
      */
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;

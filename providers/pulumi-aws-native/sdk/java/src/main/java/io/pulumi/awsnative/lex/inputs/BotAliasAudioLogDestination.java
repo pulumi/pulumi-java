@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The location of audio log files collected when conversation logging is enabled for a bot.
- * 
  */
 public final class BotAliasAudioLogDestination extends io.pulumi.resources.InvokeArgs {
 

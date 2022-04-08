@@ -17,161 +17,246 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for Metric Stream
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myMetricStream = new AwsNative.CloudWatch.MetricStream("myMetricStream", new AwsNative.CloudWatch.MetricStreamArgs
+ *         {
+ *             OutputFormat = "json",
+ *             FirehoseArn = "arn:aws:firehose:us-east-1:123456789012:deliverystream/MyDeliveryStream",
+ *             RoleArn = "arn:aws:iam::123456789012:role/service-role/MyRole",
+ *             IncludeFilters = 
+ *             {
+ *                 new AwsNative.CloudWatch.Inputs.MetricStreamFilterArgs
+ *                 {
+ *                     Namespace = "AWS/ELB",
+ *                 },
+ *                 new AwsNative.CloudWatch.Inputs.MetricStreamFilterArgs
+ *                 {
+ *                     Namespace = "AWS/EC2",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudwatch.NewMetricStream(ctx, "myMetricStream", &cloudwatch.MetricStreamArgs{
+ * 			OutputFormat: pulumi.String("json"),
+ * 			FirehoseArn:  pulumi.String("arn:aws:firehose:us-east-1:123456789012:deliverystream/MyDeliveryStream"),
+ * 			RoleArn:      pulumi.String("arn:aws:iam::123456789012:role/service-role/MyRole"),
+ * 			IncludeFilters: []cloudwatch.MetricStreamFilterArgs{
+ * 				&cloudwatch.MetricStreamFilterArgs{
+ * 					Namespace: pulumi.String("AWS/ELB"),
+ * 				},
+ * 				&cloudwatch.MetricStreamFilterArgs{
+ * 					Namespace: pulumi.String("AWS/EC2"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myMetricStream = new aws_native.cloudwatch.MetricStream("myMetricStream", {
+ *     outputFormat: "json",
+ *     firehoseArn: "arn:aws:firehose:us-east-1:123456789012:deliverystream/MyDeliveryStream",
+ *     roleArn: "arn:aws:iam::123456789012:role/service-role/MyRole",
+ *     includeFilters: [
+ *         {
+ *             namespace: "AWS/ELB",
+ *         },
+ *         {
+ *             namespace: "AWS/EC2",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_metric_stream = aws_native.cloudwatch.MetricStream("myMetricStream",
+ *     output_format="json",
+ *     firehose_arn="arn:aws:firehose:us-east-1:123456789012:deliverystream/MyDeliveryStream",
+ *     role_arn="arn:aws:iam::123456789012:role/service-role/MyRole",
+ *     include_filters=[
+ *         aws_native.cloudwatch.MetricStreamFilterArgs(
+ *             namespace="AWS/ELB",
+ *         ),
+ *         aws_native.cloudwatch.MetricStreamFilterArgs(
+ *             namespace="AWS/EC2",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:cloudwatch:MetricStream")
 public class MetricStream extends io.pulumi.resources.CustomResource {
     /**
      * Amazon Resource Name of the metric stream.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Amazon Resource Name of the metric stream.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The date of creation of the metric stream.
-     * 
      */
     @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
      * @return The date of creation of the metric stream.
-     * 
      */
     public Output<String> getCreationDate() {
         return this.creationDate;
     }
     /**
      * Define which metrics will be not streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
-     * 
      */
     @Export(name="excludeFilters", type=List.class, parameters={MetricStreamFilter.class})
     private Output</* @Nullable */ List<MetricStreamFilter>> excludeFilters;
 
     /**
      * @return Define which metrics will be not streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
-     * 
      */
     public Output</* @Nullable */ List<MetricStreamFilter>> getExcludeFilters() {
         return this.excludeFilters;
     }
     /**
      * The ARN of the Kinesis Firehose where to stream the data.
-     * 
      */
     @Export(name="firehoseArn", type=String.class, parameters={})
     private Output<String> firehoseArn;
 
     /**
      * @return The ARN of the Kinesis Firehose where to stream the data.
-     * 
      */
     public Output<String> getFirehoseArn() {
         return this.firehoseArn;
     }
     /**
      * Define which metrics will be streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
-     * 
      */
     @Export(name="includeFilters", type=List.class, parameters={MetricStreamFilter.class})
     private Output</* @Nullable */ List<MetricStreamFilter>> includeFilters;
 
     /**
      * @return Define which metrics will be streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
-     * 
      */
     public Output</* @Nullable */ List<MetricStreamFilter>> getIncludeFilters() {
         return this.includeFilters;
     }
     /**
      * The date of the last update of the metric stream.
-     * 
      */
     @Export(name="lastUpdateDate", type=String.class, parameters={})
     private Output<String> lastUpdateDate;
 
     /**
      * @return The date of the last update of the metric stream.
-     * 
      */
     public Output<String> getLastUpdateDate() {
         return this.lastUpdateDate;
     }
     /**
      * Name of the metric stream.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Name of the metric stream.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The output format of the data streamed to the Kinesis Firehose.
-     * 
      */
     @Export(name="outputFormat", type=String.class, parameters={})
     private Output<String> outputFormat;
 
     /**
      * @return The output format of the data streamed to the Kinesis Firehose.
-     * 
      */
     public Output<String> getOutputFormat() {
         return this.outputFormat;
     }
     /**
      * The ARN of the role that provides access to the Kinesis Firehose.
-     * 
      */
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
      * @return The ARN of the role that provides access to the Kinesis Firehose.
-     * 
      */
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
     /**
      * Displays the state of the Metric Stream.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return Displays the state of the Metric Stream.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * A set of tags to assign to the delivery stream.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={MetricStreamTag.class})
     private Output</* @Nullable */ List<MetricStreamTag>> tags;
 
     /**
      * @return A set of tags to assign to the delivery stream.
-     * 
      */
     public Output</* @Nullable */ List<MetricStreamTag>> getTags() {
         return this.tags;

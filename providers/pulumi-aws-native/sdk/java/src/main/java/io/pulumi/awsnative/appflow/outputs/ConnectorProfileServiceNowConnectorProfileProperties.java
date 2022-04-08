@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ConnectorProfileServiceNowConnectorProfileProperties {
     /**
      * The location of the ServiceNow resource
-     * 
      */
     private final String instanceUrl;
 
@@ -22,7 +21,6 @@ public final class ConnectorProfileServiceNowConnectorProfileProperties {
 
     /**
      * The location of the ServiceNow resource
-     * 
     */
     public String getInstanceUrl() {
         return this.instanceUrl;

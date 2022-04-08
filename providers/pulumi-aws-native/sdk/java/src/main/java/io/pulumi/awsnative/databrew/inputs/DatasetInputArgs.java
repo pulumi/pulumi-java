@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Input
- * 
  */
 public final class DatasetInputArgs extends io.pulumi.resources.ResourceArgs {
 

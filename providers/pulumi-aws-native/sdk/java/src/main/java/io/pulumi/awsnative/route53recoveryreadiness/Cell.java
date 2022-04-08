@@ -15,76 +15,65 @@ import javax.annotation.Nullable;
 
 /**
  * The API Schema for AWS Route53 Recovery Readiness Cells.
- * 
  */
 @ResourceType(type="aws-native:route53recoveryreadiness:Cell")
 public class Cell extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the cell.
-     * 
      */
     @Export(name="cellArn", type=String.class, parameters={})
     private Output<String> cellArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the cell.
-     * 
      */
     public Output<String> getCellArn() {
         return this.cellArn;
     }
     /**
      * The name of the cell to create.
-     * 
      */
     @Export(name="cellName", type=String.class, parameters={})
     private Output<String> cellName;
 
     /**
      * @return The name of the cell to create.
-     * 
      */
     public Output<String> getCellName() {
         return this.cellName;
     }
     /**
      * A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in nested cells. For example, Availability Zones within specific Regions.
-     * 
      */
     @Export(name="cells", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> cells;
 
     /**
      * @return A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in nested cells. For example, Availability Zones within specific Regions.
-     * 
      */
     public Output</* @Nullable */ List<String>> getCells() {
         return this.cells;
     }
     /**
      * The readiness scope for the cell, which can be a cell Amazon Resource Name (ARN) or a recovery group ARN. This is a list but currently can have only one element.
-     * 
      */
     @Export(name="parentReadinessScopes", type=List.class, parameters={String.class})
     private Output<List<String>> parentReadinessScopes;
 
     /**
      * @return The readiness scope for the cell, which can be a cell Amazon Resource Name (ARN) or a recovery group ARN. This is a list but currently can have only one element.
-     * 
      */
     public Output<List<String>> getParentReadinessScopes() {
         return this.parentReadinessScopes;
     }
     /**
      * A collection of tags associated with a resource
-     * 
      */
     @Export(name="tags", type=List.class, parameters={CellTag.class})
     private Output</* @Nullable */ List<CellTag>> tags;
 
     /**
      * @return A collection of tags associated with a resource
-     * 
      */
     public Output</* @Nullable */ List<CellTag>> getTags() {
         return this.tags;

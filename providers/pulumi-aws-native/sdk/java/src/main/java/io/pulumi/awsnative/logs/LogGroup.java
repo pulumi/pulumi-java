@@ -16,76 +16,65 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::Logs::LogGroup
- * 
  */
 @ResourceType(type="aws-native:logs:LogGroup")
 public class LogGroup extends io.pulumi.resources.CustomResource {
     /**
      * The CloudWatch log group ARN.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The CloudWatch log group ARN.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The Amazon Resource Name (ARN) of the CMK to use when encrypting log data.
-     * 
      */
     @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
     /**
      * @return The Amazon Resource Name (ARN) of the CMK to use when encrypting log data.
-     * 
      */
     public Output</* @Nullable */ String> getKmsKeyId() {
         return this.kmsKeyId;
     }
     /**
      * The name of the log group. If you don't specify a name, AWS CloudFormation generates a unique ID for the log group.
-     * 
      */
     @Export(name="logGroupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> logGroupName;
 
     /**
      * @return The name of the log group. If you don't specify a name, AWS CloudFormation generates a unique ID for the log group.
-     * 
      */
     public Output</* @Nullable */ String> getLogGroupName() {
         return this.logGroupName;
     }
     /**
      * The number of days to retain the log events in the specified log group. Possible values are: 1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, and 3653.
-     * 
      */
     @Export(name="retentionInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionInDays;
 
     /**
      * @return The number of days to retain the log events in the specified log group. Possible values are: 1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, and 3653.
-     * 
      */
     public Output</* @Nullable */ Integer> getRetentionInDays() {
         return this.retentionInDays;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={LogGroupTag.class})
     private Output</* @Nullable */ List<LogGroupTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<LogGroupTag>> getTags() {
         return this.tags;

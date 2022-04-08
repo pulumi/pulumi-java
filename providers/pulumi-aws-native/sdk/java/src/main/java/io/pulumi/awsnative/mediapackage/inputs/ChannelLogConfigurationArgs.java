@@ -16,7 +16,6 @@ public final class ChannelLogConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * Sets a custom AWS CloudWatch log group name for access logs. If a log group name isn't specified, the defaults are used: /aws/MediaPackage/EgressAccessLogs for egress access logs and /aws/MediaPackage/IngressAccessLogs for ingress access logs.
-     * 
      */
     @Import(name="logGroupName")
       private final @Nullable Output<String> logGroupName;

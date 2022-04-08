@@ -19,7 +19,6 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Cluster
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -30,7 +29,6 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of FargateProfile
-     * 
      */
     @Import(name="fargateProfileName")
       private final @Nullable Output<String> fargateProfileName;
@@ -41,7 +39,6 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The IAM policy arn for pods
-     * 
      */
     @Import(name="podExecutionRoleArn", required=true)
       private final Output<String> podExecutionRoleArn;
@@ -66,7 +63,6 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<FargateProfileTagArgs>> tags;

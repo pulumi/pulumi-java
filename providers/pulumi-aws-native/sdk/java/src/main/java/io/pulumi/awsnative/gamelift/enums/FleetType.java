@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates whether to use On-Demand instances or Spot instances for this fleet. If empty, the default is ON_DEMAND. Both categories of instances use identical hardware and configurations based on the instance type selected for this fleet.
-     * 
      */
     @EnumType
     public enum FleetType {

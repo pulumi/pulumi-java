@@ -20,119 +20,735 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for AWS::Athena::WorkGroup
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myAthenaWorkGroup = new AwsNative.Athena.WorkGroup("myAthenaWorkGroup", new AwsNative.Athena.WorkGroupArgs
+ *         {
+ *             Name = "MyCustomWorkGroup",
+ *             Description = "My WorkGroup",
+ *             State = "ENABLED",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.Athena.Inputs.WorkGroupTagArgs
+ *                 {
+ *                     Key = "key1",
+ *                     Value = "value1",
+ *                 },
+ *                 new AwsNative.Athena.Inputs.WorkGroupTagArgs
+ *                 {
+ *                     Key = "key2",
+ *                     Value = "value2",
+ *                 },
+ *             },
+ *             WorkGroupConfiguration = new AwsNative.Athena.Inputs.WorkGroupConfigurationArgs
+ *             {
+ *                 BytesScannedCutoffPerQuery = 200000000,
+ *                 EnforceWorkGroupConfiguration = false,
+ *                 PublishCloudWatchMetricsEnabled = false,
+ *                 RequesterPaysEnabled = true,
+ *                 ResultConfiguration = new AwsNative.Athena.Inputs.WorkGroupResultConfigurationArgs
+ *                 {
+ *                     OutputLocation = "s3://path/to/my/bucket/",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/athena"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := athena.NewWorkGroup(ctx, "myAthenaWorkGroup", &athena.WorkGroupArgs{
+ * 			Name:        pulumi.String("MyCustomWorkGroup"),
+ * 			Description: pulumi.String("My WorkGroup"),
+ * 			State:       "ENABLED",
+ * 			Tags: []athena.WorkGroupTagArgs{
+ * 				&athena.WorkGroupTagArgs{
+ * 					Key:   pulumi.String("key1"),
+ * 					Value: pulumi.String("value1"),
+ * 				},
+ * 				&athena.WorkGroupTagArgs{
+ * 					Key:   pulumi.String("key2"),
+ * 					Value: pulumi.String("value2"),
+ * 				},
+ * 			},
+ * 			WorkGroupConfiguration: &athena.WorkGroupConfigurationArgs{
+ * 				BytesScannedCutoffPerQuery:      pulumi.Int(200000000),
+ * 				EnforceWorkGroupConfiguration:   pulumi.Bool(false),
+ * 				PublishCloudWatchMetricsEnabled: pulumi.Bool(false),
+ * 				RequesterPaysEnabled:            pulumi.Bool(true),
+ * 				ResultConfiguration: &athena.WorkGroupResultConfigurationArgs{
+ * 					OutputLocation: pulumi.String("s3://path/to/my/bucket/"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myAthenaWorkGroup = new aws_native.athena.WorkGroup("myAthenaWorkGroup", {
+ *     name: "MyCustomWorkGroup",
+ *     description: "My WorkGroup",
+ *     state: "ENABLED",
+ *     tags: [
+ *         {
+ *             key: "key1",
+ *             value: "value1",
+ *         },
+ *         {
+ *             key: "key2",
+ *             value: "value2",
+ *         },
+ *     ],
+ *     workGroupConfiguration: {
+ *         bytesScannedCutoffPerQuery: 200000000,
+ *         enforceWorkGroupConfiguration: false,
+ *         publishCloudWatchMetricsEnabled: false,
+ *         requesterPaysEnabled: true,
+ *         resultConfiguration: {
+ *             outputLocation: "s3://path/to/my/bucket/",
+ *         },
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_athena_work_group = aws_native.athena.WorkGroup("myAthenaWorkGroup",
+ *     name="MyCustomWorkGroup",
+ *     description="My WorkGroup",
+ *     state="ENABLED",
+ *     tags=[
+ *         aws_native.athena.WorkGroupTagArgs(
+ *             key="key1",
+ *             value="value1",
+ *         ),
+ *         aws_native.athena.WorkGroupTagArgs(
+ *             key="key2",
+ *             value="value2",
+ *         ),
+ *     ],
+ *     work_group_configuration=aws_native.athena.WorkGroupConfigurationArgs(
+ *         bytes_scanned_cutoff_per_query=200000000,
+ *         enforce_work_group_configuration=False,
+ *         publish_cloud_watch_metrics_enabled=False,
+ *         requester_pays_enabled=True,
+ *         result_configuration=aws_native.athena.WorkGroupResultConfigurationArgs(
+ *             output_location="s3://path/to/my/bucket/",
+ *         ),
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myAthenaWorkGroup = new AwsNative.Athena.WorkGroup("myAthenaWorkGroup", new AwsNative.Athena.WorkGroupArgs
+ *         {
+ *             Name = "MyCustomWorkGroup",
+ *             Description = "My WorkGroup",
+ *             State = "ENABLED",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.Athena.Inputs.WorkGroupTagArgs
+ *                 {
+ *                     Key = "key1",
+ *                     Value = "value1",
+ *                 },
+ *                 new AwsNative.Athena.Inputs.WorkGroupTagArgs
+ *                 {
+ *                     Key = "key2",
+ *                     Value = "value2",
+ *                 },
+ *             },
+ *             WorkGroupConfiguration = new AwsNative.Athena.Inputs.WorkGroupConfigurationArgs
+ *             {
+ *                 BytesScannedCutoffPerQuery = 200000000,
+ *                 EnforceWorkGroupConfiguration = false,
+ *                 PublishCloudWatchMetricsEnabled = false,
+ *                 RequesterPaysEnabled = true,
+ *                 ResultConfiguration = new AwsNative.Athena.Inputs.WorkGroupResultConfigurationArgs
+ *                 {
+ *                     OutputLocation = "s3://path/to/my/bucket/",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/athena"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := athena.NewWorkGroup(ctx, "myAthenaWorkGroup", &athena.WorkGroupArgs{
+ * 			Name:        pulumi.String("MyCustomWorkGroup"),
+ * 			Description: pulumi.String("My WorkGroup"),
+ * 			State:       "ENABLED",
+ * 			Tags: []athena.WorkGroupTagArgs{
+ * 				&athena.WorkGroupTagArgs{
+ * 					Key:   pulumi.String("key1"),
+ * 					Value: pulumi.String("value1"),
+ * 				},
+ * 				&athena.WorkGroupTagArgs{
+ * 					Key:   pulumi.String("key2"),
+ * 					Value: pulumi.String("value2"),
+ * 				},
+ * 			},
+ * 			WorkGroupConfiguration: &athena.WorkGroupConfigurationArgs{
+ * 				BytesScannedCutoffPerQuery:      pulumi.Int(200000000),
+ * 				EnforceWorkGroupConfiguration:   pulumi.Bool(false),
+ * 				PublishCloudWatchMetricsEnabled: pulumi.Bool(false),
+ * 				RequesterPaysEnabled:            pulumi.Bool(true),
+ * 				ResultConfiguration: &athena.WorkGroupResultConfigurationArgs{
+ * 					OutputLocation: pulumi.String("s3://path/to/my/bucket/"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myAthenaWorkGroup = new aws_native.athena.WorkGroup("myAthenaWorkGroup", {
+ *     name: "MyCustomWorkGroup",
+ *     description: "My WorkGroup",
+ *     state: "ENABLED",
+ *     tags: [
+ *         {
+ *             key: "key1",
+ *             value: "value1",
+ *         },
+ *         {
+ *             key: "key2",
+ *             value: "value2",
+ *         },
+ *     ],
+ *     workGroupConfiguration: {
+ *         bytesScannedCutoffPerQuery: 200000000,
+ *         enforceWorkGroupConfiguration: false,
+ *         publishCloudWatchMetricsEnabled: false,
+ *         requesterPaysEnabled: true,
+ *         resultConfiguration: {
+ *             outputLocation: "s3://path/to/my/bucket/",
+ *         },
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_athena_work_group = aws_native.athena.WorkGroup("myAthenaWorkGroup",
+ *     name="MyCustomWorkGroup",
+ *     description="My WorkGroup",
+ *     state="ENABLED",
+ *     tags=[
+ *         aws_native.athena.WorkGroupTagArgs(
+ *             key="key1",
+ *             value="value1",
+ *         ),
+ *         aws_native.athena.WorkGroupTagArgs(
+ *             key="key2",
+ *             value="value2",
+ *         ),
+ *     ],
+ *     work_group_configuration=aws_native.athena.WorkGroupConfigurationArgs(
+ *         bytes_scanned_cutoff_per_query=200000000,
+ *         enforce_work_group_configuration=False,
+ *         publish_cloud_watch_metrics_enabled=False,
+ *         requester_pays_enabled=True,
+ *         result_configuration=aws_native.athena.WorkGroupResultConfigurationArgs(
+ *             output_location="s3://path/to/my/bucket/",
+ *         ),
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myAthenaWorkGroup = new AwsNative.Athena.WorkGroup("myAthenaWorkGroup", new AwsNative.Athena.WorkGroupArgs
+ *         {
+ *             Name = "MyCustomWorkGroup",
+ *             Description = "My WorkGroup Updated",
+ *             State = "DISABLED",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.Athena.Inputs.WorkGroupTagArgs
+ *                 {
+ *                     Key = "key1",
+ *                     Value = "value1",
+ *                 },
+ *                 new AwsNative.Athena.Inputs.WorkGroupTagArgs
+ *                 {
+ *                     Key = "key2",
+ *                     Value = "value2",
+ *                 },
+ *             },
+ *             WorkGroupConfigurationUpdates = new AwsNative.Athena.Inputs.WorkGroupConfigurationUpdatesArgs
+ *             {
+ *                 BytesScannedCutoffPerQuery = 10000000,
+ *                 EnforceWorkGroupConfiguration = true,
+ *                 PublishCloudWatchMetricsEnabled = true,
+ *                 RequesterPaysEnabled = false,
+ *                 ResultConfigurationUpdates = new AwsNative.Athena.Inputs.WorkGroupResultConfigurationUpdatesArgs
+ *                 {
+ *                     EncryptionConfiguration = new AwsNative.Athena.Inputs.WorkGroupEncryptionConfigurationArgs
+ *                     {
+ *                         EncryptionOption = "SSE_S3",
+ *                     },
+ *                     OutputLocation = "s3://path/to/my/bucket/updated/",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/athena"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := athena.NewWorkGroup(ctx, "myAthenaWorkGroup", &athena.WorkGroupArgs{
+ * 			Name:        pulumi.String("MyCustomWorkGroup"),
+ * 			Description: pulumi.String("My WorkGroup Updated"),
+ * 			State:       "DISABLED",
+ * 			Tags: []athena.WorkGroupTagArgs{
+ * 				&athena.WorkGroupTagArgs{
+ * 					Key:   pulumi.String("key1"),
+ * 					Value: pulumi.String("value1"),
+ * 				},
+ * 				&athena.WorkGroupTagArgs{
+ * 					Key:   pulumi.String("key2"),
+ * 					Value: pulumi.String("value2"),
+ * 				},
+ * 			},
+ * 			WorkGroupConfigurationUpdates: &athena.WorkGroupConfigurationUpdatesArgs{
+ * 				BytesScannedCutoffPerQuery:      pulumi.Int(10000000),
+ * 				EnforceWorkGroupConfiguration:   pulumi.Bool(true),
+ * 				PublishCloudWatchMetricsEnabled: pulumi.Bool(true),
+ * 				RequesterPaysEnabled:            pulumi.Bool(false),
+ * 				ResultConfigurationUpdates: &athena.WorkGroupResultConfigurationUpdatesArgs{
+ * 					EncryptionConfiguration: &athena.WorkGroupEncryptionConfigurationArgs{
+ * 						EncryptionOption: "SSE_S3",
+ * 					},
+ * 					OutputLocation: pulumi.String("s3://path/to/my/bucket/updated/"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myAthenaWorkGroup = new aws_native.athena.WorkGroup("myAthenaWorkGroup", {
+ *     name: "MyCustomWorkGroup",
+ *     description: "My WorkGroup Updated",
+ *     state: "DISABLED",
+ *     tags: [
+ *         {
+ *             key: "key1",
+ *             value: "value1",
+ *         },
+ *         {
+ *             key: "key2",
+ *             value: "value2",
+ *         },
+ *     ],
+ *     workGroupConfigurationUpdates: {
+ *         bytesScannedCutoffPerQuery: 10000000,
+ *         enforceWorkGroupConfiguration: true,
+ *         publishCloudWatchMetricsEnabled: true,
+ *         requesterPaysEnabled: false,
+ *         resultConfigurationUpdates: {
+ *             encryptionConfiguration: {
+ *                 encryptionOption: "SSE_S3",
+ *             },
+ *             outputLocation: "s3://path/to/my/bucket/updated/",
+ *         },
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_athena_work_group = aws_native.athena.WorkGroup("myAthenaWorkGroup",
+ *     name="MyCustomWorkGroup",
+ *     description="My WorkGroup Updated",
+ *     state="DISABLED",
+ *     tags=[
+ *         aws_native.athena.WorkGroupTagArgs(
+ *             key="key1",
+ *             value="value1",
+ *         ),
+ *         aws_native.athena.WorkGroupTagArgs(
+ *             key="key2",
+ *             value="value2",
+ *         ),
+ *     ],
+ *     work_group_configuration_updates=aws_native.athena.WorkGroupConfigurationUpdatesArgs(
+ *         bytes_scanned_cutoff_per_query=10000000,
+ *         enforce_work_group_configuration=True,
+ *         publish_cloud_watch_metrics_enabled=True,
+ *         requester_pays_enabled=False,
+ *         result_configuration_updates=aws_native.athena.WorkGroupResultConfigurationUpdatesArgs(
+ *             encryption_configuration=aws_native.athena.WorkGroupEncryptionConfigurationArgs(
+ *                 encryption_option="SSE_S3",
+ *             ),
+ *             output_location="s3://path/to/my/bucket/updated/",
+ *         ),
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myAthenaWorkGroup = new AwsNative.Athena.WorkGroup("myAthenaWorkGroup", new AwsNative.Athena.WorkGroupArgs
+ *         {
+ *             Name = "MyCustomWorkGroup",
+ *             Description = "My WorkGroup Updated",
+ *             State = "DISABLED",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.Athena.Inputs.WorkGroupTagArgs
+ *                 {
+ *                     Key = "key1",
+ *                     Value = "value1",
+ *                 },
+ *                 new AwsNative.Athena.Inputs.WorkGroupTagArgs
+ *                 {
+ *                     Key = "key2",
+ *                     Value = "value2",
+ *                 },
+ *             },
+ *             WorkGroupConfigurationUpdates = new AwsNative.Athena.Inputs.WorkGroupConfigurationUpdatesArgs
+ *             {
+ *                 BytesScannedCutoffPerQuery = 10000000,
+ *                 EnforceWorkGroupConfiguration = true,
+ *                 PublishCloudWatchMetricsEnabled = true,
+ *                 RequesterPaysEnabled = false,
+ *                 ResultConfigurationUpdates = new AwsNative.Athena.Inputs.WorkGroupResultConfigurationUpdatesArgs
+ *                 {
+ *                     EncryptionConfiguration = new AwsNative.Athena.Inputs.WorkGroupEncryptionConfigurationArgs
+ *                     {
+ *                         EncryptionOption = "SSE_S3",
+ *                     },
+ *                     OutputLocation = "s3://path/to/my/bucket/updated/",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/athena"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := athena.NewWorkGroup(ctx, "myAthenaWorkGroup", &athena.WorkGroupArgs{
+ * 			Name:        pulumi.String("MyCustomWorkGroup"),
+ * 			Description: pulumi.String("My WorkGroup Updated"),
+ * 			State:       "DISABLED",
+ * 			Tags: []athena.WorkGroupTagArgs{
+ * 				&athena.WorkGroupTagArgs{
+ * 					Key:   pulumi.String("key1"),
+ * 					Value: pulumi.String("value1"),
+ * 				},
+ * 				&athena.WorkGroupTagArgs{
+ * 					Key:   pulumi.String("key2"),
+ * 					Value: pulumi.String("value2"),
+ * 				},
+ * 			},
+ * 			WorkGroupConfigurationUpdates: &athena.WorkGroupConfigurationUpdatesArgs{
+ * 				BytesScannedCutoffPerQuery:      pulumi.Int(10000000),
+ * 				EnforceWorkGroupConfiguration:   pulumi.Bool(true),
+ * 				PublishCloudWatchMetricsEnabled: pulumi.Bool(true),
+ * 				RequesterPaysEnabled:            pulumi.Bool(false),
+ * 				ResultConfigurationUpdates: &athena.WorkGroupResultConfigurationUpdatesArgs{
+ * 					EncryptionConfiguration: &athena.WorkGroupEncryptionConfigurationArgs{
+ * 						EncryptionOption: "SSE_S3",
+ * 					},
+ * 					OutputLocation: pulumi.String("s3://path/to/my/bucket/updated/"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myAthenaWorkGroup = new aws_native.athena.WorkGroup("myAthenaWorkGroup", {
+ *     name: "MyCustomWorkGroup",
+ *     description: "My WorkGroup Updated",
+ *     state: "DISABLED",
+ *     tags: [
+ *         {
+ *             key: "key1",
+ *             value: "value1",
+ *         },
+ *         {
+ *             key: "key2",
+ *             value: "value2",
+ *         },
+ *     ],
+ *     workGroupConfigurationUpdates: {
+ *         bytesScannedCutoffPerQuery: 10000000,
+ *         enforceWorkGroupConfiguration: true,
+ *         publishCloudWatchMetricsEnabled: true,
+ *         requesterPaysEnabled: false,
+ *         resultConfigurationUpdates: {
+ *             encryptionConfiguration: {
+ *                 encryptionOption: "SSE_S3",
+ *             },
+ *             outputLocation: "s3://path/to/my/bucket/updated/",
+ *         },
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_athena_work_group = aws_native.athena.WorkGroup("myAthenaWorkGroup",
+ *     name="MyCustomWorkGroup",
+ *     description="My WorkGroup Updated",
+ *     state="DISABLED",
+ *     tags=[
+ *         aws_native.athena.WorkGroupTagArgs(
+ *             key="key1",
+ *             value="value1",
+ *         ),
+ *         aws_native.athena.WorkGroupTagArgs(
+ *             key="key2",
+ *             value="value2",
+ *         ),
+ *     ],
+ *     work_group_configuration_updates=aws_native.athena.WorkGroupConfigurationUpdatesArgs(
+ *         bytes_scanned_cutoff_per_query=10000000,
+ *         enforce_work_group_configuration=True,
+ *         publish_cloud_watch_metrics_enabled=True,
+ *         requester_pays_enabled=False,
+ *         result_configuration_updates=aws_native.athena.WorkGroupResultConfigurationUpdatesArgs(
+ *             encryption_configuration=aws_native.athena.WorkGroupEncryptionConfigurationArgs(
+ *                 encryption_option="SSE_S3",
+ *             ),
+ *             output_location="s3://path/to/my/bucket/updated/",
+ *         ),
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:athena:WorkGroup")
 public class WorkGroup extends io.pulumi.resources.CustomResource {
     /**
      * The date and time the workgroup was created.
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return The date and time the workgroup was created.
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * The workgroup description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The workgroup description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The workGroup name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The workGroup name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The option to delete the workgroup and its contents even if the workgroup contains any named queries.
-     * 
      */
     @Export(name="recursiveDeleteOption", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> recursiveDeleteOption;
 
     /**
      * @return The option to delete the workgroup and its contents even if the workgroup contains any named queries.
-     * 
      */
     public Output</* @Nullable */ Boolean> getRecursiveDeleteOption() {
         return this.recursiveDeleteOption;
     }
     /**
      * The state of the workgroup: ENABLED or DISABLED.
-     * 
      */
     @Export(name="state", type=WorkGroupState.class, parameters={})
     private Output</* @Nullable */ WorkGroupState> state;
 
     /**
      * @return The state of the workgroup: ENABLED or DISABLED.
-     * 
      */
     public Output</* @Nullable */ WorkGroupState> getState() {
         return this.state;
     }
     /**
      * One or more tags, separated by commas, that you want to attach to the workgroup as you create it
-     * 
      */
     @Export(name="tags", type=List.class, parameters={WorkGroupTag.class})
     private Output</* @Nullable */ List<WorkGroupTag>> tags;
 
     /**
      * @return One or more tags, separated by commas, that you want to attach to the workgroup as you create it
-     * 
      */
     public Output</* @Nullable */ List<WorkGroupTag>> getTags() {
         return this.tags;
     }
     /**
      * The workgroup configuration
-     * 
      */
     @Export(name="workGroupConfiguration", type=WorkGroupConfiguration.class, parameters={})
     private Output</* @Nullable */ WorkGroupConfiguration> workGroupConfiguration;
 
     /**
      * @return The workgroup configuration
-     * 
      */
     public Output</* @Nullable */ WorkGroupConfiguration> getWorkGroupConfiguration() {
         return this.workGroupConfiguration;
     }
     /**
      * The workgroup configuration update object
-     * 
      */
     @Export(name="workGroupConfigurationUpdates", type=WorkGroupConfigurationUpdates.class, parameters={})
     private Output</* @Nullable */ WorkGroupConfigurationUpdates> workGroupConfigurationUpdates;
 
     /**
      * @return The workgroup configuration update object
-     * 
      */
     public Output</* @Nullable */ WorkGroupConfigurationUpdates> getWorkGroupConfigurationUpdates() {
         return this.workGroupConfigurationUpdates;

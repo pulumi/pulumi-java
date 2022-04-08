@@ -19,119 +19,943 @@ import javax.annotation.Nullable;
 /**
  * Private certificate authority.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var rootCA = new AwsNative.ACMPCA.CertificateAuthority("rootCA", new AwsNative.ACMPCA.CertificateAuthorityArgs
+ *         {
+ *             Type = "ROOT",
+ *             KeyAlgorithm = "RSA_2048",
+ *             SigningAlgorithm = "SHA256WITHRSA",
+ *             Subject = new AwsNative.ACMPCA.Inputs.CertificateAuthoritySubjectArgs
+ *             {
+ *                 Country = "US",
+ *                 Organization = "string",
+ *                 OrganizationalUnit = "string",
+ *                 DistinguishedNameQualifier = "string",
+ *                 State = "string",
+ *                 CommonName = "123",
+ *                 SerialNumber = "string",
+ *                 Locality = "string",
+ *                 Title = "string",
+ *                 Surname = "string",
+ *                 GivenName = "string",
+ *                 Initials = "DG",
+ *                 Pseudonym = "string",
+ *                 GenerationQualifier = "DBG",
+ *             },
+ *             RevocationConfiguration = new AwsNative.ACMPCA.Inputs.CertificateAuthorityRevocationConfigurationArgs
+ *             {
+ *                 CrlConfiguration = new AwsNative.ACMPCA.Inputs.CertificateAuthorityCrlConfigurationArgs
+ *                 {
+ *                     Enabled = false,
+ *                 },
+ *             },
+ *         });
+ *         var rootCACertificate = new AwsNative.ACMPCA.Certificate("rootCACertificate", new AwsNative.ACMPCA.CertificateArgs
+ *         {
+ *             CertificateAuthorityArn = rootCA.Id,
+ *             CertificateSigningRequest = rootCA.Certificate_signing_request,
+ *             SigningAlgorithm = "SHA256WITHRSA",
+ *             TemplateArn = "arn:aws:acm-pca:::template/RootCACertificate/V1",
+ *             Validity = new AwsNative.ACMPCA.Inputs.CertificateValidityArgs
+ *             {
+ *                 Type = "DAYS",
+ *                 Value = 100,
+ *             },
+ *         });
+ *         var rootCAActivation = new AwsNative.ACMPCA.CertificateAuthorityActivation("rootCAActivation", new AwsNative.ACMPCA.CertificateAuthorityActivationArgs
+ *         {
+ *             CertificateAuthorityArn = rootCA.Id,
+ *             Certificate = rootCACertificate.Certificate,
+ *             Status = "ACTIVE",
+ *         });
+ *         var rootCAPermission = new AwsNative.ACMPCA.Permission("rootCAPermission", new AwsNative.ACMPCA.PermissionArgs
+ *         {
+ *             Actions = 
+ *             {
+ *                 "IssueCertificate",
+ *                 "GetCertificate",
+ *                 "ListPermissions",
+ *             },
+ *             CertificateAuthorityArn = rootCA.Id,
+ *             Principal = "acm.amazonaws.com",
+ *         });
+ *         var subordinateCAOne = new AwsNative.ACMPCA.CertificateAuthority("subordinateCAOne", new AwsNative.ACMPCA.CertificateAuthorityArgs
+ *         {
+ *             Type = "SUBORDINATE",
+ *             KeyAlgorithm = "RSA_2048",
+ *             SigningAlgorithm = "SHA256WITHRSA",
+ *             Subject = new AwsNative.ACMPCA.Inputs.CertificateAuthoritySubjectArgs
+ *             {
+ *                 Country = "US",
+ *                 Organization = "string",
+ *                 OrganizationalUnit = "string",
+ *                 DistinguishedNameQualifier = "string",
+ *                 State = "string",
+ *                 CommonName = "Sub1",
+ *                 SerialNumber = "string",
+ *                 Locality = "string",
+ *                 Title = "string",
+ *                 Surname = "string",
+ *                 GivenName = "string",
+ *                 Initials = "DG",
+ *                 Pseudonym = "string",
+ *                 GenerationQualifier = "DBG",
+ *             },
+ *             RevocationConfiguration = ,
+ *             Tags = {},
+ *         });
+ *         var subordinateCAOneCACertificate = new AwsNative.ACMPCA.Certificate("subordinateCAOneCACertificate", new AwsNative.ACMPCA.CertificateArgs
+ *         {
+ *             CertificateAuthorityArn = rootCA.Id,
+ *             CertificateSigningRequest = subordinateCAOne.Certificate_signing_request,
+ *             SigningAlgorithm = "SHA256WITHRSA",
+ *             TemplateArn = "arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen3/V1",
+ *             Validity = new AwsNative.ACMPCA.Inputs.CertificateValidityArgs
+ *             {
+ *                 Type = "DAYS",
+ *                 Value = 90,
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 rootCAActivation,
+ *             },
+ *         });
+ *         var subordinateCAOneActivation = new AwsNative.ACMPCA.CertificateAuthorityActivation("subordinateCAOneActivation", new AwsNative.ACMPCA.CertificateAuthorityActivationArgs
+ *         {
+ *             CertificateAuthorityArn = subordinateCAOne.Id,
+ *             Certificate = subordinateCAOneCACertificate.Certificate,
+ *             CertificateChain = rootCAActivation.Complete_certificate_chain,
+ *             Status = "ACTIVE",
+ *         });
+ *         var subordinateCAOnePermission = new AwsNative.ACMPCA.Permission("subordinateCAOnePermission", new AwsNative.ACMPCA.PermissionArgs
+ *         {
+ *             Actions = 
+ *             {
+ *                 "IssueCertificate",
+ *                 "GetCertificate",
+ *                 "ListPermissions",
+ *             },
+ *             CertificateAuthorityArn = subordinateCAOne.Id,
+ *             Principal = "acm.amazonaws.com",
+ *         });
+ *         var subordinateCATwo = new AwsNative.ACMPCA.CertificateAuthority("subordinateCATwo", new AwsNative.ACMPCA.CertificateAuthorityArgs
+ *         {
+ *             Type = "SUBORDINATE",
+ *             KeyAlgorithm = "RSA_2048",
+ *             SigningAlgorithm = "SHA256WITHRSA",
+ *             Subject = new AwsNative.ACMPCA.Inputs.CertificateAuthoritySubjectArgs
+ *             {
+ *                 Country = "US",
+ *                 Organization = "string",
+ *                 OrganizationalUnit = "string",
+ *                 DistinguishedNameQualifier = "string",
+ *                 State = "string",
+ *                 SerialNumber = "string",
+ *                 Locality = "string",
+ *                 Title = "string",
+ *                 Surname = "string",
+ *                 GivenName = "string",
+ *                 Initials = "DG",
+ *                 Pseudonym = "string",
+ *                 GenerationQualifier = "DBG",
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.ACMPCA.Inputs.CertificateAuthorityTagArgs
+ *                 {
+ *                     Key = "Key1",
+ *                     Value = "Value1",
+ *                 },
+ *                 new AwsNative.ACMPCA.Inputs.CertificateAuthorityTagArgs
+ *                 {
+ *                     Key = "Key2",
+ *                     Value = "Value2",
+ *                 },
+ *             },
+ *         });
+ *         var subordinateCATwoCACertificate = new AwsNative.ACMPCA.Certificate("subordinateCATwoCACertificate", new AwsNative.ACMPCA.CertificateArgs
+ *         {
+ *             CertificateAuthorityArn = subordinateCAOne.Id,
+ *             CertificateSigningRequest = subordinateCATwo.Certificate_signing_request,
+ *             SigningAlgorithm = "SHA256WITHRSA",
+ *             TemplateArn = "arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen2/V1",
+ *             Validity = new AwsNative.ACMPCA.Inputs.CertificateValidityArgs
+ *             {
+ *                 Type = "DAYS",
+ *                 Value = 80,
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 subordinateCAOneActivation,
+ *             },
+ *         });
+ *         var subordinateCATwoActivation = new AwsNative.ACMPCA.CertificateAuthorityActivation("subordinateCATwoActivation", new AwsNative.ACMPCA.CertificateAuthorityActivationArgs
+ *         {
+ *             CertificateAuthorityArn = subordinateCATwo.Id,
+ *             Certificate = subordinateCATwoCACertificate.Certificate,
+ *             CertificateChain = subordinateCAOneActivation.Complete_certificate_chain,
+ *         });
+ *         var subordinateCATwoPermission = new AwsNative.ACMPCA.Permission("subordinateCATwoPermission", new AwsNative.ACMPCA.PermissionArgs
+ *         {
+ *             Actions = 
+ *             {
+ *                 "IssueCertificate",
+ *                 "GetCertificate",
+ *                 "ListPermissions",
+ *             },
+ *             CertificateAuthorityArn = subordinateCATwo.Id,
+ *             Principal = "acm.amazonaws.com",
+ *         });
+ *         var endEntityCertificate = new AwsNative.ACMPCA.Certificate("endEntityCertificate", new AwsNative.ACMPCA.CertificateArgs
+ *         {
+ *             CertificateAuthorityArn = subordinateCATwo.Id,
+ *             CertificateSigningRequest = @"-----BEGIN CERTIFICATE REQUEST-----
+ * MIICvDCCAaQCAQAwdzELMAkGA1UEBhMCVVMxDTALBgNVBAgMBFV0YWgxDzANBgNV
+ * BAcMBkxpbmRvbjEWMBQGA1UECgwNRGlnaUNlcnQgSW5jLjERMA8GA1UECwwIRGln
+ * aUNlcnQxHTAbBgNVBAMMFGV4YW1wbGUuZGlnaWNlcnQuY29tMIIBIjANBgkqhkiG
+ * 9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8+To7d+2kPWeBv/orU3LVbJwDrSQbeKamCmo
+ * wp5bqDxIwV20zqRb7APUOKYoVEFFOEQs6T6gImnIolhbiH6m4zgZ/CPvWBOkZc+c
+ * 1Po2EmvBz+AD5sBdT5kzGQA6NbWyZGldxRthNLOs1efOhdnWFuhI162qmcflgpiI
+ * WDuwq4C9f+YkeJhNn9dF5+owm8cOQmDrV8NNdiTqin8q3qYAHHJRW28glJUCZkTZ
+ * wIaSR6crBQ8TbYNE0dc+Caa3DOIkz1EOsHWzTx+n0zKfqcbgXi4DJx+C1bjptYPR
+ * BPZL8DAeWuA8ebudVT44yEp82G96/Ggcf7F33xMxe0yc+Xa6owIDAQABoAAwDQYJ
+ * KoZIhvcNAQEFBQADggEBAB0kcrFccSmFDmxox0Ne01UIqSsDqHgL+XmHTXJwre6D
+ * hJSZwbvEtOK0G3+dr4Fs11WuUNt5qcLsx5a8uk4G6AKHMzuhLsJ7XZjgmQXGECpY
+ * Q4mC3yT3ZoCGpIXbw+iP3lmEEXgaQL0Tx5LFl/okKbKYwIqNiyKWOMj7ZR/wxWg/
+ * ZDGRs55xuoeLDJ/ZRFf9bI+IaCUd1YrfYcHIl3G87Av+r49YVwqRDT0VDV7uLgqn
+ * 29XI1PpVUNCPQGn9p/eX6Qo7vpDaPybRtA2R7XLKjQaF9oXWeCUqy1hvJac9QFO2
+ * 97Ob1alpHPoZ7mWiEuJwjBPii6a9M9G30nUo39lBi1w=
+ * -----END CERTIFICATE REQUEST-----",
+ *             SigningAlgorithm = "SHA256WITHRSA",
+ *             Validity = new AwsNative.ACMPCA.Inputs.CertificateValidityArgs
+ *             {
+ *                 Type = "DAYS",
+ *                 Value = 70,
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 subordinateCATwoActivation,
+ *             },
+ *         });
+ *         this.CompleteCertificateChain = subordinateCATwoActivation.Complete_certificate_chain;
+ *         this.CertificateArn = endEntityCertificate.Arn;
+ *     }
+ * 
+ *     [Output("completeCertificateChain")]
+ *     public Output<string> CompleteCertificateChain { get; set; }
+ *     [Output("certificateArn")]
+ *     public Output<string> CertificateArn { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/acmpca"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		rootCA, err := acmpca.NewCertificateAuthority(ctx, "rootCA", &acmpca.CertificateAuthorityArgs{
+ * 			Type:             pulumi.String("ROOT"),
+ * 			KeyAlgorithm:     pulumi.String("RSA_2048"),
+ * 			SigningAlgorithm: pulumi.String("SHA256WITHRSA"),
+ * 			Subject: &acmpca.CertificateAuthoritySubjectArgs{
+ * 				Country:                    pulumi.String("US"),
+ * 				Organization:               pulumi.String("string"),
+ * 				OrganizationalUnit:         pulumi.String("string"),
+ * 				DistinguishedNameQualifier: pulumi.String("string"),
+ * 				State:                      pulumi.String("string"),
+ * 				CommonName:                 pulumi.String("123"),
+ * 				SerialNumber:               pulumi.String("string"),
+ * 				Locality:                   pulumi.String("string"),
+ * 				Title:                      pulumi.String("string"),
+ * 				Surname:                    pulumi.String("string"),
+ * 				GivenName:                  pulumi.String("string"),
+ * 				Initials:                   pulumi.String("DG"),
+ * 				Pseudonym:                  pulumi.String("string"),
+ * 				GenerationQualifier:        pulumi.String("DBG"),
+ * 			},
+ * 			RevocationConfiguration: &acmpca.CertificateAuthorityRevocationConfigurationArgs{
+ * 				CrlConfiguration: &acmpca.CertificateAuthorityCrlConfigurationArgs{
+ * 					Enabled: pulumi.Bool(false),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		rootCACertificate, err := acmpca.NewCertificate(ctx, "rootCACertificate", &acmpca.CertificateArgs{
+ * 			CertificateAuthorityArn:   rootCA.ID(),
+ * 			CertificateSigningRequest: rootCA.Certificate_signing_request,
+ * 			SigningAlgorithm:          pulumi.String("SHA256WITHRSA"),
+ * 			TemplateArn:               pulumi.String("arn:aws:acm-pca:::template/RootCACertificate/V1"),
+ * 			Validity: &acmpca.CertificateValidityArgs{
+ * 				Type:  pulumi.String("DAYS"),
+ * 				Value: pulumi.Float64(100),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		rootCAActivation, err := acmpca.NewCertificateAuthorityActivation(ctx, "rootCAActivation", &acmpca.CertificateAuthorityActivationArgs{
+ * 			CertificateAuthorityArn: rootCA.ID(),
+ * 			Certificate:             rootCACertificate.Certificate,
+ * 			Status:                  pulumi.String("ACTIVE"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = acmpca.NewPermission(ctx, "rootCAPermission", &acmpca.PermissionArgs{
+ * 			Actions: pulumi.StringArray{
+ * 				pulumi.String("IssueCertificate"),
+ * 				pulumi.String("GetCertificate"),
+ * 				pulumi.String("ListPermissions"),
+ * 			},
+ * 			CertificateAuthorityArn: rootCA.ID(),
+ * 			Principal:               pulumi.String("acm.amazonaws.com"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		subordinateCAOne, err := acmpca.NewCertificateAuthority(ctx, "subordinateCAOne", &acmpca.CertificateAuthorityArgs{
+ * 			Type:             pulumi.String("SUBORDINATE"),
+ * 			KeyAlgorithm:     pulumi.String("RSA_2048"),
+ * 			SigningAlgorithm: pulumi.String("SHA256WITHRSA"),
+ * 			Subject: &acmpca.CertificateAuthoritySubjectArgs{
+ * 				Country:                    pulumi.String("US"),
+ * 				Organization:               pulumi.String("string"),
+ * 				OrganizationalUnit:         pulumi.String("string"),
+ * 				DistinguishedNameQualifier: pulumi.String("string"),
+ * 				State:                      pulumi.String("string"),
+ * 				CommonName:                 pulumi.String("Sub1"),
+ * 				SerialNumber:               pulumi.String("string"),
+ * 				Locality:                   pulumi.String("string"),
+ * 				Title:                      pulumi.String("string"),
+ * 				Surname:                    pulumi.String("string"),
+ * 				GivenName:                  pulumi.String("string"),
+ * 				Initials:                   pulumi.String("DG"),
+ * 				Pseudonym:                  pulumi.String("string"),
+ * 				GenerationQualifier:        pulumi.String("DBG"),
+ * 			},
+ * 			RevocationConfiguration: nil,
+ * 			Tags:                    acmpca.CertificateAuthorityTagArray{},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		subordinateCAOneCACertificate, err := acmpca.NewCertificate(ctx, "subordinateCAOneCACertificate", &acmpca.CertificateArgs{
+ * 			CertificateAuthorityArn:   rootCA.ID(),
+ * 			CertificateSigningRequest: subordinateCAOne.Certificate_signing_request,
+ * 			SigningAlgorithm:          pulumi.String("SHA256WITHRSA"),
+ * 			TemplateArn:               pulumi.String("arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen3/V1"),
+ * 			Validity: &acmpca.CertificateValidityArgs{
+ * 				Type:  pulumi.String("DAYS"),
+ * 				Value: pulumi.Float64(90),
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			rootCAActivation,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		subordinateCAOneActivation, err := acmpca.NewCertificateAuthorityActivation(ctx, "subordinateCAOneActivation", &acmpca.CertificateAuthorityActivationArgs{
+ * 			CertificateAuthorityArn: subordinateCAOne.ID(),
+ * 			Certificate:             subordinateCAOneCACertificate.Certificate,
+ * 			CertificateChain:        rootCAActivation.Complete_certificate_chain,
+ * 			Status:                  pulumi.String("ACTIVE"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = acmpca.NewPermission(ctx, "subordinateCAOnePermission", &acmpca.PermissionArgs{
+ * 			Actions: pulumi.StringArray{
+ * 				pulumi.String("IssueCertificate"),
+ * 				pulumi.String("GetCertificate"),
+ * 				pulumi.String("ListPermissions"),
+ * 			},
+ * 			CertificateAuthorityArn: subordinateCAOne.ID(),
+ * 			Principal:               pulumi.String("acm.amazonaws.com"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		subordinateCATwo, err := acmpca.NewCertificateAuthority(ctx, "subordinateCATwo", &acmpca.CertificateAuthorityArgs{
+ * 			Type:             pulumi.String("SUBORDINATE"),
+ * 			KeyAlgorithm:     pulumi.String("RSA_2048"),
+ * 			SigningAlgorithm: pulumi.String("SHA256WITHRSA"),
+ * 			Subject: &acmpca.CertificateAuthoritySubjectArgs{
+ * 				Country:                    pulumi.String("US"),
+ * 				Organization:               pulumi.String("string"),
+ * 				OrganizationalUnit:         pulumi.String("string"),
+ * 				DistinguishedNameQualifier: pulumi.String("string"),
+ * 				State:                      pulumi.String("string"),
+ * 				SerialNumber:               pulumi.String("string"),
+ * 				Locality:                   pulumi.String("string"),
+ * 				Title:                      pulumi.String("string"),
+ * 				Surname:                    pulumi.String("string"),
+ * 				GivenName:                  pulumi.String("string"),
+ * 				Initials:                   pulumi.String("DG"),
+ * 				Pseudonym:                  pulumi.String("string"),
+ * 				GenerationQualifier:        pulumi.String("DBG"),
+ * 			},
+ * 			Tags: []acmpca.CertificateAuthorityTagArgs{
+ * 				&acmpca.CertificateAuthorityTagArgs{
+ * 					Key:   pulumi.String("Key1"),
+ * 					Value: pulumi.String("Value1"),
+ * 				},
+ * 				&acmpca.CertificateAuthorityTagArgs{
+ * 					Key:   pulumi.String("Key2"),
+ * 					Value: pulumi.String("Value2"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		subordinateCATwoCACertificate, err := acmpca.NewCertificate(ctx, "subordinateCATwoCACertificate", &acmpca.CertificateArgs{
+ * 			CertificateAuthorityArn:   subordinateCAOne.ID(),
+ * 			CertificateSigningRequest: subordinateCATwo.Certificate_signing_request,
+ * 			SigningAlgorithm:          pulumi.String("SHA256WITHRSA"),
+ * 			TemplateArn:               pulumi.String("arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen2/V1"),
+ * 			Validity: &acmpca.CertificateValidityArgs{
+ * 				Type:  pulumi.String("DAYS"),
+ * 				Value: pulumi.Float64(80),
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			subordinateCAOneActivation,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		subordinateCATwoActivation, err := acmpca.NewCertificateAuthorityActivation(ctx, "subordinateCATwoActivation", &acmpca.CertificateAuthorityActivationArgs{
+ * 			CertificateAuthorityArn: subordinateCATwo.ID(),
+ * 			Certificate:             subordinateCATwoCACertificate.Certificate,
+ * 			CertificateChain:        subordinateCAOneActivation.Complete_certificate_chain,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = acmpca.NewPermission(ctx, "subordinateCATwoPermission", &acmpca.PermissionArgs{
+ * 			Actions: pulumi.StringArray{
+ * 				pulumi.String("IssueCertificate"),
+ * 				pulumi.String("GetCertificate"),
+ * 				pulumi.String("ListPermissions"),
+ * 			},
+ * 			CertificateAuthorityArn: subordinateCATwo.ID(),
+ * 			Principal:               pulumi.String("acm.amazonaws.com"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		endEntityCertificate, err := acmpca.NewCertificate(ctx, "endEntityCertificate", &acmpca.CertificateArgs{
+ * 			CertificateAuthorityArn:   subordinateCATwo.ID(),
+ * 			CertificateSigningRequest: pulumi.String("-----BEGIN CERTIFICATE REQUEST-----\nMIICvDCCAaQCAQAwdzELMAkGA1UEBhMCVVMxDTALBgNVBAgMBFV0YWgxDzANBgNV\nBAcMBkxpbmRvbjEWMBQGA1UECgwNRGlnaUNlcnQgSW5jLjERMA8GA1UECwwIRGln\naUNlcnQxHTAbBgNVBAMMFGV4YW1wbGUuZGlnaWNlcnQuY29tMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8+To7d+2kPWeBv/orU3LVbJwDrSQbeKamCmo\nwp5bqDxIwV20zqRb7APUOKYoVEFFOEQs6T6gImnIolhbiH6m4zgZ/CPvWBOkZc+c\n1Po2EmvBz+AD5sBdT5kzGQA6NbWyZGldxRthNLOs1efOhdnWFuhI162qmcflgpiI\nWDuwq4C9f+YkeJhNn9dF5+owm8cOQmDrV8NNdiTqin8q3qYAHHJRW28glJUCZkTZ\nwIaSR6crBQ8TbYNE0dc+Caa3DOIkz1EOsHWzTx+n0zKfqcbgXi4DJx+C1bjptYPR\nBPZL8DAeWuA8ebudVT44yEp82G96/Ggcf7F33xMxe0yc+Xa6owIDAQABoAAwDQYJ\nKoZIhvcNAQEFBQADggEBAB0kcrFccSmFDmxox0Ne01UIqSsDqHgL+XmHTXJwre6D\nhJSZwbvEtOK0G3+dr4Fs11WuUNt5qcLsx5a8uk4G6AKHMzuhLsJ7XZjgmQXGECpY\nQ4mC3yT3ZoCGpIXbw+iP3lmEEXgaQL0Tx5LFl/okKbKYwIqNiyKWOMj7ZR/wxWg/\nZDGRs55xuoeLDJ/ZRFf9bI+IaCUd1YrfYcHIl3G87Av+r49YVwqRDT0VDV7uLgqn\n29XI1PpVUNCPQGn9p/eX6Qo7vpDaPybRtA2R7XLKjQaF9oXWeCUqy1hvJac9QFO2\n97Ob1alpHPoZ7mWiEuJwjBPii6a9M9G30nUo39lBi1w=\n-----END CERTIFICATE REQUEST-----"),
+ * 			SigningAlgorithm:          pulumi.String("SHA256WITHRSA"),
+ * 			Validity: &acmpca.CertificateValidityArgs{
+ * 				Type:  pulumi.String("DAYS"),
+ * 				Value: pulumi.Float64(70),
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			subordinateCATwoActivation,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("completeCertificateChain", subordinateCATwoActivation.Complete_certificate_chain)
+ * 		ctx.Export("certificateArn", endEntityCertificate.Arn)
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const rootCA = new aws_native.acmpca.CertificateAuthority("rootCA", {
+ *     type: "ROOT",
+ *     keyAlgorithm: "RSA_2048",
+ *     signingAlgorithm: "SHA256WITHRSA",
+ *     subject: {
+ *         country: "US",
+ *         organization: "string",
+ *         organizationalUnit: "string",
+ *         distinguishedNameQualifier: "string",
+ *         state: "string",
+ *         commonName: "123",
+ *         serialNumber: "string",
+ *         locality: "string",
+ *         title: "string",
+ *         surname: "string",
+ *         givenName: "string",
+ *         initials: "DG",
+ *         pseudonym: "string",
+ *         generationQualifier: "DBG",
+ *     },
+ *     revocationConfiguration: {
+ *         crlConfiguration: {
+ *             enabled: false,
+ *         },
+ *     },
+ * });
+ * const rootCACertificate = new aws_native.acmpca.Certificate("rootCACertificate", {
+ *     certificateAuthorityArn: rootCA.id,
+ *     certificateSigningRequest: rootCA.certificateSigningRequest,
+ *     signingAlgorithm: "SHA256WITHRSA",
+ *     templateArn: "arn:aws:acm-pca:::template/RootCACertificate/V1",
+ *     validity: {
+ *         type: "DAYS",
+ *         value: 100,
+ *     },
+ * });
+ * const rootCAActivation = new aws_native.acmpca.CertificateAuthorityActivation("rootCAActivation", {
+ *     certificateAuthorityArn: rootCA.id,
+ *     certificate: rootCACertificate.certificate,
+ *     status: "ACTIVE",
+ * });
+ * const rootCAPermission = new aws_native.acmpca.Permission("rootCAPermission", {
+ *     actions: [
+ *         "IssueCertificate",
+ *         "GetCertificate",
+ *         "ListPermissions",
+ *     ],
+ *     certificateAuthorityArn: rootCA.id,
+ *     principal: "acm.amazonaws.com",
+ * });
+ * const subordinateCAOne = new aws_native.acmpca.CertificateAuthority("subordinateCAOne", {
+ *     type: "SUBORDINATE",
+ *     keyAlgorithm: "RSA_2048",
+ *     signingAlgorithm: "SHA256WITHRSA",
+ *     subject: {
+ *         country: "US",
+ *         organization: "string",
+ *         organizationalUnit: "string",
+ *         distinguishedNameQualifier: "string",
+ *         state: "string",
+ *         commonName: "Sub1",
+ *         serialNumber: "string",
+ *         locality: "string",
+ *         title: "string",
+ *         surname: "string",
+ *         givenName: "string",
+ *         initials: "DG",
+ *         pseudonym: "string",
+ *         generationQualifier: "DBG",
+ *     },
+ *     revocationConfiguration: {},
+ *     tags: [],
+ * });
+ * const subordinateCAOneCACertificate = new aws_native.acmpca.Certificate("subordinateCAOneCACertificate", {
+ *     certificateAuthorityArn: rootCA.id,
+ *     certificateSigningRequest: subordinateCAOne.certificateSigningRequest,
+ *     signingAlgorithm: "SHA256WITHRSA",
+ *     templateArn: "arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen3/V1",
+ *     validity: {
+ *         type: "DAYS",
+ *         value: 90,
+ *     },
+ * }, {
+ *     dependsOn: [rootCAActivation],
+ * });
+ * const subordinateCAOneActivation = new aws_native.acmpca.CertificateAuthorityActivation("subordinateCAOneActivation", {
+ *     certificateAuthorityArn: subordinateCAOne.id,
+ *     certificate: subordinateCAOneCACertificate.certificate,
+ *     certificateChain: rootCAActivation.completeCertificateChain,
+ *     status: "ACTIVE",
+ * });
+ * const subordinateCAOnePermission = new aws_native.acmpca.Permission("subordinateCAOnePermission", {
+ *     actions: [
+ *         "IssueCertificate",
+ *         "GetCertificate",
+ *         "ListPermissions",
+ *     ],
+ *     certificateAuthorityArn: subordinateCAOne.id,
+ *     principal: "acm.amazonaws.com",
+ * });
+ * const subordinateCATwo = new aws_native.acmpca.CertificateAuthority("subordinateCATwo", {
+ *     type: "SUBORDINATE",
+ *     keyAlgorithm: "RSA_2048",
+ *     signingAlgorithm: "SHA256WITHRSA",
+ *     subject: {
+ *         country: "US",
+ *         organization: "string",
+ *         organizationalUnit: "string",
+ *         distinguishedNameQualifier: "string",
+ *         state: "string",
+ *         serialNumber: "string",
+ *         locality: "string",
+ *         title: "string",
+ *         surname: "string",
+ *         givenName: "string",
+ *         initials: "DG",
+ *         pseudonym: "string",
+ *         generationQualifier: "DBG",
+ *     },
+ *     tags: [
+ *         {
+ *             key: "Key1",
+ *             value: "Value1",
+ *         },
+ *         {
+ *             key: "Key2",
+ *             value: "Value2",
+ *         },
+ *     ],
+ * });
+ * const subordinateCATwoCACertificate = new aws_native.acmpca.Certificate("subordinateCATwoCACertificate", {
+ *     certificateAuthorityArn: subordinateCAOne.id,
+ *     certificateSigningRequest: subordinateCATwo.certificateSigningRequest,
+ *     signingAlgorithm: "SHA256WITHRSA",
+ *     templateArn: "arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen2/V1",
+ *     validity: {
+ *         type: "DAYS",
+ *         value: 80,
+ *     },
+ * }, {
+ *     dependsOn: [subordinateCAOneActivation],
+ * });
+ * const subordinateCATwoActivation = new aws_native.acmpca.CertificateAuthorityActivation("subordinateCATwoActivation", {
+ *     certificateAuthorityArn: subordinateCATwo.id,
+ *     certificate: subordinateCATwoCACertificate.certificate,
+ *     certificateChain: subordinateCAOneActivation.completeCertificateChain,
+ * });
+ * const subordinateCATwoPermission = new aws_native.acmpca.Permission("subordinateCATwoPermission", {
+ *     actions: [
+ *         "IssueCertificate",
+ *         "GetCertificate",
+ *         "ListPermissions",
+ *     ],
+ *     certificateAuthorityArn: subordinateCATwo.id,
+ *     principal: "acm.amazonaws.com",
+ * });
+ * const endEntityCertificate = new aws_native.acmpca.Certificate("endEntityCertificate", {
+ *     certificateAuthorityArn: subordinateCATwo.id,
+ *     certificateSigningRequest: `-----BEGIN CERTIFICATE REQUEST-----
+ * MIICvDCCAaQCAQAwdzELMAkGA1UEBhMCVVMxDTALBgNVBAgMBFV0YWgxDzANBgNV
+ * BAcMBkxpbmRvbjEWMBQGA1UECgwNRGlnaUNlcnQgSW5jLjERMA8GA1UECwwIRGln
+ * aUNlcnQxHTAbBgNVBAMMFGV4YW1wbGUuZGlnaWNlcnQuY29tMIIBIjANBgkqhkiG
+ * 9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8+To7d+2kPWeBv/orU3LVbJwDrSQbeKamCmo
+ * wp5bqDxIwV20zqRb7APUOKYoVEFFOEQs6T6gImnIolhbiH6m4zgZ/CPvWBOkZc+c
+ * 1Po2EmvBz+AD5sBdT5kzGQA6NbWyZGldxRthNLOs1efOhdnWFuhI162qmcflgpiI
+ * WDuwq4C9f+YkeJhNn9dF5+owm8cOQmDrV8NNdiTqin8q3qYAHHJRW28glJUCZkTZ
+ * wIaSR6crBQ8TbYNE0dc+Caa3DOIkz1EOsHWzTx+n0zKfqcbgXi4DJx+C1bjptYPR
+ * BPZL8DAeWuA8ebudVT44yEp82G96/Ggcf7F33xMxe0yc+Xa6owIDAQABoAAwDQYJ
+ * KoZIhvcNAQEFBQADggEBAB0kcrFccSmFDmxox0Ne01UIqSsDqHgL+XmHTXJwre6D
+ * hJSZwbvEtOK0G3+dr4Fs11WuUNt5qcLsx5a8uk4G6AKHMzuhLsJ7XZjgmQXGECpY
+ * Q4mC3yT3ZoCGpIXbw+iP3lmEEXgaQL0Tx5LFl/okKbKYwIqNiyKWOMj7ZR/wxWg/
+ * ZDGRs55xuoeLDJ/ZRFf9bI+IaCUd1YrfYcHIl3G87Av+r49YVwqRDT0VDV7uLgqn
+ * 29XI1PpVUNCPQGn9p/eX6Qo7vpDaPybRtA2R7XLKjQaF9oXWeCUqy1hvJac9QFO2
+ * 97Ob1alpHPoZ7mWiEuJwjBPii6a9M9G30nUo39lBi1w=
+ * -----END CERTIFICATE REQUEST-----`,
+ *     signingAlgorithm: "SHA256WITHRSA",
+ *     validity: {
+ *         type: "DAYS",
+ *         value: 70,
+ *     },
+ * }, {
+ *     dependsOn: [subordinateCATwoActivation],
+ * });
+ * export const completeCertificateChain = subordinateCATwoActivation.completeCertificateChain;
+ * export const certificateArn = endEntityCertificate.arn;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * root_ca = aws_native.acmpca.CertificateAuthority("rootCA",
+ *     type="ROOT",
+ *     key_algorithm="RSA_2048",
+ *     signing_algorithm="SHA256WITHRSA",
+ *     subject=aws_native.acmpca.CertificateAuthoritySubjectArgs(
+ *         country="US",
+ *         organization="string",
+ *         organizational_unit="string",
+ *         distinguished_name_qualifier="string",
+ *         state="string",
+ *         common_name="123",
+ *         serial_number="string",
+ *         locality="string",
+ *         title="string",
+ *         surname="string",
+ *         given_name="string",
+ *         initials="DG",
+ *         pseudonym="string",
+ *         generation_qualifier="DBG",
+ *     ),
+ *     revocation_configuration=aws_native.acmpca.CertificateAuthorityRevocationConfigurationArgs(
+ *         crl_configuration=aws_native.acmpca.CertificateAuthorityCrlConfigurationArgs(
+ *             enabled=False,
+ *         ),
+ *     ))
+ * root_ca_certificate = aws_native.acmpca.Certificate("rootCACertificate",
+ *     certificate_authority_arn=root_ca.id,
+ *     certificate_signing_request=root_ca.certificate_signing_request,
+ *     signing_algorithm="SHA256WITHRSA",
+ *     template_arn="arn:aws:acm-pca:::template/RootCACertificate/V1",
+ *     validity=aws_native.acmpca.CertificateValidityArgs(
+ *         type="DAYS",
+ *         value=100,
+ *     ))
+ * root_ca_activation = aws_native.acmpca.CertificateAuthorityActivation("rootCAActivation",
+ *     certificate_authority_arn=root_ca.id,
+ *     certificate=root_ca_certificate.certificate,
+ *     status="ACTIVE")
+ * root_ca_permission = aws_native.acmpca.Permission("rootCAPermission",
+ *     actions=[
+ *         "IssueCertificate",
+ *         "GetCertificate",
+ *         "ListPermissions",
+ *     ],
+ *     certificate_authority_arn=root_ca.id,
+ *     principal="acm.amazonaws.com")
+ * subordinate_ca_one = aws_native.acmpca.CertificateAuthority("subordinateCAOne",
+ *     type="SUBORDINATE",
+ *     key_algorithm="RSA_2048",
+ *     signing_algorithm="SHA256WITHRSA",
+ *     subject=aws_native.acmpca.CertificateAuthoritySubjectArgs(
+ *         country="US",
+ *         organization="string",
+ *         organizational_unit="string",
+ *         distinguished_name_qualifier="string",
+ *         state="string",
+ *         common_name="Sub1",
+ *         serial_number="string",
+ *         locality="string",
+ *         title="string",
+ *         surname="string",
+ *         given_name="string",
+ *         initials="DG",
+ *         pseudonym="string",
+ *         generation_qualifier="DBG",
+ *     ),
+ *     revocation_configuration=aws_native.acmpca.CertificateAuthorityRevocationConfigurationArgs(),
+ *     tags=[])
+ * subordinate_ca_one_ca_certificate = aws_native.acmpca.Certificate("subordinateCAOneCACertificate",
+ *     certificate_authority_arn=root_ca.id,
+ *     certificate_signing_request=subordinate_ca_one.certificate_signing_request,
+ *     signing_algorithm="SHA256WITHRSA",
+ *     template_arn="arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen3/V1",
+ *     validity=aws_native.acmpca.CertificateValidityArgs(
+ *         type="DAYS",
+ *         value=90,
+ *     ),
+ *     opts=pulumi.ResourceOptions(depends_on=[root_ca_activation]))
+ * subordinate_ca_one_activation = aws_native.acmpca.CertificateAuthorityActivation("subordinateCAOneActivation",
+ *     certificate_authority_arn=subordinate_ca_one.id,
+ *     certificate=subordinate_ca_one_ca_certificate.certificate,
+ *     certificate_chain=root_ca_activation.complete_certificate_chain,
+ *     status="ACTIVE")
+ * subordinate_ca_one_permission = aws_native.acmpca.Permission("subordinateCAOnePermission",
+ *     actions=[
+ *         "IssueCertificate",
+ *         "GetCertificate",
+ *         "ListPermissions",
+ *     ],
+ *     certificate_authority_arn=subordinate_ca_one.id,
+ *     principal="acm.amazonaws.com")
+ * subordinate_ca_two = aws_native.acmpca.CertificateAuthority("subordinateCATwo",
+ *     type="SUBORDINATE",
+ *     key_algorithm="RSA_2048",
+ *     signing_algorithm="SHA256WITHRSA",
+ *     subject=aws_native.acmpca.CertificateAuthoritySubjectArgs(
+ *         country="US",
+ *         organization="string",
+ *         organizational_unit="string",
+ *         distinguished_name_qualifier="string",
+ *         state="string",
+ *         serial_number="string",
+ *         locality="string",
+ *         title="string",
+ *         surname="string",
+ *         given_name="string",
+ *         initials="DG",
+ *         pseudonym="string",
+ *         generation_qualifier="DBG",
+ *     ),
+ *     tags=[
+ *         aws_native.acmpca.CertificateAuthorityTagArgs(
+ *             key="Key1",
+ *             value="Value1",
+ *         ),
+ *         aws_native.acmpca.CertificateAuthorityTagArgs(
+ *             key="Key2",
+ *             value="Value2",
+ *         ),
+ *     ])
+ * subordinate_ca_two_ca_certificate = aws_native.acmpca.Certificate("subordinateCATwoCACertificate",
+ *     certificate_authority_arn=subordinate_ca_one.id,
+ *     certificate_signing_request=subordinate_ca_two.certificate_signing_request,
+ *     signing_algorithm="SHA256WITHRSA",
+ *     template_arn="arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen2/V1",
+ *     validity=aws_native.acmpca.CertificateValidityArgs(
+ *         type="DAYS",
+ *         value=80,
+ *     ),
+ *     opts=pulumi.ResourceOptions(depends_on=[subordinate_ca_one_activation]))
+ * subordinate_ca_two_activation = aws_native.acmpca.CertificateAuthorityActivation("subordinateCATwoActivation",
+ *     certificate_authority_arn=subordinate_ca_two.id,
+ *     certificate=subordinate_ca_two_ca_certificate.certificate,
+ *     certificate_chain=subordinate_ca_one_activation.complete_certificate_chain)
+ * subordinate_ca_two_permission = aws_native.acmpca.Permission("subordinateCATwoPermission",
+ *     actions=[
+ *         "IssueCertificate",
+ *         "GetCertificate",
+ *         "ListPermissions",
+ *     ],
+ *     certificate_authority_arn=subordinate_ca_two.id,
+ *     principal="acm.amazonaws.com")
+ * end_entity_certificate = aws_native.acmpca.Certificate("endEntityCertificate",
+ *     certificate_authority_arn=subordinate_ca_two.id,
+ *     certificate_signing_request="""-----BEGIN CERTIFICATE REQUEST-----
+ * MIICvDCCAaQCAQAwdzELMAkGA1UEBhMCVVMxDTALBgNVBAgMBFV0YWgxDzANBgNV
+ * BAcMBkxpbmRvbjEWMBQGA1UECgwNRGlnaUNlcnQgSW5jLjERMA8GA1UECwwIRGln
+ * aUNlcnQxHTAbBgNVBAMMFGV4YW1wbGUuZGlnaWNlcnQuY29tMIIBIjANBgkqhkiG
+ * 9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8+To7d+2kPWeBv/orU3LVbJwDrSQbeKamCmo
+ * wp5bqDxIwV20zqRb7APUOKYoVEFFOEQs6T6gImnIolhbiH6m4zgZ/CPvWBOkZc+c
+ * 1Po2EmvBz+AD5sBdT5kzGQA6NbWyZGldxRthNLOs1efOhdnWFuhI162qmcflgpiI
+ * WDuwq4C9f+YkeJhNn9dF5+owm8cOQmDrV8NNdiTqin8q3qYAHHJRW28glJUCZkTZ
+ * wIaSR6crBQ8TbYNE0dc+Caa3DOIkz1EOsHWzTx+n0zKfqcbgXi4DJx+C1bjptYPR
+ * BPZL8DAeWuA8ebudVT44yEp82G96/Ggcf7F33xMxe0yc+Xa6owIDAQABoAAwDQYJ
+ * KoZIhvcNAQEFBQADggEBAB0kcrFccSmFDmxox0Ne01UIqSsDqHgL+XmHTXJwre6D
+ * hJSZwbvEtOK0G3+dr4Fs11WuUNt5qcLsx5a8uk4G6AKHMzuhLsJ7XZjgmQXGECpY
+ * Q4mC3yT3ZoCGpIXbw+iP3lmEEXgaQL0Tx5LFl/okKbKYwIqNiyKWOMj7ZR/wxWg/
+ * ZDGRs55xuoeLDJ/ZRFf9bI+IaCUd1YrfYcHIl3G87Av+r49YVwqRDT0VDV7uLgqn
+ * 29XI1PpVUNCPQGn9p/eX6Qo7vpDaPybRtA2R7XLKjQaF9oXWeCUqy1hvJac9QFO2
+ * 97Ob1alpHPoZ7mWiEuJwjBPii6a9M9G30nUo39lBi1w=
+ * -----END CERTIFICATE REQUEST-----""",
+ *     signing_algorithm="SHA256WITHRSA",
+ *     validity=aws_native.acmpca.CertificateValidityArgs(
+ *         type="DAYS",
+ *         value=70,
+ *     ),
+ *     opts=pulumi.ResourceOptions(depends_on=[subordinate_ca_two_activation]))
+ * pulumi.export("completeCertificateChain", subordinate_ca_two_activation.complete_certificate_chain)
+ * pulumi.export("certificateArn", end_entity_certificate.arn)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:acmpca:CertificateAuthority")
 public class CertificateAuthority extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the certificate authority.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the certificate authority.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The base64 PEM-encoded certificate signing request (CSR) for your certificate authority certificate.
-     * 
      */
     @Export(name="certificateSigningRequest", type=String.class, parameters={})
     private Output<String> certificateSigningRequest;
 
     /**
      * @return The base64 PEM-encoded certificate signing request (CSR) for your certificate authority certificate.
-     * 
      */
     public Output<String> getCertificateSigningRequest() {
         return this.certificateSigningRequest;
     }
     /**
      * Structure that contains CSR pass through extension information used by the CreateCertificateAuthority action.
-     * 
      */
     @Export(name="csrExtensions", type=CertificateAuthorityCsrExtensions.class, parameters={})
     private Output</* @Nullable */ CertificateAuthorityCsrExtensions> csrExtensions;
 
     /**
      * @return Structure that contains CSR pass through extension information used by the CreateCertificateAuthority action.
-     * 
      */
     public Output</* @Nullable */ CertificateAuthorityCsrExtensions> getCsrExtensions() {
         return this.csrExtensions;
     }
     /**
      * Public key algorithm and size, in bits, of the key pair that your CA creates when it issues a certificate.
-     * 
      */
     @Export(name="keyAlgorithm", type=String.class, parameters={})
     private Output<String> keyAlgorithm;
 
     /**
      * @return Public key algorithm and size, in bits, of the key pair that your CA creates when it issues a certificate.
-     * 
      */
     public Output<String> getKeyAlgorithm() {
         return this.keyAlgorithm;
     }
     /**
      * KeyStorageSecurityStadard defines a cryptographic key management compliance standard used for handling CA keys.
-     * 
      */
     @Export(name="keyStorageSecurityStandard", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyStorageSecurityStandard;
 
     /**
      * @return KeyStorageSecurityStadard defines a cryptographic key management compliance standard used for handling CA keys.
-     * 
      */
     public Output</* @Nullable */ String> getKeyStorageSecurityStandard() {
         return this.keyStorageSecurityStandard;
     }
     /**
      * Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions.
-     * 
      */
     @Export(name="revocationConfiguration", type=CertificateAuthorityRevocationConfiguration.class, parameters={})
     private Output</* @Nullable */ CertificateAuthorityRevocationConfiguration> revocationConfiguration;
 
     /**
      * @return Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions.
-     * 
      */
     public Output</* @Nullable */ CertificateAuthorityRevocationConfiguration> getRevocationConfiguration() {
         return this.revocationConfiguration;
     }
     /**
      * Algorithm your CA uses to sign certificate requests.
-     * 
      */
     @Export(name="signingAlgorithm", type=String.class, parameters={})
     private Output<String> signingAlgorithm;
 
     /**
      * @return Algorithm your CA uses to sign certificate requests.
-     * 
      */
     public Output<String> getSigningAlgorithm() {
         return this.signingAlgorithm;
     }
     /**
      * Structure that contains X.500 distinguished name information for your CA.
-     * 
      */
     @Export(name="subject", type=CertificateAuthoritySubject.class, parameters={})
     private Output<CertificateAuthoritySubject> subject;
 
     /**
      * @return Structure that contains X.500 distinguished name information for your CA.
-     * 
      */
     public Output<CertificateAuthoritySubject> getSubject() {
         return this.subject;
@@ -144,14 +968,12 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
     }
     /**
      * The type of the certificate authority.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the certificate authority.
-     * 
      */
     public Output<String> getType() {
         return this.type;

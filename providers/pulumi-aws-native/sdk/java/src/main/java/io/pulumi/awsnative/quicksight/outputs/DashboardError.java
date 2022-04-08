@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 public final class DashboardError {
     /**
      * <p>Message.</p>
-     * 
      */
     private final @Nullable String message;
     private final @Nullable DashboardErrorType type;
@@ -29,7 +28,6 @@ public final class DashboardError {
 
     /**
      * <p>Message.</p>
-     * 
     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);

@@ -16,105 +16,453 @@ import javax.annotation.Nullable;
 /**
  * Schema for AWS::CodeStarConnections::Connection resource which can be used to connect external source providers with AWS CodePipeline
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sampleConnection = new AwsNative.CodeStarConnections.Connection("sampleConnection", new AwsNative.CodeStarConnections.ConnectionArgs
+ *         {
+ *             ConnectionName = "MyConnection",
+ *             ProviderType = "Bitbucket",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.CodeStarConnections.Inputs.ConnectionTagArgs
+ *                 {
+ *                     Key = "Project",
+ *                     Value = "ProjectB",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/codestarconnections"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codestarconnections.NewConnection(ctx, "sampleConnection", &codestarconnections.ConnectionArgs{
+ * 			ConnectionName: pulumi.String("MyConnection"),
+ * 			ProviderType:   pulumi.String("Bitbucket"),
+ * 			Tags: []codestarconnections.ConnectionTagArgs{
+ * 				&codestarconnections.ConnectionTagArgs{
+ * 					Key:   pulumi.String("Project"),
+ * 					Value: pulumi.String("ProjectB"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const sampleConnection = new aws_native.codestarconnections.Connection("sampleConnection", {
+ *     connectionName: "MyConnection",
+ *     providerType: "Bitbucket",
+ *     tags: [{
+ *         key: "Project",
+ *         value: "ProjectB",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * sample_connection = aws_native.codestarconnections.Connection("sampleConnection",
+ *     connection_name="MyConnection",
+ *     provider_type="Bitbucket",
+ *     tags=[aws_native.codestarconnections.ConnectionTagArgs(
+ *         key="Project",
+ *         value="ProjectB",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sampleConnection = new AwsNative.CodeStarConnections.Connection("sampleConnection", new AwsNative.CodeStarConnections.ConnectionArgs
+ *         {
+ *             ConnectionName = "MyConnection",
+ *             ProviderType = "Bitbucket",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.CodeStarConnections.Inputs.ConnectionTagArgs
+ *                 {
+ *                     Key = "Project",
+ *                     Value = "ProjectB",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/codestarconnections"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codestarconnections.NewConnection(ctx, "sampleConnection", &codestarconnections.ConnectionArgs{
+ * 			ConnectionName: pulumi.String("MyConnection"),
+ * 			ProviderType:   pulumi.String("Bitbucket"),
+ * 			Tags: []codestarconnections.ConnectionTagArgs{
+ * 				&codestarconnections.ConnectionTagArgs{
+ * 					Key:   pulumi.String("Project"),
+ * 					Value: pulumi.String("ProjectB"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const sampleConnection = new aws_native.codestarconnections.Connection("sampleConnection", {
+ *     connectionName: "MyConnection",
+ *     providerType: "Bitbucket",
+ *     tags: [{
+ *         key: "Project",
+ *         value: "ProjectB",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * sample_connection = aws_native.codestarconnections.Connection("sampleConnection",
+ *     connection_name="MyConnection",
+ *     provider_type="Bitbucket",
+ *     tags=[aws_native.codestarconnections.ConnectionTagArgs(
+ *         key="Project",
+ *         value="ProjectB",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sampleConnection = new AwsNative.CodeStarConnections.Connection("sampleConnection", new AwsNative.CodeStarConnections.ConnectionArgs
+ *         {
+ *             ConnectionName = "MyConnection",
+ *             ProviderType = "GitHubEnterpriseServer",
+ *             HostArn = "arn:aws:codestar-connections:us-west-2:123456789123:host/abc123-example",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.CodeStarConnections.Inputs.ConnectionTagArgs
+ *                 {
+ *                     Key = "Project",
+ *                     Value = "ProjectB",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/codestarconnections"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codestarconnections.NewConnection(ctx, "sampleConnection", &codestarconnections.ConnectionArgs{
+ * 			ConnectionName: pulumi.String("MyConnection"),
+ * 			ProviderType:   pulumi.String("GitHubEnterpriseServer"),
+ * 			HostArn:        pulumi.String("arn:aws:codestar-connections:us-west-2:123456789123:host/abc123-example"),
+ * 			Tags: []codestarconnections.ConnectionTagArgs{
+ * 				&codestarconnections.ConnectionTagArgs{
+ * 					Key:   pulumi.String("Project"),
+ * 					Value: pulumi.String("ProjectB"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const sampleConnection = new aws_native.codestarconnections.Connection("sampleConnection", {
+ *     connectionName: "MyConnection",
+ *     providerType: "GitHubEnterpriseServer",
+ *     hostArn: "arn:aws:codestar-connections:us-west-2:123456789123:host/abc123-example",
+ *     tags: [{
+ *         key: "Project",
+ *         value: "ProjectB",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * sample_connection = aws_native.codestarconnections.Connection("sampleConnection",
+ *     connection_name="MyConnection",
+ *     provider_type="GitHubEnterpriseServer",
+ *     host_arn="arn:aws:codestar-connections:us-west-2:123456789123:host/abc123-example",
+ *     tags=[aws_native.codestarconnections.ConnectionTagArgs(
+ *         key="Project",
+ *         value="ProjectB",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sampleConnection = new AwsNative.CodeStarConnections.Connection("sampleConnection", new AwsNative.CodeStarConnections.ConnectionArgs
+ *         {
+ *             ConnectionName = "MyConnection",
+ *             ProviderType = "GitHubEnterpriseServer",
+ *             HostArn = "arn:aws:codestar-connections:us-west-2:123456789123:host/abc123-example",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.CodeStarConnections.Inputs.ConnectionTagArgs
+ *                 {
+ *                     Key = "Project",
+ *                     Value = "ProjectB",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/codestarconnections"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codestarconnections.NewConnection(ctx, "sampleConnection", &codestarconnections.ConnectionArgs{
+ * 			ConnectionName: pulumi.String("MyConnection"),
+ * 			ProviderType:   pulumi.String("GitHubEnterpriseServer"),
+ * 			HostArn:        pulumi.String("arn:aws:codestar-connections:us-west-2:123456789123:host/abc123-example"),
+ * 			Tags: []codestarconnections.ConnectionTagArgs{
+ * 				&codestarconnections.ConnectionTagArgs{
+ * 					Key:   pulumi.String("Project"),
+ * 					Value: pulumi.String("ProjectB"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const sampleConnection = new aws_native.codestarconnections.Connection("sampleConnection", {
+ *     connectionName: "MyConnection",
+ *     providerType: "GitHubEnterpriseServer",
+ *     hostArn: "arn:aws:codestar-connections:us-west-2:123456789123:host/abc123-example",
+ *     tags: [{
+ *         key: "Project",
+ *         value: "ProjectB",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * sample_connection = aws_native.codestarconnections.Connection("sampleConnection",
+ *     connection_name="MyConnection",
+ *     provider_type="GitHubEnterpriseServer",
+ *     host_arn="arn:aws:codestar-connections:us-west-2:123456789123:host/abc123-example",
+ *     tags=[aws_native.codestarconnections.ConnectionTagArgs(
+ *         key="Project",
+ *         value="ProjectB",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:codestarconnections:Connection")
 public class Connection extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the  connection. The ARN is used as the connection reference when the connection is shared between AWS services.
-     * 
      */
     @Export(name="connectionArn", type=String.class, parameters={})
     private Output<String> connectionArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the  connection. The ARN is used as the connection reference when the connection is shared between AWS services.
-     * 
      */
     public Output<String> getConnectionArn() {
         return this.connectionArn;
     }
     /**
      * The name of the connection. Connection names must be unique in an AWS user account.
-     * 
      */
     @Export(name="connectionName", type=String.class, parameters={})
     private Output<String> connectionName;
 
     /**
      * @return The name of the connection. Connection names must be unique in an AWS user account.
-     * 
      */
     public Output<String> getConnectionName() {
         return this.connectionName;
     }
     /**
      * The current status of the connection.
-     * 
      */
     @Export(name="connectionStatus", type=String.class, parameters={})
     private Output<String> connectionStatus;
 
     /**
      * @return The current status of the connection.
-     * 
      */
     public Output<String> getConnectionStatus() {
         return this.connectionStatus;
     }
     /**
      * The host arn configured to represent the infrastructure where your third-party provider is installed. You must specify either a ProviderType or a HostArn.
-     * 
      */
     @Export(name="hostArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostArn;
 
     /**
      * @return The host arn configured to represent the infrastructure where your third-party provider is installed. You must specify either a ProviderType or a HostArn.
-     * 
      */
     public Output</* @Nullable */ String> getHostArn() {
         return this.hostArn;
     }
     /**
      * The name of the external provider where your third-party code repository is configured. For Bitbucket, this is the account ID of the owner of the Bitbucket repository.
-     * 
      */
     @Export(name="ownerAccountId", type=String.class, parameters={})
     private Output<String> ownerAccountId;
 
     /**
      * @return The name of the external provider where your third-party code repository is configured. For Bitbucket, this is the account ID of the owner of the Bitbucket repository.
-     * 
      */
     public Output<String> getOwnerAccountId() {
         return this.ownerAccountId;
     }
     /**
      * The name of the external provider where your third-party code repository is configured. You must specify either a ProviderType or a HostArn.
-     * 
      */
     @Export(name="providerType", type=String.class, parameters={})
     private Output</* @Nullable */ String> providerType;
 
     /**
      * @return The name of the external provider where your third-party code repository is configured. You must specify either a ProviderType or a HostArn.
-     * 
      */
     public Output</* @Nullable */ String> getProviderType() {
         return this.providerType;
     }
     /**
      * Specifies the tags applied to a connection.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ConnectionTag.class})
     private Output</* @Nullable */ List<ConnectionTag>> tags;
 
     /**
      * @return Specifies the tags applied to a connection.
-     * 
      */
     public Output</* @Nullable */ List<ConnectionTag>> getTags() {
         return this.tags;

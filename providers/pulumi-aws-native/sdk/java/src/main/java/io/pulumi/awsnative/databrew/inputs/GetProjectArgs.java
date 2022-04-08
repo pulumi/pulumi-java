@@ -14,7 +14,6 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Project name
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

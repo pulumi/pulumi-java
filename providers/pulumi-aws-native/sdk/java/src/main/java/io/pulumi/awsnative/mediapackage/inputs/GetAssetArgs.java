@@ -14,7 +14,6 @@ public final class GetAssetArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The unique identifier for the Asset.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

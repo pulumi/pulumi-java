@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class AccountAuditConfigurationAuditNotificationTarget {
     /**
      * True if notifications to the target are enabled.
-     * 
      */
     private final @Nullable Boolean enabled;
     /**
      * The ARN of the role that grants permission to send notifications to the target.
-     * 
      */
     private final @Nullable String roleArn;
     /**
      * The ARN of the target (SNS topic) to which audit notifications are sent.
-     * 
      */
     private final @Nullable String targetArn;
 
@@ -40,21 +37,18 @@ public final class AccountAuditConfigurationAuditNotificationTarget {
 
     /**
      * True if notifications to the target are enabled.
-     * 
     */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The ARN of the role that grants permission to send notifications to the target.
-     * 
     */
     public Optional<String> getRoleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
      * The ARN of the target (SNS topic) to which audit notifications are sent.
-     * 
     */
     public Optional<String> getTargetArn() {
         return Optional.ofNullable(this.targetArn);

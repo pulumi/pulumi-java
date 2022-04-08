@@ -14,7 +14,6 @@ public final class GetIPAMArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Id of the IPAM.
-     * 
      */
     @Import(name="ipamId", required=true)
       private final String ipamId;

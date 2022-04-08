@@ -16,7 +16,6 @@ public final class ConnectorProfileConnectorOAuthRequestArgs extends io.pulumi.r
 
     /**
      * The code provided by the connector when it has been authenticated via the connected app.
-     * 
      */
     @Import(name="authCode")
       private final @Nullable Output<String> authCode;
@@ -28,7 +27,6 @@ public final class ConnectorProfileConnectorOAuthRequestArgs extends io.pulumi.r
     /**
      * The URL to which the authentication server redirects the browser after authorization has been
      * granted.
-     * 
      */
     @Import(name="redirectUri")
       private final @Nullable Output<String> redirectUri;

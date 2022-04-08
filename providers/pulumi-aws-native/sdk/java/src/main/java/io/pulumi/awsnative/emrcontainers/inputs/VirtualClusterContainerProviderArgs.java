@@ -16,7 +16,6 @@ public final class VirtualClusterContainerProviderArgs extends io.pulumi.resourc
 
     /**
      * The ID of the container cluster
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;
@@ -34,7 +33,6 @@ public final class VirtualClusterContainerProviderArgs extends io.pulumi.resourc
 
     /**
      * The type of the container provider
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

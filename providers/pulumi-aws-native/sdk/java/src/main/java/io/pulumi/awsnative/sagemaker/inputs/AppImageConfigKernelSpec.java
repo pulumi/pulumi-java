@@ -16,7 +16,6 @@ public final class AppImageConfigKernelSpec extends io.pulumi.resources.InvokeAr
 
     /**
      * The display name of the kernel.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -27,7 +26,6 @@ public final class AppImageConfigKernelSpec extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the kernel.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

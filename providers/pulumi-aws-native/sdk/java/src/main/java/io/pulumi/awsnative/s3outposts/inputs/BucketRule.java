@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies lifecycle rules for an Amazon S3Outposts bucket. You must specify at least one of the following: AbortIncompleteMultipartUpload, ExpirationDate, ExpirationInDays.
- * 
  */
 public final class BucketRule extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class BucketRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies a lifecycle rule that stops incomplete multipart uploads to an Amazon S3Outposts bucket.
-     * 
      */
     @Import(name="abortIncompleteMultipartUpload")
       private final @Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload;
@@ -35,7 +33,6 @@ public final class BucketRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Indicates when objects are deleted from Amazon S3Outposts. The date value must be in ISO 8601 format. The time is always midnight UTC.
-     * 
      */
     @Import(name="expirationDate")
       private final @Nullable String expirationDate;
@@ -46,7 +43,6 @@ public final class BucketRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Indicates the number of days after creation when objects are deleted from Amazon S3Outposts.
-     * 
      */
     @Import(name="expirationInDays")
       private final @Nullable Integer expirationInDays;
@@ -57,7 +53,6 @@ public final class BucketRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The container for the filter of the lifecycle rule.
-     * 
      */
     @Import(name="filter")
       private final @Nullable BucketRuleFilterProperties filter;
@@ -68,7 +63,6 @@ public final class BucketRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Unique identifier for the lifecycle rule. The value can't be longer than 255 characters.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

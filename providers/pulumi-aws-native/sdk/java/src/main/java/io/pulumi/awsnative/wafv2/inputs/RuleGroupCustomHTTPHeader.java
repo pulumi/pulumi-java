@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * HTTP header.
- * 
  */
 public final class RuleGroupCustomHTTPHeader extends io.pulumi.resources.InvokeArgs {
 

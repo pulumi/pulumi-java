@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class LocationS3Tag {
     /**
      * The key for an AWS resource tag.
-     * 
      */
     private final String key;
     /**
      * The value for an AWS resource tag.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class LocationS3Tag {
 
     /**
      * The key for an AWS resource tag.
-     * 
     */
     public String getKey() {
         return this.key;
     }
     /**
      * The value for an AWS resource tag.
-     * 
     */
     public String getValue() {
         return this.value;

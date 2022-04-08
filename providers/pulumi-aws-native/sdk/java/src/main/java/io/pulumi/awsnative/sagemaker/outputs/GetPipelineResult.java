@@ -19,17 +19,14 @@ public final class GetPipelineResult {
     private final @Nullable Object pipelineDefinition;
     /**
      * The description of the Pipeline.
-     * 
      */
     private final @Nullable String pipelineDescription;
     /**
      * The display name of the Pipeline.
-     * 
      */
     private final @Nullable String pipelineDisplayName;
     /**
      * Role Arn
-     * 
      */
     private final @Nullable String roleArn;
     private final @Nullable List<PipelineTag> tags;
@@ -58,21 +55,18 @@ public final class GetPipelineResult {
     }
     /**
      * The description of the Pipeline.
-     * 
     */
     public Optional<String> getPipelineDescription() {
         return Optional.ofNullable(this.pipelineDescription);
     }
     /**
      * The display name of the Pipeline.
-     * 
     */
     public Optional<String> getPipelineDisplayName() {
         return Optional.ofNullable(this.pipelineDisplayName);
     }
     /**
      * Role Arn
-     * 
     */
     public Optional<String> getRoleArn() {
         return Optional.ofNullable(this.roleArn);

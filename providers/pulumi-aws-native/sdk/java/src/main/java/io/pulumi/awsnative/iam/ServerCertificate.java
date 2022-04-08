@@ -15,20 +15,17 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::IAM::ServerCertificate
- * 
  */
 @ResourceType(type="aws-native:iam:ServerCertificate")
 public class ServerCertificate extends io.pulumi.resources.CustomResource {
     /**
      * Amazon Resource Name (ARN) of the server certificate
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Amazon Resource Name (ARN) of the server certificate
-     * 
      */
     public Output<String> getArn() {
         return this.arn;

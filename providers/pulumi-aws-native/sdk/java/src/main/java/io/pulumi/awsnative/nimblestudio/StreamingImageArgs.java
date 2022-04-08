@@ -17,7 +17,6 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <p>A human-readable description of the streaming image.</p>
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -28,7 +27,6 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <p>The ID of an EC2 machine image with which to create this streaming image.</p>
-     * 
      */
     @Import(name="ec2ImageId", required=true)
       private final Output<String> ec2ImageId;
@@ -39,7 +37,6 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <p>A friendly name for a streaming image resource.</p>
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -50,7 +47,6 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <p>The studioId. </p>
-     * 
      */
     @Import(name="studioId", required=true)
       private final Output<String> studioId;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GatewayGreengrassV2 {
     /**
      * The name of the CoreDevice in GreenGrass V2.
-     * 
      */
     private final String coreDeviceThingName;
 
@@ -22,7 +21,6 @@ public final class GatewayGreengrassV2 {
 
     /**
      * The name of the CoreDevice in GreenGrass V2.
-     * 
     */
     public String getCoreDeviceThingName() {
         return this.coreDeviceThingName;

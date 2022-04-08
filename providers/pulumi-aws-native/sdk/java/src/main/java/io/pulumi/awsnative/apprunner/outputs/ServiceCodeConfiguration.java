@@ -15,7 +15,6 @@ public final class ServiceCodeConfiguration {
     private final @Nullable ServiceCodeConfigurationValues codeConfigurationValues;
     /**
      * Configuration Source
-     * 
      */
     private final ServiceCodeConfigurationConfigurationSource configurationSource;
 
@@ -32,7 +31,6 @@ public final class ServiceCodeConfiguration {
     }
     /**
      * Configuration Source
-     * 
     */
     public ServiceCodeConfigurationConfigurationSource getConfigurationSource() {
         return this.configurationSource;

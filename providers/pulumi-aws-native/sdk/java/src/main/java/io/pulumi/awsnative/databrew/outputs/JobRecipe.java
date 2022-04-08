@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class JobRecipe {
     /**
      * Recipe name
-     * 
      */
     private final String name;
     /**
      * Recipe version
-     * 
      */
     private final @Nullable String version;
 
@@ -32,14 +30,12 @@ public final class JobRecipe {
 
     /**
      * Recipe name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Recipe version
-     * 
     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);

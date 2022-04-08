@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class SentimentAnalysisSettingsProperties {
     /**
      * Enable to call Amazon Comprehend for Sentiment natively within Lex
-     * 
      */
     private final Boolean detectSentiment;
 
@@ -22,7 +21,6 @@ public final class SentimentAnalysisSettingsProperties {
 
     /**
      * Enable to call Amazon Comprehend for Sentiment natively within Lex
-     * 
     */
     public Boolean getDetectSentiment() {
         return this.detectSentiment;

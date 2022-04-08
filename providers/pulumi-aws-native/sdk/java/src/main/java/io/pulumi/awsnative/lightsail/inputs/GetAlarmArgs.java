@@ -14,7 +14,6 @@ public final class GetAlarmArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name for the alarm. Specify the name of an existing alarm to update, and overwrite the previous configuration of the alarm.
-     * 
      */
     @Import(name="alarmName", required=true)
       private final String alarmName;

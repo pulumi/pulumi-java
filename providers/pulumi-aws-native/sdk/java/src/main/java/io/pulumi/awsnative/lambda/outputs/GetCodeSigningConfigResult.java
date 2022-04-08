@@ -15,27 +15,22 @@ import javax.annotation.Nullable;
 public final class GetCodeSigningConfigResult {
     /**
      * When the CodeSigningConfig is later on attached to a function, the function code will be expected to be signed by profiles from this list
-     * 
      */
     private final @Nullable CodeSigningConfigAllowedPublishers allowedPublishers;
     /**
      * A unique Arn for CodeSigningConfig resource
-     * 
      */
     private final @Nullable String codeSigningConfigArn;
     /**
      * A unique identifier for CodeSigningConfig resource
-     * 
      */
     private final @Nullable String codeSigningConfigId;
     /**
      * Policies to control how to act if a signature is invalid
-     * 
      */
     private final @Nullable CodeSigningConfigCodeSigningPolicies codeSigningPolicies;
     /**
      * A description of the CodeSigningConfig
-     * 
      */
     private final @Nullable String description;
 
@@ -55,35 +50,30 @@ public final class GetCodeSigningConfigResult {
 
     /**
      * When the CodeSigningConfig is later on attached to a function, the function code will be expected to be signed by profiles from this list
-     * 
     */
     public Optional<CodeSigningConfigAllowedPublishers> getAllowedPublishers() {
         return Optional.ofNullable(this.allowedPublishers);
     }
     /**
      * A unique Arn for CodeSigningConfig resource
-     * 
     */
     public Optional<String> getCodeSigningConfigArn() {
         return Optional.ofNullable(this.codeSigningConfigArn);
     }
     /**
      * A unique identifier for CodeSigningConfig resource
-     * 
     */
     public Optional<String> getCodeSigningConfigId() {
         return Optional.ofNullable(this.codeSigningConfigId);
     }
     /**
      * Policies to control how to act if a signature is invalid
-     * 
     */
     public Optional<CodeSigningConfigCodeSigningPolicies> getCodeSigningPolicies() {
         return Optional.ofNullable(this.codeSigningPolicies);
     }
     /**
      * A description of the CodeSigningConfig
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);

@@ -20,7 +20,6 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the accelerator.
-     * 
      */
     @Import(name="acceleratorArn", required=true)
       private final Output<String> acceleratorArn;
@@ -31,7 +30,6 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Client affinity lets you direct all requests from a user to the same endpoint.
-     * 
      */
     @Import(name="clientAffinity")
       private final @Nullable Output<ListenerClientAffinity> clientAffinity;
@@ -49,7 +47,6 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The protocol for the listener.
-     * 
      */
     @Import(name="protocol", required=true)
       private final Output<ListenerProtocol> protocol;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * AWS::DeviceFarm::VPCEConfiguration creates a new Device Farm VPCE Configuration
- * 
  */
 @ResourceType(type="aws-native:devicefarm:VPCEConfiguration")
 public class VPCEConfiguration extends io.pulumi.resources.CustomResource {

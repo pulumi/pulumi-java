@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class GetDataQualityJobDefinitionResult {
     /**
      * The time at which the job definition was created.
-     * 
      */
     private final @Nullable String creationTime;
     /**
      * The Amazon Resource Name (ARN) of job definition.
-     * 
      */
     private final @Nullable String jobDefinitionArn;
 
@@ -32,14 +30,12 @@ public final class GetDataQualityJobDefinitionResult {
 
     /**
      * The time at which the job definition was created.
-     * 
     */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The Amazon Resource Name (ARN) of job definition.
-     * 
     */
     public Optional<String> getJobDefinitionArn() {
         return Optional.ofNullable(this.jobDefinitionArn);

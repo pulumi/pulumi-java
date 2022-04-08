@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An HTTP Live Streaming (HLS) ingest resource configuration.
- * 
  */
 public final class ChannelHlsIngest extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ChannelHlsIngest extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A list of endpoints to which the source stream should be sent.
-     * 
      */
     @Import(name="ingestEndpoints")
       private final @Nullable List<ChannelIngestEndpoint> ingestEndpoints;

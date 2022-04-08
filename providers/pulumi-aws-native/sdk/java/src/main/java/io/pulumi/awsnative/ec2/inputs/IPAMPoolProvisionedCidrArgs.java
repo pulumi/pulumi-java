@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * An address space to be inserted into this pool. All allocations must be made from this address space.
- * 
  */
 public final class IPAMPoolProvisionedCidrArgs extends io.pulumi.resources.ResourceArgs {
 

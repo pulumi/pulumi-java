@@ -16,132 +16,113 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::NetworkManager::Link type describes a link.
- * 
  */
 @ResourceType(type="aws-native:networkmanager:Link")
 public class Link extends io.pulumi.resources.CustomResource {
     /**
      * The Bandwidth for the link.
-     * 
      */
     @Export(name="bandwidth", type=LinkBandwidth.class, parameters={})
     private Output<LinkBandwidth> bandwidth;
 
     /**
      * @return The Bandwidth for the link.
-     * 
      */
     public Output<LinkBandwidth> getBandwidth() {
         return this.bandwidth;
     }
     /**
      * The description of the link.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the link.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The ID of the global network.
-     * 
      */
     @Export(name="globalNetworkId", type=String.class, parameters={})
     private Output<String> globalNetworkId;
 
     /**
      * @return The ID of the global network.
-     * 
      */
     public Output<String> getGlobalNetworkId() {
         return this.globalNetworkId;
     }
     /**
      * The Amazon Resource Name (ARN) of the link.
-     * 
      */
     @Export(name="linkArn", type=String.class, parameters={})
     private Output<String> linkArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the link.
-     * 
      */
     public Output<String> getLinkArn() {
         return this.linkArn;
     }
     /**
      * The ID of the link.
-     * 
      */
     @Export(name="linkId", type=String.class, parameters={})
     private Output<String> linkId;
 
     /**
      * @return The ID of the link.
-     * 
      */
     public Output<String> getLinkId() {
         return this.linkId;
     }
     /**
      * The provider of the link.
-     * 
      */
     @Export(name="provider", type=String.class, parameters={})
     private Output</* @Nullable */ String> provider;
 
     /**
      * @return The provider of the link.
-     * 
      */
     public Output</* @Nullable */ String> getProvider() {
         return this.provider;
     }
     /**
      * The ID of the site
-     * 
      */
     @Export(name="siteId", type=String.class, parameters={})
     private Output<String> siteId;
 
     /**
      * @return The ID of the site
-     * 
      */
     public Output<String> getSiteId() {
         return this.siteId;
     }
     /**
      * The tags for the link.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={LinkTag.class})
     private Output</* @Nullable */ List<LinkTag>> tags;
 
     /**
      * @return The tags for the link.
-     * 
      */
     public Output</* @Nullable */ List<LinkTag>> getTags() {
         return this.tags;
     }
     /**
      * The type of the link.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**
      * @return The type of the link.
-     * 
      */
     public Output</* @Nullable */ String> getType() {
         return this.type;

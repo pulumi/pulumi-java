@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Input ServiceCatalog Provisioning Details
- * 
  */
 public final class ServiceCatalogProvisioningDetailsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -43,7 +42,6 @@ public final class ServiceCatalogProvisioningDetailsPropertiesArgs extends io.pu
 
     /**
      * Parameters specified by the administrator that are required for provisioning the product.
-     * 
      */
     @Import(name="provisioningParameters")
       private final @Nullable Output<List<ProjectProvisioningParameterArgs>> provisioningParameters;

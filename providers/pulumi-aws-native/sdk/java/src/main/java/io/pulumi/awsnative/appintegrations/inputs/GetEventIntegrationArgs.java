@@ -14,7 +14,6 @@ public final class GetEventIntegrationArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the event integration.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

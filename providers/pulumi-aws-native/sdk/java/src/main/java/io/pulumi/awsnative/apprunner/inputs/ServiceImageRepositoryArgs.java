@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Image Repository
- * 
  */
 public final class ServiceImageRepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class ServiceImageRepositoryArgs extends io.pulumi.resources.Resour
 
     /**
      * Image Identifier
-     * 
      */
     @Import(name="imageIdentifier", required=true)
       private final Output<String> imageIdentifier;
@@ -40,7 +38,6 @@ public final class ServiceImageRepositoryArgs extends io.pulumi.resources.Resour
 
     /**
      * Image Repository Type
-     * 
      */
     @Import(name="imageRepositoryType", required=true)
       private final Output<ServiceImageRepositoryImageRepositoryType> imageRepositoryType;

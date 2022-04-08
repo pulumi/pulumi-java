@@ -14,76 +14,65 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::Detective::MemberInvitation
- * 
  */
 @ResourceType(type="aws-native:detective:MemberInvitation")
 public class MemberInvitation extends io.pulumi.resources.CustomResource {
     /**
      * When set to true, invitation emails are not sent to the member accounts. Member accounts must still accept the invitation before they are added to the behavior graph. Updating this field has no effect.
-     * 
      */
     @Export(name="disableEmailNotification", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableEmailNotification;
 
     /**
      * @return When set to true, invitation emails are not sent to the member accounts. Member accounts must still accept the invitation before they are added to the behavior graph. Updating this field has no effect.
-     * 
      */
     public Output</* @Nullable */ Boolean> getDisableEmailNotification() {
         return this.disableEmailNotification;
     }
     /**
      * The ARN of the graph to which the member account will be invited
-     * 
      */
     @Export(name="graphArn", type=String.class, parameters={})
     private Output<String> graphArn;
 
     /**
      * @return The ARN of the graph to which the member account will be invited
-     * 
      */
     public Output<String> getGraphArn() {
         return this.graphArn;
     }
     /**
      * The root email address for the account to be invited, for validation. Updating this field has no effect.
-     * 
      */
     @Export(name="memberEmailAddress", type=String.class, parameters={})
     private Output<String> memberEmailAddress;
 
     /**
      * @return The root email address for the account to be invited, for validation. Updating this field has no effect.
-     * 
      */
     public Output<String> getMemberEmailAddress() {
         return this.memberEmailAddress;
     }
     /**
      * The AWS account ID to be invited to join the graph as a member
-     * 
      */
     @Export(name="memberId", type=String.class, parameters={})
     private Output<String> memberId;
 
     /**
      * @return The AWS account ID to be invited to join the graph as a member
-     * 
      */
     public Output<String> getMemberId() {
         return this.memberId;
     }
     /**
      * A message to be included in the email invitation sent to the invited account. Updating this field has no effect.
-     * 
      */
     @Export(name="message", type=String.class, parameters={})
     private Output</* @Nullable */ String> message;
 
     /**
      * @return A message to be included in the email invitation sent to the invited account. Updating this field has no effect.
-     * 
      */
     public Output</* @Nullable */ String> getMessage() {
         return this.message;

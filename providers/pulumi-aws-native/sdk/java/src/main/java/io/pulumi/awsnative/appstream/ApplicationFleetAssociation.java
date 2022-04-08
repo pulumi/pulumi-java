@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::AppStream::ApplicationFleetAssociation
- * 
  */
 @ResourceType(type="aws-native:appstream:ApplicationFleetAssociation")
 public class ApplicationFleetAssociation extends io.pulumi.resources.CustomResource {

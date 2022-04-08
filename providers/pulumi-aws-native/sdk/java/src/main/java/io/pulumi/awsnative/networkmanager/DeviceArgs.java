@@ -19,7 +19,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the device.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -30,7 +29,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the global network.
-     * 
      */
     @Import(name="globalNetworkId", required=true)
       private final Output<String> globalNetworkId;
@@ -41,7 +39,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The site location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<DeviceLocationArgs> location;
@@ -52,7 +49,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The device model
-     * 
      */
     @Import(name="model")
       private final @Nullable Output<String> model;
@@ -63,7 +59,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The device serial number.
-     * 
      */
     @Import(name="serialNumber")
       private final @Nullable Output<String> serialNumber;
@@ -74,7 +69,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The site ID.
-     * 
      */
     @Import(name="siteId")
       private final @Nullable Output<String> siteId;
@@ -85,7 +79,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags for the device.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<DeviceTagArgs>> tags;
@@ -96,7 +89,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The device type.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;
@@ -107,7 +99,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The device vendor.
-     * 
      */
     @Import(name="vendor")
       private final @Nullable Output<String> vendor;

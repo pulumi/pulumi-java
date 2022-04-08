@@ -14,7 +14,6 @@ public final class GetTaskDefinitionArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The Amazon Resource Name (ARN) of the Amazon ECS task definition
-     * 
      */
     @Import(name="taskDefinitionArn", required=true)
       private final String taskDefinitionArn;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Frequency of anomaly detection
-     * 
      */
     @EnumType
     public enum AnomalyDetectorFrequency {

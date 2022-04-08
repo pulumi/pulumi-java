@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains information for an IAM role identity in an access policy.
- * 
  */
 public final class AccessPolicyIamRole extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AccessPolicyIamRole extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ARN of the IAM role.
-     * 
      */
     @Import(name="arn")
       private final @Nullable String arn;

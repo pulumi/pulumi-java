@@ -15,7 +15,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The parent resource's identifier.
-     * 
      */
     @Import(name="parentId", required=true)
       private final Output<String> parentId;
@@ -26,7 +25,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The last path segment for this resource.
-     * 
      */
     @Import(name="pathPart", required=true)
       private final Output<String> pathPart;
@@ -37,7 +35,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the RestApi resource in which you want to create this resource..
-     * 
      */
     @Import(name="restApiId", required=true)
       private final Output<String> restApiId;

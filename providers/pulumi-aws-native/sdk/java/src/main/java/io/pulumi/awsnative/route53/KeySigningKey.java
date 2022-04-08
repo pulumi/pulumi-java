@@ -14,62 +14,53 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a key signing key (KSK) associated with a hosted zone. You can only have two KSKs per hosted zone.
- * 
  */
 @ResourceType(type="aws-native:route53:KeySigningKey")
 public class KeySigningKey extends io.pulumi.resources.CustomResource {
     /**
      * The unique string (ID) used to identify a hosted zone.
-     * 
      */
     @Export(name="hostedZoneId", type=String.class, parameters={})
     private Output<String> hostedZoneId;
 
     /**
      * @return The unique string (ID) used to identify a hosted zone.
-     * 
      */
     public Output<String> getHostedZoneId() {
         return this.hostedZoneId;
     }
     /**
      * The Amazon resource name (ARN) for a customer managed key (CMK) in AWS Key Management Service (KMS). The KeyManagementServiceArn must be unique for each key signing key (KSK) in a single hosted zone.
-     * 
      */
     @Export(name="keyManagementServiceArn", type=String.class, parameters={})
     private Output<String> keyManagementServiceArn;
 
     /**
      * @return The Amazon resource name (ARN) for a customer managed key (CMK) in AWS Key Management Service (KMS). The KeyManagementServiceArn must be unique for each key signing key (KSK) in a single hosted zone.
-     * 
      */
     public Output<String> getKeyManagementServiceArn() {
         return this.keyManagementServiceArn;
     }
     /**
      * An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.
-     * 
      */
     @Export(name="status", type=KeySigningKeyStatus.class, parameters={})
     private Output<KeySigningKeyStatus> status;
 
     /**
      * @return A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.
-     * 
      */
     public Output<KeySigningKeyStatus> getStatus() {
         return this.status;

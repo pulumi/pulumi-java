@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The encryption type to use.
-     * 
      */
     @EnumType
     public enum RepositoryEncryptionType {

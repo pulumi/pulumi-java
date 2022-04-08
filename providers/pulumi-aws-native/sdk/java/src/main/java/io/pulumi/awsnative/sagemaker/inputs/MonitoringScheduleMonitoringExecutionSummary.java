@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Summary of information about monitoring job
- * 
  */
 public final class MonitoringScheduleMonitoringExecutionSummary extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends io.pulum
 
     /**
      * The time at which the monitoring job was created.
-     * 
      */
     @Import(name="creationTime", required=true)
       private final String creationTime;
@@ -39,7 +37,6 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends io.pulum
 
     /**
      * Contains the reason a monitoring job failed, if it failed.
-     * 
      */
     @Import(name="failureReason")
       private final @Nullable String failureReason;
@@ -50,7 +47,6 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends io.pulum
 
     /**
      * A timestamp that indicates the last time the monitoring job was modified.
-     * 
      */
     @Import(name="lastModifiedTime", required=true)
       private final String lastModifiedTime;
@@ -61,7 +57,6 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends io.pulum
 
     /**
      * The status of the monitoring job.
-     * 
      */
     @Import(name="monitoringExecutionStatus", required=true)
       private final MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus;
@@ -79,7 +74,6 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends io.pulum
 
     /**
      * The Amazon Resource Name (ARN) of the monitoring job.
-     * 
      */
     @Import(name="processingJobArn")
       private final @Nullable String processingJobArn;
@@ -90,7 +84,6 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends io.pulum
 
     /**
      * The time the monitoring job was scheduled.
-     * 
      */
     @Import(name="scheduledTime", required=true)
       private final String scheduledTime;

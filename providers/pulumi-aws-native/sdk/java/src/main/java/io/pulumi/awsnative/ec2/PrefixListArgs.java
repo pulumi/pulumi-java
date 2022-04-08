@@ -21,7 +21,6 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Ip Version of Prefix List.
-     * 
      */
     @Import(name="addressFamily", required=true)
       private final Output<PrefixListAddressFamily> addressFamily;
@@ -32,7 +31,6 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Entries of Prefix List.
-     * 
      */
     @Import(name="entries")
       private final @Nullable Output<List<PrefixListEntryArgs>> entries;
@@ -43,7 +41,6 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Max Entries of Prefix List.
-     * 
      */
     @Import(name="maxEntries", required=true)
       private final Output<Integer> maxEntries;
@@ -54,7 +51,6 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of Prefix List.
-     * 
      */
     @Import(name="prefixListName")
       private final @Nullable Output<String> prefixListName;
@@ -65,7 +61,6 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tags for Prefix List
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<PrefixListTagArgs>> tags;

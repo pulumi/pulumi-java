@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * S3 Output location
- * 
  */
 public final class JobS3LocationArgs extends io.pulumi.resources.ResourceArgs {
 

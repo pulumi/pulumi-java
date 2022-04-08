@@ -20,7 +20,6 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * DNS queries for this domain name are forwarded to the IP addresses that are specified in TargetIps
-     * 
      */
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
@@ -31,7 +30,6 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name for the Resolver rule
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -42,7 +40,6 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the endpoint that the rule is associated with.
-     * 
      */
     @Import(name="resolverEndpointId")
       private final @Nullable Output<String> resolverEndpointId;
@@ -53,7 +50,6 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * When you want to forward DNS queries for specified domain name to resolvers on your network, specify FORWARD. When you have a forwarding rule to forward DNS queries for a domain to your network and you want Resolver to process queries for a subdomain of that domain, specify SYSTEM.
-     * 
      */
     @Import(name="ruleType", required=true)
       private final Output<ResolverRuleRuleType> ruleType;
@@ -64,7 +60,6 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ResolverRuleTagArgs>> tags;
@@ -75,7 +70,6 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array that contains the IP addresses and ports that an outbound endpoint forwards DNS queries to. Typically, these are the IP addresses of DNS resolvers on your network. Specify IPv4 addresses. IPv6 is not supported.
-     * 
      */
     @Import(name="targetIps")
       private final @Nullable Output<List<ResolverRuleTargetAddressArgs>> targetIps;

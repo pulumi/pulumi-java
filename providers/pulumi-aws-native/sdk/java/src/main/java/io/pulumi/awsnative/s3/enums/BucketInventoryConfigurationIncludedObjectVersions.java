@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Object versions to include in the inventory list.
-     * 
      */
     @EnumType
     public enum BucketInventoryConfigurationIncludedObjectVersions {

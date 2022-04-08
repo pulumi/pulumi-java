@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 public final class DetectorModelIotEvents {
     /**
      * The name of the AWS IoT Events input where the data is sent.
-     * 
      */
     private final String inputName;
     private final @Nullable DetectorModelPayload payload;
@@ -29,7 +28,6 @@ public final class DetectorModelIotEvents {
 
     /**
      * The name of the AWS IoT Events input where the data is sent.
-     * 
     */
     public String getInputName() {
         return this.inputName;

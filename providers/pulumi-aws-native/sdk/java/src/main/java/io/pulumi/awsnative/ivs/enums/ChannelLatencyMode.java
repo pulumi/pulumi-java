@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Channel latency mode.
-     * 
      */
     @EnumType
     public enum ChannelLatencyMode {

@@ -21,7 +21,6 @@ public final class GetCloudFormationProvisionedProductResult {
     private final @Nullable String cloudformationStackArn;
     /**
      * List of key-value pair outputs.
-     * 
      */
     private final @Nullable Object outputs;
     private final @Nullable String pathId;
@@ -76,7 +75,6 @@ public final class GetCloudFormationProvisionedProductResult {
     }
     /**
      * List of key-value pair outputs.
-     * 
     */
     public Optional<Object> getOutputs() {
         return Optional.ofNullable(this.outputs);

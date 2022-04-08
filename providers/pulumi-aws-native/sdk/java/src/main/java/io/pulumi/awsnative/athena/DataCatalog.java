@@ -18,77 +18,321 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for AWS::Athena::DataCatalog
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myAthenaDataCatalog = new AwsNative.Athena.DataCatalog("myAthenaDataCatalog", new AwsNative.Athena.DataCatalogArgs
+ *         {
+ *             Name = "MyCustomDataCatalog",
+ *             Type = "HIVE",
+ *             Description = "Custom Hive Catalog Description",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.Athena.Inputs.DataCatalogTagArgs
+ *                 {
+ *                     Key = "key1",
+ *                     Value = "value1",
+ *                 },
+ *                 new AwsNative.Athena.Inputs.DataCatalogTagArgs
+ *                 {
+ *                     Key = "key2",
+ *                     Value = "value2",
+ *                 },
+ *             },
+ *             Parameters = 
+ *             {
+ *                 { "metadata-function", "arn:aws:lambda:us-west-2:111122223333:function:lambdaname" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/athena"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := athena.NewDataCatalog(ctx, "myAthenaDataCatalog", &athena.DataCatalogArgs{
+ * 			Name:        pulumi.String("MyCustomDataCatalog"),
+ * 			Type:        "HIVE",
+ * 			Description: pulumi.String("Custom Hive Catalog Description"),
+ * 			Tags: []athena.DataCatalogTagArgs{
+ * 				&athena.DataCatalogTagArgs{
+ * 					Key:   pulumi.String("key1"),
+ * 					Value: pulumi.String("value1"),
+ * 				},
+ * 				&athena.DataCatalogTagArgs{
+ * 					Key:   pulumi.String("key2"),
+ * 					Value: pulumi.String("value2"),
+ * 				},
+ * 			},
+ * 			Parameters: pulumi.Any{
+ * 				Metadata - function: "arn:aws:lambda:us-west-2:111122223333:function:lambdaname",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myAthenaDataCatalog = new aws_native.athena.DataCatalog("myAthenaDataCatalog", {
+ *     name: "MyCustomDataCatalog",
+ *     type: "HIVE",
+ *     description: "Custom Hive Catalog Description",
+ *     tags: [
+ *         {
+ *             key: "key1",
+ *             value: "value1",
+ *         },
+ *         {
+ *             key: "key2",
+ *             value: "value2",
+ *         },
+ *     ],
+ *     parameters: {
+ *         "metadata-function": "arn:aws:lambda:us-west-2:111122223333:function:lambdaname",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_athena_data_catalog = aws_native.athena.DataCatalog("myAthenaDataCatalog",
+ *     name="MyCustomDataCatalog",
+ *     type="HIVE",
+ *     description="Custom Hive Catalog Description",
+ *     tags=[
+ *         aws_native.athena.DataCatalogTagArgs(
+ *             key="key1",
+ *             value="value1",
+ *         ),
+ *         aws_native.athena.DataCatalogTagArgs(
+ *             key="key2",
+ *             value="value2",
+ *         ),
+ *     ],
+ *     parameters={
+ *         "metadata-function": "arn:aws:lambda:us-west-2:111122223333:function:lambdaname",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myAthenaDataCatalog = new AwsNative.Athena.DataCatalog("myAthenaDataCatalog", new AwsNative.Athena.DataCatalogArgs
+ *         {
+ *             Name = "MyCustomDataCatalog",
+ *             Type = "HIVE",
+ *             Description = "Custom Hive Catalog Description",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.Athena.Inputs.DataCatalogTagArgs
+ *                 {
+ *                     Key = "key1",
+ *                     Value = "value1",
+ *                 },
+ *                 new AwsNative.Athena.Inputs.DataCatalogTagArgs
+ *                 {
+ *                     Key = "key2",
+ *                     Value = "value2",
+ *                 },
+ *             },
+ *             Parameters = 
+ *             {
+ *                 { "metadata-function", "arn:aws:lambda:us-west-2:111122223333:function:lambdaname" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/athena"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := athena.NewDataCatalog(ctx, "myAthenaDataCatalog", &athena.DataCatalogArgs{
+ * 			Name:        pulumi.String("MyCustomDataCatalog"),
+ * 			Type:        "HIVE",
+ * 			Description: pulumi.String("Custom Hive Catalog Description"),
+ * 			Tags: []athena.DataCatalogTagArgs{
+ * 				&athena.DataCatalogTagArgs{
+ * 					Key:   pulumi.String("key1"),
+ * 					Value: pulumi.String("value1"),
+ * 				},
+ * 				&athena.DataCatalogTagArgs{
+ * 					Key:   pulumi.String("key2"),
+ * 					Value: pulumi.String("value2"),
+ * 				},
+ * 			},
+ * 			Parameters: pulumi.Any{
+ * 				Metadata - function: "arn:aws:lambda:us-west-2:111122223333:function:lambdaname",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myAthenaDataCatalog = new aws_native.athena.DataCatalog("myAthenaDataCatalog", {
+ *     name: "MyCustomDataCatalog",
+ *     type: "HIVE",
+ *     description: "Custom Hive Catalog Description",
+ *     tags: [
+ *         {
+ *             key: "key1",
+ *             value: "value1",
+ *         },
+ *         {
+ *             key: "key2",
+ *             value: "value2",
+ *         },
+ *     ],
+ *     parameters: {
+ *         "metadata-function": "arn:aws:lambda:us-west-2:111122223333:function:lambdaname",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_athena_data_catalog = aws_native.athena.DataCatalog("myAthenaDataCatalog",
+ *     name="MyCustomDataCatalog",
+ *     type="HIVE",
+ *     description="Custom Hive Catalog Description",
+ *     tags=[
+ *         aws_native.athena.DataCatalogTagArgs(
+ *             key="key1",
+ *             value="value1",
+ *         ),
+ *         aws_native.athena.DataCatalogTagArgs(
+ *             key="key2",
+ *             value="value2",
+ *         ),
+ *     ],
+ *     parameters={
+ *         "metadata-function": "arn:aws:lambda:us-west-2:111122223333:function:lambdaname",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:athena:DataCatalog")
 public class DataCatalog extends io.pulumi.resources.CustomResource {
     /**
-     * A description of the data catalog to be created.
-     * 
+     * A description of the data catalog to be created. 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return A description of the data catalog to be created.
-     * 
+     * @return A description of the data catalog to be created. 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
-     * The name of the data catalog to create. The catalog name must be unique for the AWS account and can use a maximum of 128 alphanumeric, underscore, at sign, or hyphen characters.
-     * 
+     * The name of the data catalog to create. The catalog name must be unique for the AWS account and can use a maximum of 128 alphanumeric, underscore, at sign, or hyphen characters. 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The name of the data catalog to create. The catalog name must be unique for the AWS account and can use a maximum of 128 alphanumeric, underscore, at sign, or hyphen characters.
-     * 
+     * @return The name of the data catalog to create. The catalog name must be unique for the AWS account and can use a maximum of 128 alphanumeric, underscore, at sign, or hyphen characters. 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
-     * Specifies the Lambda function or functions to use for creating the data catalog. This is a mapping whose values depend on the catalog type.
-     * 
+     * Specifies the Lambda function or functions to use for creating the data catalog. This is a mapping whose values depend on the catalog type. 
      */
     @Export(name="parameters", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> parameters;
 
     /**
-     * @return Specifies the Lambda function or functions to use for creating the data catalog. This is a mapping whose values depend on the catalog type.
-     * 
+     * @return Specifies the Lambda function or functions to use for creating the data catalog. This is a mapping whose values depend on the catalog type. 
      */
     public Output</* @Nullable */ Object> getParameters() {
         return this.parameters;
     }
     /**
-     * A list of comma separated tags to add to the data catalog that is created.
-     * 
+     * A list of comma separated tags to add to the data catalog that is created. 
      */
     @Export(name="tags", type=List.class, parameters={DataCatalogTag.class})
     private Output</* @Nullable */ List<DataCatalogTag>> tags;
 
     /**
-     * @return A list of comma separated tags to add to the data catalog that is created.
-     * 
+     * @return A list of comma separated tags to add to the data catalog that is created. 
      */
     public Output</* @Nullable */ List<DataCatalogTag>> getTags() {
         return this.tags;
     }
     /**
-     * The type of data catalog to create: LAMBDA for a federated catalog, GLUE for AWS Glue Catalog, or HIVE for an external hive metastore.
-     * 
+     * The type of data catalog to create: LAMBDA for a federated catalog, GLUE for AWS Glue Catalog, or HIVE for an external hive metastore. 
      */
     @Export(name="type", type=DataCatalogType.class, parameters={})
     private Output<DataCatalogType> type;
 
     /**
-     * @return The type of data catalog to create: LAMBDA for a federated catalog, GLUE for AWS Glue Catalog, or HIVE for an external hive metastore.
-     * 
+     * @return The type of data catalog to create: LAMBDA for a federated catalog, GLUE for AWS Glue Catalog, or HIVE for an external hive metastore. 
      */
     public Output<DataCatalogType> getType() {
         return this.type;

@@ -14,7 +14,6 @@ public final class GetCostCategoryArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Cost category ARN
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

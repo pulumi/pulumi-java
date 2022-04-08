@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Route 53 resource that a DNS target resource record points to.
- * 
  */
 public final class ResourceSetR53ResourceRecord extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ResourceSetR53ResourceRecord extends io.pulumi.resources.Invo
 
     /**
      * The DNS target domain name.
-     * 
      */
     @Import(name="domainName")
       private final @Nullable String domainName;
@@ -31,7 +29,6 @@ public final class ResourceSetR53ResourceRecord extends io.pulumi.resources.Invo
 
     /**
      * The Resource Record set id.
-     * 
      */
     @Import(name="recordSetId")
       private final @Nullable String recordSetId;

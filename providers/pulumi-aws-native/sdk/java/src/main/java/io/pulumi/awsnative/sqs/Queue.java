@@ -18,244 +18,209 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::SQS::Queue
- * 
  */
 @ResourceType(type="aws-native:sqs:Queue")
 public class Queue extends io.pulumi.resources.CustomResource {
     /**
      * Amazon Resource Name (ARN) of the queue.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Amazon Resource Name (ARN) of the queue.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * For first-in-first-out (FIFO) queues, specifies whether to enable content-based deduplication. During the deduplication interval, Amazon SQS treats messages that are sent with identical content as duplicates and delivers only one copy of the message.
-     * 
      */
     @Export(name="contentBasedDeduplication", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> contentBasedDeduplication;
 
     /**
      * @return For first-in-first-out (FIFO) queues, specifies whether to enable content-based deduplication. During the deduplication interval, Amazon SQS treats messages that are sent with identical content as duplicates and delivers only one copy of the message.
-     * 
      */
     public Output</* @Nullable */ Boolean> getContentBasedDeduplication() {
         return this.contentBasedDeduplication;
     }
     /**
      * Specifies whether message deduplication occurs at the message group or queue level. Valid values are messageGroup and queue.
-     * 
      */
     @Export(name="deduplicationScope", type=String.class, parameters={})
     private Output</* @Nullable */ String> deduplicationScope;
 
     /**
      * @return Specifies whether message deduplication occurs at the message group or queue level. Valid values are messageGroup and queue.
-     * 
      */
     public Output</* @Nullable */ String> getDeduplicationScope() {
         return this.deduplicationScope;
     }
     /**
      * The time in seconds for which the delivery of all messages in the queue is delayed. You can specify an integer value of 0 to 900 (15 minutes). The default value is 0.
-     * 
      */
     @Export(name="delaySeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> delaySeconds;
 
     /**
      * @return The time in seconds for which the delivery of all messages in the queue is delayed. You can specify an integer value of 0 to 900 (15 minutes). The default value is 0.
-     * 
      */
     public Output</* @Nullable */ Integer> getDelaySeconds() {
         return this.delaySeconds;
     }
     /**
      * If set to true, creates a FIFO queue. If you don't specify this property, Amazon SQS creates a standard queue.
-     * 
      */
     @Export(name="fifoQueue", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> fifoQueue;
 
     /**
      * @return If set to true, creates a FIFO queue. If you don't specify this property, Amazon SQS creates a standard queue.
-     * 
      */
     public Output</* @Nullable */ Boolean> getFifoQueue() {
         return this.fifoQueue;
     }
     /**
      * Specifies whether the FIFO queue throughput quota applies to the entire queue or per message group. Valid values are perQueue and perMessageGroupId. The perMessageGroupId value is allowed only when the value for DeduplicationScope is messageGroup.
-     * 
      */
     @Export(name="fifoThroughputLimit", type=String.class, parameters={})
     private Output</* @Nullable */ String> fifoThroughputLimit;
 
     /**
      * @return Specifies whether the FIFO queue throughput quota applies to the entire queue or per message group. Valid values are perQueue and perMessageGroupId. The perMessageGroupId value is allowed only when the value for DeduplicationScope is messageGroup.
-     * 
      */
     public Output</* @Nullable */ String> getFifoThroughputLimit() {
         return this.fifoThroughputLimit;
     }
     /**
      * The length of time in seconds for which Amazon SQS can reuse a data key to encrypt or decrypt messages before calling AWS KMS again. The value must be an integer between 60 (1 minute) and 86,400 (24 hours). The default is 300 (5 minutes).
-     * 
      */
     @Export(name="kmsDataKeyReusePeriodSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> kmsDataKeyReusePeriodSeconds;
 
     /**
      * @return The length of time in seconds for which Amazon SQS can reuse a data key to encrypt or decrypt messages before calling AWS KMS again. The value must be an integer between 60 (1 minute) and 86,400 (24 hours). The default is 300 (5 minutes).
-     * 
      */
     public Output</* @Nullable */ Integer> getKmsDataKeyReusePeriodSeconds() {
         return this.kmsDataKeyReusePeriodSeconds;
     }
     /**
      * The ID of an AWS managed customer master key (CMK) for Amazon SQS or a custom CMK. To use the AWS managed CMK for Amazon SQS, specify the (default) alias alias/aws/sqs.
-     * 
      */
     @Export(name="kmsMasterKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsMasterKeyId;
 
     /**
      * @return The ID of an AWS managed customer master key (CMK) for Amazon SQS or a custom CMK. To use the AWS managed CMK for Amazon SQS, specify the (default) alias alias/aws/sqs.
-     * 
      */
     public Output</* @Nullable */ String> getKmsMasterKeyId() {
         return this.kmsMasterKeyId;
     }
     /**
      * The limit of how many bytes that a message can contain before Amazon SQS rejects it. You can specify an integer value from 1,024 bytes (1 KiB) to 262,144 bytes (256 KiB). The default value is 262,144 (256 KiB).
-     * 
      */
     @Export(name="maximumMessageSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maximumMessageSize;
 
     /**
      * @return The limit of how many bytes that a message can contain before Amazon SQS rejects it. You can specify an integer value from 1,024 bytes (1 KiB) to 262,144 bytes (256 KiB). The default value is 262,144 (256 KiB).
-     * 
      */
     public Output</* @Nullable */ Integer> getMaximumMessageSize() {
         return this.maximumMessageSize;
     }
     /**
      * The number of seconds that Amazon SQS retains a message. You can specify an integer value from 60 seconds (1 minute) to 1,209,600 seconds (14 days). The default value is 345,600 seconds (4 days).
-     * 
      */
     @Export(name="messageRetentionPeriod", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> messageRetentionPeriod;
 
     /**
      * @return The number of seconds that Amazon SQS retains a message. You can specify an integer value from 60 seconds (1 minute) to 1,209,600 seconds (14 days). The default value is 345,600 seconds (4 days).
-     * 
      */
     public Output</* @Nullable */ Integer> getMessageRetentionPeriod() {
         return this.messageRetentionPeriod;
     }
     /**
      * A name for the queue. To create a FIFO queue, the name of your FIFO queue must end with the .fifo suffix.
-     * 
      */
     @Export(name="queueName", type=String.class, parameters={})
     private Output</* @Nullable */ String> queueName;
 
     /**
      * @return A name for the queue. To create a FIFO queue, the name of your FIFO queue must end with the .fifo suffix.
-     * 
      */
     public Output</* @Nullable */ String> getQueueName() {
         return this.queueName;
     }
     /**
      * URL of the source queue.
-     * 
      */
     @Export(name="queueUrl", type=String.class, parameters={})
     private Output<String> queueUrl;
 
     /**
      * @return URL of the source queue.
-     * 
      */
     public Output<String> getQueueUrl() {
         return this.queueUrl;
     }
     /**
      * Specifies the duration, in seconds, that the ReceiveMessage action call waits until a message is in the queue in order to include it in the response, rather than returning an empty response if a message isn't yet available. You can specify an integer from 1 to 20. Short polling is used as the default or when you specify 0 for this property.
-     * 
      */
     @Export(name="receiveMessageWaitTimeSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> receiveMessageWaitTimeSeconds;
 
     /**
      * @return Specifies the duration, in seconds, that the ReceiveMessage action call waits until a message is in the queue in order to include it in the response, rather than returning an empty response if a message isn't yet available. You can specify an integer from 1 to 20. Short polling is used as the default or when you specify 0 for this property.
-     * 
      */
     public Output</* @Nullable */ Integer> getReceiveMessageWaitTimeSeconds() {
         return this.receiveMessageWaitTimeSeconds;
     }
     /**
      * The string that includes the parameters for the permissions for the dead-letter queue redrive permission and which source queues can specify dead-letter queues as a JSON object.
-     * 
      */
     @Export(name="redriveAllowPolicy", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> redriveAllowPolicy;
 
     /**
      * @return The string that includes the parameters for the permissions for the dead-letter queue redrive permission and which source queues can specify dead-letter queues as a JSON object.
-     * 
      */
     public Output</* @Nullable */ Object> getRedriveAllowPolicy() {
         return this.redriveAllowPolicy;
     }
     /**
      * A string that includes the parameters for the dead-letter queue functionality (redrive policy) of the source queue.
-     * 
      */
     @Export(name="redrivePolicy", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> redrivePolicy;
 
     /**
      * @return A string that includes the parameters for the dead-letter queue functionality (redrive policy) of the source queue.
-     * 
      */
     public Output</* @Nullable */ Object> getRedrivePolicy() {
         return this.redrivePolicy;
     }
     /**
      * The tags that you attach to this queue.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={QueueTag.class})
     private Output</* @Nullable */ List<QueueTag>> tags;
 
     /**
      * @return The tags that you attach to this queue.
-     * 
      */
     public Output</* @Nullable */ List<QueueTag>> getTags() {
         return this.tags;
     }
     /**
      * The length of time during which a message will be unavailable after a message is delivered from the queue. This blocks other components from receiving the same message and gives the initial component time to process and delete the message from the queue. Values must be from 0 to 43,200 seconds (12 hours). If you don't specify a value, AWS CloudFormation uses the default value of 30 seconds.
-     * 
      */
     @Export(name="visibilityTimeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> visibilityTimeout;
 
     /**
      * @return The length of time during which a message will be unavailable after a message is delivered from the queue. This blocks other components from receiving the same message and gives the initial component time to process and delete the message from the queue. Values must be from 0 to 43,200 seconds (12 hours). If you don't specify a value, AWS CloudFormation uses the default value of 30 seconds.
-     * 
      */
     public Output</* @Nullable */ Integer> getVisibilityTimeout() {
         return this.visibilityTimeout;

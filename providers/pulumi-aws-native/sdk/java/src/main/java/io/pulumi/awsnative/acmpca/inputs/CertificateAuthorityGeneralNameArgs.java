@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Structure that contains X.509 GeneralName information. Assign one and ONLY one field.
- * 
  */
 public final class CertificateAuthorityGeneralNameArgs extends io.pulumi.resources.ResourceArgs {
 

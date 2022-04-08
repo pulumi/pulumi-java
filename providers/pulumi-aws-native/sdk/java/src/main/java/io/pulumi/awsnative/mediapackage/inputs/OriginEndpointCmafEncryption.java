@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A Common Media Application Format (CMAF) encryption configuration.
- * 
  */
 public final class OriginEndpointCmafEncryption extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class OriginEndpointCmafEncryption extends io.pulumi.resources.Invo
 
     /**
      * An optional 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with the key for encrypting blocks. If you don't specify a value, then MediaPackage creates the constant initialization vector (IV).
-     * 
      */
     @Import(name="constantInitializationVector")
       private final @Nullable String constantInitializationVector;
@@ -33,7 +31,6 @@ public final class OriginEndpointCmafEncryption extends io.pulumi.resources.Invo
 
     /**
      * Time (in seconds) between each encryption key rotation.
-     * 
      */
     @Import(name="keyRotationIntervalSeconds")
       private final @Nullable Integer keyRotationIntervalSeconds;

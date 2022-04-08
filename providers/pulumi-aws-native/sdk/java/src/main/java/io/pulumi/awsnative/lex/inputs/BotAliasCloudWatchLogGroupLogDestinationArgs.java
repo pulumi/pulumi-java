@@ -15,7 +15,6 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends io.pulum
 
     /**
      * A string used to identify this tag
-     * 
      */
     @Import(name="cloudWatchLogGroupArn", required=true)
       private final Output<String> cloudWatchLogGroupArn;
@@ -26,7 +25,6 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends io.pulum
 
     /**
      * A string containing the value for the tag
-     * 
      */
     @Import(name="logPrefix", required=true)
       private final Output<String> logPrefix;

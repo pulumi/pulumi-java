@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Information about the scale in policy of the connector.
- * 
  */
 public final class ConnectorScaleInPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ConnectorScaleInPolicyArgs extends io.pulumi.resources.Resour
 
     /**
      * Specifies the CPU utilization percentage threshold at which connector scale in should trigger.
-     * 
      */
     @Import(name="cpuUtilizationPercentage", required=true)
       private final Output<Integer> cpuUtilizationPercentage;

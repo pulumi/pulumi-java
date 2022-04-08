@@ -14,7 +14,6 @@ public final class GetTransitGatewayConnectArgs extends io.pulumi.resources.Invo
 
     /**
      * The ID of the Connect attachment.
-     * 
      */
     @Import(name="transitGatewayAttachmentId", required=true)
       private final String transitGatewayAttachmentId;

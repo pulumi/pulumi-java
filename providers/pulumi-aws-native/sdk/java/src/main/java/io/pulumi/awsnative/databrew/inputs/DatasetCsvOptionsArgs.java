@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Csv options
- * 
  */
 public final class DatasetCsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
 

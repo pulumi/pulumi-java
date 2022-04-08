@@ -14,7 +14,6 @@ public final class GetAliasArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Unique alias ID
-     * 
      */
     @Import(name="aliasId", required=true)
       private final String aliasId;

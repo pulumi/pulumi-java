@@ -17,76 +17,65 @@ import javax.annotation.Nullable;
 
 /**
  * A WAFv2 Logging Configuration Resource Provider
- * 
  */
 @ResourceType(type="aws-native:wafv2:LoggingConfiguration")
 public class LoggingConfiguration extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
-     * 
      */
     @Export(name="logDestinationConfigs", type=List.class, parameters={String.class})
     private Output<List<String>> logDestinationConfigs;
 
     /**
      * @return The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
-     * 
      */
     public Output<List<String>> getLogDestinationConfigs() {
         return this.logDestinationConfigs;
     }
     /**
      * Filtering that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation.
-     * 
      */
     @Export(name="loggingFilter", type=LoggingFilterProperties.class, parameters={})
     private Output</* @Nullable */ LoggingFilterProperties> loggingFilter;
 
     /**
      * @return Filtering that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation.
-     * 
      */
     public Output</* @Nullable */ LoggingFilterProperties> getLoggingFilter() {
         return this.loggingFilter;
     }
     /**
      * Indicates whether the logging configuration was created by AWS Firewall Manager, as part of an AWS WAF policy configuration. If true, only Firewall Manager can modify or delete the configuration.
-     * 
      */
     @Export(name="managedByFirewallManager", type=Boolean.class, parameters={})
     private Output<Boolean> managedByFirewallManager;
 
     /**
      * @return Indicates whether the logging configuration was created by AWS Firewall Manager, as part of an AWS WAF policy configuration. If true, only Firewall Manager can modify or delete the configuration.
-     * 
      */
     public Output<Boolean> getManagedByFirewallManager() {
         return this.managedByFirewallManager;
     }
     /**
      * The parts of the request that you want to keep out of the logs. For example, if you redact the HEADER field, the HEADER field in the firehose will be xxx.
-     * 
      */
     @Export(name="redactedFields", type=List.class, parameters={LoggingConfigurationFieldToMatch.class})
     private Output</* @Nullable */ List<LoggingConfigurationFieldToMatch>> redactedFields;
 
     /**
      * @return The parts of the request that you want to keep out of the logs. For example, if you redact the HEADER field, the HEADER field in the firehose will be xxx.
-     * 
      */
     public Output</* @Nullable */ List<LoggingConfigurationFieldToMatch>> getRedactedFields() {
         return this.redactedFields;
     }
     /**
      * The Amazon Resource Name (ARN) of the web ACL that you want to associate with LogDestinationConfigs.
-     * 
      */
     @Export(name="resourceArn", type=String.class, parameters={})
     private Output<String> resourceArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the web ACL that you want to associate with LogDestinationConfigs.
-     * 
      */
     public Output<String> getResourceArn() {
         return this.resourceArn;

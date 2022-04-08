@@ -14,7 +14,6 @@ public final class GetModelExplainabilityJobDefinitionArgs extends io.pulumi.res
 
     /**
      * The Amazon Resource Name (ARN) of job definition.
-     * 
      */
     @Import(name="jobDefinitionArn", required=true)
       private final String jobDefinitionArn;

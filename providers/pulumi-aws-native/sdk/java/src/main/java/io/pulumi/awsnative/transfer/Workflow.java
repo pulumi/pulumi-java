@@ -16,90 +16,77 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Transfer::Workflow
- * 
  */
 @ResourceType(type="aws-native:transfer:Workflow")
 public class Workflow extends io.pulumi.resources.CustomResource {
     /**
      * Specifies the unique Amazon Resource Name (ARN) for the workflow.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Specifies the unique Amazon Resource Name (ARN) for the workflow.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * A textual description for the workflow.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A textual description for the workflow.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
-     * 
      */
     @Export(name="onExceptionSteps", type=List.class, parameters={WorkflowStep.class})
     private Output</* @Nullable */ List<WorkflowStep>> onExceptionSteps;
 
     /**
      * @return Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
-     * 
      */
     public Output</* @Nullable */ List<WorkflowStep>> getOnExceptionSteps() {
         return this.onExceptionSteps;
     }
     /**
      * Specifies the details for the steps that are in the specified workflow.
-     * 
      */
     @Export(name="steps", type=List.class, parameters={WorkflowStep.class})
     private Output<List<WorkflowStep>> steps;
 
     /**
      * @return Specifies the details for the steps that are in the specified workflow.
-     * 
      */
     public Output<List<WorkflowStep>> getSteps() {
         return this.steps;
     }
     /**
      * Key-value pairs that can be used to group and search for workflows. Tags are metadata attached to workflows for any purpose.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={WorkflowTag.class})
     private Output</* @Nullable */ List<WorkflowTag>> tags;
 
     /**
      * @return Key-value pairs that can be used to group and search for workflows. Tags are metadata attached to workflows for any purpose.
-     * 
      */
     public Output</* @Nullable */ List<WorkflowTag>> getTags() {
         return this.tags;
     }
     /**
      * A unique identifier for the workflow.
-     * 
      */
     @Export(name="workflowId", type=String.class, parameters={})
     private Output<String> workflowId;
 
     /**
      * @return A unique identifier for the workflow.
-     * 
      */
     public Output<String> getWorkflowId() {
         return this.workflowId;

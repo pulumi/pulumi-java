@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A string that contains insight types that are logged on a trail.
- * 
  */
 public final class TrailInsightSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class TrailInsightSelectorArgs extends io.pulumi.resources.Resource
 
     /**
      * The type of insight to log on a trail.
-     * 
      */
     @Import(name="insightType")
       private final @Nullable Output<String> insightType;

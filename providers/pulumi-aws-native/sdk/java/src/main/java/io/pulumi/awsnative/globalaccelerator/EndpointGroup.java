@@ -19,62 +19,53 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::GlobalAccelerator::EndpointGroup
- * 
  */
 @ResourceType(type="aws-native:globalaccelerator:EndpointGroup")
 public class EndpointGroup extends io.pulumi.resources.CustomResource {
     /**
      * The list of endpoint objects.
-     * 
      */
     @Export(name="endpointConfigurations", type=List.class, parameters={EndpointGroupEndpointConfiguration.class})
     private Output</* @Nullable */ List<EndpointGroupEndpointConfiguration>> endpointConfigurations;
 
     /**
      * @return The list of endpoint objects.
-     * 
      */
     public Output</* @Nullable */ List<EndpointGroupEndpointConfiguration>> getEndpointConfigurations() {
         return this.endpointConfigurations;
     }
     /**
      * The Amazon Resource Name (ARN) of the endpoint group
-     * 
      */
     @Export(name="endpointGroupArn", type=String.class, parameters={})
     private Output<String> endpointGroupArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the endpoint group
-     * 
      */
     public Output<String> getEndpointGroupArn() {
         return this.endpointGroupArn;
     }
     /**
      * The name of the AWS Region where the endpoint group is located
-     * 
      */
     @Export(name="endpointGroupRegion", type=String.class, parameters={})
     private Output<String> endpointGroupRegion;
 
     /**
      * @return The name of the AWS Region where the endpoint group is located
-     * 
      */
     public Output<String> getEndpointGroupRegion() {
         return this.endpointGroupRegion;
     }
     /**
      * The time in seconds between each health check for an endpoint. Must be a value of 10 or 30
-     * 
      */
     @Export(name="healthCheckIntervalSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> healthCheckIntervalSeconds;
 
     /**
      * @return The time in seconds between each health check for an endpoint. Must be a value of 10 or 30
-     * 
      */
     public Output</* @Nullable */ Integer> getHealthCheckIntervalSeconds() {
         return this.healthCheckIntervalSeconds;
@@ -87,42 +78,36 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
     }
     /**
      * The port that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
-     * 
      */
     @Export(name="healthCheckPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> healthCheckPort;
 
     /**
      * @return The port that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
-     * 
      */
     public Output</* @Nullable */ Integer> getHealthCheckPort() {
         return this.healthCheckPort;
     }
     /**
      * The protocol that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
-     * 
      */
     @Export(name="healthCheckProtocol", type=EndpointGroupHealthCheckProtocol.class, parameters={})
     private Output</* @Nullable */ EndpointGroupHealthCheckProtocol> healthCheckProtocol;
 
     /**
      * @return The protocol that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
-     * 
      */
     public Output</* @Nullable */ EndpointGroupHealthCheckProtocol> getHealthCheckProtocol() {
         return this.healthCheckProtocol;
     }
     /**
      * The Amazon Resource Name (ARN) of the listener
-     * 
      */
     @Export(name="listenerArn", type=String.class, parameters={})
     private Output<String> listenerArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the listener
-     * 
      */
     public Output<String> getListenerArn() {
         return this.listenerArn;
@@ -135,28 +120,24 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
     }
     /**
      * The number of consecutive health checks required to set the state of the endpoint to unhealthy.
-     * 
      */
     @Export(name="thresholdCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> thresholdCount;
 
     /**
      * @return The number of consecutive health checks required to set the state of the endpoint to unhealthy.
-     * 
      */
     public Output</* @Nullable */ Integer> getThresholdCount() {
         return this.thresholdCount;
     }
     /**
      * The percentage of traffic to sent to an AWS Region
-     * 
      */
     @Export(name="trafficDialPercentage", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> trafficDialPercentage;
 
     /**
      * @return The percentage of traffic to sent to an AWS Region
-     * 
      */
     public Output</* @Nullable */ Double> getTrafficDialPercentage() {
         return this.trafficDialPercentage;

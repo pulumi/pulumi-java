@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::Timestream::ScheduledQuery resource creates a Timestream Scheduled Query.
- * 
  */
 @ResourceType(type="aws-native:timestream:ScheduledQuery")
 public class ScheduledQuery extends io.pulumi.resources.CustomResource {
@@ -61,112 +60,96 @@ public class ScheduledQuery extends io.pulumi.resources.CustomResource {
     }
     /**
      * Configuration for error reporting. Error reports will be generated when a problem is encountered when writing the query results.
-     * 
      */
     @Export(name="sQErrorReportConfiguration", type=String.class, parameters={})
     private Output<String> sQErrorReportConfiguration;
 
     /**
      * @return Configuration for error reporting. Error reports will be generated when a problem is encountered when writing the query results.
-     * 
      */
     public Output<String> getSQErrorReportConfiguration() {
         return this.sQErrorReportConfiguration;
     }
     /**
      * The Amazon KMS key used to encrypt the scheduled query resource, at-rest. If the Amazon KMS key is not specified, the scheduled query resource will be encrypted with a Timestream owned Amazon KMS key. To specify a KMS key, use the key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix the name with alias/. If ErrorReportConfiguration uses SSE_KMS as encryption type, the same KmsKeyId is used to encrypt the error report at rest.
-     * 
      */
     @Export(name="sQKmsKeyId", type=String.class, parameters={})
     private Output<String> sQKmsKeyId;
 
     /**
      * @return The Amazon KMS key used to encrypt the scheduled query resource, at-rest. If the Amazon KMS key is not specified, the scheduled query resource will be encrypted with a Timestream owned Amazon KMS key. To specify a KMS key, use the key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix the name with alias/. If ErrorReportConfiguration uses SSE_KMS as encryption type, the same KmsKeyId is used to encrypt the error report at rest.
-     * 
      */
     public Output<String> getSQKmsKeyId() {
         return this.sQKmsKeyId;
     }
     /**
      * The name of the scheduled query. Scheduled query names must be unique within each Region.
-     * 
      */
     @Export(name="sQName", type=String.class, parameters={})
     private Output<String> sQName;
 
     /**
      * @return The name of the scheduled query. Scheduled query names must be unique within each Region.
-     * 
      */
     public Output<String> getSQName() {
         return this.sQName;
     }
     /**
      * Notification configuration for the scheduled query. A notification is sent by Timestream when a query run finishes, when the state is updated or when you delete it.
-     * 
      */
     @Export(name="sQNotificationConfiguration", type=String.class, parameters={})
     private Output<String> sQNotificationConfiguration;
 
     /**
      * @return Notification configuration for the scheduled query. A notification is sent by Timestream when a query run finishes, when the state is updated or when you delete it.
-     * 
      */
     public Output<String> getSQNotificationConfiguration() {
         return this.sQNotificationConfiguration;
     }
     /**
      * The query string to run. Parameter names can be specified in the query string @ character followed by an identifier. The named Parameter @scheduled_runtime is reserved and can be used in the query to get the time at which the query is scheduled to run. The timestamp calculated according to the ScheduleConfiguration parameter, will be the value of @scheduled_runtime paramater for each query run. For example, consider an instance of a scheduled query executing on 2021-12-01 00:00:00. For this instance, the @scheduled_runtime parameter is initialized to the timestamp 2021-12-01 00:00:00 when invoking the query.
-     * 
      */
     @Export(name="sQQueryString", type=String.class, parameters={})
     private Output<String> sQQueryString;
 
     /**
      * @return The query string to run. Parameter names can be specified in the query string @ character followed by an identifier. The named Parameter @scheduled_runtime is reserved and can be used in the query to get the time at which the query is scheduled to run. The timestamp calculated according to the ScheduleConfiguration parameter, will be the value of @scheduled_runtime paramater for each query run. For example, consider an instance of a scheduled query executing on 2021-12-01 00:00:00. For this instance, the @scheduled_runtime parameter is initialized to the timestamp 2021-12-01 00:00:00 when invoking the query.
-     * 
      */
     public Output<String> getSQQueryString() {
         return this.sQQueryString;
     }
     /**
      * Configuration for when the scheduled query is executed.
-     * 
      */
     @Export(name="sQScheduleConfiguration", type=String.class, parameters={})
     private Output<String> sQScheduleConfiguration;
 
     /**
      * @return Configuration for when the scheduled query is executed.
-     * 
      */
     public Output<String> getSQScheduleConfiguration() {
         return this.sQScheduleConfiguration;
     }
     /**
      * The ARN for the IAM role that Timestream will assume when running the scheduled query.
-     * 
      */
     @Export(name="sQScheduledQueryExecutionRoleArn", type=String.class, parameters={})
     private Output<String> sQScheduledQueryExecutionRoleArn;
 
     /**
      * @return The ARN for the IAM role that Timestream will assume when running the scheduled query.
-     * 
      */
     public Output<String> getSQScheduledQueryExecutionRoleArn() {
         return this.sQScheduledQueryExecutionRoleArn;
     }
     /**
      * Configuration of target store where scheduled query results are written to.
-     * 
      */
     @Export(name="sQTargetConfiguration", type=String.class, parameters={})
     private Output<String> sQTargetConfiguration;
 
     /**
      * @return Configuration of target store where scheduled query results are written to.
-     * 
      */
     public Output<String> getSQTargetConfiguration() {
         return this.sQTargetConfiguration;

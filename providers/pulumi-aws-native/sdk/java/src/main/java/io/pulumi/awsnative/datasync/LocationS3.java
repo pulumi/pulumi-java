@@ -18,49 +18,211 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for AWS::DataSync::LocationS3
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var locationS3 = new AwsNative.DataSync.LocationS3("locationS3", new AwsNative.DataSync.LocationS3Args
+ *         {
+ *             S3BucketArn = "arn:aws:s3:::MyBucket",
+ *             S3Config = new AwsNative.DataSync.Inputs.LocationS3S3ConfigArgs
+ *             {
+ *                 BucketAccessRoleArn = "arn:aws:iam::111222333444:role/MyBucketAccessRole",
+ *             },
+ *             S3StorageClass = "STANDARD",
+ *             Subdirectory = "/MyFolder",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/datasync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datasync.NewLocationS3(ctx, "locationS3", &datasync.LocationS3Args{
+ * 			S3BucketArn: pulumi.String("arn:aws:s3:::MyBucket"),
+ * 			S3Config: &datasync.LocationS3S3ConfigArgs{
+ * 				BucketAccessRoleArn: pulumi.String("arn:aws:iam::111222333444:role/MyBucketAccessRole"),
+ * 			},
+ * 			S3StorageClass: "STANDARD",
+ * 			Subdirectory:   pulumi.String("/MyFolder"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const locationS3 = new aws_native.datasync.LocationS3("locationS3", {
+ *     s3BucketArn: "arn:aws:s3:::MyBucket",
+ *     s3Config: {
+ *         bucketAccessRoleArn: "arn:aws:iam::111222333444:role/MyBucketAccessRole",
+ *     },
+ *     s3StorageClass: "STANDARD",
+ *     subdirectory: "/MyFolder",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * location_s3 = aws_native.datasync.LocationS3("locationS3",
+ *     s3_bucket_arn="arn:aws:s3:::MyBucket",
+ *     s3_config=aws_native.datasync.LocationS3S3ConfigArgs(
+ *         bucket_access_role_arn="arn:aws:iam::111222333444:role/MyBucketAccessRole",
+ *     ),
+ *     s3_storage_class="STANDARD",
+ *     subdirectory="/MyFolder")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var locationS3 = new AwsNative.DataSync.LocationS3("locationS3", new AwsNative.DataSync.LocationS3Args
+ *         {
+ *             S3BucketArn = "arn:aws:s3:::MyBucket",
+ *             S3Config = new AwsNative.DataSync.Inputs.LocationS3S3ConfigArgs
+ *             {
+ *                 BucketAccessRoleArn = "arn:aws:iam::111222333444:role/MyBucketAccessRole",
+ *             },
+ *             S3StorageClass = "STANDARD",
+ *             Subdirectory = "/MyFolder",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/datasync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datasync.NewLocationS3(ctx, "locationS3", &datasync.LocationS3Args{
+ * 			S3BucketArn: pulumi.String("arn:aws:s3:::MyBucket"),
+ * 			S3Config: &datasync.LocationS3S3ConfigArgs{
+ * 				BucketAccessRoleArn: pulumi.String("arn:aws:iam::111222333444:role/MyBucketAccessRole"),
+ * 			},
+ * 			S3StorageClass: "STANDARD",
+ * 			Subdirectory:   pulumi.String("/MyFolder"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const locationS3 = new aws_native.datasync.LocationS3("locationS3", {
+ *     s3BucketArn: "arn:aws:s3:::MyBucket",
+ *     s3Config: {
+ *         bucketAccessRoleArn: "arn:aws:iam::111222333444:role/MyBucketAccessRole",
+ *     },
+ *     s3StorageClass: "STANDARD",
+ *     subdirectory: "/MyFolder",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * location_s3 = aws_native.datasync.LocationS3("locationS3",
+ *     s3_bucket_arn="arn:aws:s3:::MyBucket",
+ *     s3_config=aws_native.datasync.LocationS3S3ConfigArgs(
+ *         bucket_access_role_arn="arn:aws:iam::111222333444:role/MyBucketAccessRole",
+ *     ),
+ *     s3_storage_class="STANDARD",
+ *     subdirectory="/MyFolder")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:datasync:LocationS3")
 public class LocationS3 extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the Amazon S3 bucket location.
-     * 
      */
     @Export(name="locationArn", type=String.class, parameters={})
     private Output<String> locationArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the Amazon S3 bucket location.
-     * 
      */
     public Output<String> getLocationArn() {
         return this.locationArn;
     }
     /**
      * The URL of the S3 location that was described.
-     * 
      */
     @Export(name="locationUri", type=String.class, parameters={})
     private Output<String> locationUri;
 
     /**
      * @return The URL of the S3 location that was described.
-     * 
      */
     public Output<String> getLocationUri() {
         return this.locationUri;
     }
     /**
      * The Amazon Resource Name (ARN) of the Amazon S3 bucket.
-     * 
      */
     @Export(name="s3BucketArn", type=String.class, parameters={})
     private Output<String> s3BucketArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the Amazon S3 bucket.
-     * 
      */
     public Output<String> getS3BucketArn() {
         return this.s3BucketArn;
@@ -73,42 +235,36 @@ public class LocationS3 extends io.pulumi.resources.CustomResource {
     }
     /**
      * The Amazon S3 storage class you want to store your files in when this location is used as a task destination.
-     * 
      */
     @Export(name="s3StorageClass", type=LocationS3S3StorageClass.class, parameters={})
     private Output</* @Nullable */ LocationS3S3StorageClass> s3StorageClass;
 
     /**
      * @return The Amazon S3 storage class you want to store your files in when this location is used as a task destination.
-     * 
      */
     public Output</* @Nullable */ LocationS3S3StorageClass> getS3StorageClass() {
         return this.s3StorageClass;
     }
     /**
      * A subdirectory in the Amazon S3 bucket. This subdirectory in Amazon S3 is used to read data from the S3 source location or write data to the S3 destination.
-     * 
      */
     @Export(name="subdirectory", type=String.class, parameters={})
     private Output</* @Nullable */ String> subdirectory;
 
     /**
      * @return A subdirectory in the Amazon S3 bucket. This subdirectory in Amazon S3 is used to read data from the S3 source location or write data to the S3 destination.
-     * 
      */
     public Output</* @Nullable */ String> getSubdirectory() {
         return this.subdirectory;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={LocationS3Tag.class})
     private Output</* @Nullable */ List<LocationS3Tag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<LocationS3Tag>> getTags() {
         return this.tags;

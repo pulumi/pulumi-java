@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The status of the delegation.
-     * 
      */
     @EnumType
     public enum AssessmentDelegationStatus {

@@ -14,7 +14,6 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Amazon Resource Name (ARN) for the user.
-     * 
      */
     @Import(name="userArn", required=true)
       private final String userArn;

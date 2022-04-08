@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates the role of the member, primary or secondary.
-     * 
      */
     @EnumType
     public enum GlobalReplicationGroupMemberRole {

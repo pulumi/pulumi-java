@@ -14,7 +14,6 @@ public final class GetListenerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the listener.
-     * 
      */
     @Import(name="listenerArn", required=true)
       private final String listenerArn;

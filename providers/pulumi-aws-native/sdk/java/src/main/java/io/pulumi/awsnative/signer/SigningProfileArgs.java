@@ -19,7 +19,6 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the target signing platform.
-     * 
      */
     @Import(name="platformId", required=true)
       private final Output<SigningProfilePlatformId> platformId;
@@ -30,7 +29,6 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Signature validity period of the profile.
-     * 
      */
     @Import(name="signatureValidityPeriod")
       private final @Nullable Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod;
@@ -41,7 +39,6 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of tags associated with the signing profile.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<SigningProfileTagArgs>> tags;

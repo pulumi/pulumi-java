@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class LocationHDFSQopConfiguration {
     /**
      * Configuration for Data Transfer Protection.
-     * 
      */
     private final @Nullable LocationHDFSQopConfigurationDataTransferProtection dataTransferProtection;
     /**
      * Configuration for RPC Protection.
-     * 
      */
     private final @Nullable LocationHDFSQopConfigurationRpcProtection rpcProtection;
 
@@ -33,14 +31,12 @@ public final class LocationHDFSQopConfiguration {
 
     /**
      * Configuration for Data Transfer Protection.
-     * 
     */
     public Optional<LocationHDFSQopConfigurationDataTransferProtection> getDataTransferProtection() {
         return Optional.ofNullable(this.dataTransferProtection);
     }
     /**
      * Configuration for RPC Protection.
-     * 
     */
     public Optional<LocationHDFSQopConfigurationRpcProtection> getRpcProtection() {
         return Optional.ofNullable(this.rpcProtection);

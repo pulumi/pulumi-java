@@ -11,22 +11,18 @@ import java.util.Objects;
 public final class ConnectorProfileInforNexusConnectorProfileCredentials {
     /**
      * The Access Key portion of the credentials.
-     * 
      */
     private final String accessKeyId;
     /**
      * The encryption keys used to encrypt data.
-     * 
      */
     private final String datakey;
     /**
      * The secret key used to sign requests.
-     * 
      */
     private final String secretAccessKey;
     /**
      * The identiﬁer for the user.
-     * 
      */
     private final String userId;
 
@@ -44,28 +40,24 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentials {
 
     /**
      * The Access Key portion of the credentials.
-     * 
     */
     public String getAccessKeyId() {
         return this.accessKeyId;
     }
     /**
      * The encryption keys used to encrypt data.
-     * 
     */
     public String getDatakey() {
         return this.datakey;
     }
     /**
      * The secret key used to sign requests.
-     * 
     */
     public String getSecretAccessKey() {
         return this.secretAccessKey;
     }
     /**
      * The identiﬁer for the user.
-     * 
     */
     public String getUserId() {
         return this.userId;

@@ -14,7 +14,6 @@ public final class GetSecurityProfileArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * A unique identifier for the security profile.
-     * 
      */
     @Import(name="securityProfileName", required=true)
       private final String securityProfileName;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Amazon Elastic File System (EFS) storage configuration for a SageMaker image.
- * 
  */
 public final class AppImageConfigFileSystemConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AppImageConfigFileSystemConfigArgs extends io.pulumi.resource
 
     /**
      * The default POSIX group ID (GID). If not specified, defaults to 100.
-     * 
      */
     @Import(name="defaultGid")
       private final @Nullable Output<Integer> defaultGid;
@@ -32,7 +30,6 @@ public final class AppImageConfigFileSystemConfigArgs extends io.pulumi.resource
 
     /**
      * The default POSIX user ID (UID). If not specified, defaults to 1000.
-     * 
      */
     @Import(name="defaultUid")
       private final @Nullable Output<Integer> defaultUid;
@@ -43,7 +40,6 @@ public final class AppImageConfigFileSystemConfigArgs extends io.pulumi.resource
 
     /**
      * The path within the image to mount the user's EFS home directory. The directory should be empty. If not specified, defaults to /home/sagemaker-user.
-     * 
      */
     @Import(name="mountPath")
       private final @Nullable Output<String> mountPath;

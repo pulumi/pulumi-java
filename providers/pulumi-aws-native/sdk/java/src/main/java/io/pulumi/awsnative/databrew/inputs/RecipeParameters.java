@@ -224,7 +224,6 @@ public final class RecipeParameters extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Input
-     * 
      */
     @Import(name="input")
       private final @Nullable RecipeParametersInputProperties input;

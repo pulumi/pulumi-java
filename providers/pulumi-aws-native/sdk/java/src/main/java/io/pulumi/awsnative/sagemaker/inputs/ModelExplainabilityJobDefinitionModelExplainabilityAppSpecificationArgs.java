@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container image configuration object for the monitoring job.
- * 
  */
 public final class ModelExplainabilityJobDefinitionModelExplainabilityAppSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityAppSpecifi
 
     /**
      * The S3 URI to an analysis configuration file
-     * 
      */
     @Import(name="configUri", required=true)
       private final Output<String> configUri;
@@ -32,7 +30,6 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityAppSpecifi
 
     /**
      * Sets the environment variables in the Docker container
-     * 
      */
     @Import(name="environment")
       private final @Nullable Output<Object> environment;
@@ -43,7 +40,6 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityAppSpecifi
 
     /**
      * The container image to be run by the monitoring job.
-     * 
      */
     @Import(name="imageUri", required=true)
       private final Output<String> imageUri;

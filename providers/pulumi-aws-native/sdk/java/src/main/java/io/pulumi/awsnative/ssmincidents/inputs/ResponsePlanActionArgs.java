@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The automation configuration to launch.
- * 
  */
 public final class ResponsePlanActionArgs extends io.pulumi.resources.ResourceArgs {
 

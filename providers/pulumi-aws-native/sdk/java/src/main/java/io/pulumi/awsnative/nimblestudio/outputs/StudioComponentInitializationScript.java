@@ -15,14 +15,12 @@ import javax.annotation.Nullable;
 public final class StudioComponentInitializationScript {
     /**
      * <p>The version number of the protocol that is used by the launch profile. The only valid version is "2021-03-31".</p>
-     * 
      */
     private final @Nullable String launchProfileProtocolVersion;
     private final @Nullable StudioComponentLaunchProfilePlatform platform;
     private final @Nullable StudioComponentInitializationScriptRunContext runContext;
     /**
      * <p>The initialization script.</p>
-     * 
      */
     private final @Nullable String script;
 
@@ -40,7 +38,6 @@ public final class StudioComponentInitializationScript {
 
     /**
      * <p>The version number of the protocol that is used by the launch profile. The only valid version is "2021-03-31".</p>
-     * 
     */
     public Optional<String> getLaunchProfileProtocolVersion() {
         return Optional.ofNullable(this.launchProfileProtocolVersion);
@@ -53,7 +50,6 @@ public final class StudioComponentInitializationScript {
     }
     /**
      * <p>The initialization script.</p>
-     * 
     */
     public Optional<String> getScript() {
         return Optional.ofNullable(this.script);

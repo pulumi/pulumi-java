@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Networking of the Instance.
- * 
  */
 public final class InstanceNetworking extends io.pulumi.resources.InvokeArgs {
 
@@ -29,7 +28,6 @@ public final class InstanceNetworking extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Ports to the Instance.
-     * 
      */
     @Import(name="ports", required=true)
       private final List<InstancePort> ports;

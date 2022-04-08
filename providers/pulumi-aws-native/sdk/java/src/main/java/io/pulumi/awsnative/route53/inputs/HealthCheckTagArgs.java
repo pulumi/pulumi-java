@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A key-value pair to associate with a resource.
- * 
  */
 public final class HealthCheckTagArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class HealthCheckTagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The key name of the tag.
-     * 
      */
     @Import(name="key", required=true)
       private final Output<String> key;
@@ -30,7 +28,6 @@ public final class HealthCheckTagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value for the tag.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

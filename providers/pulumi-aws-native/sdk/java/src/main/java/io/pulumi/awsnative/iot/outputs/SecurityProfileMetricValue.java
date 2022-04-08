@@ -16,32 +16,26 @@ import javax.annotation.Nullable;
 public final class SecurityProfileMetricValue {
     /**
      * If the ComparisonOperator calls for a set of CIDRs, use this to specify that set to be compared with the metric.
-     * 
      */
     private final @Nullable List<String> cidrs;
     /**
      * If the ComparisonOperator calls for a numeric value, use this to specify that (integer) numeric value to be compared with the metric.
-     * 
      */
     private final @Nullable String count;
     /**
      * The numeral value of a metric.
-     * 
      */
     private final @Nullable Double number;
     /**
      * The numeral values of a metric.
-     * 
      */
     private final @Nullable List<Double> numbers;
     /**
      * If the ComparisonOperator calls for a set of ports, use this to specify that set to be compared with the metric.
-     * 
      */
     private final @Nullable List<Integer> ports;
     /**
      * The string values of a metric.
-     * 
      */
     private final @Nullable List<String> strings;
 
@@ -63,42 +57,36 @@ public final class SecurityProfileMetricValue {
 
     /**
      * If the ComparisonOperator calls for a set of CIDRs, use this to specify that set to be compared with the metric.
-     * 
     */
     public List<String> getCidrs() {
         return this.cidrs == null ? List.of() : this.cidrs;
     }
     /**
      * If the ComparisonOperator calls for a numeric value, use this to specify that (integer) numeric value to be compared with the metric.
-     * 
     */
     public Optional<String> getCount() {
         return Optional.ofNullable(this.count);
     }
     /**
      * The numeral value of a metric.
-     * 
     */
     public Optional<Double> getNumber() {
         return Optional.ofNullable(this.number);
     }
     /**
      * The numeral values of a metric.
-     * 
     */
     public List<Double> getNumbers() {
         return this.numbers == null ? List.of() : this.numbers;
     }
     /**
      * If the ComparisonOperator calls for a set of ports, use this to specify that set to be compared with the metric.
-     * 
     */
     public List<Integer> getPorts() {
         return this.ports == null ? List.of() : this.ports;
     }
     /**
      * The string values of a metric.
-     * 
     */
     public List<String> getStrings() {
         return this.strings == null ? List.of() : this.strings;

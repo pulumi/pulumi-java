@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class LocationHDFSNameNode {
     /**
      * The DNS name or IP address of the Name Node in the customer's on premises HDFS cluster.
-     * 
      */
     private final String hostname;
     /**
      * The port on which the Name Node is listening on for client requests.
-     * 
      */
     private final Integer port;
 
@@ -31,14 +29,12 @@ public final class LocationHDFSNameNode {
 
     /**
      * The DNS name or IP address of the Name Node in the customer's on premises HDFS cluster.
-     * 
     */
     public String getHostname() {
         return this.hostname;
     }
     /**
      * The port on which the Name Node is listening on for client requests.
-     * 
     */
     public Integer getPort() {
         return this.port;

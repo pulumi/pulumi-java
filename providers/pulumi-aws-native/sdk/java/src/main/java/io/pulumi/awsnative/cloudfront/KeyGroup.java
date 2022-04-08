@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::CloudFront::KeyGroup
- * 
  */
 @ResourceType(type="aws-native:cloudfront:KeyGroup")
 public class KeyGroup extends io.pulumi.resources.CustomResource {

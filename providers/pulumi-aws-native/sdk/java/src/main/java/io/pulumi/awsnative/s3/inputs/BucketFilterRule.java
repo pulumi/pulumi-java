@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Specifies the Amazon S3 object key name to filter on and whether to filter on the suffix or prefix of the key name.
- * 
  */
 public final class BucketFilterRule extends io.pulumi.resources.InvokeArgs {
 

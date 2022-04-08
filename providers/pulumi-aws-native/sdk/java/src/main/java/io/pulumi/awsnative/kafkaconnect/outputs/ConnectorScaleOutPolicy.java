@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ConnectorScaleOutPolicy {
     /**
      * Specifies the CPU utilization percentage threshold at which connector scale out should trigger.
-     * 
      */
     private final Integer cpuUtilizationPercentage;
 
@@ -22,7 +21,6 @@ public final class ConnectorScaleOutPolicy {
 
     /**
      * Specifies the CPU utilization percentage threshold at which connector scale out should trigger.
-     * 
     */
     public Integer getCpuUtilizationPercentage() {
         return this.cpuUtilizationPercentage;

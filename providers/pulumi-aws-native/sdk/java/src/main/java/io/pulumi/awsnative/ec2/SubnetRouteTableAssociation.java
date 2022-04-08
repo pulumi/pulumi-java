@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::EC2::SubnetRouteTableAssociation
- * 
  */
 @ResourceType(type="aws-native:ec2:SubnetRouteTableAssociation")
 public class SubnetRouteTableAssociation extends io.pulumi.resources.CustomResource {

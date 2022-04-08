@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Contains a key/value pair that sets the named component parameter.
- * 
  */
 public final class ImageRecipeComponentParameterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ImageRecipeComponentParameterArgs extends io.pulumi.resources
 
     /**
      * The name of the component parameter to set.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -31,7 +29,6 @@ public final class ImageRecipeComponentParameterArgs extends io.pulumi.resources
 
     /**
      * Sets the value for the named component parameter.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<List<String>> value;

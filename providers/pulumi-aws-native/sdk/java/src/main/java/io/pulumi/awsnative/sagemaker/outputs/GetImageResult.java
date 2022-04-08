@@ -19,7 +19,6 @@ public final class GetImageResult {
     private final @Nullable String imageRoleArn;
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     private final @Nullable List<ImageTag> tags;
 
@@ -51,7 +50,6 @@ public final class GetImageResult {
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
     */
     public List<ImageTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

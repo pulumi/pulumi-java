@@ -22,7 +22,6 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of the flow.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -33,7 +32,6 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of Destination connectors of the flow.
-     * 
      */
     @Import(name="destinationFlowConfigList", required=true)
       private final Output<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList;
@@ -44,7 +42,6 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the flow.
-     * 
      */
     @Import(name="flowName")
       private final @Nullable Output<String> flowName;
@@ -55,7 +52,6 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
-     * 
      */
     @Import(name="kMSArn")
       private final @Nullable Output<String> kMSArn;
@@ -66,7 +62,6 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configurations of Source connector of the flow.
-     * 
      */
     @Import(name="sourceFlowConfig", required=true)
       private final Output<FlowSourceFlowConfigArgs> sourceFlowConfig;
@@ -77,7 +72,6 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of Tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<FlowTagArgs>> tags;
@@ -88,7 +82,6 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of tasks for the flow.
-     * 
      */
     @Import(name="tasks", required=true)
       private final Output<List<FlowTaskArgs>> tasks;
@@ -99,7 +92,6 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Trigger settings of the flow.
-     * 
      */
     @Import(name="triggerConfig", required=true)
       private final Output<FlowTriggerConfigArgs> triggerConfig;

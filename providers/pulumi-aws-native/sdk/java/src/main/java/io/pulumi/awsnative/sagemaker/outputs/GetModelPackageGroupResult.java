@@ -17,19 +17,16 @@ import javax.annotation.Nullable;
 public final class GetModelPackageGroupResult {
     /**
      * The time at which the model package group was created.
-     * 
      */
     private final @Nullable String creationTime;
     private final @Nullable String modelPackageGroupArn;
     private final @Nullable Object modelPackageGroupPolicy;
     /**
      * The status of a modelpackage group job.
-     * 
      */
     private final @Nullable ModelPackageGroupStatus modelPackageGroupStatus;
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     private final @Nullable List<ModelPackageGroupTag> tags;
 
@@ -49,7 +46,6 @@ public final class GetModelPackageGroupResult {
 
     /**
      * The time at which the model package group was created.
-     * 
     */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
@@ -62,14 +58,12 @@ public final class GetModelPackageGroupResult {
     }
     /**
      * The status of a modelpackage group job.
-     * 
     */
     public Optional<ModelPackageGroupStatus> getModelPackageGroupStatus() {
         return Optional.ofNullable(this.modelPackageGroupStatus);
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
     */
     public List<ModelPackageGroupTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

@@ -18,7 +18,6 @@ public final class ServiceCatalogProvisioningDetailsProperties {
     private final @Nullable String provisioningArtifactId;
     /**
      * Parameters specified by the administrator that are required for provisioning the product.
-     * 
      */
     private final @Nullable List<ProjectProvisioningParameter> provisioningParameters;
 
@@ -45,7 +44,6 @@ public final class ServiceCatalogProvisioningDetailsProperties {
     }
     /**
      * Parameters specified by the administrator that are required for provisioning the product.
-     * 
     */
     public List<ProjectProvisioningParameter> getProvisioningParameters() {
         return this.provisioningParameters == null ? List.of() : this.provisioningParameters;

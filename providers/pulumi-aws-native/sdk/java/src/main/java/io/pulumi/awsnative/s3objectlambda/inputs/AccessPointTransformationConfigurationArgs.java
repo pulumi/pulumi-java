@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Configuration to define what content transformation will be applied on which S3 Action.
- * 
  */
 public final class AccessPointTransformationConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 

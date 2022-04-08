@@ -40,7 +40,6 @@ public final class DBProxyTargetGroupArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The identifier for the proxy.
-     * 
      */
     @Import(name="dBProxyName", required=true)
       private final Output<String> dBProxyName;
@@ -51,7 +50,6 @@ public final class DBProxyTargetGroupArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The identifier for the DBProxyTargetGroup
-     * 
      */
     @Import(name="targetGroupName", required=true)
       private final Output<DBProxyTargetGroupTargetGroupName> targetGroupName;

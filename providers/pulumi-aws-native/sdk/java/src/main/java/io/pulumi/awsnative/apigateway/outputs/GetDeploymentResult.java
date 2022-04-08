@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class GetDeploymentResult {
     /**
      * Primary Id for this resource
-     * 
      */
     private final @Nullable String deploymentId;
     /**
      * A description of the purpose of the API Gateway deployment.
-     * 
      */
     private final @Nullable String description;
 
@@ -32,14 +30,12 @@ public final class GetDeploymentResult {
 
     /**
      * Primary Id for this resource
-     * 
     */
     public Optional<String> getDeploymentId() {
         return Optional.ofNullable(this.deploymentId);
     }
     /**
      * A description of the purpose of the API Gateway deployment.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);

@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Rule of RuleGroup that contains condition and action.
- * 
  */
 public final class RuleGroupRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -55,7 +54,6 @@ public final class RuleGroupRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Collection of Rule Labels.
-     * 
      */
     @Import(name="ruleLabels")
       private final @Nullable Output<List<RuleGroupLabelArgs>> ruleLabels;

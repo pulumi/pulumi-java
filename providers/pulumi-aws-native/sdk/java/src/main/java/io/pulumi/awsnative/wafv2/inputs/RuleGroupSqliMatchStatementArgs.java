@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Sqli Match Statement.
- * 
  */
 public final class RuleGroupSqliMatchStatementArgs extends io.pulumi.resources.ResourceArgs {
 

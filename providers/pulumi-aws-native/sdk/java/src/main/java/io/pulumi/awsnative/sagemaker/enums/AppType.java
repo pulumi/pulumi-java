@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of app.
-     * 
      */
     @EnumType
     public enum AppType {

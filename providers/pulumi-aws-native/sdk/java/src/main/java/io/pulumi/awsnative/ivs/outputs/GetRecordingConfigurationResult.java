@@ -16,17 +16,14 @@ import javax.annotation.Nullable;
 public final class GetRecordingConfigurationResult {
     /**
      * Recording Configuration ARN is automatically generated on creation and assigned as the unique identifier.
-     * 
      */
     private final @Nullable String arn;
     /**
      * Recording Configuration State.
-     * 
      */
     private final @Nullable RecordingConfigurationState state;
     /**
      * A list of key-value pairs that contain metadata for the asset model.
-     * 
      */
     private final @Nullable List<RecordingConfigurationTag> tags;
 
@@ -42,21 +39,18 @@ public final class GetRecordingConfigurationResult {
 
     /**
      * Recording Configuration ARN is automatically generated on creation and assigned as the unique identifier.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Recording Configuration State.
-     * 
     */
     public Optional<RecordingConfigurationState> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * A list of key-value pairs that contain metadata for the asset model.
-     * 
     */
     public List<RecordingConfigurationTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

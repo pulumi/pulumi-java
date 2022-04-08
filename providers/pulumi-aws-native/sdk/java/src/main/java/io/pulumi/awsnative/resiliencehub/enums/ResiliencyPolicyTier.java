@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Resiliency Policy Tier.
-     * 
      */
     @EnumType
     public enum ResiliencyPolicyTier {

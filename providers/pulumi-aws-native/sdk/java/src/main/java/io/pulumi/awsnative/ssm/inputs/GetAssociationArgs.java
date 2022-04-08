@@ -14,7 +14,6 @@ public final class GetAssociationArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Unique identifier of the association.
-     * 
      */
     @Import(name="associationId", required=true)
       private final String associationId;

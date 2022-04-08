@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class DataSetTag {
     /**
      * <p>Tag key.</p>
-     * 
      */
     private final String key;
     /**
      * <p>Tag value.</p>
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class DataSetTag {
 
     /**
      * <p>Tag key.</p>
-     * 
     */
     public String getKey() {
         return this.key;
     }
     /**
      * <p>Tag value.</p>
-     * 
     */
     public String getValue() {
         return this.value;

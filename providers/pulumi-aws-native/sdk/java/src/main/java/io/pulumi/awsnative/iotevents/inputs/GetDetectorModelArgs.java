@@ -14,7 +14,6 @@ public final class GetDetectorModelArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the detector model.
-     * 
      */
     @Import(name="detectorModelName", required=true)
       private final String detectorModelName;

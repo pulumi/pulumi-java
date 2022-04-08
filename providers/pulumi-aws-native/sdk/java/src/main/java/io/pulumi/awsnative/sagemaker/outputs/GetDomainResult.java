@@ -14,32 +14,26 @@ import javax.annotation.Nullable;
 public final class GetDomainResult {
     /**
      * The default user settings.
-     * 
      */
     private final @Nullable DomainUserSettings defaultUserSettings;
     /**
      * The Amazon Resource Name (ARN) of the created domain.
-     * 
      */
     private final @Nullable String domainArn;
     /**
      * The domain name.
-     * 
      */
     private final @Nullable String domainId;
     /**
      * The ID of the Amazon Elastic File System (EFS) managed by this Domain.
-     * 
      */
     private final @Nullable String homeEfsFileSystemId;
     /**
      * The SSO managed application instance ID.
-     * 
      */
     private final @Nullable String singleSignOnManagedApplicationInstanceId;
     /**
      * The URL to the created domain.
-     * 
      */
     private final @Nullable String url;
 
@@ -61,42 +55,36 @@ public final class GetDomainResult {
 
     /**
      * The default user settings.
-     * 
     */
     public Optional<DomainUserSettings> getDefaultUserSettings() {
         return Optional.ofNullable(this.defaultUserSettings);
     }
     /**
      * The Amazon Resource Name (ARN) of the created domain.
-     * 
     */
     public Optional<String> getDomainArn() {
         return Optional.ofNullable(this.domainArn);
     }
     /**
      * The domain name.
-     * 
     */
     public Optional<String> getDomainId() {
         return Optional.ofNullable(this.domainId);
     }
     /**
      * The ID of the Amazon Elastic File System (EFS) managed by this Domain.
-     * 
     */
     public Optional<String> getHomeEfsFileSystemId() {
         return Optional.ofNullable(this.homeEfsFileSystemId);
     }
     /**
      * The SSO managed application instance ID.
-     * 
     */
     public Optional<String> getSingleSignOnManagedApplicationInstanceId() {
         return Optional.ofNullable(this.singleSignOnManagedApplicationInstanceId);
     }
     /**
      * The URL to the created domain.
-     * 
     */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);

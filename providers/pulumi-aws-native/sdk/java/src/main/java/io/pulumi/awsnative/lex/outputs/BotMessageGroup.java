@@ -14,7 +14,6 @@ public final class BotMessageGroup {
     private final BotMessage message;
     /**
      * Message variations to send to the user.
-     * 
      */
     private final @Nullable List<BotMessage> variations;
 
@@ -31,7 +30,6 @@ public final class BotMessageGroup {
     }
     /**
      * Message variations to send to the user.
-     * 
     */
     public List<BotMessage> getVariations() {
         return this.variations == null ? List.of() : this.variations;

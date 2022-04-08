@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information about the encryption of the flow.
- * 
  */
 public final class FlowOutputEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
 
     /**
      * The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).
-     * 
      */
     @Import(name="algorithm")
       private final @Nullable Output<FlowOutputEncryptionAlgorithm> algorithm;
@@ -33,7 +31,6 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
 
     /**
      * The type of key that is used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
-     * 
      */
     @Import(name="keyType")
       private final @Nullable Output<FlowOutputEncryptionKeyType> keyType;
@@ -44,7 +41,6 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
 
     /**
      * The ARN of the role that you created during setup (when you set up AWS Elemental MediaConnect as a trusted entity).
-     * 
      */
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
@@ -55,7 +51,6 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
 
     /**
      *  The ARN of the secret that you created in AWS Secrets Manager to store the encryption key. This parameter is required for static key encryption and is not valid for SPEKE encryption.
-     * 
      */
     @Import(name="secretArn", required=true)
       private final Output<String> secretArn;

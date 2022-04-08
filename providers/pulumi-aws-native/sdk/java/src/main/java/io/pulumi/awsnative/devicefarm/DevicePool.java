@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * AWS::DeviceFarm::DevicePool creates a new Device Pool for a given DF Project
- * 
  */
 @ResourceType(type="aws-native:devicefarm:DevicePool")
 public class DevicePool extends io.pulumi.resources.CustomResource {

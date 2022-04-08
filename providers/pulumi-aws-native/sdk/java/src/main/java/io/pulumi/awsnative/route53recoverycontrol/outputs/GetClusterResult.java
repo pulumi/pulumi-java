@@ -16,17 +16,14 @@ import javax.annotation.Nullable;
 public final class GetClusterResult {
     /**
      * The Amazon Resource Name (ARN) of the cluster.
-     * 
      */
     private final @Nullable String clusterArn;
     /**
      * Endpoints for the cluster.
-     * 
      */
     private final @Nullable List<ClusterEndpoint> clusterEndpoints;
     /**
      * Deployment status of a resource. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
-     * 
      */
     private final @Nullable ClusterStatus status;
 
@@ -42,21 +39,18 @@ public final class GetClusterResult {
 
     /**
      * The Amazon Resource Name (ARN) of the cluster.
-     * 
     */
     public Optional<String> getClusterArn() {
         return Optional.ofNullable(this.clusterArn);
     }
     /**
      * Endpoints for the cluster.
-     * 
     */
     public List<ClusterEndpoint> getClusterEndpoints() {
         return this.clusterEndpoints == null ? List.of() : this.clusterEndpoints;
     }
     /**
      * Deployment status of a resource. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
-     * 
     */
     public Optional<ClusterStatus> getStatus() {
         return Optional.ofNullable(this.status);

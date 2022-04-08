@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * <p>Amazon Elasticsearch Service parameters.</p>
- * 
  */
 public final class DataSourceAmazonElasticsearchParameters extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DataSourceAmazonElasticsearchParameters extends io.pulumi.res
 
     /**
      * <p>The Amazon Elasticsearch Service domain.</p>
-     * 
      */
     @Import(name="domain", required=true)
       private final String domain;

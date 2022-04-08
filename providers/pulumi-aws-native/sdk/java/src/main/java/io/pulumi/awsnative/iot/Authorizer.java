@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Creates an authorizer.
- * 
  */
 @ResourceType(type="aws-native:iot:Authorizer")
 public class Authorizer extends io.pulumi.resources.CustomResource {

@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Destination connector details
- * 
  */
 public final class FlowDestinationConnectorProperties extends io.pulumi.resources.InvokeArgs {
 

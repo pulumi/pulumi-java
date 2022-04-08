@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * <p>VPC connection properties.</p>
- * 
  */
 public final class DataSourceVpcConnectionProperties extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DataSourceVpcConnectionProperties extends io.pulumi.resources
 
     /**
      * <p>The Amazon Resource Name (ARN) for the VPC connection.</p>
-     * 
      */
     @Import(name="vpcConnectionArn", required=true)
       private final String vpcConnectionArn;

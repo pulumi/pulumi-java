@@ -16,118 +16,101 @@ import javax.annotation.Nullable;
 
 /**
  * Create and manage wireless gateways, including LoRa gateways.
- * 
  */
 @ResourceType(type="aws-native:iotwireless:WirelessGateway")
 public class WirelessGateway extends io.pulumi.resources.CustomResource {
     /**
      * Arn for Wireless Gateway. Returned upon successful create.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Arn for Wireless Gateway. Returned upon successful create.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * Description of Wireless Gateway.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description of Wireless Gateway.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The date and time when the most recent uplink was received.
-     * 
      */
     @Export(name="lastUplinkReceivedAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastUplinkReceivedAt;
 
     /**
      * @return The date and time when the most recent uplink was received.
-     * 
      */
     public Output</* @Nullable */ String> getLastUplinkReceivedAt() {
         return this.lastUplinkReceivedAt;
     }
     /**
      * The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Gateway.
-     * 
      */
     @Export(name="loRaWAN", type=WirelessGatewayLoRaWANGateway.class, parameters={})
     private Output<WirelessGatewayLoRaWANGateway> loRaWAN;
 
     /**
      * @return The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Gateway.
-     * 
      */
     public Output<WirelessGatewayLoRaWANGateway> getLoRaWAN() {
         return this.loRaWAN;
     }
     /**
      * Name of Wireless Gateway.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Name of Wireless Gateway.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * A list of key-value pairs that contain metadata for the gateway.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={WirelessGatewayTag.class})
     private Output</* @Nullable */ List<WirelessGatewayTag>> tags;
 
     /**
      * @return A list of key-value pairs that contain metadata for the gateway.
-     * 
      */
     public Output</* @Nullable */ List<WirelessGatewayTag>> getTags() {
         return this.tags;
     }
     /**
      * Thing Arn. Passed into Update to associate a Thing with the Wireless Gateway.
-     * 
      */
     @Export(name="thingArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> thingArn;
 
     /**
      * @return Thing Arn. Passed into Update to associate a Thing with the Wireless Gateway.
-     * 
      */
     public Output</* @Nullable */ String> getThingArn() {
         return this.thingArn;
     }
     /**
      * Thing Arn. If there is a Thing created, this can be returned with a Get call.
-     * 
      */
     @Export(name="thingName", type=String.class, parameters={})
     private Output<String> thingName;
 
     /**
      * @return Thing Arn. If there is a Thing created, this can be returned with a Get call.
-     * 
      */
     public Output<String> getThingName() {
         return this.thingName;

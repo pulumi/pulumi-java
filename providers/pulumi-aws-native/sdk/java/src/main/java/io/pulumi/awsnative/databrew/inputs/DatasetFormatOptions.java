@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Format options for dataset
- * 
  */
 public final class DatasetFormatOptions extends io.pulumi.resources.InvokeArgs {
 

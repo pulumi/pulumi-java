@@ -17,7 +17,6 @@ public final class CanaryBaseScreenshotArgs extends io.pulumi.resources.Resource
 
     /**
      * List of coordinates of rectangles to be ignored during visual testing
-     * 
      */
     @Import(name="ignoreCoordinates")
       private final @Nullable Output<List<String>> ignoreCoordinates;
@@ -28,7 +27,6 @@ public final class CanaryBaseScreenshotArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the screenshot to be used as base reference for visual testing
-     * 
      */
     @Import(name="screenshotName", required=true)
       private final Output<String> screenshotName;

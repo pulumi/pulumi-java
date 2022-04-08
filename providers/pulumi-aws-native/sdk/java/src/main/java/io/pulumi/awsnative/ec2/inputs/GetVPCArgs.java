@@ -14,7 +14,6 @@ public final class GetVPCArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Id for the model.
-     * 
      */
     @Import(name="vpcId", required=true)
       private final String vpcId;

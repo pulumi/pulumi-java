@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * A resource policy to add to the resource. The policy is a JSON structure following the IAM syntax that contains one or more statements that define the policy.
- * 
  */
 public final class ResourcePolicyPolicy extends io.pulumi.resources.InvokeArgs {
 

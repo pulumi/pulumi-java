@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of repository filter
-     * 
      */
     @EnumType
     public enum ReplicationConfigurationFilterType {

@@ -14,7 +14,6 @@ public final class GetTransitGatewayPeeringAttachmentArgs extends io.pulumi.reso
 
     /**
      * The ID of the transit gateway peering attachment.
-     * 
      */
     @Import(name="transitGatewayAttachmentId", required=true)
       private final String transitGatewayAttachmentId;

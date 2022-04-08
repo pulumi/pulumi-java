@@ -14,7 +14,6 @@ public final class GetCustomerGatewayAssociationArgs extends io.pulumi.resources
 
     /**
      * The Amazon Resource Name (ARN) of the customer gateway.
-     * 
      */
     @Import(name="customerGatewayArn", required=true)
       private final String customerGatewayArn;
@@ -25,7 +24,6 @@ public final class GetCustomerGatewayAssociationArgs extends io.pulumi.resources
 
     /**
      * The ID of the global network.
-     * 
      */
     @Import(name="globalNetworkId", required=true)
       private final String globalNetworkId;

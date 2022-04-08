@@ -19,7 +19,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the domain.
-     * 
      */
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
@@ -30,7 +29,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The access control resource policy on the provided domain.
-     * 
      */
     @Import(name="permissionsPolicyDocument")
       private final @Nullable Output<Object> permissionsPolicyDocument;
@@ -41,7 +39,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<DomainTagArgs>> tags;

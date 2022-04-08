@@ -14,7 +14,6 @@ public final class GetEntityTypeArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The entity type ARN.
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

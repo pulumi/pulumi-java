@@ -16,7 +16,6 @@ public final class GetDHCPOptionsResult {
     private final @Nullable String dhcpOptionsId;
     /**
      * Any tags assigned to the DHCP options set.
-     * 
      */
     private final @Nullable List<DHCPOptionsTag> tags;
 
@@ -33,7 +32,6 @@ public final class GetDHCPOptionsResult {
     }
     /**
      * Any tags assigned to the DHCP options set.
-     * 
     */
     public List<DHCPOptionsTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

@@ -15,48 +15,41 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::SageMaker::Device
- * 
  */
 @ResourceType(type="aws-native:sagemaker:Device")
 public class Device extends io.pulumi.resources.CustomResource {
     /**
      * The Edge Device you want to register against a device fleet
-     * 
      */
     @Export(name="device", type=io.pulumi.awsnative.sagemaker.outputs.Device.class, parameters={})
     private Output</* @Nullable */ io.pulumi.awsnative.sagemaker.outputs.Device> device;
 
     /**
      * @return The Edge Device you want to register against a device fleet
-     * 
      */
     public Output</* @Nullable */ io.pulumi.awsnative.sagemaker.outputs.Device> getDevice() {
         return this.device;
     }
     /**
      * The name of the edge device fleet
-     * 
      */
     @Export(name="deviceFleetName", type=String.class, parameters={})
     private Output<String> deviceFleetName;
 
     /**
      * @return The name of the edge device fleet
-     * 
      */
     public Output<String> getDeviceFleetName() {
         return this.deviceFleetName;
     }
     /**
      * Associate tags with the resource
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DeviceTag.class})
     private Output</* @Nullable */ List<DeviceTag>> tags;
 
     /**
      * @return Associate tags with the resource
-     * 
      */
     public Output</* @Nullable */ List<DeviceTag>> getTags() {
         return this.tags;

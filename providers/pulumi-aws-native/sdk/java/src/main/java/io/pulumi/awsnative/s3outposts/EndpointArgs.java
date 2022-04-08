@@ -17,7 +17,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of access for the on-premise network connectivity for the Outpost endpoint. To access endpoint from an on-premises network, you must specify the access type and provide the customer owned Ipv4 pool.
-     * 
      */
     @Import(name="accessType")
       private final @Nullable Output<EndpointAccessType> accessType;
@@ -28,7 +27,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the customer-owned IPv4 pool for the Endpoint. IP addresses will be allocated from this pool for the endpoint.
-     * 
      */
     @Import(name="customerOwnedIpv4Pool")
       private final @Nullable Output<String> customerOwnedIpv4Pool;
@@ -39,7 +37,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The id of the customer outpost on which the bucket resides.
-     * 
      */
     @Import(name="outpostId", required=true)
       private final Output<String> outpostId;
@@ -50,7 +47,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the security group to use with the endpoint.
-     * 
      */
     @Import(name="securityGroupId", required=true)
       private final Output<String> securityGroupId;
@@ -61,7 +57,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the subnet in the selected VPC. The subnet must belong to the Outpost.
-     * 
      */
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;

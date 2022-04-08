@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Whether the publisher is verified.
-     * 
      */
     @EnumType
     public enum PublisherStatus {

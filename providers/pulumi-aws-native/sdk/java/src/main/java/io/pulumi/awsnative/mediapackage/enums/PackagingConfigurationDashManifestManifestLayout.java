@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Determines the position of some tags in the Media Presentation Description (MPD). When set to FULL, elements like SegmentTemplate and ContentProtection are included in each Representation. When set to COMPACT, duplicate elements are combined and presented at the AdaptationSet level.
-     * 
      */
     @EnumType
     public enum PackagingConfigurationDashManifestManifestLayout {

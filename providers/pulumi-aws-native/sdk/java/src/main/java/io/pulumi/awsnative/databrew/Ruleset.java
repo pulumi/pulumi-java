@@ -16,48 +16,41 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::DataBrew::Ruleset.
- * 
  */
 @ResourceType(type="aws-native:databrew:Ruleset")
 public class Ruleset extends io.pulumi.resources.CustomResource {
     /**
      * Description of the Ruleset
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description of the Ruleset
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Name of the Ruleset
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the Ruleset
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * List of the data quality rules in the ruleset
-     * 
      */
     @Export(name="rules", type=List.class, parameters={RulesetRule.class})
     private Output<List<RulesetRule>> rules;
 
     /**
      * @return List of the data quality rules in the ruleset
-     * 
      */
     public Output<List<RulesetRule>> getRules() {
         return this.rules;
@@ -70,14 +63,12 @@ public class Ruleset extends io.pulumi.resources.CustomResource {
     }
     /**
      * Arn of the target resource (dataset) to apply the ruleset to
-     * 
      */
     @Export(name="targetArn", type=String.class, parameters={})
     private Output<String> targetArn;
 
     /**
      * @return Arn of the target resource (dataset) to apply the ruleset to
-     * 
      */
     public Output<String> getTargetArn() {
         return this.targetArn;

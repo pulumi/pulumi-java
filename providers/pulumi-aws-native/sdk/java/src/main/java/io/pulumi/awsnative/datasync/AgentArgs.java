@@ -18,7 +18,6 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activation key of the Agent.
-     * 
      */
     @Import(name="activationKey", required=true)
       private final Output<String> activationKey;
@@ -29,7 +28,6 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name configured for the agent. Text reference used to identify the agent in the console.
-     * 
      */
     @Import(name="agentName")
       private final @Nullable Output<String> agentName;
@@ -40,7 +38,6 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ARNs of the security group used to protect your data transfer task subnets.
-     * 
      */
     @Import(name="securityGroupArns")
       private final @Nullable Output<List<String>> securityGroupArns;
@@ -51,7 +48,6 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ARNs of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
-     * 
      */
     @Import(name="subnetArns")
       private final @Nullable Output<List<String>> subnetArns;
@@ -62,7 +58,6 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<AgentTagArgs>> tags;
@@ -73,7 +68,6 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the VPC endpoint that the agent has access to.
-     * 
      */
     @Import(name="vpcEndpointId")
       private final @Nullable Output<String> vpcEndpointId;

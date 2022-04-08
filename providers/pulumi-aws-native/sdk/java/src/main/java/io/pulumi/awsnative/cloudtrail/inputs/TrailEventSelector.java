@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The type of email sending events to publish to the event destination.
- * 
  */
 public final class TrailEventSelector extends io.pulumi.resources.InvokeArgs {
 
@@ -31,7 +30,6 @@ public final class TrailEventSelector extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An optional list of service event sources from which you do not want management events to be logged on your trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key Management Service events by containing "kms.amazonaws.com". By default, ExcludeManagementEventSources is empty, and AWS KMS events are included in events that are logged to your trail.
-     * 
      */
     @Import(name="excludeManagementEventSources")
       private final @Nullable List<String> excludeManagementEventSources;
@@ -42,7 +40,6 @@ public final class TrailEventSelector extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specify if you want your event selector to include management events for your trail.
-     * 
      */
     @Import(name="includeManagementEvents")
       private final @Nullable Boolean includeManagementEvents;
@@ -53,7 +50,6 @@ public final class TrailEventSelector extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specify if you want your trail to log read-only events, write-only events, or all. For example, the EC2 GetConsoleOutput is a read-only API operation and RunInstances is a write-only API operation.
-     * 
      */
     @Import(name="readWriteType")
       private final @Nullable TrailEventSelectorReadWriteType readWriteType;

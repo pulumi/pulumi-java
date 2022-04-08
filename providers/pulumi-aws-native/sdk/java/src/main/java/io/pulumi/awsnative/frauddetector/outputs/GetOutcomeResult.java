@@ -15,27 +15,22 @@ import javax.annotation.Nullable;
 public final class GetOutcomeResult {
     /**
      * The outcome ARN.
-     * 
      */
     private final @Nullable String arn;
     /**
      * The timestamp when the outcome was created.
-     * 
      */
     private final @Nullable String createdTime;
     /**
      * The outcome description.
-     * 
      */
     private final @Nullable String description;
     /**
      * The timestamp when the outcome was last updated.
-     * 
      */
     private final @Nullable String lastUpdatedTime;
     /**
      * Tags associated with this outcome.
-     * 
      */
     private final @Nullable List<OutcomeTag> tags;
 
@@ -55,35 +50,30 @@ public final class GetOutcomeResult {
 
     /**
      * The outcome ARN.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The timestamp when the outcome was created.
-     * 
     */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * The outcome description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The timestamp when the outcome was last updated.
-     * 
     */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * Tags associated with this outcome.
-     * 
     */
     public List<OutcomeTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

@@ -18,161 +18,307 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for AWS::DataSync::LocationObjectStorage.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var locationObjectStorage = new AwsNative.DataSync.LocationObjectStorage("locationObjectStorage", new AwsNative.DataSync.LocationObjectStorageArgs
+ *         {
+ *             AgentArns = 
+ *             {
+ *                 "arn:aws:datasync:us-east-2:111222333444:agent/agent-0b0addbeef44b3nfs",
+ *             },
+ *             BucketName = "MyBucket",
+ *             ServerHostname = "MyServer@example.com",
+ *             ServerProtocol = "HTTPS",
+ *             Subdirectory = "/MySubdirectory",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/datasync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datasync.NewLocationObjectStorage(ctx, "locationObjectStorage", &datasync.LocationObjectStorageArgs{
+ * 			AgentArns: pulumi.StringArray{
+ * 				pulumi.String("arn:aws:datasync:us-east-2:111222333444:agent/agent-0b0addbeef44b3nfs"),
+ * 			},
+ * 			BucketName:     pulumi.String("MyBucket"),
+ * 			ServerHostname: pulumi.String("MyServer@example.com"),
+ * 			ServerProtocol: "HTTPS",
+ * 			Subdirectory:   pulumi.String("/MySubdirectory"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const locationObjectStorage = new aws_native.datasync.LocationObjectStorage("locationObjectStorage", {
+ *     agentArns: ["arn:aws:datasync:us-east-2:111222333444:agent/agent-0b0addbeef44b3nfs"],
+ *     bucketName: "MyBucket",
+ *     serverHostname: "MyServer@example.com",
+ *     serverProtocol: "HTTPS",
+ *     subdirectory: "/MySubdirectory",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * location_object_storage = aws_native.datasync.LocationObjectStorage("locationObjectStorage",
+ *     agent_arns=["arn:aws:datasync:us-east-2:111222333444:agent/agent-0b0addbeef44b3nfs"],
+ *     bucket_name="MyBucket",
+ *     server_hostname="MyServer@example.com",
+ *     server_protocol="HTTPS",
+ *     subdirectory="/MySubdirectory")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var locationObjectStorage = new AwsNative.DataSync.LocationObjectStorage("locationObjectStorage", new AwsNative.DataSync.LocationObjectStorageArgs
+ *         {
+ *             AgentArns = 
+ *             {
+ *                 "arn:aws:datasync:us-east-2:111222333444:agent/agent-0b0addbeef44b3nfs",
+ *             },
+ *             BucketName = "MyBucket",
+ *             ServerHostname = "MyServer@example.com",
+ *             ServerProtocol = "HTTPS",
+ *             Subdirectory = "/MySubdirectory",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/datasync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datasync.NewLocationObjectStorage(ctx, "locationObjectStorage", &datasync.LocationObjectStorageArgs{
+ * 			AgentArns: pulumi.StringArray{
+ * 				pulumi.String("arn:aws:datasync:us-east-2:111222333444:agent/agent-0b0addbeef44b3nfs"),
+ * 			},
+ * 			BucketName:     pulumi.String("MyBucket"),
+ * 			ServerHostname: pulumi.String("MyServer@example.com"),
+ * 			ServerProtocol: "HTTPS",
+ * 			Subdirectory:   pulumi.String("/MySubdirectory"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const locationObjectStorage = new aws_native.datasync.LocationObjectStorage("locationObjectStorage", {
+ *     agentArns: ["arn:aws:datasync:us-east-2:111222333444:agent/agent-0b0addbeef44b3nfs"],
+ *     bucketName: "MyBucket",
+ *     serverHostname: "MyServer@example.com",
+ *     serverProtocol: "HTTPS",
+ *     subdirectory: "/MySubdirectory",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * location_object_storage = aws_native.datasync.LocationObjectStorage("locationObjectStorage",
+ *     agent_arns=["arn:aws:datasync:us-east-2:111222333444:agent/agent-0b0addbeef44b3nfs"],
+ *     bucket_name="MyBucket",
+ *     server_hostname="MyServer@example.com",
+ *     server_protocol="HTTPS",
+ *     subdirectory="/MySubdirectory")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:datasync:LocationObjectStorage")
 public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
     /**
      * Optional. The access key is used if credentials are required to access the self-managed object storage server.
-     * 
      */
     @Export(name="accessKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> accessKey;
 
     /**
      * @return Optional. The access key is used if credentials are required to access the self-managed object storage server.
-     * 
      */
     public Output</* @Nullable */ String> getAccessKey() {
         return this.accessKey;
     }
     /**
      * The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.
-     * 
      */
     @Export(name="agentArns", type=List.class, parameters={String.class})
     private Output<List<String>> agentArns;
 
     /**
      * @return The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.
-     * 
      */
     public Output<List<String>> getAgentArns() {
         return this.agentArns;
     }
     /**
      * The name of the bucket on the self-managed object storage server.
-     * 
      */
     @Export(name="bucketName", type=String.class, parameters={})
     private Output<String> bucketName;
 
     /**
      * @return The name of the bucket on the self-managed object storage server.
-     * 
      */
     public Output<String> getBucketName() {
         return this.bucketName;
     }
     /**
      * The Amazon Resource Name (ARN) of the location that is created.
-     * 
      */
     @Export(name="locationArn", type=String.class, parameters={})
     private Output<String> locationArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the location that is created.
-     * 
      */
     public Output<String> getLocationArn() {
         return this.locationArn;
     }
     /**
      * The URL of the object storage location that was described.
-     * 
      */
     @Export(name="locationUri", type=String.class, parameters={})
     private Output<String> locationUri;
 
     /**
      * @return The URL of the object storage location that was described.
-     * 
      */
     public Output<String> getLocationUri() {
         return this.locationUri;
     }
     /**
      * Optional. The secret key is used if credentials are required to access the self-managed object storage server.
-     * 
      */
     @Export(name="secretKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> secretKey;
 
     /**
      * @return Optional. The secret key is used if credentials are required to access the self-managed object storage server.
-     * 
      */
     public Output</* @Nullable */ String> getSecretKey() {
         return this.secretKey;
     }
     /**
      * The name of the self-managed object storage server. This value is the IP address or Domain Name Service (DNS) name of the object storage server.
-     * 
      */
     @Export(name="serverHostname", type=String.class, parameters={})
     private Output<String> serverHostname;
 
     /**
      * @return The name of the self-managed object storage server. This value is the IP address or Domain Name Service (DNS) name of the object storage server.
-     * 
      */
     public Output<String> getServerHostname() {
         return this.serverHostname;
     }
     /**
      * The port that your self-managed server accepts inbound network traffic on.
-     * 
      */
     @Export(name="serverPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> serverPort;
 
     /**
      * @return The port that your self-managed server accepts inbound network traffic on.
-     * 
      */
     public Output</* @Nullable */ Integer> getServerPort() {
         return this.serverPort;
     }
     /**
      * The protocol that the object storage server uses to communicate.
-     * 
      */
     @Export(name="serverProtocol", type=LocationObjectStorageServerProtocol.class, parameters={})
     private Output</* @Nullable */ LocationObjectStorageServerProtocol> serverProtocol;
 
     /**
      * @return The protocol that the object storage server uses to communicate.
-     * 
      */
     public Output</* @Nullable */ LocationObjectStorageServerProtocol> getServerProtocol() {
         return this.serverProtocol;
     }
     /**
      * The subdirectory in the self-managed object storage server that is used to read data from.
-     * 
      */
     @Export(name="subdirectory", type=String.class, parameters={})
     private Output</* @Nullable */ String> subdirectory;
 
     /**
      * @return The subdirectory in the self-managed object storage server that is used to read data from.
-     * 
      */
     public Output</* @Nullable */ String> getSubdirectory() {
         return this.subdirectory;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={LocationObjectStorageTag.class})
     private Output</* @Nullable */ List<LocationObjectStorageTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<LocationObjectStorageTag>> getTags() {
         return this.tags;

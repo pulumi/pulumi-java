@@ -12,7 +12,6 @@ public final class DatasetFilterValue {
     private final String value;
     /**
      * Variable name
-     * 
      */
     private final String valueReference;
 
@@ -29,7 +28,6 @@ public final class DatasetFilterValue {
     }
     /**
      * Variable name
-     * 
     */
     public String getValueReference() {
         return this.valueReference;

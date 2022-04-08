@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The JMX Prometheus Exporter settings.
- * 
  */
 public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
 
     /**
      * Java agent host port
-     * 
      */
     @Import(name="hostPort")
       private final @Nullable Output<String> hostPort;
@@ -31,7 +29,6 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
 
     /**
      * JMX service URL.
-     * 
      */
     @Import(name="jMXURL")
       private final @Nullable Output<String> jMXURL;
@@ -42,7 +39,6 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
 
     /**
      * Prometheus exporter port.
-     * 
      */
     @Import(name="prometheusPort")
       private final @Nullable Output<String> prometheusPort;

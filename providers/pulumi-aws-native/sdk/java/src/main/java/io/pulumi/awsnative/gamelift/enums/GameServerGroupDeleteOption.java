@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of delete to perform.
-     * 
      */
     @EnumType
     public enum GameServerGroupDeleteOption {

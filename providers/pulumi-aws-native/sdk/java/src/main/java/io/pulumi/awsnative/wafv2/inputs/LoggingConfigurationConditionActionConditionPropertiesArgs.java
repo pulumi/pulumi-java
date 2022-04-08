@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A single action condition.
- * 
  */
 public final class LoggingConfigurationConditionActionConditionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class LoggingConfigurationConditionActionConditionPropertiesArgs ex
 
     /**
      * Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.
-     * 
      */
     @Import(name="action", required=true)
       private final Output<LoggingConfigurationConditionActionConditionPropertiesAction> action;

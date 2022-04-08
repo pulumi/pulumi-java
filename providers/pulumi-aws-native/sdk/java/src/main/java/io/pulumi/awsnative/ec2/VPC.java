@@ -16,90 +16,77 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::EC2::VPC
- * 
  */
 @ResourceType(type="aws-native:ec2:VPC")
 public class VPC extends io.pulumi.resources.CustomResource {
     /**
      * The primary IPv4 CIDR block for the VPC.
-     * 
      */
     @Export(name="cidrBlock", type=String.class, parameters={})
     private Output<String> cidrBlock;
 
     /**
      * @return The primary IPv4 CIDR block for the VPC.
-     * 
      */
     public Output<String> getCidrBlock() {
         return this.cidrBlock;
     }
     /**
      * A list of IPv4 CIDR block association IDs for the VPC.
-     * 
      */
     @Export(name="cidrBlockAssociations", type=List.class, parameters={String.class})
     private Output<List<String>> cidrBlockAssociations;
 
     /**
      * @return A list of IPv4 CIDR block association IDs for the VPC.
-     * 
      */
     public Output<List<String>> getCidrBlockAssociations() {
         return this.cidrBlockAssociations;
     }
     /**
      * The default network ACL ID that is associated with the VPC.
-     * 
      */
     @Export(name="defaultNetworkAcl", type=String.class, parameters={})
     private Output<String> defaultNetworkAcl;
 
     /**
      * @return The default network ACL ID that is associated with the VPC.
-     * 
      */
     public Output<String> getDefaultNetworkAcl() {
         return this.defaultNetworkAcl;
     }
     /**
      * The default security group ID that is associated with the VPC.
-     * 
      */
     @Export(name="defaultSecurityGroup", type=String.class, parameters={})
     private Output<String> defaultSecurityGroup;
 
     /**
      * @return The default security group ID that is associated with the VPC.
-     * 
      */
     public Output<String> getDefaultSecurityGroup() {
         return this.defaultSecurityGroup;
     }
     /**
      * Indicates whether the instances launched in the VPC get DNS hostnames. If enabled, instances in the VPC get DNS hostnames; otherwise, they do not. Disabled by default for nondefault VPCs.
-     * 
      */
     @Export(name="enableDnsHostnames", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDnsHostnames;
 
     /**
      * @return Indicates whether the instances launched in the VPC get DNS hostnames. If enabled, instances in the VPC get DNS hostnames; otherwise, they do not. Disabled by default for nondefault VPCs.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableDnsHostnames() {
         return this.enableDnsHostnames;
     }
     /**
      * Indicates whether the DNS resolution is supported for the VPC. If enabled, queries to the Amazon provided DNS server at the 169.254.169.253 IP address, or the reserved IP address at the base of the VPC network range "plus two" succeed. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled. Enabled by default.
-     * 
      */
     @Export(name="enableDnsSupport", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDnsSupport;
 
     /**
      * @return Indicates whether the DNS resolution is supported for the VPC. If enabled, queries to the Amazon provided DNS server at the 169.254.169.253 IP address, or the reserved IP address at the base of the VPC network range "plus two" succeed. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled. Enabled by default.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableDnsSupport() {
         return this.enableDnsSupport;
@@ -112,7 +99,6 @@ public class VPC extends io.pulumi.resources.CustomResource {
      * "dedicated": An instance launched into the VPC is a Dedicated Instance by default, unless you explicitly specify a tenancy of host during instance launch. You cannot specify a tenancy of default during instance launch.
      * 
      * Updating InstanceTenancy requires no replacement only if you are updating its value from "dedicated" to "default". Updating InstanceTenancy from "default" to "dedicated" requires replacement.
-     * 
      */
     @Export(name="instanceTenancy", type=String.class, parameters={})
     private Output</* @Nullable */ String> instanceTenancy;
@@ -125,49 +111,42 @@ public class VPC extends io.pulumi.resources.CustomResource {
      * "dedicated": An instance launched into the VPC is a Dedicated Instance by default, unless you explicitly specify a tenancy of host during instance launch. You cannot specify a tenancy of default during instance launch.
      * 
      * Updating InstanceTenancy requires no replacement only if you are updating its value from "dedicated" to "default". Updating InstanceTenancy from "default" to "dedicated" requires replacement.
-     * 
      */
     public Output</* @Nullable */ String> getInstanceTenancy() {
         return this.instanceTenancy;
     }
     /**
      * A list of IPv6 CIDR blocks that are associated with the VPC.
-     * 
      */
     @Export(name="ipv6CidrBlocks", type=List.class, parameters={String.class})
     private Output<List<String>> ipv6CidrBlocks;
 
     /**
      * @return A list of IPv6 CIDR blocks that are associated with the VPC.
-     * 
      */
     public Output<List<String>> getIpv6CidrBlocks() {
         return this.ipv6CidrBlocks;
     }
     /**
      * The tags for the VPC.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={VPCTag.class})
     private Output</* @Nullable */ List<VPCTag>> tags;
 
     /**
      * @return The tags for the VPC.
-     * 
      */
     public Output</* @Nullable */ List<VPCTag>> getTags() {
         return this.tags;
     }
     /**
      * The Id for the model.
-     * 
      */
     @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**
      * @return The Id for the model.
-     * 
      */
     public Output<String> getVpcId() {
         return this.vpcId;

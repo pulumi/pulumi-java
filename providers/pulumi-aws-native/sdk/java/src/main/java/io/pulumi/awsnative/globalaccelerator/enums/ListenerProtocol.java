@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The protocol for the listener.
-     * 
      */
     @EnumType
     public enum ListenerProtocol {

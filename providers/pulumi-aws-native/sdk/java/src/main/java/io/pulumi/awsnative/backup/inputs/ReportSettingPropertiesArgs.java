@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Identifies the report template for the report. Reports are built using a report template.
- * 
  */
 public final class ReportSettingPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ReportSettingPropertiesArgs extends io.pulumi.resources.Resou
 
     /**
      * The Amazon Resource Names (ARNs) of the frameworks a report covers.
-     * 
      */
     @Import(name="frameworkArns")
       private final @Nullable Output<List<String>> frameworkArns;
@@ -32,7 +30,6 @@ public final class ReportSettingPropertiesArgs extends io.pulumi.resources.Resou
 
     /**
      * Identifies the report template for the report. Reports are built using a report template. The report templates are: `BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT`
-     * 
      */
     @Import(name="reportTemplate", required=true)
       private final Output<String> reportTemplate;

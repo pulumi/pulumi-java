@@ -14,7 +14,6 @@ public final class GetAccessPointArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name you want to assign to this Access Point. If you don't specify a name, AWS CloudFormation generates a unique ID and uses that ID for the access point name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

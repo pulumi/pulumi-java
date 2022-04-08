@@ -15,21 +15,145 @@ import javax.annotation.Nullable;
 /**
  * The AWS::ECR::RegistryPolicy is used to specify permissions for another AWS account and is used when configuring cross-account replication. For more information, see Registry permissions in the Amazon Elastic Container Registry User Guide: https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testRegistryPolicy = new AwsNative.ECR.RegistryPolicy("testRegistryPolicy", new AwsNative.ECR.RegistryPolicyArgs
+ *         {
+ *             PolicyText = 
+ *             {
+ *                 { "version", "2012-10-17" },
+ *                 { "statement", 
+ *                 {
+ *                     
+ *                     {
+ *                         { "sid", "UpdatedRegistryPolicy" },
+ *                         { "effect", "Allow" },
+ *                         { "principal", 
+ *                         {
+ *                             { "aws", "arn:aws:iam::210987654321:root" },
+ *                         } },
+ *                         { "action", 
+ *                         {
+ *                             "ecr:CreateRepository",
+ *                             "ecr:ReplicateImage",
+ *                         } },
+ *                         { "resource", "arn:aws:ecr:us-west-2:123456789012:repository/*" },
+ *                     },
+ *                 } },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ecr"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ecr.NewRegistryPolicy(ctx, "testRegistryPolicy", &ecr.RegistryPolicyArgs{
+ * 			PolicyText: pulumi.Any{
+ * 				Version: "2012-10-17",
+ * 				Statement: []map[string]interface{}{
+ * 					map[string]interface{}{
+ * 						"sid":    "UpdatedRegistryPolicy",
+ * 						"effect": "Allow",
+ * 						"principal": map[string]interface{}{
+ * 							"aws": "arn:aws:iam::210987654321:root",
+ * 						},
+ * 						"action": []string{
+ * 							"ecr:CreateRepository",
+ * 							"ecr:ReplicateImage",
+ * 						},
+ * 						"resource": "arn:aws:ecr:us-west-2:123456789012:repository/*",
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const testRegistryPolicy = new aws_native.ecr.RegistryPolicy("testRegistryPolicy", {policyText: {
+ *     version: "2012-10-17",
+ *     statement: [{
+ *         sid: "UpdatedRegistryPolicy",
+ *         effect: "Allow",
+ *         principal: {
+ *             aws: "arn:aws:iam::210987654321:root",
+ *         },
+ *         action: [
+ *             "ecr:CreateRepository",
+ *             "ecr:ReplicateImage",
+ *         ],
+ *         resource: "arn:aws:ecr:us-west-2:123456789012:repository/*",
+ *     }],
+ * }});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * test_registry_policy = aws_native.ecr.RegistryPolicy("testRegistryPolicy", policy_text={
+ *     "version": "2012-10-17",
+ *     "statement": [{
+ *         "sid": "UpdatedRegistryPolicy",
+ *         "effect": "Allow",
+ *         "principal": {
+ *             "aws": "arn:aws:iam::210987654321:root",
+ *         },
+ *         "action": [
+ *             "ecr:CreateRepository",
+ *             "ecr:ReplicateImage",
+ *         ],
+ *         "resource": "arn:aws:ecr:us-west-2:123456789012:repository/*",
+ *     }],
+ * })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:ecr:RegistryPolicy")
 public class RegistryPolicy extends io.pulumi.resources.CustomResource {
     /**
      * The JSON policy text to apply to your registry. The policy text follows the same format as IAM policy text. For more information, see Registry permissions (https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html) in the Amazon Elastic Container Registry User Guide.
-     * 
      */
     @Export(name="policyText", type=Object.class, parameters={})
     private Output<Object> policyText;
 
     /**
      * @return The JSON policy text to apply to your registry. The policy text follows the same format as IAM policy text. For more information, see Registry permissions (https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html) in the Amazon Elastic Container Registry User Guide.
-     * 
      */
     public Output<Object> getPolicyText() {
         return this.policyText;

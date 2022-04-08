@@ -20,7 +20,6 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The revision ID of robot application.
-     * 
      */
     @Import(name="currentRevisionId")
       private final @Nullable Output<String> currentRevisionId;
@@ -31,7 +30,6 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The URI of the Docker image for the robot application.
-     * 
      */
     @Import(name="environment")
       private final @Nullable Output<String> environment;
@@ -42,7 +40,6 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the robot application.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -60,7 +57,6 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The sources of the robot application.
-     * 
      */
     @Import(name="sources")
       private final @Nullable Output<List<RobotApplicationSourceConfigArgs>> sources;

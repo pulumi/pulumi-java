@@ -34,7 +34,6 @@ public final class LocationNFSArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the NFS server. This value is the IP address or DNS name of the NFS server.
-     * 
      */
     @Import(name="serverHostname", required=true)
       private final Output<String> serverHostname;
@@ -45,7 +44,6 @@ public final class LocationNFSArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The subdirectory in the NFS file system that is used to read data from the NFS source location or write data to the NFS destination.
-     * 
      */
     @Import(name="subdirectory", required=true)
       private final Output<String> subdirectory;
@@ -56,7 +54,6 @@ public final class LocationNFSArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<LocationNFSTagArgs>> tags;

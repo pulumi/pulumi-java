@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration needed to write data into the Timestream database and table.
- * 
  */
 public final class ScheduledQueryTimestreamConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 

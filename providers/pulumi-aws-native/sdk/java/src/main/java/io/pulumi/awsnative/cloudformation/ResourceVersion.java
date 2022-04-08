@@ -18,77 +18,513 @@ import javax.annotation.Nullable;
 /**
  * A resource that has been registered in the CloudFormation Registry.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var resourceVersion = new AwsNative.CloudFormation.ResourceVersion("resourceVersion", new AwsNative.CloudFormation.ResourceVersionArgs
+ *         {
+ *             TypeName = "My::Sample::Resource",
+ *             SchemaHandlerPackage = "s3://my-sample-resourceversion-bucket/my-sample-resource.zip",
+ *         });
+ *         var resourceDefaultVersion = new AwsNative.CloudFormation.ResourceDefaultVersion("resourceDefaultVersion", new AwsNative.CloudFormation.ResourceDefaultVersionArgs
+ *         {
+ *             TypeVersionArn = resourceVersion.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cloudformation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		resourceVersion, err := cloudformation.NewResourceVersion(ctx, "resourceVersion", &cloudformation.ResourceVersionArgs{
+ * 			TypeName:             pulumi.String("My::Sample::Resource"),
+ * 			SchemaHandlerPackage: pulumi.String("s3://my-sample-resourceversion-bucket/my-sample-resource.zip"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudformation.NewResourceDefaultVersion(ctx, "resourceDefaultVersion", &cloudformation.ResourceDefaultVersionArgs{
+ * 			TypeVersionArn: resourceVersion.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const resourceVersion = new aws_native.cloudformation.ResourceVersion("resourceVersion", {
+ *     typeName: "My::Sample::Resource",
+ *     schemaHandlerPackage: "s3://my-sample-resourceversion-bucket/my-sample-resource.zip",
+ * });
+ * const resourceDefaultVersion = new aws_native.cloudformation.ResourceDefaultVersion("resourceDefaultVersion", {typeVersionArn: resourceVersion.id});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * resource_version = aws_native.cloudformation.ResourceVersion("resourceVersion",
+ *     type_name="My::Sample::Resource",
+ *     schema_handler_package="s3://my-sample-resourceversion-bucket/my-sample-resource.zip")
+ * resource_default_version = aws_native.cloudformation.ResourceDefaultVersion("resourceDefaultVersion", type_version_arn=resource_version.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var resourceVersion = new AwsNative.CloudFormation.ResourceVersion("resourceVersion", new AwsNative.CloudFormation.ResourceVersionArgs
+ *         {
+ *             TypeName = "My::Sample::Resource",
+ *             SchemaHandlerPackage = "s3://my-sample-resourceversion-bucket/my-sample-resource.zip",
+ *         });
+ *         var resourceDefaultVersion = new AwsNative.CloudFormation.ResourceDefaultVersion("resourceDefaultVersion", new AwsNative.CloudFormation.ResourceDefaultVersionArgs
+ *         {
+ *             TypeVersionArn = resourceVersion.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cloudformation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		resourceVersion, err := cloudformation.NewResourceVersion(ctx, "resourceVersion", &cloudformation.ResourceVersionArgs{
+ * 			TypeName:             pulumi.String("My::Sample::Resource"),
+ * 			SchemaHandlerPackage: pulumi.String("s3://my-sample-resourceversion-bucket/my-sample-resource.zip"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudformation.NewResourceDefaultVersion(ctx, "resourceDefaultVersion", &cloudformation.ResourceDefaultVersionArgs{
+ * 			TypeVersionArn: resourceVersion.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const resourceVersion = new aws_native.cloudformation.ResourceVersion("resourceVersion", {
+ *     typeName: "My::Sample::Resource",
+ *     schemaHandlerPackage: "s3://my-sample-resourceversion-bucket/my-sample-resource.zip",
+ * });
+ * const resourceDefaultVersion = new aws_native.cloudformation.ResourceDefaultVersion("resourceDefaultVersion", {typeVersionArn: resourceVersion.id});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * resource_version = aws_native.cloudformation.ResourceVersion("resourceVersion",
+ *     type_name="My::Sample::Resource",
+ *     schema_handler_package="s3://my-sample-resourceversion-bucket/my-sample-resource.zip")
+ * resource_default_version = aws_native.cloudformation.ResourceDefaultVersion("resourceDefaultVersion", type_version_arn=resource_version.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var resourceVersion = new AwsNative.CloudFormation.ResourceVersion("resourceVersion", new AwsNative.CloudFormation.ResourceVersionArgs
+ *         {
+ *             TypeName = "My::Sample::Resource",
+ *             SchemaHandlerPackage = "s3://my-sample-resourceversion-bucket/my-sample-resource.zip",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cloudformation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudformation.NewResourceVersion(ctx, "resourceVersion", &cloudformation.ResourceVersionArgs{
+ * 			TypeName:             pulumi.String("My::Sample::Resource"),
+ * 			SchemaHandlerPackage: pulumi.String("s3://my-sample-resourceversion-bucket/my-sample-resource.zip"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const resourceVersion = new aws_native.cloudformation.ResourceVersion("resourceVersion", {
+ *     typeName: "My::Sample::Resource",
+ *     schemaHandlerPackage: "s3://my-sample-resourceversion-bucket/my-sample-resource.zip",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * resource_version = aws_native.cloudformation.ResourceVersion("resourceVersion",
+ *     type_name="My::Sample::Resource",
+ *     schema_handler_package="s3://my-sample-resourceversion-bucket/my-sample-resource.zip")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var resourceVersion = new AwsNative.CloudFormation.ResourceVersion("resourceVersion", new AwsNative.CloudFormation.ResourceVersionArgs
+ *         {
+ *             TypeName = "My::Sample::Resource",
+ *             SchemaHandlerPackage = "s3://my-sample-resourceversion-bucket/my-sample-resource.zip",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cloudformation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudformation.NewResourceVersion(ctx, "resourceVersion", &cloudformation.ResourceVersionArgs{
+ * 			TypeName:             pulumi.String("My::Sample::Resource"),
+ * 			SchemaHandlerPackage: pulumi.String("s3://my-sample-resourceversion-bucket/my-sample-resource.zip"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const resourceVersion = new aws_native.cloudformation.ResourceVersion("resourceVersion", {
+ *     typeName: "My::Sample::Resource",
+ *     schemaHandlerPackage: "s3://my-sample-resourceversion-bucket/my-sample-resource.zip",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * resource_version = aws_native.cloudformation.ResourceVersion("resourceVersion",
+ *     type_name="My::Sample::Resource",
+ *     schema_handler_package="s3://my-sample-resourceversion-bucket/my-sample-resource.zip")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var resourceVersion = new AwsNative.CloudFormation.ResourceVersion("resourceVersion", new AwsNative.CloudFormation.ResourceVersionArgs
+ *         {
+ *             TypeName = "My::Sample::Resource",
+ *             SchemaHandlerPackage = "s3://my-sample-resourceversion-bucket/my-sample-resource.zip",
+ *         });
+ *         var resourceDefaultVersion = new AwsNative.CloudFormation.ResourceDefaultVersion("resourceDefaultVersion", new AwsNative.CloudFormation.ResourceDefaultVersionArgs
+ *         {
+ *             TypeVersionArn = resourceVersion.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cloudformation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		resourceVersion, err := cloudformation.NewResourceVersion(ctx, "resourceVersion", &cloudformation.ResourceVersionArgs{
+ * 			TypeName:             pulumi.String("My::Sample::Resource"),
+ * 			SchemaHandlerPackage: pulumi.String("s3://my-sample-resourceversion-bucket/my-sample-resource.zip"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudformation.NewResourceDefaultVersion(ctx, "resourceDefaultVersion", &cloudformation.ResourceDefaultVersionArgs{
+ * 			TypeVersionArn: resourceVersion.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const resourceVersion = new aws_native.cloudformation.ResourceVersion("resourceVersion", {
+ *     typeName: "My::Sample::Resource",
+ *     schemaHandlerPackage: "s3://my-sample-resourceversion-bucket/my-sample-resource.zip",
+ * });
+ * const resourceDefaultVersion = new aws_native.cloudformation.ResourceDefaultVersion("resourceDefaultVersion", {typeVersionArn: resourceVersion.id});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * resource_version = aws_native.cloudformation.ResourceVersion("resourceVersion",
+ *     type_name="My::Sample::Resource",
+ *     schema_handler_package="s3://my-sample-resourceversion-bucket/my-sample-resource.zip")
+ * resource_default_version = aws_native.cloudformation.ResourceDefaultVersion("resourceDefaultVersion", type_version_arn=resource_version.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var resourceVersion = new AwsNative.CloudFormation.ResourceVersion("resourceVersion", new AwsNative.CloudFormation.ResourceVersionArgs
+ *         {
+ *             TypeName = "My::Sample::Resource",
+ *             SchemaHandlerPackage = "s3://my-sample-resourceversion-bucket/my-sample-resource.zip",
+ *         });
+ *         var resourceDefaultVersion = new AwsNative.CloudFormation.ResourceDefaultVersion("resourceDefaultVersion", new AwsNative.CloudFormation.ResourceDefaultVersionArgs
+ *         {
+ *             TypeVersionArn = resourceVersion.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cloudformation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		resourceVersion, err := cloudformation.NewResourceVersion(ctx, "resourceVersion", &cloudformation.ResourceVersionArgs{
+ * 			TypeName:             pulumi.String("My::Sample::Resource"),
+ * 			SchemaHandlerPackage: pulumi.String("s3://my-sample-resourceversion-bucket/my-sample-resource.zip"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudformation.NewResourceDefaultVersion(ctx, "resourceDefaultVersion", &cloudformation.ResourceDefaultVersionArgs{
+ * 			TypeVersionArn: resourceVersion.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const resourceVersion = new aws_native.cloudformation.ResourceVersion("resourceVersion", {
+ *     typeName: "My::Sample::Resource",
+ *     schemaHandlerPackage: "s3://my-sample-resourceversion-bucket/my-sample-resource.zip",
+ * });
+ * const resourceDefaultVersion = new aws_native.cloudformation.ResourceDefaultVersion("resourceDefaultVersion", {typeVersionArn: resourceVersion.id});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * resource_version = aws_native.cloudformation.ResourceVersion("resourceVersion",
+ *     type_name="My::Sample::Resource",
+ *     schema_handler_package="s3://my-sample-resourceversion-bucket/my-sample-resource.zip")
+ * resource_default_version = aws_native.cloudformation.ResourceDefaultVersion("resourceDefaultVersion", type_version_arn=resource_version.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:cloudformation:ResourceVersion")
 public class ResourceVersion extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the type, here the ResourceVersion. This is used to uniquely identify a ResourceVersion resource
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the type, here the ResourceVersion. This is used to uniquely identify a ResourceVersion resource
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The Amazon Resource Name (ARN) of the IAM execution role to use to register the type. If your resource type calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account. CloudFormation then assumes that execution role to provide your resource type with the appropriate credentials.
-     * 
      */
     @Export(name="executionRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> executionRoleArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the IAM execution role to use to register the type. If your resource type calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account. CloudFormation then assumes that execution role to provide your resource type with the appropriate credentials.
-     * 
      */
     public Output</* @Nullable */ String> getExecutionRoleArn() {
         return this.executionRoleArn;
     }
     /**
      * Indicates if this type version is the current default version
-     * 
      */
     @Export(name="isDefaultVersion", type=Boolean.class, parameters={})
     private Output<Boolean> isDefaultVersion;
 
     /**
      * @return Indicates if this type version is the current default version
-     * 
      */
     public Output<Boolean> getIsDefaultVersion() {
         return this.isDefaultVersion;
     }
     /**
      * Specifies logging configuration information for a type.
-     * 
      */
     @Export(name="loggingConfig", type=ResourceVersionLoggingConfig.class, parameters={})
     private Output</* @Nullable */ ResourceVersionLoggingConfig> loggingConfig;
 
     /**
      * @return Specifies logging configuration information for a type.
-     * 
      */
     public Output</* @Nullable */ ResourceVersionLoggingConfig> getLoggingConfig() {
         return this.loggingConfig;
     }
     /**
      * The provisioning behavior of the type. AWS CloudFormation determines the provisioning type during registration, based on the types of handlers in the schema handler package submitted.
-     * 
      */
     @Export(name="provisioningType", type=ResourceVersionProvisioningType.class, parameters={})
     private Output<ResourceVersionProvisioningType> provisioningType;
 
     /**
      * @return The provisioning behavior of the type. AWS CloudFormation determines the provisioning type during registration, based on the types of handlers in the schema handler package submitted.
-     * 
      */
     public Output<ResourceVersionProvisioningType> getProvisioningType() {
         return this.provisioningType;
@@ -97,7 +533,6 @@ public class ResourceVersion extends io.pulumi.resources.CustomResource {
      * A url to the S3 bucket containing the schema handler package that contains the schema, event handlers, and associated files for the type you want to register.
      * 
      * For information on generating a schema handler package for the type you want to register, see submit in the CloudFormation CLI User Guide.
-     * 
      */
     @Export(name="schemaHandlerPackage", type=String.class, parameters={})
     private Output<String> schemaHandlerPackage;
@@ -106,21 +541,18 @@ public class ResourceVersion extends io.pulumi.resources.CustomResource {
      * @return A url to the S3 bucket containing the schema handler package that contains the schema, event handlers, and associated files for the type you want to register.
      * 
      * For information on generating a schema handler package for the type you want to register, see submit in the CloudFormation CLI User Guide.
-     * 
      */
     public Output<String> getSchemaHandlerPackage() {
         return this.schemaHandlerPackage;
     }
     /**
      * The Amazon Resource Name (ARN) of the type without the versionID.
-     * 
      */
     @Export(name="typeArn", type=String.class, parameters={})
     private Output<String> typeArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the type without the versionID.
-     * 
      */
     public Output<String> getTypeArn() {
         return this.typeArn;
@@ -129,7 +561,6 @@ public class ResourceVersion extends io.pulumi.resources.CustomResource {
      * The name of the type being registered.
      * 
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
-     * 
      */
     @Export(name="typeName", type=String.class, parameters={})
     private Output<String> typeName;
@@ -138,21 +569,18 @@ public class ResourceVersion extends io.pulumi.resources.CustomResource {
      * @return The name of the type being registered.
      * 
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
-     * 
      */
     public Output<String> getTypeName() {
         return this.typeName;
     }
     /**
      * The ID of the version of the type represented by this resource instance.
-     * 
      */
     @Export(name="versionId", type=String.class, parameters={})
     private Output<String> versionId;
 
     /**
      * @return The ID of the version of the type represented by this resource instance.
-     * 
      */
     public Output<String> getVersionId() {
         return this.versionId;
@@ -165,7 +593,6 @@ public class ResourceVersion extends io.pulumi.resources.CustomResource {
      * PRIVATE: The type is only visible and usable within the account in which it is registered. Currently, AWS CloudFormation marks any types you register as PRIVATE.
      * 
      * PUBLIC: The type is publically visible and usable within any Amazon account.
-     * 
      */
     @Export(name="visibility", type=ResourceVersionVisibility.class, parameters={})
     private Output<ResourceVersionVisibility> visibility;
@@ -178,7 +605,6 @@ public class ResourceVersion extends io.pulumi.resources.CustomResource {
      * PRIVATE: The type is only visible and usable within the account in which it is registered. Currently, AWS CloudFormation marks any types you register as PRIVATE.
      * 
      * PUBLIC: The type is publically visible and usable within any Amazon account.
-     * 
      */
     public Output<ResourceVersionVisibility> getVisibility() {
         return this.visibility;

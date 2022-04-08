@@ -18,7 +18,6 @@ public final class MethodIntegrationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Specifies how to handle request payload content type conversions.
-     * 
      */
     @Import(name="contentHandling")
       private final @Nullable MethodIntegrationResponseContentHandling contentHandling;
@@ -29,7 +28,6 @@ public final class MethodIntegrationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The response parameters from the backend response that API Gateway sends to the method response.
-     * 
      */
     @Import(name="responseParameters")
       private final @Nullable Object responseParameters;
@@ -40,7 +38,6 @@ public final class MethodIntegrationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The templates that are used to transform the integration response body. Specify templates as key-value pairs (string-to-string mappings), with a content type as the key and a template as the value.
-     * 
      */
     @Import(name="responseTemplates")
       private final @Nullable Object responseTemplates;
@@ -51,7 +48,6 @@ public final class MethodIntegrationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * A regular expression that specifies which error strings or status codes from the backend map to the integration response.
-     * 
      */
     @Import(name="selectionPattern")
       private final @Nullable String selectionPattern;
@@ -62,7 +58,6 @@ public final class MethodIntegrationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The status code that API Gateway uses to map the integration response to a MethodResponse status code.
-     * 
      */
     @Import(name="statusCode", required=true)
       private final String statusCode;

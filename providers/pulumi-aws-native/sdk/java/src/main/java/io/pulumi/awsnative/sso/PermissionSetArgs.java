@@ -19,7 +19,6 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The permission set description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -30,7 +29,6 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The inline policy to put in permission set.
-     * 
      */
     @Import(name="inlinePolicy")
       private final @Nullable Output<Object> inlinePolicy;
@@ -41,7 +39,6 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The sso instance arn that the permission set is owned.
-     * 
      */
     @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
@@ -59,7 +56,6 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name you want to assign to this permission set.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -70,7 +66,6 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The relay state URL that redirect links to any service in the AWS Management Console.
-     * 
      */
     @Import(name="relayStateType")
       private final @Nullable Output<String> relayStateType;
@@ -81,7 +76,6 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The length of time that a user can be signed in to an AWS account.
-     * 
      */
     @Import(name="sessionDuration")
       private final @Nullable Output<String> sessionDuration;

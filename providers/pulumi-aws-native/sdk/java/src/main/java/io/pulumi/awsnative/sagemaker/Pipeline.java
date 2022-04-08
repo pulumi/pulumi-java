@@ -18,7 +18,383 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::SageMaker::Pipeline
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myPipeline = new AwsNative.SageMaker.Pipeline("myPipeline", new AwsNative.SageMaker.PipelineArgs
+ *         {
+ *             PipelineName = "<pipeline-name>",
+ *             PipelineDisplayName = "<pipeline-display-name>",
+ *             PipelineDescription = "<pipeline-description>",
+ *             PipelineDefinition = 
+ *             {
+ *                 { "pipelineDefinitionBody", "{\"Version\":\"2020-12-01\",\"Parameters\":[{\"Name\":\"InputDataSource\",\"DefaultValue\":\"\"},{\"Name\":\"InstanceCount\",\"Type\":\"Integer\",\"DefaultValue\":1}],\"Steps\":[{\"Name\":\"Training1\",\"Type\":\"Training\",\"Arguments\":{\"InputDataConfig\":[{\"DataSource\":{\"S3DataSource\":{\"S3Uri\":{\"Get\":\"Parameters.InputDataSource\"}}}}],\"OutputDataConfig\":{\"S3OutputPath\":\"s3://my-s3-bucket/\"},\"ResourceConfig\":{\"InstanceType\":\"ml.m5.large\",\"InstanceCount\":{\"Get\":\"Parameters.InstanceCount\"},\"VolumeSizeInGB\":1024}}}]}" },
+ *             },
+ *             RoleArn = "arn:aws:iam::<account-id>:root",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sagemaker.NewPipeline(ctx, "myPipeline", &sagemaker.PipelineArgs{
+ * 			PipelineName:        pulumi.String("<pipeline-name>"),
+ * 			PipelineDisplayName: pulumi.String("<pipeline-display-name>"),
+ * 			PipelineDescription: pulumi.String("<pipeline-description>"),
+ * 			PipelineDefinition: pulumi.Any{
+ * 				PipelineDefinitionBody: "{\"Version\":\"2020-12-01\",\"Parameters\":[{\"Name\":\"InputDataSource\",\"DefaultValue\":\"\"},{\"Name\":\"InstanceCount\",\"Type\":\"Integer\",\"DefaultValue\":1}],\"Steps\":[{\"Name\":\"Training1\",\"Type\":\"Training\",\"Arguments\":{\"InputDataConfig\":[{\"DataSource\":{\"S3DataSource\":{\"S3Uri\":{\"Get\":\"Parameters.InputDataSource\"}}}}],\"OutputDataConfig\":{\"S3OutputPath\":\"s3://my-s3-bucket/\"},\"ResourceConfig\":{\"InstanceType\":\"ml.m5.large\",\"InstanceCount\":{\"Get\":\"Parameters.InstanceCount\"},\"VolumeSizeInGB\":1024}}}]}",
+ * 			},
+ * 			RoleArn: pulumi.String("arn:aws:iam::<account-id>:root"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myPipeline = new aws_native.sagemaker.Pipeline("myPipeline", {
+ *     pipelineName: "<pipeline-name>",
+ *     pipelineDisplayName: "<pipeline-display-name>",
+ *     pipelineDescription: "<pipeline-description>",
+ *     pipelineDefinition: {
+ *         pipelineDefinitionBody: "{\"Version\":\"2020-12-01\",\"Parameters\":[{\"Name\":\"InputDataSource\",\"DefaultValue\":\"\"},{\"Name\":\"InstanceCount\",\"Type\":\"Integer\",\"DefaultValue\":1}],\"Steps\":[{\"Name\":\"Training1\",\"Type\":\"Training\",\"Arguments\":{\"InputDataConfig\":[{\"DataSource\":{\"S3DataSource\":{\"S3Uri\":{\"Get\":\"Parameters.InputDataSource\"}}}}],\"OutputDataConfig\":{\"S3OutputPath\":\"s3://my-s3-bucket/\"},\"ResourceConfig\":{\"InstanceType\":\"ml.m5.large\",\"InstanceCount\":{\"Get\":\"Parameters.InstanceCount\"},\"VolumeSizeInGB\":1024}}}]}",
+ *     },
+ *     roleArn: "arn:aws:iam::<account-id>:root",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_pipeline = aws_native.sagemaker.Pipeline("myPipeline",
+ *     pipeline_name="<pipeline-name>",
+ *     pipeline_display_name="<pipeline-display-name>",
+ *     pipeline_description="<pipeline-description>",
+ *     pipeline_definition={
+ *         "pipelineDefinitionBody": "{\"Version\":\"2020-12-01\",\"Parameters\":[{\"Name\":\"InputDataSource\",\"DefaultValue\":\"\"},{\"Name\":\"InstanceCount\",\"Type\":\"Integer\",\"DefaultValue\":1}],\"Steps\":[{\"Name\":\"Training1\",\"Type\":\"Training\",\"Arguments\":{\"InputDataConfig\":[{\"DataSource\":{\"S3DataSource\":{\"S3Uri\":{\"Get\":\"Parameters.InputDataSource\"}}}}],\"OutputDataConfig\":{\"S3OutputPath\":\"s3://my-s3-bucket/\"},\"ResourceConfig\":{\"InstanceType\":\"ml.m5.large\",\"InstanceCount\":{\"Get\":\"Parameters.InstanceCount\"},\"VolumeSizeInGB\":1024}}}]}",
+ *     },
+ *     role_arn="arn:aws:iam::<account-id>:root")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myPipeline = new AwsNative.SageMaker.Pipeline("myPipeline", new AwsNative.SageMaker.PipelineArgs
+ *         {
+ *             PipelineName = "<pipeline-name>",
+ *             PipelineDisplayName = "<pipeline-display-name>",
+ *             PipelineDescription = "<pipeline-description>",
+ *             PipelineDefinition = 
+ *             {
+ *                 { "pipelineDefinitionS3Location", 
+ *                 {
+ *                     { "bucket", "<S3-bucket-location>" },
+ *                     { "key", "<S3-bucket-key>" },
+ *                 } },
+ *             },
+ *             RoleArn = "arn:aws:iam::<account-id>:root",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sagemaker.NewPipeline(ctx, "myPipeline", &sagemaker.PipelineArgs{
+ * 			PipelineName:        pulumi.String("<pipeline-name>"),
+ * 			PipelineDisplayName: pulumi.String("<pipeline-display-name>"),
+ * 			PipelineDescription: pulumi.String("<pipeline-description>"),
+ * 			PipelineDefinition: pulumi.Any{
+ * 				PipelineDefinitionS3Location: map[string]interface{}{
+ * 					"bucket": "<S3-bucket-location>",
+ * 					"key":    "<S3-bucket-key>",
+ * 				},
+ * 			},
+ * 			RoleArn: pulumi.String("arn:aws:iam::<account-id>:root"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myPipeline = new aws_native.sagemaker.Pipeline("myPipeline", {
+ *     pipelineName: "<pipeline-name>",
+ *     pipelineDisplayName: "<pipeline-display-name>",
+ *     pipelineDescription: "<pipeline-description>",
+ *     pipelineDefinition: {
+ *         pipelineDefinitionS3Location: {
+ *             bucket: "<S3-bucket-location>",
+ *             key: "<S3-bucket-key>",
+ *         },
+ *     },
+ *     roleArn: "arn:aws:iam::<account-id>:root",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_pipeline = aws_native.sagemaker.Pipeline("myPipeline",
+ *     pipeline_name="<pipeline-name>",
+ *     pipeline_display_name="<pipeline-display-name>",
+ *     pipeline_description="<pipeline-description>",
+ *     pipeline_definition={
+ *         "pipelineDefinitionS3Location": {
+ *             "bucket": "<S3-bucket-location>",
+ *             "key": "<S3-bucket-key>",
+ *         },
+ *     },
+ *     role_arn="arn:aws:iam::<account-id>:root")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myAwesomePipeline = new AwsNative.SageMaker.Pipeline("myAwesomePipeline", new AwsNative.SageMaker.PipelineArgs
+ *         {
+ *             PipelineName = "<pipeline-name>",
+ *             PipelineDisplayName = "<pipeline-display-name>",
+ *             PipelineDescription = "<pipeline-description>",
+ *             PipelineDefinition = 
+ *             {
+ *                 { "pipelineDefinitionBody", "{\"Version\":\"2020-12-01\",\"Parameters\":[{\"Name\":\"InputDataSource\",\"DefaultValue\":\"\"},{\"Name\":\"InstanceCount\",\"Type\":\"Integer\",\"DefaultValue\":1}],\"Steps\":[{\"Name\":\"Training1\",\"Type\":\"Training\",\"Arguments\":{\"InputDataConfig\":[{\"DataSource\":{\"S3DataSource\":{\"S3Uri\":{\"Get\":\"Parameters.InputDataSource\"}}}}],\"OutputDataConfig\":{\"S3OutputPath\":\"s3://my-s3-bucket/\"},\"ResourceConfig\":{\"InstanceType\":\"ml.m5.large\",\"InstanceCount\":{\"Get\":\"Parameters.InstanceCount\"},\"VolumeSizeInGB\":1024}}}]}" },
+ *             },
+ *             RoleArn = "arn:aws:iam::<account-id>:root",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sagemaker.NewPipeline(ctx, "myAwesomePipeline", &sagemaker.PipelineArgs{
+ * 			PipelineName:        pulumi.String("<pipeline-name>"),
+ * 			PipelineDisplayName: pulumi.String("<pipeline-display-name>"),
+ * 			PipelineDescription: pulumi.String("<pipeline-description>"),
+ * 			PipelineDefinition: pulumi.Any{
+ * 				PipelineDefinitionBody: "{\"Version\":\"2020-12-01\",\"Parameters\":[{\"Name\":\"InputDataSource\",\"DefaultValue\":\"\"},{\"Name\":\"InstanceCount\",\"Type\":\"Integer\",\"DefaultValue\":1}],\"Steps\":[{\"Name\":\"Training1\",\"Type\":\"Training\",\"Arguments\":{\"InputDataConfig\":[{\"DataSource\":{\"S3DataSource\":{\"S3Uri\":{\"Get\":\"Parameters.InputDataSource\"}}}}],\"OutputDataConfig\":{\"S3OutputPath\":\"s3://my-s3-bucket/\"},\"ResourceConfig\":{\"InstanceType\":\"ml.m5.large\",\"InstanceCount\":{\"Get\":\"Parameters.InstanceCount\"},\"VolumeSizeInGB\":1024}}}]}",
+ * 			},
+ * 			RoleArn: pulumi.String("arn:aws:iam::<account-id>:root"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myAwesomePipeline = new aws_native.sagemaker.Pipeline("myAwesomePipeline", {
+ *     pipelineName: "<pipeline-name>",
+ *     pipelineDisplayName: "<pipeline-display-name>",
+ *     pipelineDescription: "<pipeline-description>",
+ *     pipelineDefinition: {
+ *         pipelineDefinitionBody: "{\"Version\":\"2020-12-01\",\"Parameters\":[{\"Name\":\"InputDataSource\",\"DefaultValue\":\"\"},{\"Name\":\"InstanceCount\",\"Type\":\"Integer\",\"DefaultValue\":1}],\"Steps\":[{\"Name\":\"Training1\",\"Type\":\"Training\",\"Arguments\":{\"InputDataConfig\":[{\"DataSource\":{\"S3DataSource\":{\"S3Uri\":{\"Get\":\"Parameters.InputDataSource\"}}}}],\"OutputDataConfig\":{\"S3OutputPath\":\"s3://my-s3-bucket/\"},\"ResourceConfig\":{\"InstanceType\":\"ml.m5.large\",\"InstanceCount\":{\"Get\":\"Parameters.InstanceCount\"},\"VolumeSizeInGB\":1024}}}]}",
+ *     },
+ *     roleArn: "arn:aws:iam::<account-id>:root",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_awesome_pipeline = aws_native.sagemaker.Pipeline("myAwesomePipeline",
+ *     pipeline_name="<pipeline-name>",
+ *     pipeline_display_name="<pipeline-display-name>",
+ *     pipeline_description="<pipeline-description>",
+ *     pipeline_definition={
+ *         "pipelineDefinitionBody": "{\"Version\":\"2020-12-01\",\"Parameters\":[{\"Name\":\"InputDataSource\",\"DefaultValue\":\"\"},{\"Name\":\"InstanceCount\",\"Type\":\"Integer\",\"DefaultValue\":1}],\"Steps\":[{\"Name\":\"Training1\",\"Type\":\"Training\",\"Arguments\":{\"InputDataConfig\":[{\"DataSource\":{\"S3DataSource\":{\"S3Uri\":{\"Get\":\"Parameters.InputDataSource\"}}}}],\"OutputDataConfig\":{\"S3OutputPath\":\"s3://my-s3-bucket/\"},\"ResourceConfig\":{\"InstanceType\":\"ml.m5.large\",\"InstanceCount\":{\"Get\":\"Parameters.InstanceCount\"},\"VolumeSizeInGB\":1024}}}]}",
+ *     },
+ *     role_arn="arn:aws:iam::<account-id>:root")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myAwesomePipeline = new AwsNative.SageMaker.Pipeline("myAwesomePipeline", new AwsNative.SageMaker.PipelineArgs
+ *         {
+ *             PipelineName = "<pipeline-name>",
+ *             PipelineDisplayName = "<pipeline-display-name>",
+ *             PipelineDescription = "<pipeline-description>",
+ *             PipelineDefinition = 
+ *             {
+ *                 { "pipelineDefinitionS3Location", 
+ *                 {
+ *                     { "bucket", "<S3-bucket-location>" },
+ *                     { "key", "<S3-bucket-key>" },
+ *                 } },
+ *             },
+ *             RoleArn = "arn:aws:iam::<account-id>:root",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sagemaker.NewPipeline(ctx, "myAwesomePipeline", &sagemaker.PipelineArgs{
+ * 			PipelineName:        pulumi.String("<pipeline-name>"),
+ * 			PipelineDisplayName: pulumi.String("<pipeline-display-name>"),
+ * 			PipelineDescription: pulumi.String("<pipeline-description>"),
+ * 			PipelineDefinition: pulumi.Any{
+ * 				PipelineDefinitionS3Location: map[string]interface{}{
+ * 					"bucket": "<S3-bucket-location>",
+ * 					"key":    "<S3-bucket-key>",
+ * 				},
+ * 			},
+ * 			RoleArn: pulumi.String("arn:aws:iam::<account-id>:root"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myAwesomePipeline = new aws_native.sagemaker.Pipeline("myAwesomePipeline", {
+ *     pipelineName: "<pipeline-name>",
+ *     pipelineDisplayName: "<pipeline-display-name>",
+ *     pipelineDescription: "<pipeline-description>",
+ *     pipelineDefinition: {
+ *         pipelineDefinitionS3Location: {
+ *             bucket: "<S3-bucket-location>",
+ *             key: "<S3-bucket-key>",
+ *         },
+ *     },
+ *     roleArn: "arn:aws:iam::<account-id>:root",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_awesome_pipeline = aws_native.sagemaker.Pipeline("myAwesomePipeline",
+ *     pipeline_name="<pipeline-name>",
+ *     pipeline_display_name="<pipeline-display-name>",
+ *     pipeline_description="<pipeline-description>",
+ *     pipeline_definition={
+ *         "pipelineDefinitionS3Location": {
+ *             "bucket": "<S3-bucket-location>",
+ *             "key": "<S3-bucket-key>",
+ *         },
+ *     },
+ *     role_arn="arn:aws:iam::<account-id>:root")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:sagemaker:Pipeline")
@@ -37,56 +413,48 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
     }
     /**
      * The description of the Pipeline.
-     * 
      */
     @Export(name="pipelineDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> pipelineDescription;
 
     /**
      * @return The description of the Pipeline.
-     * 
      */
     public Output</* @Nullable */ String> getPipelineDescription() {
         return this.pipelineDescription;
     }
     /**
      * The display name of the Pipeline.
-     * 
      */
     @Export(name="pipelineDisplayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> pipelineDisplayName;
 
     /**
      * @return The display name of the Pipeline.
-     * 
      */
     public Output</* @Nullable */ String> getPipelineDisplayName() {
         return this.pipelineDisplayName;
     }
     /**
      * The name of the Pipeline.
-     * 
      */
     @Export(name="pipelineName", type=String.class, parameters={})
     private Output<String> pipelineName;
 
     /**
      * @return The name of the Pipeline.
-     * 
      */
     public Output<String> getPipelineName() {
         return this.pipelineName;
     }
     /**
      * Role Arn
-     * 
      */
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
      * @return Role Arn
-     * 
      */
     public Output<String> getRoleArn() {
         return this.roleArn;

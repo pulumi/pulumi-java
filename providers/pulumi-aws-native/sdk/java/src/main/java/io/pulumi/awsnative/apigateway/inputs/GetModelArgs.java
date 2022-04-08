@@ -14,7 +14,6 @@ public final class GetModelArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A name for the model. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetModelArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ID of a REST API with which to associate this model.
-     * 
      */
     @Import(name="restApiId", required=true)
       private final String restApiId;

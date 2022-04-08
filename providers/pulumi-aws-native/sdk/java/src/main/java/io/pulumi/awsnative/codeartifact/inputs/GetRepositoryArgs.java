@@ -14,7 +14,6 @@ public final class GetRepositoryArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ARN of the repository.
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

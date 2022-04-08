@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class FHIRDatastoreCreatedAt {
     /**
      * Nanoseconds.
-     * 
      */
     private final Integer nanos;
     /**
      * Seconds since epoch.
-     * 
      */
     private final String seconds;
 
@@ -31,14 +29,12 @@ public final class FHIRDatastoreCreatedAt {
 
     /**
      * Nanoseconds.
-     * 
     */
     public Integer getNanos() {
         return this.nanos;
     }
     /**
      * Seconds since epoch.
-     * 
     */
     public String getSeconds() {
         return this.seconds;

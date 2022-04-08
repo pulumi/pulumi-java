@@ -25,7 +25,6 @@ public final class JobDatabaseOutput extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Database table name
-     * 
      */
     @Import(name="databaseOutputMode")
       private final @Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode;
@@ -36,7 +35,6 @@ public final class JobDatabaseOutput extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Glue connection name
-     * 
      */
     @Import(name="glueConnectionName", required=true)
       private final String glueConnectionName;

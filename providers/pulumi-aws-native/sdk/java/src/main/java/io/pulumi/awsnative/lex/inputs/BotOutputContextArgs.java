@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A session context that is activated when an intent is fulfilled.
- * 
  */
 public final class BotOutputContextArgs extends io.pulumi.resources.ResourceArgs {
 

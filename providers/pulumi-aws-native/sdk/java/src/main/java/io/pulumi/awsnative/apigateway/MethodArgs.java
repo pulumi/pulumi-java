@@ -22,7 +22,6 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether the method requires clients to submit a valid API key.
-     * 
      */
     @Import(name="apiKeyRequired")
       private final @Nullable Output<Boolean> apiKeyRequired;
@@ -33,7 +32,6 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of authorization scopes configured on the method.
-     * 
      */
     @Import(name="authorizationScopes")
       private final @Nullable Output<List<String>> authorizationScopes;
@@ -44,7 +42,6 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The method's authorization type.
-     * 
      */
     @Import(name="authorizationType")
       private final @Nullable Output<MethodAuthorizationType> authorizationType;
@@ -55,7 +52,6 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identifier of the authorizer to use on this method.
-     * 
      */
     @Import(name="authorizerId")
       private final @Nullable Output<String> authorizerId;
@@ -66,7 +62,6 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The backend system that the method calls when it receives a request.
-     * 
      */
     @Import(name="httpMethod", required=true)
       private final Output<String> httpMethod;
@@ -77,7 +72,6 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The backend system that the method calls when it receives a request.
-     * 
      */
     @Import(name="integration")
       private final @Nullable Output<MethodIntegrationArgs> integration;
@@ -88,7 +82,6 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The responses that can be sent to the client who calls the method.
-     * 
      */
     @Import(name="methodResponses")
       private final @Nullable Output<List<MethodResponseArgs>> methodResponses;
@@ -99,7 +92,6 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A friendly operation name for the method.
-     * 
      */
     @Import(name="operationName")
       private final @Nullable Output<String> operationName;
@@ -110,7 +102,6 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resources that are used for the request's content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.
-     * 
      */
     @Import(name="requestModels")
       private final @Nullable Output<Object> requestModels;
@@ -121,7 +112,6 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The request parameters that API Gateway accepts. Specify request parameters as key-value pairs (string-to-Boolean mapping), with a source as the key and a Boolean as the value.
-     * 
      */
     @Import(name="requestParameters")
       private final @Nullable Output<Object> requestParameters;
@@ -132,7 +122,6 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the associated request validator.
-     * 
      */
     @Import(name="requestValidatorId")
       private final @Nullable Output<String> requestValidatorId;
@@ -143,7 +132,6 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of an API Gateway resource.
-     * 
      */
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
@@ -154,7 +142,6 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the RestApi resource in which API Gateway creates the method.
-     * 
      */
     @Import(name="restApiId", required=true)
       private final Output<String> restApiId;

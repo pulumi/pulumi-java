@@ -14,7 +14,6 @@ public final class GetRecordingConfigurationArgs extends io.pulumi.resources.Inv
 
     /**
      * Recording Configuration ARN is automatically generated on creation and assigned as the unique identifier.
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

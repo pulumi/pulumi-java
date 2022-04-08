@@ -27,7 +27,6 @@ public final class DetectorRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The time when the event type was created.
-     * 
      */
     @Import(name="createdTime")
       private final @Nullable String createdTime;
@@ -38,7 +37,6 @@ public final class DetectorRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -70,7 +68,6 @@ public final class DetectorRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The time when the event type was last updated.
-     * 
      */
     @Import(name="lastUpdatedTime")
       private final @Nullable String lastUpdatedTime;
@@ -102,7 +99,6 @@ public final class DetectorRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Tags associated with this event type.
-     * 
      */
     @Import(name="tags")
       private final @Nullable List<DetectorTag> tags;

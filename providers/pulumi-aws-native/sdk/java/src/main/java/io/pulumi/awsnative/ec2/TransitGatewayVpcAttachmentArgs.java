@@ -26,7 +26,6 @@ public final class TransitGatewayVpcAttachmentArgs extends io.pulumi.resources.R
 
     /**
      * The options for the transit gateway vpc attachment.
-     * 
      */
     @Import(name="options")
       private final @Nullable Output<OptionsPropertiesArgs> options;

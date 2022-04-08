@@ -17,7 +17,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The sso instance that the permission set is owned.
-     * 
      */
     @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
@@ -28,7 +27,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The permission set that the assignemt will be assigned
-     * 
      */
     @Import(name="permissionSetArn", required=true)
       private final Output<String> permissionSetArn;
@@ -39,7 +37,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The assignee's identifier, user id/group id
-     * 
      */
     @Import(name="principalId", required=true)
       private final Output<String> principalId;
@@ -50,7 +47,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The assignee's type, user/group
-     * 
      */
     @Import(name="principalType", required=true)
       private final Output<AssignmentPrincipalType> principalType;
@@ -61,7 +57,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The account id to be provisioned.
-     * 
      */
     @Import(name="targetId", required=true)
       private final Output<String> targetId;
@@ -72,7 +67,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of resource to be provsioned to, only aws account now
-     * 
      */
     @Import(name="targetType", required=true)
       private final Output<AssignmentTargetType> targetType;

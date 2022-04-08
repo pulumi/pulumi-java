@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::CloudFront::ResponseHeadersPolicy
- * 
  */
 @ResourceType(type="aws-native:cloudfront:ResponseHeadersPolicy")
 public class ResponseHeadersPolicy extends io.pulumi.resources.CustomResource {

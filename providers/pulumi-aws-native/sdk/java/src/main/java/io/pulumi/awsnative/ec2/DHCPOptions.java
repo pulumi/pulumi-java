@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::EC2::DHCPOptions
- * 
  */
 @ResourceType(type="aws-native:ec2:DHCPOptions")
 public class DHCPOptions extends io.pulumi.resources.CustomResource {
@@ -28,84 +27,72 @@ public class DHCPOptions extends io.pulumi.resources.CustomResource {
     }
     /**
      * This value is used to complete unqualified DNS hostnames.
-     * 
      */
     @Export(name="domainName", type=String.class, parameters={})
     private Output</* @Nullable */ String> domainName;
 
     /**
      * @return This value is used to complete unqualified DNS hostnames.
-     * 
      */
     public Output</* @Nullable */ String> getDomainName() {
         return this.domainName;
     }
     /**
      * The IPv4 addresses of up to four domain name servers, or AmazonProvidedDNS.
-     * 
      */
     @Export(name="domainNameServers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> domainNameServers;
 
     /**
      * @return The IPv4 addresses of up to four domain name servers, or AmazonProvidedDNS.
-     * 
      */
     public Output</* @Nullable */ List<String>> getDomainNameServers() {
         return this.domainNameServers;
     }
     /**
      * The IPv4 addresses of up to four NetBIOS name servers.
-     * 
      */
     @Export(name="netbiosNameServers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> netbiosNameServers;
 
     /**
      * @return The IPv4 addresses of up to four NetBIOS name servers.
-     * 
      */
     public Output</* @Nullable */ List<String>> getNetbiosNameServers() {
         return this.netbiosNameServers;
     }
     /**
      * The NetBIOS node type (1, 2, 4, or 8).
-     * 
      */
     @Export(name="netbiosNodeType", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> netbiosNodeType;
 
     /**
      * @return The NetBIOS node type (1, 2, 4, or 8).
-     * 
      */
     public Output</* @Nullable */ Integer> getNetbiosNodeType() {
         return this.netbiosNodeType;
     }
     /**
      * The IPv4 addresses of up to four Network Time Protocol (NTP) servers.
-     * 
      */
     @Export(name="ntpServers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ntpServers;
 
     /**
      * @return The IPv4 addresses of up to four Network Time Protocol (NTP) servers.
-     * 
      */
     public Output</* @Nullable */ List<String>> getNtpServers() {
         return this.ntpServers;
     }
     /**
      * Any tags assigned to the DHCP options set.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DHCPOptionsTag.class})
     private Output</* @Nullable */ List<DHCPOptionsTag>> tags;
 
     /**
      * @return Any tags assigned to the DHCP options set.
-     * 
      */
     public Output</* @Nullable */ List<DHCPOptionsTag>> getTags() {
         return this.tags;

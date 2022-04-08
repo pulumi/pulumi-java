@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A Microsoft Smooth Streaming (MSS) PackagingConfiguration.
- * 
  */
 public final class PackagingConfigurationMssPackage extends io.pulumi.resources.InvokeArgs {
 
@@ -30,7 +29,6 @@ public final class PackagingConfigurationMssPackage extends io.pulumi.resources.
 
     /**
      * A list of MSS manifest configurations.
-     * 
      */
     @Import(name="mssManifests", required=true)
       private final List<PackagingConfigurationMssManifest> mssManifests;

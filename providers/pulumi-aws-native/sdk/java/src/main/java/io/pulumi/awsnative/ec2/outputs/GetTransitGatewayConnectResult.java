@@ -15,27 +15,22 @@ import javax.annotation.Nullable;
 public final class GetTransitGatewayConnectResult {
     /**
      * The creation time.
-     * 
      */
     private final @Nullable String creationTime;
     /**
      * The state of the attachment.
-     * 
      */
     private final @Nullable String state;
     /**
      * The tags for the attachment.
-     * 
      */
     private final @Nullable List<TransitGatewayConnectTag> tags;
     /**
      * The ID of the Connect attachment.
-     * 
      */
     private final @Nullable String transitGatewayAttachmentId;
     /**
      * The ID of the transit gateway.
-     * 
      */
     private final @Nullable String transitGatewayId;
 
@@ -55,35 +50,30 @@ public final class GetTransitGatewayConnectResult {
 
     /**
      * The creation time.
-     * 
     */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The state of the attachment.
-     * 
     */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The tags for the attachment.
-     * 
     */
     public List<TransitGatewayConnectTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The ID of the Connect attachment.
-     * 
     */
     public Optional<String> getTransitGatewayAttachmentId() {
         return Optional.ofNullable(this.transitGatewayAttachmentId);
     }
     /**
      * The ID of the transit gateway.
-     * 
     */
     public Optional<String> getTransitGatewayId() {
         return Optional.ofNullable(this.transitGatewayId);

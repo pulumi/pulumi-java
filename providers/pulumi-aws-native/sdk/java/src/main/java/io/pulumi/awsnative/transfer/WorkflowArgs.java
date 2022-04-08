@@ -19,7 +19,6 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A textual description for the workflow.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -30,7 +29,6 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
-     * 
      */
     @Import(name="onExceptionSteps")
       private final @Nullable Output<List<WorkflowStepArgs>> onExceptionSteps;
@@ -41,7 +39,6 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the details for the steps that are in the specified workflow.
-     * 
      */
     @Import(name="steps", required=true)
       private final Output<List<WorkflowStepArgs>> steps;
@@ -52,7 +49,6 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Key-value pairs that can be used to group and search for workflows. Tags are metadata attached to workflows for any purpose.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<WorkflowTagArgs>> tags;

@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::IoTEvents::DetectorModel resource creates a detector model. You create a *detector model* (a model of your equipment or process) using *states*. For each state, you define conditional (Boolean) logic that evaluates the incoming inputs to detect significant events. When an event is detected, it can change the state or trigger custom-built or predefined actions using other AWS services. You can define additional events that trigger actions when entering or exiting a state and, optionally, when a condition is met. For more information, see [How to Use AWS IoT Events](https://docs.aws.amazon.com/iotevents/latest/developerguide/how-to-use-iotevents.html) in the *AWS IoT Events Developer Guide*.
- * 
  */
 @ResourceType(type="aws-native:iotevents:DetectorModel")
 public class DetectorModel extends io.pulumi.resources.CustomResource {
@@ -29,42 +28,36 @@ public class DetectorModel extends io.pulumi.resources.CustomResource {
     }
     /**
      * A brief description of the detector model.
-     * 
      */
     @Export(name="detectorModelDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> detectorModelDescription;
 
     /**
      * @return A brief description of the detector model.
-     * 
      */
     public Output</* @Nullable */ String> getDetectorModelDescription() {
         return this.detectorModelDescription;
     }
     /**
      * The name of the detector model.
-     * 
      */
     @Export(name="detectorModelName", type=String.class, parameters={})
     private Output</* @Nullable */ String> detectorModelName;
 
     /**
      * @return The name of the detector model.
-     * 
      */
     public Output</* @Nullable */ String> getDetectorModelName() {
         return this.detectorModelName;
     }
     /**
      * Information about the order in which events are evaluated and how actions are executed.
-     * 
      */
     @Export(name="evaluationMethod", type=DetectorModelEvaluationMethod.class, parameters={})
     private Output</* @Nullable */ DetectorModelEvaluationMethod> evaluationMethod;
 
     /**
      * @return Information about the order in which events are evaluated and how actions are executed.
-     * 
      */
     public Output</* @Nullable */ DetectorModelEvaluationMethod> getEvaluationMethod() {
         return this.evaluationMethod;
@@ -73,7 +66,6 @@ public class DetectorModel extends io.pulumi.resources.CustomResource {
      * The value used to identify a detector instance. When a device or system sends input, a new detector instance with a unique key value is created. AWS IoT Events can continue to route input to its corresponding detector instance based on this identifying information.
      * 
      * This parameter uses a JSON-path expression to select the attribute-value pair in the message payload that is used for identification. To route the message to the correct detector instance, the device must send a message payload that contains the same attribute-value.
-     * 
      */
     @Export(name="key", type=String.class, parameters={})
     private Output</* @Nullable */ String> key;
@@ -82,21 +74,18 @@ public class DetectorModel extends io.pulumi.resources.CustomResource {
      * @return The value used to identify a detector instance. When a device or system sends input, a new detector instance with a unique key value is created. AWS IoT Events can continue to route input to its corresponding detector instance based on this identifying information.
      * 
      * This parameter uses a JSON-path expression to select the attribute-value pair in the message payload that is used for identification. To route the message to the correct detector instance, the device must send a message payload that contains the same attribute-value.
-     * 
      */
     public Output</* @Nullable */ String> getKey() {
         return this.key;
     }
     /**
      * The ARN of the role that grants permission to AWS IoT Events to perform its operations.
-     * 
      */
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
      * @return The ARN of the role that grants permission to AWS IoT Events to perform its operations.
-     * 
      */
     public Output<String> getRoleArn() {
         return this.roleArn;
@@ -105,7 +94,6 @@ public class DetectorModel extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DetectorModelTag.class})
     private Output</* @Nullable */ List<DetectorModelTag>> tags;
@@ -114,7 +102,6 @@ public class DetectorModel extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
-     * 
      */
     public Output</* @Nullable */ List<DetectorModelTag>> getTags() {
         return this.tags;

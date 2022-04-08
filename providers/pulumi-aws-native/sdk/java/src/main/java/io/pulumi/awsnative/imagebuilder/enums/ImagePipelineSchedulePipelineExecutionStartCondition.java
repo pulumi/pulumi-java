@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The condition configures when the pipeline should trigger a new image build.
-     * 
      */
     @EnumType
     public enum ImagePipelineSchedulePipelineExecutionStartCondition {

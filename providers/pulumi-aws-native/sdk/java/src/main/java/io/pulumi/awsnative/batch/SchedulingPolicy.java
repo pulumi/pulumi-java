@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type schema for AWS::Batch::SchedulingPolicy
- * 
  */
 @ResourceType(type="aws-native:batch:SchedulingPolicy")
 public class SchedulingPolicy extends io.pulumi.resources.CustomResource {
@@ -33,28 +32,24 @@ public class SchedulingPolicy extends io.pulumi.resources.CustomResource {
     }
     /**
      * Name of Scheduling Policy.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Name of Scheduling Policy.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * A key-value pair to associate with a resource.
-     * 
      */
     @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
     /**
      * @return A key-value pair to associate with a resource.
-     * 
      */
     public Output</* @Nullable */ Object> getTags() {
         return this.tags;

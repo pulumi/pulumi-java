@@ -14,7 +14,6 @@ public final class GetMethodArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The backend system that the method calls when it receives a request.
-     * 
      */
     @Import(name="httpMethod", required=true)
       private final String httpMethod;
@@ -25,7 +24,6 @@ public final class GetMethodArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ID of an API Gateway resource.
-     * 
      */
     @Import(name="resourceId", required=true)
       private final String resourceId;
@@ -36,7 +34,6 @@ public final class GetMethodArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ID of the RestApi resource in which API Gateway creates the method.
-     * 
      */
     @Import(name="restApiId", required=true)
       private final String restApiId;

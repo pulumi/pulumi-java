@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class DetectorModelSetVariable {
     /**
      * The new value of the variable.
-     * 
      */
     private final String value;
     /**
      * The name of the variable.
-     * 
      */
     private final String variableName;
 
@@ -30,14 +28,12 @@ public final class DetectorModelSetVariable {
 
     /**
      * The new value of the variable.
-     * 
     */
     public String getValue() {
         return this.value;
     }
     /**
      * The name of the variable.
-     * 
     */
     public String getVariableName() {
         return this.variableName;

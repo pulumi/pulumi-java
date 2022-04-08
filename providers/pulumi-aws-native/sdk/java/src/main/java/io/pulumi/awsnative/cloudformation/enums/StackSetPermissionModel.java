@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Describes how the IAM roles required for stack set operations are created. By default, SELF-MANAGED is specified.
-     * 
      */
     @EnumType
     public enum StackSetPermissionModel {

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * AWS::DeviceFarm::NetworkProfile creates a new DF Network Profile
- * 
  */
 @ResourceType(type="aws-native:devicefarm:NetworkProfile")
 public class NetworkProfile extends io.pulumi.resources.CustomResource {

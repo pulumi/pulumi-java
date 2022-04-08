@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class AssetProperty {
     /**
      * The property alias that identifies the property.
-     * 
      */
     private final @Nullable String alias;
     /**
      * Customer provided ID for property.
-     * 
      */
     private final String logicalId;
     /**
      * The MQTT notification state (ENABLED or DISABLED) for this asset property.
-     * 
      */
     private final @Nullable AssetPropertyNotificationState notificationState;
 
@@ -40,21 +37,18 @@ public final class AssetProperty {
 
     /**
      * The property alias that identifies the property.
-     * 
     */
     public Optional<String> getAlias() {
         return Optional.ofNullable(this.alias);
     }
     /**
      * Customer provided ID for property.
-     * 
     */
     public String getLogicalId() {
         return this.logicalId;
     }
     /**
      * The MQTT notification state (ENABLED or DISABLED) for this asset property.
-     * 
     */
     public Optional<AssetPropertyNotificationState> getNotificationState() {
         return Optional.ofNullable(this.notificationState);

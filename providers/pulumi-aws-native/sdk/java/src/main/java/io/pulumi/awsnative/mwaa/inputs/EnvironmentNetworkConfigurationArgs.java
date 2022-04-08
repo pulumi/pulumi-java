@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configures the network resources of the environment.
- * 
  */
 public final class EnvironmentNetworkConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class EnvironmentNetworkConfigurationArgs extends io.pulumi.resourc
 
     /**
      * A list of security groups to use for the environment.
-     * 
      */
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
@@ -32,7 +30,6 @@ public final class EnvironmentNetworkConfigurationArgs extends io.pulumi.resourc
 
     /**
      * A list of subnets to use for the environment. These must be private subnets, in the same VPC, in two different availability zones.
-     * 
      */
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;

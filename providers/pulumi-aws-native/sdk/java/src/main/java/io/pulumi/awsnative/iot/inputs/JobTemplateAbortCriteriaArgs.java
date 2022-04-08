@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * The criteria that determine when and how a job abort takes place.
- * 
  */
 public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
 
     /**
      * The type of job action to take to initiate the job abort.
-     * 
      */
     @Import(name="action", required=true)
       private final Output<JobTemplateAction> action;
@@ -33,7 +31,6 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
 
     /**
      * The type of job execution failures that can initiate a job abort.
-     * 
      */
     @Import(name="failureType", required=true)
       private final Output<JobTemplateFailureType> failureType;
@@ -44,7 +41,6 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
 
     /**
      * The minimum number of things which must receive job execution notifications before the job can be aborted.
-     * 
      */
     @Import(name="minNumberOfExecutedThings", required=true)
       private final Output<Integer> minNumberOfExecutedThings;
@@ -55,7 +51,6 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
 
     /**
      * The minimum percentage of job execution failures that must occur to initiate the job abort.
-     * 
      */
     @Import(name="thresholdPercentage", required=true)
       private final Output<Double> thresholdPercentage;

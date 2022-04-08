@@ -17,32 +17,26 @@ import javax.annotation.Nullable;
 public final class GetScheduledAuditResult {
     /**
      * The day of the month on which the scheduled audit takes place. Can be 1 through 31 or LAST. This field is required if the frequency parameter is set to MONTHLY.
-     * 
      */
     private final @Nullable String dayOfMonth;
     /**
      * The day of the week on which the scheduled audit takes place. Can be one of SUN, MON, TUE,WED, THU, FRI, or SAT. This field is required if the frequency parameter is set to WEEKLY or BIWEEKLY.
-     * 
      */
     private final @Nullable ScheduledAuditDayOfWeek dayOfWeek;
     /**
      * How often the scheduled audit takes place. Can be one of DAILY, WEEKLY, BIWEEKLY, or MONTHLY.
-     * 
      */
     private final @Nullable ScheduledAuditFrequency frequency;
     /**
      * The ARN (Amazon resource name) of the scheduled audit.
-     * 
      */
     private final @Nullable String scheduledAuditArn;
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     private final @Nullable List<ScheduledAuditTag> tags;
     /**
      * Which checks are performed during the scheduled audit. Checks must be enabled for your account.
-     * 
      */
     private final @Nullable List<String> targetCheckNames;
 
@@ -64,42 +58,36 @@ public final class GetScheduledAuditResult {
 
     /**
      * The day of the month on which the scheduled audit takes place. Can be 1 through 31 or LAST. This field is required if the frequency parameter is set to MONTHLY.
-     * 
     */
     public Optional<String> getDayOfMonth() {
         return Optional.ofNullable(this.dayOfMonth);
     }
     /**
      * The day of the week on which the scheduled audit takes place. Can be one of SUN, MON, TUE,WED, THU, FRI, or SAT. This field is required if the frequency parameter is set to WEEKLY or BIWEEKLY.
-     * 
     */
     public Optional<ScheduledAuditDayOfWeek> getDayOfWeek() {
         return Optional.ofNullable(this.dayOfWeek);
     }
     /**
      * How often the scheduled audit takes place. Can be one of DAILY, WEEKLY, BIWEEKLY, or MONTHLY.
-     * 
     */
     public Optional<ScheduledAuditFrequency> getFrequency() {
         return Optional.ofNullable(this.frequency);
     }
     /**
      * The ARN (Amazon resource name) of the scheduled audit.
-     * 
     */
     public Optional<String> getScheduledAuditArn() {
         return Optional.ofNullable(this.scheduledAuditArn);
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
     */
     public List<ScheduledAuditTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * Which checks are performed during the scheduled audit. Checks must be enabled for your account.
-     * 
     */
     public List<String> getTargetCheckNames() {
         return this.targetCheckNames == null ? List.of() : this.targetCheckNames;

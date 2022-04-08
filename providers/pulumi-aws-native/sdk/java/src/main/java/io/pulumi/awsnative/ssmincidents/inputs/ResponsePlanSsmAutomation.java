@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration to use when starting the SSM automation document.
- * 
  */
 public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
 
     /**
      * The document name to use when starting the SSM automation document.
-     * 
      */
     @Import(name="documentName", required=true)
       private final String documentName;
@@ -34,7 +32,6 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
 
     /**
      * The version of the document to use when starting the SSM automation document.
-     * 
      */
     @Import(name="documentVersion")
       private final @Nullable String documentVersion;
@@ -45,7 +42,6 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
 
     /**
      * The parameters to set when starting the SSM automation document.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable List<ResponsePlanSsmParameter> parameters;
@@ -56,7 +52,6 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
 
     /**
      * The role ARN to use when starting the SSM automation document.
-     * 
      */
     @Import(name="roleArn", required=true)
       private final String roleArn;
@@ -67,7 +62,6 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
 
     /**
      * The account type to use when starting the SSM automation document.
-     * 
      */
     @Import(name="targetAccount")
       private final @Nullable ResponsePlanSsmAutomationTargetAccount targetAccount;

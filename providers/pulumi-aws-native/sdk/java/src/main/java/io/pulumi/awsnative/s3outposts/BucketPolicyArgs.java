@@ -16,7 +16,6 @@ public final class BucketPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the specified bucket.
-     * 
      */
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
@@ -27,7 +26,6 @@ public final class BucketPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A policy document containing permissions to add to the specified bucket.
-     * 
      */
     @Import(name="policyDocument", required=true)
       private final Output<Object> policyDocument;

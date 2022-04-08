@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Log subscription
-     * 
      */
     @EnumType
     public enum JobLogSubscription {

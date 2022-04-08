@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information about a robot software suite.
- * 
  */
 public final class SimulationApplicationRobotSoftwareSuite extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SimulationApplicationRobotSoftwareSuite extends io.pulumi.res
 
     /**
      * The name of the robot software suite.
-     * 
      */
     @Import(name="name", required=true)
       private final SimulationApplicationRobotSoftwareSuiteName name;
@@ -32,7 +30,6 @@ public final class SimulationApplicationRobotSoftwareSuite extends io.pulumi.res
 
     /**
      * The version of the robot software suite.
-     * 
      */
     @Import(name="version")
       private final @Nullable SimulationApplicationRobotSoftwareSuiteVersion version;

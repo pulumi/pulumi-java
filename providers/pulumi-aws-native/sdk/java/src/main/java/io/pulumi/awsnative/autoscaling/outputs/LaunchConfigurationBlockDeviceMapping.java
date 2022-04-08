@@ -14,23 +14,19 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LaunchConfigurationBlockDeviceMapping {
     /**
-     * The device name exposed to the EC2 instance (for example, /dev/sdh or xvdh).
-     * 
+     * The device name exposed to the EC2 instance (for example, /dev/sdh or xvdh). 
      */
     private final String deviceName;
     /**
      * Parameters used to automatically set up EBS volumes when an instance is launched.
-     * 
      */
     private final @Nullable LaunchConfigurationBlockDevice ebs;
     /**
      * Setting this value to true suppresses the specified device included in the block device mapping of the AMI.
-     * 
      */
     private final @Nullable Boolean noDevice;
     /**
      * The name of the virtual device.
-     * 
      */
     private final @Nullable String virtualName;
 
@@ -47,29 +43,25 @@ public final class LaunchConfigurationBlockDeviceMapping {
     }
 
     /**
-     * The device name exposed to the EC2 instance (for example, /dev/sdh or xvdh).
-     * 
+     * The device name exposed to the EC2 instance (for example, /dev/sdh or xvdh). 
     */
     public String getDeviceName() {
         return this.deviceName;
     }
     /**
      * Parameters used to automatically set up EBS volumes when an instance is launched.
-     * 
     */
     public Optional<LaunchConfigurationBlockDevice> getEbs() {
         return Optional.ofNullable(this.ebs);
     }
     /**
      * Setting this value to true suppresses the specified device included in the block device mapping of the AMI.
-     * 
     */
     public Optional<Boolean> getNoDevice() {
         return Optional.ofNullable(this.noDevice);
     }
     /**
      * The name of the virtual device.
-     * 
     */
     public Optional<String> getVirtualName() {
         return Optional.ofNullable(this.virtualName);

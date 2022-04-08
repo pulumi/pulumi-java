@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Provisioned ServiceCatalog  Details
- * 
  */
 public final class ServiceCatalogProvisionedProductDetailsProperties extends io.pulumi.resources.InvokeArgs {
 

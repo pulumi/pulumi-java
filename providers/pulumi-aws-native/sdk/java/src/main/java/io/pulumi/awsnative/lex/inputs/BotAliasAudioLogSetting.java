@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Settings for logging audio of conversations between Amazon Lex and a user. You specify whether to log audio and the Amazon S3 bucket where the audio file is stored.
- * 
  */
 public final class BotAliasAudioLogSetting extends io.pulumi.resources.InvokeArgs {
 

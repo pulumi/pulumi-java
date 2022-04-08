@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Connector specific configurations needed to create connector profile
- * 
  */
 public final class ConnectorProfileConfigArgs extends io.pulumi.resources.ResourceArgs {
 

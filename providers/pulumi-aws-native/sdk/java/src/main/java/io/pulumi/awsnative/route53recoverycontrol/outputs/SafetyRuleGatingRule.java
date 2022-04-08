@@ -13,18 +13,15 @@ import java.util.Objects;
 public final class SafetyRuleGatingRule {
     /**
      * The gating controls for the gating rule. That is, routing controls that are evaluated by the rule configuration that you specify.
-     * 
      */
     private final List<String> gatingControls;
     /**
-     * Routing controls that can only be set or unset if the specified RuleConfig evaluates to true for the specified GatingControls. For example, say you have three gating controls, one for each of three AWS Regions. Now you specify AtLeast 2 as your RuleConfig. With these settings, you can only change (set or unset) the routing controls that you have specified as TargetControls if that rule evaluates to true.
+     * Routing controls that can only be set or unset if the specified RuleConfig evaluates to true for the specified GatingControls. For example, say you have three gating controls, one for each of three AWS Regions. Now you specify AtLeast 2 as your RuleConfig. With these settings, you can only change (set or unset) the routing controls that you have specified as TargetControls if that rule evaluates to true. 
      * In other words, your ability to change the routing controls that you have specified as TargetControls is gated by the rule that you set for the routing controls in GatingControls.
-     * 
      */
     private final List<String> targetControls;
     /**
      * An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail. This helps prevent "flapping" of state. The wait period is 5000 ms by default, but you can choose a custom value.
-     * 
      */
     private final Integer waitPeriodMs;
 
@@ -40,22 +37,19 @@ public final class SafetyRuleGatingRule {
 
     /**
      * The gating controls for the gating rule. That is, routing controls that are evaluated by the rule configuration that you specify.
-     * 
     */
     public List<String> getGatingControls() {
         return this.gatingControls;
     }
     /**
-     * Routing controls that can only be set or unset if the specified RuleConfig evaluates to true for the specified GatingControls. For example, say you have three gating controls, one for each of three AWS Regions. Now you specify AtLeast 2 as your RuleConfig. With these settings, you can only change (set or unset) the routing controls that you have specified as TargetControls if that rule evaluates to true.
+     * Routing controls that can only be set or unset if the specified RuleConfig evaluates to true for the specified GatingControls. For example, say you have three gating controls, one for each of three AWS Regions. Now you specify AtLeast 2 as your RuleConfig. With these settings, you can only change (set or unset) the routing controls that you have specified as TargetControls if that rule evaluates to true. 
      * In other words, your ability to change the routing controls that you have specified as TargetControls is gated by the rule that you set for the routing controls in GatingControls.
-     * 
     */
     public List<String> getTargetControls() {
         return this.targetControls;
     }
     /**
      * An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail. This helps prevent "flapping" of state. The wait period is 5000 ms by default, but you can choose a custom value.
-     * 
     */
     public Integer getWaitPeriodMs() {
         return this.waitPeriodMs;

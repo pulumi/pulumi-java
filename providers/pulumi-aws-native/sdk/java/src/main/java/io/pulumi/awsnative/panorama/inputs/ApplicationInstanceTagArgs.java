@@ -15,7 +15,6 @@ public final class ApplicationInstanceTagArgs extends io.pulumi.resources.Resour
 
     /**
      * A string used to identify this tag
-     * 
      */
     @Import(name="key", required=true)
       private final Output<String> key;
@@ -26,7 +25,6 @@ public final class ApplicationInstanceTagArgs extends io.pulumi.resources.Resour
 
     /**
      * A string containing the value for the tag
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

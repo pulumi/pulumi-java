@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class AnalysisStringParameter {
     /**
      * <p>A display name for a string parameter.</p>
-     * 
      */
     private final String name;
     /**
      * <p>The values of a string parameter.</p>
-     * 
      */
     private final List<String> values;
 
@@ -31,14 +29,12 @@ public final class AnalysisStringParameter {
 
     /**
      * <p>A display name for a string parameter.</p>
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * <p>The values of a string parameter.</p>
-     * 
     */
     public List<String> getValues() {
         return this.values;

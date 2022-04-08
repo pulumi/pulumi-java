@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains information about an asset model property.
- * 
  */
 public final class AssetModelProperty extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class AssetModelProperty extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The data type of the asset model property.
-     * 
      */
     @Import(name="dataType", required=true)
       private final AssetModelDataType dataType;
@@ -34,7 +32,6 @@ public final class AssetModelProperty extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The data type of the structure for this property.
-     * 
      */
     @Import(name="dataTypeSpec")
       private final @Nullable AssetModelDataTypeSpec dataTypeSpec;
@@ -45,7 +42,6 @@ public final class AssetModelProperty extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Customer provided ID for property.
-     * 
      */
     @Import(name="logicalId", required=true)
       private final String logicalId;
@@ -56,7 +52,6 @@ public final class AssetModelProperty extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the asset model property.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -67,7 +62,6 @@ public final class AssetModelProperty extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The property type
-     * 
      */
     @Import(name="type", required=true)
       private final AssetModelPropertyType type;
@@ -78,7 +72,6 @@ public final class AssetModelProperty extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The unit of the asset model property, such as Newtons or RPM.
-     * 
      */
     @Import(name="unit")
       private final @Nullable String unit;

@@ -18,7 +18,6 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * S3 URL to import domains from.
-     * 
      */
     @Import(name="domainFileUrl")
       private final @Nullable Output<String> domainFileUrl;
@@ -36,7 +35,6 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * FirewallDomainListName
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -47,7 +45,6 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<FirewallDomainListTagArgs>> tags;

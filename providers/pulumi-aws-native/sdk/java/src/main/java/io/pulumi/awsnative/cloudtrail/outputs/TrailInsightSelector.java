@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class TrailInsightSelector {
     /**
      * The type of insight to log on a trail.
-     * 
      */
     private final @Nullable String insightType;
 
@@ -24,7 +23,6 @@ public final class TrailInsightSelector {
 
     /**
      * The type of insight to log on a trail.
-     * 
     */
     public Optional<String> getInsightType() {
         return Optional.ofNullable(this.insightType);

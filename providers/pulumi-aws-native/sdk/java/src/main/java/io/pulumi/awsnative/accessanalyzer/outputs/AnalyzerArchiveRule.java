@@ -14,7 +14,6 @@ public final class AnalyzerArchiveRule {
     private final List<AnalyzerFilter> filter;
     /**
      * The archive rule name
-     * 
      */
     private final String ruleName;
 
@@ -31,7 +30,6 @@ public final class AnalyzerArchiveRule {
     }
     /**
      * The archive rule name
-     * 
     */
     public String getRuleName() {
         return this.ruleName;

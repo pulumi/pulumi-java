@@ -19,7 +19,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
-     * 
      */
     @Import(name="containerRecipeArn")
       private final @Nullable Output<String> containerRecipeArn;
@@ -30,7 +29,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the distribution configuration.
-     * 
      */
     @Import(name="distributionConfigurationArn")
       private final @Nullable Output<String> distributionConfigurationArn;
@@ -41,7 +39,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Collects additional information about the image being created, including the operating system (OS) version and package list.
-     * 
      */
     @Import(name="enhancedImageMetadataEnabled")
       private final @Nullable Output<Boolean> enhancedImageMetadataEnabled;
@@ -52,7 +49,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
-     * 
      */
     @Import(name="imageRecipeArn")
       private final @Nullable Output<String> imageRecipeArn;
@@ -63,7 +59,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The image tests configuration used when creating this image.
-     * 
      */
     @Import(name="imageTestsConfiguration")
       private final @Nullable Output<ImageTestsConfigurationArgs> imageTestsConfiguration;
@@ -74,7 +69,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the infrastructure configuration.
-     * 
      */
     @Import(name="infrastructureConfigurationArn")
       private final @Nullable Output<String> infrastructureConfigurationArn;
@@ -85,7 +79,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags associated with the image.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Object> tags;

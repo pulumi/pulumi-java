@@ -14,21 +14,142 @@ import javax.annotation.Nullable;
 /**
  * The AWS::ECR::ReplicationConfiguration resource configures the replication destinations for an Amazon Elastic Container Registry (Amazon Private ECR). For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/replication.html
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myReplicationConfig = new AwsNative.ECR.ReplicationConfiguration("myReplicationConfig", new AwsNative.ECR.ReplicationConfigurationArgs
+ *         {
+ *             ReplicationConfiguration = new AwsNative.ECR.Inputs.ReplicationConfigurationArgs
+ *             {
+ *                 Rules = 
+ *                 {
+ *                     new AwsNative.ECR.Inputs.ReplicationConfigurationReplicationRuleArgs
+ *                     {
+ *                         Destinations = 
+ *                         {
+ *                             new AwsNative.ECR.Inputs.ReplicationConfigurationReplicationDestinationArgs
+ *                             {
+ *                                 Region = "us-east-2",
+ *                                 RegistryId = "123456789012",
+ *                             },
+ *                             new AwsNative.ECR.Inputs.ReplicationConfigurationReplicationDestinationArgs
+ *                             {
+ *                                 Region = "us-west-1",
+ *                                 RegistryId = "123456789012",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ecr"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ecr.NewReplicationConfiguration(ctx, "myReplicationConfig", &ecr.ReplicationConfigurationArgs{
+ * 			ReplicationConfiguration: &ecr.ReplicationConfigurationArgs{
+ * 				Rules: ecr.ReplicationConfigurationReplicationRuleArray{
+ * 					&ecr.ReplicationConfigurationReplicationRuleArgs{
+ * 						Destinations: ecr.ReplicationConfigurationReplicationDestinationArray{
+ * 							&ecr.ReplicationConfigurationReplicationDestinationArgs{
+ * 								Region:     pulumi.String("us-east-2"),
+ * 								RegistryId: pulumi.String("123456789012"),
+ * 							},
+ * 							&ecr.ReplicationConfigurationReplicationDestinationArgs{
+ * 								Region:     pulumi.String("us-west-1"),
+ * 								RegistryId: pulumi.String("123456789012"),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myReplicationConfig = new aws_native.ecr.ReplicationConfiguration("myReplicationConfig", {replicationConfiguration: {
+ *     rules: [{
+ *         destinations: [
+ *             {
+ *                 region: "us-east-2",
+ *                 registryId: "123456789012",
+ *             },
+ *             {
+ *                 region: "us-west-1",
+ *                 registryId: "123456789012",
+ *             },
+ *         ],
+ *     }],
+ * }});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_replication_config = aws_native.ecr.ReplicationConfiguration("myReplicationConfig", replication_configuration=aws_native.ecr.ReplicationConfigurationArgs(
+ *     rules=[aws_native.ecr.ReplicationConfigurationReplicationRuleArgs(
+ *         destinations=[
+ *             aws_native.ecr.ReplicationConfigurationReplicationDestinationArgs(
+ *                 region="us-east-2",
+ *                 registry_id="123456789012",
+ *             ),
+ *             aws_native.ecr.ReplicationConfigurationReplicationDestinationArgs(
+ *                 region="us-west-1",
+ *                 registry_id="123456789012",
+ *             ),
+ *         ],
+ *     )],
+ * ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:ecr:ReplicationConfiguration")
 public class ReplicationConfiguration extends io.pulumi.resources.CustomResource {
     /**
      * The RegistryId associated with the aws account.
-     * 
      */
     @Export(name="registryId", type=String.class, parameters={})
     private Output<String> registryId;
 
     /**
      * @return The RegistryId associated with the aws account.
-     * 
      */
     public Output<String> getRegistryId() {
         return this.registryId;

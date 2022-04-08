@@ -14,7 +14,6 @@ public final class GetContainerRecipeArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The Amazon Resource Name (ARN) of the container recipe.
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

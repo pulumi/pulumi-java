@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration to attach Rulesets to the job
- * 
  */
 public final class JobValidationConfiguration extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class JobValidationConfiguration extends io.pulumi.resources.Invoke
 
     /**
      * Arn of the Ruleset
-     * 
      */
     @Import(name="rulesetArn", required=true)
       private final String rulesetArn;

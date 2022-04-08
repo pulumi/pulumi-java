@@ -19,7 +19,6 @@ public final class MitigationActionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A unique identifier for the mitigation action.
-     * 
      */
     @Import(name="actionName")
       private final @Nullable Output<String> actionName;
@@ -44,7 +43,6 @@ public final class MitigationActionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<MitigationActionTagArgs>> tags;

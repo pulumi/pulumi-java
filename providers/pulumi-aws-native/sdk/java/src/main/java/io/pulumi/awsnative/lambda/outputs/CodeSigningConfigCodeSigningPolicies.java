@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class CodeSigningConfigCodeSigningPolicies {
     /**
      * Indicates how Lambda operations involve updating the code artifact will operate. Default to Warn if not provided
-     * 
      */
     private final CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment untrustedArtifactOnDeployment;
 
@@ -22,7 +21,6 @@ public final class CodeSigningConfigCodeSigningPolicies {
 
     /**
      * Indicates how Lambda operations involve updating the code artifact will operate. Default to Warn if not provided
-     * 
     */
     public CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment getUntrustedArtifactOnDeployment() {
         return this.untrustedArtifactOnDeployment;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class BotSSMLMessage {
     /**
      * The SSML text that defines the prompt.
-     * 
      */
     private final String value;
 
@@ -22,7 +21,6 @@ public final class BotSSMLMessage {
 
     /**
      * The SSML text that defines the prompt.
-     * 
     */
     public String getValue() {
         return this.value;

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Schema for PackageVersion Resource Type
- * 
  */
 @ResourceType(type="aws-native:panorama:PackageVersion")
 public class PackageVersion extends io.pulumi.resources.CustomResource {

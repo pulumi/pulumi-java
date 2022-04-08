@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * <p>The display options for margins around the outside edge of sheets.</p>
- * 
  */
 public final class ThemeMarginStyle extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ThemeMarginStyle extends io.pulumi.resources.InvokeArgs {
 
     /**
      * <p>This Boolean value controls whether to display sheet margins.</p>
-     * 
      */
     @Import(name="show")
       private final @Nullable Boolean show;

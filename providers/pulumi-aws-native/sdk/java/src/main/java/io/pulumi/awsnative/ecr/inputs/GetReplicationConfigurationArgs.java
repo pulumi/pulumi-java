@@ -14,7 +14,6 @@ public final class GetReplicationConfigurationArgs extends io.pulumi.resources.I
 
     /**
      * The RegistryId associated with the aws account.
-     * 
      */
     @Import(name="registryId", required=true)
       private final String registryId;

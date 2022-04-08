@@ -21,7 +21,6 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specify additional settings and launch scripts for your build instances.
-     * 
      */
     @Import(name="additionalInstanceConfiguration")
       private final @Nullable Output<ImageRecipeAdditionalInstanceConfigurationArgs> additionalInstanceConfiguration;
@@ -32,7 +31,6 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The block device mappings to apply when creating images from this recipe.
-     * 
      */
     @Import(name="blockDeviceMappings")
       private final @Nullable Output<List<ImageRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
@@ -43,7 +41,6 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The components of the image recipe.
-     * 
      */
     @Import(name="components", required=true)
       private final Output<List<ImageRecipeComponentConfigurationArgs>> components;
@@ -54,7 +51,6 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the image recipe.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -65,7 +61,6 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the image recipe.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -76,7 +71,6 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The parent image of the image recipe.
-     * 
      */
     @Import(name="parentImage", required=true)
       private final Output<String> parentImage;
@@ -87,7 +81,6 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the image recipe.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Object> tags;
@@ -98,7 +91,6 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The version of the image recipe.
-     * 
      */
     @Import(name="version", required=true)
       private final Output<String> version;
@@ -109,7 +101,6 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The working directory to be used during build and test workflows.
-     * 
      */
     @Import(name="workingDirectory")
       private final @Nullable Output<String> workingDirectory;

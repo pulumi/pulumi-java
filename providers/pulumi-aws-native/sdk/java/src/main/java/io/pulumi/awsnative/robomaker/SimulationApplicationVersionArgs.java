@@ -23,7 +23,6 @@ public final class SimulationApplicationVersionArgs extends io.pulumi.resources.
 
     /**
      * The revision ID of robot application.
-     * 
      */
     @Import(name="currentRevisionId")
       private final @Nullable Output<String> currentRevisionId;

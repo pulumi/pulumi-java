@@ -18,7 +18,6 @@ public final class CanaryVisualReferenceArgs extends io.pulumi.resources.Resourc
 
     /**
      * Canary run id to be used as base reference for visual testing
-     * 
      */
     @Import(name="baseCanaryRunId", required=true)
       private final Output<String> baseCanaryRunId;
@@ -29,7 +28,6 @@ public final class CanaryVisualReferenceArgs extends io.pulumi.resources.Resourc
 
     /**
      * List of screenshots used as base reference for visual testing
-     * 
      */
     @Import(name="baseScreenshots")
       private final @Nullable Output<List<CanaryBaseScreenshotArgs>> baseScreenshots;

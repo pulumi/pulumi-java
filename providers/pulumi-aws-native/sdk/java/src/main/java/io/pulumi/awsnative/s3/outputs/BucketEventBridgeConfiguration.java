@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class BucketEventBridgeConfiguration {
     /**
      * Specifies whether to send notifications to Amazon EventBridge when events occur in an Amazon S3 bucket.
-     * 
      */
     private final Boolean eventBridgeEnabled;
 
@@ -22,7 +21,6 @@ public final class BucketEventBridgeConfiguration {
 
     /**
      * Specifies whether to send notifications to Amazon EventBridge when events occur in an Amazon S3 bucket.
-     * 
     */
     public Boolean getEventBridgeEnabled() {
         return this.eventBridgeEnabled;

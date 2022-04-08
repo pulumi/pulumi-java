@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Use the AWS::IoT::Certificate resource to declare an AWS IoT X.509 certificate.
- * 
  */
 @ResourceType(type="aws-native:iot:Certificate")
 public class Certificate extends io.pulumi.resources.CustomResource {

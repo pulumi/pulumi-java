@@ -19,7 +19,6 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of the Ruleset
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -30,7 +29,6 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Ruleset
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -41,7 +39,6 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of the data quality rules in the ruleset
-     * 
      */
     @Import(name="rules", required=true)
       private final Output<List<RulesetRuleArgs>> rules;
@@ -59,7 +56,6 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Arn of the target resource (dataset) to apply the ruleset to
-     * 
      */
     @Import(name="targetArn", required=true)
       private final Output<String> targetArn;

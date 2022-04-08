@@ -14,7 +14,6 @@ public final class GetBucketArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name for the bucket.
-     * 
      */
     @Import(name="bucketName", required=true)
       private final String bucketName;

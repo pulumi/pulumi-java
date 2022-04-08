@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Schema for Package CloudFormation Resource
- * 
  */
 @ResourceType(type="aws-native:panorama:Package")
 public class Package extends io.pulumi.resources.CustomResource {

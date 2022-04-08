@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::IoT::TopicRule
- * 
  */
 @ResourceType(type="aws-native:iot:TopicRule")
 public class TopicRule extends io.pulumi.resources.CustomResource {

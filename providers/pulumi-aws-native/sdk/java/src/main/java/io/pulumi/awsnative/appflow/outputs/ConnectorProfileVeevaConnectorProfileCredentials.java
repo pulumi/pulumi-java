@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ConnectorProfileVeevaConnectorProfileCredentials {
     /**
      * The password that corresponds to the username.
-     * 
      */
     private final String password;
     /**
      * The name of the user.
-     * 
      */
     private final String username;
 
@@ -30,14 +28,12 @@ public final class ConnectorProfileVeevaConnectorProfileCredentials {
 
     /**
      * The password that corresponds to the username.
-     * 
     */
     public String getPassword() {
         return this.password;
     }
     /**
      * The name of the user.
-     * 
     */
     public String getUsername() {
         return this.username;

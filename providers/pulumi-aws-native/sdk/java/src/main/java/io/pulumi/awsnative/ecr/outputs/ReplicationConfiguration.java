@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class ReplicationConfiguration {
     /**
      * An array of objects representing the replication rules for a replication configuration. A replication configuration may contain a maximum of 10 rules.
-     * 
      */
     private final List<ReplicationConfigurationReplicationRule> rules;
 
@@ -23,7 +22,6 @@ public final class ReplicationConfiguration {
 
     /**
      * An array of objects representing the replication rules for a replication configuration. A replication configuration may contain a maximum of 10 rules.
-     * 
     */
     public List<ReplicationConfigurationReplicationRule> getRules() {
         return this.rules;

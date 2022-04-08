@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Data type of the field
-     * 
      */
     @EnumType
     public enum DatasetAttributesItemPropertiesAttributeType {

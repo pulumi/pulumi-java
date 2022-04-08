@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class RulesetColumnSelector {
     /**
      * The name of a column from a dataset
-     * 
      */
     private final @Nullable String name;
     /**
      * A regular expression for selecting a column from a dataset
-     * 
      */
     private final @Nullable String regex;
 
@@ -32,14 +30,12 @@ public final class RulesetColumnSelector {
 
     /**
      * The name of a column from a dataset
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A regular expression for selecting a column from a dataset
-     * 
     */
     public Optional<String> getRegex() {
         return Optional.ofNullable(this.regex);

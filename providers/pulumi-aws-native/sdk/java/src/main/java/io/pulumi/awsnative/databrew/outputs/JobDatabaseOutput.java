@@ -16,12 +16,10 @@ public final class JobDatabaseOutput {
     private final JobDatabaseTableOutputOptions databaseOptions;
     /**
      * Database table name
-     * 
      */
     private final @Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode;
     /**
      * Glue connection name
-     * 
      */
     private final String glueConnectionName;
 
@@ -40,14 +38,12 @@ public final class JobDatabaseOutput {
     }
     /**
      * Database table name
-     * 
     */
     public Optional<JobDatabaseOutputDatabaseOutputMode> getDatabaseOutputMode() {
         return Optional.ofNullable(this.databaseOutputMode);
     }
     /**
      * Glue connection name
-     * 
     */
     public String getGlueConnectionName() {
         return this.glueConnectionName;

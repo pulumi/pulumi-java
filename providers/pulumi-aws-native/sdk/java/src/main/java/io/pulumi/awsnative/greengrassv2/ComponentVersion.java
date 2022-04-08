@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource for Greengrass component version.
- * 
  */
 @ResourceType(type="aws-native:greengrassv2:ComponentVersion")
 public class ComponentVersion extends io.pulumi.resources.CustomResource {

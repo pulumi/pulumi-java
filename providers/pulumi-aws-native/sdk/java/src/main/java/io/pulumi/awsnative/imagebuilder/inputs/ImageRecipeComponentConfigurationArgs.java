@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration details of the component.
- * 
  */
 public final class ImageRecipeComponentConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ImageRecipeComponentConfigurationArgs extends io.pulumi.resou
 
     /**
      * The Amazon Resource Name (ARN) of the component.
-     * 
      */
     @Import(name="componentArn")
       private final @Nullable Output<String> componentArn;
@@ -33,7 +31,6 @@ public final class ImageRecipeComponentConfigurationArgs extends io.pulumi.resou
 
     /**
      * A group of parameter settings that are used to configure the component for a specific recipe.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<List<ImageRecipeComponentParameterArgs>> parameters;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Sample type
-     * 
      */
     @EnumType
     public enum ProjectSampleType {

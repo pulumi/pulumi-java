@@ -14,7 +14,6 @@ public final class GetLoggingConfigurationArgs extends io.pulumi.resources.Invok
 
     /**
      * The Amazon Resource Name (ARN) of the web ACL that you want to associate with LogDestinationConfigs.
-     * 
      */
     @Import(name="resourceArn", required=true)
       private final String resourceArn;

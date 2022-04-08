@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Information about a rendering engine.
- * 
  */
 public final class SimulationApplicationRenderingEngineArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SimulationApplicationRenderingEngineArgs extends io.pulumi.re
 
     /**
      * The name of the rendering engine.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<SimulationApplicationRenderingEngineName> name;
@@ -31,7 +29,6 @@ public final class SimulationApplicationRenderingEngineArgs extends io.pulumi.re
 
     /**
      * The version of the rendering engine.
-     * 
      */
     @Import(name="version", required=true)
       private final Output<String> version;

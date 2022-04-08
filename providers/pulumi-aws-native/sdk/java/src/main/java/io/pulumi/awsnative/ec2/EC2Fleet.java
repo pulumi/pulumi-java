@@ -22,7 +22,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::EC2::EC2Fleet
- * 
  */
 @ResourceType(type="aws-native:ec2:EC2Fleet")
 public class EC2Fleet extends io.pulumi.resources.CustomResource {

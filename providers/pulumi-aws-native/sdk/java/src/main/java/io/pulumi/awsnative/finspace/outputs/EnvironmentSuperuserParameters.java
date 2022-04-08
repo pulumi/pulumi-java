@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class EnvironmentSuperuserParameters {
     /**
      * Email address
-     * 
      */
     private final @Nullable String emailAddress;
     /**
      * First name
-     * 
      */
     private final @Nullable String firstName;
     /**
      * Last name
-     * 
      */
     private final @Nullable String lastName;
 
@@ -39,21 +36,18 @@ public final class EnvironmentSuperuserParameters {
 
     /**
      * Email address
-     * 
     */
     public Optional<String> getEmailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }
     /**
      * First name
-     * 
     */
     public Optional<String> getFirstName() {
         return Optional.ofNullable(this.firstName);
     }
     /**
      * Last name
-     * 
     */
     public Optional<String> getLastName() {
         return Optional.ofNullable(this.lastName);

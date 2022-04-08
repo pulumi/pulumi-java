@@ -12,8 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Defines block device mappings for the instance used to configure your image.
- * 
+ * Defines block device mappings for the instance used to configure your image. 
  */
 public final class ImageRecipeInstanceBlockDeviceMappingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ImageRecipeInstanceBlockDeviceMappingArgs extends io.pulumi.r
 
     /**
      * The device to which these mappings apply.
-     * 
      */
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
@@ -32,7 +30,6 @@ public final class ImageRecipeInstanceBlockDeviceMappingArgs extends io.pulumi.r
 
     /**
      * Use to manage Amazon EBS-specific configuration for this mapping.
-     * 
      */
     @Import(name="ebs")
       private final @Nullable Output<ImageRecipeEbsInstanceBlockDeviceSpecificationArgs> ebs;
@@ -43,7 +40,6 @@ public final class ImageRecipeInstanceBlockDeviceMappingArgs extends io.pulumi.r
 
     /**
      * Use to remove a mapping from the parent image.
-     * 
      */
     @Import(name="noDevice")
       private final @Nullable Output<String> noDevice;
@@ -54,7 +50,6 @@ public final class ImageRecipeInstanceBlockDeviceMappingArgs extends io.pulumi.r
 
     /**
      * Use to manage instance ephemeral devices.
-     * 
      */
     @Import(name="virtualName")
       private final @Nullable Output<String> virtualName;

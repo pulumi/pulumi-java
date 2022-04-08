@@ -15,40 +15,33 @@ import javax.annotation.Nullable;
 public final class InstancePort {
     /**
      * Access Direction for Protocol of the Instance(inbound/outbound).
-     * 
      */
     private final @Nullable String accessDirection;
     /**
      * Access From Protocol of the Instance.
-     * 
      */
     private final @Nullable String accessFrom;
     /**
      * Access Type Protocol of the Instance.
-     * 
      */
     private final @Nullable String accessType;
     private final @Nullable List<String> cidrListAliases;
     private final @Nullable List<String> cidrs;
     /**
      * CommonName for Protocol of the Instance.
-     * 
      */
     private final @Nullable String commonName;
     /**
      * From Port of the Instance.
-     * 
      */
     private final @Nullable Integer fromPort;
     private final @Nullable List<String> ipv6Cidrs;
     /**
      * Port Protocol of the Instance.
-     * 
      */
     private final @Nullable String protocol;
     /**
      * To Port of the Instance.
-     * 
      */
     private final @Nullable Integer toPort;
 
@@ -78,21 +71,18 @@ public final class InstancePort {
 
     /**
      * Access Direction for Protocol of the Instance(inbound/outbound).
-     * 
     */
     public Optional<String> getAccessDirection() {
         return Optional.ofNullable(this.accessDirection);
     }
     /**
      * Access From Protocol of the Instance.
-     * 
     */
     public Optional<String> getAccessFrom() {
         return Optional.ofNullable(this.accessFrom);
     }
     /**
      * Access Type Protocol of the Instance.
-     * 
     */
     public Optional<String> getAccessType() {
         return Optional.ofNullable(this.accessType);
@@ -105,14 +95,12 @@ public final class InstancePort {
     }
     /**
      * CommonName for Protocol of the Instance.
-     * 
     */
     public Optional<String> getCommonName() {
         return Optional.ofNullable(this.commonName);
     }
     /**
      * From Port of the Instance.
-     * 
     */
     public Optional<Integer> getFromPort() {
         return Optional.ofNullable(this.fromPort);
@@ -122,14 +110,12 @@ public final class InstancePort {
     }
     /**
      * Port Protocol of the Instance.
-     * 
     */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * To Port of the Instance.
-     * 
     */
     public Optional<Integer> getToPort() {
         return Optional.ofNullable(this.toPort);

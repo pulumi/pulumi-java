@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class GetLocalGatewayRouteResult {
     /**
      * The state of the route.
-     * 
      */
     private final @Nullable String state;
     /**
      * The route type.
-     * 
      */
     private final @Nullable String type;
 
@@ -32,14 +30,12 @@ public final class GetLocalGatewayRouteResult {
 
     /**
      * The state of the route.
-     * 
     */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The route type.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

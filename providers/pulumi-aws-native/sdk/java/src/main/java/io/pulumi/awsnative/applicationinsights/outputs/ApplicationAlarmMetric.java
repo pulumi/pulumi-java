@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ApplicationAlarmMetric {
     /**
      * The name of the metric to be monitored for the component.
-     * 
      */
     private final String alarmMetricName;
 
@@ -22,7 +21,6 @@ public final class ApplicationAlarmMetric {
 
     /**
      * The name of the metric to be monitored for the component.
-     * 
     */
     public String getAlarmMetricName() {
         return this.alarmMetricName;

@@ -19,7 +19,6 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Configuration options for the AnomalyDetector
-     * 
      */
     @Import(name="anomalyDetectorConfig", required=true)
       private final Output<AnomalyDetectorConfigArgs> anomalyDetectorConfig;
@@ -30,7 +29,6 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A description for the AnomalyDetector.
-     * 
      */
     @Import(name="anomalyDetectorDescription")
       private final @Nullable Output<String> anomalyDetectorDescription;
@@ -41,7 +39,6 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name for the Amazon Lookout for Metrics Anomaly Detector
-     * 
      */
     @Import(name="anomalyDetectorName")
       private final @Nullable Output<String> anomalyDetectorName;
@@ -52,7 +49,6 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * KMS key used to encrypt the AnomalyDetector data
-     * 
      */
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
@@ -63,7 +59,6 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * List of metric sets for anomaly detection
-     * 
      */
     @Import(name="metricSetList", required=true)
       private final Output<List<AnomalyDetectorMetricSetArgs>> metricSetList;

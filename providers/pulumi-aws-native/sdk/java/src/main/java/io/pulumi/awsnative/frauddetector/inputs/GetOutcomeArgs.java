@@ -14,7 +14,6 @@ public final class GetOutcomeArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The outcome ARN.
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

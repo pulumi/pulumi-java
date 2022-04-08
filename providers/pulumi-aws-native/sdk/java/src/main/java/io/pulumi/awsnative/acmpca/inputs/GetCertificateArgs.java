@@ -14,7 +14,6 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ARN of the issued certificate.
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;
@@ -25,7 +24,6 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Amazon Resource Name (ARN) for the private CA to issue the certificate.
-     * 
      */
     @Import(name="certificateAuthorityArn", required=true)
       private final String certificateAuthorityArn;

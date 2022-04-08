@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Json options
- * 
  */
 public final class DatasetJsonOptions extends io.pulumi.resources.InvokeArgs {
 

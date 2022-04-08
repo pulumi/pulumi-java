@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Determines the type of UTCTiming included in the Media Presentation Description (MPD)
-     * 
      */
     @EnumType
     public enum OriginEndpointDashPackageUtcTiming {

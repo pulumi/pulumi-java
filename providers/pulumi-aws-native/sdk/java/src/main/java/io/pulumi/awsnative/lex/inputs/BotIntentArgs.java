@@ -23,7 +23,6 @@ import javax.annotation.Nullable;
 
 /**
  * An intent represents an action that the user wants to perform. You create a bot to support one or more related intents.
- * 
  */
 public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -115,7 +114,6 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of slots
-     * 
      */
     @Import(name="slots")
       private final @Nullable Output<List<BotSlotArgs>> slots;

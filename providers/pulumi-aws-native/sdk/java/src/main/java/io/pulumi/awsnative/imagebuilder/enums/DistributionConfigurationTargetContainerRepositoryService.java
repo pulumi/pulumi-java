@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The service of target container repository.
-     * 
      */
     @EnumType
     public enum DistributionConfigurationTargetContainerRepositoryService {

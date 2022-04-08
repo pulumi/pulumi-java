@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Evidently::Experiment.
- * 
  */
 @ResourceType(type="aws-native:evidently:Experiment")
 public class Experiment extends io.pulumi.resources.CustomResource {
@@ -73,14 +72,12 @@ public class Experiment extends io.pulumi.resources.CustomResource {
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ExperimentTag.class})
     private Output</* @Nullable */ List<ExperimentTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<ExperimentTag>> getTags() {
         return this.tags;

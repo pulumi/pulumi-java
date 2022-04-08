@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Deployment status of a resource. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
-     * 
      */
     @EnumType
     public enum ClusterStatus {

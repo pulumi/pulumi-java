@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A message in a custom format defined by the client application.
- * 
  */
 public final class BotCustomPayloadArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class BotCustomPayloadArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The string that is sent to your application.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

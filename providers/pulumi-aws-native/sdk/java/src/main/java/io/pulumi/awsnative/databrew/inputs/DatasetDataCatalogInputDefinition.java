@@ -17,7 +17,6 @@ public final class DatasetDataCatalogInputDefinition extends io.pulumi.resources
 
     /**
      * Catalog id
-     * 
      */
     @Import(name="catalogId")
       private final @Nullable String catalogId;
@@ -28,7 +27,6 @@ public final class DatasetDataCatalogInputDefinition extends io.pulumi.resources
 
     /**
      * Database name
-     * 
      */
     @Import(name="databaseName")
       private final @Nullable String databaseName;
@@ -39,7 +37,6 @@ public final class DatasetDataCatalogInputDefinition extends io.pulumi.resources
 
     /**
      * Table name
-     * 
      */
     @Import(name="tableName")
       private final @Nullable String tableName;

@@ -18,7 +18,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of a Cluster. You can use any non-white space character in the name
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -29,7 +28,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A collection of tags associated with a resource
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ClusterTagArgs>> tags;

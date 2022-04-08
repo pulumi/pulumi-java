@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::RDS::DBProxyTargetGroup
- * 
  */
 @ResourceType(type="aws-native:rds:DBProxyTargetGroup")
 public class DBProxyTargetGroup extends io.pulumi.resources.CustomResource {
@@ -40,42 +39,36 @@ public class DBProxyTargetGroup extends io.pulumi.resources.CustomResource {
     }
     /**
      * The identifier for the proxy.
-     * 
      */
     @Export(name="dBProxyName", type=String.class, parameters={})
     private Output<String> dBProxyName;
 
     /**
      * @return The identifier for the proxy.
-     * 
      */
     public Output<String> getDBProxyName() {
         return this.dBProxyName;
     }
     /**
      * The Amazon Resource Name (ARN) representing the target group.
-     * 
      */
     @Export(name="targetGroupArn", type=String.class, parameters={})
     private Output<String> targetGroupArn;
 
     /**
      * @return The Amazon Resource Name (ARN) representing the target group.
-     * 
      */
     public Output<String> getTargetGroupArn() {
         return this.targetGroupArn;
     }
     /**
      * The identifier for the DBProxyTargetGroup
-     * 
      */
     @Export(name="targetGroupName", type=DBProxyTargetGroupTargetGroupName.class, parameters={})
     private Output<DBProxyTargetGroupTargetGroupName> targetGroupName;
 
     /**
      * @return The identifier for the DBProxyTargetGroup
-     * 
      */
     public Output<DBProxyTargetGroupTargetGroupName> getTargetGroupName() {
         return this.targetGroupName;

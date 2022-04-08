@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      *  The IAM role type.
-     * 
      */
     @EnumType
     public enum AssessmentRoleType {

@@ -17,76 +17,65 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::IoTSiteWise::Gateway
- * 
  */
 @ResourceType(type="aws-native:iotsitewise:Gateway")
 public class Gateway extends io.pulumi.resources.CustomResource {
     /**
      * A list of gateway capability summaries that each contain a namespace and status.
-     * 
      */
     @Export(name="gatewayCapabilitySummaries", type=List.class, parameters={GatewayCapabilitySummary.class})
     private Output</* @Nullable */ List<GatewayCapabilitySummary>> gatewayCapabilitySummaries;
 
     /**
      * @return A list of gateway capability summaries that each contain a namespace and status.
-     * 
      */
     public Output</* @Nullable */ List<GatewayCapabilitySummary>> getGatewayCapabilitySummaries() {
         return this.gatewayCapabilitySummaries;
     }
     /**
      * The ID of the gateway device.
-     * 
      */
     @Export(name="gatewayId", type=String.class, parameters={})
     private Output<String> gatewayId;
 
     /**
      * @return The ID of the gateway device.
-     * 
      */
     public Output<String> getGatewayId() {
         return this.gatewayId;
     }
     /**
      * A unique, friendly name for the gateway.
-     * 
      */
     @Export(name="gatewayName", type=String.class, parameters={})
     private Output<String> gatewayName;
 
     /**
      * @return A unique, friendly name for the gateway.
-     * 
      */
     public Output<String> getGatewayName() {
         return this.gatewayName;
     }
     /**
      * The gateway's platform. You can only specify one platform in a gateway.
-     * 
      */
     @Export(name="gatewayPlatform", type=GatewayPlatform.class, parameters={})
     private Output<GatewayPlatform> gatewayPlatform;
 
     /**
      * @return The gateway's platform. You can only specify one platform in a gateway.
-     * 
      */
     public Output<GatewayPlatform> getGatewayPlatform() {
         return this.gatewayPlatform;
     }
     /**
      * A list of key-value pairs that contain metadata for the gateway.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={GatewayTag.class})
     private Output</* @Nullable */ List<GatewayTag>> tags;
 
     /**
      * @return A list of key-value pairs that contain metadata for the gateway.
-     * 
      */
     public Output</* @Nullable */ List<GatewayTag>> getTags() {
         return this.tags;

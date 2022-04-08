@@ -15,63 +15,223 @@ import javax.annotation.Nullable;
 /**
  * The AWS::GameLift::Alias resource creates an alias for an Amazon GameLift (GameLift) fleet destination.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var aliasResource = new AwsNative.GameLift.Alias("aliasResource", new AwsNative.GameLift.AliasArgs
+ *         {
+ *             Name = "MyTerminalAlias",
+ *             Description = "A terminal alias",
+ *             RoutingStrategy = new AwsNative.GameLift.Inputs.AliasRoutingStrategyArgs
+ *             {
+ *                 Type = "TERMINAL",
+ *                 Message = "Terminal routing strategy message",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/gamelift"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := gamelift.NewAlias(ctx, "aliasResource", &gamelift.AliasArgs{
+ * 			Name:        pulumi.String("MyTerminalAlias"),
+ * 			Description: pulumi.String("A terminal alias"),
+ * 			RoutingStrategy: &gamelift.AliasRoutingStrategyArgs{
+ * 				Type:    "TERMINAL",
+ * 				Message: pulumi.String("Terminal routing strategy message"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const aliasResource = new aws_native.gamelift.Alias("aliasResource", {
+ *     name: "MyTerminalAlias",
+ *     description: "A terminal alias",
+ *     routingStrategy: {
+ *         type: "TERMINAL",
+ *         message: "Terminal routing strategy message",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * alias_resource = aws_native.gamelift.Alias("aliasResource",
+ *     name="MyTerminalAlias",
+ *     description="A terminal alias",
+ *     routing_strategy=aws_native.gamelift.AliasRoutingStrategyArgs(
+ *         type="TERMINAL",
+ *         message="Terminal routing strategy message",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var aliasResource = new AwsNative.GameLift.Alias("aliasResource", new AwsNative.GameLift.AliasArgs
+ *         {
+ *             Name = "MyTerminalAlias",
+ *             Description = "A terminal alias",
+ *             RoutingStrategy = new AwsNative.GameLift.Inputs.AliasRoutingStrategyArgs
+ *             {
+ *                 Type = "TERMINAL",
+ *                 Message = "Terminal routing strategy message",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/gamelift"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := gamelift.NewAlias(ctx, "aliasResource", &gamelift.AliasArgs{
+ * 			Name:        pulumi.String("MyTerminalAlias"),
+ * 			Description: pulumi.String("A terminal alias"),
+ * 			RoutingStrategy: &gamelift.AliasRoutingStrategyArgs{
+ * 				Type:    "TERMINAL",
+ * 				Message: pulumi.String("Terminal routing strategy message"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const aliasResource = new aws_native.gamelift.Alias("aliasResource", {
+ *     name: "MyTerminalAlias",
+ *     description: "A terminal alias",
+ *     routingStrategy: {
+ *         type: "TERMINAL",
+ *         message: "Terminal routing strategy message",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * alias_resource = aws_native.gamelift.Alias("aliasResource",
+ *     name="MyTerminalAlias",
+ *     description="A terminal alias",
+ *     routing_strategy=aws_native.gamelift.AliasRoutingStrategyArgs(
+ *         type="TERMINAL",
+ *         message="Terminal routing strategy message",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:gamelift:Alias")
 public class Alias extends io.pulumi.resources.CustomResource {
     /**
      * Unique alias ID
-     * 
      */
     @Export(name="aliasId", type=String.class, parameters={})
     private Output<String> aliasId;
 
     /**
      * @return Unique alias ID
-     * 
      */
     public Output<String> getAliasId() {
         return this.aliasId;
     }
     /**
      * A human-readable description of the alias.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A human-readable description of the alias.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * A descriptive label that is associated with an alias. Alias names do not need to be unique.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return A descriptive label that is associated with an alias. Alias names do not need to be unique.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message.
-     * 
      */
     @Export(name="routingStrategy", type=AliasRoutingStrategy.class, parameters={})
     private Output<AliasRoutingStrategy> routingStrategy;
 
     /**
      * @return A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message.
-     * 
      */
     public Output<AliasRoutingStrategy> getRoutingStrategy() {
         return this.routingStrategy;

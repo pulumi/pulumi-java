@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A resource tag.
- * 
  */
 public final class PolicyResourceTagArgs extends io.pulumi.resources.ResourceArgs {
 

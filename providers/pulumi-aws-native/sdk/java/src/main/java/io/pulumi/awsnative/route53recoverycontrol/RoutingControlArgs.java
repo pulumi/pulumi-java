@@ -16,7 +16,6 @@ public final class RoutingControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Arn associated with Control Panel
-     * 
      */
     @Import(name="clusterArn")
       private final @Nullable Output<String> clusterArn;
@@ -27,7 +26,6 @@ public final class RoutingControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the control panel.
-     * 
      */
     @Import(name="controlPanelArn")
       private final @Nullable Output<String> controlPanelArn;
@@ -38,7 +36,6 @@ public final class RoutingControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the routing control. You can use any non-white space character in the name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

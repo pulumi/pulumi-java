@@ -13,20 +13,17 @@ import javax.annotation.Nullable;
 
 /**
  * Resource used to control (enable/disable) DNSSEC in a specific hosted zone.
- * 
  */
 @ResourceType(type="aws-native:route53:DNSSEC")
 public class DNSSEC extends io.pulumi.resources.CustomResource {
     /**
      * The unique string (ID) used to identify a hosted zone.
-     * 
      */
     @Export(name="hostedZoneId", type=String.class, parameters={})
     private Output<String> hostedZoneId;
 
     /**
      * @return The unique string (ID) used to identify a hosted zone.
-     * 
      */
     public Output<String> getHostedZoneId() {
         return this.hostedZoneId;

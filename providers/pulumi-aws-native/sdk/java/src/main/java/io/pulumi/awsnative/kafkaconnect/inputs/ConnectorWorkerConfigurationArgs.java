@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Specifies the worker configuration to use with the connector.
- * 
  */
 public final class ConnectorWorkerConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ConnectorWorkerConfigurationArgs extends io.pulumi.resources.
 
     /**
      * The revision of the worker configuration to use.
-     * 
      */
     @Import(name="revision", required=true)
       private final Output<Integer> revision;
@@ -31,7 +29,6 @@ public final class ConnectorWorkerConfigurationArgs extends io.pulumi.resources.
 
     /**
      * The Amazon Resource Name (ARN) of the worker configuration to use.
-     * 
      */
     @Import(name="workerConfigurationArn", required=true)
       private final Output<String> workerConfigurationArn;

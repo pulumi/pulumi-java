@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the members of a VPC security group.
- * 
  */
 public final class EndpointAccessVpcSecurityGroup extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EndpointAccessVpcSecurityGroup extends io.pulumi.resources.In
 
     /**
      * The status of the VPC security group.
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;
@@ -31,7 +29,6 @@ public final class EndpointAccessVpcSecurityGroup extends io.pulumi.resources.In
 
     /**
      * The identifier of the VPC security group.
-     * 
      */
     @Import(name="vpcSecurityGroupId")
       private final @Nullable String vpcSecurityGroupId;

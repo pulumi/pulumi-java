@@ -18,7 +18,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The AMP Workspace alert manager definition data
-     * 
      */
     @Import(name="alertManagerDefinition")
       private final @Nullable Output<String> alertManagerDefinition;
@@ -29,7 +28,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * AMP Workspace alias.
-     * 
      */
     @Import(name="alias")
       private final @Nullable Output<String> alias;
@@ -40,7 +38,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<WorkspaceTagArgs>> tags;

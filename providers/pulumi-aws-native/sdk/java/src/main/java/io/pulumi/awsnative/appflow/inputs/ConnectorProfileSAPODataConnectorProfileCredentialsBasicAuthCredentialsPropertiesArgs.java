@@ -16,7 +16,6 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthC
 
     /**
      * The password that corresponds to the username.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -27,7 +26,6 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthC
 
     /**
      * The name of the user.
-     * 
      */
     @Import(name="username")
       private final @Nullable Output<String> username;

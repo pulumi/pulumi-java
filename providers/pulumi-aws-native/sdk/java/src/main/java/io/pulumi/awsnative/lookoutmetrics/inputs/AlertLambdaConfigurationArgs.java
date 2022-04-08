@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Configuration options for a Lambda alert action.
- * 
  */
 public final class AlertLambdaConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class AlertLambdaConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * ARN of a Lambda to send alert notifications to.
-     * 
      */
     @Import(name="lambdaArn", required=true)
       private final Output<String> lambdaArn;
@@ -30,7 +28,6 @@ public final class AlertLambdaConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * ARN of an IAM role that LookoutMetrics should assume to access the Lambda function.
-     * 
      */
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;

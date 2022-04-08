@@ -14,7 +14,6 @@ public final class GetFargateProfileArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Name of the Cluster
-     * 
      */
     @Import(name="clusterName", required=true)
       private final String clusterName;
@@ -25,7 +24,6 @@ public final class GetFargateProfileArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Name of FargateProfile
-     * 
      */
     @Import(name="fargateProfileName", required=true)
       private final String fargateProfileName;

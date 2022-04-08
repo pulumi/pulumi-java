@@ -14,7 +14,6 @@ public final class GetDocumentationVersionArgs extends io.pulumi.resources.Invok
 
     /**
      * The version identifier of the API documentation snapshot.
-     * 
      */
     @Import(name="documentationVersion", required=true)
       private final String documentationVersion;
@@ -25,7 +24,6 @@ public final class GetDocumentationVersionArgs extends io.pulumi.resources.Invok
 
     /**
      * The identifier of the API.
-     * 
      */
     @Import(name="restApiId", required=true)
       private final String restApiId;

@@ -40,7 +40,6 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ModelPackageGroupTagArgs>> tags;

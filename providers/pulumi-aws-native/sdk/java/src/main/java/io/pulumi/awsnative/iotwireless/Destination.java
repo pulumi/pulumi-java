@@ -16,104 +16,89 @@ import javax.annotation.Nullable;
 
 /**
  * Destination's resource schema demonstrating some basic constructs and validation rules.
- * 
  */
 @ResourceType(type="aws-native:iotwireless:Destination")
 public class Destination extends io.pulumi.resources.CustomResource {
     /**
      * Destination arn. Returned after successful create.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Destination arn. Returned after successful create.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * Destination description
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Destination description
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Destination expression
-     * 
      */
     @Export(name="expression", type=String.class, parameters={})
     private Output<String> expression;
 
     /**
      * @return Destination expression
-     * 
      */
     public Output<String> getExpression() {
         return this.expression;
     }
     /**
      * Must be RuleName
-     * 
      */
     @Export(name="expressionType", type=DestinationExpressionType.class, parameters={})
     private Output<DestinationExpressionType> expressionType;
 
     /**
      * @return Must be RuleName
-     * 
      */
     public Output<DestinationExpressionType> getExpressionType() {
         return this.expressionType;
     }
     /**
      * Unique name of destination
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Unique name of destination
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * AWS role ARN that grants access
-     * 
      */
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
      * @return AWS role ARN that grants access
-     * 
      */
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
     /**
      * A list of key-value pairs that contain metadata for the destination.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DestinationTag.class})
     private Output</* @Nullable */ List<DestinationTag>> tags;
 
     /**
      * @return A list of key-value pairs that contain metadata for the destination.
-     * 
      */
     public Output</* @Nullable */ List<DestinationTag>> getTags() {
         return this.tags;

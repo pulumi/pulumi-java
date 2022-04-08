@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies which Amazon S3 objects to replicate and where to store the replicas.
- * 
  */
 public final class BucketReplicationRule extends io.pulumi.resources.InvokeArgs {
 
@@ -47,7 +46,6 @@ public final class BucketReplicationRule extends io.pulumi.resources.InvokeArgs 
 
     /**
      * A unique identifier for the rule.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -58,7 +56,6 @@ public final class BucketReplicationRule extends io.pulumi.resources.InvokeArgs 
 
     /**
      * An object key name prefix that identifies the object or objects to which the rule applies.
-     * 
      */
     @Import(name="prefix")
       private final @Nullable String prefix;
@@ -83,7 +80,6 @@ public final class BucketReplicationRule extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Specifies whether the rule is enabled.
-     * 
      */
     @Import(name="status", required=true)
       private final BucketReplicationRuleStatus status;

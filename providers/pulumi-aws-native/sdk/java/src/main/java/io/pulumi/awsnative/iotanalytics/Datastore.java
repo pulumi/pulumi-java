@@ -20,7 +20,371 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::IoTAnalytics::Datastore
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var datastore = new AwsNative.IoTAnalytics.Datastore("datastore", new AwsNative.IoTAnalytics.DatastoreArgs
+ *         {
+ *             DatastoreName = "SimpleDatastore",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iotanalytics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iotanalytics.NewDatastore(ctx, "datastore", &iotanalytics.DatastoreArgs{
+ * 			DatastoreName: pulumi.String("SimpleDatastore"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const datastore = new aws_native.iotanalytics.Datastore("datastore", {datastoreName: "SimpleDatastore"});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * datastore = aws_native.iotanalytics.Datastore("datastore", datastore_name="SimpleDatastore")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var datastore = new AwsNative.IoTAnalytics.Datastore("datastore", new AwsNative.IoTAnalytics.DatastoreArgs
+ *         {
+ *             DatastoreName = "SimpleDatastore",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iotanalytics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iotanalytics.NewDatastore(ctx, "datastore", &iotanalytics.DatastoreArgs{
+ * 			DatastoreName: pulumi.String("SimpleDatastore"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const datastore = new aws_native.iotanalytics.Datastore("datastore", {datastoreName: "SimpleDatastore"});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * datastore = aws_native.iotanalytics.Datastore("datastore", datastore_name="SimpleDatastore")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var datastore = new AwsNative.IoTAnalytics.Datastore("datastore", new AwsNative.IoTAnalytics.DatastoreArgs
+ *         {
+ *             DatastoreName = "ComplexDatastore",
+ *             RetentionPeriod = new AwsNative.IoTAnalytics.Inputs.DatastoreRetentionPeriodArgs
+ *             {
+ *                 Unlimited = false,
+ *                 NumberOfDays = 10,
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.DatastoreTagArgs
+ *                 {
+ *                     Key = "keyname1",
+ *                     Value = "value1",
+ *                 },
+ *                 new AwsNative.IoTAnalytics.Inputs.DatastoreTagArgs
+ *                 {
+ *                     Key = "keyname2",
+ *                     Value = "value2",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iotanalytics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iotanalytics.NewDatastore(ctx, "datastore", &iotanalytics.DatastoreArgs{
+ * 			DatastoreName: pulumi.String("ComplexDatastore"),
+ * 			RetentionPeriod: &iotanalytics.DatastoreRetentionPeriodArgs{
+ * 				Unlimited:    pulumi.Bool(false),
+ * 				NumberOfDays: pulumi.Int(10),
+ * 			},
+ * 			Tags: []iotanalytics.DatastoreTagArgs{
+ * 				&iotanalytics.DatastoreTagArgs{
+ * 					Key:   pulumi.String("keyname1"),
+ * 					Value: pulumi.String("value1"),
+ * 				},
+ * 				&iotanalytics.DatastoreTagArgs{
+ * 					Key:   pulumi.String("keyname2"),
+ * 					Value: pulumi.String("value2"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const datastore = new aws_native.iotanalytics.Datastore("datastore", {
+ *     datastoreName: "ComplexDatastore",
+ *     retentionPeriod: {
+ *         unlimited: false,
+ *         numberOfDays: 10,
+ *     },
+ *     tags: [
+ *         {
+ *             key: "keyname1",
+ *             value: "value1",
+ *         },
+ *         {
+ *             key: "keyname2",
+ *             value: "value2",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * datastore = aws_native.iotanalytics.Datastore("datastore",
+ *     datastore_name="ComplexDatastore",
+ *     retention_period=aws_native.iotanalytics.DatastoreRetentionPeriodArgs(
+ *         unlimited=False,
+ *         number_of_days=10,
+ *     ),
+ *     tags=[
+ *         aws_native.iotanalytics.DatastoreTagArgs(
+ *             key="keyname1",
+ *             value="value1",
+ *         ),
+ *         aws_native.iotanalytics.DatastoreTagArgs(
+ *             key="keyname2",
+ *             value="value2",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var datastore = new AwsNative.IoTAnalytics.Datastore("datastore", new AwsNative.IoTAnalytics.DatastoreArgs
+ *         {
+ *             DatastoreName = "ComplexDatastore",
+ *             RetentionPeriod = new AwsNative.IoTAnalytics.Inputs.DatastoreRetentionPeriodArgs
+ *             {
+ *                 Unlimited = false,
+ *                 NumberOfDays = 10,
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.DatastoreTagArgs
+ *                 {
+ *                     Key = "keyname1",
+ *                     Value = "value1",
+ *                 },
+ *                 new AwsNative.IoTAnalytics.Inputs.DatastoreTagArgs
+ *                 {
+ *                     Key = "keyname2",
+ *                     Value = "value2",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iotanalytics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iotanalytics.NewDatastore(ctx, "datastore", &iotanalytics.DatastoreArgs{
+ * 			DatastoreName: pulumi.String("ComplexDatastore"),
+ * 			RetentionPeriod: &iotanalytics.DatastoreRetentionPeriodArgs{
+ * 				Unlimited:    pulumi.Bool(false),
+ * 				NumberOfDays: pulumi.Int(10),
+ * 			},
+ * 			Tags: []iotanalytics.DatastoreTagArgs{
+ * 				&iotanalytics.DatastoreTagArgs{
+ * 					Key:   pulumi.String("keyname1"),
+ * 					Value: pulumi.String("value1"),
+ * 				},
+ * 				&iotanalytics.DatastoreTagArgs{
+ * 					Key:   pulumi.String("keyname2"),
+ * 					Value: pulumi.String("value2"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const datastore = new aws_native.iotanalytics.Datastore("datastore", {
+ *     datastoreName: "ComplexDatastore",
+ *     retentionPeriod: {
+ *         unlimited: false,
+ *         numberOfDays: 10,
+ *     },
+ *     tags: [
+ *         {
+ *             key: "keyname1",
+ *             value: "value1",
+ *         },
+ *         {
+ *             key: "keyname2",
+ *             value: "value2",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * datastore = aws_native.iotanalytics.Datastore("datastore",
+ *     datastore_name="ComplexDatastore",
+ *     retention_period=aws_native.iotanalytics.DatastoreRetentionPeriodArgs(
+ *         unlimited=False,
+ *         number_of_days=10,
+ *     ),
+ *     tags=[
+ *         aws_native.iotanalytics.DatastoreTagArgs(
+ *             key="keyname1",
+ *             value="value1",
+ *         ),
+ *         aws_native.iotanalytics.DatastoreTagArgs(
+ *             key="keyname2",
+ *             value="value2",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:iotanalytics:Datastore")

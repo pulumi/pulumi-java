@@ -15,76 +15,65 @@ import javax.annotation.Nullable;
 
 /**
  * An example resource schema demonstrating some basic constructs and validation rules.
- * 
  */
 @ResourceType(type="aws-native:ec2:CarrierGateway")
 public class CarrierGateway extends io.pulumi.resources.CustomResource {
     /**
      * The ID of the carrier gateway.
-     * 
      */
     @Export(name="carrierGatewayId", type=String.class, parameters={})
     private Output<String> carrierGatewayId;
 
     /**
      * @return The ID of the carrier gateway.
-     * 
      */
     public Output<String> getCarrierGatewayId() {
         return this.carrierGatewayId;
     }
     /**
      * The ID of the owner.
-     * 
      */
     @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
      * @return The ID of the owner.
-     * 
      */
     public Output<String> getOwnerId() {
         return this.ownerId;
     }
     /**
      * The state of the carrier gateway.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The state of the carrier gateway.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The tags for the carrier gateway.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={CarrierGatewayTag.class})
     private Output</* @Nullable */ List<CarrierGatewayTag>> tags;
 
     /**
      * @return The tags for the carrier gateway.
-     * 
      */
     public Output</* @Nullable */ List<CarrierGatewayTag>> getTags() {
         return this.tags;
     }
     /**
      * The ID of the VPC.
-     * 
      */
     @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**
      * @return The ID of the VPC.
-     * 
      */
     public Output<String> getVpcId() {
         return this.vpcId;

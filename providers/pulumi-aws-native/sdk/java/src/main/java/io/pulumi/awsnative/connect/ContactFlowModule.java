@@ -18,119 +18,201 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::Connect::ContactFlowModule.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cf11 = new AwsNative.Connect.ContactFlowModule("cf11", new AwsNative.Connect.ContactFlowModuleArgs
+ *         {
+ *             Name = "ExampleContactFlowModule",
+ *             Description = "contact flow module created using cfn",
+ *             InstanceArn = "arn:aws:connect:region-name:aws-account-id:instance/instance-arn",
+ *             Content = "ExampleContactFlowModule content(JSON) using Amazon Connect Flow Language.",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.Connect.Inputs.ContactFlowModuleTagArgs
+ *                 {
+ *                     Key = "testkey",
+ *                     Value = "testValue",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/connect"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := connect.NewContactFlowModule(ctx, "cf11", &connect.ContactFlowModuleArgs{
+ * 			Name:        pulumi.String("ExampleContactFlowModule"),
+ * 			Description: pulumi.String("contact flow module created using cfn"),
+ * 			InstanceArn: pulumi.String("arn:aws:connect:region-name:aws-account-id:instance/instance-arn"),
+ * 			Content:     pulumi.String("ExampleContactFlowModule content(JSON) using Amazon Connect Flow Language."),
+ * 			Tags: []connect.ContactFlowModuleTagArgs{
+ * 				&connect.ContactFlowModuleTagArgs{
+ * 					Key:   pulumi.String("testkey"),
+ * 					Value: pulumi.String("testValue"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const cf11 = new aws_native.connect.ContactFlowModule("cf11", {
+ *     name: "ExampleContactFlowModule",
+ *     description: "contact flow module created using cfn",
+ *     instanceArn: "arn:aws:connect:region-name:aws-account-id:instance/instance-arn",
+ *     content: "ExampleContactFlowModule content(JSON) using Amazon Connect Flow Language.",
+ *     tags: [{
+ *         key: "testkey",
+ *         value: "testValue",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * cf11 = aws_native.connect.ContactFlowModule("cf11",
+ *     name="ExampleContactFlowModule",
+ *     description="contact flow module created using cfn",
+ *     instance_arn="arn:aws:connect:region-name:aws-account-id:instance/instance-arn",
+ *     content="ExampleContactFlowModule content(JSON) using Amazon Connect Flow Language.",
+ *     tags=[aws_native.connect.ContactFlowModuleTagArgs(
+ *         key="testkey",
+ *         value="testValue",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:connect:ContactFlowModule")
 public class ContactFlowModule extends io.pulumi.resources.CustomResource {
     /**
      * The identifier of the contact flow module (ARN).
-     * 
      */
     @Export(name="contactFlowModuleArn", type=String.class, parameters={})
     private Output<String> contactFlowModuleArn;
 
     /**
      * @return The identifier of the contact flow module (ARN).
-     * 
      */
     public Output<String> getContactFlowModuleArn() {
         return this.contactFlowModuleArn;
     }
     /**
      * The content of the contact flow module in JSON format.
-     * 
      */
     @Export(name="content", type=String.class, parameters={})
     private Output<String> content;
 
     /**
      * @return The content of the contact flow module in JSON format.
-     * 
      */
     public Output<String> getContent() {
         return this.content;
     }
     /**
      * The description of the contact flow module.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the contact flow module.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The identifier of the Amazon Connect instance (ARN).
-     * 
      */
     @Export(name="instanceArn", type=String.class, parameters={})
     private Output<String> instanceArn;
 
     /**
      * @return The identifier of the Amazon Connect instance (ARN).
-     * 
      */
     public Output<String> getInstanceArn() {
         return this.instanceArn;
     }
     /**
      * The name of the contact flow module.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the contact flow module.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The state of the contact flow module.
-     * 
      */
     @Export(name="state", type=ContactFlowModuleState.class, parameters={})
     private Output</* @Nullable */ ContactFlowModuleState> state;
 
     /**
      * @return The state of the contact flow module.
-     * 
      */
     public Output</* @Nullable */ ContactFlowModuleState> getState() {
         return this.state;
     }
     /**
      * The status of the contact flow module.
-     * 
      */
     @Export(name="status", type=ContactFlowModuleStatus.class, parameters={})
     private Output<ContactFlowModuleStatus> status;
 
     /**
      * @return The status of the contact flow module.
-     * 
      */
     public Output<ContactFlowModuleStatus> getStatus() {
         return this.status;
     }
     /**
      * One or more tags.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ContactFlowModuleTag.class})
     private Output</* @Nullable */ List<ContactFlowModuleTag>> tags;
 
     /**
      * @return One or more tags.
-     * 
      */
     public Output</* @Nullable */ List<ContactFlowModuleTag>> getTags() {
         return this.tags;

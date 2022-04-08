@@ -14,7 +14,6 @@ public final class GetTaskArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ARN of the task.
-     * 
      */
     @Import(name="taskArn", required=true)
       private final String taskArn;

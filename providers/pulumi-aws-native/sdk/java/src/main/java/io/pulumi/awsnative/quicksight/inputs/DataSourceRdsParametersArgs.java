@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * <p>Amazon RDS parameters.</p>
- * 
  */
 public final class DataSourceRdsParametersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class DataSourceRdsParametersArgs extends io.pulumi.resources.Resou
 
     /**
      * <p>Database.</p>
-     * 
      */
     @Import(name="database", required=true)
       private final Output<String> database;
@@ -30,7 +28,6 @@ public final class DataSourceRdsParametersArgs extends io.pulumi.resources.Resou
 
     /**
      * <p>Instance ID.</p>
-     * 
      */
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;

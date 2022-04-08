@@ -13,62 +13,53 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::ApiGateway::Resource
- * 
  */
 @ResourceType(type="aws-native:apigateway:Resource")
 public class Resource extends io.pulumi.resources.CustomResource {
     /**
      * The parent resource's identifier.
-     * 
      */
     @Export(name="parentId", type=String.class, parameters={})
     private Output<String> parentId;
 
     /**
      * @return The parent resource's identifier.
-     * 
      */
     public Output<String> getParentId() {
         return this.parentId;
     }
     /**
      * The last path segment for this resource.
-     * 
      */
     @Export(name="pathPart", type=String.class, parameters={})
     private Output<String> pathPart;
 
     /**
      * @return The last path segment for this resource.
-     * 
      */
     public Output<String> getPathPart() {
         return this.pathPart;
     }
     /**
      * A unique primary identifier for a Resource
-     * 
      */
     @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**
      * @return A unique primary identifier for a Resource
-     * 
      */
     public Output<String> getResourceId() {
         return this.resourceId;
     }
     /**
      * The ID of the RestApi resource in which you want to create this resource..
-     * 
      */
     @Export(name="restApiId", type=String.class, parameters={})
     private Output<String> restApiId;
 
     /**
      * @return The ID of the RestApi resource in which you want to create this resource..
-     * 
      */
     public Output<String> getRestApiId() {
         return this.restApiId;

@@ -13,62 +13,53 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::ApiGateway::BasePathMapping
- * 
  */
 @ResourceType(type="aws-native:apigateway:BasePathMapping")
 public class BasePathMapping extends io.pulumi.resources.CustomResource {
     /**
      * The base path name that callers of the API must provide in the URL after the domain name.
-     * 
      */
     @Export(name="basePath", type=String.class, parameters={})
     private Output</* @Nullable */ String> basePath;
 
     /**
      * @return The base path name that callers of the API must provide in the URL after the domain name.
-     * 
      */
     public Output</* @Nullable */ String> getBasePath() {
         return this.basePath;
     }
     /**
      * The DomainName of an AWS::ApiGateway::DomainName resource.
-     * 
      */
     @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
      * @return The DomainName of an AWS::ApiGateway::DomainName resource.
-     * 
      */
     public Output<String> getDomainName() {
         return this.domainName;
     }
     /**
      * The ID of the API.
-     * 
      */
     @Export(name="restApiId", type=String.class, parameters={})
     private Output</* @Nullable */ String> restApiId;
 
     /**
      * @return The ID of the API.
-     * 
      */
     public Output</* @Nullable */ String> getRestApiId() {
         return this.restApiId;
     }
     /**
      * The name of the API's stage.
-     * 
      */
     @Export(name="stage", type=String.class, parameters={})
     private Output</* @Nullable */ String> stage;
 
     /**
      * @return The name of the API's stage.
-     * 
      */
     public Output</* @Nullable */ String> getStage() {
         return this.stage;

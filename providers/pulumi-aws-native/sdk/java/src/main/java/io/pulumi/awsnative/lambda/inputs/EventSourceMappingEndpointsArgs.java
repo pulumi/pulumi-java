@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The endpoints used by AWS Lambda to access a self-managed event source.
- * 
  */
 public final class EventSourceMappingEndpointsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class EventSourceMappingEndpointsArgs extends io.pulumi.resources.R
 
     /**
      * A list of Kafka server endpoints.
-     * 
      */
     @Import(name="kafkaBootstrapServers")
       private final @Nullable Output<List<String>> kafkaBootstrapServers;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the schedule for generating inventory results.
-     * 
      */
     @EnumType
     public enum BucketInventoryConfigurationScheduleFrequency {

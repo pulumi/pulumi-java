@@ -16,7 +16,6 @@ public final class DocumentRequiresArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the required SSM document. The name can be an Amazon Resource Name (ARN).
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -27,7 +26,6 @@ public final class DocumentRequiresArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The document version required by the current document.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

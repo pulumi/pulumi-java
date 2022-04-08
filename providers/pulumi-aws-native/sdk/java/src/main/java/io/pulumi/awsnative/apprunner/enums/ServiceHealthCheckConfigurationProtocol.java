@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Health Check Protocol
-     * 
      */
     @EnumType
     public enum ServiceHealthCheckConfigurationProtocol {

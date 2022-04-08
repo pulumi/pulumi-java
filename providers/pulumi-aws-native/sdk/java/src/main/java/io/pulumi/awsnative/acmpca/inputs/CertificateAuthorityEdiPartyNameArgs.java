@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Structure that contains X.509 EdiPartyName information.
- * 
  */
 public final class CertificateAuthorityEdiPartyNameArgs extends io.pulumi.resources.ResourceArgs {
 

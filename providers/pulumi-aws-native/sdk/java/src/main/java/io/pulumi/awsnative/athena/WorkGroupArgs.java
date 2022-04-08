@@ -22,7 +22,6 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The workgroup description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -33,7 +32,6 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The workGroup name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -44,7 +42,6 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The option to delete the workgroup and its contents even if the workgroup contains any named queries.
-     * 
      */
     @Import(name="recursiveDeleteOption")
       private final @Nullable Output<Boolean> recursiveDeleteOption;
@@ -55,7 +52,6 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The state of the workgroup: ENABLED or DISABLED.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<WorkGroupState> state;
@@ -66,7 +62,6 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * One or more tags, separated by commas, that you want to attach to the workgroup as you create it
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<WorkGroupTagArgs>> tags;
@@ -77,7 +72,6 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The workgroup configuration
-     * 
      */
     @Import(name="workGroupConfiguration")
       private final @Nullable Output<WorkGroupConfigurationArgs> workGroupConfiguration;
@@ -88,7 +82,6 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The workgroup configuration update object
-     * 
      */
     @Import(name="workGroupConfigurationUpdates")
       private final @Nullable Output<WorkGroupConfigurationUpdatesArgs> workGroupConfigurationUpdates;

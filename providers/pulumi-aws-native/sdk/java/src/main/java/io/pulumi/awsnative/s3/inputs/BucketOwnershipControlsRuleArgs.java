@@ -16,7 +16,6 @@ public final class BucketOwnershipControlsRuleArgs extends io.pulumi.resources.R
 
     /**
      * Specifies an object ownership rule.
-     * 
      */
     @Import(name="objectOwnership")
       private final @Nullable Output<BucketOwnershipControlsRuleObjectOwnership> objectOwnership;

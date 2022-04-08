@@ -14,7 +14,6 @@ public final class GetAccessPointArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the specified AccessPoint.
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

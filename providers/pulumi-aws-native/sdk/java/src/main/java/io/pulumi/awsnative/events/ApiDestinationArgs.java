@@ -18,7 +18,6 @@ public final class ApiDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The arn of the connection.
-     * 
      */
     @Import(name="connectionArn", required=true)
       private final Output<String> connectionArn;
@@ -43,7 +42,6 @@ public final class ApiDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Url endpoint to invoke.
-     * 
      */
     @Import(name="invocationEndpoint", required=true)
       private final Output<String> invocationEndpoint;
@@ -61,7 +59,6 @@ public final class ApiDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the apiDestination.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

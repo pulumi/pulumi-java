@@ -14,7 +14,6 @@ public final class GetSuiteDefinitionArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The unique identifier for the suite definition.
-     * 
      */
     @Import(name="suiteDefinitionId", required=true)
       private final String suiteDefinitionId;

@@ -14,7 +14,6 @@ public final class GetACLArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the acl.
-     * 
      */
     @Import(name="aCLName", required=true)
       private final String aCLName;

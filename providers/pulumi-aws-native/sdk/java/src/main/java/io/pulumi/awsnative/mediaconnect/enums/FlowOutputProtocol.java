@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The protocol that is used by the source or output.
-     * 
      */
     @EnumType
     public enum FlowOutputProtocol {

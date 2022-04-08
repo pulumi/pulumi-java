@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configurations of destination connector.
- * 
  */
 public final class FlowDestinationFlowConfig extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class FlowDestinationFlowConfig extends io.pulumi.resources.InvokeA
 
     /**
      * Name of destination connector profile
-     * 
      */
     @Import(name="connectorProfileName")
       private final @Nullable String connectorProfileName;
@@ -33,7 +31,6 @@ public final class FlowDestinationFlowConfig extends io.pulumi.resources.InvokeA
 
     /**
      * Destination connector type
-     * 
      */
     @Import(name="connectorType", required=true)
       private final FlowConnectorType connectorType;
@@ -44,7 +41,6 @@ public final class FlowDestinationFlowConfig extends io.pulumi.resources.InvokeA
 
     /**
      * Destination connector details
-     * 
      */
     @Import(name="destinationConnectorProperties", required=true)
       private final FlowDestinationConnectorProperties destinationConnectorProperties;

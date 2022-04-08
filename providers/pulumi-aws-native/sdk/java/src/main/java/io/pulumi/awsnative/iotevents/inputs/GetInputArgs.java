@@ -14,7 +14,6 @@ public final class GetInputArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the input.
-     * 
      */
     @Import(name="inputName", required=true)
       private final String inputName;

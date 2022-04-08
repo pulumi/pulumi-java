@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Backup::BackupVault
- * 
  */
 @ResourceType(type="aws-native:backup:BackupVault")
 public class BackupVault extends io.pulumi.resources.CustomResource {

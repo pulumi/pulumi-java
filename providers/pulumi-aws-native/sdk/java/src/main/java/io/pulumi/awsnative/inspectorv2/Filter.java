@@ -15,76 +15,65 @@ import javax.annotation.Nullable;
 
 /**
  * Inspector Filter resource schema
- * 
  */
 @ResourceType(type="aws-native:inspectorv2:Filter")
 public class Filter extends io.pulumi.resources.CustomResource {
     /**
      * Findings filter ARN.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Findings filter ARN.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * Findings filter description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Findings filter description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Findings filter action.
-     * 
      */
     @Export(name="filterAction", type=FilterAction.class, parameters={})
     private Output<FilterAction> filterAction;
 
     /**
      * @return Findings filter action.
-     * 
      */
     public Output<FilterAction> getFilterAction() {
         return this.filterAction;
     }
     /**
      * Findings filter criteria.
-     * 
      */
     @Export(name="filterCriteria", type=FilterCriteria.class, parameters={})
     private Output<FilterCriteria> filterCriteria;
 
     /**
      * @return Findings filter criteria.
-     * 
      */
     public Output<FilterCriteria> getFilterCriteria() {
         return this.filterCriteria;
     }
     /**
      * Findings filter name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Findings filter name.
-     * 
      */
     public Output<String> getName() {
         return this.name;

@@ -16,23 +16,19 @@ import javax.annotation.Nullable;
 public final class GetSuiteDefinitionResult {
     /**
      * The Amazon Resource name for the suite definition.
-     * 
      */
     private final @Nullable String suiteDefinitionArn;
     private final @Nullable SuiteDefinitionConfigurationProperties suiteDefinitionConfiguration;
     /**
      * The unique identifier for the suite definition.
-     * 
      */
     private final @Nullable String suiteDefinitionId;
     /**
      * The suite definition version of a test suite.
-     * 
      */
     private final @Nullable String suiteDefinitionVersion;
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     private final @Nullable List<SuiteDefinitionTag> tags;
 
@@ -52,7 +48,6 @@ public final class GetSuiteDefinitionResult {
 
     /**
      * The Amazon Resource name for the suite definition.
-     * 
     */
     public Optional<String> getSuiteDefinitionArn() {
         return Optional.ofNullable(this.suiteDefinitionArn);
@@ -62,21 +57,18 @@ public final class GetSuiteDefinitionResult {
     }
     /**
      * The unique identifier for the suite definition.
-     * 
     */
     public Optional<String> getSuiteDefinitionId() {
         return Optional.ofNullable(this.suiteDefinitionId);
     }
     /**
      * The suite definition version of a test suite.
-     * 
     */
     public Optional<String> getSuiteDefinitionVersion() {
         return Optional.ofNullable(this.suiteDefinitionVersion);
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
     */
     public List<SuiteDefinitionTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

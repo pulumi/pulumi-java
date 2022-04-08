@@ -17,160 +17,137 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for a Redshift-managed VPC endpoint.
- * 
  */
 @ResourceType(type="aws-native:redshift:EndpointAccess")
 public class EndpointAccess extends io.pulumi.resources.CustomResource {
     /**
      * The DNS address of the endpoint.
-     * 
      */
     @Export(name="address", type=String.class, parameters={})
     private Output<String> address;
 
     /**
      * @return The DNS address of the endpoint.
-     * 
      */
     public Output<String> getAddress() {
         return this.address;
     }
     /**
      * A unique identifier for the cluster. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying. All alphabetical characters must be lower case, no hypens at the end, no two consecutive hyphens. Cluster name should be unique for all clusters within an AWS account
-     * 
      */
     @Export(name="clusterIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterIdentifier;
 
     /**
      * @return A unique identifier for the cluster. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying. All alphabetical characters must be lower case, no hypens at the end, no two consecutive hyphens. Cluster name should be unique for all clusters within an AWS account
-     * 
      */
     public Output</* @Nullable */ String> getClusterIdentifier() {
         return this.clusterIdentifier;
     }
     /**
      * The time (UTC) that the endpoint was created.
-     * 
      */
     @Export(name="endpointCreateTime", type=String.class, parameters={})
     private Output<String> endpointCreateTime;
 
     /**
      * @return The time (UTC) that the endpoint was created.
-     * 
      */
     public Output<String> getEndpointCreateTime() {
         return this.endpointCreateTime;
     }
     /**
      * The name of the endpoint.
-     * 
      */
     @Export(name="endpointName", type=String.class, parameters={})
     private Output<String> endpointName;
 
     /**
      * @return The name of the endpoint.
-     * 
      */
     public Output<String> getEndpointName() {
         return this.endpointName;
     }
     /**
      * The status of the endpoint.
-     * 
      */
     @Export(name="endpointStatus", type=String.class, parameters={})
     private Output<String> endpointStatus;
 
     /**
      * @return The status of the endpoint.
-     * 
      */
     public Output<String> getEndpointStatus() {
         return this.endpointStatus;
     }
     /**
      * The port number on which the cluster accepts incoming connections.
-     * 
      */
     @Export(name="port", type=Integer.class, parameters={})
     private Output<Integer> port;
 
     /**
      * @return The port number on which the cluster accepts incoming connections.
-     * 
      */
     public Output<Integer> getPort() {
         return this.port;
     }
     /**
      * The AWS account ID of the owner of the cluster.
-     * 
      */
     @Export(name="resourceOwner", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceOwner;
 
     /**
      * @return The AWS account ID of the owner of the cluster.
-     * 
      */
     public Output</* @Nullable */ String> getResourceOwner() {
         return this.resourceOwner;
     }
     /**
      * The subnet group name where Amazon Redshift chooses to deploy the endpoint.
-     * 
      */
     @Export(name="subnetGroupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> subnetGroupName;
 
     /**
      * @return The subnet group name where Amazon Redshift chooses to deploy the endpoint.
-     * 
      */
     public Output</* @Nullable */ String> getSubnetGroupName() {
         return this.subnetGroupName;
     }
     /**
      * The connection endpoint for connecting to an Amazon Redshift cluster through the proxy.
-     * 
      */
     @Export(name="vpcEndpoint", type=VpcEndpointProperties.class, parameters={})
     private Output<VpcEndpointProperties> vpcEndpoint;
 
     /**
      * @return The connection endpoint for connecting to an Amazon Redshift cluster through the proxy.
-     * 
      */
     public Output<VpcEndpointProperties> getVpcEndpoint() {
         return this.vpcEndpoint;
     }
     /**
      * A list of vpc security group ids to apply to the created endpoint access.
-     * 
      */
     @Export(name="vpcSecurityGroupIds", type=List.class, parameters={String.class})
     private Output<List<String>> vpcSecurityGroupIds;
 
     /**
      * @return A list of vpc security group ids to apply to the created endpoint access.
-     * 
      */
     public Output<List<String>> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
     /**
      * A list of Virtual Private Cloud (VPC) security groups to be associated with the endpoint.
-     * 
      */
     @Export(name="vpcSecurityGroups", type=List.class, parameters={EndpointAccessVpcSecurityGroup.class})
     private Output<List<EndpointAccessVpcSecurityGroup>> vpcSecurityGroups;
 
     /**
      * @return A list of Virtual Private Cloud (VPC) security groups to be associated with the endpoint.
-     * 
      */
     public Output<List<EndpointAccessVpcSecurityGroup>> getVpcSecurityGroups() {
         return this.vpcSecurityGroups;

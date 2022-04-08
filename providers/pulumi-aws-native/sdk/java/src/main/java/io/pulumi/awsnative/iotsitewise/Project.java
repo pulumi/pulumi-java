@@ -15,104 +15,89 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::IoTSiteWise::Project
- * 
  */
 @ResourceType(type="aws-native:iotsitewise:Project")
 public class Project extends io.pulumi.resources.CustomResource {
     /**
      * The IDs of the assets to be associated to the project.
-     * 
      */
     @Export(name="assetIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> assetIds;
 
     /**
      * @return The IDs of the assets to be associated to the project.
-     * 
      */
     public Output</* @Nullable */ List<String>> getAssetIds() {
         return this.assetIds;
     }
     /**
      * The ID of the portal in which to create the project.
-     * 
      */
     @Export(name="portalId", type=String.class, parameters={})
     private Output<String> portalId;
 
     /**
      * @return The ID of the portal in which to create the project.
-     * 
      */
     public Output<String> getPortalId() {
         return this.portalId;
     }
     /**
      * The ARN of the project.
-     * 
      */
     @Export(name="projectArn", type=String.class, parameters={})
     private Output<String> projectArn;
 
     /**
      * @return The ARN of the project.
-     * 
      */
     public Output<String> getProjectArn() {
         return this.projectArn;
     }
     /**
      * A description for the project.
-     * 
      */
     @Export(name="projectDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> projectDescription;
 
     /**
      * @return A description for the project.
-     * 
      */
     public Output</* @Nullable */ String> getProjectDescription() {
         return this.projectDescription;
     }
     /**
      * The ID of the project.
-     * 
      */
     @Export(name="projectId", type=String.class, parameters={})
     private Output<String> projectId;
 
     /**
      * @return The ID of the project.
-     * 
      */
     public Output<String> getProjectId() {
         return this.projectId;
     }
     /**
      * A friendly name for the project.
-     * 
      */
     @Export(name="projectName", type=String.class, parameters={})
     private Output<String> projectName;
 
     /**
      * @return A friendly name for the project.
-     * 
      */
     public Output<String> getProjectName() {
         return this.projectName;
     }
     /**
      * A list of key-value pairs that contain metadata for the project.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ProjectTag.class})
     private Output</* @Nullable */ List<ProjectTag>> tags;
 
     /**
      * @return A list of key-value pairs that contain metadata for the project.
-     * 
      */
     public Output</* @Nullable */ List<ProjectTag>> getTags() {
         return this.tags;

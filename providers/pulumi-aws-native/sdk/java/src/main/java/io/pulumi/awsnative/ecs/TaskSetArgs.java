@@ -22,7 +22,6 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
-     * 
      */
     @Import(name="cluster", required=true)
       private final Output<String> cluster;
@@ -32,8 +31,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * An optional non-unique tag that identifies this task set in external systems. If the task set is associated with a service discovery registry, the tasks in this task set will have the ECS_TASK_SET_EXTERNAL_ID AWS Cloud Map attribute set to the provided value.
-     * 
+     * An optional non-unique tag that identifies this task set in external systems. If the task set is associated with a service discovery registry, the tasks in this task set will have the ECS_TASK_SET_EXTERNAL_ID AWS Cloud Map attribute set to the provided value. 
      */
     @Import(name="externalId")
       private final @Nullable Output<String> externalId;
@@ -43,8 +41,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The launch type that new tasks in the task set will use. For more information, see https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html in the Amazon Elastic Container Service Developer Guide.
-     * 
+     * The launch type that new tasks in the task set will use. For more information, see https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html in the Amazon Elastic Container Service Developer Guide. 
      */
     @Import(name="launchType")
       private final @Nullable Output<TaskSetLaunchType> launchType;
@@ -69,7 +66,6 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The platform version that the tasks in the task set should use. A platform version is specified only for tasks using the Fargate launch type. If one isn't specified, the LATEST platform version is used by default.
-     * 
      */
     @Import(name="platformVersion")
       private final @Nullable Output<String> platformVersion;
@@ -80,7 +76,6 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A floating-point percentage of the desired number of tasks to place and keep running in the task set.
-     * 
      */
     @Import(name="scale")
       private final @Nullable Output<TaskSetScaleArgs> scale;
@@ -91,7 +86,6 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
-     * 
      */
     @Import(name="service", required=true)
       private final Output<String> service;
@@ -102,7 +96,6 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The details of the service discovery registries to assign to this task set. For more information, see https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html.
-     * 
      */
     @Import(name="serviceRegistries")
       private final @Nullable Output<List<TaskSetServiceRegistryArgs>> serviceRegistries;
@@ -113,7 +106,6 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The short name or full Amazon Resource Name (ARN) of the task definition for the tasks in the task set to use.
-     * 
      */
     @Import(name="taskDefinition", required=true)
       private final Output<String> taskDefinition;

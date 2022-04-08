@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of repository to be associated.
-     * 
      */
     @EnumType
     public enum RepositoryAssociationType {

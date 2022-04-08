@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::EC2::NetworkInsightsPath
- * 
  */
 @ResourceType(type="aws-native:ec2:NetworkInsightsPath")
 public class NetworkInsightsPath extends io.pulumi.resources.CustomResource {

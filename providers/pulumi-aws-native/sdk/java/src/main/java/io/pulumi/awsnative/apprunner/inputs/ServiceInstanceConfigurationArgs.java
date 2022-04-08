@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Instance Configuration
- * 
  */
 public final class ServiceInstanceConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ServiceInstanceConfigurationArgs extends io.pulumi.resources.
 
     /**
      * CPU
-     * 
      */
     @Import(name="cpu")
       private final @Nullable Output<String> cpu;
@@ -31,7 +29,6 @@ public final class ServiceInstanceConfigurationArgs extends io.pulumi.resources.
 
     /**
      * Instance Role Arn
-     * 
      */
     @Import(name="instanceRoleArn")
       private final @Nullable Output<String> instanceRoleArn;
@@ -42,7 +39,6 @@ public final class ServiceInstanceConfigurationArgs extends io.pulumi.resources.
 
     /**
      * Memory
-     * 
      */
     @Import(name="memory")
       private final @Nullable Output<String> memory;

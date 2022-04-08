@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies the details of Amazon S3 Storage Lens configuration.
- * 
  */
 public final class StorageLensConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -67,7 +66,6 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * Specifies whether the Amazon S3 Storage Lens configuration is enabled or disabled.
-     * 
      */
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
@@ -78,7 +76,6 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * The ARN for the Amazon S3 Storage Lens configuration.
-     * 
      */
     @Import(name="storageLensArn")
       private final @Nullable Output<String> storageLensArn;

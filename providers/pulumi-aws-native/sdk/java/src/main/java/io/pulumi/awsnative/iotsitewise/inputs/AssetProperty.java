@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The asset property's definition, alias, and notification state.
- * 
  */
 public final class AssetProperty extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AssetProperty extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The property alias that identifies the property.
-     * 
      */
     @Import(name="alias")
       private final @Nullable String alias;
@@ -32,7 +30,6 @@ public final class AssetProperty extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Customer provided ID for property.
-     * 
      */
     @Import(name="logicalId", required=true)
       private final String logicalId;
@@ -43,7 +40,6 @@ public final class AssetProperty extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The MQTT notification state (ENABLED or DISABLED) for this asset property.
-     * 
      */
     @Import(name="notificationState")
       private final @Nullable AssetPropertyNotificationState notificationState;

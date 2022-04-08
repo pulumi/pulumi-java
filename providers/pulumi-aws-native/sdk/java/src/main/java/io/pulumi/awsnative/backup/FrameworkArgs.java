@@ -19,7 +19,6 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Contains detailed information about all of the controls of a framework. Each framework must contain at least one control.
-     * 
      */
     @Import(name="frameworkControls", required=true)
       private final Output<List<FrameworkControlArgs>> frameworkControls;
@@ -30,7 +29,6 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional description of the framework with a maximum 1,024 characters.
-     * 
      */
     @Import(name="frameworkDescription")
       private final @Nullable Output<String> frameworkDescription;
@@ -41,7 +39,6 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique name of a framework. This name is between 1 and 256 characters, starting with a letter, and consisting of letters (a-z, A-Z), numbers (0-9), and underscores (_).
-     * 
      */
     @Import(name="frameworkName")
       private final @Nullable Output<String> frameworkName;
@@ -52,7 +49,6 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
-     * 
      */
     @Import(name="frameworkTags")
       private final @Nullable Output<List<FrameworkTagArgs>> frameworkTags;

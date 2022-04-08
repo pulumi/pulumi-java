@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of AWS::Wisdom::Assistant Resource Type
- * 
  */
 @ResourceType(type="aws-native:wisdom:Assistant")
 public class Assistant extends io.pulumi.resources.CustomResource {

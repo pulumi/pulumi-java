@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Configuration details about the monitoring schedule.
- * 
  */
 public final class MonitoringScheduleScheduleConfig extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MonitoringScheduleScheduleConfig extends io.pulumi.resources.
 
     /**
      * A cron expression that describes details about the monitoring schedule.
-     * 
      */
     @Import(name="scheduleExpression", required=true)
       private final String scheduleExpression;

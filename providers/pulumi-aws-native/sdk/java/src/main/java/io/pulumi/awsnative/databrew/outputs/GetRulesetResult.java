@@ -16,12 +16,10 @@ import javax.annotation.Nullable;
 public final class GetRulesetResult {
     /**
      * Description of the Ruleset
-     * 
      */
     private final @Nullable String description;
     /**
      * List of the data quality rules in the ruleset
-     * 
      */
     private final @Nullable List<RulesetRule> rules;
     private final @Nullable List<RulesetTag> tags;
@@ -38,14 +36,12 @@ public final class GetRulesetResult {
 
     /**
      * Description of the Ruleset
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * List of the data quality rules in the ruleset
-     * 
     */
     public List<RulesetRule> getRules() {
         return this.rules == null ? List.of() : this.rules;

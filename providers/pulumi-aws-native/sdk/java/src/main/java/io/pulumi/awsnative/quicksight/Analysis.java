@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of the AWS::QuickSight::Analysis Resource Type.
- * 
  */
 @ResourceType(type="aws-native:quicksight:Analysis")
 public class Analysis extends io.pulumi.resources.CustomResource {
@@ -33,14 +32,12 @@ public class Analysis extends io.pulumi.resources.CustomResource {
     }
     /**
      * <p>The Amazon Resource Name (ARN) of the analysis.</p>
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return <p>The Amazon Resource Name (ARN) of the analysis.</p>
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
@@ -53,70 +50,60 @@ public class Analysis extends io.pulumi.resources.CustomResource {
     }
     /**
      * <p>The time that the analysis was created.</p>
-     * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
      * @return <p>The time that the analysis was created.</p>
-     * 
      */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
     /**
      * <p>The ARNs of the datasets of the analysis.</p>
-     * 
      */
     @Export(name="dataSetArns", type=List.class, parameters={String.class})
     private Output<List<String>> dataSetArns;
 
     /**
      * @return <p>The ARNs of the datasets of the analysis.</p>
-     * 
      */
     public Output<List<String>> getDataSetArns() {
         return this.dataSetArns;
     }
     /**
      * <p>Errors associated with the analysis.</p>
-     * 
      */
     @Export(name="errors", type=List.class, parameters={AnalysisError.class})
     private Output</* @Nullable */ List<AnalysisError>> errors;
 
     /**
      * @return <p>Errors associated with the analysis.</p>
-     * 
      */
     public Output</* @Nullable */ List<AnalysisError>> getErrors() {
         return this.errors;
     }
     /**
      * <p>The time that the analysis was last updated.</p>
-     * 
      */
     @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
      * @return <p>The time that the analysis was last updated.</p>
-     * 
      */
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
      * <p>The descriptive name of the analysis.</p>
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return <p>The descriptive name of the analysis.</p>
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
@@ -134,7 +121,6 @@ public class Analysis extends io.pulumi.resources.CustomResource {
      *             principal listed by Amazon Resource Name (ARN). </p>
      * 
      *         <p>To specify no permissions, omit <code>Permissions</code>.</p>
-     * 
      */
     @Export(name="permissions", type=List.class, parameters={AnalysisResourcePermission.class})
     private Output</* @Nullable */ List<AnalysisResourcePermission>> permissions;
@@ -146,21 +132,18 @@ public class Analysis extends io.pulumi.resources.CustomResource {
      *             principal listed by Amazon Resource Name (ARN). </p>
      * 
      *         <p>To specify no permissions, omit <code>Permissions</code>.</p>
-     * 
      */
     public Output</* @Nullable */ List<AnalysisResourcePermission>> getPermissions() {
         return this.permissions;
     }
     /**
      * <p>A list of the associated sheets with the unique identifier and name of each sheet.</p>
-     * 
      */
     @Export(name="sheets", type=List.class, parameters={AnalysisSheet.class})
     private Output<List<AnalysisSheet>> sheets;
 
     /**
      * @return <p>A list of the associated sheets with the unique identifier and name of each sheet.</p>
-     * 
      */
     public Output<List<AnalysisSheet>> getSheets() {
         return this.sheets;
@@ -180,7 +163,6 @@ public class Analysis extends io.pulumi.resources.CustomResource {
     /**
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
      *             analysis.</p>
-     * 
      */
     @Export(name="tags", type=List.class, parameters={AnalysisTag.class})
     private Output</* @Nullable */ List<AnalysisTag>> tags;
@@ -188,21 +170,18 @@ public class Analysis extends io.pulumi.resources.CustomResource {
     /**
      * @return <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
      *             analysis.</p>
-     * 
      */
     public Output</* @Nullable */ List<AnalysisTag>> getTags() {
         return this.tags;
     }
     /**
      * <p>The ARN of the theme of the analysis.</p>
-     * 
      */
     @Export(name="themeArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> themeArn;
 
     /**
      * @return <p>The ARN of the theme of the analysis.</p>
-     * 
      */
     public Output</* @Nullable */ String> getThemeArn() {
         return this.themeArn;

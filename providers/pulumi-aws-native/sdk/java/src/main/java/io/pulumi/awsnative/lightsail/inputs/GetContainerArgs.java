@@ -14,7 +14,6 @@ public final class GetContainerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name for the container service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;

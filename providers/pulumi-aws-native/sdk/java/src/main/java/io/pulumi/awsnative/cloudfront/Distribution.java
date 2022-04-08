@@ -17,7 +17,391 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::CloudFront::Distribution
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cloudfrontdistribution = new AwsNative.CloudFront.Distribution("cloudfrontdistribution", new AwsNative.CloudFront.DistributionArgs
+ *         {
+ *             DistributionConfig = new AwsNative.CloudFront.Inputs.DistributionConfigArgs
+ *             {
+ *                 CacheBehaviors = 
+ *                 {
+ *                     new AwsNative.CloudFront.Inputs.DistributionCacheBehaviorArgs
+ *                     {
+ *                         LambdaFunctionAssociations = 
+ *                         {
+ *                             new AwsNative.CloudFront.Inputs.DistributionLambdaFunctionAssociationArgs
+ *                             {
+ *                                 EventType = "string-value",
+ *                                 LambdaFunctionARN = "string-value",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 DefaultCacheBehavior = new AwsNative.CloudFront.Inputs.DistributionDefaultCacheBehaviorArgs
+ *                 {
+ *                     LambdaFunctionAssociations = 
+ *                     {
+ *                         new AwsNative.CloudFront.Inputs.DistributionLambdaFunctionAssociationArgs
+ *                         {
+ *                             EventType = "string-value",
+ *                             LambdaFunctionARN = "string-value",
+ *                         },
+ *                     },
+ *                 },
+ *                 Ipv6Enabled = "boolean-value",
+ *                 Origins = 
+ *                 {
+ *                     new AwsNative.CloudFront.Inputs.DistributionOriginArgs
+ *                     {
+ *                         CustomOriginConfig = new AwsNative.CloudFront.Inputs.DistributionCustomOriginConfigArgs
+ *                         {
+ *                             OriginKeepaliveTimeout = "integer-value",
+ *                             OriginReadTimeout = "integer-value",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.CloudFront.Inputs.DistributionTagArgs
+ *                 {
+ *                     Key = "string-value",
+ *                     Value = "string-value",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cloudfront"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudfront.NewDistribution(ctx, "cloudfrontdistribution", &cloudfront.DistributionArgs{
+ * 			DistributionConfig: &cloudfront.DistributionConfigArgs{
+ * 				CacheBehaviors: cloudfront.DistributionCacheBehaviorArray{
+ * 					&cloudfront.DistributionCacheBehaviorArgs{
+ * 						LambdaFunctionAssociations: cloudfront.DistributionLambdaFunctionAssociationArray{
+ * 							&cloudfront.DistributionLambdaFunctionAssociationArgs{
+ * 								EventType:         pulumi.String("string-value"),
+ * 								LambdaFunctionARN: pulumi.String("string-value"),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				DefaultCacheBehavior: &cloudfront.DistributionDefaultCacheBehaviorArgs{
+ * 					LambdaFunctionAssociations: cloudfront.DistributionLambdaFunctionAssociationArray{
+ * 						&cloudfront.DistributionLambdaFunctionAssociationArgs{
+ * 							EventType:         pulumi.String("string-value"),
+ * 							LambdaFunctionARN: pulumi.String("string-value"),
+ * 						},
+ * 					},
+ * 				},
+ * 				Ipv6Enabled: "boolean-value",
+ * 				Origins: cloudfront.DistributionOriginArray{
+ * 					&cloudfront.DistributionOriginArgs{
+ * 						CustomOriginConfig: &cloudfront.DistributionCustomOriginConfigArgs{
+ * 							OriginKeepaliveTimeout: pulumi.Int("integer-value"),
+ * 							OriginReadTimeout:      pulumi.Int("integer-value"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Tags: []cloudfront.DistributionTagArgs{
+ * 				&cloudfront.DistributionTagArgs{
+ * 					Key:   pulumi.String("string-value"),
+ * 					Value: pulumi.String("string-value"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const cloudfrontdistribution = new aws_native.cloudfront.Distribution("cloudfrontdistribution", {
+ *     distributionConfig: {
+ *         cacheBehaviors: [{
+ *             lambdaFunctionAssociations: [{
+ *                 eventType: "string-value",
+ *                 lambdaFunctionARN: "string-value",
+ *             }],
+ *         }],
+ *         defaultCacheBehavior: {
+ *             lambdaFunctionAssociations: [{
+ *                 eventType: "string-value",
+ *                 lambdaFunctionARN: "string-value",
+ *             }],
+ *         },
+ *         ipv6Enabled: "boolean-value",
+ *         origins: [{
+ *             customOriginConfig: {
+ *                 originKeepaliveTimeout: "integer-value",
+ *                 originReadTimeout: "integer-value",
+ *             },
+ *         }],
+ *     },
+ *     tags: [{
+ *         key: "string-value",
+ *         value: "string-value",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * cloudfrontdistribution = aws_native.cloudfront.Distribution("cloudfrontdistribution",
+ *     distribution_config=aws_native.cloudfront.DistributionConfigArgs(
+ *         cache_behaviors=[aws_native.cloudfront.DistributionCacheBehaviorArgs(
+ *             lambda_function_associations=[aws_native.cloudfront.DistributionLambdaFunctionAssociationArgs(
+ *                 event_type="string-value",
+ *                 lambda_function_arn="string-value",
+ *             )],
+ *         )],
+ *         default_cache_behavior=aws_native.cloudfront.DistributionDefaultCacheBehaviorArgs(
+ *             lambda_function_associations=[aws_native.cloudfront.DistributionLambdaFunctionAssociationArgs(
+ *                 event_type="string-value",
+ *                 lambda_function_arn="string-value",
+ *             )],
+ *         ),
+ *         ipv6_enabled="boolean-value",
+ *         origins=[aws_native.cloudfront.DistributionOriginArgs(
+ *             custom_origin_config=aws_native.cloudfront.DistributionCustomOriginConfigArgs(
+ *                 origin_keepalive_timeout="integer-value",
+ *                 origin_read_timeout="integer-value",
+ *             ),
+ *         )],
+ *     ),
+ *     tags=[aws_native.cloudfront.DistributionTagArgs(
+ *         key="string-value",
+ *         value="string-value",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cloudfrontdistribution = new AwsNative.CloudFront.Distribution("cloudfrontdistribution", new AwsNative.CloudFront.DistributionArgs
+ *         {
+ *             DistributionConfig = new AwsNative.CloudFront.Inputs.DistributionConfigArgs
+ *             {
+ *                 CacheBehaviors = 
+ *                 {
+ *                     new AwsNative.CloudFront.Inputs.DistributionCacheBehaviorArgs
+ *                     {
+ *                         LambdaFunctionAssociations = 
+ *                         {
+ *                             new AwsNative.CloudFront.Inputs.DistributionLambdaFunctionAssociationArgs
+ *                             {
+ *                                 EventType = "string-value",
+ *                                 LambdaFunctionARN = "string-value",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 DefaultCacheBehavior = new AwsNative.CloudFront.Inputs.DistributionDefaultCacheBehaviorArgs
+ *                 {
+ *                     LambdaFunctionAssociations = 
+ *                     {
+ *                         new AwsNative.CloudFront.Inputs.DistributionLambdaFunctionAssociationArgs
+ *                         {
+ *                             EventType = "string-value",
+ *                             LambdaFunctionARN = "string-value",
+ *                         },
+ *                     },
+ *                 },
+ *                 Ipv6Enabled = "boolean-value",
+ *                 Origins = 
+ *                 {
+ *                     new AwsNative.CloudFront.Inputs.DistributionOriginArgs
+ *                     {
+ *                         CustomOriginConfig = new AwsNative.CloudFront.Inputs.DistributionCustomOriginConfigArgs
+ *                         {
+ *                             OriginKeepaliveTimeout = "integer-value",
+ *                             OriginReadTimeout = "integer-value",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.CloudFront.Inputs.DistributionTagArgs
+ *                 {
+ *                     Key = "string-value",
+ *                     Value = "string-value",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cloudfront"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudfront.NewDistribution(ctx, "cloudfrontdistribution", &cloudfront.DistributionArgs{
+ * 			DistributionConfig: &cloudfront.DistributionConfigArgs{
+ * 				CacheBehaviors: cloudfront.DistributionCacheBehaviorArray{
+ * 					&cloudfront.DistributionCacheBehaviorArgs{
+ * 						LambdaFunctionAssociations: cloudfront.DistributionLambdaFunctionAssociationArray{
+ * 							&cloudfront.DistributionLambdaFunctionAssociationArgs{
+ * 								EventType:         pulumi.String("string-value"),
+ * 								LambdaFunctionARN: pulumi.String("string-value"),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				DefaultCacheBehavior: &cloudfront.DistributionDefaultCacheBehaviorArgs{
+ * 					LambdaFunctionAssociations: cloudfront.DistributionLambdaFunctionAssociationArray{
+ * 						&cloudfront.DistributionLambdaFunctionAssociationArgs{
+ * 							EventType:         pulumi.String("string-value"),
+ * 							LambdaFunctionARN: pulumi.String("string-value"),
+ * 						},
+ * 					},
+ * 				},
+ * 				Ipv6Enabled: "boolean-value",
+ * 				Origins: cloudfront.DistributionOriginArray{
+ * 					&cloudfront.DistributionOriginArgs{
+ * 						CustomOriginConfig: &cloudfront.DistributionCustomOriginConfigArgs{
+ * 							OriginKeepaliveTimeout: pulumi.Int("integer-value"),
+ * 							OriginReadTimeout:      pulumi.Int("integer-value"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Tags: []cloudfront.DistributionTagArgs{
+ * 				&cloudfront.DistributionTagArgs{
+ * 					Key:   pulumi.String("string-value"),
+ * 					Value: pulumi.String("string-value"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const cloudfrontdistribution = new aws_native.cloudfront.Distribution("cloudfrontdistribution", {
+ *     distributionConfig: {
+ *         cacheBehaviors: [{
+ *             lambdaFunctionAssociations: [{
+ *                 eventType: "string-value",
+ *                 lambdaFunctionARN: "string-value",
+ *             }],
+ *         }],
+ *         defaultCacheBehavior: {
+ *             lambdaFunctionAssociations: [{
+ *                 eventType: "string-value",
+ *                 lambdaFunctionARN: "string-value",
+ *             }],
+ *         },
+ *         ipv6Enabled: "boolean-value",
+ *         origins: [{
+ *             customOriginConfig: {
+ *                 originKeepaliveTimeout: "integer-value",
+ *                 originReadTimeout: "integer-value",
+ *             },
+ *         }],
+ *     },
+ *     tags: [{
+ *         key: "string-value",
+ *         value: "string-value",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * cloudfrontdistribution = aws_native.cloudfront.Distribution("cloudfrontdistribution",
+ *     distribution_config=aws_native.cloudfront.DistributionConfigArgs(
+ *         cache_behaviors=[aws_native.cloudfront.DistributionCacheBehaviorArgs(
+ *             lambda_function_associations=[aws_native.cloudfront.DistributionLambdaFunctionAssociationArgs(
+ *                 event_type="string-value",
+ *                 lambda_function_arn="string-value",
+ *             )],
+ *         )],
+ *         default_cache_behavior=aws_native.cloudfront.DistributionDefaultCacheBehaviorArgs(
+ *             lambda_function_associations=[aws_native.cloudfront.DistributionLambdaFunctionAssociationArgs(
+ *                 event_type="string-value",
+ *                 lambda_function_arn="string-value",
+ *             )],
+ *         ),
+ *         ipv6_enabled="boolean-value",
+ *         origins=[aws_native.cloudfront.DistributionOriginArgs(
+ *             custom_origin_config=aws_native.cloudfront.DistributionCustomOriginConfigArgs(
+ *                 origin_keepalive_timeout="integer-value",
+ *                 origin_read_timeout="integer-value",
+ *             ),
+ *         )],
+ *     ),
+ *     tags=[aws_native.cloudfront.DistributionTagArgs(
+ *         key="string-value",
+ *         value="string-value",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:cloudfront:Distribution")

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ChannelLogConfiguration {
     /**
      * Sets a custom AWS CloudWatch log group name for access logs. If a log group name isn't specified, the defaults are used: /aws/MediaPackage/EgressAccessLogs for egress access logs and /aws/MediaPackage/IngressAccessLogs for ingress access logs.
-     * 
      */
     private final @Nullable String logGroupName;
 
@@ -24,7 +23,6 @@ public final class ChannelLogConfiguration {
 
     /**
      * Sets a custom AWS CloudWatch log group name for access logs. If a log group name isn't specified, the defaults are used: /aws/MediaPackage/EgressAccessLogs for egress access logs and /aws/MediaPackage/IngressAccessLogs for ingress access logs.
-     * 
     */
     public Optional<String> getLogGroupName() {
         return Optional.ofNullable(this.logGroupName);

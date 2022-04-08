@@ -17,7 +17,143 @@ import javax.annotation.Nullable;
 /**
  * AWS Ground Station DataflowEndpointGroup schema for CloudFormation
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myDataflowEndpointGroup = new AwsNative.GroundStation.DataflowEndpointGroup("myDataflowEndpointGroup", new AwsNative.GroundStation.DataflowEndpointGroupArgs
+ *         {
+ *             EndpointDetails = 
+ *             {
+ *                 new AwsNative.GroundStation.Inputs.DataflowEndpointGroupEndpointDetailsArgs
+ *                 {
+ *                     SecurityDetails = new AwsNative.GroundStation.Inputs.DataflowEndpointGroupSecurityDetailsArgs
+ *                     {
+ *                         SubnetIds = 
+ *                         {
+ *                             "subnet-6782e71e",
+ *                         },
+ *                         SecurityGroupIds = 
+ *                         {
+ *                             "sg-6979fe18",
+ *                         },
+ *                         RoleArn = "arn:aws:iam::012345678910:role/groundstation-service-role-AWSServiceRoleForAmazonGroundStation-EXAMPLEBQ4PI",
+ *                     },
+ *                     Endpoint = new AwsNative.GroundStation.Inputs.DataflowEndpointGroupDataflowEndpointArgs
+ *                     {
+ *                         Name = "myEndpoint",
+ *                         Address = new AwsNative.GroundStation.Inputs.DataflowEndpointGroupSocketAddressArgs
+ *                         {
+ *                             Name = "172.10.0.2",
+ *                             Port = 44720,
+ *                         },
+ *                         Mtu = 1500,
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/groundstation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := groundstation.NewDataflowEndpointGroup(ctx, "myDataflowEndpointGroup", &groundstation.DataflowEndpointGroupArgs{
+ * 			EndpointDetails: groundstation.DataflowEndpointGroupEndpointDetailsArray{
+ * 				&groundstation.DataflowEndpointGroupEndpointDetailsArgs{
+ * 					SecurityDetails: &groundstation.DataflowEndpointGroupSecurityDetailsArgs{
+ * 						SubnetIds: pulumi.StringArray{
+ * 							pulumi.String("subnet-6782e71e"),
+ * 						},
+ * 						SecurityGroupIds: pulumi.StringArray{
+ * 							pulumi.String("sg-6979fe18"),
+ * 						},
+ * 						RoleArn: pulumi.String("arn:aws:iam::012345678910:role/groundstation-service-role-AWSServiceRoleForAmazonGroundStation-EXAMPLEBQ4PI"),
+ * 					},
+ * 					Endpoint: &groundstation.DataflowEndpointGroupDataflowEndpointArgs{
+ * 						Name: pulumi.String("myEndpoint"),
+ * 						Address: &groundstation.DataflowEndpointGroupSocketAddressArgs{
+ * 							Name: pulumi.String("172.10.0.2"),
+ * 							Port: pulumi.Int(44720),
+ * 						},
+ * 						Mtu: pulumi.Int(1500),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myDataflowEndpointGroup = new aws_native.groundstation.DataflowEndpointGroup("myDataflowEndpointGroup", {endpointDetails: [{
+ *     securityDetails: {
+ *         subnetIds: ["subnet-6782e71e"],
+ *         securityGroupIds: ["sg-6979fe18"],
+ *         roleArn: "arn:aws:iam::012345678910:role/groundstation-service-role-AWSServiceRoleForAmazonGroundStation-EXAMPLEBQ4PI",
+ *     },
+ *     endpoint: {
+ *         name: "myEndpoint",
+ *         address: {
+ *             name: "172.10.0.2",
+ *             port: 44720,
+ *         },
+ *         mtu: 1500,
+ *     },
+ * }]});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_dataflow_endpoint_group = aws_native.groundstation.DataflowEndpointGroup("myDataflowEndpointGroup", endpoint_details=[aws_native.groundstation.DataflowEndpointGroupEndpointDetailsArgs(
+ *     security_details=aws_native.groundstation.DataflowEndpointGroupSecurityDetailsArgs(
+ *         subnet_ids=["subnet-6782e71e"],
+ *         security_group_ids=["sg-6979fe18"],
+ *         role_arn="arn:aws:iam::012345678910:role/groundstation-service-role-AWSServiceRoleForAmazonGroundStation-EXAMPLEBQ4PI",
+ *     ),
+ *     endpoint=aws_native.groundstation.DataflowEndpointGroupDataflowEndpointArgs(
+ *         name="myEndpoint",
+ *         address=aws_native.groundstation.DataflowEndpointGroupSocketAddressArgs(
+ *             name="172.10.0.2",
+ *             port=44720,
+ *         ),
+ *         mtu=1500,
+ *     ),
+ * )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:groundstation:DataflowEndpointGroup")

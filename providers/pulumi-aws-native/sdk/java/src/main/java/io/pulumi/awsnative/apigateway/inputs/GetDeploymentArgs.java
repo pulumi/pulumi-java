@@ -14,7 +14,6 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Primary Id for this resource
-     * 
      */
     @Import(name="deploymentId", required=true)
       private final String deploymentId;
@@ -24,8 +23,7 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The ID of the RestApi resource to deploy.
-     * 
+     * The ID of the RestApi resource to deploy. 
      */
     @Import(name="restApiId", required=true)
       private final String restApiId;

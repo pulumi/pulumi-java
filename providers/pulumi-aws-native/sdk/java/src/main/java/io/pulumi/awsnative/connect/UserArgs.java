@@ -20,7 +20,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identifier of the user account in the directory used for identity management.
-     * 
      */
     @Import(name="directoryUserId")
       private final @Nullable Output<String> directoryUserId;
@@ -31,7 +30,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identifier of the hierarchy group for the user.
-     * 
      */
     @Import(name="hierarchyGroupArn")
       private final @Nullable Output<String> hierarchyGroupArn;
@@ -42,7 +40,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The information about the identity of the user.
-     * 
      */
     @Import(name="identityInfo")
       private final @Nullable Output<UserIdentityInfoArgs> identityInfo;
@@ -53,7 +50,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identifier of the Amazon Connect instance.
-     * 
      */
     @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
@@ -64,7 +60,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The password for the user account. A password is required if you are using Amazon Connect for identity management. Otherwise, it is an error to include a password.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -75,7 +70,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The phone settings for the user.
-     * 
      */
     @Import(name="phoneConfig", required=true)
       private final Output<UserPhoneConfigArgs> phoneConfig;
@@ -86,7 +80,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identifier of the routing profile for the user.
-     * 
      */
     @Import(name="routingProfileArn", required=true)
       private final Output<String> routingProfileArn;
@@ -97,7 +90,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * One or more security profile arns for the user
-     * 
      */
     @Import(name="securityProfileArns", required=true)
       private final Output<List<String>> securityProfileArns;
@@ -108,7 +100,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * One or more tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<UserTagArgs>> tags;
@@ -119,7 +110,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user name for the account.
-     * 
      */
     @Import(name="username", required=true)
       private final Output<String> username;

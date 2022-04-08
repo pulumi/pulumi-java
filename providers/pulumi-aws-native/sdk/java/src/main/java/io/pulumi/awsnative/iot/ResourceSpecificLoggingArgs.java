@@ -17,7 +17,6 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
 
     /**
      * The log level for a specific target. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
-     * 
      */
     @Import(name="logLevel", required=true)
       private final Output<ResourceSpecificLoggingLogLevel> logLevel;
@@ -28,7 +27,6 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
 
     /**
      * The target name.
-     * 
      */
     @Import(name="targetName", required=true)
       private final Output<String> targetName;
@@ -39,7 +37,6 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
 
     /**
      * The target type. Value must be THING_GROUP.
-     * 
      */
     @Import(name="targetType", required=true)
       private final Output<ResourceSpecificLoggingTargetType> targetType;

@@ -14,7 +14,6 @@ public final class GetStageArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ID of the RestApi resource that you're deploying with this stage.
-     * 
      */
     @Import(name="restApiId", required=true)
       private final String restApiId;
@@ -25,7 +24,6 @@ public final class GetStageArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the stage, which API Gateway uses as the first path segment in the invoked Uniform Resource Identifier (URI).
-     * 
      */
     @Import(name="stageName", required=true)
       private final String stageName;

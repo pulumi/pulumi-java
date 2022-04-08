@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Use CLOUDFRONT for CloudFront IPSet, use REGIONAL for Application Load Balancer and API Gateway.
-     * 
      */
     @EnumType
     public enum IPSetScope {

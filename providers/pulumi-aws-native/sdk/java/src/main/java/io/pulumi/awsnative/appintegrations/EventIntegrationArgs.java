@@ -19,7 +19,6 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The event integration description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -30,7 +29,6 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The Amazon Eventbridge bus for the event integration.
-     * 
      */
     @Import(name="eventBridgeBus", required=true)
       private final Output<String> eventBridgeBus;
@@ -41,7 +39,6 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The EventFilter (source) associated with the event integration.
-     * 
      */
     @Import(name="eventFilter", required=true)
       private final Output<EventIntegrationEventFilterArgs> eventFilter;
@@ -52,7 +49,6 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the event integration.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -63,7 +59,6 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The tags (keys and values) associated with the event integration.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<EventIntegrationTagArgs>> tags;

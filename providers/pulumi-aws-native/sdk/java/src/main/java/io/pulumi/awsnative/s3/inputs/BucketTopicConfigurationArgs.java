@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The topic to which notifications are sent and the events for which notifications are generated.
- * 
  */
 public final class BucketTopicConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class BucketTopicConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * The Amazon S3 bucket event about which to send notifications.
-     * 
      */
     @Import(name="event", required=true)
       private final Output<String> event;
@@ -32,7 +30,6 @@ public final class BucketTopicConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * The filtering rules that determine for which objects to send notifications.
-     * 
      */
     @Import(name="filter")
       private final @Nullable Output<BucketNotificationFilterArgs> filter;
@@ -43,7 +40,6 @@ public final class BucketTopicConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * The Amazon Resource Name (ARN) of the Amazon SNS topic to which Amazon S3 publishes a message when it detects events of the specified type.
-     * 
      */
     @Import(name="topic", required=true)
       private final Output<String> topic;

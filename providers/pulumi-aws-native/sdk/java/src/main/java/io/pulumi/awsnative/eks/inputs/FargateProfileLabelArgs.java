@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A key-value pair to associate with a pod.
- * 
  */
 public final class FargateProfileLabelArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class FargateProfileLabelArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The key name of the label.
-     * 
      */
     @Import(name="key", required=true)
       private final Output<String> key;
@@ -29,8 +27,7 @@ public final class FargateProfileLabelArgs extends io.pulumi.resources.ResourceA
     }
 
     /**
-     * The value for the label.
-     * 
+     * The value for the label. 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

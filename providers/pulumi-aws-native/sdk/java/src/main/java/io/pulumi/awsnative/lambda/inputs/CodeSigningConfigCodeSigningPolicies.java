@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Policies to control how to act if a signature is invalid
- * 
  */
 public final class CodeSigningConfigCodeSigningPolicies extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CodeSigningConfigCodeSigningPolicies extends io.pulumi.resour
 
     /**
      * Indicates how Lambda operations involve updating the code artifact will operate. Default to Warn if not provided
-     * 
      */
     @Import(name="untrustedArtifactOnDeployment", required=true)
       private final CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment untrustedArtifactOnDeployment;

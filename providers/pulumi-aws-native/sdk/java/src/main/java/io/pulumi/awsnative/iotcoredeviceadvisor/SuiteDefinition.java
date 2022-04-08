@@ -17,21 +17,271 @@ import javax.annotation.Nullable;
 /**
  * An example resource schema demonstrating some basic constructs and validation rules.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testSuiteDefinition = new AwsNative.IoTCoreDeviceAdvisor.SuiteDefinition("testSuiteDefinition", new AwsNative.IoTCoreDeviceAdvisor.SuiteDefinitionArgs
+ *         {
+ *             SuiteDefinitionConfiguration = new AwsNative.IoTCoreDeviceAdvisor.Inputs.SuiteDefinitionConfigurationPropertiesArgs
+ *             {
+ *                 SuiteDefinitionName = "SuiteDefinitionName",
+ *                 DevicePermissionRoleArn = "arn:aws:iam::123456789012:role/RoleName",
+ *                 Devices = 
+ *                 {
+ *                     new AwsNative.IoTCoreDeviceAdvisor.Inputs.SuiteDefinitionDeviceUnderTestArgs
+ *                     {
+ *                         ThingArn = "arn:aws:iot:us-east-1:123456789012:thing/ThingName",
+ *                     },
+ *                 },
+ *                 RootGroup = @"{
+ * ""configuration"": {},
+ * ""tests"": [{
+ * ""name"": ""TestGroup"",
+ * ""configuration"": {
+ * ""EXECUTION_TIMEOUT"": ""30""
+ * },
+ * ""tests"": [{
+ * ""name"": ""MQTTPublishTest"",
+ * ""configuration"": {
+ * ""TOPIC_FOR_PUBLISH_VALIDATION"": ""target""
+ * },
+ * ""test"": {
+ * ""id"": ""MQTT_Publish"",
+ * ""version"": ""0.0.0""
+ * }
+ * }]
+ * }]
+ * }",
+ *                 IntendedForQualification = false,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iotcoredeviceadvisor"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iotcoredeviceadvisor.NewSuiteDefinition(ctx, "testSuiteDefinition", &iotcoredeviceadvisor.SuiteDefinitionArgs{
+ * 			SuiteDefinitionConfiguration: &iotcoredeviceadvisor.SuiteDefinitionConfigurationPropertiesArgs{
+ * 				SuiteDefinitionName:     pulumi.String("SuiteDefinitionName"),
+ * 				DevicePermissionRoleArn: pulumi.String("arn:aws:iam::123456789012:role/RoleName"),
+ * 				Devices: iotcoredeviceadvisor.SuiteDefinitionDeviceUnderTestArray{
+ * 					&iotcoredeviceadvisor.SuiteDefinitionDeviceUnderTestArgs{
+ * 						ThingArn: pulumi.String("arn:aws:iot:us-east-1:123456789012:thing/ThingName"),
+ * 					},
+ * 				},
+ * 				RootGroup:                pulumi.String("{\n\"configuration\": {},\n\"tests\": [{\n\"name\": \"TestGroup\",\n\"configuration\": {\n\"EXECUTION_TIMEOUT\": \"30\"\n},\n\"tests\": [{\n\"name\": \"MQTTPublishTest\",\n\"configuration\": {\n\"TOPIC_FOR_PUBLISH_VALIDATION\": \"target\"\n},\n\"test\": {\n\"id\": \"MQTT_Publish\",\n\"version\": \"0.0.0\"\n}\n}]\n}]\n}"),
+ * 				IntendedForQualification: pulumi.Bool(false),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const testSuiteDefinition = new aws_native.iotcoredeviceadvisor.SuiteDefinition("testSuiteDefinition", {suiteDefinitionConfiguration: {
+ *     suiteDefinitionName: "SuiteDefinitionName",
+ *     devicePermissionRoleArn: "arn:aws:iam::123456789012:role/RoleName",
+ *     devices: [{
+ *         thingArn: "arn:aws:iot:us-east-1:123456789012:thing/ThingName",
+ *     }],
+ *     rootGroup: `{
+ * "configuration": {},
+ * "tests": [{
+ * "name": "TestGroup",
+ * "configuration": {
+ * "EXECUTION_TIMEOUT": "30"
+ * },
+ * "tests": [{
+ * "name": "MQTTPublishTest",
+ * "configuration": {
+ * "TOPIC_FOR_PUBLISH_VALIDATION": "target"
+ * },
+ * "test": {
+ * "id": "MQTT_Publish",
+ * "version": "0.0.0"
+ * }
+ * }]
+ * }]
+ * }`,
+ *     intendedForQualification: false,
+ * }});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * test_suite_definition = aws_native.iotcoredeviceadvisor.SuiteDefinition("testSuiteDefinition", suite_definition_configuration=aws_native.iotcoredeviceadvisor.SuiteDefinitionConfigurationPropertiesArgs(
+ *     suite_definition_name="SuiteDefinitionName",
+ *     device_permission_role_arn="arn:aws:iam::123456789012:role/RoleName",
+ *     devices=[aws_native.iotcoredeviceadvisor.SuiteDefinitionDeviceUnderTestArgs(
+ *         thing_arn="arn:aws:iot:us-east-1:123456789012:thing/ThingName",
+ *     )],
+ *     root_group="""{
+ * "configuration": {},
+ * "tests": [{
+ * "name": "TestGroup",
+ * "configuration": {
+ * "EXECUTION_TIMEOUT": "30"
+ * },
+ * "tests": [{
+ * "name": "MQTTPublishTest",
+ * "configuration": {
+ * "TOPIC_FOR_PUBLISH_VALIDATION": "target"
+ * },
+ * "test": {
+ * "id": "MQTT_Publish",
+ * "version": "0.0.0"
+ * }
+ * }]
+ * }]
+ * }""",
+ *     intended_for_qualification=False,
+ * ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testSuiteDefinition = new AwsNative.IoTCoreDeviceAdvisor.SuiteDefinition("testSuiteDefinition", new AwsNative.IoTCoreDeviceAdvisor.SuiteDefinitionArgs
+ *         {
+ *             SuiteDefinitionConfiguration = new AwsNative.IoTCoreDeviceAdvisor.Inputs.SuiteDefinitionConfigurationPropertiesArgs
+ *             {
+ *                 SuiteDefinitionName = "SuiteDefinitionName",
+ *                 DevicePermissionRoleArn = "arn:aws:iam::123456789012:role/RoleName",
+ *                 Devices = 
+ *                 {
+ *                     new AwsNative.IoTCoreDeviceAdvisor.Inputs.SuiteDefinitionDeviceUnderTestArgs
+ *                     {
+ *                         ThingArn = "arn:aws:iot:us-east-1:123456789012:thing/ThingName",
+ *                     },
+ *                 },
+ *                 RootGroup = "{ \"configuration\": {}, \"tests\": [{ \"name\": \"TestGroup\", \"configuration\": { \"EXECUTION_TIMEOUT\": \"30\" }, \"tests\": [{ \"name\": \"MQTTPublishTest\", \"configuration\": { \"TOPIC_FOR_PUBLISH_VALIDATION\": \"target\" }, \"test\": { \"id\": \"MQTT_Publish\", \"version\": \"0.0.0\" } }] }] }",
+ *                 IntendedForQualification = false,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iotcoredeviceadvisor"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iotcoredeviceadvisor.NewSuiteDefinition(ctx, "testSuiteDefinition", &iotcoredeviceadvisor.SuiteDefinitionArgs{
+ * 			SuiteDefinitionConfiguration: &iotcoredeviceadvisor.SuiteDefinitionConfigurationPropertiesArgs{
+ * 				SuiteDefinitionName:     pulumi.String("SuiteDefinitionName"),
+ * 				DevicePermissionRoleArn: pulumi.String("arn:aws:iam::123456789012:role/RoleName"),
+ * 				Devices: iotcoredeviceadvisor.SuiteDefinitionDeviceUnderTestArray{
+ * 					&iotcoredeviceadvisor.SuiteDefinitionDeviceUnderTestArgs{
+ * 						ThingArn: pulumi.String("arn:aws:iot:us-east-1:123456789012:thing/ThingName"),
+ * 					},
+ * 				},
+ * 				RootGroup:                pulumi.String("{ \"configuration\": {}, \"tests\": [{ \"name\": \"TestGroup\", \"configuration\": { \"EXECUTION_TIMEOUT\": \"30\" }, \"tests\": [{ \"name\": \"MQTTPublishTest\", \"configuration\": { \"TOPIC_FOR_PUBLISH_VALIDATION\": \"target\" }, \"test\": { \"id\": \"MQTT_Publish\", \"version\": \"0.0.0\" } }] }] }"),
+ * 				IntendedForQualification: pulumi.Bool(false),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const testSuiteDefinition = new aws_native.iotcoredeviceadvisor.SuiteDefinition("testSuiteDefinition", {suiteDefinitionConfiguration: {
+ *     suiteDefinitionName: "SuiteDefinitionName",
+ *     devicePermissionRoleArn: "arn:aws:iam::123456789012:role/RoleName",
+ *     devices: [{
+ *         thingArn: "arn:aws:iot:us-east-1:123456789012:thing/ThingName",
+ *     }],
+ *     rootGroup: "{ \"configuration\": {}, \"tests\": [{ \"name\": \"TestGroup\", \"configuration\": { \"EXECUTION_TIMEOUT\": \"30\" }, \"tests\": [{ \"name\": \"MQTTPublishTest\", \"configuration\": { \"TOPIC_FOR_PUBLISH_VALIDATION\": \"target\" }, \"test\": { \"id\": \"MQTT_Publish\", \"version\": \"0.0.0\" } }] }] }",
+ *     intendedForQualification: false,
+ * }});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * test_suite_definition = aws_native.iotcoredeviceadvisor.SuiteDefinition("testSuiteDefinition", suite_definition_configuration=aws_native.iotcoredeviceadvisor.SuiteDefinitionConfigurationPropertiesArgs(
+ *     suite_definition_name="SuiteDefinitionName",
+ *     device_permission_role_arn="arn:aws:iam::123456789012:role/RoleName",
+ *     devices=[aws_native.iotcoredeviceadvisor.SuiteDefinitionDeviceUnderTestArgs(
+ *         thing_arn="arn:aws:iot:us-east-1:123456789012:thing/ThingName",
+ *     )],
+ *     root_group="{ \"configuration\": {}, \"tests\": [{ \"name\": \"TestGroup\", \"configuration\": { \"EXECUTION_TIMEOUT\": \"30\" }, \"tests\": [{ \"name\": \"MQTTPublishTest\", \"configuration\": { \"TOPIC_FOR_PUBLISH_VALIDATION\": \"target\" }, \"test\": { \"id\": \"MQTT_Publish\", \"version\": \"0.0.0\" } }] }] }",
+ *     intended_for_qualification=False,
+ * ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:iotcoredeviceadvisor:SuiteDefinition")
 public class SuiteDefinition extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource name for the suite definition.
-     * 
      */
     @Export(name="suiteDefinitionArn", type=String.class, parameters={})
     private Output<String> suiteDefinitionArn;
 
     /**
      * @return The Amazon Resource name for the suite definition.
-     * 
      */
     public Output<String> getSuiteDefinitionArn() {
         return this.suiteDefinitionArn;
@@ -44,42 +294,36 @@ public class SuiteDefinition extends io.pulumi.resources.CustomResource {
     }
     /**
      * The unique identifier for the suite definition.
-     * 
      */
     @Export(name="suiteDefinitionId", type=String.class, parameters={})
     private Output<String> suiteDefinitionId;
 
     /**
      * @return The unique identifier for the suite definition.
-     * 
      */
     public Output<String> getSuiteDefinitionId() {
         return this.suiteDefinitionId;
     }
     /**
      * The suite definition version of a test suite.
-     * 
      */
     @Export(name="suiteDefinitionVersion", type=String.class, parameters={})
     private Output<String> suiteDefinitionVersion;
 
     /**
      * @return The suite definition version of a test suite.
-     * 
      */
     public Output<String> getSuiteDefinitionVersion() {
         return this.suiteDefinitionVersion;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={SuiteDefinitionTag.class})
     private Output</* @Nullable */ List<SuiteDefinitionTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<SuiteDefinitionTag>> getTags() {
         return this.tags;

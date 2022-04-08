@@ -19,133 +19,387 @@ import javax.annotation.Nullable;
 /**
  * Resource schema of AWS::EC2::PrefixList Type
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var newPrefixList = new AwsNative.EC2.PrefixList("newPrefixList", new AwsNative.EC2.PrefixListArgs
+ *         {
+ *             PrefixListName = "vpc-1-servers",
+ *             AddressFamily = "IPv4",
+ *             MaxEntries = 10,
+ *             Entries = 
+ *             {
+ *                 new AwsNative.EC2.Inputs.PrefixListEntryArgs
+ *                 {
+ *                     Cidr = "10.0.0.5/32",
+ *                     Description = "Server 1",
+ *                 },
+ *                 new AwsNative.EC2.Inputs.PrefixListEntryArgs
+ *                 {
+ *                     Cidr = "10.0.0.10/32",
+ *                     Description = "Server 2",
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.EC2.Inputs.PrefixListTagArgs
+ *                 {
+ *                     Key = "Name",
+ *                     Value = "VPC-1-Servers",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewPrefixList(ctx, "newPrefixList", &ec2.PrefixListArgs{
+ * 			PrefixListName: pulumi.String("vpc-1-servers"),
+ * 			AddressFamily:  "IPv4",
+ * 			MaxEntries:     pulumi.Int(10),
+ * 			Entries: []ec2.PrefixListEntryArgs{
+ * 				&ec2.PrefixListEntryArgs{
+ * 					Cidr:        pulumi.String("10.0.0.5/32"),
+ * 					Description: pulumi.String("Server 1"),
+ * 				},
+ * 				&ec2.PrefixListEntryArgs{
+ * 					Cidr:        pulumi.String("10.0.0.10/32"),
+ * 					Description: pulumi.String("Server 2"),
+ * 				},
+ * 			},
+ * 			Tags: []ec2.PrefixListTagArgs{
+ * 				&ec2.PrefixListTagArgs{
+ * 					Key:   pulumi.String("Name"),
+ * 					Value: pulumi.String("VPC-1-Servers"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const newPrefixList = new aws_native.ec2.PrefixList("newPrefixList", {
+ *     prefixListName: "vpc-1-servers",
+ *     addressFamily: "IPv4",
+ *     maxEntries: 10,
+ *     entries: [
+ *         {
+ *             cidr: "10.0.0.5/32",
+ *             description: "Server 1",
+ *         },
+ *         {
+ *             cidr: "10.0.0.10/32",
+ *             description: "Server 2",
+ *         },
+ *     ],
+ *     tags: [{
+ *         key: "Name",
+ *         value: "VPC-1-Servers",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * new_prefix_list = aws_native.ec2.PrefixList("newPrefixList",
+ *     prefix_list_name="vpc-1-servers",
+ *     address_family="IPv4",
+ *     max_entries=10,
+ *     entries=[
+ *         aws_native.ec2.PrefixListEntryArgs(
+ *             cidr="10.0.0.5/32",
+ *             description="Server 1",
+ *         ),
+ *         aws_native.ec2.PrefixListEntryArgs(
+ *             cidr="10.0.0.10/32",
+ *             description="Server 2",
+ *         ),
+ *     ],
+ *     tags=[aws_native.ec2.PrefixListTagArgs(
+ *         key="Name",
+ *         value="VPC-1-Servers",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var newPrefixList = new AwsNative.EC2.PrefixList("newPrefixList", new AwsNative.EC2.PrefixListArgs
+ *         {
+ *             PrefixListName = "vpc-1-servers",
+ *             AddressFamily = "IPv4",
+ *             MaxEntries = 10,
+ *             Entries = 
+ *             {
+ *                 new AwsNative.EC2.Inputs.PrefixListEntryArgs
+ *                 {
+ *                     Cidr = "10.0.0.5/32",
+ *                     Description = "Server 1",
+ *                 },
+ *                 new AwsNative.EC2.Inputs.PrefixListEntryArgs
+ *                 {
+ *                     Cidr = "10.0.0.10/32",
+ *                     Description = "Server 2",
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.EC2.Inputs.PrefixListTagArgs
+ *                 {
+ *                     Key = "Name",
+ *                     Value = "VPC-1-Servers",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewPrefixList(ctx, "newPrefixList", &ec2.PrefixListArgs{
+ * 			PrefixListName: pulumi.String("vpc-1-servers"),
+ * 			AddressFamily:  "IPv4",
+ * 			MaxEntries:     pulumi.Int(10),
+ * 			Entries: []ec2.PrefixListEntryArgs{
+ * 				&ec2.PrefixListEntryArgs{
+ * 					Cidr:        pulumi.String("10.0.0.5/32"),
+ * 					Description: pulumi.String("Server 1"),
+ * 				},
+ * 				&ec2.PrefixListEntryArgs{
+ * 					Cidr:        pulumi.String("10.0.0.10/32"),
+ * 					Description: pulumi.String("Server 2"),
+ * 				},
+ * 			},
+ * 			Tags: []ec2.PrefixListTagArgs{
+ * 				&ec2.PrefixListTagArgs{
+ * 					Key:   pulumi.String("Name"),
+ * 					Value: pulumi.String("VPC-1-Servers"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const newPrefixList = new aws_native.ec2.PrefixList("newPrefixList", {
+ *     prefixListName: "vpc-1-servers",
+ *     addressFamily: "IPv4",
+ *     maxEntries: 10,
+ *     entries: [
+ *         {
+ *             cidr: "10.0.0.5/32",
+ *             description: "Server 1",
+ *         },
+ *         {
+ *             cidr: "10.0.0.10/32",
+ *             description: "Server 2",
+ *         },
+ *     ],
+ *     tags: [{
+ *         key: "Name",
+ *         value: "VPC-1-Servers",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * new_prefix_list = aws_native.ec2.PrefixList("newPrefixList",
+ *     prefix_list_name="vpc-1-servers",
+ *     address_family="IPv4",
+ *     max_entries=10,
+ *     entries=[
+ *         aws_native.ec2.PrefixListEntryArgs(
+ *             cidr="10.0.0.5/32",
+ *             description="Server 1",
+ *         ),
+ *         aws_native.ec2.PrefixListEntryArgs(
+ *             cidr="10.0.0.10/32",
+ *             description="Server 2",
+ *         ),
+ *     ],
+ *     tags=[aws_native.ec2.PrefixListTagArgs(
+ *         key="Name",
+ *         value="VPC-1-Servers",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:ec2:PrefixList")
 public class PrefixList extends io.pulumi.resources.CustomResource {
     /**
      * Ip Version of Prefix List.
-     * 
      */
     @Export(name="addressFamily", type=PrefixListAddressFamily.class, parameters={})
     private Output<PrefixListAddressFamily> addressFamily;
 
     /**
      * @return Ip Version of Prefix List.
-     * 
      */
     public Output<PrefixListAddressFamily> getAddressFamily() {
         return this.addressFamily;
     }
     /**
      * The Amazon Resource Name (ARN) of the Prefix List.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the Prefix List.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * Entries of Prefix List.
-     * 
      */
     @Export(name="entries", type=List.class, parameters={PrefixListEntry.class})
     private Output</* @Nullable */ List<PrefixListEntry>> entries;
 
     /**
      * @return Entries of Prefix List.
-     * 
      */
     public Output</* @Nullable */ List<PrefixListEntry>> getEntries() {
         return this.entries;
     }
     /**
      * Max Entries of Prefix List.
-     * 
      */
     @Export(name="maxEntries", type=Integer.class, parameters={})
     private Output<Integer> maxEntries;
 
     /**
      * @return Max Entries of Prefix List.
-     * 
      */
     public Output<Integer> getMaxEntries() {
         return this.maxEntries;
     }
     /**
      * Owner Id of Prefix List.
-     * 
      */
     @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
      * @return Owner Id of Prefix List.
-     * 
      */
     public Output<String> getOwnerId() {
         return this.ownerId;
     }
     /**
      * Id of Prefix List.
-     * 
      */
     @Export(name="prefixListId", type=String.class, parameters={})
     private Output<String> prefixListId;
 
     /**
      * @return Id of Prefix List.
-     * 
      */
     public Output<String> getPrefixListId() {
         return this.prefixListId;
     }
     /**
      * Name of Prefix List.
-     * 
      */
     @Export(name="prefixListName", type=String.class, parameters={})
     private Output<String> prefixListName;
 
     /**
      * @return Name of Prefix List.
-     * 
      */
     public Output<String> getPrefixListName() {
         return this.prefixListName;
     }
     /**
      * Tags for Prefix List
-     * 
      */
     @Export(name="tags", type=List.class, parameters={PrefixListTag.class})
     private Output</* @Nullable */ List<PrefixListTag>> tags;
 
     /**
      * @return Tags for Prefix List
-     * 
      */
     public Output</* @Nullable */ List<PrefixListTag>> getTags() {
         return this.tags;
     }
     /**
      * Version of Prefix List.
-     * 
      */
     @Export(name="version", type=Integer.class, parameters={})
     private Output<Integer> version;
 
     /**
      * @return Version of Prefix List.
-     * 
      */
     public Output<Integer> getVersion() {
         return this.version;

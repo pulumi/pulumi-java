@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A container for object key name prefix and suffix filtering rules.
- * 
  */
 public final class BucketS3KeyFilterArgs extends io.pulumi.resources.ResourceArgs {
 

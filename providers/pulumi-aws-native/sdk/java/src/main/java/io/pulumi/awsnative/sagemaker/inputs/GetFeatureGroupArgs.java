@@ -14,7 +14,6 @@ public final class GetFeatureGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Name of the FeatureGroup.
-     * 
      */
     @Import(name="featureGroupName", required=true)
       private final String featureGroupName;

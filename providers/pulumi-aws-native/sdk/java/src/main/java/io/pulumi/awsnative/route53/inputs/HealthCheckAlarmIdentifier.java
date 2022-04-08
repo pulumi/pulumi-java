@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A complex type that identifies the CloudWatch alarm that you want Amazon Route 53 health checkers to use to determine whether the specified health check is healthy.
- * 
  */
 public final class HealthCheckAlarmIdentifier extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class HealthCheckAlarmIdentifier extends io.pulumi.resources.Invoke
 
     /**
      * The name of the CloudWatch alarm that you want Amazon Route 53 health checkers to use to determine whether this health check is healthy.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class HealthCheckAlarmIdentifier extends io.pulumi.resources.Invoke
 
     /**
      * For the CloudWatch alarm that you want Route 53 health checkers to use to determine whether this health check is healthy, the region that the alarm was created in.
-     * 
      */
     @Import(name="region", required=true)
       private final String region;

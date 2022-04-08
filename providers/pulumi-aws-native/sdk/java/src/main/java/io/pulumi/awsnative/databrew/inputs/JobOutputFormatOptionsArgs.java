@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Format options for job Output
- * 
  */
 public final class JobOutputFormatOptionsArgs extends io.pulumi.resources.ResourceArgs {
 

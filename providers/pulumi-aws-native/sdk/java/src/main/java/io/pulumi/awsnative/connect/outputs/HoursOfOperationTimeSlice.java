@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class HoursOfOperationTimeSlice {
     /**
      * The hours.
-     * 
      */
     private final Integer hours;
     /**
      * The minutes.
-     * 
      */
     private final Integer minutes;
 
@@ -30,14 +28,12 @@ public final class HoursOfOperationTimeSlice {
 
     /**
      * The hours.
-     * 
     */
     public Integer getHours() {
         return this.hours;
     }
     /**
      * The minutes.
-     * 
     */
     public Integer getMinutes() {
         return this.minutes;

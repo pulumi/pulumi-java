@@ -22,7 +22,653 @@ import javax.annotation.Nullable;
 /**
  * The AWS::SSM::Association resource associates an SSM document in AWS Systems Manager with EC2 instances that contain a configuration agent to process the document.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var specificInstanceIdAssociation = new AwsNative.SSM.Association("specificInstanceIdAssociation", new AwsNative.SSM.AssociationArgs
+ *         {
+ *             Name = "AWS-RunShellScript",
+ *             Targets = 
+ *             {
+ *                 new AwsNative.SSM.Inputs.AssociationTargetArgs
+ *                 {
+ *                     Key = "InstanceIds",
+ *                     Values = 
+ *                     {
+ *                         "i-1234567890abcdef0",
+ *                     },
+ *                 },
+ *             },
+ *             Parameters = 
+ *             {
+ *                 { "commands", 
+ *                 {
+ *                     "ls",
+ *                 } },
+ *                 { "workingDirectory", 
+ *                 {
+ *                     "/",
+ *                 } },
+ *             },
+ *             WaitForSuccessTimeoutSeconds = 300,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ssm.NewAssociation(ctx, "specificInstanceIdAssociation", &ssm.AssociationArgs{
+ * 			Name: pulumi.String("AWS-RunShellScript"),
+ * 			Targets: []ssm.AssociationTargetArgs{
+ * 				&ssm.AssociationTargetArgs{
+ * 					Key: pulumi.String("InstanceIds"),
+ * 					Values: pulumi.StringArray{
+ * 						pulumi.String("i-1234567890abcdef0"),
+ * 					},
+ * 				},
+ * 			},
+ * 			Parameters: pulumi.Any{
+ * 				Commands: []string{
+ * 					"ls",
+ * 				},
+ * 				WorkingDirectory: []string{
+ * 					"/",
+ * 				},
+ * 			},
+ * 			WaitForSuccessTimeoutSeconds: pulumi.Int(300),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const specificInstanceIdAssociation = new aws_native.ssm.Association("specificInstanceIdAssociation", {
+ *     name: "AWS-RunShellScript",
+ *     targets: [{
+ *         key: "InstanceIds",
+ *         values: ["i-1234567890abcdef0"],
+ *     }],
+ *     parameters: {
+ *         commands: ["ls"],
+ *         workingDirectory: ["/"],
+ *     },
+ *     waitForSuccessTimeoutSeconds: 300,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * specific_instance_id_association = aws_native.ssm.Association("specificInstanceIdAssociation",
+ *     name="AWS-RunShellScript",
+ *     targets=[aws_native.ssm.AssociationTargetArgs(
+ *         key="InstanceIds",
+ *         values=["i-1234567890abcdef0"],
+ *     )],
+ *     parameters={
+ *         "commands": ["ls"],
+ *         "workingDirectory": ["/"],
+ *     },
+ *     wait_for_success_timeout_seconds=300)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var specificInstanceIdAssociation = new AwsNative.SSM.Association("specificInstanceIdAssociation", new AwsNative.SSM.AssociationArgs
+ *         {
+ *             Name = "AWS-RunShellScript",
+ *             Targets = 
+ *             {
+ *                 new AwsNative.SSM.Inputs.AssociationTargetArgs
+ *                 {
+ *                     Key = "InstanceIds",
+ *                     Values = 
+ *                     {
+ *                         "i-1234567890abcdef0",
+ *                     },
+ *                 },
+ *             },
+ *             Parameters = 
+ *             {
+ *                 { "commands", 
+ *                 {
+ *                     "ls",
+ *                 } },
+ *                 { "workingDirectory", 
+ *                 {
+ *                     "/",
+ *                 } },
+ *             },
+ *             WaitForSuccessTimeoutSeconds = 300,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ssm.NewAssociation(ctx, "specificInstanceIdAssociation", &ssm.AssociationArgs{
+ * 			Name: pulumi.String("AWS-RunShellScript"),
+ * 			Targets: []ssm.AssociationTargetArgs{
+ * 				&ssm.AssociationTargetArgs{
+ * 					Key: pulumi.String("InstanceIds"),
+ * 					Values: pulumi.StringArray{
+ * 						pulumi.String("i-1234567890abcdef0"),
+ * 					},
+ * 				},
+ * 			},
+ * 			Parameters: pulumi.Any{
+ * 				Commands: []string{
+ * 					"ls",
+ * 				},
+ * 				WorkingDirectory: []string{
+ * 					"/",
+ * 				},
+ * 			},
+ * 			WaitForSuccessTimeoutSeconds: pulumi.Int(300),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const specificInstanceIdAssociation = new aws_native.ssm.Association("specificInstanceIdAssociation", {
+ *     name: "AWS-RunShellScript",
+ *     targets: [{
+ *         key: "InstanceIds",
+ *         values: ["i-1234567890abcdef0"],
+ *     }],
+ *     parameters: {
+ *         commands: ["ls"],
+ *         workingDirectory: ["/"],
+ *     },
+ *     waitForSuccessTimeoutSeconds: 300,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * specific_instance_id_association = aws_native.ssm.Association("specificInstanceIdAssociation",
+ *     name="AWS-RunShellScript",
+ *     targets=[aws_native.ssm.AssociationTargetArgs(
+ *         key="InstanceIds",
+ *         values=["i-1234567890abcdef0"],
+ *     )],
+ *     parameters={
+ *         "commands": ["ls"],
+ *         "workingDirectory": ["/"],
+ *     },
+ *     wait_for_success_timeout_seconds=300)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var allInstanceIdsAssociation = new AwsNative.SSM.Association("allInstanceIdsAssociation", new AwsNative.SSM.AssociationArgs
+ *         {
+ *             AssociationName = "UpdateSSMAgent",
+ *             Name = "AWS-UpdateSSMAgent",
+ *             ScheduleExpression = "cron(0 2 ? * SUN *)",
+ *             Targets = 
+ *             {
+ *                 new AwsNative.SSM.Inputs.AssociationTargetArgs
+ *                 {
+ *                     Key = "InstanceIds",
+ *                     Values = 
+ *                     {
+ *                         "*",
+ *                     },
+ *                 },
+ *             },
+ *             WaitForSuccessTimeoutSeconds = 300,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ssm.NewAssociation(ctx, "allInstanceIdsAssociation", &ssm.AssociationArgs{
+ * 			AssociationName:    pulumi.String("UpdateSSMAgent"),
+ * 			Name:               pulumi.String("AWS-UpdateSSMAgent"),
+ * 			ScheduleExpression: pulumi.String("cron(0 2 ? * SUN *)"),
+ * 			Targets: []ssm.AssociationTargetArgs{
+ * 				&ssm.AssociationTargetArgs{
+ * 					Key: pulumi.String("InstanceIds"),
+ * 					Values: pulumi.StringArray{
+ * 						pulumi.String("*"),
+ * 					},
+ * 				},
+ * 			},
+ * 			WaitForSuccessTimeoutSeconds: pulumi.Int(300),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const allInstanceIdsAssociation = new aws_native.ssm.Association("allInstanceIdsAssociation", {
+ *     associationName: "UpdateSSMAgent",
+ *     name: "AWS-UpdateSSMAgent",
+ *     scheduleExpression: "cron(0 2 ? * SUN *)",
+ *     targets: [{
+ *         key: "InstanceIds",
+ *         values: ["*"],
+ *     }],
+ *     waitForSuccessTimeoutSeconds: 300,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * all_instance_ids_association = aws_native.ssm.Association("allInstanceIdsAssociation",
+ *     association_name="UpdateSSMAgent",
+ *     name="AWS-UpdateSSMAgent",
+ *     schedule_expression="cron(0 2 ? * SUN *)",
+ *     targets=[aws_native.ssm.AssociationTargetArgs(
+ *         key="InstanceIds",
+ *         values=["*"],
+ *     )],
+ *     wait_for_success_timeout_seconds=300)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var allInstanceIdsAssociation = new AwsNative.SSM.Association("allInstanceIdsAssociation", new AwsNative.SSM.AssociationArgs
+ *         {
+ *             AssociationName = "UpdateSSMAgent",
+ *             Name = "AWS-UpdateSSMAgent",
+ *             ScheduleExpression = "cron(0 2 ? * SUN *)",
+ *             Targets = 
+ *             {
+ *                 new AwsNative.SSM.Inputs.AssociationTargetArgs
+ *                 {
+ *                     Key = "InstanceIds",
+ *                     Values = 
+ *                     {
+ *                         "*",
+ *                     },
+ *                 },
+ *             },
+ *             WaitForSuccessTimeoutSeconds = 300,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ssm.NewAssociation(ctx, "allInstanceIdsAssociation", &ssm.AssociationArgs{
+ * 			AssociationName:    pulumi.String("UpdateSSMAgent"),
+ * 			Name:               pulumi.String("AWS-UpdateSSMAgent"),
+ * 			ScheduleExpression: pulumi.String("cron(0 2 ? * SUN *)"),
+ * 			Targets: []ssm.AssociationTargetArgs{
+ * 				&ssm.AssociationTargetArgs{
+ * 					Key: pulumi.String("InstanceIds"),
+ * 					Values: pulumi.StringArray{
+ * 						pulumi.String("*"),
+ * 					},
+ * 				},
+ * 			},
+ * 			WaitForSuccessTimeoutSeconds: pulumi.Int(300),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const allInstanceIdsAssociation = new aws_native.ssm.Association("allInstanceIdsAssociation", {
+ *     associationName: "UpdateSSMAgent",
+ *     name: "AWS-UpdateSSMAgent",
+ *     scheduleExpression: "cron(0 2 ? * SUN *)",
+ *     targets: [{
+ *         key: "InstanceIds",
+ *         values: ["*"],
+ *     }],
+ *     waitForSuccessTimeoutSeconds: 300,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * all_instance_ids_association = aws_native.ssm.Association("allInstanceIdsAssociation",
+ *     association_name="UpdateSSMAgent",
+ *     name="AWS-UpdateSSMAgent",
+ *     schedule_expression="cron(0 2 ? * SUN *)",
+ *     targets=[aws_native.ssm.AssociationTargetArgs(
+ *         key="InstanceIds",
+ *         values=["*"],
+ *     )],
+ *     wait_for_success_timeout_seconds=300)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var taggedInstancesAssociation = new AwsNative.SSM.Association("taggedInstancesAssociation", new AwsNative.SSM.AssociationArgs
+ *         {
+ *             AssociationName = "UpdateSSMAgent",
+ *             Name = "AWS-UpdateSSMAgent",
+ *             ScheduleExpression = "rate(7 days)",
+ *             Targets = 
+ *             {
+ *                 new AwsNative.SSM.Inputs.AssociationTargetArgs
+ *                 {
+ *                     Key = "tag:Environment",
+ *                     Values = 
+ *                     {
+ *                         "Production",
+ *                     },
+ *                 },
+ *             },
+ *             WaitForSuccessTimeoutSeconds = 300,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ssm.NewAssociation(ctx, "taggedInstancesAssociation", &ssm.AssociationArgs{
+ * 			AssociationName:    pulumi.String("UpdateSSMAgent"),
+ * 			Name:               pulumi.String("AWS-UpdateSSMAgent"),
+ * 			ScheduleExpression: pulumi.String("rate(7 days)"),
+ * 			Targets: []ssm.AssociationTargetArgs{
+ * 				&ssm.AssociationTargetArgs{
+ * 					Key: pulumi.String("tag:Environment"),
+ * 					Values: pulumi.StringArray{
+ * 						pulumi.String("Production"),
+ * 					},
+ * 				},
+ * 			},
+ * 			WaitForSuccessTimeoutSeconds: pulumi.Int(300),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const taggedInstancesAssociation = new aws_native.ssm.Association("taggedInstancesAssociation", {
+ *     associationName: "UpdateSSMAgent",
+ *     name: "AWS-UpdateSSMAgent",
+ *     scheduleExpression: "rate(7 days)",
+ *     targets: [{
+ *         key: "tag:Environment",
+ *         values: ["Production"],
+ *     }],
+ *     waitForSuccessTimeoutSeconds: 300,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * tagged_instances_association = aws_native.ssm.Association("taggedInstancesAssociation",
+ *     association_name="UpdateSSMAgent",
+ *     name="AWS-UpdateSSMAgent",
+ *     schedule_expression="rate(7 days)",
+ *     targets=[aws_native.ssm.AssociationTargetArgs(
+ *         key="tag:Environment",
+ *         values=["Production"],
+ *     )],
+ *     wait_for_success_timeout_seconds=300)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var taggedInstancesAssociation = new AwsNative.SSM.Association("taggedInstancesAssociation", new AwsNative.SSM.AssociationArgs
+ *         {
+ *             AssociationName = "UpdateSSMAgent",
+ *             Name = "AWS-UpdateSSMAgent",
+ *             ScheduleExpression = "rate(7 days)",
+ *             Targets = 
+ *             {
+ *                 new AwsNative.SSM.Inputs.AssociationTargetArgs
+ *                 {
+ *                     Key = "tag:Environment",
+ *                     Values = 
+ *                     {
+ *                         "Production",
+ *                     },
+ *                 },
+ *             },
+ *             WaitForSuccessTimeoutSeconds = 300,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ssm.NewAssociation(ctx, "taggedInstancesAssociation", &ssm.AssociationArgs{
+ * 			AssociationName:    pulumi.String("UpdateSSMAgent"),
+ * 			Name:               pulumi.String("AWS-UpdateSSMAgent"),
+ * 			ScheduleExpression: pulumi.String("rate(7 days)"),
+ * 			Targets: []ssm.AssociationTargetArgs{
+ * 				&ssm.AssociationTargetArgs{
+ * 					Key: pulumi.String("tag:Environment"),
+ * 					Values: pulumi.StringArray{
+ * 						pulumi.String("Production"),
+ * 					},
+ * 				},
+ * 			},
+ * 			WaitForSuccessTimeoutSeconds: pulumi.Int(300),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const taggedInstancesAssociation = new aws_native.ssm.Association("taggedInstancesAssociation", {
+ *     associationName: "UpdateSSMAgent",
+ *     name: "AWS-UpdateSSMAgent",
+ *     scheduleExpression: "rate(7 days)",
+ *     targets: [{
+ *         key: "tag:Environment",
+ *         values: ["Production"],
+ *     }],
+ *     waitForSuccessTimeoutSeconds: 300,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * tagged_instances_association = aws_native.ssm.Association("taggedInstancesAssociation",
+ *     association_name="UpdateSSMAgent",
+ *     name="AWS-UpdateSSMAgent",
+ *     schedule_expression="rate(7 days)",
+ *     targets=[aws_native.ssm.AssociationTargetArgs(
+ *         key="tag:Environment",
+ *         values=["Production"],
+ *     )],
+ *     wait_for_success_timeout_seconds=300)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:ssm:Association")
@@ -35,28 +681,24 @@ public class Association extends io.pulumi.resources.CustomResource {
     }
     /**
      * Unique identifier of the association.
-     * 
      */
     @Export(name="associationId", type=String.class, parameters={})
     private Output<String> associationId;
 
     /**
      * @return Unique identifier of the association.
-     * 
      */
     public Output<String> getAssociationId() {
         return this.associationId;
     }
     /**
      * The name of the association.
-     * 
      */
     @Export(name="associationName", type=String.class, parameters={})
     private Output</* @Nullable */ String> associationName;
 
     /**
      * @return The name of the association.
-     * 
      */
     public Output</* @Nullable */ String> getAssociationName() {
         return this.associationName;
@@ -81,28 +723,24 @@ public class Association extends io.pulumi.resources.CustomResource {
     }
     /**
      * The version of the SSM document to associate with the target.
-     * 
      */
     @Export(name="documentVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> documentVersion;
 
     /**
      * @return The version of the SSM document to associate with the target.
-     * 
      */
     public Output</* @Nullable */ String> getDocumentVersion() {
         return this.documentVersion;
     }
     /**
      * The ID of the instance that the SSM document is associated with.
-     * 
      */
     @Export(name="instanceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> instanceId;
 
     /**
      * @return The ID of the instance that the SSM document is associated with.
-     * 
      */
     public Output</* @Nullable */ String> getInstanceId() {
         return this.instanceId;
@@ -121,14 +759,12 @@ public class Association extends io.pulumi.resources.CustomResource {
     }
     /**
      * The name of the SSM document.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the SSM document.
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -141,28 +777,24 @@ public class Association extends io.pulumi.resources.CustomResource {
     }
     /**
      * Parameter values that the SSM document uses at runtime.
-     * 
      */
     @Export(name="parameters", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> parameters;
 
     /**
      * @return Parameter values that the SSM document uses at runtime.
-     * 
      */
     public Output</* @Nullable */ Object> getParameters() {
         return this.parameters;
     }
     /**
      * A Cron or Rate expression that specifies when the association is applied to the target.
-     * 
      */
     @Export(name="scheduleExpression", type=String.class, parameters={})
     private Output</* @Nullable */ String> scheduleExpression;
 
     /**
      * @return A Cron or Rate expression that specifies when the association is applied to the target.
-     * 
      */
     public Output</* @Nullable */ String> getScheduleExpression() {
         return this.scheduleExpression;
@@ -175,14 +807,12 @@ public class Association extends io.pulumi.resources.CustomResource {
     }
     /**
      * The targets that the SSM document sends commands to.
-     * 
      */
     @Export(name="targets", type=List.class, parameters={AssociationTarget.class})
     private Output</* @Nullable */ List<AssociationTarget>> targets;
 
     /**
      * @return The targets that the SSM document sends commands to.
-     * 
      */
     public Output</* @Nullable */ List<AssociationTarget>> getTargets() {
         return this.targets;

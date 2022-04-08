@@ -16,34 +16,29 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a streaming session machine image that can be used to launch a streaming session
- * 
  */
 @ResourceType(type="aws-native:nimblestudio:StreamingImage")
 public class StreamingImage extends io.pulumi.resources.CustomResource {
     /**
      * <p>A human-readable description of the streaming image.</p>
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return <p>A human-readable description of the streaming image.</p>
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * <p>The ID of an EC2 machine image with which to create this streaming image.</p>
-     * 
      */
     @Export(name="ec2ImageId", type=String.class, parameters={})
     private Output<String> ec2ImageId;
 
     /**
      * @return <p>The ID of an EC2 machine image with which to create this streaming image.</p>
-     * 
      */
     public Output<String> getEc2ImageId() {
         return this.ec2ImageId;
@@ -56,56 +51,48 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
     }
     /**
      * <p>The list of EULAs that must be accepted before a Streaming Session can be started using this streaming image.</p>
-     * 
      */
     @Export(name="eulaIds", type=List.class, parameters={String.class})
     private Output<List<String>> eulaIds;
 
     /**
      * @return <p>The list of EULAs that must be accepted before a Streaming Session can be started using this streaming image.</p>
-     * 
      */
     public Output<List<String>> getEulaIds() {
         return this.eulaIds;
     }
     /**
      * <p>A friendly name for a streaming image resource.</p>
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return <p>A friendly name for a streaming image resource.</p>
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * <p>The owner of the streaming image, either the studioId that contains the streaming image, or 'amazon' for images that are provided by Amazon Nimble Studio.</p>
-     * 
      */
     @Export(name="owner", type=String.class, parameters={})
     private Output<String> owner;
 
     /**
      * @return <p>The owner of the streaming image, either the studioId that contains the streaming image, or 'amazon' for images that are provided by Amazon Nimble Studio.</p>
-     * 
      */
     public Output<String> getOwner() {
         return this.owner;
     }
     /**
      * <p>The platform of the streaming image, either WINDOWS or LINUX.</p>
-     * 
      */
     @Export(name="platform", type=String.class, parameters={})
     private Output<String> platform;
 
     /**
      * @return <p>The platform of the streaming image, either WINDOWS or LINUX.</p>
-     * 
      */
     public Output<String> getPlatform() {
         return this.platform;
@@ -118,14 +105,12 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
     }
     /**
      * <p>The studioId. </p>
-     * 
      */
     @Export(name="studioId", type=String.class, parameters={})
     private Output<String> studioId;
 
     /**
      * @return <p>The studioId. </p>
-     * 
      */
     public Output<String> getStudioId() {
         return this.studioId;

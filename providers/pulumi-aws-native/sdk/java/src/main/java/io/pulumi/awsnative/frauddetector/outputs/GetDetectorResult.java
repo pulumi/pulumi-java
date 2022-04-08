@@ -20,49 +20,40 @@ import javax.annotation.Nullable;
 public final class GetDetectorResult {
     /**
      * The ARN of the detector.
-     * 
      */
     private final @Nullable String arn;
     /**
      * The models to associate with this detector.
-     * 
      */
     private final @Nullable List<DetectorModel> associatedModels;
     /**
      * The time when the detector was created.
-     * 
      */
     private final @Nullable String createdTime;
     /**
      * The description of the detector.
-     * 
      */
     private final @Nullable String description;
     /**
      * The active version ID of the detector
-     * 
      */
     private final @Nullable String detectorVersionId;
     /**
      * The desired detector version status for the detector
-     * 
      */
     private final @Nullable DetectorVersionStatus detectorVersionStatus;
     /**
      * The event type to associate this detector with.
-     * 
      */
     private final @Nullable DetectorEventType eventType;
     /**
      * The time when the detector was last updated.
-     * 
      */
     private final @Nullable String lastUpdatedTime;
     private final @Nullable DetectorRuleExecutionMode ruleExecutionMode;
     private final @Nullable List<DetectorRule> rules;
     /**
      * Tags associated with this detector.
-     * 
      */
     private final @Nullable List<DetectorTag> tags;
 
@@ -94,56 +85,48 @@ public final class GetDetectorResult {
 
     /**
      * The ARN of the detector.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The models to associate with this detector.
-     * 
     */
     public List<DetectorModel> getAssociatedModels() {
         return this.associatedModels == null ? List.of() : this.associatedModels;
     }
     /**
      * The time when the detector was created.
-     * 
     */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * The description of the detector.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The active version ID of the detector
-     * 
     */
     public Optional<String> getDetectorVersionId() {
         return Optional.ofNullable(this.detectorVersionId);
     }
     /**
      * The desired detector version status for the detector
-     * 
     */
     public Optional<DetectorVersionStatus> getDetectorVersionStatus() {
         return Optional.ofNullable(this.detectorVersionStatus);
     }
     /**
      * The event type to associate this detector with.
-     * 
     */
     public Optional<DetectorEventType> getEventType() {
         return Optional.ofNullable(this.eventType);
     }
     /**
      * The time when the detector was last updated.
-     * 
     */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
@@ -156,7 +139,6 @@ public final class GetDetectorResult {
     }
     /**
      * Tags associated with this detector.
-     * 
     */
     public List<DetectorTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

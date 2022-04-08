@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * Custom response key and body map.
- * 
  */
 public final class WebACLCustomResponseBodiesArgs extends io.pulumi.resources.ResourceArgs {
 

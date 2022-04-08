@@ -15,7 +15,6 @@ public final class DetectorModelDynamoDBv2 {
     private final @Nullable DetectorModelPayload payload;
     /**
      * The name of the DynamoDB table.
-     * 
      */
     private final String tableName;
 
@@ -32,7 +31,6 @@ public final class DetectorModelDynamoDBv2 {
     }
     /**
      * The name of the DynamoDB table.
-     * 
     */
     public String getTableName() {
         return this.tableName;

@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class DetectorModelDefinition {
     /**
      * The state that is entered at the creation of each detector (instance).
-     * 
      */
     private final String initialStateName;
     /**
      * Information about the states of the detector.
-     * 
      */
     private final List<DetectorModelState> states;
 
@@ -32,14 +30,12 @@ public final class DetectorModelDefinition {
 
     /**
      * The state that is entered at the creation of each detector (instance).
-     * 
     */
     public String getInitialStateName() {
         return this.initialStateName;
     }
     /**
      * Information about the states of the detector.
-     * 
     */
     public List<DetectorModelState> getStates() {
         return this.states;

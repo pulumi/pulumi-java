@@ -15,7 +15,6 @@ public final class BotAliasLocaleSettings {
     private final @Nullable BotAliasCodeHookSpecification codeHookSpecification;
     /**
      * Whether the Lambda code hook is enabled
-     * 
      */
     private final Boolean enabled;
 
@@ -32,7 +31,6 @@ public final class BotAliasLocaleSettings {
     }
     /**
      * Whether the Lambda code hook is enabled
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;

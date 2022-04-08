@@ -18,104 +18,89 @@ import javax.annotation.Nullable;
 
 /**
  * AWS Route53 Recovery Control Control Panel resource schema .
- * 
  */
 @ResourceType(type="aws-native:route53recoverycontrol:ControlPanel")
 public class ControlPanel extends io.pulumi.resources.CustomResource {
     /**
      * Cluster to associate with the Control Panel
-     * 
      */
     @Export(name="clusterArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterArn;
 
     /**
      * @return Cluster to associate with the Control Panel
-     * 
      */
     public Output</* @Nullable */ String> getClusterArn() {
         return this.clusterArn;
     }
     /**
      * The Amazon Resource Name (ARN) of the cluster.
-     * 
      */
     @Export(name="controlPanelArn", type=String.class, parameters={})
     private Output<String> controlPanelArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the cluster.
-     * 
      */
     public Output<String> getControlPanelArn() {
         return this.controlPanelArn;
     }
     /**
      * A flag that Amazon Route 53 Application Recovery Controller sets to true to designate the default control panel for a cluster. When you create a cluster, Amazon Route 53 Application Recovery Controller creates a control panel, and sets this flag for that control panel. If you create a control panel yourself, this flag is set to false.
-     * 
      */
     @Export(name="defaultControlPanel", type=Boolean.class, parameters={})
     private Output<Boolean> defaultControlPanel;
 
     /**
      * @return A flag that Amazon Route 53 Application Recovery Controller sets to true to designate the default control panel for a cluster. When you create a cluster, Amazon Route 53 Application Recovery Controller creates a control panel, and sets this flag for that control panel. If you create a control panel yourself, this flag is set to false.
-     * 
      */
     public Output<Boolean> getDefaultControlPanel() {
         return this.defaultControlPanel;
     }
     /**
      * The name of the control panel. You can use any non-white space character in the name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the control panel. You can use any non-white space character in the name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Count of associated routing controls
-     * 
      */
     @Export(name="routingControlCount", type=Integer.class, parameters={})
     private Output<Integer> routingControlCount;
 
     /**
      * @return Count of associated routing controls
-     * 
      */
     public Output<Integer> getRoutingControlCount() {
         return this.routingControlCount;
     }
     /**
      * The deployment status of control panel. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
-     * 
      */
     @Export(name="status", type=ControlPanelStatus.class, parameters={})
     private Output<ControlPanelStatus> status;
 
     /**
      * @return The deployment status of control panel. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
-     * 
      */
     public Output<ControlPanelStatus> getStatus() {
         return this.status;
     }
     /**
      * A collection of tags associated with a resource
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ControlPanelTag.class})
     private Output</* @Nullable */ List<ControlPanelTag>> tags;
 
     /**
      * @return A collection of tags associated with a resource
-     * 
      */
     public Output</* @Nullable */ List<ControlPanelTag>> getTags() {
         return this.tags;

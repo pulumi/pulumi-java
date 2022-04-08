@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A key-value pair to associated with the Kinesis Video Stream.
- * 
  */
 public final class StreamTag extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class StreamTag extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The key name of the tag. Specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:. The following characters can be used: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -29,7 +27,6 @@ public final class StreamTag extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The value for the tag. Specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed with aws:. The following characters can be used: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

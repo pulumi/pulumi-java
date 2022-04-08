@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::EC2::NetworkInsightsAccessScope
- * 
  */
 @ResourceType(type="aws-native:ec2:NetworkInsightsAccessScope")
 public class NetworkInsightsAccessScope extends io.pulumi.resources.CustomResource {

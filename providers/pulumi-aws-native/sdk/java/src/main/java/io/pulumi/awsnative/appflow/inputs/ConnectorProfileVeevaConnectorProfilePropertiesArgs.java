@@ -15,7 +15,6 @@ public final class ConnectorProfileVeevaConnectorProfilePropertiesArgs extends i
 
     /**
      * The location of the Veeva resource
-     * 
      */
     @Import(name="instanceUrl", required=true)
       private final Output<String> instanceUrl;

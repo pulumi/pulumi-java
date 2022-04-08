@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A Microsoft Smooth Streaming (MSS) manifest configuration.
- * 
  */
 public final class PackagingConfigurationMssManifest extends io.pulumi.resources.InvokeArgs {
 

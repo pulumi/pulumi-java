@@ -15,7 +15,6 @@ public final class GetConnectorResult {
     private final @Nullable ConnectorCapacity capacity;
     /**
      * Amazon Resource Name for the created Connector.
-     * 
      */
     private final @Nullable String connectorArn;
 
@@ -32,7 +31,6 @@ public final class GetConnectorResult {
     }
     /**
      * Amazon Resource Name for the created Connector.
-     * 
     */
     public Optional<String> getConnectorArn() {
         return Optional.ofNullable(this.connectorArn);

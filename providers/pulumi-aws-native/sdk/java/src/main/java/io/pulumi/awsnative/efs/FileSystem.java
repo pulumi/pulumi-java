@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::EFS::FileSystem
- * 
  */
 @ResourceType(type="aws-native:efs:FileSystem")
 public class FileSystem extends io.pulumi.resources.CustomResource {
@@ -44,14 +43,12 @@ public class FileSystem extends io.pulumi.resources.CustomResource {
     }
     /**
      * Whether to bypass the FileSystemPolicy lockout safety check. The policy lockout safety check determines whether the policy in the request will prevent the principal making the request to be locked out from making future PutFileSystemPolicy requests on the file system. Set BypassPolicyLockoutSafetyCheck to True only when you intend to prevent the principal that is making the request from making a subsequent PutFileSystemPolicy request on the file system. Defaults to false
-     * 
      */
     @Export(name="bypassPolicyLockoutSafetyCheck", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> bypassPolicyLockoutSafetyCheck;
 
     /**
      * @return Whether to bypass the FileSystemPolicy lockout safety check. The policy lockout safety check determines whether the policy in the request will prevent the principal making the request to be locked out from making future PutFileSystemPolicy requests on the file system. Set BypassPolicyLockoutSafetyCheck to True only when you intend to prevent the principal that is making the request from making a subsequent PutFileSystemPolicy request on the file system. Defaults to false
-     * 
      */
     public Output</* @Nullable */ Boolean> getBypassPolicyLockoutSafetyCheck() {
         return this.bypassPolicyLockoutSafetyCheck;

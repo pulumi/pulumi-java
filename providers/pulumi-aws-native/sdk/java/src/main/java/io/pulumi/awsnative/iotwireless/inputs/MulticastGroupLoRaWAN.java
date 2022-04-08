@@ -17,7 +17,6 @@ public final class MulticastGroupLoRaWAN extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Multicast group LoRaWAN DL Class
-     * 
      */
     @Import(name="dlClass", required=true)
       private final String dlClass;
@@ -28,7 +27,6 @@ public final class MulticastGroupLoRaWAN extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Multicast group number of devices in group. Returned after successful read.
-     * 
      */
     @Import(name="numberOfDevicesInGroup")
       private final @Nullable Integer numberOfDevicesInGroup;
@@ -39,7 +37,6 @@ public final class MulticastGroupLoRaWAN extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Multicast group number of devices requested. Returned after successful read.
-     * 
      */
     @Import(name="numberOfDevicesRequested")
       private final @Nullable Integer numberOfDevicesRequested;
@@ -50,7 +47,6 @@ public final class MulticastGroupLoRaWAN extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Multicast group LoRaWAN RF region
-     * 
      */
     @Import(name="rfRegion", required=true)
       private final String rfRegion;

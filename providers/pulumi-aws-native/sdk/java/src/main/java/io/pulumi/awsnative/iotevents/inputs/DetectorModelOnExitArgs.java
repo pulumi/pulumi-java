@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * When exiting this state, perform these `actions` if the specified `condition` is `TRUE`.
- * 
  */
 public final class DetectorModelOnExitArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DetectorModelOnExitArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Specifies the `actions` that are performed when the state is exited and the `condition` is `TRUE`.
-     * 
      */
     @Import(name="events")
       private final @Nullable Output<List<DetectorModelEventArgs>> events;

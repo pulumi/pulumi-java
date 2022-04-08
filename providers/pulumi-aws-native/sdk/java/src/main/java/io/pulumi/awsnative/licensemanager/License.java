@@ -19,20 +19,17 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::LicenseManager::License
- * 
  */
 @ResourceType(type="aws-native:licensemanager:License")
 public class License extends io.pulumi.resources.CustomResource {
     /**
      * Beneficiary of the license.
-     * 
      */
     @Export(name="beneficiary", type=String.class, parameters={})
     private Output</* @Nullable */ String> beneficiary;
 
     /**
      * @return Beneficiary of the license.
-     * 
      */
     public Output</* @Nullable */ String> getBeneficiary() {
         return this.beneficiary;
@@ -51,14 +48,12 @@ public class License extends io.pulumi.resources.CustomResource {
     }
     /**
      * Home region for the created license.
-     * 
      */
     @Export(name="homeRegion", type=String.class, parameters={})
     private Output<String> homeRegion;
 
     /**
      * @return Home region for the created license.
-     * 
      */
     public Output<String> getHomeRegion() {
         return this.homeRegion;
@@ -71,14 +66,12 @@ public class License extends io.pulumi.resources.CustomResource {
     }
     /**
      * Amazon Resource Name is a unique name for each resource.
-     * 
      */
     @Export(name="licenseArn", type=String.class, parameters={})
     private Output<String> licenseArn;
 
     /**
      * @return Amazon Resource Name is a unique name for each resource.
-     * 
      */
     public Output<String> getLicenseArn() {
         return this.licenseArn;
@@ -91,42 +84,36 @@ public class License extends io.pulumi.resources.CustomResource {
     }
     /**
      * Name for the created license.
-     * 
      */
     @Export(name="licenseName", type=String.class, parameters={})
     private Output<String> licenseName;
 
     /**
      * @return Name for the created license.
-     * 
      */
     public Output<String> getLicenseName() {
         return this.licenseName;
     }
     /**
      * Product name for the created license.
-     * 
      */
     @Export(name="productName", type=String.class, parameters={})
     private Output<String> productName;
 
     /**
      * @return Product name for the created license.
-     * 
      */
     public Output<String> getProductName() {
         return this.productName;
     }
     /**
      * ProductSKU of the license.
-     * 
      */
     @Export(name="productSKU", type=String.class, parameters={})
     private Output</* @Nullable */ String> productSKU;
 
     /**
      * @return ProductSKU of the license.
-     * 
      */
     public Output</* @Nullable */ String> getProductSKU() {
         return this.productSKU;
@@ -145,14 +132,12 @@ public class License extends io.pulumi.resources.CustomResource {
     }
     /**
      * The version of the license.
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
      * @return The version of the license.
-     * 
      */
     public Output<String> getVersion() {
         return this.version;

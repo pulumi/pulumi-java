@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Source Code configuration
- * 
  */
 public final class ServiceSourceConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -30,7 +29,6 @@ public final class ServiceSourceConfigurationArgs extends io.pulumi.resources.Re
 
     /**
      * Auto Deployment enabled
-     * 
      */
     @Import(name="autoDeploymentsEnabled")
       private final @Nullable Output<Boolean> autoDeploymentsEnabled;

@@ -22,7 +22,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A description for the network interface.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -33,7 +32,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A list of security group IDs associated with this network interface.
-     * 
      */
     @Import(name="groupSet")
       private final @Nullable Output<List<String>> groupSet;
@@ -44,7 +42,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Indicates the type of network interface.
-     * 
      */
     @Import(name="interfaceType")
       private final @Nullable Output<String> interfaceType;
@@ -55,7 +52,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The number of IPv6 addresses to assign to a network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify specific IPv6 addresses, use the Ipv6Addresses property and don't specify this property.
-     * 
      */
     @Import(name="ipv6AddressCount")
       private final @Nullable Output<Integer> ipv6AddressCount;
@@ -66,7 +62,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface. If you're specifying a number of IPv6 addresses, use the Ipv6AddressCount property and don't specify this property.
-     * 
      */
     @Import(name="ipv6Addresses")
       private final @Nullable Output<List<NetworkInterfaceInstanceIpv6AddressArgs>> ipv6Addresses;
@@ -76,8 +71,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Assigns a single private IP address to the network interface, which is used as the primary private IP address. If you want to specify multiple private IP address, use the PrivateIpAddresses property.
-     * 
+     * Assigns a single private IP address to the network interface, which is used as the primary private IP address. If you want to specify multiple private IP address, use the PrivateIpAddresses property. 
      */
     @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
@@ -88,7 +82,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Assigns a list of private IP addresses to the network interface. You can specify a primary private IP address by setting the value of the Primary property to true in the PrivateIpAddressSpecification property. If you want EC2 to automatically assign private IP addresses, use the SecondaryPrivateIpAddressCount property and do not specify this property.
-     * 
      */
     @Import(name="privateIpAddresses")
       private final @Nullable Output<List<NetworkInterfacePrivateIpAddressSpecificationArgs>> privateIpAddresses;
@@ -99,7 +92,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The number of secondary private IPv4 addresses to assign to a network interface. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet's IPv4 CIDR range. You can't specify this option and specify more than one private IP address using privateIpAddresses
-     * 
      */
     @Import(name="secondaryPrivateIpAddressCount")
       private final @Nullable Output<Integer> secondaryPrivateIpAddressCount;
@@ -110,7 +102,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Indicates whether traffic to or from the instance is validated.
-     * 
      */
     @Import(name="sourceDestCheck")
       private final @Nullable Output<Boolean> sourceDestCheck;
@@ -121,7 +112,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The ID of the subnet to associate with the network interface.
-     * 
      */
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
@@ -132,7 +122,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * An arbitrary set of tags (key-value pairs) for this network interface.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<NetworkInterfaceTagArgs>> tags;

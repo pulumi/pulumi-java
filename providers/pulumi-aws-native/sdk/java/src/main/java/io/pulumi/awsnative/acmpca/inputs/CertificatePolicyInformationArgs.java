@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Structure that contains X.509 Policy information.
- * 
  */
 public final class CertificatePolicyInformationArgs extends io.pulumi.resources.ResourceArgs {
 

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains a summary of a gateway capability configuration.
- * 
  */
 public final class GatewayCapabilitySummaryArgs extends io.pulumi.resources.ResourceArgs {
 

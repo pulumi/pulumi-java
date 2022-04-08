@@ -16,22 +16,18 @@ import javax.annotation.Nullable;
 public final class GetTemplateResult {
     /**
      * <p>The Amazon Resource Name (ARN) of the template.</p>
-     * 
      */
     private final @Nullable String arn;
     /**
      * <p>A display name for the template.</p>
-     * 
      */
     private final @Nullable String name;
     /**
      * <p>A list of resource permissions to be set on the template. </p>
-     * 
      */
     private final @Nullable List<TemplateResourcePermission> permissions;
     /**
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.</p>
-     * 
      */
     private final @Nullable List<TemplateTag> tags;
 
@@ -49,28 +45,24 @@ public final class GetTemplateResult {
 
     /**
      * <p>The Amazon Resource Name (ARN) of the template.</p>
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * <p>A display name for the template.</p>
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * <p>A list of resource permissions to be set on the template. </p>
-     * 
     */
     public List<TemplateResourcePermission> getPermissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
     /**
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.</p>
-     * 
     */
     public List<TemplateTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

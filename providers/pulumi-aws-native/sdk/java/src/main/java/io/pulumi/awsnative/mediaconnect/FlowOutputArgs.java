@@ -21,7 +21,6 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The range of IP addresses that should be allowed to initiate output requests to this flow. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
-     * 
      */
     @Import(name="cidrAllowList")
       private final @Nullable Output<List<String>> cidrAllowList;
@@ -32,7 +31,6 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description of the output.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -43,7 +41,6 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The address where you want to send the output.
-     * 
      */
     @Import(name="destination")
       private final @Nullable Output<String> destination;
@@ -54,7 +51,6 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of key used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
-     * 
      */
     @Import(name="encryption")
       private final @Nullable Output<FlowOutputEncryptionArgs> encryption;
@@ -65,7 +61,6 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
-     * 
      */
     @Import(name="flowArn", required=true)
       private final Output<String> flowArn;
@@ -76,7 +71,6 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
-     * 
      */
     @Import(name="maxLatency")
       private final @Nullable Output<Integer> maxLatency;
@@ -87,7 +81,6 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The minimum latency in milliseconds.
-     * 
      */
     @Import(name="minLatency")
       private final @Nullable Output<Integer> minLatency;
@@ -98,7 +91,6 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the output. This value must be unique within the current flow.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -109,7 +101,6 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The port to use when content is distributed to this output.
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Integer> port;
@@ -120,7 +111,6 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The protocol that is used by the source or output.
-     * 
      */
     @Import(name="protocol", required=true)
       private final Output<FlowOutputProtocol> protocol;
@@ -131,7 +121,6 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The remote ID for the Zixi-pull stream.
-     * 
      */
     @Import(name="remoteId")
       private final @Nullable Output<String> remoteId;
@@ -142,7 +131,6 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The smoothing latency in milliseconds for RIST, RTP, and RTP-FEC streams.
-     * 
      */
     @Import(name="smoothingLatency")
       private final @Nullable Output<Integer> smoothingLatency;
@@ -153,7 +141,6 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
-     * 
      */
     @Import(name="streamId")
       private final @Nullable Output<String> streamId;
@@ -164,7 +151,6 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the VPC interface attachment to use for this output.
-     * 
      */
     @Import(name="vpcInterfaceAttachment")
       private final @Nullable Output<FlowOutputVpcInterfaceAttachmentArgs> vpcInterfaceAttachment;

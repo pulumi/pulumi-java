@@ -27,7 +27,6 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the asset model from which to create the asset.
-     * 
      */
     @Import(name="assetModelId", required=true)
       private final Output<String> assetModelId;
@@ -38,7 +37,6 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A unique, friendly name for the asset.
-     * 
      */
     @Import(name="assetName")
       private final @Nullable Output<String> assetName;
@@ -56,7 +54,6 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of key-value pairs that contain metadata for the asset.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<AssetTagArgs>> tags;

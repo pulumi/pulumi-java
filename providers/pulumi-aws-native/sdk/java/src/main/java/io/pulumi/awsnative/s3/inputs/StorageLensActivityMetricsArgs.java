@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Enables activity metrics.
- * 
  */
 public final class StorageLensActivityMetricsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class StorageLensActivityMetricsArgs extends io.pulumi.resources.Re
 
     /**
      * Specifies whether activity metrics are enabled or disabled.
-     * 
      */
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;

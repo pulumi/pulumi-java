@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::AppSync::DomainName
- * 
  */
 @ResourceType(type="aws-native:appsync:DomainName")
 public class DomainName extends io.pulumi.resources.CustomResource {

@@ -20,7 +20,6 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
 
     /**
      * Optional. The access key is used if credentials are required to access the self-managed object storage server.
-     * 
      */
     @Import(name="accessKey")
       private final @Nullable Output<String> accessKey;
@@ -31,7 +30,6 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
 
     /**
      * The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.
-     * 
      */
     @Import(name="agentArns", required=true)
       private final Output<List<String>> agentArns;
@@ -42,7 +40,6 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the bucket on the self-managed object storage server.
-     * 
      */
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
@@ -53,7 +50,6 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
 
     /**
      * Optional. The secret key is used if credentials are required to access the self-managed object storage server.
-     * 
      */
     @Import(name="secretKey")
       private final @Nullable Output<String> secretKey;
@@ -64,7 +60,6 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the self-managed object storage server. This value is the IP address or Domain Name Service (DNS) name of the object storage server.
-     * 
      */
     @Import(name="serverHostname", required=true)
       private final Output<String> serverHostname;
@@ -75,7 +70,6 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
 
     /**
      * The port that your self-managed server accepts inbound network traffic on.
-     * 
      */
     @Import(name="serverPort")
       private final @Nullable Output<Integer> serverPort;
@@ -86,7 +80,6 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
 
     /**
      * The protocol that the object storage server uses to communicate.
-     * 
      */
     @Import(name="serverProtocol")
       private final @Nullable Output<LocationObjectStorageServerProtocol> serverProtocol;
@@ -97,7 +90,6 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
 
     /**
      * The subdirectory in the self-managed object storage server that is used to read data from.
-     * 
      */
     @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
@@ -108,7 +100,6 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<LocationObjectStorageTagArgs>> tags;

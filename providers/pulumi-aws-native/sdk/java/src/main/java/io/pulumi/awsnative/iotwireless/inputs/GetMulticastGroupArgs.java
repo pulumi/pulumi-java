@@ -14,7 +14,6 @@ public final class GetMulticastGroupArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Multicast group id. Returned after successful create.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

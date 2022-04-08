@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class PolicyStatusProperties {
     /**
      * Specifies whether the policy is public or not.
-     * 
      */
     private final MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic;
 
@@ -22,7 +21,6 @@ public final class PolicyStatusProperties {
 
     /**
      * Specifies whether the policy is public or not.
-     * 
     */
     public MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic getIsPublic() {
         return this.isPublic;

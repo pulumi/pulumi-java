@@ -18,7 +18,6 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional description of the subnet group.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -29,7 +28,6 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.
-     * 
      */
     @Import(name="subnetGroupName")
       private final @Nullable Output<String> subnetGroupName;
@@ -40,7 +38,6 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of VPC subnet IDs for the subnet group.
-     * 
      */
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
@@ -51,7 +48,6 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this subnet group.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<SubnetGroupTagArgs>> tags;

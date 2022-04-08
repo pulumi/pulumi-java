@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A function's environment variable settings.
- * 
  */
 public final class FunctionEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class FunctionEnvironmentArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Environment variable key-value pairs.
-     * 
      */
     @Import(name="variables")
       private final @Nullable Output<Object> variables;

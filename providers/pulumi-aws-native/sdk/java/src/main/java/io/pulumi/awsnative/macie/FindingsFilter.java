@@ -18,104 +18,89 @@ import javax.annotation.Nullable;
 
 /**
  * Macie FindingsFilter resource schema.
- * 
  */
 @ResourceType(type="aws-native:macie:FindingsFilter")
 public class FindingsFilter extends io.pulumi.resources.CustomResource {
     /**
      * Findings filter action.
-     * 
      */
     @Export(name="action", type=FindingsFilterFindingFilterAction.class, parameters={})
     private Output</* @Nullable */ FindingsFilterFindingFilterAction> action;
 
     /**
      * @return Findings filter action.
-     * 
      */
     public Output</* @Nullable */ FindingsFilterFindingFilterAction> getAction() {
         return this.action;
     }
     /**
      * Findings filter ARN.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Findings filter ARN.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * Findings filter description
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Findings filter description
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Findings filter criteria.
-     * 
      */
     @Export(name="findingCriteria", type=FindingsFilterFindingCriteria.class, parameters={})
     private Output<FindingsFilterFindingCriteria> findingCriteria;
 
     /**
      * @return Findings filter criteria.
-     * 
      */
     public Output<FindingsFilterFindingCriteria> getFindingCriteria() {
         return this.findingCriteria;
     }
     /**
      * Findings filters list.
-     * 
      */
     @Export(name="findingsFilterListItems", type=List.class, parameters={FindingsFilterListItem.class})
     private Output<List<FindingsFilterListItem>> findingsFilterListItems;
 
     /**
      * @return Findings filters list.
-     * 
      */
     public Output<List<FindingsFilterListItem>> getFindingsFilterListItems() {
         return this.findingsFilterListItems;
     }
     /**
      * Findings filter name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Findings filter name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Findings filter position.
-     * 
      */
     @Export(name="position", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> position;
 
     /**
      * @return Findings filter position.
-     * 
      */
     public Output</* @Nullable */ Integer> getPosition() {
         return this.position;

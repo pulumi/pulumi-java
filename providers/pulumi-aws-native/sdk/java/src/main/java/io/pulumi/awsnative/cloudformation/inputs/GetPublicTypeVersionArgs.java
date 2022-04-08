@@ -14,7 +14,6 @@ public final class GetPublicTypeVersionArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The Amazon Resource Number (ARN) assigned to the public extension upon publication
-     * 
      */
     @Import(name="publicTypeArn", required=true)
       private final String publicTypeArn;

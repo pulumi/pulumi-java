@@ -74,7 +74,6 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
 
     /**
      * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
-     * 
      */
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
@@ -92,7 +91,6 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ModelBiasJobDefinitionTagArgs>> tags;

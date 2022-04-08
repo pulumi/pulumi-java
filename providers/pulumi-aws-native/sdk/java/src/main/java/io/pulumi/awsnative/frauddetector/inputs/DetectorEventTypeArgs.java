@@ -22,7 +22,6 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The ARN of the event type.
-     * 
      */
     @Import(name="arn")
       private final @Nullable Output<String> arn;
@@ -33,7 +32,6 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The time when the event type was created.
-     * 
      */
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
@@ -44,7 +42,6 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The description of the event type.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -83,7 +80,6 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The time when the event type was last updated.
-     * 
      */
     @Import(name="lastUpdatedTime")
       private final @Nullable Output<String> lastUpdatedTime;
@@ -94,7 +90,6 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name for the event type
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -105,7 +100,6 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Tags associated with this event type.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<DetectorTagArgs>> tags;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A addon associate with a resource.
- * 
  */
 public final class InstanceAddOnArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class InstanceAddOnArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The add-on type
-     * 
      */
     @Import(name="addOnType", required=true)
       private final Output<String> addOnType;
@@ -40,7 +38,6 @@ public final class InstanceAddOnArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Status of the Addon
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<InstanceAddOnStatus> status;

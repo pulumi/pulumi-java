@@ -18,7 +18,6 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * If true, the schedule is enabled. If false, the scheduled action does not trigger.
-     * 
      */
     @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
@@ -29,7 +28,6 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The end time in UTC of the scheduled action. After this time, the scheduled action does not trigger.
-     * 
      */
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
@@ -40,7 +38,6 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The IAM role to assume to run the target action.
-     * 
      */
     @Import(name="iamRole")
       private final @Nullable Output<String> iamRole;
@@ -51,7 +48,6 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The schedule in `at( )` or `cron( )` format.
-     * 
      */
     @Import(name="schedule")
       private final @Nullable Output<String> schedule;
@@ -62,7 +58,6 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The description of the scheduled action.
-     * 
      */
     @Import(name="scheduledActionDescription")
       private final @Nullable Output<String> scheduledActionDescription;
@@ -73,7 +68,6 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the scheduled action. The name must be unique within an account.
-     * 
      */
     @Import(name="scheduledActionName")
       private final @Nullable Output<String> scheduledActionName;
@@ -84,7 +78,6 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The start time in UTC of the scheduled action. Before this time, the scheduled action does not trigger.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
@@ -95,7 +88,6 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A JSON format string of the Amazon Redshift API operation with input parameters.
-     * 
      */
     @Import(name="targetAction")
       private final @Nullable Output<ScheduledActionTypeArgs> targetAction;

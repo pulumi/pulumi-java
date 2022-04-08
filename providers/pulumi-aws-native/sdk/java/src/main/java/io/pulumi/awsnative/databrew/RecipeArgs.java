@@ -19,7 +19,6 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of the recipe
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -30,7 +29,6 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Recipe name
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A resource policy with specified policy statements that attaches to a Lex bot or bot alias.
- * 
  */
 @ResourceType(type="aws-native:lex:ResourcePolicy")
 public class ResourcePolicy extends io.pulumi.resources.CustomResource {

@@ -20,7 +20,6 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * For Auto Scaling groups that are running in a virtual private cloud (VPC), specifies whether to assign a public IP address to the group's instances.
-     * 
      */
     @Import(name="associatePublicIpAddress")
       private final @Nullable Output<Boolean> associatePublicIpAddress;
@@ -31,7 +30,6 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Specifies how block devices are exposed to the instance. You can specify virtual devices and EBS volumes.
-     * 
      */
     @Import(name="blockDeviceMappings")
       private final @Nullable Output<List<LaunchConfigurationBlockDeviceMappingArgs>> blockDeviceMappings;
@@ -42,7 +40,6 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to.
-     * 
      */
     @Import(name="classicLinkVPCId")
       private final @Nullable Output<String> classicLinkVPCId;
@@ -53,7 +50,6 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The IDs of one or more security groups for the VPC that you specified in the ClassicLinkVPCId property.
-     * 
      */
     @Import(name="classicLinkVPCSecurityGroups")
       private final @Nullable Output<List<String>> classicLinkVPCSecurityGroups;
@@ -64,7 +60,6 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Specifies whether the launch configuration is optimized for EBS I/O (true) or not (false).
-     * 
      */
     @Import(name="ebsOptimized")
       private final @Nullable Output<Boolean> ebsOptimized;
@@ -75,7 +70,6 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Provides the name or the Amazon Resource Name (ARN) of the instance profile associated with the IAM role for the instance. The instance profile contains the IAM role.
-     * 
      */
     @Import(name="iamInstanceProfile")
       private final @Nullable Output<String> iamInstanceProfile;
@@ -86,7 +80,6 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Provides the unique ID of the Amazon Machine Image (AMI) that was assigned during registration.
-     * 
      */
     @Import(name="imageId", required=true)
       private final Output<String> imageId;
@@ -97,7 +90,6 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The ID of the Amazon EC2 instance you want to use to create the launch configuration.
-     * 
      */
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
@@ -108,7 +100,6 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Controls whether instances in this group are launched with detailed (true) or basic (false) monitoring.
-     * 
      */
     @Import(name="instanceMonitoring")
       private final @Nullable Output<Boolean> instanceMonitoring;
@@ -119,7 +110,6 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Specifies the instance type of the EC2 instance.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
@@ -130,7 +120,6 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Provides the ID of the kernel associated with the EC2 AMI.
-     * 
      */
     @Import(name="kernelId")
       private final @Nullable Output<String> kernelId;
@@ -141,7 +130,6 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Provides the name of the EC2 key pair.
-     * 
      */
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
@@ -152,7 +140,6 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the launch configuration. This name must be unique per Region per account.
-     * 
      */
     @Import(name="launchConfigurationName")
       private final @Nullable Output<String> launchConfigurationName;
@@ -163,7 +150,6 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The metadata options for the instances.
-     * 
      */
     @Import(name="metadataOptions")
       private final @Nullable Output<LaunchConfigurationMetadataOptionsArgs> metadataOptions;
@@ -174,7 +160,6 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The tenancy of the instance, either default or dedicated.
-     * 
      */
     @Import(name="placementTenancy")
       private final @Nullable Output<String> placementTenancy;
@@ -185,7 +170,6 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The ID of the RAM disk to select.
-     * 
      */
     @Import(name="ramDiskId")
       private final @Nullable Output<String> ramDiskId;
@@ -196,7 +180,6 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * A list that contains the security groups to assign to the instances in the Auto Scaling group.
-     * 
      */
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
@@ -207,7 +190,6 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The maximum hourly price you are willing to pay for any Spot Instances launched to fulfill the request.
-     * 
      */
     @Import(name="spotPrice")
       private final @Nullable Output<String> spotPrice;
@@ -218,7 +200,6 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The Base64-encoded user data to make available to the launched EC2 instances.
-     * 
      */
     @Import(name="userData")
       private final @Nullable Output<String> userData;

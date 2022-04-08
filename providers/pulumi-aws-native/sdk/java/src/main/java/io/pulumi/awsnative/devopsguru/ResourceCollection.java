@@ -15,7 +15,353 @@ import javax.annotation.Nullable;
 /**
  * This resource schema represents the ResourceCollection resource in the Amazon DevOps Guru.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myResourceCollection = new AwsNative.DevOpsGuru.ResourceCollection("myResourceCollection", new AwsNative.DevOpsGuru.ResourceCollectionArgs
+ *         {
+ *             ResourceCollectionFilter = new AwsNative.DevOpsGuru.Inputs.ResourceCollectionFilterArgs
+ *             {
+ *                 CloudFormation = new AwsNative.DevOpsGuru.Inputs.ResourceCollectionCloudFormationCollectionFilterArgs
+ *                 {
+ *                     StackNames = 
+ *                     {
+ *                         "StackA",
+ *                         "StackB",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/devopsguru"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devopsguru.NewResourceCollection(ctx, "myResourceCollection", &devopsguru.ResourceCollectionArgs{
+ * 			ResourceCollectionFilter: &devopsguru.ResourceCollectionFilterArgs{
+ * 				CloudFormation: &devopsguru.ResourceCollectionCloudFormationCollectionFilterArgs{
+ * 					StackNames: pulumi.StringArray{
+ * 						pulumi.String("StackA"),
+ * 						pulumi.String("StackB"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myResourceCollection = new aws_native.devopsguru.ResourceCollection("myResourceCollection", {resourceCollectionFilter: {
+ *     cloudFormation: {
+ *         stackNames: [
+ *             "StackA",
+ *             "StackB",
+ *         ],
+ *     },
+ * }});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_resource_collection = aws_native.devopsguru.ResourceCollection("myResourceCollection", resource_collection_filter=aws_native.devopsguru.ResourceCollectionFilterArgs(
+ *     cloud_formation=aws_native.devopsguru.ResourceCollectionCloudFormationCollectionFilterArgs(
+ *         stack_names=[
+ *             "StackA",
+ *             "StackB",
+ *         ],
+ *     ),
+ * ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myResourceCollection = new AwsNative.DevOpsGuru.ResourceCollection("myResourceCollection", new AwsNative.DevOpsGuru.ResourceCollectionArgs
+ *         {
+ *             ResourceCollectionFilter = new AwsNative.DevOpsGuru.Inputs.ResourceCollectionFilterArgs
+ *             {
+ *                 CloudFormation = new AwsNative.DevOpsGuru.Inputs.ResourceCollectionCloudFormationCollectionFilterArgs
+ *                 {
+ *                     StackNames = 
+ *                     {
+ *                         "StackA",
+ *                         "StackB",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/devopsguru"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devopsguru.NewResourceCollection(ctx, "myResourceCollection", &devopsguru.ResourceCollectionArgs{
+ * 			ResourceCollectionFilter: &devopsguru.ResourceCollectionFilterArgs{
+ * 				CloudFormation: &devopsguru.ResourceCollectionCloudFormationCollectionFilterArgs{
+ * 					StackNames: pulumi.StringArray{
+ * 						pulumi.String("StackA"),
+ * 						pulumi.String("StackB"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myResourceCollection = new aws_native.devopsguru.ResourceCollection("myResourceCollection", {resourceCollectionFilter: {
+ *     cloudFormation: {
+ *         stackNames: [
+ *             "StackA",
+ *             "StackB",
+ *         ],
+ *     },
+ * }});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_resource_collection = aws_native.devopsguru.ResourceCollection("myResourceCollection", resource_collection_filter=aws_native.devopsguru.ResourceCollectionFilterArgs(
+ *     cloud_formation=aws_native.devopsguru.ResourceCollectionCloudFormationCollectionFilterArgs(
+ *         stack_names=[
+ *             "StackA",
+ *             "StackB",
+ *         ],
+ *     ),
+ * ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myResourceCollection = new AwsNative.DevOpsGuru.ResourceCollection("myResourceCollection", new AwsNative.DevOpsGuru.ResourceCollectionArgs
+ *         {
+ *             ResourceCollectionFilter = new AwsNative.DevOpsGuru.Inputs.ResourceCollectionFilterArgs
+ *             {
+ *                 CloudFormation = new AwsNative.DevOpsGuru.Inputs.ResourceCollectionCloudFormationCollectionFilterArgs
+ *                 {
+ *                     StackNames = 
+ *                     {
+ *                         "*",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/devopsguru"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devopsguru.NewResourceCollection(ctx, "myResourceCollection", &devopsguru.ResourceCollectionArgs{
+ * 			ResourceCollectionFilter: &devopsguru.ResourceCollectionFilterArgs{
+ * 				CloudFormation: &devopsguru.ResourceCollectionCloudFormationCollectionFilterArgs{
+ * 					StackNames: pulumi.StringArray{
+ * 						pulumi.String("*"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myResourceCollection = new aws_native.devopsguru.ResourceCollection("myResourceCollection", {resourceCollectionFilter: {
+ *     cloudFormation: {
+ *         stackNames: ["*"],
+ *     },
+ * }});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_resource_collection = aws_native.devopsguru.ResourceCollection("myResourceCollection", resource_collection_filter=aws_native.devopsguru.ResourceCollectionFilterArgs(
+ *     cloud_formation=aws_native.devopsguru.ResourceCollectionCloudFormationCollectionFilterArgs(
+ *         stack_names=["*"],
+ *     ),
+ * ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myResourceCollection = new AwsNative.DevOpsGuru.ResourceCollection("myResourceCollection", new AwsNative.DevOpsGuru.ResourceCollectionArgs
+ *         {
+ *             ResourceCollectionFilter = new AwsNative.DevOpsGuru.Inputs.ResourceCollectionFilterArgs
+ *             {
+ *                 CloudFormation = new AwsNative.DevOpsGuru.Inputs.ResourceCollectionCloudFormationCollectionFilterArgs
+ *                 {
+ *                     StackNames = 
+ *                     {
+ *                         "*",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/devopsguru"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devopsguru.NewResourceCollection(ctx, "myResourceCollection", &devopsguru.ResourceCollectionArgs{
+ * 			ResourceCollectionFilter: &devopsguru.ResourceCollectionFilterArgs{
+ * 				CloudFormation: &devopsguru.ResourceCollectionCloudFormationCollectionFilterArgs{
+ * 					StackNames: pulumi.StringArray{
+ * 						pulumi.String("*"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myResourceCollection = new aws_native.devopsguru.ResourceCollection("myResourceCollection", {resourceCollectionFilter: {
+ *     cloudFormation: {
+ *         stackNames: ["*"],
+ *     },
+ * }});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_resource_collection = aws_native.devopsguru.ResourceCollection("myResourceCollection", resource_collection_filter=aws_native.devopsguru.ResourceCollectionFilterArgs(
+ *     cloud_formation=aws_native.devopsguru.ResourceCollectionCloudFormationCollectionFilterArgs(
+ *         stack_names=["*"],
+ *     ),
+ * ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:devopsguru:ResourceCollection")
@@ -28,14 +374,12 @@ public class ResourceCollection extends io.pulumi.resources.CustomResource {
     }
     /**
      * The type of ResourceCollection
-     * 
      */
     @Export(name="resourceCollectionType", type=ResourceCollectionType.class, parameters={})
     private Output<ResourceCollectionType> resourceCollectionType;
 
     /**
      * @return The type of ResourceCollection
-     * 
      */
     public Output<ResourceCollectionType> getResourceCollectionType() {
         return this.resourceCollectionType;

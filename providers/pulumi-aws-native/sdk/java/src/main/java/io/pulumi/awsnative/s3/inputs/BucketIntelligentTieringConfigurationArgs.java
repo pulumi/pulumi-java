@@ -20,7 +20,6 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
 
     /**
      * The ID used to identify the S3 Intelligent-Tiering configuration.
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;
@@ -31,7 +30,6 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
 
     /**
      * An object key name prefix that identifies the subset of objects to which the rule applies.
-     * 
      */
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
@@ -42,7 +40,6 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
 
     /**
      * Specifies the status of the configuration.
-     * 
      */
     @Import(name="status", required=true)
       private final Output<BucketIntelligentTieringConfigurationStatus> status;
@@ -53,7 +50,6 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
 
     /**
      * A container for a key-value pair.
-     * 
      */
     @Import(name="tagFilters")
       private final @Nullable Output<List<BucketTagFilterArgs>> tagFilters;
@@ -64,7 +60,6 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
 
     /**
      * Specifies a list of S3 Intelligent-Tiering storage class tiers in the configuration. At least one tier must be defined in the list. At most, you can specify two tiers in the list, one for each available AccessTier: ARCHIVE_ACCESS and DEEP_ARCHIVE_ACCESS.
-     * 
      */
     @Import(name="tierings", required=true)
       private final Output<List<BucketTieringArgs>> tierings;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The protocol that the object storage server uses to communicate.
-     * 
      */
     @EnumType
     public enum LocationObjectStorageServerProtocol {

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
  * A complex type that contains an optional comment.
  * 
  * If you don't want to specify a comment, omit the HostedZoneConfig and Comment elements.
- * 
  */
 public final class HostedZoneConfig extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class HostedZoneConfig extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Any comments that you want to include about the hosted zone.
-     * 
      */
     @Import(name="comment")
       private final @Nullable String comment;

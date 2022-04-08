@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class DataSourceAthenaParameters {
     /**
      * <p>The workgroup that Amazon Athena uses.</p>
-     * 
      */
     private final @Nullable String workGroup;
 
@@ -24,7 +23,6 @@ public final class DataSourceAthenaParameters {
 
     /**
      * <p>The workgroup that Amazon Athena uses.</p>
-     * 
     */
     public Optional<String> getWorkGroup() {
         return Optional.ofNullable(this.workGroup);

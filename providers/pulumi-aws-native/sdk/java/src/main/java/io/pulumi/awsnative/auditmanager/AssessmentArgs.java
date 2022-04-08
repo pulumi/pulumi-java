@@ -58,7 +58,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of roles for the specified assessment.
-     * 
      */
     @Import(name="roles")
       private final @Nullable Output<List<AssessmentRoleArgs>> roles;
@@ -83,7 +82,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags associated with the assessment.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<AssessmentTagArgs>> tags;

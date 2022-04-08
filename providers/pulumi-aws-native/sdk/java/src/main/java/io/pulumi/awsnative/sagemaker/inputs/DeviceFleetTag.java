@@ -10,15 +10,13 @@ import java.util.Objects;
 
 /**
  * Key-value pair to associate as a tag for the resource
- * 
  */
 public final class DeviceFleetTag extends io.pulumi.resources.InvokeArgs {
 
     public static final DeviceFleetTag Empty = new DeviceFleetTag();
 
     /**
-     * The key name of the tag. You can specify a value that is 1 to 127 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
-     * 
+     * The key name of the tag. You can specify a value that is 1 to 127 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -. 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -28,8 +26,7 @@ public final class DeviceFleetTag extends io.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The key value of the tag. You can specify a value that is 1 to 127 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
-     * 
+     * The key value of the tag. You can specify a value that is 1 to 127 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -. 
      */
     @Import(name="value", required=true)
       private final String value;

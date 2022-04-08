@@ -18,7 +18,6 @@ public final class TopicRuleDestinationArgs extends io.pulumi.resources.Resource
 
     /**
      * HTTP URL destination properties.
-     * 
      */
     @Import(name="httpUrlProperties")
       private final @Nullable Output<TopicRuleDestinationHttpUrlDestinationSummaryArgs> httpUrlProperties;
@@ -29,7 +28,6 @@ public final class TopicRuleDestinationArgs extends io.pulumi.resources.Resource
 
     /**
      * The status of the TopicRuleDestination.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<TopicRuleDestinationStatus> status;
@@ -40,7 +38,6 @@ public final class TopicRuleDestinationArgs extends io.pulumi.resources.Resource
 
     /**
      * VPC destination properties.
-     * 
      */
     @Import(name="vpcProperties")
       private final @Nullable Output<TopicRuleDestinationVpcDestinationPropertiesArgs> vpcProperties;

@@ -119,7 +119,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An arbitrary set of tags (key-value pairs) for this Domain.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<DomainTagArgs>> tags;

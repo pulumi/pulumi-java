@@ -16,7 +16,6 @@ public final class CanaryArtifactConfigArgs extends io.pulumi.resources.Resource
 
     /**
      * Encryption configuration for uploading artifacts to S3
-     * 
      */
     @Import(name="s3Encryption")
       private final @Nullable Output<CanaryS3EncryptionArgs> s3Encryption;

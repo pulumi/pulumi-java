@@ -14,7 +14,6 @@ public final class GetDomainArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The domain name.
-     * 
      */
     @Import(name="domainId", required=true)
       private final String domainId;

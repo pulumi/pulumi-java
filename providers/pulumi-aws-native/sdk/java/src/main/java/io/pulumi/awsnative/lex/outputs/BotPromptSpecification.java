@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 public final class BotPromptSpecification {
     /**
      * Indicates whether the user can interrupt a speech prompt from the bot.
-     * 
      */
     private final @Nullable Boolean allowInterrupt;
     private final Integer maxRetries;
@@ -34,7 +33,6 @@ public final class BotPromptSpecification {
 
     /**
      * Indicates whether the user can interrupt a speech prompt from the bot.
-     * 
     */
     public Optional<Boolean> getAllowInterrupt() {
         return Optional.ofNullable(this.allowInterrupt);

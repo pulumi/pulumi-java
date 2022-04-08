@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The user configuration. This is required only if QuickConnectType is USER.
- * 
  */
 public final class QuickConnectUserQuickConnectConfig extends io.pulumi.resources.InvokeArgs {
 

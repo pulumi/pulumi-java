@@ -18,7 +18,6 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the Windows domain that the FSx for Windows server belongs to.
-     * 
      */
     @Import(name="domain")
       private final @Nullable Output<String> domain;
@@ -29,7 +28,6 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The Amazon Resource Name (ARN) for the FSx for Windows file system.
-     * 
      */
     @Import(name="fsxFilesystemArn", required=true)
       private final Output<String> fsxFilesystemArn;
@@ -40,7 +38,6 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The password of the user who has the permissions to access files and folders in the FSx for Windows file system.
-     * 
      */
     @Import(name="password", required=true)
       private final Output<String> password;
@@ -51,7 +48,6 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The ARNs of the security groups that are to use to configure the FSx for Windows file system.
-     * 
      */
     @Import(name="securityGroupArns", required=true)
       private final Output<List<String>> securityGroupArns;
@@ -62,7 +58,6 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * A subdirectory in the location's path.
-     * 
      */
     @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
@@ -73,7 +68,6 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<LocationFSxWindowsTagArgs>> tags;
@@ -84,7 +78,6 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The user who has the permissions to access files and folders in the FSx for Windows file system.
-     * 
      */
     @Import(name="user", required=true)
       private final Output<String> user;

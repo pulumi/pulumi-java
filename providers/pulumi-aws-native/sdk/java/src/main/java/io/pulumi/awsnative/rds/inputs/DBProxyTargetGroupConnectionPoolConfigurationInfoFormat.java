@@ -18,7 +18,6 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
 
     /**
      * The number of seconds for a proxy to wait for a connection to become available in the connection pool.
-     * 
      */
     @Import(name="connectionBorrowTimeout")
       private final @Nullable Integer connectionBorrowTimeout;
@@ -29,7 +28,6 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
 
     /**
      * One or more SQL statements for the proxy to run when opening each new database connection.
-     * 
      */
     @Import(name="initQuery")
       private final @Nullable String initQuery;
@@ -40,7 +38,6 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
 
     /**
      * The maximum size of the connection pool for each target in a target group.
-     * 
      */
     @Import(name="maxConnectionsPercent")
       private final @Nullable Integer maxConnectionsPercent;
@@ -51,7 +48,6 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
 
     /**
      * Controls how actively the proxy closes idle database connections in the connection pool.
-     * 
      */
     @Import(name="maxIdleConnectionsPercent")
       private final @Nullable Integer maxIdleConnectionsPercent;
@@ -62,7 +58,6 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
 
     /**
      * Each item in the list represents a class of SQL operations that normally cause all later statements in a session using a proxy to be pinned to the same underlying database connection.
-     * 
      */
     @Import(name="sessionPinningFilters")
       private final @Nullable List<String> sessionPinningFilters;

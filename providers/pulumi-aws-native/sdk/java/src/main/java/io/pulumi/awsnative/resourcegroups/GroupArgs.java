@@ -27,7 +27,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the resource group
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -38,7 +37,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

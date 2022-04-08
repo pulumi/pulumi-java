@@ -16,91 +16,165 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::APS::Workspace
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var apsWorkspace = new AwsNative.APS.Workspace("apsWorkspace", new AwsNative.APS.WorkspaceArgs
+ *         {
+ *             Alias = "TestWorkspace",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.APS.Inputs.WorkspaceTagArgs
+ *                 {
+ *                     Key = "BusinessPurpose",
+ *                     Value = "LoadTesting",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/aps"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := aps.NewWorkspace(ctx, "apsWorkspace", &aps.WorkspaceArgs{
+ * 			Alias: pulumi.String("TestWorkspace"),
+ * 			Tags: []aps.WorkspaceTagArgs{
+ * 				&aps.WorkspaceTagArgs{
+ * 					Key:   pulumi.String("BusinessPurpose"),
+ * 					Value: pulumi.String("LoadTesting"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const apsWorkspace = new aws_native.aps.Workspace("apsWorkspace", {
+ *     alias: "TestWorkspace",
+ *     tags: [{
+ *         key: "BusinessPurpose",
+ *         value: "LoadTesting",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * aps_workspace = aws_native.aps.Workspace("apsWorkspace",
+ *     alias="TestWorkspace",
+ *     tags=[aws_native.aps.WorkspaceTagArgs(
+ *         key="BusinessPurpose",
+ *         value="LoadTesting",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:aps:Workspace")
 public class Workspace extends io.pulumi.resources.CustomResource {
     /**
      * The AMP Workspace alert manager definition data
-     * 
      */
     @Export(name="alertManagerDefinition", type=String.class, parameters={})
     private Output</* @Nullable */ String> alertManagerDefinition;
 
     /**
      * @return The AMP Workspace alert manager definition data
-     * 
      */
     public Output</* @Nullable */ String> getAlertManagerDefinition() {
         return this.alertManagerDefinition;
     }
     /**
      * AMP Workspace alias.
-     * 
      */
     @Export(name="alias", type=String.class, parameters={})
     private Output</* @Nullable */ String> alias;
 
     /**
      * @return AMP Workspace alias.
-     * 
      */
     public Output</* @Nullable */ String> getAlias() {
         return this.alias;
     }
     /**
      * Workspace arn.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Workspace arn.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * AMP Workspace prometheus endpoint
-     * 
      */
     @Export(name="prometheusEndpoint", type=String.class, parameters={})
     private Output<String> prometheusEndpoint;
 
     /**
      * @return AMP Workspace prometheus endpoint
-     * 
      */
     public Output<String> getPrometheusEndpoint() {
         return this.prometheusEndpoint;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={WorkspaceTag.class})
     private Output</* @Nullable */ List<WorkspaceTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<WorkspaceTag>> getTags() {
         return this.tags;
     }
     /**
      * Required to identify a specific APS Workspace.
-     * 
      */
     @Export(name="workspaceId", type=String.class, parameters={})
     private Output<String> workspaceId;
 
     /**
      * @return Required to identify a specific APS Workspace.
-     * 
      */
     public Output<String> getWorkspaceId() {
         return this.workspaceId;

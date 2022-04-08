@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class SimulationApplicationRobotSoftwareSuite {
     /**
      * The name of the robot software suite.
-     * 
      */
     private final SimulationApplicationRobotSoftwareSuiteName name;
     /**
      * The version of the robot software suite.
-     * 
      */
     private final @Nullable SimulationApplicationRobotSoftwareSuiteVersion version;
 
@@ -33,14 +31,12 @@ public final class SimulationApplicationRobotSoftwareSuite {
 
     /**
      * The name of the robot software suite.
-     * 
     */
     public SimulationApplicationRobotSoftwareSuiteName getName() {
         return this.name;
     }
     /**
      * The version of the robot software suite.
-     * 
     */
     public Optional<SimulationApplicationRobotSoftwareSuiteVersion> getVersion() {
         return Optional.ofNullable(this.version);

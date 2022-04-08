@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant output is enabled.
-     * 
      */
     @EnumType
     public enum PackagingConfigurationDashManifestProfile {

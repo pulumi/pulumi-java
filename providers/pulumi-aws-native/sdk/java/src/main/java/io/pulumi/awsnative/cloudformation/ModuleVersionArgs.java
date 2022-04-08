@@ -17,7 +17,6 @@ public final class ModuleVersionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the module being registered.
      * 
      * Recommended module naming pattern: company_or_organization::service::type::MODULE.
-     * 
      */
     @Import(name="moduleName", required=true)
       private final Output<String> moduleName;
@@ -28,7 +27,6 @@ public final class ModuleVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The url to the S3 bucket containing the schema and template fragment for the module you want to register.
-     * 
      */
     @Import(name="modulePackage", required=true)
       private final Output<String> modulePackage;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Baseline configuration used to validate that the data conforms to the specified constraints and statistics.
- * 
  */
 public final class ModelQualityJobDefinitionModelQualityBaselineConfigArgs extends io.pulumi.resources.ResourceArgs {
 

@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS Route53 Recovery Control basic constructs and validation rules.
- * 
  */
 @ResourceType(type="aws-native:route53recoverycontrol:SafetyRule")
 public class SafetyRule extends io.pulumi.resources.CustomResource {
@@ -31,14 +30,12 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
     }
     /**
      * The Amazon Resource Name (ARN) of the control panel.
-     * 
      */
     @Export(name="controlPanelArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> controlPanelArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the control panel.
-     * 
      */
     public Output</* @Nullable */ String> getControlPanelArn() {
         return this.controlPanelArn;
@@ -63,42 +60,36 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
     }
     /**
      * The Amazon Resource Name (ARN) of the safety rule.
-     * 
      */
     @Export(name="safetyRuleArn", type=String.class, parameters={})
     private Output<String> safetyRuleArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the safety rule.
-     * 
      */
     public Output<String> getSafetyRuleArn() {
         return this.safetyRuleArn;
     }
     /**
      * The deployment status of the routing control. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
-     * 
      */
     @Export(name="status", type=SafetyRuleStatus.class, parameters={})
     private Output<SafetyRuleStatus> status;
 
     /**
      * @return The deployment status of the routing control. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
-     * 
      */
     public Output<SafetyRuleStatus> getStatus() {
         return this.status;
     }
     /**
      * A collection of tags associated with a resource
-     * 
      */
     @Export(name="tags", type=List.class, parameters={SafetyRuleTag.class})
     private Output</* @Nullable */ List<SafetyRuleTag>> tags;
 
     /**
      * @return A collection of tags associated with a resource
-     * 
      */
     public Output</* @Nullable */ List<SafetyRuleTag>> getTags() {
         return this.tags;

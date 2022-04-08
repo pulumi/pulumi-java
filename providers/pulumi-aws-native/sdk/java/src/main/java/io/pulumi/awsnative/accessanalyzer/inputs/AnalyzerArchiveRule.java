@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * An Access Analyzer archive rule. Archive rules automatically archive new findings that meet the criteria you define when you create the rule.
- * 
  */
 public final class AnalyzerArchiveRule extends io.pulumi.resources.InvokeArgs {
 
@@ -27,7 +26,6 @@ public final class AnalyzerArchiveRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The archive rule name
-     * 
      */
     @Import(name="ruleName", required=true)
       private final String ruleName;

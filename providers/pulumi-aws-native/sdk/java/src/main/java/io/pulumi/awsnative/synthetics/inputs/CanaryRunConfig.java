@@ -18,7 +18,6 @@ public final class CanaryRunConfig extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Enable active tracing if set to true
-     * 
      */
     @Import(name="activeTracing")
       private final @Nullable Boolean activeTracing;
@@ -29,7 +28,6 @@ public final class CanaryRunConfig extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Environment variable key-value pairs.
-     * 
      */
     @Import(name="environmentVariables")
       private final @Nullable Object environmentVariables;
@@ -40,7 +38,6 @@ public final class CanaryRunConfig extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Provide maximum memory available for canary in MB
-     * 
      */
     @Import(name="memoryInMB")
       private final @Nullable Integer memoryInMB;
@@ -51,7 +48,6 @@ public final class CanaryRunConfig extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Provide maximum canary timeout per run in seconds
-     * 
      */
     @Import(name="timeoutInSeconds")
       private final @Nullable Integer timeoutInSeconds;

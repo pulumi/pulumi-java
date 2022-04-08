@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the settings of a public endpoint for an Amazon Lightsail container service.
- * 
  */
 public final class ContainerPublicEndpoint extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ContainerPublicEndpoint extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the container for the endpoint.
-     * 
      */
     @Import(name="containerName")
       private final @Nullable String containerName;
@@ -33,7 +31,6 @@ public final class ContainerPublicEndpoint extends io.pulumi.resources.InvokeArg
 
     /**
      * The port of the container to which traffic is forwarded to.
-     * 
      */
     @Import(name="containerPort")
       private final @Nullable Integer containerPort;
@@ -44,7 +41,6 @@ public final class ContainerPublicEndpoint extends io.pulumi.resources.InvokeArg
 
     /**
      * An object that describes the health check configuration of the container.
-     * 
      */
     @Import(name="healthCheckConfig")
       private final @Nullable ContainerHealthCheckConfig healthCheckConfig;

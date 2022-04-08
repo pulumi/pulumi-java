@@ -15,7 +15,6 @@ public final class RegistryPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The JSON policy text to apply to your registry. The policy text follows the same format as IAM policy text. For more information, see Registry permissions (https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html) in the Amazon Elastic Container Registry User Guide.
-     * 
      */
     @Import(name="policyText", required=true)
       private final Output<Object> policyText;

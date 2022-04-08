@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The distributions of the distribution configuration.
- * 
  */
 public final class DistributionConfigurationDistributionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
 
     /**
      * The specific AMI settings (for example, launch permissions, AMI tags).
-     * 
      */
     @Import(name="amiDistributionConfiguration")
       private final @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> amiDistributionConfiguration;
@@ -35,7 +33,6 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
 
     /**
      * Container distribution settings for encryption, licensing, and sharing in a specific Region.
-     * 
      */
     @Import(name="containerDistributionConfiguration")
       private final @Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> containerDistributionConfiguration;
@@ -46,7 +43,6 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
 
     /**
      * A group of launchTemplateConfiguration settings that apply to image distribution.
-     * 
      */
     @Import(name="launchTemplateConfigurations")
       private final @Nullable Output<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> launchTemplateConfigurations;
@@ -57,7 +53,6 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
 
     /**
      * The License Manager Configuration to associate with the AMI in the specified Region.
-     * 
      */
     @Import(name="licenseConfigurationArns")
       private final @Nullable Output<List<String>> licenseConfigurationArns;
@@ -68,7 +63,6 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
 
     /**
      * region
-     * 
      */
     @Import(name="region", required=true)
       private final Output<String> region;

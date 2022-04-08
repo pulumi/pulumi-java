@@ -19,7 +19,6 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The primary IPv4 CIDR block for the VPC.
-     * 
      */
     @Import(name="cidrBlock", required=true)
       private final Output<String> cidrBlock;
@@ -30,7 +29,6 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether the instances launched in the VPC get DNS hostnames. If enabled, instances in the VPC get DNS hostnames; otherwise, they do not. Disabled by default for nondefault VPCs.
-     * 
      */
     @Import(name="enableDnsHostnames")
       private final @Nullable Output<Boolean> enableDnsHostnames;
@@ -41,7 +39,6 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether the DNS resolution is supported for the VPC. If enabled, queries to the Amazon provided DNS server at the 169.254.169.253 IP address, or the reserved IP address at the base of the VPC network range "plus two" succeed. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled. Enabled by default.
-     * 
      */
     @Import(name="enableDnsSupport")
       private final @Nullable Output<Boolean> enableDnsSupport;
@@ -58,7 +55,6 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
      * "dedicated": An instance launched into the VPC is a Dedicated Instance by default, unless you explicitly specify a tenancy of host during instance launch. You cannot specify a tenancy of default during instance launch.
      * 
      * Updating InstanceTenancy requires no replacement only if you are updating its value from "dedicated" to "default". Updating InstanceTenancy from "default" to "dedicated" requires replacement.
-     * 
      */
     @Import(name="instanceTenancy")
       private final @Nullable Output<String> instanceTenancy;
@@ -69,7 +65,6 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags for the VPC.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<VPCTagArgs>> tags;

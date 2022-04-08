@@ -14,7 +14,6 @@ public final class SchemaTag extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A key to identify the tag.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -25,7 +24,6 @@ public final class SchemaTag extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Corresponding tag value for the key.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

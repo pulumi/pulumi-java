@@ -15,7 +15,6 @@ public final class EgressOnlyInternetGatewayArgs extends io.pulumi.resources.Res
 
     /**
      * The ID of the VPC for which to create the egress-only internet gateway.
-     * 
      */
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;

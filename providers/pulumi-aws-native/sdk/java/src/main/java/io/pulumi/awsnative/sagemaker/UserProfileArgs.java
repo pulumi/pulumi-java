@@ -19,7 +19,6 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the associated Domain.
-     * 
      */
     @Import(name="domainId", required=true)
       private final Output<String> domainId;
@@ -30,7 +29,6 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A specifier for the type of value specified in SingleSignOnUserValue. Currently, the only supported value is "UserName". If the Domain's AuthMode is SSO, this field is required. If the Domain's AuthMode is not SSO, this field cannot be specified.
-     * 
      */
     @Import(name="singleSignOnUserIdentifier")
       private final @Nullable Output<String> singleSignOnUserIdentifier;
@@ -41,7 +39,6 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The username of the associated AWS Single Sign-On User for this UserProfile. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain's AuthMode is not SSO, this field cannot be specified.
-     * 
      */
     @Import(name="singleSignOnUserValue")
       private final @Nullable Output<String> singleSignOnUserValue;
@@ -52,7 +49,6 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of tags to apply to the user profile.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<UserProfileTagArgs>> tags;
@@ -63,7 +59,6 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A name for the UserProfile.
-     * 
      */
     @Import(name="userProfileName")
       private final @Nullable Output<String> userProfileName;
@@ -74,7 +69,6 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A collection of settings.
-     * 
      */
     @Import(name="userSettings")
       private final @Nullable Output<UserProfileUserSettingsArgs> userSettings;

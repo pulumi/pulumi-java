@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class ProjectSample {
     /**
      * Sample size
-     * 
      */
     private final @Nullable Integer size;
     /**
      * Sample type
-     * 
      */
     private final ProjectSampleType type;
 
@@ -33,14 +31,12 @@ public final class ProjectSample {
 
     /**
      * Sample size
-     * 
     */
     public Optional<Integer> getSize() {
         return Optional.ofNullable(this.size);
     }
     /**
      * Sample type
-     * 
     */
     public ProjectSampleType getType() {
         return this.type;

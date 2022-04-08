@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The attributes from the JSON payload that are made available by the input. Inputs are derived from messages sent to the AWS IoT Events system using `BatchPutMessage`. Each such message contains a JSON payload, and those attributes (and their paired values) specified here are available for use in the `condition` expressions used by detectors that monitor this input.
- * 
  */
 public final class InputAttributeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class InputAttributeArgs extends io.pulumi.resources.ResourceArgs {
      * An expression that specifies an attribute-value pair in a JSON structure. Use this to specify an attribute from the JSON payload that is made available by the input. Inputs are derived from messages sent to AWS IoT Events (`BatchPutMessage`). Each such message contains a JSON payload. The attribute (and its paired value) specified here are available for use in the `condition` expressions used by detectors.
      * 
      * _Syntax_: `<field-name>.<field-name>...`
-     * 
      */
     @Import(name="jsonPath", required=true)
       private final Output<String> jsonPath;

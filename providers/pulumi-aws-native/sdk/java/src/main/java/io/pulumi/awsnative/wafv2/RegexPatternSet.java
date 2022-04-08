@@ -16,48 +16,41 @@ import javax.annotation.Nullable;
 
 /**
  * Contains a list of Regular expressions based on the provided inputs. RegexPatternSet can be used with other WAF entities with RegexPatternSetReferenceStatement to perform other actions .
- * 
  */
 @ResourceType(type="aws-native:wafv2:RegexPatternSet")
 public class RegexPatternSet extends io.pulumi.resources.CustomResource {
     /**
      * ARN of the WAF entity.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return ARN of the WAF entity.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * Description of the entity.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description of the entity.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Name of the RegexPatternSet.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Name of the RegexPatternSet.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
@@ -70,14 +63,12 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
     }
     /**
      * Use CLOUDFRONT for CloudFront RegexPatternSet, use REGIONAL for Application Load Balancer and API Gateway.
-     * 
      */
     @Export(name="scope", type=RegexPatternSetScope.class, parameters={})
     private Output<RegexPatternSetScope> scope;
 
     /**
      * @return Use CLOUDFRONT for CloudFront RegexPatternSet, use REGIONAL for Application Load Balancer and API Gateway.
-     * 
      */
     public Output<RegexPatternSetScope> getScope() {
         return this.scope;

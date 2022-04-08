@@ -15,13 +15,11 @@ import javax.annotation.Nullable;
 public final class DiskAddOn {
     /**
      * The add-on type
-     * 
      */
     private final String addOnType;
     private final @Nullable DiskAutoSnapshotAddOn autoSnapshotAddOnRequest;
     /**
      * Status of the Addon
-     * 
      */
     private final @Nullable DiskAddOnStatus status;
 
@@ -37,7 +35,6 @@ public final class DiskAddOn {
 
     /**
      * The add-on type
-     * 
     */
     public String getAddOnType() {
         return this.addOnType;
@@ -47,7 +44,6 @@ public final class DiskAddOn {
     }
     /**
      * Status of the Addon
-     * 
     */
     public Optional<DiskAddOnStatus> getStatus() {
         return Optional.ofNullable(this.status);

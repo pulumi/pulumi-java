@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains a tumbling window, which is a repeating fixed-sized, non-overlapping, and contiguous time interval. This window is used in metric and aggregation computations.
- * 
  */
 public final class AssetModelTumblingWindow extends io.pulumi.resources.InvokeArgs {
 

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration information for RPC Protection and Data Transfer Protection. These parameters can be set to AUTHENTICATION, INTEGRITY, or PRIVACY. The default value is PRIVACY.
- * 
  */
 public final class LocationHDFSQopConfiguration extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class LocationHDFSQopConfiguration extends io.pulumi.resources.Invo
 
     /**
      * Configuration for Data Transfer Protection.
-     * 
      */
     @Import(name="dataTransferProtection")
       private final @Nullable LocationHDFSQopConfigurationDataTransferProtection dataTransferProtection;
@@ -32,7 +30,6 @@ public final class LocationHDFSQopConfiguration extends io.pulumi.resources.Invo
 
     /**
      * Configuration for RPC Protection.
-     * 
      */
     @Import(name="rpcProtection")
       private final @Nullable LocationHDFSQopConfigurationRpcProtection rpcProtection;

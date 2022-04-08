@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details about delivering logs to Amazon Kinesis Data Firehose.
- * 
  */
 public final class ConnectorFirehoseLogDeliveryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ConnectorFirehoseLogDeliveryArgs extends io.pulumi.resources.
 
     /**
      * The Kinesis Data Firehose delivery stream that is the destination for log delivery.
-     * 
      */
     @Import(name="deliveryStream")
       private final @Nullable Output<String> deliveryStream;
@@ -32,7 +30,6 @@ public final class ConnectorFirehoseLogDeliveryArgs extends io.pulumi.resources.
 
     /**
      * Specifies whether the logs get sent to the specified Kinesis Data Firehose delivery stream.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;

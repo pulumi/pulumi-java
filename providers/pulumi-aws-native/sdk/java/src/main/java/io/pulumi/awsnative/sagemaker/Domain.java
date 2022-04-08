@@ -18,188 +18,161 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::SageMaker::Domain
- * 
  */
 @ResourceType(type="aws-native:sagemaker:Domain")
 public class Domain extends io.pulumi.resources.CustomResource {
     /**
      * Specifies the VPC used for non-EFS traffic. The default value is PublicInternetOnly.
-     * 
      */
     @Export(name="appNetworkAccessType", type=DomainAppNetworkAccessType.class, parameters={})
     private Output</* @Nullable */ DomainAppNetworkAccessType> appNetworkAccessType;
 
     /**
      * @return Specifies the VPC used for non-EFS traffic. The default value is PublicInternetOnly.
-     * 
      */
     public Output</* @Nullable */ DomainAppNetworkAccessType> getAppNetworkAccessType() {
         return this.appNetworkAccessType;
     }
     /**
      * The mode of authentication that members use to access the domain.
-     * 
      */
     @Export(name="authMode", type=DomainAuthMode.class, parameters={})
     private Output<DomainAuthMode> authMode;
 
     /**
      * @return The mode of authentication that members use to access the domain.
-     * 
      */
     public Output<DomainAuthMode> getAuthMode() {
         return this.authMode;
     }
     /**
      * The default user settings.
-     * 
      */
     @Export(name="defaultUserSettings", type=DomainUserSettings.class, parameters={})
     private Output<DomainUserSettings> defaultUserSettings;
 
     /**
      * @return The default user settings.
-     * 
      */
     public Output<DomainUserSettings> getDefaultUserSettings() {
         return this.defaultUserSettings;
     }
     /**
      * The Amazon Resource Name (ARN) of the created domain.
-     * 
      */
     @Export(name="domainArn", type=String.class, parameters={})
     private Output<String> domainArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the created domain.
-     * 
      */
     public Output<String> getDomainArn() {
         return this.domainArn;
     }
     /**
      * The domain name.
-     * 
      */
     @Export(name="domainId", type=String.class, parameters={})
     private Output<String> domainId;
 
     /**
      * @return The domain name.
-     * 
      */
     public Output<String> getDomainId() {
         return this.domainId;
     }
     /**
      * A name for the domain.
-     * 
      */
     @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
      * @return A name for the domain.
-     * 
      */
     public Output<String> getDomainName() {
         return this.domainName;
     }
     /**
      * The ID of the Amazon Elastic File System (EFS) managed by this Domain.
-     * 
      */
     @Export(name="homeEfsFileSystemId", type=String.class, parameters={})
     private Output<String> homeEfsFileSystemId;
 
     /**
      * @return The ID of the Amazon Elastic File System (EFS) managed by this Domain.
-     * 
      */
     public Output<String> getHomeEfsFileSystemId() {
         return this.homeEfsFileSystemId;
     }
     /**
      * SageMaker uses AWS KMS to encrypt the EFS volume attached to the domain with an AWS managed customer master key (CMK) by default.
-     * 
      */
     @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
     /**
      * @return SageMaker uses AWS KMS to encrypt the EFS volume attached to the domain with an AWS managed customer master key (CMK) by default.
-     * 
      */
     public Output</* @Nullable */ String> getKmsKeyId() {
         return this.kmsKeyId;
     }
     /**
      * The SSO managed application instance ID.
-     * 
      */
     @Export(name="singleSignOnManagedApplicationInstanceId", type=String.class, parameters={})
     private Output<String> singleSignOnManagedApplicationInstanceId;
 
     /**
      * @return The SSO managed application instance ID.
-     * 
      */
     public Output<String> getSingleSignOnManagedApplicationInstanceId() {
         return this.singleSignOnManagedApplicationInstanceId;
     }
     /**
      * The VPC subnets that Studio uses for communication.
-     * 
      */
     @Export(name="subnetIds", type=List.class, parameters={String.class})
     private Output<List<String>> subnetIds;
 
     /**
      * @return The VPC subnets that Studio uses for communication.
-     * 
      */
     public Output<List<String>> getSubnetIds() {
         return this.subnetIds;
     }
     /**
      * A list of tags to apply to the user profile.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DomainTag.class})
     private Output</* @Nullable */ List<DomainTag>> tags;
 
     /**
      * @return A list of tags to apply to the user profile.
-     * 
      */
     public Output</* @Nullable */ List<DomainTag>> getTags() {
         return this.tags;
     }
     /**
      * The URL to the created domain.
-     * 
      */
     @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**
      * @return The URL to the created domain.
-     * 
      */
     public Output<String> getUrl() {
         return this.url;
     }
     /**
      * The ID of the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
-     * 
      */
     @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**
      * @return The ID of the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
-     * 
      */
     public Output<String> getVpcId() {
         return this.vpcId;

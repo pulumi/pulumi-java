@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class DataSourceSparkParameters {
     /**
      * <p>Host.</p>
-     * 
      */
     private final String host;
     /**
      * <p>Port.</p>
-     * 
      */
     private final Double port;
 
@@ -31,14 +29,12 @@ public final class DataSourceSparkParameters {
 
     /**
      * <p>Host.</p>
-     * 
     */
     public String getHost() {
         return this.host;
     }
     /**
      * <p>Port.</p>
-     * 
     */
     public Double getPort() {
         return this.port;

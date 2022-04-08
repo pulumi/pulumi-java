@@ -16,7 +16,6 @@ public final class DatasetFilterExpression extends io.pulumi.resources.InvokeArg
 
     /**
      * Filtering expression for a parameter
-     * 
      */
     @Import(name="expression", required=true)
       private final String expression;

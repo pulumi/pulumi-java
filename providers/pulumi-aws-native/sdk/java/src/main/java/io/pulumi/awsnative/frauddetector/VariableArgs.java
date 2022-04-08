@@ -21,7 +21,6 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The source of the data.
-     * 
      */
     @Import(name="dataSource", required=true)
       private final Output<VariableDataSource> dataSource;
@@ -32,7 +31,6 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The data type.
-     * 
      */
     @Import(name="dataType", required=true)
       private final Output<VariableDataType> dataType;
@@ -43,7 +41,6 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The default value for the variable when no value is received.
-     * 
      */
     @Import(name="defaultValue", required=true)
       private final Output<String> defaultValue;
@@ -54,7 +51,6 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -65,7 +61,6 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the variable.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -76,7 +71,6 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tags associated with this variable.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<VariableTagArgs>> tags;
@@ -87,7 +81,6 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The variable type. For more information see https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types
-     * 
      */
     @Import(name="variableType")
       private final @Nullable Output<VariableType> variableType;

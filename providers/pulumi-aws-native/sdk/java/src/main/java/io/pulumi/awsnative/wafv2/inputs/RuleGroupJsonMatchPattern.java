@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The pattern to look for in the JSON body.
- * 
  */
 public final class RuleGroupJsonMatchPattern extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class RuleGroupJsonMatchPattern extends io.pulumi.resources.InvokeA
 
     /**
      * Inspect all parts of the web request's JSON body.
-     * 
      */
     @Import(name="all")
       private final @Nullable Object all;

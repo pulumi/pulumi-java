@@ -16,8 +16,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     public static final ApplicationArgs Empty = new ApplicationArgs();
 
     /**
-     * The description of the application.
-     * 
+     * The description of the application. 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -27,8 +26,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the application.
-     * 
+     * The name of the application. 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

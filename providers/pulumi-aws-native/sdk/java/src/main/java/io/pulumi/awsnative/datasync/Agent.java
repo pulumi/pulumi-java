@@ -17,119 +17,237 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for AWS::DataSync::Agent.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var agent = new AwsNative.DataSync.Agent("agent", new AwsNative.DataSync.AgentArgs
+ *         {
+ *             ActivationKey = "AAAAA-7AAAA-GG7MC-3I9R3-27COD",
+ *             AgentName = "MyAgent",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/datasync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datasync.NewAgent(ctx, "agent", &datasync.AgentArgs{
+ * 			ActivationKey: pulumi.String("AAAAA-7AAAA-GG7MC-3I9R3-27COD"),
+ * 			AgentName:     pulumi.String("MyAgent"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const agent = new aws_native.datasync.Agent("agent", {
+ *     activationKey: "AAAAA-7AAAA-GG7MC-3I9R3-27COD",
+ *     agentName: "MyAgent",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * agent = aws_native.datasync.Agent("agent",
+ *     activation_key="AAAAA-7AAAA-GG7MC-3I9R3-27COD",
+ *     agent_name="MyAgent")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var agent = new AwsNative.DataSync.Agent("agent", new AwsNative.DataSync.AgentArgs
+ *         {
+ *             ActivationKey = "AAAAA-7AAAA-GG7MC-3I9R3-27COD",
+ *             AgentName = "MyAgent",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/datasync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datasync.NewAgent(ctx, "agent", &datasync.AgentArgs{
+ * 			ActivationKey: pulumi.String("AAAAA-7AAAA-GG7MC-3I9R3-27COD"),
+ * 			AgentName:     pulumi.String("MyAgent"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const agent = new aws_native.datasync.Agent("agent", {
+ *     activationKey: "AAAAA-7AAAA-GG7MC-3I9R3-27COD",
+ *     agentName: "MyAgent",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * agent = aws_native.datasync.Agent("agent",
+ *     activation_key="AAAAA-7AAAA-GG7MC-3I9R3-27COD",
+ *     agent_name="MyAgent")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:datasync:Agent")
 public class Agent extends io.pulumi.resources.CustomResource {
     /**
      * Activation key of the Agent.
-     * 
      */
     @Export(name="activationKey", type=String.class, parameters={})
     private Output<String> activationKey;
 
     /**
      * @return Activation key of the Agent.
-     * 
      */
     public Output<String> getActivationKey() {
         return this.activationKey;
     }
     /**
      * The DataSync Agent ARN.
-     * 
      */
     @Export(name="agentArn", type=String.class, parameters={})
     private Output<String> agentArn;
 
     /**
      * @return The DataSync Agent ARN.
-     * 
      */
     public Output<String> getAgentArn() {
         return this.agentArn;
     }
     /**
      * The name configured for the agent. Text reference used to identify the agent in the console.
-     * 
      */
     @Export(name="agentName", type=String.class, parameters={})
     private Output</* @Nullable */ String> agentName;
 
     /**
      * @return The name configured for the agent. Text reference used to identify the agent in the console.
-     * 
      */
     public Output</* @Nullable */ String> getAgentName() {
         return this.agentName;
     }
     /**
      * The service endpoints that the agent will connect to.
-     * 
      */
     @Export(name="endpointType", type=AgentEndpointType.class, parameters={})
     private Output<AgentEndpointType> endpointType;
 
     /**
      * @return The service endpoints that the agent will connect to.
-     * 
      */
     public Output<AgentEndpointType> getEndpointType() {
         return this.endpointType;
     }
     /**
      * The ARNs of the security group used to protect your data transfer task subnets.
-     * 
      */
     @Export(name="securityGroupArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> securityGroupArns;
 
     /**
      * @return The ARNs of the security group used to protect your data transfer task subnets.
-     * 
      */
     public Output</* @Nullable */ List<String>> getSecurityGroupArns() {
         return this.securityGroupArns;
     }
     /**
      * The ARNs of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
-     * 
      */
     @Export(name="subnetArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> subnetArns;
 
     /**
      * @return The ARNs of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
-     * 
      */
     public Output</* @Nullable */ List<String>> getSubnetArns() {
         return this.subnetArns;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={AgentTag.class})
     private Output</* @Nullable */ List<AgentTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<AgentTag>> getTags() {
         return this.tags;
     }
     /**
      * The ID of the VPC endpoint that the agent has access to.
-     * 
      */
     @Export(name="vpcEndpointId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpcEndpointId;
 
     /**
      * @return The ID of the VPC endpoint that the agent has access to.
-     * 
      */
     public Output</* @Nullable */ String> getVpcEndpointId() {
         return this.vpcEndpointId;

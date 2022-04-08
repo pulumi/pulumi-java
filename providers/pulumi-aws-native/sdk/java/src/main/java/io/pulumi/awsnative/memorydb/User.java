@@ -16,34 +16,29 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::MemoryDB::User
- * 
  */
 @ResourceType(type="aws-native:memorydb:User")
 public class User extends io.pulumi.resources.CustomResource {
     /**
      * Access permissions string used for this user account.
-     * 
      */
     @Export(name="accessString", type=String.class, parameters={})
     private Output<String> accessString;
 
     /**
      * @return Access permissions string used for this user account.
-     * 
      */
     public Output<String> getAccessString() {
         return this.accessString;
     }
     /**
      * The Amazon Resource Name (ARN) of the user account.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the user account.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
@@ -56,42 +51,36 @@ public class User extends io.pulumi.resources.CustomResource {
     }
     /**
      * Indicates the user status. Can be "active", "modifying" or "deleting".
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return Indicates the user status. Can be "active", "modifying" or "deleting".
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * An array of key-value pairs to apply to this user.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={UserTag.class})
     private Output</* @Nullable */ List<UserTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this user.
-     * 
      */
     public Output</* @Nullable */ List<UserTag>> getTags() {
         return this.tags;
     }
     /**
      * The name of the user.
-     * 
      */
     @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**
      * @return The name of the user.
-     * 
      */
     public Output<String> getUserName() {
         return this.userName;

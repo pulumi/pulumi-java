@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The user configuration. This is required only if QuickConnectType is USER.
- * 
  */
 public final class QuickConnectUserQuickConnectConfigArgs extends io.pulumi.resources.ResourceArgs {
 

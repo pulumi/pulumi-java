@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Monthly Transfer of the Instance.
- * 
  */
 public final class InstanceMonthlyTransferArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class InstanceMonthlyTransferArgs extends io.pulumi.resources.Resou
 
     /**
      * GbPerMonthAllocated of the Instance.
-     * 
      */
     @Import(name="gbPerMonthAllocated")
       private final @Nullable Output<String> gbPerMonthAllocated;

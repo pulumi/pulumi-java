@@ -14,7 +14,6 @@ public final class GetAnalyzerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Amazon Resource Name (ARN) of the analyzer
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

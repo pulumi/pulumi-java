@@ -14,7 +14,6 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the image.
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

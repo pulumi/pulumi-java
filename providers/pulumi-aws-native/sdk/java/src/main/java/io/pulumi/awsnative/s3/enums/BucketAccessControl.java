@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A canned access control list (ACL) that grants predefined permissions to the bucket.
-     * 
      */
     @EnumType
     public enum BucketAccessControl {

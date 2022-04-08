@@ -18,7 +18,6 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of the cell Amazon Resource Names (ARNs) in the recovery group.
-     * 
      */
     @Import(name="cells")
       private final @Nullable Output<List<String>> cells;
@@ -29,7 +28,6 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the recovery group to create.
-     * 
      */
     @Import(name="recoveryGroupName")
       private final @Nullable Output<String> recoveryGroupName;
@@ -40,7 +38,6 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A collection of tags associated with a resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<RecoveryGroupTagArgs>> tags;

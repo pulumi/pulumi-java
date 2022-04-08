@@ -17,7 +17,6 @@ public final class AssetModelMetric extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The mathematical expression that defines the metric aggregation function. You can specify up to 10 functions per expression.
-     * 
      */
     @Import(name="expression", required=true)
       private final String expression;
@@ -28,7 +27,6 @@ public final class AssetModelMetric extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The list of variables used in the expression.
-     * 
      */
     @Import(name="variables", required=true)
       private final List<AssetModelExpressionVariable> variables;
@@ -39,7 +37,6 @@ public final class AssetModelMetric extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The window (time interval) over which AWS IoT SiteWise computes the metric's aggregation expression
-     * 
      */
     @Import(name="window", required=true)
       private final AssetModelMetricWindow window;

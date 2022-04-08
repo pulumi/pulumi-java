@@ -16,77 +16,299 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::IVS::PlaybackKeyPair
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var playbackKeyPair = new AwsNative.IVS.PlaybackKeyPair("playbackKeyPair", new AwsNative.IVS.PlaybackKeyPairArgs
+ *         {
+ *             PublicKeyMaterial = @"-----BEGIN PUBLIC KEY-----
+ * MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEwOR43ETwEoWif1i14aL8GtDMNkT/kBQm
+ * h4sas9P//bjCU988rmQQXVBfftKT9xngg+W6hzOEpeUlCRlAtz6b6U79naYYRaSk
+ * K/UhYGWkXlbJlc9zn13imYWgVGe/BMFp
+ * -----END PUBLIC KEY-----
+ * ",
+ *             Name = "MyPlaybackKeyPair",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.IVS.Inputs.PlaybackKeyPairTagArgs
+ *                 {
+ *                     Key = "MyKey",
+ *                     Value = "MyValue",
+ *                 },
+ *             },
+ *         });
+ *         this.PlaybackKeyPairArn = playbackKeyPair.Id;
+ *         this.PlaybackKeyPairFingerprint = playbackKeyPair.Fingerprint;
+ *     }
+ * 
+ *     [Output("playbackKeyPairArn")]
+ *     public Output<string> PlaybackKeyPairArn { get; set; }
+ *     [Output("playbackKeyPairFingerprint")]
+ *     public Output<string> PlaybackKeyPairFingerprint { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ivs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		playbackKeyPair, err := ivs.NewPlaybackKeyPair(ctx, "playbackKeyPair", &ivs.PlaybackKeyPairArgs{
+ * 			PublicKeyMaterial: pulumi.String("-----BEGIN PUBLIC KEY-----\nMHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEwOR43ETwEoWif1i14aL8GtDMNkT/kBQm\nh4sas9P//bjCU988rmQQXVBfftKT9xngg+W6hzOEpeUlCRlAtz6b6U79naYYRaSk\nK/UhYGWkXlbJlc9zn13imYWgVGe/BMFp\n-----END PUBLIC KEY-----\n"),
+ * 			Name:              pulumi.String("MyPlaybackKeyPair"),
+ * 			Tags: []ivs.PlaybackKeyPairTagArgs{
+ * 				&ivs.PlaybackKeyPairTagArgs{
+ * 					Key:   pulumi.String("MyKey"),
+ * 					Value: pulumi.String("MyValue"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("playbackKeyPairArn", playbackKeyPair.ID())
+ * 		ctx.Export("playbackKeyPairFingerprint", playbackKeyPair.Fingerprint)
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const playbackKeyPair = new aws_native.ivs.PlaybackKeyPair("playbackKeyPair", {
+ *     publicKeyMaterial: `-----BEGIN PUBLIC KEY-----
+ * MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEwOR43ETwEoWif1i14aL8GtDMNkT/kBQm
+ * h4sas9P//bjCU988rmQQXVBfftKT9xngg+W6hzOEpeUlCRlAtz6b6U79naYYRaSk
+ * K/UhYGWkXlbJlc9zn13imYWgVGe/BMFp
+ * -----END PUBLIC KEY-----
+ * `,
+ *     name: "MyPlaybackKeyPair",
+ *     tags: [{
+ *         key: "MyKey",
+ *         value: "MyValue",
+ *     }],
+ * });
+ * export const playbackKeyPairArn = playbackKeyPair.id;
+ * export const playbackKeyPairFingerprint = playbackKeyPair.fingerprint;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * playback_key_pair = aws_native.ivs.PlaybackKeyPair("playbackKeyPair",
+ *     public_key_material="""-----BEGIN PUBLIC KEY-----
+ * MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEwOR43ETwEoWif1i14aL8GtDMNkT/kBQm
+ * h4sas9P//bjCU988rmQQXVBfftKT9xngg+W6hzOEpeUlCRlAtz6b6U79naYYRaSk
+ * K/UhYGWkXlbJlc9zn13imYWgVGe/BMFp
+ * -----END PUBLIC KEY-----
+ * """,
+ *     name="MyPlaybackKeyPair",
+ *     tags=[aws_native.ivs.PlaybackKeyPairTagArgs(
+ *         key="MyKey",
+ *         value="MyValue",
+ *     )])
+ * pulumi.export("playbackKeyPairArn", playback_key_pair.id)
+ * pulumi.export("playbackKeyPairFingerprint", playback_key_pair.fingerprint)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var playbackKeyPair = new AwsNative.IVS.PlaybackKeyPair("playbackKeyPair", new AwsNative.IVS.PlaybackKeyPairArgs
+ *         {
+ *             PublicKeyMaterial = @"-----BEGIN PUBLIC KEY-----
+ * MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEwOR43ETwEoWif1i14aL8GtDMNkT/kBQm
+ * h4sas9P//bjCU988rmQQXVBfftKT9xngg+W6hzOEpeUlCRlAtz6b6U79naYYRaSk
+ * K/UhYGWkXlbJlc9zn13imYWgVGe/BMFp
+ * -----END PUBLIC KEY-----
+ * ",
+ *             Name = "MyPlaybackKeyPair",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.IVS.Inputs.PlaybackKeyPairTagArgs
+ *                 {
+ *                     Key = "MyKey",
+ *                     Value = "MyValue",
+ *                 },
+ *             },
+ *         });
+ *         this.PlaybackKeyPairArn = playbackKeyPair.Id;
+ *         this.PlaybackKeyPairFingerprint = playbackKeyPair.Fingerprint;
+ *     }
+ * 
+ *     [Output("playbackKeyPairArn")]
+ *     public Output<string> PlaybackKeyPairArn { get; set; }
+ *     [Output("playbackKeyPairFingerprint")]
+ *     public Output<string> PlaybackKeyPairFingerprint { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ivs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		playbackKeyPair, err := ivs.NewPlaybackKeyPair(ctx, "playbackKeyPair", &ivs.PlaybackKeyPairArgs{
+ * 			PublicKeyMaterial: pulumi.String("-----BEGIN PUBLIC KEY-----\nMHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEwOR43ETwEoWif1i14aL8GtDMNkT/kBQm\nh4sas9P//bjCU988rmQQXVBfftKT9xngg+W6hzOEpeUlCRlAtz6b6U79naYYRaSk\nK/UhYGWkXlbJlc9zn13imYWgVGe/BMFp\n-----END PUBLIC KEY-----\n"),
+ * 			Name:              pulumi.String("MyPlaybackKeyPair"),
+ * 			Tags: []ivs.PlaybackKeyPairTagArgs{
+ * 				&ivs.PlaybackKeyPairTagArgs{
+ * 					Key:   pulumi.String("MyKey"),
+ * 					Value: pulumi.String("MyValue"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("playbackKeyPairArn", playbackKeyPair.ID())
+ * 		ctx.Export("playbackKeyPairFingerprint", playbackKeyPair.Fingerprint)
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const playbackKeyPair = new aws_native.ivs.PlaybackKeyPair("playbackKeyPair", {
+ *     publicKeyMaterial: `-----BEGIN PUBLIC KEY-----
+ * MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEwOR43ETwEoWif1i14aL8GtDMNkT/kBQm
+ * h4sas9P//bjCU988rmQQXVBfftKT9xngg+W6hzOEpeUlCRlAtz6b6U79naYYRaSk
+ * K/UhYGWkXlbJlc9zn13imYWgVGe/BMFp
+ * -----END PUBLIC KEY-----
+ * `,
+ *     name: "MyPlaybackKeyPair",
+ *     tags: [{
+ *         key: "MyKey",
+ *         value: "MyValue",
+ *     }],
+ * });
+ * export const playbackKeyPairArn = playbackKeyPair.id;
+ * export const playbackKeyPairFingerprint = playbackKeyPair.fingerprint;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * playback_key_pair = aws_native.ivs.PlaybackKeyPair("playbackKeyPair",
+ *     public_key_material="""-----BEGIN PUBLIC KEY-----
+ * MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEwOR43ETwEoWif1i14aL8GtDMNkT/kBQm
+ * h4sas9P//bjCU988rmQQXVBfftKT9xngg+W6hzOEpeUlCRlAtz6b6U79naYYRaSk
+ * K/UhYGWkXlbJlc9zn13imYWgVGe/BMFp
+ * -----END PUBLIC KEY-----
+ * """,
+ *     name="MyPlaybackKeyPair",
+ *     tags=[aws_native.ivs.PlaybackKeyPairTagArgs(
+ *         key="MyKey",
+ *         value="MyValue",
+ *     )])
+ * pulumi.export("playbackKeyPairArn", playback_key_pair.id)
+ * pulumi.export("playbackKeyPairFingerprint", playback_key_pair.fingerprint)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:ivs:PlaybackKeyPair")
 public class PlaybackKeyPair extends io.pulumi.resources.CustomResource {
     /**
      * Key-pair identifier.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Key-pair identifier.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * Key-pair identifier.
-     * 
      */
     @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
      * @return Key-pair identifier.
-     * 
      */
     public Output<String> getFingerprint() {
         return this.fingerprint;
     }
     /**
      * An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource. The value does not need to be unique.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource. The value does not need to be unique.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The public portion of a customer-generated key pair.
-     * 
      */
     @Export(name="publicKeyMaterial", type=String.class, parameters={})
     private Output<String> publicKeyMaterial;
 
     /**
      * @return The public portion of a customer-generated key pair.
-     * 
      */
     public Output<String> getPublicKeyMaterial() {
         return this.publicKeyMaterial;
     }
     /**
      * A list of key-value pairs that contain metadata for the asset model.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={PlaybackKeyPairTag.class})
     private Output</* @Nullable */ List<PlaybackKeyPairTag>> tags;
 
     /**
      * @return A list of key-value pairs that contain metadata for the asset model.
-     * 
      */
     public Output</* @Nullable */ List<PlaybackKeyPairTag>> getTags() {
         return this.tags;

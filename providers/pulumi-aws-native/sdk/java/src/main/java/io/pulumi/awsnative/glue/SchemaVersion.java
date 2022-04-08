@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * This resource represents an individual schema version of a schema defined in Glue Schema Registry.
- * 
  */
 @ResourceType(type="aws-native:glue:SchemaVersion")
 public class SchemaVersion extends io.pulumi.resources.CustomResource {
@@ -26,28 +25,24 @@ public class SchemaVersion extends io.pulumi.resources.CustomResource {
     }
     /**
      * Complete definition of the schema in plain-text.
-     * 
      */
     @Export(name="schemaDefinition", type=String.class, parameters={})
     private Output<String> schemaDefinition;
 
     /**
      * @return Complete definition of the schema in plain-text.
-     * 
      */
     public Output<String> getSchemaDefinition() {
         return this.schemaDefinition;
     }
     /**
      * Represents the version ID associated with the schema version.
-     * 
      */
     @Export(name="versionId", type=String.class, parameters={})
     private Output<String> versionId;
 
     /**
      * @return Represents the version ID associated with the schema version.
-     * 
      */
     public Output<String> getVersionId() {
         return this.versionId;

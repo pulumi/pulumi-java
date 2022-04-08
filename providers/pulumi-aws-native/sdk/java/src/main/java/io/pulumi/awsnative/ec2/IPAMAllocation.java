@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Schema of AWS::EC2::IPAMAllocation Type
- * 
  */
 @ResourceType(type="aws-native:ec2:IPAMAllocation")
 public class IPAMAllocation extends io.pulumi.resources.CustomResource {
@@ -32,42 +31,36 @@ public class IPAMAllocation extends io.pulumi.resources.CustomResource {
     }
     /**
      * Id of the allocation.
-     * 
      */
     @Export(name="ipamPoolAllocationId", type=String.class, parameters={})
     private Output<String> ipamPoolAllocationId;
 
     /**
      * @return Id of the allocation.
-     * 
      */
     public Output<String> getIpamPoolAllocationId() {
         return this.ipamPoolAllocationId;
     }
     /**
      * Id of the IPAM Pool.
-     * 
      */
     @Export(name="ipamPoolId", type=String.class, parameters={})
     private Output<String> ipamPoolId;
 
     /**
      * @return Id of the IPAM Pool.
-     * 
      */
     public Output<String> getIpamPoolId() {
         return this.ipamPoolId;
     }
     /**
      * The desired netmask length of the allocation. If set, IPAM will choose a block of free space with this size and return the CIDR representing it.
-     * 
      */
     @Export(name="netmaskLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> netmaskLength;
 
     /**
      * @return The desired netmask length of the allocation. If set, IPAM will choose a block of free space with this size and return the CIDR representing it.
-     * 
      */
     public Output</* @Nullable */ Integer> getNetmaskLength() {
         return this.netmaskLength;

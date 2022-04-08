@@ -18,35 +18,130 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for AWS::DataSync::LocationNFS
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var locationNFS = new AwsNative.DataSync.LocationNFS("locationNFS", new AwsNative.DataSync.LocationNFSArgs
+ *         {
+ *             MountOptions = new AwsNative.DataSync.Inputs.LocationNFSMountOptionsArgs
+ *             {
+ *                 Version = "NFS4_0",
+ *             },
+ *             OnPremConfig = new AwsNative.DataSync.Inputs.LocationNFSOnPremConfigArgs
+ *             {
+ *                 AgentArns = 
+ *                 {
+ *                     "arn:aws:datasync:us-east-2:111222333444:agent/agent-0b0addbeef44b3nfs",
+ *                 },
+ *             },
+ *             ServerHostname = "MyServer@example.com",
+ *             Subdirectory = "/MySubdirectory",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/datasync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datasync.NewLocationNFS(ctx, "locationNFS", &datasync.LocationNFSArgs{
+ * 			MountOptions: &datasync.LocationNFSMountOptionsArgs{
+ * 				Version: "NFS4_0",
+ * 			},
+ * 			OnPremConfig: &datasync.LocationNFSOnPremConfigArgs{
+ * 				AgentArns: pulumi.StringArray{
+ * 					pulumi.String("arn:aws:datasync:us-east-2:111222333444:agent/agent-0b0addbeef44b3nfs"),
+ * 				},
+ * 			},
+ * 			ServerHostname: pulumi.String("MyServer@example.com"),
+ * 			Subdirectory:   pulumi.String("/MySubdirectory"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const locationNFS = new aws_native.datasync.LocationNFS("locationNFS", {
+ *     mountOptions: {
+ *         version: "NFS4_0",
+ *     },
+ *     onPremConfig: {
+ *         agentArns: ["arn:aws:datasync:us-east-2:111222333444:agent/agent-0b0addbeef44b3nfs"],
+ *     },
+ *     serverHostname: "MyServer@example.com",
+ *     subdirectory: "/MySubdirectory",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * location_nfs = aws_native.datasync.LocationNFS("locationNFS",
+ *     mount_options=aws_native.datasync.LocationNFSMountOptionsArgs(
+ *         version="NFS4_0",
+ *     ),
+ *     on_prem_config=aws_native.datasync.LocationNFSOnPremConfigArgs(
+ *         agent_arns=["arn:aws:datasync:us-east-2:111222333444:agent/agent-0b0addbeef44b3nfs"],
+ *     ),
+ *     server_hostname="MyServer@example.com",
+ *     subdirectory="/MySubdirectory")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:datasync:LocationNFS")
 public class LocationNFS extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the NFS location.
-     * 
      */
     @Export(name="locationArn", type=String.class, parameters={})
     private Output<String> locationArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the NFS location.
-     * 
      */
     public Output<String> getLocationArn() {
         return this.locationArn;
     }
     /**
      * The URL of the NFS location that was described.
-     * 
      */
     @Export(name="locationUri", type=String.class, parameters={})
     private Output<String> locationUri;
 
     /**
      * @return The URL of the NFS location that was described.
-     * 
      */
     public Output<String> getLocationUri() {
         return this.locationUri;
@@ -65,42 +160,36 @@ public class LocationNFS extends io.pulumi.resources.CustomResource {
     }
     /**
      * The name of the NFS server. This value is the IP address or DNS name of the NFS server.
-     * 
      */
     @Export(name="serverHostname", type=String.class, parameters={})
     private Output<String> serverHostname;
 
     /**
      * @return The name of the NFS server. This value is the IP address or DNS name of the NFS server.
-     * 
      */
     public Output<String> getServerHostname() {
         return this.serverHostname;
     }
     /**
      * The subdirectory in the NFS file system that is used to read data from the NFS source location or write data to the NFS destination.
-     * 
      */
     @Export(name="subdirectory", type=String.class, parameters={})
     private Output<String> subdirectory;
 
     /**
      * @return The subdirectory in the NFS file system that is used to read data from the NFS source location or write data to the NFS destination.
-     * 
      */
     public Output<String> getSubdirectory() {
         return this.subdirectory;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={LocationNFSTag.class})
     private Output</* @Nullable */ List<LocationNFSTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<LocationNFSTag>> getTags() {
         return this.tags;

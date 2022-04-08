@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Create and manage a Domain Configuration
- * 
  */
 @ResourceType(type="aws-native:iot:DomainConfiguration")
 public class DomainConfiguration extends io.pulumi.resources.CustomResource {

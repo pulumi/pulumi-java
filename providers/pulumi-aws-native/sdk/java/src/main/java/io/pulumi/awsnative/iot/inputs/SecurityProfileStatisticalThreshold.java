@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A statistical ranking (percentile) which indicates a threshold value by which a behavior is determined to be in compliance or in violation of the behavior.
- * 
  */
 public final class SecurityProfileStatisticalThreshold extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SecurityProfileStatisticalThreshold extends io.pulumi.resourc
 
     /**
      * The percentile which resolves to a threshold value by which compliance with a behavior is determined
-     * 
      */
     @Import(name="statistic")
       private final @Nullable SecurityProfileStatisticalThresholdStatistic statistic;

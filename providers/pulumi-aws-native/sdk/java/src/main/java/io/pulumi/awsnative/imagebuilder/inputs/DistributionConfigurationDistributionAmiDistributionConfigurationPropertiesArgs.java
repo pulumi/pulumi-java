@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The specific AMI settings (for example, launch permissions, AMI tags).
- * 
  */
 public final class DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
 
     /**
      * The tags to apply to AMIs distributed to this Region.
-     * 
      */
     @Import(name="amiTags")
       private final @Nullable Output<Object> amiTags;
@@ -34,7 +32,6 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
 
     /**
      * The description of the AMI distribution configuration.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -45,7 +42,6 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
 
     /**
      * The KMS key identifier used to encrypt the distributed image.
-     * 
      */
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
@@ -56,7 +52,6 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
 
     /**
      * Launch permissions can be used to configure which AWS accounts can use the AMI to launch instances.
-     * 
      */
     @Import(name="launchPermissionConfiguration")
       private final @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs> launchPermissionConfiguration;
@@ -67,7 +62,6 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
 
     /**
      * The name of the AMI distribution configuration.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -78,7 +72,6 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
 
     /**
      * The ID of accounts to which you want to distribute an image.
-     * 
      */
     @Import(name="targetAccountIds")
       private final @Nullable Output<List<String>> targetAccountIds;

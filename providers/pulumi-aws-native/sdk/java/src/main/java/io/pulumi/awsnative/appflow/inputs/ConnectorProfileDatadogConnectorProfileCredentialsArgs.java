@@ -15,7 +15,6 @@ public final class ConnectorProfileDatadogConnectorProfileCredentialsArgs extend
 
     /**
      * A unique alphanumeric identiﬁer used to authenticate a user, developer, or calling program to your API.
-     * 
      */
     @Import(name="apiKey", required=true)
       private final Output<String> apiKey;
@@ -26,7 +25,6 @@ public final class ConnectorProfileDatadogConnectorProfileCredentialsArgs extend
 
     /**
      * Application keys, in conjunction with your API key, give you full access to Datadog’s programmatic API. Application keys are associated with the user account that created them. The application key is used to log all requests made to the API.
-     * 
      */
     @Import(name="applicationKey", required=true)
       private final Output<String> applicationKey;

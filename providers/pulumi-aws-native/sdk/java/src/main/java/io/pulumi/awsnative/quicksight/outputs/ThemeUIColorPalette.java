@@ -13,92 +13,76 @@ import javax.annotation.Nullable;
 public final class ThemeUIColorPalette {
     /**
      * <p>This color is that applies to selected states and buttons.</p>
-     * 
      */
     private final @Nullable String accent;
     /**
      * <p>The foreground color that applies to any text or other elements that appear over the
      *             accent color.</p>
-     * 
      */
     private final @Nullable String accentForeground;
     /**
      * <p>The color that applies to error messages.</p>
-     * 
      */
     private final @Nullable String danger;
     /**
      * <p>The foreground color that applies to any text or other elements that appear over the
      *             error color.</p>
-     * 
      */
     private final @Nullable String dangerForeground;
     /**
      * <p>The color that applies to the names of fields that are identified as
      *             dimensions.</p>
-     * 
      */
     private final @Nullable String dimension;
     /**
      * <p>The foreground color that applies to any text or other elements that appear over the
      *             dimension color.</p>
-     * 
      */
     private final @Nullable String dimensionForeground;
     /**
      * <p>The color that applies to the names of fields that are identified as measures.</p>
-     * 
      */
     private final @Nullable String measure;
     /**
      * <p>The foreground color that applies to any text or other elements that appear over the
      *             measure color.</p>
-     * 
      */
     private final @Nullable String measureForeground;
     /**
      * <p>The background color that applies to visuals and other high emphasis UI.</p>
-     * 
      */
     private final @Nullable String primaryBackground;
     /**
      * <p>The color of text and other foreground elements that appear over the primary
      *             background regions, such as grid lines, borders, table banding, icons, and so on.</p>
-     * 
      */
     private final @Nullable String primaryForeground;
     /**
      * <p>The background color that applies to the sheet background and sheet controls.</p>
-     * 
      */
     private final @Nullable String secondaryBackground;
     /**
      * <p>The foreground color that applies to any sheet title, sheet control text, or UI that
      *             appears over the secondary background.</p>
-     * 
      */
     private final @Nullable String secondaryForeground;
     /**
      * <p>The color that applies to success messages, for example the check mark for a
      *             successful download.</p>
-     * 
      */
     private final @Nullable String success;
     /**
      * <p>The foreground color that applies to any text or other elements that appear over the
      *             success color.</p>
-     * 
      */
     private final @Nullable String successForeground;
     /**
      * <p>This color that applies to warning and informational messages.</p>
-     * 
      */
     private final @Nullable String warning;
     /**
      * <p>The foreground color that applies to any text or other elements that appear over the
      *             warning color.</p>
-     * 
      */
     private final @Nullable String warningForeground;
 
@@ -140,7 +124,6 @@ public final class ThemeUIColorPalette {
 
     /**
      * <p>This color is that applies to selected states and buttons.</p>
-     * 
     */
     public Optional<String> getAccent() {
         return Optional.ofNullable(this.accent);
@@ -148,14 +131,12 @@ public final class ThemeUIColorPalette {
     /**
      * <p>The foreground color that applies to any text or other elements that appear over the
      *             accent color.</p>
-     * 
     */
     public Optional<String> getAccentForeground() {
         return Optional.ofNullable(this.accentForeground);
     }
     /**
      * <p>The color that applies to error messages.</p>
-     * 
     */
     public Optional<String> getDanger() {
         return Optional.ofNullable(this.danger);
@@ -163,7 +144,6 @@ public final class ThemeUIColorPalette {
     /**
      * <p>The foreground color that applies to any text or other elements that appear over the
      *             error color.</p>
-     * 
     */
     public Optional<String> getDangerForeground() {
         return Optional.ofNullable(this.dangerForeground);
@@ -171,7 +151,6 @@ public final class ThemeUIColorPalette {
     /**
      * <p>The color that applies to the names of fields that are identified as
      *             dimensions.</p>
-     * 
     */
     public Optional<String> getDimension() {
         return Optional.ofNullable(this.dimension);
@@ -179,14 +158,12 @@ public final class ThemeUIColorPalette {
     /**
      * <p>The foreground color that applies to any text or other elements that appear over the
      *             dimension color.</p>
-     * 
     */
     public Optional<String> getDimensionForeground() {
         return Optional.ofNullable(this.dimensionForeground);
     }
     /**
      * <p>The color that applies to the names of fields that are identified as measures.</p>
-     * 
     */
     public Optional<String> getMeasure() {
         return Optional.ofNullable(this.measure);
@@ -194,14 +171,12 @@ public final class ThemeUIColorPalette {
     /**
      * <p>The foreground color that applies to any text or other elements that appear over the
      *             measure color.</p>
-     * 
     */
     public Optional<String> getMeasureForeground() {
         return Optional.ofNullable(this.measureForeground);
     }
     /**
      * <p>The background color that applies to visuals and other high emphasis UI.</p>
-     * 
     */
     public Optional<String> getPrimaryBackground() {
         return Optional.ofNullable(this.primaryBackground);
@@ -209,14 +184,12 @@ public final class ThemeUIColorPalette {
     /**
      * <p>The color of text and other foreground elements that appear over the primary
      *             background regions, such as grid lines, borders, table banding, icons, and so on.</p>
-     * 
     */
     public Optional<String> getPrimaryForeground() {
         return Optional.ofNullable(this.primaryForeground);
     }
     /**
      * <p>The background color that applies to the sheet background and sheet controls.</p>
-     * 
     */
     public Optional<String> getSecondaryBackground() {
         return Optional.ofNullable(this.secondaryBackground);
@@ -224,7 +197,6 @@ public final class ThemeUIColorPalette {
     /**
      * <p>The foreground color that applies to any sheet title, sheet control text, or UI that
      *             appears over the secondary background.</p>
-     * 
     */
     public Optional<String> getSecondaryForeground() {
         return Optional.ofNullable(this.secondaryForeground);
@@ -232,7 +204,6 @@ public final class ThemeUIColorPalette {
     /**
      * <p>The color that applies to success messages, for example the check mark for a
      *             successful download.</p>
-     * 
     */
     public Optional<String> getSuccess() {
         return Optional.ofNullable(this.success);
@@ -240,14 +211,12 @@ public final class ThemeUIColorPalette {
     /**
      * <p>The foreground color that applies to any text or other elements that appear over the
      *             success color.</p>
-     * 
     */
     public Optional<String> getSuccessForeground() {
         return Optional.ofNullable(this.successForeground);
     }
     /**
      * <p>This color that applies to warning and informational messages.</p>
-     * 
     */
     public Optional<String> getWarning() {
         return Optional.ofNullable(this.warning);
@@ -255,7 +224,6 @@ public final class ThemeUIColorPalette {
     /**
      * <p>The foreground color that applies to any text or other elements that appear over the
      *             warning color.</p>
-     * 
     */
     public Optional<String> getWarningForeground() {
         return Optional.ofNullable(this.warningForeground);

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The baseline statistics resource for a monitoring job.
- * 
  */
 public final class MonitoringScheduleStatisticsResourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MonitoringScheduleStatisticsResourceArgs extends io.pulumi.re
 
     /**
      * The Amazon S3 URI for the baseline statistics file in Amazon S3 that the current monitoring job should be validated against.
-     * 
      */
     @Import(name="s3Uri")
       private final @Nullable Output<String> s3Uri;

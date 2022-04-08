@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A CMAF encryption configuration.
- * 
  */
 public final class PackagingConfigurationCmafEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 

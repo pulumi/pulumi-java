@@ -16,27 +16,22 @@ import javax.annotation.Nullable;
 public final class GetIntegrationResult {
     /**
      * The time of this integration got created
-     * 
      */
     private final @Nullable String createdAt;
     /**
      * The time of this integration got last updated at
-     * 
      */
     private final @Nullable String lastUpdatedAt;
     /**
      * The name of the ObjectType defined for the 3rd party data in Profile Service
-     * 
      */
     private final @Nullable String objectTypeName;
     /**
      * The mapping between 3rd party event types and ObjectType names
-     * 
      */
     private final @Nullable List<IntegrationObjectTypeMapping> objectTypeNames;
     /**
      * The tags (keys and values) associated with the integration
-     * 
      */
     private final @Nullable List<IntegrationTag> tags;
 
@@ -56,35 +51,30 @@ public final class GetIntegrationResult {
 
     /**
      * The time of this integration got created
-     * 
     */
     public Optional<String> getCreatedAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
      * The time of this integration got last updated at
-     * 
     */
     public Optional<String> getLastUpdatedAt() {
         return Optional.ofNullable(this.lastUpdatedAt);
     }
     /**
      * The name of the ObjectType defined for the 3rd party data in Profile Service
-     * 
     */
     public Optional<String> getObjectTypeName() {
         return Optional.ofNullable(this.objectTypeName);
     }
     /**
      * The mapping between 3rd party event types and ObjectType names
-     * 
     */
     public List<IntegrationObjectTypeMapping> getObjectTypeNames() {
         return this.objectTypeNames == null ? List.of() : this.objectTypeNames;
     }
     /**
      * The tags (keys and values) associated with the integration
-     * 
     */
     public List<IntegrationTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

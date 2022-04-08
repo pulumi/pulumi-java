@@ -19,7 +19,6 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Matches attributes derived from the request.
-     * 
      */
     @Import(name="attributes")
       private final @Nullable Object attributes;
@@ -30,7 +29,6 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The percentage of matching requests to instrument, after the reservoir is exhausted.
-     * 
      */
     @Import(name="fixedRate")
       private final @Nullable Double fixedRate;
@@ -41,7 +39,6 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Matches the HTTP method from a request URL.
-     * 
      */
     @Import(name="hTTPMethod")
       private final @Nullable String hTTPMethod;
@@ -52,7 +49,6 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Matches the hostname from a request URL.
-     * 
      */
     @Import(name="host")
       private final @Nullable String host;
@@ -63,7 +59,6 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The priority of the sampling rule.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Integer priority;
@@ -74,7 +69,6 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
-     * 
      */
     @Import(name="reservoirSize")
       private final @Nullable Integer reservoirSize;
@@ -85,7 +79,6 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Matches the ARN of the AWS resource on which the service runs.
-     * 
      */
     @Import(name="resourceARN")
       private final @Nullable String resourceARN;
@@ -110,7 +103,6 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Matches the name that the service uses to identify itself in segments.
-     * 
      */
     @Import(name="serviceName")
       private final @Nullable String serviceName;
@@ -121,7 +113,6 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Matches the origin that the service uses to identify its type in segments.
-     * 
      */
     @Import(name="serviceType")
       private final @Nullable String serviceType;
@@ -132,7 +123,6 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Matches the path from a request URL.
-     * 
      */
     @Import(name="uRLPath")
       private final @Nullable String uRLPath;

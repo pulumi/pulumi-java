@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information about notification channels you have configured with DevOps Guru.
- * 
  */
 public final class NotificationChannelConfigArgs extends io.pulumi.resources.ResourceArgs {
 

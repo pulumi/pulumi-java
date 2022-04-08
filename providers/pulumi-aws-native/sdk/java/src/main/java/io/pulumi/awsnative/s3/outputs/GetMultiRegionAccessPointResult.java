@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class GetMultiRegionAccessPointResult {
     /**
      * The alias is a unique identifier to, and is part of the public DNS name for this Multi Region Access Point
-     * 
      */
     private final @Nullable String alias;
     /**
      * The timestamp of the when the Multi Region Access Point is created
-     * 
      */
     private final @Nullable String createdAt;
 
@@ -32,14 +30,12 @@ public final class GetMultiRegionAccessPointResult {
 
     /**
      * The alias is a unique identifier to, and is part of the public DNS name for this Multi Region Access Point
-     * 
     */
     public Optional<String> getAlias() {
         return Optional.ofNullable(this.alias);
     }
     /**
      * The timestamp of the when the Multi Region Access Point is created
-     * 
     */
     public Optional<String> getCreatedAt() {
         return Optional.ofNullable(this.createdAt);

@@ -16,7 +16,6 @@ public final class InstanceNetworking {
     private final @Nullable InstanceMonthlyTransfer monthlyTransfer;
     /**
      * Ports to the Instance.
-     * 
      */
     private final List<InstancePort> ports;
 
@@ -33,7 +32,6 @@ public final class InstanceNetworking {
     }
     /**
      * Ports to the Instance.
-     * 
     */
     public List<InstancePort> getPorts() {
         return this.ports;

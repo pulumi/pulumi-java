@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Parameters, to define a mitigation action that publishes findings to Amazon SNS. You can implement your own custom actions in response to the Amazon SNS messages.
- * 
  */
 public final class MitigationActionPublishFindingToSnsParams extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MitigationActionPublishFindingToSnsParams extends io.pulumi.r
 
     /**
      * The ARN of the topic to which you want to publish the findings.
-     * 
      */
     @Import(name="topicArn", required=true)
       private final String topicArn;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class TemplateSourceTemplate {
     /**
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
-     * 
      */
     private final String arn;
 
@@ -22,7 +21,6 @@ public final class TemplateSourceTemplate {
 
     /**
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
-     * 
     */
     public String getArn() {
         return this.arn;

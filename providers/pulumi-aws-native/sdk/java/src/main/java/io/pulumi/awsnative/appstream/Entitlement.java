@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::AppStream::Entitlement
- * 
  */
 @ResourceType(type="aws-native:appstream:Entitlement")
 public class Entitlement extends io.pulumi.resources.CustomResource {

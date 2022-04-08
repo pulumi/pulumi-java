@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Schema for AWS::ServiceCatalog::ServiceAction
- * 
  */
 @ResourceType(type="aws-native:servicecatalog:ServiceAction")
 public class ServiceAction extends io.pulumi.resources.CustomResource {

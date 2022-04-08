@@ -14,7 +14,6 @@ public final class GetAccessPointArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name you want to assign to this Object lambda Access Point.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

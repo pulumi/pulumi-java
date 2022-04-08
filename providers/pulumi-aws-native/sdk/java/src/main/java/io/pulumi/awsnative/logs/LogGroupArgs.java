@@ -19,7 +19,6 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the CMK to use when encrypting log data.
-     * 
      */
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
@@ -30,7 +29,6 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the log group. If you don't specify a name, AWS CloudFormation generates a unique ID for the log group.
-     * 
      */
     @Import(name="logGroupName")
       private final @Nullable Output<String> logGroupName;
@@ -41,7 +39,6 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of days to retain the log events in the specified log group. Possible values are: 1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, and 3653.
-     * 
      */
     @Import(name="retentionInDays")
       private final @Nullable Output<Integer> retentionInDays;
@@ -52,7 +49,6 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<LogGroupTagArgs>> tags;

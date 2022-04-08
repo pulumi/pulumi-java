@@ -16,12 +16,10 @@ public final class ServiceImageRepository {
     private final @Nullable ServiceImageConfiguration imageConfiguration;
     /**
      * Image Identifier
-     * 
      */
     private final String imageIdentifier;
     /**
      * Image Repository Type
-     * 
      */
     private final ServiceImageRepositoryImageRepositoryType imageRepositoryType;
 
@@ -40,14 +38,12 @@ public final class ServiceImageRepository {
     }
     /**
      * Image Identifier
-     * 
     */
     public String getImageIdentifier() {
         return this.imageIdentifier;
     }
     /**
      * Image Repository Type
-     * 
     */
     public ServiceImageRepositoryImageRepositoryType getImageRepositoryType() {
         return this.imageRepositoryType;

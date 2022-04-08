@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies how requests are redirected. In the event of an error, you can specify a different error code to return.
- * 
  */
 public final class BucketRedirectRule extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class BucketRedirectRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The host name to use in the redirect request.
-     * 
      */
     @Import(name="hostName")
       private final @Nullable String hostName;
@@ -32,7 +30,6 @@ public final class BucketRedirectRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The HTTP redirect code to use on the response. Not required if one of the siblings is present.
-     * 
      */
     @Import(name="httpRedirectCode")
       private final @Nullable String httpRedirectCode;
@@ -43,7 +40,6 @@ public final class BucketRedirectRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
-     * 
      */
     @Import(name="protocol")
       private final @Nullable BucketRedirectRuleProtocol protocol;
@@ -54,7 +50,6 @@ public final class BucketRedirectRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The object key prefix to use in the redirect request.
-     * 
      */
     @Import(name="replaceKeyPrefixWith")
       private final @Nullable String replaceKeyPrefixWith;
@@ -65,7 +60,6 @@ public final class BucketRedirectRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The specific object key to use in the redirect request.d
-     * 
      */
     @Import(name="replaceKeyWith")
       private final @Nullable String replaceKeyWith;

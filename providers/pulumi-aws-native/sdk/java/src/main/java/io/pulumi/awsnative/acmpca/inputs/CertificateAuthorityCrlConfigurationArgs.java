@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Your certificate authority can create and maintain a certificate revocation list (CRL). A CRL contains information about certificates that have been revoked.
- * 
  */
 public final class CertificateAuthorityCrlConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 

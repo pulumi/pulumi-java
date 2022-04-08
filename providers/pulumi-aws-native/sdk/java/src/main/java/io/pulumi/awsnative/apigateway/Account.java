@@ -13,20 +13,17 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::ApiGateway::Account
- * 
  */
 @ResourceType(type="aws-native:apigateway:Account")
 public class Account extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of an IAM role that has write access to CloudWatch Logs in your account.
-     * 
      */
     @Export(name="cloudWatchRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudWatchRoleArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of an IAM role that has write access to CloudWatch Logs in your account.
-     * 
      */
     public Output</* @Nullable */ String> getCloudWatchRoleArn() {
         return this.cloudWatchRoleArn;

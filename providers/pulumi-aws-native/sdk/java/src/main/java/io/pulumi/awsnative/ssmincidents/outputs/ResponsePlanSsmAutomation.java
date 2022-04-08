@@ -16,27 +16,22 @@ import javax.annotation.Nullable;
 public final class ResponsePlanSsmAutomation {
     /**
      * The document name to use when starting the SSM automation document.
-     * 
      */
     private final String documentName;
     /**
      * The version of the document to use when starting the SSM automation document.
-     * 
      */
     private final @Nullable String documentVersion;
     /**
      * The parameters to set when starting the SSM automation document.
-     * 
      */
     private final @Nullable List<ResponsePlanSsmParameter> parameters;
     /**
      * The role ARN to use when starting the SSM automation document.
-     * 
      */
     private final String roleArn;
     /**
      * The account type to use when starting the SSM automation document.
-     * 
      */
     private final @Nullable ResponsePlanSsmAutomationTargetAccount targetAccount;
 
@@ -56,35 +51,30 @@ public final class ResponsePlanSsmAutomation {
 
     /**
      * The document name to use when starting the SSM automation document.
-     * 
     */
     public String getDocumentName() {
         return this.documentName;
     }
     /**
      * The version of the document to use when starting the SSM automation document.
-     * 
     */
     public Optional<String> getDocumentVersion() {
         return Optional.ofNullable(this.documentVersion);
     }
     /**
      * The parameters to set when starting the SSM automation document.
-     * 
     */
     public List<ResponsePlanSsmParameter> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * The role ARN to use when starting the SSM automation document.
-     * 
     */
     public String getRoleArn() {
         return this.roleArn;
     }
     /**
      * The account type to use when starting the SSM automation document.
-     * 
     */
     public Optional<ResponsePlanSsmAutomationTargetAccount> getTargetAccount() {
         return Optional.ofNullable(this.targetAccount);

@@ -18,7 +18,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Edge Device you want to register against a device fleet
-     * 
      */
     @Import(name="device")
       private final @Nullable Output<io.pulumi.awsnative.sagemaker.inputs.DeviceArgs> device;
@@ -29,7 +28,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the edge device fleet
-     * 
      */
     @Import(name="deviceFleetName", required=true)
       private final Output<String> deviceFleetName;
@@ -40,7 +38,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Associate tags with the resource
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<DeviceTagArgs>> tags;

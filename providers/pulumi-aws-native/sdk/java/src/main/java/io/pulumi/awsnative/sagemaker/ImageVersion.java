@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::SageMaker::ImageVersion
- * 
  */
 @ResourceType(type="aws-native:sagemaker:ImageVersion")
 public class ImageVersion extends io.pulumi.resources.CustomResource {

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 public final class GetSAMLProviderResult {
     /**
      * Amazon Resource Name (ARN) of the SAML provider
-     * 
      */
     private final @Nullable String arn;
     private final @Nullable String samlMetadataDocument;
@@ -33,7 +32,6 @@ public final class GetSAMLProviderResult {
 
     /**
      * Amazon Resource Name (ARN) of the SAML provider
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);

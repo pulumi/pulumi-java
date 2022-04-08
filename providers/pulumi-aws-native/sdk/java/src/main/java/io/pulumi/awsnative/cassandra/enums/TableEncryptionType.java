@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Server-side encryption type
-     * 
      */
     @EnumType
     public enum TableEncryptionType {

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The target architecture of the robot.
-     * 
      */
     @EnumType
     public enum RobotArchitecture {

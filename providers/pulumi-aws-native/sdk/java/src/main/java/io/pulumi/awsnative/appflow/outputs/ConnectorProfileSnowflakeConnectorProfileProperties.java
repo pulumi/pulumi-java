@@ -13,38 +13,31 @@ import javax.annotation.Nullable;
 public final class ConnectorProfileSnowflakeConnectorProfileProperties {
     /**
      * The name of the account.
-     * 
      */
     private final @Nullable String accountName;
     /**
      * The name of the Amazon S3 bucket associated with Snowﬂake.
-     * 
      */
     private final String bucketName;
     /**
      * The bucket prefix that refers to the Amazon S3 bucket associated with Snowﬂake.
-     * 
      */
     private final @Nullable String bucketPrefix;
     /**
      * The Snowﬂake Private Link service name to be used for private data transfers.
-     * 
      */
     private final @Nullable String privateLinkServiceName;
     /**
      * The region of the Snowﬂake account.
-     * 
      */
     private final @Nullable String region;
     /**
      * The name of the Amazon S3 stage that was created while setting up an Amazon S3 stage in the
      * Snowﬂake account. This is written in the following format: < Database>< Schema><Stage Name>.
-     * 
      */
     private final String stage;
     /**
      * The name of the Snowﬂake warehouse.
-     * 
      */
     private final String warehouse;
 
@@ -68,35 +61,30 @@ public final class ConnectorProfileSnowflakeConnectorProfileProperties {
 
     /**
      * The name of the account.
-     * 
     */
     public Optional<String> getAccountName() {
         return Optional.ofNullable(this.accountName);
     }
     /**
      * The name of the Amazon S3 bucket associated with Snowﬂake.
-     * 
     */
     public String getBucketName() {
         return this.bucketName;
     }
     /**
      * The bucket prefix that refers to the Amazon S3 bucket associated with Snowﬂake.
-     * 
     */
     public Optional<String> getBucketPrefix() {
         return Optional.ofNullable(this.bucketPrefix);
     }
     /**
      * The Snowﬂake Private Link service name to be used for private data transfers.
-     * 
     */
     public Optional<String> getPrivateLinkServiceName() {
         return Optional.ofNullable(this.privateLinkServiceName);
     }
     /**
      * The region of the Snowﬂake account.
-     * 
     */
     public Optional<String> getRegion() {
         return Optional.ofNullable(this.region);
@@ -104,14 +92,12 @@ public final class ConnectorProfileSnowflakeConnectorProfileProperties {
     /**
      * The name of the Amazon S3 stage that was created while setting up an Amazon S3 stage in the
      * Snowﬂake account. This is written in the following format: < Database>< Schema><Stage Name>.
-     * 
     */
     public String getStage() {
         return this.stage;
     }
     /**
      * The name of the Snowﬂake warehouse.
-     * 
     */
     public String getWarehouse() {
         return this.warehouse;

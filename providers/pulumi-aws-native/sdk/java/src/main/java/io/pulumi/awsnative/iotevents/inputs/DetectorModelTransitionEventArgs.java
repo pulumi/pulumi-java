@@ -13,8 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Specifies the ` actions  `performed and the next `state` entered when a `condition` evaluates to `TRUE`.
- * 
+ * Specifies the `actions `performed and the next `state` entered when a `condition` evaluates to `TRUE`.
  */
 public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
 
     /**
      * The actions to be performed.
-     * 
      */
     @Import(name="actions")
       private final @Nullable Output<List<DetectorModelActionArgs>> actions;
@@ -33,7 +31,6 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
 
     /**
      * A Boolean expression that when `TRUE` causes the `actions` to be performed and the `nextState` to be entered.
-     * 
      */
     @Import(name="condition", required=true)
       private final Output<String> condition;
@@ -44,7 +41,6 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
 
     /**
      * The name of the event.
-     * 
      */
     @Import(name="eventName", required=true)
       private final Output<String> eventName;
@@ -55,7 +51,6 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
 
     /**
      * The next state to enter.
-     * 
      */
     @Import(name="nextState", required=true)
       private final Output<String> nextState;

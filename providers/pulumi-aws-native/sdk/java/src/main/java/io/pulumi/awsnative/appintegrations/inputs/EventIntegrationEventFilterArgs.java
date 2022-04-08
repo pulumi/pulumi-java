@@ -15,7 +15,6 @@ public final class EventIntegrationEventFilterArgs extends io.pulumi.resources.R
 
     /**
      * The source of the events.
-     * 
      */
     @Import(name="source", required=true)
       private final Output<String> source;

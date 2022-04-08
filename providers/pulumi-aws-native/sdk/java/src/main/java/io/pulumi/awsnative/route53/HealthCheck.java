@@ -16,20 +16,17 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::Route53::HealthCheck.
- * 
  */
 @ResourceType(type="aws-native:route53:HealthCheck")
 public class HealthCheck extends io.pulumi.resources.CustomResource {
     /**
      * A complex type that contains information about the health check.
-     * 
      */
     @Export(name="healthCheckConfig", type=HealthCheckConfigProperties.class, parameters={})
     private Output<HealthCheckConfigProperties> healthCheckConfig;
 
     /**
      * @return A complex type that contains information about the health check.
-     * 
      */
     public Output<HealthCheckConfigProperties> getHealthCheckConfig() {
         return this.healthCheckConfig;
@@ -42,14 +39,12 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="healthCheckTags", type=List.class, parameters={HealthCheckTag.class})
     private Output</* @Nullable */ List<HealthCheckTag>> healthCheckTags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<HealthCheckTag>> getHealthCheckTags() {
         return this.healthCheckTags;

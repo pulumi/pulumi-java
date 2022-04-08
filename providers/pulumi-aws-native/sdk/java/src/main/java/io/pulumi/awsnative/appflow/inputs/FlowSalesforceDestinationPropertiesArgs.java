@@ -26,7 +26,6 @@ public final class FlowSalesforceDestinationPropertiesArgs extends io.pulumi.res
 
     /**
      * List of fields used as ID when performing a write operation.
-     * 
      */
     @Import(name="idFieldNames")
       private final @Nullable Output<List<String>> idFieldNames;

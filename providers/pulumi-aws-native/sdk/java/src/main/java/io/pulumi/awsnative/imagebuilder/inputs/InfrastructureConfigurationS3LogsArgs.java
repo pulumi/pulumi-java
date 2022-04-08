@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The S3 path in which to store the logs.
- * 
  */
 public final class InfrastructureConfigurationS3LogsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class InfrastructureConfigurationS3LogsArgs extends io.pulumi.resou
 
     /**
      * S3BucketName
-     * 
      */
     @Import(name="s3BucketName")
       private final @Nullable Output<String> s3BucketName;
@@ -31,7 +29,6 @@ public final class InfrastructureConfigurationS3LogsArgs extends io.pulumi.resou
 
     /**
      * S3KeyPrefix
-     * 
      */
     @Import(name="s3KeyPrefix")
       private final @Nullable Output<String> s3KeyPrefix;

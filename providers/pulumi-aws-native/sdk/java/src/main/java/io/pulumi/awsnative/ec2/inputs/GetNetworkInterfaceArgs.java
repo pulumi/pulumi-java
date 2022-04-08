@@ -14,7 +14,6 @@ public final class GetNetworkInterfaceArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Network interface id.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

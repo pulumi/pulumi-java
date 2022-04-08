@@ -22,7 +22,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::KafkaConnect::Connector
- * 
  */
 @ResourceType(type="aws-native:kafkaconnect:Connector")
 public class Connector extends io.pulumi.resources.CustomResource {
@@ -34,56 +33,48 @@ public class Connector extends io.pulumi.resources.CustomResource {
     }
     /**
      * Amazon Resource Name for the created Connector.
-     * 
      */
     @Export(name="connectorArn", type=String.class, parameters={})
     private Output<String> connectorArn;
 
     /**
      * @return Amazon Resource Name for the created Connector.
-     * 
      */
     public Output<String> getConnectorArn() {
         return this.connectorArn;
     }
     /**
      * The configuration for the connector.
-     * 
      */
     @Export(name="connectorConfiguration", type=Object.class, parameters={})
     private Output<Object> connectorConfiguration;
 
     /**
      * @return The configuration for the connector.
-     * 
      */
     public Output<Object> getConnectorConfiguration() {
         return this.connectorConfiguration;
     }
     /**
      * A summary description of the connector.
-     * 
      */
     @Export(name="connectorDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectorDescription;
 
     /**
      * @return A summary description of the connector.
-     * 
      */
     public Output</* @Nullable */ String> getConnectorDescription() {
         return this.connectorDescription;
     }
     /**
      * The name of the connector.
-     * 
      */
     @Export(name="connectorName", type=String.class, parameters={})
     private Output<String> connectorName;
 
     /**
      * @return The name of the connector.
-     * 
      */
     public Output<String> getConnectorName() {
         return this.connectorName;
@@ -108,14 +99,12 @@ public class Connector extends io.pulumi.resources.CustomResource {
     }
     /**
      * The version of Kafka Connect. It has to be compatible with both the Kafka cluster's version and the plugins.
-     * 
      */
     @Export(name="kafkaConnectVersion", type=String.class, parameters={})
     private Output<String> kafkaConnectVersion;
 
     /**
      * @return The version of Kafka Connect. It has to be compatible with both the Kafka cluster's version and the plugins.
-     * 
      */
     public Output<String> getKafkaConnectVersion() {
         return this.kafkaConnectVersion;
@@ -128,28 +117,24 @@ public class Connector extends io.pulumi.resources.CustomResource {
     }
     /**
      * List of plugins to use with the connector.
-     * 
      */
     @Export(name="plugins", type=List.class, parameters={ConnectorPlugin.class})
     private Output<List<ConnectorPlugin>> plugins;
 
     /**
      * @return List of plugins to use with the connector.
-     * 
      */
     public Output<List<ConnectorPlugin>> getPlugins() {
         return this.plugins;
     }
     /**
      * The Amazon Resource Name (ARN) of the IAM role used by the connector to access Amazon S3 objects and other external resources.
-     * 
      */
     @Export(name="serviceExecutionRoleArn", type=String.class, parameters={})
     private Output<String> serviceExecutionRoleArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the IAM role used by the connector to access Amazon S3 objects and other external resources.
-     * 
      */
     public Output<String> getServiceExecutionRoleArn() {
         return this.serviceExecutionRoleArn;

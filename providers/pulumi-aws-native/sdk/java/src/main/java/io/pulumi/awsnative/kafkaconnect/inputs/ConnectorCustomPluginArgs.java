@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Details about a custom plugin.
- * 
  */
 public final class ConnectorCustomPluginArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ConnectorCustomPluginArgs extends io.pulumi.resources.Resourc
 
     /**
      * The Amazon Resource Name (ARN) of the custom plugin to use.
-     * 
      */
     @Import(name="customPluginArn", required=true)
       private final Output<String> customPluginArn;
@@ -31,7 +29,6 @@ public final class ConnectorCustomPluginArgs extends io.pulumi.resources.Resourc
 
     /**
      * The revision of the custom plugin to use.
-     * 
      */
     @Import(name="revision", required=true)
       private final Output<Integer> revision;

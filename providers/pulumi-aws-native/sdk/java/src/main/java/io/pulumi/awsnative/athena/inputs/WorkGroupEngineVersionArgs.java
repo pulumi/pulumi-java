@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Athena engine version for running queries.
- * 
  */
 public final class WorkGroupEngineVersionArgs extends io.pulumi.resources.ResourceArgs {
 

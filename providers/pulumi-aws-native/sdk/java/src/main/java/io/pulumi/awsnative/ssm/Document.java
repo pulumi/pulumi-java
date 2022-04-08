@@ -21,133 +21,827 @@ import javax.annotation.Nullable;
 /**
  * The AWS::SSM::Document resource is an SSM document in AWS Systems Manager that defines the actions that Systems Manager performs, which can be used to set up and run commands on your instances.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sessionPreferencesDocument = new AwsNative.SSM.Document("sessionPreferencesDocument", new AwsNative.SSM.DocumentArgs
+ *         {
+ *             Name = "SSM-SessionManagerRunShell",
+ *             Content = 
+ *             {
+ *                 { "schemaVersion", "1.0" },
+ *                 { "description", "Document to hold regional settings for Session Manager" },
+ *                 { "sessionType", "Standard_Stream" },
+ *                 { "inputs", 
+ *                 {
+ *                     { "s3BucketName", "DOC-EXAMPLE-BUCKET" },
+ *                     { "s3KeyPrefix", "MyBucketPrefix" },
+ *                     { "s3EncryptionEnabled", true },
+ *                     { "cloudWatchLogGroupName", "MyLogGroupName" },
+ *                     { "cloudWatchEncryptionEnabled", true },
+ *                     { "cloudWatchStreamingEnabled", false },
+ *                     { "kmsKeyId", "MyKMSKeyID" },
+ *                     { "runAsEnabled", false },
+ *                     { "runAsDefaultUser", "MyDefaultRunAsUser" },
+ *                     { "idleSessionTimeout", "20" },
+ *                     { "shellProfile", 
+ *                     {
+ *                         { "windows", "example commands" },
+ *                         { "linux", "example commands" },
+ *                     } },
+ *                 } },
+ *             },
+ *             DocumentType = "Session",
+ *         });
+ *         this.DocumentName = "SSM-SessionManagerRunShell";
+ *     }
+ * 
+ *     [Output("documentName")]
+ *     public Output<string> DocumentName { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ssm.NewDocument(ctx, "sessionPreferencesDocument", &ssm.DocumentArgs{
+ * 			Name: pulumi.String("SSM-SessionManagerRunShell"),
+ * 			Content: pulumi.Any{
+ * 				SchemaVersion: "1.0",
+ * 				Description:   "Document to hold regional settings for Session Manager",
+ * 				SessionType:   "Standard_Stream",
+ * 				Inputs: map[string]interface{}{
+ * 					"s3BucketName":                "DOC-EXAMPLE-BUCKET",
+ * 					"s3KeyPrefix":                 "MyBucketPrefix",
+ * 					"s3EncryptionEnabled":         true,
+ * 					"cloudWatchLogGroupName":      "MyLogGroupName",
+ * 					"cloudWatchEncryptionEnabled": true,
+ * 					"cloudWatchStreamingEnabled":  false,
+ * 					"kmsKeyId":                    "MyKMSKeyID",
+ * 					"runAsEnabled":                false,
+ * 					"runAsDefaultUser":            "MyDefaultRunAsUser",
+ * 					"idleSessionTimeout":          "20",
+ * 					"shellProfile": map[string]interface{}{
+ * 						"windows": "example commands",
+ * 						"linux":   "example commands",
+ * 					},
+ * 				},
+ * 			},
+ * 			DocumentType: "Session",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("documentName", "SSM-SessionManagerRunShell")
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const sessionPreferencesDocument = new aws_native.ssm.Document("sessionPreferencesDocument", {
+ *     name: "SSM-SessionManagerRunShell",
+ *     content: {
+ *         schemaVersion: "1.0",
+ *         description: "Document to hold regional settings for Session Manager",
+ *         sessionType: "Standard_Stream",
+ *         inputs: {
+ *             s3BucketName: "DOC-EXAMPLE-BUCKET",
+ *             s3KeyPrefix: "MyBucketPrefix",
+ *             s3EncryptionEnabled: true,
+ *             cloudWatchLogGroupName: "MyLogGroupName",
+ *             cloudWatchEncryptionEnabled: true,
+ *             cloudWatchStreamingEnabled: false,
+ *             kmsKeyId: "MyKMSKeyID",
+ *             runAsEnabled: false,
+ *             runAsDefaultUser: "MyDefaultRunAsUser",
+ *             idleSessionTimeout: "20",
+ *             shellProfile: {
+ *                 windows: "example commands",
+ *                 linux: "example commands",
+ *             },
+ *         },
+ *     },
+ *     documentType: "Session",
+ * });
+ * export const documentName = "SSM-SessionManagerRunShell";
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * session_preferences_document = aws_native.ssm.Document("sessionPreferencesDocument",
+ *     name="SSM-SessionManagerRunShell",
+ *     content={
+ *         "schemaVersion": "1.0",
+ *         "description": "Document to hold regional settings for Session Manager",
+ *         "sessionType": "Standard_Stream",
+ *         "inputs": {
+ *             "s3BucketName": "DOC-EXAMPLE-BUCKET",
+ *             "s3KeyPrefix": "MyBucketPrefix",
+ *             "s3EncryptionEnabled": True,
+ *             "cloudWatchLogGroupName": "MyLogGroupName",
+ *             "cloudWatchEncryptionEnabled": True,
+ *             "cloudWatchStreamingEnabled": False,
+ *             "kmsKeyId": "MyKMSKeyID",
+ *             "runAsEnabled": False,
+ *             "runAsDefaultUser": "MyDefaultRunAsUser",
+ *             "idleSessionTimeout": "20",
+ *             "shellProfile": {
+ *                 "windows": "example commands",
+ *                 "linux": "example commands",
+ *             },
+ *         },
+ *     },
+ *     document_type="Session")
+ * pulumi.export("documentName", "SSM-SessionManagerRunShell")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sessionPreferencesDocument = new AwsNative.SSM.Document("sessionPreferencesDocument", new AwsNative.SSM.DocumentArgs
+ *         {
+ *             Name = "SSM-SessionManagerRunShell",
+ *             Content = 
+ *             {
+ *                 { "schemaVersion", "1.0" },
+ *                 { "description", "Document to hold regional settings for Session Manager" },
+ *                 { "sessionType", "Standard_Stream" },
+ *                 { "inputs", 
+ *                 {
+ *                     { "s3BucketName", "DOC-EXAMPLE-BUCKET" },
+ *                     { "s3KeyPrefix", "MyBucketPrefix" },
+ *                     { "s3EncryptionEnabled", true },
+ *                     { "cloudWatchLogGroupName", "MyLogGroupName" },
+ *                     { "cloudWatchEncryptionEnabled", true },
+ *                     { "cloudWatchStreamingEnabled", false },
+ *                     { "kmsKeyId", "MyKMSKeyID" },
+ *                     { "runAsEnabled", false },
+ *                     { "runAsDefaultUser", "MyDefaultRunAsUser" },
+ *                     { "idleSessionTimeout", "20" },
+ *                     { "shellProfile", 
+ *                     {
+ *                         { "windows", "example commands" },
+ *                         { "linux", "example commands" },
+ *                     } },
+ *                 } },
+ *             },
+ *             DocumentType = "Session",
+ *         });
+ *         this.DocumentName = "SSM-SessionManagerRunShell";
+ *     }
+ * 
+ *     [Output("documentName")]
+ *     public Output<string> DocumentName { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ssm.NewDocument(ctx, "sessionPreferencesDocument", &ssm.DocumentArgs{
+ * 			Name: pulumi.String("SSM-SessionManagerRunShell"),
+ * 			Content: pulumi.Any{
+ * 				SchemaVersion: "1.0",
+ * 				Description:   "Document to hold regional settings for Session Manager",
+ * 				SessionType:   "Standard_Stream",
+ * 				Inputs: map[string]interface{}{
+ * 					"s3BucketName":                "DOC-EXAMPLE-BUCKET",
+ * 					"s3KeyPrefix":                 "MyBucketPrefix",
+ * 					"s3EncryptionEnabled":         true,
+ * 					"cloudWatchLogGroupName":      "MyLogGroupName",
+ * 					"cloudWatchEncryptionEnabled": true,
+ * 					"cloudWatchStreamingEnabled":  false,
+ * 					"kmsKeyId":                    "MyKMSKeyID",
+ * 					"runAsEnabled":                false,
+ * 					"runAsDefaultUser":            "MyDefaultRunAsUser",
+ * 					"idleSessionTimeout":          "20",
+ * 					"shellProfile": map[string]interface{}{
+ * 						"windows": "example commands",
+ * 						"linux":   "example commands",
+ * 					},
+ * 				},
+ * 			},
+ * 			DocumentType: "Session",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("documentName", "SSM-SessionManagerRunShell")
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const sessionPreferencesDocument = new aws_native.ssm.Document("sessionPreferencesDocument", {
+ *     name: "SSM-SessionManagerRunShell",
+ *     content: {
+ *         schemaVersion: "1.0",
+ *         description: "Document to hold regional settings for Session Manager",
+ *         sessionType: "Standard_Stream",
+ *         inputs: {
+ *             s3BucketName: "DOC-EXAMPLE-BUCKET",
+ *             s3KeyPrefix: "MyBucketPrefix",
+ *             s3EncryptionEnabled: true,
+ *             cloudWatchLogGroupName: "MyLogGroupName",
+ *             cloudWatchEncryptionEnabled: true,
+ *             cloudWatchStreamingEnabled: false,
+ *             kmsKeyId: "MyKMSKeyID",
+ *             runAsEnabled: false,
+ *             runAsDefaultUser: "MyDefaultRunAsUser",
+ *             idleSessionTimeout: "20",
+ *             shellProfile: {
+ *                 windows: "example commands",
+ *                 linux: "example commands",
+ *             },
+ *         },
+ *     },
+ *     documentType: "Session",
+ * });
+ * export const documentName = "SSM-SessionManagerRunShell";
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * session_preferences_document = aws_native.ssm.Document("sessionPreferencesDocument",
+ *     name="SSM-SessionManagerRunShell",
+ *     content={
+ *         "schemaVersion": "1.0",
+ *         "description": "Document to hold regional settings for Session Manager",
+ *         "sessionType": "Standard_Stream",
+ *         "inputs": {
+ *             "s3BucketName": "DOC-EXAMPLE-BUCKET",
+ *             "s3KeyPrefix": "MyBucketPrefix",
+ *             "s3EncryptionEnabled": True,
+ *             "cloudWatchLogGroupName": "MyLogGroupName",
+ *             "cloudWatchEncryptionEnabled": True,
+ *             "cloudWatchStreamingEnabled": False,
+ *             "kmsKeyId": "MyKMSKeyID",
+ *             "runAsEnabled": False,
+ *             "runAsDefaultUser": "MyDefaultRunAsUser",
+ *             "idleSessionTimeout": "20",
+ *             "shellProfile": {
+ *                 "windows": "example commands",
+ *                 "linux": "example commands",
+ *             },
+ *         },
+ *     },
+ *     document_type="Session")
+ * pulumi.export("documentName", "SSM-SessionManagerRunShell")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var examplePackageDocument = new AwsNative.SSM.Document("examplePackageDocument", new AwsNative.SSM.DocumentArgs
+ *         {
+ *             Content = "{\"files\": {\"NewPackage_WINDOWS.zip\": {\"checksums\": {\"sha256\": \"36aeb0ec2c706013cf8c68163459678f7f6daa9489cd3f91d52799331EXAMPLE\"}}}, \"publisher\": \"publisherName\", \"schemaVersion\": \"2.0\", \"packages\": {\"_any\": {\"_any\": {\"x86_64\": {\"file\": \"NewPackage_WINDOWS.zip\"}}}}, \"version\": \"1.0\"}",
+ *             DocumentType = "Package",
+ *             Attachments = 
+ *             {
+ *                 new AwsNative.SSM.Inputs.DocumentAttachmentsSourceArgs
+ *                 {
+ *                     Key = "SourceUrl",
+ *                     Values = 
+ *                     {
+ *                         "s3://example-package-path/valid-package",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ssm.NewDocument(ctx, "examplePackageDocument", &ssm.DocumentArgs{
+ * 			Content:      pulumi.Any("{\"files\": {\"NewPackage_WINDOWS.zip\": {\"checksums\": {\"sha256\": \"36aeb0ec2c706013cf8c68163459678f7f6daa9489cd3f91d52799331EXAMPLE\"}}}, \"publisher\": \"publisherName\", \"schemaVersion\": \"2.0\", \"packages\": {\"_any\": {\"_any\": {\"x86_64\": {\"file\": \"NewPackage_WINDOWS.zip\"}}}}, \"version\": \"1.0\"}"),
+ * 			DocumentType: "Package",
+ * 			Attachments: []ssm.DocumentAttachmentsSourceArgs{
+ * 				&ssm.DocumentAttachmentsSourceArgs{
+ * 					Key: "SourceUrl",
+ * 					Values: pulumi.StringArray{
+ * 						pulumi.String("s3://example-package-path/valid-package"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const examplePackageDocument = new aws_native.ssm.Document("examplePackageDocument", {
+ *     content: "{\"files\": {\"NewPackage_WINDOWS.zip\": {\"checksums\": {\"sha256\": \"36aeb0ec2c706013cf8c68163459678f7f6daa9489cd3f91d52799331EXAMPLE\"}}}, \"publisher\": \"publisherName\", \"schemaVersion\": \"2.0\", \"packages\": {\"_any\": {\"_any\": {\"x86_64\": {\"file\": \"NewPackage_WINDOWS.zip\"}}}}, \"version\": \"1.0\"}",
+ *     documentType: "Package",
+ *     attachments: [{
+ *         key: "SourceUrl",
+ *         values: ["s3://example-package-path/valid-package"],
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * example_package_document = aws_native.ssm.Document("examplePackageDocument",
+ *     content="{\"files\": {\"NewPackage_WINDOWS.zip\": {\"checksums\": {\"sha256\": \"36aeb0ec2c706013cf8c68163459678f7f6daa9489cd3f91d52799331EXAMPLE\"}}}, \"publisher\": \"publisherName\", \"schemaVersion\": \"2.0\", \"packages\": {\"_any\": {\"_any\": {\"x86_64\": {\"file\": \"NewPackage_WINDOWS.zip\"}}}}, \"version\": \"1.0\"}",
+ *     document_type="Package",
+ *     attachments=[aws_native.ssm.DocumentAttachmentsSourceArgs(
+ *         key="SourceUrl",
+ *         values=["s3://example-package-path/valid-package"],
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var examplePackageDocument = new AwsNative.SSM.Document("examplePackageDocument", new AwsNative.SSM.DocumentArgs
+ *         {
+ *             Content = "{\\\"files\\\": {\\\"NewPackage_WINDOWS.zip\\\": {\\\"checksums\\\": {\\\"sha256\\\": \\\"36aeb0ec2c706013cf8c68163459678f7f6daa9489cd3f91d52799331EXAMPLE\\\"}}}, \\\"publisher\\\": \\\"publisherName\\\", \\\"schemaVersion\\\": \\\"2.0\\\", \\\"packages\\\": {\\\"_any\\\": {\\\"_any\\\": {\\\"x86_64\\\": {\\\"file\\\": \\\"NewPackage_WINDOWS.zip\\\"}}}}, \\\"version\\\": \\\"1.0\\\"}",
+ *             DocumentType = "Package",
+ *             Attachments = 
+ *             {
+ *                 new AwsNative.SSM.Inputs.DocumentAttachmentsSourceArgs
+ *                 {
+ *                     Key = "SourceUrl",
+ *                     Values = 
+ *                     {
+ *                         "s3://example-package-path/valid-package",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ssm.NewDocument(ctx, "examplePackageDocument", &ssm.DocumentArgs{
+ * 			Content:      pulumi.Any("{\\\"files\\\": {\\\"NewPackage_WINDOWS.zip\\\": {\\\"checksums\\\": {\\\"sha256\\\": \\\"36aeb0ec2c706013cf8c68163459678f7f6daa9489cd3f91d52799331EXAMPLE\\\"}}}, \\\"publisher\\\": \\\"publisherName\\\", \\\"schemaVersion\\\": \\\"2.0\\\", \\\"packages\\\": {\\\"_any\\\": {\\\"_any\\\": {\\\"x86_64\\\": {\\\"file\\\": \\\"NewPackage_WINDOWS.zip\\\"}}}}, \\\"version\\\": \\\"1.0\\\"}"),
+ * 			DocumentType: "Package",
+ * 			Attachments: []ssm.DocumentAttachmentsSourceArgs{
+ * 				&ssm.DocumentAttachmentsSourceArgs{
+ * 					Key: "SourceUrl",
+ * 					Values: pulumi.StringArray{
+ * 						pulumi.String("s3://example-package-path/valid-package"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const examplePackageDocument = new aws_native.ssm.Document("examplePackageDocument", {
+ *     content: "{\\\"files\\\": {\\\"NewPackage_WINDOWS.zip\\\": {\\\"checksums\\\": {\\\"sha256\\\": \\\"36aeb0ec2c706013cf8c68163459678f7f6daa9489cd3f91d52799331EXAMPLE\\\"}}}, \\\"publisher\\\": \\\"publisherName\\\", \\\"schemaVersion\\\": \\\"2.0\\\", \\\"packages\\\": {\\\"_any\\\": {\\\"_any\\\": {\\\"x86_64\\\": {\\\"file\\\": \\\"NewPackage_WINDOWS.zip\\\"}}}}, \\\"version\\\": \\\"1.0\\\"}",
+ *     documentType: "Package",
+ *     attachments: [{
+ *         key: "SourceUrl",
+ *         values: ["s3://example-package-path/valid-package"],
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * example_package_document = aws_native.ssm.Document("examplePackageDocument",
+ *     content="{\\\"files\\\": {\\\"NewPackage_WINDOWS.zip\\\": {\\\"checksums\\\": {\\\"sha256\\\": \\\"36aeb0ec2c706013cf8c68163459678f7f6daa9489cd3f91d52799331EXAMPLE\\\"}}}, \\\"publisher\\\": \\\"publisherName\\\", \\\"schemaVersion\\\": \\\"2.0\\\", \\\"packages\\\": {\\\"_any\\\": {\\\"_any\\\": {\\\"x86_64\\\": {\\\"file\\\": \\\"NewPackage_WINDOWS.zip\\\"}}}}, \\\"version\\\": \\\"1.0\\\"}",
+ *     document_type="Package",
+ *     attachments=[aws_native.ssm.DocumentAttachmentsSourceArgs(
+ *         key="SourceUrl",
+ *         values=["s3://example-package-path/valid-package"],
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleChangeCalendarDocument = new AwsNative.SSM.Document("exampleChangeCalendarDocument", new AwsNative.SSM.DocumentArgs
+ *         {
+ *             Content = @"BEGIN:VCALENDAR\r
+ * PRODID:-//AWS//Change Calendar 1.0//EN\r
+ * VERSION:2.0\r
+ * X-CALENDAR-TYPE:DEFAULT_OPEN\r
+ * X-WR-CALDESC:test\r
+ * BEGIN:VTODO\r
+ * DTSTAMP:20200320T004207Z\r
+ * UID:3b5af39a-d0b3-4049-a839-d7bb8af01f92\r
+ * SUMMARY:Add events to this calendar.\r
+ * END:VTODO\r
+ * END:VCALENDAR\r
+ * ",
+ *             DocumentType = "ChangeCalendar",
+ *             DocumentFormat = "TEXT",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ssm.NewDocument(ctx, "exampleChangeCalendarDocument", &ssm.DocumentArgs{
+ * 			Content:        pulumi.Any("BEGIN:VCALENDAR\\r\nPRODID:-//AWS//Change Calendar 1.0//EN\\r\nVERSION:2.0\\r\nX-CALENDAR-TYPE:DEFAULT_OPEN\\r\nX-WR-CALDESC:test\\r\nBEGIN:VTODO\\r\nDTSTAMP:20200320T004207Z\\r\nUID:3b5af39a-d0b3-4049-a839-d7bb8af01f92\\r\nSUMMARY:Add events to this calendar.\\r\nEND:VTODO\\r\nEND:VCALENDAR\\r\n"),
+ * 			DocumentType:   "ChangeCalendar",
+ * 			DocumentFormat: "TEXT",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const exampleChangeCalendarDocument = new aws_native.ssm.Document("exampleChangeCalendarDocument", {
+ *     content: `BEGIN:VCALENDAR\\r
+ * PRODID:-//AWS//Change Calendar 1.0//EN\\r
+ * VERSION:2.0\\r
+ * X-CALENDAR-TYPE:DEFAULT_OPEN\\r
+ * X-WR-CALDESC:test\\r
+ * BEGIN:VTODO\\r
+ * DTSTAMP:20200320T004207Z\\r
+ * UID:3b5af39a-d0b3-4049-a839-d7bb8af01f92\\r
+ * SUMMARY:Add events to this calendar.\\r
+ * END:VTODO\\r
+ * END:VCALENDAR\\r
+ * `,
+ *     documentType: "ChangeCalendar",
+ *     documentFormat: "TEXT",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * example_change_calendar_document = aws_native.ssm.Document("exampleChangeCalendarDocument",
+ *     content="""BEGIN:VCALENDAR\r
+ * PRODID:-//AWS//Change Calendar 1.0//EN\r
+ * VERSION:2.0\r
+ * X-CALENDAR-TYPE:DEFAULT_OPEN\r
+ * X-WR-CALDESC:test\r
+ * BEGIN:VTODO\r
+ * DTSTAMP:20200320T004207Z\r
+ * UID:3b5af39a-d0b3-4049-a839-d7bb8af01f92\r
+ * SUMMARY:Add events to this calendar.\r
+ * END:VTODO\r
+ * END:VCALENDAR\r
+ * """,
+ *     document_type="ChangeCalendar",
+ *     document_format="TEXT")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleChangeCalendarDocument = new AwsNative.SSM.Document("exampleChangeCalendarDocument", new AwsNative.SSM.DocumentArgs
+ *         {
+ *             Content = @"BEGIN:VCALENDAR\r
+ * PRODID:-//AWS//Change Calendar 1.0//EN\r
+ * VERSION:2.0\r
+ * X-CALENDAR-TYPE:DEFAULT_OPEN\r
+ * X-WR-CALDESC:test\r
+ * BEGIN:VTODO\r
+ * DTSTAMP:20200320T004207Z\r
+ * UID:3b5af39a-d0b3-4049-a839-d7bb8af01f92\r
+ * SUMMARY:Add events to this calendar.\r
+ * END:VTODO\r
+ * END:VCALENDAR\r
+ * ",
+ *             DocumentType = "ChangeCalendar",
+ *             DocumentFormat = "TEXT",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ssm.NewDocument(ctx, "exampleChangeCalendarDocument", &ssm.DocumentArgs{
+ * 			Content:        pulumi.Any("BEGIN:VCALENDAR\\r\nPRODID:-//AWS//Change Calendar 1.0//EN\\r\nVERSION:2.0\\r\nX-CALENDAR-TYPE:DEFAULT_OPEN\\r\nX-WR-CALDESC:test\\r\nBEGIN:VTODO\\r\nDTSTAMP:20200320T004207Z\\r\nUID:3b5af39a-d0b3-4049-a839-d7bb8af01f92\\r\nSUMMARY:Add events to this calendar.\\r\nEND:VTODO\\r\nEND:VCALENDAR\\r\n"),
+ * 			DocumentType:   "ChangeCalendar",
+ * 			DocumentFormat: "TEXT",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const exampleChangeCalendarDocument = new aws_native.ssm.Document("exampleChangeCalendarDocument", {
+ *     content: `BEGIN:VCALENDAR\\r
+ * PRODID:-//AWS//Change Calendar 1.0//EN\\r
+ * VERSION:2.0\\r
+ * X-CALENDAR-TYPE:DEFAULT_OPEN\\r
+ * X-WR-CALDESC:test\\r
+ * BEGIN:VTODO\\r
+ * DTSTAMP:20200320T004207Z\\r
+ * UID:3b5af39a-d0b3-4049-a839-d7bb8af01f92\\r
+ * SUMMARY:Add events to this calendar.\\r
+ * END:VTODO\\r
+ * END:VCALENDAR\\r
+ * `,
+ *     documentType: "ChangeCalendar",
+ *     documentFormat: "TEXT",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * example_change_calendar_document = aws_native.ssm.Document("exampleChangeCalendarDocument",
+ *     content="""BEGIN:VCALENDAR\r
+ * PRODID:-//AWS//Change Calendar 1.0//EN\r
+ * VERSION:2.0\r
+ * X-CALENDAR-TYPE:DEFAULT_OPEN\r
+ * X-WR-CALDESC:test\r
+ * BEGIN:VTODO\r
+ * DTSTAMP:20200320T004207Z\r
+ * UID:3b5af39a-d0b3-4049-a839-d7bb8af01f92\r
+ * SUMMARY:Add events to this calendar.\r
+ * END:VTODO\r
+ * END:VCALENDAR\r
+ * """,
+ *     document_type="ChangeCalendar",
+ *     document_format="TEXT")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:ssm:Document")
 public class Document extends io.pulumi.resources.CustomResource {
     /**
      * A list of key and value pairs that describe attachments to a version of a document.
-     * 
      */
     @Export(name="attachments", type=List.class, parameters={DocumentAttachmentsSource.class})
     private Output</* @Nullable */ List<DocumentAttachmentsSource>> attachments;
 
     /**
      * @return A list of key and value pairs that describe attachments to a version of a document.
-     * 
      */
     public Output</* @Nullable */ List<DocumentAttachmentsSource>> getAttachments() {
         return this.attachments;
     }
     /**
      * The content for the Systems Manager document in JSON, YAML or String format.
-     * 
      */
     @Export(name="content", type=Object.class, parameters={})
     private Output<Object> content;
 
     /**
      * @return The content for the Systems Manager document in JSON, YAML or String format.
-     * 
      */
     public Output<Object> getContent() {
         return this.content;
     }
     /**
      * Specify the document format for the request. The document format can be either JSON or YAML. JSON is the default format.
-     * 
      */
     @Export(name="documentFormat", type=DocumentFormat.class, parameters={})
     private Output</* @Nullable */ DocumentFormat> documentFormat;
 
     /**
      * @return Specify the document format for the request. The document format can be either JSON or YAML. JSON is the default format.
-     * 
      */
     public Output</* @Nullable */ DocumentFormat> getDocumentFormat() {
         return this.documentFormat;
     }
     /**
      * The type of document to create.
-     * 
      */
     @Export(name="documentType", type=DocumentType.class, parameters={})
     private Output</* @Nullable */ DocumentType> documentType;
 
     /**
      * @return The type of document to create.
-     * 
      */
     public Output</* @Nullable */ DocumentType> getDocumentType() {
         return this.documentType;
     }
     /**
      * A name for the Systems Manager document.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return A name for the Systems Manager document.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * A list of SSM documents required by a document. For example, an ApplicationConfiguration document requires an ApplicationConfigurationSchema document.
-     * 
      */
     @Export(name="requires", type=List.class, parameters={DocumentRequires.class})
     private Output</* @Nullable */ List<DocumentRequires>> requires;
 
     /**
      * @return A list of SSM documents required by a document. For example, an ApplicationConfiguration document requires an ApplicationConfigurationSchema document.
-     * 
      */
     public Output</* @Nullable */ List<DocumentRequires>> getRequires() {
         return this.requires;
     }
     /**
      * Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different ways, such as by purpose, owner, or environment.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DocumentTag.class})
     private Output</* @Nullable */ List<DocumentTag>> tags;
 
     /**
      * @return Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different ways, such as by purpose, owner, or environment.
-     * 
      */
     public Output</* @Nullable */ List<DocumentTag>> getTags() {
         return this.tags;
     }
     /**
      * Specify a target type to define the kinds of resources the document can run on.
-     * 
      */
     @Export(name="targetType", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetType;
 
     /**
      * @return Specify a target type to define the kinds of resources the document can run on.
-     * 
      */
     public Output</* @Nullable */ String> getTargetType() {
         return this.targetType;
     }
     /**
      * An optional field specifying the version of the artifact you are creating with the document. This value is unique across all versions of a document, and cannot be changed.
-     * 
      */
     @Export(name="versionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> versionName;
 
     /**
      * @return An optional field specifying the version of the artifact you are creating with the document. This value is unique across all versions of a document, and cannot be changed.
-     * 
      */
     public Output</* @Nullable */ String> getVersionName() {
         return this.versionName;

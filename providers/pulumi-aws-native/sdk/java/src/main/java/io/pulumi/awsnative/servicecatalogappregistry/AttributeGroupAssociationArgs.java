@@ -15,7 +15,6 @@ public final class AttributeGroupAssociationArgs extends io.pulumi.resources.Res
 
     /**
      * The name or the Id of the Application.
-     * 
      */
     @Import(name="application", required=true)
       private final Output<String> application;
@@ -26,7 +25,6 @@ public final class AttributeGroupAssociationArgs extends io.pulumi.resources.Res
 
     /**
      * The name or the Id of the AttributeGroup.
-     * 
      */
     @Import(name="attributeGroup", required=true)
       private final Output<String> attributeGroup;

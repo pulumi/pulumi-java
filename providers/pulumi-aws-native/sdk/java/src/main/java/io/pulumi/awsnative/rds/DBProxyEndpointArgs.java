@@ -19,7 +19,6 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The identifier for the DB proxy endpoint. This name must be unique for all DB proxy endpoints owned by your AWS account in the specified AWS Region.
-     * 
      */
     @Import(name="dBProxyEndpointName")
       private final @Nullable Output<String> dBProxyEndpointName;
@@ -30,7 +29,6 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.
-     * 
      */
     @Import(name="dBProxyName", required=true)
       private final Output<String> dBProxyName;
@@ -41,7 +39,6 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * An optional set of key-value pairs to associate arbitrary data of your choosing with the DB proxy endpoint.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<DBProxyEndpointTagFormatArgs>> tags;
@@ -52,7 +49,6 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A value that indicates whether the DB proxy endpoint can be used for read/write or read-only operations.
-     * 
      */
     @Import(name="targetRole")
       private final @Nullable Output<DBProxyEndpointTargetRole> targetRole;
@@ -63,7 +59,6 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * VPC security group IDs to associate with the new DB proxy endpoint.
-     * 
      */
     @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
@@ -74,7 +69,6 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * VPC subnet IDs to associate with the new DB proxy endpoint.
-     * 
      */
     @Import(name="vpcSubnetIds", required=true)
       private final Output<List<String>> vpcSubnetIds;
