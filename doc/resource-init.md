@@ -1,7 +1,7 @@
 # Resource Init Design
 
 The field initialization for Custom resources is unexpected. This doc
-document the unusual design.
+documents the unusual design.
 
 The class hierarchy is as follows:
 
@@ -19,7 +19,8 @@ these is auto-generated.
 
 Because there are so many, the less custom code we emit for them, the
 smaller the SDKs are and the faster everything works. Current design
-favors reflection to do field init.
+favors reflection to do field init, over generating more init code in
+the subclasses.
 
 Precisely, these are the fields that need init:
 
@@ -41,8 +42,9 @@ cloud resources.
 How it is implemented: `Resource` constructor (top of the class
 hierarchy) does two things:
 
-1. Uses refletion to init all these fields to non-nil incomplete
-   promise values, even when fields are declared in subclasses
+1. Inits all these fields to non-nil incomplete promise values, using
+   reflection when necessary to discover subclass-defined fields on
+   the current object
 
 2. Starts a background async computation `readOrRegisterResource` that
    must complete all the promises
