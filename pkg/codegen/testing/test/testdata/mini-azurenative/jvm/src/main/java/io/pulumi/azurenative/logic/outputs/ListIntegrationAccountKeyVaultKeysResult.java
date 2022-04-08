@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ListIntegrationAccountKeyVaultKeysResult {
     /**
      * The skip token.
-     * 
      */
     private final @Nullable String skipToken;
 
@@ -24,7 +23,6 @@ public final class ListIntegrationAccountKeyVaultKeysResult {
 
     /**
      * The skip token.
-     * 
     */
     public Optional<String> getSkipToken() {
         return Optional.ofNullable(this.skipToken);

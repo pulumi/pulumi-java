@@ -21,14 +21,12 @@ public class Volume extends io.pulumi.resources.CustomResource {
     }
     /**
      * Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
-     * 
      */
     @Export(name="usageThreshold", type=Double.class, parameters={})
     private Output<Double> usageThreshold;
 
     /**
      * @return Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
-     * 
      */
     public Output<Double> getUsageThreshold() {
         return this.usageThreshold;

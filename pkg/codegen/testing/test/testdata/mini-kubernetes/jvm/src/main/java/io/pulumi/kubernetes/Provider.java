@@ -11,7 +11,6 @@ import javax.annotation.Nullable;
 
 /**
  * The provider type for the kubernetes package.
- * 
  */
 @ResourceType(type="pulumi:providers:kubernetes")
 public class Provider extends io.pulumi.resources.ProviderResource {

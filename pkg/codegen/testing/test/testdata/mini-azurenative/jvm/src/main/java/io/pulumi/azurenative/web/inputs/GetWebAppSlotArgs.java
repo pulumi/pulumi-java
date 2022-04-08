@@ -14,7 +14,6 @@ public final class GetWebAppSlotArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the deployment slot. By default, this API returns the production slot.
-     * 
      */
     @Import(name="slot", required=true)
       private final String slot;

@@ -21,12 +21,10 @@ public final class Object {
     private final @Nullable Resource foo;
     /**
      * List of lists of other objects
-     * 
      */
     private final @Nullable List<List<SomeOtherObject>> others;
     /**
      * Mapping from string to list of some other object
-     * 
      */
     private final @Nullable Map<String,List<SomeOtherObject>> stillOthers;
 
@@ -55,14 +53,12 @@ public final class Object {
     }
     /**
      * List of lists of other objects
-     * 
     */
     public List<List<SomeOtherObject>> getOthers() {
         return this.others == null ? List.of() : this.others;
     }
     /**
      * Mapping from string to list of some other object
-     * 
     */
     public Map<String,List<SomeOtherObject>> getStillOthers() {
         return this.stillOthers == null ? Map.of() : this.stillOthers;

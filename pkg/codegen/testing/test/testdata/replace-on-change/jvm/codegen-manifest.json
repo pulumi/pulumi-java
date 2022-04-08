@@ -7,6 +7,7 @@
     "src/main/java/io/pulumi/example/CatArgs.java",
     "src/main/java/io/pulumi/example/Dog.java",
     "src/main/java/io/pulumi/example/DogArgs.java",
+    "src/main/java/io/pulumi/example/Functions.java",
     "src/main/java/io/pulumi/example/God.java",
     "src/main/java/io/pulumi/example/GodArgs.java",
     "src/main/java/io/pulumi/example/NoRecursive.java",

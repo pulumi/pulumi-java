@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Returns link related to the product
- * 
  */
 public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Type of link
-     * 
      */
     @Import(name="linkType", required=true)
       private final String linkType;
@@ -29,7 +27,6 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Url of the link
-     * 
      */
     @Import(name="linkUrl", required=true)
       private final String linkUrl;

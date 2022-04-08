@@ -3,6 +3,7 @@
     "README.md",
     "build.gradle",
     "settings.gradle",
+    "src/main/java/io/pulumi/kubernetes/Functions.java",
     "src/main/java/io/pulumi/kubernetes/Provider.java",
     "src/main/java/io/pulumi/kubernetes/ProviderArgs.java",
     "src/main/java/io/pulumi/kubernetes/Utilities.java",

@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class ListConfigurationsResult {
     /**
      * Link for the next set of configurations.
-     * 
      */
     private final @Nullable String nextLink;
     /**
      * List of configurations.
-     * 
      */
     private final List<ConfigurationResponse> value;
 
@@ -34,14 +32,12 @@ public final class ListConfigurationsResult {
 
     /**
      * Link for the next set of configurations.
-     * 
     */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * List of configurations.
-     * 
     */
     public List<ConfigurationResponse> getValue() {
         return this.value;

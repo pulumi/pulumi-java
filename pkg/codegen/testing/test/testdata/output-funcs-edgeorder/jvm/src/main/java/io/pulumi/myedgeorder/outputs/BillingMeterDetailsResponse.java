@@ -14,22 +14,18 @@ import java.util.Objects;
 public final class BillingMeterDetailsResponse {
     /**
      * Frequency of recurrence
-     * 
      */
     private final String frequency;
     /**
      * Represents MeterDetails
-     * 
      */
     private final Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails;
     /**
      * Represents Metering type (eg one-time or recurrent)
-     * 
      */
     private final String meteringType;
     /**
      * Represents Billing type name
-     * 
      */
     private final String name;
 
@@ -47,28 +43,24 @@ public final class BillingMeterDetailsResponse {
 
     /**
      * Frequency of recurrence
-     * 
     */
     public String getFrequency() {
         return this.frequency;
     }
     /**
      * Represents MeterDetails
-     * 
     */
     public Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> getMeterDetails() {
         return this.meterDetails;
     }
     /**
      * Represents Metering type (eg one-time or recurrent)
-     * 
     */
     public String getMeteringType() {
         return this.meteringType;
     }
     /**
      * Represents Billing type name
-     * 
     */
     public String getName() {
         return this.name;

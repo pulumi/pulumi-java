@@ -17,7 +17,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The identifier for the Batch inference deployment.
-     * 
      */
     @Import(name="deploymentName")
       private final @Nullable Output<String> deploymentName;
@@ -28,7 +27,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Inference endpoint name
-     * 
      */
     @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
@@ -39,7 +37,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -50,7 +47,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -61,7 +57,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Additional attributes of the entity.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<io.pulumi.azurenative.machinelearningservices.inputs.BatchDeploymentArgs> properties;
@@ -72,7 +67,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -83,7 +77,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -94,7 +87,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

@@ -23,7 +23,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
-     * 
      */
     @Import(name="usageThreshold", required=true)
       private final Output<Double> usageThreshold;

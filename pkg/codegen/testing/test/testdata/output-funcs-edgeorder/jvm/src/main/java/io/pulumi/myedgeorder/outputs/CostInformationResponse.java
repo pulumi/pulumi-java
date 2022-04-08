@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class CostInformationResponse {
     /**
      * Default url to display billing information
-     * 
      */
     private final String billingInfoUrl;
     /**
      * Details on the various billing aspects for the product system.
-     * 
      */
     private final List<BillingMeterDetailsResponse> billingMeterDetails;
 
@@ -32,14 +30,12 @@ public final class CostInformationResponse {
 
     /**
      * Default url to display billing information
-     * 
     */
     public String getBillingInfoUrl() {
         return this.billingInfoUrl;
     }
     /**
      * Details on the various billing aspects for the product system.
-     * 
     */
     public List<BillingMeterDetailsResponse> getBillingMeterDetails() {
         return this.billingMeterDetails;

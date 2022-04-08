@@ -18,7 +18,6 @@ import java.util.Objects;
 
 /**
  * Product line
- * 
  */
 public final class ProductLineResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class ProductLineResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Availability information of the product system.
-     * 
      */
     @Import(name="availabilityInformation", required=true)
       private final AvailabilityInformationResponse availabilityInformation;
@@ -37,7 +35,6 @@ public final class ProductLineResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Cost information for the product system.
-     * 
      */
     @Import(name="costInformation", required=true)
       private final CostInformationResponse costInformation;
@@ -48,7 +45,6 @@ public final class ProductLineResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Description related to the product system.
-     * 
      */
     @Import(name="description", required=true)
       private final DescriptionResponse description;
@@ -59,7 +55,6 @@ public final class ProductLineResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Display Name for the product system.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -70,7 +65,6 @@ public final class ProductLineResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * list of filters supported for a product
-     * 
      */
     @Import(name="filterableProperties", required=true)
       private final List<FilterablePropertyResponse> filterableProperties;
@@ -81,7 +75,6 @@ public final class ProductLineResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Hierarchy information of a product.
-     * 
      */
     @Import(name="hierarchyInformation", required=true)
       private final HierarchyInformationResponse hierarchyInformation;
@@ -92,7 +85,6 @@ public final class ProductLineResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Image information for the product system.
-     * 
      */
     @Import(name="imageInformation", required=true)
       private final List<ImageInformationResponse> imageInformation;
@@ -103,7 +95,6 @@ public final class ProductLineResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of products in the product line
-     * 
      */
     @Import(name="products", required=true)
       private final List<ProductResponse> products;

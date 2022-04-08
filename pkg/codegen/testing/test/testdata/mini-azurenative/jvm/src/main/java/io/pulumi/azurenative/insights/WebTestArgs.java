@@ -20,7 +20,6 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Purpose/user defined descriptive test for this WebTest.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -31,7 +30,6 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Is the test actively being monitored.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -42,7 +40,6 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Interval in seconds between test runs for this WebTest. Default value is 300.
-     * 
      */
     @Import(name="frequency")
       private final @Nullable Output<Integer> frequency;
@@ -53,7 +50,6 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The kind of web test that this web test watches. Choices are ping and multistep.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<WebTestKind> kind;
@@ -64,7 +60,6 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -75,7 +70,6 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -86,7 +80,6 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Allow for retries should this WebTest fail.
-     * 
      */
     @Import(name="retryEnabled")
       private final @Nullable Output<Boolean> retryEnabled;
@@ -97,7 +90,6 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unique ID of this WebTest. This is typically the same value as the Name field.
-     * 
      */
     @Import(name="syntheticMonitorId", required=true)
       private final Output<String> syntheticMonitorId;
@@ -108,7 +100,6 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -119,7 +110,6 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Seconds until this WebTest will timeout and fail. Default value is 30.
-     * 
      */
     @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
@@ -130,7 +120,6 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The kind of web test this is, valid choices are ping and multistep.
-     * 
      */
     @Import(name="webTestKind", required=true)
       private final Output<WebTestKind> webTestKind;
@@ -141,7 +130,6 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User defined name if this WebTest.
-     * 
      */
     @Import(name="webTestName")
       private final @Nullable Output<String> webTestName;
