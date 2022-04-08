@@ -96,7 +96,7 @@ public interface Output<T> extends Copyable<Output<T>> {
     default Output<Void> applyVoid(Consumer<T> consumer) {
         return apply(t -> {
             consumer.accept(t);
-            return Output.empty();
+            return Output.ofNullable(null);
         });
     }
 
