@@ -11,8 +11,8 @@ class OutputDataTest {
 
     @Test
     void testHashCodeEqualsContract() {
-        assertThat(OutputData.empty()).isEqualTo(OutputData.empty());
-        assertThat(OutputData.empty()).isNotEqualTo(OutputData.of(1));
+        assertThat(OutputData.of((Object)null)).isEqualTo(OutputData.of((Object)null));
+        assertThat(OutputData.of((Object)null)).isNotEqualTo(OutputData.of(1));
     }
 
     @Test
@@ -60,9 +60,9 @@ class OutputDataTest {
     void testAccumulator() {
         var result = OutputData.builder(null)
                 .accumulate(OutputData.of("foo"), (__, o2) -> o2)
-                .accumulate(OutputData.empty(), (o1, __) -> o1)
+                .accumulate(OutputData.of(null), (o1, __) -> o1)
                 .accumulate(OutputData.unknown(), (o1, __) -> o1)
-                .accumulate(OutputData.emptySecret(), (o1, __) -> o1)
+                .accumulate(OutputData.of(null).withIsSecret(true), (o1, __) -> o1)
                 .accumulate(OutputData.unknownSecret(), (o1, __) -> o1)
                 .build();
 

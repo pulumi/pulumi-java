@@ -98,13 +98,15 @@ public final class OutputData<T> implements Copyable<OutputData<T>> {
     public static <T> OutputData<T> ofNullable(
             ImmutableSet<Resource> resources, @Nullable T value, boolean isKnown, boolean isSecret
     ) {
+        // Identify special cases to reuse singleton objects. Everything should use this factory method to
+        // construct instances to take advantage of this optimization.
         if (resources.isEmpty() && value == null) {
             if (isKnown && !isSecret) {
-                return empty();
+                return (OutputData<T>) Empty;
             }
             //noinspection ConstantConditions
             if (isKnown && isSecret) {
-                return emptySecret();
+                return (OutputData<T>) EmptySecret;
             }
             //noinspection ConstantConditions
             if (!isKnown && !isSecret) {
@@ -115,21 +117,28 @@ public final class OutputData<T> implements Copyable<OutputData<T>> {
                 return unknownSecret();
             }
         }
-        if (value == null) {
-            // rare case, of unknown or empty value but with resources
-            return new OutputData<>(resources, null, isKnown, isSecret);
-        }
         return new OutputData<>(resources, value, isKnown, isSecret);
     }
 
-    public static <T> OutputData<T> empty() {
-        //noinspection unchecked
-        return (OutputData<T>) Empty;
+    public static <T> OutputData<T> of(T value) {
+        return OutputData.ofNullable(ImmutableSet.of(), value, true, false);
     }
 
-    public static <T> OutputData<T> emptySecret() {
-        //noinspection unchecked
-        return (OutputData<T>) EmptySecret;
+    public static <T> OutputData<T> of(ImmutableSet<Resource> resources, T value) {
+        return OutputData.ofNullable(resources, value, true, false);
+    }
+
+    public static <T> OutputData<T> of(ImmutableSet<Resource> resources, T value, boolean isSecret) {
+        return OutputData.ofNullable(resources, value, true, isSecret);
+    }
+
+    public static <T> OutputData<T> of(T value, boolean isSecret) {
+        return OutputData.ofNullable(ImmutableSet.of(), value, true, isSecret);
+    }
+
+    public static <T> CompletableFuture<OutputData<T>> ofAsync(CompletableFuture<T> value, boolean isSecret) {
+        Objects.requireNonNull(value);
+        return value.thenApply(v -> ofNullable(ImmutableSet.of(), v, true, isSecret));
     }
 
     public static <T> OutputData<T> unknown() {
@@ -278,7 +287,7 @@ public final class OutputData<T> implements Copyable<OutputData<T>> {
             @SuppressWarnings("rawtypes") @Nullable Output obj
     ) {
         if (obj == null) {
-            return CompletableFuture.completedFuture(OutputData.empty());
+            return CompletableFuture.completedFuture(OutputData.of((Object) null));
         }
         //noinspection unchecked,rawtypes
         return ((OutputInternal<Object>) obj).getDataAsync().copy();
