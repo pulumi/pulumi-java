@@ -1,5 +1,8 @@
+artifactID: gcp
 version: 6.11.0
 schema: https://raw.githubusercontent.com/pulumi/pulumi-gcp/v6.11.0/provider/cmd/pulumi-resource-gcp/schema.json
 out: sdk/java
 versionFile: src/main/resources/io/pulumi/gcp/version.txt
 pluginFile: src/main/resources/io/pulumi/gcp/plugin.json
+overlays:
+  - "../build-templates"

@@ -42,8 +42,6 @@ providers_generate_all: provider.random.generate provider.aws.generate provider.
 
 providers_all: provider.random.install provider.aws.install provider.aws-native.install provider.docker.install provider.kubernetes.install provider.azure-native.install provider.google-native.install provider.gcp.install provider.eks.install
 
-provider.eks.build: provider.kubernetes.install provider.aws.install
-
 # Example: make provider.random.build
 provider.%.build:	provider.%.generate
 	cd providers/pulumi-$*/sdk/java && gradle build
@@ -63,25 +61,17 @@ provider.%.install:	provider.%.build
 
 # Integration tests will use PULUMI_ACCESS_TOKEN to provision tests
 # stacks in Pulumi service.
-integration_tests::	bin/pulumi-language-jvm ensure_tests
+integration_tests::	bin/pulumi-language-jvm
 
 # Run a custom integration test or example.
 # Example: make test_example.aws-java-webserver
-test_example.%:	bin/pulumi-language-jvm ensure_tests provider.random.install
+test_example.%:	bin/pulumi-language-jvm
 	cd tests/examples && PATH=${PATH}:${PWD}/bin go test -run "TestExamples/^$*" -test.v
 
-ensure_plugins::
-	pulumi plugin install resource aws v4.37.3
-	pulumi plugin install resource aws-native v0.12.0
-	pulumi plugin install resource azure-native v1.56.0
-	pulumi plugin install resource kubernetes v3.15.1
-	pulumi plugin install resource gcp v6.11.0
-	pulumi plugin install resource random v4.3.1
-	pulumi plugin install resource eks v0.37.1
+test_example.random: install_sdk provider.random.install
+test_example.minimal: install_sdk
 
-ensure_tests::	submodule_update ensure_plugins
-
-codegen_tests::	ensure_tests
+codegen_tests::
 	cd ./pkg/codegen/jvm && go test ./...
 
 submodule_update::
