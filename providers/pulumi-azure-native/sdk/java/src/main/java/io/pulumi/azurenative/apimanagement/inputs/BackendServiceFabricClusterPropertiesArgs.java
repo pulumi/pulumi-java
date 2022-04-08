@@ -6,6 +6,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 import io.pulumi.azurenative.apimanagement.inputs.X509CertificateNameArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
       private final @Nullable Output<String> clientCertificateId;
 
     public Output<String> getClientCertificateId() {
-        return this.clientCertificateId == null ? Output.empty() : this.clientCertificateId;
+        return this.clientCertificateId == null ? Codegen.empty() : this.clientCertificateId;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
       private final @Nullable Output<String> clientCertificatethumbprint;
 
     public Output<String> getClientCertificatethumbprint() {
-        return this.clientCertificatethumbprint == null ? Output.empty() : this.clientCertificatethumbprint;
+        return this.clientCertificatethumbprint == null ? Codegen.empty() : this.clientCertificatethumbprint;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
       private final @Nullable Output<Integer> maxPartitionResolutionRetries;
 
     public Output<Integer> getMaxPartitionResolutionRetries() {
-        return this.maxPartitionResolutionRetries == null ? Output.empty() : this.maxPartitionResolutionRetries;
+        return this.maxPartitionResolutionRetries == null ? Codegen.empty() : this.maxPartitionResolutionRetries;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
       private final @Nullable Output<List<String>> serverCertificateThumbprints;
 
     public Output<List<String>> getServerCertificateThumbprints() {
-        return this.serverCertificateThumbprints == null ? Output.empty() : this.serverCertificateThumbprints;
+        return this.serverCertificateThumbprints == null ? Codegen.empty() : this.serverCertificateThumbprints;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
       private final @Nullable Output<List<X509CertificateNameArgs>> serverX509Names;
 
     public Output<List<X509CertificateNameArgs>> getServerX509Names() {
-        return this.serverX509Names == null ? Output.empty() : this.serverX509Names;
+        return this.serverX509Names == null ? Codegen.empty() : this.serverX509Names;
     }
 
     public BackendServiceFabricClusterPropertiesArgs(
@@ -103,12 +104,12 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
     }
 
     private BackendServiceFabricClusterPropertiesArgs() {
-        this.clientCertificateId = Output.empty();
-        this.clientCertificatethumbprint = Output.empty();
-        this.managementEndpoints = Output.empty();
-        this.maxPartitionResolutionRetries = Output.empty();
-        this.serverCertificateThumbprints = Output.empty();
-        this.serverX509Names = Output.empty();
+        this.clientCertificateId = Codegen.empty();
+        this.clientCertificatethumbprint = Codegen.empty();
+        this.managementEndpoints = Codegen.empty();
+        this.maxPartitionResolutionRetries = Codegen.empty();
+        this.serverCertificateThumbprints = Codegen.empty();
+        this.serverX509Names = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder clientCertificateId(@Nullable String clientCertificateId) {
-            this.clientCertificateId = Output.ofNullable(clientCertificateId);
+            this.clientCertificateId = Codegen.ofNullable(clientCertificateId);
             return this;
         }
         public Builder clientCertificatethumbprint(@Nullable Output<String> clientCertificatethumbprint) {
@@ -154,7 +155,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder clientCertificatethumbprint(@Nullable String clientCertificatethumbprint) {
-            this.clientCertificatethumbprint = Output.ofNullable(clientCertificatethumbprint);
+            this.clientCertificatethumbprint = Codegen.ofNullable(clientCertificatethumbprint);
             return this;
         }
         public Builder managementEndpoints(Output<List<String>> managementEndpoints) {
@@ -173,7 +174,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder maxPartitionResolutionRetries(@Nullable Integer maxPartitionResolutionRetries) {
-            this.maxPartitionResolutionRetries = Output.ofNullable(maxPartitionResolutionRetries);
+            this.maxPartitionResolutionRetries = Codegen.ofNullable(maxPartitionResolutionRetries);
             return this;
         }
         public Builder serverCertificateThumbprints(@Nullable Output<List<String>> serverCertificateThumbprints) {
@@ -181,7 +182,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder serverCertificateThumbprints(@Nullable List<String> serverCertificateThumbprints) {
-            this.serverCertificateThumbprints = Output.ofNullable(serverCertificateThumbprints);
+            this.serverCertificateThumbprints = Codegen.ofNullable(serverCertificateThumbprints);
             return this;
         }
         public Builder serverCertificateThumbprints(String... serverCertificateThumbprints) {
@@ -192,7 +193,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder serverX509Names(@Nullable List<X509CertificateNameArgs> serverX509Names) {
-            this.serverX509Names = Output.ofNullable(serverX509Names);
+            this.serverX509Names = Codegen.ofNullable(serverX509Names);
             return this;
         }
         public Builder serverX509Names(X509CertificateNameArgs... serverX509Names) {

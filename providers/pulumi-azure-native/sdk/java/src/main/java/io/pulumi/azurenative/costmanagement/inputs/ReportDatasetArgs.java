@@ -11,6 +11,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ReportGroupingArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -34,7 +35,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,ReportAggregationArgs>> aggregation;
 
     public Output<Map<String,ReportAggregationArgs>> getAggregation() {
-        return this.aggregation == null ? Output.empty() : this.aggregation;
+        return this.aggregation == null ? Codegen.empty() : this.aggregation;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ReportDatasetConfigurationArgs> configuration;
 
     public Output<ReportDatasetConfigurationArgs> getConfiguration() {
-        return this.configuration == null ? Output.empty() : this.configuration;
+        return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ReportFilterArgs> filter;
 
     public Output<ReportFilterArgs> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,GranularityType>> granularity;
 
     public Output<Either<String,GranularityType>> getGranularity() {
-        return this.granularity == null ? Output.empty() : this.granularity;
+        return this.granularity == null ? Codegen.empty() : this.granularity;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ReportGroupingArgs>> grouping;
 
     public Output<List<ReportGroupingArgs>> getGrouping() {
-        return this.grouping == null ? Output.empty() : this.grouping;
+        return this.grouping == null ? Codegen.empty() : this.grouping;
     }
 
     public ReportDatasetArgs(
@@ -95,11 +96,11 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReportDatasetArgs() {
-        this.aggregation = Output.empty();
-        this.configuration = Output.empty();
-        this.filter = Output.empty();
-        this.granularity = Output.empty();
-        this.grouping = Output.empty();
+        this.aggregation = Codegen.empty();
+        this.configuration = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.granularity = Codegen.empty();
+        this.grouping = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -135,7 +136,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder aggregation(@Nullable Map<String,ReportAggregationArgs> aggregation) {
-            this.aggregation = Output.ofNullable(aggregation);
+            this.aggregation = Codegen.ofNullable(aggregation);
             return this;
         }
         public Builder configuration(@Nullable Output<ReportDatasetConfigurationArgs> configuration) {
@@ -143,7 +144,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configuration(@Nullable ReportDatasetConfigurationArgs configuration) {
-            this.configuration = Output.ofNullable(configuration);
+            this.configuration = Codegen.ofNullable(configuration);
             return this;
         }
         public Builder filter(@Nullable Output<ReportFilterArgs> filter) {
@@ -151,7 +152,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filter(@Nullable ReportFilterArgs filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder granularity(@Nullable Output<Either<String,GranularityType>> granularity) {
@@ -159,7 +160,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder granularity(@Nullable Either<String,GranularityType> granularity) {
-            this.granularity = Output.ofNullable(granularity);
+            this.granularity = Codegen.ofNullable(granularity);
             return this;
         }
         public Builder grouping(@Nullable Output<List<ReportGroupingArgs>> grouping) {
@@ -167,7 +168,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder grouping(@Nullable List<ReportGroupingArgs> grouping) {
-            this.grouping = Output.ofNullable(grouping);
+            this.grouping = Codegen.ofNullable(grouping);
             return this;
         }
         public Builder grouping(ReportGroupingArgs... grouping) {

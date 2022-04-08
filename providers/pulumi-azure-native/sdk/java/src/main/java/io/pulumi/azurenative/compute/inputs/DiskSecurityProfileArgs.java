@@ -7,6 +7,7 @@ import io.pulumi.azurenative.compute.enums.DiskSecurityTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class DiskSecurityProfileArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Either<String,DiskSecurityTypes>> securityType;
 
     public Output<Either<String,DiskSecurityTypes>> getSecurityType() {
-        return this.securityType == null ? Output.empty() : this.securityType;
+        return this.securityType == null ? Codegen.empty() : this.securityType;
     }
 
     public DiskSecurityProfileArgs(@Nullable Output<Either<String,DiskSecurityTypes>> securityType) {
@@ -36,7 +37,7 @@ public final class DiskSecurityProfileArgs extends io.pulumi.resources.ResourceA
     }
 
     private DiskSecurityProfileArgs() {
-        this.securityType = Output.empty();
+        this.securityType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class DiskSecurityProfileArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder securityType(@Nullable Either<String,DiskSecurityTypes> securityType) {
-            this.securityType = Output.ofNullable(securityType);
+            this.securityType = Codegen.ofNullable(securityType);
             return this;
         }        public DiskSecurityProfileArgs build() {
             return new DiskSecurityProfileArgs(securityType);

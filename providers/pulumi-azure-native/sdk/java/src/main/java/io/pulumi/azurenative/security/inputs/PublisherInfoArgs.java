@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> binaryName;
 
     public Output<String> getBinaryName() {
-        return this.binaryName == null ? Output.empty() : this.binaryName;
+        return this.binaryName == null ? Codegen.empty() : this.binaryName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> productName;
 
     public Output<String> getProductName() {
-        return this.productName == null ? Output.empty() : this.productName;
+        return this.productName == null ? Codegen.empty() : this.productName;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> publisherName;
 
     public Output<String> getPublisherName() {
-        return this.publisherName == null ? Output.empty() : this.publisherName;
+        return this.publisherName == null ? Codegen.empty() : this.publisherName;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public PublisherInfoArgs(
@@ -74,10 +75,10 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PublisherInfoArgs() {
-        this.binaryName = Output.empty();
-        this.productName = Output.empty();
-        this.publisherName = Output.empty();
-        this.version = Output.empty();
+        this.binaryName = Codegen.empty();
+        this.productName = Codegen.empty();
+        this.publisherName = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder binaryName(@Nullable String binaryName) {
-            this.binaryName = Output.ofNullable(binaryName);
+            this.binaryName = Codegen.ofNullable(binaryName);
             return this;
         }
         public Builder productName(@Nullable Output<String> productName) {
@@ -119,7 +120,7 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder productName(@Nullable String productName) {
-            this.productName = Output.ofNullable(productName);
+            this.productName = Codegen.ofNullable(productName);
             return this;
         }
         public Builder publisherName(@Nullable Output<String> publisherName) {
@@ -127,7 +128,7 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publisherName(@Nullable String publisherName) {
-            this.publisherName = Output.ofNullable(publisherName);
+            this.publisherName = Codegen.ofNullable(publisherName);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -135,7 +136,7 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public PublisherInfoArgs build() {
             return new PublisherInfoArgs(binaryName, productName, publisherName, version);

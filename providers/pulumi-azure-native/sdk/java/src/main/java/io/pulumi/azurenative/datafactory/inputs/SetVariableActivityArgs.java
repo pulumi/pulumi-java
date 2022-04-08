@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Output.empty() : this.dependsOn;
+        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Output.empty() : this.userProperties;
+        return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> value;
 
     public Output<Object> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> variableName;
 
     public Output<String> getVariableName() {
-        return this.variableName == null ? Output.empty() : this.variableName;
+        return this.variableName == null ? Codegen.empty() : this.variableName;
     }
 
     public SetVariableActivityArgs(
@@ -118,13 +119,13 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
     }
 
     private SetVariableActivityArgs() {
-        this.dependsOn = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.type = Output.empty();
-        this.userProperties = Output.empty();
-        this.value = Output.empty();
-        this.variableName = Output.empty();
+        this.dependsOn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userProperties = Codegen.empty();
+        this.value = Codegen.empty();
+        this.variableName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -164,7 +165,7 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Output.ofNullable(dependsOn);
+            this.dependsOn = Codegen.ofNullable(dependsOn);
             return this;
         }
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
@@ -175,7 +176,7 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -199,7 +200,7 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Output.ofNullable(userProperties);
+            this.userProperties = Codegen.ofNullable(userProperties);
             return this;
         }
         public Builder userProperties(UserPropertyArgs... userProperties) {
@@ -210,7 +211,7 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder value(@Nullable Object value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }
         public Builder variableName(@Nullable Output<String> variableName) {
@@ -218,7 +219,7 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder variableName(@Nullable String variableName) {
-            this.variableName = Output.ofNullable(variableName);
+            this.variableName = Codegen.ofNullable(variableName);
             return this;
         }        public SetVariableActivityArgs build() {
             return new SetVariableActivityArgs(dependsOn, description, name, type, userProperties, value, variableName);

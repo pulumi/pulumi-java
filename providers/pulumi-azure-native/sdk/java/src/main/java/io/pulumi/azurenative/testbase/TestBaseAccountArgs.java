@@ -6,6 +6,7 @@ package io.pulumi.azurenative.testbase;
 import io.pulumi.azurenative.testbase.inputs.TestBaseAccountSKUArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> restore;
 
     public Output<Boolean> getRestore() {
-        return this.restore == null ? Output.empty() : this.restore;
+        return this.restore == null ? Codegen.empty() : this.restore;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> testBaseAccountName;
 
     public Output<String> getTestBaseAccountName() {
-        return this.testBaseAccountName == null ? Output.empty() : this.testBaseAccountName;
+        return this.testBaseAccountName == null ? Codegen.empty() : this.testBaseAccountName;
     }
 
     public TestBaseAccountArgs(
@@ -99,12 +100,12 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TestBaseAccountArgs() {
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.restore = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
-        this.testBaseAccountName = Output.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.restore = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.testBaseAccountName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -158,7 +159,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder restore(@Nullable Boolean restore) {
-            this.restore = Output.ofNullable(restore);
+            this.restore = Codegen.ofNullable(restore);
             return this;
         }
         public Builder sku(Output<TestBaseAccountSKUArgs> sku) {
@@ -174,7 +175,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder testBaseAccountName(@Nullable Output<String> testBaseAccountName) {
@@ -182,7 +183,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder testBaseAccountName(@Nullable String testBaseAccountName) {
-            this.testBaseAccountName = Output.ofNullable(testBaseAccountName);
+            this.testBaseAccountName = Codegen.ofNullable(testBaseAccountName);
             return this;
         }        public TestBaseAccountArgs build() {
             return new TestBaseAccountArgs(location, resourceGroupName, restore, sku, tags, testBaseAccountName);

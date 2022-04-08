@@ -9,6 +9,7 @@ import io.pulumi.azurenative.delegatednetwork.inputs.OrchestratorIdentityArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
       private final @Nullable Output<String> apiServerEndpoint;
 
     public Output<String> getApiServerEndpoint() {
-        return this.apiServerEndpoint == null ? Output.empty() : this.apiServerEndpoint;
+        return this.apiServerEndpoint == null ? Codegen.empty() : this.apiServerEndpoint;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
       private final @Nullable Output<String> clusterRootCA;
 
     public Output<String> getClusterRootCA() {
-        return this.clusterRootCA == null ? Output.empty() : this.clusterRootCA;
+        return this.clusterRootCA == null ? Codegen.empty() : this.clusterRootCA;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
       private final @Nullable Output<OrchestratorIdentityArgs> identity;
 
     public Output<OrchestratorIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
       private final @Nullable Output<String> orchestratorAppId;
 
     public Output<String> getOrchestratorAppId() {
-        return this.orchestratorAppId == null ? Output.empty() : this.orchestratorAppId;
+        return this.orchestratorAppId == null ? Codegen.empty() : this.orchestratorAppId;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
       private final @Nullable Output<String> orchestratorTenantId;
 
     public Output<String> getOrchestratorTenantId() {
-        return this.orchestratorTenantId == null ? Output.empty() : this.orchestratorTenantId;
+        return this.orchestratorTenantId == null ? Codegen.empty() : this.orchestratorTenantId;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
       private final @Nullable Output<String> privateLinkResourceId;
 
     public Output<String> getPrivateLinkResourceId() {
-        return this.privateLinkResourceId == null ? Output.empty() : this.privateLinkResourceId;
+        return this.privateLinkResourceId == null ? Codegen.empty() : this.privateLinkResourceId;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public OrchestratorInstanceServiceDetailsArgs(
@@ -179,18 +180,18 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
     }
 
     private OrchestratorInstanceServiceDetailsArgs() {
-        this.apiServerEndpoint = Output.empty();
-        this.clusterRootCA = Output.empty();
-        this.controllerDetails = Output.empty();
-        this.identity = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.orchestratorAppId = Output.empty();
-        this.orchestratorTenantId = Output.empty();
-        this.privateLinkResourceId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.tags = Output.empty();
+        this.apiServerEndpoint = Codegen.empty();
+        this.clusterRootCA = Codegen.empty();
+        this.controllerDetails = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.orchestratorAppId = Codegen.empty();
+        this.orchestratorTenantId = Codegen.empty();
+        this.privateLinkResourceId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -240,7 +241,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
             return this;
         }
         public Builder apiServerEndpoint(@Nullable String apiServerEndpoint) {
-            this.apiServerEndpoint = Output.ofNullable(apiServerEndpoint);
+            this.apiServerEndpoint = Codegen.ofNullable(apiServerEndpoint);
             return this;
         }
         public Builder clusterRootCA(@Nullable Output<String> clusterRootCA) {
@@ -248,7 +249,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
             return this;
         }
         public Builder clusterRootCA(@Nullable String clusterRootCA) {
-            this.clusterRootCA = Output.ofNullable(clusterRootCA);
+            this.clusterRootCA = Codegen.ofNullable(clusterRootCA);
             return this;
         }
         public Builder controllerDetails(Output<ControllerDetailsArgs> controllerDetails) {
@@ -264,7 +265,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
             return this;
         }
         public Builder identity(@Nullable OrchestratorIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder kind(Output<Either<String,OrchestratorKind>> kind) {
@@ -280,7 +281,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder orchestratorAppId(@Nullable Output<String> orchestratorAppId) {
@@ -288,7 +289,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
             return this;
         }
         public Builder orchestratorAppId(@Nullable String orchestratorAppId) {
-            this.orchestratorAppId = Output.ofNullable(orchestratorAppId);
+            this.orchestratorAppId = Codegen.ofNullable(orchestratorAppId);
             return this;
         }
         public Builder orchestratorTenantId(@Nullable Output<String> orchestratorTenantId) {
@@ -296,7 +297,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
             return this;
         }
         public Builder orchestratorTenantId(@Nullable String orchestratorTenantId) {
-            this.orchestratorTenantId = Output.ofNullable(orchestratorTenantId);
+            this.orchestratorTenantId = Codegen.ofNullable(orchestratorTenantId);
             return this;
         }
         public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
@@ -304,7 +305,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
             return this;
         }
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
-            this.privateLinkResourceId = Output.ofNullable(privateLinkResourceId);
+            this.privateLinkResourceId = Codegen.ofNullable(privateLinkResourceId);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -320,7 +321,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -328,7 +329,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public OrchestratorInstanceServiceDetailsArgs build() {
             return new OrchestratorInstanceServiceDetailsArgs(apiServerEndpoint, clusterRootCA, controllerDetails, identity, kind, location, orchestratorAppId, orchestratorTenantId, privateLinkResourceId, resourceGroupName, resourceName, tags);

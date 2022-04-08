@@ -5,6 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> accountKey;
 
     public Output<String> getAccountKey() {
-        return this.accountKey == null ? Output.empty() : this.accountKey;
+        return this.accountKey == null ? Codegen.empty() : this.accountKey;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
-        return this.accountName == null ? Output.empty() : this.accountName;
+        return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
     public StorageAccountArgs(
@@ -48,8 +49,8 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StorageAccountArgs() {
-        this.accountKey = Output.empty();
-        this.accountName = Output.empty();
+        this.accountKey = Codegen.empty();
+        this.accountName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountKey(@Nullable String accountKey) {
-            this.accountKey = Output.ofNullable(accountKey);
+            this.accountKey = Codegen.ofNullable(accountKey);
             return this;
         }
         public Builder accountName(@Nullable Output<String> accountName) {
@@ -87,7 +88,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Output.ofNullable(accountName);
+            this.accountName = Codegen.ofNullable(accountName);
             return this;
         }        public StorageAccountArgs build() {
             return new StorageAccountArgs(accountKey, accountName);

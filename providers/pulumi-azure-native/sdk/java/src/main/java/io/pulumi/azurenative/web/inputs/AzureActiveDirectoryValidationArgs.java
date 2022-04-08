@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.JwtClaimChecksArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class AzureActiveDirectoryValidationArgs extends io.pulumi.resource
       private final @Nullable Output<List<String>> allowedAudiences;
 
     public Output<List<String>> getAllowedAudiences() {
-        return this.allowedAudiences == null ? Output.empty() : this.allowedAudiences;
+        return this.allowedAudiences == null ? Codegen.empty() : this.allowedAudiences;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class AzureActiveDirectoryValidationArgs extends io.pulumi.resource
       private final @Nullable Output<JwtClaimChecksArgs> jwtClaimChecks;
 
     public Output<JwtClaimChecksArgs> getJwtClaimChecks() {
-        return this.jwtClaimChecks == null ? Output.empty() : this.jwtClaimChecks;
+        return this.jwtClaimChecks == null ? Codegen.empty() : this.jwtClaimChecks;
     }
 
     public AzureActiveDirectoryValidationArgs(
@@ -50,8 +51,8 @@ public final class AzureActiveDirectoryValidationArgs extends io.pulumi.resource
     }
 
     private AzureActiveDirectoryValidationArgs() {
-        this.allowedAudiences = Output.empty();
-        this.jwtClaimChecks = Output.empty();
+        this.allowedAudiences = Codegen.empty();
+        this.jwtClaimChecks = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class AzureActiveDirectoryValidationArgs extends io.pulumi.resource
             return this;
         }
         public Builder allowedAudiences(@Nullable List<String> allowedAudiences) {
-            this.allowedAudiences = Output.ofNullable(allowedAudiences);
+            this.allowedAudiences = Codegen.ofNullable(allowedAudiences);
             return this;
         }
         public Builder allowedAudiences(String... allowedAudiences) {
@@ -92,7 +93,7 @@ public final class AzureActiveDirectoryValidationArgs extends io.pulumi.resource
             return this;
         }
         public Builder jwtClaimChecks(@Nullable JwtClaimChecksArgs jwtClaimChecks) {
-            this.jwtClaimChecks = Output.ofNullable(jwtClaimChecks);
+            this.jwtClaimChecks = Codegen.ofNullable(jwtClaimChecks);
             return this;
         }        public AzureActiveDirectoryValidationArgs build() {
             return new AzureActiveDirectoryValidationArgs(allowedAudiences, jwtClaimChecks);

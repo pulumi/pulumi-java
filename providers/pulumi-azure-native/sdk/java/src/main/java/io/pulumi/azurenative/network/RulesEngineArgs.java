@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.RulesEngineRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -46,7 +47,7 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RulesEngineRuleArgs>> rules;
 
     public Output<List<RulesEngineRuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> rulesEngineName;
 
     public Output<String> getRulesEngineName() {
-        return this.rulesEngineName == null ? Output.empty() : this.rulesEngineName;
+        return this.rulesEngineName == null ? Codegen.empty() : this.rulesEngineName;
     }
 
     public RulesEngineArgs(
@@ -72,10 +73,10 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RulesEngineArgs() {
-        this.frontDoorName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.rules = Output.empty();
-        this.rulesEngineName = Output.empty();
+        this.frontDoorName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.rules = Codegen.empty();
+        this.rulesEngineName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rules(@Nullable List<RulesEngineRuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(RulesEngineRuleArgs... rules) {
@@ -136,7 +137,7 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rulesEngineName(@Nullable String rulesEngineName) {
-            this.rulesEngineName = Output.ofNullable(rulesEngineName);
+            this.rulesEngineName = Codegen.ofNullable(rulesEngineName);
             return this;
         }        public RulesEngineArgs build() {
             return new RulesEngineArgs(frontDoorName, resourceGroupName, rules, rulesEngineName);

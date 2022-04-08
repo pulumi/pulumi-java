@@ -9,6 +9,7 @@ import io.pulumi.azurenative.network.enums.UseHubGateway;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Either<String,GroupConnectivity>> groupConnectivity;
 
     public Output<Either<String,GroupConnectivity>> getGroupConnectivity() {
-        return this.groupConnectivity == null ? Output.empty() : this.groupConnectivity;
+        return this.groupConnectivity == null ? Codegen.empty() : this.groupConnectivity;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Either<String,IsGlobal>> isGlobal;
 
     public Output<Either<String,IsGlobal>> getIsGlobal() {
-        return this.isGlobal == null ? Output.empty() : this.isGlobal;
+        return this.isGlobal == null ? Codegen.empty() : this.isGlobal;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> networkGroupId;
 
     public Output<String> getNetworkGroupId() {
-        return this.networkGroupId == null ? Output.empty() : this.networkGroupId;
+        return this.networkGroupId == null ? Codegen.empty() : this.networkGroupId;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Either<String,UseHubGateway>> useHubGateway;
 
     public Output<Either<String,UseHubGateway>> getUseHubGateway() {
-        return this.useHubGateway == null ? Output.empty() : this.useHubGateway;
+        return this.useHubGateway == null ? Codegen.empty() : this.useHubGateway;
     }
 
     public ConnectivityGroupItemArgs(
@@ -74,10 +75,10 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
     }
 
     private ConnectivityGroupItemArgs() {
-        this.groupConnectivity = Output.empty();
-        this.isGlobal = Output.empty();
-        this.networkGroupId = Output.empty();
-        this.useHubGateway = Output.empty();
+        this.groupConnectivity = Codegen.empty();
+        this.isGlobal = Codegen.empty();
+        this.networkGroupId = Codegen.empty();
+        this.useHubGateway = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder groupConnectivity(@Nullable Either<String,GroupConnectivity> groupConnectivity) {
-            this.groupConnectivity = Output.ofNullable(groupConnectivity);
+            this.groupConnectivity = Codegen.ofNullable(groupConnectivity);
             return this;
         }
         public Builder isGlobal(@Nullable Output<Either<String,IsGlobal>> isGlobal) {
@@ -119,7 +120,7 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder isGlobal(@Nullable Either<String,IsGlobal> isGlobal) {
-            this.isGlobal = Output.ofNullable(isGlobal);
+            this.isGlobal = Codegen.ofNullable(isGlobal);
             return this;
         }
         public Builder networkGroupId(@Nullable Output<String> networkGroupId) {
@@ -127,7 +128,7 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder networkGroupId(@Nullable String networkGroupId) {
-            this.networkGroupId = Output.ofNullable(networkGroupId);
+            this.networkGroupId = Codegen.ofNullable(networkGroupId);
             return this;
         }
         public Builder useHubGateway(@Nullable Output<Either<String,UseHubGateway>> useHubGateway) {
@@ -135,7 +136,7 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder useHubGateway(@Nullable Either<String,UseHubGateway> useHubGateway) {
-            this.useHubGateway = Output.ofNullable(useHubGateway);
+            this.useHubGateway = Codegen.ofNullable(useHubGateway);
             return this;
         }        public ConnectivityGroupItemArgs build() {
             return new ConnectivityGroupItemArgs(groupConnectivity, isGlobal, networkGroupId, useHubGateway);

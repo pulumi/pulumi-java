@@ -9,6 +9,7 @@ import io.pulumi.azurenative.timeseriesinsights.inputs.TimeSeriesIdPropertyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -39,7 +40,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> environmentName;
 
     public Output<String> getEnvironmentName() {
-        return this.environmentName == null ? Output.empty() : this.environmentName;
+        return this.environmentName == null ? Codegen.empty() : this.environmentName;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<TimeSeriesIdPropertyArgs>> partitionKeyProperties;
 
     public Output<List<TimeSeriesIdPropertyArgs>> getPartitionKeyProperties() {
-        return this.partitionKeyProperties == null ? Output.empty() : this.partitionKeyProperties;
+        return this.partitionKeyProperties == null ? Codegen.empty() : this.partitionKeyProperties;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Either<String,StorageLimitExceededBehavior>> storageLimitExceededBehavior;
 
     public Output<Either<String,StorageLimitExceededBehavior>> getStorageLimitExceededBehavior() {
-        return this.storageLimitExceededBehavior == null ? Output.empty() : this.storageLimitExceededBehavior;
+        return this.storageLimitExceededBehavior == null ? Codegen.empty() : this.storageLimitExceededBehavior;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public Gen1EnvironmentArgs(
@@ -142,15 +143,15 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private Gen1EnvironmentArgs() {
-        this.dataRetentionTime = Output.empty();
-        this.environmentName = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.partitionKeyProperties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.storageLimitExceededBehavior = Output.empty();
-        this.tags = Output.empty();
+        this.dataRetentionTime = Codegen.empty();
+        this.environmentName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.partitionKeyProperties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.storageLimitExceededBehavior = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -202,7 +203,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder environmentName(@Nullable String environmentName) {
-            this.environmentName = Output.ofNullable(environmentName);
+            this.environmentName = Codegen.ofNullable(environmentName);
             return this;
         }
         public Builder kind(Output<String> kind) {
@@ -218,7 +219,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder partitionKeyProperties(@Nullable Output<List<TimeSeriesIdPropertyArgs>> partitionKeyProperties) {
@@ -226,7 +227,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder partitionKeyProperties(@Nullable List<TimeSeriesIdPropertyArgs> partitionKeyProperties) {
-            this.partitionKeyProperties = Output.ofNullable(partitionKeyProperties);
+            this.partitionKeyProperties = Codegen.ofNullable(partitionKeyProperties);
             return this;
         }
         public Builder partitionKeyProperties(TimeSeriesIdPropertyArgs... partitionKeyProperties) {
@@ -253,7 +254,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder storageLimitExceededBehavior(@Nullable Either<String,StorageLimitExceededBehavior> storageLimitExceededBehavior) {
-            this.storageLimitExceededBehavior = Output.ofNullable(storageLimitExceededBehavior);
+            this.storageLimitExceededBehavior = Codegen.ofNullable(storageLimitExceededBehavior);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -261,7 +262,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public Gen1EnvironmentArgs build() {
             return new Gen1EnvironmentArgs(dataRetentionTime, environmentName, kind, location, partitionKeyProperties, resourceGroupName, sku, storageLimitExceededBehavior, tags);

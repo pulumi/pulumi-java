@@ -7,6 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.RetentionDurationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class RetentionDurationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> count;
 
     public Output<Integer> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class RetentionDurationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Either<String,RetentionDurationType>> durationType;
 
     public Output<Either<String,RetentionDurationType>> getDurationType() {
-        return this.durationType == null ? Output.empty() : this.durationType;
+        return this.durationType == null ? Codegen.empty() : this.durationType;
     }
 
     public RetentionDurationArgs(
@@ -52,8 +53,8 @@ public final class RetentionDurationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private RetentionDurationArgs() {
-        this.count = Output.empty();
-        this.durationType = Output.empty();
+        this.count = Codegen.empty();
+        this.durationType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class RetentionDurationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder count(@Nullable Integer count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }
         public Builder durationType(@Nullable Output<Either<String,RetentionDurationType>> durationType) {
@@ -91,7 +92,7 @@ public final class RetentionDurationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder durationType(@Nullable Either<String,RetentionDurationType> durationType) {
-            this.durationType = Output.ofNullable(durationType);
+            this.durationType = Codegen.ofNullable(durationType);
             return this;
         }        public RetentionDurationArgs build() {
             return new RetentionDurationArgs(count, durationType);

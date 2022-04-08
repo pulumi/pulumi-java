@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningexperimentation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class StorageAccountPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     private StorageAccountPropertiesArgs() {
-        this.accessKey = Output.empty();
-        this.storageAccountId = Output.empty();
+        this.accessKey = Codegen.empty();
+        this.storageAccountId = Codegen.empty();
     }
 
     public static Builder builder() {

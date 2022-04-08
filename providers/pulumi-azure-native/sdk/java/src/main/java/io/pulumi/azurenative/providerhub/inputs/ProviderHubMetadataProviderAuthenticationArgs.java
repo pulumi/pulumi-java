@@ -5,6 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class ProviderHubMetadataProviderAuthenticationArgs extends io.pulu
     }
 
     private ProviderHubMetadataProviderAuthenticationArgs() {
-        this.allowedAudiences = Output.empty();
+        this.allowedAudiences = Codegen.empty();
     }
 
     public static Builder builder() {

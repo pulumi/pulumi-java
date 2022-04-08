@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ObjectReplicationPolicyFilterArgs extends io.pulumi.resources
       private final @Nullable Output<String> minCreationTime;
 
     public Output<String> getMinCreationTime() {
-        return this.minCreationTime == null ? Output.empty() : this.minCreationTime;
+        return this.minCreationTime == null ? Codegen.empty() : this.minCreationTime;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ObjectReplicationPolicyFilterArgs extends io.pulumi.resources
       private final @Nullable Output<List<String>> prefixMatch;
 
     public Output<List<String>> getPrefixMatch() {
-        return this.prefixMatch == null ? Output.empty() : this.prefixMatch;
+        return this.prefixMatch == null ? Codegen.empty() : this.prefixMatch;
     }
 
     public ObjectReplicationPolicyFilterArgs(
@@ -49,8 +50,8 @@ public final class ObjectReplicationPolicyFilterArgs extends io.pulumi.resources
     }
 
     private ObjectReplicationPolicyFilterArgs() {
-        this.minCreationTime = Output.empty();
-        this.prefixMatch = Output.empty();
+        this.minCreationTime = Codegen.empty();
+        this.prefixMatch = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ObjectReplicationPolicyFilterArgs extends io.pulumi.resources
             return this;
         }
         public Builder minCreationTime(@Nullable String minCreationTime) {
-            this.minCreationTime = Output.ofNullable(minCreationTime);
+            this.minCreationTime = Codegen.ofNullable(minCreationTime);
             return this;
         }
         public Builder prefixMatch(@Nullable Output<List<String>> prefixMatch) {
@@ -88,7 +89,7 @@ public final class ObjectReplicationPolicyFilterArgs extends io.pulumi.resources
             return this;
         }
         public Builder prefixMatch(@Nullable List<String> prefixMatch) {
-            this.prefixMatch = Output.ofNullable(prefixMatch);
+            this.prefixMatch = Codegen.ofNullable(prefixMatch);
             return this;
         }
         public Builder prefixMatch(String... prefixMatch) {

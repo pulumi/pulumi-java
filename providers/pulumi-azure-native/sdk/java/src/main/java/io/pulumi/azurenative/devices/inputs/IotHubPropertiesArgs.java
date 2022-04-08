@@ -17,6 +17,7 @@ import io.pulumi.azurenative.devices.inputs.StorageEndpointPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -41,7 +42,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<SharedAccessSignatureAuthorizationRuleArgs>> authorizationPolicies;
 
     public Output<List<SharedAccessSignatureAuthorizationRuleArgs>> getAuthorizationPolicies() {
-        return this.authorizationPolicies == null ? Output.empty() : this.authorizationPolicies;
+        return this.authorizationPolicies == null ? Codegen.empty() : this.authorizationPolicies;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<CloudToDevicePropertiesArgs> cloudToDevice;
 
     public Output<CloudToDevicePropertiesArgs> getCloudToDevice() {
-        return this.cloudToDevice == null ? Output.empty() : this.cloudToDevice;
+        return this.cloudToDevice == null ? Codegen.empty() : this.cloudToDevice;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> comments;
 
     public Output<String> getComments() {
-        return this.comments == null ? Output.empty() : this.comments;
+        return this.comments == null ? Codegen.empty() : this.comments;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Boolean> enableFileUploadNotifications;
 
     public Output<Boolean> getEnableFileUploadNotifications() {
-        return this.enableFileUploadNotifications == null ? Output.empty() : this.enableFileUploadNotifications;
+        return this.enableFileUploadNotifications == null ? Codegen.empty() : this.enableFileUploadNotifications;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,EventHubPropertiesArgs>> eventHubEndpoints;
 
     public Output<Map<String,EventHubPropertiesArgs>> getEventHubEndpoints() {
-        return this.eventHubEndpoints == null ? Output.empty() : this.eventHubEndpoints;
+        return this.eventHubEndpoints == null ? Codegen.empty() : this.eventHubEndpoints;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Either<String,Capabilities>> features;
 
     public Output<Either<String,Capabilities>> getFeatures() {
-        return this.features == null ? Output.empty() : this.features;
+        return this.features == null ? Codegen.empty() : this.features;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<IpFilterRuleArgs>> ipFilterRules;
 
     public Output<List<IpFilterRuleArgs>> getIpFilterRules() {
-        return this.ipFilterRules == null ? Output.empty() : this.ipFilterRules;
+        return this.ipFilterRules == null ? Codegen.empty() : this.ipFilterRules;
     }
 
     /**
@@ -118,7 +119,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,MessagingEndpointPropertiesArgs>> messagingEndpoints;
 
     public Output<Map<String,MessagingEndpointPropertiesArgs>> getMessagingEndpoints() {
-        return this.messagingEndpoints == null ? Output.empty() : this.messagingEndpoints;
+        return this.messagingEndpoints == null ? Codegen.empty() : this.messagingEndpoints;
     }
 
     /**
@@ -129,7 +130,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> minTlsVersion;
 
     public Output<String> getMinTlsVersion() {
-        return this.minTlsVersion == null ? Output.empty() : this.minTlsVersion;
+        return this.minTlsVersion == null ? Codegen.empty() : this.minTlsVersion;
     }
 
     /**
@@ -140,7 +141,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<NetworkRuleSetPropertiesArgs> networkRuleSets;
 
     public Output<NetworkRuleSetPropertiesArgs> getNetworkRuleSets() {
-        return this.networkRuleSets == null ? Output.empty() : this.networkRuleSets;
+        return this.networkRuleSets == null ? Codegen.empty() : this.networkRuleSets;
     }
 
     /**
@@ -151,7 +152,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
     public Output<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
-        return this.privateEndpointConnections == null ? Output.empty() : this.privateEndpointConnections;
+        return this.privateEndpointConnections == null ? Codegen.empty() : this.privateEndpointConnections;
     }
 
     /**
@@ -162,7 +163,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
+        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -173,7 +174,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<RoutingPropertiesArgs> routing;
 
     public Output<RoutingPropertiesArgs> getRouting() {
-        return this.routing == null ? Output.empty() : this.routing;
+        return this.routing == null ? Codegen.empty() : this.routing;
     }
 
     /**
@@ -184,7 +185,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,StorageEndpointPropertiesArgs>> storageEndpoints;
 
     public Output<Map<String,StorageEndpointPropertiesArgs>> getStorageEndpoints() {
-        return this.storageEndpoints == null ? Output.empty() : this.storageEndpoints;
+        return this.storageEndpoints == null ? Codegen.empty() : this.storageEndpoints;
     }
 
     public IotHubPropertiesArgs(
@@ -219,20 +220,20 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private IotHubPropertiesArgs() {
-        this.authorizationPolicies = Output.empty();
-        this.cloudToDevice = Output.empty();
-        this.comments = Output.empty();
-        this.enableFileUploadNotifications = Output.empty();
-        this.eventHubEndpoints = Output.empty();
-        this.features = Output.empty();
-        this.ipFilterRules = Output.empty();
-        this.messagingEndpoints = Output.empty();
-        this.minTlsVersion = Output.empty();
-        this.networkRuleSets = Output.empty();
-        this.privateEndpointConnections = Output.empty();
-        this.publicNetworkAccess = Output.empty();
-        this.routing = Output.empty();
-        this.storageEndpoints = Output.empty();
+        this.authorizationPolicies = Codegen.empty();
+        this.cloudToDevice = Codegen.empty();
+        this.comments = Codegen.empty();
+        this.enableFileUploadNotifications = Codegen.empty();
+        this.eventHubEndpoints = Codegen.empty();
+        this.features = Codegen.empty();
+        this.ipFilterRules = Codegen.empty();
+        this.messagingEndpoints = Codegen.empty();
+        this.minTlsVersion = Codegen.empty();
+        this.networkRuleSets = Codegen.empty();
+        this.privateEndpointConnections = Codegen.empty();
+        this.publicNetworkAccess = Codegen.empty();
+        this.routing = Codegen.empty();
+        this.storageEndpoints = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -286,7 +287,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder authorizationPolicies(@Nullable List<SharedAccessSignatureAuthorizationRuleArgs> authorizationPolicies) {
-            this.authorizationPolicies = Output.ofNullable(authorizationPolicies);
+            this.authorizationPolicies = Codegen.ofNullable(authorizationPolicies);
             return this;
         }
         public Builder authorizationPolicies(SharedAccessSignatureAuthorizationRuleArgs... authorizationPolicies) {
@@ -297,7 +298,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder cloudToDevice(@Nullable CloudToDevicePropertiesArgs cloudToDevice) {
-            this.cloudToDevice = Output.ofNullable(cloudToDevice);
+            this.cloudToDevice = Codegen.ofNullable(cloudToDevice);
             return this;
         }
         public Builder comments(@Nullable Output<String> comments) {
@@ -305,7 +306,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder comments(@Nullable String comments) {
-            this.comments = Output.ofNullable(comments);
+            this.comments = Codegen.ofNullable(comments);
             return this;
         }
         public Builder enableFileUploadNotifications(@Nullable Output<Boolean> enableFileUploadNotifications) {
@@ -313,7 +314,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder enableFileUploadNotifications(@Nullable Boolean enableFileUploadNotifications) {
-            this.enableFileUploadNotifications = Output.ofNullable(enableFileUploadNotifications);
+            this.enableFileUploadNotifications = Codegen.ofNullable(enableFileUploadNotifications);
             return this;
         }
         public Builder eventHubEndpoints(@Nullable Output<Map<String,EventHubPropertiesArgs>> eventHubEndpoints) {
@@ -321,7 +322,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder eventHubEndpoints(@Nullable Map<String,EventHubPropertiesArgs> eventHubEndpoints) {
-            this.eventHubEndpoints = Output.ofNullable(eventHubEndpoints);
+            this.eventHubEndpoints = Codegen.ofNullable(eventHubEndpoints);
             return this;
         }
         public Builder features(@Nullable Output<Either<String,Capabilities>> features) {
@@ -329,7 +330,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder features(@Nullable Either<String,Capabilities> features) {
-            this.features = Output.ofNullable(features);
+            this.features = Codegen.ofNullable(features);
             return this;
         }
         public Builder ipFilterRules(@Nullable Output<List<IpFilterRuleArgs>> ipFilterRules) {
@@ -337,7 +338,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ipFilterRules(@Nullable List<IpFilterRuleArgs> ipFilterRules) {
-            this.ipFilterRules = Output.ofNullable(ipFilterRules);
+            this.ipFilterRules = Codegen.ofNullable(ipFilterRules);
             return this;
         }
         public Builder ipFilterRules(IpFilterRuleArgs... ipFilterRules) {
@@ -348,7 +349,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder messagingEndpoints(@Nullable Map<String,MessagingEndpointPropertiesArgs> messagingEndpoints) {
-            this.messagingEndpoints = Output.ofNullable(messagingEndpoints);
+            this.messagingEndpoints = Codegen.ofNullable(messagingEndpoints);
             return this;
         }
         public Builder minTlsVersion(@Nullable Output<String> minTlsVersion) {
@@ -356,7 +357,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder minTlsVersion(@Nullable String minTlsVersion) {
-            this.minTlsVersion = Output.ofNullable(minTlsVersion);
+            this.minTlsVersion = Codegen.ofNullable(minTlsVersion);
             return this;
         }
         public Builder networkRuleSets(@Nullable Output<NetworkRuleSetPropertiesArgs> networkRuleSets) {
@@ -364,7 +365,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder networkRuleSets(@Nullable NetworkRuleSetPropertiesArgs networkRuleSets) {
-            this.networkRuleSets = Output.ofNullable(networkRuleSets);
+            this.networkRuleSets = Codegen.ofNullable(networkRuleSets);
             return this;
         }
         public Builder privateEndpointConnections(@Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
@@ -372,7 +373,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
-            this.privateEndpointConnections = Output.ofNullable(privateEndpointConnections);
+            this.privateEndpointConnections = Codegen.ofNullable(privateEndpointConnections);
             return this;
         }
         public Builder privateEndpointConnections(PrivateEndpointConnectionArgs... privateEndpointConnections) {
@@ -383,7 +384,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
             return this;
         }
         public Builder routing(@Nullable Output<RoutingPropertiesArgs> routing) {
@@ -391,7 +392,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder routing(@Nullable RoutingPropertiesArgs routing) {
-            this.routing = Output.ofNullable(routing);
+            this.routing = Codegen.ofNullable(routing);
             return this;
         }
         public Builder storageEndpoints(@Nullable Output<Map<String,StorageEndpointPropertiesArgs>> storageEndpoints) {
@@ -399,7 +400,7 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder storageEndpoints(@Nullable Map<String,StorageEndpointPropertiesArgs> storageEndpoints) {
-            this.storageEndpoints = Output.ofNullable(storageEndpoints);
+            this.storageEndpoints = Codegen.ofNullable(storageEndpoints);
             return this;
         }        public IotHubPropertiesArgs build() {
             return new IotHubPropertiesArgs(authorizationPolicies, cloudToDevice, comments, enableFileUploadNotifications, eventHubEndpoints, features, ipFilterRules, messagingEndpoints, minTlsVersion, networkRuleSets, privateEndpointConnections, publicNetworkAccess, routing, storageEndpoints);

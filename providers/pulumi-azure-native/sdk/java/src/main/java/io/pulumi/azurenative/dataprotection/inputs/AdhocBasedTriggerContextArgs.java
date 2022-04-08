@@ -6,6 +6,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 import io.pulumi.azurenative.dataprotection.inputs.AdhocBasedTaggingCriteriaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -49,8 +50,8 @@ public final class AdhocBasedTriggerContextArgs extends io.pulumi.resources.Reso
     }
 
     private AdhocBasedTriggerContextArgs() {
-        this.objectType = Output.empty();
-        this.taggingCriteria = Output.empty();
+        this.objectType = Codegen.empty();
+        this.taggingCriteria = Codegen.empty();
     }
 
     public static Builder builder() {

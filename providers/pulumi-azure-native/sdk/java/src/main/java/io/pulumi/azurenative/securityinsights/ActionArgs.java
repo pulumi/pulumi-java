@@ -5,6 +5,7 @@ package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> actionId;
 
     public Output<String> getActionId() {
-        return this.actionId == null ? Output.empty() : this.actionId;
+        return this.actionId == null ? Codegen.empty() : this.actionId;
     }
 
     /**
@@ -96,12 +97,12 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ActionArgs() {
-        this.actionId = Output.empty();
-        this.logicAppResourceId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.ruleId = Output.empty();
-        this.triggerUri = Output.empty();
-        this.workspaceName = Output.empty();
+        this.actionId = Codegen.empty();
+        this.logicAppResourceId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.ruleId = Codegen.empty();
+        this.triggerUri = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder actionId(@Nullable String actionId) {
-            this.actionId = Output.ofNullable(actionId);
+            this.actionId = Codegen.ofNullable(actionId);
             return this;
         }
         public Builder logicAppResourceId(Output<String> logicAppResourceId) {

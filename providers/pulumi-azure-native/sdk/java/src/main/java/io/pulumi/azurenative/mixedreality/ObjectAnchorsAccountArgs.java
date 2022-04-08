@@ -8,6 +8,7 @@ import io.pulumi.azurenative.mixedreality.inputs.ObjectAnchorsAccountIdentityArg
 import io.pulumi.azurenative.mixedreality.inputs.SkuArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,14 +27,14 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
-        return this.accountName == null ? Output.empty() : this.accountName;
+        return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
     @Import(name="identity")
       private final @Nullable Output<ObjectAnchorsAccountIdentityArgs> identity;
 
     public Output<ObjectAnchorsAccountIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<SkuArgs> kind;
 
     public Output<SkuArgs> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<IdentityArgs> plan;
 
     public Output<IdentityArgs> getPlan() {
-        return this.plan == null ? Output.empty() : this.plan;
+        return this.plan == null ? Codegen.empty() : this.plan;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> storageAccountName;
 
     public Output<String> getStorageAccountName() {
-        return this.storageAccountName == null ? Output.empty() : this.storageAccountName;
+        return this.storageAccountName == null ? Codegen.empty() : this.storageAccountName;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ObjectAnchorsAccountArgs(
@@ -135,15 +136,15 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
     }
 
     private ObjectAnchorsAccountArgs() {
-        this.accountName = Output.empty();
-        this.identity = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.plan = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.storageAccountName = Output.empty();
-        this.tags = Output.empty();
+        this.accountName = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.plan = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.storageAccountName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -187,7 +188,7 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Output.ofNullable(accountName);
+            this.accountName = Codegen.ofNullable(accountName);
             return this;
         }
         public Builder identity(@Nullable Output<ObjectAnchorsAccountIdentityArgs> identity) {
@@ -195,7 +196,7 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder identity(@Nullable ObjectAnchorsAccountIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder kind(@Nullable Output<SkuArgs> kind) {
@@ -203,7 +204,7 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder kind(@Nullable SkuArgs kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -211,7 +212,7 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder plan(@Nullable Output<IdentityArgs> plan) {
@@ -219,7 +220,7 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder plan(@Nullable IdentityArgs plan) {
-            this.plan = Output.ofNullable(plan);
+            this.plan = Codegen.ofNullable(plan);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -235,7 +236,7 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder storageAccountName(@Nullable Output<String> storageAccountName) {
@@ -243,7 +244,7 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder storageAccountName(@Nullable String storageAccountName) {
-            this.storageAccountName = Output.ofNullable(storageAccountName);
+            this.storageAccountName = Codegen.ofNullable(storageAccountName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -251,7 +252,7 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ObjectAnchorsAccountArgs build() {
             return new ObjectAnchorsAccountArgs(accountName, identity, kind, location, plan, resourceGroupName, sku, storageAccountName, tags);

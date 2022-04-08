@@ -8,6 +8,7 @@ import io.pulumi.azurenative.logic.inputs.IntegrationAccountMapPropertiesParamet
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +28,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> mapName;
 
     public Output<String> getMapName() {
-        return this.mapName == null ? Output.empty() : this.mapName;
+        return this.mapName == null ? Codegen.empty() : this.mapName;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema;
 
     public Output<IntegrationAccountMapPropertiesParametersSchemaArgs> getParametersSchema() {
-        return this.parametersSchema == null ? Output.empty() : this.parametersSchema;
+        return this.parametersSchema == null ? Codegen.empty() : this.parametersSchema;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public IntegrationAccountMapArgs(
@@ -153,16 +154,16 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
     }
 
     private IntegrationAccountMapArgs() {
-        this.content = Output.empty();
-        this.contentType = Output.empty();
-        this.integrationAccountName = Output.empty();
-        this.location = Output.empty();
-        this.mapName = Output.empty();
-        this.mapType = Output.empty();
-        this.metadata = Output.empty();
-        this.parametersSchema = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.content = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.integrationAccountName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.mapName = Codegen.empty();
+        this.mapType = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.parametersSchema = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -208,7 +209,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder contentType(@Nullable Output<String> contentType) {
@@ -216,7 +217,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder integrationAccountName(Output<String> integrationAccountName) {
@@ -232,7 +233,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder mapName(@Nullable Output<String> mapName) {
@@ -240,7 +241,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder mapName(@Nullable String mapName) {
-            this.mapName = Output.ofNullable(mapName);
+            this.mapName = Codegen.ofNullable(mapName);
             return this;
         }
         public Builder mapType(Output<Either<String,MapType>> mapType) {
@@ -256,7 +257,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder parametersSchema(@Nullable Output<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema) {
@@ -264,7 +265,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder parametersSchema(@Nullable IntegrationAccountMapPropertiesParametersSchemaArgs parametersSchema) {
-            this.parametersSchema = Output.ofNullable(parametersSchema);
+            this.parametersSchema = Codegen.ofNullable(parametersSchema);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -280,7 +281,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public IntegrationAccountMapArgs build() {
             return new IntegrationAccountMapArgs(content, contentType, integrationAccountName, location, mapName, mapType, metadata, parametersSchema, resourceGroupName, tags);

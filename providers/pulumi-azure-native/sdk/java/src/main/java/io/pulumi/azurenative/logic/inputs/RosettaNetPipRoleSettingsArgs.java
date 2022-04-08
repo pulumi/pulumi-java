@@ -7,6 +7,7 @@ import io.pulumi.azurenative.logic.enums.RosettaNetPipRoleType;
 import io.pulumi.azurenative.logic.inputs.RosettaNetPipBusinessDocumentArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -50,7 +51,7 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -115,13 +116,13 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
     }
 
     private RosettaNetPipRoleSettingsArgs() {
-        this.action = Output.empty();
-        this.businessDocument = Output.empty();
-        this.description = Output.empty();
-        this.role = Output.empty();
-        this.roleType = Output.empty();
-        this.service = Output.empty();
-        this.serviceClassification = Output.empty();
+        this.action = Codegen.empty();
+        this.businessDocument = Codegen.empty();
+        this.description = Codegen.empty();
+        this.role = Codegen.empty();
+        this.roleType = Codegen.empty();
+        this.service = Codegen.empty();
+        this.serviceClassification = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder role(Output<String> role) {

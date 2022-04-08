@@ -7,6 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.enums.BatchOutputAction;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class BatchOutputConfigurationArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> appendRowFileName;
 
     public Output<String> getAppendRowFileName() {
-        return this.appendRowFileName == null ? Output.empty() : this.appendRowFileName;
+        return this.appendRowFileName == null ? Codegen.empty() : this.appendRowFileName;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class BatchOutputConfigurationArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Either<String,BatchOutputAction>> outputAction;
 
     public Output<Either<String,BatchOutputAction>> getOutputAction() {
-        return this.outputAction == null ? Output.empty() : this.outputAction;
+        return this.outputAction == null ? Codegen.empty() : this.outputAction;
     }
 
     public BatchOutputConfigurationArgs(
@@ -50,8 +51,8 @@ public final class BatchOutputConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     private BatchOutputConfigurationArgs() {
-        this.appendRowFileName = Output.empty();
-        this.outputAction = Output.empty();
+        this.appendRowFileName = Codegen.empty();
+        this.outputAction = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class BatchOutputConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder appendRowFileName(@Nullable String appendRowFileName) {
-            this.appendRowFileName = Output.ofNullable(appendRowFileName);
+            this.appendRowFileName = Codegen.ofNullable(appendRowFileName);
             return this;
         }
         public Builder outputAction(@Nullable Output<Either<String,BatchOutputAction>> outputAction) {
@@ -89,7 +90,7 @@ public final class BatchOutputConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder outputAction(@Nullable Either<String,BatchOutputAction> outputAction) {
-            this.outputAction = Output.ofNullable(outputAction);
+            this.outputAction = Codegen.ofNullable(outputAction);
             return this;
         }        public BatchOutputConfigurationArgs build() {
             return new BatchOutputConfigurationArgs(appendRowFileName, outputAction);

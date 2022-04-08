@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -48,7 +49,7 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {
-        return this.timeZone == null ? Output.empty() : this.timeZone;
+        return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
     public TimeWindowArgs(
@@ -61,9 +62,9 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TimeWindowArgs() {
-        this.end = Output.empty();
-        this.start = Output.empty();
-        this.timeZone = Output.empty();
+        this.end = Codegen.empty();
+        this.start = Codegen.empty();
+        this.timeZone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Output.ofNullable(timeZone);
+            this.timeZone = Codegen.ofNullable(timeZone);
             return this;
         }        public TimeWindowArgs build() {
             return new TimeWindowArgs(end, start, timeZone);

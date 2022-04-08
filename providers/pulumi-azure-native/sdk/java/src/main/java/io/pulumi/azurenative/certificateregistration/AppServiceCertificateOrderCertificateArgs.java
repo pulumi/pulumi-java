@@ -5,6 +5,7 @@ package io.pulumi.azurenative.certificateregistration;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
       private final @Nullable Output<String> keyVaultId;
 
     public Output<String> getKeyVaultId() {
-        return this.keyVaultId == null ? Output.empty() : this.keyVaultId;
+        return this.keyVaultId == null ? Codegen.empty() : this.keyVaultId;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
       private final @Nullable Output<String> keyVaultSecretName;
 
     public Output<String> getKeyVaultSecretName() {
-        return this.keyVaultSecretName == null ? Output.empty() : this.keyVaultSecretName;
+        return this.keyVaultSecretName == null ? Codegen.empty() : this.keyVaultSecretName;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AppServiceCertificateOrderCertificateArgs(
@@ -123,14 +124,14 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
     }
 
     private AppServiceCertificateOrderCertificateArgs() {
-        this.certificateOrderName = Output.empty();
-        this.keyVaultId = Output.empty();
-        this.keyVaultSecretName = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.certificateOrderName = Codegen.empty();
+        this.keyVaultId = Codegen.empty();
+        this.keyVaultSecretName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -180,7 +181,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
             return this;
         }
         public Builder keyVaultId(@Nullable String keyVaultId) {
-            this.keyVaultId = Output.ofNullable(keyVaultId);
+            this.keyVaultId = Codegen.ofNullable(keyVaultId);
             return this;
         }
         public Builder keyVaultSecretName(@Nullable Output<String> keyVaultSecretName) {
@@ -188,7 +189,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
             return this;
         }
         public Builder keyVaultSecretName(@Nullable String keyVaultSecretName) {
-            this.keyVaultSecretName = Output.ofNullable(keyVaultSecretName);
+            this.keyVaultSecretName = Codegen.ofNullable(keyVaultSecretName);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -196,7 +197,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -204,7 +205,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -212,7 +213,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -228,7 +229,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public AppServiceCertificateOrderCertificateArgs build() {
             return new AppServiceCertificateOrderCertificateArgs(certificateOrderName, keyVaultId, keyVaultSecretName, kind, location, name, resourceGroupName, tags);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class StaticRouteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> addressPrefixes;
 
     public Output<List<String>> getAddressPrefixes() {
-        return this.addressPrefixes == null ? Output.empty() : this.addressPrefixes;
+        return this.addressPrefixes == null ? Codegen.empty() : this.addressPrefixes;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class StaticRouteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class StaticRouteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> nextHopIpAddress;
 
     public Output<String> getNextHopIpAddress() {
-        return this.nextHopIpAddress == null ? Output.empty() : this.nextHopIpAddress;
+        return this.nextHopIpAddress == null ? Codegen.empty() : this.nextHopIpAddress;
     }
 
     public StaticRouteArgs(
@@ -62,9 +63,9 @@ public final class StaticRouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StaticRouteArgs() {
-        this.addressPrefixes = Output.empty();
-        this.name = Output.empty();
-        this.nextHopIpAddress = Output.empty();
+        this.addressPrefixes = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nextHopIpAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class StaticRouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
-            this.addressPrefixes = Output.ofNullable(addressPrefixes);
+            this.addressPrefixes = Codegen.ofNullable(addressPrefixes);
             return this;
         }
         public Builder addressPrefixes(String... addressPrefixes) {
@@ -107,7 +108,7 @@ public final class StaticRouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder nextHopIpAddress(@Nullable Output<String> nextHopIpAddress) {
@@ -115,7 +116,7 @@ public final class StaticRouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
-            this.nextHopIpAddress = Output.ofNullable(nextHopIpAddress);
+            this.nextHopIpAddress = Codegen.ofNullable(nextHopIpAddress);
             return this;
         }        public StaticRouteArgs build() {
             return new StaticRouteArgs(addressPrefixes, name, nextHopIpAddress);

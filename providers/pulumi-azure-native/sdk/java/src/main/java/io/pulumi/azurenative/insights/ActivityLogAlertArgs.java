@@ -7,6 +7,7 @@ import io.pulumi.azurenative.insights.inputs.ActionListArgs;
 import io.pulumi.azurenative.insights.inputs.AlertRuleAllOfConditionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +39,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> activityLogAlertName;
 
     public Output<String> getActivityLogAlertName() {
-        return this.activityLogAlertName == null ? Output.empty() : this.activityLogAlertName;
+        return this.activityLogAlertName == null ? Codegen.empty() : this.activityLogAlertName;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ActivityLogAlertArgs(
@@ -132,23 +133,23 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
         this.activityLogAlertName = activityLogAlertName;
         this.condition = Objects.requireNonNull(condition, "expected parameter 'condition' to be non-null");
         this.description = description;
-        this.enabled = enabled == null ? Output.ofNullable(true) : enabled;
-        this.location = location == null ? Output.ofNullable("global") : location;
+        this.enabled = enabled == null ? Codegen.ofNullable(true) : enabled;
+        this.location = location == null ? Codegen.ofNullable("global") : location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.scopes = Objects.requireNonNull(scopes, "expected parameter 'scopes' to be non-null");
         this.tags = tags;
     }
 
     private ActivityLogAlertArgs() {
-        this.actions = Output.empty();
-        this.activityLogAlertName = Output.empty();
-        this.condition = Output.empty();
-        this.description = Output.empty();
-        this.enabled = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scopes = Output.empty();
-        this.tags = Output.empty();
+        this.actions = Codegen.empty();
+        this.activityLogAlertName = Codegen.empty();
+        this.condition = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scopes = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -200,7 +201,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder activityLogAlertName(@Nullable String activityLogAlertName) {
-            this.activityLogAlertName = Output.ofNullable(activityLogAlertName);
+            this.activityLogAlertName = Codegen.ofNullable(activityLogAlertName);
             return this;
         }
         public Builder condition(Output<AlertRuleAllOfConditionArgs> condition) {
@@ -216,7 +217,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -224,7 +225,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -232,7 +233,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -259,7 +260,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ActivityLogAlertArgs build() {
             return new ActivityLogAlertArgs(actions, activityLogAlertName, condition, description, enabled, location, resourceGroupName, scopes, tags);

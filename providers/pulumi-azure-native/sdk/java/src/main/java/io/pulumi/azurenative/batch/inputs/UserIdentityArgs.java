@@ -6,6 +6,7 @@ package io.pulumi.azurenative.batch.inputs;
 import io.pulumi.azurenative.batch.inputs.AutoUserSpecificationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AutoUserSpecificationArgs> autoUser;
 
     public Output<AutoUserSpecificationArgs> getAutoUser() {
-        return this.autoUser == null ? Output.empty() : this.autoUser;
+        return this.autoUser == null ? Codegen.empty() : this.autoUser;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public UserIdentityArgs(
@@ -49,8 +50,8 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserIdentityArgs() {
-        this.autoUser = Output.empty();
-        this.userName = Output.empty();
+        this.autoUser = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoUser(@Nullable AutoUserSpecificationArgs autoUser) {
-            this.autoUser = Output.ofNullable(autoUser);
+            this.autoUser = Codegen.ofNullable(autoUser);
             return this;
         }
         public Builder userName(@Nullable Output<String> userName) {
@@ -88,7 +89,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userName(@Nullable String userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public UserIdentityArgs build() {
             return new UserIdentityArgs(autoUser, userName);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<String>> filters;
 
     public Output<List<String>> getFilters() {
-        return this.filters == null ? Output.empty() : this.filters;
+        return this.filters == null ? Codegen.empty() : this.filters;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Integer> order;
 
     public Output<Integer> getOrder() {
-        return this.order == null ? Output.empty() : this.order;
+        return this.order == null ? Codegen.empty() : this.order;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<String>> predicates;
 
     public Output<List<String>> getPredicates() {
-        return this.predicates == null ? Output.empty() : this.predicates;
+        return this.predicates == null ? Codegen.empty() : this.predicates;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> ssoEnabled;
 
     public Output<Boolean> getSsoEnabled() {
-        return this.ssoEnabled == null ? Output.empty() : this.ssoEnabled;
+        return this.ssoEnabled == null ? Codegen.empty() : this.ssoEnabled;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> tokenRelay;
 
     public Output<Boolean> getTokenRelay() {
-        return this.tokenRelay == null ? Output.empty() : this.tokenRelay;
+        return this.tokenRelay == null ? Codegen.empty() : this.tokenRelay;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public GatewayApiRouteArgs(
@@ -142,15 +143,15 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private GatewayApiRouteArgs() {
-        this.description = Output.empty();
-        this.filters = Output.empty();
-        this.order = Output.empty();
-        this.predicates = Output.empty();
-        this.ssoEnabled = Output.empty();
-        this.tags = Output.empty();
-        this.title = Output.empty();
-        this.tokenRelay = Output.empty();
-        this.uri = Output.empty();
+        this.description = Codegen.empty();
+        this.filters = Codegen.empty();
+        this.order = Codegen.empty();
+        this.predicates = Codegen.empty();
+        this.ssoEnabled = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.title = Codegen.empty();
+        this.tokenRelay = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -194,7 +195,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder filters(@Nullable Output<List<String>> filters) {
@@ -202,7 +203,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder filters(@Nullable List<String> filters) {
-            this.filters = Output.ofNullable(filters);
+            this.filters = Codegen.ofNullable(filters);
             return this;
         }
         public Builder filters(String... filters) {
@@ -213,7 +214,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder order(@Nullable Integer order) {
-            this.order = Output.ofNullable(order);
+            this.order = Codegen.ofNullable(order);
             return this;
         }
         public Builder predicates(@Nullable Output<List<String>> predicates) {
@@ -221,7 +222,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder predicates(@Nullable List<String> predicates) {
-            this.predicates = Output.ofNullable(predicates);
+            this.predicates = Codegen.ofNullable(predicates);
             return this;
         }
         public Builder predicates(String... predicates) {
@@ -232,7 +233,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder ssoEnabled(@Nullable Boolean ssoEnabled) {
-            this.ssoEnabled = Output.ofNullable(ssoEnabled);
+            this.ssoEnabled = Codegen.ofNullable(ssoEnabled);
             return this;
         }
         public Builder tags(@Nullable Output<List<String>> tags) {
@@ -240,7 +241,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(String... tags) {
@@ -251,7 +252,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }
         public Builder tokenRelay(@Nullable Output<Boolean> tokenRelay) {
@@ -259,7 +260,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tokenRelay(@Nullable Boolean tokenRelay) {
-            this.tokenRelay = Output.ofNullable(tokenRelay);
+            this.tokenRelay = Codegen.ofNullable(tokenRelay);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -267,7 +268,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public GatewayApiRouteArgs build() {
             return new GatewayApiRouteArgs(description, filters, order, predicates, ssoEnabled, tags, title, tokenRelay, uri);

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.security.inputs.ProtectionModeArgs;
 import io.pulumi.azurenative.security.inputs.VmRecommendationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -37,7 +38,7 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> enforcementMode;
 
     public Output<String> getEnforcementMode() {
-        return this.enforcementMode == null ? Output.empty() : this.enforcementMode;
+        return this.enforcementMode == null ? Codegen.empty() : this.enforcementMode;
     }
 
     /**
@@ -48,14 +49,14 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> groupName;
 
     public Output<String> getGroupName() {
-        return this.groupName == null ? Output.empty() : this.groupName;
+        return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 
     @Import(name="pathRecommendations")
       private final @Nullable Output<List<PathRecommendationArgs>> pathRecommendations;
 
     public Output<List<PathRecommendationArgs>> getPathRecommendations() {
-        return this.pathRecommendations == null ? Output.empty() : this.pathRecommendations;
+        return this.pathRecommendations == null ? Codegen.empty() : this.pathRecommendations;
     }
 
     /**
@@ -66,14 +67,14 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
       private final @Nullable Output<ProtectionModeArgs> protectionMode;
 
     public Output<ProtectionModeArgs> getProtectionMode() {
-        return this.protectionMode == null ? Output.empty() : this.protectionMode;
+        return this.protectionMode == null ? Codegen.empty() : this.protectionMode;
     }
 
     @Import(name="vmRecommendations")
       private final @Nullable Output<List<VmRecommendationArgs>> vmRecommendations;
 
     public Output<List<VmRecommendationArgs>> getVmRecommendations() {
-        return this.vmRecommendations == null ? Output.empty() : this.vmRecommendations;
+        return this.vmRecommendations == null ? Codegen.empty() : this.vmRecommendations;
     }
 
     public AdaptiveApplicationControlArgs(
@@ -92,12 +93,12 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
     }
 
     private AdaptiveApplicationControlArgs() {
-        this.ascLocation = Output.empty();
-        this.enforcementMode = Output.empty();
-        this.groupName = Output.empty();
-        this.pathRecommendations = Output.empty();
-        this.protectionMode = Output.empty();
-        this.vmRecommendations = Output.empty();
+        this.ascLocation = Codegen.empty();
+        this.enforcementMode = Codegen.empty();
+        this.groupName = Codegen.empty();
+        this.pathRecommendations = Codegen.empty();
+        this.protectionMode = Codegen.empty();
+        this.vmRecommendations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder enforcementMode(@Nullable String enforcementMode) {
-            this.enforcementMode = Output.ofNullable(enforcementMode);
+            this.enforcementMode = Codegen.ofNullable(enforcementMode);
             return this;
         }
         public Builder groupName(@Nullable Output<String> groupName) {
@@ -151,7 +152,7 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = Output.ofNullable(groupName);
+            this.groupName = Codegen.ofNullable(groupName);
             return this;
         }
         public Builder pathRecommendations(@Nullable Output<List<PathRecommendationArgs>> pathRecommendations) {
@@ -159,7 +160,7 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder pathRecommendations(@Nullable List<PathRecommendationArgs> pathRecommendations) {
-            this.pathRecommendations = Output.ofNullable(pathRecommendations);
+            this.pathRecommendations = Codegen.ofNullable(pathRecommendations);
             return this;
         }
         public Builder pathRecommendations(PathRecommendationArgs... pathRecommendations) {
@@ -170,7 +171,7 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder protectionMode(@Nullable ProtectionModeArgs protectionMode) {
-            this.protectionMode = Output.ofNullable(protectionMode);
+            this.protectionMode = Codegen.ofNullable(protectionMode);
             return this;
         }
         public Builder vmRecommendations(@Nullable Output<List<VmRecommendationArgs>> vmRecommendations) {
@@ -178,7 +179,7 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder vmRecommendations(@Nullable List<VmRecommendationArgs> vmRecommendations) {
-            this.vmRecommendations = Output.ofNullable(vmRecommendations);
+            this.vmRecommendations = Codegen.ofNullable(vmRecommendations);
             return this;
         }
         public Builder vmRecommendations(VmRecommendationArgs... vmRecommendations) {

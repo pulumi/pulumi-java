@@ -10,6 +10,7 @@ import io.pulumi.azurenative.avs.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +30,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<IdentitySourceArgs>> identitySources;
 
     public Output<List<IdentitySourceArgs>> getIdentitySources() {
-        return this.identitySources == null ? Output.empty() : this.identitySources;
+        return this.identitySources == null ? Codegen.empty() : this.identitySources;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,InternetEnum>> internet;
 
     public Output<Either<String,InternetEnum>> getInternet() {
-        return this.internet == null ? Output.empty() : this.internet;
+        return this.internet == null ? Codegen.empty() : this.internet;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> nsxtPassword;
 
     public Output<String> getNsxtPassword() {
-        return this.nsxtPassword == null ? Output.empty() : this.nsxtPassword;
+        return this.nsxtPassword == null ? Codegen.empty() : this.nsxtPassword;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> privateCloudName;
 
     public Output<String> getPrivateCloudName() {
-        return this.privateCloudName == null ? Output.empty() : this.privateCloudName;
+        return this.privateCloudName == null ? Codegen.empty() : this.privateCloudName;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> vcenterPassword;
 
     public Output<String> getVcenterPassword() {
-        return this.vcenterPassword == null ? Output.empty() : this.vcenterPassword;
+        return this.vcenterPassword == null ? Codegen.empty() : this.vcenterPassword;
     }
 
     public PrivateCloudArgs(
@@ -168,17 +169,17 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PrivateCloudArgs() {
-        this.identitySources = Output.empty();
-        this.internet = Output.empty();
-        this.location = Output.empty();
-        this.managementCluster = Output.empty();
-        this.networkBlock = Output.empty();
-        this.nsxtPassword = Output.empty();
-        this.privateCloudName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
-        this.vcenterPassword = Output.empty();
+        this.identitySources = Codegen.empty();
+        this.internet = Codegen.empty();
+        this.location = Codegen.empty();
+        this.managementCluster = Codegen.empty();
+        this.networkBlock = Codegen.empty();
+        this.nsxtPassword = Codegen.empty();
+        this.privateCloudName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vcenterPassword = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -226,7 +227,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identitySources(@Nullable List<IdentitySourceArgs> identitySources) {
-            this.identitySources = Output.ofNullable(identitySources);
+            this.identitySources = Codegen.ofNullable(identitySources);
             return this;
         }
         public Builder identitySources(IdentitySourceArgs... identitySources) {
@@ -237,7 +238,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder internet(@Nullable Either<String,InternetEnum> internet) {
-            this.internet = Output.ofNullable(internet);
+            this.internet = Codegen.ofNullable(internet);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -245,7 +246,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder managementCluster(Output<ManagementClusterArgs> managementCluster) {
@@ -269,7 +270,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nsxtPassword(@Nullable String nsxtPassword) {
-            this.nsxtPassword = Output.ofNullable(nsxtPassword);
+            this.nsxtPassword = Codegen.ofNullable(nsxtPassword);
             return this;
         }
         public Builder privateCloudName(@Nullable Output<String> privateCloudName) {
@@ -277,7 +278,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateCloudName(@Nullable String privateCloudName) {
-            this.privateCloudName = Output.ofNullable(privateCloudName);
+            this.privateCloudName = Codegen.ofNullable(privateCloudName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -301,7 +302,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vcenterPassword(@Nullable Output<String> vcenterPassword) {
@@ -309,7 +310,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vcenterPassword(@Nullable String vcenterPassword) {
-            this.vcenterPassword = Output.ofNullable(vcenterPassword);
+            this.vcenterPassword = Codegen.ofNullable(vcenterPassword);
             return this;
         }        public PrivateCloudArgs build() {
             return new PrivateCloudArgs(identitySources, internet, location, managementCluster, networkBlock, nsxtPassword, privateCloudName, resourceGroupName, sku, tags, vcenterPassword);

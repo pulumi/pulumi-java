@@ -5,6 +5,7 @@ package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class FeedbackPropertiesArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> lockDurationAsIso8601;
 
     public Output<String> getLockDurationAsIso8601() {
-        return this.lockDurationAsIso8601 == null ? Output.empty() : this.lockDurationAsIso8601;
+        return this.lockDurationAsIso8601 == null ? Codegen.empty() : this.lockDurationAsIso8601;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class FeedbackPropertiesArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> maxDeliveryCount;
 
     public Output<Integer> getMaxDeliveryCount() {
-        return this.maxDeliveryCount == null ? Output.empty() : this.maxDeliveryCount;
+        return this.maxDeliveryCount == null ? Codegen.empty() : this.maxDeliveryCount;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class FeedbackPropertiesArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> ttlAsIso8601;
 
     public Output<String> getTtlAsIso8601() {
-        return this.ttlAsIso8601 == null ? Output.empty() : this.ttlAsIso8601;
+        return this.ttlAsIso8601 == null ? Codegen.empty() : this.ttlAsIso8601;
     }
 
     public FeedbackPropertiesArgs(
@@ -62,9 +63,9 @@ public final class FeedbackPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private FeedbackPropertiesArgs() {
-        this.lockDurationAsIso8601 = Output.empty();
-        this.maxDeliveryCount = Output.empty();
-        this.ttlAsIso8601 = Output.empty();
+        this.lockDurationAsIso8601 = Codegen.empty();
+        this.maxDeliveryCount = Codegen.empty();
+        this.ttlAsIso8601 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class FeedbackPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder lockDurationAsIso8601(@Nullable String lockDurationAsIso8601) {
-            this.lockDurationAsIso8601 = Output.ofNullable(lockDurationAsIso8601);
+            this.lockDurationAsIso8601 = Codegen.ofNullable(lockDurationAsIso8601);
             return this;
         }
         public Builder maxDeliveryCount(@Nullable Output<Integer> maxDeliveryCount) {
@@ -104,7 +105,7 @@ public final class FeedbackPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
-            this.maxDeliveryCount = Output.ofNullable(maxDeliveryCount);
+            this.maxDeliveryCount = Codegen.ofNullable(maxDeliveryCount);
             return this;
         }
         public Builder ttlAsIso8601(@Nullable Output<String> ttlAsIso8601) {
@@ -112,7 +113,7 @@ public final class FeedbackPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder ttlAsIso8601(@Nullable String ttlAsIso8601) {
-            this.ttlAsIso8601 = Output.ofNullable(ttlAsIso8601);
+            this.ttlAsIso8601 = Codegen.ofNullable(ttlAsIso8601);
             return this;
         }        public FeedbackPropertiesArgs build() {
             return new FeedbackPropertiesArgs(lockDurationAsIso8601, maxDeliveryCount, ttlAsIso8601);

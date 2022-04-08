@@ -7,6 +7,7 @@ import io.pulumi.azurenative.web.enums.ConnectionParameterType;
 import io.pulumi.azurenative.web.inputs.ApiOAuthSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -27,7 +28,7 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<ApiOAuthSettingsArgs> oAuthSettings;
 
     public Output<ApiOAuthSettingsArgs> getOAuthSettings() {
-        return this.oAuthSettings == null ? Output.empty() : this.oAuthSettings;
+        return this.oAuthSettings == null ? Codegen.empty() : this.oAuthSettings;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<ConnectionParameterType> type;
 
     public Output<ConnectionParameterType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ConnectionParameterArgs(
@@ -49,8 +50,8 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
     }
 
     private ConnectionParameterArgs() {
-        this.oAuthSettings = Output.empty();
-        this.type = Output.empty();
+        this.oAuthSettings = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder oAuthSettings(@Nullable ApiOAuthSettingsArgs oAuthSettings) {
-            this.oAuthSettings = Output.ofNullable(oAuthSettings);
+            this.oAuthSettings = Codegen.ofNullable(oAuthSettings);
             return this;
         }
         public Builder type(@Nullable Output<ConnectionParameterType> type) {
@@ -88,7 +89,7 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder type(@Nullable ConnectionParameterType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ConnectionParameterArgs build() {
             return new ConnectionParameterArgs(oAuthSettings, type);

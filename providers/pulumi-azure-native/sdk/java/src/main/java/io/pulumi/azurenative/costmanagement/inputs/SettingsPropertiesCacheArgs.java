@@ -5,6 +5,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -55,7 +56,7 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -96,12 +97,12 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
     }
 
     private SettingsPropertiesCacheArgs() {
-        this.channel = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.parent = Output.empty();
-        this.status = Output.empty();
-        this.subchannel = Output.empty();
+        this.channel = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.status = Codegen.empty();
+        this.subchannel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -171,7 +172,7 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder subchannel(Output<String> subchannel) {

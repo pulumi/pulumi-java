@@ -5,6 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -74,10 +75,10 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactDetailsArgs() {
-        this.companyName = Output.empty();
-        this.contactPerson = Output.empty();
-        this.emailList = Output.empty();
-        this.phone = Output.empty();
+        this.companyName = Codegen.empty();
+        this.contactPerson = Codegen.empty();
+        this.emailList = Codegen.empty();
+        this.phone = Codegen.empty();
     }
 
     public static Builder builder() {

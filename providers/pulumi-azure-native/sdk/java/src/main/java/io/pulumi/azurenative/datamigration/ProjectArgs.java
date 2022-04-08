@@ -13,6 +13,7 @@ import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +34,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DatabaseInfoArgs>> databasesInfo;
 
     public Output<List<DatabaseInfoArgs>> getDatabasesInfo() {
-        return this.databasesInfo == null ? Output.empty() : this.databasesInfo;
+        return this.databasesInfo == null ? Codegen.empty() : this.databasesInfo;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> projectName;
 
     public Output<String> getProjectName() {
-        return this.projectName == null ? Output.empty() : this.projectName;
+        return this.projectName == null ? Codegen.empty() : this.projectName;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> sourceConnectionInfo;
 
     public Output<Object> getSourceConnectionInfo() {
-        return this.sourceConnectionInfo == null ? Output.empty() : this.sourceConnectionInfo;
+        return this.sourceConnectionInfo == null ? Codegen.empty() : this.sourceConnectionInfo;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -121,7 +122,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> targetConnectionInfo;
 
     public Output<Object> getTargetConnectionInfo() {
-        return this.targetConnectionInfo == null ? Output.empty() : this.targetConnectionInfo;
+        return this.targetConnectionInfo == null ? Codegen.empty() : this.targetConnectionInfo;
     }
 
     /**
@@ -159,16 +160,16 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProjectArgs() {
-        this.databasesInfo = Output.empty();
-        this.groupName = Output.empty();
-        this.location = Output.empty();
-        this.projectName = Output.empty();
-        this.serviceName = Output.empty();
-        this.sourceConnectionInfo = Output.empty();
-        this.sourcePlatform = Output.empty();
-        this.tags = Output.empty();
-        this.targetConnectionInfo = Output.empty();
-        this.targetPlatform = Output.empty();
+        this.databasesInfo = Codegen.empty();
+        this.groupName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.projectName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.sourceConnectionInfo = Codegen.empty();
+        this.sourcePlatform = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targetConnectionInfo = Codegen.empty();
+        this.targetPlatform = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -214,7 +215,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databasesInfo(@Nullable List<DatabaseInfoArgs> databasesInfo) {
-            this.databasesInfo = Output.ofNullable(databasesInfo);
+            this.databasesInfo = Codegen.ofNullable(databasesInfo);
             return this;
         }
         public Builder databasesInfo(DatabaseInfoArgs... databasesInfo) {
@@ -233,7 +234,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder projectName(@Nullable Output<String> projectName) {
@@ -241,7 +242,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projectName(@Nullable String projectName) {
-            this.projectName = Output.ofNullable(projectName);
+            this.projectName = Codegen.ofNullable(projectName);
             return this;
         }
         public Builder serviceName(Output<String> serviceName) {
@@ -257,7 +258,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceConnectionInfo(@Nullable Object sourceConnectionInfo) {
-            this.sourceConnectionInfo = Output.ofNullable(sourceConnectionInfo);
+            this.sourceConnectionInfo = Codegen.ofNullable(sourceConnectionInfo);
             return this;
         }
         public Builder sourcePlatform(Output<Either<String,ProjectSourcePlatform>> sourcePlatform) {
@@ -273,7 +274,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder targetConnectionInfo(@Nullable Output<Object> targetConnectionInfo) {
@@ -281,7 +282,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetConnectionInfo(@Nullable Object targetConnectionInfo) {
-            this.targetConnectionInfo = Output.ofNullable(targetConnectionInfo);
+            this.targetConnectionInfo = Codegen.ofNullable(targetConnectionInfo);
             return this;
         }
         public Builder targetPlatform(Output<Either<String,ProjectTargetPlatform>> targetPlatform) {

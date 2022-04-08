@@ -5,6 +5,7 @@ package io.pulumi.azurenative.attestation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> alg;
 
     public Output<String> getAlg() {
-        return this.alg == null ? Output.empty() : this.alg;
+        return this.alg == null ? Codegen.empty() : this.alg;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> crv;
 
     public Output<String> getCrv() {
-        return this.crv == null ? Output.empty() : this.crv;
+        return this.crv == null ? Codegen.empty() : this.crv;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> d;
 
     public Output<String> getD() {
-        return this.d == null ? Output.empty() : this.d;
+        return this.d == null ? Codegen.empty() : this.d;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dp;
 
     public Output<String> getDp() {
-        return this.dp == null ? Output.empty() : this.dp;
+        return this.dp == null ? Codegen.empty() : this.dp;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dq;
 
     public Output<String> getDq() {
-        return this.dq == null ? Output.empty() : this.dq;
+        return this.dq == null ? Codegen.empty() : this.dq;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> e;
 
     public Output<String> getE() {
-        return this.e == null ? Output.empty() : this.e;
+        return this.e == null ? Codegen.empty() : this.e;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> k;
 
     public Output<String> getK() {
-        return this.k == null ? Output.empty() : this.k;
+        return this.k == null ? Codegen.empty() : this.k;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kid;
 
     public Output<String> getKid() {
-        return this.kid == null ? Output.empty() : this.kid;
+        return this.kid == null ? Codegen.empty() : this.kid;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> n;
 
     public Output<String> getN() {
-        return this.n == null ? Output.empty() : this.n;
+        return this.n == null ? Codegen.empty() : this.n;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> p;
 
     public Output<String> getP() {
-        return this.p == null ? Output.empty() : this.p;
+        return this.p == null ? Codegen.empty() : this.p;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> q;
 
     public Output<String> getQ() {
-        return this.q == null ? Output.empty() : this.q;
+        return this.q == null ? Codegen.empty() : this.q;
     }
 
     /**
@@ -171,7 +172,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> qi;
 
     public Output<String> getQi() {
-        return this.qi == null ? Output.empty() : this.qi;
+        return this.qi == null ? Codegen.empty() : this.qi;
     }
 
     /**
@@ -185,7 +186,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> use;
 
     public Output<String> getUse() {
-        return this.use == null ? Output.empty() : this.use;
+        return this.use == null ? Codegen.empty() : this.use;
     }
 
     /**
@@ -196,7 +197,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> x;
 
     public Output<String> getX() {
-        return this.x == null ? Output.empty() : this.x;
+        return this.x == null ? Codegen.empty() : this.x;
     }
 
     /**
@@ -213,7 +214,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> x5c;
 
     public Output<List<String>> getX5c() {
-        return this.x5c == null ? Output.empty() : this.x5c;
+        return this.x5c == null ? Codegen.empty() : this.x5c;
     }
 
     /**
@@ -224,7 +225,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> y;
 
     public Output<String> getY() {
-        return this.y == null ? Output.empty() : this.y;
+        return this.y == null ? Codegen.empty() : this.y;
     }
 
     public JSONWebKeyArgs(
@@ -265,23 +266,23 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JSONWebKeyArgs() {
-        this.alg = Output.empty();
-        this.crv = Output.empty();
-        this.d = Output.empty();
-        this.dp = Output.empty();
-        this.dq = Output.empty();
-        this.e = Output.empty();
-        this.k = Output.empty();
-        this.kid = Output.empty();
-        this.kty = Output.empty();
-        this.n = Output.empty();
-        this.p = Output.empty();
-        this.q = Output.empty();
-        this.qi = Output.empty();
-        this.use = Output.empty();
-        this.x = Output.empty();
-        this.x5c = Output.empty();
-        this.y = Output.empty();
+        this.alg = Codegen.empty();
+        this.crv = Codegen.empty();
+        this.d = Codegen.empty();
+        this.dp = Codegen.empty();
+        this.dq = Codegen.empty();
+        this.e = Codegen.empty();
+        this.k = Codegen.empty();
+        this.kid = Codegen.empty();
+        this.kty = Codegen.empty();
+        this.n = Codegen.empty();
+        this.p = Codegen.empty();
+        this.q = Codegen.empty();
+        this.qi = Codegen.empty();
+        this.use = Codegen.empty();
+        this.x = Codegen.empty();
+        this.x5c = Codegen.empty();
+        this.y = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -341,7 +342,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alg(@Nullable String alg) {
-            this.alg = Output.ofNullable(alg);
+            this.alg = Codegen.ofNullable(alg);
             return this;
         }
         public Builder crv(@Nullable Output<String> crv) {
@@ -349,7 +350,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder crv(@Nullable String crv) {
-            this.crv = Output.ofNullable(crv);
+            this.crv = Codegen.ofNullable(crv);
             return this;
         }
         public Builder d(@Nullable Output<String> d) {
@@ -357,7 +358,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder d(@Nullable String d) {
-            this.d = Output.ofNullable(d);
+            this.d = Codegen.ofNullable(d);
             return this;
         }
         public Builder dp(@Nullable Output<String> dp) {
@@ -365,7 +366,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dp(@Nullable String dp) {
-            this.dp = Output.ofNullable(dp);
+            this.dp = Codegen.ofNullable(dp);
             return this;
         }
         public Builder dq(@Nullable Output<String> dq) {
@@ -373,7 +374,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dq(@Nullable String dq) {
-            this.dq = Output.ofNullable(dq);
+            this.dq = Codegen.ofNullable(dq);
             return this;
         }
         public Builder e(@Nullable Output<String> e) {
@@ -381,7 +382,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder e(@Nullable String e) {
-            this.e = Output.ofNullable(e);
+            this.e = Codegen.ofNullable(e);
             return this;
         }
         public Builder k(@Nullable Output<String> k) {
@@ -389,7 +390,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder k(@Nullable String k) {
-            this.k = Output.ofNullable(k);
+            this.k = Codegen.ofNullable(k);
             return this;
         }
         public Builder kid(@Nullable Output<String> kid) {
@@ -397,7 +398,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kid(@Nullable String kid) {
-            this.kid = Output.ofNullable(kid);
+            this.kid = Codegen.ofNullable(kid);
             return this;
         }
         public Builder kty(Output<String> kty) {
@@ -413,7 +414,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder n(@Nullable String n) {
-            this.n = Output.ofNullable(n);
+            this.n = Codegen.ofNullable(n);
             return this;
         }
         public Builder p(@Nullable Output<String> p) {
@@ -421,7 +422,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder p(@Nullable String p) {
-            this.p = Output.ofNullable(p);
+            this.p = Codegen.ofNullable(p);
             return this;
         }
         public Builder q(@Nullable Output<String> q) {
@@ -429,7 +430,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder q(@Nullable String q) {
-            this.q = Output.ofNullable(q);
+            this.q = Codegen.ofNullable(q);
             return this;
         }
         public Builder qi(@Nullable Output<String> qi) {
@@ -437,7 +438,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder qi(@Nullable String qi) {
-            this.qi = Output.ofNullable(qi);
+            this.qi = Codegen.ofNullable(qi);
             return this;
         }
         public Builder use(@Nullable Output<String> use) {
@@ -445,7 +446,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder use(@Nullable String use) {
-            this.use = Output.ofNullable(use);
+            this.use = Codegen.ofNullable(use);
             return this;
         }
         public Builder x(@Nullable Output<String> x) {
@@ -453,7 +454,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder x(@Nullable String x) {
-            this.x = Output.ofNullable(x);
+            this.x = Codegen.ofNullable(x);
             return this;
         }
         public Builder x5c(@Nullable Output<List<String>> x5c) {
@@ -461,7 +462,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder x5c(@Nullable List<String> x5c) {
-            this.x5c = Output.ofNullable(x5c);
+            this.x5c = Codegen.ofNullable(x5c);
             return this;
         }
         public Builder x5c(String... x5c) {
@@ -472,7 +473,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder y(@Nullable String y) {
-            this.y = Output.ofNullable(y);
+            this.y = Codegen.ofNullable(y);
             return this;
         }        public JSONWebKeyArgs build() {
             return new JSONWebKeyArgs(alg, crv, d, dp, dq, e, k, kid, kty, n, p, q, qi, use, x, x5c, y);

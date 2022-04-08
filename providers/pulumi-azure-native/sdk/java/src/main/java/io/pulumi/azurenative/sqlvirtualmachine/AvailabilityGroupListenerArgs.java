@@ -6,6 +6,7 @@ package io.pulumi.azurenative.sqlvirtualmachine;
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.LoadBalancerConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> availabilityGroupListenerName;
 
     public Output<String> getAvailabilityGroupListenerName() {
-        return this.availabilityGroupListenerName == null ? Output.empty() : this.availabilityGroupListenerName;
+        return this.availabilityGroupListenerName == null ? Codegen.empty() : this.availabilityGroupListenerName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> availabilityGroupName;
 
     public Output<String> getAvailabilityGroupName() {
-        return this.availabilityGroupName == null ? Output.empty() : this.availabilityGroupName;
+        return this.availabilityGroupName == null ? Codegen.empty() : this.availabilityGroupName;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Boolean> createDefaultAvailabilityGroupIfNotExist;
 
     public Output<Boolean> getCreateDefaultAvailabilityGroupIfNotExist() {
-        return this.createDefaultAvailabilityGroupIfNotExist == null ? Output.empty() : this.createDefaultAvailabilityGroupIfNotExist;
+        return this.createDefaultAvailabilityGroupIfNotExist == null ? Codegen.empty() : this.createDefaultAvailabilityGroupIfNotExist;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
 
     public Output<List<LoadBalancerConfigurationArgs>> getLoadBalancerConfigurations() {
-        return this.loadBalancerConfigurations == null ? Output.empty() : this.loadBalancerConfigurations;
+        return this.loadBalancerConfigurations == null ? Codegen.empty() : this.loadBalancerConfigurations;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -113,13 +114,13 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
     }
 
     private AvailabilityGroupListenerArgs() {
-        this.availabilityGroupListenerName = Output.empty();
-        this.availabilityGroupName = Output.empty();
-        this.createDefaultAvailabilityGroupIfNotExist = Output.empty();
-        this.loadBalancerConfigurations = Output.empty();
-        this.port = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sqlVirtualMachineGroupName = Output.empty();
+        this.availabilityGroupListenerName = Codegen.empty();
+        this.availabilityGroupName = Codegen.empty();
+        this.createDefaultAvailabilityGroupIfNotExist = Codegen.empty();
+        this.loadBalancerConfigurations = Codegen.empty();
+        this.port = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sqlVirtualMachineGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder availabilityGroupListenerName(@Nullable String availabilityGroupListenerName) {
-            this.availabilityGroupListenerName = Output.ofNullable(availabilityGroupListenerName);
+            this.availabilityGroupListenerName = Codegen.ofNullable(availabilityGroupListenerName);
             return this;
         }
         public Builder availabilityGroupName(@Nullable Output<String> availabilityGroupName) {
@@ -167,7 +168,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder availabilityGroupName(@Nullable String availabilityGroupName) {
-            this.availabilityGroupName = Output.ofNullable(availabilityGroupName);
+            this.availabilityGroupName = Codegen.ofNullable(availabilityGroupName);
             return this;
         }
         public Builder createDefaultAvailabilityGroupIfNotExist(@Nullable Output<Boolean> createDefaultAvailabilityGroupIfNotExist) {
@@ -175,7 +176,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder createDefaultAvailabilityGroupIfNotExist(@Nullable Boolean createDefaultAvailabilityGroupIfNotExist) {
-            this.createDefaultAvailabilityGroupIfNotExist = Output.ofNullable(createDefaultAvailabilityGroupIfNotExist);
+            this.createDefaultAvailabilityGroupIfNotExist = Codegen.ofNullable(createDefaultAvailabilityGroupIfNotExist);
             return this;
         }
         public Builder loadBalancerConfigurations(@Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations) {
@@ -183,7 +184,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder loadBalancerConfigurations(@Nullable List<LoadBalancerConfigurationArgs> loadBalancerConfigurations) {
-            this.loadBalancerConfigurations = Output.ofNullable(loadBalancerConfigurations);
+            this.loadBalancerConfigurations = Codegen.ofNullable(loadBalancerConfigurations);
             return this;
         }
         public Builder loadBalancerConfigurations(LoadBalancerConfigurationArgs... loadBalancerConfigurations) {
@@ -194,7 +195,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

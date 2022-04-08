@@ -5,6 +5,7 @@ package io.pulumi.azurenative.edgeorder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,7 +50,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> mobile;
 
     public Output<String> getMobile() {
-        return this.mobile == null ? Output.empty() : this.mobile;
+        return this.mobile == null ? Codegen.empty() : this.mobile;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> phoneExtension;
 
     public Output<String> getPhoneExtension() {
-        return this.phoneExtension == null ? Output.empty() : this.phoneExtension;
+        return this.phoneExtension == null ? Codegen.empty() : this.phoneExtension;
     }
 
     public ContactDetailsArgs(
@@ -88,11 +89,11 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactDetailsArgs() {
-        this.contactName = Output.empty();
-        this.emailList = Output.empty();
-        this.mobile = Output.empty();
-        this.phone = Output.empty();
-        this.phoneExtension = Output.empty();
+        this.contactName = Codegen.empty();
+        this.emailList = Codegen.empty();
+        this.mobile = Codegen.empty();
+        this.phone = Codegen.empty();
+        this.phoneExtension = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mobile(@Nullable String mobile) {
-            this.mobile = Output.ofNullable(mobile);
+            this.mobile = Codegen.ofNullable(mobile);
             return this;
         }
         public Builder phone(Output<String> phone) {
@@ -163,7 +164,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder phoneExtension(@Nullable String phoneExtension) {
-            this.phoneExtension = Output.ofNullable(phoneExtension);
+            this.phoneExtension = Codegen.ofNullable(phoneExtension);
             return this;
         }        public ContactDetailsArgs build() {
             return new ContactDetailsArgs(contactName, emailList, mobile, phone, phoneExtension);

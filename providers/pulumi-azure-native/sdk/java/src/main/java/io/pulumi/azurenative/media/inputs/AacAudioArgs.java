@@ -7,6 +7,7 @@ import io.pulumi.azurenative.media.enums.AacAudioProfile;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> bitrate;
 
     public Output<Integer> getBitrate() {
-        return this.bitrate == null ? Output.empty() : this.bitrate;
+        return this.bitrate == null ? Codegen.empty() : this.bitrate;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> channels;
 
     public Output<Integer> getChannels() {
-        return this.channels == null ? Output.empty() : this.channels;
+        return this.channels == null ? Codegen.empty() : this.channels;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,AacAudioProfile>> profile;
 
     public Output<Either<String,AacAudioProfile>> getProfile() {
-        return this.profile == null ? Output.empty() : this.profile;
+        return this.profile == null ? Codegen.empty() : this.profile;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> samplingRate;
 
     public Output<Integer> getSamplingRate() {
-        return this.samplingRate == null ? Output.empty() : this.samplingRate;
+        return this.samplingRate == null ? Codegen.empty() : this.samplingRate;
     }
 
     public AacAudioArgs(
@@ -104,12 +105,12 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AacAudioArgs() {
-        this.bitrate = Output.empty();
-        this.channels = Output.empty();
-        this.label = Output.empty();
-        this.odataType = Output.empty();
-        this.profile = Output.empty();
-        this.samplingRate = Output.empty();
+        this.bitrate = Codegen.empty();
+        this.channels = Codegen.empty();
+        this.label = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.profile = Codegen.empty();
+        this.samplingRate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bitrate(@Nullable Integer bitrate) {
-            this.bitrate = Output.ofNullable(bitrate);
+            this.bitrate = Codegen.ofNullable(bitrate);
             return this;
         }
         public Builder channels(@Nullable Output<Integer> channels) {
@@ -155,7 +156,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder channels(@Nullable Integer channels) {
-            this.channels = Output.ofNullable(channels);
+            this.channels = Codegen.ofNullable(channels);
             return this;
         }
         public Builder label(@Nullable Output<String> label) {
@@ -163,7 +164,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder odataType(Output<String> odataType) {
@@ -179,7 +180,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder profile(@Nullable Either<String,AacAudioProfile> profile) {
-            this.profile = Output.ofNullable(profile);
+            this.profile = Codegen.ofNullable(profile);
             return this;
         }
         public Builder samplingRate(@Nullable Output<Integer> samplingRate) {
@@ -187,7 +188,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder samplingRate(@Nullable Integer samplingRate) {
-            this.samplingRate = Output.ofNullable(samplingRate);
+            this.samplingRate = Codegen.ofNullable(samplingRate);
             return this;
         }        public AacAudioArgs build() {
             return new AacAudioArgs(bitrate, channels, label, odataType, profile, samplingRate);

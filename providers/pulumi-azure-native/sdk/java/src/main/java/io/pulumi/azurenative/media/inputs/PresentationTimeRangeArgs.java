@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Double> endTimestamp;
 
     public Output<Double> getEndTimestamp() {
-        return this.endTimestamp == null ? Output.empty() : this.endTimestamp;
+        return this.endTimestamp == null ? Codegen.empty() : this.endTimestamp;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> forceEndTimestamp;
 
     public Output<Boolean> getForceEndTimestamp() {
-        return this.forceEndTimestamp == null ? Output.empty() : this.forceEndTimestamp;
+        return this.forceEndTimestamp == null ? Codegen.empty() : this.forceEndTimestamp;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Double> liveBackoffDuration;
 
     public Output<Double> getLiveBackoffDuration() {
-        return this.liveBackoffDuration == null ? Output.empty() : this.liveBackoffDuration;
+        return this.liveBackoffDuration == null ? Codegen.empty() : this.liveBackoffDuration;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Double> presentationWindowDuration;
 
     public Output<Double> getPresentationWindowDuration() {
-        return this.presentationWindowDuration == null ? Output.empty() : this.presentationWindowDuration;
+        return this.presentationWindowDuration == null ? Codegen.empty() : this.presentationWindowDuration;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Double> startTimestamp;
 
     public Output<Double> getStartTimestamp() {
-        return this.startTimestamp == null ? Output.empty() : this.startTimestamp;
+        return this.startTimestamp == null ? Codegen.empty() : this.startTimestamp;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Double> timescale;
 
     public Output<Double> getTimescale() {
-        return this.timescale == null ? Output.empty() : this.timescale;
+        return this.timescale == null ? Codegen.empty() : this.timescale;
     }
 
     public PresentationTimeRangeArgs(
@@ -101,12 +102,12 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
     }
 
     private PresentationTimeRangeArgs() {
-        this.endTimestamp = Output.empty();
-        this.forceEndTimestamp = Output.empty();
-        this.liveBackoffDuration = Output.empty();
-        this.presentationWindowDuration = Output.empty();
-        this.startTimestamp = Output.empty();
-        this.timescale = Output.empty();
+        this.endTimestamp = Codegen.empty();
+        this.forceEndTimestamp = Codegen.empty();
+        this.liveBackoffDuration = Codegen.empty();
+        this.presentationWindowDuration = Codegen.empty();
+        this.startTimestamp = Codegen.empty();
+        this.timescale = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder endTimestamp(@Nullable Double endTimestamp) {
-            this.endTimestamp = Output.ofNullable(endTimestamp);
+            this.endTimestamp = Codegen.ofNullable(endTimestamp);
             return this;
         }
         public Builder forceEndTimestamp(@Nullable Output<Boolean> forceEndTimestamp) {
@@ -152,7 +153,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder forceEndTimestamp(@Nullable Boolean forceEndTimestamp) {
-            this.forceEndTimestamp = Output.ofNullable(forceEndTimestamp);
+            this.forceEndTimestamp = Codegen.ofNullable(forceEndTimestamp);
             return this;
         }
         public Builder liveBackoffDuration(@Nullable Output<Double> liveBackoffDuration) {
@@ -160,7 +161,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder liveBackoffDuration(@Nullable Double liveBackoffDuration) {
-            this.liveBackoffDuration = Output.ofNullable(liveBackoffDuration);
+            this.liveBackoffDuration = Codegen.ofNullable(liveBackoffDuration);
             return this;
         }
         public Builder presentationWindowDuration(@Nullable Output<Double> presentationWindowDuration) {
@@ -168,7 +169,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder presentationWindowDuration(@Nullable Double presentationWindowDuration) {
-            this.presentationWindowDuration = Output.ofNullable(presentationWindowDuration);
+            this.presentationWindowDuration = Codegen.ofNullable(presentationWindowDuration);
             return this;
         }
         public Builder startTimestamp(@Nullable Output<Double> startTimestamp) {
@@ -176,7 +177,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder startTimestamp(@Nullable Double startTimestamp) {
-            this.startTimestamp = Output.ofNullable(startTimestamp);
+            this.startTimestamp = Codegen.ofNullable(startTimestamp);
             return this;
         }
         public Builder timescale(@Nullable Output<Double> timescale) {
@@ -184,7 +185,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder timescale(@Nullable Double timescale) {
-            this.timescale = Output.ofNullable(timescale);
+            this.timescale = Codegen.ofNullable(timescale);
             return this;
         }        public PresentationTimeRangeArgs build() {
             return new PresentationTimeRangeArgs(endTimestamp, forceEndTimestamp, liveBackoffDuration, presentationWindowDuration, startTimestamp, timescale);

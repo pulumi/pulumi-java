@@ -5,6 +5,7 @@ package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -60,9 +61,9 @@ public final class PlatformImagePurchasePlanArgs extends io.pulumi.resources.Res
     }
 
     private PlatformImagePurchasePlanArgs() {
-        this.planName = Output.empty();
-        this.planProduct = Output.empty();
-        this.planPublisher = Output.empty();
+        this.planName = Codegen.empty();
+        this.planProduct = Codegen.empty();
+        this.planPublisher = Codegen.empty();
     }
 
     public static Builder builder() {

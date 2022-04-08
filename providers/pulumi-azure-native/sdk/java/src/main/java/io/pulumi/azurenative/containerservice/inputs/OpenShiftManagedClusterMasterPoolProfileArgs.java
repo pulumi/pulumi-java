@@ -8,6 +8,7 @@ import io.pulumi.azurenative.containerservice.enums.OpenShiftContainerServiceVMS
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,7 +42,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
       private final @Nullable Output<Either<String,OSType>> osType;
 
     public Output<Either<String,OSType>> getOsType() {
-        return this.osType == null ? Output.empty() : this.osType;
+        return this.osType == null ? Codegen.empty() : this.osType;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
       private final @Nullable Output<String> subnetCidr;
 
     public Output<String> getSubnetCidr() {
-        return this.subnetCidr == null ? Output.empty() : this.subnetCidr;
+        return this.subnetCidr == null ? Codegen.empty() : this.subnetCidr;
     }
 
     /**
@@ -91,11 +92,11 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
     }
 
     private OpenShiftManagedClusterMasterPoolProfileArgs() {
-        this.count = Output.empty();
-        this.name = Output.empty();
-        this.osType = Output.empty();
-        this.subnetCidr = Output.empty();
-        this.vmSize = Output.empty();
+        this.count = Codegen.empty();
+        this.name = Codegen.empty();
+        this.osType = Codegen.empty();
+        this.subnetCidr = Codegen.empty();
+        this.vmSize = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder osType(@Nullable Output<Either<String,OSType>> osType) {
@@ -147,7 +148,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
             return this;
         }
         public Builder osType(@Nullable Either<String,OSType> osType) {
-            this.osType = Output.ofNullable(osType);
+            this.osType = Codegen.ofNullable(osType);
             return this;
         }
         public Builder subnetCidr(@Nullable Output<String> subnetCidr) {
@@ -155,7 +156,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
             return this;
         }
         public Builder subnetCidr(@Nullable String subnetCidr) {
-            this.subnetCidr = Output.ofNullable(subnetCidr);
+            this.subnetCidr = Codegen.ofNullable(subnetCidr);
             return this;
         }
         public Builder vmSize(Output<Either<String,OpenShiftContainerServiceVMSize>> vmSize) {

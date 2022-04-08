@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -96,7 +97,7 @@ public class IotDpsResourcePrivateEndpointConnection extends io.pulumi.resources
      * @param options A bag of options that control this resource's behavior.
      */
     public IotDpsResourcePrivateEndpointConnection(String name, IotDpsResourcePrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:devices:IotDpsResourcePrivateEndpointConnection", name, args == null ? IotDpsResourcePrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:devices:IotDpsResourcePrivateEndpointConnection", name, args == null ? IotDpsResourcePrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IotDpsResourcePrivateEndpointConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

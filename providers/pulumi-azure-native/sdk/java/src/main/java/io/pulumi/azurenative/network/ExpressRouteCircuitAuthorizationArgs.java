@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.AuthorizationUseStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
       private final @Nullable Output<String> authorizationKey;
 
     public Output<String> getAuthorizationKey() {
-        return this.authorizationKey == null ? Output.empty() : this.authorizationKey;
+        return this.authorizationKey == null ? Codegen.empty() : this.authorizationKey;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
       private final @Nullable Output<String> authorizationName;
 
     public Output<String> getAuthorizationName() {
-        return this.authorizationName == null ? Output.empty() : this.authorizationName;
+        return this.authorizationName == null ? Codegen.empty() : this.authorizationName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
       private final @Nullable Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
 
     public Output<Either<String,AuthorizationUseStatus>> getAuthorizationUseStatus() {
-        return this.authorizationUseStatus == null ? Output.empty() : this.authorizationUseStatus;
+        return this.authorizationUseStatus == null ? Codegen.empty() : this.authorizationUseStatus;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -111,13 +112,13 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
     }
 
     private ExpressRouteCircuitAuthorizationArgs() {
-        this.authorizationKey = Output.empty();
-        this.authorizationName = Output.empty();
-        this.authorizationUseStatus = Output.empty();
-        this.circuitName = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.authorizationKey = Codegen.empty();
+        this.authorizationName = Codegen.empty();
+        this.authorizationUseStatus = Codegen.empty();
+        this.circuitName = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
             return this;
         }
         public Builder authorizationKey(@Nullable String authorizationKey) {
-            this.authorizationKey = Output.ofNullable(authorizationKey);
+            this.authorizationKey = Codegen.ofNullable(authorizationKey);
             return this;
         }
         public Builder authorizationName(@Nullable Output<String> authorizationName) {
@@ -165,7 +166,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
             return this;
         }
         public Builder authorizationName(@Nullable String authorizationName) {
-            this.authorizationName = Output.ofNullable(authorizationName);
+            this.authorizationName = Codegen.ofNullable(authorizationName);
             return this;
         }
         public Builder authorizationUseStatus(@Nullable Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus) {
@@ -173,7 +174,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
             return this;
         }
         public Builder authorizationUseStatus(@Nullable Either<String,AuthorizationUseStatus> authorizationUseStatus) {
-            this.authorizationUseStatus = Output.ofNullable(authorizationUseStatus);
+            this.authorizationUseStatus = Codegen.ofNullable(authorizationUseStatus);
             return this;
         }
         public Builder circuitName(Output<String> circuitName) {
@@ -189,7 +190,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -197,7 +198,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

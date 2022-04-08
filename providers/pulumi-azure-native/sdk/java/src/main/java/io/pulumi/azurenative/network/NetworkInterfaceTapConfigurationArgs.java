@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.VirtualNetworkTapArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
       private final @Nullable Output<String> tapConfigurationName;
 
     public Output<String> getTapConfigurationName() {
-        return this.tapConfigurationName == null ? Output.empty() : this.tapConfigurationName;
+        return this.tapConfigurationName == null ? Codegen.empty() : this.tapConfigurationName;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
       private final @Nullable Output<VirtualNetworkTapArgs> virtualNetworkTap;
 
     public Output<VirtualNetworkTapArgs> getVirtualNetworkTap() {
-        return this.virtualNetworkTap == null ? Output.empty() : this.virtualNetworkTap;
+        return this.virtualNetworkTap == null ? Codegen.empty() : this.virtualNetworkTap;
     }
 
     public NetworkInterfaceTapConfigurationArgs(
@@ -97,12 +98,12 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
     }
 
     private NetworkInterfaceTapConfigurationArgs() {
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.networkInterfaceName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tapConfigurationName = Output.empty();
-        this.virtualNetworkTap = Output.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.networkInterfaceName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tapConfigurationName = Codegen.empty();
+        this.virtualNetworkTap = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -148,7 +149,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder networkInterfaceName(Output<String> networkInterfaceName) {
@@ -172,7 +173,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder tapConfigurationName(@Nullable String tapConfigurationName) {
-            this.tapConfigurationName = Output.ofNullable(tapConfigurationName);
+            this.tapConfigurationName = Codegen.ofNullable(tapConfigurationName);
             return this;
         }
         public Builder virtualNetworkTap(@Nullable Output<VirtualNetworkTapArgs> virtualNetworkTap) {
@@ -180,7 +181,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder virtualNetworkTap(@Nullable VirtualNetworkTapArgs virtualNetworkTap) {
-            this.virtualNetworkTap = Output.ofNullable(virtualNetworkTap);
+            this.virtualNetworkTap = Codegen.ofNullable(virtualNetworkTap);
             return this;
         }        public NetworkInterfaceTapConfigurationArgs build() {
             return new NetworkInterfaceTapConfigurationArgs(id, name, networkInterfaceName, resourceGroupName, tapConfigurationName, virtualNetworkTap);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesArgs extends io.
       private final @Nullable Output<String> blobContainerUri;
 
     public Output<String> getBlobContainerUri() {
-        return this.blobContainerUri == null ? Output.empty() : this.blobContainerUri;
+        return this.blobContainerUri == null ? Codegen.empty() : this.blobContainerUri;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesArgs extends io.
       private final @Nullable Output<SecureStringArgs> sasToken;
 
     public Output<SecureStringArgs> getSasToken() {
-        return this.sasToken == null ? Output.empty() : this.sasToken;
+        return this.sasToken == null ? Codegen.empty() : this.sasToken;
     }
 
     public IntegrationRuntimeCustomSetupScriptPropertiesArgs(
@@ -49,8 +50,8 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesArgs extends io.
     }
 
     private IntegrationRuntimeCustomSetupScriptPropertiesArgs() {
-        this.blobContainerUri = Output.empty();
-        this.sasToken = Output.empty();
+        this.blobContainerUri = Codegen.empty();
+        this.sasToken = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesArgs extends io.
             return this;
         }
         public Builder blobContainerUri(@Nullable String blobContainerUri) {
-            this.blobContainerUri = Output.ofNullable(blobContainerUri);
+            this.blobContainerUri = Codegen.ofNullable(blobContainerUri);
             return this;
         }
         public Builder sasToken(@Nullable Output<SecureStringArgs> sasToken) {
@@ -88,7 +89,7 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesArgs extends io.
             return this;
         }
         public Builder sasToken(@Nullable SecureStringArgs sasToken) {
-            this.sasToken = Output.ofNullable(sasToken);
+            this.sasToken = Codegen.ofNullable(sasToken);
             return this;
         }        public IntegrationRuntimeCustomSetupScriptPropertiesArgs build() {
             return new IntegrationRuntimeCustomSetupScriptPropertiesArgs(blobContainerUri, sasToken);

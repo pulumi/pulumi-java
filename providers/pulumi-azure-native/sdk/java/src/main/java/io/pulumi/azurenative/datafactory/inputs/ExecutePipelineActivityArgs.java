@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.PipelineReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -33,7 +34,7 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Output.empty() : this.dependsOn;
+        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Map<String,Object>> parameters;
 
     public Output<Map<String,Object>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Output.empty() : this.userProperties;
+        return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Boolean> waitOnCompletion;
 
     public Output<Boolean> getWaitOnCompletion() {
-        return this.waitOnCompletion == null ? Output.empty() : this.waitOnCompletion;
+        return this.waitOnCompletion == null ? Codegen.empty() : this.waitOnCompletion;
     }
 
     public ExecutePipelineActivityArgs(
@@ -134,14 +135,14 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
     }
 
     private ExecutePipelineActivityArgs() {
-        this.dependsOn = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.parameters = Output.empty();
-        this.pipeline = Output.empty();
-        this.type = Output.empty();
-        this.userProperties = Output.empty();
-        this.waitOnCompletion = Output.empty();
+        this.dependsOn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.pipeline = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userProperties = Codegen.empty();
+        this.waitOnCompletion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -183,7 +184,7 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Output.ofNullable(dependsOn);
+            this.dependsOn = Codegen.ofNullable(dependsOn);
             return this;
         }
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
@@ -194,7 +195,7 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -210,7 +211,7 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder pipeline(Output<PipelineReferenceArgs> pipeline) {
@@ -234,7 +235,7 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Output.ofNullable(userProperties);
+            this.userProperties = Codegen.ofNullable(userProperties);
             return this;
         }
         public Builder userProperties(UserPropertyArgs... userProperties) {
@@ -245,7 +246,7 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder waitOnCompletion(@Nullable Boolean waitOnCompletion) {
-            this.waitOnCompletion = Output.ofNullable(waitOnCompletion);
+            this.waitOnCompletion = Codegen.ofNullable(waitOnCompletion);
             return this;
         }        public ExecutePipelineActivityArgs build() {
             return new ExecutePipelineActivityArgs(dependsOn, description, name, parameters, pipeline, type, userProperties, waitOnCompletion);

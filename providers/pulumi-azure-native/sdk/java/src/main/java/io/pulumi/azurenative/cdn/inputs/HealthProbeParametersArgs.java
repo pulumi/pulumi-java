@@ -7,6 +7,7 @@ import io.pulumi.azurenative.cdn.enums.HealthProbeRequestType;
 import io.pulumi.azurenative.cdn.enums.ProbeProtocol;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class HealthProbeParametersArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> probeIntervalInSeconds;
 
     public Output<Integer> getProbeIntervalInSeconds() {
-        return this.probeIntervalInSeconds == null ? Output.empty() : this.probeIntervalInSeconds;
+        return this.probeIntervalInSeconds == null ? Codegen.empty() : this.probeIntervalInSeconds;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class HealthProbeParametersArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> probePath;
 
     public Output<String> getProbePath() {
-        return this.probePath == null ? Output.empty() : this.probePath;
+        return this.probePath == null ? Codegen.empty() : this.probePath;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class HealthProbeParametersArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<ProbeProtocol> probeProtocol;
 
     public Output<ProbeProtocol> getProbeProtocol() {
-        return this.probeProtocol == null ? Output.empty() : this.probeProtocol;
+        return this.probeProtocol == null ? Codegen.empty() : this.probeProtocol;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class HealthProbeParametersArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<HealthProbeRequestType> probeRequestType;
 
     public Output<HealthProbeRequestType> getProbeRequestType() {
-        return this.probeRequestType == null ? Output.empty() : this.probeRequestType;
+        return this.probeRequestType == null ? Codegen.empty() : this.probeRequestType;
     }
 
     public HealthProbeParametersArgs(
@@ -77,10 +78,10 @@ public final class HealthProbeParametersArgs extends io.pulumi.resources.Resourc
     }
 
     private HealthProbeParametersArgs() {
-        this.probeIntervalInSeconds = Output.empty();
-        this.probePath = Output.empty();
-        this.probeProtocol = Output.empty();
-        this.probeRequestType = Output.empty();
+        this.probeIntervalInSeconds = Codegen.empty();
+        this.probePath = Codegen.empty();
+        this.probeProtocol = Codegen.empty();
+        this.probeRequestType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class HealthProbeParametersArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder probeIntervalInSeconds(@Nullable Integer probeIntervalInSeconds) {
-            this.probeIntervalInSeconds = Output.ofNullable(probeIntervalInSeconds);
+            this.probeIntervalInSeconds = Codegen.ofNullable(probeIntervalInSeconds);
             return this;
         }
         public Builder probePath(@Nullable Output<String> probePath) {
@@ -122,7 +123,7 @@ public final class HealthProbeParametersArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder probePath(@Nullable String probePath) {
-            this.probePath = Output.ofNullable(probePath);
+            this.probePath = Codegen.ofNullable(probePath);
             return this;
         }
         public Builder probeProtocol(@Nullable Output<ProbeProtocol> probeProtocol) {
@@ -130,7 +131,7 @@ public final class HealthProbeParametersArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder probeProtocol(@Nullable ProbeProtocol probeProtocol) {
-            this.probeProtocol = Output.ofNullable(probeProtocol);
+            this.probeProtocol = Codegen.ofNullable(probeProtocol);
             return this;
         }
         public Builder probeRequestType(@Nullable Output<HealthProbeRequestType> probeRequestType) {
@@ -138,7 +139,7 @@ public final class HealthProbeParametersArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder probeRequestType(@Nullable HealthProbeRequestType probeRequestType) {
-            this.probeRequestType = Output.ofNullable(probeRequestType);
+            this.probeRequestType = Codegen.ofNullable(probeRequestType);
             return this;
         }        public HealthProbeParametersArgs build() {
             return new HealthProbeParametersArgs(probeIntervalInSeconds, probePath, probeProtocol, probeRequestType);

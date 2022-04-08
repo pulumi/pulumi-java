@@ -5,6 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class CustomDomainPropertiesArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> certName;
 
     public Output<String> getCertName() {
-        return this.certName == null ? Output.empty() : this.certName;
+        return this.certName == null ? Codegen.empty() : this.certName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class CustomDomainPropertiesArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> thumbprint;
 
     public Output<String> getThumbprint() {
-        return this.thumbprint == null ? Output.empty() : this.thumbprint;
+        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 
     public CustomDomainPropertiesArgs(
@@ -48,8 +49,8 @@ public final class CustomDomainPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     private CustomDomainPropertiesArgs() {
-        this.certName = Output.empty();
-        this.thumbprint = Output.empty();
+        this.certName = Codegen.empty();
+        this.thumbprint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class CustomDomainPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder certName(@Nullable String certName) {
-            this.certName = Output.ofNullable(certName);
+            this.certName = Codegen.ofNullable(certName);
             return this;
         }
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
@@ -87,7 +88,7 @@ public final class CustomDomainPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Output.ofNullable(thumbprint);
+            this.thumbprint = Codegen.ofNullable(thumbprint);
             return this;
         }        public CustomDomainPropertiesArgs build() {
             return new CustomDomainPropertiesArgs(certName, thumbprint);

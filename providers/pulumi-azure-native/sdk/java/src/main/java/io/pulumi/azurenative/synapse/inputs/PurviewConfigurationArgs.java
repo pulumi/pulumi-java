@@ -5,6 +5,7 @@ package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class PurviewConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> purviewResourceId;
 
     public Output<String> getPurviewResourceId() {
-        return this.purviewResourceId == null ? Output.empty() : this.purviewResourceId;
+        return this.purviewResourceId == null ? Codegen.empty() : this.purviewResourceId;
     }
 
     public PurviewConfigurationArgs(@Nullable Output<String> purviewResourceId) {
@@ -34,7 +35,7 @@ public final class PurviewConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     private PurviewConfigurationArgs() {
-        this.purviewResourceId = Output.empty();
+        this.purviewResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class PurviewConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder purviewResourceId(@Nullable String purviewResourceId) {
-            this.purviewResourceId = Output.ofNullable(purviewResourceId);
+            this.purviewResourceId = Codegen.ofNullable(purviewResourceId);
             return this;
         }        public PurviewConfigurationArgs build() {
             return new PurviewConfigurationArgs(purviewResourceId);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devtestlab.enums.EnableStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> emailRecipient;
 
     public Output<String> getEmailRecipient() {
-        return this.emailRecipient == null ? Output.empty() : this.emailRecipient;
+        return this.emailRecipient == null ? Codegen.empty() : this.emailRecipient;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> notificationLocale;
 
     public Output<String> getNotificationLocale() {
-        return this.notificationLocale == null ? Output.empty() : this.notificationLocale;
+        return this.notificationLocale == null ? Codegen.empty() : this.notificationLocale;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Either<String,EnableStatus>> status;
 
     public Output<Either<String,EnableStatus>> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> timeInMinutes;
 
     public Output<Integer> getTimeInMinutes() {
-        return this.timeInMinutes == null ? Output.empty() : this.timeInMinutes;
+        return this.timeInMinutes == null ? Codegen.empty() : this.timeInMinutes;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> webhookUrl;
 
     public Output<String> getWebhookUrl() {
-        return this.webhookUrl == null ? Output.empty() : this.webhookUrl;
+        return this.webhookUrl == null ? Codegen.empty() : this.webhookUrl;
     }
 
     public NotificationSettingsArgs(
@@ -90,11 +91,11 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
     }
 
     private NotificationSettingsArgs() {
-        this.emailRecipient = Output.empty();
-        this.notificationLocale = Output.empty();
-        this.status = Output.empty();
-        this.timeInMinutes = Output.empty();
-        this.webhookUrl = Output.empty();
+        this.emailRecipient = Codegen.empty();
+        this.notificationLocale = Codegen.empty();
+        this.status = Codegen.empty();
+        this.timeInMinutes = Codegen.empty();
+        this.webhookUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder emailRecipient(@Nullable String emailRecipient) {
-            this.emailRecipient = Output.ofNullable(emailRecipient);
+            this.emailRecipient = Codegen.ofNullable(emailRecipient);
             return this;
         }
         public Builder notificationLocale(@Nullable Output<String> notificationLocale) {
@@ -138,7 +139,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder notificationLocale(@Nullable String notificationLocale) {
-            this.notificationLocale = Output.ofNullable(notificationLocale);
+            this.notificationLocale = Codegen.ofNullable(notificationLocale);
             return this;
         }
         public Builder status(@Nullable Output<Either<String,EnableStatus>> status) {
@@ -146,7 +147,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder status(@Nullable Either<String,EnableStatus> status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder timeInMinutes(@Nullable Output<Integer> timeInMinutes) {
@@ -154,7 +155,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder timeInMinutes(@Nullable Integer timeInMinutes) {
-            this.timeInMinutes = Output.ofNullable(timeInMinutes);
+            this.timeInMinutes = Codegen.ofNullable(timeInMinutes);
             return this;
         }
         public Builder webhookUrl(@Nullable Output<String> webhookUrl) {
@@ -162,7 +163,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder webhookUrl(@Nullable String webhookUrl) {
-            this.webhookUrl = Output.ofNullable(webhookUrl);
+            this.webhookUrl = Codegen.ofNullable(webhookUrl);
             return this;
         }        public NotificationSettingsArgs build() {
             return new NotificationSettingsArgs(emailRecipient, notificationLocale, status, timeInMinutes, webhookUrl);

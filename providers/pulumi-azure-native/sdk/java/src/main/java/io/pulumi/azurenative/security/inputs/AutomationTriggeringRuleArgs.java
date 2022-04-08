@@ -8,6 +8,7 @@ import io.pulumi.azurenative.security.enums.PropertyType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> expectedValue;
 
     public Output<String> getExpectedValue() {
-        return this.expectedValue == null ? Output.empty() : this.expectedValue;
+        return this.expectedValue == null ? Codegen.empty() : this.expectedValue;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Either<String,Operator>> operator;
 
     public Output<Either<String,Operator>> getOperator() {
-        return this.operator == null ? Output.empty() : this.operator;
+        return this.operator == null ? Codegen.empty() : this.operator;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> propertyJPath;
 
     public Output<String> getPropertyJPath() {
-        return this.propertyJPath == null ? Output.empty() : this.propertyJPath;
+        return this.propertyJPath == null ? Codegen.empty() : this.propertyJPath;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Either<String,PropertyType>> propertyType;
 
     public Output<Either<String,PropertyType>> getPropertyType() {
-        return this.propertyType == null ? Output.empty() : this.propertyType;
+        return this.propertyType == null ? Codegen.empty() : this.propertyType;
     }
 
     public AutomationTriggeringRuleArgs(
@@ -77,10 +78,10 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
     }
 
     private AutomationTriggeringRuleArgs() {
-        this.expectedValue = Output.empty();
-        this.operator = Output.empty();
-        this.propertyJPath = Output.empty();
-        this.propertyType = Output.empty();
+        this.expectedValue = Codegen.empty();
+        this.operator = Codegen.empty();
+        this.propertyJPath = Codegen.empty();
+        this.propertyType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder expectedValue(@Nullable String expectedValue) {
-            this.expectedValue = Output.ofNullable(expectedValue);
+            this.expectedValue = Codegen.ofNullable(expectedValue);
             return this;
         }
         public Builder operator(@Nullable Output<Either<String,Operator>> operator) {
@@ -122,7 +123,7 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder operator(@Nullable Either<String,Operator> operator) {
-            this.operator = Output.ofNullable(operator);
+            this.operator = Codegen.ofNullable(operator);
             return this;
         }
         public Builder propertyJPath(@Nullable Output<String> propertyJPath) {
@@ -130,7 +131,7 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder propertyJPath(@Nullable String propertyJPath) {
-            this.propertyJPath = Output.ofNullable(propertyJPath);
+            this.propertyJPath = Codegen.ofNullable(propertyJPath);
             return this;
         }
         public Builder propertyType(@Nullable Output<Either<String,PropertyType>> propertyType) {
@@ -138,7 +139,7 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder propertyType(@Nullable Either<String,PropertyType> propertyType) {
-            this.propertyType = Output.ofNullable(propertyType);
+            this.propertyType = Codegen.ofNullable(propertyType);
             return this;
         }        public AutomationTriggeringRuleArgs build() {
             return new AutomationTriggeringRuleArgs(expectedValue, operator, propertyJPath, propertyType);

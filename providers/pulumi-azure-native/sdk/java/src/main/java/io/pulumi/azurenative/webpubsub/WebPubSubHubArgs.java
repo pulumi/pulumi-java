@@ -6,6 +6,7 @@ package io.pulumi.azurenative.webpubsub;
 import io.pulumi.azurenative.webpubsub.inputs.WebPubSubHubPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> hubName;
 
     public Output<String> getHubName() {
-        return this.hubName == null ? Output.empty() : this.hubName;
+        return this.hubName == null ? Codegen.empty() : this.hubName;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebPubSubHubArgs() {
-        this.hubName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
+        this.hubName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hubName(@Nullable String hubName) {
-            this.hubName = Output.ofNullable(hubName);
+            this.hubName = Codegen.ofNullable(hubName);
             return this;
         }
         public Builder properties(Output<WebPubSubHubPropertiesArgs> properties) {

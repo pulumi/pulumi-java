@@ -5,6 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class FormulaPropertiesFromVmArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> labVmId;
 
     public Output<String> getLabVmId() {
-        return this.labVmId == null ? Output.empty() : this.labVmId;
+        return this.labVmId == null ? Codegen.empty() : this.labVmId;
     }
 
     public FormulaPropertiesFromVmArgs(@Nullable Output<String> labVmId) {
@@ -34,7 +35,7 @@ public final class FormulaPropertiesFromVmArgs extends io.pulumi.resources.Resou
     }
 
     private FormulaPropertiesFromVmArgs() {
-        this.labVmId = Output.empty();
+        this.labVmId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class FormulaPropertiesFromVmArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder labVmId(@Nullable String labVmId) {
-            this.labVmId = Output.ofNullable(labVmId);
+            this.labVmId = Codegen.ofNullable(labVmId);
             return this;
         }        public FormulaPropertiesFromVmArgs build() {
             return new FormulaPropertiesFromVmArgs(labVmId);

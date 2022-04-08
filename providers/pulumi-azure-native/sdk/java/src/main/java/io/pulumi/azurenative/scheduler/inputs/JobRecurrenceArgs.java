@@ -7,6 +7,7 @@ import io.pulumi.azurenative.scheduler.enums.RecurrenceFrequency;
 import io.pulumi.azurenative.scheduler.inputs.JobRecurrenceScheduleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> count;
 
     public Output<Integer> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
-        return this.endTime == null ? Output.empty() : this.endTime;
+        return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RecurrenceFrequency> frequency;
 
     public Output<RecurrenceFrequency> getFrequency() {
-        return this.frequency == null ? Output.empty() : this.frequency;
+        return this.frequency == null ? Codegen.empty() : this.frequency;
     }
 
     /**
@@ -58,14 +59,14 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> interval;
 
     public Output<Integer> getInterval() {
-        return this.interval == null ? Output.empty() : this.interval;
+        return this.interval == null ? Codegen.empty() : this.interval;
     }
 
     @Import(name="schedule")
       private final @Nullable Output<JobRecurrenceScheduleArgs> schedule;
 
     public Output<JobRecurrenceScheduleArgs> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     public JobRecurrenceArgs(
@@ -82,11 +83,11 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobRecurrenceArgs() {
-        this.count = Output.empty();
-        this.endTime = Output.empty();
-        this.frequency = Output.empty();
-        this.interval = Output.empty();
-        this.schedule = Output.empty();
+        this.count = Codegen.empty();
+        this.endTime = Codegen.empty();
+        this.frequency = Codegen.empty();
+        this.interval = Codegen.empty();
+        this.schedule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -122,7 +123,7 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder count(@Nullable Integer count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }
         public Builder endTime(@Nullable Output<String> endTime) {
@@ -130,7 +131,7 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Output.ofNullable(endTime);
+            this.endTime = Codegen.ofNullable(endTime);
             return this;
         }
         public Builder frequency(@Nullable Output<RecurrenceFrequency> frequency) {
@@ -138,7 +139,7 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder frequency(@Nullable RecurrenceFrequency frequency) {
-            this.frequency = Output.ofNullable(frequency);
+            this.frequency = Codegen.ofNullable(frequency);
             return this;
         }
         public Builder interval(@Nullable Output<Integer> interval) {
@@ -146,7 +147,7 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder interval(@Nullable Integer interval) {
-            this.interval = Output.ofNullable(interval);
+            this.interval = Codegen.ofNullable(interval);
             return this;
         }
         public Builder schedule(@Nullable Output<JobRecurrenceScheduleArgs> schedule) {
@@ -154,7 +155,7 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedule(@Nullable JobRecurrenceScheduleArgs schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }        public JobRecurrenceArgs build() {
             return new JobRecurrenceArgs(count, endTime, frequency, interval, schedule);

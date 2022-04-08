@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScheduleArgs() {
-        this.frequencyInMinutes = Output.empty();
-        this.timeWindowInMinutes = Output.empty();
+        this.frequencyInMinutes = Codegen.empty();
+        this.timeWindowInMinutes = Codegen.empty();
     }
 
     public static Builder builder() {

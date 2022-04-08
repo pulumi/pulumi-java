@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -48,7 +49,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
       private final @Nullable Output<String> protectedAccountKeyName2;
 
     public Output<String> getProtectedAccountKeyName2() {
-        return this.protectedAccountKeyName2 == null ? Output.empty() : this.protectedAccountKeyName2;
+        return this.protectedAccountKeyName2 == null ? Codegen.empty() : this.protectedAccountKeyName2;
     }
 
     /**
@@ -100,12 +101,12 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
     }
 
     private DiagnosticsStorageAccountConfigArgs() {
-        this.blobEndpoint = Output.empty();
-        this.protectedAccountKeyName = Output.empty();
-        this.protectedAccountKeyName2 = Output.empty();
-        this.queueEndpoint = Output.empty();
-        this.storageAccountName = Output.empty();
-        this.tableEndpoint = Output.empty();
+        this.blobEndpoint = Codegen.empty();
+        this.protectedAccountKeyName = Codegen.empty();
+        this.protectedAccountKeyName2 = Codegen.empty();
+        this.queueEndpoint = Codegen.empty();
+        this.storageAccountName = Codegen.empty();
+        this.tableEndpoint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
             return this;
         }
         public Builder protectedAccountKeyName2(@Nullable String protectedAccountKeyName2) {
-            this.protectedAccountKeyName2 = Output.ofNullable(protectedAccountKeyName2);
+            this.protectedAccountKeyName2 = Codegen.ofNullable(protectedAccountKeyName2);
             return this;
         }
         public Builder queueEndpoint(Output<String> queueEndpoint) {

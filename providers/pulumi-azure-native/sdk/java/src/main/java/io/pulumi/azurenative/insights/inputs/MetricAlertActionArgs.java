@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class MetricAlertActionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> actionGroupId;
 
     public Output<String> getActionGroupId() {
-        return this.actionGroupId == null ? Output.empty() : this.actionGroupId;
+        return this.actionGroupId == null ? Codegen.empty() : this.actionGroupId;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class MetricAlertActionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> webHookProperties;
 
     public Output<Map<String,String>> getWebHookProperties() {
-        return this.webHookProperties == null ? Output.empty() : this.webHookProperties;
+        return this.webHookProperties == null ? Codegen.empty() : this.webHookProperties;
     }
 
     public MetricAlertActionArgs(
@@ -49,8 +50,8 @@ public final class MetricAlertActionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private MetricAlertActionArgs() {
-        this.actionGroupId = Output.empty();
-        this.webHookProperties = Output.empty();
+        this.actionGroupId = Codegen.empty();
+        this.webHookProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class MetricAlertActionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder actionGroupId(@Nullable String actionGroupId) {
-            this.actionGroupId = Output.ofNullable(actionGroupId);
+            this.actionGroupId = Codegen.ofNullable(actionGroupId);
             return this;
         }
         public Builder webHookProperties(@Nullable Output<Map<String,String>> webHookProperties) {
@@ -88,7 +89,7 @@ public final class MetricAlertActionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder webHookProperties(@Nullable Map<String,String> webHookProperties) {
-            this.webHookProperties = Output.ofNullable(webHookProperties);
+            this.webHookProperties = Codegen.ofNullable(webHookProperties);
             return this;
         }        public MetricAlertActionArgs build() {
             return new MetricAlertActionArgs(actionGroupId, webHookProperties);

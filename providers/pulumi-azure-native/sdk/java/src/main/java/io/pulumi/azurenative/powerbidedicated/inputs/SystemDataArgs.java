@@ -7,6 +7,7 @@ import io.pulumi.azurenative.powerbidedicated.enums.IdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
-        return this.createdAt == null ? Output.empty() : this.createdAt;
+        return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createdBy;
 
     public Output<String> getCreatedBy() {
-        return this.createdBy == null ? Output.empty() : this.createdBy;
+        return this.createdBy == null ? Codegen.empty() : this.createdBy;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,IdentityType>> createdByType;
 
     public Output<Either<String,IdentityType>> getCreatedByType() {
-        return this.createdByType == null ? Output.empty() : this.createdByType;
+        return this.createdByType == null ? Codegen.empty() : this.createdByType;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> lastModifiedAt;
 
     public Output<String> getLastModifiedAt() {
-        return this.lastModifiedAt == null ? Output.empty() : this.lastModifiedAt;
+        return this.lastModifiedAt == null ? Codegen.empty() : this.lastModifiedAt;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> lastModifiedBy;
 
     public Output<String> getLastModifiedBy() {
-        return this.lastModifiedBy == null ? Output.empty() : this.lastModifiedBy;
+        return this.lastModifiedBy == null ? Codegen.empty() : this.lastModifiedBy;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,IdentityType>> lastModifiedByType;
 
     public Output<Either<String,IdentityType>> getLastModifiedByType() {
-        return this.lastModifiedByType == null ? Output.empty() : this.lastModifiedByType;
+        return this.lastModifiedByType == null ? Codegen.empty() : this.lastModifiedByType;
     }
 
     public SystemDataArgs(
@@ -102,12 +103,12 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SystemDataArgs() {
-        this.createdAt = Output.empty();
-        this.createdBy = Output.empty();
-        this.createdByType = Output.empty();
-        this.lastModifiedAt = Output.empty();
-        this.lastModifiedBy = Output.empty();
-        this.lastModifiedByType = Output.empty();
+        this.createdAt = Codegen.empty();
+        this.createdBy = Codegen.empty();
+        this.createdByType = Codegen.empty();
+        this.lastModifiedAt = Codegen.empty();
+        this.lastModifiedBy = Codegen.empty();
+        this.lastModifiedByType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Output.ofNullable(createdAt);
+            this.createdAt = Codegen.ofNullable(createdAt);
             return this;
         }
         public Builder createdBy(@Nullable Output<String> createdBy) {
@@ -153,7 +154,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdBy(@Nullable String createdBy) {
-            this.createdBy = Output.ofNullable(createdBy);
+            this.createdBy = Codegen.ofNullable(createdBy);
             return this;
         }
         public Builder createdByType(@Nullable Output<Either<String,IdentityType>> createdByType) {
@@ -161,7 +162,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdByType(@Nullable Either<String,IdentityType> createdByType) {
-            this.createdByType = Output.ofNullable(createdByType);
+            this.createdByType = Codegen.ofNullable(createdByType);
             return this;
         }
         public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
@@ -169,7 +170,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
-            this.lastModifiedAt = Output.ofNullable(lastModifiedAt);
+            this.lastModifiedAt = Codegen.ofNullable(lastModifiedAt);
             return this;
         }
         public Builder lastModifiedBy(@Nullable Output<String> lastModifiedBy) {
@@ -177,7 +178,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
-            this.lastModifiedBy = Output.ofNullable(lastModifiedBy);
+            this.lastModifiedBy = Codegen.ofNullable(lastModifiedBy);
             return this;
         }
         public Builder lastModifiedByType(@Nullable Output<Either<String,IdentityType>> lastModifiedByType) {
@@ -185,7 +186,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastModifiedByType(@Nullable Either<String,IdentityType> lastModifiedByType) {
-            this.lastModifiedByType = Output.ofNullable(lastModifiedByType);
+            this.lastModifiedByType = Codegen.ofNullable(lastModifiedByType);
             return this;
         }        public SystemDataArgs build() {
             return new SystemDataArgs(createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 import io.pulumi.azurenative.servicefabric.inputs.ServiceTypeHealthPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class ApplicationHealthPolicyArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<ServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy;
 
     public Output<ServiceTypeHealthPolicyArgs> getDefaultServiceTypeHealthPolicy() {
-        return this.defaultServiceTypeHealthPolicy == null ? Output.empty() : this.defaultServiceTypeHealthPolicy;
+        return this.defaultServiceTypeHealthPolicy == null ? Codegen.empty() : this.defaultServiceTypeHealthPolicy;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ApplicationHealthPolicyArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies;
 
     public Output<Map<String,ServiceTypeHealthPolicyArgs>> getServiceTypeHealthPolicies() {
-        return this.serviceTypeHealthPolicies == null ? Output.empty() : this.serviceTypeHealthPolicies;
+        return this.serviceTypeHealthPolicies == null ? Codegen.empty() : this.serviceTypeHealthPolicies;
     }
 
     public ApplicationHealthPolicyArgs(
@@ -50,8 +51,8 @@ public final class ApplicationHealthPolicyArgs extends io.pulumi.resources.Resou
     }
 
     private ApplicationHealthPolicyArgs() {
-        this.defaultServiceTypeHealthPolicy = Output.empty();
-        this.serviceTypeHealthPolicies = Output.empty();
+        this.defaultServiceTypeHealthPolicy = Codegen.empty();
+        this.serviceTypeHealthPolicies = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ApplicationHealthPolicyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder defaultServiceTypeHealthPolicy(@Nullable ServiceTypeHealthPolicyArgs defaultServiceTypeHealthPolicy) {
-            this.defaultServiceTypeHealthPolicy = Output.ofNullable(defaultServiceTypeHealthPolicy);
+            this.defaultServiceTypeHealthPolicy = Codegen.ofNullable(defaultServiceTypeHealthPolicy);
             return this;
         }
         public Builder serviceTypeHealthPolicies(@Nullable Output<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies) {
@@ -89,7 +90,7 @@ public final class ApplicationHealthPolicyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder serviceTypeHealthPolicies(@Nullable Map<String,ServiceTypeHealthPolicyArgs> serviceTypeHealthPolicies) {
-            this.serviceTypeHealthPolicies = Output.ofNullable(serviceTypeHealthPolicies);
+            this.serviceTypeHealthPolicies = Codegen.ofNullable(serviceTypeHealthPolicies);
             return this;
         }        public ApplicationHealthPolicyArgs build() {
             return new ApplicationHealthPolicyArgs(defaultServiceTypeHealthPolicy, serviceTypeHealthPolicies);

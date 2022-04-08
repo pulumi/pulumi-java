@@ -10,6 +10,7 @@ import io.pulumi.azurenative.operationalinsights.inputs.SearchResultsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,TablePlanEnum>> plan;
 
     public Output<Either<String,TablePlanEnum>> getPlan() {
-        return this.plan == null ? Output.empty() : this.plan;
+        return this.plan == null ? Codegen.empty() : this.plan;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RestoredLogsArgs> restoredLogs;
 
     public Output<RestoredLogsArgs> getRestoredLogs() {
-        return this.restoredLogs == null ? Output.empty() : this.restoredLogs;
+        return this.restoredLogs == null ? Codegen.empty() : this.restoredLogs;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> retentionInDays;
 
     public Output<Integer> getRetentionInDays() {
-        return this.retentionInDays == null ? Output.empty() : this.retentionInDays;
+        return this.retentionInDays == null ? Codegen.empty() : this.retentionInDays;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SchemaArgs> schema;
 
     public Output<SchemaArgs> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SearchResultsArgs> searchResults;
 
     public Output<SearchResultsArgs> getSearchResults() {
-        return this.searchResults == null ? Output.empty() : this.searchResults;
+        return this.searchResults == null ? Codegen.empty() : this.searchResults;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> tableName;
 
     public Output<String> getTableName() {
-        return this.tableName == null ? Output.empty() : this.tableName;
+        return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> totalRetentionInDays;
 
     public Output<Integer> getTotalRetentionInDays() {
-        return this.totalRetentionInDays == null ? Output.empty() : this.totalRetentionInDays;
+        return this.totalRetentionInDays == null ? Codegen.empty() : this.totalRetentionInDays;
     }
 
     /**
@@ -141,15 +142,15 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableArgs() {
-        this.plan = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.restoredLogs = Output.empty();
-        this.retentionInDays = Output.empty();
-        this.schema = Output.empty();
-        this.searchResults = Output.empty();
-        this.tableName = Output.empty();
-        this.totalRetentionInDays = Output.empty();
-        this.workspaceName = Output.empty();
+        this.plan = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.restoredLogs = Codegen.empty();
+        this.retentionInDays = Codegen.empty();
+        this.schema = Codegen.empty();
+        this.searchResults = Codegen.empty();
+        this.tableName = Codegen.empty();
+        this.totalRetentionInDays = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -193,7 +194,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder plan(@Nullable Either<String,TablePlanEnum> plan) {
-            this.plan = Output.ofNullable(plan);
+            this.plan = Codegen.ofNullable(plan);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -209,7 +210,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder restoredLogs(@Nullable RestoredLogsArgs restoredLogs) {
-            this.restoredLogs = Output.ofNullable(restoredLogs);
+            this.restoredLogs = Codegen.ofNullable(restoredLogs);
             return this;
         }
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
@@ -217,7 +218,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
-            this.retentionInDays = Output.ofNullable(retentionInDays);
+            this.retentionInDays = Codegen.ofNullable(retentionInDays);
             return this;
         }
         public Builder schema(@Nullable Output<SchemaArgs> schema) {
@@ -225,7 +226,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schema(@Nullable SchemaArgs schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }
         public Builder searchResults(@Nullable Output<SearchResultsArgs> searchResults) {
@@ -233,7 +234,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder searchResults(@Nullable SearchResultsArgs searchResults) {
-            this.searchResults = Output.ofNullable(searchResults);
+            this.searchResults = Codegen.ofNullable(searchResults);
             return this;
         }
         public Builder tableName(@Nullable Output<String> tableName) {
@@ -241,7 +242,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Output.ofNullable(tableName);
+            this.tableName = Codegen.ofNullable(tableName);
             return this;
         }
         public Builder totalRetentionInDays(@Nullable Output<Integer> totalRetentionInDays) {
@@ -249,7 +250,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder totalRetentionInDays(@Nullable Integer totalRetentionInDays) {
-            this.totalRetentionInDays = Output.ofNullable(totalRetentionInDays);
+            this.totalRetentionInDays = Codegen.ofNullable(totalRetentionInDays);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

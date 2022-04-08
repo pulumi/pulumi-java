@@ -5,6 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ClientGroupInfoArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> groupId;
 
     public Output<String> getGroupId() {
-        return this.groupId == null ? Output.empty() : this.groupId;
+        return this.groupId == null ? Codegen.empty() : this.groupId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ClientGroupInfoArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> groupName;
 
     public Output<String> getGroupName() {
-        return this.groupName == null ? Output.empty() : this.groupName;
+        return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 
     public ClientGroupInfoArgs(
@@ -48,8 +49,8 @@ public final class ClientGroupInfoArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ClientGroupInfoArgs() {
-        this.groupId = Output.empty();
-        this.groupName = Output.empty();
+        this.groupId = Codegen.empty();
+        this.groupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ClientGroupInfoArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = Output.ofNullable(groupId);
+            this.groupId = Codegen.ofNullable(groupId);
             return this;
         }
         public Builder groupName(@Nullable Output<String> groupName) {
@@ -87,7 +88,7 @@ public final class ClientGroupInfoArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = Output.ofNullable(groupName);
+            this.groupName = Codegen.ofNullable(groupName);
             return this;
         }        public ClientGroupInfoArgs build() {
             return new ClientGroupInfoArgs(groupId, groupName);

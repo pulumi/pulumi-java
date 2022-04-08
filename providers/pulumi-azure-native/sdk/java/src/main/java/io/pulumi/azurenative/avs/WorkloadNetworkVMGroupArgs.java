@@ -5,6 +5,7 @@ package io.pulumi.azurenative.avs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
-        return this.members == null ? Output.empty() : this.members;
+        return this.members == null ? Codegen.empty() : this.members;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Double> revision;
 
     public Output<Double> getRevision() {
-        return this.revision == null ? Output.empty() : this.revision;
+        return this.revision == null ? Codegen.empty() : this.revision;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> vmGroupId;
 
     public Output<String> getVmGroupId() {
-        return this.vmGroupId == null ? Output.empty() : this.vmGroupId;
+        return this.vmGroupId == null ? Codegen.empty() : this.vmGroupId;
     }
 
     public WorkloadNetworkVMGroupArgs(
@@ -98,12 +99,12 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
     }
 
     private WorkloadNetworkVMGroupArgs() {
-        this.displayName = Output.empty();
-        this.members = Output.empty();
-        this.privateCloudName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.revision = Output.empty();
-        this.vmGroupId = Output.empty();
+        this.displayName = Codegen.empty();
+        this.members = Codegen.empty();
+        this.privateCloudName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.revision = Codegen.empty();
+        this.vmGroupId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder members(@Nullable Output<List<String>> members) {
@@ -149,7 +150,7 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder members(@Nullable List<String> members) {
-            this.members = Output.ofNullable(members);
+            this.members = Codegen.ofNullable(members);
             return this;
         }
         public Builder members(String... members) {
@@ -176,7 +177,7 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder revision(@Nullable Double revision) {
-            this.revision = Output.ofNullable(revision);
+            this.revision = Codegen.ofNullable(revision);
             return this;
         }
         public Builder vmGroupId(@Nullable Output<String> vmGroupId) {
@@ -184,7 +185,7 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder vmGroupId(@Nullable String vmGroupId) {
-            this.vmGroupId = Output.ofNullable(vmGroupId);
+            this.vmGroupId = Codegen.ofNullable(vmGroupId);
             return this;
         }        public WorkloadNetworkVMGroupArgs build() {
             return new WorkloadNetworkVMGroupArgs(displayName, members, privateCloudName, resourceGroupName, revision, vmGroupId);

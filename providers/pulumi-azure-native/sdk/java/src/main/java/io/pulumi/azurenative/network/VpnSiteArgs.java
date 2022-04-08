@@ -11,6 +11,7 @@ import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.azurenative.network.inputs.VpnSiteLinkArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +32,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AddressSpaceArgs> addressSpace;
 
     public Output<AddressSpaceArgs> getAddressSpace() {
-        return this.addressSpace == null ? Output.empty() : this.addressSpace;
+        return this.addressSpace == null ? Codegen.empty() : this.addressSpace;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BgpSettingsArgs> bgpProperties;
 
     public Output<BgpSettingsArgs> getBgpProperties() {
-        return this.bgpProperties == null ? Output.empty() : this.bgpProperties;
+        return this.bgpProperties == null ? Codegen.empty() : this.bgpProperties;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DevicePropertiesArgs> deviceProperties;
 
     public Output<DevicePropertiesArgs> getDeviceProperties() {
-        return this.deviceProperties == null ? Output.empty() : this.deviceProperties;
+        return this.deviceProperties == null ? Codegen.empty() : this.deviceProperties;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isSecuritySite;
 
     public Output<Boolean> getIsSecuritySite() {
-        return this.isSecuritySite == null ? Output.empty() : this.isSecuritySite;
+        return this.isSecuritySite == null ? Codegen.empty() : this.isSecuritySite;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<O365PolicyPropertiesArgs> o365Policy;
 
     public Output<O365PolicyPropertiesArgs> getO365Policy() {
-        return this.o365Policy == null ? Output.empty() : this.o365Policy;
+        return this.o365Policy == null ? Codegen.empty() : this.o365Policy;
     }
 
     /**
@@ -130,7 +131,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> siteKey;
 
     public Output<String> getSiteKey() {
-        return this.siteKey == null ? Output.empty() : this.siteKey;
+        return this.siteKey == null ? Codegen.empty() : this.siteKey;
     }
 
     /**
@@ -141,7 +142,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -152,7 +153,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SubResourceArgs> virtualWan;
 
     public Output<SubResourceArgs> getVirtualWan() {
-        return this.virtualWan == null ? Output.empty() : this.virtualWan;
+        return this.virtualWan == null ? Codegen.empty() : this.virtualWan;
     }
 
     /**
@@ -163,7 +164,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<VpnSiteLinkArgs>> vpnSiteLinks;
 
     public Output<List<VpnSiteLinkArgs>> getVpnSiteLinks() {
-        return this.vpnSiteLinks == null ? Output.empty() : this.vpnSiteLinks;
+        return this.vpnSiteLinks == null ? Codegen.empty() : this.vpnSiteLinks;
     }
 
     /**
@@ -174,7 +175,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> vpnSiteName;
 
     public Output<String> getVpnSiteName() {
-        return this.vpnSiteName == null ? Output.empty() : this.vpnSiteName;
+        return this.vpnSiteName == null ? Codegen.empty() : this.vpnSiteName;
     }
 
     public VpnSiteArgs(
@@ -209,20 +210,20 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VpnSiteArgs() {
-        this.addressSpace = Output.empty();
-        this.bgpProperties = Output.empty();
-        this.deviceProperties = Output.empty();
-        this.id = Output.empty();
-        this.ipAddress = Output.empty();
-        this.isSecuritySite = Output.empty();
-        this.location = Output.empty();
-        this.o365Policy = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.siteKey = Output.empty();
-        this.tags = Output.empty();
-        this.virtualWan = Output.empty();
-        this.vpnSiteLinks = Output.empty();
-        this.vpnSiteName = Output.empty();
+        this.addressSpace = Codegen.empty();
+        this.bgpProperties = Codegen.empty();
+        this.deviceProperties = Codegen.empty();
+        this.id = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.isSecuritySite = Codegen.empty();
+        this.location = Codegen.empty();
+        this.o365Policy = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.siteKey = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.virtualWan = Codegen.empty();
+        this.vpnSiteLinks = Codegen.empty();
+        this.vpnSiteName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -276,7 +277,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addressSpace(@Nullable AddressSpaceArgs addressSpace) {
-            this.addressSpace = Output.ofNullable(addressSpace);
+            this.addressSpace = Codegen.ofNullable(addressSpace);
             return this;
         }
         public Builder bgpProperties(@Nullable Output<BgpSettingsArgs> bgpProperties) {
@@ -284,7 +285,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bgpProperties(@Nullable BgpSettingsArgs bgpProperties) {
-            this.bgpProperties = Output.ofNullable(bgpProperties);
+            this.bgpProperties = Codegen.ofNullable(bgpProperties);
             return this;
         }
         public Builder deviceProperties(@Nullable Output<DevicePropertiesArgs> deviceProperties) {
@@ -292,7 +293,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deviceProperties(@Nullable DevicePropertiesArgs deviceProperties) {
-            this.deviceProperties = Output.ofNullable(deviceProperties);
+            this.deviceProperties = Codegen.ofNullable(deviceProperties);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -300,7 +301,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -308,7 +309,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder isSecuritySite(@Nullable Output<Boolean> isSecuritySite) {
@@ -316,7 +317,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isSecuritySite(@Nullable Boolean isSecuritySite) {
-            this.isSecuritySite = Output.ofNullable(isSecuritySite);
+            this.isSecuritySite = Codegen.ofNullable(isSecuritySite);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -324,7 +325,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder o365Policy(@Nullable Output<O365PolicyPropertiesArgs> o365Policy) {
@@ -332,7 +333,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder o365Policy(@Nullable O365PolicyPropertiesArgs o365Policy) {
-            this.o365Policy = Output.ofNullable(o365Policy);
+            this.o365Policy = Codegen.ofNullable(o365Policy);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -348,7 +349,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder siteKey(@Nullable String siteKey) {
-            this.siteKey = Output.ofNullable(siteKey);
+            this.siteKey = Codegen.ofNullable(siteKey);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -356,7 +357,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder virtualWan(@Nullable Output<SubResourceArgs> virtualWan) {
@@ -364,7 +365,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualWan(@Nullable SubResourceArgs virtualWan) {
-            this.virtualWan = Output.ofNullable(virtualWan);
+            this.virtualWan = Codegen.ofNullable(virtualWan);
             return this;
         }
         public Builder vpnSiteLinks(@Nullable Output<List<VpnSiteLinkArgs>> vpnSiteLinks) {
@@ -372,7 +373,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpnSiteLinks(@Nullable List<VpnSiteLinkArgs> vpnSiteLinks) {
-            this.vpnSiteLinks = Output.ofNullable(vpnSiteLinks);
+            this.vpnSiteLinks = Codegen.ofNullable(vpnSiteLinks);
             return this;
         }
         public Builder vpnSiteLinks(VpnSiteLinkArgs... vpnSiteLinks) {
@@ -383,7 +384,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpnSiteName(@Nullable String vpnSiteName) {
-            this.vpnSiteName = Output.ofNullable(vpnSiteName);
+            this.vpnSiteName = Codegen.ofNullable(vpnSiteName);
             return this;
         }        public VpnSiteArgs build() {
             return new VpnSiteArgs(addressSpace, bgpProperties, deviceProperties, id, ipAddress, isSecuritySite, location, o365Policy, resourceGroupName, siteKey, tags, virtualWan, vpnSiteLinks, vpnSiteName);

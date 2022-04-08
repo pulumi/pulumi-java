@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class LoginRoutesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> logoutEndpoint;
 
     public Output<String> getLogoutEndpoint() {
-        return this.logoutEndpoint == null ? Output.empty() : this.logoutEndpoint;
+        return this.logoutEndpoint == null ? Codegen.empty() : this.logoutEndpoint;
     }
 
     public LoginRoutesArgs(@Nullable Output<String> logoutEndpoint) {
@@ -34,7 +35,7 @@ public final class LoginRoutesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LoginRoutesArgs() {
-        this.logoutEndpoint = Output.empty();
+        this.logoutEndpoint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class LoginRoutesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logoutEndpoint(@Nullable String logoutEndpoint) {
-            this.logoutEndpoint = Output.ofNullable(logoutEndpoint);
+            this.logoutEndpoint = Codegen.ofNullable(logoutEndpoint);
             return this;
         }        public LoginRoutesArgs build() {
             return new LoginRoutesArgs(logoutEndpoint);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
       private final @Nullable Output<String> keyName;
 
     public Output<String> getKeyName() {
-        return this.keyName == null ? Output.empty() : this.keyName;
+        return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
       private final @Nullable Output<ResourceReferenceArgs> keyVault;
 
     public Output<ResourceReferenceArgs> getKeyVault() {
-        return this.keyVault == null ? Output.empty() : this.keyVault;
+        return this.keyVault == null ? Codegen.empty() : this.keyVault;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
       private final @Nullable Output<String> keyVersion;
 
     public Output<String> getKeyVersion() {
-        return this.keyVersion == null ? Output.empty() : this.keyVersion;
+        return this.keyVersion == null ? Codegen.empty() : this.keyVersion;
     }
 
     public IntegrationServiceEnvironmenEncryptionKeyReferenceArgs(
@@ -62,9 +63,9 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
     }
 
     private IntegrationServiceEnvironmenEncryptionKeyReferenceArgs() {
-        this.keyName = Output.empty();
-        this.keyVault = Output.empty();
-        this.keyVersion = Output.empty();
+        this.keyName = Codegen.empty();
+        this.keyVault = Codegen.empty();
+        this.keyVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
             return this;
         }
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Output.ofNullable(keyName);
+            this.keyName = Codegen.ofNullable(keyName);
             return this;
         }
         public Builder keyVault(@Nullable Output<ResourceReferenceArgs> keyVault) {
@@ -104,7 +105,7 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
             return this;
         }
         public Builder keyVault(@Nullable ResourceReferenceArgs keyVault) {
-            this.keyVault = Output.ofNullable(keyVault);
+            this.keyVault = Codegen.ofNullable(keyVault);
             return this;
         }
         public Builder keyVersion(@Nullable Output<String> keyVersion) {
@@ -112,7 +113,7 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
             return this;
         }
         public Builder keyVersion(@Nullable String keyVersion) {
-            this.keyVersion = Output.ofNullable(keyVersion);
+            this.keyVersion = Codegen.ofNullable(keyVersion);
             return this;
         }        public IntegrationServiceEnvironmenEncryptionKeyReferenceArgs build() {
             return new IntegrationServiceEnvironmenEncryptionKeyReferenceArgs(keyName, keyVault, keyVersion);

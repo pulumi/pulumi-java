@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -61,9 +62,9 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends io.pu
     }
 
     private AwAssumeRoleAuthenticationDetailsPropertiesArgs() {
-        this.authenticationType = Output.empty();
-        this.awsAssumeRoleArn = Output.empty();
-        this.awsExternalId = Output.empty();
+        this.authenticationType = Codegen.empty();
+        this.awsAssumeRoleArn = Codegen.empty();
+        this.awsExternalId = Codegen.empty();
     }
 
     public static Builder builder() {

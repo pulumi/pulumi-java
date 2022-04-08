@@ -5,6 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class JavaScriptFunctionBindingArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> script;
 
     public Output<String> getScript() {
-        return this.script == null ? Output.empty() : this.script;
+        return this.script == null ? Codegen.empty() : this.script;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class JavaScriptFunctionBindingArgs extends io.pulumi.resources.Res
     }
 
     private JavaScriptFunctionBindingArgs() {
-        this.script = Output.empty();
-        this.type = Output.empty();
+        this.script = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class JavaScriptFunctionBindingArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder script(@Nullable String script) {
-            this.script = Output.ofNullable(script);
+            this.script = Codegen.ofNullable(script);
             return this;
         }
         public Builder type(Output<String> type) {

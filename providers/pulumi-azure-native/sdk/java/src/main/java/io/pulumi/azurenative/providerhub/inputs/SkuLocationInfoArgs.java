@@ -6,6 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.inputs.SkuZoneDetailArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ public final class SkuLocationInfoArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<String>> extendedLocations;
 
     public Output<List<String>> getExtendedLocations() {
-        return this.extendedLocations == null ? Output.empty() : this.extendedLocations;
+        return this.extendedLocations == null ? Codegen.empty() : this.extendedLocations;
     }
 
     @Import(name="location", required=true)
@@ -34,21 +35,21 @@ public final class SkuLocationInfoArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     @Import(name="zoneDetails")
       private final @Nullable Output<List<SkuZoneDetailArgs>> zoneDetails;
 
     public Output<List<SkuZoneDetailArgs>> getZoneDetails() {
-        return this.zoneDetails == null ? Output.empty() : this.zoneDetails;
+        return this.zoneDetails == null ? Codegen.empty() : this.zoneDetails;
     }
 
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {
-        return this.zones == null ? Output.empty() : this.zones;
+        return this.zones == null ? Codegen.empty() : this.zones;
     }
 
     public SkuLocationInfoArgs(
@@ -65,11 +66,11 @@ public final class SkuLocationInfoArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SkuLocationInfoArgs() {
-        this.extendedLocations = Output.empty();
-        this.location = Output.empty();
-        this.type = Output.empty();
-        this.zoneDetails = Output.empty();
-        this.zones = Output.empty();
+        this.extendedLocations = Codegen.empty();
+        this.location = Codegen.empty();
+        this.type = Codegen.empty();
+        this.zoneDetails = Codegen.empty();
+        this.zones = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class SkuLocationInfoArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder extendedLocations(@Nullable List<String> extendedLocations) {
-            this.extendedLocations = Output.ofNullable(extendedLocations);
+            this.extendedLocations = Codegen.ofNullable(extendedLocations);
             return this;
         }
         public Builder extendedLocations(String... extendedLocations) {
@@ -124,7 +125,7 @@ public final class SkuLocationInfoArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder zoneDetails(@Nullable Output<List<SkuZoneDetailArgs>> zoneDetails) {
@@ -132,7 +133,7 @@ public final class SkuLocationInfoArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder zoneDetails(@Nullable List<SkuZoneDetailArgs> zoneDetails) {
-            this.zoneDetails = Output.ofNullable(zoneDetails);
+            this.zoneDetails = Codegen.ofNullable(zoneDetails);
             return this;
         }
         public Builder zoneDetails(SkuZoneDetailArgs... zoneDetails) {
@@ -143,7 +144,7 @@ public final class SkuLocationInfoArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Output.ofNullable(zones);
+            this.zones = Codegen.ofNullable(zones);
             return this;
         }
         public Builder zones(String... zones) {

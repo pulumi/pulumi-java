@@ -8,6 +8,7 @@ import io.pulumi.azurenative.security.inputs.AutomationRuleSetArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class AutomationSourceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Either<String,EventSource>> eventSource;
 
     public Output<Either<String,EventSource>> getEventSource() {
-        return this.eventSource == null ? Output.empty() : this.eventSource;
+        return this.eventSource == null ? Codegen.empty() : this.eventSource;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class AutomationSourceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<AutomationRuleSetArgs>> ruleSets;
 
     public Output<List<AutomationRuleSetArgs>> getRuleSets() {
-        return this.ruleSets == null ? Output.empty() : this.ruleSets;
+        return this.ruleSets == null ? Codegen.empty() : this.ruleSets;
     }
 
     public AutomationSourceArgs(
@@ -52,8 +53,8 @@ public final class AutomationSourceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private AutomationSourceArgs() {
-        this.eventSource = Output.empty();
-        this.ruleSets = Output.empty();
+        this.eventSource = Codegen.empty();
+        this.ruleSets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class AutomationSourceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder eventSource(@Nullable Either<String,EventSource> eventSource) {
-            this.eventSource = Output.ofNullable(eventSource);
+            this.eventSource = Codegen.ofNullable(eventSource);
             return this;
         }
         public Builder ruleSets(@Nullable Output<List<AutomationRuleSetArgs>> ruleSets) {
@@ -91,7 +92,7 @@ public final class AutomationSourceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ruleSets(@Nullable List<AutomationRuleSetArgs> ruleSets) {
-            this.ruleSets = Output.ofNullable(ruleSets);
+            this.ruleSets = Codegen.ofNullable(ruleSets);
             return this;
         }
         public Builder ruleSets(AutomationRuleSetArgs... ruleSets) {

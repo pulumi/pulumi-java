@@ -7,6 +7,7 @@ import io.pulumi.azurenative.security.inputs.JitNetworkAccessPolicyVirtualMachin
 import io.pulumi.azurenative.security.inputs.JitNetworkAccessRequestArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> jitNetworkAccessPolicyName;
 
     public Output<String> getJitNetworkAccessPolicyName() {
-        return this.jitNetworkAccessPolicyName == null ? Output.empty() : this.jitNetworkAccessPolicyName;
+        return this.jitNetworkAccessPolicyName == null ? Codegen.empty() : this.jitNetworkAccessPolicyName;
     }
 
     /**
@@ -47,14 +48,14 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     @Import(name="requests")
       private final @Nullable Output<List<JitNetworkAccessRequestArgs>> requests;
 
     public Output<List<JitNetworkAccessRequestArgs>> getRequests() {
-        return this.requests == null ? Output.empty() : this.requests;
+        return this.requests == null ? Codegen.empty() : this.requests;
     }
 
     /**
@@ -95,12 +96,12 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
     }
 
     private JitNetworkAccessPolicyArgs() {
-        this.ascLocation = Output.empty();
-        this.jitNetworkAccessPolicyName = Output.empty();
-        this.kind = Output.empty();
-        this.requests = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.virtualMachines = Output.empty();
+        this.ascLocation = Codegen.empty();
+        this.jitNetworkAccessPolicyName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.requests = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.virtualMachines = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder jitNetworkAccessPolicyName(@Nullable String jitNetworkAccessPolicyName) {
-            this.jitNetworkAccessPolicyName = Output.ofNullable(jitNetworkAccessPolicyName);
+            this.jitNetworkAccessPolicyName = Codegen.ofNullable(jitNetworkAccessPolicyName);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -154,7 +155,7 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder requests(@Nullable Output<List<JitNetworkAccessRequestArgs>> requests) {
@@ -162,7 +163,7 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder requests(@Nullable List<JitNetworkAccessRequestArgs> requests) {
-            this.requests = Output.ofNullable(requests);
+            this.requests = Codegen.ofNullable(requests);
             return this;
         }
         public Builder requests(JitNetworkAccessRequestArgs... requests) {

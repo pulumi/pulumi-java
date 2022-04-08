@@ -10,6 +10,7 @@ import io.pulumi.azurenative.cache.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,7 +32,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableNonSslPort;
 
     public Output<Boolean> getEnableNonSslPort() {
-        return this.enableNonSslPort == null ? Output.empty() : this.enableNonSslPort;
+        return this.enableNonSslPort == null ? Codegen.empty() : this.enableNonSslPort;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,TlsVersion>> minimumTlsVersion;
 
     public Output<Either<String,TlsVersion>> getMinimumTlsVersion() {
-        return this.minimumTlsVersion == null ? Output.empty() : this.minimumTlsVersion;
+        return this.minimumTlsVersion == null ? Codegen.empty() : this.minimumTlsVersion;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
+        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration;
 
     public Output<RedisCommonPropertiesRedisConfigurationArgs> getRedisConfiguration() {
-        return this.redisConfiguration == null ? Output.empty() : this.redisConfiguration;
+        return this.redisConfiguration == null ? Codegen.empty() : this.redisConfiguration;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> replicasPerMaster;
 
     public Output<Integer> getReplicasPerMaster() {
-        return this.replicasPerMaster == null ? Output.empty() : this.replicasPerMaster;
+        return this.replicasPerMaster == null ? Codegen.empty() : this.replicasPerMaster;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> shardCount;
 
     public Output<Integer> getShardCount() {
-        return this.shardCount == null ? Output.empty() : this.shardCount;
+        return this.shardCount == null ? Codegen.empty() : this.shardCount;
     }
 
     /**
@@ -141,7 +142,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> staticIP;
 
     public Output<String> getStaticIP() {
-        return this.staticIP == null ? Output.empty() : this.staticIP;
+        return this.staticIP == null ? Codegen.empty() : this.staticIP;
     }
 
     /**
@@ -152,7 +153,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     /**
@@ -163,7 +164,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -174,7 +175,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tenantSettings;
 
     public Output<Map<String,String>> getTenantSettings() {
-        return this.tenantSettings == null ? Output.empty() : this.tenantSettings;
+        return this.tenantSettings == null ? Codegen.empty() : this.tenantSettings;
     }
 
     /**
@@ -185,7 +186,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {
-        return this.zones == null ? Output.empty() : this.zones;
+        return this.zones == null ? Codegen.empty() : this.zones;
     }
 
     public RedisArgs(
@@ -204,7 +205,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<Map<String,String>> tags,
         @Nullable Output<Map<String,String>> tenantSettings,
         @Nullable Output<List<String>> zones) {
-        this.enableNonSslPort = enableNonSslPort == null ? Output.ofNullable(false) : enableNonSslPort;
+        this.enableNonSslPort = enableNonSslPort == null ? Codegen.ofNullable(false) : enableNonSslPort;
         this.location = location;
         this.minimumTlsVersion = minimumTlsVersion;
         this.name = name;
@@ -222,21 +223,21 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RedisArgs() {
-        this.enableNonSslPort = Output.empty();
-        this.location = Output.empty();
-        this.minimumTlsVersion = Output.empty();
-        this.name = Output.empty();
-        this.publicNetworkAccess = Output.empty();
-        this.redisConfiguration = Output.empty();
-        this.replicasPerMaster = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.shardCount = Output.empty();
-        this.sku = Output.empty();
-        this.staticIP = Output.empty();
-        this.subnetId = Output.empty();
-        this.tags = Output.empty();
-        this.tenantSettings = Output.empty();
-        this.zones = Output.empty();
+        this.enableNonSslPort = Codegen.empty();
+        this.location = Codegen.empty();
+        this.minimumTlsVersion = Codegen.empty();
+        this.name = Codegen.empty();
+        this.publicNetworkAccess = Codegen.empty();
+        this.redisConfiguration = Codegen.empty();
+        this.replicasPerMaster = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.shardCount = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.staticIP = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tenantSettings = Codegen.empty();
+        this.zones = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -292,7 +293,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableNonSslPort(@Nullable Boolean enableNonSslPort) {
-            this.enableNonSslPort = Output.ofNullable(enableNonSslPort);
+            this.enableNonSslPort = Codegen.ofNullable(enableNonSslPort);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -300,7 +301,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder minimumTlsVersion(@Nullable Output<Either<String,TlsVersion>> minimumTlsVersion) {
@@ -308,7 +309,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minimumTlsVersion(@Nullable Either<String,TlsVersion> minimumTlsVersion) {
-            this.minimumTlsVersion = Output.ofNullable(minimumTlsVersion);
+            this.minimumTlsVersion = Codegen.ofNullable(minimumTlsVersion);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -316,7 +317,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
@@ -324,7 +325,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
             return this;
         }
         public Builder redisConfiguration(@Nullable Output<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration) {
@@ -332,7 +333,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder redisConfiguration(@Nullable RedisCommonPropertiesRedisConfigurationArgs redisConfiguration) {
-            this.redisConfiguration = Output.ofNullable(redisConfiguration);
+            this.redisConfiguration = Codegen.ofNullable(redisConfiguration);
             return this;
         }
         public Builder replicasPerMaster(@Nullable Output<Integer> replicasPerMaster) {
@@ -340,7 +341,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder replicasPerMaster(@Nullable Integer replicasPerMaster) {
-            this.replicasPerMaster = Output.ofNullable(replicasPerMaster);
+            this.replicasPerMaster = Codegen.ofNullable(replicasPerMaster);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -356,7 +357,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shardCount(@Nullable Integer shardCount) {
-            this.shardCount = Output.ofNullable(shardCount);
+            this.shardCount = Codegen.ofNullable(shardCount);
             return this;
         }
         public Builder sku(Output<SkuArgs> sku) {
@@ -372,7 +373,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder staticIP(@Nullable String staticIP) {
-            this.staticIP = Output.ofNullable(staticIP);
+            this.staticIP = Codegen.ofNullable(staticIP);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -380,7 +381,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -388,7 +389,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tenantSettings(@Nullable Output<Map<String,String>> tenantSettings) {
@@ -396,7 +397,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tenantSettings(@Nullable Map<String,String> tenantSettings) {
-            this.tenantSettings = Output.ofNullable(tenantSettings);
+            this.tenantSettings = Codegen.ofNullable(tenantSettings);
             return this;
         }
         public Builder zones(@Nullable Output<List<String>> zones) {
@@ -404,7 +405,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Output.ofNullable(zones);
+            this.zones = Codegen.ofNullable(zones);
             return this;
         }
         public Builder zones(String... zones) {

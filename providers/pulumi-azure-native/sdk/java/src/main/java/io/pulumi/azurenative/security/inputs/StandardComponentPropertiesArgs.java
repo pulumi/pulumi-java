@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class StandardComponentPropertiesArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     public StandardComponentPropertiesArgs(@Nullable Output<String> key) {
@@ -34,7 +35,7 @@ public final class StandardComponentPropertiesArgs extends io.pulumi.resources.R
     }
 
     private StandardComponentPropertiesArgs() {
-        this.key = Output.empty();
+        this.key = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class StandardComponentPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }        public StandardComponentPropertiesArgs build() {
             return new StandardComponentPropertiesArgs(key);

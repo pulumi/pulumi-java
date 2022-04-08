@@ -11,6 +11,7 @@ import io.pulumi.azurenative.datafactory.inputs.FileServerWriteSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.SftpWriteSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -33,7 +34,7 @@ public final class BinarySinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> disableMetricsCollection;
 
     public Output<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
+        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class BinarySinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> maxConcurrentConnections;
 
     public Output<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
+        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class BinarySinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> sinkRetryCount;
 
     public Output<Object> getSinkRetryCount() {
-        return this.sinkRetryCount == null ? Output.empty() : this.sinkRetryCount;
+        return this.sinkRetryCount == null ? Codegen.empty() : this.sinkRetryCount;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class BinarySinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> sinkRetryWait;
 
     public Output<Object> getSinkRetryWait() {
-        return this.sinkRetryWait == null ? Output.empty() : this.sinkRetryWait;
+        return this.sinkRetryWait == null ? Codegen.empty() : this.sinkRetryWait;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class BinarySinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> storeSettings;
 
     public Output<Object> getStoreSettings() {
-        return this.storeSettings == null ? Output.empty() : this.storeSettings;
+        return this.storeSettings == null ? Codegen.empty() : this.storeSettings;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class BinarySinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> writeBatchSize;
 
     public Output<Object> getWriteBatchSize() {
-        return this.writeBatchSize == null ? Output.empty() : this.writeBatchSize;
+        return this.writeBatchSize == null ? Codegen.empty() : this.writeBatchSize;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class BinarySinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> writeBatchTimeout;
 
     public Output<Object> getWriteBatchTimeout() {
-        return this.writeBatchTimeout == null ? Output.empty() : this.writeBatchTimeout;
+        return this.writeBatchTimeout == null ? Codegen.empty() : this.writeBatchTimeout;
     }
 
     public BinarySinkArgs(
@@ -134,14 +135,14 @@ public final class BinarySinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BinarySinkArgs() {
-        this.disableMetricsCollection = Output.empty();
-        this.maxConcurrentConnections = Output.empty();
-        this.sinkRetryCount = Output.empty();
-        this.sinkRetryWait = Output.empty();
-        this.storeSettings = Output.empty();
-        this.type = Output.empty();
-        this.writeBatchSize = Output.empty();
-        this.writeBatchTimeout = Output.empty();
+        this.disableMetricsCollection = Codegen.empty();
+        this.maxConcurrentConnections = Codegen.empty();
+        this.sinkRetryCount = Codegen.empty();
+        this.sinkRetryWait = Codegen.empty();
+        this.storeSettings = Codegen.empty();
+        this.type = Codegen.empty();
+        this.writeBatchSize = Codegen.empty();
+        this.writeBatchTimeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -183,7 +184,7 @@ public final class BinarySinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
@@ -191,7 +192,7 @@ public final class BinarySinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
             return this;
         }
         public Builder sinkRetryCount(@Nullable Output<Object> sinkRetryCount) {
@@ -199,7 +200,7 @@ public final class BinarySinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
-            this.sinkRetryCount = Output.ofNullable(sinkRetryCount);
+            this.sinkRetryCount = Codegen.ofNullable(sinkRetryCount);
             return this;
         }
         public Builder sinkRetryWait(@Nullable Output<Object> sinkRetryWait) {
@@ -207,7 +208,7 @@ public final class BinarySinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
-            this.sinkRetryWait = Output.ofNullable(sinkRetryWait);
+            this.sinkRetryWait = Codegen.ofNullable(sinkRetryWait);
             return this;
         }
         public Builder storeSettings(@Nullable Output<Object> storeSettings) {
@@ -215,7 +216,7 @@ public final class BinarySinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storeSettings(@Nullable Object storeSettings) {
-            this.storeSettings = Output.ofNullable(storeSettings);
+            this.storeSettings = Codegen.ofNullable(storeSettings);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -231,7 +232,7 @@ public final class BinarySinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
-            this.writeBatchSize = Output.ofNullable(writeBatchSize);
+            this.writeBatchSize = Codegen.ofNullable(writeBatchSize);
             return this;
         }
         public Builder writeBatchTimeout(@Nullable Output<Object> writeBatchTimeout) {
@@ -239,7 +240,7 @@ public final class BinarySinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
-            this.writeBatchTimeout = Output.ofNullable(writeBatchTimeout);
+            this.writeBatchTimeout = Codegen.ofNullable(writeBatchTimeout);
             return this;
         }        public BinarySinkArgs build() {
             return new BinarySinkArgs(disableMetricsCollection, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, storeSettings, type, writeBatchSize, writeBatchTimeout);

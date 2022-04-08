@@ -5,6 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserInfoArgs() {
-        this.objectId = Output.empty();
+        this.objectId = Codegen.empty();
     }
 
     public static Builder builder() {

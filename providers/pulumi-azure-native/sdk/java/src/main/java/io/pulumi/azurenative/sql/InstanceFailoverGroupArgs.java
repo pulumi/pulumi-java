@@ -9,6 +9,7 @@ import io.pulumi.azurenative.sql.inputs.ManagedInstancePairInfoArgs;
 import io.pulumi.azurenative.sql.inputs.PartnerRegionInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> failoverGroupName;
 
     public Output<String> getFailoverGroupName() {
-        return this.failoverGroupName == null ? Output.empty() : this.failoverGroupName;
+        return this.failoverGroupName == null ? Codegen.empty() : this.failoverGroupName;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<InstanceFailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint;
 
     public Output<InstanceFailoverGroupReadOnlyEndpointArgs> getReadOnlyEndpoint() {
-        return this.readOnlyEndpoint == null ? Output.empty() : this.readOnlyEndpoint;
+        return this.readOnlyEndpoint == null ? Codegen.empty() : this.readOnlyEndpoint;
     }
 
     /**
@@ -114,13 +115,13 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
     }
 
     private InstanceFailoverGroupArgs() {
-        this.failoverGroupName = Output.empty();
-        this.locationName = Output.empty();
-        this.managedInstancePairs = Output.empty();
-        this.partnerRegions = Output.empty();
-        this.readOnlyEndpoint = Output.empty();
-        this.readWriteEndpoint = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.failoverGroupName = Codegen.empty();
+        this.locationName = Codegen.empty();
+        this.managedInstancePairs = Codegen.empty();
+        this.partnerRegions = Codegen.empty();
+        this.readOnlyEndpoint = Codegen.empty();
+        this.readWriteEndpoint = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder failoverGroupName(@Nullable String failoverGroupName) {
-            this.failoverGroupName = Output.ofNullable(failoverGroupName);
+            this.failoverGroupName = Codegen.ofNullable(failoverGroupName);
             return this;
         }
         public Builder locationName(Output<String> locationName) {
@@ -198,7 +199,7 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder readOnlyEndpoint(@Nullable InstanceFailoverGroupReadOnlyEndpointArgs readOnlyEndpoint) {
-            this.readOnlyEndpoint = Output.ofNullable(readOnlyEndpoint);
+            this.readOnlyEndpoint = Codegen.ofNullable(readOnlyEndpoint);
             return this;
         }
         public Builder readWriteEndpoint(Output<InstanceFailoverGroupReadWriteEndpointArgs> readWriteEndpoint) {

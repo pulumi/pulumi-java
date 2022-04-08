@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -48,8 +49,8 @@ public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends io.pulumi
     }
 
     private ContentKeyPolicyX509CertificateTokenKeyArgs() {
-        this.odataType = Output.empty();
-        this.rawBody = Output.empty();
+        this.odataType = Codegen.empty();
+        this.rawBody = Codegen.empty();
     }
 
     public static Builder builder() {

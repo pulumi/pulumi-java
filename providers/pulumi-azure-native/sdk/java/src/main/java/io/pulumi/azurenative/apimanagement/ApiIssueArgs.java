@@ -7,6 +7,7 @@ import io.pulumi.azurenative.apimanagement.enums.State;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -35,7 +36,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createdDate;
 
     public Output<String> getCreatedDate() {
-        return this.createdDate == null ? Output.empty() : this.createdDate;
+        return this.createdDate == null ? Codegen.empty() : this.createdDate;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> issueId;
 
     public Output<String> getIssueId() {
-        return this.issueId == null ? Output.empty() : this.issueId;
+        return this.issueId == null ? Codegen.empty() : this.issueId;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,State>> state;
 
     public Output<Either<String,State>> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -137,15 +138,15 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiIssueArgs() {
-        this.apiId = Output.empty();
-        this.createdDate = Output.empty();
-        this.description = Output.empty();
-        this.issueId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.state = Output.empty();
-        this.title = Output.empty();
-        this.userId = Output.empty();
+        this.apiId = Codegen.empty();
+        this.createdDate = Codegen.empty();
+        this.description = Codegen.empty();
+        this.issueId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.state = Codegen.empty();
+        this.title = Codegen.empty();
+        this.userId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -197,7 +198,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Output.ofNullable(createdDate);
+            this.createdDate = Codegen.ofNullable(createdDate);
             return this;
         }
         public Builder description(Output<String> description) {
@@ -213,7 +214,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder issueId(@Nullable String issueId) {
-            this.issueId = Output.ofNullable(issueId);
+            this.issueId = Codegen.ofNullable(issueId);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -237,7 +238,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable Either<String,State> state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder title(Output<String> title) {

@@ -9,6 +9,7 @@ import io.pulumi.azurenative.resourceconnector.inputs.IdentityArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,Distro>> distro;
 
     public Output<Either<String,Distro>> getDistro() {
-        return this.distro == null ? Output.empty() : this.distro;
+        return this.distro == null ? Codegen.empty() : this.distro;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IdentityArgs> identity;
 
     public Output<IdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig;
 
     public Output<AppliancePropertiesInfrastructureConfigArgs> getInfrastructureConfig() {
-        return this.infrastructureConfig == null ? Output.empty() : this.infrastructureConfig;
+        return this.infrastructureConfig == null ? Codegen.empty() : this.infrastructureConfig;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> publicKey;
 
     public Output<String> getPublicKey() {
-        return this.publicKey == null ? Output.empty() : this.publicKey;
+        return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ApplianceArgs(
@@ -127,14 +128,14 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplianceArgs() {
-        this.distro = Output.empty();
-        this.identity = Output.empty();
-        this.infrastructureConfig = Output.empty();
-        this.location = Output.empty();
-        this.publicKey = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.tags = Output.empty();
+        this.distro = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.infrastructureConfig = Codegen.empty();
+        this.location = Codegen.empty();
+        this.publicKey = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder distro(@Nullable Either<String,Distro> distro) {
-            this.distro = Output.ofNullable(distro);
+            this.distro = Codegen.ofNullable(distro);
             return this;
         }
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
@@ -184,7 +185,7 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder infrastructureConfig(@Nullable Output<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig) {
@@ -192,7 +193,7 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder infrastructureConfig(@Nullable AppliancePropertiesInfrastructureConfigArgs infrastructureConfig) {
-            this.infrastructureConfig = Output.ofNullable(infrastructureConfig);
+            this.infrastructureConfig = Codegen.ofNullable(infrastructureConfig);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -200,7 +201,7 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder publicKey(@Nullable Output<String> publicKey) {
@@ -208,7 +209,7 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Output.ofNullable(publicKey);
+            this.publicKey = Codegen.ofNullable(publicKey);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -224,7 +225,7 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -232,7 +233,7 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ApplianceArgs build() {
             return new ApplianceArgs(distro, identity, infrastructureConfig, location, publicKey, resourceGroupName, resourceName, tags);

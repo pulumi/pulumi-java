@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devices.enums.AccessRightsDescription;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -39,7 +40,7 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
       private final @Nullable Output<String> primaryKey;
 
     public Output<String> getPrimaryKey() {
-        return this.primaryKey == null ? Output.empty() : this.primaryKey;
+        return this.primaryKey == null ? Codegen.empty() : this.primaryKey;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
       private final @Nullable Output<String> secondaryKey;
 
     public Output<String> getSecondaryKey() {
-        return this.secondaryKey == null ? Output.empty() : this.secondaryKey;
+        return this.secondaryKey == null ? Codegen.empty() : this.secondaryKey;
     }
 
     public SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs(
@@ -76,10 +77,10 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
     }
 
     private SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs() {
-        this.keyName = Output.empty();
-        this.primaryKey = Output.empty();
-        this.rights = Output.empty();
-        this.secondaryKey = Output.empty();
+        this.keyName = Codegen.empty();
+        this.primaryKey = Codegen.empty();
+        this.rights = Codegen.empty();
+        this.secondaryKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -121,7 +122,7 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
             return this;
         }
         public Builder primaryKey(@Nullable String primaryKey) {
-            this.primaryKey = Output.ofNullable(primaryKey);
+            this.primaryKey = Codegen.ofNullable(primaryKey);
             return this;
         }
         public Builder rights(Output<Either<String,AccessRightsDescription>> rights) {
@@ -137,7 +138,7 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
             return this;
         }
         public Builder secondaryKey(@Nullable String secondaryKey) {
-            this.secondaryKey = Output.ofNullable(secondaryKey);
+            this.secondaryKey = Codegen.ofNullable(secondaryKey);
             return this;
         }        public SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs build() {
             return new SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs(keyName, primaryKey, rights, secondaryKey);

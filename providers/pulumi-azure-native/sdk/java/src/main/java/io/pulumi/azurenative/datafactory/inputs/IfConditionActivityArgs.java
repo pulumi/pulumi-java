@@ -45,6 +45,7 @@ import io.pulumi.azurenative.datafactory.inputs.WebActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -68,7 +69,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Output.empty() : this.dependsOn;
+        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<Object>> ifFalseActivities;
 
     public Output<List<Object>> getIfFalseActivities() {
-        return this.ifFalseActivities == null ? Output.empty() : this.ifFalseActivities;
+        return this.ifFalseActivities == null ? Codegen.empty() : this.ifFalseActivities;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<Object>> ifTrueActivities;
 
     public Output<List<Object>> getIfTrueActivities() {
-        return this.ifTrueActivities == null ? Output.empty() : this.ifTrueActivities;
+        return this.ifTrueActivities == null ? Codegen.empty() : this.ifTrueActivities;
     }
 
     /**
@@ -146,7 +147,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Output.empty() : this.userProperties;
+        return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 
     public IfConditionActivityArgs(
@@ -169,14 +170,14 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
     }
 
     private IfConditionActivityArgs() {
-        this.dependsOn = Output.empty();
-        this.description = Output.empty();
-        this.expression = Output.empty();
-        this.ifFalseActivities = Output.empty();
-        this.ifTrueActivities = Output.empty();
-        this.name = Output.empty();
-        this.type = Output.empty();
-        this.userProperties = Output.empty();
+        this.dependsOn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.expression = Codegen.empty();
+        this.ifFalseActivities = Codegen.empty();
+        this.ifTrueActivities = Codegen.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -218,7 +219,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Output.ofNullable(dependsOn);
+            this.dependsOn = Codegen.ofNullable(dependsOn);
             return this;
         }
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
@@ -229,7 +230,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder expression(Output<ExpressionArgs> expression) {
@@ -245,7 +246,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder ifFalseActivities(@Nullable List<Object> ifFalseActivities) {
-            this.ifFalseActivities = Output.ofNullable(ifFalseActivities);
+            this.ifFalseActivities = Codegen.ofNullable(ifFalseActivities);
             return this;
         }
         public Builder ifFalseActivities(Object... ifFalseActivities) {
@@ -256,7 +257,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder ifTrueActivities(@Nullable List<Object> ifTrueActivities) {
-            this.ifTrueActivities = Output.ofNullable(ifTrueActivities);
+            this.ifTrueActivities = Codegen.ofNullable(ifTrueActivities);
             return this;
         }
         public Builder ifTrueActivities(Object... ifTrueActivities) {
@@ -283,7 +284,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Output.ofNullable(userProperties);
+            this.userProperties = Codegen.ofNullable(userProperties);
             return this;
         }
         public Builder userProperties(UserPropertyArgs... userProperties) {

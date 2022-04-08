@@ -7,6 +7,7 @@ import io.pulumi.azurenative.dbforpostgresql.enums.AdministratorType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -97,12 +98,12 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
     }
 
     private ServerAdministratorArgs() {
-        this.administratorType = Output.empty();
-        this.login = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
-        this.sid = Output.empty();
-        this.tenantId = Output.empty();
+        this.administratorType = Codegen.empty();
+        this.login = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.sid = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {

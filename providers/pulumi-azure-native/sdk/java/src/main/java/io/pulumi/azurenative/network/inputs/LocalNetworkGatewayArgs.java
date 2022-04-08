@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.inputs.AddressSpaceArgs;
 import io.pulumi.azurenative.network.inputs.BgpSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<BgpSettingsArgs> bgpSettings;
 
     public Output<BgpSettingsArgs> getBgpSettings() {
-        return this.bgpSettings == null ? Output.empty() : this.bgpSettings;
+        return this.bgpSettings == null ? Codegen.empty() : this.bgpSettings;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> fqdn;
 
     public Output<String> getFqdn() {
-        return this.fqdn == null ? Output.empty() : this.fqdn;
+        return this.fqdn == null ? Codegen.empty() : this.fqdn;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> gatewayIpAddress;
 
     public Output<String> getGatewayIpAddress() {
-        return this.gatewayIpAddress == null ? Output.empty() : this.gatewayIpAddress;
+        return this.gatewayIpAddress == null ? Codegen.empty() : this.gatewayIpAddress;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<AddressSpaceArgs> localNetworkAddressSpace;
 
     public Output<AddressSpaceArgs> getLocalNetworkAddressSpace() {
-        return this.localNetworkAddressSpace == null ? Output.empty() : this.localNetworkAddressSpace;
+        return this.localNetworkAddressSpace == null ? Codegen.empty() : this.localNetworkAddressSpace;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public LocalNetworkGatewayArgs(
@@ -116,13 +117,13 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
     }
 
     private LocalNetworkGatewayArgs() {
-        this.bgpSettings = Output.empty();
-        this.fqdn = Output.empty();
-        this.gatewayIpAddress = Output.empty();
-        this.id = Output.empty();
-        this.localNetworkAddressSpace = Output.empty();
-        this.location = Output.empty();
-        this.tags = Output.empty();
+        this.bgpSettings = Codegen.empty();
+        this.fqdn = Codegen.empty();
+        this.gatewayIpAddress = Codegen.empty();
+        this.id = Codegen.empty();
+        this.localNetworkAddressSpace = Codegen.empty();
+        this.location = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -162,7 +163,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder bgpSettings(@Nullable BgpSettingsArgs bgpSettings) {
-            this.bgpSettings = Output.ofNullable(bgpSettings);
+            this.bgpSettings = Codegen.ofNullable(bgpSettings);
             return this;
         }
         public Builder fqdn(@Nullable Output<String> fqdn) {
@@ -170,7 +171,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Output.ofNullable(fqdn);
+            this.fqdn = Codegen.ofNullable(fqdn);
             return this;
         }
         public Builder gatewayIpAddress(@Nullable Output<String> gatewayIpAddress) {
@@ -178,7 +179,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder gatewayIpAddress(@Nullable String gatewayIpAddress) {
-            this.gatewayIpAddress = Output.ofNullable(gatewayIpAddress);
+            this.gatewayIpAddress = Codegen.ofNullable(gatewayIpAddress);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -186,7 +187,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder localNetworkAddressSpace(@Nullable Output<AddressSpaceArgs> localNetworkAddressSpace) {
@@ -194,7 +195,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder localNetworkAddressSpace(@Nullable AddressSpaceArgs localNetworkAddressSpace) {
-            this.localNetworkAddressSpace = Output.ofNullable(localNetworkAddressSpace);
+            this.localNetworkAddressSpace = Codegen.ofNullable(localNetworkAddressSpace);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -202,7 +203,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -210,7 +211,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public LocalNetworkGatewayArgs build() {
             return new LocalNetworkGatewayArgs(bgpSettings, fqdn, gatewayIpAddress, id, localNetworkAddressSpace, location, tags);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.ResourceRangeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class RecommendedMachineConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<ResourceRangeArgs> memory;
 
     public Output<ResourceRangeArgs> getMemory() {
-        return this.memory == null ? Output.empty() : this.memory;
+        return this.memory == null ? Codegen.empty() : this.memory;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class RecommendedMachineConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<ResourceRangeArgs> vCPUs;
 
     public Output<ResourceRangeArgs> getVCPUs() {
-        return this.vCPUs == null ? Output.empty() : this.vCPUs;
+        return this.vCPUs == null ? Codegen.empty() : this.vCPUs;
     }
 
     public RecommendedMachineConfigurationArgs(
@@ -48,8 +49,8 @@ public final class RecommendedMachineConfigurationArgs extends io.pulumi.resourc
     }
 
     private RecommendedMachineConfigurationArgs() {
-        this.memory = Output.empty();
-        this.vCPUs = Output.empty();
+        this.memory = Codegen.empty();
+        this.vCPUs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class RecommendedMachineConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder memory(@Nullable ResourceRangeArgs memory) {
-            this.memory = Output.ofNullable(memory);
+            this.memory = Codegen.ofNullable(memory);
             return this;
         }
         public Builder vCPUs(@Nullable Output<ResourceRangeArgs> vCPUs) {
@@ -87,7 +88,7 @@ public final class RecommendedMachineConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder vCPUs(@Nullable ResourceRangeArgs vCPUs) {
-            this.vCPUs = Output.ofNullable(vCPUs);
+            this.vCPUs = Codegen.ofNullable(vCPUs);
             return this;
         }        public RecommendedMachineConfigurationArgs build() {
             return new RecommendedMachineConfigurationArgs(memory, vCPUs);

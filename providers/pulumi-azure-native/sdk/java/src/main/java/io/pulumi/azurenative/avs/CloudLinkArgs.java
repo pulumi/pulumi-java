@@ -5,6 +5,7 @@ package io.pulumi.azurenative.avs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cloudLinkName;
 
     public Output<String> getCloudLinkName() {
-        return this.cloudLinkName == null ? Output.empty() : this.cloudLinkName;
+        return this.cloudLinkName == null ? Codegen.empty() : this.cloudLinkName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> linkedCloud;
 
     public Output<String> getLinkedCloud() {
-        return this.linkedCloud == null ? Output.empty() : this.linkedCloud;
+        return this.linkedCloud == null ? Codegen.empty() : this.linkedCloud;
     }
 
     /**
@@ -70,10 +71,10 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CloudLinkArgs() {
-        this.cloudLinkName = Output.empty();
-        this.linkedCloud = Output.empty();
-        this.privateCloudName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.cloudLinkName = Codegen.empty();
+        this.linkedCloud = Codegen.empty();
+        this.privateCloudName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudLinkName(@Nullable String cloudLinkName) {
-            this.cloudLinkName = Output.ofNullable(cloudLinkName);
+            this.cloudLinkName = Codegen.ofNullable(cloudLinkName);
             return this;
         }
         public Builder linkedCloud(@Nullable Output<String> linkedCloud) {
@@ -115,7 +116,7 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linkedCloud(@Nullable String linkedCloud) {
-            this.linkedCloud = Output.ofNullable(linkedCloud);
+            this.linkedCloud = Codegen.ofNullable(linkedCloud);
             return this;
         }
         public Builder privateCloudName(Output<String> privateCloudName) {

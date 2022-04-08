@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -124,7 +125,7 @@ public class MongoDBResourceMongoDBCollection extends io.pulumi.resources.Custom
      * @param options A bag of options that control this resource's behavior.
      */
     public MongoDBResourceMongoDBCollection(String name, MongoDBResourceMongoDBCollectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:documentdb:MongoDBResourceMongoDBCollection", name, args == null ? MongoDBResourceMongoDBCollectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:documentdb:MongoDBResourceMongoDBCollection", name, args == null ? MongoDBResourceMongoDBCollectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MongoDBResourceMongoDBCollection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

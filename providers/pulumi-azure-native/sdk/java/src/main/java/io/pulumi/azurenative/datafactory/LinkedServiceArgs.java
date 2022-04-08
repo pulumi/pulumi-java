@@ -107,6 +107,7 @@ import io.pulumi.azurenative.datafactory.inputs.XeroLinkedServiceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ZohoLinkedServiceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -136,7 +137,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> linkedServiceName;
 
     public Output<String> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
+        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
     /**
@@ -173,10 +174,10 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LinkedServiceArgs() {
-        this.factoryName = Output.empty();
-        this.linkedServiceName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.factoryName = Codegen.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -218,7 +219,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linkedServiceName(@Nullable String linkedServiceName) {
-            this.linkedServiceName = Output.ofNullable(linkedServiceName);
+            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
             return this;
         }
         public Builder properties(Output<Object> properties) {

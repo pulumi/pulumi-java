@@ -7,6 +7,7 @@ import io.pulumi.azurenative.sql.enums.ReplicationMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
       private final @Nullable Output<String> distributedAvailabilityGroupName;
 
     public Output<String> getDistributedAvailabilityGroupName() {
-        return this.distributedAvailabilityGroupName == null ? Output.empty() : this.distributedAvailabilityGroupName;
+        return this.distributedAvailabilityGroupName == null ? Codegen.empty() : this.distributedAvailabilityGroupName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
       private final @Nullable Output<String> primaryAvailabilityGroupName;
 
     public Output<String> getPrimaryAvailabilityGroupName() {
-        return this.primaryAvailabilityGroupName == null ? Output.empty() : this.primaryAvailabilityGroupName;
+        return this.primaryAvailabilityGroupName == null ? Codegen.empty() : this.primaryAvailabilityGroupName;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
       private final @Nullable Output<Either<String,ReplicationMode>> replicationMode;
 
     public Output<Either<String,ReplicationMode>> getReplicationMode() {
-        return this.replicationMode == null ? Output.empty() : this.replicationMode;
+        return this.replicationMode == null ? Codegen.empty() : this.replicationMode;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
       private final @Nullable Output<String> secondaryAvailabilityGroupName;
 
     public Output<String> getSecondaryAvailabilityGroupName() {
-        return this.secondaryAvailabilityGroupName == null ? Output.empty() : this.secondaryAvailabilityGroupName;
+        return this.secondaryAvailabilityGroupName == null ? Codegen.empty() : this.secondaryAvailabilityGroupName;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
       private final @Nullable Output<String> sourceEndpoint;
 
     public Output<String> getSourceEndpoint() {
-        return this.sourceEndpoint == null ? Output.empty() : this.sourceEndpoint;
+        return this.sourceEndpoint == null ? Codegen.empty() : this.sourceEndpoint;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
       private final @Nullable Output<String> targetDatabase;
 
     public Output<String> getTargetDatabase() {
-        return this.targetDatabase == null ? Output.empty() : this.targetDatabase;
+        return this.targetDatabase == null ? Codegen.empty() : this.targetDatabase;
     }
 
     public DistributedAvailabilityGroupArgs(
@@ -124,14 +125,14 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
     }
 
     private DistributedAvailabilityGroupArgs() {
-        this.distributedAvailabilityGroupName = Output.empty();
-        this.managedInstanceName = Output.empty();
-        this.primaryAvailabilityGroupName = Output.empty();
-        this.replicationMode = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.secondaryAvailabilityGroupName = Output.empty();
-        this.sourceEndpoint = Output.empty();
-        this.targetDatabase = Output.empty();
+        this.distributedAvailabilityGroupName = Codegen.empty();
+        this.managedInstanceName = Codegen.empty();
+        this.primaryAvailabilityGroupName = Codegen.empty();
+        this.replicationMode = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.secondaryAvailabilityGroupName = Codegen.empty();
+        this.sourceEndpoint = Codegen.empty();
+        this.targetDatabase = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
             return this;
         }
         public Builder distributedAvailabilityGroupName(@Nullable String distributedAvailabilityGroupName) {
-            this.distributedAvailabilityGroupName = Output.ofNullable(distributedAvailabilityGroupName);
+            this.distributedAvailabilityGroupName = Codegen.ofNullable(distributedAvailabilityGroupName);
             return this;
         }
         public Builder managedInstanceName(Output<String> managedInstanceName) {
@@ -189,7 +190,7 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
             return this;
         }
         public Builder primaryAvailabilityGroupName(@Nullable String primaryAvailabilityGroupName) {
-            this.primaryAvailabilityGroupName = Output.ofNullable(primaryAvailabilityGroupName);
+            this.primaryAvailabilityGroupName = Codegen.ofNullable(primaryAvailabilityGroupName);
             return this;
         }
         public Builder replicationMode(@Nullable Output<Either<String,ReplicationMode>> replicationMode) {
@@ -197,7 +198,7 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
             return this;
         }
         public Builder replicationMode(@Nullable Either<String,ReplicationMode> replicationMode) {
-            this.replicationMode = Output.ofNullable(replicationMode);
+            this.replicationMode = Codegen.ofNullable(replicationMode);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -213,7 +214,7 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
             return this;
         }
         public Builder secondaryAvailabilityGroupName(@Nullable String secondaryAvailabilityGroupName) {
-            this.secondaryAvailabilityGroupName = Output.ofNullable(secondaryAvailabilityGroupName);
+            this.secondaryAvailabilityGroupName = Codegen.ofNullable(secondaryAvailabilityGroupName);
             return this;
         }
         public Builder sourceEndpoint(@Nullable Output<String> sourceEndpoint) {
@@ -221,7 +222,7 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
             return this;
         }
         public Builder sourceEndpoint(@Nullable String sourceEndpoint) {
-            this.sourceEndpoint = Output.ofNullable(sourceEndpoint);
+            this.sourceEndpoint = Codegen.ofNullable(sourceEndpoint);
             return this;
         }
         public Builder targetDatabase(@Nullable Output<String> targetDatabase) {
@@ -229,7 +230,7 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
             return this;
         }
         public Builder targetDatabase(@Nullable String targetDatabase) {
-            this.targetDatabase = Output.ofNullable(targetDatabase);
+            this.targetDatabase = Codegen.ofNullable(targetDatabase);
             return this;
         }        public DistributedAvailabilityGroupArgs build() {
             return new DistributedAvailabilityGroupArgs(distributedAvailabilityGroupName, managedInstanceName, primaryAvailabilityGroupName, replicationMode, resourceGroupName, secondaryAvailabilityGroupName, sourceEndpoint, targetDatabase);

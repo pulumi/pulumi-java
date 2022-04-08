@@ -7,6 +7,7 @@ import io.pulumi.azurenative.hanaonazure.inputs.DiskArgs;
 import io.pulumi.azurenative.hanaonazure.inputs.SAPSystemIDArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SAPSystemIDArgs>> hanaSids;
 
     public Output<List<SAPSystemIDArgs>> getHanaSids() {
-        return this.hanaSids == null ? Output.empty() : this.hanaSids;
+        return this.hanaSids == null ? Codegen.empty() : this.hanaSids;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DiskArgs>> osDisks;
 
     public Output<List<DiskArgs>> getOsDisks() {
-        return this.osDisks == null ? Output.empty() : this.osDisks;
+        return this.osDisks == null ? Codegen.empty() : this.osDisks;
     }
 
     public StorageProfileArgs(
@@ -50,8 +51,8 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StorageProfileArgs() {
-        this.hanaSids = Output.empty();
-        this.osDisks = Output.empty();
+        this.hanaSids = Codegen.empty();
+        this.osDisks = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hanaSids(@Nullable List<SAPSystemIDArgs> hanaSids) {
-            this.hanaSids = Output.ofNullable(hanaSids);
+            this.hanaSids = Codegen.ofNullable(hanaSids);
             return this;
         }
         public Builder hanaSids(SAPSystemIDArgs... hanaSids) {
@@ -92,7 +93,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder osDisks(@Nullable List<DiskArgs> osDisks) {
-            this.osDisks = Output.ofNullable(osDisks);
+            this.osDisks = Codegen.ofNullable(osDisks);
             return this;
         }
         public Builder osDisks(DiskArgs... osDisks) {

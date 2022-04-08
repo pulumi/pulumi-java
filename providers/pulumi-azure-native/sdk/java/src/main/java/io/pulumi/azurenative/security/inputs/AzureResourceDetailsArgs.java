@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -34,7 +35,7 @@ public final class AzureResourceDetailsArgs extends io.pulumi.resources.Resource
     }
 
     private AzureResourceDetailsArgs() {
-        this.source = Output.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {

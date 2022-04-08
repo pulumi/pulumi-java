@@ -8,6 +8,7 @@ import io.pulumi.azurenative.avs.inputs.ScriptSecureStringExecutionParameterArgs
 import io.pulumi.azurenative.avs.inputs.ScriptStringExecutionParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> failureReason;
 
     public Output<String> getFailureReason() {
-        return this.failureReason == null ? Output.empty() : this.failureReason;
+        return this.failureReason == null ? Codegen.empty() : this.failureReason;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<Object>> hiddenParameters;
 
     public Output<List<Object>> getHiddenParameters() {
-        return this.hiddenParameters == null ? Output.empty() : this.hiddenParameters;
+        return this.hiddenParameters == null ? Codegen.empty() : this.hiddenParameters;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,Object>> namedOutputs;
 
     public Output<Map<String,Object>> getNamedOutputs() {
-        return this.namedOutputs == null ? Output.empty() : this.namedOutputs;
+        return this.namedOutputs == null ? Codegen.empty() : this.namedOutputs;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<String>> output;
 
     public Output<List<String>> getOutput() {
-        return this.output == null ? Output.empty() : this.output;
+        return this.output == null ? Codegen.empty() : this.output;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<Object>> parameters;
 
     public Output<List<Object>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> retention;
 
     public Output<String> getRetention() {
-        return this.retention == null ? Output.empty() : this.retention;
+        return this.retention == null ? Codegen.empty() : this.retention;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> scriptCmdletId;
 
     public Output<String> getScriptCmdletId() {
-        return this.scriptCmdletId == null ? Output.empty() : this.scriptCmdletId;
+        return this.scriptCmdletId == null ? Codegen.empty() : this.scriptCmdletId;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> scriptExecutionName;
 
     public Output<String> getScriptExecutionName() {
-        return this.scriptExecutionName == null ? Output.empty() : this.scriptExecutionName;
+        return this.scriptExecutionName == null ? Codegen.empty() : this.scriptExecutionName;
     }
 
     /**
@@ -167,17 +168,17 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ScriptExecutionArgs() {
-        this.failureReason = Output.empty();
-        this.hiddenParameters = Output.empty();
-        this.namedOutputs = Output.empty();
-        this.output = Output.empty();
-        this.parameters = Output.empty();
-        this.privateCloudName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.retention = Output.empty();
-        this.scriptCmdletId = Output.empty();
-        this.scriptExecutionName = Output.empty();
-        this.timeout = Output.empty();
+        this.failureReason = Codegen.empty();
+        this.hiddenParameters = Codegen.empty();
+        this.namedOutputs = Codegen.empty();
+        this.output = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.privateCloudName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.retention = Codegen.empty();
+        this.scriptCmdletId = Codegen.empty();
+        this.scriptExecutionName = Codegen.empty();
+        this.timeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -225,7 +226,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder failureReason(@Nullable String failureReason) {
-            this.failureReason = Output.ofNullable(failureReason);
+            this.failureReason = Codegen.ofNullable(failureReason);
             return this;
         }
         public Builder hiddenParameters(@Nullable Output<List<Object>> hiddenParameters) {
@@ -233,7 +234,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder hiddenParameters(@Nullable List<Object> hiddenParameters) {
-            this.hiddenParameters = Output.ofNullable(hiddenParameters);
+            this.hiddenParameters = Codegen.ofNullable(hiddenParameters);
             return this;
         }
         public Builder hiddenParameters(Object... hiddenParameters) {
@@ -244,7 +245,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder namedOutputs(@Nullable Map<String,Object> namedOutputs) {
-            this.namedOutputs = Output.ofNullable(namedOutputs);
+            this.namedOutputs = Codegen.ofNullable(namedOutputs);
             return this;
         }
         public Builder output(@Nullable Output<List<String>> output) {
@@ -252,7 +253,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder output(@Nullable List<String> output) {
-            this.output = Output.ofNullable(output);
+            this.output = Codegen.ofNullable(output);
             return this;
         }
         public Builder output(String... output) {
@@ -263,7 +264,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder parameters(@Nullable List<Object> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(Object... parameters) {
@@ -290,7 +291,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder retention(@Nullable String retention) {
-            this.retention = Output.ofNullable(retention);
+            this.retention = Codegen.ofNullable(retention);
             return this;
         }
         public Builder scriptCmdletId(@Nullable Output<String> scriptCmdletId) {
@@ -298,7 +299,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder scriptCmdletId(@Nullable String scriptCmdletId) {
-            this.scriptCmdletId = Output.ofNullable(scriptCmdletId);
+            this.scriptCmdletId = Codegen.ofNullable(scriptCmdletId);
             return this;
         }
         public Builder scriptExecutionName(@Nullable Output<String> scriptExecutionName) {
@@ -306,7 +307,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder scriptExecutionName(@Nullable String scriptExecutionName) {
-            this.scriptExecutionName = Output.ofNullable(scriptExecutionName);
+            this.scriptExecutionName = Codegen.ofNullable(scriptExecutionName);
             return this;
         }
         public Builder timeout(Output<String> timeout) {

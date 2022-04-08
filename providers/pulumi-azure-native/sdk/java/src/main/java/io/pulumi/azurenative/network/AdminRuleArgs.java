@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.AdminRuleKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -79,7 +80,7 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ruleName;
 
     public Output<String> getRuleName() {
-        return this.ruleName == null ? Output.empty() : this.ruleName;
+        return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
     public AdminRuleArgs(
@@ -98,12 +99,12 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AdminRuleArgs() {
-        this.configurationName = Output.empty();
-        this.kind = Output.empty();
-        this.networkManagerName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.ruleCollectionName = Output.empty();
-        this.ruleName = Output.empty();
+        this.configurationName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.networkManagerName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.ruleCollectionName = Codegen.empty();
+        this.ruleName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -181,7 +182,7 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Output.ofNullable(ruleName);
+            this.ruleName = Codegen.ofNullable(ruleName);
             return this;
         }        public AdminRuleArgs build() {
             return new AdminRuleArgs(configurationName, kind, networkManagerName, resourceGroupName, ruleCollectionName, ruleName);

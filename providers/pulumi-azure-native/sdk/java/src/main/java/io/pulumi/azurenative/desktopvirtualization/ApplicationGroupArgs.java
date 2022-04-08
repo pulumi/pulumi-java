@@ -11,6 +11,7 @@ import io.pulumi.azurenative.desktopvirtualization.inputs.ResourceModelWithAllow
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> applicationGroupName;
 
     public Output<String> getApplicationGroupName() {
-        return this.applicationGroupName == null ? Output.empty() : this.applicationGroupName;
+        return this.applicationGroupName == null ? Codegen.empty() : this.applicationGroupName;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
 
     public Output<ResourceModelWithAllowedPropertySetIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> managedBy;
 
     public Output<String> getManagedBy() {
-        return this.managedBy == null ? Output.empty() : this.managedBy;
+        return this.managedBy == null ? Codegen.empty() : this.managedBy;
     }
 
     /**
@@ -124,14 +125,14 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<MigrationRequestPropertiesArgs> migrationRequest;
 
     public Output<MigrationRequestPropertiesArgs> getMigrationRequest() {
-        return this.migrationRequest == null ? Output.empty() : this.migrationRequest;
+        return this.migrationRequest == null ? Codegen.empty() : this.migrationRequest;
     }
 
     @Import(name="plan")
       private final @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan;
 
     public Output<ResourceModelWithAllowedPropertySetPlanArgs> getPlan() {
-        return this.plan == null ? Output.empty() : this.plan;
+        return this.plan == null ? Codegen.empty() : this.plan;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku;
 
     public Output<ResourceModelWithAllowedPropertySetSkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ApplicationGroupArgs(
@@ -195,20 +196,20 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ApplicationGroupArgs() {
-        this.applicationGroupName = Output.empty();
-        this.applicationGroupType = Output.empty();
-        this.description = Output.empty();
-        this.friendlyName = Output.empty();
-        this.hostPoolArmPath = Output.empty();
-        this.identity = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.managedBy = Output.empty();
-        this.migrationRequest = Output.empty();
-        this.plan = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
+        this.applicationGroupName = Codegen.empty();
+        this.applicationGroupType = Codegen.empty();
+        this.description = Codegen.empty();
+        this.friendlyName = Codegen.empty();
+        this.hostPoolArmPath = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.managedBy = Codegen.empty();
+        this.migrationRequest = Codegen.empty();
+        this.plan = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -262,7 +263,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder applicationGroupName(@Nullable String applicationGroupName) {
-            this.applicationGroupName = Output.ofNullable(applicationGroupName);
+            this.applicationGroupName = Codegen.ofNullable(applicationGroupName);
             return this;
         }
         public Builder applicationGroupType(Output<Either<String,ApplicationGroupType>> applicationGroupType) {
@@ -278,7 +279,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
@@ -286,7 +287,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder hostPoolArmPath(Output<String> hostPoolArmPath) {
@@ -302,7 +303,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder identity(@Nullable ResourceModelWithAllowedPropertySetIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -310,7 +311,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -318,7 +319,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder managedBy(@Nullable Output<String> managedBy) {
@@ -326,7 +327,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder managedBy(@Nullable String managedBy) {
-            this.managedBy = Output.ofNullable(managedBy);
+            this.managedBy = Codegen.ofNullable(managedBy);
             return this;
         }
         public Builder migrationRequest(@Nullable Output<MigrationRequestPropertiesArgs> migrationRequest) {
@@ -334,7 +335,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder migrationRequest(@Nullable MigrationRequestPropertiesArgs migrationRequest) {
-            this.migrationRequest = Output.ofNullable(migrationRequest);
+            this.migrationRequest = Codegen.ofNullable(migrationRequest);
             return this;
         }
         public Builder plan(@Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan) {
@@ -342,7 +343,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder plan(@Nullable ResourceModelWithAllowedPropertySetPlanArgs plan) {
-            this.plan = Output.ofNullable(plan);
+            this.plan = Codegen.ofNullable(plan);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -358,7 +359,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sku(@Nullable ResourceModelWithAllowedPropertySetSkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -366,7 +367,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ApplicationGroupArgs build() {
             return new ApplicationGroupArgs(applicationGroupName, applicationGroupType, description, friendlyName, hostPoolArmPath, identity, kind, location, managedBy, migrationRequest, plan, resourceGroupName, sku, tags);

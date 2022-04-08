@@ -7,6 +7,7 @@ import io.pulumi.azurenative.operationalinsights.enums.DataSourceKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dataSourceName;
 
     public Output<String> getDataSourceName() {
-        return this.dataSourceName == null ? Output.empty() : this.dataSourceName;
+        return this.dataSourceName == null ? Codegen.empty() : this.dataSourceName;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -100,12 +101,12 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataSourceArgs() {
-        this.dataSourceName = Output.empty();
-        this.kind = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.workspaceName = Output.empty();
+        this.dataSourceName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataSourceName(@Nullable String dataSourceName) {
-            this.dataSourceName = Output.ofNullable(dataSourceName);
+            this.dataSourceName = Codegen.ofNullable(dataSourceName);
             return this;
         }
         public Builder kind(Output<Either<String,DataSourceKind>> kind) {
@@ -175,7 +176,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

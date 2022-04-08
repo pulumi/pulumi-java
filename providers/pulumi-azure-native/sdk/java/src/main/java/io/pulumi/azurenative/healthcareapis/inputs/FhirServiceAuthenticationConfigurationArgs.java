@@ -5,6 +5,7 @@ package io.pulumi.azurenative.healthcareapis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class FhirServiceAuthenticationConfigurationArgs extends io.pulumi.
       private final @Nullable Output<String> audience;
 
     public Output<String> getAudience() {
-        return this.audience == null ? Output.empty() : this.audience;
+        return this.audience == null ? Codegen.empty() : this.audience;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class FhirServiceAuthenticationConfigurationArgs extends io.pulumi.
       private final @Nullable Output<String> authority;
 
     public Output<String> getAuthority() {
-        return this.authority == null ? Output.empty() : this.authority;
+        return this.authority == null ? Codegen.empty() : this.authority;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class FhirServiceAuthenticationConfigurationArgs extends io.pulumi.
       private final @Nullable Output<Boolean> smartProxyEnabled;
 
     public Output<Boolean> getSmartProxyEnabled() {
-        return this.smartProxyEnabled == null ? Output.empty() : this.smartProxyEnabled;
+        return this.smartProxyEnabled == null ? Codegen.empty() : this.smartProxyEnabled;
     }
 
     public FhirServiceAuthenticationConfigurationArgs(
@@ -62,9 +63,9 @@ public final class FhirServiceAuthenticationConfigurationArgs extends io.pulumi.
     }
 
     private FhirServiceAuthenticationConfigurationArgs() {
-        this.audience = Output.empty();
-        this.authority = Output.empty();
-        this.smartProxyEnabled = Output.empty();
+        this.audience = Codegen.empty();
+        this.authority = Codegen.empty();
+        this.smartProxyEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class FhirServiceAuthenticationConfigurationArgs extends io.pulumi.
             return this;
         }
         public Builder audience(@Nullable String audience) {
-            this.audience = Output.ofNullable(audience);
+            this.audience = Codegen.ofNullable(audience);
             return this;
         }
         public Builder authority(@Nullable Output<String> authority) {
@@ -104,7 +105,7 @@ public final class FhirServiceAuthenticationConfigurationArgs extends io.pulumi.
             return this;
         }
         public Builder authority(@Nullable String authority) {
-            this.authority = Output.ofNullable(authority);
+            this.authority = Codegen.ofNullable(authority);
             return this;
         }
         public Builder smartProxyEnabled(@Nullable Output<Boolean> smartProxyEnabled) {
@@ -112,7 +113,7 @@ public final class FhirServiceAuthenticationConfigurationArgs extends io.pulumi.
             return this;
         }
         public Builder smartProxyEnabled(@Nullable Boolean smartProxyEnabled) {
-            this.smartProxyEnabled = Output.ofNullable(smartProxyEnabled);
+            this.smartProxyEnabled = Codegen.ofNullable(smartProxyEnabled);
             return this;
         }        public FhirServiceAuthenticationConfigurationArgs build() {
             return new FhirServiceAuthenticationConfigurationArgs(audience, authority, smartProxyEnabled);

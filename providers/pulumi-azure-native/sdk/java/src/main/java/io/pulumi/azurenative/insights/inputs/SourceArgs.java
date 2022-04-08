@@ -7,6 +7,7 @@ import io.pulumi.azurenative.insights.enums.QueryType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> authorizedResources;
 
     public Output<List<String>> getAuthorizedResources() {
-        return this.authorizedResources == null ? Output.empty() : this.authorizedResources;
+        return this.authorizedResources == null ? Codegen.empty() : this.authorizedResources;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> query;
 
     public Output<String> getQuery() {
-        return this.query == null ? Output.empty() : this.query;
+        return this.query == null ? Codegen.empty() : this.query;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,QueryType>> queryType;
 
     public Output<Either<String,QueryType>> getQueryType() {
-        return this.queryType == null ? Output.empty() : this.queryType;
+        return this.queryType == null ? Codegen.empty() : this.queryType;
     }
 
     public SourceArgs(
@@ -77,10 +78,10 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SourceArgs() {
-        this.authorizedResources = Output.empty();
-        this.dataSourceId = Output.empty();
-        this.query = Output.empty();
-        this.queryType = Output.empty();
+        this.authorizedResources = Codegen.empty();
+        this.dataSourceId = Codegen.empty();
+        this.query = Codegen.empty();
+        this.queryType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorizedResources(@Nullable List<String> authorizedResources) {
-            this.authorizedResources = Output.ofNullable(authorizedResources);
+            this.authorizedResources = Codegen.ofNullable(authorizedResources);
             return this;
         }
         public Builder authorizedResources(String... authorizedResources) {
@@ -133,7 +134,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder query(@Nullable String query) {
-            this.query = Output.ofNullable(query);
+            this.query = Codegen.ofNullable(query);
             return this;
         }
         public Builder queryType(@Nullable Output<Either<String,QueryType>> queryType) {
@@ -141,7 +142,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queryType(@Nullable Either<String,QueryType> queryType) {
-            this.queryType = Output.ofNullable(queryType);
+            this.queryType = Codegen.ofNullable(queryType);
             return this;
         }        public SourceArgs build() {
             return new SourceArgs(authorizedResources, dataSourceId, query, queryType);

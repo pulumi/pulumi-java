@@ -7,6 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.SetMultiVmSyncStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> appConsistentFrequencyInMinutes;
 
     public Output<Integer> getAppConsistentFrequencyInMinutes() {
-        return this.appConsistentFrequencyInMinutes == null ? Output.empty() : this.appConsistentFrequencyInMinutes;
+        return this.appConsistentFrequencyInMinutes == null ? Codegen.empty() : this.appConsistentFrequencyInMinutes;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> crashConsistentFrequencyInMinutes;
 
     public Output<Integer> getCrashConsistentFrequencyInMinutes() {
-        return this.crashConsistentFrequencyInMinutes == null ? Output.empty() : this.crashConsistentFrequencyInMinutes;
+        return this.crashConsistentFrequencyInMinutes == null ? Codegen.empty() : this.crashConsistentFrequencyInMinutes;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> recoveryPointHistory;
 
     public Output<Integer> getRecoveryPointHistory() {
-        return this.recoveryPointHistory == null ? Output.empty() : this.recoveryPointHistory;
+        return this.recoveryPointHistory == null ? Codegen.empty() : this.recoveryPointHistory;
     }
 
     public A2APolicyCreationInputArgs(
@@ -91,11 +92,11 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
     }
 
     private A2APolicyCreationInputArgs() {
-        this.appConsistentFrequencyInMinutes = Output.empty();
-        this.crashConsistentFrequencyInMinutes = Output.empty();
-        this.instanceType = Output.empty();
-        this.multiVmSyncStatus = Output.empty();
-        this.recoveryPointHistory = Output.empty();
+        this.appConsistentFrequencyInMinutes = Codegen.empty();
+        this.crashConsistentFrequencyInMinutes = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.multiVmSyncStatus = Codegen.empty();
+        this.recoveryPointHistory = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder appConsistentFrequencyInMinutes(@Nullable Integer appConsistentFrequencyInMinutes) {
-            this.appConsistentFrequencyInMinutes = Output.ofNullable(appConsistentFrequencyInMinutes);
+            this.appConsistentFrequencyInMinutes = Codegen.ofNullable(appConsistentFrequencyInMinutes);
             return this;
         }
         public Builder crashConsistentFrequencyInMinutes(@Nullable Output<Integer> crashConsistentFrequencyInMinutes) {
@@ -139,7 +140,7 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder crashConsistentFrequencyInMinutes(@Nullable Integer crashConsistentFrequencyInMinutes) {
-            this.crashConsistentFrequencyInMinutes = Output.ofNullable(crashConsistentFrequencyInMinutes);
+            this.crashConsistentFrequencyInMinutes = Codegen.ofNullable(crashConsistentFrequencyInMinutes);
             return this;
         }
         public Builder instanceType(@Nullable Output<String> instanceType) {
@@ -147,7 +148,7 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder multiVmSyncStatus(Output<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus) {
@@ -163,7 +164,7 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder recoveryPointHistory(@Nullable Integer recoveryPointHistory) {
-            this.recoveryPointHistory = Output.ofNullable(recoveryPointHistory);
+            this.recoveryPointHistory = Codegen.ofNullable(recoveryPointHistory);
             return this;
         }        public A2APolicyCreationInputArgs build() {
             return new A2APolicyCreationInputArgs(appConsistentFrequencyInMinutes, crashConsistentFrequencyInMinutes, instanceType, multiVmSyncStatus, recoveryPointHistory);

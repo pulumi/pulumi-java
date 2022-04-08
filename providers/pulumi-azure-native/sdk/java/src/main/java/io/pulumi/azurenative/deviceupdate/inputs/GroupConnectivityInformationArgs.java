@@ -5,6 +5,7 @@ package io.pulumi.azurenative.deviceupdate.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GroupConnectivityInformationArgs extends io.pulumi.resources.
       private final @Nullable Output<List<String>> customerVisibleFqdns;
 
     public Output<List<String>> getCustomerVisibleFqdns() {
-        return this.customerVisibleFqdns == null ? Output.empty() : this.customerVisibleFqdns;
+        return this.customerVisibleFqdns == null ? Codegen.empty() : this.customerVisibleFqdns;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GroupConnectivityInformationArgs extends io.pulumi.resources.
       private final @Nullable Output<String> privateLinkServiceArmRegion;
 
     public Output<String> getPrivateLinkServiceArmRegion() {
-        return this.privateLinkServiceArmRegion == null ? Output.empty() : this.privateLinkServiceArmRegion;
+        return this.privateLinkServiceArmRegion == null ? Codegen.empty() : this.privateLinkServiceArmRegion;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class GroupConnectivityInformationArgs extends io.pulumi.resources.
       private final @Nullable Output<String> redirectMapId;
 
     public Output<String> getRedirectMapId() {
-        return this.redirectMapId == null ? Output.empty() : this.redirectMapId;
+        return this.redirectMapId == null ? Codegen.empty() : this.redirectMapId;
     }
 
     public GroupConnectivityInformationArgs(
@@ -62,9 +63,9 @@ public final class GroupConnectivityInformationArgs extends io.pulumi.resources.
     }
 
     private GroupConnectivityInformationArgs() {
-        this.customerVisibleFqdns = Output.empty();
-        this.privateLinkServiceArmRegion = Output.empty();
-        this.redirectMapId = Output.empty();
+        this.customerVisibleFqdns = Codegen.empty();
+        this.privateLinkServiceArmRegion = Codegen.empty();
+        this.redirectMapId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class GroupConnectivityInformationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder customerVisibleFqdns(@Nullable List<String> customerVisibleFqdns) {
-            this.customerVisibleFqdns = Output.ofNullable(customerVisibleFqdns);
+            this.customerVisibleFqdns = Codegen.ofNullable(customerVisibleFqdns);
             return this;
         }
         public Builder customerVisibleFqdns(String... customerVisibleFqdns) {
@@ -107,7 +108,7 @@ public final class GroupConnectivityInformationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder privateLinkServiceArmRegion(@Nullable String privateLinkServiceArmRegion) {
-            this.privateLinkServiceArmRegion = Output.ofNullable(privateLinkServiceArmRegion);
+            this.privateLinkServiceArmRegion = Codegen.ofNullable(privateLinkServiceArmRegion);
             return this;
         }
         public Builder redirectMapId(@Nullable Output<String> redirectMapId) {
@@ -115,7 +116,7 @@ public final class GroupConnectivityInformationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder redirectMapId(@Nullable String redirectMapId) {
-            this.redirectMapId = Output.ofNullable(redirectMapId);
+            this.redirectMapId = Codegen.ofNullable(redirectMapId);
             return this;
         }        public GroupConnectivityInformationArgs build() {
             return new GroupConnectivityInformationArgs(customerVisibleFqdns, privateLinkServiceArmRegion, redirectMapId);

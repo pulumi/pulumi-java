@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
       private final @Nullable Output<String> helpUrl;
 
     public Output<String> getHelpUrl() {
-        return this.helpUrl == null ? Output.empty() : this.helpUrl;
+        return this.helpUrl == null ? Codegen.empty() : this.helpUrl;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
       private final @Nullable Output<Boolean> isEnabledByDefault;
 
     public Output<Boolean> getIsEnabledByDefault() {
-        return this.isEnabledByDefault == null ? Output.empty() : this.isEnabledByDefault;
+        return this.isEnabledByDefault == null ? Codegen.empty() : this.isEnabledByDefault;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
       private final @Nullable Output<Boolean> isHidden;
 
     public Output<Boolean> getIsHidden() {
-        return this.isHidden == null ? Output.empty() : this.isHidden;
+        return this.isHidden == null ? Codegen.empty() : this.isHidden;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
       private final @Nullable Output<Boolean> isInPreview;
 
     public Output<Boolean> getIsInPreview() {
-        return this.isInPreview == null ? Output.empty() : this.isInPreview;
+        return this.isInPreview == null ? Codegen.empty() : this.isInPreview;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
       private final @Nullable Output<Boolean> supportsEmailNotifications;
 
     public Output<Boolean> getSupportsEmailNotifications() {
-        return this.supportsEmailNotifications == null ? Output.empty() : this.supportsEmailNotifications;
+        return this.supportsEmailNotifications == null ? Codegen.empty() : this.supportsEmailNotifications;
     }
 
     public ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs(
@@ -127,14 +128,14 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
     }
 
     private ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.helpUrl = Output.empty();
-        this.isEnabledByDefault = Output.empty();
-        this.isHidden = Output.empty();
-        this.isInPreview = Output.empty();
-        this.name = Output.empty();
-        this.supportsEmailNotifications = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.helpUrl = Codegen.empty();
+        this.isEnabledByDefault = Codegen.empty();
+        this.isHidden = Codegen.empty();
+        this.isInPreview = Codegen.empty();
+        this.name = Codegen.empty();
+        this.supportsEmailNotifications = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -184,7 +185,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder helpUrl(@Nullable Output<String> helpUrl) {
@@ -192,7 +193,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
             return this;
         }
         public Builder helpUrl(@Nullable String helpUrl) {
-            this.helpUrl = Output.ofNullable(helpUrl);
+            this.helpUrl = Codegen.ofNullable(helpUrl);
             return this;
         }
         public Builder isEnabledByDefault(@Nullable Output<Boolean> isEnabledByDefault) {
@@ -200,7 +201,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
             return this;
         }
         public Builder isEnabledByDefault(@Nullable Boolean isEnabledByDefault) {
-            this.isEnabledByDefault = Output.ofNullable(isEnabledByDefault);
+            this.isEnabledByDefault = Codegen.ofNullable(isEnabledByDefault);
             return this;
         }
         public Builder isHidden(@Nullable Output<Boolean> isHidden) {
@@ -208,7 +209,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
             return this;
         }
         public Builder isHidden(@Nullable Boolean isHidden) {
-            this.isHidden = Output.ofNullable(isHidden);
+            this.isHidden = Codegen.ofNullable(isHidden);
             return this;
         }
         public Builder isInPreview(@Nullable Output<Boolean> isInPreview) {
@@ -216,7 +217,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
             return this;
         }
         public Builder isInPreview(@Nullable Boolean isInPreview) {
-            this.isInPreview = Output.ofNullable(isInPreview);
+            this.isInPreview = Codegen.ofNullable(isInPreview);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -224,7 +225,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder supportsEmailNotifications(@Nullable Output<Boolean> supportsEmailNotifications) {
@@ -232,7 +233,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
             return this;
         }
         public Builder supportsEmailNotifications(@Nullable Boolean supportsEmailNotifications) {
-            this.supportsEmailNotifications = Output.ofNullable(supportsEmailNotifications);
+            this.supportsEmailNotifications = Codegen.ofNullable(supportsEmailNotifications);
             return this;
         }        public ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs build() {
             return new ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs(description, displayName, helpUrl, isEnabledByDefault, isHidden, isInPreview, name, supportsEmailNotifications);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class NotebookWorkspaceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> notebookWorkspaceName;
 
     public Output<String> getNotebookWorkspaceName() {
-        return this.notebookWorkspaceName == null ? Output.empty() : this.notebookWorkspaceName;
+        return this.notebookWorkspaceName == null ? Codegen.empty() : this.notebookWorkspaceName;
     }
 
     /**
@@ -57,9 +58,9 @@ public final class NotebookWorkspaceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private NotebookWorkspaceArgs() {
-        this.accountName = Output.empty();
-        this.notebookWorkspaceName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.notebookWorkspaceName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class NotebookWorkspaceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder notebookWorkspaceName(@Nullable String notebookWorkspaceName) {
-            this.notebookWorkspaceName = Output.ofNullable(notebookWorkspaceName);
+            this.notebookWorkspaceName = Codegen.ofNullable(notebookWorkspaceName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

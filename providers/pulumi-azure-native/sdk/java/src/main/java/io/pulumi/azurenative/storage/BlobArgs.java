@@ -8,6 +8,7 @@ import io.pulumi.azurenative.storage.enums.BlobType;
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BlobAccessTier> accessTier;
 
     public Output<BlobAccessTier> getAccessTier() {
-        return this.accessTier == null ? Output.empty() : this.accessTier;
+        return this.accessTier == null ? Codegen.empty() : this.accessTier;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> blobName;
 
     public Output<String> getBlobName() {
-        return this.blobName == null ? Output.empty() : this.blobName;
+        return this.blobName == null ? Codegen.empty() : this.blobName;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> contentMd5;
 
     public Output<String> getContentMd5() {
-        return this.contentMd5 == null ? Output.empty() : this.contentMd5;
+        return this.contentMd5 == null ? Codegen.empty() : this.contentMd5;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AssetOrArchive> source;
 
     public Output<AssetOrArchive> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BlobType> type;
 
     public Output<BlobType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public BlobArgs(
@@ -148,20 +149,20 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
         this.metadata = metadata;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.source = source;
-        this.type = type == null ? Output.ofNullable(io.pulumi.azurenative.storage.enums.BlobType.Block) : type;
+        this.type = type == null ? Codegen.ofNullable(io.pulumi.azurenative.storage.enums.BlobType.Block) : type;
     }
 
     private BlobArgs() {
-        this.accessTier = Output.empty();
-        this.accountName = Output.empty();
-        this.blobName = Output.empty();
-        this.containerName = Output.empty();
-        this.contentMd5 = Output.empty();
-        this.contentType = Output.empty();
-        this.metadata = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.source = Output.empty();
-        this.type = Output.empty();
+        this.accessTier = Codegen.empty();
+        this.accountName = Codegen.empty();
+        this.blobName = Codegen.empty();
+        this.containerName = Codegen.empty();
+        this.contentMd5 = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.source = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -207,7 +208,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessTier(@Nullable BlobAccessTier accessTier) {
-            this.accessTier = Output.ofNullable(accessTier);
+            this.accessTier = Codegen.ofNullable(accessTier);
             return this;
         }
         public Builder accountName(Output<String> accountName) {
@@ -223,7 +224,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blobName(@Nullable String blobName) {
-            this.blobName = Output.ofNullable(blobName);
+            this.blobName = Codegen.ofNullable(blobName);
             return this;
         }
         public Builder containerName(Output<String> containerName) {
@@ -239,7 +240,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentMd5(@Nullable String contentMd5) {
-            this.contentMd5 = Output.ofNullable(contentMd5);
+            this.contentMd5 = Codegen.ofNullable(contentMd5);
             return this;
         }
         public Builder contentType(@Nullable Output<String> contentType) {
@@ -247,7 +248,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
@@ -255,7 +256,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -271,7 +272,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder source(@Nullable AssetOrArchive source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder type(@Nullable Output<BlobType> type) {
@@ -279,7 +280,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable BlobType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public BlobArgs build() {
             return new BlobArgs(accessTier, accountName, blobName, containerName, contentMd5, contentType, metadata, resourceGroupName, source, type);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.attestation.inputs;
 import io.pulumi.azurenative.attestation.inputs.JSONWebKeyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class JSONWebKeySetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<JSONWebKeyArgs>> keys;
 
     public Output<List<JSONWebKeyArgs>> getKeys() {
-        return this.keys == null ? Output.empty() : this.keys;
+        return this.keys == null ? Codegen.empty() : this.keys;
     }
 
     public JSONWebKeySetArgs(@Nullable Output<List<JSONWebKeyArgs>> keys) {
@@ -35,7 +36,7 @@ public final class JSONWebKeySetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JSONWebKeySetArgs() {
-        this.keys = Output.empty();
+        this.keys = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class JSONWebKeySetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keys(@Nullable List<JSONWebKeyArgs> keys) {
-            this.keys = Output.ofNullable(keys);
+            this.keys = Codegen.ofNullable(keys);
             return this;
         }
         public Builder keys(JSONWebKeyArgs... keys) {

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.logic.inputs.RosettaNetPipAcknowledgmentOfReceiptSe
 import io.pulumi.azurenative.logic.inputs.RosettaNetPipActivityBehaviorArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -62,9 +63,9 @@ public final class RosettaNetPipActivitySettingsArgs extends io.pulumi.resources
     }
 
     private RosettaNetPipActivitySettingsArgs() {
-        this.acknowledgmentOfReceiptSettings = Output.empty();
-        this.activityBehavior = Output.empty();
-        this.activityType = Output.empty();
+        this.acknowledgmentOfReceiptSettings = Codegen.empty();
+        this.activityBehavior = Codegen.empty();
+        this.activityType = Codegen.empty();
     }
 
     public static Builder builder() {

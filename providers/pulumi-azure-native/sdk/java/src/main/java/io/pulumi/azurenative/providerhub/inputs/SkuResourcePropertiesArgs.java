@@ -8,6 +8,7 @@ import io.pulumi.azurenative.providerhub.inputs.SkuSettingArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class SkuResourcePropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
     public Output<Either<String,ProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     @Import(name="skuSettings", required=true)
@@ -40,8 +41,8 @@ public final class SkuResourcePropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     private SkuResourcePropertiesArgs() {
-        this.provisioningState = Output.empty();
-        this.skuSettings = Output.empty();
+        this.provisioningState = Codegen.empty();
+        this.skuSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -71,7 +72,7 @@ public final class SkuResourcePropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder skuSettings(Output<List<SkuSettingArgs>> skuSettings) {

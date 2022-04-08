@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.web.inputs.AzureStorageInfoValueArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class WebAppAzureStorageAccountsSlotArgs extends io.pulumi.resource
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class WebAppAzureStorageAccountsSlotArgs extends io.pulumi.resource
       private final @Nullable Output<Map<String,AzureStorageInfoValueArgs>> properties;
 
     public Output<Map<String,AzureStorageInfoValueArgs>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -85,11 +86,11 @@ public final class WebAppAzureStorageAccountsSlotArgs extends io.pulumi.resource
     }
 
     private WebAppAzureStorageAccountsSlotArgs() {
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.slot = Output.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.slot = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class WebAppAzureStorageAccountsSlotArgs extends io.pulumi.resource
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -141,7 +142,7 @@ public final class WebAppAzureStorageAccountsSlotArgs extends io.pulumi.resource
             return this;
         }
         public Builder properties(@Nullable Map<String,AzureStorageInfoValueArgs> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

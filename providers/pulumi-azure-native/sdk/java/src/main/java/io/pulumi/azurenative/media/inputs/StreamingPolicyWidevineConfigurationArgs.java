@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class StreamingPolicyWidevineConfigurationArgs extends io.pulumi.re
       private final @Nullable Output<String> customLicenseAcquisitionUrlTemplate;
 
     public Output<String> getCustomLicenseAcquisitionUrlTemplate() {
-        return this.customLicenseAcquisitionUrlTemplate == null ? Output.empty() : this.customLicenseAcquisitionUrlTemplate;
+        return this.customLicenseAcquisitionUrlTemplate == null ? Codegen.empty() : this.customLicenseAcquisitionUrlTemplate;
     }
 
     public StreamingPolicyWidevineConfigurationArgs(@Nullable Output<String> customLicenseAcquisitionUrlTemplate) {
@@ -34,7 +35,7 @@ public final class StreamingPolicyWidevineConfigurationArgs extends io.pulumi.re
     }
 
     private StreamingPolicyWidevineConfigurationArgs() {
-        this.customLicenseAcquisitionUrlTemplate = Output.empty();
+        this.customLicenseAcquisitionUrlTemplate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class StreamingPolicyWidevineConfigurationArgs extends io.pulumi.re
             return this;
         }
         public Builder customLicenseAcquisitionUrlTemplate(@Nullable String customLicenseAcquisitionUrlTemplate) {
-            this.customLicenseAcquisitionUrlTemplate = Output.ofNullable(customLicenseAcquisitionUrlTemplate);
+            this.customLicenseAcquisitionUrlTemplate = Codegen.ofNullable(customLicenseAcquisitionUrlTemplate);
             return this;
         }        public StreamingPolicyWidevineConfigurationArgs build() {
             return new StreamingPolicyWidevineConfigurationArgs(customLicenseAcquisitionUrlTemplate);

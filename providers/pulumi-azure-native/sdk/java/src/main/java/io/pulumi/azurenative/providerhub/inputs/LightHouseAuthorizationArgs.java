@@ -5,6 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,8 +36,8 @@ public final class LightHouseAuthorizationArgs extends io.pulumi.resources.Resou
     }
 
     private LightHouseAuthorizationArgs() {
-        this.principalId = Output.empty();
-        this.roleDefinitionId = Output.empty();
+        this.principalId = Codegen.empty();
+        this.roleDefinitionId = Codegen.empty();
     }
 
     public static Builder builder() {

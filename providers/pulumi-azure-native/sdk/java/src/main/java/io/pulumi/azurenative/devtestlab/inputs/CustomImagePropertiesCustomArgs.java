@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devtestlab.enums.CustomImageOsType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class CustomImagePropertiesCustomArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> imageName;
 
     public Output<String> getImageName() {
-        return this.imageName == null ? Output.empty() : this.imageName;
+        return this.imageName == null ? Codegen.empty() : this.imageName;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class CustomImagePropertiesCustomArgs extends io.pulumi.resources.R
       private final @Nullable Output<Boolean> sysPrep;
 
     public Output<Boolean> getSysPrep() {
-        return this.sysPrep == null ? Output.empty() : this.sysPrep;
+        return this.sysPrep == null ? Codegen.empty() : this.sysPrep;
     }
 
     public CustomImagePropertiesCustomArgs(
@@ -64,9 +65,9 @@ public final class CustomImagePropertiesCustomArgs extends io.pulumi.resources.R
     }
 
     private CustomImagePropertiesCustomArgs() {
-        this.imageName = Output.empty();
-        this.osType = Output.empty();
-        this.sysPrep = Output.empty();
+        this.imageName = Codegen.empty();
+        this.osType = Codegen.empty();
+        this.sysPrep = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class CustomImagePropertiesCustomArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder imageName(@Nullable String imageName) {
-            this.imageName = Output.ofNullable(imageName);
+            this.imageName = Codegen.ofNullable(imageName);
             return this;
         }
         public Builder osType(Output<Either<String,CustomImageOsType>> osType) {
@@ -114,7 +115,7 @@ public final class CustomImagePropertiesCustomArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder sysPrep(@Nullable Boolean sysPrep) {
-            this.sysPrep = Output.ofNullable(sysPrep);
+            this.sysPrep = Codegen.ofNullable(sysPrep);
             return this;
         }        public CustomImagePropertiesCustomArgs build() {
             return new CustomImagePropertiesCustomArgs(imageName, osType, sysPrep);

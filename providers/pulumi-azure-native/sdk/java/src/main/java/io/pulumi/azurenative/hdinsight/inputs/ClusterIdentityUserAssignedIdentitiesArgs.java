@@ -5,6 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ClusterIdentityUserAssignedIdentitiesArgs extends io.pulumi.r
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     public ClusterIdentityUserAssignedIdentitiesArgs(@Nullable Output<String> tenantId) {
@@ -30,7 +31,7 @@ public final class ClusterIdentityUserAssignedIdentitiesArgs extends io.pulumi.r
     }
 
     private ClusterIdentityUserAssignedIdentitiesArgs() {
-        this.tenantId = Output.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ClusterIdentityUserAssignedIdentitiesArgs extends io.pulumi.r
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }        public ClusterIdentityUserAssignedIdentitiesArgs build() {
             return new ClusterIdentityUserAssignedIdentitiesArgs(tenantId);

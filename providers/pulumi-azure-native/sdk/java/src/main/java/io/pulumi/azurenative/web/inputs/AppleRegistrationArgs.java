@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AppleRegistrationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AppleRegistrationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> clientSecretSettingName;
 
     public Output<String> getClientSecretSettingName() {
-        return this.clientSecretSettingName == null ? Output.empty() : this.clientSecretSettingName;
+        return this.clientSecretSettingName == null ? Codegen.empty() : this.clientSecretSettingName;
     }
 
     public AppleRegistrationArgs(
@@ -48,8 +49,8 @@ public final class AppleRegistrationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AppleRegistrationArgs() {
-        this.clientId = Output.empty();
-        this.clientSecretSettingName = Output.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecretSettingName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class AppleRegistrationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder clientSecretSettingName(@Nullable Output<String> clientSecretSettingName) {
@@ -87,7 +88,7 @@ public final class AppleRegistrationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder clientSecretSettingName(@Nullable String clientSecretSettingName) {
-            this.clientSecretSettingName = Output.ofNullable(clientSecretSettingName);
+            this.clientSecretSettingName = Codegen.ofNullable(clientSecretSettingName);
             return this;
         }        public AppleRegistrationArgs build() {
             return new AppleRegistrationArgs(clientId, clientSecretSettingName);

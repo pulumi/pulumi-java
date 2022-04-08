@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerservice.enums.WeekDay;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public final class TimeInWeekArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,WeekDay>> day;
 
     public Output<Either<String,WeekDay>> getDay() {
-        return this.day == null ? Output.empty() : this.day;
+        return this.day == null ? Codegen.empty() : this.day;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class TimeInWeekArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Integer>> hourSlots;
 
     public Output<List<Integer>> getHourSlots() {
-        return this.hourSlots == null ? Output.empty() : this.hourSlots;
+        return this.hourSlots == null ? Codegen.empty() : this.hourSlots;
     }
 
     public TimeInWeekArgs(
@@ -52,8 +53,8 @@ public final class TimeInWeekArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TimeInWeekArgs() {
-        this.day = Output.empty();
-        this.hourSlots = Output.empty();
+        this.day = Codegen.empty();
+        this.hourSlots = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class TimeInWeekArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder day(@Nullable Either<String,WeekDay> day) {
-            this.day = Output.ofNullable(day);
+            this.day = Codegen.ofNullable(day);
             return this;
         }
         public Builder hourSlots(@Nullable Output<List<Integer>> hourSlots) {
@@ -91,7 +92,7 @@ public final class TimeInWeekArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hourSlots(@Nullable List<Integer> hourSlots) {
-            this.hourSlots = Output.ofNullable(hourSlots);
+            this.hourSlots = Codegen.ofNullable(hourSlots);
             return this;
         }
         public Builder hourSlots(Integer... hourSlots) {

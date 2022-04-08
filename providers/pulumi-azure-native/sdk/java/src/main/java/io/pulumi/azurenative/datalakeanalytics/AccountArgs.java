@@ -12,6 +12,7 @@ import io.pulumi.azurenative.datalakeanalytics.inputs.CreateComputePolicyWithAcc
 import io.pulumi.azurenative.datalakeanalytics.inputs.CreateFirewallRuleWithAccountParametersArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +33,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
-        return this.accountName == null ? Output.empty() : this.accountName;
+        return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<CreateComputePolicyWithAccountParametersArgs>> computePolicies;
 
     public Output<List<CreateComputePolicyWithAccountParametersArgs>> getComputePolicies() {
-        return this.computePolicies == null ? Output.empty() : this.computePolicies;
+        return this.computePolicies == null ? Codegen.empty() : this.computePolicies;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps;
 
     public Output<FirewallAllowAzureIpsState> getFirewallAllowAzureIps() {
-        return this.firewallAllowAzureIps == null ? Output.empty() : this.firewallAllowAzureIps;
+        return this.firewallAllowAzureIps == null ? Codegen.empty() : this.firewallAllowAzureIps;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
 
     public Output<List<CreateFirewallRuleWithAccountParametersArgs>> getFirewallRules() {
-        return this.firewallRules == null ? Output.empty() : this.firewallRules;
+        return this.firewallRules == null ? Codegen.empty() : this.firewallRules;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FirewallState> firewallState;
 
     public Output<FirewallState> getFirewallState() {
-        return this.firewallState == null ? Output.empty() : this.firewallState;
+        return this.firewallState == null ? Codegen.empty() : this.firewallState;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -120,7 +121,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxDegreeOfParallelism;
 
     public Output<Integer> getMaxDegreeOfParallelism() {
-        return this.maxDegreeOfParallelism == null ? Output.empty() : this.maxDegreeOfParallelism;
+        return this.maxDegreeOfParallelism == null ? Codegen.empty() : this.maxDegreeOfParallelism;
     }
 
     /**
@@ -131,7 +132,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
 
     public Output<Integer> getMaxDegreeOfParallelismPerJob() {
-        return this.maxDegreeOfParallelismPerJob == null ? Output.empty() : this.maxDegreeOfParallelismPerJob;
+        return this.maxDegreeOfParallelismPerJob == null ? Codegen.empty() : this.maxDegreeOfParallelismPerJob;
     }
 
     /**
@@ -142,7 +143,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxJobCount;
 
     public Output<Integer> getMaxJobCount() {
-        return this.maxJobCount == null ? Output.empty() : this.maxJobCount;
+        return this.maxJobCount == null ? Codegen.empty() : this.maxJobCount;
     }
 
     /**
@@ -153,7 +154,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> minPriorityPerJob;
 
     public Output<Integer> getMinPriorityPerJob() {
-        return this.minPriorityPerJob == null ? Output.empty() : this.minPriorityPerJob;
+        return this.minPriorityPerJob == null ? Codegen.empty() : this.minPriorityPerJob;
     }
 
     /**
@@ -164,7 +165,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TierType> newTier;
 
     public Output<TierType> getNewTier() {
-        return this.newTier == null ? Output.empty() : this.newTier;
+        return this.newTier == null ? Codegen.empty() : this.newTier;
     }
 
     /**
@@ -175,7 +176,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> queryStoreRetention;
 
     public Output<Integer> getQueryStoreRetention() {
-        return this.queryStoreRetention == null ? Output.empty() : this.queryStoreRetention;
+        return this.queryStoreRetention == null ? Codegen.empty() : this.queryStoreRetention;
     }
 
     /**
@@ -197,7 +198,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<AddStorageAccountWithAccountParametersArgs>> storageAccounts;
 
     public Output<List<AddStorageAccountWithAccountParametersArgs>> getStorageAccounts() {
-        return this.storageAccounts == null ? Output.empty() : this.storageAccounts;
+        return this.storageAccounts == null ? Codegen.empty() : this.storageAccounts;
     }
 
     /**
@@ -208,7 +209,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AccountArgs(
@@ -233,39 +234,39 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         this.computePolicies = computePolicies;
         this.dataLakeStoreAccounts = Objects.requireNonNull(dataLakeStoreAccounts, "expected parameter 'dataLakeStoreAccounts' to be non-null");
         this.defaultDataLakeStoreAccount = Objects.requireNonNull(defaultDataLakeStoreAccount, "expected parameter 'defaultDataLakeStoreAccount' to be non-null");
-        this.firewallAllowAzureIps = firewallAllowAzureIps == null ? Output.ofNullable(io.pulumi.azurenative.datalakeanalytics.enums.FirewallAllowAzureIpsState.Disabled) : firewallAllowAzureIps;
+        this.firewallAllowAzureIps = firewallAllowAzureIps == null ? Codegen.ofNullable(io.pulumi.azurenative.datalakeanalytics.enums.FirewallAllowAzureIpsState.Disabled) : firewallAllowAzureIps;
         this.firewallRules = firewallRules;
-        this.firewallState = firewallState == null ? Output.ofNullable(io.pulumi.azurenative.datalakeanalytics.enums.FirewallState.Disabled) : firewallState;
+        this.firewallState = firewallState == null ? Codegen.ofNullable(io.pulumi.azurenative.datalakeanalytics.enums.FirewallState.Disabled) : firewallState;
         this.location = location;
-        this.maxDegreeOfParallelism = maxDegreeOfParallelism == null ? Output.ofNullable(30) : maxDegreeOfParallelism;
-        this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob == null ? Output.ofNullable(32) : maxDegreeOfParallelismPerJob;
-        this.maxJobCount = maxJobCount == null ? Output.ofNullable(3) : maxJobCount;
+        this.maxDegreeOfParallelism = maxDegreeOfParallelism == null ? Codegen.ofNullable(30) : maxDegreeOfParallelism;
+        this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob == null ? Codegen.ofNullable(32) : maxDegreeOfParallelismPerJob;
+        this.maxJobCount = maxJobCount == null ? Codegen.ofNullable(3) : maxJobCount;
         this.minPriorityPerJob = minPriorityPerJob;
-        this.newTier = newTier == null ? Output.ofNullable(io.pulumi.azurenative.datalakeanalytics.enums.TierType.Consumption) : newTier;
-        this.queryStoreRetention = queryStoreRetention == null ? Output.ofNullable(30) : queryStoreRetention;
+        this.newTier = newTier == null ? Codegen.ofNullable(io.pulumi.azurenative.datalakeanalytics.enums.TierType.Consumption) : newTier;
+        this.queryStoreRetention = queryStoreRetention == null ? Codegen.ofNullable(30) : queryStoreRetention;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.storageAccounts = storageAccounts;
         this.tags = tags;
     }
 
     private AccountArgs() {
-        this.accountName = Output.empty();
-        this.computePolicies = Output.empty();
-        this.dataLakeStoreAccounts = Output.empty();
-        this.defaultDataLakeStoreAccount = Output.empty();
-        this.firewallAllowAzureIps = Output.empty();
-        this.firewallRules = Output.empty();
-        this.firewallState = Output.empty();
-        this.location = Output.empty();
-        this.maxDegreeOfParallelism = Output.empty();
-        this.maxDegreeOfParallelismPerJob = Output.empty();
-        this.maxJobCount = Output.empty();
-        this.minPriorityPerJob = Output.empty();
-        this.newTier = Output.empty();
-        this.queryStoreRetention = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.storageAccounts = Output.empty();
-        this.tags = Output.empty();
+        this.accountName = Codegen.empty();
+        this.computePolicies = Codegen.empty();
+        this.dataLakeStoreAccounts = Codegen.empty();
+        this.defaultDataLakeStoreAccount = Codegen.empty();
+        this.firewallAllowAzureIps = Codegen.empty();
+        this.firewallRules = Codegen.empty();
+        this.firewallState = Codegen.empty();
+        this.location = Codegen.empty();
+        this.maxDegreeOfParallelism = Codegen.empty();
+        this.maxDegreeOfParallelismPerJob = Codegen.empty();
+        this.maxJobCount = Codegen.empty();
+        this.minPriorityPerJob = Codegen.empty();
+        this.newTier = Codegen.empty();
+        this.queryStoreRetention = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.storageAccounts = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -325,7 +326,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Output.ofNullable(accountName);
+            this.accountName = Codegen.ofNullable(accountName);
             return this;
         }
         public Builder computePolicies(@Nullable Output<List<CreateComputePolicyWithAccountParametersArgs>> computePolicies) {
@@ -333,7 +334,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder computePolicies(@Nullable List<CreateComputePolicyWithAccountParametersArgs> computePolicies) {
-            this.computePolicies = Output.ofNullable(computePolicies);
+            this.computePolicies = Codegen.ofNullable(computePolicies);
             return this;
         }
         public Builder computePolicies(CreateComputePolicyWithAccountParametersArgs... computePolicies) {
@@ -363,7 +364,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firewallAllowAzureIps(@Nullable FirewallAllowAzureIpsState firewallAllowAzureIps) {
-            this.firewallAllowAzureIps = Output.ofNullable(firewallAllowAzureIps);
+            this.firewallAllowAzureIps = Codegen.ofNullable(firewallAllowAzureIps);
             return this;
         }
         public Builder firewallRules(@Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules) {
@@ -371,7 +372,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firewallRules(@Nullable List<CreateFirewallRuleWithAccountParametersArgs> firewallRules) {
-            this.firewallRules = Output.ofNullable(firewallRules);
+            this.firewallRules = Codegen.ofNullable(firewallRules);
             return this;
         }
         public Builder firewallRules(CreateFirewallRuleWithAccountParametersArgs... firewallRules) {
@@ -382,7 +383,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firewallState(@Nullable FirewallState firewallState) {
-            this.firewallState = Output.ofNullable(firewallState);
+            this.firewallState = Codegen.ofNullable(firewallState);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -390,7 +391,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder maxDegreeOfParallelism(@Nullable Output<Integer> maxDegreeOfParallelism) {
@@ -398,7 +399,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxDegreeOfParallelism(@Nullable Integer maxDegreeOfParallelism) {
-            this.maxDegreeOfParallelism = Output.ofNullable(maxDegreeOfParallelism);
+            this.maxDegreeOfParallelism = Codegen.ofNullable(maxDegreeOfParallelism);
             return this;
         }
         public Builder maxDegreeOfParallelismPerJob(@Nullable Output<Integer> maxDegreeOfParallelismPerJob) {
@@ -406,7 +407,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxDegreeOfParallelismPerJob(@Nullable Integer maxDegreeOfParallelismPerJob) {
-            this.maxDegreeOfParallelismPerJob = Output.ofNullable(maxDegreeOfParallelismPerJob);
+            this.maxDegreeOfParallelismPerJob = Codegen.ofNullable(maxDegreeOfParallelismPerJob);
             return this;
         }
         public Builder maxJobCount(@Nullable Output<Integer> maxJobCount) {
@@ -414,7 +415,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxJobCount(@Nullable Integer maxJobCount) {
-            this.maxJobCount = Output.ofNullable(maxJobCount);
+            this.maxJobCount = Codegen.ofNullable(maxJobCount);
             return this;
         }
         public Builder minPriorityPerJob(@Nullable Output<Integer> minPriorityPerJob) {
@@ -422,7 +423,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minPriorityPerJob(@Nullable Integer minPriorityPerJob) {
-            this.minPriorityPerJob = Output.ofNullable(minPriorityPerJob);
+            this.minPriorityPerJob = Codegen.ofNullable(minPriorityPerJob);
             return this;
         }
         public Builder newTier(@Nullable Output<TierType> newTier) {
@@ -430,7 +431,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder newTier(@Nullable TierType newTier) {
-            this.newTier = Output.ofNullable(newTier);
+            this.newTier = Codegen.ofNullable(newTier);
             return this;
         }
         public Builder queryStoreRetention(@Nullable Output<Integer> queryStoreRetention) {
@@ -438,7 +439,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queryStoreRetention(@Nullable Integer queryStoreRetention) {
-            this.queryStoreRetention = Output.ofNullable(queryStoreRetention);
+            this.queryStoreRetention = Codegen.ofNullable(queryStoreRetention);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -454,7 +455,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageAccounts(@Nullable List<AddStorageAccountWithAccountParametersArgs> storageAccounts) {
-            this.storageAccounts = Output.ofNullable(storageAccounts);
+            this.storageAccounts = Codegen.ofNullable(storageAccounts);
             return this;
         }
         public Builder storageAccounts(AddStorageAccountWithAccountParametersArgs... storageAccounts) {
@@ -465,7 +466,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public AccountArgs build() {
             return new AccountArgs(accountName, computePolicies, dataLakeStoreAccounts, defaultDataLakeStoreAccount, firewallAllowAzureIps, firewallRules, firewallState, location, maxDegreeOfParallelism, maxDegreeOfParallelismPerJob, maxJobCount, minPriorityPerJob, newTier, queryStoreRetention, resourceGroupName, storageAccounts, tags);

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.compute.enums.DiffDiskPlacement;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class DiffDiskSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Either<String,DiffDiskOptions>> option;
 
     public Output<Either<String,DiffDiskOptions>> getOption() {
-        return this.option == null ? Output.empty() : this.option;
+        return this.option == null ? Codegen.empty() : this.option;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class DiffDiskSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Either<String,DiffDiskPlacement>> placement;
 
     public Output<Either<String,DiffDiskPlacement>> getPlacement() {
-        return this.placement == null ? Output.empty() : this.placement;
+        return this.placement == null ? Codegen.empty() : this.placement;
     }
 
     public DiffDiskSettingsArgs(
@@ -51,8 +52,8 @@ public final class DiffDiskSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DiffDiskSettingsArgs() {
-        this.option = Output.empty();
-        this.placement = Output.empty();
+        this.option = Codegen.empty();
+        this.placement = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class DiffDiskSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder option(@Nullable Either<String,DiffDiskOptions> option) {
-            this.option = Output.ofNullable(option);
+            this.option = Codegen.ofNullable(option);
             return this;
         }
         public Builder placement(@Nullable Output<Either<String,DiffDiskPlacement>> placement) {
@@ -90,7 +91,7 @@ public final class DiffDiskSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder placement(@Nullable Either<String,DiffDiskPlacement> placement) {
-            this.placement = Output.ofNullable(placement);
+            this.placement = Codegen.ofNullable(placement);
             return this;
         }        public DiffDiskSettingsArgs build() {
             return new DiffDiskSettingsArgs(option, placement);

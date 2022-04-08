@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class SSISPropertyOverrideArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> isSensitive;
 
     public Output<Boolean> getIsSensitive() {
-        return this.isSensitive == null ? Output.empty() : this.isSensitive;
+        return this.isSensitive == null ? Codegen.empty() : this.isSensitive;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class SSISPropertyOverrideArgs extends io.pulumi.resources.Resource
     }
 
     private SSISPropertyOverrideArgs() {
-        this.isSensitive = Output.empty();
-        this.value = Output.empty();
+        this.isSensitive = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class SSISPropertyOverrideArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder isSensitive(@Nullable Boolean isSensitive) {
-            this.isSensitive = Output.ofNullable(isSensitive);
+            this.isSensitive = Codegen.ofNullable(isSensitive);
             return this;
         }
         public Builder value(Output<Object> value) {

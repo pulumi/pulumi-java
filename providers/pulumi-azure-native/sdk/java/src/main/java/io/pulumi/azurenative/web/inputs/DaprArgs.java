@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.DaprComponentArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,7 +31,7 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> appId;
 
     public Output<String> getAppId() {
-        return this.appId == null ? Output.empty() : this.appId;
+        return this.appId == null ? Codegen.empty() : this.appId;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> appPort;
 
     public Output<Integer> getAppPort() {
-        return this.appPort == null ? Output.empty() : this.appPort;
+        return this.appPort == null ? Codegen.empty() : this.appPort;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DaprComponentArgs>> components;
 
     public Output<List<DaprComponentArgs>> getComponents() {
-        return this.components == null ? Output.empty() : this.components;
+        return this.components == null ? Codegen.empty() : this.components;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     public DaprArgs(
@@ -78,10 +79,10 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DaprArgs() {
-        this.appId = Output.empty();
-        this.appPort = Output.empty();
-        this.components = Output.empty();
-        this.enabled = Output.empty();
+        this.appId = Codegen.empty();
+        this.appPort = Codegen.empty();
+        this.components = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appId(@Nullable String appId) {
-            this.appId = Output.ofNullable(appId);
+            this.appId = Codegen.ofNullable(appId);
             return this;
         }
         public Builder appPort(@Nullable Output<Integer> appPort) {
@@ -123,7 +124,7 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appPort(@Nullable Integer appPort) {
-            this.appPort = Output.ofNullable(appPort);
+            this.appPort = Codegen.ofNullable(appPort);
             return this;
         }
         public Builder components(@Nullable Output<List<DaprComponentArgs>> components) {
@@ -131,7 +132,7 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder components(@Nullable List<DaprComponentArgs> components) {
-            this.components = Output.ofNullable(components);
+            this.components = Codegen.ofNullable(components);
             return this;
         }
         public Builder components(DaprComponentArgs... components) {
@@ -142,7 +143,7 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }        public DaprArgs build() {
             return new DaprArgs(appId, appPort, components, enabled);

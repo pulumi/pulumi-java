@@ -6,6 +6,7 @@ package io.pulumi.azurenative.digitaltwins;
 import io.pulumi.azurenative.digitaltwins.inputs.AzureDataExplorerConnectionPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
       private final @Nullable Output<AzureDataExplorerConnectionPropertiesArgs> properties;
 
     public Output<AzureDataExplorerConnectionPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
       private final @Nullable Output<String> timeSeriesDatabaseConnectionName;
 
     public Output<String> getTimeSeriesDatabaseConnectionName() {
-        return this.timeSeriesDatabaseConnectionName == null ? Output.empty() : this.timeSeriesDatabaseConnectionName;
+        return this.timeSeriesDatabaseConnectionName == null ? Codegen.empty() : this.timeSeriesDatabaseConnectionName;
     }
 
     public TimeSeriesDatabaseConnectionArgs(
@@ -71,10 +72,10 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
     }
 
     private TimeSeriesDatabaseConnectionArgs() {
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.timeSeriesDatabaseConnectionName = Output.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.timeSeriesDatabaseConnectionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder properties(@Nullable AzureDataExplorerConnectionPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -132,7 +133,7 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder timeSeriesDatabaseConnectionName(@Nullable String timeSeriesDatabaseConnectionName) {
-            this.timeSeriesDatabaseConnectionName = Output.ofNullable(timeSeriesDatabaseConnectionName);
+            this.timeSeriesDatabaseConnectionName = Codegen.ofNullable(timeSeriesDatabaseConnectionName);
             return this;
         }        public TimeSeriesDatabaseConnectionArgs build() {
             return new TimeSeriesDatabaseConnectionArgs(properties, resourceGroupName, resourceName, timeSeriesDatabaseConnectionName);

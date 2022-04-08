@@ -5,6 +5,7 @@ package io.pulumi.azurenative.customproviders;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> associationName;
 
     public Output<String> getAssociationName() {
-        return this.associationName == null ? Output.empty() : this.associationName;
+        return this.associationName == null ? Codegen.empty() : this.associationName;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> targetResourceId;
 
     public Output<String> getTargetResourceId() {
-        return this.targetResourceId == null ? Output.empty() : this.targetResourceId;
+        return this.targetResourceId == null ? Codegen.empty() : this.targetResourceId;
     }
 
     public AssociationArgs(
@@ -57,9 +58,9 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssociationArgs() {
-        this.associationName = Output.empty();
-        this.scope = Output.empty();
-        this.targetResourceId = Output.empty();
+        this.associationName = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.targetResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder associationName(@Nullable String associationName) {
-            this.associationName = Output.ofNullable(associationName);
+            this.associationName = Codegen.ofNullable(associationName);
             return this;
         }
         public Builder scope(Output<String> scope) {
@@ -107,7 +108,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetResourceId(@Nullable String targetResourceId) {
-            this.targetResourceId = Output.ofNullable(targetResourceId);
+            this.targetResourceId = Codegen.ofNullable(targetResourceId);
             return this;
         }        public AssociationArgs build() {
             return new AssociationArgs(associationName, scope, targetResourceId);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -48,8 +49,8 @@ public final class PngFormatArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PngFormatArgs() {
-        this.filenamePattern = Output.empty();
-        this.odataType = Output.empty();
+        this.filenamePattern = Codegen.empty();
+        this.odataType = Codegen.empty();
     }
 
     public static Builder builder() {

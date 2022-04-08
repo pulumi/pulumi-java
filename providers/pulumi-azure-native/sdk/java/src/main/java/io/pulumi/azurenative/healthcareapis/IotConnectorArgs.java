@@ -8,6 +8,7 @@ import io.pulumi.azurenative.healthcareapis.inputs.IotMappingPropertiesArgs;
 import io.pulumi.azurenative.healthcareapis.inputs.ServiceManagedIdentityIdentityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IotMappingPropertiesArgs> deviceMapping;
 
     public Output<IotMappingPropertiesArgs> getDeviceMapping() {
-        return this.deviceMapping == null ? Output.empty() : this.deviceMapping;
+        return this.deviceMapping == null ? Codegen.empty() : this.deviceMapping;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ServiceManagedIdentityIdentityArgs> identity;
 
     public Output<ServiceManagedIdentityIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IotEventHubIngestionEndpointConfigurationArgs> ingestionEndpointConfiguration;
 
     public Output<IotEventHubIngestionEndpointConfigurationArgs> getIngestionEndpointConfiguration() {
-        return this.ingestionEndpointConfiguration == null ? Output.empty() : this.ingestionEndpointConfiguration;
+        return this.ingestionEndpointConfiguration == null ? Codegen.empty() : this.ingestionEndpointConfiguration;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> iotConnectorName;
 
     public Output<String> getIotConnectorName() {
-        return this.iotConnectorName == null ? Output.empty() : this.iotConnectorName;
+        return this.iotConnectorName == null ? Codegen.empty() : this.iotConnectorName;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -126,14 +127,14 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IotConnectorArgs() {
-        this.deviceMapping = Output.empty();
-        this.identity = Output.empty();
-        this.ingestionEndpointConfiguration = Output.empty();
-        this.iotConnectorName = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.workspaceName = Output.empty();
+        this.deviceMapping = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.ingestionEndpointConfiguration = Codegen.empty();
+        this.iotConnectorName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -175,7 +176,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deviceMapping(@Nullable IotMappingPropertiesArgs deviceMapping) {
-            this.deviceMapping = Output.ofNullable(deviceMapping);
+            this.deviceMapping = Codegen.ofNullable(deviceMapping);
             return this;
         }
         public Builder identity(@Nullable Output<ServiceManagedIdentityIdentityArgs> identity) {
@@ -183,7 +184,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable ServiceManagedIdentityIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder ingestionEndpointConfiguration(@Nullable Output<IotEventHubIngestionEndpointConfigurationArgs> ingestionEndpointConfiguration) {
@@ -191,7 +192,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ingestionEndpointConfiguration(@Nullable IotEventHubIngestionEndpointConfigurationArgs ingestionEndpointConfiguration) {
-            this.ingestionEndpointConfiguration = Output.ofNullable(ingestionEndpointConfiguration);
+            this.ingestionEndpointConfiguration = Codegen.ofNullable(ingestionEndpointConfiguration);
             return this;
         }
         public Builder iotConnectorName(@Nullable Output<String> iotConnectorName) {
@@ -199,7 +200,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iotConnectorName(@Nullable String iotConnectorName) {
-            this.iotConnectorName = Output.ofNullable(iotConnectorName);
+            this.iotConnectorName = Codegen.ofNullable(iotConnectorName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -207,7 +208,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -223,7 +224,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

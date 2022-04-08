@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datashare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class KustoDatabaseDataSetArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> dataSetName;
 
     public Output<String> getDataSetName() {
-        return this.dataSetName == null ? Output.empty() : this.dataSetName;
+        return this.dataSetName == null ? Codegen.empty() : this.dataSetName;
     }
 
     /**
@@ -97,12 +98,12 @@ public final class KustoDatabaseDataSetArgs extends io.pulumi.resources.Resource
     }
 
     private KustoDatabaseDataSetArgs() {
-        this.accountName = Output.empty();
-        this.dataSetName = Output.empty();
-        this.kind = Output.empty();
-        this.kustoDatabaseResourceId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.shareName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.dataSetName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.kustoDatabaseResourceId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.shareName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class KustoDatabaseDataSetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder dataSetName(@Nullable String dataSetName) {
-            this.dataSetName = Output.ofNullable(dataSetName);
+            this.dataSetName = Codegen.ofNullable(dataSetName);
             return this;
         }
         public Builder kind(Output<String> kind) {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerregistry.enums.PolicyStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class QuarantinePolicyArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Either<String,PolicyStatus>> status;
 
     public Output<Either<String,PolicyStatus>> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public QuarantinePolicyArgs(@Nullable Output<Either<String,PolicyStatus>> status) {
@@ -36,7 +37,7 @@ public final class QuarantinePolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private QuarantinePolicyArgs() {
-        this.status = Output.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class QuarantinePolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder status(@Nullable Either<String,PolicyStatus> status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public QuarantinePolicyArgs build() {
             return new QuarantinePolicyArgs(status);

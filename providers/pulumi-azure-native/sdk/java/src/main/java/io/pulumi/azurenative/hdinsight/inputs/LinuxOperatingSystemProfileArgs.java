@@ -6,6 +6,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 import io.pulumi.azurenative.hdinsight.inputs.SshProfileArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class LinuxOperatingSystemProfileArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class LinuxOperatingSystemProfileArgs extends io.pulumi.resources.R
       private final @Nullable Output<SshProfileArgs> sshProfile;
 
     public Output<SshProfileArgs> getSshProfile() {
-        return this.sshProfile == null ? Output.empty() : this.sshProfile;
+        return this.sshProfile == null ? Codegen.empty() : this.sshProfile;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class LinuxOperatingSystemProfileArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public LinuxOperatingSystemProfileArgs(
@@ -62,9 +63,9 @@ public final class LinuxOperatingSystemProfileArgs extends io.pulumi.resources.R
     }
 
     private LinuxOperatingSystemProfileArgs() {
-        this.password = Output.empty();
-        this.sshProfile = Output.empty();
-        this.username = Output.empty();
+        this.password = Codegen.empty();
+        this.sshProfile = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class LinuxOperatingSystemProfileArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder sshProfile(@Nullable Output<SshProfileArgs> sshProfile) {
@@ -104,7 +105,7 @@ public final class LinuxOperatingSystemProfileArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder sshProfile(@Nullable SshProfileArgs sshProfile) {
-            this.sshProfile = Output.ofNullable(sshProfile);
+            this.sshProfile = Codegen.ofNullable(sshProfile);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -112,7 +113,7 @@ public final class LinuxOperatingSystemProfileArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public LinuxOperatingSystemProfileArgs build() {
             return new LinuxOperatingSystemProfileArgs(password, sshProfile, username);

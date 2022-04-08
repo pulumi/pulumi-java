@@ -5,6 +5,7 @@ package io.pulumi.azurenative.solutions.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> parameters;
 
     public Output<String> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> policyDefinitionId;
 
     public Output<String> getPolicyDefinitionId() {
-        return this.policyDefinitionId == null ? Output.empty() : this.policyDefinitionId;
+        return this.policyDefinitionId == null ? Codegen.empty() : this.policyDefinitionId;
     }
 
     public ApplicationPolicyArgs(
@@ -61,9 +62,9 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ApplicationPolicyArgs() {
-        this.name = Output.empty();
-        this.parameters = Output.empty();
-        this.policyDefinitionId = Output.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.policyDefinitionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parameters(@Nullable Output<String> parameters) {
@@ -103,7 +104,7 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder parameters(@Nullable String parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder policyDefinitionId(@Nullable Output<String> policyDefinitionId) {
@@ -111,7 +112,7 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder policyDefinitionId(@Nullable String policyDefinitionId) {
-            this.policyDefinitionId = Output.ofNullable(policyDefinitionId);
+            this.policyDefinitionId = Codegen.ofNullable(policyDefinitionId);
             return this;
         }        public ApplicationPolicyArgs build() {
             return new ApplicationPolicyArgs(name, parameters, policyDefinitionId);

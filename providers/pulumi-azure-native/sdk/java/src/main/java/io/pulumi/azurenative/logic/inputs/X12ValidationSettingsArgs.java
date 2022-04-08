@@ -7,6 +7,7 @@ import io.pulumi.azurenative.logic.enums.TrailingSeparatorPolicy;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -155,16 +156,16 @@ public final class X12ValidationSettingsArgs extends io.pulumi.resources.Resourc
     }
 
     private X12ValidationSettingsArgs() {
-        this.allowLeadingAndTrailingSpacesAndZeroes = Output.empty();
-        this.checkDuplicateGroupControlNumber = Output.empty();
-        this.checkDuplicateInterchangeControlNumber = Output.empty();
-        this.checkDuplicateTransactionSetControlNumber = Output.empty();
-        this.interchangeControlNumberValidityDays = Output.empty();
-        this.trailingSeparatorPolicy = Output.empty();
-        this.trimLeadingAndTrailingSpacesAndZeroes = Output.empty();
-        this.validateCharacterSet = Output.empty();
-        this.validateEDITypes = Output.empty();
-        this.validateXSDTypes = Output.empty();
+        this.allowLeadingAndTrailingSpacesAndZeroes = Codegen.empty();
+        this.checkDuplicateGroupControlNumber = Codegen.empty();
+        this.checkDuplicateInterchangeControlNumber = Codegen.empty();
+        this.checkDuplicateTransactionSetControlNumber = Codegen.empty();
+        this.interchangeControlNumberValidityDays = Codegen.empty();
+        this.trailingSeparatorPolicy = Codegen.empty();
+        this.trimLeadingAndTrailingSpacesAndZeroes = Codegen.empty();
+        this.validateCharacterSet = Codegen.empty();
+        this.validateEDITypes = Codegen.empty();
+        this.validateXSDTypes = Codegen.empty();
     }
 
     public static Builder builder() {

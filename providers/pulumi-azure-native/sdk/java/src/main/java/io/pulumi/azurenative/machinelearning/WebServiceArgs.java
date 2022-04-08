@@ -6,6 +6,7 @@ package io.pulumi.azurenative.machinelearning;
 import io.pulumi.azurenative.machinelearning.inputs.WebServicePropertiesForGraphArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> webServiceName;
 
     public Output<String> getWebServiceName() {
-        return this.webServiceName == null ? Output.empty() : this.webServiceName;
+        return this.webServiceName == null ? Codegen.empty() : this.webServiceName;
     }
 
     public WebServiceArgs(
@@ -85,11 +86,11 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebServiceArgs() {
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.webServiceName = Output.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.webServiceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(Output<WebServicePropertiesForGraphArgs> properties) {
@@ -149,7 +150,7 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder webServiceName(@Nullable Output<String> webServiceName) {
@@ -157,7 +158,7 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder webServiceName(@Nullable String webServiceName) {
-            this.webServiceName = Output.ofNullable(webServiceName);
+            this.webServiceName = Codegen.ofNullable(webServiceName);
             return this;
         }        public WebServiceArgs build() {
             return new WebServiceArgs(location, properties, resourceGroupName, tags, webServiceName);

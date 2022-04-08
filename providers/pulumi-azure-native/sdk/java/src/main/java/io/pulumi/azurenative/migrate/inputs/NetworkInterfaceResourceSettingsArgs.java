@@ -6,6 +6,7 @@ package io.pulumi.azurenative.migrate.inputs;
 import io.pulumi.azurenative.migrate.inputs.NicIpConfigurationResourceSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class NetworkInterfaceResourceSettingsArgs extends io.pulumi.resour
       private final @Nullable Output<Boolean> enableAcceleratedNetworking;
 
     public Output<Boolean> getEnableAcceleratedNetworking() {
-        return this.enableAcceleratedNetworking == null ? Output.empty() : this.enableAcceleratedNetworking;
+        return this.enableAcceleratedNetworking == null ? Codegen.empty() : this.enableAcceleratedNetworking;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class NetworkInterfaceResourceSettingsArgs extends io.pulumi.resour
       private final @Nullable Output<List<NicIpConfigurationResourceSettingsArgs>> ipConfigurations;
 
     public Output<List<NicIpConfigurationResourceSettingsArgs>> getIpConfigurations() {
-        return this.ipConfigurations == null ? Output.empty() : this.ipConfigurations;
+        return this.ipConfigurations == null ? Codegen.empty() : this.ipConfigurations;
     }
 
     /**
@@ -78,10 +79,10 @@ public final class NetworkInterfaceResourceSettingsArgs extends io.pulumi.resour
     }
 
     private NetworkInterfaceResourceSettingsArgs() {
-        this.enableAcceleratedNetworking = Output.empty();
-        this.ipConfigurations = Output.empty();
-        this.resourceType = Output.empty();
-        this.targetResourceName = Output.empty();
+        this.enableAcceleratedNetworking = Codegen.empty();
+        this.ipConfigurations = Codegen.empty();
+        this.resourceType = Codegen.empty();
+        this.targetResourceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class NetworkInterfaceResourceSettingsArgs extends io.pulumi.resour
             return this;
         }
         public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
-            this.enableAcceleratedNetworking = Output.ofNullable(enableAcceleratedNetworking);
+            this.enableAcceleratedNetworking = Codegen.ofNullable(enableAcceleratedNetworking);
             return this;
         }
         public Builder ipConfigurations(@Nullable Output<List<NicIpConfigurationResourceSettingsArgs>> ipConfigurations) {
@@ -123,7 +124,7 @@ public final class NetworkInterfaceResourceSettingsArgs extends io.pulumi.resour
             return this;
         }
         public Builder ipConfigurations(@Nullable List<NicIpConfigurationResourceSettingsArgs> ipConfigurations) {
-            this.ipConfigurations = Output.ofNullable(ipConfigurations);
+            this.ipConfigurations = Codegen.ofNullable(ipConfigurations);
             return this;
         }
         public Builder ipConfigurations(NicIpConfigurationResourceSettingsArgs... ipConfigurations) {

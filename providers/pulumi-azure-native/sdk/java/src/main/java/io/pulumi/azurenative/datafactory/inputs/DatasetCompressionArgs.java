@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class DatasetCompressionArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Object> level;
 
     public Output<Object> getLevel() {
-        return this.level == null ? Output.empty() : this.level;
+        return this.level == null ? Codegen.empty() : this.level;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class DatasetCompressionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DatasetCompressionArgs() {
-        this.level = Output.empty();
-        this.type = Output.empty();
+        this.level = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class DatasetCompressionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder level(@Nullable Object level) {
-            this.level = Output.ofNullable(level);
+            this.level = Codegen.ofNullable(level);
             return this;
         }
         public Builder type(Output<Object> type) {

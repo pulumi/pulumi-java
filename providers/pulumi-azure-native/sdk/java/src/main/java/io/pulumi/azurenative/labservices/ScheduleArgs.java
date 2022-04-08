@@ -6,6 +6,7 @@ package io.pulumi.azurenative.labservices;
 import io.pulumi.azurenative.labservices.inputs.RecurrencePatternArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> notes;
 
     public Output<String> getNotes() {
-        return this.notes == null ? Output.empty() : this.notes;
+        return this.notes == null ? Codegen.empty() : this.notes;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RecurrencePatternArgs> recurrencePattern;
 
     public Output<RecurrencePatternArgs> getRecurrencePattern() {
-        return this.recurrencePattern == null ? Output.empty() : this.recurrencePattern;
+        return this.recurrencePattern == null ? Codegen.empty() : this.recurrencePattern;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> scheduleName;
 
     public Output<String> getScheduleName() {
-        return this.scheduleName == null ? Output.empty() : this.scheduleName;
+        return this.scheduleName == null ? Codegen.empty() : this.scheduleName;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> startAt;
 
     public Output<String> getStartAt() {
-        return this.startAt == null ? Output.empty() : this.startAt;
+        return this.startAt == null ? Codegen.empty() : this.startAt;
     }
 
     /**
@@ -123,14 +124,14 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScheduleArgs() {
-        this.labName = Output.empty();
-        this.notes = Output.empty();
-        this.recurrencePattern = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scheduleName = Output.empty();
-        this.startAt = Output.empty();
-        this.stopAt = Output.empty();
-        this.timeZoneId = Output.empty();
+        this.labName = Codegen.empty();
+        this.notes = Codegen.empty();
+        this.recurrencePattern = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scheduleName = Codegen.empty();
+        this.startAt = Codegen.empty();
+        this.stopAt = Codegen.empty();
+        this.timeZoneId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -180,7 +181,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notes(@Nullable String notes) {
-            this.notes = Output.ofNullable(notes);
+            this.notes = Codegen.ofNullable(notes);
             return this;
         }
         public Builder recurrencePattern(@Nullable Output<RecurrencePatternArgs> recurrencePattern) {
@@ -188,7 +189,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recurrencePattern(@Nullable RecurrencePatternArgs recurrencePattern) {
-            this.recurrencePattern = Output.ofNullable(recurrencePattern);
+            this.recurrencePattern = Codegen.ofNullable(recurrencePattern);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -204,7 +205,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scheduleName(@Nullable String scheduleName) {
-            this.scheduleName = Output.ofNullable(scheduleName);
+            this.scheduleName = Codegen.ofNullable(scheduleName);
             return this;
         }
         public Builder startAt(@Nullable Output<String> startAt) {
@@ -212,7 +213,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startAt(@Nullable String startAt) {
-            this.startAt = Output.ofNullable(startAt);
+            this.startAt = Codegen.ofNullable(startAt);
             return this;
         }
         public Builder stopAt(Output<String> stopAt) {

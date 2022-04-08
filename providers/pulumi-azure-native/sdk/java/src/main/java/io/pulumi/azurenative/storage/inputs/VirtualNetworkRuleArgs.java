@@ -8,6 +8,7 @@ import io.pulumi.azurenative.storage.enums.State;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Action> action;
 
     public Output<Action> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Either<String,State>> state;
 
     public Output<Either<String,State>> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -58,15 +59,15 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
         @Nullable Output<Action> action,
         @Nullable Output<Either<String,State>> state,
         Output<String> virtualNetworkResourceId) {
-        this.action = action == null ? Output.ofNullable(io.pulumi.azurenative.storage.enums.Action.Allow) : action;
+        this.action = action == null ? Codegen.ofNullable(io.pulumi.azurenative.storage.enums.Action.Allow) : action;
         this.state = state;
         this.virtualNetworkResourceId = Objects.requireNonNull(virtualNetworkResourceId, "expected parameter 'virtualNetworkResourceId' to be non-null");
     }
 
     private VirtualNetworkRuleArgs() {
-        this.action = Output.empty();
-        this.state = Output.empty();
-        this.virtualNetworkResourceId = Output.empty();
+        this.action = Codegen.empty();
+        this.state = Codegen.empty();
+        this.virtualNetworkResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder action(@Nullable Action action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder state(@Nullable Output<Either<String,State>> state) {
@@ -106,7 +107,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder state(@Nullable Either<String,State> state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder virtualNetworkResourceId(Output<String> virtualNetworkResourceId) {

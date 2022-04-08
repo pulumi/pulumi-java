@@ -7,6 +7,7 @@ import io.pulumi.azurenative.web.inputs.BackupScheduleArgs;
 import io.pulumi.azurenative.web.inputs.DatabaseBackupSettingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> backupName;
 
     public Output<String> getBackupName() {
-        return this.backupName == null ? Output.empty() : this.backupName;
+        return this.backupName == null ? Codegen.empty() : this.backupName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<BackupScheduleArgs> backupSchedule;
 
     public Output<BackupScheduleArgs> getBackupSchedule() {
-        return this.backupSchedule == null ? Output.empty() : this.backupSchedule;
+        return this.backupSchedule == null ? Codegen.empty() : this.backupSchedule;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<DatabaseBackupSettingArgs>> databases;
 
     public Output<List<DatabaseBackupSettingArgs>> getDatabases() {
-        return this.databases == null ? Output.empty() : this.databases;
+        return this.databases == null ? Codegen.empty() : this.databases;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -126,14 +127,14 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
     }
 
     private WebAppBackupConfigurationArgs() {
-        this.backupName = Output.empty();
-        this.backupSchedule = Output.empty();
-        this.databases = Output.empty();
-        this.enabled = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.storageAccountUrl = Output.empty();
+        this.backupName = Codegen.empty();
+        this.backupSchedule = Codegen.empty();
+        this.databases = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.storageAccountUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -175,7 +176,7 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder backupName(@Nullable String backupName) {
-            this.backupName = Output.ofNullable(backupName);
+            this.backupName = Codegen.ofNullable(backupName);
             return this;
         }
         public Builder backupSchedule(@Nullable Output<BackupScheduleArgs> backupSchedule) {
@@ -183,7 +184,7 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder backupSchedule(@Nullable BackupScheduleArgs backupSchedule) {
-            this.backupSchedule = Output.ofNullable(backupSchedule);
+            this.backupSchedule = Codegen.ofNullable(backupSchedule);
             return this;
         }
         public Builder databases(@Nullable Output<List<DatabaseBackupSettingArgs>> databases) {
@@ -191,7 +192,7 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder databases(@Nullable List<DatabaseBackupSettingArgs> databases) {
-            this.databases = Output.ofNullable(databases);
+            this.databases = Codegen.ofNullable(databases);
             return this;
         }
         public Builder databases(DatabaseBackupSettingArgs... databases) {
@@ -202,7 +203,7 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -210,7 +211,7 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(Output<String> name) {

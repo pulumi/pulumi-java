@@ -9,6 +9,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.NodeInputArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -79,10 +80,10 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private EncoderProcessorArgs() {
-        this.inputs = Output.empty();
-        this.name = Output.empty();
-        this.preset = Output.empty();
-        this.type = Output.empty();
+        this.inputs = Codegen.empty();
+        this.name = Codegen.empty();
+        this.preset = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

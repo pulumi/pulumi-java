@@ -9,6 +9,7 @@ import io.pulumi.azurenative.customerinsights.inputs.ParticipantPropertyReferenc
 import io.pulumi.azurenative.customerinsights.inputs.TypePropertiesMappingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> description;
 
     public Output<Map<String,String>> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> displayName;
 
     public Output<Map<String,String>> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> linkName;
 
     public Output<String> getLinkName() {
-        return this.linkName == null ? Output.empty() : this.linkName;
+        return this.linkName == null ? Codegen.empty() : this.linkName;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<TypePropertiesMappingArgs>> mappings;
 
     public Output<List<TypePropertiesMappingArgs>> getMappings() {
-        return this.mappings == null ? Output.empty() : this.mappings;
+        return this.mappings == null ? Codegen.empty() : this.mappings;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InstanceOperationType> operationType;
 
     public Output<InstanceOperationType> getOperationType() {
-        return this.operationType == null ? Output.empty() : this.operationType;
+        return this.operationType == null ? Codegen.empty() : this.operationType;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> referenceOnly;
 
     public Output<Boolean> getReferenceOnly() {
-        return this.referenceOnly == null ? Output.empty() : this.referenceOnly;
+        return this.referenceOnly == null ? Codegen.empty() : this.referenceOnly;
     }
 
     /**
@@ -194,19 +195,19 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LinkArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.hubName = Output.empty();
-        this.linkName = Output.empty();
-        this.mappings = Output.empty();
-        this.operationType = Output.empty();
-        this.participantPropertyReferences = Output.empty();
-        this.referenceOnly = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sourceEntityType = Output.empty();
-        this.sourceEntityTypeName = Output.empty();
-        this.targetEntityType = Output.empty();
-        this.targetEntityTypeName = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.hubName = Codegen.empty();
+        this.linkName = Codegen.empty();
+        this.mappings = Codegen.empty();
+        this.operationType = Codegen.empty();
+        this.participantPropertyReferences = Codegen.empty();
+        this.referenceOnly = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sourceEntityType = Codegen.empty();
+        this.sourceEntityTypeName = Codegen.empty();
+        this.targetEntityType = Codegen.empty();
+        this.targetEntityTypeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -258,7 +259,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable Map<String,String> description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
@@ -266,7 +267,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder hubName(Output<String> hubName) {
@@ -282,7 +283,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linkName(@Nullable String linkName) {
-            this.linkName = Output.ofNullable(linkName);
+            this.linkName = Codegen.ofNullable(linkName);
             return this;
         }
         public Builder mappings(@Nullable Output<List<TypePropertiesMappingArgs>> mappings) {
@@ -290,7 +291,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mappings(@Nullable List<TypePropertiesMappingArgs> mappings) {
-            this.mappings = Output.ofNullable(mappings);
+            this.mappings = Codegen.ofNullable(mappings);
             return this;
         }
         public Builder mappings(TypePropertiesMappingArgs... mappings) {
@@ -301,7 +302,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder operationType(@Nullable InstanceOperationType operationType) {
-            this.operationType = Output.ofNullable(operationType);
+            this.operationType = Codegen.ofNullable(operationType);
             return this;
         }
         public Builder participantPropertyReferences(Output<List<ParticipantPropertyReferenceArgs>> participantPropertyReferences) {
@@ -320,7 +321,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder referenceOnly(@Nullable Boolean referenceOnly) {
-            this.referenceOnly = Output.ofNullable(referenceOnly);
+            this.referenceOnly = Codegen.ofNullable(referenceOnly);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

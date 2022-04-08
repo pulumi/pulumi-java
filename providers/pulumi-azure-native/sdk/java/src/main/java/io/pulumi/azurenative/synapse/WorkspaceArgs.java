@@ -15,6 +15,7 @@ import io.pulumi.azurenative.synapse.inputs.WorkspaceRepositoryConfigurationArgs
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -34,7 +35,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> connectivityEndpoints;
 
     public Output<Map<String,String>> getConnectivityEndpoints() {
-        return this.connectivityEndpoints == null ? Output.empty() : this.connectivityEndpoints;
+        return this.connectivityEndpoints == null ? Codegen.empty() : this.connectivityEndpoints;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DataLakeStorageAccountDetailsArgs> defaultDataLakeStorage;
 
     public Output<DataLakeStorageAccountDetailsArgs> getDefaultDataLakeStorage() {
-        return this.defaultDataLakeStorage == null ? Output.empty() : this.defaultDataLakeStorage;
+        return this.defaultDataLakeStorage == null ? Codegen.empty() : this.defaultDataLakeStorage;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EncryptionDetailsArgs> encryption;
 
     public Output<EncryptionDetailsArgs> getEncryption() {
-        return this.encryption == null ? Output.empty() : this.encryption;
+        return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ManagedIdentityArgs> identity;
 
     public Output<ManagedIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> managedResourceGroupName;
 
     public Output<String> getManagedResourceGroupName() {
-        return this.managedResourceGroupName == null ? Output.empty() : this.managedResourceGroupName;
+        return this.managedResourceGroupName == null ? Codegen.empty() : this.managedResourceGroupName;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> managedVirtualNetwork;
 
     public Output<String> getManagedVirtualNetwork() {
-        return this.managedVirtualNetwork == null ? Output.empty() : this.managedVirtualNetwork;
+        return this.managedVirtualNetwork == null ? Codegen.empty() : this.managedVirtualNetwork;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ManagedVirtualNetworkSettingsArgs> managedVirtualNetworkSettings;
 
     public Output<ManagedVirtualNetworkSettingsArgs> getManagedVirtualNetworkSettings() {
-        return this.managedVirtualNetworkSettings == null ? Output.empty() : this.managedVirtualNetworkSettings;
+        return this.managedVirtualNetworkSettings == null ? Codegen.empty() : this.managedVirtualNetworkSettings;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
     public Output<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
-        return this.privateEndpointConnections == null ? Output.empty() : this.privateEndpointConnections;
+        return this.privateEndpointConnections == null ? Codegen.empty() : this.privateEndpointConnections;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,WorkspacePublicNetworkAccess>> publicNetworkAccess;
 
     public Output<Either<String,WorkspacePublicNetworkAccess>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
+        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -144,7 +145,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PurviewConfigurationArgs> purviewConfiguration;
 
     public Output<PurviewConfigurationArgs> getPurviewConfiguration() {
-        return this.purviewConfiguration == null ? Output.empty() : this.purviewConfiguration;
+        return this.purviewConfiguration == null ? Codegen.empty() : this.purviewConfiguration;
     }
 
     /**
@@ -166,7 +167,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sqlAdministratorLogin;
 
     public Output<String> getSqlAdministratorLogin() {
-        return this.sqlAdministratorLogin == null ? Output.empty() : this.sqlAdministratorLogin;
+        return this.sqlAdministratorLogin == null ? Codegen.empty() : this.sqlAdministratorLogin;
     }
 
     /**
@@ -177,7 +178,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sqlAdministratorLoginPassword;
 
     public Output<String> getSqlAdministratorLoginPassword() {
-        return this.sqlAdministratorLoginPassword == null ? Output.empty() : this.sqlAdministratorLoginPassword;
+        return this.sqlAdministratorLoginPassword == null ? Codegen.empty() : this.sqlAdministratorLoginPassword;
     }
 
     /**
@@ -188,7 +189,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -199,7 +200,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile;
 
     public Output<VirtualNetworkProfileArgs> getVirtualNetworkProfile() {
-        return this.virtualNetworkProfile == null ? Output.empty() : this.virtualNetworkProfile;
+        return this.virtualNetworkProfile == null ? Codegen.empty() : this.virtualNetworkProfile;
     }
 
     /**
@@ -210,7 +211,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {
-        return this.workspaceName == null ? Output.empty() : this.workspaceName;
+        return this.workspaceName == null ? Codegen.empty() : this.workspaceName;
     }
 
     /**
@@ -221,7 +222,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WorkspaceRepositoryConfigurationArgs> workspaceRepositoryConfiguration;
 
     public Output<WorkspaceRepositoryConfigurationArgs> getWorkspaceRepositoryConfiguration() {
-        return this.workspaceRepositoryConfiguration == null ? Output.empty() : this.workspaceRepositoryConfiguration;
+        return this.workspaceRepositoryConfiguration == null ? Codegen.empty() : this.workspaceRepositoryConfiguration;
     }
 
     public WorkspaceArgs(
@@ -264,24 +265,24 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkspaceArgs() {
-        this.connectivityEndpoints = Output.empty();
-        this.defaultDataLakeStorage = Output.empty();
-        this.encryption = Output.empty();
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.managedResourceGroupName = Output.empty();
-        this.managedVirtualNetwork = Output.empty();
-        this.managedVirtualNetworkSettings = Output.empty();
-        this.privateEndpointConnections = Output.empty();
-        this.publicNetworkAccess = Output.empty();
-        this.purviewConfiguration = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sqlAdministratorLogin = Output.empty();
-        this.sqlAdministratorLoginPassword = Output.empty();
-        this.tags = Output.empty();
-        this.virtualNetworkProfile = Output.empty();
-        this.workspaceName = Output.empty();
-        this.workspaceRepositoryConfiguration = Output.empty();
+        this.connectivityEndpoints = Codegen.empty();
+        this.defaultDataLakeStorage = Codegen.empty();
+        this.encryption = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.managedResourceGroupName = Codegen.empty();
+        this.managedVirtualNetwork = Codegen.empty();
+        this.managedVirtualNetworkSettings = Codegen.empty();
+        this.privateEndpointConnections = Codegen.empty();
+        this.publicNetworkAccess = Codegen.empty();
+        this.purviewConfiguration = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sqlAdministratorLogin = Codegen.empty();
+        this.sqlAdministratorLoginPassword = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.virtualNetworkProfile = Codegen.empty();
+        this.workspaceName = Codegen.empty();
+        this.workspaceRepositoryConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -343,7 +344,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectivityEndpoints(@Nullable Map<String,String> connectivityEndpoints) {
-            this.connectivityEndpoints = Output.ofNullable(connectivityEndpoints);
+            this.connectivityEndpoints = Codegen.ofNullable(connectivityEndpoints);
             return this;
         }
         public Builder defaultDataLakeStorage(@Nullable Output<DataLakeStorageAccountDetailsArgs> defaultDataLakeStorage) {
@@ -351,7 +352,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultDataLakeStorage(@Nullable DataLakeStorageAccountDetailsArgs defaultDataLakeStorage) {
-            this.defaultDataLakeStorage = Output.ofNullable(defaultDataLakeStorage);
+            this.defaultDataLakeStorage = Codegen.ofNullable(defaultDataLakeStorage);
             return this;
         }
         public Builder encryption(@Nullable Output<EncryptionDetailsArgs> encryption) {
@@ -359,7 +360,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryption(@Nullable EncryptionDetailsArgs encryption) {
-            this.encryption = Output.ofNullable(encryption);
+            this.encryption = Codegen.ofNullable(encryption);
             return this;
         }
         public Builder identity(@Nullable Output<ManagedIdentityArgs> identity) {
@@ -367,7 +368,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable ManagedIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -375,7 +376,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder managedResourceGroupName(@Nullable Output<String> managedResourceGroupName) {
@@ -383,7 +384,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managedResourceGroupName(@Nullable String managedResourceGroupName) {
-            this.managedResourceGroupName = Output.ofNullable(managedResourceGroupName);
+            this.managedResourceGroupName = Codegen.ofNullable(managedResourceGroupName);
             return this;
         }
         public Builder managedVirtualNetwork(@Nullable Output<String> managedVirtualNetwork) {
@@ -391,7 +392,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managedVirtualNetwork(@Nullable String managedVirtualNetwork) {
-            this.managedVirtualNetwork = Output.ofNullable(managedVirtualNetwork);
+            this.managedVirtualNetwork = Codegen.ofNullable(managedVirtualNetwork);
             return this;
         }
         public Builder managedVirtualNetworkSettings(@Nullable Output<ManagedVirtualNetworkSettingsArgs> managedVirtualNetworkSettings) {
@@ -399,7 +400,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managedVirtualNetworkSettings(@Nullable ManagedVirtualNetworkSettingsArgs managedVirtualNetworkSettings) {
-            this.managedVirtualNetworkSettings = Output.ofNullable(managedVirtualNetworkSettings);
+            this.managedVirtualNetworkSettings = Codegen.ofNullable(managedVirtualNetworkSettings);
             return this;
         }
         public Builder privateEndpointConnections(@Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
@@ -407,7 +408,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
-            this.privateEndpointConnections = Output.ofNullable(privateEndpointConnections);
+            this.privateEndpointConnections = Codegen.ofNullable(privateEndpointConnections);
             return this;
         }
         public Builder privateEndpointConnections(PrivateEndpointConnectionArgs... privateEndpointConnections) {
@@ -418,7 +419,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Either<String,WorkspacePublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
             return this;
         }
         public Builder purviewConfiguration(@Nullable Output<PurviewConfigurationArgs> purviewConfiguration) {
@@ -426,7 +427,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder purviewConfiguration(@Nullable PurviewConfigurationArgs purviewConfiguration) {
-            this.purviewConfiguration = Output.ofNullable(purviewConfiguration);
+            this.purviewConfiguration = Codegen.ofNullable(purviewConfiguration);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -442,7 +443,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sqlAdministratorLogin(@Nullable String sqlAdministratorLogin) {
-            this.sqlAdministratorLogin = Output.ofNullable(sqlAdministratorLogin);
+            this.sqlAdministratorLogin = Codegen.ofNullable(sqlAdministratorLogin);
             return this;
         }
         public Builder sqlAdministratorLoginPassword(@Nullable Output<String> sqlAdministratorLoginPassword) {
@@ -450,7 +451,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sqlAdministratorLoginPassword(@Nullable String sqlAdministratorLoginPassword) {
-            this.sqlAdministratorLoginPassword = Output.ofNullable(sqlAdministratorLoginPassword);
+            this.sqlAdministratorLoginPassword = Codegen.ofNullable(sqlAdministratorLoginPassword);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -458,7 +459,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder virtualNetworkProfile(@Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile) {
@@ -466,7 +467,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualNetworkProfile(@Nullable VirtualNetworkProfileArgs virtualNetworkProfile) {
-            this.virtualNetworkProfile = Output.ofNullable(virtualNetworkProfile);
+            this.virtualNetworkProfile = Codegen.ofNullable(virtualNetworkProfile);
             return this;
         }
         public Builder workspaceName(@Nullable Output<String> workspaceName) {
@@ -474,7 +475,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workspaceName(@Nullable String workspaceName) {
-            this.workspaceName = Output.ofNullable(workspaceName);
+            this.workspaceName = Codegen.ofNullable(workspaceName);
             return this;
         }
         public Builder workspaceRepositoryConfiguration(@Nullable Output<WorkspaceRepositoryConfigurationArgs> workspaceRepositoryConfiguration) {
@@ -482,7 +483,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workspaceRepositoryConfiguration(@Nullable WorkspaceRepositoryConfigurationArgs workspaceRepositoryConfiguration) {
-            this.workspaceRepositoryConfiguration = Output.ofNullable(workspaceRepositoryConfiguration);
+            this.workspaceRepositoryConfiguration = Codegen.ofNullable(workspaceRepositoryConfiguration);
             return this;
         }        public WorkspaceArgs build() {
             return new WorkspaceArgs(connectivityEndpoints, defaultDataLakeStorage, encryption, identity, location, managedResourceGroupName, managedVirtualNetwork, managedVirtualNetworkSettings, privateEndpointConnections, publicNetworkAccess, purviewConfiguration, resourceGroupName, sqlAdministratorLogin, sqlAdministratorLoginPassword, tags, virtualNetworkProfile, workspaceName, workspaceRepositoryConfiguration);

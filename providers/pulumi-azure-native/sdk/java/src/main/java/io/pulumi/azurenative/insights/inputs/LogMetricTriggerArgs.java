@@ -8,6 +8,7 @@ import io.pulumi.azurenative.insights.enums.MetricTriggerType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> metricColumn;
 
     public Output<String> getMetricColumn() {
-        return this.metricColumn == null ? Output.empty() : this.metricColumn;
+        return this.metricColumn == null ? Codegen.empty() : this.metricColumn;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Either<String,MetricTriggerType>> metricTriggerType;
 
     public Output<Either<String,MetricTriggerType>> getMetricTriggerType() {
-        return this.metricTriggerType == null ? Output.empty() : this.metricTriggerType;
+        return this.metricTriggerType == null ? Codegen.empty() : this.metricTriggerType;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Double> threshold;
 
     public Output<Double> getThreshold() {
-        return this.threshold == null ? Output.empty() : this.threshold;
+        return this.threshold == null ? Codegen.empty() : this.threshold;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Either<String,ConditionalOperator>> thresholdOperator;
 
     public Output<Either<String,ConditionalOperator>> getThresholdOperator() {
-        return this.thresholdOperator == null ? Output.empty() : this.thresholdOperator;
+        return this.thresholdOperator == null ? Codegen.empty() : this.thresholdOperator;
     }
 
     public LogMetricTriggerArgs(
@@ -78,10 +79,10 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private LogMetricTriggerArgs() {
-        this.metricColumn = Output.empty();
-        this.metricTriggerType = Output.empty();
-        this.threshold = Output.empty();
-        this.thresholdOperator = Output.empty();
+        this.metricColumn = Codegen.empty();
+        this.metricTriggerType = Codegen.empty();
+        this.threshold = Codegen.empty();
+        this.thresholdOperator = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder metricColumn(@Nullable String metricColumn) {
-            this.metricColumn = Output.ofNullable(metricColumn);
+            this.metricColumn = Codegen.ofNullable(metricColumn);
             return this;
         }
         public Builder metricTriggerType(@Nullable Output<Either<String,MetricTriggerType>> metricTriggerType) {
@@ -123,7 +124,7 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder metricTriggerType(@Nullable Either<String,MetricTriggerType> metricTriggerType) {
-            this.metricTriggerType = Output.ofNullable(metricTriggerType);
+            this.metricTriggerType = Codegen.ofNullable(metricTriggerType);
             return this;
         }
         public Builder threshold(@Nullable Output<Double> threshold) {
@@ -131,7 +132,7 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder threshold(@Nullable Double threshold) {
-            this.threshold = Output.ofNullable(threshold);
+            this.threshold = Codegen.ofNullable(threshold);
             return this;
         }
         public Builder thresholdOperator(@Nullable Output<Either<String,ConditionalOperator>> thresholdOperator) {
@@ -139,7 +140,7 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder thresholdOperator(@Nullable Either<String,ConditionalOperator> thresholdOperator) {
-            this.thresholdOperator = Output.ofNullable(thresholdOperator);
+            this.thresholdOperator = Codegen.ofNullable(thresholdOperator);
             return this;
         }        public LogMetricTriggerArgs build() {
             return new LogMetricTriggerArgs(metricColumn, metricTriggerType, threshold, thresholdOperator);

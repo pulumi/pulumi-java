@@ -8,6 +8,7 @@ import io.pulumi.azurenative.documentdb.inputs.CreateUpdateOptionsArgs;
 import io.pulumi.azurenative.documentdb.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -37,7 +38,7 @@ public final class CassandraResourceCassandraViewArgs extends io.pulumi.resource
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
     public Output<ManagedServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class CassandraResourceCassandraViewArgs extends io.pulumi.resource
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class CassandraResourceCassandraViewArgs extends io.pulumi.resource
       private final @Nullable Output<CreateUpdateOptionsArgs> options;
 
     public Output<CreateUpdateOptionsArgs> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class CassandraResourceCassandraViewArgs extends io.pulumi.resource
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class CassandraResourceCassandraViewArgs extends io.pulumi.resource
       private final @Nullable Output<String> viewName;
 
     public Output<String> getViewName() {
-        return this.viewName == null ? Output.empty() : this.viewName;
+        return this.viewName == null ? Codegen.empty() : this.viewName;
     }
 
     public CassandraResourceCassandraViewArgs(
@@ -139,15 +140,15 @@ public final class CassandraResourceCassandraViewArgs extends io.pulumi.resource
     }
 
     private CassandraResourceCassandraViewArgs() {
-        this.accountName = Output.empty();
-        this.identity = Output.empty();
-        this.keyspaceName = Output.empty();
-        this.location = Output.empty();
-        this.options = Output.empty();
-        this.resource = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.viewName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.keyspaceName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.options = Codegen.empty();
+        this.resource = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.viewName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -199,7 +200,7 @@ public final class CassandraResourceCassandraViewArgs extends io.pulumi.resource
             return this;
         }
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder keyspaceName(Output<String> keyspaceName) {
@@ -215,7 +216,7 @@ public final class CassandraResourceCassandraViewArgs extends io.pulumi.resource
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder options(@Nullable Output<CreateUpdateOptionsArgs> options) {
@@ -223,7 +224,7 @@ public final class CassandraResourceCassandraViewArgs extends io.pulumi.resource
             return this;
         }
         public Builder options(@Nullable CreateUpdateOptionsArgs options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder resource(Output<CassandraViewResourceArgs> resource) {
@@ -247,7 +248,7 @@ public final class CassandraResourceCassandraViewArgs extends io.pulumi.resource
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder viewName(@Nullable Output<String> viewName) {
@@ -255,7 +256,7 @@ public final class CassandraResourceCassandraViewArgs extends io.pulumi.resource
             return this;
         }
         public Builder viewName(@Nullable String viewName) {
-            this.viewName = Output.ofNullable(viewName);
+            this.viewName = Codegen.ofNullable(viewName);
             return this;
         }        public CassandraResourceCassandraViewArgs build() {
             return new CassandraResourceCassandraViewArgs(accountName, identity, keyspaceName, location, options, resource, resourceGroupName, tags, viewName);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 import io.pulumi.azurenative.costmanagement.inputs.ReportConfigComparisonExpressionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<ReportConfigFilterArgs>> and;
 
     public Output<List<ReportConfigFilterArgs>> getAnd() {
-        return this.and == null ? Output.empty() : this.and;
+        return this.and == null ? Codegen.empty() : this.and;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<ReportConfigComparisonExpressionArgs> dimensions;
 
     public Output<ReportConfigComparisonExpressionArgs> getDimensions() {
-        return this.dimensions == null ? Output.empty() : this.dimensions;
+        return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<ReportConfigFilterArgs>> or;
 
     public Output<List<ReportConfigFilterArgs>> getOr() {
-        return this.or == null ? Output.empty() : this.or;
+        return this.or == null ? Codegen.empty() : this.or;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<ReportConfigComparisonExpressionArgs> tagKey;
 
     public Output<ReportConfigComparisonExpressionArgs> getTagKey() {
-        return this.tagKey == null ? Output.empty() : this.tagKey;
+        return this.tagKey == null ? Codegen.empty() : this.tagKey;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<ReportConfigComparisonExpressionArgs> tagValue;
 
     public Output<ReportConfigComparisonExpressionArgs> getTagValue() {
-        return this.tagValue == null ? Output.empty() : this.tagValue;
+        return this.tagValue == null ? Codegen.empty() : this.tagValue;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<ReportConfigComparisonExpressionArgs> tags;
 
     public Output<ReportConfigComparisonExpressionArgs> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ReportConfigFilterArgs(
@@ -101,12 +102,12 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ReportConfigFilterArgs() {
-        this.and = Output.empty();
-        this.dimensions = Output.empty();
-        this.or = Output.empty();
-        this.tagKey = Output.empty();
-        this.tagValue = Output.empty();
-        this.tags = Output.empty();
+        this.and = Codegen.empty();
+        this.dimensions = Codegen.empty();
+        this.or = Codegen.empty();
+        this.tagKey = Codegen.empty();
+        this.tagValue = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder and(@Nullable List<ReportConfigFilterArgs> and) {
-            this.and = Output.ofNullable(and);
+            this.and = Codegen.ofNullable(and);
             return this;
         }
         public Builder and(ReportConfigFilterArgs... and) {
@@ -155,7 +156,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder dimensions(@Nullable ReportConfigComparisonExpressionArgs dimensions) {
-            this.dimensions = Output.ofNullable(dimensions);
+            this.dimensions = Codegen.ofNullable(dimensions);
             return this;
         }
         public Builder or(@Nullable Output<List<ReportConfigFilterArgs>> or) {
@@ -163,7 +164,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder or(@Nullable List<ReportConfigFilterArgs> or) {
-            this.or = Output.ofNullable(or);
+            this.or = Codegen.ofNullable(or);
             return this;
         }
         public Builder or(ReportConfigFilterArgs... or) {
@@ -174,7 +175,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tagKey(@Nullable ReportConfigComparisonExpressionArgs tagKey) {
-            this.tagKey = Output.ofNullable(tagKey);
+            this.tagKey = Codegen.ofNullable(tagKey);
             return this;
         }
         public Builder tagValue(@Nullable Output<ReportConfigComparisonExpressionArgs> tagValue) {
@@ -182,7 +183,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tagValue(@Nullable ReportConfigComparisonExpressionArgs tagValue) {
-            this.tagValue = Output.ofNullable(tagValue);
+            this.tagValue = Codegen.ofNullable(tagValue);
             return this;
         }
         public Builder tags(@Nullable Output<ReportConfigComparisonExpressionArgs> tags) {
@@ -190,7 +191,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable ReportConfigComparisonExpressionArgs tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ReportConfigFilterArgs build() {
             return new ReportConfigFilterArgs(and, dimensions, or, tagKey, tagValue, tags);

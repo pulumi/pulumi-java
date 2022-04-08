@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class AzureFirewallIPConfigurationArgs extends io.pulumi.resources.
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AzureFirewallIPConfigurationArgs extends io.pulumi.resources.
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class AzureFirewallIPConfigurationArgs extends io.pulumi.resources.
       private final @Nullable Output<SubResourceArgs> publicIPAddress;
 
     public Output<SubResourceArgs> getPublicIPAddress() {
-        return this.publicIPAddress == null ? Output.empty() : this.publicIPAddress;
+        return this.publicIPAddress == null ? Codegen.empty() : this.publicIPAddress;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class AzureFirewallIPConfigurationArgs extends io.pulumi.resources.
       private final @Nullable Output<SubResourceArgs> subnet;
 
     public Output<SubResourceArgs> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     public AzureFirewallIPConfigurationArgs(
@@ -75,10 +76,10 @@ public final class AzureFirewallIPConfigurationArgs extends io.pulumi.resources.
     }
 
     private AzureFirewallIPConfigurationArgs() {
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.publicIPAddress = Output.empty();
-        this.subnet = Output.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.publicIPAddress = Codegen.empty();
+        this.subnet = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class AzureFirewallIPConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -120,7 +121,7 @@ public final class AzureFirewallIPConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder publicIPAddress(@Nullable Output<SubResourceArgs> publicIPAddress) {
@@ -128,7 +129,7 @@ public final class AzureFirewallIPConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder publicIPAddress(@Nullable SubResourceArgs publicIPAddress) {
-            this.publicIPAddress = Output.ofNullable(publicIPAddress);
+            this.publicIPAddress = Codegen.ofNullable(publicIPAddress);
             return this;
         }
         public Builder subnet(@Nullable Output<SubResourceArgs> subnet) {
@@ -136,7 +137,7 @@ public final class AzureFirewallIPConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder subnet(@Nullable SubResourceArgs subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }        public AzureFirewallIPConfigurationArgs build() {
             return new AzureFirewallIPConfigurationArgs(id, name, publicIPAddress, subnet);

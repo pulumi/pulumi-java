@@ -10,6 +10,7 @@ import io.pulumi.azurenative.kubernetesconfiguration.inputs.KustomizationDefinit
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -62,7 +63,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> configurationProtectedSettings;
 
     public Output<Map<String,String>> getConfigurationProtectedSettings() {
-        return this.configurationProtectedSettings == null ? Output.empty() : this.configurationProtectedSettings;
+        return this.configurationProtectedSettings == null ? Codegen.empty() : this.configurationProtectedSettings;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> fluxConfigurationName;
 
     public Output<String> getFluxConfigurationName() {
-        return this.fluxConfigurationName == null ? Output.empty() : this.fluxConfigurationName;
+        return this.fluxConfigurationName == null ? Codegen.empty() : this.fluxConfigurationName;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<GitRepositoryDefinitionArgs> gitRepository;
 
     public Output<GitRepositoryDefinitionArgs> getGitRepository() {
-        return this.gitRepository == null ? Output.empty() : this.gitRepository;
+        return this.gitRepository == null ? Codegen.empty() : this.gitRepository;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,KustomizationDefinitionArgs>> kustomizations;
 
     public Output<Map<String,KustomizationDefinitionArgs>> getKustomizations() {
-        return this.kustomizations == null ? Output.empty() : this.kustomizations;
+        return this.kustomizations == null ? Codegen.empty() : this.kustomizations;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Either<String,ScopeType>> scope;
 
     public Output<Either<String,ScopeType>> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Either<String,SourceKindType>> sourceKind;
 
     public Output<Either<String,SourceKindType>> getSourceKind() {
-        return this.sourceKind == null ? Output.empty() : this.sourceKind;
+        return this.sourceKind == null ? Codegen.empty() : this.sourceKind;
     }
 
     /**
@@ -150,7 +151,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> suspend;
 
     public Output<Boolean> getSuspend() {
-        return this.suspend == null ? Output.empty() : this.suspend;
+        return this.suspend == null ? Codegen.empty() : this.suspend;
     }
 
     public FluxConfigurationArgs(
@@ -173,26 +174,26 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
         this.fluxConfigurationName = fluxConfigurationName;
         this.gitRepository = gitRepository;
         this.kustomizations = kustomizations;
-        this.namespace = namespace == null ? Output.ofNullable("default") : namespace;
+        this.namespace = namespace == null ? Codegen.ofNullable("default") : namespace;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.scope = scope;
         this.sourceKind = sourceKind;
-        this.suspend = suspend == null ? Output.ofNullable(false) : suspend;
+        this.suspend = suspend == null ? Codegen.ofNullable(false) : suspend;
     }
 
     private FluxConfigurationArgs() {
-        this.clusterName = Output.empty();
-        this.clusterResourceName = Output.empty();
-        this.clusterRp = Output.empty();
-        this.configurationProtectedSettings = Output.empty();
-        this.fluxConfigurationName = Output.empty();
-        this.gitRepository = Output.empty();
-        this.kustomizations = Output.empty();
-        this.namespace = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scope = Output.empty();
-        this.sourceKind = Output.empty();
-        this.suspend = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.clusterResourceName = Codegen.empty();
+        this.clusterRp = Codegen.empty();
+        this.configurationProtectedSettings = Codegen.empty();
+        this.fluxConfigurationName = Codegen.empty();
+        this.gitRepository = Codegen.empty();
+        this.kustomizations = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.sourceKind = Codegen.empty();
+        this.suspend = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -266,7 +267,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder configurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
-            this.configurationProtectedSettings = Output.ofNullable(configurationProtectedSettings);
+            this.configurationProtectedSettings = Codegen.ofNullable(configurationProtectedSettings);
             return this;
         }
         public Builder fluxConfigurationName(@Nullable Output<String> fluxConfigurationName) {
@@ -274,7 +275,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder fluxConfigurationName(@Nullable String fluxConfigurationName) {
-            this.fluxConfigurationName = Output.ofNullable(fluxConfigurationName);
+            this.fluxConfigurationName = Codegen.ofNullable(fluxConfigurationName);
             return this;
         }
         public Builder gitRepository(@Nullable Output<GitRepositoryDefinitionArgs> gitRepository) {
@@ -282,7 +283,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder gitRepository(@Nullable GitRepositoryDefinitionArgs gitRepository) {
-            this.gitRepository = Output.ofNullable(gitRepository);
+            this.gitRepository = Codegen.ofNullable(gitRepository);
             return this;
         }
         public Builder kustomizations(@Nullable Output<Map<String,KustomizationDefinitionArgs>> kustomizations) {
@@ -290,7 +291,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder kustomizations(@Nullable Map<String,KustomizationDefinitionArgs> kustomizations) {
-            this.kustomizations = Output.ofNullable(kustomizations);
+            this.kustomizations = Codegen.ofNullable(kustomizations);
             return this;
         }
         public Builder namespace(@Nullable Output<String> namespace) {
@@ -298,7 +299,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -314,7 +315,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder scope(@Nullable Either<String,ScopeType> scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }
         public Builder sourceKind(@Nullable Output<Either<String,SourceKindType>> sourceKind) {
@@ -322,7 +323,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder sourceKind(@Nullable Either<String,SourceKindType> sourceKind) {
-            this.sourceKind = Output.ofNullable(sourceKind);
+            this.sourceKind = Codegen.ofNullable(sourceKind);
             return this;
         }
         public Builder suspend(@Nullable Output<Boolean> suspend) {
@@ -330,7 +331,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder suspend(@Nullable Boolean suspend) {
-            this.suspend = Output.ofNullable(suspend);
+            this.suspend = Codegen.ofNullable(suspend);
             return this;
         }        public FluxConfigurationArgs build() {
             return new FluxConfigurationArgs(clusterName, clusterResourceName, clusterRp, configurationProtectedSettings, fluxConfigurationName, gitRepository, kustomizations, namespace, resourceGroupName, scope, sourceKind, suspend);

@@ -11,6 +11,7 @@ import io.pulumi.azurenative.containerservice.inputs.OpenShiftRouterProfileArgs;
 import io.pulumi.azurenative.containerservice.inputs.PurchasePlanArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +31,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<OpenShiftManagedClusterAgentPoolProfileArgs>> agentPoolProfiles;
 
     public Output<List<OpenShiftManagedClusterAgentPoolProfileArgs>> getAgentPoolProfiles() {
-        return this.agentPoolProfiles == null ? Output.empty() : this.agentPoolProfiles;
+        return this.agentPoolProfiles == null ? Codegen.empty() : this.agentPoolProfiles;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<OpenShiftManagedClusterAuthProfileArgs> authProfile;
 
     public Output<OpenShiftManagedClusterAuthProfileArgs> getAuthProfile() {
-        return this.authProfile == null ? Output.empty() : this.authProfile;
+        return this.authProfile == null ? Codegen.empty() : this.authProfile;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<OpenShiftManagedClusterMasterPoolProfileArgs> masterPoolProfile;
 
     public Output<OpenShiftManagedClusterMasterPoolProfileArgs> getMasterPoolProfile() {
-        return this.masterPoolProfile == null ? Output.empty() : this.masterPoolProfile;
+        return this.masterPoolProfile == null ? Codegen.empty() : this.masterPoolProfile;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<NetworkProfileArgs> networkProfile;
 
     public Output<NetworkProfileArgs> getNetworkProfile() {
-        return this.networkProfile == null ? Output.empty() : this.networkProfile;
+        return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<PurchasePlanArgs> plan;
 
     public Output<PurchasePlanArgs> getPlan() {
-        return this.plan == null ? Output.empty() : this.plan;
+        return this.plan == null ? Codegen.empty() : this.plan;
     }
 
     /**
@@ -118,7 +119,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     /**
@@ -129,7 +130,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<OpenShiftRouterProfileArgs>> routerProfiles;
 
     public Output<List<OpenShiftRouterProfileArgs>> getRouterProfiles() {
-        return this.routerProfiles == null ? Output.empty() : this.routerProfiles;
+        return this.routerProfiles == null ? Codegen.empty() : this.routerProfiles;
     }
 
     /**
@@ -140,7 +141,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public OpenShiftManagedClusterArgs(
@@ -169,17 +170,17 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
     }
 
     private OpenShiftManagedClusterArgs() {
-        this.agentPoolProfiles = Output.empty();
-        this.authProfile = Output.empty();
-        this.location = Output.empty();
-        this.masterPoolProfile = Output.empty();
-        this.networkProfile = Output.empty();
-        this.openShiftVersion = Output.empty();
-        this.plan = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.routerProfiles = Output.empty();
-        this.tags = Output.empty();
+        this.agentPoolProfiles = Codegen.empty();
+        this.authProfile = Codegen.empty();
+        this.location = Codegen.empty();
+        this.masterPoolProfile = Codegen.empty();
+        this.networkProfile = Codegen.empty();
+        this.openShiftVersion = Codegen.empty();
+        this.plan = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.routerProfiles = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -227,7 +228,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder agentPoolProfiles(@Nullable List<OpenShiftManagedClusterAgentPoolProfileArgs> agentPoolProfiles) {
-            this.agentPoolProfiles = Output.ofNullable(agentPoolProfiles);
+            this.agentPoolProfiles = Codegen.ofNullable(agentPoolProfiles);
             return this;
         }
         public Builder agentPoolProfiles(OpenShiftManagedClusterAgentPoolProfileArgs... agentPoolProfiles) {
@@ -238,7 +239,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder authProfile(@Nullable OpenShiftManagedClusterAuthProfileArgs authProfile) {
-            this.authProfile = Output.ofNullable(authProfile);
+            this.authProfile = Codegen.ofNullable(authProfile);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -246,7 +247,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder masterPoolProfile(@Nullable Output<OpenShiftManagedClusterMasterPoolProfileArgs> masterPoolProfile) {
@@ -254,7 +255,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder masterPoolProfile(@Nullable OpenShiftManagedClusterMasterPoolProfileArgs masterPoolProfile) {
-            this.masterPoolProfile = Output.ofNullable(masterPoolProfile);
+            this.masterPoolProfile = Codegen.ofNullable(masterPoolProfile);
             return this;
         }
         public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
@@ -262,7 +263,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
-            this.networkProfile = Output.ofNullable(networkProfile);
+            this.networkProfile = Codegen.ofNullable(networkProfile);
             return this;
         }
         public Builder openShiftVersion(Output<String> openShiftVersion) {
@@ -278,7 +279,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder plan(@Nullable PurchasePlanArgs plan) {
-            this.plan = Output.ofNullable(plan);
+            this.plan = Codegen.ofNullable(plan);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -294,7 +295,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }
         public Builder routerProfiles(@Nullable Output<List<OpenShiftRouterProfileArgs>> routerProfiles) {
@@ -302,7 +303,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder routerProfiles(@Nullable List<OpenShiftRouterProfileArgs> routerProfiles) {
-            this.routerProfiles = Output.ofNullable(routerProfiles);
+            this.routerProfiles = Codegen.ofNullable(routerProfiles);
             return this;
         }
         public Builder routerProfiles(OpenShiftRouterProfileArgs... routerProfiles) {
@@ -313,7 +314,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public OpenShiftManagedClusterArgs build() {
             return new OpenShiftManagedClusterArgs(agentPoolProfiles, authProfile, location, masterPoolProfile, networkProfile, openShiftVersion, plan, resourceGroupName, resourceName, routerProfiles, tags);

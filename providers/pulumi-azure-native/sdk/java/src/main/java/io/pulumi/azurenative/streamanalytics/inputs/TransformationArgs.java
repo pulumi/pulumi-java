@@ -5,6 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> query;
 
     public Output<String> getQuery() {
-        return this.query == null ? Output.empty() : this.query;
+        return this.query == null ? Codegen.empty() : this.query;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> streamingUnits;
 
     public Output<Integer> getStreamingUnits() {
-        return this.streamingUnits == null ? Output.empty() : this.streamingUnits;
+        return this.streamingUnits == null ? Codegen.empty() : this.streamingUnits;
     }
 
     public TransformationArgs(
@@ -62,9 +63,9 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TransformationArgs() {
-        this.name = Output.empty();
-        this.query = Output.empty();
-        this.streamingUnits = Output.empty();
+        this.name = Codegen.empty();
+        this.query = Codegen.empty();
+        this.streamingUnits = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder query(@Nullable Output<String> query) {
@@ -104,7 +105,7 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder query(@Nullable String query) {
-            this.query = Output.ofNullable(query);
+            this.query = Codegen.ofNullable(query);
             return this;
         }
         public Builder streamingUnits(@Nullable Output<Integer> streamingUnits) {
@@ -112,7 +113,7 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder streamingUnits(@Nullable Integer streamingUnits) {
-            this.streamingUnits = Output.ofNullable(streamingUnits);
+            this.streamingUnits = Codegen.ofNullable(streamingUnits);
             return this;
         }        public TransformationArgs build() {
             return new TransformationArgs(name, query, streamingUnits);

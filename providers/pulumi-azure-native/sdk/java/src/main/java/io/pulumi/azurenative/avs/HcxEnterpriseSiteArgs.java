@@ -5,6 +5,7 @@ package io.pulumi.azurenative.avs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class HcxEnterpriseSiteArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> hcxEnterpriseSiteName;
 
     public Output<String> getHcxEnterpriseSiteName() {
-        return this.hcxEnterpriseSiteName == null ? Output.empty() : this.hcxEnterpriseSiteName;
+        return this.hcxEnterpriseSiteName == null ? Codegen.empty() : this.hcxEnterpriseSiteName;
     }
 
     /**
@@ -57,9 +58,9 @@ public final class HcxEnterpriseSiteArgs extends io.pulumi.resources.ResourceArg
     }
 
     private HcxEnterpriseSiteArgs() {
-        this.hcxEnterpriseSiteName = Output.empty();
-        this.privateCloudName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.hcxEnterpriseSiteName = Codegen.empty();
+        this.privateCloudName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class HcxEnterpriseSiteArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder hcxEnterpriseSiteName(@Nullable String hcxEnterpriseSiteName) {
-            this.hcxEnterpriseSiteName = Output.ofNullable(hcxEnterpriseSiteName);
+            this.hcxEnterpriseSiteName = Codegen.ofNullable(hcxEnterpriseSiteName);
             return this;
         }
         public Builder privateCloudName(Output<String> privateCloudName) {

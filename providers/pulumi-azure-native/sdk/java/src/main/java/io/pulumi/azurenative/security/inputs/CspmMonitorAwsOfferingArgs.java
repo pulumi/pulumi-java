@@ -6,6 +6,7 @@ package io.pulumi.azurenative.security.inputs;
 import io.pulumi.azurenative.security.inputs.CspmMonitorAwsOfferingNativeCloudConnectionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class CspmMonitorAwsOfferingArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<CspmMonitorAwsOfferingNativeCloudConnectionArgs> nativeCloudConnection;
 
     public Output<CspmMonitorAwsOfferingNativeCloudConnectionArgs> getNativeCloudConnection() {
-        return this.nativeCloudConnection == null ? Output.empty() : this.nativeCloudConnection;
+        return this.nativeCloudConnection == null ? Codegen.empty() : this.nativeCloudConnection;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class CspmMonitorAwsOfferingArgs extends io.pulumi.resources.Resour
     }
 
     private CspmMonitorAwsOfferingArgs() {
-        this.nativeCloudConnection = Output.empty();
-        this.offeringType = Output.empty();
+        this.nativeCloudConnection = Codegen.empty();
+        this.offeringType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class CspmMonitorAwsOfferingArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder nativeCloudConnection(@Nullable CspmMonitorAwsOfferingNativeCloudConnectionArgs nativeCloudConnection) {
-            this.nativeCloudConnection = Output.ofNullable(nativeCloudConnection);
+            this.nativeCloudConnection = Codegen.ofNullable(nativeCloudConnection);
             return this;
         }
         public Builder offeringType(Output<String> offeringType) {

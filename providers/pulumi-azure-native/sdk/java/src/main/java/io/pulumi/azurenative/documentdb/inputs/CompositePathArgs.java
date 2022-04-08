@@ -7,6 +7,7 @@ import io.pulumi.azurenative.documentdb.enums.CompositePathSortOrder;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class CompositePathArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,CompositePathSortOrder>> order;
 
     public Output<Either<String,CompositePathSortOrder>> getOrder() {
-        return this.order == null ? Output.empty() : this.order;
+        return this.order == null ? Codegen.empty() : this.order;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class CompositePathArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     public CompositePathArgs(
@@ -46,8 +47,8 @@ public final class CompositePathArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CompositePathArgs() {
-        this.order = Output.empty();
-        this.path = Output.empty();
+        this.order = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class CompositePathArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder order(@Nullable Either<String,CompositePathSortOrder> order) {
-            this.order = Output.ofNullable(order);
+            this.order = Codegen.ofNullable(order);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -85,7 +86,7 @@ public final class CompositePathArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }        public CompositePathArgs build() {
             return new CompositePathArgs(order, path);

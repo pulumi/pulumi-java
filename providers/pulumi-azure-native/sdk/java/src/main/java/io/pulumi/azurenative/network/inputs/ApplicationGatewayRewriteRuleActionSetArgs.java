@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.inputs.ApplicationGatewayHeaderConfiguratio
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayUrlConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends io.pulumi.
       private final @Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> requestHeaderConfigurations;
 
     public Output<List<ApplicationGatewayHeaderConfigurationArgs>> getRequestHeaderConfigurations() {
-        return this.requestHeaderConfigurations == null ? Output.empty() : this.requestHeaderConfigurations;
+        return this.requestHeaderConfigurations == null ? Codegen.empty() : this.requestHeaderConfigurations;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends io.pulumi.
       private final @Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations;
 
     public Output<List<ApplicationGatewayHeaderConfigurationArgs>> getResponseHeaderConfigurations() {
-        return this.responseHeaderConfigurations == null ? Output.empty() : this.responseHeaderConfigurations;
+        return this.responseHeaderConfigurations == null ? Codegen.empty() : this.responseHeaderConfigurations;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends io.pulumi.
       private final @Nullable Output<ApplicationGatewayUrlConfigurationArgs> urlConfiguration;
 
     public Output<ApplicationGatewayUrlConfigurationArgs> getUrlConfiguration() {
-        return this.urlConfiguration == null ? Output.empty() : this.urlConfiguration;
+        return this.urlConfiguration == null ? Codegen.empty() : this.urlConfiguration;
     }
 
     public ApplicationGatewayRewriteRuleActionSetArgs(
@@ -63,9 +64,9 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends io.pulumi.
     }
 
     private ApplicationGatewayRewriteRuleActionSetArgs() {
-        this.requestHeaderConfigurations = Output.empty();
-        this.responseHeaderConfigurations = Output.empty();
-        this.urlConfiguration = Output.empty();
+        this.requestHeaderConfigurations = Codegen.empty();
+        this.responseHeaderConfigurations = Codegen.empty();
+        this.urlConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends io.pulumi.
             return this;
         }
         public Builder requestHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationArgs> requestHeaderConfigurations) {
-            this.requestHeaderConfigurations = Output.ofNullable(requestHeaderConfigurations);
+            this.requestHeaderConfigurations = Codegen.ofNullable(requestHeaderConfigurations);
             return this;
         }
         public Builder requestHeaderConfigurations(ApplicationGatewayHeaderConfigurationArgs... requestHeaderConfigurations) {
@@ -108,7 +109,7 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends io.pulumi.
             return this;
         }
         public Builder responseHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationArgs> responseHeaderConfigurations) {
-            this.responseHeaderConfigurations = Output.ofNullable(responseHeaderConfigurations);
+            this.responseHeaderConfigurations = Codegen.ofNullable(responseHeaderConfigurations);
             return this;
         }
         public Builder responseHeaderConfigurations(ApplicationGatewayHeaderConfigurationArgs... responseHeaderConfigurations) {
@@ -119,7 +120,7 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends io.pulumi.
             return this;
         }
         public Builder urlConfiguration(@Nullable ApplicationGatewayUrlConfigurationArgs urlConfiguration) {
-            this.urlConfiguration = Output.ofNullable(urlConfiguration);
+            this.urlConfiguration = Codegen.ofNullable(urlConfiguration);
             return this;
         }        public ApplicationGatewayRewriteRuleActionSetArgs build() {
             return new ApplicationGatewayRewriteRuleActionSetArgs(requestHeaderConfigurations, responseHeaderConfigurations, urlConfiguration);

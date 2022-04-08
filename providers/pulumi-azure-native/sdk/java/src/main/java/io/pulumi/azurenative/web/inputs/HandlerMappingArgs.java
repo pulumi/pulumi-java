@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arguments;
 
     public Output<String> getArguments() {
-        return this.arguments == null ? Output.empty() : this.arguments;
+        return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> extension;
 
     public Output<String> getExtension() {
-        return this.extension == null ? Output.empty() : this.extension;
+        return this.extension == null ? Codegen.empty() : this.extension;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> scriptProcessor;
 
     public Output<String> getScriptProcessor() {
-        return this.scriptProcessor == null ? Output.empty() : this.scriptProcessor;
+        return this.scriptProcessor == null ? Codegen.empty() : this.scriptProcessor;
     }
 
     public HandlerMappingArgs(
@@ -62,9 +63,9 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HandlerMappingArgs() {
-        this.arguments = Output.empty();
-        this.extension = Output.empty();
-        this.scriptProcessor = Output.empty();
+        this.arguments = Codegen.empty();
+        this.extension = Codegen.empty();
+        this.scriptProcessor = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arguments(@Nullable String arguments) {
-            this.arguments = Output.ofNullable(arguments);
+            this.arguments = Codegen.ofNullable(arguments);
             return this;
         }
         public Builder extension(@Nullable Output<String> extension) {
@@ -104,7 +105,7 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extension(@Nullable String extension) {
-            this.extension = Output.ofNullable(extension);
+            this.extension = Codegen.ofNullable(extension);
             return this;
         }
         public Builder scriptProcessor(@Nullable Output<String> scriptProcessor) {
@@ -112,7 +113,7 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scriptProcessor(@Nullable String scriptProcessor) {
-            this.scriptProcessor = Output.ofNullable(scriptProcessor);
+            this.scriptProcessor = Codegen.ofNullable(scriptProcessor);
             return this;
         }        public HandlerMappingArgs build() {
             return new HandlerMappingArgs(arguments, extension, scriptProcessor);

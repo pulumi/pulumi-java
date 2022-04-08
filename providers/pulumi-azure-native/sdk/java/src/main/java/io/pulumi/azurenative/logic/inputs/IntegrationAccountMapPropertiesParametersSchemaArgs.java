@@ -5,6 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class IntegrationAccountMapPropertiesParametersSchemaArgs extends i
       private final @Nullable Output<String> ref;
 
     public Output<String> getRef() {
-        return this.ref == null ? Output.empty() : this.ref;
+        return this.ref == null ? Codegen.empty() : this.ref;
     }
 
     public IntegrationAccountMapPropertiesParametersSchemaArgs(@Nullable Output<String> ref) {
@@ -34,7 +35,7 @@ public final class IntegrationAccountMapPropertiesParametersSchemaArgs extends i
     }
 
     private IntegrationAccountMapPropertiesParametersSchemaArgs() {
-        this.ref = Output.empty();
+        this.ref = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class IntegrationAccountMapPropertiesParametersSchemaArgs extends i
             return this;
         }
         public Builder ref(@Nullable String ref) {
-            this.ref = Output.ofNullable(ref);
+            this.ref = Codegen.ofNullable(ref);
             return this;
         }        public IntegrationAccountMapPropertiesParametersSchemaArgs build() {
             return new IntegrationAccountMapPropertiesParametersSchemaArgs(ref);

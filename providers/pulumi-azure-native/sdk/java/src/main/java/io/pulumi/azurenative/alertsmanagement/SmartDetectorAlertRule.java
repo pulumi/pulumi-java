@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -225,7 +226,7 @@ public class SmartDetectorAlertRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SmartDetectorAlertRule(String name, SmartDetectorAlertRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:alertsmanagement:SmartDetectorAlertRule", name, args == null ? SmartDetectorAlertRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:alertsmanagement:SmartDetectorAlertRule", name, args == null ? SmartDetectorAlertRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SmartDetectorAlertRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

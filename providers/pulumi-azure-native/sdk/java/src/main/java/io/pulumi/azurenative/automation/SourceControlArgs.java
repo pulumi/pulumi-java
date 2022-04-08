@@ -8,6 +8,7 @@ import io.pulumi.azurenative.automation.inputs.SourceControlSecurityTokenPropert
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> autoSync;
 
     public Output<Boolean> getAutoSync() {
-        return this.autoSync == null ? Output.empty() : this.autoSync;
+        return this.autoSync == null ? Codegen.empty() : this.autoSync;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> branch;
 
     public Output<String> getBranch() {
-        return this.branch == null ? Output.empty() : this.branch;
+        return this.branch == null ? Codegen.empty() : this.branch;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> folderPath;
 
     public Output<String> getFolderPath() {
-        return this.folderPath == null ? Output.empty() : this.folderPath;
+        return this.folderPath == null ? Codegen.empty() : this.folderPath;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> publishRunbook;
 
     public Output<Boolean> getPublishRunbook() {
-        return this.publishRunbook == null ? Output.empty() : this.publishRunbook;
+        return this.publishRunbook == null ? Codegen.empty() : this.publishRunbook;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> repoUrl;
 
     public Output<String> getRepoUrl() {
-        return this.repoUrl == null ? Output.empty() : this.repoUrl;
+        return this.repoUrl == null ? Codegen.empty() : this.repoUrl;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SourceControlSecurityTokenPropertiesArgs> securityToken;
 
     public Output<SourceControlSecurityTokenPropertiesArgs> getSecurityToken() {
-        return this.securityToken == null ? Output.empty() : this.securityToken;
+        return this.securityToken == null ? Codegen.empty() : this.securityToken;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sourceControlName;
 
     public Output<String> getSourceControlName() {
-        return this.sourceControlName == null ? Output.empty() : this.sourceControlName;
+        return this.sourceControlName == null ? Codegen.empty() : this.sourceControlName;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,SourceType>> sourceType;
 
     public Output<Either<String,SourceType>> getSourceType() {
-        return this.sourceType == null ? Output.empty() : this.sourceType;
+        return this.sourceType == null ? Codegen.empty() : this.sourceType;
     }
 
     public SourceControlArgs(
@@ -165,17 +166,17 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SourceControlArgs() {
-        this.autoSync = Output.empty();
-        this.automationAccountName = Output.empty();
-        this.branch = Output.empty();
-        this.description = Output.empty();
-        this.folderPath = Output.empty();
-        this.publishRunbook = Output.empty();
-        this.repoUrl = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.securityToken = Output.empty();
-        this.sourceControlName = Output.empty();
-        this.sourceType = Output.empty();
+        this.autoSync = Codegen.empty();
+        this.automationAccountName = Codegen.empty();
+        this.branch = Codegen.empty();
+        this.description = Codegen.empty();
+        this.folderPath = Codegen.empty();
+        this.publishRunbook = Codegen.empty();
+        this.repoUrl = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.securityToken = Codegen.empty();
+        this.sourceControlName = Codegen.empty();
+        this.sourceType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -223,7 +224,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoSync(@Nullable Boolean autoSync) {
-            this.autoSync = Output.ofNullable(autoSync);
+            this.autoSync = Codegen.ofNullable(autoSync);
             return this;
         }
         public Builder automationAccountName(Output<String> automationAccountName) {
@@ -239,7 +240,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder branch(@Nullable String branch) {
-            this.branch = Output.ofNullable(branch);
+            this.branch = Codegen.ofNullable(branch);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -247,7 +248,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder folderPath(@Nullable Output<String> folderPath) {
@@ -255,7 +256,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder folderPath(@Nullable String folderPath) {
-            this.folderPath = Output.ofNullable(folderPath);
+            this.folderPath = Codegen.ofNullable(folderPath);
             return this;
         }
         public Builder publishRunbook(@Nullable Output<Boolean> publishRunbook) {
@@ -263,7 +264,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publishRunbook(@Nullable Boolean publishRunbook) {
-            this.publishRunbook = Output.ofNullable(publishRunbook);
+            this.publishRunbook = Codegen.ofNullable(publishRunbook);
             return this;
         }
         public Builder repoUrl(@Nullable Output<String> repoUrl) {
@@ -271,7 +272,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder repoUrl(@Nullable String repoUrl) {
-            this.repoUrl = Output.ofNullable(repoUrl);
+            this.repoUrl = Codegen.ofNullable(repoUrl);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -287,7 +288,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityToken(@Nullable SourceControlSecurityTokenPropertiesArgs securityToken) {
-            this.securityToken = Output.ofNullable(securityToken);
+            this.securityToken = Codegen.ofNullable(securityToken);
             return this;
         }
         public Builder sourceControlName(@Nullable Output<String> sourceControlName) {
@@ -295,7 +296,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceControlName(@Nullable String sourceControlName) {
-            this.sourceControlName = Output.ofNullable(sourceControlName);
+            this.sourceControlName = Codegen.ofNullable(sourceControlName);
             return this;
         }
         public Builder sourceType(@Nullable Output<Either<String,SourceType>> sourceType) {
@@ -303,7 +304,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceType(@Nullable Either<String,SourceType> sourceType) {
-            this.sourceType = Output.ofNullable(sourceType);
+            this.sourceType = Codegen.ofNullable(sourceType);
             return this;
         }        public SourceControlArgs build() {
             return new SourceControlArgs(autoSync, automationAccountName, branch, description, folderPath, publishRunbook, repoUrl, resourceGroupName, securityToken, sourceControlName, sourceType);

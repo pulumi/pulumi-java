@@ -6,6 +6,7 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.securityinsights.inputs.AlertsDataTypeOfDataConnectorArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class AATPDataConnectorArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> dataConnectorId;
 
     public Output<String> getDataConnectorId() {
-        return this.dataConnectorId == null ? Output.empty() : this.dataConnectorId;
+        return this.dataConnectorId == null ? Codegen.empty() : this.dataConnectorId;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class AATPDataConnectorArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<AlertsDataTypeOfDataConnectorArgs> dataTypes;
 
     public Output<AlertsDataTypeOfDataConnectorArgs> getDataTypes() {
-        return this.dataTypes == null ? Output.empty() : this.dataTypes;
+        return this.dataTypes == null ? Codegen.empty() : this.dataTypes;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class AATPDataConnectorArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     /**
@@ -98,12 +99,12 @@ public final class AATPDataConnectorArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AATPDataConnectorArgs() {
-        this.dataConnectorId = Output.empty();
-        this.dataTypes = Output.empty();
-        this.kind = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tenantId = Output.empty();
-        this.workspaceName = Output.empty();
+        this.dataConnectorId = Codegen.empty();
+        this.dataTypes = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tenantId = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class AATPDataConnectorArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder dataConnectorId(@Nullable String dataConnectorId) {
-            this.dataConnectorId = Output.ofNullable(dataConnectorId);
+            this.dataConnectorId = Codegen.ofNullable(dataConnectorId);
             return this;
         }
         public Builder dataTypes(@Nullable Output<AlertsDataTypeOfDataConnectorArgs> dataTypes) {
@@ -149,7 +150,7 @@ public final class AATPDataConnectorArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder dataTypes(@Nullable AlertsDataTypeOfDataConnectorArgs dataTypes) {
-            this.dataTypes = Output.ofNullable(dataTypes);
+            this.dataTypes = Codegen.ofNullable(dataTypes);
             return this;
         }
         public Builder kind(Output<String> kind) {
@@ -173,7 +174,7 @@ public final class AATPDataConnectorArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

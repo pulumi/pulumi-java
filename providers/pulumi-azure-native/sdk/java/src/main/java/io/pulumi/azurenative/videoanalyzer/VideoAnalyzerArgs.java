@@ -8,6 +8,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.StorageAccountArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoAnalyzerIdentityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +28,7 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
-        return this.accountName == null ? Output.empty() : this.accountName;
+        return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<VideoAnalyzerIdentityArgs> identity;
 
     public Output<VideoAnalyzerIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public VideoAnalyzerArgs(
@@ -114,13 +115,13 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VideoAnalyzerArgs() {
-        this.accountName = Output.empty();
-        this.encryption = Output.empty();
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.storageAccounts = Output.empty();
-        this.tags = Output.empty();
+        this.accountName = Codegen.empty();
+        this.encryption = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.storageAccounts = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Output.ofNullable(accountName);
+            this.accountName = Codegen.ofNullable(accountName);
             return this;
         }
         public Builder encryption(Output<AccountEncryptionArgs> encryption) {
@@ -176,7 +177,7 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable VideoAnalyzerIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -184,7 +185,7 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -211,7 +212,7 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public VideoAnalyzerArgs build() {
             return new VideoAnalyzerArgs(accountName, encryption, identity, location, resourceGroupName, storageAccounts, tags);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> dataset;
 
     public Output<String> getDataset() {
-        return this.dataset == null ? Output.empty() : this.dataset;
+        return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> groupId;
 
     public Output<String> getGroupId() {
-        return this.groupId == null ? Output.empty() : this.groupId;
+        return this.groupId == null ? Codegen.empty() : this.groupId;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> groupName;
 
     public Output<String> getGroupName() {
-        return this.groupName == null ? Output.empty() : this.groupName;
+        return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> refreshToken;
 
     public Output<String> getRefreshToken() {
-        return this.refreshToken == null ? Output.empty() : this.refreshToken;
+        return this.refreshToken == null ? Codegen.empty() : this.refreshToken;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> table;
 
     public Output<String> getTable() {
-        return this.table == null ? Output.empty() : this.table;
+        return this.table == null ? Codegen.empty() : this.table;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> tokenUserDisplayName;
 
     public Output<String> getTokenUserDisplayName() {
-        return this.tokenUserDisplayName == null ? Output.empty() : this.tokenUserDisplayName;
+        return this.tokenUserDisplayName == null ? Codegen.empty() : this.tokenUserDisplayName;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> tokenUserPrincipalName;
 
     public Output<String> getTokenUserPrincipalName() {
-        return this.tokenUserPrincipalName == null ? Output.empty() : this.tokenUserPrincipalName;
+        return this.tokenUserPrincipalName == null ? Codegen.empty() : this.tokenUserPrincipalName;
     }
 
     /**
@@ -127,14 +128,14 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
     }
 
     private PowerBIOutputDataSourceArgs() {
-        this.dataset = Output.empty();
-        this.groupId = Output.empty();
-        this.groupName = Output.empty();
-        this.refreshToken = Output.empty();
-        this.table = Output.empty();
-        this.tokenUserDisplayName = Output.empty();
-        this.tokenUserPrincipalName = Output.empty();
-        this.type = Output.empty();
+        this.dataset = Codegen.empty();
+        this.groupId = Codegen.empty();
+        this.groupName = Codegen.empty();
+        this.refreshToken = Codegen.empty();
+        this.table = Codegen.empty();
+        this.tokenUserDisplayName = Codegen.empty();
+        this.tokenUserPrincipalName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder dataset(@Nullable String dataset) {
-            this.dataset = Output.ofNullable(dataset);
+            this.dataset = Codegen.ofNullable(dataset);
             return this;
         }
         public Builder groupId(@Nullable Output<String> groupId) {
@@ -184,7 +185,7 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = Output.ofNullable(groupId);
+            this.groupId = Codegen.ofNullable(groupId);
             return this;
         }
         public Builder groupName(@Nullable Output<String> groupName) {
@@ -192,7 +193,7 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = Output.ofNullable(groupName);
+            this.groupName = Codegen.ofNullable(groupName);
             return this;
         }
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
@@ -200,7 +201,7 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder refreshToken(@Nullable String refreshToken) {
-            this.refreshToken = Output.ofNullable(refreshToken);
+            this.refreshToken = Codegen.ofNullable(refreshToken);
             return this;
         }
         public Builder table(@Nullable Output<String> table) {
@@ -208,7 +209,7 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder table(@Nullable String table) {
-            this.table = Output.ofNullable(table);
+            this.table = Codegen.ofNullable(table);
             return this;
         }
         public Builder tokenUserDisplayName(@Nullable Output<String> tokenUserDisplayName) {
@@ -216,7 +217,7 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tokenUserDisplayName(@Nullable String tokenUserDisplayName) {
-            this.tokenUserDisplayName = Output.ofNullable(tokenUserDisplayName);
+            this.tokenUserDisplayName = Codegen.ofNullable(tokenUserDisplayName);
             return this;
         }
         public Builder tokenUserPrincipalName(@Nullable Output<String> tokenUserPrincipalName) {
@@ -224,7 +225,7 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tokenUserPrincipalName(@Nullable String tokenUserPrincipalName) {
-            this.tokenUserPrincipalName = Output.ofNullable(tokenUserPrincipalName);
+            this.tokenUserPrincipalName = Codegen.ofNullable(tokenUserPrincipalName);
             return this;
         }
         public Builder type(Output<String> type) {

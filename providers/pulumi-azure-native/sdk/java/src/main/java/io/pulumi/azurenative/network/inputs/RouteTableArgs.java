@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.RouteArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> disableBgpRoutePropagation;
 
     public Output<Boolean> getDisableBgpRoutePropagation() {
-        return this.disableBgpRoutePropagation == null ? Output.empty() : this.disableBgpRoutePropagation;
+        return this.disableBgpRoutePropagation == null ? Codegen.empty() : this.disableBgpRoutePropagation;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RouteArgs>> routes;
 
     public Output<List<RouteArgs>> getRoutes() {
-        return this.routes == null ? Output.empty() : this.routes;
+        return this.routes == null ? Codegen.empty() : this.routes;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public RouteTableArgs(
@@ -91,11 +92,11 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteTableArgs() {
-        this.disableBgpRoutePropagation = Output.empty();
-        this.id = Output.empty();
-        this.location = Output.empty();
-        this.routes = Output.empty();
-        this.tags = Output.empty();
+        this.disableBgpRoutePropagation = Codegen.empty();
+        this.id = Codegen.empty();
+        this.location = Codegen.empty();
+        this.routes = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableBgpRoutePropagation(@Nullable Boolean disableBgpRoutePropagation) {
-            this.disableBgpRoutePropagation = Output.ofNullable(disableBgpRoutePropagation);
+            this.disableBgpRoutePropagation = Codegen.ofNullable(disableBgpRoutePropagation);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -139,7 +140,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -147,7 +148,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder routes(@Nullable Output<List<RouteArgs>> routes) {
@@ -155,7 +156,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routes(@Nullable List<RouteArgs> routes) {
-            this.routes = Output.ofNullable(routes);
+            this.routes = Codegen.ofNullable(routes);
             return this;
         }
         public Builder routes(RouteArgs... routes) {
@@ -166,7 +167,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public RouteTableArgs build() {
             return new RouteTableArgs(disableBgpRoutePropagation, id, location, routes, tags);

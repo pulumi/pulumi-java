@@ -7,6 +7,7 @@ import io.pulumi.azurenative.compute.inputs.LinuxPatchSettingsArgs;
 import io.pulumi.azurenative.compute.inputs.SshConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> disablePasswordAuthentication;
 
     public Output<Boolean> getDisablePasswordAuthentication() {
-        return this.disablePasswordAuthentication == null ? Output.empty() : this.disablePasswordAuthentication;
+        return this.disablePasswordAuthentication == null ? Codegen.empty() : this.disablePasswordAuthentication;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<LinuxPatchSettingsArgs> patchSettings;
 
     public Output<LinuxPatchSettingsArgs> getPatchSettings() {
-        return this.patchSettings == null ? Output.empty() : this.patchSettings;
+        return this.patchSettings == null ? Codegen.empty() : this.patchSettings;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> provisionVMAgent;
 
     public Output<Boolean> getProvisionVMAgent() {
-        return this.provisionVMAgent == null ? Output.empty() : this.provisionVMAgent;
+        return this.provisionVMAgent == null ? Codegen.empty() : this.provisionVMAgent;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<SshConfigurationArgs> ssh;
 
     public Output<SshConfigurationArgs> getSsh() {
-        return this.ssh == null ? Output.empty() : this.ssh;
+        return this.ssh == null ? Codegen.empty() : this.ssh;
     }
 
     public LinuxConfigurationArgs(
@@ -76,10 +77,10 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private LinuxConfigurationArgs() {
-        this.disablePasswordAuthentication = Output.empty();
-        this.patchSettings = Output.empty();
-        this.provisionVMAgent = Output.empty();
-        this.ssh = Output.empty();
+        this.disablePasswordAuthentication = Codegen.empty();
+        this.patchSettings = Codegen.empty();
+        this.provisionVMAgent = Codegen.empty();
+        this.ssh = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder disablePasswordAuthentication(@Nullable Boolean disablePasswordAuthentication) {
-            this.disablePasswordAuthentication = Output.ofNullable(disablePasswordAuthentication);
+            this.disablePasswordAuthentication = Codegen.ofNullable(disablePasswordAuthentication);
             return this;
         }
         public Builder patchSettings(@Nullable Output<LinuxPatchSettingsArgs> patchSettings) {
@@ -121,7 +122,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder patchSettings(@Nullable LinuxPatchSettingsArgs patchSettings) {
-            this.patchSettings = Output.ofNullable(patchSettings);
+            this.patchSettings = Codegen.ofNullable(patchSettings);
             return this;
         }
         public Builder provisionVMAgent(@Nullable Output<Boolean> provisionVMAgent) {
@@ -129,7 +130,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder provisionVMAgent(@Nullable Boolean provisionVMAgent) {
-            this.provisionVMAgent = Output.ofNullable(provisionVMAgent);
+            this.provisionVMAgent = Codegen.ofNullable(provisionVMAgent);
             return this;
         }
         public Builder ssh(@Nullable Output<SshConfigurationArgs> ssh) {
@@ -137,7 +138,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder ssh(@Nullable SshConfigurationArgs ssh) {
-            this.ssh = Output.ofNullable(ssh);
+            this.ssh = Codegen.ofNullable(ssh);
             return this;
         }        public LinuxConfigurationArgs build() {
             return new LinuxConfigurationArgs(disablePasswordAuthentication, patchSettings, provisionVMAgent, ssh);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.media.enums.AudioAnalysisMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class AudioAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> audioLanguage;
 
     public Output<String> getAudioLanguage() {
-        return this.audioLanguage == null ? Output.empty() : this.audioLanguage;
+        return this.audioLanguage == null ? Codegen.empty() : this.audioLanguage;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class AudioAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> experimentalOptions;
 
     public Output<Map<String,String>> getExperimentalOptions() {
-        return this.experimentalOptions == null ? Output.empty() : this.experimentalOptions;
+        return this.experimentalOptions == null ? Codegen.empty() : this.experimentalOptions;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class AudioAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Either<String,AudioAnalysisMode>> mode;
 
     public Output<Either<String,AudioAnalysisMode>> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -78,10 +79,10 @@ public final class AudioAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
     }
 
     private AudioAnalyzerPresetArgs() {
-        this.audioLanguage = Output.empty();
-        this.experimentalOptions = Output.empty();
-        this.mode = Output.empty();
-        this.odataType = Output.empty();
+        this.audioLanguage = Codegen.empty();
+        this.experimentalOptions = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.odataType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class AudioAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder audioLanguage(@Nullable String audioLanguage) {
-            this.audioLanguage = Output.ofNullable(audioLanguage);
+            this.audioLanguage = Codegen.ofNullable(audioLanguage);
             return this;
         }
         public Builder experimentalOptions(@Nullable Output<Map<String,String>> experimentalOptions) {
@@ -123,7 +124,7 @@ public final class AudioAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder experimentalOptions(@Nullable Map<String,String> experimentalOptions) {
-            this.experimentalOptions = Output.ofNullable(experimentalOptions);
+            this.experimentalOptions = Codegen.ofNullable(experimentalOptions);
             return this;
         }
         public Builder mode(@Nullable Output<Either<String,AudioAnalysisMode>> mode) {
@@ -131,7 +132,7 @@ public final class AudioAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder mode(@Nullable Either<String,AudioAnalysisMode> mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder odataType(Output<String> odataType) {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.storsimple.enums.Kind;
 import io.pulumi.azurenative.storsimple.inputs.BandwidthScheduleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> bandwidthSettingName;
 
     public Output<String> getBandwidthSettingName() {
-        return this.bandwidthSettingName == null ? Output.empty() : this.bandwidthSettingName;
+        return this.bandwidthSettingName == null ? Codegen.empty() : this.bandwidthSettingName;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Kind> kind;
 
     public Output<Kind> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -86,11 +87,11 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private BandwidthSettingArgs() {
-        this.bandwidthSettingName = Output.empty();
-        this.kind = Output.empty();
-        this.managerName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.schedules = Output.empty();
+        this.bandwidthSettingName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.managerName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.schedules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder bandwidthSettingName(@Nullable String bandwidthSettingName) {
-            this.bandwidthSettingName = Output.ofNullable(bandwidthSettingName);
+            this.bandwidthSettingName = Codegen.ofNullable(bandwidthSettingName);
             return this;
         }
         public Builder kind(@Nullable Output<Kind> kind) {
@@ -134,7 +135,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder kind(@Nullable Kind kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder managerName(Output<String> managerName) {

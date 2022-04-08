@@ -6,6 +6,7 @@ package io.pulumi.azurenative.elastic.inputs;
 import io.pulumi.azurenative.elastic.inputs.FilteringTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class LogRulesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<FilteringTagArgs>> filteringTags;
 
     public Output<List<FilteringTagArgs>> getFilteringTags() {
-        return this.filteringTags == null ? Output.empty() : this.filteringTags;
+        return this.filteringTags == null ? Codegen.empty() : this.filteringTags;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class LogRulesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> sendAadLogs;
 
     public Output<Boolean> getSendAadLogs() {
-        return this.sendAadLogs == null ? Output.empty() : this.sendAadLogs;
+        return this.sendAadLogs == null ? Codegen.empty() : this.sendAadLogs;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class LogRulesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> sendActivityLogs;
 
     public Output<Boolean> getSendActivityLogs() {
-        return this.sendActivityLogs == null ? Output.empty() : this.sendActivityLogs;
+        return this.sendActivityLogs == null ? Codegen.empty() : this.sendActivityLogs;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class LogRulesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> sendSubscriptionLogs;
 
     public Output<Boolean> getSendSubscriptionLogs() {
-        return this.sendSubscriptionLogs == null ? Output.empty() : this.sendSubscriptionLogs;
+        return this.sendSubscriptionLogs == null ? Codegen.empty() : this.sendSubscriptionLogs;
     }
 
     public LogRulesArgs(
@@ -76,10 +77,10 @@ public final class LogRulesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LogRulesArgs() {
-        this.filteringTags = Output.empty();
-        this.sendAadLogs = Output.empty();
-        this.sendActivityLogs = Output.empty();
-        this.sendSubscriptionLogs = Output.empty();
+        this.filteringTags = Codegen.empty();
+        this.sendAadLogs = Codegen.empty();
+        this.sendActivityLogs = Codegen.empty();
+        this.sendSubscriptionLogs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class LogRulesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filteringTags(@Nullable List<FilteringTagArgs> filteringTags) {
-            this.filteringTags = Output.ofNullable(filteringTags);
+            this.filteringTags = Codegen.ofNullable(filteringTags);
             return this;
         }
         public Builder filteringTags(FilteringTagArgs... filteringTags) {
@@ -124,7 +125,7 @@ public final class LogRulesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sendAadLogs(@Nullable Boolean sendAadLogs) {
-            this.sendAadLogs = Output.ofNullable(sendAadLogs);
+            this.sendAadLogs = Codegen.ofNullable(sendAadLogs);
             return this;
         }
         public Builder sendActivityLogs(@Nullable Output<Boolean> sendActivityLogs) {
@@ -132,7 +133,7 @@ public final class LogRulesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sendActivityLogs(@Nullable Boolean sendActivityLogs) {
-            this.sendActivityLogs = Output.ofNullable(sendActivityLogs);
+            this.sendActivityLogs = Codegen.ofNullable(sendActivityLogs);
             return this;
         }
         public Builder sendSubscriptionLogs(@Nullable Output<Boolean> sendSubscriptionLogs) {
@@ -140,7 +141,7 @@ public final class LogRulesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sendSubscriptionLogs(@Nullable Boolean sendSubscriptionLogs) {
-            this.sendSubscriptionLogs = Output.ofNullable(sendSubscriptionLogs);
+            this.sendSubscriptionLogs = Codegen.ofNullable(sendSubscriptionLogs);
             return this;
         }        public LogRulesArgs build() {
             return new LogRulesArgs(filteringTags, sendAadLogs, sendActivityLogs, sendSubscriptionLogs);

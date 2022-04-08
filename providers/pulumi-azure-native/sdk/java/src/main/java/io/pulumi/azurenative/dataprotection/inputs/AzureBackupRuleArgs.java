@@ -10,6 +10,7 @@ import io.pulumi.azurenative.dataprotection.inputs.ScheduleBasedTriggerContextAr
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<AzureBackupParamsArgs> backupParameters;
 
     public Output<AzureBackupParamsArgs> getBackupParameters() {
-        return this.backupParameters == null ? Output.empty() : this.backupParameters;
+        return this.backupParameters == null ? Codegen.empty() : this.backupParameters;
     }
 
     /**
@@ -88,11 +89,11 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AzureBackupRuleArgs() {
-        this.backupParameters = Output.empty();
-        this.dataStore = Output.empty();
-        this.name = Output.empty();
-        this.objectType = Output.empty();
-        this.trigger = Output.empty();
+        this.backupParameters = Codegen.empty();
+        this.dataStore = Codegen.empty();
+        this.name = Codegen.empty();
+        this.objectType = Codegen.empty();
+        this.trigger = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder backupParameters(@Nullable AzureBackupParamsArgs backupParameters) {
-            this.backupParameters = Output.ofNullable(backupParameters);
+            this.backupParameters = Codegen.ofNullable(backupParameters);
             return this;
         }
         public Builder dataStore(Output<DataStoreInfoBaseArgs> dataStore) {

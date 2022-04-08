@@ -6,6 +6,7 @@ package io.pulumi.azurenative.automation.inputs;
 import io.pulumi.azurenative.automation.inputs.ContentHashArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ContentHashArgs> contentHash;
 
     public Output<ContentHashArgs> getContentHash() {
-        return this.contentHash == null ? Output.empty() : this.contentHash;
+        return this.contentHash == null ? Codegen.empty() : this.contentHash;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ContentLinkArgs(
@@ -62,9 +63,9 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContentLinkArgs() {
-        this.contentHash = Output.empty();
-        this.uri = Output.empty();
-        this.version = Output.empty();
+        this.contentHash = Codegen.empty();
+        this.uri = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentHash(@Nullable ContentHashArgs contentHash) {
-            this.contentHash = Output.ofNullable(contentHash);
+            this.contentHash = Codegen.ofNullable(contentHash);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -104,7 +105,7 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -112,7 +113,7 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ContentLinkArgs build() {
             return new ContentLinkArgs(contentHash, uri, version);

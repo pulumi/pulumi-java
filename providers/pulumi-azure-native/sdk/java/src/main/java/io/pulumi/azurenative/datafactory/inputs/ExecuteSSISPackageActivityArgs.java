@@ -15,6 +15,7 @@ import io.pulumi.azurenative.datafactory.inputs.SSISPropertyOverrideArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -50,7 +51,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Output.empty() : this.dependsOn;
+        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Object> environmentPath;
 
     public Output<Object> getEnvironmentPath() {
-        return this.environmentPath == null ? Output.empty() : this.environmentPath;
+        return this.environmentPath == null ? Codegen.empty() : this.environmentPath;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
       private final @Nullable Output<SSISExecutionCredentialArgs> executionCredential;
 
     public Output<SSISExecutionCredentialArgs> getExecutionCredential() {
-        return this.executionCredential == null ? Output.empty() : this.executionCredential;
+        return this.executionCredential == null ? Codegen.empty() : this.executionCredential;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
+        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
       private final @Nullable Output<SSISLogLocationArgs> logLocation;
 
     public Output<SSISLogLocationArgs> getLogLocation() {
-        return this.logLocation == null ? Output.empty() : this.logLocation;
+        return this.logLocation == null ? Codegen.empty() : this.logLocation;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Object> loggingLevel;
 
     public Output<Object> getLoggingLevel() {
-        return this.loggingLevel == null ? Output.empty() : this.loggingLevel;
+        return this.loggingLevel == null ? Codegen.empty() : this.loggingLevel;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Map<String,Map<String,SSISExecutionParameterArgs>>> packageConnectionManagers;
 
     public Output<Map<String,Map<String,SSISExecutionParameterArgs>>> getPackageConnectionManagers() {
-        return this.packageConnectionManagers == null ? Output.empty() : this.packageConnectionManagers;
+        return this.packageConnectionManagers == null ? Codegen.empty() : this.packageConnectionManagers;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Map<String,SSISExecutionParameterArgs>> packageParameters;
 
     public Output<Map<String,SSISExecutionParameterArgs>> getPackageParameters() {
-        return this.packageParameters == null ? Output.empty() : this.packageParameters;
+        return this.packageParameters == null ? Codegen.empty() : this.packageParameters;
     }
 
     /**
@@ -171,7 +172,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
     public Output<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -182,7 +183,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Map<String,Map<String,SSISExecutionParameterArgs>>> projectConnectionManagers;
 
     public Output<Map<String,Map<String,SSISExecutionParameterArgs>>> getProjectConnectionManagers() {
-        return this.projectConnectionManagers == null ? Output.empty() : this.projectConnectionManagers;
+        return this.projectConnectionManagers == null ? Codegen.empty() : this.projectConnectionManagers;
     }
 
     /**
@@ -193,7 +194,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Map<String,SSISExecutionParameterArgs>> projectParameters;
 
     public Output<Map<String,SSISExecutionParameterArgs>> getProjectParameters() {
-        return this.projectParameters == null ? Output.empty() : this.projectParameters;
+        return this.projectParameters == null ? Codegen.empty() : this.projectParameters;
     }
 
     /**
@@ -204,7 +205,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Map<String,SSISPropertyOverrideArgs>> propertyOverrides;
 
     public Output<Map<String,SSISPropertyOverrideArgs>> getPropertyOverrides() {
-        return this.propertyOverrides == null ? Output.empty() : this.propertyOverrides;
+        return this.propertyOverrides == null ? Codegen.empty() : this.propertyOverrides;
     }
 
     /**
@@ -215,7 +216,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Object> runtime;
 
     public Output<Object> getRuntime() {
-        return this.runtime == null ? Output.empty() : this.runtime;
+        return this.runtime == null ? Codegen.empty() : this.runtime;
     }
 
     /**
@@ -238,7 +239,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Output.empty() : this.userProperties;
+        return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 
     public ExecuteSSISPackageActivityArgs(
@@ -283,25 +284,25 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
     }
 
     private ExecuteSSISPackageActivityArgs() {
-        this.connectVia = Output.empty();
-        this.dependsOn = Output.empty();
-        this.description = Output.empty();
-        this.environmentPath = Output.empty();
-        this.executionCredential = Output.empty();
-        this.linkedServiceName = Output.empty();
-        this.logLocation = Output.empty();
-        this.loggingLevel = Output.empty();
-        this.name = Output.empty();
-        this.packageConnectionManagers = Output.empty();
-        this.packageLocation = Output.empty();
-        this.packageParameters = Output.empty();
-        this.policy = Output.empty();
-        this.projectConnectionManagers = Output.empty();
-        this.projectParameters = Output.empty();
-        this.propertyOverrides = Output.empty();
-        this.runtime = Output.empty();
-        this.type = Output.empty();
-        this.userProperties = Output.empty();
+        this.connectVia = Codegen.empty();
+        this.dependsOn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.environmentPath = Codegen.empty();
+        this.executionCredential = Codegen.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.logLocation = Codegen.empty();
+        this.loggingLevel = Codegen.empty();
+        this.name = Codegen.empty();
+        this.packageConnectionManagers = Codegen.empty();
+        this.packageLocation = Codegen.empty();
+        this.packageParameters = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.projectConnectionManagers = Codegen.empty();
+        this.projectParameters = Codegen.empty();
+        this.propertyOverrides = Codegen.empty();
+        this.runtime = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -373,7 +374,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Output.ofNullable(dependsOn);
+            this.dependsOn = Codegen.ofNullable(dependsOn);
             return this;
         }
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
@@ -384,7 +385,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder environmentPath(@Nullable Output<Object> environmentPath) {
@@ -392,7 +393,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder environmentPath(@Nullable Object environmentPath) {
-            this.environmentPath = Output.ofNullable(environmentPath);
+            this.environmentPath = Codegen.ofNullable(environmentPath);
             return this;
         }
         public Builder executionCredential(@Nullable Output<SSISExecutionCredentialArgs> executionCredential) {
@@ -400,7 +401,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder executionCredential(@Nullable SSISExecutionCredentialArgs executionCredential) {
-            this.executionCredential = Output.ofNullable(executionCredential);
+            this.executionCredential = Codegen.ofNullable(executionCredential);
             return this;
         }
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
@@ -408,7 +409,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Output.ofNullable(linkedServiceName);
+            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
             return this;
         }
         public Builder logLocation(@Nullable Output<SSISLogLocationArgs> logLocation) {
@@ -416,7 +417,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder logLocation(@Nullable SSISLogLocationArgs logLocation) {
-            this.logLocation = Output.ofNullable(logLocation);
+            this.logLocation = Codegen.ofNullable(logLocation);
             return this;
         }
         public Builder loggingLevel(@Nullable Output<Object> loggingLevel) {
@@ -424,7 +425,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder loggingLevel(@Nullable Object loggingLevel) {
-            this.loggingLevel = Output.ofNullable(loggingLevel);
+            this.loggingLevel = Codegen.ofNullable(loggingLevel);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -440,7 +441,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder packageConnectionManagers(@Nullable Map<String,Map<String,SSISExecutionParameterArgs>> packageConnectionManagers) {
-            this.packageConnectionManagers = Output.ofNullable(packageConnectionManagers);
+            this.packageConnectionManagers = Codegen.ofNullable(packageConnectionManagers);
             return this;
         }
         public Builder packageLocation(Output<SSISPackageLocationArgs> packageLocation) {
@@ -456,7 +457,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder packageParameters(@Nullable Map<String,SSISExecutionParameterArgs> packageParameters) {
-            this.packageParameters = Output.ofNullable(packageParameters);
+            this.packageParameters = Codegen.ofNullable(packageParameters);
             return this;
         }
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
@@ -464,7 +465,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder projectConnectionManagers(@Nullable Output<Map<String,Map<String,SSISExecutionParameterArgs>>> projectConnectionManagers) {
@@ -472,7 +473,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder projectConnectionManagers(@Nullable Map<String,Map<String,SSISExecutionParameterArgs>> projectConnectionManagers) {
-            this.projectConnectionManagers = Output.ofNullable(projectConnectionManagers);
+            this.projectConnectionManagers = Codegen.ofNullable(projectConnectionManagers);
             return this;
         }
         public Builder projectParameters(@Nullable Output<Map<String,SSISExecutionParameterArgs>> projectParameters) {
@@ -480,7 +481,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder projectParameters(@Nullable Map<String,SSISExecutionParameterArgs> projectParameters) {
-            this.projectParameters = Output.ofNullable(projectParameters);
+            this.projectParameters = Codegen.ofNullable(projectParameters);
             return this;
         }
         public Builder propertyOverrides(@Nullable Output<Map<String,SSISPropertyOverrideArgs>> propertyOverrides) {
@@ -488,7 +489,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder propertyOverrides(@Nullable Map<String,SSISPropertyOverrideArgs> propertyOverrides) {
-            this.propertyOverrides = Output.ofNullable(propertyOverrides);
+            this.propertyOverrides = Codegen.ofNullable(propertyOverrides);
             return this;
         }
         public Builder runtime(@Nullable Output<Object> runtime) {
@@ -496,7 +497,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder runtime(@Nullable Object runtime) {
-            this.runtime = Output.ofNullable(runtime);
+            this.runtime = Codegen.ofNullable(runtime);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -512,7 +513,7 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Output.ofNullable(userProperties);
+            this.userProperties = Codegen.ofNullable(userProperties);
             return this;
         }
         public Builder userProperties(UserPropertyArgs... userProperties) {

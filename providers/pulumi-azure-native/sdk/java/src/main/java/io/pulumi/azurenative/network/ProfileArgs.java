@@ -13,6 +13,7 @@ import io.pulumi.azurenative.network.inputs.MonitorConfigArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +34,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes;
 
     public Output<List<Either<String,AllowedEndpointRecordType>>> getAllowedEndpointRecordTypes() {
-        return this.allowedEndpointRecordTypes == null ? Output.empty() : this.allowedEndpointRecordTypes;
+        return this.allowedEndpointRecordTypes == null ? Codegen.empty() : this.allowedEndpointRecordTypes;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DnsConfigArgs> dnsConfig;
 
     public Output<DnsConfigArgs> getDnsConfig() {
-        return this.dnsConfig == null ? Output.empty() : this.dnsConfig;
+        return this.dnsConfig == null ? Codegen.empty() : this.dnsConfig;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<EndpointArgs>> endpoints;
 
     public Output<List<EndpointArgs>> getEndpoints() {
-        return this.endpoints == null ? Output.empty() : this.endpoints;
+        return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> maxReturn;
 
     public Output<Double> getMaxReturn() {
-        return this.maxReturn == null ? Output.empty() : this.maxReturn;
+        return this.maxReturn == null ? Codegen.empty() : this.maxReturn;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<MonitorConfigArgs> monitorConfig;
 
     public Output<MonitorConfigArgs> getMonitorConfig() {
-        return this.monitorConfig == null ? Output.empty() : this.monitorConfig;
+        return this.monitorConfig == null ? Codegen.empty() : this.monitorConfig;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -121,7 +122,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> profileName;
 
     public Output<String> getProfileName() {
-        return this.profileName == null ? Output.empty() : this.profileName;
+        return this.profileName == null ? Codegen.empty() : this.profileName;
     }
 
     /**
@@ -132,7 +133,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ProfileStatus>> profileStatus;
 
     public Output<Either<String,ProfileStatus>> getProfileStatus() {
-        return this.profileStatus == null ? Output.empty() : this.profileStatus;
+        return this.profileStatus == null ? Codegen.empty() : this.profileStatus;
     }
 
     /**
@@ -154,7 +155,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -165,7 +166,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,TrafficRoutingMethod>> trafficRoutingMethod;
 
     public Output<Either<String,TrafficRoutingMethod>> getTrafficRoutingMethod() {
-        return this.trafficRoutingMethod == null ? Output.empty() : this.trafficRoutingMethod;
+        return this.trafficRoutingMethod == null ? Codegen.empty() : this.trafficRoutingMethod;
     }
 
     /**
@@ -176,7 +177,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus;
 
     public Output<Either<String,TrafficViewEnrollmentStatus>> getTrafficViewEnrollmentStatus() {
-        return this.trafficViewEnrollmentStatus == null ? Output.empty() : this.trafficViewEnrollmentStatus;
+        return this.trafficViewEnrollmentStatus == null ? Codegen.empty() : this.trafficViewEnrollmentStatus;
     }
 
     /**
@@ -187,7 +188,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ProfileArgs(
@@ -224,21 +225,21 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProfileArgs() {
-        this.allowedEndpointRecordTypes = Output.empty();
-        this.dnsConfig = Output.empty();
-        this.endpoints = Output.empty();
-        this.id = Output.empty();
-        this.location = Output.empty();
-        this.maxReturn = Output.empty();
-        this.monitorConfig = Output.empty();
-        this.name = Output.empty();
-        this.profileName = Output.empty();
-        this.profileStatus = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.trafficRoutingMethod = Output.empty();
-        this.trafficViewEnrollmentStatus = Output.empty();
-        this.type = Output.empty();
+        this.allowedEndpointRecordTypes = Codegen.empty();
+        this.dnsConfig = Codegen.empty();
+        this.endpoints = Codegen.empty();
+        this.id = Codegen.empty();
+        this.location = Codegen.empty();
+        this.maxReturn = Codegen.empty();
+        this.monitorConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.profileName = Codegen.empty();
+        this.profileStatus = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.trafficRoutingMethod = Codegen.empty();
+        this.trafficViewEnrollmentStatus = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -294,7 +295,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowedEndpointRecordTypes(@Nullable List<Either<String,AllowedEndpointRecordType>> allowedEndpointRecordTypes) {
-            this.allowedEndpointRecordTypes = Output.ofNullable(allowedEndpointRecordTypes);
+            this.allowedEndpointRecordTypes = Codegen.ofNullable(allowedEndpointRecordTypes);
             return this;
         }
         public Builder allowedEndpointRecordTypes(Either<String,AllowedEndpointRecordType>... allowedEndpointRecordTypes) {
@@ -305,7 +306,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dnsConfig(@Nullable DnsConfigArgs dnsConfig) {
-            this.dnsConfig = Output.ofNullable(dnsConfig);
+            this.dnsConfig = Codegen.ofNullable(dnsConfig);
             return this;
         }
         public Builder endpoints(@Nullable Output<List<EndpointArgs>> endpoints) {
@@ -313,7 +314,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpoints(@Nullable List<EndpointArgs> endpoints) {
-            this.endpoints = Output.ofNullable(endpoints);
+            this.endpoints = Codegen.ofNullable(endpoints);
             return this;
         }
         public Builder endpoints(EndpointArgs... endpoints) {
@@ -324,7 +325,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -332,7 +333,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder maxReturn(@Nullable Output<Double> maxReturn) {
@@ -340,7 +341,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxReturn(@Nullable Double maxReturn) {
-            this.maxReturn = Output.ofNullable(maxReturn);
+            this.maxReturn = Codegen.ofNullable(maxReturn);
             return this;
         }
         public Builder monitorConfig(@Nullable Output<MonitorConfigArgs> monitorConfig) {
@@ -348,7 +349,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder monitorConfig(@Nullable MonitorConfigArgs monitorConfig) {
-            this.monitorConfig = Output.ofNullable(monitorConfig);
+            this.monitorConfig = Codegen.ofNullable(monitorConfig);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -356,7 +357,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder profileName(@Nullable Output<String> profileName) {
@@ -364,7 +365,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder profileName(@Nullable String profileName) {
-            this.profileName = Output.ofNullable(profileName);
+            this.profileName = Codegen.ofNullable(profileName);
             return this;
         }
         public Builder profileStatus(@Nullable Output<Either<String,ProfileStatus>> profileStatus) {
@@ -372,7 +373,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder profileStatus(@Nullable Either<String,ProfileStatus> profileStatus) {
-            this.profileStatus = Output.ofNullable(profileStatus);
+            this.profileStatus = Codegen.ofNullable(profileStatus);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -388,7 +389,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder trafficRoutingMethod(@Nullable Output<Either<String,TrafficRoutingMethod>> trafficRoutingMethod) {
@@ -396,7 +397,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trafficRoutingMethod(@Nullable Either<String,TrafficRoutingMethod> trafficRoutingMethod) {
-            this.trafficRoutingMethod = Output.ofNullable(trafficRoutingMethod);
+            this.trafficRoutingMethod = Codegen.ofNullable(trafficRoutingMethod);
             return this;
         }
         public Builder trafficViewEnrollmentStatus(@Nullable Output<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus) {
@@ -404,7 +405,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trafficViewEnrollmentStatus(@Nullable Either<String,TrafficViewEnrollmentStatus> trafficViewEnrollmentStatus) {
-            this.trafficViewEnrollmentStatus = Output.ofNullable(trafficViewEnrollmentStatus);
+            this.trafficViewEnrollmentStatus = Codegen.ofNullable(trafficViewEnrollmentStatus);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -412,7 +413,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ProfileArgs build() {
             return new ProfileArgs(allowedEndpointRecordTypes, dnsConfig, endpoints, id, location, maxReturn, monitorConfig, name, profileName, profileStatus, resourceGroupName, tags, trafficRoutingMethod, trafficViewEnrollmentStatus, type);

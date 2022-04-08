@@ -5,6 +5,7 @@ package io.pulumi.azurenative.vmwarecloudsimple.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> allocation;
 
     public Output<String> getAllocation() {
-        return this.allocation == null ? Output.empty() : this.allocation;
+        return this.allocation == null ? Codegen.empty() : this.allocation;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<String>> dnsServers;
 
     public Output<List<String>> getDnsServers() {
-        return this.dnsServers == null ? Output.empty() : this.dnsServers;
+        return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<String>> gateway;
 
     public Output<List<String>> getGateway() {
-        return this.gateway == null ? Output.empty() : this.gateway;
+        return this.gateway == null ? Codegen.empty() : this.gateway;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> mask;
 
     public Output<String> getMask() {
-        return this.mask == null ? Output.empty() : this.mask;
+        return this.mask == null ? Codegen.empty() : this.mask;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> primaryWinsServer;
 
     public Output<String> getPrimaryWinsServer() {
-        return this.primaryWinsServer == null ? Output.empty() : this.primaryWinsServer;
+        return this.primaryWinsServer == null ? Codegen.empty() : this.primaryWinsServer;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> secondaryWinsServer;
 
     public Output<String> getSecondaryWinsServer() {
-        return this.secondaryWinsServer == null ? Output.empty() : this.secondaryWinsServer;
+        return this.secondaryWinsServer == null ? Codegen.empty() : this.secondaryWinsServer;
     }
 
     public GuestOSNICCustomizationArgs(
@@ -114,13 +115,13 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
     }
 
     private GuestOSNICCustomizationArgs() {
-        this.allocation = Output.empty();
-        this.dnsServers = Output.empty();
-        this.gateway = Output.empty();
-        this.ipAddress = Output.empty();
-        this.mask = Output.empty();
-        this.primaryWinsServer = Output.empty();
-        this.secondaryWinsServer = Output.empty();
+        this.allocation = Codegen.empty();
+        this.dnsServers = Codegen.empty();
+        this.gateway = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.mask = Codegen.empty();
+        this.primaryWinsServer = Codegen.empty();
+        this.secondaryWinsServer = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder allocation(@Nullable String allocation) {
-            this.allocation = Output.ofNullable(allocation);
+            this.allocation = Codegen.ofNullable(allocation);
             return this;
         }
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
@@ -168,7 +169,7 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Output.ofNullable(dnsServers);
+            this.dnsServers = Codegen.ofNullable(dnsServers);
             return this;
         }
         public Builder dnsServers(String... dnsServers) {
@@ -179,7 +180,7 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder gateway(@Nullable List<String> gateway) {
-            this.gateway = Output.ofNullable(gateway);
+            this.gateway = Codegen.ofNullable(gateway);
             return this;
         }
         public Builder gateway(String... gateway) {
@@ -190,7 +191,7 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder mask(@Nullable Output<String> mask) {
@@ -198,7 +199,7 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder mask(@Nullable String mask) {
-            this.mask = Output.ofNullable(mask);
+            this.mask = Codegen.ofNullable(mask);
             return this;
         }
         public Builder primaryWinsServer(@Nullable Output<String> primaryWinsServer) {
@@ -206,7 +207,7 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder primaryWinsServer(@Nullable String primaryWinsServer) {
-            this.primaryWinsServer = Output.ofNullable(primaryWinsServer);
+            this.primaryWinsServer = Codegen.ofNullable(primaryWinsServer);
             return this;
         }
         public Builder secondaryWinsServer(@Nullable Output<String> secondaryWinsServer) {
@@ -214,7 +215,7 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder secondaryWinsServer(@Nullable String secondaryWinsServer) {
-            this.secondaryWinsServer = Output.ofNullable(secondaryWinsServer);
+            this.secondaryWinsServer = Codegen.ofNullable(secondaryWinsServer);
             return this;
         }        public GuestOSNICCustomizationArgs build() {
             return new GuestOSNICCustomizationArgs(allocation, dnsServers, gateway, ipAddress, mask, primaryWinsServer, secondaryWinsServer);

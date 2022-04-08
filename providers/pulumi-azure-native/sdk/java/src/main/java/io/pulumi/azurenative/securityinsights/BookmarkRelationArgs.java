@@ -5,6 +5,7 @@ package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -55,7 +56,7 @@ public final class BookmarkRelationArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> relationName;
 
     public Output<String> getRelationName() {
-        return this.relationName == null ? Output.empty() : this.relationName;
+        return this.relationName == null ? Codegen.empty() : this.relationName;
     }
 
     /**
@@ -96,12 +97,12 @@ public final class BookmarkRelationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private BookmarkRelationArgs() {
-        this.bookmarkId = Output.empty();
-        this.operationalInsightsResourceProvider = Output.empty();
-        this.relatedResourceId = Output.empty();
-        this.relationName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.workspaceName = Output.empty();
+        this.bookmarkId = Codegen.empty();
+        this.operationalInsightsResourceProvider = Codegen.empty();
+        this.relatedResourceId = Codegen.empty();
+        this.relationName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class BookmarkRelationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder relationName(@Nullable String relationName) {
-            this.relationName = Output.ofNullable(relationName);
+            this.relationName = Codegen.ofNullable(relationName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SqlUpsertSettingsArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> interimSchemaName;
 
     public Output<Object> getInterimSchemaName() {
-        return this.interimSchemaName == null ? Output.empty() : this.interimSchemaName;
+        return this.interimSchemaName == null ? Codegen.empty() : this.interimSchemaName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class SqlUpsertSettingsArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> keys;
 
     public Output<Object> getKeys() {
-        return this.keys == null ? Output.empty() : this.keys;
+        return this.keys == null ? Codegen.empty() : this.keys;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class SqlUpsertSettingsArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> useTempDB;
 
     public Output<Object> getUseTempDB() {
-        return this.useTempDB == null ? Output.empty() : this.useTempDB;
+        return this.useTempDB == null ? Codegen.empty() : this.useTempDB;
     }
 
     public SqlUpsertSettingsArgs(
@@ -61,9 +62,9 @@ public final class SqlUpsertSettingsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SqlUpsertSettingsArgs() {
-        this.interimSchemaName = Output.empty();
-        this.keys = Output.empty();
-        this.useTempDB = Output.empty();
+        this.interimSchemaName = Codegen.empty();
+        this.keys = Codegen.empty();
+        this.useTempDB = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class SqlUpsertSettingsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder interimSchemaName(@Nullable Object interimSchemaName) {
-            this.interimSchemaName = Output.ofNullable(interimSchemaName);
+            this.interimSchemaName = Codegen.ofNullable(interimSchemaName);
             return this;
         }
         public Builder keys(@Nullable Output<Object> keys) {
@@ -103,7 +104,7 @@ public final class SqlUpsertSettingsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder keys(@Nullable Object keys) {
-            this.keys = Output.ofNullable(keys);
+            this.keys = Codegen.ofNullable(keys);
             return this;
         }
         public Builder useTempDB(@Nullable Output<Object> useTempDB) {
@@ -111,7 +112,7 @@ public final class SqlUpsertSettingsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder useTempDB(@Nullable Object useTempDB) {
-            this.useTempDB = Output.ofNullable(useTempDB);
+            this.useTempDB = Codegen.ofNullable(useTempDB);
             return this;
         }        public SqlUpsertSettingsArgs build() {
             return new SqlUpsertSettingsArgs(interimSchemaName, keys, useTempDB);

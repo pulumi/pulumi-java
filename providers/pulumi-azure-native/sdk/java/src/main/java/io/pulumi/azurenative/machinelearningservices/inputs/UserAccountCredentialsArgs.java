@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> adminUserPassword;
 
     public Output<String> getAdminUserPassword() {
-        return this.adminUserPassword == null ? Output.empty() : this.adminUserPassword;
+        return this.adminUserPassword == null ? Codegen.empty() : this.adminUserPassword;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> adminUserSshPublicKey;
 
     public Output<String> getAdminUserSshPublicKey() {
-        return this.adminUserSshPublicKey == null ? Output.empty() : this.adminUserSshPublicKey;
+        return this.adminUserSshPublicKey == null ? Codegen.empty() : this.adminUserSshPublicKey;
     }
 
     public UserAccountCredentialsArgs(
@@ -61,9 +62,9 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
     }
 
     private UserAccountCredentialsArgs() {
-        this.adminUserName = Output.empty();
-        this.adminUserPassword = Output.empty();
-        this.adminUserSshPublicKey = Output.empty();
+        this.adminUserName = Codegen.empty();
+        this.adminUserPassword = Codegen.empty();
+        this.adminUserSshPublicKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -103,7 +104,7 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder adminUserPassword(@Nullable String adminUserPassword) {
-            this.adminUserPassword = Output.ofNullable(adminUserPassword);
+            this.adminUserPassword = Codegen.ofNullable(adminUserPassword);
             return this;
         }
         public Builder adminUserSshPublicKey(@Nullable Output<String> adminUserSshPublicKey) {
@@ -111,7 +112,7 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder adminUserSshPublicKey(@Nullable String adminUserSshPublicKey) {
-            this.adminUserSshPublicKey = Output.ofNullable(adminUserSshPublicKey);
+            this.adminUserSshPublicKey = Codegen.ofNullable(adminUserSshPublicKey);
             return this;
         }        public UserAccountCredentialsArgs build() {
             return new UserAccountCredentialsArgs(adminUserName, adminUserPassword, adminUserSshPublicKey);

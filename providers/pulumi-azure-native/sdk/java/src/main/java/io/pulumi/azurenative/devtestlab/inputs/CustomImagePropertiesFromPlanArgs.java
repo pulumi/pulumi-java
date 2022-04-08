@@ -5,6 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
       private final @Nullable Output<String> offer;
 
     public Output<String> getOffer() {
-        return this.offer == null ? Output.empty() : this.offer;
+        return this.offer == null ? Codegen.empty() : this.offer;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
       private final @Nullable Output<String> publisher;
 
     public Output<String> getPublisher() {
-        return this.publisher == null ? Output.empty() : this.publisher;
+        return this.publisher == null ? Codegen.empty() : this.publisher;
     }
 
     public CustomImagePropertiesFromPlanArgs(
@@ -61,9 +62,9 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
     }
 
     private CustomImagePropertiesFromPlanArgs() {
-        this.id = Output.empty();
-        this.offer = Output.empty();
-        this.publisher = Output.empty();
+        this.id = Codegen.empty();
+        this.offer = Codegen.empty();
+        this.publisher = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder offer(@Nullable Output<String> offer) {
@@ -103,7 +104,7 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
             return this;
         }
         public Builder offer(@Nullable String offer) {
-            this.offer = Output.ofNullable(offer);
+            this.offer = Codegen.ofNullable(offer);
             return this;
         }
         public Builder publisher(@Nullable Output<String> publisher) {
@@ -111,7 +112,7 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
             return this;
         }
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = Output.ofNullable(publisher);
+            this.publisher = Codegen.ofNullable(publisher);
             return this;
         }        public CustomImagePropertiesFromPlanArgs build() {
             return new CustomImagePropertiesFromPlanArgs(id, offer, publisher);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.authorization;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
       private final @Nullable Output<String> rmplName;
 
     public Output<String> getRmplName() {
-        return this.rmplName == null ? Output.empty() : this.rmplName;
+        return this.rmplName == null ? Codegen.empty() : this.rmplName;
     }
 
     public ResourceManagementPrivateLinkArgs(
@@ -57,9 +58,9 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
     }
 
     private ResourceManagementPrivateLinkArgs() {
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.rmplName = Output.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.rmplName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -107,7 +108,7 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
             return this;
         }
         public Builder rmplName(@Nullable String rmplName) {
-            this.rmplName = Output.ofNullable(rmplName);
+            this.rmplName = Codegen.ofNullable(rmplName);
             return this;
         }        public ResourceManagementPrivateLinkArgs build() {
             return new ResourceManagementPrivateLinkArgs(location, resourceGroupName, rmplName);

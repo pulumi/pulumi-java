@@ -5,6 +5,7 @@ package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ParametersLinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> contentVersion;
 
     public Output<String> getContentVersion() {
-        return this.contentVersion == null ? Output.empty() : this.contentVersion;
+        return this.contentVersion == null ? Codegen.empty() : this.contentVersion;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ParametersLinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ParametersLinkArgs() {
-        this.contentVersion = Output.empty();
-        this.uri = Output.empty();
+        this.contentVersion = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ParametersLinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentVersion(@Nullable String contentVersion) {
-            this.contentVersion = Output.ofNullable(contentVersion);
+            this.contentVersion = Codegen.ofNullable(contentVersion);
             return this;
         }
         public Builder uri(Output<String> uri) {

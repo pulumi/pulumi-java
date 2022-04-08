@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerservice.inputs.TimeInWeekArgs;
 import io.pulumi.azurenative.containerservice.inputs.TimeSpanArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> configName;
 
     public Output<String> getConfigName() {
-        return this.configName == null ? Output.empty() : this.configName;
+        return this.configName == null ? Codegen.empty() : this.configName;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<TimeSpanArgs>> notAllowedTime;
 
     public Output<List<TimeSpanArgs>> getNotAllowedTime() {
-        return this.notAllowedTime == null ? Output.empty() : this.notAllowedTime;
+        return this.notAllowedTime == null ? Codegen.empty() : this.notAllowedTime;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<TimeInWeekArgs>> timeInWeek;
 
     public Output<List<TimeInWeekArgs>> getTimeInWeek() {
-        return this.timeInWeek == null ? Output.empty() : this.timeInWeek;
+        return this.timeInWeek == null ? Codegen.empty() : this.timeInWeek;
     }
 
     public MaintenanceConfigurationArgs(
@@ -86,11 +87,11 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     private MaintenanceConfigurationArgs() {
-        this.configName = Output.empty();
-        this.notAllowedTime = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.timeInWeek = Output.empty();
+        this.configName = Codegen.empty();
+        this.notAllowedTime = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.timeInWeek = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder configName(@Nullable String configName) {
-            this.configName = Output.ofNullable(configName);
+            this.configName = Codegen.ofNullable(configName);
             return this;
         }
         public Builder notAllowedTime(@Nullable Output<List<TimeSpanArgs>> notAllowedTime) {
@@ -134,7 +135,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder notAllowedTime(@Nullable List<TimeSpanArgs> notAllowedTime) {
-            this.notAllowedTime = Output.ofNullable(notAllowedTime);
+            this.notAllowedTime = Codegen.ofNullable(notAllowedTime);
             return this;
         }
         public Builder notAllowedTime(TimeSpanArgs... notAllowedTime) {
@@ -161,7 +162,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder timeInWeek(@Nullable List<TimeInWeekArgs> timeInWeek) {
-            this.timeInWeek = Output.ofNullable(timeInWeek);
+            this.timeInWeek = Codegen.ofNullable(timeInWeek);
             return this;
         }
         public Builder timeInWeek(TimeInWeekArgs... timeInWeek) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> mimeType;
 
     public Output<String> getMimeType() {
-        return this.mimeType == null ? Output.empty() : this.mimeType;
+        return this.mimeType == null ? Codegen.empty() : this.mimeType;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> unpack;
 
     public Output<Boolean> getUnpack() {
-        return this.unpack == null ? Output.empty() : this.unpack;
+        return this.unpack == null ? Codegen.empty() : this.unpack;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public ImageAssetArgs(
@@ -75,10 +76,10 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageAssetArgs() {
-        this.id = Output.empty();
-        this.mimeType = Output.empty();
-        this.unpack = Output.empty();
-        this.url = Output.empty();
+        this.id = Codegen.empty();
+        this.mimeType = Codegen.empty();
+        this.unpack = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder mimeType(@Nullable Output<String> mimeType) {
@@ -120,7 +121,7 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mimeType(@Nullable String mimeType) {
-            this.mimeType = Output.ofNullable(mimeType);
+            this.mimeType = Codegen.ofNullable(mimeType);
             return this;
         }
         public Builder unpack(@Nullable Output<Boolean> unpack) {
@@ -128,7 +129,7 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder unpack(@Nullable Boolean unpack) {
-            this.unpack = Output.ofNullable(unpack);
+            this.unpack = Codegen.ofNullable(unpack);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -136,7 +137,7 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public ImageAssetArgs build() {
             return new ImageAssetArgs(id, mimeType, unpack, url);

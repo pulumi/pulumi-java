@@ -11,6 +11,7 @@ import io.pulumi.azurenative.cache.inputs.PersistenceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,Protocol>> clientProtocol;
 
     public Output<Either<String,Protocol>> getClientProtocol() {
-        return this.clientProtocol == null ? Output.empty() : this.clientProtocol;
+        return this.clientProtocol == null ? Codegen.empty() : this.clientProtocol;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ClusteringPolicy>> clusteringPolicy;
 
     public Output<Either<String,ClusteringPolicy>> getClusteringPolicy() {
-        return this.clusteringPolicy == null ? Output.empty() : this.clusteringPolicy;
+        return this.clusteringPolicy == null ? Codegen.empty() : this.clusteringPolicy;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
-        return this.databaseName == null ? Output.empty() : this.databaseName;
+        return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,EvictionPolicy>> evictionPolicy;
 
     public Output<Either<String,EvictionPolicy>> getEvictionPolicy() {
-        return this.evictionPolicy == null ? Output.empty() : this.evictionPolicy;
+        return this.evictionPolicy == null ? Codegen.empty() : this.evictionPolicy;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ModuleArgs>> modules;
 
     public Output<List<ModuleArgs>> getModules() {
-        return this.modules == null ? Output.empty() : this.modules;
+        return this.modules == null ? Codegen.empty() : this.modules;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PersistenceArgs> persistence;
 
     public Output<PersistenceArgs> getPersistence() {
-        return this.persistence == null ? Output.empty() : this.persistence;
+        return this.persistence == null ? Codegen.empty() : this.persistence;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -143,15 +144,15 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatabaseArgs() {
-        this.clientProtocol = Output.empty();
-        this.clusterName = Output.empty();
-        this.clusteringPolicy = Output.empty();
-        this.databaseName = Output.empty();
-        this.evictionPolicy = Output.empty();
-        this.modules = Output.empty();
-        this.persistence = Output.empty();
-        this.port = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.clientProtocol = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.clusteringPolicy = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.evictionPolicy = Codegen.empty();
+        this.modules = Codegen.empty();
+        this.persistence = Codegen.empty();
+        this.port = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -195,7 +196,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientProtocol(@Nullable Either<String,Protocol> clientProtocol) {
-            this.clientProtocol = Output.ofNullable(clientProtocol);
+            this.clientProtocol = Codegen.ofNullable(clientProtocol);
             return this;
         }
         public Builder clusterName(Output<String> clusterName) {
@@ -211,7 +212,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusteringPolicy(@Nullable Either<String,ClusteringPolicy> clusteringPolicy) {
-            this.clusteringPolicy = Output.ofNullable(clusteringPolicy);
+            this.clusteringPolicy = Codegen.ofNullable(clusteringPolicy);
             return this;
         }
         public Builder databaseName(@Nullable Output<String> databaseName) {
@@ -219,7 +220,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Output.ofNullable(databaseName);
+            this.databaseName = Codegen.ofNullable(databaseName);
             return this;
         }
         public Builder evictionPolicy(@Nullable Output<Either<String,EvictionPolicy>> evictionPolicy) {
@@ -227,7 +228,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder evictionPolicy(@Nullable Either<String,EvictionPolicy> evictionPolicy) {
-            this.evictionPolicy = Output.ofNullable(evictionPolicy);
+            this.evictionPolicy = Codegen.ofNullable(evictionPolicy);
             return this;
         }
         public Builder modules(@Nullable Output<List<ModuleArgs>> modules) {
@@ -235,7 +236,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder modules(@Nullable List<ModuleArgs> modules) {
-            this.modules = Output.ofNullable(modules);
+            this.modules = Codegen.ofNullable(modules);
             return this;
         }
         public Builder modules(ModuleArgs... modules) {
@@ -246,7 +247,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder persistence(@Nullable PersistenceArgs persistence) {
-            this.persistence = Output.ofNullable(persistence);
+            this.persistence = Codegen.ofNullable(persistence);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -254,7 +255,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

@@ -9,6 +9,7 @@ import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetManagedDiskPar
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -33,7 +34,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
       private final @Nullable Output<CachingTypes> caching;
 
     public Output<CachingTypes> getCaching() {
-        return this.caching == null ? Output.empty() : this.caching;
+        return this.caching == null ? Codegen.empty() : this.caching;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
       private final @Nullable Output<Double> diskIOPSReadWrite;
 
     public Output<Double> getDiskIOPSReadWrite() {
-        return this.diskIOPSReadWrite == null ? Output.empty() : this.diskIOPSReadWrite;
+        return this.diskIOPSReadWrite == null ? Codegen.empty() : this.diskIOPSReadWrite;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
       private final @Nullable Output<Double> diskMBpsReadWrite;
 
     public Output<Double> getDiskMBpsReadWrite() {
-        return this.diskMBpsReadWrite == null ? Output.empty() : this.diskMBpsReadWrite;
+        return this.diskMBpsReadWrite == null ? Codegen.empty() : this.diskMBpsReadWrite;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
       private final @Nullable Output<Integer> diskSizeGB;
 
     public Output<Integer> getDiskSizeGB() {
-        return this.diskSizeGB == null ? Output.empty() : this.diskSizeGB;
+        return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
       private final @Nullable Output<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk;
 
     public Output<VirtualMachineScaleSetManagedDiskParametersArgs> getManagedDisk() {
-        return this.managedDisk == null ? Output.empty() : this.managedDisk;
+        return this.managedDisk == null ? Codegen.empty() : this.managedDisk;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -121,7 +122,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
       private final @Nullable Output<Boolean> writeAcceleratorEnabled;
 
     public Output<Boolean> getWriteAcceleratorEnabled() {
-        return this.writeAcceleratorEnabled == null ? Output.empty() : this.writeAcceleratorEnabled;
+        return this.writeAcceleratorEnabled == null ? Codegen.empty() : this.writeAcceleratorEnabled;
     }
 
     public VirtualMachineScaleSetDataDiskArgs(
@@ -146,15 +147,15 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
     }
 
     private VirtualMachineScaleSetDataDiskArgs() {
-        this.caching = Output.empty();
-        this.createOption = Output.empty();
-        this.diskIOPSReadWrite = Output.empty();
-        this.diskMBpsReadWrite = Output.empty();
-        this.diskSizeGB = Output.empty();
-        this.lun = Output.empty();
-        this.managedDisk = Output.empty();
-        this.name = Output.empty();
-        this.writeAcceleratorEnabled = Output.empty();
+        this.caching = Codegen.empty();
+        this.createOption = Codegen.empty();
+        this.diskIOPSReadWrite = Codegen.empty();
+        this.diskMBpsReadWrite = Codegen.empty();
+        this.diskSizeGB = Codegen.empty();
+        this.lun = Codegen.empty();
+        this.managedDisk = Codegen.empty();
+        this.name = Codegen.empty();
+        this.writeAcceleratorEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -198,7 +199,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
             return this;
         }
         public Builder caching(@Nullable CachingTypes caching) {
-            this.caching = Output.ofNullable(caching);
+            this.caching = Codegen.ofNullable(caching);
             return this;
         }
         public Builder createOption(Output<Either<String,DiskCreateOptionTypes>> createOption) {
@@ -214,7 +215,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
             return this;
         }
         public Builder diskIOPSReadWrite(@Nullable Double diskIOPSReadWrite) {
-            this.diskIOPSReadWrite = Output.ofNullable(diskIOPSReadWrite);
+            this.diskIOPSReadWrite = Codegen.ofNullable(diskIOPSReadWrite);
             return this;
         }
         public Builder diskMBpsReadWrite(@Nullable Output<Double> diskMBpsReadWrite) {
@@ -222,7 +223,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
             return this;
         }
         public Builder diskMBpsReadWrite(@Nullable Double diskMBpsReadWrite) {
-            this.diskMBpsReadWrite = Output.ofNullable(diskMBpsReadWrite);
+            this.diskMBpsReadWrite = Codegen.ofNullable(diskMBpsReadWrite);
             return this;
         }
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
@@ -230,7 +231,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
             return this;
         }
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Output.ofNullable(diskSizeGB);
+            this.diskSizeGB = Codegen.ofNullable(diskSizeGB);
             return this;
         }
         public Builder lun(Output<Integer> lun) {
@@ -246,7 +247,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
             return this;
         }
         public Builder managedDisk(@Nullable VirtualMachineScaleSetManagedDiskParametersArgs managedDisk) {
-            this.managedDisk = Output.ofNullable(managedDisk);
+            this.managedDisk = Codegen.ofNullable(managedDisk);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -254,7 +255,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder writeAcceleratorEnabled(@Nullable Output<Boolean> writeAcceleratorEnabled) {
@@ -262,7 +263,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
             return this;
         }
         public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
-            this.writeAcceleratorEnabled = Output.ofNullable(writeAcceleratorEnabled);
+            this.writeAcceleratorEnabled = Codegen.ofNullable(writeAcceleratorEnabled);
             return this;
         }        public VirtualMachineScaleSetDataDiskArgs build() {
             return new VirtualMachineScaleSetDataDiskArgs(caching, createOption, diskIOPSReadWrite, diskMBpsReadWrite, diskSizeGB, lun, managedDisk, name, writeAcceleratorEnabled);

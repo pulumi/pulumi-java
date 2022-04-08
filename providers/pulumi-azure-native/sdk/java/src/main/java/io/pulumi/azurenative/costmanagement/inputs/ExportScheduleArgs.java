@@ -9,6 +9,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ExportRecurrencePeriodArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,RecurrenceType>> recurrence;
 
     public Output<Either<String,RecurrenceType>> getRecurrence() {
-        return this.recurrence == null ? Output.empty() : this.recurrence;
+        return this.recurrence == null ? Codegen.empty() : this.recurrence;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ExportRecurrencePeriodArgs> recurrencePeriod;
 
     public Output<ExportRecurrencePeriodArgs> getRecurrencePeriod() {
-        return this.recurrencePeriod == null ? Output.empty() : this.recurrencePeriod;
+        return this.recurrencePeriod == null ? Codegen.empty() : this.recurrencePeriod;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,StatusType>> status;
 
     public Output<Either<String,StatusType>> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public ExportScheduleArgs(
@@ -65,9 +66,9 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExportScheduleArgs() {
-        this.recurrence = Output.empty();
-        this.recurrencePeriod = Output.empty();
-        this.status = Output.empty();
+        this.recurrence = Codegen.empty();
+        this.recurrencePeriod = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recurrence(@Nullable Either<String,RecurrenceType> recurrence) {
-            this.recurrence = Output.ofNullable(recurrence);
+            this.recurrence = Codegen.ofNullable(recurrence);
             return this;
         }
         public Builder recurrencePeriod(@Nullable Output<ExportRecurrencePeriodArgs> recurrencePeriod) {
@@ -107,7 +108,7 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recurrencePeriod(@Nullable ExportRecurrencePeriodArgs recurrencePeriod) {
-            this.recurrencePeriod = Output.ofNullable(recurrencePeriod);
+            this.recurrencePeriod = Codegen.ofNullable(recurrencePeriod);
             return this;
         }
         public Builder status(@Nullable Output<Either<String,StatusType>> status) {
@@ -115,7 +116,7 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable Either<String,StatusType> status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public ExportScheduleArgs build() {
             return new ExportScheduleArgs(recurrence, recurrencePeriod, status);

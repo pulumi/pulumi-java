@@ -7,6 +7,7 @@ import io.pulumi.azurenative.databoxedge.enums.AzureContainerDataFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> containerName;
 
     public Output<String> getContainerName() {
-        return this.containerName == null ? Output.empty() : this.containerName;
+        return this.containerName == null ? Codegen.empty() : this.containerName;
     }
 
     /**
@@ -85,11 +86,11 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerArgs() {
-        this.containerName = Output.empty();
-        this.dataFormat = Output.empty();
-        this.deviceName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.storageAccountName = Output.empty();
+        this.containerName = Codegen.empty();
+        this.dataFormat = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.storageAccountName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Output.ofNullable(containerName);
+            this.containerName = Codegen.ofNullable(containerName);
             return this;
         }
         public Builder dataFormat(Output<Either<String,AzureContainerDataFormat>> dataFormat) {

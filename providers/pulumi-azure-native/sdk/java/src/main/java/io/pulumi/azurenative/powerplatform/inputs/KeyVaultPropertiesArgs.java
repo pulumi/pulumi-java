@@ -6,6 +6,7 @@ package io.pulumi.azurenative.powerplatform.inputs;
 import io.pulumi.azurenative.powerplatform.inputs.KeyPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<KeyPropertiesArgs> key;
 
     public Output<KeyPropertiesArgs> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     public KeyVaultPropertiesArgs(
@@ -49,8 +50,8 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private KeyVaultPropertiesArgs() {
-        this.id = Output.empty();
-        this.key = Output.empty();
+        this.id = Codegen.empty();
+        this.key = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder key(@Nullable Output<KeyPropertiesArgs> key) {
@@ -88,7 +89,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder key(@Nullable KeyPropertiesArgs key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }        public KeyVaultPropertiesArgs build() {
             return new KeyVaultPropertiesArgs(id, key);

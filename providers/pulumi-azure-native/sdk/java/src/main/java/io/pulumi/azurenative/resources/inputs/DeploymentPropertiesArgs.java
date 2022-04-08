@@ -11,6 +11,7 @@ import io.pulumi.azurenative.resources.inputs.ParametersLinkArgs;
 import io.pulumi.azurenative.resources.inputs.TemplateLinkArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<DebugSettingArgs> debugSetting;
 
     public Output<DebugSettingArgs> getDebugSetting() {
-        return this.debugSetting == null ? Output.empty() : this.debugSetting;
+        return this.debugSetting == null ? Codegen.empty() : this.debugSetting;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions;
 
     public Output<ExpressionEvaluationOptionsArgs> getExpressionEvaluationOptions() {
-        return this.expressionEvaluationOptions == null ? Output.empty() : this.expressionEvaluationOptions;
+        return this.expressionEvaluationOptions == null ? Codegen.empty() : this.expressionEvaluationOptions;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<OnErrorDeploymentArgs> onErrorDeployment;
 
     public Output<OnErrorDeploymentArgs> getOnErrorDeployment() {
-        return this.onErrorDeployment == null ? Output.empty() : this.onErrorDeployment;
+        return this.onErrorDeployment == null ? Codegen.empty() : this.onErrorDeployment;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Object> parameters;
 
     public Output<Object> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<ParametersLinkArgs> parametersLink;
 
     public Output<ParametersLinkArgs> getParametersLink() {
-        return this.parametersLink == null ? Output.empty() : this.parametersLink;
+        return this.parametersLink == null ? Codegen.empty() : this.parametersLink;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Object> template;
 
     public Output<Object> getTemplate() {
-        return this.template == null ? Output.empty() : this.template;
+        return this.template == null ? Codegen.empty() : this.template;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<TemplateLinkArgs> templateLink;
 
     public Output<TemplateLinkArgs> getTemplateLink() {
-        return this.templateLink == null ? Output.empty() : this.templateLink;
+        return this.templateLink == null ? Codegen.empty() : this.templateLink;
     }
 
     public DeploymentPropertiesArgs(
@@ -132,14 +133,14 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     private DeploymentPropertiesArgs() {
-        this.debugSetting = Output.empty();
-        this.expressionEvaluationOptions = Output.empty();
-        this.mode = Output.empty();
-        this.onErrorDeployment = Output.empty();
-        this.parameters = Output.empty();
-        this.parametersLink = Output.empty();
-        this.template = Output.empty();
-        this.templateLink = Output.empty();
+        this.debugSetting = Codegen.empty();
+        this.expressionEvaluationOptions = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.onErrorDeployment = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.parametersLink = Codegen.empty();
+        this.template = Codegen.empty();
+        this.templateLink = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -181,7 +182,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder debugSetting(@Nullable DebugSettingArgs debugSetting) {
-            this.debugSetting = Output.ofNullable(debugSetting);
+            this.debugSetting = Codegen.ofNullable(debugSetting);
             return this;
         }
         public Builder expressionEvaluationOptions(@Nullable Output<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions) {
@@ -189,7 +190,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder expressionEvaluationOptions(@Nullable ExpressionEvaluationOptionsArgs expressionEvaluationOptions) {
-            this.expressionEvaluationOptions = Output.ofNullable(expressionEvaluationOptions);
+            this.expressionEvaluationOptions = Codegen.ofNullable(expressionEvaluationOptions);
             return this;
         }
         public Builder mode(Output<DeploymentMode> mode) {
@@ -205,7 +206,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder onErrorDeployment(@Nullable OnErrorDeploymentArgs onErrorDeployment) {
-            this.onErrorDeployment = Output.ofNullable(onErrorDeployment);
+            this.onErrorDeployment = Codegen.ofNullable(onErrorDeployment);
             return this;
         }
         public Builder parameters(@Nullable Output<Object> parameters) {
@@ -213,7 +214,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder parameters(@Nullable Object parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parametersLink(@Nullable Output<ParametersLinkArgs> parametersLink) {
@@ -221,7 +222,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder parametersLink(@Nullable ParametersLinkArgs parametersLink) {
-            this.parametersLink = Output.ofNullable(parametersLink);
+            this.parametersLink = Codegen.ofNullable(parametersLink);
             return this;
         }
         public Builder template(@Nullable Output<Object> template) {
@@ -229,7 +230,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder template(@Nullable Object template) {
-            this.template = Output.ofNullable(template);
+            this.template = Codegen.ofNullable(template);
             return this;
         }
         public Builder templateLink(@Nullable Output<TemplateLinkArgs> templateLink) {
@@ -237,7 +238,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder templateLink(@Nullable TemplateLinkArgs templateLink) {
-            this.templateLink = Output.ofNullable(templateLink);
+            this.templateLink = Codegen.ofNullable(templateLink);
             return this;
         }        public DeploymentPropertiesArgs build() {
             return new DeploymentPropertiesArgs(debugSetting, expressionEvaluationOptions, mode, onErrorDeployment, parameters, parametersLink, template, templateLink);

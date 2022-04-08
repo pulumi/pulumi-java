@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> expireTime;
 
     public Output<Double> getExpireTime() {
-        return this.expireTime == null ? Output.empty() : this.expireTime;
+        return this.expireTime == null ? Codegen.empty() : this.expireTime;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
-        return this.host == null ? Output.empty() : this.host;
+        return this.host == null ? Codegen.empty() : this.host;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> minimumTtl;
 
     public Output<Double> getMinimumTtl() {
-        return this.minimumTtl == null ? Output.empty() : this.minimumTtl;
+        return this.minimumTtl == null ? Codegen.empty() : this.minimumTtl;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> refreshTime;
 
     public Output<Double> getRefreshTime() {
-        return this.refreshTime == null ? Output.empty() : this.refreshTime;
+        return this.refreshTime == null ? Codegen.empty() : this.refreshTime;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> retryTime;
 
     public Output<Double> getRetryTime() {
-        return this.retryTime == null ? Output.empty() : this.retryTime;
+        return this.retryTime == null ? Codegen.empty() : this.retryTime;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> serialNumber;
 
     public Output<Double> getSerialNumber() {
-        return this.serialNumber == null ? Output.empty() : this.serialNumber;
+        return this.serialNumber == null ? Codegen.empty() : this.serialNumber;
     }
 
     public SoaRecordArgs(
@@ -114,13 +115,13 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SoaRecordArgs() {
-        this.email = Output.empty();
-        this.expireTime = Output.empty();
-        this.host = Output.empty();
-        this.minimumTtl = Output.empty();
-        this.refreshTime = Output.empty();
-        this.retryTime = Output.empty();
-        this.serialNumber = Output.empty();
+        this.email = Codegen.empty();
+        this.expireTime = Codegen.empty();
+        this.host = Codegen.empty();
+        this.minimumTtl = Codegen.empty();
+        this.refreshTime = Codegen.empty();
+        this.retryTime = Codegen.empty();
+        this.serialNumber = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder expireTime(@Nullable Output<Double> expireTime) {
@@ -168,7 +169,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expireTime(@Nullable Double expireTime) {
-            this.expireTime = Output.ofNullable(expireTime);
+            this.expireTime = Codegen.ofNullable(expireTime);
             return this;
         }
         public Builder host(@Nullable Output<String> host) {
@@ -176,7 +177,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder host(@Nullable String host) {
-            this.host = Output.ofNullable(host);
+            this.host = Codegen.ofNullable(host);
             return this;
         }
         public Builder minimumTtl(@Nullable Output<Double> minimumTtl) {
@@ -184,7 +185,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minimumTtl(@Nullable Double minimumTtl) {
-            this.minimumTtl = Output.ofNullable(minimumTtl);
+            this.minimumTtl = Codegen.ofNullable(minimumTtl);
             return this;
         }
         public Builder refreshTime(@Nullable Output<Double> refreshTime) {
@@ -192,7 +193,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder refreshTime(@Nullable Double refreshTime) {
-            this.refreshTime = Output.ofNullable(refreshTime);
+            this.refreshTime = Codegen.ofNullable(refreshTime);
             return this;
         }
         public Builder retryTime(@Nullable Output<Double> retryTime) {
@@ -200,7 +201,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retryTime(@Nullable Double retryTime) {
-            this.retryTime = Output.ofNullable(retryTime);
+            this.retryTime = Codegen.ofNullable(retryTime);
             return this;
         }
         public Builder serialNumber(@Nullable Output<Double> serialNumber) {
@@ -208,7 +209,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serialNumber(@Nullable Double serialNumber) {
-            this.serialNumber = Output.ofNullable(serialNumber);
+            this.serialNumber = Codegen.ofNullable(serialNumber);
             return this;
         }        public SoaRecordArgs build() {
             return new SoaRecordArgs(email, expireTime, host, minimumTtl, refreshTime, retryTime, serialNumber);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -117,13 +118,13 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
     }
 
     private RerunTumblingWindowTriggerArgs() {
-        this.annotations = Output.empty();
-        this.description = Output.empty();
-        this.parentTrigger = Output.empty();
-        this.requestedEndTime = Output.empty();
-        this.requestedStartTime = Output.empty();
-        this.rerunConcurrency = Output.empty();
-        this.type = Output.empty();
+        this.annotations = Codegen.empty();
+        this.description = Codegen.empty();
+        this.parentTrigger = Codegen.empty();
+        this.requestedEndTime = Codegen.empty();
+        this.requestedStartTime = Codegen.empty();
+        this.rerunConcurrency = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -174,7 +175,7 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder parentTrigger(Output<Object> parentTrigger) {

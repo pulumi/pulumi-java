@@ -5,6 +5,7 @@ package io.pulumi.azurenative.aad.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> remoteDnsIps;
 
     public Output<String> getRemoteDnsIps() {
-        return this.remoteDnsIps == null ? Output.empty() : this.remoteDnsIps;
+        return this.remoteDnsIps == null ? Codegen.empty() : this.remoteDnsIps;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> trustDirection;
 
     public Output<String> getTrustDirection() {
-        return this.trustDirection == null ? Output.empty() : this.trustDirection;
+        return this.trustDirection == null ? Codegen.empty() : this.trustDirection;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> trustPassword;
 
     public Output<String> getTrustPassword() {
-        return this.trustPassword == null ? Output.empty() : this.trustPassword;
+        return this.trustPassword == null ? Codegen.empty() : this.trustPassword;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> trustedDomainFqdn;
 
     public Output<String> getTrustedDomainFqdn() {
-        return this.trustedDomainFqdn == null ? Output.empty() : this.trustedDomainFqdn;
+        return this.trustedDomainFqdn == null ? Codegen.empty() : this.trustedDomainFqdn;
     }
 
     public ForestTrustArgs(
@@ -87,11 +88,11 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ForestTrustArgs() {
-        this.friendlyName = Output.empty();
-        this.remoteDnsIps = Output.empty();
-        this.trustDirection = Output.empty();
-        this.trustPassword = Output.empty();
-        this.trustedDomainFqdn = Output.empty();
+        this.friendlyName = Codegen.empty();
+        this.remoteDnsIps = Codegen.empty();
+        this.trustDirection = Codegen.empty();
+        this.trustPassword = Codegen.empty();
+        this.trustedDomainFqdn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder remoteDnsIps(@Nullable Output<String> remoteDnsIps) {
@@ -135,7 +136,7 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder remoteDnsIps(@Nullable String remoteDnsIps) {
-            this.remoteDnsIps = Output.ofNullable(remoteDnsIps);
+            this.remoteDnsIps = Codegen.ofNullable(remoteDnsIps);
             return this;
         }
         public Builder trustDirection(@Nullable Output<String> trustDirection) {
@@ -143,7 +144,7 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trustDirection(@Nullable String trustDirection) {
-            this.trustDirection = Output.ofNullable(trustDirection);
+            this.trustDirection = Codegen.ofNullable(trustDirection);
             return this;
         }
         public Builder trustPassword(@Nullable Output<String> trustPassword) {
@@ -151,7 +152,7 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trustPassword(@Nullable String trustPassword) {
-            this.trustPassword = Output.ofNullable(trustPassword);
+            this.trustPassword = Codegen.ofNullable(trustPassword);
             return this;
         }
         public Builder trustedDomainFqdn(@Nullable Output<String> trustedDomainFqdn) {
@@ -159,7 +160,7 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trustedDomainFqdn(@Nullable String trustedDomainFqdn) {
-            this.trustedDomainFqdn = Output.ofNullable(trustedDomainFqdn);
+            this.trustedDomainFqdn = Codegen.ofNullable(trustedDomainFqdn);
             return this;
         }        public ForestTrustArgs build() {
             return new ForestTrustArgs(friendlyName, remoteDnsIps, trustDirection, trustPassword, trustedDomainFqdn);

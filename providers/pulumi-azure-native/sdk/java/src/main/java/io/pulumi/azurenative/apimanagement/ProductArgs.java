@@ -6,6 +6,7 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.apimanagement.enums.ProductState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> approvalRequired;
 
     public Output<Boolean> getApprovalRequired() {
-        return this.approvalRequired == null ? Output.empty() : this.approvalRequired;
+        return this.approvalRequired == null ? Codegen.empty() : this.approvalRequired;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> productId;
 
     public Output<String> getProductId() {
-        return this.productId == null ? Output.empty() : this.productId;
+        return this.productId == null ? Codegen.empty() : this.productId;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ProductState> state;
 
     public Output<ProductState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> subscriptionRequired;
 
     public Output<Boolean> getSubscriptionRequired() {
-        return this.subscriptionRequired == null ? Output.empty() : this.subscriptionRequired;
+        return this.subscriptionRequired == null ? Codegen.empty() : this.subscriptionRequired;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> subscriptionsLimit;
 
     public Output<Integer> getSubscriptionsLimit() {
-        return this.subscriptionsLimit == null ? Output.empty() : this.subscriptionsLimit;
+        return this.subscriptionsLimit == null ? Codegen.empty() : this.subscriptionsLimit;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> terms;
 
     public Output<String> getTerms() {
-        return this.terms == null ? Output.empty() : this.terms;
+        return this.terms == null ? Codegen.empty() : this.terms;
     }
 
     public ProductArgs(
@@ -151,16 +152,16 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProductArgs() {
-        this.approvalRequired = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.productId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.state = Output.empty();
-        this.subscriptionRequired = Output.empty();
-        this.subscriptionsLimit = Output.empty();
-        this.terms = Output.empty();
+        this.approvalRequired = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.productId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.state = Codegen.empty();
+        this.subscriptionRequired = Codegen.empty();
+        this.subscriptionsLimit = Codegen.empty();
+        this.terms = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -206,7 +207,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder approvalRequired(@Nullable Boolean approvalRequired) {
-            this.approvalRequired = Output.ofNullable(approvalRequired);
+            this.approvalRequired = Codegen.ofNullable(approvalRequired);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -214,7 +215,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -230,7 +231,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder productId(@Nullable String productId) {
-            this.productId = Output.ofNullable(productId);
+            this.productId = Codegen.ofNullable(productId);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -254,7 +255,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable ProductState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder subscriptionRequired(@Nullable Output<Boolean> subscriptionRequired) {
@@ -262,7 +263,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subscriptionRequired(@Nullable Boolean subscriptionRequired) {
-            this.subscriptionRequired = Output.ofNullable(subscriptionRequired);
+            this.subscriptionRequired = Codegen.ofNullable(subscriptionRequired);
             return this;
         }
         public Builder subscriptionsLimit(@Nullable Output<Integer> subscriptionsLimit) {
@@ -270,7 +271,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subscriptionsLimit(@Nullable Integer subscriptionsLimit) {
-            this.subscriptionsLimit = Output.ofNullable(subscriptionsLimit);
+            this.subscriptionsLimit = Codegen.ofNullable(subscriptionsLimit);
             return this;
         }
         public Builder terms(@Nullable Output<String> terms) {
@@ -278,7 +279,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder terms(@Nullable String terms) {
-            this.terms = Output.ofNullable(terms);
+            this.terms = Codegen.ofNullable(terms);
             return this;
         }        public ProductArgs build() {
             return new ProductArgs(approvalRequired, description, displayName, productId, resourceGroupName, serviceName, state, subscriptionRequired, subscriptionsLimit, terms);

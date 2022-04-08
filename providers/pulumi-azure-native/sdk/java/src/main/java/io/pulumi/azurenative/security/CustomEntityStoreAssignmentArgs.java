@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> customEntityStoreAssignmentName;
 
     public Output<String> getCustomEntityStoreAssignmentName() {
-        return this.customEntityStoreAssignmentName == null ? Output.empty() : this.customEntityStoreAssignmentName;
+        return this.customEntityStoreAssignmentName == null ? Codegen.empty() : this.customEntityStoreAssignmentName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> principal;
 
     public Output<String> getPrincipal() {
-        return this.principal == null ? Output.empty() : this.principal;
+        return this.principal == null ? Codegen.empty() : this.principal;
     }
 
     /**
@@ -57,9 +58,9 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
     }
 
     private CustomEntityStoreAssignmentArgs() {
-        this.customEntityStoreAssignmentName = Output.empty();
-        this.principal = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.customEntityStoreAssignmentName = Codegen.empty();
+        this.principal = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder customEntityStoreAssignmentName(@Nullable String customEntityStoreAssignmentName) {
-            this.customEntityStoreAssignmentName = Output.ofNullable(customEntityStoreAssignmentName);
+            this.customEntityStoreAssignmentName = Codegen.ofNullable(customEntityStoreAssignmentName);
             return this;
         }
         public Builder principal(@Nullable Output<String> principal) {
@@ -99,7 +100,7 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder principal(@Nullable String principal) {
-            this.principal = Output.ofNullable(principal);
+            this.principal = Codegen.ofNullable(principal);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
       private final @Nullable Output<String> accountKey;
 
     public Output<String> getAccountKey() {
-        return this.accountKey == null ? Output.empty() : this.accountKey;
+        return this.accountKey == null ? Codegen.empty() : this.accountKey;
     }
 
     @Import(name="accountName", required=true)
@@ -40,7 +41,7 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
       private final @Nullable Output<String> blobfuseOptions;
 
     public Output<String> getBlobfuseOptions() {
-        return this.blobfuseOptions == null ? Output.empty() : this.blobfuseOptions;
+        return this.blobfuseOptions == null ? Codegen.empty() : this.blobfuseOptions;
     }
 
     @Import(name="containerName", required=true)
@@ -69,7 +70,7 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
       private final @Nullable Output<String> sasKey;
 
     public Output<String> getSasKey() {
-        return this.sasKey == null ? Output.empty() : this.sasKey;
+        return this.sasKey == null ? Codegen.empty() : this.sasKey;
     }
 
     public AzureBlobFileSystemConfigurationArgs(
@@ -88,12 +89,12 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
     }
 
     private AzureBlobFileSystemConfigurationArgs() {
-        this.accountKey = Output.empty();
-        this.accountName = Output.empty();
-        this.blobfuseOptions = Output.empty();
-        this.containerName = Output.empty();
-        this.relativeMountPath = Output.empty();
-        this.sasKey = Output.empty();
+        this.accountKey = Codegen.empty();
+        this.accountName = Codegen.empty();
+        this.blobfuseOptions = Codegen.empty();
+        this.containerName = Codegen.empty();
+        this.relativeMountPath = Codegen.empty();
+        this.sasKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder accountKey(@Nullable String accountKey) {
-            this.accountKey = Output.ofNullable(accountKey);
+            this.accountKey = Codegen.ofNullable(accountKey);
             return this;
         }
         public Builder accountName(Output<String> accountName) {
@@ -147,7 +148,7 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder blobfuseOptions(@Nullable String blobfuseOptions) {
-            this.blobfuseOptions = Output.ofNullable(blobfuseOptions);
+            this.blobfuseOptions = Codegen.ofNullable(blobfuseOptions);
             return this;
         }
         public Builder containerName(Output<String> containerName) {
@@ -171,7 +172,7 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder sasKey(@Nullable String sasKey) {
-            this.sasKey = Output.ofNullable(sasKey);
+            this.sasKey = Codegen.ofNullable(sasKey);
             return this;
         }        public AzureBlobFileSystemConfigurationArgs build() {
             return new AzureBlobFileSystemConfigurationArgs(accountKey, accountName, blobfuseOptions, containerName, relativeMountPath, sasKey);

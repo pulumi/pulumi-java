@@ -6,6 +6,7 @@ package io.pulumi.azurenative.orbital;
 import io.pulumi.azurenative.orbital.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> contactName;
 
     public Output<String> getContactName() {
-        return this.contactName == null ? Output.empty() : this.contactName;
+        return this.contactName == null ? Codegen.empty() : this.contactName;
     }
 
     /**
@@ -110,13 +111,13 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactArgs() {
-        this.contactName = Output.empty();
-        this.contactProfile = Output.empty();
-        this.groundStationName = Output.empty();
-        this.reservationEndTime = Output.empty();
-        this.reservationStartTime = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.spacecraftName = Output.empty();
+        this.contactName = Codegen.empty();
+        this.contactProfile = Codegen.empty();
+        this.groundStationName = Codegen.empty();
+        this.reservationEndTime = Codegen.empty();
+        this.reservationStartTime = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.spacecraftName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contactName(@Nullable String contactName) {
-            this.contactName = Output.ofNullable(contactName);
+            this.contactName = Codegen.ofNullable(contactName);
             return this;
         }
         public Builder contactProfile(Output<ResourceReferenceArgs> contactProfile) {

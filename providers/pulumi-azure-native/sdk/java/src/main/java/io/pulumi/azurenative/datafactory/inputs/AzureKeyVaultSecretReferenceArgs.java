@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -39,7 +40,7 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
       private final @Nullable Output<Object> secretVersion;
 
     public Output<Object> getSecretVersion() {
-        return this.secretVersion == null ? Output.empty() : this.secretVersion;
+        return this.secretVersion == null ? Codegen.empty() : this.secretVersion;
     }
 
     /**
@@ -77,10 +78,10 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
     }
 
     private AzureKeyVaultSecretReferenceArgs() {
-        this.secretName = Output.empty();
-        this.secretVersion = Output.empty();
-        this.store = Output.empty();
-        this.type = Output.empty();
+        this.secretName = Codegen.empty();
+        this.secretVersion = Codegen.empty();
+        this.store = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -122,7 +123,7 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder secretVersion(@Nullable Object secretVersion) {
-            this.secretVersion = Output.ofNullable(secretVersion);
+            this.secretVersion = Codegen.ofNullable(secretVersion);
             return this;
         }
         public Builder store(Output<LinkedServiceReferenceArgs> store) {

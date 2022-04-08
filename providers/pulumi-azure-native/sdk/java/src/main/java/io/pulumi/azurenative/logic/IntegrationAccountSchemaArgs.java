@@ -7,6 +7,7 @@ import io.pulumi.azurenative.logic.enums.SchemaType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> documentName;
 
     public Output<String> getDocumentName() {
-        return this.documentName == null ? Output.empty() : this.documentName;
+        return this.documentName == null ? Codegen.empty() : this.documentName;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> fileName;
 
     public Output<String> getFileName() {
-        return this.fileName == null ? Output.empty() : this.fileName;
+        return this.fileName == null ? Codegen.empty() : this.fileName;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> schemaName;
 
     public Output<String> getSchemaName() {
-        return this.schemaName == null ? Output.empty() : this.schemaName;
+        return this.schemaName == null ? Codegen.empty() : this.schemaName;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> targetNamespace;
 
     public Output<String> getTargetNamespace() {
-        return this.targetNamespace == null ? Output.empty() : this.targetNamespace;
+        return this.targetNamespace == null ? Codegen.empty() : this.targetNamespace;
     }
 
     public IntegrationAccountSchemaArgs(
@@ -178,18 +179,18 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
     }
 
     private IntegrationAccountSchemaArgs() {
-        this.content = Output.empty();
-        this.contentType = Output.empty();
-        this.documentName = Output.empty();
-        this.fileName = Output.empty();
-        this.integrationAccountName = Output.empty();
-        this.location = Output.empty();
-        this.metadata = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.schemaName = Output.empty();
-        this.schemaType = Output.empty();
-        this.tags = Output.empty();
-        this.targetNamespace = Output.empty();
+        this.content = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.documentName = Codegen.empty();
+        this.fileName = Codegen.empty();
+        this.integrationAccountName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.schemaName = Codegen.empty();
+        this.schemaType = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targetNamespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -239,7 +240,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder contentType(@Nullable Output<String> contentType) {
@@ -247,7 +248,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder documentName(@Nullable Output<String> documentName) {
@@ -255,7 +256,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder documentName(@Nullable String documentName) {
-            this.documentName = Output.ofNullable(documentName);
+            this.documentName = Codegen.ofNullable(documentName);
             return this;
         }
         public Builder fileName(@Nullable Output<String> fileName) {
@@ -263,7 +264,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder fileName(@Nullable String fileName) {
-            this.fileName = Output.ofNullable(fileName);
+            this.fileName = Codegen.ofNullable(fileName);
             return this;
         }
         public Builder integrationAccountName(Output<String> integrationAccountName) {
@@ -279,7 +280,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder metadata(@Nullable Output<Object> metadata) {
@@ -287,7 +288,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -303,7 +304,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder schemaName(@Nullable String schemaName) {
-            this.schemaName = Output.ofNullable(schemaName);
+            this.schemaName = Codegen.ofNullable(schemaName);
             return this;
         }
         public Builder schemaType(Output<Either<String,SchemaType>> schemaType) {
@@ -319,7 +320,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder targetNamespace(@Nullable Output<String> targetNamespace) {
@@ -327,7 +328,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder targetNamespace(@Nullable String targetNamespace) {
-            this.targetNamespace = Output.ofNullable(targetNamespace);
+            this.targetNamespace = Codegen.ofNullable(targetNamespace);
             return this;
         }        public IntegrationAccountSchemaArgs build() {
             return new IntegrationAccountSchemaArgs(content, contentType, documentName, fileName, integrationAccountName, location, metadata, resourceGroupName, schemaName, schemaType, tags, targetNamespace);

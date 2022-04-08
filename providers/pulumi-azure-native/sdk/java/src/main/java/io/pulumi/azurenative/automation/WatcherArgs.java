@@ -5,6 +5,7 @@ package io.pulumi.azurenative.automation;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -35,7 +36,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> executionFrequencyInSeconds;
 
     public Output<Double> getExecutionFrequencyInSeconds() {
-        return this.executionFrequencyInSeconds == null ? Output.empty() : this.executionFrequencyInSeconds;
+        return this.executionFrequencyInSeconds == null ? Codegen.empty() : this.executionFrequencyInSeconds;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> scriptName;
 
     public Output<String> getScriptName() {
-        return this.scriptName == null ? Output.empty() : this.scriptName;
+        return this.scriptName == null ? Codegen.empty() : this.scriptName;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> scriptParameters;
 
     public Output<Map<String,String>> getScriptParameters() {
-        return this.scriptParameters == null ? Output.empty() : this.scriptParameters;
+        return this.scriptParameters == null ? Codegen.empty() : this.scriptParameters;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> scriptRunOn;
 
     public Output<String> getScriptRunOn() {
-        return this.scriptRunOn == null ? Output.empty() : this.scriptRunOn;
+        return this.scriptRunOn == null ? Codegen.empty() : this.scriptRunOn;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> watcherName;
 
     public Output<String> getWatcherName() {
-        return this.watcherName == null ? Output.empty() : this.watcherName;
+        return this.watcherName == null ? Codegen.empty() : this.watcherName;
     }
 
     public WatcherArgs(
@@ -150,16 +151,16 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WatcherArgs() {
-        this.automationAccountName = Output.empty();
-        this.description = Output.empty();
-        this.executionFrequencyInSeconds = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scriptName = Output.empty();
-        this.scriptParameters = Output.empty();
-        this.scriptRunOn = Output.empty();
-        this.tags = Output.empty();
-        this.watcherName = Output.empty();
+        this.automationAccountName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.executionFrequencyInSeconds = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scriptName = Codegen.empty();
+        this.scriptParameters = Codegen.empty();
+        this.scriptRunOn = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.watcherName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -213,7 +214,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder executionFrequencyInSeconds(@Nullable Output<Double> executionFrequencyInSeconds) {
@@ -221,7 +222,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder executionFrequencyInSeconds(@Nullable Double executionFrequencyInSeconds) {
-            this.executionFrequencyInSeconds = Output.ofNullable(executionFrequencyInSeconds);
+            this.executionFrequencyInSeconds = Codegen.ofNullable(executionFrequencyInSeconds);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -229,7 +230,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -245,7 +246,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scriptName(@Nullable String scriptName) {
-            this.scriptName = Output.ofNullable(scriptName);
+            this.scriptName = Codegen.ofNullable(scriptName);
             return this;
         }
         public Builder scriptParameters(@Nullable Output<Map<String,String>> scriptParameters) {
@@ -253,7 +254,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scriptParameters(@Nullable Map<String,String> scriptParameters) {
-            this.scriptParameters = Output.ofNullable(scriptParameters);
+            this.scriptParameters = Codegen.ofNullable(scriptParameters);
             return this;
         }
         public Builder scriptRunOn(@Nullable Output<String> scriptRunOn) {
@@ -261,7 +262,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scriptRunOn(@Nullable String scriptRunOn) {
-            this.scriptRunOn = Output.ofNullable(scriptRunOn);
+            this.scriptRunOn = Codegen.ofNullable(scriptRunOn);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -269,7 +270,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder watcherName(@Nullable Output<String> watcherName) {
@@ -277,7 +278,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder watcherName(@Nullable String watcherName) {
-            this.watcherName = Output.ofNullable(watcherName);
+            this.watcherName = Codegen.ofNullable(watcherName);
             return this;
         }        public WatcherArgs build() {
             return new WatcherArgs(automationAccountName, description, executionFrequencyInSeconds, location, resourceGroupName, scriptName, scriptParameters, scriptRunOn, tags, watcherName);

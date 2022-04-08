@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.enums.RouteFilterRuleType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -48,7 +49,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> ruleName;
 
     public Output<String> getRuleName() {
-        return this.ruleName == null ? Output.empty() : this.ruleName;
+        return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
     public RouteFilterRuleArgs(
@@ -139,15 +140,15 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RouteFilterRuleArgs() {
-        this.access = Output.empty();
-        this.communities = Output.empty();
-        this.id = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.routeFilterName = Output.empty();
-        this.routeFilterRuleType = Output.empty();
-        this.ruleName = Output.empty();
+        this.access = Codegen.empty();
+        this.communities = Codegen.empty();
+        this.id = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.routeFilterName = Codegen.empty();
+        this.routeFilterRuleType = Codegen.empty();
+        this.ruleName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -210,7 +211,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -218,7 +219,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -226,7 +227,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -258,7 +259,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Output.ofNullable(ruleName);
+            this.ruleName = Codegen.ofNullable(ruleName);
             return this;
         }        public RouteFilterRuleArgs build() {
             return new RouteFilterRuleArgs(access, communities, id, location, name, resourceGroupName, routeFilterName, routeFilterRuleType, ruleName);

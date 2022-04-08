@@ -9,6 +9,7 @@ import io.pulumi.azurenative.network.inputs.VpnNatRuleMappingArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<VpnNatRuleMappingArgs>> externalMappings;
 
     public Output<List<VpnNatRuleMappingArgs>> getExternalMappings() {
-        return this.externalMappings == null ? Output.empty() : this.externalMappings;
+        return this.externalMappings == null ? Codegen.empty() : this.externalMappings;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<VpnNatRuleMappingArgs>> internalMappings;
 
     public Output<List<VpnNatRuleMappingArgs>> getInternalMappings() {
-        return this.internalMappings == null ? Output.empty() : this.internalMappings;
+        return this.internalMappings == null ? Codegen.empty() : this.internalMappings;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ipConfigurationId;
 
     public Output<String> getIpConfigurationId() {
-        return this.ipConfigurationId == null ? Output.empty() : this.ipConfigurationId;
+        return this.ipConfigurationId == null ? Codegen.empty() : this.ipConfigurationId;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,VpnNatRuleMode>> mode;
 
     public Output<Either<String,VpnNatRuleMode>> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> natRuleName;
 
     public Output<String> getNatRuleName() {
-        return this.natRuleName == null ? Output.empty() : this.natRuleName;
+        return this.natRuleName == null ? Codegen.empty() : this.natRuleName;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,VpnNatRuleType>> type;
 
     public Output<Either<String,VpnNatRuleType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public NatRuleArgs(
@@ -153,16 +154,16 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NatRuleArgs() {
-        this.externalMappings = Output.empty();
-        this.gatewayName = Output.empty();
-        this.id = Output.empty();
-        this.internalMappings = Output.empty();
-        this.ipConfigurationId = Output.empty();
-        this.mode = Output.empty();
-        this.name = Output.empty();
-        this.natRuleName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.type = Output.empty();
+        this.externalMappings = Codegen.empty();
+        this.gatewayName = Codegen.empty();
+        this.id = Codegen.empty();
+        this.internalMappings = Codegen.empty();
+        this.ipConfigurationId = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.name = Codegen.empty();
+        this.natRuleName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -208,7 +209,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder externalMappings(@Nullable List<VpnNatRuleMappingArgs> externalMappings) {
-            this.externalMappings = Output.ofNullable(externalMappings);
+            this.externalMappings = Codegen.ofNullable(externalMappings);
             return this;
         }
         public Builder externalMappings(VpnNatRuleMappingArgs... externalMappings) {
@@ -227,7 +228,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder internalMappings(@Nullable Output<List<VpnNatRuleMappingArgs>> internalMappings) {
@@ -235,7 +236,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder internalMappings(@Nullable List<VpnNatRuleMappingArgs> internalMappings) {
-            this.internalMappings = Output.ofNullable(internalMappings);
+            this.internalMappings = Codegen.ofNullable(internalMappings);
             return this;
         }
         public Builder internalMappings(VpnNatRuleMappingArgs... internalMappings) {
@@ -246,7 +247,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipConfigurationId(@Nullable String ipConfigurationId) {
-            this.ipConfigurationId = Output.ofNullable(ipConfigurationId);
+            this.ipConfigurationId = Codegen.ofNullable(ipConfigurationId);
             return this;
         }
         public Builder mode(@Nullable Output<Either<String,VpnNatRuleMode>> mode) {
@@ -254,7 +255,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mode(@Nullable Either<String,VpnNatRuleMode> mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -262,7 +263,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder natRuleName(@Nullable Output<String> natRuleName) {
@@ -270,7 +271,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder natRuleName(@Nullable String natRuleName) {
-            this.natRuleName = Output.ofNullable(natRuleName);
+            this.natRuleName = Codegen.ofNullable(natRuleName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -286,7 +287,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable Either<String,VpnNatRuleType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public NatRuleArgs build() {
             return new NatRuleArgs(externalMappings, gatewayName, id, internalMappings, ipConfigurationId, mode, name, natRuleName, resourceGroupName, type);

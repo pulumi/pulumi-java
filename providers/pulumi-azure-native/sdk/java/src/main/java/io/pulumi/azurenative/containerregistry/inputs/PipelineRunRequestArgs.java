@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerregistry.inputs.PipelineRunSourcePropertie
 import io.pulumi.azurenative.containerregistry.inputs.PipelineRunTargetPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,7 +33,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> artifacts;
 
     public Output<List<String>> getArtifacts() {
-        return this.artifacts == null ? Output.empty() : this.artifacts;
+        return this.artifacts == null ? Codegen.empty() : this.artifacts;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> catalogDigest;
 
     public Output<String> getCatalogDigest() {
-        return this.catalogDigest == null ? Output.empty() : this.catalogDigest;
+        return this.catalogDigest == null ? Codegen.empty() : this.catalogDigest;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> pipelineResourceId;
 
     public Output<String> getPipelineResourceId() {
-        return this.pipelineResourceId == null ? Output.empty() : this.pipelineResourceId;
+        return this.pipelineResourceId == null ? Codegen.empty() : this.pipelineResourceId;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<PipelineRunSourcePropertiesArgs> source;
 
     public Output<PipelineRunSourcePropertiesArgs> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<PipelineRunTargetPropertiesArgs> target;
 
     public Output<PipelineRunTargetPropertiesArgs> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     public PipelineRunRequestArgs(
@@ -93,11 +94,11 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
     }
 
     private PipelineRunRequestArgs() {
-        this.artifacts = Output.empty();
-        this.catalogDigest = Output.empty();
-        this.pipelineResourceId = Output.empty();
-        this.source = Output.empty();
-        this.target = Output.empty();
+        this.artifacts = Codegen.empty();
+        this.catalogDigest = Codegen.empty();
+        this.pipelineResourceId = Codegen.empty();
+        this.source = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder artifacts(@Nullable List<String> artifacts) {
-            this.artifacts = Output.ofNullable(artifacts);
+            this.artifacts = Codegen.ofNullable(artifacts);
             return this;
         }
         public Builder artifacts(String... artifacts) {
@@ -144,7 +145,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder catalogDigest(@Nullable String catalogDigest) {
-            this.catalogDigest = Output.ofNullable(catalogDigest);
+            this.catalogDigest = Codegen.ofNullable(catalogDigest);
             return this;
         }
         public Builder pipelineResourceId(@Nullable Output<String> pipelineResourceId) {
@@ -152,7 +153,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder pipelineResourceId(@Nullable String pipelineResourceId) {
-            this.pipelineResourceId = Output.ofNullable(pipelineResourceId);
+            this.pipelineResourceId = Codegen.ofNullable(pipelineResourceId);
             return this;
         }
         public Builder source(@Nullable Output<PipelineRunSourcePropertiesArgs> source) {
@@ -160,7 +161,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder source(@Nullable PipelineRunSourcePropertiesArgs source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder target(@Nullable Output<PipelineRunTargetPropertiesArgs> target) {
@@ -168,7 +169,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder target(@Nullable PipelineRunTargetPropertiesArgs target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }        public PipelineRunRequestArgs build() {
             return new PipelineRunRequestArgs(artifacts, catalogDigest, pipelineResourceId, source, target);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
       private final @Nullable Output<Boolean> autoscaleEnabled;
 
     public Output<Boolean> getAutoscaleEnabled() {
-        return this.autoscaleEnabled == null ? Output.empty() : this.autoscaleEnabled;
+        return this.autoscaleEnabled == null ? Codegen.empty() : this.autoscaleEnabled;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
       private final @Nullable Output<Integer> maxReplicas;
 
     public Output<Integer> getMaxReplicas() {
-        return this.maxReplicas == null ? Output.empty() : this.maxReplicas;
+        return this.maxReplicas == null ? Codegen.empty() : this.maxReplicas;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
       private final @Nullable Output<Integer> minReplicas;
 
     public Output<Integer> getMinReplicas() {
-        return this.minReplicas == null ? Output.empty() : this.minReplicas;
+        return this.minReplicas == null ? Codegen.empty() : this.minReplicas;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
       private final @Nullable Output<Integer> refreshPeriodInSeconds;
 
     public Output<Integer> getRefreshPeriodInSeconds() {
-        return this.refreshPeriodInSeconds == null ? Output.empty() : this.refreshPeriodInSeconds;
+        return this.refreshPeriodInSeconds == null ? Codegen.empty() : this.refreshPeriodInSeconds;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
       private final @Nullable Output<Integer> targetUtilization;
 
     public Output<Integer> getTargetUtilization() {
-        return this.targetUtilization == null ? Output.empty() : this.targetUtilization;
+        return this.targetUtilization == null ? Codegen.empty() : this.targetUtilization;
     }
 
     public AKSServiceCreateRequestAutoScalerArgs(
@@ -88,11 +89,11 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
     }
 
     private AKSServiceCreateRequestAutoScalerArgs() {
-        this.autoscaleEnabled = Output.empty();
-        this.maxReplicas = Output.empty();
-        this.minReplicas = Output.empty();
-        this.refreshPeriodInSeconds = Output.empty();
-        this.targetUtilization = Output.empty();
+        this.autoscaleEnabled = Codegen.empty();
+        this.maxReplicas = Codegen.empty();
+        this.minReplicas = Codegen.empty();
+        this.refreshPeriodInSeconds = Codegen.empty();
+        this.targetUtilization = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
             return this;
         }
         public Builder autoscaleEnabled(@Nullable Boolean autoscaleEnabled) {
-            this.autoscaleEnabled = Output.ofNullable(autoscaleEnabled);
+            this.autoscaleEnabled = Codegen.ofNullable(autoscaleEnabled);
             return this;
         }
         public Builder maxReplicas(@Nullable Output<Integer> maxReplicas) {
@@ -136,7 +137,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
             return this;
         }
         public Builder maxReplicas(@Nullable Integer maxReplicas) {
-            this.maxReplicas = Output.ofNullable(maxReplicas);
+            this.maxReplicas = Codegen.ofNullable(maxReplicas);
             return this;
         }
         public Builder minReplicas(@Nullable Output<Integer> minReplicas) {
@@ -144,7 +145,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
             return this;
         }
         public Builder minReplicas(@Nullable Integer minReplicas) {
-            this.minReplicas = Output.ofNullable(minReplicas);
+            this.minReplicas = Codegen.ofNullable(minReplicas);
             return this;
         }
         public Builder refreshPeriodInSeconds(@Nullable Output<Integer> refreshPeriodInSeconds) {
@@ -152,7 +153,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
             return this;
         }
         public Builder refreshPeriodInSeconds(@Nullable Integer refreshPeriodInSeconds) {
-            this.refreshPeriodInSeconds = Output.ofNullable(refreshPeriodInSeconds);
+            this.refreshPeriodInSeconds = Codegen.ofNullable(refreshPeriodInSeconds);
             return this;
         }
         public Builder targetUtilization(@Nullable Output<Integer> targetUtilization) {
@@ -160,7 +161,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
             return this;
         }
         public Builder targetUtilization(@Nullable Integer targetUtilization) {
-            this.targetUtilization = Output.ofNullable(targetUtilization);
+            this.targetUtilization = Codegen.ofNullable(targetUtilization);
             return this;
         }        public AKSServiceCreateRequestAutoScalerArgs build() {
             return new AKSServiceCreateRequestAutoScalerArgs(autoscaleEnabled, maxReplicas, minReplicas, refreshPeriodInSeconds, targetUtilization);

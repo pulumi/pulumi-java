@@ -14,6 +14,7 @@ import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,7 +33,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CompressionSettingsArgs> compressionSettings;
 
     public Output<CompressionSettingsArgs> getCompressionSettings() {
-        return this.compressionSettings == null ? Output.empty() : this.compressionSettings;
+        return this.compressionSettings == null ? Codegen.empty() : this.compressionSettings;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ResourceReferenceArgs>> customDomains;
 
     public Output<List<ResourceReferenceArgs>> getCustomDomains() {
-        return this.customDomains == null ? Output.empty() : this.customDomains;
+        return this.customDomains == null ? Codegen.empty() : this.customDomains;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,EnabledState>> enabledState;
 
     public Output<Either<String,EnabledState>> getEnabledState() {
-        return this.enabledState == null ? Output.empty() : this.enabledState;
+        return this.enabledState == null ? Codegen.empty() : this.enabledState;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ForwardingProtocol>> forwardingProtocol;
 
     public Output<Either<String,ForwardingProtocol>> getForwardingProtocol() {
-        return this.forwardingProtocol == null ? Output.empty() : this.forwardingProtocol;
+        return this.forwardingProtocol == null ? Codegen.empty() : this.forwardingProtocol;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,HttpsRedirect>> httpsRedirect;
 
     public Output<Either<String,HttpsRedirect>> getHttpsRedirect() {
-        return this.httpsRedirect == null ? Output.empty() : this.httpsRedirect;
+        return this.httpsRedirect == null ? Codegen.empty() : this.httpsRedirect;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,LinkToDefaultDomain>> linkToDefaultDomain;
 
     public Output<Either<String,LinkToDefaultDomain>> getLinkToDefaultDomain() {
-        return this.linkToDefaultDomain == null ? Output.empty() : this.linkToDefaultDomain;
+        return this.linkToDefaultDomain == null ? Codegen.empty() : this.linkToDefaultDomain;
     }
 
     /**
@@ -120,7 +121,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> originPath;
 
     public Output<String> getOriginPath() {
-        return this.originPath == null ? Output.empty() : this.originPath;
+        return this.originPath == null ? Codegen.empty() : this.originPath;
     }
 
     /**
@@ -131,7 +132,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> patternsToMatch;
 
     public Output<List<String>> getPatternsToMatch() {
-        return this.patternsToMatch == null ? Output.empty() : this.patternsToMatch;
+        return this.patternsToMatch == null ? Codegen.empty() : this.patternsToMatch;
     }
 
     /**
@@ -153,7 +154,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AfdQueryStringCachingBehavior> queryStringCachingBehavior;
 
     public Output<AfdQueryStringCachingBehavior> getQueryStringCachingBehavior() {
-        return this.queryStringCachingBehavior == null ? Output.empty() : this.queryStringCachingBehavior;
+        return this.queryStringCachingBehavior == null ? Codegen.empty() : this.queryStringCachingBehavior;
     }
 
     /**
@@ -175,7 +176,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> routeName;
 
     public Output<String> getRouteName() {
-        return this.routeName == null ? Output.empty() : this.routeName;
+        return this.routeName == null ? Codegen.empty() : this.routeName;
     }
 
     /**
@@ -186,7 +187,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ResourceReferenceArgs>> ruleSets;
 
     public Output<List<ResourceReferenceArgs>> getRuleSets() {
-        return this.ruleSets == null ? Output.empty() : this.ruleSets;
+        return this.ruleSets == null ? Codegen.empty() : this.ruleSets;
     }
 
     /**
@@ -197,7 +198,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Either<String,AFDEndpointProtocols>>> supportedProtocols;
 
     public Output<List<Either<String,AFDEndpointProtocols>>> getSupportedProtocols() {
-        return this.supportedProtocols == null ? Output.empty() : this.supportedProtocols;
+        return this.supportedProtocols == null ? Codegen.empty() : this.supportedProtocols;
     }
 
     public RouteArgs(
@@ -236,22 +237,22 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteArgs() {
-        this.compressionSettings = Output.empty();
-        this.customDomains = Output.empty();
-        this.enabledState = Output.empty();
-        this.endpointName = Output.empty();
-        this.forwardingProtocol = Output.empty();
-        this.httpsRedirect = Output.empty();
-        this.linkToDefaultDomain = Output.empty();
-        this.originGroup = Output.empty();
-        this.originPath = Output.empty();
-        this.patternsToMatch = Output.empty();
-        this.profileName = Output.empty();
-        this.queryStringCachingBehavior = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.routeName = Output.empty();
-        this.ruleSets = Output.empty();
-        this.supportedProtocols = Output.empty();
+        this.compressionSettings = Codegen.empty();
+        this.customDomains = Codegen.empty();
+        this.enabledState = Codegen.empty();
+        this.endpointName = Codegen.empty();
+        this.forwardingProtocol = Codegen.empty();
+        this.httpsRedirect = Codegen.empty();
+        this.linkToDefaultDomain = Codegen.empty();
+        this.originGroup = Codegen.empty();
+        this.originPath = Codegen.empty();
+        this.patternsToMatch = Codegen.empty();
+        this.profileName = Codegen.empty();
+        this.queryStringCachingBehavior = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.routeName = Codegen.empty();
+        this.ruleSets = Codegen.empty();
+        this.supportedProtocols = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -309,7 +310,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder compressionSettings(@Nullable CompressionSettingsArgs compressionSettings) {
-            this.compressionSettings = Output.ofNullable(compressionSettings);
+            this.compressionSettings = Codegen.ofNullable(compressionSettings);
             return this;
         }
         public Builder customDomains(@Nullable Output<List<ResourceReferenceArgs>> customDomains) {
@@ -317,7 +318,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customDomains(@Nullable List<ResourceReferenceArgs> customDomains) {
-            this.customDomains = Output.ofNullable(customDomains);
+            this.customDomains = Codegen.ofNullable(customDomains);
             return this;
         }
         public Builder customDomains(ResourceReferenceArgs... customDomains) {
@@ -328,7 +329,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabledState(@Nullable Either<String,EnabledState> enabledState) {
-            this.enabledState = Output.ofNullable(enabledState);
+            this.enabledState = Codegen.ofNullable(enabledState);
             return this;
         }
         public Builder endpointName(Output<String> endpointName) {
@@ -344,7 +345,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forwardingProtocol(@Nullable Either<String,ForwardingProtocol> forwardingProtocol) {
-            this.forwardingProtocol = Output.ofNullable(forwardingProtocol);
+            this.forwardingProtocol = Codegen.ofNullable(forwardingProtocol);
             return this;
         }
         public Builder httpsRedirect(@Nullable Output<Either<String,HttpsRedirect>> httpsRedirect) {
@@ -352,7 +353,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpsRedirect(@Nullable Either<String,HttpsRedirect> httpsRedirect) {
-            this.httpsRedirect = Output.ofNullable(httpsRedirect);
+            this.httpsRedirect = Codegen.ofNullable(httpsRedirect);
             return this;
         }
         public Builder linkToDefaultDomain(@Nullable Output<Either<String,LinkToDefaultDomain>> linkToDefaultDomain) {
@@ -360,7 +361,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linkToDefaultDomain(@Nullable Either<String,LinkToDefaultDomain> linkToDefaultDomain) {
-            this.linkToDefaultDomain = Output.ofNullable(linkToDefaultDomain);
+            this.linkToDefaultDomain = Codegen.ofNullable(linkToDefaultDomain);
             return this;
         }
         public Builder originGroup(Output<ResourceReferenceArgs> originGroup) {
@@ -376,7 +377,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder originPath(@Nullable String originPath) {
-            this.originPath = Output.ofNullable(originPath);
+            this.originPath = Codegen.ofNullable(originPath);
             return this;
         }
         public Builder patternsToMatch(@Nullable Output<List<String>> patternsToMatch) {
@@ -384,7 +385,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder patternsToMatch(@Nullable List<String> patternsToMatch) {
-            this.patternsToMatch = Output.ofNullable(patternsToMatch);
+            this.patternsToMatch = Codegen.ofNullable(patternsToMatch);
             return this;
         }
         public Builder patternsToMatch(String... patternsToMatch) {
@@ -403,7 +404,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queryStringCachingBehavior(@Nullable AfdQueryStringCachingBehavior queryStringCachingBehavior) {
-            this.queryStringCachingBehavior = Output.ofNullable(queryStringCachingBehavior);
+            this.queryStringCachingBehavior = Codegen.ofNullable(queryStringCachingBehavior);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -419,7 +420,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routeName(@Nullable String routeName) {
-            this.routeName = Output.ofNullable(routeName);
+            this.routeName = Codegen.ofNullable(routeName);
             return this;
         }
         public Builder ruleSets(@Nullable Output<List<ResourceReferenceArgs>> ruleSets) {
@@ -427,7 +428,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleSets(@Nullable List<ResourceReferenceArgs> ruleSets) {
-            this.ruleSets = Output.ofNullable(ruleSets);
+            this.ruleSets = Codegen.ofNullable(ruleSets);
             return this;
         }
         public Builder ruleSets(ResourceReferenceArgs... ruleSets) {
@@ -438,7 +439,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder supportedProtocols(@Nullable List<Either<String,AFDEndpointProtocols>> supportedProtocols) {
-            this.supportedProtocols = Output.ofNullable(supportedProtocols);
+            this.supportedProtocols = Codegen.ofNullable(supportedProtocols);
             return this;
         }
         public Builder supportedProtocols(Either<String,AFDEndpointProtocols>... supportedProtocols) {

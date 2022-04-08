@@ -8,6 +8,7 @@ import io.pulumi.azurenative.containerregistry.inputs.TokenCredentialsProperties
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TokenCredentialsPropertiesArgs> credentials;
 
     public Output<TokenCredentialsPropertiesArgs> getCredentials() {
-        return this.credentials == null ? Output.empty() : this.credentials;
+        return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> scopeMapId;
 
     public Output<String> getScopeMapId() {
-        return this.scopeMapId == null ? Output.empty() : this.scopeMapId;
+        return this.scopeMapId == null ? Codegen.empty() : this.scopeMapId;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,TokenStatus>> status;
 
     public Output<Either<String,TokenStatus>> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> tokenName;
 
     public Output<String> getTokenName() {
-        return this.tokenName == null ? Output.empty() : this.tokenName;
+        return this.tokenName == null ? Codegen.empty() : this.tokenName;
     }
 
     public TokenArgs(
@@ -99,12 +100,12 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TokenArgs() {
-        this.credentials = Output.empty();
-        this.registryName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scopeMapId = Output.empty();
-        this.status = Output.empty();
-        this.tokenName = Output.empty();
+        this.credentials = Codegen.empty();
+        this.registryName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scopeMapId = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tokenName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder credentials(@Nullable TokenCredentialsPropertiesArgs credentials) {
-            this.credentials = Output.ofNullable(credentials);
+            this.credentials = Codegen.ofNullable(credentials);
             return this;
         }
         public Builder registryName(Output<String> registryName) {
@@ -166,7 +167,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scopeMapId(@Nullable String scopeMapId) {
-            this.scopeMapId = Output.ofNullable(scopeMapId);
+            this.scopeMapId = Codegen.ofNullable(scopeMapId);
             return this;
         }
         public Builder status(@Nullable Output<Either<String,TokenStatus>> status) {
@@ -174,7 +175,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable Either<String,TokenStatus> status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tokenName(@Nullable Output<String> tokenName) {
@@ -182,7 +183,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tokenName(@Nullable String tokenName) {
-            this.tokenName = Output.ofNullable(tokenName);
+            this.tokenName = Codegen.ofNullable(tokenName);
             return this;
         }        public TokenArgs build() {
             return new TokenArgs(credentials, registryName, resourceGroupName, scopeMapId, status, tokenName);

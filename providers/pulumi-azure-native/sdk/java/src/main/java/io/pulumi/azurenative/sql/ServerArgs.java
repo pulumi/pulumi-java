@@ -9,6 +9,7 @@ import io.pulumi.azurenative.sql.inputs.ServerExternalAdministratorArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> administratorLogin;
 
     public Output<String> getAdministratorLogin() {
-        return this.administratorLogin == null ? Output.empty() : this.administratorLogin;
+        return this.administratorLogin == null ? Codegen.empty() : this.administratorLogin;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> administratorLoginPassword;
 
     public Output<String> getAdministratorLoginPassword() {
-        return this.administratorLoginPassword == null ? Output.empty() : this.administratorLoginPassword;
+        return this.administratorLoginPassword == null ? Codegen.empty() : this.administratorLoginPassword;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ServerExternalAdministratorArgs> administrators;
 
     public Output<ServerExternalAdministratorArgs> getAdministrators() {
-        return this.administrators == null ? Output.empty() : this.administrators;
+        return this.administrators == null ? Codegen.empty() : this.administrators;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ResourceIdentityArgs> identity;
 
     public Output<ResourceIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyId;
 
     public Output<String> getKeyId() {
-        return this.keyId == null ? Output.empty() : this.keyId;
+        return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> minimalTlsVersion;
 
     public Output<String> getMinimalTlsVersion() {
-        return this.minimalTlsVersion == null ? Output.empty() : this.minimalTlsVersion;
+        return this.minimalTlsVersion == null ? Codegen.empty() : this.minimalTlsVersion;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> primaryUserAssignedIdentityId;
 
     public Output<String> getPrimaryUserAssignedIdentityId() {
-        return this.primaryUserAssignedIdentityId == null ? Output.empty() : this.primaryUserAssignedIdentityId;
+        return this.primaryUserAssignedIdentityId == null ? Codegen.empty() : this.primaryUserAssignedIdentityId;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ServerPublicNetworkAccess>> publicNetworkAccess;
 
     public Output<Either<String,ServerPublicNetworkAccess>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
+        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serverName;
 
     public Output<String> getServerName() {
-        return this.serverName == null ? Output.empty() : this.serverName;
+        return this.serverName == null ? Codegen.empty() : this.serverName;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ServerArgs(
@@ -192,19 +193,19 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServerArgs() {
-        this.administratorLogin = Output.empty();
-        this.administratorLoginPassword = Output.empty();
-        this.administrators = Output.empty();
-        this.identity = Output.empty();
-        this.keyId = Output.empty();
-        this.location = Output.empty();
-        this.minimalTlsVersion = Output.empty();
-        this.primaryUserAssignedIdentityId = Output.empty();
-        this.publicNetworkAccess = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
-        this.tags = Output.empty();
-        this.version = Output.empty();
+        this.administratorLogin = Codegen.empty();
+        this.administratorLoginPassword = Codegen.empty();
+        this.administrators = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.keyId = Codegen.empty();
+        this.location = Codegen.empty();
+        this.minimalTlsVersion = Codegen.empty();
+        this.primaryUserAssignedIdentityId = Codegen.empty();
+        this.publicNetworkAccess = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -256,7 +257,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder administratorLogin(@Nullable String administratorLogin) {
-            this.administratorLogin = Output.ofNullable(administratorLogin);
+            this.administratorLogin = Codegen.ofNullable(administratorLogin);
             return this;
         }
         public Builder administratorLoginPassword(@Nullable Output<String> administratorLoginPassword) {
@@ -264,7 +265,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder administratorLoginPassword(@Nullable String administratorLoginPassword) {
-            this.administratorLoginPassword = Output.ofNullable(administratorLoginPassword);
+            this.administratorLoginPassword = Codegen.ofNullable(administratorLoginPassword);
             return this;
         }
         public Builder administrators(@Nullable Output<ServerExternalAdministratorArgs> administrators) {
@@ -272,7 +273,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder administrators(@Nullable ServerExternalAdministratorArgs administrators) {
-            this.administrators = Output.ofNullable(administrators);
+            this.administrators = Codegen.ofNullable(administrators);
             return this;
         }
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
@@ -280,7 +281,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder keyId(@Nullable Output<String> keyId) {
@@ -288,7 +289,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = Output.ofNullable(keyId);
+            this.keyId = Codegen.ofNullable(keyId);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -296,7 +297,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder minimalTlsVersion(@Nullable Output<String> minimalTlsVersion) {
@@ -304,7 +305,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minimalTlsVersion(@Nullable String minimalTlsVersion) {
-            this.minimalTlsVersion = Output.ofNullable(minimalTlsVersion);
+            this.minimalTlsVersion = Codegen.ofNullable(minimalTlsVersion);
             return this;
         }
         public Builder primaryUserAssignedIdentityId(@Nullable Output<String> primaryUserAssignedIdentityId) {
@@ -312,7 +313,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder primaryUserAssignedIdentityId(@Nullable String primaryUserAssignedIdentityId) {
-            this.primaryUserAssignedIdentityId = Output.ofNullable(primaryUserAssignedIdentityId);
+            this.primaryUserAssignedIdentityId = Codegen.ofNullable(primaryUserAssignedIdentityId);
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Output<Either<String,ServerPublicNetworkAccess>> publicNetworkAccess) {
@@ -320,7 +321,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Either<String,ServerPublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -336,7 +337,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverName(@Nullable String serverName) {
-            this.serverName = Output.ofNullable(serverName);
+            this.serverName = Codegen.ofNullable(serverName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -344,7 +345,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -352,7 +353,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ServerArgs build() {
             return new ServerArgs(administratorLogin, administratorLoginPassword, administrators, identity, keyId, location, minimalTlsVersion, primaryUserAssignedIdentityId, publicNetworkAccess, resourceGroupName, serverName, tags, version);

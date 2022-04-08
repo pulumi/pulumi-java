@@ -11,6 +11,7 @@ import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +35,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Object> body;
 
     public Output<Object> getBody() {
-        return this.body == null ? Output.empty() : this.body;
+        return this.body == null ? Codegen.empty() : this.body;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Output.empty() : this.dependsOn;
+        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Object> headers;
 
     public Output<Object> getHeaders() {
-        return this.headers == null ? Output.empty() : this.headers;
+        return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
+        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
     public Output<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Output.empty() : this.userProperties;
+        return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 
     public AzureFunctionActivityArgs(
@@ -174,17 +175,17 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
     }
 
     private AzureFunctionActivityArgs() {
-        this.body = Output.empty();
-        this.dependsOn = Output.empty();
-        this.description = Output.empty();
-        this.functionName = Output.empty();
-        this.headers = Output.empty();
-        this.linkedServiceName = Output.empty();
-        this.method = Output.empty();
-        this.name = Output.empty();
-        this.policy = Output.empty();
-        this.type = Output.empty();
-        this.userProperties = Output.empty();
+        this.body = Codegen.empty();
+        this.dependsOn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.functionName = Codegen.empty();
+        this.headers = Codegen.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.method = Codegen.empty();
+        this.name = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -232,7 +233,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder body(@Nullable Object body) {
-            this.body = Output.ofNullable(body);
+            this.body = Codegen.ofNullable(body);
             return this;
         }
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
@@ -240,7 +241,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Output.ofNullable(dependsOn);
+            this.dependsOn = Codegen.ofNullable(dependsOn);
             return this;
         }
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
@@ -251,7 +252,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder functionName(Output<Object> functionName) {
@@ -267,7 +268,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder headers(@Nullable Object headers) {
-            this.headers = Output.ofNullable(headers);
+            this.headers = Codegen.ofNullable(headers);
             return this;
         }
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
@@ -275,7 +276,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Output.ofNullable(linkedServiceName);
+            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
             return this;
         }
         public Builder method(Output<Either<String,AzureFunctionActivityMethod>> method) {
@@ -299,7 +300,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -315,7 +316,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Output.ofNullable(userProperties);
+            this.userProperties = Codegen.ofNullable(userProperties);
             return this;
         }
         public Builder userProperties(UserPropertyArgs... userProperties) {

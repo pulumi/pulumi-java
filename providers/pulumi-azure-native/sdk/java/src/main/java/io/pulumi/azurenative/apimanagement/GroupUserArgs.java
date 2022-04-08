@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -55,7 +56,7 @@ public final class GroupUserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> userId;
 
     public Output<String> getUserId() {
-        return this.userId == null ? Output.empty() : this.userId;
+        return this.userId == null ? Codegen.empty() : this.userId;
     }
 
     public GroupUserArgs(
@@ -70,10 +71,10 @@ public final class GroupUserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupUserArgs() {
-        this.groupId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.userId = Output.empty();
+        this.groupId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.userId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class GroupUserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userId(@Nullable String userId) {
-            this.userId = Output.ofNullable(userId);
+            this.userId = Codegen.ofNullable(userId);
             return this;
         }        public GroupUserArgs build() {
             return new GroupUserArgs(groupId, resourceGroupName, serviceName, userId);

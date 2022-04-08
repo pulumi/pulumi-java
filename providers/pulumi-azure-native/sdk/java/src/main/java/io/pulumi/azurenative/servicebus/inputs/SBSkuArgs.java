@@ -7,6 +7,7 @@ import io.pulumi.azurenative.servicebus.enums.SkuName;
 import io.pulumi.azurenative.servicebus.enums.SkuTier;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class SBSkuArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
-        return this.capacity == null ? Output.empty() : this.capacity;
+        return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class SBSkuArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SkuTier> tier;
 
     public Output<SkuTier> getTier() {
-        return this.tier == null ? Output.empty() : this.tier;
+        return this.tier == null ? Codegen.empty() : this.tier;
     }
 
     public SBSkuArgs(
@@ -63,9 +64,9 @@ public final class SBSkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SBSkuArgs() {
-        this.capacity = Output.empty();
-        this.name = Output.empty();
-        this.tier = Output.empty();
+        this.capacity = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class SBSkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Output.ofNullable(capacity);
+            this.capacity = Codegen.ofNullable(capacity);
             return this;
         }
         public Builder name(Output<SkuName> name) {
@@ -113,7 +114,7 @@ public final class SBSkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tier(@Nullable SkuTier tier) {
-            this.tier = Output.ofNullable(tier);
+            this.tier = Codegen.ofNullable(tier);
             return this;
         }        public SBSkuArgs build() {
             return new SBSkuArgs(capacity, name, tier);

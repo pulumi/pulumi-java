@@ -8,6 +8,7 @@ import io.pulumi.azurenative.digitaltwins.inputs.EventHubArgs;
 import io.pulumi.azurenative.digitaltwins.inputs.ServiceBusArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> endpointName;
 
     public Output<String> getEndpointName() {
-        return this.endpointName == null ? Output.empty() : this.endpointName;
+        return this.endpointName == null ? Codegen.empty() : this.endpointName;
     }
 
     /**
@@ -74,10 +75,10 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
     }
 
     private DigitalTwinsEndpointArgs() {
-        this.endpointName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
+        this.endpointName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder endpointName(@Nullable String endpointName) {
-            this.endpointName = Output.ofNullable(endpointName);
+            this.endpointName = Codegen.ofNullable(endpointName);
             return this;
         }
         public Builder properties(Output<Object> properties) {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datashare.enums.OutputType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -46,7 +47,7 @@ public final class ADLSGen2FileDataSetMappingArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> dataSetMappingName;
 
     public Output<String> getDataSetMappingName() {
-        return this.dataSetMappingName == null ? Output.empty() : this.dataSetMappingName;
+        return this.dataSetMappingName == null ? Codegen.empty() : this.dataSetMappingName;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class ADLSGen2FileDataSetMappingArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Either<String,OutputType>> outputType;
 
     public Output<Either<String,OutputType>> getOutputType() {
-        return this.outputType == null ? Output.empty() : this.outputType;
+        return this.outputType == null ? Codegen.empty() : this.outputType;
     }
 
     /**
@@ -177,18 +178,18 @@ public final class ADLSGen2FileDataSetMappingArgs extends io.pulumi.resources.Re
     }
 
     private ADLSGen2FileDataSetMappingArgs() {
-        this.accountName = Output.empty();
-        this.dataSetId = Output.empty();
-        this.dataSetMappingName = Output.empty();
-        this.filePath = Output.empty();
-        this.fileSystem = Output.empty();
-        this.kind = Output.empty();
-        this.outputType = Output.empty();
-        this.resourceGroup = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.shareSubscriptionName = Output.empty();
-        this.storageAccountName = Output.empty();
-        this.subscriptionId = Output.empty();
+        this.accountName = Codegen.empty();
+        this.dataSetId = Codegen.empty();
+        this.dataSetMappingName = Codegen.empty();
+        this.filePath = Codegen.empty();
+        this.fileSystem = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.outputType = Codegen.empty();
+        this.resourceGroup = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.shareSubscriptionName = Codegen.empty();
+        this.storageAccountName = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -254,7 +255,7 @@ public final class ADLSGen2FileDataSetMappingArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder dataSetMappingName(@Nullable String dataSetMappingName) {
-            this.dataSetMappingName = Output.ofNullable(dataSetMappingName);
+            this.dataSetMappingName = Codegen.ofNullable(dataSetMappingName);
             return this;
         }
         public Builder filePath(Output<String> filePath) {
@@ -286,7 +287,7 @@ public final class ADLSGen2FileDataSetMappingArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder outputType(@Nullable Either<String,OutputType> outputType) {
-            this.outputType = Output.ofNullable(outputType);
+            this.outputType = Codegen.ofNullable(outputType);
             return this;
         }
         public Builder resourceGroup(Output<String> resourceGroup) {

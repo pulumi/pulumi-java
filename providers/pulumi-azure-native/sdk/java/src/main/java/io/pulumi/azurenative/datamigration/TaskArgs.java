@@ -26,6 +26,7 @@ import io.pulumi.azurenative.datamigration.inputs.ValidateMigrationInputSqlServe
 import io.pulumi.azurenative.datamigration.inputs.ValidateMigrationInputSqlServerSqlMITaskPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -66,7 +67,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> properties;
 
     public Output<Object> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> taskName;
 
     public Output<String> getTaskName() {
-        return this.taskName == null ? Output.empty() : this.taskName;
+        return this.taskName == null ? Codegen.empty() : this.taskName;
     }
 
     public TaskArgs(
@@ -105,11 +106,11 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TaskArgs() {
-        this.groupName = Output.empty();
-        this.projectName = Output.empty();
-        this.properties = Output.empty();
-        this.serviceName = Output.empty();
-        this.taskName = Output.empty();
+        this.groupName = Codegen.empty();
+        this.projectName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.taskName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable Object properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder serviceName(Output<String> serviceName) {
@@ -177,7 +178,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder taskName(@Nullable String taskName) {
-            this.taskName = Output.ofNullable(taskName);
+            this.taskName = Codegen.ofNullable(taskName);
             return this;
         }        public TaskArgs build() {
             return new TaskArgs(groupName, projectName, properties, serviceName, taskName);

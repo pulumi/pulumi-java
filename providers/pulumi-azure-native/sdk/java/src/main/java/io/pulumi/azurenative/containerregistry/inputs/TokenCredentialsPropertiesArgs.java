@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerregistry.inputs.TokenCertificateArgs;
 import io.pulumi.azurenative.containerregistry.inputs.TokenPasswordArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,14 +25,14 @@ public final class TokenCredentialsPropertiesArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<TokenCertificateArgs>> certificates;
 
     public Output<List<TokenCertificateArgs>> getCertificates() {
-        return this.certificates == null ? Output.empty() : this.certificates;
+        return this.certificates == null ? Codegen.empty() : this.certificates;
     }
 
     @Import(name="passwords")
       private final @Nullable Output<List<TokenPasswordArgs>> passwords;
 
     public Output<List<TokenPasswordArgs>> getPasswords() {
-        return this.passwords == null ? Output.empty() : this.passwords;
+        return this.passwords == null ? Codegen.empty() : this.passwords;
     }
 
     public TokenCredentialsPropertiesArgs(
@@ -42,8 +43,8 @@ public final class TokenCredentialsPropertiesArgs extends io.pulumi.resources.Re
     }
 
     private TokenCredentialsPropertiesArgs() {
-        this.certificates = Output.empty();
-        this.passwords = Output.empty();
+        this.certificates = Codegen.empty();
+        this.passwords = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -73,7 +74,7 @@ public final class TokenCredentialsPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder certificates(@Nullable List<TokenCertificateArgs> certificates) {
-            this.certificates = Output.ofNullable(certificates);
+            this.certificates = Codegen.ofNullable(certificates);
             return this;
         }
         public Builder certificates(TokenCertificateArgs... certificates) {
@@ -84,7 +85,7 @@ public final class TokenCredentialsPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder passwords(@Nullable List<TokenPasswordArgs> passwords) {
-            this.passwords = Output.ofNullable(passwords);
+            this.passwords = Codegen.ofNullable(passwords);
             return this;
         }
         public Builder passwords(TokenPasswordArgs... passwords) {

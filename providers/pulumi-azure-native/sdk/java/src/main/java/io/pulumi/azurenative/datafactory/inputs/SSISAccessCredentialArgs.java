@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -63,9 +64,9 @@ public final class SSISAccessCredentialArgs extends io.pulumi.resources.Resource
     }
 
     private SSISAccessCredentialArgs() {
-        this.domain = Output.empty();
-        this.password = Output.empty();
-        this.userName = Output.empty();
+        this.domain = Codegen.empty();
+        this.password = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {

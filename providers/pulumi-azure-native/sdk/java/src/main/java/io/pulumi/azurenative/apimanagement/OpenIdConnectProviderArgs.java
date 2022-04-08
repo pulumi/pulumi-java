@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> clientSecret;
 
     public Output<String> getClientSecret() {
-        return this.clientSecret == null ? Output.empty() : this.clientSecret;
+        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> opid;
 
     public Output<String> getOpid() {
-        return this.opid == null ? Output.empty() : this.opid;
+        return this.opid == null ? Codegen.empty() : this.opid;
     }
 
     /**
@@ -122,14 +123,14 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
     }
 
     private OpenIdConnectProviderArgs() {
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.metadataEndpoint = Output.empty();
-        this.opid = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.metadataEndpoint = Codegen.empty();
+        this.opid = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Output.ofNullable(clientSecret);
+            this.clientSecret = Codegen.ofNullable(clientSecret);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -187,7 +188,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -211,7 +212,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder opid(@Nullable String opid) {
-            this.opid = Output.ofNullable(opid);
+            this.opid = Codegen.ofNullable(opid);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

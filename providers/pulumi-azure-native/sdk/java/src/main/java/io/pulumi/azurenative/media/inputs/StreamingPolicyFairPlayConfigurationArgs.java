@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class StreamingPolicyFairPlayConfigurationArgs extends io.pulumi.re
       private final @Nullable Output<String> customLicenseAcquisitionUrlTemplate;
 
     public Output<String> getCustomLicenseAcquisitionUrlTemplate() {
-        return this.customLicenseAcquisitionUrlTemplate == null ? Output.empty() : this.customLicenseAcquisitionUrlTemplate;
+        return this.customLicenseAcquisitionUrlTemplate == null ? Codegen.empty() : this.customLicenseAcquisitionUrlTemplate;
     }
 
     public StreamingPolicyFairPlayConfigurationArgs(
@@ -49,8 +50,8 @@ public final class StreamingPolicyFairPlayConfigurationArgs extends io.pulumi.re
     }
 
     private StreamingPolicyFairPlayConfigurationArgs() {
-        this.allowPersistentLicense = Output.empty();
-        this.customLicenseAcquisitionUrlTemplate = Output.empty();
+        this.allowPersistentLicense = Codegen.empty();
+        this.customLicenseAcquisitionUrlTemplate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class StreamingPolicyFairPlayConfigurationArgs extends io.pulumi.re
             return this;
         }
         public Builder customLicenseAcquisitionUrlTemplate(@Nullable String customLicenseAcquisitionUrlTemplate) {
-            this.customLicenseAcquisitionUrlTemplate = Output.ofNullable(customLicenseAcquisitionUrlTemplate);
+            this.customLicenseAcquisitionUrlTemplate = Codegen.ofNullable(customLicenseAcquisitionUrlTemplate);
             return this;
         }        public StreamingPolicyFairPlayConfigurationArgs build() {
             return new StreamingPolicyFairPlayConfigurationArgs(allowPersistentLicense, customLicenseAcquisitionUrlTemplate);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class VpnNatRuleMappingArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> addressSpace;
 
     public Output<String> getAddressSpace() {
-        return this.addressSpace == null ? Output.empty() : this.addressSpace;
+        return this.addressSpace == null ? Codegen.empty() : this.addressSpace;
     }
 
     public VpnNatRuleMappingArgs(@Nullable Output<String> addressSpace) {
@@ -34,7 +35,7 @@ public final class VpnNatRuleMappingArgs extends io.pulumi.resources.ResourceArg
     }
 
     private VpnNatRuleMappingArgs() {
-        this.addressSpace = Output.empty();
+        this.addressSpace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class VpnNatRuleMappingArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder addressSpace(@Nullable String addressSpace) {
-            this.addressSpace = Output.ofNullable(addressSpace);
+            this.addressSpace = Codegen.ofNullable(addressSpace);
             return this;
         }        public VpnNatRuleMappingArgs build() {
             return new VpnNatRuleMappingArgs(addressSpace);

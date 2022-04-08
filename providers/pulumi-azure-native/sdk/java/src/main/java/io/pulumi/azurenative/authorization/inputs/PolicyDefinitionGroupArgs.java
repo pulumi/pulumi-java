@@ -5,6 +5,7 @@ package io.pulumi.azurenative.authorization.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> additionalMetadataId;
 
     public Output<String> getAdditionalMetadataId() {
-        return this.additionalMetadataId == null ? Output.empty() : this.additionalMetadataId;
+        return this.additionalMetadataId == null ? Codegen.empty() : this.additionalMetadataId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> category;
 
     public Output<String> getCategory() {
-        return this.category == null ? Output.empty() : this.category;
+        return this.category == null ? Codegen.empty() : this.category;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -87,11 +88,11 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
     }
 
     private PolicyDefinitionGroupArgs() {
-        this.additionalMetadataId = Output.empty();
-        this.category = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.name = Output.empty();
+        this.additionalMetadataId = Codegen.empty();
+        this.category = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder additionalMetadataId(@Nullable String additionalMetadataId) {
-            this.additionalMetadataId = Output.ofNullable(additionalMetadataId);
+            this.additionalMetadataId = Codegen.ofNullable(additionalMetadataId);
             return this;
         }
         public Builder category(@Nullable Output<String> category) {
@@ -135,7 +136,7 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder category(@Nullable String category) {
-            this.category = Output.ofNullable(category);
+            this.category = Codegen.ofNullable(category);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -143,7 +144,7 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -151,7 +152,7 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder name(Output<String> name) {

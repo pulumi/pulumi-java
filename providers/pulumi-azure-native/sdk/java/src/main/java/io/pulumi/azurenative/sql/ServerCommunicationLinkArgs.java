@@ -5,6 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> communicationLinkName;
 
     public Output<String> getCommunicationLinkName() {
-        return this.communicationLinkName == null ? Output.empty() : this.communicationLinkName;
+        return this.communicationLinkName == null ? Codegen.empty() : this.communicationLinkName;
     }
 
     /**
@@ -70,10 +71,10 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
     }
 
     private ServerCommunicationLinkArgs() {
-        this.communicationLinkName = Output.empty();
-        this.partnerServer = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
+        this.communicationLinkName = Codegen.empty();
+        this.partnerServer = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder communicationLinkName(@Nullable String communicationLinkName) {
-            this.communicationLinkName = Output.ofNullable(communicationLinkName);
+            this.communicationLinkName = Codegen.ofNullable(communicationLinkName);
             return this;
         }
         public Builder partnerServer(Output<String> partnerServer) {
