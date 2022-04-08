@@ -19,7 +19,15 @@ import io.pulumi.exceptions.RunException;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Optional;
+import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
@@ -490,6 +498,15 @@ public abstract class Resource {
             return resource.providers.getOrDefault(memComponents[0], null);
         }
 
+        /**
+         * Finds all {@link Output} fields annotated with {@link Export},
+         * validates the annotation presence and content,
+         * validates non-null-ness of fields,
+         * ensures the field type is {@link Output}
+         * and uses reflection to get the references to them.
+         * Returns a map of export names and output references.
+         * Not to be confused with {@link io.pulumi.core.internal.OutputCompletionSource#from(io.pulumi.resources.Resource)}
+         */
         @InternalUse
         public static Map<String, Output<?>> findOutputs(Object object) {
             var infos = ExportMetadata.of(object.getClass());
@@ -506,7 +523,7 @@ public abstract class Resource {
                     .collect(Collectors.toList());
             if (!nulls.isEmpty()) {
                 throw new RunException(String.format(
-                        "Output(s) '%s' have no value assigned. %s annotated fields must be assigned inside Stack constructor.",
+                        "Output(s) '%s' have no value assigned, it is 'null'. All '%s' annotated fields must have a value assigned (non-null).",
                         String.join(", ", nulls), Export.class.getSimpleName()
                 ));
             }
@@ -522,7 +539,7 @@ public abstract class Resource {
 
             if (!wrongFields.isEmpty()) {
                 throw new RunException(String.format(
-                        "Output(s) '%s' have incorrect type. %s annotated fields must be instances of Output<T>",
+                        "Output(s) '%s' have incorrect type. All '%s' annotated fields must be an instances of Output<T>",
                         String.join(", ", wrongFields), Export.class.getSimpleName()
                 ));
             }

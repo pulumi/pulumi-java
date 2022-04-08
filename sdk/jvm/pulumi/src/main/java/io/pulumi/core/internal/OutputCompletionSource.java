@@ -1,11 +1,13 @@
 package io.pulumi.core.internal;
 
+import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
 import com.google.protobuf.Value;
 import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.annotations.ExportMetadata;
 import io.pulumi.resources.Resource;
 import io.pulumi.serialization.internal.Converter;
@@ -17,6 +19,14 @@ import java.util.concurrent.CompletableFuture;
 
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 
+/**
+ * Lazy initialization object used to set {@link Output}
+ * field values with data that will come from Pulumi engine.
+ * The lazy initialization is done with reflection during the resource registration in:
+ * {@link io.pulumi.deployment.internal.DeploymentImpl.ReadOrRegisterResource#readOrRegisterResource(io.pulumi.resources.Resource, boolean, java.util.function.Function, io.pulumi.resources.ResourceArgs, io.pulumi.resources.ResourceOptions)}.
+ * @param <T> type of the field value
+ */
+@SuppressWarnings("JavadocReference") // ReadOrRegisterResource is private but this is an internal class
 @ParametersAreNonnullByDefault
 public class OutputCompletionSource<T> {
 
@@ -94,7 +104,8 @@ public class OutputCompletionSource<T> {
         return dataTypeShape;
     }
 
-    public static <T> OutputCompletionSource<T> of(
+    @VisibleForTesting
+    static <T> OutputCompletionSource<T> of(
             Output<T> output,
             ImmutableSet<Resource> resources,
             TypeShape<T> fieldTypeShape
@@ -102,7 +113,7 @@ public class OutputCompletionSource<T> {
         return new OutputCompletionSource<>(Internal.of(output).getDataAsync(), resources, fieldTypeShape);
     }
 
-    public static <T> OutputCompletionSource<T> from(
+    private static <T> OutputCompletionSource<T> from(
             Resource resource,
             ExportMetadata<T> metadata
     ) {
@@ -114,6 +125,13 @@ public class OutputCompletionSource<T> {
         return of(output, ImmutableSet.of(resource), metadata.getDataShape());
     }
 
+    /**
+     * Finds all {@link Output} fields annotated with {@link Export}
+     * and uses reflection to replace their values with a lazy initialization object {@link OutputCompletionSource}
+     * It skips two special fields: {@code id} and {@code urn}
+     * @param resource the resource to replace fields on
+     * @return a map of export name and an output a lazy initialization object {@link OutputCompletionSource}
+     */
     public static ImmutableMap<String, OutputCompletionSource<?>> from(Resource resource) {
         return ExportMetadata.of(resource.getClass()).entrySet().stream()
                 .filter(x -> {
