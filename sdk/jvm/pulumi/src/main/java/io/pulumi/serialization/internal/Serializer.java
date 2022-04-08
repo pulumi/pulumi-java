@@ -6,9 +6,11 @@ import com.google.protobuf.NullValue;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
 import io.pulumi.Log;
-import io.pulumi.core.Archive.InvalidArchive;
-import io.pulumi.core.Asset.InvalidAsset;
-import io.pulumi.core.AssetOrArchive;
+import io.pulumi.asset.Archive;
+import io.pulumi.asset.Archive.InvalidArchive;
+import io.pulumi.asset.Asset;
+import io.pulumi.asset.Asset.InvalidAsset;
+import io.pulumi.asset.AssetOrArchive;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
@@ -25,7 +27,14 @@ import io.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
 import java.lang.reflect.InvocationTargetException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Optional;
+import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -52,8 +61,8 @@ public class Serializer {
      * <li>{@code int} or {@code Integer}</li>
      * <li>{@code double} or {@code Double}</li>
      * <li>{@code String}</li>
-     * <li>@see {@link io.pulumi.core.Asset}</li>
-     * <li>@see {@link io.pulumi.core.Archive}</li>
+     * <li>@see {@link Asset}</li>
+     * <li>@see {@link Archive}</li>
      * <li>@see {@link Resource}</li>
      * <li>@see {@link io.pulumi.resources.ResourceArgs}</li>
      * <li>@see {@link com.google.gson.JsonElement}</li>

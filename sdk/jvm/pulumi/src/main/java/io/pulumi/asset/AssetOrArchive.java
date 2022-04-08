@@ -1,4 +1,4 @@
-package io.pulumi.core;
+package io.pulumi.asset;
 
 import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.annotations.InternalUse;
