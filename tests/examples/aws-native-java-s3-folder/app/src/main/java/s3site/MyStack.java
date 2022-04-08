@@ -2,6 +2,7 @@
 package s3site;
 
 import io.pulumi.Stack;
+import io.pulumi.asset.FileAsset;
 import io.pulumi.aws.s3.BucketObject;
 import io.pulumi.aws.s3.BucketObjectArgs;
 import io.pulumi.aws.s3.BucketPolicy;
@@ -9,7 +10,6 @@ import io.pulumi.aws.s3.BucketPolicyArgs;
 import io.pulumi.awsnative.s3.Bucket;
 import io.pulumi.awsnative.s3.BucketArgs;
 import io.pulumi.awsnative.s3.inputs.BucketWebsiteConfigurationArgs;
-import io.pulumi.core.Asset.FileAsset;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 
