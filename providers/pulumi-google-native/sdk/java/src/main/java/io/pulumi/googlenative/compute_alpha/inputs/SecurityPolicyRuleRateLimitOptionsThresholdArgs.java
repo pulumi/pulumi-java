@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends io.pu
       private final @Nullable Output<Integer> count;
 
     public Output<Integer> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends io.pu
       private final @Nullable Output<Integer> intervalSec;
 
     public Output<Integer> getIntervalSec() {
-        return this.intervalSec == null ? Output.empty() : this.intervalSec;
+        return this.intervalSec == null ? Codegen.empty() : this.intervalSec;
     }
 
     public SecurityPolicyRuleRateLimitOptionsThresholdArgs(
@@ -44,8 +45,8 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends io.pu
     }
 
     private SecurityPolicyRuleRateLimitOptionsThresholdArgs() {
-        this.count = Output.empty();
-        this.intervalSec = Output.empty();
+        this.count = Codegen.empty();
+        this.intervalSec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends io.pu
             return this;
         }
         public Builder count(@Nullable Integer count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }
         public Builder intervalSec(@Nullable Output<Integer> intervalSec) {
@@ -83,7 +84,7 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends io.pu
             return this;
         }
         public Builder intervalSec(@Nullable Integer intervalSec) {
-            this.intervalSec = Output.ofNullable(intervalSec);
+            this.intervalSec = Codegen.ofNullable(intervalSec);
             return this;
         }        public SecurityPolicyRuleRateLimitOptionsThresholdArgs build() {
             return new SecurityPolicyRuleRateLimitOptionsThresholdArgs(count, intervalSec);

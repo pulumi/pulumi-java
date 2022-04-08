@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudasset_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudasset_v1.inputs.PubsubDestinationArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class FeedOutputConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<PubsubDestinationArgs> pubsubDestination;
 
     public Output<PubsubDestinationArgs> getPubsubDestination() {
-        return this.pubsubDestination == null ? Output.empty() : this.pubsubDestination;
+        return this.pubsubDestination == null ? Codegen.empty() : this.pubsubDestination;
     }
 
     public FeedOutputConfigArgs(@Nullable Output<PubsubDestinationArgs> pubsubDestination) {
@@ -34,7 +35,7 @@ public final class FeedOutputConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private FeedOutputConfigArgs() {
-        this.pubsubDestination = Output.empty();
+        this.pubsubDestination = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class FeedOutputConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder pubsubDestination(@Nullable PubsubDestinationArgs pubsubDestination) {
-            this.pubsubDestination = Output.ofNullable(pubsubDestination);
+            this.pubsubDestination = Codegen.ofNullable(pubsubDestination);
             return this;
         }        public FeedOutputConfigArgs build() {
             return new FeedOutputConfigArgs(pubsubDestination);

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.gameservices_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.gameservices_v1.RealmArgs;
 import java.lang.String;
@@ -139,7 +140,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Realm(String name, RealmArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:gameservices/v1:Realm", name, args == null ? RealmArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:gameservices/v1:Realm", name, args == null ? RealmArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Realm(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

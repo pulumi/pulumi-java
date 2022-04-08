@@ -5,6 +5,7 @@ package io.pulumi.googlenative.retail_v2alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs extends 
       private final @Nullable Output<List<String>> synonyms;
 
     public Output<List<String>> getSynonyms() {
-        return this.synonyms == null ? Output.empty() : this.synonyms;
+        return this.synonyms == null ? Codegen.empty() : this.synonyms;
     }
 
     public GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs(@Nullable Output<List<String>> synonyms) {
@@ -35,7 +36,7 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs extends 
     }
 
     private GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs() {
-        this.synonyms = Output.empty();
+        this.synonyms = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs extends 
             return this;
         }
         public Builder synonyms(@Nullable List<String> synonyms) {
-            this.synonyms = Output.ofNullable(synonyms);
+            this.synonyms = Codegen.ofNullable(synonyms);
             return this;
         }
         public Builder synonyms(String... synonyms) {

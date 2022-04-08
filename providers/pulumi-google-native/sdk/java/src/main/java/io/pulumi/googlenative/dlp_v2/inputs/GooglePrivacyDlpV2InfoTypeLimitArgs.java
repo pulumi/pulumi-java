@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GooglePrivacyDlpV2InfoTypeLimitArgs extends io.pulumi.resourc
       private final @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType;
 
     public Output<GooglePrivacyDlpV2InfoTypeArgs> getInfoType() {
-        return this.infoType == null ? Output.empty() : this.infoType;
+        return this.infoType == null ? Codegen.empty() : this.infoType;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GooglePrivacyDlpV2InfoTypeLimitArgs extends io.pulumi.resourc
       private final @Nullable Output<Integer> maxFindings;
 
     public Output<Integer> getMaxFindings() {
-        return this.maxFindings == null ? Output.empty() : this.maxFindings;
+        return this.maxFindings == null ? Codegen.empty() : this.maxFindings;
     }
 
     public GooglePrivacyDlpV2InfoTypeLimitArgs(
@@ -49,8 +50,8 @@ public final class GooglePrivacyDlpV2InfoTypeLimitArgs extends io.pulumi.resourc
     }
 
     private GooglePrivacyDlpV2InfoTypeLimitArgs() {
-        this.infoType = Output.empty();
-        this.maxFindings = Output.empty();
+        this.infoType = Codegen.empty();
+        this.maxFindings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GooglePrivacyDlpV2InfoTypeLimitArgs extends io.pulumi.resourc
             return this;
         }
         public Builder infoType(@Nullable GooglePrivacyDlpV2InfoTypeArgs infoType) {
-            this.infoType = Output.ofNullable(infoType);
+            this.infoType = Codegen.ofNullable(infoType);
             return this;
         }
         public Builder maxFindings(@Nullable Output<Integer> maxFindings) {
@@ -88,7 +89,7 @@ public final class GooglePrivacyDlpV2InfoTypeLimitArgs extends io.pulumi.resourc
             return this;
         }
         public Builder maxFindings(@Nullable Integer maxFindings) {
-            this.maxFindings = Output.ofNullable(maxFindings);
+            this.maxFindings = Codegen.ofNullable(maxFindings);
             return this;
         }        public GooglePrivacyDlpV2InfoTypeLimitArgs build() {
             return new GooglePrivacyDlpV2InfoTypeLimitArgs(infoType, maxFindings);

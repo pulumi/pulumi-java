@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> sizeGb;
 
     public Output<Double> getSizeGb() {
-        return this.sizeGb == null ? Output.empty() : this.sizeGb;
+        return this.sizeGb == null ? Codegen.empty() : this.sizeGb;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> volumeType;
 
     public Output<String> getVolumeType() {
-        return this.volumeType == null ? Output.empty() : this.volumeType;
+        return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 
     public VolumeArgs(
@@ -62,9 +63,9 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VolumeArgs() {
-        this.name = Output.empty();
-        this.sizeGb = Output.empty();
-        this.volumeType = Output.empty();
+        this.name = Codegen.empty();
+        this.sizeGb = Codegen.empty();
+        this.volumeType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder sizeGb(@Nullable Output<Double> sizeGb) {
@@ -104,7 +105,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sizeGb(@Nullable Double sizeGb) {
-            this.sizeGb = Output.ofNullable(sizeGb);
+            this.sizeGb = Codegen.ofNullable(sizeGb);
             return this;
         }
         public Builder volumeType(@Nullable Output<String> volumeType) {
@@ -112,7 +113,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Output.ofNullable(volumeType);
+            this.volumeType = Codegen.ofNullable(volumeType);
             return this;
         }        public VolumeArgs build() {
             return new VolumeArgs(name, sizeGb, volumeType);

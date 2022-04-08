@@ -5,6 +5,7 @@ package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.vmmigration_v1alpha1.enums.ComputeSchedulingOnHostMaintenance;
 import io.pulumi.googlenative.vmmigration_v1alpha1.enums.ComputeSchedulingRestartType;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.SchedulingNodeAffinityArgs;
@@ -27,7 +28,7 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> automaticRestart;
 
     public Output<Boolean> getAutomaticRestart() {
-        return this.automaticRestart == null ? Output.empty() : this.automaticRestart;
+        return this.automaticRestart == null ? Codegen.empty() : this.automaticRestart;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> minNodeCpus;
 
     public Output<Integer> getMinNodeCpus() {
-        return this.minNodeCpus == null ? Output.empty() : this.minNodeCpus;
+        return this.minNodeCpus == null ? Codegen.empty() : this.minNodeCpus;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities;
 
     public Output<List<SchedulingNodeAffinityArgs>> getNodeAffinities() {
-        return this.nodeAffinities == null ? Output.empty() : this.nodeAffinities;
+        return this.nodeAffinities == null ? Codegen.empty() : this.nodeAffinities;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<ComputeSchedulingOnHostMaintenance> onHostMaintenance;
 
     public Output<ComputeSchedulingOnHostMaintenance> getOnHostMaintenance() {
-        return this.onHostMaintenance == null ? Output.empty() : this.onHostMaintenance;
+        return this.onHostMaintenance == null ? Codegen.empty() : this.onHostMaintenance;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<ComputeSchedulingRestartType> restartType;
 
     public Output<ComputeSchedulingRestartType> getRestartType() {
-        return this.restartType == null ? Output.empty() : this.restartType;
+        return this.restartType == null ? Codegen.empty() : this.restartType;
     }
 
     public ComputeSchedulingArgs(
@@ -88,11 +89,11 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ComputeSchedulingArgs() {
-        this.automaticRestart = Output.empty();
-        this.minNodeCpus = Output.empty();
-        this.nodeAffinities = Output.empty();
-        this.onHostMaintenance = Output.empty();
-        this.restartType = Output.empty();
+        this.automaticRestart = Codegen.empty();
+        this.minNodeCpus = Codegen.empty();
+        this.nodeAffinities = Codegen.empty();
+        this.onHostMaintenance = Codegen.empty();
+        this.restartType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder automaticRestart(@Nullable Boolean automaticRestart) {
-            this.automaticRestart = Output.ofNullable(automaticRestart);
+            this.automaticRestart = Codegen.ofNullable(automaticRestart);
             return this;
         }
         public Builder minNodeCpus(@Nullable Output<Integer> minNodeCpus) {
@@ -136,7 +137,7 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder minNodeCpus(@Nullable Integer minNodeCpus) {
-            this.minNodeCpus = Output.ofNullable(minNodeCpus);
+            this.minNodeCpus = Codegen.ofNullable(minNodeCpus);
             return this;
         }
         public Builder nodeAffinities(@Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities) {
@@ -144,7 +145,7 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder nodeAffinities(@Nullable List<SchedulingNodeAffinityArgs> nodeAffinities) {
-            this.nodeAffinities = Output.ofNullable(nodeAffinities);
+            this.nodeAffinities = Codegen.ofNullable(nodeAffinities);
             return this;
         }
         public Builder nodeAffinities(SchedulingNodeAffinityArgs... nodeAffinities) {
@@ -155,7 +156,7 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder onHostMaintenance(@Nullable ComputeSchedulingOnHostMaintenance onHostMaintenance) {
-            this.onHostMaintenance = Output.ofNullable(onHostMaintenance);
+            this.onHostMaintenance = Codegen.ofNullable(onHostMaintenance);
             return this;
         }
         public Builder restartType(@Nullable Output<ComputeSchedulingRestartType> restartType) {
@@ -163,7 +164,7 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder restartType(@Nullable ComputeSchedulingRestartType restartType) {
-            this.restartType = Output.ofNullable(restartType);
+            this.restartType = Codegen.ofNullable(restartType);
             return this;
         }        public ComputeSchedulingArgs build() {
             return new ComputeSchedulingArgs(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, restartType);

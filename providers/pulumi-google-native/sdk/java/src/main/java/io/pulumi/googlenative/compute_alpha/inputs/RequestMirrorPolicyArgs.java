@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class RequestMirrorPolicyArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> backendService;
 
     public Output<String> getBackendService() {
-        return this.backendService == null ? Output.empty() : this.backendService;
+        return this.backendService == null ? Codegen.empty() : this.backendService;
     }
 
     public RequestMirrorPolicyArgs(@Nullable Output<String> backendService) {
@@ -34,7 +35,7 @@ public final class RequestMirrorPolicyArgs extends io.pulumi.resources.ResourceA
     }
 
     private RequestMirrorPolicyArgs() {
-        this.backendService = Output.empty();
+        this.backendService = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class RequestMirrorPolicyArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder backendService(@Nullable String backendService) {
-            this.backendService = Output.ofNullable(backendService);
+            this.backendService = Codegen.ofNullable(backendService);
             return this;
         }        public RequestMirrorPolicyArgs build() {
             return new RequestMirrorPolicyArgs(backendService);

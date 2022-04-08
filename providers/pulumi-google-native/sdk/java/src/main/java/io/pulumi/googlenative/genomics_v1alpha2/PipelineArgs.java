@@ -5,6 +5,7 @@ package io.pulumi.googlenative.genomics_v1alpha2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.genomics_v1alpha2.inputs.DockerExecutorArgs;
 import io.pulumi.googlenative.genomics_v1alpha2.inputs.PipelineParameterArgs;
 import io.pulumi.googlenative.genomics_v1alpha2.inputs.PipelineResourcesArgs;
@@ -26,7 +27,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DockerExecutorArgs> docker;
 
     public Output<DockerExecutorArgs> getDocker() {
-        return this.docker == null ? Output.empty() : this.docker;
+        return this.docker == null ? Codegen.empty() : this.docker;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<PipelineParameterArgs>> inputParameters;
 
     public Output<List<PipelineParameterArgs>> getInputParameters() {
-        return this.inputParameters == null ? Output.empty() : this.inputParameters;
+        return this.inputParameters == null ? Codegen.empty() : this.inputParameters;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<PipelineParameterArgs>> outputParameters;
 
     public Output<List<PipelineParameterArgs>> getOutputParameters() {
-        return this.outputParameters == null ? Output.empty() : this.outputParameters;
+        return this.outputParameters == null ? Codegen.empty() : this.outputParameters;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> pipelineId;
 
     public Output<String> getPipelineId() {
-        return this.pipelineId == null ? Output.empty() : this.pipelineId;
+        return this.pipelineId == null ? Codegen.empty() : this.pipelineId;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -126,14 +127,14 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PipelineArgs() {
-        this.description = Output.empty();
-        this.docker = Output.empty();
-        this.inputParameters = Output.empty();
-        this.name = Output.empty();
-        this.outputParameters = Output.empty();
-        this.pipelineId = Output.empty();
-        this.project = Output.empty();
-        this.resources = Output.empty();
+        this.description = Codegen.empty();
+        this.docker = Codegen.empty();
+        this.inputParameters = Codegen.empty();
+        this.name = Codegen.empty();
+        this.outputParameters = Codegen.empty();
+        this.pipelineId = Codegen.empty();
+        this.project = Codegen.empty();
+        this.resources = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -175,7 +176,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder docker(@Nullable Output<DockerExecutorArgs> docker) {
@@ -183,7 +184,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder docker(@Nullable DockerExecutorArgs docker) {
-            this.docker = Output.ofNullable(docker);
+            this.docker = Codegen.ofNullable(docker);
             return this;
         }
         public Builder inputParameters(@Nullable Output<List<PipelineParameterArgs>> inputParameters) {
@@ -191,7 +192,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputParameters(@Nullable List<PipelineParameterArgs> inputParameters) {
-            this.inputParameters = Output.ofNullable(inputParameters);
+            this.inputParameters = Codegen.ofNullable(inputParameters);
             return this;
         }
         public Builder inputParameters(PipelineParameterArgs... inputParameters) {
@@ -202,7 +203,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder outputParameters(@Nullable Output<List<PipelineParameterArgs>> outputParameters) {
@@ -210,7 +211,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputParameters(@Nullable List<PipelineParameterArgs> outputParameters) {
-            this.outputParameters = Output.ofNullable(outputParameters);
+            this.outputParameters = Codegen.ofNullable(outputParameters);
             return this;
         }
         public Builder outputParameters(PipelineParameterArgs... outputParameters) {
@@ -221,7 +222,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pipelineId(@Nullable String pipelineId) {
-            this.pipelineId = Output.ofNullable(pipelineId);
+            this.pipelineId = Codegen.ofNullable(pipelineId);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -229,7 +230,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder resources(Output<PipelineResourcesArgs> resources) {

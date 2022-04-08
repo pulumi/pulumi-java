@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionArgs extends io.pul
       private final @Nullable Output<Integer> numPaths;
 
     public Output<Integer> getNumPaths() {
-        return this.numPaths == null ? Output.empty() : this.numPaths;
+        return this.numPaths == null ? Codegen.empty() : this.numPaths;
     }
 
     public GoogleCloudMlV1__SampledShapleyAttributionArgs(@Nullable Output<Integer> numPaths) {
@@ -34,7 +35,7 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionArgs extends io.pul
     }
 
     private GoogleCloudMlV1__SampledShapleyAttributionArgs() {
-        this.numPaths = Output.empty();
+        this.numPaths = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionArgs extends io.pul
             return this;
         }
         public Builder numPaths(@Nullable Integer numPaths) {
-            this.numPaths = Output.ofNullable(numPaths);
+            this.numPaths = Codegen.ofNullable(numPaths);
             return this;
         }        public GoogleCloudMlV1__SampledShapleyAttributionArgs build() {
             return new GoogleCloudMlV1__SampledShapleyAttributionArgs(numPaths);

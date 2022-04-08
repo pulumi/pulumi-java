@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class NotificationRateLimitArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> period;
 
     public Output<String> getPeriod() {
-        return this.period == null ? Output.empty() : this.period;
+        return this.period == null ? Codegen.empty() : this.period;
     }
 
     public NotificationRateLimitArgs(@Nullable Output<String> period) {
@@ -34,7 +35,7 @@ public final class NotificationRateLimitArgs extends io.pulumi.resources.Resourc
     }
 
     private NotificationRateLimitArgs() {
-        this.period = Output.empty();
+        this.period = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class NotificationRateLimitArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder period(@Nullable String period) {
-            this.period = Output.ofNullable(period);
+            this.period = Codegen.ofNullable(period);
             return this;
         }        public NotificationRateLimitArgs build() {
             return new NotificationRateLimitArgs(period);

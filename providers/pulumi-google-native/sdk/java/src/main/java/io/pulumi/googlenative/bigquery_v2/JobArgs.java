@@ -6,6 +6,7 @@ package io.pulumi.googlenative.bigquery_v2;
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.JobReferenceArgs;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<JobConfigurationArgs> configuration;
 
     public Output<JobConfigurationArgs> getConfiguration() {
-        return this.configuration == null ? Output.empty() : this.configuration;
+        return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
     /**
@@ -36,21 +37,21 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<JobReferenceArgs> jobReference;
 
     public Output<JobReferenceArgs> getJobReference() {
-        return this.jobReference == null ? Output.empty() : this.jobReference;
+        return this.jobReference == null ? Codegen.empty() : this.jobReference;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="source")
       private final @Nullable Output<AssetOrArchive> source;
 
     public Output<AssetOrArchive> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     public JobArgs(
@@ -65,10 +66,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.configuration = Output.empty();
-        this.jobReference = Output.empty();
-        this.project = Output.empty();
-        this.source = Output.empty();
+        this.configuration = Codegen.empty();
+        this.jobReference = Codegen.empty();
+        this.project = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -102,7 +103,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configuration(@Nullable JobConfigurationArgs configuration) {
-            this.configuration = Output.ofNullable(configuration);
+            this.configuration = Codegen.ofNullable(configuration);
             return this;
         }
         public Builder jobReference(@Nullable Output<JobReferenceArgs> jobReference) {
@@ -110,7 +111,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jobReference(@Nullable JobReferenceArgs jobReference) {
-            this.jobReference = Output.ofNullable(jobReference);
+            this.jobReference = Codegen.ofNullable(jobReference);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -118,7 +119,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder source(@Nullable Output<AssetOrArchive> source) {
@@ -126,7 +127,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder source(@Nullable AssetOrArchive source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }        public JobArgs build() {
             return new JobArgs(configuration, jobReference, project, source);

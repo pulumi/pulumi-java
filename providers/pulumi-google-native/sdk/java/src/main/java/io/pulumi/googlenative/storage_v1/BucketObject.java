@@ -6,6 +6,7 @@ package io.pulumi.googlenative.storage_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.storage_v1.BucketObjectArgs;
 import io.pulumi.googlenative.storage_v1.outputs.BucketObjectCustomerEncryptionResponse;
@@ -481,7 +482,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BucketObject(String name, BucketObjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:storage/v1:BucketObject", name, args == null ? BucketObjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:storage/v1:BucketObject", name, args == null ? BucketObjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BucketObject(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

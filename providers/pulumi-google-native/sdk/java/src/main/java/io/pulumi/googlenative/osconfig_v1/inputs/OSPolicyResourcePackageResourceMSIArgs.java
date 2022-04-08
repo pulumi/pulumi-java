@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceFileArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class OSPolicyResourcePackageResourceMSIArgs extends io.pulumi.reso
       private final @Nullable Output<List<String>> properties;
 
     public Output<List<String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class OSPolicyResourcePackageResourceMSIArgs extends io.pulumi.reso
     }
 
     private OSPolicyResourcePackageResourceMSIArgs() {
-        this.properties = Output.empty();
-        this.source = Output.empty();
+        this.properties = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class OSPolicyResourcePackageResourceMSIArgs extends io.pulumi.reso
             return this;
         }
         public Builder properties(@Nullable List<String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder properties(String... properties) {

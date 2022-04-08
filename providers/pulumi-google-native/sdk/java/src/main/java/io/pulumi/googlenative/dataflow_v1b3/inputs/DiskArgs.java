@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> diskType;
 
     public Output<String> getDiskType() {
-        return this.diskType == null ? Output.empty() : this.diskType;
+        return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> mountPoint;
 
     public Output<String> getMountPoint() {
-        return this.mountPoint == null ? Output.empty() : this.mountPoint;
+        return this.mountPoint == null ? Codegen.empty() : this.mountPoint;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> sizeGb;
 
     public Output<Integer> getSizeGb() {
-        return this.sizeGb == null ? Output.empty() : this.sizeGb;
+        return this.sizeGb == null ? Codegen.empty() : this.sizeGb;
     }
 
     public DiskArgs(
@@ -62,9 +63,9 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiskArgs() {
-        this.diskType = Output.empty();
-        this.mountPoint = Output.empty();
-        this.sizeGb = Output.empty();
+        this.diskType = Codegen.empty();
+        this.mountPoint = Codegen.empty();
+        this.sizeGb = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskType(@Nullable String diskType) {
-            this.diskType = Output.ofNullable(diskType);
+            this.diskType = Codegen.ofNullable(diskType);
             return this;
         }
         public Builder mountPoint(@Nullable Output<String> mountPoint) {
@@ -104,7 +105,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mountPoint(@Nullable String mountPoint) {
-            this.mountPoint = Output.ofNullable(mountPoint);
+            this.mountPoint = Codegen.ofNullable(mountPoint);
             return this;
         }
         public Builder sizeGb(@Nullable Output<Integer> sizeGb) {
@@ -112,7 +113,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sizeGb(@Nullable Integer sizeGb) {
-            this.sizeGb = Output.ofNullable(sizeGb);
+            this.sizeGb = Codegen.ofNullable(sizeGb);
             return this;
         }        public DiskArgs build() {
             return new DiskArgs(diskType, mountPoint, sizeGb);

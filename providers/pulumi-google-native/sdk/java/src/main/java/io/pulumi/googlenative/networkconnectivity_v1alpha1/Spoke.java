@@ -6,6 +6,7 @@ package io.pulumi.googlenative.networkconnectivity_v1alpha1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networkconnectivity_v1alpha1.SpokeArgs;
 import io.pulumi.googlenative.networkconnectivity_v1alpha1.outputs.RouterApplianceInstanceResponse;
@@ -197,7 +198,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Spoke(String name, @Nullable SpokeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:networkconnectivity/v1alpha1:Spoke", name, args == null ? SpokeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:networkconnectivity/v1alpha1:Spoke", name, args == null ? SpokeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Spoke(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

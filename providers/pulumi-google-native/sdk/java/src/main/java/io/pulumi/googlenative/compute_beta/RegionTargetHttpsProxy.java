@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.RegionTargetHttpsProxyArgs;
 import java.lang.Boolean;
@@ -266,7 +267,7 @@ public class RegionTargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionTargetHttpsProxy(String name, RegionTargetHttpsProxyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/beta:RegionTargetHttpsProxy", name, args == null ? RegionTargetHttpsProxyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/beta:RegionTargetHttpsProxy", name, args == null ? RegionTargetHttpsProxyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionTargetHttpsProxy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

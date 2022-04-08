@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.CallCredentialsCallCredentialType;
 import io.pulumi.googlenative.compute_alpha.inputs.MetadataCredentialsFromPluginArgs;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class CallCredentialsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<CallCredentialsCallCredentialType> callCredentialType;
 
     public Output<CallCredentialsCallCredentialType> getCallCredentialType() {
-        return this.callCredentialType == null ? Output.empty() : this.callCredentialType;
+        return this.callCredentialType == null ? Codegen.empty() : this.callCredentialType;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class CallCredentialsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<MetadataCredentialsFromPluginArgs> fromPlugin;
 
     public Output<MetadataCredentialsFromPluginArgs> getFromPlugin() {
-        return this.fromPlugin == null ? Output.empty() : this.fromPlugin;
+        return this.fromPlugin == null ? Codegen.empty() : this.fromPlugin;
     }
 
     public CallCredentialsArgs(
@@ -49,8 +50,8 @@ public final class CallCredentialsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private CallCredentialsArgs() {
-        this.callCredentialType = Output.empty();
-        this.fromPlugin = Output.empty();
+        this.callCredentialType = Codegen.empty();
+        this.fromPlugin = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class CallCredentialsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder callCredentialType(@Nullable CallCredentialsCallCredentialType callCredentialType) {
-            this.callCredentialType = Output.ofNullable(callCredentialType);
+            this.callCredentialType = Codegen.ofNullable(callCredentialType);
             return this;
         }
         public Builder fromPlugin(@Nullable Output<MetadataCredentialsFromPluginArgs> fromPlugin) {
@@ -88,7 +89,7 @@ public final class CallCredentialsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder fromPlugin(@Nullable MetadataCredentialsFromPluginArgs fromPlugin) {
-            this.fromPlugin = Output.ofNullable(fromPlugin);
+            this.fromPlugin = Codegen.ofNullable(fromPlugin);
             return this;
         }        public CallCredentialsArgs build() {
             return new CallCredentialsArgs(callCredentialType, fromPlugin);

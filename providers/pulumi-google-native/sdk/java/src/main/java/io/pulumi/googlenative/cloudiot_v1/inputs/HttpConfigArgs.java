@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudiot_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudiot_v1.enums.HttpConfigHttpEnabledState;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<HttpConfigHttpEnabledState> httpEnabledState;
 
     public Output<HttpConfigHttpEnabledState> getHttpEnabledState() {
-        return this.httpEnabledState == null ? Output.empty() : this.httpEnabledState;
+        return this.httpEnabledState == null ? Codegen.empty() : this.httpEnabledState;
     }
 
     public HttpConfigArgs(@Nullable Output<HttpConfigHttpEnabledState> httpEnabledState) {
@@ -34,7 +35,7 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HttpConfigArgs() {
-        this.httpEnabledState = Output.empty();
+        this.httpEnabledState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpEnabledState(@Nullable HttpConfigHttpEnabledState httpEnabledState) {
-            this.httpEnabledState = Output.ofNullable(httpEnabledState);
+            this.httpEnabledState = Codegen.ofNullable(httpEnabledState);
             return this;
         }        public HttpConfigArgs build() {
             return new HttpConfigArgs(httpEnabledState);

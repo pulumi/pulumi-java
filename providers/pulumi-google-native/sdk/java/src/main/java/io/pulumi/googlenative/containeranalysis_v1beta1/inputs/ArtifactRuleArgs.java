@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ArtifactRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> artifactRule;
 
     public Output<List<String>> getArtifactRule() {
-        return this.artifactRule == null ? Output.empty() : this.artifactRule;
+        return this.artifactRule == null ? Codegen.empty() : this.artifactRule;
     }
 
     public ArtifactRuleArgs(@Nullable Output<List<String>> artifactRule) {
@@ -31,7 +32,7 @@ public final class ArtifactRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ArtifactRuleArgs() {
-        this.artifactRule = Output.empty();
+        this.artifactRule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class ArtifactRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder artifactRule(@Nullable List<String> artifactRule) {
-            this.artifactRule = Output.ofNullable(artifactRule);
+            this.artifactRule = Codegen.ofNullable(artifactRule);
             return this;
         }
         public Builder artifactRule(String... artifactRule) {

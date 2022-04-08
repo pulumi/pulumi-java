@@ -6,6 +6,7 @@ package io.pulumi.googlenative.datacatalog_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datacatalog_v1beta1.TaxonomyPolicyTagIamPolicyArgs;
 import io.pulumi.googlenative.datacatalog_v1beta1.outputs.BindingResponse;
@@ -87,7 +88,7 @@ public class TaxonomyPolicyTagIamPolicy extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public TaxonomyPolicyTagIamPolicy(String name, TaxonomyPolicyTagIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:datacatalog/v1beta1:TaxonomyPolicyTagIamPolicy", name, args == null ? TaxonomyPolicyTagIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:datacatalog/v1beta1:TaxonomyPolicyTagIamPolicy", name, args == null ? TaxonomyPolicyTagIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TaxonomyPolicyTagIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

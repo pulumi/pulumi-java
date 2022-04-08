@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dataproc_v1beta2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dataproc_v1beta2.RegionClusterIamPolicyArgs;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.BindingResponse;
@@ -87,7 +88,7 @@ public class RegionClusterIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionClusterIamPolicy(String name, RegionClusterIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dataproc/v1beta2:RegionClusterIamPolicy", name, args == null ? RegionClusterIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dataproc/v1beta2:RegionClusterIamPolicy", name, args == null ? RegionClusterIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionClusterIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

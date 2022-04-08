@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.privateca_v1beta1.enums.CertificateAuthorityTier;
 import io.pulumi.googlenative.privateca_v1beta1.enums.CertificateAuthorityType;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.CertificateAuthorityPolicyArgs;
@@ -37,7 +38,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<CertificateAuthorityPolicyArgs> certificatePolicy;
 
     public Output<CertificateAuthorityPolicyArgs> getCertificatePolicy() {
-        return this.certificatePolicy == null ? Output.empty() : this.certificatePolicy;
+        return this.certificatePolicy == null ? Codegen.empty() : this.certificatePolicy;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> gcsBucket;
 
     public Output<String> getGcsBucket() {
-        return this.gcsBucket == null ? Output.empty() : this.gcsBucket;
+        return this.gcsBucket == null ? Codegen.empty() : this.gcsBucket;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<IssuingOptionsArgs> issuingOptions;
 
     public Output<IssuingOptionsArgs> getIssuingOptions() {
-        return this.issuingOptions == null ? Output.empty() : this.issuingOptions;
+        return this.issuingOptions == null ? Codegen.empty() : this.issuingOptions;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -110,21 +111,21 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<SubordinateConfigArgs> subordinateConfig;
 
     public Output<SubordinateConfigArgs> getSubordinateConfig() {
-        return this.subordinateConfig == null ? Output.empty() : this.subordinateConfig;
+        return this.subordinateConfig == null ? Codegen.empty() : this.subordinateConfig;
     }
 
     /**
@@ -192,20 +193,20 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     }
 
     private CertificateAuthorityArgs() {
-        this.certificateAuthorityId = Output.empty();
-        this.certificatePolicy = Output.empty();
-        this.config = Output.empty();
-        this.gcsBucket = Output.empty();
-        this.issuingOptions = Output.empty();
-        this.keySpec = Output.empty();
-        this.labels = Output.empty();
-        this.lifetime = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.subordinateConfig = Output.empty();
-        this.tier = Output.empty();
-        this.type = Output.empty();
+        this.certificateAuthorityId = Codegen.empty();
+        this.certificatePolicy = Codegen.empty();
+        this.config = Codegen.empty();
+        this.gcsBucket = Codegen.empty();
+        this.issuingOptions = Codegen.empty();
+        this.keySpec = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.lifetime = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.subordinateConfig = Codegen.empty();
+        this.tier = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -267,7 +268,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder certificatePolicy(@Nullable CertificateAuthorityPolicyArgs certificatePolicy) {
-            this.certificatePolicy = Output.ofNullable(certificatePolicy);
+            this.certificatePolicy = Codegen.ofNullable(certificatePolicy);
             return this;
         }
         public Builder config(Output<CertificateConfigArgs> config) {
@@ -283,7 +284,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder gcsBucket(@Nullable String gcsBucket) {
-            this.gcsBucket = Output.ofNullable(gcsBucket);
+            this.gcsBucket = Codegen.ofNullable(gcsBucket);
             return this;
         }
         public Builder issuingOptions(@Nullable Output<IssuingOptionsArgs> issuingOptions) {
@@ -291,7 +292,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder issuingOptions(@Nullable IssuingOptionsArgs issuingOptions) {
-            this.issuingOptions = Output.ofNullable(issuingOptions);
+            this.issuingOptions = Codegen.ofNullable(issuingOptions);
             return this;
         }
         public Builder keySpec(Output<KeyVersionSpecArgs> keySpec) {
@@ -307,7 +308,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder lifetime(Output<String> lifetime) {
@@ -323,7 +324,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -331,7 +332,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -339,7 +340,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder subordinateConfig(@Nullable Output<SubordinateConfigArgs> subordinateConfig) {
@@ -347,7 +348,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder subordinateConfig(@Nullable SubordinateConfigArgs subordinateConfig) {
-            this.subordinateConfig = Output.ofNullable(subordinateConfig);
+            this.subordinateConfig = Codegen.ofNullable(subordinateConfig);
             return this;
         }
         public Builder tier(Output<CertificateAuthorityTier> tier) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.testing_v1.inputs.AccountArgs;
 import io.pulumi.googlenative.testing_v1.inputs.ApkArgs;
 import io.pulumi.googlenative.testing_v1.inputs.DeviceFileArgs;
@@ -32,7 +33,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AccountArgs> account;
 
     public Output<AccountArgs> getAccount() {
-        return this.account == null ? Output.empty() : this.account;
+        return this.account == null ? Codegen.empty() : this.account;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ApkArgs>> additionalApks;
 
     public Output<List<ApkArgs>> getAdditionalApks() {
-        return this.additionalApks == null ? Output.empty() : this.additionalApks;
+        return this.additionalApks == null ? Codegen.empty() : this.additionalApks;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> directoriesToPull;
 
     public Output<List<String>> getDirectoriesToPull() {
-        return this.directoriesToPull == null ? Output.empty() : this.directoriesToPull;
+        return this.directoriesToPull == null ? Codegen.empty() : this.directoriesToPull;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> dontAutograntPermissions;
 
     public Output<Boolean> getDontAutograntPermissions() {
-        return this.dontAutograntPermissions == null ? Output.empty() : this.dontAutograntPermissions;
+        return this.dontAutograntPermissions == null ? Codegen.empty() : this.dontAutograntPermissions;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
 
     public Output<List<EnvironmentVariableArgs>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
+        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DeviceFileArgs>> filesToPush;
 
     public Output<List<DeviceFileArgs>> getFilesToPush() {
-        return this.filesToPush == null ? Output.empty() : this.filesToPush;
+        return this.filesToPush == null ? Codegen.empty() : this.filesToPush;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> networkProfile;
 
     public Output<String> getNetworkProfile() {
-        return this.networkProfile == null ? Output.empty() : this.networkProfile;
+        return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
     }
 
     public TestSetupArgs(
@@ -119,13 +120,13 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TestSetupArgs() {
-        this.account = Output.empty();
-        this.additionalApks = Output.empty();
-        this.directoriesToPull = Output.empty();
-        this.dontAutograntPermissions = Output.empty();
-        this.environmentVariables = Output.empty();
-        this.filesToPush = Output.empty();
-        this.networkProfile = Output.empty();
+        this.account = Codegen.empty();
+        this.additionalApks = Codegen.empty();
+        this.directoriesToPull = Codegen.empty();
+        this.dontAutograntPermissions = Codegen.empty();
+        this.environmentVariables = Codegen.empty();
+        this.filesToPush = Codegen.empty();
+        this.networkProfile = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -165,7 +166,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder account(@Nullable AccountArgs account) {
-            this.account = Output.ofNullable(account);
+            this.account = Codegen.ofNullable(account);
             return this;
         }
         public Builder additionalApks(@Nullable Output<List<ApkArgs>> additionalApks) {
@@ -173,7 +174,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder additionalApks(@Nullable List<ApkArgs> additionalApks) {
-            this.additionalApks = Output.ofNullable(additionalApks);
+            this.additionalApks = Codegen.ofNullable(additionalApks);
             return this;
         }
         public Builder additionalApks(ApkArgs... additionalApks) {
@@ -184,7 +185,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder directoriesToPull(@Nullable List<String> directoriesToPull) {
-            this.directoriesToPull = Output.ofNullable(directoriesToPull);
+            this.directoriesToPull = Codegen.ofNullable(directoriesToPull);
             return this;
         }
         public Builder directoriesToPull(String... directoriesToPull) {
@@ -195,7 +196,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dontAutograntPermissions(@Nullable Boolean dontAutograntPermissions) {
-            this.dontAutograntPermissions = Output.ofNullable(dontAutograntPermissions);
+            this.dontAutograntPermissions = Codegen.ofNullable(dontAutograntPermissions);
             return this;
         }
         public Builder environmentVariables(@Nullable Output<List<EnvironmentVariableArgs>> environmentVariables) {
@@ -203,7 +204,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder environmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
-            this.environmentVariables = Output.ofNullable(environmentVariables);
+            this.environmentVariables = Codegen.ofNullable(environmentVariables);
             return this;
         }
         public Builder environmentVariables(EnvironmentVariableArgs... environmentVariables) {
@@ -214,7 +215,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filesToPush(@Nullable List<DeviceFileArgs> filesToPush) {
-            this.filesToPush = Output.ofNullable(filesToPush);
+            this.filesToPush = Codegen.ofNullable(filesToPush);
             return this;
         }
         public Builder filesToPush(DeviceFileArgs... filesToPush) {
@@ -225,7 +226,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkProfile(@Nullable String networkProfile) {
-            this.networkProfile = Output.ofNullable(networkProfile);
+            this.networkProfile = Codegen.ofNullable(networkProfile);
             return this;
         }        public TestSetupArgs build() {
             return new TestSetupArgs(account, additionalApks, directoriesToPull, dontAutograntPermissions, environmentVariables, filesToPush, networkProfile);

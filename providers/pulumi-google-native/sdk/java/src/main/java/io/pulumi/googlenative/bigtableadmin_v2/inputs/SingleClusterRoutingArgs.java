@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class SingleClusterRoutingArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> allowTransactionalWrites;
 
     public Output<Boolean> getAllowTransactionalWrites() {
-        return this.allowTransactionalWrites == null ? Output.empty() : this.allowTransactionalWrites;
+        return this.allowTransactionalWrites == null ? Codegen.empty() : this.allowTransactionalWrites;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class SingleClusterRoutingArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> clusterId;
 
     public Output<String> getClusterId() {
-        return this.clusterId == null ? Output.empty() : this.clusterId;
+        return this.clusterId == null ? Codegen.empty() : this.clusterId;
     }
 
     public SingleClusterRoutingArgs(
@@ -49,8 +50,8 @@ public final class SingleClusterRoutingArgs extends io.pulumi.resources.Resource
     }
 
     private SingleClusterRoutingArgs() {
-        this.allowTransactionalWrites = Output.empty();
-        this.clusterId = Output.empty();
+        this.allowTransactionalWrites = Codegen.empty();
+        this.clusterId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class SingleClusterRoutingArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder allowTransactionalWrites(@Nullable Boolean allowTransactionalWrites) {
-            this.allowTransactionalWrites = Output.ofNullable(allowTransactionalWrites);
+            this.allowTransactionalWrites = Codegen.ofNullable(allowTransactionalWrites);
             return this;
         }
         public Builder clusterId(@Nullable Output<String> clusterId) {
@@ -88,7 +89,7 @@ public final class SingleClusterRoutingArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = Output.ofNullable(clusterId);
+            this.clusterId = Codegen.ofNullable(clusterId);
             return this;
         }        public SingleClusterRoutingArgs build() {
             return new SingleClusterRoutingArgs(allowTransactionalWrites, clusterId);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.appengine_v1beta.enums.UrlMapAuthFailAction;
 import io.pulumi.googlenative.appengine_v1beta.enums.UrlMapLogin;
 import io.pulumi.googlenative.appengine_v1beta.enums.UrlMapRedirectHttpResponseCode;
@@ -33,7 +34,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ApiEndpointHandlerArgs> apiEndpoint;
 
     public Output<ApiEndpointHandlerArgs> getApiEndpoint() {
-        return this.apiEndpoint == null ? Output.empty() : this.apiEndpoint;
+        return this.apiEndpoint == null ? Codegen.empty() : this.apiEndpoint;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<UrlMapAuthFailAction> authFailAction;
 
     public Output<UrlMapAuthFailAction> getAuthFailAction() {
-        return this.authFailAction == null ? Output.empty() : this.authFailAction;
+        return this.authFailAction == null ? Codegen.empty() : this.authFailAction;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<UrlMapLogin> login;
 
     public Output<UrlMapLogin> getLogin() {
-        return this.login == null ? Output.empty() : this.login;
+        return this.login == null ? Codegen.empty() : this.login;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<UrlMapRedirectHttpResponseCode> redirectHttpResponseCode;
 
     public Output<UrlMapRedirectHttpResponseCode> getRedirectHttpResponseCode() {
-        return this.redirectHttpResponseCode == null ? Output.empty() : this.redirectHttpResponseCode;
+        return this.redirectHttpResponseCode == null ? Codegen.empty() : this.redirectHttpResponseCode;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ScriptHandlerArgs> script;
 
     public Output<ScriptHandlerArgs> getScript() {
-        return this.script == null ? Output.empty() : this.script;
+        return this.script == null ? Codegen.empty() : this.script;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<UrlMapSecurityLevel> securityLevel;
 
     public Output<UrlMapSecurityLevel> getSecurityLevel() {
-        return this.securityLevel == null ? Output.empty() : this.securityLevel;
+        return this.securityLevel == null ? Codegen.empty() : this.securityLevel;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<StaticFilesHandlerArgs> staticFiles;
 
     public Output<StaticFilesHandlerArgs> getStaticFiles() {
-        return this.staticFiles == null ? Output.empty() : this.staticFiles;
+        return this.staticFiles == null ? Codegen.empty() : this.staticFiles;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> urlRegex;
 
     public Output<String> getUrlRegex() {
-        return this.urlRegex == null ? Output.empty() : this.urlRegex;
+        return this.urlRegex == null ? Codegen.empty() : this.urlRegex;
     }
 
     public UrlMapArgs(
@@ -133,14 +134,14 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UrlMapArgs() {
-        this.apiEndpoint = Output.empty();
-        this.authFailAction = Output.empty();
-        this.login = Output.empty();
-        this.redirectHttpResponseCode = Output.empty();
-        this.script = Output.empty();
-        this.securityLevel = Output.empty();
-        this.staticFiles = Output.empty();
-        this.urlRegex = Output.empty();
+        this.apiEndpoint = Codegen.empty();
+        this.authFailAction = Codegen.empty();
+        this.login = Codegen.empty();
+        this.redirectHttpResponseCode = Codegen.empty();
+        this.script = Codegen.empty();
+        this.securityLevel = Codegen.empty();
+        this.staticFiles = Codegen.empty();
+        this.urlRegex = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -182,7 +183,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiEndpoint(@Nullable ApiEndpointHandlerArgs apiEndpoint) {
-            this.apiEndpoint = Output.ofNullable(apiEndpoint);
+            this.apiEndpoint = Codegen.ofNullable(apiEndpoint);
             return this;
         }
         public Builder authFailAction(@Nullable Output<UrlMapAuthFailAction> authFailAction) {
@@ -190,7 +191,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authFailAction(@Nullable UrlMapAuthFailAction authFailAction) {
-            this.authFailAction = Output.ofNullable(authFailAction);
+            this.authFailAction = Codegen.ofNullable(authFailAction);
             return this;
         }
         public Builder login(@Nullable Output<UrlMapLogin> login) {
@@ -198,7 +199,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder login(@Nullable UrlMapLogin login) {
-            this.login = Output.ofNullable(login);
+            this.login = Codegen.ofNullable(login);
             return this;
         }
         public Builder redirectHttpResponseCode(@Nullable Output<UrlMapRedirectHttpResponseCode> redirectHttpResponseCode) {
@@ -206,7 +207,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder redirectHttpResponseCode(@Nullable UrlMapRedirectHttpResponseCode redirectHttpResponseCode) {
-            this.redirectHttpResponseCode = Output.ofNullable(redirectHttpResponseCode);
+            this.redirectHttpResponseCode = Codegen.ofNullable(redirectHttpResponseCode);
             return this;
         }
         public Builder script(@Nullable Output<ScriptHandlerArgs> script) {
@@ -214,7 +215,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder script(@Nullable ScriptHandlerArgs script) {
-            this.script = Output.ofNullable(script);
+            this.script = Codegen.ofNullable(script);
             return this;
         }
         public Builder securityLevel(@Nullable Output<UrlMapSecurityLevel> securityLevel) {
@@ -222,7 +223,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityLevel(@Nullable UrlMapSecurityLevel securityLevel) {
-            this.securityLevel = Output.ofNullable(securityLevel);
+            this.securityLevel = Codegen.ofNullable(securityLevel);
             return this;
         }
         public Builder staticFiles(@Nullable Output<StaticFilesHandlerArgs> staticFiles) {
@@ -230,7 +231,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder staticFiles(@Nullable StaticFilesHandlerArgs staticFiles) {
-            this.staticFiles = Output.ofNullable(staticFiles);
+            this.staticFiles = Codegen.ofNullable(staticFiles);
             return this;
         }
         public Builder urlRegex(@Nullable Output<String> urlRegex) {
@@ -238,7 +239,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder urlRegex(@Nullable String urlRegex) {
-            this.urlRegex = Output.ofNullable(urlRegex);
+            this.urlRegex = Codegen.ofNullable(urlRegex);
             return this;
         }        public UrlMapArgs build() {
             return new UrlMapArgs(apiEndpoint, authFailAction, login, redirectHttpResponseCode, script, securityLevel, staticFiles, urlRegex);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.notebooks_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.notebooks_v1.enums.RuntimeAcceleratorConfigType;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class RuntimeAcceleratorConfigArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> coreCount;
 
     public Output<String> getCoreCount() {
-        return this.coreCount == null ? Output.empty() : this.coreCount;
+        return this.coreCount == null ? Codegen.empty() : this.coreCount;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class RuntimeAcceleratorConfigArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<RuntimeAcceleratorConfigType> type;
 
     public Output<RuntimeAcceleratorConfigType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public RuntimeAcceleratorConfigArgs(
@@ -49,8 +50,8 @@ public final class RuntimeAcceleratorConfigArgs extends io.pulumi.resources.Reso
     }
 
     private RuntimeAcceleratorConfigArgs() {
-        this.coreCount = Output.empty();
-        this.type = Output.empty();
+        this.coreCount = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class RuntimeAcceleratorConfigArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder coreCount(@Nullable String coreCount) {
-            this.coreCount = Output.ofNullable(coreCount);
+            this.coreCount = Codegen.ofNullable(coreCount);
             return this;
         }
         public Builder type(@Nullable Output<RuntimeAcceleratorConfigType> type) {
@@ -88,7 +89,7 @@ public final class RuntimeAcceleratorConfigArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder type(@Nullable RuntimeAcceleratorConfigType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public RuntimeAcceleratorConfigArgs build() {
             return new RuntimeAcceleratorConfigArgs(coreCount, type);

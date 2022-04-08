@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1beta1.enums.PlacementPolicyType;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<PlacementPolicyType> type;
 
     public Output<PlacementPolicyType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public PlacementPolicyArgs(@Nullable Output<PlacementPolicyType> type) {
@@ -34,7 +35,7 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PlacementPolicyArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder type(@Nullable PlacementPolicyType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public PlacementPolicyArgs build() {
             return new PlacementPolicyArgs(type);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionAr
       private final @Nullable Output<String> parameter;
 
     public Output<String> getParameter() {
-        return this.parameter == null ? Output.empty() : this.parameter;
+        return this.parameter == null ? Codegen.empty() : this.parameter;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionAr
       private final @Nullable Output<Object> value;
 
     public Output<Object> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionAr
     }
 
     private GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs() {
-        this.parameter = Output.empty();
-        this.value = Output.empty();
+        this.parameter = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionAr
             return this;
         }
         public Builder parameter(@Nullable String parameter) {
-            this.parameter = Output.ofNullable(parameter);
+            this.parameter = Codegen.ofNullable(parameter);
             return this;
         }
         public Builder value(@Nullable Output<Object> value) {
@@ -88,7 +89,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionAr
             return this;
         }
         public Builder value(@Nullable Object value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs build() {
             return new GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs(parameter, value);

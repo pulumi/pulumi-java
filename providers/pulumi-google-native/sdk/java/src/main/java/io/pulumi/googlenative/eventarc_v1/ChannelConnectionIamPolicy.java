@@ -6,6 +6,7 @@ package io.pulumi.googlenative.eventarc_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.eventarc_v1.ChannelConnectionIamPolicyArgs;
 import io.pulumi.googlenative.eventarc_v1.outputs.AuditConfigResponse;
@@ -102,7 +103,7 @@ public class ChannelConnectionIamPolicy extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public ChannelConnectionIamPolicy(String name, ChannelConnectionIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:eventarc/v1:ChannelConnectionIamPolicy", name, args == null ? ChannelConnectionIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:eventarc/v1:ChannelConnectionIamPolicy", name, args == null ? ChannelConnectionIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ChannelConnectionIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

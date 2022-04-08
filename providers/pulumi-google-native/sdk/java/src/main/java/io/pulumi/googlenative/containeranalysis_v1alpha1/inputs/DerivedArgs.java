@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.FingerprintArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.LayerArgs;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class DerivedArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FingerprintArgs> fingerprint;
 
     public Output<FingerprintArgs> getFingerprint() {
-        return this.fingerprint == null ? Output.empty() : this.fingerprint;
+        return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class DerivedArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<LayerArgs>> layerInfo;
 
     public Output<List<LayerArgs>> getLayerInfo() {
-        return this.layerInfo == null ? Output.empty() : this.layerInfo;
+        return this.layerInfo == null ? Codegen.empty() : this.layerInfo;
     }
 
     public DerivedArgs(
@@ -50,8 +51,8 @@ public final class DerivedArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DerivedArgs() {
-        this.fingerprint = Output.empty();
-        this.layerInfo = Output.empty();
+        this.fingerprint = Codegen.empty();
+        this.layerInfo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class DerivedArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fingerprint(@Nullable FingerprintArgs fingerprint) {
-            this.fingerprint = Output.ofNullable(fingerprint);
+            this.fingerprint = Codegen.ofNullable(fingerprint);
             return this;
         }
         public Builder layerInfo(@Nullable Output<List<LayerArgs>> layerInfo) {
@@ -89,7 +90,7 @@ public final class DerivedArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder layerInfo(@Nullable List<LayerArgs> layerInfo) {
-            this.layerInfo = Output.ofNullable(layerInfo);
+            this.layerInfo = Codegen.ofNullable(layerInfo);
             return this;
         }
         public Builder layerInfo(LayerArgs... layerInfo) {

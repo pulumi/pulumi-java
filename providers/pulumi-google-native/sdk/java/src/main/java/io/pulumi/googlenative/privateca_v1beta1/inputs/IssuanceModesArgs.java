@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IssuanceModesArgs() {
-        this.allowConfigBasedIssuance = Output.empty();
-        this.allowCsrBasedIssuance = Output.empty();
+        this.allowConfigBasedIssuance = Codegen.empty();
+        this.allowCsrBasedIssuance = Codegen.empty();
     }
 
     public static Builder builder() {

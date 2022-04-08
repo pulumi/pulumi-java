@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> encoding;
 
     public Output<String> getEncoding() {
-        return this.encoding == null ? Output.empty() : this.encoding;
+        return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> fieldName;
 
     public Output<String> getFieldName() {
-        return this.fieldName == null ? Output.empty() : this.fieldName;
+        return this.fieldName == null ? Codegen.empty() : this.fieldName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> onlyReadLatest;
 
     public Output<Boolean> getOnlyReadLatest() {
-        return this.onlyReadLatest == null ? Output.empty() : this.onlyReadLatest;
+        return this.onlyReadLatest == null ? Codegen.empty() : this.onlyReadLatest;
     }
 
     /**
@@ -56,14 +57,14 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> qualifierEncoded;
 
     public Output<String> getQualifierEncoded() {
-        return this.qualifierEncoded == null ? Output.empty() : this.qualifierEncoded;
+        return this.qualifierEncoded == null ? Codegen.empty() : this.qualifierEncoded;
     }
 
     @Import(name="qualifierString")
       private final @Nullable Output<String> qualifierString;
 
     public Output<String> getQualifierString() {
-        return this.qualifierString == null ? Output.empty() : this.qualifierString;
+        return this.qualifierString == null ? Codegen.empty() : this.qualifierString;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public BigtableColumnArgs(
@@ -93,12 +94,12 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BigtableColumnArgs() {
-        this.encoding = Output.empty();
-        this.fieldName = Output.empty();
-        this.onlyReadLatest = Output.empty();
-        this.qualifierEncoded = Output.empty();
-        this.qualifierString = Output.empty();
-        this.type = Output.empty();
+        this.encoding = Codegen.empty();
+        this.fieldName = Codegen.empty();
+        this.onlyReadLatest = Codegen.empty();
+        this.qualifierEncoded = Codegen.empty();
+        this.qualifierString = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -136,7 +137,7 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encoding(@Nullable String encoding) {
-            this.encoding = Output.ofNullable(encoding);
+            this.encoding = Codegen.ofNullable(encoding);
             return this;
         }
         public Builder fieldName(@Nullable Output<String> fieldName) {
@@ -144,7 +145,7 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fieldName(@Nullable String fieldName) {
-            this.fieldName = Output.ofNullable(fieldName);
+            this.fieldName = Codegen.ofNullable(fieldName);
             return this;
         }
         public Builder onlyReadLatest(@Nullable Output<Boolean> onlyReadLatest) {
@@ -152,7 +153,7 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder onlyReadLatest(@Nullable Boolean onlyReadLatest) {
-            this.onlyReadLatest = Output.ofNullable(onlyReadLatest);
+            this.onlyReadLatest = Codegen.ofNullable(onlyReadLatest);
             return this;
         }
         public Builder qualifierEncoded(@Nullable Output<String> qualifierEncoded) {
@@ -160,7 +161,7 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder qualifierEncoded(@Nullable String qualifierEncoded) {
-            this.qualifierEncoded = Output.ofNullable(qualifierEncoded);
+            this.qualifierEncoded = Codegen.ofNullable(qualifierEncoded);
             return this;
         }
         public Builder qualifierString(@Nullable Output<String> qualifierString) {
@@ -168,7 +169,7 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder qualifierString(@Nullable String qualifierString) {
-            this.qualifierString = Output.ofNullable(qualifierString);
+            this.qualifierString = Codegen.ofNullable(qualifierString);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -176,7 +177,7 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public BigtableColumnArgs build() {
             return new BigtableColumnArgs(encoding, fieldName, onlyReadLatest, qualifierEncoded, qualifierString, type);

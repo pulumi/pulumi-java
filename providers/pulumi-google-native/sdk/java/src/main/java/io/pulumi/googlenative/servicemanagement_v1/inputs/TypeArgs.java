@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.servicemanagement_v1.enums.TypeSyntax;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.FieldArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
@@ -31,7 +32,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<FieldArgs>> fields;
 
     public Output<List<FieldArgs>> getFields() {
-        return this.fields == null ? Output.empty() : this.fields;
+        return this.fields == null ? Codegen.empty() : this.fields;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> oneofs;
 
     public Output<List<String>> getOneofs() {
-        return this.oneofs == null ? Output.empty() : this.oneofs;
+        return this.oneofs == null ? Codegen.empty() : this.oneofs;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<OptionArgs>> options;
 
     public Output<List<OptionArgs>> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SourceContextArgs> sourceContext;
 
     public Output<SourceContextArgs> getSourceContext() {
-        return this.sourceContext == null ? Output.empty() : this.sourceContext;
+        return this.sourceContext == null ? Codegen.empty() : this.sourceContext;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TypeSyntax> syntax;
 
     public Output<TypeSyntax> getSyntax() {
-        return this.syntax == null ? Output.empty() : this.syntax;
+        return this.syntax == null ? Codegen.empty() : this.syntax;
     }
 
     public TypeArgs(
@@ -105,12 +106,12 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TypeArgs() {
-        this.fields = Output.empty();
-        this.name = Output.empty();
-        this.oneofs = Output.empty();
-        this.options = Output.empty();
-        this.sourceContext = Output.empty();
-        this.syntax = Output.empty();
+        this.fields = Codegen.empty();
+        this.name = Codegen.empty();
+        this.oneofs = Codegen.empty();
+        this.options = Codegen.empty();
+        this.sourceContext = Codegen.empty();
+        this.syntax = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fields(@Nullable List<FieldArgs> fields) {
-            this.fields = Output.ofNullable(fields);
+            this.fields = Codegen.ofNullable(fields);
             return this;
         }
         public Builder fields(FieldArgs... fields) {
@@ -159,7 +160,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder oneofs(@Nullable Output<List<String>> oneofs) {
@@ -167,7 +168,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder oneofs(@Nullable List<String> oneofs) {
-            this.oneofs = Output.ofNullable(oneofs);
+            this.oneofs = Codegen.ofNullable(oneofs);
             return this;
         }
         public Builder oneofs(String... oneofs) {
@@ -178,7 +179,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder options(@Nullable List<OptionArgs> options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder options(OptionArgs... options) {
@@ -189,7 +190,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceContext(@Nullable SourceContextArgs sourceContext) {
-            this.sourceContext = Output.ofNullable(sourceContext);
+            this.sourceContext = Codegen.ofNullable(sourceContext);
             return this;
         }
         public Builder syntax(@Nullable Output<TypeSyntax> syntax) {
@@ -197,7 +198,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder syntax(@Nullable TypeSyntax syntax) {
-            this.syntax = Output.ofNullable(syntax);
+            this.syntax = Codegen.ofNullable(syntax);
             return this;
         }        public TypeArgs build() {
             return new TypeArgs(fields, name, oneofs, options, sourceContext, syntax);

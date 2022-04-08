@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SoftwareRecipeArtifactRemoteArgs extends io.pulumi.resources.
       private final @Nullable Output<String> checksum;
 
     public Output<String> getChecksum() {
-        return this.checksum == null ? Output.empty() : this.checksum;
+        return this.checksum == null ? Codegen.empty() : this.checksum;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class SoftwareRecipeArtifactRemoteArgs extends io.pulumi.resources.
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public SoftwareRecipeArtifactRemoteArgs(
@@ -48,8 +49,8 @@ public final class SoftwareRecipeArtifactRemoteArgs extends io.pulumi.resources.
     }
 
     private SoftwareRecipeArtifactRemoteArgs() {
-        this.checksum = Output.empty();
-        this.uri = Output.empty();
+        this.checksum = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class SoftwareRecipeArtifactRemoteArgs extends io.pulumi.resources.
             return this;
         }
         public Builder checksum(@Nullable String checksum) {
-            this.checksum = Output.ofNullable(checksum);
+            this.checksum = Codegen.ofNullable(checksum);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -87,7 +88,7 @@ public final class SoftwareRecipeArtifactRemoteArgs extends io.pulumi.resources.
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public SoftwareRecipeArtifactRemoteArgs build() {
             return new SoftwareRecipeArtifactRemoteArgs(checksum, uri);

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.healthcare_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1beta1.MessageArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.ParsedDataResponse;
@@ -185,7 +186,7 @@ public class Message extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Message(String name, MessageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:healthcare/v1beta1:Message", name, args == null ? MessageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:healthcare/v1beta1:Message", name, args == null ? MessageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Message(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

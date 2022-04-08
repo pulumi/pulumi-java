@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs ex
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs ex
       private final @Nullable Output<String> minDuration;
 
     public Output<String> getMinDuration() {
-        return this.minDuration == null ? Output.empty() : this.minDuration;
+        return this.minDuration == null ? Codegen.empty() : this.minDuration;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs ex
       private final @Nullable Output<Integer> trafficPercent;
 
     public Output<Integer> getTrafficPercent() {
-        return this.trafficPercent == null ? Output.empty() : this.trafficPercent;
+        return this.trafficPercent == null ? Codegen.empty() : this.trafficPercent;
     }
 
     public GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs(
@@ -62,9 +63,9 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs ex
     }
 
     private GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs() {
-        this.displayName = Output.empty();
-        this.minDuration = Output.empty();
-        this.trafficPercent = Output.empty();
+        this.displayName = Codegen.empty();
+        this.minDuration = Codegen.empty();
+        this.trafficPercent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs ex
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder minDuration(@Nullable Output<String> minDuration) {
@@ -104,7 +105,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs ex
             return this;
         }
         public Builder minDuration(@Nullable String minDuration) {
-            this.minDuration = Output.ofNullable(minDuration);
+            this.minDuration = Codegen.ofNullable(minDuration);
             return this;
         }
         public Builder trafficPercent(@Nullable Output<Integer> trafficPercent) {
@@ -112,7 +113,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs ex
             return this;
         }
         public Builder trafficPercent(@Nullable Integer trafficPercent) {
-            this.trafficPercent = Output.ofNullable(trafficPercent);
+            this.trafficPercent = Codegen.ofNullable(trafficPercent);
             return this;
         }        public GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs build() {
             return new GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs(displayName, minDuration, trafficPercent);

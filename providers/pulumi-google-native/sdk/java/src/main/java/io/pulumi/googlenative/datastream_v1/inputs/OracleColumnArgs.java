@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> column;
 
     public Output<String> getColumn() {
-        return this.column == null ? Output.empty() : this.column;
+        return this.column == null ? Codegen.empty() : this.column;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dataType;
 
     public Output<String> getDataType() {
-        return this.dataType == null ? Output.empty() : this.dataType;
+        return this.dataType == null ? Codegen.empty() : this.dataType;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> encoding;
 
     public Output<String> getEncoding() {
-        return this.encoding == null ? Output.empty() : this.encoding;
+        return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> length;
 
     public Output<Integer> getLength() {
-        return this.length == null ? Output.empty() : this.length;
+        return this.length == null ? Codegen.empty() : this.length;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> nullable;
 
     public Output<Boolean> getNullable() {
-        return this.nullable == null ? Output.empty() : this.nullable;
+        return this.nullable == null ? Codegen.empty() : this.nullable;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> ordinalPosition;
 
     public Output<Integer> getOrdinalPosition() {
-        return this.ordinalPosition == null ? Output.empty() : this.ordinalPosition;
+        return this.ordinalPosition == null ? Codegen.empty() : this.ordinalPosition;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> precision;
 
     public Output<Integer> getPrecision() {
-        return this.precision == null ? Output.empty() : this.precision;
+        return this.precision == null ? Codegen.empty() : this.precision;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> primaryKey;
 
     public Output<Boolean> getPrimaryKey() {
-        return this.primaryKey == null ? Output.empty() : this.primaryKey;
+        return this.primaryKey == null ? Codegen.empty() : this.primaryKey;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> scale;
 
     public Output<Integer> getScale() {
-        return this.scale == null ? Output.empty() : this.scale;
+        return this.scale == null ? Codegen.empty() : this.scale;
     }
 
     public OracleColumnArgs(
@@ -141,15 +142,15 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OracleColumnArgs() {
-        this.column = Output.empty();
-        this.dataType = Output.empty();
-        this.encoding = Output.empty();
-        this.length = Output.empty();
-        this.nullable = Output.empty();
-        this.ordinalPosition = Output.empty();
-        this.precision = Output.empty();
-        this.primaryKey = Output.empty();
-        this.scale = Output.empty();
+        this.column = Codegen.empty();
+        this.dataType = Codegen.empty();
+        this.encoding = Codegen.empty();
+        this.length = Codegen.empty();
+        this.nullable = Codegen.empty();
+        this.ordinalPosition = Codegen.empty();
+        this.precision = Codegen.empty();
+        this.primaryKey = Codegen.empty();
+        this.scale = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -193,7 +194,7 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder column(@Nullable String column) {
-            this.column = Output.ofNullable(column);
+            this.column = Codegen.ofNullable(column);
             return this;
         }
         public Builder dataType(@Nullable Output<String> dataType) {
@@ -201,7 +202,7 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = Output.ofNullable(dataType);
+            this.dataType = Codegen.ofNullable(dataType);
             return this;
         }
         public Builder encoding(@Nullable Output<String> encoding) {
@@ -209,7 +210,7 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encoding(@Nullable String encoding) {
-            this.encoding = Output.ofNullable(encoding);
+            this.encoding = Codegen.ofNullable(encoding);
             return this;
         }
         public Builder length(@Nullable Output<Integer> length) {
@@ -217,7 +218,7 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder length(@Nullable Integer length) {
-            this.length = Output.ofNullable(length);
+            this.length = Codegen.ofNullable(length);
             return this;
         }
         public Builder nullable(@Nullable Output<Boolean> nullable) {
@@ -225,7 +226,7 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nullable(@Nullable Boolean nullable) {
-            this.nullable = Output.ofNullable(nullable);
+            this.nullable = Codegen.ofNullable(nullable);
             return this;
         }
         public Builder ordinalPosition(@Nullable Output<Integer> ordinalPosition) {
@@ -233,7 +234,7 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ordinalPosition(@Nullable Integer ordinalPosition) {
-            this.ordinalPosition = Output.ofNullable(ordinalPosition);
+            this.ordinalPosition = Codegen.ofNullable(ordinalPosition);
             return this;
         }
         public Builder precision(@Nullable Output<Integer> precision) {
@@ -241,7 +242,7 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder precision(@Nullable Integer precision) {
-            this.precision = Output.ofNullable(precision);
+            this.precision = Codegen.ofNullable(precision);
             return this;
         }
         public Builder primaryKey(@Nullable Output<Boolean> primaryKey) {
@@ -249,7 +250,7 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder primaryKey(@Nullable Boolean primaryKey) {
-            this.primaryKey = Output.ofNullable(primaryKey);
+            this.primaryKey = Codegen.ofNullable(primaryKey);
             return this;
         }
         public Builder scale(@Nullable Output<Integer> scale) {
@@ -257,7 +258,7 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scale(@Nullable Integer scale) {
-            this.scale = Output.ofNullable(scale);
+            this.scale = Codegen.ofNullable(scale);
             return this;
         }        public OracleColumnArgs build() {
             return new OracleColumnArgs(column, dataType, encoding, length, nullable, ordinalPosition, precision, primaryKey, scale);

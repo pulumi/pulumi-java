@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.RegionInstantSnapshotArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.InstantSnapshotResourceStatusResponse;
@@ -295,7 +296,7 @@ public class RegionInstantSnapshot extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionInstantSnapshot(String name, RegionInstantSnapshotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:RegionInstantSnapshot", name, args == null ? RegionInstantSnapshotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/alpha:RegionInstantSnapshot", name, args == null ? RegionInstantSnapshotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionInstantSnapshot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

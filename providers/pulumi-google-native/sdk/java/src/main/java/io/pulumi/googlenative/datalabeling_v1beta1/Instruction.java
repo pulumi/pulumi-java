@@ -6,6 +6,7 @@ package io.pulumi.googlenative.datalabeling_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datalabeling_v1beta1.InstructionArgs;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1PdfInstructionResponse;
@@ -155,7 +156,7 @@ public class Instruction extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Instruction(String name, InstructionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:datalabeling/v1beta1:Instruction", name, args == null ? InstructionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:datalabeling/v1beta1:Instruction", name, args == null ? InstructionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Instruction(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

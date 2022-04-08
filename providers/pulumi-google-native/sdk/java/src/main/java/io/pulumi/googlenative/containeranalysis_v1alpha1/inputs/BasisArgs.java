@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.FingerprintArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FingerprintArgs> fingerprint;
 
     public Output<FingerprintArgs> getFingerprint() {
-        return this.fingerprint == null ? Output.empty() : this.fingerprint;
+        return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceUrl;
 
     public Output<String> getResourceUrl() {
-        return this.resourceUrl == null ? Output.empty() : this.resourceUrl;
+        return this.resourceUrl == null ? Codegen.empty() : this.resourceUrl;
     }
 
     public BasisArgs(
@@ -49,8 +50,8 @@ public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BasisArgs() {
-        this.fingerprint = Output.empty();
-        this.resourceUrl = Output.empty();
+        this.fingerprint = Codegen.empty();
+        this.resourceUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fingerprint(@Nullable FingerprintArgs fingerprint) {
-            this.fingerprint = Output.ofNullable(fingerprint);
+            this.fingerprint = Codegen.ofNullable(fingerprint);
             return this;
         }
         public Builder resourceUrl(@Nullable Output<String> resourceUrl) {
@@ -88,7 +89,7 @@ public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceUrl(@Nullable String resourceUrl) {
-            this.resourceUrl = Output.ofNullable(resourceUrl);
+            this.resourceUrl = Codegen.ofNullable(resourceUrl);
             return this;
         }        public BasisArgs build() {
             return new BasisArgs(fingerprint, resourceUrl);

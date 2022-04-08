@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datafusion_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ipAllocation;
 
     public Output<String> getIpAllocation() {
-        return this.ipAllocation == null ? Output.empty() : this.ipAllocation;
+        return this.ipAllocation == null ? Codegen.empty() : this.ipAllocation;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     public NetworkConfigArgs(
@@ -48,8 +49,8 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkConfigArgs() {
-        this.ipAllocation = Output.empty();
-        this.network = Output.empty();
+        this.ipAllocation = Codegen.empty();
+        this.network = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipAllocation(@Nullable String ipAllocation) {
-            this.ipAllocation = Output.ofNullable(ipAllocation);
+            this.ipAllocation = Codegen.ofNullable(ipAllocation);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -87,7 +88,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }        public NetworkConfigArgs build() {
             return new NetworkConfigArgs(ipAllocation, network);

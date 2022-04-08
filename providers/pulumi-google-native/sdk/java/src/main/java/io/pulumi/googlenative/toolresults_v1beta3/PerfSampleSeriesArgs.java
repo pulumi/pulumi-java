@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.BasicPerfSampleSeriesArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class PerfSampleSeriesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<BasicPerfSampleSeriesArgs> basicPerfSampleSeries;
 
     public Output<BasicPerfSampleSeriesArgs> getBasicPerfSampleSeries() {
-        return this.basicPerfSampleSeries == null ? Output.empty() : this.basicPerfSampleSeries;
+        return this.basicPerfSampleSeries == null ? Codegen.empty() : this.basicPerfSampleSeries;
     }
 
     @Import(name="executionId", required=true)
@@ -44,7 +45,7 @@ public final class PerfSampleSeriesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="stepId", required=true)
@@ -68,11 +69,11 @@ public final class PerfSampleSeriesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PerfSampleSeriesArgs() {
-        this.basicPerfSampleSeries = Output.empty();
-        this.executionId = Output.empty();
-        this.historyId = Output.empty();
-        this.project = Output.empty();
-        this.stepId = Output.empty();
+        this.basicPerfSampleSeries = Codegen.empty();
+        this.executionId = Codegen.empty();
+        this.historyId = Codegen.empty();
+        this.project = Codegen.empty();
+        this.stepId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class PerfSampleSeriesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder basicPerfSampleSeries(@Nullable BasicPerfSampleSeriesArgs basicPerfSampleSeries) {
-            this.basicPerfSampleSeries = Output.ofNullable(basicPerfSampleSeries);
+            this.basicPerfSampleSeries = Codegen.ofNullable(basicPerfSampleSeries);
             return this;
         }
         public Builder executionId(Output<String> executionId) {
@@ -132,7 +133,7 @@ public final class PerfSampleSeriesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder stepId(Output<String> stepId) {

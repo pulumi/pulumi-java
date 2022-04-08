@@ -5,6 +5,7 @@ package io.pulumi.googlenative.eventarc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -59,7 +60,7 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -87,11 +88,11 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GKEArgs() {
-        this.cluster = Output.empty();
-        this.location = Output.empty();
-        this.namespace = Output.empty();
-        this.path = Output.empty();
-        this.service = Output.empty();
+        this.cluster = Codegen.empty();
+        this.location = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.path = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -151,7 +152,7 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder service(Output<String> service) {

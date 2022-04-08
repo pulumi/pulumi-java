@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dataproc_v1beta2.enums.SoftwareConfigOptionalComponentsItem;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> imageVersion;
 
     public Output<String> getImageVersion() {
-        return this.imageVersion == null ? Output.empty() : this.imageVersion;
+        return this.imageVersion == null ? Codegen.empty() : this.imageVersion;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SoftwareConfigOptionalComponentsItem>> optionalComponents;
 
     public Output<List<SoftwareConfigOptionalComponentsItem>> getOptionalComponents() {
-        return this.optionalComponents == null ? Output.empty() : this.optionalComponents;
+        return this.optionalComponents == null ? Codegen.empty() : this.optionalComponents;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     public SoftwareConfigArgs(
@@ -64,9 +65,9 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SoftwareConfigArgs() {
-        this.imageVersion = Output.empty();
-        this.optionalComponents = Output.empty();
-        this.properties = Output.empty();
+        this.imageVersion = Codegen.empty();
+        this.optionalComponents = Codegen.empty();
+        this.properties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageVersion(@Nullable String imageVersion) {
-            this.imageVersion = Output.ofNullable(imageVersion);
+            this.imageVersion = Codegen.ofNullable(imageVersion);
             return this;
         }
         public Builder optionalComponents(@Nullable Output<List<SoftwareConfigOptionalComponentsItem>> optionalComponents) {
@@ -106,7 +107,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder optionalComponents(@Nullable List<SoftwareConfigOptionalComponentsItem> optionalComponents) {
-            this.optionalComponents = Output.ofNullable(optionalComponents);
+            this.optionalComponents = Codegen.ofNullable(optionalComponents);
             return this;
         }
         public Builder optionalComponents(SoftwareConfigOptionalComponentsItem... optionalComponents) {
@@ -117,7 +118,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }        public SoftwareConfigArgs build() {
             return new SoftwareConfigArgs(imageVersion, optionalComponents, properties);

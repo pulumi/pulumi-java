@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
       private final @Nullable Output<String> interconnectName;
 
     public Output<String> getInterconnectName() {
-        return this.interconnectName == null ? Output.empty() : this.interconnectName;
+        return this.interconnectName == null ? Codegen.empty() : this.interconnectName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
       private final @Nullable Output<String> partnerName;
 
     public Output<String> getPartnerName() {
-        return this.partnerName == null ? Output.empty() : this.partnerName;
+        return this.partnerName == null ? Codegen.empty() : this.partnerName;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
       private final @Nullable Output<String> portalUrl;
 
     public Output<String> getPortalUrl() {
-        return this.portalUrl == null ? Output.empty() : this.portalUrl;
+        return this.portalUrl == null ? Codegen.empty() : this.portalUrl;
     }
 
     public InterconnectAttachmentPartnerMetadataArgs(
@@ -61,9 +62,9 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
     }
 
     private InterconnectAttachmentPartnerMetadataArgs() {
-        this.interconnectName = Output.empty();
-        this.partnerName = Output.empty();
-        this.portalUrl = Output.empty();
+        this.interconnectName = Codegen.empty();
+        this.partnerName = Codegen.empty();
+        this.portalUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
             return this;
         }
         public Builder interconnectName(@Nullable String interconnectName) {
-            this.interconnectName = Output.ofNullable(interconnectName);
+            this.interconnectName = Codegen.ofNullable(interconnectName);
             return this;
         }
         public Builder partnerName(@Nullable Output<String> partnerName) {
@@ -103,7 +104,7 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
             return this;
         }
         public Builder partnerName(@Nullable String partnerName) {
-            this.partnerName = Output.ofNullable(partnerName);
+            this.partnerName = Codegen.ofNullable(partnerName);
             return this;
         }
         public Builder portalUrl(@Nullable Output<String> portalUrl) {
@@ -111,7 +112,7 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
             return this;
         }
         public Builder portalUrl(@Nullable String portalUrl) {
-            this.portalUrl = Output.ofNullable(portalUrl);
+            this.portalUrl = Codegen.ofNullable(portalUrl);
             return this;
         }        public InterconnectAttachmentPartnerMetadataArgs build() {
             return new InterconnectAttachmentPartnerMetadataArgs(interconnectName, partnerName, portalUrl);

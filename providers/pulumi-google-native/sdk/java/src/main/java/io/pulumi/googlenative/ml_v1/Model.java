@@ -6,6 +6,7 @@ package io.pulumi.googlenative.ml_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.ml_v1.ModelArgs;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__VersionResponse;
@@ -156,7 +157,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Model(String name, @Nullable ModelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:ml/v1:Model", name, args == null ? ModelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:ml/v1:Model", name, args == null ? ModelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Model(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

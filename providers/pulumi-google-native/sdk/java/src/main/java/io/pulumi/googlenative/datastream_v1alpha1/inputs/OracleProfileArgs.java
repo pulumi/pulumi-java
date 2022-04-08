@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> connectionAttributes;
 
     public Output<Map<String,String>> getConnectionAttributes() {
-        return this.connectionAttributes == null ? Output.empty() : this.connectionAttributes;
+        return this.connectionAttributes == null ? Codegen.empty() : this.connectionAttributes;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -102,12 +103,12 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OracleProfileArgs() {
-        this.connectionAttributes = Output.empty();
-        this.databaseService = Output.empty();
-        this.hostname = Output.empty();
-        this.password = Output.empty();
-        this.port = Output.empty();
-        this.username = Output.empty();
+        this.connectionAttributes = Codegen.empty();
+        this.databaseService = Codegen.empty();
+        this.hostname = Codegen.empty();
+        this.password = Codegen.empty();
+        this.port = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectionAttributes(@Nullable Map<String,String> connectionAttributes) {
-            this.connectionAttributes = Output.ofNullable(connectionAttributes);
+            this.connectionAttributes = Codegen.ofNullable(connectionAttributes);
             return this;
         }
         public Builder databaseService(Output<String> databaseService) {
@@ -177,7 +178,7 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder username(Output<String> username) {

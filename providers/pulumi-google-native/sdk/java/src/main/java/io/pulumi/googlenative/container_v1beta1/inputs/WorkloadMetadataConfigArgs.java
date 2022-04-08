@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1beta1.enums.WorkloadMetadataConfigMode;
 import io.pulumi.googlenative.container_v1beta1.enums.WorkloadMetadataConfigNodeMetadata;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<WorkloadMetadataConfigMode> mode;
 
     public Output<WorkloadMetadataConfigMode> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<WorkloadMetadataConfigNodeMetadata> nodeMetadata;
 
     public Output<WorkloadMetadataConfigNodeMetadata> getNodeMetadata() {
-        return this.nodeMetadata == null ? Output.empty() : this.nodeMetadata;
+        return this.nodeMetadata == null ? Codegen.empty() : this.nodeMetadata;
     }
 
     public WorkloadMetadataConfigArgs(
@@ -49,8 +50,8 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
     }
 
     private WorkloadMetadataConfigArgs() {
-        this.mode = Output.empty();
-        this.nodeMetadata = Output.empty();
+        this.mode = Codegen.empty();
+        this.nodeMetadata = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder mode(@Nullable WorkloadMetadataConfigMode mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder nodeMetadata(@Nullable Output<WorkloadMetadataConfigNodeMetadata> nodeMetadata) {
@@ -88,7 +89,7 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder nodeMetadata(@Nullable WorkloadMetadataConfigNodeMetadata nodeMetadata) {
-            this.nodeMetadata = Output.ofNullable(nodeMetadata);
+            this.nodeMetadata = Codegen.ofNullable(nodeMetadata);
             return this;
         }        public WorkloadMetadataConfigArgs build() {
             return new WorkloadMetadataConfigArgs(mode, nodeMetadata);

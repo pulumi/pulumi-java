@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ActionArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryTableArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PrivacyMetricArgs;
@@ -29,7 +30,7 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends io.pulumi
       private final @Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions;
 
     public Output<List<GooglePrivacyDlpV2ActionArgs>> getActions() {
-        return this.actions == null ? Output.empty() : this.actions;
+        return this.actions == null ? Codegen.empty() : this.actions;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends io.pulumi
       private final @Nullable Output<GooglePrivacyDlpV2PrivacyMetricArgs> privacyMetric;
 
     public Output<GooglePrivacyDlpV2PrivacyMetricArgs> getPrivacyMetric() {
-        return this.privacyMetric == null ? Output.empty() : this.privacyMetric;
+        return this.privacyMetric == null ? Codegen.empty() : this.privacyMetric;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends io.pulumi
       private final @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> sourceTable;
 
     public Output<GooglePrivacyDlpV2BigQueryTableArgs> getSourceTable() {
-        return this.sourceTable == null ? Output.empty() : this.sourceTable;
+        return this.sourceTable == null ? Codegen.empty() : this.sourceTable;
     }
 
     public GooglePrivacyDlpV2RiskAnalysisJobConfigArgs(
@@ -64,9 +65,9 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends io.pulumi
     }
 
     private GooglePrivacyDlpV2RiskAnalysisJobConfigArgs() {
-        this.actions = Output.empty();
-        this.privacyMetric = Output.empty();
-        this.sourceTable = Output.empty();
+        this.actions = Codegen.empty();
+        this.privacyMetric = Codegen.empty();
+        this.sourceTable = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends io.pulumi
             return this;
         }
         public Builder actions(@Nullable List<GooglePrivacyDlpV2ActionArgs> actions) {
-            this.actions = Output.ofNullable(actions);
+            this.actions = Codegen.ofNullable(actions);
             return this;
         }
         public Builder actions(GooglePrivacyDlpV2ActionArgs... actions) {
@@ -109,7 +110,7 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends io.pulumi
             return this;
         }
         public Builder privacyMetric(@Nullable GooglePrivacyDlpV2PrivacyMetricArgs privacyMetric) {
-            this.privacyMetric = Output.ofNullable(privacyMetric);
+            this.privacyMetric = Codegen.ofNullable(privacyMetric);
             return this;
         }
         public Builder sourceTable(@Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> sourceTable) {
@@ -117,7 +118,7 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends io.pulumi
             return this;
         }
         public Builder sourceTable(@Nullable GooglePrivacyDlpV2BigQueryTableArgs sourceTable) {
-            this.sourceTable = Output.ofNullable(sourceTable);
+            this.sourceTable = Codegen.ofNullable(sourceTable);
             return this;
         }        public GooglePrivacyDlpV2RiskAnalysisJobConfigArgs build() {
             return new GooglePrivacyDlpV2RiskAnalysisJobConfigArgs(actions, privacyMetric, sourceTable);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class RouterMd5AuthenticationKeyArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class RouterMd5AuthenticationKeyArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public RouterMd5AuthenticationKeyArgs(
@@ -44,8 +45,8 @@ public final class RouterMd5AuthenticationKeyArgs extends io.pulumi.resources.Re
     }
 
     private RouterMd5AuthenticationKeyArgs() {
-        this.key = Output.empty();
-        this.name = Output.empty();
+        this.key = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class RouterMd5AuthenticationKeyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -83,7 +84,7 @@ public final class RouterMd5AuthenticationKeyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public RouterMd5AuthenticationKeyArgs build() {
             return new RouterMd5AuthenticationKeyArgs(key, name);

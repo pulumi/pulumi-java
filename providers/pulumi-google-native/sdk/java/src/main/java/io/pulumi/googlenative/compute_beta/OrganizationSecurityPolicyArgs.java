@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_beta.enums.OrganizationSecurityPolicyType;
 import io.pulumi.googlenative.compute_beta.inputs.SecurityPolicyAdaptiveProtectionConfigArgs;
 import io.pulumi.googlenative.compute_beta.inputs.SecurityPolicyAdvancedOptionsConfigArgs;
@@ -26,14 +27,14 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
       private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
 
     public Output<SecurityPolicyAdaptiveProtectionConfigArgs> getAdaptiveProtectionConfig() {
-        return this.adaptiveProtectionConfig == null ? Output.empty() : this.adaptiveProtectionConfig;
+        return this.adaptiveProtectionConfig == null ? Codegen.empty() : this.adaptiveProtectionConfig;
     }
 
     @Import(name="advancedOptionsConfig")
       private final @Nullable Output<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig;
 
     public Output<SecurityPolicyAdvancedOptionsConfigArgs> getAdvancedOptionsConfig() {
-        return this.advancedOptionsConfig == null ? Output.empty() : this.advancedOptionsConfig;
+        return this.advancedOptionsConfig == null ? Codegen.empty() : this.advancedOptionsConfig;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<SecurityPolicyAssociationArgs>> associations;
 
     public Output<List<SecurityPolicyAssociationArgs>> getAssociations() {
-        return this.associations == null ? Output.empty() : this.associations;
+        return this.associations == null ? Codegen.empty() : this.associations;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -88,28 +89,28 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="parentId")
       private final @Nullable Output<String> parentId;
 
     public Output<String> getParentId() {
-        return this.parentId == null ? Output.empty() : this.parentId;
+        return this.parentId == null ? Codegen.empty() : this.parentId;
     }
 
     @Import(name="recaptchaOptionsConfig")
       private final @Nullable Output<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig;
 
     public Output<SecurityPolicyRecaptchaOptionsConfigArgs> getRecaptchaOptionsConfig() {
-        return this.recaptchaOptionsConfig == null ? Output.empty() : this.recaptchaOptionsConfig;
+        return this.recaptchaOptionsConfig == null ? Codegen.empty() : this.recaptchaOptionsConfig;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -120,7 +121,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<SecurityPolicyRuleArgs>> rules;
 
     public Output<List<SecurityPolicyRuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     /**
@@ -131,7 +132,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
       private final @Nullable Output<OrganizationSecurityPolicyType> type;
 
     public Output<OrganizationSecurityPolicyType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public OrganizationSecurityPolicyArgs(
@@ -162,18 +163,18 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
     }
 
     private OrganizationSecurityPolicyArgs() {
-        this.adaptiveProtectionConfig = Output.empty();
-        this.advancedOptionsConfig = Output.empty();
-        this.associations = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.parentId = Output.empty();
-        this.recaptchaOptionsConfig = Output.empty();
-        this.requestId = Output.empty();
-        this.rules = Output.empty();
-        this.type = Output.empty();
+        this.adaptiveProtectionConfig = Codegen.empty();
+        this.advancedOptionsConfig = Codegen.empty();
+        this.associations = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parentId = Codegen.empty();
+        this.recaptchaOptionsConfig = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.rules = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -223,7 +224,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder adaptiveProtectionConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigArgs adaptiveProtectionConfig) {
-            this.adaptiveProtectionConfig = Output.ofNullable(adaptiveProtectionConfig);
+            this.adaptiveProtectionConfig = Codegen.ofNullable(adaptiveProtectionConfig);
             return this;
         }
         public Builder advancedOptionsConfig(@Nullable Output<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig) {
@@ -231,7 +232,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder advancedOptionsConfig(@Nullable SecurityPolicyAdvancedOptionsConfigArgs advancedOptionsConfig) {
-            this.advancedOptionsConfig = Output.ofNullable(advancedOptionsConfig);
+            this.advancedOptionsConfig = Codegen.ofNullable(advancedOptionsConfig);
             return this;
         }
         public Builder associations(@Nullable Output<List<SecurityPolicyAssociationArgs>> associations) {
@@ -239,7 +240,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder associations(@Nullable List<SecurityPolicyAssociationArgs> associations) {
-            this.associations = Output.ofNullable(associations);
+            this.associations = Codegen.ofNullable(associations);
             return this;
         }
         public Builder associations(SecurityPolicyAssociationArgs... associations) {
@@ -250,7 +251,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -258,7 +259,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -266,7 +267,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -274,7 +275,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parentId(@Nullable Output<String> parentId) {
@@ -282,7 +283,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder parentId(@Nullable String parentId) {
-            this.parentId = Output.ofNullable(parentId);
+            this.parentId = Codegen.ofNullable(parentId);
             return this;
         }
         public Builder recaptchaOptionsConfig(@Nullable Output<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig) {
@@ -290,7 +291,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder recaptchaOptionsConfig(@Nullable SecurityPolicyRecaptchaOptionsConfigArgs recaptchaOptionsConfig) {
-            this.recaptchaOptionsConfig = Output.ofNullable(recaptchaOptionsConfig);
+            this.recaptchaOptionsConfig = Codegen.ofNullable(recaptchaOptionsConfig);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -298,7 +299,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder rules(@Nullable Output<List<SecurityPolicyRuleArgs>> rules) {
@@ -306,7 +307,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder rules(@Nullable List<SecurityPolicyRuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(SecurityPolicyRuleArgs... rules) {
@@ -317,7 +318,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder type(@Nullable OrganizationSecurityPolicyType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public OrganizationSecurityPolicyArgs build() {
             return new OrganizationSecurityPolicyArgs(adaptiveProtectionConfig, advancedOptionsConfig, associations, description, displayName, labels, name, parentId, recaptchaOptionsConfig, requestId, rules, type);

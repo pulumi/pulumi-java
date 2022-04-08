@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.enums.RouterNatLogConfigFilter;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class RouterNatLogConfigArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
-        return this.enable == null ? Output.empty() : this.enable;
+        return this.enable == null ? Codegen.empty() : this.enable;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class RouterNatLogConfigArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<RouterNatLogConfigFilter> filter;
 
     public Output<RouterNatLogConfigFilter> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     public RouterNatLogConfigArgs(
@@ -49,8 +50,8 @@ public final class RouterNatLogConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     private RouterNatLogConfigArgs() {
-        this.enable = Output.empty();
-        this.filter = Output.empty();
+        this.enable = Codegen.empty();
+        this.filter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class RouterNatLogConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Output.ofNullable(enable);
+            this.enable = Codegen.ofNullable(enable);
             return this;
         }
         public Builder filter(@Nullable Output<RouterNatLogConfigFilter> filter) {
@@ -88,7 +89,7 @@ public final class RouterNatLogConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder filter(@Nullable RouterNatLogConfigFilter filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }        public RouterNatLogConfigArgs build() {
             return new RouterNatLogConfigArgs(enable, filter);

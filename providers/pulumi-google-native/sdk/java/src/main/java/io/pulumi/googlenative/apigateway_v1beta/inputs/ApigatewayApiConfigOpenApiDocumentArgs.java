@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigateway_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayApiConfigFileArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ApigatewayApiConfigOpenApiDocumentArgs extends io.pulumi.reso
       private final @Nullable Output<ApigatewayApiConfigFileArgs> document;
 
     public Output<ApigatewayApiConfigFileArgs> getDocument() {
-        return this.document == null ? Output.empty() : this.document;
+        return this.document == null ? Codegen.empty() : this.document;
     }
 
     public ApigatewayApiConfigOpenApiDocumentArgs(@Nullable Output<ApigatewayApiConfigFileArgs> document) {
@@ -34,7 +35,7 @@ public final class ApigatewayApiConfigOpenApiDocumentArgs extends io.pulumi.reso
     }
 
     private ApigatewayApiConfigOpenApiDocumentArgs() {
-        this.document = Output.empty();
+        this.document = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ApigatewayApiConfigOpenApiDocumentArgs extends io.pulumi.reso
             return this;
         }
         public Builder document(@Nullable ApigatewayApiConfigFileArgs document) {
-            this.document = Output.ofNullable(document);
+            this.document = Codegen.ofNullable(document);
             return this;
         }        public ApigatewayApiConfigOpenApiDocumentArgs build() {
             return new ApigatewayApiConfigOpenApiDocumentArgs(document);

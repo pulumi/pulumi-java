@@ -6,6 +6,7 @@ package io.pulumi.googlenative.notebooks_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.notebooks_v1.RuntimeArgs;
 import io.pulumi.googlenative.notebooks_v1.outputs.RuntimeAccessConfigResponse;
@@ -171,7 +172,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Runtime(String name, RuntimeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:notebooks/v1:Runtime", name, args == null ? RuntimeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:notebooks/v1:Runtime", name, args == null ? RuntimeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Runtime(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

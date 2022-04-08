@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeTransformationArgs;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsArgs extends io.pulu
     }
 
     private GooglePrivacyDlpV2InfoTypeTransformationsArgs() {
-        this.transformations = Output.empty();
+        this.transformations = Codegen.empty();
     }
 
     public static Builder builder() {

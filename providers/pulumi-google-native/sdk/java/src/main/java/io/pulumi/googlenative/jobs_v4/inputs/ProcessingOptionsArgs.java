@@ -5,6 +5,7 @@ package io.pulumi.googlenative.jobs_v4.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.jobs_v4.enums.ProcessingOptionsHtmlSanitization;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ProcessingOptionsArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> disableStreetAddressResolution;
 
     public Output<Boolean> getDisableStreetAddressResolution() {
-        return this.disableStreetAddressResolution == null ? Output.empty() : this.disableStreetAddressResolution;
+        return this.disableStreetAddressResolution == null ? Codegen.empty() : this.disableStreetAddressResolution;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ProcessingOptionsArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<ProcessingOptionsHtmlSanitization> htmlSanitization;
 
     public Output<ProcessingOptionsHtmlSanitization> getHtmlSanitization() {
-        return this.htmlSanitization == null ? Output.empty() : this.htmlSanitization;
+        return this.htmlSanitization == null ? Codegen.empty() : this.htmlSanitization;
     }
 
     public ProcessingOptionsArgs(
@@ -49,8 +50,8 @@ public final class ProcessingOptionsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ProcessingOptionsArgs() {
-        this.disableStreetAddressResolution = Output.empty();
-        this.htmlSanitization = Output.empty();
+        this.disableStreetAddressResolution = Codegen.empty();
+        this.htmlSanitization = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ProcessingOptionsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder disableStreetAddressResolution(@Nullable Boolean disableStreetAddressResolution) {
-            this.disableStreetAddressResolution = Output.ofNullable(disableStreetAddressResolution);
+            this.disableStreetAddressResolution = Codegen.ofNullable(disableStreetAddressResolution);
             return this;
         }
         public Builder htmlSanitization(@Nullable Output<ProcessingOptionsHtmlSanitization> htmlSanitization) {
@@ -88,7 +89,7 @@ public final class ProcessingOptionsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder htmlSanitization(@Nullable ProcessingOptionsHtmlSanitization htmlSanitization) {
-            this.htmlSanitization = Output.ofNullable(htmlSanitization);
+            this.htmlSanitization = Codegen.ofNullable(htmlSanitization);
             return this;
         }        public ProcessingOptionsArgs build() {
             return new ProcessingOptionsArgs(disableStreetAddressResolution, htmlSanitization);

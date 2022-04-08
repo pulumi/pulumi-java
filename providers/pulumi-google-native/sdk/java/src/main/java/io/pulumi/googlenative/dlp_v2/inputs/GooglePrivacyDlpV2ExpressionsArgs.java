@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2ExpressionsLogicalOperator;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ConditionsArgs;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GooglePrivacyDlpV2ExpressionsArgs extends io.pulumi.resources
       private final @Nullable Output<GooglePrivacyDlpV2ConditionsArgs> conditions;
 
     public Output<GooglePrivacyDlpV2ConditionsArgs> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GooglePrivacyDlpV2ExpressionsArgs extends io.pulumi.resources
       private final @Nullable Output<GooglePrivacyDlpV2ExpressionsLogicalOperator> logicalOperator;
 
     public Output<GooglePrivacyDlpV2ExpressionsLogicalOperator> getLogicalOperator() {
-        return this.logicalOperator == null ? Output.empty() : this.logicalOperator;
+        return this.logicalOperator == null ? Codegen.empty() : this.logicalOperator;
     }
 
     public GooglePrivacyDlpV2ExpressionsArgs(
@@ -49,8 +50,8 @@ public final class GooglePrivacyDlpV2ExpressionsArgs extends io.pulumi.resources
     }
 
     private GooglePrivacyDlpV2ExpressionsArgs() {
-        this.conditions = Output.empty();
-        this.logicalOperator = Output.empty();
+        this.conditions = Codegen.empty();
+        this.logicalOperator = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GooglePrivacyDlpV2ExpressionsArgs extends io.pulumi.resources
             return this;
         }
         public Builder conditions(@Nullable GooglePrivacyDlpV2ConditionsArgs conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder logicalOperator(@Nullable Output<GooglePrivacyDlpV2ExpressionsLogicalOperator> logicalOperator) {
@@ -88,7 +89,7 @@ public final class GooglePrivacyDlpV2ExpressionsArgs extends io.pulumi.resources
             return this;
         }
         public Builder logicalOperator(@Nullable GooglePrivacyDlpV2ExpressionsLogicalOperator logicalOperator) {
-            this.logicalOperator = Output.ofNullable(logicalOperator);
+            this.logicalOperator = Codegen.ofNullable(logicalOperator);
             return this;
         }        public GooglePrivacyDlpV2ExpressionsArgs build() {
             return new GooglePrivacyDlpV2ExpressionsArgs(conditions, logicalOperator);

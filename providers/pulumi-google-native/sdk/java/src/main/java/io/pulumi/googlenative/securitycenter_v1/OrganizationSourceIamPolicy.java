@@ -6,6 +6,7 @@ package io.pulumi.googlenative.securitycenter_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.securitycenter_v1.OrganizationSourceIamPolicyArgs;
 import io.pulumi.googlenative.securitycenter_v1.outputs.AuditConfigResponse;
@@ -102,7 +103,7 @@ public class OrganizationSourceIamPolicy extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationSourceIamPolicy(String name, OrganizationSourceIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:securitycenter/v1:OrganizationSourceIamPolicy", name, args == null ? OrganizationSourceIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:securitycenter/v1:OrganizationSourceIamPolicy", name, args == null ? OrganizationSourceIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OrganizationSourceIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

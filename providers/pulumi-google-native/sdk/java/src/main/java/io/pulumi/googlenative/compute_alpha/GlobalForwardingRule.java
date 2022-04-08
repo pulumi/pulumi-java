@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.GlobalForwardingRuleArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.ForwardingRuleServiceDirectoryRegistrationResponse;
@@ -477,7 +478,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GlobalForwardingRule(String name, @Nullable GlobalForwardingRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:GlobalForwardingRule", name, args == null ? GlobalForwardingRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/alpha:GlobalForwardingRule", name, args == null ? GlobalForwardingRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GlobalForwardingRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.vision_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.vision_v1.inputs.BoundingPolyArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,14 +25,14 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<BoundingPolyArgs>> boundingPolys;
 
     public Output<List<BoundingPolyArgs>> getBoundingPolys() {
-        return this.boundingPolys == null ? Output.empty() : this.boundingPolys;
+        return this.boundingPolys == null ? Codegen.empty() : this.boundingPolys;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="productId", required=true)
@@ -56,14 +57,14 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="referenceImageId")
       private final @Nullable Output<String> referenceImageId;
 
     public Output<String> getReferenceImageId() {
-        return this.referenceImageId == null ? Output.empty() : this.referenceImageId;
+        return this.referenceImageId == null ? Codegen.empty() : this.referenceImageId;
     }
 
     /**
@@ -95,13 +96,13 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReferenceImageArgs() {
-        this.boundingPolys = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.productId = Output.empty();
-        this.project = Output.empty();
-        this.referenceImageId = Output.empty();
-        this.uri = Output.empty();
+        this.boundingPolys = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.productId = Codegen.empty();
+        this.project = Codegen.empty();
+        this.referenceImageId = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder boundingPolys(@Nullable List<BoundingPolyArgs> boundingPolys) {
-            this.boundingPolys = Output.ofNullable(boundingPolys);
+            this.boundingPolys = Codegen.ofNullable(boundingPolys);
             return this;
         }
         public Builder boundingPolys(BoundingPolyArgs... boundingPolys) {
@@ -152,7 +153,7 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -160,7 +161,7 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder productId(Output<String> productId) {
@@ -176,7 +177,7 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder referenceImageId(@Nullable Output<String> referenceImageId) {
@@ -184,7 +185,7 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder referenceImageId(@Nullable String referenceImageId) {
-            this.referenceImageId = Output.ofNullable(referenceImageId);
+            this.referenceImageId = Codegen.ofNullable(referenceImageId);
             return this;
         }
         public Builder uri(Output<String> uri) {

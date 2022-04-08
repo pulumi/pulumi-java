@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyArgs extends io.pu
       private final @Nullable Output<Integer> code;
 
     public Output<Integer> getCode() {
-        return this.code == null ? Output.empty() : this.code;
+        return this.code == null ? Codegen.empty() : this.code;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyArgs extends io.pu
       private final @Nullable Output<Integer> ttl;
 
     public Output<Integer> getTtl() {
-        return this.ttl == null ? Output.empty() : this.ttl;
+        return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 
     public BackendBucketCdnPolicyNegativeCachingPolicyArgs(
@@ -48,8 +49,8 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyArgs extends io.pu
     }
 
     private BackendBucketCdnPolicyNegativeCachingPolicyArgs() {
-        this.code = Output.empty();
-        this.ttl = Output.empty();
+        this.code = Codegen.empty();
+        this.ttl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyArgs extends io.pu
             return this;
         }
         public Builder code(@Nullable Integer code) {
-            this.code = Output.ofNullable(code);
+            this.code = Codegen.ofNullable(code);
             return this;
         }
         public Builder ttl(@Nullable Output<Integer> ttl) {
@@ -87,7 +88,7 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyArgs extends io.pu
             return this;
         }
         public Builder ttl(@Nullable Integer ttl) {
-            this.ttl = Output.ofNullable(ttl);
+            this.ttl = Codegen.ofNullable(ttl);
             return this;
         }        public BackendBucketCdnPolicyNegativeCachingPolicyArgs build() {
             return new BackendBucketCdnPolicyNegativeCachingPolicyArgs(code, ttl);

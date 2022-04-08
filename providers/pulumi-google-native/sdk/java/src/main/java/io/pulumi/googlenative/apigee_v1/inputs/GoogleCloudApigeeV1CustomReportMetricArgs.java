@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
       private final @Nullable Output<String> function;
 
     public Output<String> getFunction() {
-        return this.function == null ? Output.empty() : this.function;
+        return this.function == null ? Codegen.empty() : this.function;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public GoogleCloudApigeeV1CustomReportMetricArgs(
@@ -48,8 +49,8 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
     }
 
     private GoogleCloudApigeeV1CustomReportMetricArgs() {
-        this.function = Output.empty();
-        this.name = Output.empty();
+        this.function = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
             return this;
         }
         public Builder function(@Nullable String function) {
-            this.function = Output.ofNullable(function);
+            this.function = Codegen.ofNullable(function);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -87,7 +88,7 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public GoogleCloudApigeeV1CustomReportMetricArgs build() {
             return new GoogleCloudApigeeV1CustomReportMetricArgs(function, name);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class DocumentationRuleArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> deprecationDescription;
 
     public Output<String> getDeprecationDescription() {
-        return this.deprecationDescription == null ? Output.empty() : this.deprecationDescription;
+        return this.deprecationDescription == null ? Codegen.empty() : this.deprecationDescription;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class DocumentationRuleArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class DocumentationRuleArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> selector;
 
     public Output<String> getSelector() {
-        return this.selector == null ? Output.empty() : this.selector;
+        return this.selector == null ? Codegen.empty() : this.selector;
     }
 
     public DocumentationRuleArgs(
@@ -61,9 +62,9 @@ public final class DocumentationRuleArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DocumentationRuleArgs() {
-        this.deprecationDescription = Output.empty();
-        this.description = Output.empty();
-        this.selector = Output.empty();
+        this.deprecationDescription = Codegen.empty();
+        this.description = Codegen.empty();
+        this.selector = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class DocumentationRuleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder deprecationDescription(@Nullable String deprecationDescription) {
-            this.deprecationDescription = Output.ofNullable(deprecationDescription);
+            this.deprecationDescription = Codegen.ofNullable(deprecationDescription);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -103,7 +104,7 @@ public final class DocumentationRuleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder selector(@Nullable Output<String> selector) {
@@ -111,7 +112,7 @@ public final class DocumentationRuleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder selector(@Nullable String selector) {
-            this.selector = Output.ofNullable(selector);
+            this.selector = Codegen.ofNullable(selector);
             return this;
         }        public DocumentationRuleArgs build() {
             return new DocumentationRuleArgs(deprecationDescription, description, selector);

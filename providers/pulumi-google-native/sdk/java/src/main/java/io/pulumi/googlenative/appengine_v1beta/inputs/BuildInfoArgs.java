@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class BuildInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cloudBuildId;
 
     public Output<String> getCloudBuildId() {
-        return this.cloudBuildId == null ? Output.empty() : this.cloudBuildId;
+        return this.cloudBuildId == null ? Codegen.empty() : this.cloudBuildId;
     }
 
     public BuildInfoArgs(@Nullable Output<String> cloudBuildId) {
@@ -34,7 +35,7 @@ public final class BuildInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BuildInfoArgs() {
-        this.cloudBuildId = Output.empty();
+        this.cloudBuildId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class BuildInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudBuildId(@Nullable String cloudBuildId) {
-            this.cloudBuildId = Output.ofNullable(cloudBuildId);
+            this.cloudBuildId = Codegen.ofNullable(cloudBuildId);
             return this;
         }        public BuildInfoArgs build() {
             return new BuildInfoArgs(cloudBuildId);

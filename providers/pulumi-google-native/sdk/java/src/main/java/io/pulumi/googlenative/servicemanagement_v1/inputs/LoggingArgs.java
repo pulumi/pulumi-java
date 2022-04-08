@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.LoggingDestinationArgs;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<LoggingDestinationArgs>> consumerDestinations;
 
     public Output<List<LoggingDestinationArgs>> getConsumerDestinations() {
-        return this.consumerDestinations == null ? Output.empty() : this.consumerDestinations;
+        return this.consumerDestinations == null ? Codegen.empty() : this.consumerDestinations;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<LoggingDestinationArgs>> producerDestinations;
 
     public Output<List<LoggingDestinationArgs>> getProducerDestinations() {
-        return this.producerDestinations == null ? Output.empty() : this.producerDestinations;
+        return this.producerDestinations == null ? Codegen.empty() : this.producerDestinations;
     }
 
     public LoggingArgs(
@@ -49,8 +50,8 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LoggingArgs() {
-        this.consumerDestinations = Output.empty();
-        this.producerDestinations = Output.empty();
+        this.consumerDestinations = Codegen.empty();
+        this.producerDestinations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder consumerDestinations(@Nullable List<LoggingDestinationArgs> consumerDestinations) {
-            this.consumerDestinations = Output.ofNullable(consumerDestinations);
+            this.consumerDestinations = Codegen.ofNullable(consumerDestinations);
             return this;
         }
         public Builder consumerDestinations(LoggingDestinationArgs... consumerDestinations) {
@@ -91,7 +92,7 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder producerDestinations(@Nullable List<LoggingDestinationArgs> producerDestinations) {
-            this.producerDestinations = Output.ofNullable(producerDestinations);
+            this.producerDestinations = Codegen.ofNullable(producerDestinations);
             return this;
         }
         public Builder producerDestinations(LoggingDestinationArgs... producerDestinations) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.run_v1.enums.DomainMappingSpecCertificateMode;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<DomainMappingSpecCertificateMode> certificateMode;
 
     public Output<DomainMappingSpecCertificateMode> getCertificateMode() {
-        return this.certificateMode == null ? Output.empty() : this.certificateMode;
+        return this.certificateMode == null ? Codegen.empty() : this.certificateMode;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> forceOverride;
 
     public Output<Boolean> getForceOverride() {
-        return this.forceOverride == null ? Output.empty() : this.forceOverride;
+        return this.forceOverride == null ? Codegen.empty() : this.forceOverride;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> routeName;
 
     public Output<String> getRouteName() {
-        return this.routeName == null ? Output.empty() : this.routeName;
+        return this.routeName == null ? Codegen.empty() : this.routeName;
     }
 
     public DomainMappingSpecArgs(
@@ -63,9 +64,9 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DomainMappingSpecArgs() {
-        this.certificateMode = Output.empty();
-        this.forceOverride = Output.empty();
-        this.routeName = Output.empty();
+        this.certificateMode = Codegen.empty();
+        this.forceOverride = Codegen.empty();
+        this.routeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder certificateMode(@Nullable DomainMappingSpecCertificateMode certificateMode) {
-            this.certificateMode = Output.ofNullable(certificateMode);
+            this.certificateMode = Codegen.ofNullable(certificateMode);
             return this;
         }
         public Builder forceOverride(@Nullable Output<Boolean> forceOverride) {
@@ -105,7 +106,7 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder forceOverride(@Nullable Boolean forceOverride) {
-            this.forceOverride = Output.ofNullable(forceOverride);
+            this.forceOverride = Codegen.ofNullable(forceOverride);
             return this;
         }
         public Builder routeName(@Nullable Output<String> routeName) {
@@ -113,7 +114,7 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder routeName(@Nullable String routeName) {
-            this.routeName = Output.ofNullable(routeName);
+            this.routeName = Codegen.ofNullable(routeName);
             return this;
         }        public DomainMappingSpecArgs build() {
             return new DomainMappingSpecArgs(certificateMode, forceOverride, routeName);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs extend
       private final @Nullable Output<Boolean> caseSensitive;
 
     public Output<Boolean> getCaseSensitive() {
-        return this.caseSensitive == null ? Output.empty() : this.caseSensitive;
+        return this.caseSensitive == null ? Codegen.empty() : this.caseSensitive;
     }
 
     public GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs(@Nullable Output<Boolean> caseSensitive) {
@@ -34,7 +35,7 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs extend
     }
 
     private GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs() {
-        this.caseSensitive = Output.empty();
+        this.caseSensitive = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs extend
             return this;
         }
         public Builder caseSensitive(@Nullable Boolean caseSensitive) {
-            this.caseSensitive = Output.ofNullable(caseSensitive);
+            this.caseSensitive = Codegen.ofNullable(caseSensitive);
             return this;
         }        public GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs build() {
             return new GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs(caseSensitive);

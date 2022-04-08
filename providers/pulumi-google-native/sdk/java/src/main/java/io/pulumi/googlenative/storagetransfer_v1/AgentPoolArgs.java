@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storagetransfer_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.BandwidthLimitArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BandwidthLimitArgs> bandwidthLimit;
 
     public Output<BandwidthLimitArgs> getBandwidthLimit() {
-        return this.bandwidthLimit == null ? Output.empty() : this.bandwidthLimit;
+        return this.bandwidthLimit == null ? Codegen.empty() : this.bandwidthLimit;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -52,14 +53,14 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public AgentPoolArgs(
@@ -76,11 +77,11 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AgentPoolArgs() {
-        this.agentPoolId = Output.empty();
-        this.bandwidthLimit = Output.empty();
-        this.displayName = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
+        this.agentPoolId = Codegen.empty();
+        this.bandwidthLimit = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bandwidthLimit(@Nullable BandwidthLimitArgs bandwidthLimit) {
-            this.bandwidthLimit = Output.ofNullable(bandwidthLimit);
+            this.bandwidthLimit = Codegen.ofNullable(bandwidthLimit);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -132,7 +133,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -140,7 +141,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -148,7 +149,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public AgentPoolArgs build() {
             return new AgentPoolArgs(agentPoolId, bandwidthLimit, displayName, name, project);

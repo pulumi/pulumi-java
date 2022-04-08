@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigquery_v2.inputs.ClusteringArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.ConnectionPropertyArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.DatasetReferenceArgs;
@@ -35,7 +36,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> allowLargeResults;
 
     public Output<Boolean> getAllowLargeResults() {
-        return this.allowLargeResults == null ? Output.empty() : this.allowLargeResults;
+        return this.allowLargeResults == null ? Codegen.empty() : this.allowLargeResults;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<ClusteringArgs> clustering;
 
     public Output<ClusteringArgs> getClustering() {
-        return this.clustering == null ? Output.empty() : this.clustering;
+        return this.clustering == null ? Codegen.empty() : this.clustering;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<ConnectionPropertyArgs>> connectionProperties;
 
     public Output<List<ConnectionPropertyArgs>> getConnectionProperties() {
-        return this.connectionProperties == null ? Output.empty() : this.connectionProperties;
+        return this.connectionProperties == null ? Codegen.empty() : this.connectionProperties;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> createDisposition;
 
     public Output<String> getCreateDisposition() {
-        return this.createDisposition == null ? Output.empty() : this.createDisposition;
+        return this.createDisposition == null ? Codegen.empty() : this.createDisposition;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> createSession;
 
     public Output<Boolean> getCreateSession() {
-        return this.createSession == null ? Output.empty() : this.createSession;
+        return this.createSession == null ? Codegen.empty() : this.createSession;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<DatasetReferenceArgs> defaultDataset;
 
     public Output<DatasetReferenceArgs> getDefaultDataset() {
-        return this.defaultDataset == null ? Output.empty() : this.defaultDataset;
+        return this.defaultDataset == null ? Codegen.empty() : this.defaultDataset;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<EncryptionConfigurationArgs> destinationEncryptionConfiguration;
 
     public Output<EncryptionConfigurationArgs> getDestinationEncryptionConfiguration() {
-        return this.destinationEncryptionConfiguration == null ? Output.empty() : this.destinationEncryptionConfiguration;
+        return this.destinationEncryptionConfiguration == null ? Codegen.empty() : this.destinationEncryptionConfiguration;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<TableReferenceArgs> destinationTable;
 
     public Output<TableReferenceArgs> getDestinationTable() {
-        return this.destinationTable == null ? Output.empty() : this.destinationTable;
+        return this.destinationTable == null ? Codegen.empty() : this.destinationTable;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> flattenResults;
 
     public Output<Boolean> getFlattenResults() {
-        return this.flattenResults == null ? Output.empty() : this.flattenResults;
+        return this.flattenResults == null ? Codegen.empty() : this.flattenResults;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> maximumBillingTier;
 
     public Output<Integer> getMaximumBillingTier() {
-        return this.maximumBillingTier == null ? Output.empty() : this.maximumBillingTier;
+        return this.maximumBillingTier == null ? Codegen.empty() : this.maximumBillingTier;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> maximumBytesBilled;
 
     public Output<String> getMaximumBytesBilled() {
-        return this.maximumBytesBilled == null ? Output.empty() : this.maximumBytesBilled;
+        return this.maximumBytesBilled == null ? Codegen.empty() : this.maximumBytesBilled;
     }
 
     /**
@@ -156,7 +157,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> parameterMode;
 
     public Output<String> getParameterMode() {
-        return this.parameterMode == null ? Output.empty() : this.parameterMode;
+        return this.parameterMode == null ? Codegen.empty() : this.parameterMode;
     }
 
     /**
@@ -167,7 +168,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> priority;
 
     public Output<String> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -178,7 +179,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> query;
 
     public Output<String> getQuery() {
-        return this.query == null ? Output.empty() : this.query;
+        return this.query == null ? Codegen.empty() : this.query;
     }
 
     /**
@@ -189,7 +190,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<QueryParameterArgs>> queryParameters;
 
     public Output<List<QueryParameterArgs>> getQueryParameters() {
-        return this.queryParameters == null ? Output.empty() : this.queryParameters;
+        return this.queryParameters == null ? Codegen.empty() : this.queryParameters;
     }
 
     /**
@@ -200,7 +201,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<RangePartitioningArgs> rangePartitioning;
 
     public Output<RangePartitioningArgs> getRangePartitioning() {
-        return this.rangePartitioning == null ? Output.empty() : this.rangePartitioning;
+        return this.rangePartitioning == null ? Codegen.empty() : this.rangePartitioning;
     }
 
     /**
@@ -211,7 +212,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<String>> schemaUpdateOptions;
 
     public Output<List<String>> getSchemaUpdateOptions() {
-        return this.schemaUpdateOptions == null ? Output.empty() : this.schemaUpdateOptions;
+        return this.schemaUpdateOptions == null ? Codegen.empty() : this.schemaUpdateOptions;
     }
 
     /**
@@ -222,7 +223,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Map<String,String>> tableDefinitions;
 
     public Output<Map<String,String>> getTableDefinitions() {
-        return this.tableDefinitions == null ? Output.empty() : this.tableDefinitions;
+        return this.tableDefinitions == null ? Codegen.empty() : this.tableDefinitions;
     }
 
     /**
@@ -233,7 +234,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<TimePartitioningArgs> timePartitioning;
 
     public Output<TimePartitioningArgs> getTimePartitioning() {
-        return this.timePartitioning == null ? Output.empty() : this.timePartitioning;
+        return this.timePartitioning == null ? Codegen.empty() : this.timePartitioning;
     }
 
     /**
@@ -244,7 +245,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> useLegacySql;
 
     public Output<Boolean> getUseLegacySql() {
-        return this.useLegacySql == null ? Output.empty() : this.useLegacySql;
+        return this.useLegacySql == null ? Codegen.empty() : this.useLegacySql;
     }
 
     /**
@@ -255,7 +256,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> useQueryCache;
 
     public Output<Boolean> getUseQueryCache() {
-        return this.useQueryCache == null ? Output.empty() : this.useQueryCache;
+        return this.useQueryCache == null ? Codegen.empty() : this.useQueryCache;
     }
 
     /**
@@ -266,7 +267,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources;
 
     public Output<List<UserDefinedFunctionResourceArgs>> getUserDefinedFunctionResources() {
-        return this.userDefinedFunctionResources == null ? Output.empty() : this.userDefinedFunctionResources;
+        return this.userDefinedFunctionResources == null ? Codegen.empty() : this.userDefinedFunctionResources;
     }
 
     /**
@@ -277,7 +278,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> writeDisposition;
 
     public Output<String> getWriteDisposition() {
-        return this.writeDisposition == null ? Output.empty() : this.writeDisposition;
+        return this.writeDisposition == null ? Codegen.empty() : this.writeDisposition;
     }
 
     public JobConfigurationQueryArgs(
@@ -330,29 +331,29 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
     }
 
     private JobConfigurationQueryArgs() {
-        this.allowLargeResults = Output.empty();
-        this.clustering = Output.empty();
-        this.connectionProperties = Output.empty();
-        this.createDisposition = Output.empty();
-        this.createSession = Output.empty();
-        this.defaultDataset = Output.empty();
-        this.destinationEncryptionConfiguration = Output.empty();
-        this.destinationTable = Output.empty();
-        this.flattenResults = Output.empty();
-        this.maximumBillingTier = Output.empty();
-        this.maximumBytesBilled = Output.empty();
-        this.parameterMode = Output.empty();
-        this.priority = Output.empty();
-        this.query = Output.empty();
-        this.queryParameters = Output.empty();
-        this.rangePartitioning = Output.empty();
-        this.schemaUpdateOptions = Output.empty();
-        this.tableDefinitions = Output.empty();
-        this.timePartitioning = Output.empty();
-        this.useLegacySql = Output.empty();
-        this.useQueryCache = Output.empty();
-        this.userDefinedFunctionResources = Output.empty();
-        this.writeDisposition = Output.empty();
+        this.allowLargeResults = Codegen.empty();
+        this.clustering = Codegen.empty();
+        this.connectionProperties = Codegen.empty();
+        this.createDisposition = Codegen.empty();
+        this.createSession = Codegen.empty();
+        this.defaultDataset = Codegen.empty();
+        this.destinationEncryptionConfiguration = Codegen.empty();
+        this.destinationTable = Codegen.empty();
+        this.flattenResults = Codegen.empty();
+        this.maximumBillingTier = Codegen.empty();
+        this.maximumBytesBilled = Codegen.empty();
+        this.parameterMode = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.query = Codegen.empty();
+        this.queryParameters = Codegen.empty();
+        this.rangePartitioning = Codegen.empty();
+        this.schemaUpdateOptions = Codegen.empty();
+        this.tableDefinitions = Codegen.empty();
+        this.timePartitioning = Codegen.empty();
+        this.useLegacySql = Codegen.empty();
+        this.useQueryCache = Codegen.empty();
+        this.userDefinedFunctionResources = Codegen.empty();
+        this.writeDisposition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -424,7 +425,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder allowLargeResults(@Nullable Boolean allowLargeResults) {
-            this.allowLargeResults = Output.ofNullable(allowLargeResults);
+            this.allowLargeResults = Codegen.ofNullable(allowLargeResults);
             return this;
         }
         public Builder clustering(@Nullable Output<ClusteringArgs> clustering) {
@@ -432,7 +433,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder clustering(@Nullable ClusteringArgs clustering) {
-            this.clustering = Output.ofNullable(clustering);
+            this.clustering = Codegen.ofNullable(clustering);
             return this;
         }
         public Builder connectionProperties(@Nullable Output<List<ConnectionPropertyArgs>> connectionProperties) {
@@ -440,7 +441,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder connectionProperties(@Nullable List<ConnectionPropertyArgs> connectionProperties) {
-            this.connectionProperties = Output.ofNullable(connectionProperties);
+            this.connectionProperties = Codegen.ofNullable(connectionProperties);
             return this;
         }
         public Builder connectionProperties(ConnectionPropertyArgs... connectionProperties) {
@@ -451,7 +452,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder createDisposition(@Nullable String createDisposition) {
-            this.createDisposition = Output.ofNullable(createDisposition);
+            this.createDisposition = Codegen.ofNullable(createDisposition);
             return this;
         }
         public Builder createSession(@Nullable Output<Boolean> createSession) {
@@ -459,7 +460,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder createSession(@Nullable Boolean createSession) {
-            this.createSession = Output.ofNullable(createSession);
+            this.createSession = Codegen.ofNullable(createSession);
             return this;
         }
         public Builder defaultDataset(@Nullable Output<DatasetReferenceArgs> defaultDataset) {
@@ -467,7 +468,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder defaultDataset(@Nullable DatasetReferenceArgs defaultDataset) {
-            this.defaultDataset = Output.ofNullable(defaultDataset);
+            this.defaultDataset = Codegen.ofNullable(defaultDataset);
             return this;
         }
         public Builder destinationEncryptionConfiguration(@Nullable Output<EncryptionConfigurationArgs> destinationEncryptionConfiguration) {
@@ -475,7 +476,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder destinationEncryptionConfiguration(@Nullable EncryptionConfigurationArgs destinationEncryptionConfiguration) {
-            this.destinationEncryptionConfiguration = Output.ofNullable(destinationEncryptionConfiguration);
+            this.destinationEncryptionConfiguration = Codegen.ofNullable(destinationEncryptionConfiguration);
             return this;
         }
         public Builder destinationTable(@Nullable Output<TableReferenceArgs> destinationTable) {
@@ -483,7 +484,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder destinationTable(@Nullable TableReferenceArgs destinationTable) {
-            this.destinationTable = Output.ofNullable(destinationTable);
+            this.destinationTable = Codegen.ofNullable(destinationTable);
             return this;
         }
         public Builder flattenResults(@Nullable Output<Boolean> flattenResults) {
@@ -491,7 +492,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder flattenResults(@Nullable Boolean flattenResults) {
-            this.flattenResults = Output.ofNullable(flattenResults);
+            this.flattenResults = Codegen.ofNullable(flattenResults);
             return this;
         }
         public Builder maximumBillingTier(@Nullable Output<Integer> maximumBillingTier) {
@@ -499,7 +500,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder maximumBillingTier(@Nullable Integer maximumBillingTier) {
-            this.maximumBillingTier = Output.ofNullable(maximumBillingTier);
+            this.maximumBillingTier = Codegen.ofNullable(maximumBillingTier);
             return this;
         }
         public Builder maximumBytesBilled(@Nullable Output<String> maximumBytesBilled) {
@@ -507,7 +508,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder maximumBytesBilled(@Nullable String maximumBytesBilled) {
-            this.maximumBytesBilled = Output.ofNullable(maximumBytesBilled);
+            this.maximumBytesBilled = Codegen.ofNullable(maximumBytesBilled);
             return this;
         }
         public Builder parameterMode(@Nullable Output<String> parameterMode) {
@@ -515,7 +516,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder parameterMode(@Nullable String parameterMode) {
-            this.parameterMode = Output.ofNullable(parameterMode);
+            this.parameterMode = Codegen.ofNullable(parameterMode);
             return this;
         }
         public Builder priority(@Nullable Output<String> priority) {
@@ -523,7 +524,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder priority(@Nullable String priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder query(@Nullable Output<String> query) {
@@ -531,7 +532,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder query(@Nullable String query) {
-            this.query = Output.ofNullable(query);
+            this.query = Codegen.ofNullable(query);
             return this;
         }
         public Builder queryParameters(@Nullable Output<List<QueryParameterArgs>> queryParameters) {
@@ -539,7 +540,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder queryParameters(@Nullable List<QueryParameterArgs> queryParameters) {
-            this.queryParameters = Output.ofNullable(queryParameters);
+            this.queryParameters = Codegen.ofNullable(queryParameters);
             return this;
         }
         public Builder queryParameters(QueryParameterArgs... queryParameters) {
@@ -550,7 +551,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder rangePartitioning(@Nullable RangePartitioningArgs rangePartitioning) {
-            this.rangePartitioning = Output.ofNullable(rangePartitioning);
+            this.rangePartitioning = Codegen.ofNullable(rangePartitioning);
             return this;
         }
         public Builder schemaUpdateOptions(@Nullable Output<List<String>> schemaUpdateOptions) {
@@ -558,7 +559,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder schemaUpdateOptions(@Nullable List<String> schemaUpdateOptions) {
-            this.schemaUpdateOptions = Output.ofNullable(schemaUpdateOptions);
+            this.schemaUpdateOptions = Codegen.ofNullable(schemaUpdateOptions);
             return this;
         }
         public Builder schemaUpdateOptions(String... schemaUpdateOptions) {
@@ -569,7 +570,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tableDefinitions(@Nullable Map<String,String> tableDefinitions) {
-            this.tableDefinitions = Output.ofNullable(tableDefinitions);
+            this.tableDefinitions = Codegen.ofNullable(tableDefinitions);
             return this;
         }
         public Builder timePartitioning(@Nullable Output<TimePartitioningArgs> timePartitioning) {
@@ -577,7 +578,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder timePartitioning(@Nullable TimePartitioningArgs timePartitioning) {
-            this.timePartitioning = Output.ofNullable(timePartitioning);
+            this.timePartitioning = Codegen.ofNullable(timePartitioning);
             return this;
         }
         public Builder useLegacySql(@Nullable Output<Boolean> useLegacySql) {
@@ -585,7 +586,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder useLegacySql(@Nullable Boolean useLegacySql) {
-            this.useLegacySql = Output.ofNullable(useLegacySql);
+            this.useLegacySql = Codegen.ofNullable(useLegacySql);
             return this;
         }
         public Builder useQueryCache(@Nullable Output<Boolean> useQueryCache) {
@@ -593,7 +594,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder useQueryCache(@Nullable Boolean useQueryCache) {
-            this.useQueryCache = Output.ofNullable(useQueryCache);
+            this.useQueryCache = Codegen.ofNullable(useQueryCache);
             return this;
         }
         public Builder userDefinedFunctionResources(@Nullable Output<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources) {
@@ -601,7 +602,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder userDefinedFunctionResources(@Nullable List<UserDefinedFunctionResourceArgs> userDefinedFunctionResources) {
-            this.userDefinedFunctionResources = Output.ofNullable(userDefinedFunctionResources);
+            this.userDefinedFunctionResources = Codegen.ofNullable(userDefinedFunctionResources);
             return this;
         }
         public Builder userDefinedFunctionResources(UserDefinedFunctionResourceArgs... userDefinedFunctionResources) {
@@ -612,7 +613,7 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder writeDisposition(@Nullable String writeDisposition) {
-            this.writeDisposition = Output.ofNullable(writeDisposition);
+            this.writeDisposition = Codegen.ofNullable(writeDisposition);
             return this;
         }        public JobConfigurationQueryArgs build() {
             return new JobConfigurationQueryArgs(allowLargeResults, clustering, connectionProperties, createDisposition, createSession, defaultDataset, destinationEncryptionConfiguration, destinationTable, flattenResults, maximumBillingTier, maximumBytesBilled, parameterMode, priority, query, queryParameters, rangePartitioning, schemaUpdateOptions, tableDefinitions, timePartitioning, useLegacySql, useQueryCache, userDefinedFunctionResources, writeDisposition);

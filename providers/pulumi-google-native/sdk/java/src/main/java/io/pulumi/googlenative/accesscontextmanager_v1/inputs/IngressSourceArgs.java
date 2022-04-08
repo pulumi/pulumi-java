@@ -5,6 +5,7 @@ package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class IngressSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> accessLevel;
 
     public Output<String> getAccessLevel() {
-        return this.accessLevel == null ? Output.empty() : this.accessLevel;
+        return this.accessLevel == null ? Codegen.empty() : this.accessLevel;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class IngressSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resource;
 
     public Output<String> getResource() {
-        return this.resource == null ? Output.empty() : this.resource;
+        return this.resource == null ? Codegen.empty() : this.resource;
     }
 
     public IngressSourceArgs(
@@ -48,8 +49,8 @@ public final class IngressSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IngressSourceArgs() {
-        this.accessLevel = Output.empty();
-        this.resource = Output.empty();
+        this.accessLevel = Codegen.empty();
+        this.resource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class IngressSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessLevel(@Nullable String accessLevel) {
-            this.accessLevel = Output.ofNullable(accessLevel);
+            this.accessLevel = Codegen.ofNullable(accessLevel);
             return this;
         }
         public Builder resource(@Nullable Output<String> resource) {
@@ -87,7 +88,7 @@ public final class IngressSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resource(@Nullable String resource) {
-            this.resource = Output.ofNullable(resource);
+            this.resource = Codegen.ofNullable(resource);
             return this;
         }        public IngressSourceArgs build() {
             return new IngressSourceArgs(accessLevel, resource);

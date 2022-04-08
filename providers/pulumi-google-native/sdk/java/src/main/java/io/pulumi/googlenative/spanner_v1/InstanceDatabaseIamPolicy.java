@@ -6,6 +6,7 @@ package io.pulumi.googlenative.spanner_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.spanner_v1.InstanceDatabaseIamPolicyArgs;
 import io.pulumi.googlenative.spanner_v1.outputs.BindingResponse;
@@ -87,7 +88,7 @@ public class InstanceDatabaseIamPolicy extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public InstanceDatabaseIamPolicy(String name, InstanceDatabaseIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:spanner/v1:InstanceDatabaseIamPolicy", name, args == null ? InstanceDatabaseIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:spanner/v1:InstanceDatabaseIamPolicy", name, args == null ? InstanceDatabaseIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InstanceDatabaseIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

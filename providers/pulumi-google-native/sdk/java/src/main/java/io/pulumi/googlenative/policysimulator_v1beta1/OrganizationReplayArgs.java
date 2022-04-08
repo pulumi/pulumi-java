@@ -5,6 +5,7 @@ package io.pulumi.googlenative.policysimulator_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.policysimulator_v1beta1.inputs.GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class OrganizationReplayArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="organizationId", required=true)
@@ -50,9 +51,9 @@ public final class OrganizationReplayArgs extends io.pulumi.resources.ResourceAr
     }
 
     private OrganizationReplayArgs() {
-        this.config = Output.empty();
-        this.location = Output.empty();
-        this.organizationId = Output.empty();
+        this.config = Codegen.empty();
+        this.location = Codegen.empty();
+        this.organizationId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class OrganizationReplayArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder organizationId(Output<String> organizationId) {

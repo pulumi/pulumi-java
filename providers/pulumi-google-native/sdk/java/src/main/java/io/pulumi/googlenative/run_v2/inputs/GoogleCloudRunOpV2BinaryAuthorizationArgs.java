@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationArgs extends io.pulumi.r
       private final @Nullable Output<String> breakglassJustification;
 
     public Output<String> getBreakglassJustification() {
-        return this.breakglassJustification == null ? Output.empty() : this.breakglassJustification;
+        return this.breakglassJustification == null ? Codegen.empty() : this.breakglassJustification;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationArgs extends io.pulumi.r
       private final @Nullable Output<Boolean> useDefault;
 
     public Output<Boolean> getUseDefault() {
-        return this.useDefault == null ? Output.empty() : this.useDefault;
+        return this.useDefault == null ? Codegen.empty() : this.useDefault;
     }
 
     public GoogleCloudRunOpV2BinaryAuthorizationArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationArgs extends io.pulumi.r
     }
 
     private GoogleCloudRunOpV2BinaryAuthorizationArgs() {
-        this.breakglassJustification = Output.empty();
-        this.useDefault = Output.empty();
+        this.breakglassJustification = Codegen.empty();
+        this.useDefault = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationArgs extends io.pulumi.r
             return this;
         }
         public Builder breakglassJustification(@Nullable String breakglassJustification) {
-            this.breakglassJustification = Output.ofNullable(breakglassJustification);
+            this.breakglassJustification = Codegen.ofNullable(breakglassJustification);
             return this;
         }
         public Builder useDefault(@Nullable Output<Boolean> useDefault) {
@@ -88,7 +89,7 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationArgs extends io.pulumi.r
             return this;
         }
         public Builder useDefault(@Nullable Boolean useDefault) {
-            this.useDefault = Output.ofNullable(useDefault);
+            this.useDefault = Codegen.ofNullable(useDefault);
             return this;
         }        public GoogleCloudRunOpV2BinaryAuthorizationArgs build() {
             return new GoogleCloudRunOpV2BinaryAuthorizationArgs(breakglassJustification, useDefault);

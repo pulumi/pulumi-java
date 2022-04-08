@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.VersionKind;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -29,7 +30,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> epoch;
 
     public Output<Integer> getEpoch() {
-        return this.epoch == null ? Output.empty() : this.epoch;
+        return this.epoch == null ? Codegen.empty() : this.epoch;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> inclusive;
 
     public Output<Boolean> getInclusive() {
-        return this.inclusive == null ? Output.empty() : this.inclusive;
+        return this.inclusive == null ? Codegen.empty() : this.inclusive;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> revision;
 
     public Output<String> getRevision() {
-        return this.revision == null ? Output.empty() : this.revision;
+        return this.revision == null ? Codegen.empty() : this.revision;
     }
 
     public VersionArgs(
@@ -90,11 +91,11 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VersionArgs() {
-        this.epoch = Output.empty();
-        this.inclusive = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.revision = Output.empty();
+        this.epoch = Codegen.empty();
+        this.inclusive = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.revision = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder epoch(@Nullable Integer epoch) {
-            this.epoch = Output.ofNullable(epoch);
+            this.epoch = Codegen.ofNullable(epoch);
             return this;
         }
         public Builder inclusive(@Nullable Output<Boolean> inclusive) {
@@ -138,7 +139,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inclusive(@Nullable Boolean inclusive) {
-            this.inclusive = Output.ofNullable(inclusive);
+            this.inclusive = Codegen.ofNullable(inclusive);
             return this;
         }
         public Builder kind(Output<VersionKind> kind) {
@@ -154,7 +155,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder revision(@Nullable Output<String> revision) {
@@ -162,7 +163,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder revision(@Nullable String revision) {
-            this.revision = Output.ofNullable(revision);
+            this.revision = Codegen.ofNullable(revision);
             return this;
         }        public VersionArgs build() {
             return new VersionArgs(epoch, inclusive, kind, name, revision);

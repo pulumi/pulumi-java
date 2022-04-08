@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.PrivatePoolV1ConfigArgs;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> annotations;
 
     public Output<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -35,14 +36,14 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -53,21 +54,21 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PrivatePoolV1ConfigArgs> privatePoolV1Config;
 
     public Output<PrivatePoolV1ConfigArgs> getPrivatePoolV1Config() {
-        return this.privatePoolV1Config == null ? Output.empty() : this.privatePoolV1Config;
+        return this.privatePoolV1Config == null ? Codegen.empty() : this.privatePoolV1Config;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
     public Output<String> getValidateOnly() {
-        return this.validateOnly == null ? Output.empty() : this.validateOnly;
+        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 
     @Import(name="workerPoolId", required=true)
@@ -95,13 +96,13 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkerPoolArgs() {
-        this.annotations = Output.empty();
-        this.displayName = Output.empty();
-        this.location = Output.empty();
-        this.privatePoolV1Config = Output.empty();
-        this.project = Output.empty();
-        this.validateOnly = Output.empty();
-        this.workerPoolId = Output.empty();
+        this.annotations = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.privatePoolV1Config = Codegen.empty();
+        this.project = Codegen.empty();
+        this.validateOnly = Codegen.empty();
+        this.workerPoolId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -149,7 +150,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -157,7 +158,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder privatePoolV1Config(@Nullable Output<PrivatePoolV1ConfigArgs> privatePoolV1Config) {
@@ -165,7 +166,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privatePoolV1Config(@Nullable PrivatePoolV1ConfigArgs privatePoolV1Config) {
-            this.privatePoolV1Config = Output.ofNullable(privatePoolV1Config);
+            this.privatePoolV1Config = Codegen.ofNullable(privatePoolV1Config);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -173,7 +174,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
@@ -181,7 +182,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Output.ofNullable(validateOnly);
+            this.validateOnly = Codegen.ofNullable(validateOnly);
             return this;
         }
         public Builder workerPoolId(Output<String> workerPoolId) {

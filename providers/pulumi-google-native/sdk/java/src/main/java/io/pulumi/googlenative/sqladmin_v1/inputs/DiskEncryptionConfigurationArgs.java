@@ -5,6 +5,7 @@ package io.pulumi.googlenative.sqladmin_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
+        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 
     public DiskEncryptionConfigurationArgs(
@@ -48,8 +49,8 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
     }
 
     private DiskEncryptionConfigurationArgs() {
-        this.kind = Output.empty();
-        this.kmsKeyName = Output.empty();
+        this.kind = Codegen.empty();
+        this.kmsKeyName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
@@ -87,7 +88,7 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Output.ofNullable(kmsKeyName);
+            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
             return this;
         }        public DiskEncryptionConfigurationArgs build() {
             return new DiskEncryptionConfigurationArgs(kind, kmsKeyName);

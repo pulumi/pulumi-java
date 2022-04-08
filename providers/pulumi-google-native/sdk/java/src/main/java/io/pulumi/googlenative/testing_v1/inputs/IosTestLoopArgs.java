@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.Integer;
 import java.util.List;
@@ -39,7 +40,7 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Integer>> scenarios;
 
     public Output<List<Integer>> getScenarios() {
-        return this.scenarios == null ? Output.empty() : this.scenarios;
+        return this.scenarios == null ? Codegen.empty() : this.scenarios;
     }
 
     public IosTestLoopArgs(
@@ -50,8 +51,8 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IosTestLoopArgs() {
-        this.appIpa = Output.empty();
-        this.scenarios = Output.empty();
+        this.appIpa = Codegen.empty();
+        this.scenarios = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scenarios(@Nullable List<Integer> scenarios) {
-            this.scenarios = Output.ofNullable(scenarios);
+            this.scenarios = Codegen.ofNullable(scenarios);
             return this;
         }
         public Builder scenarios(Integer... scenarios) {

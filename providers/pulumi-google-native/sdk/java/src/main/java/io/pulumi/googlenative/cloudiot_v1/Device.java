@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudiot_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudiot_v1.DeviceArgs;
 import io.pulumi.googlenative.cloudiot_v1.outputs.DeviceConfigResponse;
@@ -272,7 +273,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Device(String name, DeviceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudiot/v1:Device", name, args == null ? DeviceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudiot/v1:Device", name, args == null ? DeviceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Device(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

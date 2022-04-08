@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2OutputStorageConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GooglePrivacyDlpV2SaveFindingsArgs extends io.pulumi.resource
       private final @Nullable Output<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig;
 
     public Output<GooglePrivacyDlpV2OutputStorageConfigArgs> getOutputConfig() {
-        return this.outputConfig == null ? Output.empty() : this.outputConfig;
+        return this.outputConfig == null ? Codegen.empty() : this.outputConfig;
     }
 
     public GooglePrivacyDlpV2SaveFindingsArgs(@Nullable Output<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig) {
@@ -34,7 +35,7 @@ public final class GooglePrivacyDlpV2SaveFindingsArgs extends io.pulumi.resource
     }
 
     private GooglePrivacyDlpV2SaveFindingsArgs() {
-        this.outputConfig = Output.empty();
+        this.outputConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GooglePrivacyDlpV2SaveFindingsArgs extends io.pulumi.resource
             return this;
         }
         public Builder outputConfig(@Nullable GooglePrivacyDlpV2OutputStorageConfigArgs outputConfig) {
-            this.outputConfig = Output.ofNullable(outputConfig);
+            this.outputConfig = Codegen.ofNullable(outputConfig);
             return this;
         }        public GooglePrivacyDlpV2SaveFindingsArgs build() {
             return new GooglePrivacyDlpV2SaveFindingsArgs(outputConfig);

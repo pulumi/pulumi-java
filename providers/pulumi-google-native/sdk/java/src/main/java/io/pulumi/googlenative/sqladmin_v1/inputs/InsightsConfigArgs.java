@@ -5,6 +5,7 @@ package io.pulumi.googlenative.sqladmin_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> queryInsightsEnabled;
 
     public Output<Boolean> getQueryInsightsEnabled() {
-        return this.queryInsightsEnabled == null ? Output.empty() : this.queryInsightsEnabled;
+        return this.queryInsightsEnabled == null ? Codegen.empty() : this.queryInsightsEnabled;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> queryPlansPerMinute;
 
     public Output<Integer> getQueryPlansPerMinute() {
-        return this.queryPlansPerMinute == null ? Output.empty() : this.queryPlansPerMinute;
+        return this.queryPlansPerMinute == null ? Codegen.empty() : this.queryPlansPerMinute;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> queryStringLength;
 
     public Output<Integer> getQueryStringLength() {
-        return this.queryStringLength == null ? Output.empty() : this.queryStringLength;
+        return this.queryStringLength == null ? Codegen.empty() : this.queryStringLength;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> recordApplicationTags;
 
     public Output<Boolean> getRecordApplicationTags() {
-        return this.recordApplicationTags == null ? Output.empty() : this.recordApplicationTags;
+        return this.recordApplicationTags == null ? Codegen.empty() : this.recordApplicationTags;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> recordClientAddress;
 
     public Output<Boolean> getRecordClientAddress() {
-        return this.recordClientAddress == null ? Output.empty() : this.recordClientAddress;
+        return this.recordClientAddress == null ? Codegen.empty() : this.recordClientAddress;
     }
 
     public InsightsConfigArgs(
@@ -88,11 +89,11 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InsightsConfigArgs() {
-        this.queryInsightsEnabled = Output.empty();
-        this.queryPlansPerMinute = Output.empty();
-        this.queryStringLength = Output.empty();
-        this.recordApplicationTags = Output.empty();
-        this.recordClientAddress = Output.empty();
+        this.queryInsightsEnabled = Codegen.empty();
+        this.queryPlansPerMinute = Codegen.empty();
+        this.queryStringLength = Codegen.empty();
+        this.recordApplicationTags = Codegen.empty();
+        this.recordClientAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queryInsightsEnabled(@Nullable Boolean queryInsightsEnabled) {
-            this.queryInsightsEnabled = Output.ofNullable(queryInsightsEnabled);
+            this.queryInsightsEnabled = Codegen.ofNullable(queryInsightsEnabled);
             return this;
         }
         public Builder queryPlansPerMinute(@Nullable Output<Integer> queryPlansPerMinute) {
@@ -136,7 +137,7 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queryPlansPerMinute(@Nullable Integer queryPlansPerMinute) {
-            this.queryPlansPerMinute = Output.ofNullable(queryPlansPerMinute);
+            this.queryPlansPerMinute = Codegen.ofNullable(queryPlansPerMinute);
             return this;
         }
         public Builder queryStringLength(@Nullable Output<Integer> queryStringLength) {
@@ -144,7 +145,7 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queryStringLength(@Nullable Integer queryStringLength) {
-            this.queryStringLength = Output.ofNullable(queryStringLength);
+            this.queryStringLength = Codegen.ofNullable(queryStringLength);
             return this;
         }
         public Builder recordApplicationTags(@Nullable Output<Boolean> recordApplicationTags) {
@@ -152,7 +153,7 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recordApplicationTags(@Nullable Boolean recordApplicationTags) {
-            this.recordApplicationTags = Output.ofNullable(recordApplicationTags);
+            this.recordApplicationTags = Codegen.ofNullable(recordApplicationTags);
             return this;
         }
         public Builder recordClientAddress(@Nullable Output<Boolean> recordClientAddress) {
@@ -160,7 +161,7 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recordClientAddress(@Nullable Boolean recordClientAddress) {
-            this.recordClientAddress = Output.ofNullable(recordClientAddress);
+            this.recordClientAddress = Codegen.ofNullable(recordClientAddress);
             return this;
         }        public InsightsConfigArgs build() {
             return new InsightsConfigArgs(queryInsightsEnabled, queryPlansPerMinute, queryStringLength, recordApplicationTags, recordClientAddress);

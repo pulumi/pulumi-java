@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class SecuritySettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> clientTlsPolicy;
 
     public Output<String> getClientTlsPolicy() {
-        return this.clientTlsPolicy == null ? Output.empty() : this.clientTlsPolicy;
+        return this.clientTlsPolicy == null ? Codegen.empty() : this.clientTlsPolicy;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class SecuritySettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> subjectAltNames;
 
     public Output<List<String>> getSubjectAltNames() {
-        return this.subjectAltNames == null ? Output.empty() : this.subjectAltNames;
+        return this.subjectAltNames == null ? Codegen.empty() : this.subjectAltNames;
     }
 
     public SecuritySettingsArgs(
@@ -49,8 +50,8 @@ public final class SecuritySettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SecuritySettingsArgs() {
-        this.clientTlsPolicy = Output.empty();
-        this.subjectAltNames = Output.empty();
+        this.clientTlsPolicy = Codegen.empty();
+        this.subjectAltNames = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class SecuritySettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder clientTlsPolicy(@Nullable String clientTlsPolicy) {
-            this.clientTlsPolicy = Output.ofNullable(clientTlsPolicy);
+            this.clientTlsPolicy = Codegen.ofNullable(clientTlsPolicy);
             return this;
         }
         public Builder subjectAltNames(@Nullable Output<List<String>> subjectAltNames) {
@@ -88,7 +89,7 @@ public final class SecuritySettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder subjectAltNames(@Nullable List<String> subjectAltNames) {
-            this.subjectAltNames = Output.ofNullable(subjectAltNames);
+            this.subjectAltNames = Codegen.ofNullable(subjectAltNames);
             return this;
         }
         public Builder subjectAltNames(String... subjectAltNames) {

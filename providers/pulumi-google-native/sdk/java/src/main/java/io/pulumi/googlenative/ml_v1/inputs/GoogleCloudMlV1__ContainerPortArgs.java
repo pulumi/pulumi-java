@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleCloudMlV1__ContainerPortArgs extends io.pulumi.resource
       private final @Nullable Output<Integer> containerPort;
 
     public Output<Integer> getContainerPort() {
-        return this.containerPort == null ? Output.empty() : this.containerPort;
+        return this.containerPort == null ? Codegen.empty() : this.containerPort;
     }
 
     public GoogleCloudMlV1__ContainerPortArgs(@Nullable Output<Integer> containerPort) {
@@ -34,7 +35,7 @@ public final class GoogleCloudMlV1__ContainerPortArgs extends io.pulumi.resource
     }
 
     private GoogleCloudMlV1__ContainerPortArgs() {
-        this.containerPort = Output.empty();
+        this.containerPort = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudMlV1__ContainerPortArgs extends io.pulumi.resource
             return this;
         }
         public Builder containerPort(@Nullable Integer containerPort) {
-            this.containerPort = Output.ofNullable(containerPort);
+            this.containerPort = Codegen.ofNullable(containerPort);
             return this;
         }        public GoogleCloudMlV1__ContainerPortArgs build() {
             return new GoogleCloudMlV1__ContainerPortArgs(containerPort);

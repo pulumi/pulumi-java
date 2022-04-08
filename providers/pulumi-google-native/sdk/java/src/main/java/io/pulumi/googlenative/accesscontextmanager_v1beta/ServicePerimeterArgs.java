@@ -5,6 +5,7 @@ package io.pulumi.googlenative.accesscontextmanager_v1beta;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.enums.ServicePerimeterPerimeterType;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.inputs.ServicePerimeterConfigArgs;
 import java.lang.String;
@@ -31,7 +32,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ServicePerimeterPerimeterType> perimeterType;
 
     public Output<ServicePerimeterPerimeterType> getPerimeterType() {
-        return this.perimeterType == null ? Output.empty() : this.perimeterType;
+        return this.perimeterType == null ? Codegen.empty() : this.perimeterType;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ServicePerimeterConfigArgs> status;
 
     public Output<ServicePerimeterConfigArgs> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public ServicePerimeterArgs(
@@ -94,12 +95,12 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ServicePerimeterArgs() {
-        this.accessPolicyId = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.perimeterType = Output.empty();
-        this.status = Output.empty();
-        this.title = Output.empty();
+        this.accessPolicyId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.perimeterType = Codegen.empty();
+        this.status = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -153,7 +154,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder perimeterType(@Nullable Output<ServicePerimeterPerimeterType> perimeterType) {
@@ -161,7 +162,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder perimeterType(@Nullable ServicePerimeterPerimeterType perimeterType) {
-            this.perimeterType = Output.ofNullable(perimeterType);
+            this.perimeterType = Codegen.ofNullable(perimeterType);
             return this;
         }
         public Builder status(@Nullable Output<ServicePerimeterConfigArgs> status) {
@@ -169,7 +170,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder status(@Nullable ServicePerimeterConfigArgs status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -177,7 +178,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public ServicePerimeterArgs build() {
             return new ServicePerimeterArgs(accessPolicyId, description, name, perimeterType, status, title);

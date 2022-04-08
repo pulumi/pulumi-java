@@ -5,6 +5,7 @@ package io.pulumi.googlenative.connectors_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.connectors_v1.inputs.SecretArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> boolValue;
 
     public Output<Boolean> getBoolValue() {
-        return this.boolValue == null ? Output.empty() : this.boolValue;
+        return this.boolValue == null ? Codegen.empty() : this.boolValue;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> intValue;
 
     public Output<String> getIntValue() {
-        return this.intValue == null ? Output.empty() : this.intValue;
+        return this.intValue == null ? Codegen.empty() : this.intValue;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SecretArgs> secretValue;
 
     public Output<SecretArgs> getSecretValue() {
-        return this.secretValue == null ? Output.empty() : this.secretValue;
+        return this.secretValue == null ? Codegen.empty() : this.secretValue;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> stringValue;
 
     public Output<String> getStringValue() {
-        return this.stringValue == null ? Output.empty() : this.stringValue;
+        return this.stringValue == null ? Codegen.empty() : this.stringValue;
     }
 
     public ConfigVariableArgs(
@@ -89,11 +90,11 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConfigVariableArgs() {
-        this.boolValue = Output.empty();
-        this.intValue = Output.empty();
-        this.key = Output.empty();
-        this.secretValue = Output.empty();
-        this.stringValue = Output.empty();
+        this.boolValue = Codegen.empty();
+        this.intValue = Codegen.empty();
+        this.key = Codegen.empty();
+        this.secretValue = Codegen.empty();
+        this.stringValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder boolValue(@Nullable Boolean boolValue) {
-            this.boolValue = Output.ofNullable(boolValue);
+            this.boolValue = Codegen.ofNullable(boolValue);
             return this;
         }
         public Builder intValue(@Nullable Output<String> intValue) {
@@ -137,7 +138,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder intValue(@Nullable String intValue) {
-            this.intValue = Output.ofNullable(intValue);
+            this.intValue = Codegen.ofNullable(intValue);
             return this;
         }
         public Builder key(@Nullable Output<String> key) {
@@ -145,7 +146,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder secretValue(@Nullable Output<SecretArgs> secretValue) {
@@ -153,7 +154,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secretValue(@Nullable SecretArgs secretValue) {
-            this.secretValue = Output.ofNullable(secretValue);
+            this.secretValue = Codegen.ofNullable(secretValue);
             return this;
         }
         public Builder stringValue(@Nullable Output<String> stringValue) {
@@ -161,7 +162,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Output.ofNullable(stringValue);
+            this.stringValue = Codegen.ofNullable(stringValue);
             return this;
         }        public ConfigVariableArgs build() {
             return new ConfigVariableArgs(boolValue, intValue, key, secretValue, stringValue);

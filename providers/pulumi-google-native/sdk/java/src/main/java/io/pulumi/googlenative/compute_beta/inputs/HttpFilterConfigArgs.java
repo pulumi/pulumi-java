@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class HttpFilterConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> config;
 
     public Output<String> getConfig() {
-        return this.config == null ? Output.empty() : this.config;
+        return this.config == null ? Codegen.empty() : this.config;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class HttpFilterConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> configTypeUrl;
 
     public Output<String> getConfigTypeUrl() {
-        return this.configTypeUrl == null ? Output.empty() : this.configTypeUrl;
+        return this.configTypeUrl == null ? Codegen.empty() : this.configTypeUrl;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class HttpFilterConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> filterName;
 
     public Output<String> getFilterName() {
-        return this.filterName == null ? Output.empty() : this.filterName;
+        return this.filterName == null ? Codegen.empty() : this.filterName;
     }
 
     public HttpFilterConfigArgs(
@@ -61,9 +62,9 @@ public final class HttpFilterConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private HttpFilterConfigArgs() {
-        this.config = Output.empty();
-        this.configTypeUrl = Output.empty();
-        this.filterName = Output.empty();
+        this.config = Codegen.empty();
+        this.configTypeUrl = Codegen.empty();
+        this.filterName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class HttpFilterConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder config(@Nullable String config) {
-            this.config = Output.ofNullable(config);
+            this.config = Codegen.ofNullable(config);
             return this;
         }
         public Builder configTypeUrl(@Nullable Output<String> configTypeUrl) {
@@ -103,7 +104,7 @@ public final class HttpFilterConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder configTypeUrl(@Nullable String configTypeUrl) {
-            this.configTypeUrl = Output.ofNullable(configTypeUrl);
+            this.configTypeUrl = Codegen.ofNullable(configTypeUrl);
             return this;
         }
         public Builder filterName(@Nullable Output<String> filterName) {
@@ -111,7 +112,7 @@ public final class HttpFilterConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder filterName(@Nullable String filterName) {
-            this.filterName = Output.ofNullable(filterName);
+            this.filterName = Codegen.ofNullable(filterName);
             return this;
         }        public HttpFilterConfigArgs build() {
             return new HttpFilterConfigArgs(config, configTypeUrl, filterName);

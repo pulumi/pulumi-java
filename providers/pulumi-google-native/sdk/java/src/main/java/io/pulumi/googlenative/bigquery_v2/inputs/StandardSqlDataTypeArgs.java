@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigquery_v2.enums.StandardSqlDataTypeTypeKind;
 import io.pulumi.googlenative.bigquery_v2.inputs.StandardSqlStructTypeArgs;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class StandardSqlDataTypeArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<StandardSqlDataTypeArgs> arrayElementType;
 
     public Output<StandardSqlDataTypeArgs> getArrayElementType() {
-        return this.arrayElementType == null ? Output.empty() : this.arrayElementType;
+        return this.arrayElementType == null ? Codegen.empty() : this.arrayElementType;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class StandardSqlDataTypeArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<StandardSqlStructTypeArgs> structType;
 
     public Output<StandardSqlStructTypeArgs> getStructType() {
-        return this.structType == null ? Output.empty() : this.structType;
+        return this.structType == null ? Codegen.empty() : this.structType;
     }
 
     /**
@@ -62,9 +63,9 @@ public final class StandardSqlDataTypeArgs extends io.pulumi.resources.ResourceA
     }
 
     private StandardSqlDataTypeArgs() {
-        this.arrayElementType = Output.empty();
-        this.structType = Output.empty();
-        this.typeKind = Output.empty();
+        this.arrayElementType = Codegen.empty();
+        this.structType = Codegen.empty();
+        this.typeKind = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class StandardSqlDataTypeArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder arrayElementType(@Nullable StandardSqlDataTypeArgs arrayElementType) {
-            this.arrayElementType = Output.ofNullable(arrayElementType);
+            this.arrayElementType = Codegen.ofNullable(arrayElementType);
             return this;
         }
         public Builder structType(@Nullable Output<StandardSqlStructTypeArgs> structType) {
@@ -104,7 +105,7 @@ public final class StandardSqlDataTypeArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder structType(@Nullable StandardSqlStructTypeArgs structType) {
-            this.structType = Output.ofNullable(structType);
+            this.structType = Codegen.ofNullable(structType);
             return this;
         }
         public Builder typeKind(Output<StandardSqlDataTypeTypeKind> typeKind) {

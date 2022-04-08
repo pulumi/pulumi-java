@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.BasicPerfSampleSeriesPerfMetricType;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.BasicPerfSampleSeriesPerfUnit;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.BasicPerfSampleSeriesSampleSeriesLabel;
@@ -24,21 +25,21 @@ public final class BasicPerfSampleSeriesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<BasicPerfSampleSeriesPerfMetricType> perfMetricType;
 
     public Output<BasicPerfSampleSeriesPerfMetricType> getPerfMetricType() {
-        return this.perfMetricType == null ? Output.empty() : this.perfMetricType;
+        return this.perfMetricType == null ? Codegen.empty() : this.perfMetricType;
     }
 
     @Import(name="perfUnit")
       private final @Nullable Output<BasicPerfSampleSeriesPerfUnit> perfUnit;
 
     public Output<BasicPerfSampleSeriesPerfUnit> getPerfUnit() {
-        return this.perfUnit == null ? Output.empty() : this.perfUnit;
+        return this.perfUnit == null ? Codegen.empty() : this.perfUnit;
     }
 
     @Import(name="sampleSeriesLabel")
       private final @Nullable Output<BasicPerfSampleSeriesSampleSeriesLabel> sampleSeriesLabel;
 
     public Output<BasicPerfSampleSeriesSampleSeriesLabel> getSampleSeriesLabel() {
-        return this.sampleSeriesLabel == null ? Output.empty() : this.sampleSeriesLabel;
+        return this.sampleSeriesLabel == null ? Codegen.empty() : this.sampleSeriesLabel;
     }
 
     public BasicPerfSampleSeriesArgs(
@@ -51,9 +52,9 @@ public final class BasicPerfSampleSeriesArgs extends io.pulumi.resources.Resourc
     }
 
     private BasicPerfSampleSeriesArgs() {
-        this.perfMetricType = Output.empty();
-        this.perfUnit = Output.empty();
-        this.sampleSeriesLabel = Output.empty();
+        this.perfMetricType = Codegen.empty();
+        this.perfUnit = Codegen.empty();
+        this.sampleSeriesLabel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class BasicPerfSampleSeriesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder perfMetricType(@Nullable BasicPerfSampleSeriesPerfMetricType perfMetricType) {
-            this.perfMetricType = Output.ofNullable(perfMetricType);
+            this.perfMetricType = Codegen.ofNullable(perfMetricType);
             return this;
         }
         public Builder perfUnit(@Nullable Output<BasicPerfSampleSeriesPerfUnit> perfUnit) {
@@ -93,7 +94,7 @@ public final class BasicPerfSampleSeriesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder perfUnit(@Nullable BasicPerfSampleSeriesPerfUnit perfUnit) {
-            this.perfUnit = Output.ofNullable(perfUnit);
+            this.perfUnit = Codegen.ofNullable(perfUnit);
             return this;
         }
         public Builder sampleSeriesLabel(@Nullable Output<BasicPerfSampleSeriesSampleSeriesLabel> sampleSeriesLabel) {
@@ -101,7 +102,7 @@ public final class BasicPerfSampleSeriesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder sampleSeriesLabel(@Nullable BasicPerfSampleSeriesSampleSeriesLabel sampleSeriesLabel) {
-            this.sampleSeriesLabel = Output.ofNullable(sampleSeriesLabel);
+            this.sampleSeriesLabel = Codegen.ofNullable(sampleSeriesLabel);
             return this;
         }        public BasicPerfSampleSeriesArgs build() {
             return new BasicPerfSampleSeriesArgs(perfMetricType, perfUnit, sampleSeriesLabel);

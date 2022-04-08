@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1.inputs.WeekDayOfMonthArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class MonthlyScheduleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private MonthlyScheduleArgs() {
-        this.monthDay = Output.empty();
-        this.weekDayOfMonth = Output.empty();
+        this.monthDay = Codegen.empty();
+        this.weekDayOfMonth = Codegen.empty();
     }
 
     public static Builder builder() {

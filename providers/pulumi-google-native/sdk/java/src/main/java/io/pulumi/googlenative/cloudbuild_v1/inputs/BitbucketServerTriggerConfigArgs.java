@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.PullRequestFilterArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.PushFilterArgs;
 import java.lang.String;
@@ -50,7 +51,7 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
       private final @Nullable Output<PullRequestFilterArgs> pullRequest;
 
     public Output<PullRequestFilterArgs> getPullRequest() {
-        return this.pullRequest == null ? Output.empty() : this.pullRequest;
+        return this.pullRequest == null ? Codegen.empty() : this.pullRequest;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
       private final @Nullable Output<PushFilterArgs> push;
 
     public Output<PushFilterArgs> getPush() {
-        return this.push == null ? Output.empty() : this.push;
+        return this.push == null ? Codegen.empty() : this.push;
     }
 
     /**
@@ -89,11 +90,11 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
     }
 
     private BitbucketServerTriggerConfigArgs() {
-        this.bitbucketServerConfigResource = Output.empty();
-        this.projectKey = Output.empty();
-        this.pullRequest = Output.empty();
-        this.push = Output.empty();
-        this.repoSlug = Output.empty();
+        this.bitbucketServerConfigResource = Codegen.empty();
+        this.projectKey = Codegen.empty();
+        this.pullRequest = Codegen.empty();
+        this.push = Codegen.empty();
+        this.repoSlug = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
             return this;
         }
         public Builder pullRequest(@Nullable PullRequestFilterArgs pullRequest) {
-            this.pullRequest = Output.ofNullable(pullRequest);
+            this.pullRequest = Codegen.ofNullable(pullRequest);
             return this;
         }
         public Builder push(@Nullable Output<PushFilterArgs> push) {
@@ -153,7 +154,7 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
             return this;
         }
         public Builder push(@Nullable PushFilterArgs push) {
-            this.push = Output.ofNullable(push);
+            this.push = Codegen.ofNullable(push);
             return this;
         }
         public Builder repoSlug(Output<String> repoSlug) {

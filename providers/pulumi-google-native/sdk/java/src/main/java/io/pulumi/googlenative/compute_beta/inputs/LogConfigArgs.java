@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_beta.inputs.LogConfigCloudAuditOptionsArgs;
 import io.pulumi.googlenative.compute_beta.inputs.LogConfigCounterOptionsArgs;
 import io.pulumi.googlenative.compute_beta.inputs.LogConfigDataAccessOptionsArgs;
@@ -28,7 +29,7 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LogConfigCloudAuditOptionsArgs> cloudAudit;
 
     public Output<LogConfigCloudAuditOptionsArgs> getCloudAudit() {
-        return this.cloudAudit == null ? Output.empty() : this.cloudAudit;
+        return this.cloudAudit == null ? Codegen.empty() : this.cloudAudit;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LogConfigCounterOptionsArgs> counter;
 
     public Output<LogConfigCounterOptionsArgs> getCounter() {
-        return this.counter == null ? Output.empty() : this.counter;
+        return this.counter == null ? Codegen.empty() : this.counter;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LogConfigDataAccessOptionsArgs> dataAccess;
 
     public Output<LogConfigDataAccessOptionsArgs> getDataAccess() {
-        return this.dataAccess == null ? Output.empty() : this.dataAccess;
+        return this.dataAccess == null ? Codegen.empty() : this.dataAccess;
     }
 
     public LogConfigArgs(
@@ -63,9 +64,9 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LogConfigArgs() {
-        this.cloudAudit = Output.empty();
-        this.counter = Output.empty();
-        this.dataAccess = Output.empty();
+        this.cloudAudit = Codegen.empty();
+        this.counter = Codegen.empty();
+        this.dataAccess = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudAudit(@Nullable LogConfigCloudAuditOptionsArgs cloudAudit) {
-            this.cloudAudit = Output.ofNullable(cloudAudit);
+            this.cloudAudit = Codegen.ofNullable(cloudAudit);
             return this;
         }
         public Builder counter(@Nullable Output<LogConfigCounterOptionsArgs> counter) {
@@ -105,7 +106,7 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder counter(@Nullable LogConfigCounterOptionsArgs counter) {
-            this.counter = Output.ofNullable(counter);
+            this.counter = Codegen.ofNullable(counter);
             return this;
         }
         public Builder dataAccess(@Nullable Output<LogConfigDataAccessOptionsArgs> dataAccess) {
@@ -113,7 +114,7 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataAccess(@Nullable LogConfigDataAccessOptionsArgs dataAccess) {
-            this.dataAccess = Output.ofNullable(dataAccess);
+            this.dataAccess = Codegen.ofNullable(dataAccess);
             return this;
         }        public LogConfigArgs build() {
             return new LogConfigArgs(cloudAudit, counter, dataAccess);

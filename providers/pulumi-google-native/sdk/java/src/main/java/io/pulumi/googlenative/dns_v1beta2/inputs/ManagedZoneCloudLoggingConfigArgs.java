@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,14 +28,14 @@ public final class ManagedZoneCloudLoggingConfigArgs extends io.pulumi.resources
       private final @Nullable Output<Boolean> enableLogging;
 
     public Output<Boolean> getEnableLogging() {
-        return this.enableLogging == null ? Output.empty() : this.enableLogging;
+        return this.enableLogging == null ? Codegen.empty() : this.enableLogging;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     public ManagedZoneCloudLoggingConfigArgs(
@@ -45,8 +46,8 @@ public final class ManagedZoneCloudLoggingConfigArgs extends io.pulumi.resources
     }
 
     private ManagedZoneCloudLoggingConfigArgs() {
-        this.enableLogging = Output.empty();
-        this.kind = Output.empty();
+        this.enableLogging = Codegen.empty();
+        this.kind = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ManagedZoneCloudLoggingConfigArgs extends io.pulumi.resources
             return this;
         }
         public Builder enableLogging(@Nullable Boolean enableLogging) {
-            this.enableLogging = Output.ofNullable(enableLogging);
+            this.enableLogging = Codegen.ofNullable(enableLogging);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -84,7 +85,7 @@ public final class ManagedZoneCloudLoggingConfigArgs extends io.pulumi.resources
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }        public ManagedZoneCloudLoggingConfigArgs build() {
             return new ManagedZoneCloudLoggingConfigArgs(enableLogging, kind);

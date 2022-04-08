@@ -5,6 +5,7 @@ package io.pulumi.googlenative.firestore_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.firestore_v1beta1.enums.GoogleFirestoreAdminV1beta1IndexFieldMode;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.r
       private final @Nullable Output<String> fieldPath;
 
     public Output<String> getFieldPath() {
-        return this.fieldPath == null ? Output.empty() : this.fieldPath;
+        return this.fieldPath == null ? Codegen.empty() : this.fieldPath;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.r
       private final @Nullable Output<GoogleFirestoreAdminV1beta1IndexFieldMode> mode;
 
     public Output<GoogleFirestoreAdminV1beta1IndexFieldMode> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     public GoogleFirestoreAdminV1beta1IndexFieldArgs(
@@ -49,8 +50,8 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.r
     }
 
     private GoogleFirestoreAdminV1beta1IndexFieldArgs() {
-        this.fieldPath = Output.empty();
-        this.mode = Output.empty();
+        this.fieldPath = Codegen.empty();
+        this.mode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.r
             return this;
         }
         public Builder fieldPath(@Nullable String fieldPath) {
-            this.fieldPath = Output.ofNullable(fieldPath);
+            this.fieldPath = Codegen.ofNullable(fieldPath);
             return this;
         }
         public Builder mode(@Nullable Output<GoogleFirestoreAdminV1beta1IndexFieldMode> mode) {
@@ -88,7 +89,7 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.r
             return this;
         }
         public Builder mode(@Nullable GoogleFirestoreAdminV1beta1IndexFieldMode mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }        public GoogleFirestoreAdminV1beta1IndexFieldArgs build() {
             return new GoogleFirestoreAdminV1beta1IndexFieldArgs(fieldPath, mode);

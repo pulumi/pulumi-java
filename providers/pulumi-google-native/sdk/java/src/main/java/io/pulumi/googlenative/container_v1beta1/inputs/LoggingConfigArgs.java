@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1beta1.inputs.LoggingComponentConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LoggingComponentConfigArgs> componentConfig;
 
     public Output<LoggingComponentConfigArgs> getComponentConfig() {
-        return this.componentConfig == null ? Output.empty() : this.componentConfig;
+        return this.componentConfig == null ? Codegen.empty() : this.componentConfig;
     }
 
     public LoggingConfigArgs(@Nullable Output<LoggingComponentConfigArgs> componentConfig) {
@@ -34,7 +35,7 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LoggingConfigArgs() {
-        this.componentConfig = Output.empty();
+        this.componentConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder componentConfig(@Nullable LoggingComponentConfigArgs componentConfig) {
-            this.componentConfig = Output.ofNullable(componentConfig);
+            this.componentConfig = Codegen.ofNullable(componentConfig);
             return this;
         }        public LoggingConfigArgs build() {
             return new LoggingConfigArgs(componentConfig);

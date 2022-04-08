@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs exten
       private final @Nullable Output<Boolean> enableContinuousRun;
 
     public Output<Boolean> getEnableContinuousRun() {
-        return this.enableContinuousRun == null ? Output.empty() : this.enableContinuousRun;
+        return this.enableContinuousRun == null ? Codegen.empty() : this.enableContinuousRun;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs exten
       private final @Nullable Output<Boolean> enablePredeploymentRun;
 
     public Output<Boolean> getEnablePredeploymentRun() {
-        return this.enablePredeploymentRun == null ? Output.empty() : this.enablePredeploymentRun;
+        return this.enablePredeploymentRun == null ? Codegen.empty() : this.enablePredeploymentRun;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs exten
       private final @Nullable Output<List<String>> testCases;
 
     public Output<List<String>> getTestCases() {
-        return this.testCases == null ? Output.empty() : this.testCases;
+        return this.testCases == null ? Codegen.empty() : this.testCases;
     }
 
     public GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs(
@@ -63,9 +64,9 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs exten
     }
 
     private GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs() {
-        this.enableContinuousRun = Output.empty();
-        this.enablePredeploymentRun = Output.empty();
-        this.testCases = Output.empty();
+        this.enableContinuousRun = Codegen.empty();
+        this.enablePredeploymentRun = Codegen.empty();
+        this.testCases = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs exten
             return this;
         }
         public Builder enableContinuousRun(@Nullable Boolean enableContinuousRun) {
-            this.enableContinuousRun = Output.ofNullable(enableContinuousRun);
+            this.enableContinuousRun = Codegen.ofNullable(enableContinuousRun);
             return this;
         }
         public Builder enablePredeploymentRun(@Nullable Output<Boolean> enablePredeploymentRun) {
@@ -105,7 +106,7 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs exten
             return this;
         }
         public Builder enablePredeploymentRun(@Nullable Boolean enablePredeploymentRun) {
-            this.enablePredeploymentRun = Output.ofNullable(enablePredeploymentRun);
+            this.enablePredeploymentRun = Codegen.ofNullable(enablePredeploymentRun);
             return this;
         }
         public Builder testCases(@Nullable Output<List<String>> testCases) {
@@ -113,7 +114,7 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs exten
             return this;
         }
         public Builder testCases(@Nullable List<String> testCases) {
-            this.testCases = Output.ofNullable(testCases);
+            this.testCases = Codegen.ofNullable(testCases);
             return this;
         }
         public Builder testCases(String... testCases) {

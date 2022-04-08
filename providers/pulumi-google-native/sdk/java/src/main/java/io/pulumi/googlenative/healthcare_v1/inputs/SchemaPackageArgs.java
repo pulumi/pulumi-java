@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1.enums.SchemaPackageSchematizedParsingType;
 import io.pulumi.googlenative.healthcare_v1.enums.SchemaPackageUnexpectedSegmentHandling;
 import io.pulumi.googlenative.healthcare_v1.inputs.Hl7SchemaConfigArgs;
@@ -31,7 +32,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> ignoreMinOccurs;
 
     public Output<Boolean> getIgnoreMinOccurs() {
-        return this.ignoreMinOccurs == null ? Output.empty() : this.ignoreMinOccurs;
+        return this.ignoreMinOccurs == null ? Codegen.empty() : this.ignoreMinOccurs;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Hl7SchemaConfigArgs>> schemas;
 
     public Output<List<Hl7SchemaConfigArgs>> getSchemas() {
-        return this.schemas == null ? Output.empty() : this.schemas;
+        return this.schemas == null ? Codegen.empty() : this.schemas;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SchemaPackageSchematizedParsingType> schematizedParsingType;
 
     public Output<SchemaPackageSchematizedParsingType> getSchematizedParsingType() {
-        return this.schematizedParsingType == null ? Output.empty() : this.schematizedParsingType;
+        return this.schematizedParsingType == null ? Codegen.empty() : this.schematizedParsingType;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Hl7TypesConfigArgs>> types;
 
     public Output<List<Hl7TypesConfigArgs>> getTypes() {
-        return this.types == null ? Output.empty() : this.types;
+        return this.types == null ? Codegen.empty() : this.types;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SchemaPackageUnexpectedSegmentHandling> unexpectedSegmentHandling;
 
     public Output<SchemaPackageUnexpectedSegmentHandling> getUnexpectedSegmentHandling() {
-        return this.unexpectedSegmentHandling == null ? Output.empty() : this.unexpectedSegmentHandling;
+        return this.unexpectedSegmentHandling == null ? Codegen.empty() : this.unexpectedSegmentHandling;
     }
 
     public SchemaPackageArgs(
@@ -92,11 +93,11 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SchemaPackageArgs() {
-        this.ignoreMinOccurs = Output.empty();
-        this.schemas = Output.empty();
-        this.schematizedParsingType = Output.empty();
-        this.types = Output.empty();
-        this.unexpectedSegmentHandling = Output.empty();
+        this.ignoreMinOccurs = Codegen.empty();
+        this.schemas = Codegen.empty();
+        this.schematizedParsingType = Codegen.empty();
+        this.types = Codegen.empty();
+        this.unexpectedSegmentHandling = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ignoreMinOccurs(@Nullable Boolean ignoreMinOccurs) {
-            this.ignoreMinOccurs = Output.ofNullable(ignoreMinOccurs);
+            this.ignoreMinOccurs = Codegen.ofNullable(ignoreMinOccurs);
             return this;
         }
         public Builder schemas(@Nullable Output<List<Hl7SchemaConfigArgs>> schemas) {
@@ -140,7 +141,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schemas(@Nullable List<Hl7SchemaConfigArgs> schemas) {
-            this.schemas = Output.ofNullable(schemas);
+            this.schemas = Codegen.ofNullable(schemas);
             return this;
         }
         public Builder schemas(Hl7SchemaConfigArgs... schemas) {
@@ -151,7 +152,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schematizedParsingType(@Nullable SchemaPackageSchematizedParsingType schematizedParsingType) {
-            this.schematizedParsingType = Output.ofNullable(schematizedParsingType);
+            this.schematizedParsingType = Codegen.ofNullable(schematizedParsingType);
             return this;
         }
         public Builder types(@Nullable Output<List<Hl7TypesConfigArgs>> types) {
@@ -159,7 +160,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder types(@Nullable List<Hl7TypesConfigArgs> types) {
-            this.types = Output.ofNullable(types);
+            this.types = Codegen.ofNullable(types);
             return this;
         }
         public Builder types(Hl7TypesConfigArgs... types) {
@@ -170,7 +171,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder unexpectedSegmentHandling(@Nullable SchemaPackageUnexpectedSegmentHandling unexpectedSegmentHandling) {
-            this.unexpectedSegmentHandling = Output.ofNullable(unexpectedSegmentHandling);
+            this.unexpectedSegmentHandling = Codegen.ofNullable(unexpectedSegmentHandling);
             return this;
         }        public SchemaPackageArgs build() {
             return new SchemaPackageArgs(ignoreMinOccurs, schemas, schematizedParsingType, types, unexpectedSegmentHandling);

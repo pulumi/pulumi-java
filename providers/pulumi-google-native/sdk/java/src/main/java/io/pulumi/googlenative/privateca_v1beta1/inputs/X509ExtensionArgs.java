@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.ObjectIdArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -62,9 +63,9 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private X509ExtensionArgs() {
-        this.critical = Output.empty();
-        this.objectId = Output.empty();
-        this.value = Output.empty();
+        this.critical = Codegen.empty();
+        this.objectId = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class MonitoredResourceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private MonitoredResourceArgs() {
-        this.labels = Output.empty();
-        this.type = Output.empty();
+        this.labels = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

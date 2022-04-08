@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudkms_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudkms_v1.enums.CryptoKeyVersionTemplateAlgorithm;
 import io.pulumi.googlenative.cloudkms_v1.enums.CryptoKeyVersionTemplateProtectionLevel;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class CryptoKeyVersionTemplateArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<CryptoKeyVersionTemplateProtectionLevel> protectionLevel;
 
     public Output<CryptoKeyVersionTemplateProtectionLevel> getProtectionLevel() {
-        return this.protectionLevel == null ? Output.empty() : this.protectionLevel;
+        return this.protectionLevel == null ? Codegen.empty() : this.protectionLevel;
     }
 
     public CryptoKeyVersionTemplateArgs(
@@ -49,8 +50,8 @@ public final class CryptoKeyVersionTemplateArgs extends io.pulumi.resources.Reso
     }
 
     private CryptoKeyVersionTemplateArgs() {
-        this.algorithm = Output.empty();
-        this.protectionLevel = Output.empty();
+        this.algorithm = Codegen.empty();
+        this.protectionLevel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class CryptoKeyVersionTemplateArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder protectionLevel(@Nullable CryptoKeyVersionTemplateProtectionLevel protectionLevel) {
-            this.protectionLevel = Output.ofNullable(protectionLevel);
+            this.protectionLevel = Codegen.ofNullable(protectionLevel);
             return this;
         }        public CryptoKeyVersionTemplateArgs build() {
             return new CryptoKeyVersionTemplateArgs(algorithm, protectionLevel);

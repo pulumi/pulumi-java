@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class QueryParameterValueArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<QueryParameterValueArgs>> arrayValues;
 
     public Output<List<QueryParameterValueArgs>> getArrayValues() {
-        return this.arrayValues == null ? Output.empty() : this.arrayValues;
+        return this.arrayValues == null ? Codegen.empty() : this.arrayValues;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class QueryParameterValueArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> structValues;
 
     public Output<Map<String,String>> getStructValues() {
-        return this.structValues == null ? Output.empty() : this.structValues;
+        return this.structValues == null ? Codegen.empty() : this.structValues;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class QueryParameterValueArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public QueryParameterValueArgs(
@@ -59,9 +60,9 @@ public final class QueryParameterValueArgs extends io.pulumi.resources.ResourceA
     }
 
     private QueryParameterValueArgs() {
-        this.arrayValues = Output.empty();
-        this.structValues = Output.empty();
-        this.value = Output.empty();
+        this.arrayValues = Codegen.empty();
+        this.structValues = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class QueryParameterValueArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder arrayValues(@Nullable List<QueryParameterValueArgs> arrayValues) {
-            this.arrayValues = Output.ofNullable(arrayValues);
+            this.arrayValues = Codegen.ofNullable(arrayValues);
             return this;
         }
         public Builder arrayValues(QueryParameterValueArgs... arrayValues) {
@@ -104,7 +105,7 @@ public final class QueryParameterValueArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder structValues(@Nullable Map<String,String> structValues) {
-            this.structValues = Output.ofNullable(structValues);
+            this.structValues = Codegen.ofNullable(structValues);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -112,7 +113,7 @@ public final class QueryParameterValueArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public QueryParameterValueArgs build() {
             return new QueryParameterValueArgs(arrayValues, structValues, value);

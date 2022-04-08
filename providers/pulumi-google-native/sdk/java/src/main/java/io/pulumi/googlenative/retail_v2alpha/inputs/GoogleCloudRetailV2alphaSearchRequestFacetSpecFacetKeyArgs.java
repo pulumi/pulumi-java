@@ -5,6 +5,7 @@ package io.pulumi.googlenative.retail_v2alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaIntervalArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs ex
       private final @Nullable Output<List<String>> contains;
 
     public Output<List<String>> getContains() {
-        return this.contains == null ? Output.empty() : this.contains;
+        return this.contains == null ? Codegen.empty() : this.contains;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs ex
       private final @Nullable Output<List<GoogleCloudRetailV2alphaIntervalArgs>> intervals;
 
     public Output<List<GoogleCloudRetailV2alphaIntervalArgs>> getIntervals() {
-        return this.intervals == null ? Output.empty() : this.intervals;
+        return this.intervals == null ? Codegen.empty() : this.intervals;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs ex
       private final @Nullable Output<String> orderBy;
 
     public Output<String> getOrderBy() {
-        return this.orderBy == null ? Output.empty() : this.orderBy;
+        return this.orderBy == null ? Codegen.empty() : this.orderBy;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs ex
       private final @Nullable Output<List<String>> prefixes;
 
     public Output<List<String>> getPrefixes() {
-        return this.prefixes == null ? Output.empty() : this.prefixes;
+        return this.prefixes == null ? Codegen.empty() : this.prefixes;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs ex
       private final @Nullable Output<String> query;
 
     public Output<String> getQuery() {
-        return this.query == null ? Output.empty() : this.query;
+        return this.query == null ? Codegen.empty() : this.query;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs ex
       private final @Nullable Output<List<String>> restrictedValues;
 
     public Output<List<String>> getRestrictedValues() {
-        return this.restrictedValues == null ? Output.empty() : this.restrictedValues;
+        return this.restrictedValues == null ? Codegen.empty() : this.restrictedValues;
     }
 
     public GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs(
@@ -115,13 +116,13 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs ex
     }
 
     private GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs() {
-        this.contains = Output.empty();
-        this.intervals = Output.empty();
-        this.key = Output.empty();
-        this.orderBy = Output.empty();
-        this.prefixes = Output.empty();
-        this.query = Output.empty();
-        this.restrictedValues = Output.empty();
+        this.contains = Codegen.empty();
+        this.intervals = Codegen.empty();
+        this.key = Codegen.empty();
+        this.orderBy = Codegen.empty();
+        this.prefixes = Codegen.empty();
+        this.query = Codegen.empty();
+        this.restrictedValues = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs ex
             return this;
         }
         public Builder contains(@Nullable List<String> contains) {
-            this.contains = Output.ofNullable(contains);
+            this.contains = Codegen.ofNullable(contains);
             return this;
         }
         public Builder contains(String... contains) {
@@ -172,7 +173,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs ex
             return this;
         }
         public Builder intervals(@Nullable List<GoogleCloudRetailV2alphaIntervalArgs> intervals) {
-            this.intervals = Output.ofNullable(intervals);
+            this.intervals = Codegen.ofNullable(intervals);
             return this;
         }
         public Builder intervals(GoogleCloudRetailV2alphaIntervalArgs... intervals) {
@@ -191,7 +192,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs ex
             return this;
         }
         public Builder orderBy(@Nullable String orderBy) {
-            this.orderBy = Output.ofNullable(orderBy);
+            this.orderBy = Codegen.ofNullable(orderBy);
             return this;
         }
         public Builder prefixes(@Nullable Output<List<String>> prefixes) {
@@ -199,7 +200,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs ex
             return this;
         }
         public Builder prefixes(@Nullable List<String> prefixes) {
-            this.prefixes = Output.ofNullable(prefixes);
+            this.prefixes = Codegen.ofNullable(prefixes);
             return this;
         }
         public Builder prefixes(String... prefixes) {
@@ -210,7 +211,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs ex
             return this;
         }
         public Builder query(@Nullable String query) {
-            this.query = Output.ofNullable(query);
+            this.query = Codegen.ofNullable(query);
             return this;
         }
         public Builder restrictedValues(@Nullable Output<List<String>> restrictedValues) {
@@ -218,7 +219,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs ex
             return this;
         }
         public Builder restrictedValues(@Nullable List<String> restrictedValues) {
-            this.restrictedValues = Output.ofNullable(restrictedValues);
+            this.restrictedValues = Codegen.ofNullable(restrictedValues);
             return this;
         }
         public Builder restrictedValues(String... restrictedValues) {

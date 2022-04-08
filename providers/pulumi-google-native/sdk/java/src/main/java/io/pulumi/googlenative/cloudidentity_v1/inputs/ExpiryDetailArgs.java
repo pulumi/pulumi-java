@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudidentity_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ExpiryDetailArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> expireTime;
 
     public Output<String> getExpireTime() {
-        return this.expireTime == null ? Output.empty() : this.expireTime;
+        return this.expireTime == null ? Codegen.empty() : this.expireTime;
     }
 
     public ExpiryDetailArgs(@Nullable Output<String> expireTime) {
@@ -34,7 +35,7 @@ public final class ExpiryDetailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExpiryDetailArgs() {
-        this.expireTime = Output.empty();
+        this.expireTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ExpiryDetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Output.ofNullable(expireTime);
+            this.expireTime = Codegen.ofNullable(expireTime);
             return this;
         }        public ExpiryDetailArgs build() {
             return new ExpiryDetailArgs(expireTime);

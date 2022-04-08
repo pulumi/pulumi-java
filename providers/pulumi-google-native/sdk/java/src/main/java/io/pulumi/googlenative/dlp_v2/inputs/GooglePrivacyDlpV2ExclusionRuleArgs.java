@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2ExclusionRuleMatchingType;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DictionaryArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ExcludeInfoTypesArgs;
@@ -29,7 +30,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
       private final @Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary;
 
     public Output<GooglePrivacyDlpV2DictionaryArgs> getDictionary() {
-        return this.dictionary == null ? Output.empty() : this.dictionary;
+        return this.dictionary == null ? Codegen.empty() : this.dictionary;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
       private final @Nullable Output<GooglePrivacyDlpV2ExcludeInfoTypesArgs> excludeInfoTypes;
 
     public Output<GooglePrivacyDlpV2ExcludeInfoTypesArgs> getExcludeInfoTypes() {
-        return this.excludeInfoTypes == null ? Output.empty() : this.excludeInfoTypes;
+        return this.excludeInfoTypes == null ? Codegen.empty() : this.excludeInfoTypes;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
       private final @Nullable Output<GooglePrivacyDlpV2ExclusionRuleMatchingType> matchingType;
 
     public Output<GooglePrivacyDlpV2ExclusionRuleMatchingType> getMatchingType() {
-        return this.matchingType == null ? Output.empty() : this.matchingType;
+        return this.matchingType == null ? Codegen.empty() : this.matchingType;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
       private final @Nullable Output<GooglePrivacyDlpV2RegexArgs> regex;
 
     public Output<GooglePrivacyDlpV2RegexArgs> getRegex() {
-        return this.regex == null ? Output.empty() : this.regex;
+        return this.regex == null ? Codegen.empty() : this.regex;
     }
 
     public GooglePrivacyDlpV2ExclusionRuleArgs(
@@ -77,10 +78,10 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
     }
 
     private GooglePrivacyDlpV2ExclusionRuleArgs() {
-        this.dictionary = Output.empty();
-        this.excludeInfoTypes = Output.empty();
-        this.matchingType = Output.empty();
-        this.regex = Output.empty();
+        this.dictionary = Codegen.empty();
+        this.excludeInfoTypes = Codegen.empty();
+        this.matchingType = Codegen.empty();
+        this.regex = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
             return this;
         }
         public Builder dictionary(@Nullable GooglePrivacyDlpV2DictionaryArgs dictionary) {
-            this.dictionary = Output.ofNullable(dictionary);
+            this.dictionary = Codegen.ofNullable(dictionary);
             return this;
         }
         public Builder excludeInfoTypes(@Nullable Output<GooglePrivacyDlpV2ExcludeInfoTypesArgs> excludeInfoTypes) {
@@ -122,7 +123,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
             return this;
         }
         public Builder excludeInfoTypes(@Nullable GooglePrivacyDlpV2ExcludeInfoTypesArgs excludeInfoTypes) {
-            this.excludeInfoTypes = Output.ofNullable(excludeInfoTypes);
+            this.excludeInfoTypes = Codegen.ofNullable(excludeInfoTypes);
             return this;
         }
         public Builder matchingType(@Nullable Output<GooglePrivacyDlpV2ExclusionRuleMatchingType> matchingType) {
@@ -130,7 +131,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
             return this;
         }
         public Builder matchingType(@Nullable GooglePrivacyDlpV2ExclusionRuleMatchingType matchingType) {
-            this.matchingType = Output.ofNullable(matchingType);
+            this.matchingType = Codegen.ofNullable(matchingType);
             return this;
         }
         public Builder regex(@Nullable Output<GooglePrivacyDlpV2RegexArgs> regex) {
@@ -138,7 +139,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
             return this;
         }
         public Builder regex(@Nullable GooglePrivacyDlpV2RegexArgs regex) {
-            this.regex = Output.ofNullable(regex);
+            this.regex = Codegen.ofNullable(regex);
             return this;
         }        public GooglePrivacyDlpV2ExclusionRuleArgs build() {
             return new GooglePrivacyDlpV2ExclusionRuleArgs(dictionary, excludeInfoTypes, matchingType, regex);

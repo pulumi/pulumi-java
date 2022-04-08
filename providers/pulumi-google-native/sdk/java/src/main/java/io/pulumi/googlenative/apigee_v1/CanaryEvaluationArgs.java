@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -101,13 +102,13 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private CanaryEvaluationArgs() {
-        this.control = Output.empty();
-        this.endTime = Output.empty();
-        this.instanceId = Output.empty();
-        this.metricLabels = Output.empty();
-        this.organizationId = Output.empty();
-        this.startTime = Output.empty();
-        this.treatment = Output.empty();
+        this.control = Codegen.empty();
+        this.endTime = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.metricLabels = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.startTime = Codegen.empty();
+        this.treatment = Codegen.empty();
     }
 
     public static Builder builder() {

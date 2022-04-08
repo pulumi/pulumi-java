@@ -6,6 +6,7 @@ package io.pulumi.googlenative.logging_v2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.logging_v2.BillingAccountExclusionArgs;
 import java.lang.Boolean;
@@ -125,7 +126,7 @@ public class BillingAccountExclusion extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public BillingAccountExclusion(String name, BillingAccountExclusionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:logging/v2:BillingAccountExclusion", name, args == null ? BillingAccountExclusionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:logging/v2:BillingAccountExclusion", name, args == null ? BillingAccountExclusionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BillingAccountExclusion(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

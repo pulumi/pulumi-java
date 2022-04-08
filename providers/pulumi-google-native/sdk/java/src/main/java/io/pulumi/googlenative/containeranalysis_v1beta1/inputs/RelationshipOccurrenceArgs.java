@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class RelationshipOccurrenceArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class RelationshipOccurrenceArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class RelationshipOccurrenceArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     public RelationshipOccurrenceArgs(
@@ -61,9 +62,9 @@ public final class RelationshipOccurrenceArgs extends io.pulumi.resources.Resour
     }
 
     private RelationshipOccurrenceArgs() {
-        this.comment = Output.empty();
-        this.source = Output.empty();
-        this.target = Output.empty();
+        this.comment = Codegen.empty();
+        this.source = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class RelationshipOccurrenceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder source(@Nullable Output<String> source) {
@@ -103,7 +104,7 @@ public final class RelationshipOccurrenceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder source(@Nullable String source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder target(@Nullable Output<String> target) {
@@ -111,7 +112,7 @@ public final class RelationshipOccurrenceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }        public RelationshipOccurrenceArgs build() {
             return new RelationshipOccurrenceArgs(comment, source, target);

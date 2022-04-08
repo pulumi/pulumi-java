@@ -6,6 +6,7 @@ package io.pulumi.googlenative.domains_v1alpha2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.domains_v1alpha2.RegistrationArgs;
 import io.pulumi.googlenative.domains_v1alpha2.outputs.ContactSettingsResponse;
@@ -214,7 +215,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Registration(String name, RegistrationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:domains/v1alpha2:Registration", name, args == null ? RegistrationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:domains/v1alpha2:Registration", name, args == null ? RegistrationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Registration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

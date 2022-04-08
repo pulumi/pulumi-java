@@ -5,6 +5,7 @@ package io.pulumi.googlenative.networkservices_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> endpointFilter;
 
     public Output<String> getEndpointFilter() {
-        return this.endpointFilter == null ? Output.empty() : this.endpointFilter;
+        return this.endpointFilter == null ? Codegen.empty() : this.endpointFilter;
     }
 
     /**
@@ -45,14 +46,14 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -63,14 +64,14 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -111,14 +112,14 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceBindingArgs() {
-        this.description = Output.empty();
-        this.endpointFilter = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.service = Output.empty();
-        this.serviceBindingId = Output.empty();
+        this.description = Codegen.empty();
+        this.endpointFilter = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.service = Codegen.empty();
+        this.serviceBindingId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder endpointFilter(@Nullable Output<String> endpointFilter) {
@@ -168,7 +169,7 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointFilter(@Nullable String endpointFilter) {
-            this.endpointFilter = Output.ofNullable(endpointFilter);
+            this.endpointFilter = Codegen.ofNullable(endpointFilter);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -176,7 +177,7 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -184,7 +185,7 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -192,7 +193,7 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -200,7 +201,7 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder service(Output<String> service) {

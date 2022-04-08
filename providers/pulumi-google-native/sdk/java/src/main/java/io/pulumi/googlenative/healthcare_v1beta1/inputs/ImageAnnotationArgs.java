@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.BoundingPolyArgs;
 import java.lang.Integer;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class ImageAnnotationArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<BoundingPolyArgs>> boundingPolys;
 
     public Output<List<BoundingPolyArgs>> getBoundingPolys() {
-        return this.boundingPolys == null ? Output.empty() : this.boundingPolys;
+        return this.boundingPolys == null ? Codegen.empty() : this.boundingPolys;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ImageAnnotationArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Integer> frameIndex;
 
     public Output<Integer> getFrameIndex() {
-        return this.frameIndex == null ? Output.empty() : this.frameIndex;
+        return this.frameIndex == null ? Codegen.empty() : this.frameIndex;
     }
 
     public ImageAnnotationArgs(
@@ -50,8 +51,8 @@ public final class ImageAnnotationArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ImageAnnotationArgs() {
-        this.boundingPolys = Output.empty();
-        this.frameIndex = Output.empty();
+        this.boundingPolys = Codegen.empty();
+        this.frameIndex = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ImageAnnotationArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder boundingPolys(@Nullable List<BoundingPolyArgs> boundingPolys) {
-            this.boundingPolys = Output.ofNullable(boundingPolys);
+            this.boundingPolys = Codegen.ofNullable(boundingPolys);
             return this;
         }
         public Builder boundingPolys(BoundingPolyArgs... boundingPolys) {
@@ -92,7 +93,7 @@ public final class ImageAnnotationArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder frameIndex(@Nullable Integer frameIndex) {
-            this.frameIndex = Output.ofNullable(frameIndex);
+            this.frameIndex = Codegen.ofNullable(frameIndex);
             return this;
         }        public ImageAnnotationArgs build() {
             return new ImageAnnotationArgs(boundingPolys, frameIndex);

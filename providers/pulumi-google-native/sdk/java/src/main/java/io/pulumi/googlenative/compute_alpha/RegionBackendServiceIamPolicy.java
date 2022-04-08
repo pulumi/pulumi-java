@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.RegionBackendServiceIamPolicyArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.AuditConfigResponse;
@@ -117,7 +118,7 @@ public class RegionBackendServiceIamPolicy extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionBackendServiceIamPolicy(String name, RegionBackendServiceIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:RegionBackendServiceIamPolicy", name, args == null ? RegionBackendServiceIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/alpha:RegionBackendServiceIamPolicy", name, args == null ? RegionBackendServiceIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionBackendServiceIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

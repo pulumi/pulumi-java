@@ -5,6 +5,7 @@ package io.pulumi.googlenative.managedidentities_v1alpha1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.managedidentities_v1alpha1.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,7 +33,7 @@ public final class DomainBackupIamPolicyArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<BindingArgs>> bindings;
 
     public Output<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Output.empty() : this.bindings;
+        return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
     @Import(name="domainId", required=true)
@@ -50,14 +51,14 @@ public final class DomainBackupIamPolicyArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class DomainBackupIamPolicyArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public DomainBackupIamPolicyArgs(
@@ -87,12 +88,12 @@ public final class DomainBackupIamPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     private DomainBackupIamPolicyArgs() {
-        this.backupId = Output.empty();
-        this.bindings = Output.empty();
-        this.domainId = Output.empty();
-        this.etag = Output.empty();
-        this.project = Output.empty();
-        this.version = Output.empty();
+        this.backupId = Codegen.empty();
+        this.bindings = Codegen.empty();
+        this.domainId = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.project = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -138,7 +139,7 @@ public final class DomainBackupIamPolicyArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Output.ofNullable(bindings);
+            this.bindings = Codegen.ofNullable(bindings);
             return this;
         }
         public Builder bindings(BindingArgs... bindings) {
@@ -157,7 +158,7 @@ public final class DomainBackupIamPolicyArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -165,7 +166,7 @@ public final class DomainBackupIamPolicyArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder version(@Nullable Output<Integer> version) {
@@ -173,7 +174,7 @@ public final class DomainBackupIamPolicyArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder version(@Nullable Integer version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public DomainBackupIamPolicyArgs build() {
             return new DomainBackupIamPolicyArgs(backupId, bindings, domainId, etag, project, version);

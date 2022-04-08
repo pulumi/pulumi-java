@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueArgs;
 import java.lang.Double;
 import java.util.Objects;
@@ -61,9 +62,9 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigArgs extends io.pul
     }
 
     private GooglePrivacyDlpV2FixedSizeBucketingConfigArgs() {
-        this.bucketSize = Output.empty();
-        this.lowerBound = Output.empty();
-        this.upperBound = Output.empty();
+        this.bucketSize = Codegen.empty();
+        this.lowerBound = Codegen.empty();
+        this.upperBound = Codegen.empty();
     }
 
     public static Builder builder() {

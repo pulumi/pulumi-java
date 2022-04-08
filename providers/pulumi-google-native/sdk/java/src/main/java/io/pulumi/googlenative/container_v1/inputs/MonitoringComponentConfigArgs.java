@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1.enums.MonitoringComponentConfigEnableComponentsItem;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class MonitoringComponentConfigArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<MonitoringComponentConfigEnableComponentsItem>> enableComponents;
 
     public Output<List<MonitoringComponentConfigEnableComponentsItem>> getEnableComponents() {
-        return this.enableComponents == null ? Output.empty() : this.enableComponents;
+        return this.enableComponents == null ? Codegen.empty() : this.enableComponents;
     }
 
     public MonitoringComponentConfigArgs(@Nullable Output<List<MonitoringComponentConfigEnableComponentsItem>> enableComponents) {
@@ -35,7 +36,7 @@ public final class MonitoringComponentConfigArgs extends io.pulumi.resources.Res
     }
 
     private MonitoringComponentConfigArgs() {
-        this.enableComponents = Output.empty();
+        this.enableComponents = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class MonitoringComponentConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder enableComponents(@Nullable List<MonitoringComponentConfigEnableComponentsItem> enableComponents) {
-            this.enableComponents = Output.ofNullable(enableComponents);
+            this.enableComponents = Codegen.ofNullable(enableComponents);
             return this;
         }
         public Builder enableComponents(MonitoringComponentConfigEnableComponentsItem... enableComponents) {

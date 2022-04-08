@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.CustomErrorRuleArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class CustomErrorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<CustomErrorRuleArgs>> rules;
 
     public Output<List<CustomErrorRuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class CustomErrorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> types;
 
     public Output<List<String>> getTypes() {
-        return this.types == null ? Output.empty() : this.types;
+        return this.types == null ? Codegen.empty() : this.types;
     }
 
     public CustomErrorArgs(
@@ -50,8 +51,8 @@ public final class CustomErrorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomErrorArgs() {
-        this.rules = Output.empty();
-        this.types = Output.empty();
+        this.rules = Codegen.empty();
+        this.types = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class CustomErrorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rules(@Nullable List<CustomErrorRuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(CustomErrorRuleArgs... rules) {
@@ -92,7 +93,7 @@ public final class CustomErrorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder types(@Nullable List<String> types) {
-            this.types = Output.ofNullable(types);
+            this.types = Codegen.ofNullable(types);
             return this;
         }
         public Builder types(String... types) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class NetworkEndpointGroupCloudRunArgs extends io.pulumi.resources.
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class NetworkEndpointGroupCloudRunArgs extends io.pulumi.resources.
       private final @Nullable Output<String> tag;
 
     public Output<String> getTag() {
-        return this.tag == null ? Output.empty() : this.tag;
+        return this.tag == null ? Codegen.empty() : this.tag;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class NetworkEndpointGroupCloudRunArgs extends io.pulumi.resources.
       private final @Nullable Output<String> urlMask;
 
     public Output<String> getUrlMask() {
-        return this.urlMask == null ? Output.empty() : this.urlMask;
+        return this.urlMask == null ? Codegen.empty() : this.urlMask;
     }
 
     public NetworkEndpointGroupCloudRunArgs(
@@ -61,9 +62,9 @@ public final class NetworkEndpointGroupCloudRunArgs extends io.pulumi.resources.
     }
 
     private NetworkEndpointGroupCloudRunArgs() {
-        this.service = Output.empty();
-        this.tag = Output.empty();
-        this.urlMask = Output.empty();
+        this.service = Codegen.empty();
+        this.tag = Codegen.empty();
+        this.urlMask = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class NetworkEndpointGroupCloudRunArgs extends io.pulumi.resources.
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }
         public Builder tag(@Nullable Output<String> tag) {
@@ -103,7 +104,7 @@ public final class NetworkEndpointGroupCloudRunArgs extends io.pulumi.resources.
             return this;
         }
         public Builder tag(@Nullable String tag) {
-            this.tag = Output.ofNullable(tag);
+            this.tag = Codegen.ofNullable(tag);
             return this;
         }
         public Builder urlMask(@Nullable Output<String> urlMask) {
@@ -111,7 +112,7 @@ public final class NetworkEndpointGroupCloudRunArgs extends io.pulumi.resources.
             return this;
         }
         public Builder urlMask(@Nullable String urlMask) {
-            this.urlMask = Output.ofNullable(urlMask);
+            this.urlMask = Codegen.ofNullable(urlMask);
             return this;
         }        public NetworkEndpointGroupCloudRunArgs build() {
             return new NetworkEndpointGroupCloudRunArgs(service, tag, urlMask);

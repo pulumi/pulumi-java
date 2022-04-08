@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudbilling_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudbilling_v1.BillingAccountArgs;
 import java.lang.Boolean;
@@ -100,7 +101,7 @@ public class BillingAccount extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BillingAccount(String name, @Nullable BillingAccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudbilling/v1:BillingAccount", name, args == null ? BillingAccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudbilling/v1:BillingAccount", name, args == null ? BillingAccountArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BillingAccount(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
