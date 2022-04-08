@@ -82,7 +82,7 @@ public abstract class ResourceOptions {
         }
 
         public B id(@Nullable String id) {
-            options.id = Output.of(id);
+            options.id = Output.ofNullable(id);
             return (B) this;
         }
 
@@ -101,7 +101,7 @@ public abstract class ResourceOptions {
         }
 
         public B dependsOn(@Nullable List<Resource> dependsOn) {
-            options.dependsOn = Output.of(dependsOn);
+            options.dependsOn = Output.ofNullable(dependsOn);
             return (B) this;
         }
 
