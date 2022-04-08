@@ -24,14 +24,9 @@ public class OutputStaticsTest {
     }
 
     @Test
-<<<<<<< HEAD
-    void testListConcatEmpty() {
-        var result = Output.concatList(Output.empty(), Output.empty());
-=======
     void testListConcatCoercesNullToEmpty() {
-        var nullList = Output.of((List<Object>)null);
+        var nullList = Output.ofNullable((List<Object>)null);
         var result = Output.concatList(nullList, nullList);
->>>>>>> 6436cfd493 (Revert ofFuture, deal with null ambiguity)
         var data = OutputTests.waitFor(result);
 
         assertThat(data.isSecret()).isFalse();
@@ -205,13 +200,8 @@ public class OutputStaticsTest {
     }
 
     @Test
-<<<<<<< HEAD
     void testNullableSecretifyOutput() {
         Output<String> res0_ = Output.ofNullable((String) null);
-=======
-    public void testNullableSecretifyOutput() {
-        Output<String> res0_ = Output.of((String) null);
->>>>>>> 6481a1eeb1 (Inline ofNullable as of)
         Output<String> res0 = res0_.asSecret();
         var data0 = OutputTests.waitFor(res0);
         assertThat(data0.getValueNullable()).isEqualTo(null);
@@ -234,11 +224,6 @@ public class OutputStaticsTest {
      */
     @Test
     void testExpectedNPEs() {
-        assertThatThrownBy(() ->
-                OutputTests.waitFor(
-                        Output.<Integer>empty().applyValue(x -> x + 1)
-                )
-        ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
 
         assertThatThrownBy(() ->
                 OutputTests.waitFor(
@@ -250,14 +235,6 @@ public class OutputStaticsTest {
         assertThatThrownBy(() ->
                 OutputTests.waitFor(
                         Output.<Integer>of(CompletableFuture.supplyAsync(() -> null))
-                                .applyValue(x -> x + 1)
-                )
-        ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
-
-        assertThatThrownBy(() ->
-                OutputTests.waitFor(
-                        Output.of(1)
-                                .applyOptional(__ -> Optional.<Integer>ofNullable(null))
                                 .applyValue(x -> x + 1)
                 )
         ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
