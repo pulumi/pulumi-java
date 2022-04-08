@@ -198,24 +198,6 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     /**
-     * Returns an {@code Output<T>} describing the given value, if
-     * present, otherwise returns an empty {@code Output<T>}.
-     *
-     * @param value the possibly-empty value to describe
-     * @param <T>   the type of the value
-     * @return an {@code Output<T>} with a present value if the specified value
-     * is present, otherwise an empty {@code Output<T>}
-     */
-    @SuppressWarnings("OptionalUsedAsFieldOrParameterType") // this is a converter method, so it's ok
-    static <T> Output<T> ofOptional(Optional<T> value) {
-        requireNonNull(value);
-        if (value.isEmpty()) {
-            return Output.empty();
-        }
-        return Output.of(value.get());
-    }
-
-    /**
      * Combines all the @see {@link Output<T>} values in {@code outputs}
      * into a single @see {@link Output<T>} with an @see {@link java.util.List<T>}
      * containing all their underlying values.
