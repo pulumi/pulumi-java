@@ -168,10 +168,7 @@ public interface Output<T> extends Copyable<Output<T>> {
      * is non-{@code null}, otherwise an empty {@code Output<T>}
      */
     static <T> Output<T> ofNullable(@Nullable T value) {
-        if (value == null) {
-            return Output.empty();
-        }
-        return Output.of(value);
+        return new OutputInternal<>(value);
     }
 
     /**

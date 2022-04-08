@@ -120,22 +120,6 @@ public final class OutputData<T> implements Copyable<OutputData<T>> {
         return new OutputData<>(resources, value, isKnown, isSecret);
     }
 
-    public static <T> OutputData<T> of(T value) {
-        return OutputData.ofNullable(ImmutableSet.of(), value, true, false);
-    }
-
-    public static <T> OutputData<T> of(ImmutableSet<Resource> resources, T value) {
-        return OutputData.ofNullable(resources, value, true, false);
-    }
-
-    public static <T> OutputData<T> of(ImmutableSet<Resource> resources, T value, boolean isSecret) {
-        return OutputData.ofNullable(resources, value, true, isSecret);
-    }
-
-    public static <T> OutputData<T> of(T value, boolean isSecret) {
-        return OutputData.ofNullable(ImmutableSet.of(), value, true, isSecret);
-    }
-
     public static <T> OutputData<T> unknown() {
         //noinspection unchecked
         return (OutputData<T>) Unknown;
