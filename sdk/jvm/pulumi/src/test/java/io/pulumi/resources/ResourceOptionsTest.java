@@ -40,7 +40,11 @@ class ResourceOptionsTest {
                         new TestResourceOptions(
                                 Output.of("id"),
                                 null,
+<<<<<<< HEAD
                                 Output.empty(),
+=======
+                                Output.of(List.of()),
+>>>>>>> 6436cfd493 (Revert ofFuture, deal with null ambiguity)
                                 true,
                                 List.of("b"),
                                 "test",

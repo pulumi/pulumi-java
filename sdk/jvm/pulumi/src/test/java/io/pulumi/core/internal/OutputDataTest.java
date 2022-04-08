@@ -28,11 +28,17 @@ class OutputDataTest {
 
     @Test
     void testTupleEmpty() {
+<<<<<<< HEAD
         var result = OutputData.tuple(
                 Output.empty(), Output.empty(), Output.empty(), Output.empty(),
                 Output.empty(), Output.empty(), Output.empty(), Output.empty()
         ).join();
 
+=======
+        var e = Output.of((Object)null);
+        Object nil = null;
+        var result = OutputData.tuple(e, e, e, e, e, e, e, e).join();
+>>>>>>> 6436cfd493 (Revert ofFuture, deal with null ambiguity)
         assertThat(result.getValueNullable()).isNotNull()
                 .isEqualTo(Tuples.of(null, null, null, null, null, null, null, null));
     }

@@ -234,8 +234,13 @@ public abstract class OutputTestBase {
     }
 
     @Test
+<<<<<<< HEAD
     void testApplyTupleHandlesEmpty() {
         var output = Output.tuple(Output.empty(), Output.empty());
+=======
+    void testApplyTupleHandlesNulls() {
+        var output = Output.tuple(Output.of((Object)null), Output.of((Object)null));
+>>>>>>> 6436cfd493 (Revert ofFuture, deal with null ambiguity)
         var data = OutputTests.waitFor(output);
         assertThat(data.isKnown()).isTrue();
         assertThat(data.getValueNullable()).isNotNull().isEqualTo(Tuples.of(null, null));
