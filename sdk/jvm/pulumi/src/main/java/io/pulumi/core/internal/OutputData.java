@@ -213,14 +213,6 @@ public final class OutputData<T> implements Copyable<OutputData<T>> {
         return this.secret;
     }
 
-    public boolean isPresent() {
-        return this.value != null;
-    }
-
-    public boolean isEmpty() {
-        return this.value == null;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
