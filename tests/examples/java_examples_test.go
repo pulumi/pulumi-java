@@ -3,6 +3,7 @@
 package examples
 
 import (
+	"fmt"
 	"os/exec"
 	"path/filepath"
 	"strings"
@@ -156,9 +157,14 @@ func TestExamples(t *testing.T) {
 }
 
 func getJvmBase(t *testing.T, dir string) integration.ProgramTestOptions {
+	repoRoot, err := filepath.Abs(filepath.Join("..", ".."))
+	if err != nil {
+		panic(err)
+	}
 	return getBaseOptions().
 		With(integration.ProgramTestOptions{
 			Dir: filepath.Join(getCwd(t), dir),
+			Env: []string{fmt.Sprintf("PULUMI_REPO_ROOT=%s", repoRoot)},
 			PrepareProject: func(*engine.Projinfo) error {
 				return nil
 			},
