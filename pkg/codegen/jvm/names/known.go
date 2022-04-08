@@ -58,6 +58,8 @@ var Alias = PulumiCore.Dot("Alias")
 
 var PulumiDeployment = Pulumi.Dot("deployment")
 
+var InvokeArgs = Pulumi.Dot("resources").Dot("InvokeArgs")
+
 var Deployment = PulumiDeployment.Dot("Deployment")
 
 var InvokeOptions = PulumiDeployment.Dot("InvokeOptions")

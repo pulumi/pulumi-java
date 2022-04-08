@@ -1762,6 +1762,35 @@ func (mod *modContext) functionsClassName() names.Ident {
 	return names.Ident(names.Title(mod.mod) + "Functions")
 }
 
+func printCommentFunction(ctx *classFileContext, fun *schema.Function) {
+	w := ctx.writer
+	indent := "    "
+	// Emit javadoc
+	if fun.Comment != "" || fun.DeprecationMessage != "" {
+		fprintf(w, "    /**\n")
+		fprintf(w, "%s\n", formatBlockComment(fun.Comment, indent))
+		if fun.DeprecationMessage != "" {
+			fprintf(w, "     * @Deprecated\n")
+			fprintf(w, "%s\n", formatBlockComment(fun.DeprecationMessage, indent))
+		}
+		fprintf(w, "     */\n")
+	}
+	printObsoleteAttribute(ctx, fun.DeprecationMessage, "    ")
+}
+
+func hasAllOptionalInputs(fun *schema.Function) bool {
+	if fun.Inputs == nil {
+		return true
+	}
+	for _, prop := range fun.Inputs.Properties {
+		if prop.IsRequired() {
+			return false
+		}
+	}
+
+	return true
+}
+
 func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMethod) error {
 	javaPkg, err := parsePackageName(mod.packageName)
 	if err != nil {
@@ -1792,78 +1821,52 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 
 		methodName := names.LowerCamelCase(tokenToFunctionName(fun.Token))
 
-		var typeParameter string
+		var returnType string
 		if fun.Outputs != nil {
-			typeParameter = ctx.imports.Ref(resultFQN)
+			returnType = ctx.imports.Ref(resultFQN)
 		} else {
-			typeParameter = ctx.imports.Ref(names.Void)
+			returnType = ctx.imports.Ref(names.Void)
 		}
 
-		var argsParamDef string
-		argsParamRef := "io.pulumi.resources.InvokeArgs.Empty"
-
-		if fun.Inputs != nil {
-			allOptionalInputs := true
-			for _, prop := range fun.Inputs.Properties {
-				allOptionalInputs = allOptionalInputs && !prop.IsRequired()
-			}
-
-			var nullable string
-			if allOptionalInputs {
-				// If the number of required input properties was zero, we can make the args object optional.
-				nullable = fmt.Sprintf("@%s ", ctx.ref(names.Nullable))
-			}
-
-			argsParamDef = fmt.Sprintf("%s%s args", nullable, ctx.ref(argsFQN))
-			argsParamRef = fmt.Sprintf("args == null ? %s.Empty : args", ctx.ref(argsFQN))
+		if fun.Inputs == nil {
+			ctx.imports.Ref(names.InvokeArgs)
+			argsFQN = names.InvokeArgs
+		} else {
+			ctx.imports.Ref(argsFQN)
 		}
 
-		{
-			indent := "    "
-			// Emit javadoc
-			if fun.Comment != "" || fun.DeprecationMessage != "" {
-				fprintf(w, "    /**\n")
-				fprintf(w, "%s\n", formatBlockComment(fun.Comment, indent))
-				if fun.DeprecationMessage != "" {
-					fprintf(w, "     * @Deprecated\n")
-					fprintf(w, "%s\n", formatBlockComment(fun.DeprecationMessage, indent))
-				}
-				fprintf(w, "     */\n")
-			}
+		// Emit datasource inputs method
+		ctx.imports.Ref(names.InvokeOptions)
+		invokeOptionsEmpty := names.InvokeOptions.Dot("Empty")
 
-			// Emit the datasource method.
-			printObsoleteAttribute(ctx, fun.DeprecationMessage, "    ")
-			fprintf(w, "    public static %s<%s> %s(%s) {\n",
-				ctx.ref(names.CompletableFuture), typeParameter, methodName, argsParamDef)
+		printCommentFunction(ctx, fun)
+		if hasAllOptionalInputs(fun) {
+			// Add no args constructor
+			fprintf(w, "    public static %s<%s> %s() {\n",
+				ctx.ref(names.CompletableFuture), returnType, methodName)
 			fprintf(w,
-				"        return %s.getInstance().invokeAsync(\"%s\", %s.of(%s.class), %s, %s.withVersion(InvokeOptions.Empty));\n",
-				ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), typeParameter, argsParamRef, mod.utilitiesRef(ctx))
+				"        return %s(%s, %s);\n",
+				methodName, argsFQN.Dot("Empty"), invokeOptionsEmpty)
 			fprintf(w, "    }\n")
 
-			// Emit javadoc
-			if fun.Comment != "" || fun.DeprecationMessage != "" {
-				fprintf(w, "    /**\n")
-				fprintf(w, "%s\n", formatBlockComment(fun.Comment, indent))
-				if fun.DeprecationMessage != "" {
-					fprintf(w, "     * @Deprecated\n")
-					fprintf(w, "%s\n", formatBlockComment(fun.DeprecationMessage, indent))
-				}
-				fprintf(w, "     */\n")
-			}
-
-			if argsParamDef != "" {
-				argsParamDef = argsParamDef + ", "
-			}
-
-			// Emit the datasource method.
-			printObsoleteAttribute(ctx, fun.DeprecationMessage, "    ")
-			fprintf(w, "    public static %s<%s> %s(%s%s options) {\n",
-				ctx.ref(names.CompletableFuture), typeParameter, methodName, argsParamDef, ctx.ref(names.InvokeOptions))
-			fprintf(w,
-				"        return %s.getInstance().invokeAsync(\"%s\", %s.of(%s.class), %s, %s.withVersion(options));\n",
-				ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), typeParameter, argsParamRef, mod.utilitiesRef(ctx))
-			fprintf(w, "    }\n")
 		}
+		// Add args constructor
+		fprintf(w, "    public static %s<%s> %s(%s args) {\n",
+			ctx.ref(names.CompletableFuture), returnType, methodName, argsFQN)
+		fprintf(w,
+			"        return %s(args, %s);\n",
+			methodName, invokeOptionsEmpty)
+		fprintf(w, "    }\n")
+
+		// Add full constructor
+		fprintf(w, "    public static %s<%s> %s(%s args, %s options) {\n",
+			ctx.ref(names.CompletableFuture), returnType, methodName, argsFQN, ctx.ref(names.InvokeOptions))
+		fprintf(w,
+			"        return %s.getInstance().invokeAsync(\"%s\", %s.of(%s.class), args, %s.withVersion(options));\n",
+			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, mod.utilitiesRef(ctx))
+		fprintf(w, "    }\n")
+
+		// Emit javadoc
 
 		// Emit the args and result types, if any.
 		if fun.Inputs != nil {
