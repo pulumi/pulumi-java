@@ -7,6 +7,7 @@ import io.pulumi.aws.eks.NodeGroup;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.eks.ManagedNodeGroupArgs;
 import io.pulumi.eks.Utilities;
 import javax.annotation.Nullable;
@@ -57,7 +58,7 @@ public class ManagedNodeGroup extends io.pulumi.resources.ComponentResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagedNodeGroup(String name, ManagedNodeGroupArgs args, @Nullable io.pulumi.resources.ComponentResourceOptions options) {
-        super("eks:index:ManagedNodeGroup", name, args == null ? ManagedNodeGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()), true);
+        super("eks:index:ManagedNodeGroup", name, args == null ? ManagedNodeGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()), true);
     }
 
     private static io.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {
