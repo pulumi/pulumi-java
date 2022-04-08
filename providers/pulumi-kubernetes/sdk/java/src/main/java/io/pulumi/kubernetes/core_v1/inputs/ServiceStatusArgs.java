@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * ServiceStatus represents the current status of a service.
- * 
  */
 public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Current service state
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<List<ConditionArgs>> conditions;
@@ -33,7 +31,6 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * LoadBalancer contains the current status of the load-balancer, if one is present.
-     * 
      */
     @Import(name="loadBalancer")
       private final @Nullable Output<LoadBalancerStatusArgs> loadBalancer;

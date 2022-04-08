@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * NodeCondition contains condition information for a node.
- * 
  */
 public final class NodeConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class NodeConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Last time we got an update on a given condition.
-     * 
      */
     @Import(name="lastHeartbeatTime")
       private final @Nullable Output<String> lastHeartbeatTime;
@@ -31,7 +29,6 @@ public final class NodeConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Last time the condition transit from one status to another.
-     * 
      */
     @Import(name="lastTransitionTime")
       private final @Nullable Output<String> lastTransitionTime;
@@ -42,7 +39,6 @@ public final class NodeConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Human readable message indicating details about last transition.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -53,7 +49,6 @@ public final class NodeConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * (brief) reason for the condition's last transition.
-     * 
      */
     @Import(name="reason")
       private final @Nullable Output<String> reason;
@@ -64,7 +59,6 @@ public final class NodeConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Status of the condition, one of True, False, Unknown.
-     * 
      */
     @Import(name="status", required=true)
       private final Output<String> status;
@@ -82,7 +76,6 @@ public final class NodeConditionArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"NetworkUnavailable"` means that network for the node is not correctly configured.
      *  - `"PIDPressure"` means the kubelet is under pressure due to insufficient available PID.
      *  - `"Ready"` means kubelet is healthy and ready to accept pods.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

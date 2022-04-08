@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 public final class StatefulSetUpdateStrategy {
     /**
      * RollingUpdate is used to communicate parameters when Type is RollingUpdateStatefulSetStrategyType.
-     * 
      */
     private final @Nullable RollingUpdateStatefulSetStrategy rollingUpdate;
     /**
@@ -23,7 +22,6 @@ public final class StatefulSetUpdateStrategy {
      * Possible enum values:
      *  - `"OnDelete"` triggers the legacy behavior. Version tracking and ordered rolling restarts are disabled. Pods are recreated from the StatefulSetSpec when they are manually deleted. When a scale operation is performed with this strategy,specification version indicated by the StatefulSet's currentRevision.
      *  - `"RollingUpdate"` indicates that update will be applied to all Pods in the StatefulSet with respect to the StatefulSet ordering constraints. When a scale operation is performed with this strategy, new Pods will be created from the specification version indicated by the StatefulSet's updateRevision.
-     * 
      */
     private final @Nullable String type;
 
@@ -37,7 +35,6 @@ public final class StatefulSetUpdateStrategy {
 
     /**
      * RollingUpdate is used to communicate parameters when Type is RollingUpdateStatefulSetStrategyType.
-     * 
     */
     public Optional<RollingUpdateStatefulSetStrategy> getRollingUpdate() {
         return Optional.ofNullable(this.rollingUpdate);
@@ -48,7 +45,6 @@ public final class StatefulSetUpdateStrategy {
      * Possible enum values:
      *  - `"OnDelete"` triggers the legacy behavior. Version tracking and ordered rolling restarts are disabled. Pods are recreated from the StatefulSetSpec when they are manually deleted. When a scale operation is performed with this strategy,specification version indicated by the StatefulSet's currentRevision.
      *  - `"RollingUpdate"` indicates that update will be applied to all Pods in the StatefulSet with respect to the StatefulSet ordering constraints. When a scale operation is performed with this strategy, new Pods will be created from the specification version indicated by the StatefulSet's updateRevision.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

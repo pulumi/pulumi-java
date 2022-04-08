@@ -13,27 +13,22 @@ import javax.annotation.Nullable;
 public final class HelmReleaseSettingsArgs {
     /**
      * The backend storage driver for Helm. Values are: configmap, secret, memory, sql.
-     * 
      */
     private final @Nullable Output<String> driver;
     /**
      * The path to the helm plugins directory.
-     * 
      */
     private final @Nullable Output<String> pluginsPath;
     /**
      * The path to the registry config file.
-     * 
      */
     private final @Nullable Output<String> registryConfigPath;
     /**
      * The path to the file containing cached repository indexes.
-     * 
      */
     private final @Nullable Output<String> repositoryCache;
     /**
      * The path to the file containing repository names and URLs.
-     * 
      */
     private final @Nullable Output<String> repositoryConfigPath;
 
@@ -53,35 +48,30 @@ public final class HelmReleaseSettingsArgs {
 
     /**
      * The backend storage driver for Helm. Values are: configmap, secret, memory, sql.
-     * 
     */
     public @Nullable Output<String> getDriver() {
         return this.driver;
     }
     /**
      * The path to the helm plugins directory.
-     * 
     */
     public @Nullable Output<String> getPluginsPath() {
         return this.pluginsPath;
     }
     /**
      * The path to the registry config file.
-     * 
     */
     public @Nullable Output<String> getRegistryConfigPath() {
         return this.registryConfigPath;
     }
     /**
      * The path to the file containing cached repository indexes.
-     * 
     */
     public @Nullable Output<String> getRepositoryCache() {
         return this.repositoryCache;
     }
     /**
      * The path to the file containing repository names and URLs.
-     * 
     */
     public @Nullable Output<String> getRepositoryConfigPath() {
         return this.repositoryConfigPath;

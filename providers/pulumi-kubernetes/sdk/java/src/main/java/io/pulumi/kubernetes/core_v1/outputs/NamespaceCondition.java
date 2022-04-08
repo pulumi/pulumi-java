@@ -16,7 +16,6 @@ public final class NamespaceCondition {
     private final @Nullable String reason;
     /**
      * Status of the condition, one of True, False, Unknown.
-     * 
      */
     private final String status;
     /**
@@ -28,7 +27,6 @@ public final class NamespaceCondition {
      *  - `"NamespaceDeletionDiscoveryFailure"` contains information about namespace deleter errors during resource discovery.
      *  - `"NamespaceDeletionGroupVersionParsingFailure"` contains information about namespace deleter errors parsing GV for legacy types.
      *  - `"NamespaceFinalizersRemaining"` contains information about which finalizers are on resources remaining in a namespace.
-     * 
      */
     private final String type;
 
@@ -57,7 +55,6 @@ public final class NamespaceCondition {
     }
     /**
      * Status of the condition, one of True, False, Unknown.
-     * 
     */
     public String getStatus() {
         return this.status;
@@ -71,7 +68,6 @@ public final class NamespaceCondition {
      *  - `"NamespaceDeletionDiscoveryFailure"` contains information about namespace deleter errors during resource discovery.
      *  - `"NamespaceDeletionGroupVersionParsingFailure"` contains information about namespace deleter errors parsing GV for legacy types.
      *  - `"NamespaceFinalizersRemaining"` contains information about which finalizers are on resources remaining in a namespace.
-     * 
     */
     public String getType() {
         return this.type;

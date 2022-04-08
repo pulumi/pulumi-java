@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * PodsMetricStatus indicates the current value of a metric describing each pod in the current scale target (for example, transactions-processed-per-second).
- * 
  */
 public final class PodsMetricStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PodsMetricStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * currentAverageValue is the current value of the average of the metric across all relevant pods (as a quantity)
-     * 
      */
     @Import(name="currentAverageValue", required=true)
       private final Output<String> currentAverageValue;
@@ -32,7 +30,6 @@ public final class PodsMetricStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * metricName is the name of the metric in question
-     * 
      */
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
@@ -43,7 +40,6 @@ public final class PodsMetricStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the PodsMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.
-     * 
      */
     @Import(name="selector")
       private final @Nullable Output<LabelSelectorArgs> selector;

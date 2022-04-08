@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class FlowSchemaStatus {
     /**
      * `conditions` is a list of the current states of FlowSchema.
-     * 
      */
     private final @Nullable List<FlowSchemaCondition> conditions;
 
@@ -24,7 +23,6 @@ public final class FlowSchemaStatus {
 
     /**
      * `conditions` is a list of the current states of FlowSchema.
-     * 
     */
     public List<FlowSchemaCondition> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;

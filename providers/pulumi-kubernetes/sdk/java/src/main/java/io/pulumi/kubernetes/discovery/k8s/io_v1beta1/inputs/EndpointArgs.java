@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Endpoint represents a single logical "backend" implementing a service.
- * 
  */
 public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * addresses of this endpoint. The contents of this field are interpreted according to the corresponding EndpointSlice addressType field. Consumers must handle different types of addresses in the context of their own capabilities. This must contain at least one address but no more than 100.
-     * 
      */
     @Import(name="addresses", required=true)
       private final Output<List<String>> addresses;
@@ -36,7 +34,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * conditions contains information about the current status of the endpoint.
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<EndpointConditionsArgs> conditions;
@@ -47,7 +44,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * hints contains information associated with how an endpoint should be consumed.
-     * 
      */
     @Import(name="hints")
       private final @Nullable Output<EndpointHintsArgs> hints;
@@ -58,7 +54,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * hostname of this endpoint. This field may be used by consumers of endpoints to distinguish endpoints from each other (e.g. in DNS names). Multiple endpoints which use the same hostname should be considered fungible (e.g. multiple A values in DNS). Must be lowercase and pass DNS Label (RFC 1123) validation.
-     * 
      */
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
@@ -69,7 +64,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * nodeName represents the name of the Node hosting this endpoint. This can be used to determine endpoints local to a Node. This field can be enabled with the EndpointSliceNodeName feature gate.
-     * 
      */
     @Import(name="nodeName")
       private final @Nullable Output<String> nodeName;
@@ -80,7 +74,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * targetRef is a reference to a Kubernetes object that represents this endpoint.
-     * 
      */
     @Import(name="targetRef")
       private final @Nullable Output<ObjectReferenceArgs> targetRef;
@@ -97,8 +90,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      *   endpoint is located. This should match the corresponding node label.
      * * topology.kubernetes.io/region: the value indicates the region where the
      *   endpoint is located. This should match the corresponding node label.
-     *   This field is deprecated and will be removed in future api versions.
-     * 
+     * This field is deprecated and will be removed in future api versions.
      */
     @Import(name="topology")
       private final @Nullable Output<Map<String,String>> topology;

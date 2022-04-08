@@ -20,7 +20,6 @@ public final class ClusterRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * AggregationRule is an optional field that describes how to build the Rules for this ClusterRole. If AggregationRule is set, then the Rules are controller managed and direct changes to Rules will be stomped by the controller.
-     * 
      */
     @Import(name="aggregationRule")
       private final @Nullable Output<AggregationRuleArgs> aggregationRule;
@@ -31,7 +30,6 @@ public final class ClusterRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
@@ -42,7 +40,6 @@ public final class ClusterRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -53,7 +50,6 @@ public final class ClusterRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Standard object's metadata.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
@@ -64,7 +60,6 @@ public final class ClusterRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Rules holds all the PolicyRules for this ClusterRole
-     * 
      */
     @Import(name="rules")
       private final @Nullable Output<List<PolicyRuleArgs>> rules;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * HostAlias holds the mapping between IP and hostnames that will be injected as an entry in the pod's hosts file.
- * 
  */
 public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Hostnames for the above IP address.
-     * 
      */
     @Import(name="hostnames")
       private final @Nullable Output<List<String>> hostnames;
@@ -32,7 +30,6 @@ public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IP address of the host file entry.
-     * 
      */
     @Import(name="ip")
       private final @Nullable Output<String> ip;

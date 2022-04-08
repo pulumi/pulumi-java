@@ -13,13 +13,11 @@ import java.util.Objects;
 public final class ObjectMetricStatus {
     /**
      * current contains the current value for the given metric
-     * 
      */
     private final MetricValueStatus current;
     private final CrossVersionObjectReference describedObject;
     /**
      * metric identifies the target metric by name and selector
-     * 
      */
     private final MetricIdentifier metric;
 
@@ -35,7 +33,6 @@ public final class ObjectMetricStatus {
 
     /**
      * current contains the current value for the given metric
-     * 
     */
     public MetricValueStatus getCurrent() {
         return this.current;
@@ -45,7 +42,6 @@ public final class ObjectMetricStatus {
     }
     /**
      * metric identifies the target metric by name and selector
-     * 
     */
     public MetricIdentifier getMetric() {
         return this.metric;

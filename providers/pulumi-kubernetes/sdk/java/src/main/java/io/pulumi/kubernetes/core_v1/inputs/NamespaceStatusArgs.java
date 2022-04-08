@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * NamespaceStatus is information about the current status of a Namespace.
- * 
  */
 public final class NamespaceStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class NamespaceStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Represents the latest available observations of a namespace's current state.
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<List<NamespaceConditionArgs>> conditions;
@@ -37,7 +35,6 @@ public final class NamespaceStatusArgs extends io.pulumi.resources.ResourceArgs 
      * Possible enum values:
      *  - `"Active"` means the namespace is available for use in the system
      *  - `"Terminating"` means the namespace is undergoing graceful termination
-     * 
      */
     @Import(name="phase")
       private final @Nullable Output<String> phase;

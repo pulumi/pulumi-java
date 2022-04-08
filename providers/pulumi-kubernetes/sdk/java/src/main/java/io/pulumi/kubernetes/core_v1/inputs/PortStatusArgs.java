@@ -20,7 +20,6 @@ public final class PortStatusArgs extends io.pulumi.resources.ResourceArgs {
      *   CamelCase names
      * - cloud provider specific error values must have names that comply with the
      *   format foo.example.com/CamelCase.
-     * 
      */
     @Import(name="error")
       private final @Nullable Output<String> error;
@@ -31,7 +30,6 @@ public final class PortStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Port is the port number of the service port of which status is recorded here
-     * 
      */
     @Import(name="port", required=true)
       private final Output<Integer> port;
@@ -47,7 +45,6 @@ public final class PortStatusArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"SCTP"` is the SCTP protocol.
      *  - `"TCP"` is the TCP protocol.
      *  - `"UDP"` is the UDP protocol.
-     * 
      */
     @Import(name="protocol", required=true)
       private final Output<String> protocol;

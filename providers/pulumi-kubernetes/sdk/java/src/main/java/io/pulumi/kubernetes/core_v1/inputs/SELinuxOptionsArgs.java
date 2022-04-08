@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * SELinuxOptions are the labels to be applied to the container
- * 
  */
 public final class SELinuxOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SELinuxOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Level is SELinux level label that applies to the container.
-     * 
      */
     @Import(name="level")
       private final @Nullable Output<String> level;
@@ -31,7 +29,6 @@ public final class SELinuxOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Role is a SELinux role label that applies to the container.
-     * 
      */
     @Import(name="role")
       private final @Nullable Output<String> role;
@@ -42,7 +39,6 @@ public final class SELinuxOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type is a SELinux type label that applies to the container.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;
@@ -53,7 +49,6 @@ public final class SELinuxOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User is a SELinux user label that applies to the container.
-     * 
      */
     @Import(name="user")
       private final @Nullable Output<String> user;

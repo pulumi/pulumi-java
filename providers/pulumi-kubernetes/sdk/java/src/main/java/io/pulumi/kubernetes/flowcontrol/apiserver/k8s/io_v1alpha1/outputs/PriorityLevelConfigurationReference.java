@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class PriorityLevelConfigurationReference {
     /**
      * `name` is the name of the priority level configuration being referenced Required.
-     * 
      */
     private final String name;
 
@@ -22,7 +21,6 @@ public final class PriorityLevelConfigurationReference {
 
     /**
      * `name` is the name of the priority level configuration being referenced Required.
-     * 
     */
     public String getName() {
         return this.name;

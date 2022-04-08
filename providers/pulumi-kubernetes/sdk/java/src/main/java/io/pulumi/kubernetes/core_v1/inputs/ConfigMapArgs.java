@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * ConfigMap holds configuration data for pods to consume.
- * 
  */
 public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
@@ -34,7 +32,6 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * BinaryData contains the binary data. Each key must consist of alphanumeric characters, '-', '_' or '.'. BinaryData can contain byte sequences that are not in the UTF-8 range. The keys stored in BinaryData must not overlap with the ones in the Data field, this is enforced during validation process. Using this field will require 1.10+ apiserver and kubelet.
-     * 
      */
     @Import(name="binaryData")
       private final @Nullable Output<Map<String,String>> binaryData;
@@ -45,7 +42,6 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Data contains the configuration data. Each key must consist of alphanumeric characters, '-', '_' or '.'. Values with non-UTF-8 byte sequences must use the BinaryData field. The keys stored in Data must not overlap with the keys in the BinaryData field, this is enforced during validation process.
-     * 
      */
     @Import(name="data")
       private final @Nullable Output<Map<String,String>> data;
@@ -56,7 +52,6 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Immutable, if set to true, ensures that data stored in the ConfigMap cannot be updated (only object metadata can be modified). If not set to true, the field can be modified at any time. Defaulted to nil.
-     * 
      */
     @Import(name="immutable")
       private final @Nullable Output<Boolean> immutable;
@@ -67,7 +62,6 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -78,7 +72,6 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;

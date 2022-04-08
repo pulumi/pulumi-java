@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents storage that is managed by an external CSI volume driver (Beta feature)
- * 
  */
 public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
 
     /**
      * ControllerExpandSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI ControllerExpandVolume call. This is an alpha field and requires enabling ExpandCSIVolumes feature gate. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.
-     * 
      */
     @Import(name="controllerExpandSecretRef")
       private final @Nullable Output<SecretReferenceArgs> controllerExpandSecretRef;
@@ -34,7 +32,6 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
 
     /**
      * ControllerPublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI ControllerPublishVolume and ControllerUnpublishVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.
-     * 
      */
     @Import(name="controllerPublishSecretRef")
       private final @Nullable Output<SecretReferenceArgs> controllerPublishSecretRef;
@@ -45,7 +42,6 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
 
     /**
      * Driver is the name of the driver to use for this volume. Required.
-     * 
      */
     @Import(name="driver", required=true)
       private final Output<String> driver;
@@ -56,7 +52,6 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
 
     /**
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs".
-     * 
      */
     @Import(name="fsType")
       private final @Nullable Output<String> fsType;
@@ -67,7 +62,6 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
 
     /**
      * NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.
-     * 
      */
     @Import(name="nodePublishSecretRef")
       private final @Nullable Output<SecretReferenceArgs> nodePublishSecretRef;
@@ -78,7 +72,6 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
 
     /**
      * NodeStageSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodeStageVolume and NodeStageVolume and NodeUnstageVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.
-     * 
      */
     @Import(name="nodeStageSecretRef")
       private final @Nullable Output<SecretReferenceArgs> nodeStageSecretRef;
@@ -89,7 +82,6 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
 
     /**
      * Optional: The value to pass to ControllerPublishVolumeRequest. Defaults to false (read/write).
-     * 
      */
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
@@ -100,7 +92,6 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
 
     /**
      * Attributes of the volume to publish.
-     * 
      */
     @Import(name="volumeAttributes")
       private final @Nullable Output<Map<String,String>> volumeAttributes;
@@ -111,7 +102,6 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
 
     /**
      * VolumeHandle is the unique volume name returned by the CSI volume plugin’s CreateVolume to refer to the volume on all subsequent calls. Required.
-     * 
      */
     @Import(name="volumeHandle", required=true)
       private final Output<String> volumeHandle;

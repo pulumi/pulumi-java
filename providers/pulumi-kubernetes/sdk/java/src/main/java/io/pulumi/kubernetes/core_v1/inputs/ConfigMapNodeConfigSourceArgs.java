@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * ConfigMapNodeConfigSource contains the information to reference a ConfigMap as a config source for the Node. This API is deprecated since 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
- * 
  */
 public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
 
     /**
      * KubeletConfigKey declares which key of the referenced ConfigMap corresponds to the KubeletConfiguration structure This field is required in all cases.
-     * 
      */
     @Import(name="kubeletConfigKey", required=true)
       private final Output<String> kubeletConfigKey;
@@ -31,7 +29,6 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
 
     /**
      * Name is the metadata.name of the referenced ConfigMap. This field is required in all cases.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -42,7 +39,6 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
 
     /**
      * Namespace is the metadata.namespace of the referenced ConfigMap. This field is required in all cases.
-     * 
      */
     @Import(name="namespace", required=true)
       private final Output<String> namespace;
@@ -53,7 +49,6 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
 
     /**
      * ResourceVersion is the metadata.ResourceVersion of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
-     * 
      */
     @Import(name="resourceVersion")
       private final @Nullable Output<String> resourceVersion;
@@ -64,7 +59,6 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
 
     /**
      * UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
-     * 
      */
     @Import(name="uid")
       private final @Nullable Output<String> uid;

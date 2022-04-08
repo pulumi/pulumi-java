@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * IDRange provides a min/max of an allowed range of IDs. Deprecated: use IDRange from policy API Group instead.
- * 
  */
 public final class IDRangeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class IDRangeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * max is the end of the range, inclusive.
-     * 
      */
     @Import(name="max", required=true)
       private final Output<Integer> max;
@@ -30,7 +28,6 @@ public final class IDRangeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * min is the start of the range, inclusive.
-     * 
      */
     @Import(name="min", required=true)
       private final Output<Integer> min;

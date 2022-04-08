@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * StatusCause provides more information about an api.Status failure, including cases when multiple errors are encountered.
- * 
  */
 public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
      * Examples:
      *   "name" - the field "name" on the current resource
      *   "items[0].name" - the field "name" on the first array entry in "items"
-     * 
      */
     @Import(name="field")
       private final @Nullable Output<String> field;
@@ -35,7 +33,6 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A human-readable description of the cause of the error.  This field may be presented as-is to a reader.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -46,7 +43,6 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A machine-readable description of the cause of the error. If this value is empty there is no information available.
-     * 
      */
     @Import(name="reason")
       private final @Nullable Output<String> reason;

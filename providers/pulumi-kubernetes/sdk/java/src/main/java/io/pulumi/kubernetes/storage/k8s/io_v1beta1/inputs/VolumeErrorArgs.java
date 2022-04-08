@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * VolumeError captures an error encountered during a volume operation.
- * 
  */
 public final class VolumeErrorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class VolumeErrorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * String detailing the error encountered during Attach or Detach operation. This string may be logged, so it should not contain sensitive information.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -31,7 +29,6 @@ public final class VolumeErrorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Time the error was encountered.
-     * 
      */
     @Import(name="time")
       private final @Nullable Output<String> time;

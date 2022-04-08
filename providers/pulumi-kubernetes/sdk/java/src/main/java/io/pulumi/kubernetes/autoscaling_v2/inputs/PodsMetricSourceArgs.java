@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * PodsMetricSource indicates how to scale on a metric describing each pod in the current scale target (for example, transactions-processed-per-second). The values will be averaged together before being compared to the target value.
- * 
  */
 public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * metric identifies the target metric by name and selector
-     * 
      */
     @Import(name="metric", required=true)
       private final Output<MetricIdentifierArgs> metric;
@@ -31,7 +29,6 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * target specifies the target value for the given metric
-     * 
      */
     @Import(name="target", required=true)
       private final Output<MetricTargetArgs> target;

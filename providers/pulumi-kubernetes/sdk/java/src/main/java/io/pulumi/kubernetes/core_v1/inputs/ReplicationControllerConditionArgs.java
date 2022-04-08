@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * ReplicationControllerCondition describes the state of a replication controller at a certain point.
- * 
  */
 public final class ReplicationControllerConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ReplicationControllerConditionArgs extends io.pulumi.resource
 
     /**
      * The last time the condition transitioned from one status to another.
-     * 
      */
     @Import(name="lastTransitionTime")
       private final @Nullable Output<String> lastTransitionTime;
@@ -31,7 +29,6 @@ public final class ReplicationControllerConditionArgs extends io.pulumi.resource
 
     /**
      * A human readable message indicating details about the transition.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -42,7 +39,6 @@ public final class ReplicationControllerConditionArgs extends io.pulumi.resource
 
     /**
      * The reason for the condition's last transition.
-     * 
      */
     @Import(name="reason")
       private final @Nullable Output<String> reason;
@@ -53,7 +49,6 @@ public final class ReplicationControllerConditionArgs extends io.pulumi.resource
 
     /**
      * Status of the condition, one of True, False, Unknown.
-     * 
      */
     @Import(name="status", required=true)
       private final Output<String> status;
@@ -64,7 +59,6 @@ public final class ReplicationControllerConditionArgs extends io.pulumi.resource
 
     /**
      * Type of replication controller condition.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

@@ -19,7 +19,6 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
@@ -30,7 +29,6 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Handler specifies the underlying runtime and configuration that the CRI implementation will use to handle pods of this class. The possible values are specific to the node & CRI configuration.  It is assumed that all handlers are available on every node, and handlers of the same name are equivalent on every node. For example, a handler called "runc" might specify that the runc OCI runtime (using native Linux containers) will be used to run the containers in a pod. The Handler must be lowercase, conform to the DNS Label (RFC 1123) requirements, and is immutable.
-     * 
      */
     @Import(name="handler", required=true)
       private final Output<String> handler;
@@ -41,7 +39,6 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -52,7 +49,6 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
@@ -65,7 +61,6 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
      * Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. For more details, see
      *  https://kubernetes.io/docs/concepts/scheduling-eviction/pod-overhead/
      * This field is in beta starting v1.18 and is only honored by servers that enable the PodOverhead feature.
-     * 
      */
     @Import(name="overhead")
       private final @Nullable Output<OverheadArgs> overhead;
@@ -76,7 +71,6 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Scheduling holds the scheduling constraints to ensure that pods running with this RuntimeClass are scheduled to nodes that support it. If scheduling is nil, this RuntimeClass is assumed to be supported by all nodes.
-     * 
      */
     @Import(name="scheduling")
       private final @Nullable Output<SchedulingArgs> scheduling;

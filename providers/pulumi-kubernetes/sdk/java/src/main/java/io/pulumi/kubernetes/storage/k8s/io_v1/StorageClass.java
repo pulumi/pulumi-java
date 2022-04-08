@@ -21,146 +21,125 @@ import javax.annotation.Nullable;
  * StorageClass describes the parameters for a class of storage for which PersistentVolumes can be dynamically provisioned.
  * 
  * StorageClasses are non-namespaced; the name of the storage class according to etcd is in ObjectMeta.Name.
- * 
  */
 @ResourceType(type="kubernetes:storage.k8s.io/v1:StorageClass")
 public class StorageClass extends io.pulumi.resources.CustomResource {
     /**
      * AllowVolumeExpansion shows whether the storage class allow volume expand
-     * 
      */
     @Export(name="allowVolumeExpansion", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowVolumeExpansion;
 
     /**
      * @return AllowVolumeExpansion shows whether the storage class allow volume expand
-     * 
      */
     public Output</* @Nullable */ Boolean> getAllowVolumeExpansion() {
         return this.allowVolumeExpansion;
     }
     /**
      * Restrict the node topologies where volumes can be dynamically provisioned. Each volume plugin defines its own supported topology specifications. An empty TopologySelectorTerm list means there is no topology restriction. This field is only honored by servers that enable the VolumeScheduling feature.
-     * 
      */
     @Export(name="allowedTopologies", type=List.class, parameters={TopologySelectorTerm.class})
     private Output</* @Nullable */ List<TopologySelectorTerm>> allowedTopologies;
 
     /**
      * @return Restrict the node topologies where volumes can be dynamically provisioned. Each volume plugin defines its own supported topology specifications. An empty TopologySelectorTerm list means there is no topology restriction. This field is only honored by servers that enable the VolumeScheduling feature.
-     * 
      */
     public Output</* @Nullable */ List<TopologySelectorTerm>> getAllowedTopologies() {
         return this.allowedTopologies;
     }
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
      * @return Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     public Output</* @Nullable */ ObjectMeta> getMetadata() {
         return this.metadata;
     }
     /**
      * Dynamically provisioned PersistentVolumes of this storage class are created with these mountOptions, e.g. ["ro", "soft"]. Not validated - mount of the PVs will simply fail if one is invalid.
-     * 
      */
     @Export(name="mountOptions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> mountOptions;
 
     /**
      * @return Dynamically provisioned PersistentVolumes of this storage class are created with these mountOptions, e.g. ["ro", "soft"]. Not validated - mount of the PVs will simply fail if one is invalid.
-     * 
      */
     public Output</* @Nullable */ List<String>> getMountOptions() {
         return this.mountOptions;
     }
     /**
      * Parameters holds the parameters for the provisioner that should create volumes of this storage class.
-     * 
      */
     @Export(name="parameters", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> parameters;
 
     /**
      * @return Parameters holds the parameters for the provisioner that should create volumes of this storage class.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getParameters() {
         return this.parameters;
     }
     /**
      * Provisioner indicates the type of the provisioner.
-     * 
      */
     @Export(name="provisioner", type=String.class, parameters={})
     private Output<String> provisioner;
 
     /**
      * @return Provisioner indicates the type of the provisioner.
-     * 
      */
     public Output<String> getProvisioner() {
         return this.provisioner;
     }
     /**
      * Dynamically provisioned PersistentVolumes of this storage class are created with this reclaimPolicy. Defaults to Delete.
-     * 
      */
     @Export(name="reclaimPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> reclaimPolicy;
 
     /**
      * @return Dynamically provisioned PersistentVolumes of this storage class are created with this reclaimPolicy. Defaults to Delete.
-     * 
      */
     public Output</* @Nullable */ String> getReclaimPolicy() {
         return this.reclaimPolicy;
     }
     /**
      * VolumeBindingMode indicates how PersistentVolumeClaims should be provisioned and bound.  When unset, VolumeBindingImmediate is used. This field is only honored by servers that enable the VolumeScheduling feature.
-     * 
      */
     @Export(name="volumeBindingMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> volumeBindingMode;
 
     /**
      * @return VolumeBindingMode indicates how PersistentVolumeClaims should be provisioned and bound.  When unset, VolumeBindingImmediate is used. This field is only honored by servers that enable the VolumeScheduling feature.
-     * 
      */
     public Output</* @Nullable */ String> getVolumeBindingMode() {
         return this.volumeBindingMode;

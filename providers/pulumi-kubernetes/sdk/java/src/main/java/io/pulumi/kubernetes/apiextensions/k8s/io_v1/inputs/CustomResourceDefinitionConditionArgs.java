@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * CustomResourceDefinitionCondition contains details for the current condition of this pod.
- * 
  */
 public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
 
     /**
      * lastTransitionTime last time the condition transitioned from one status to another.
-     * 
      */
     @Import(name="lastTransitionTime")
       private final @Nullable Output<String> lastTransitionTime;
@@ -31,7 +29,6 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
 
     /**
      * message is a human-readable message indicating details about last transition.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -42,7 +39,6 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
 
     /**
      * reason is a unique, one-word, CamelCase reason for the condition's last transition.
-     * 
      */
     @Import(name="reason")
       private final @Nullable Output<String> reason;
@@ -53,7 +49,6 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
 
     /**
      * status is the status of the condition. Can be True, False, Unknown.
-     * 
      */
     @Import(name="status", required=true)
       private final Output<String> status;
@@ -64,7 +59,6 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
 
     /**
      * type is the type of the condition. Types include Established, NamesAccepted and Terminating.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

@@ -16,22 +16,18 @@ import javax.annotation.Nullable;
 public final class VolumeProjection {
     /**
      * information about the configMap data to project
-     * 
      */
     private final @Nullable ConfigMapProjection configMap;
     /**
      * information about the downwardAPI data to project
-     * 
      */
     private final @Nullable DownwardAPIProjection downwardAPI;
     /**
      * information about the secret data to project
-     * 
      */
     private final @Nullable SecretProjection secret;
     /**
      * information about the serviceAccountToken data to project
-     * 
      */
     private final @Nullable ServiceAccountTokenProjection serviceAccountToken;
 
@@ -49,28 +45,24 @@ public final class VolumeProjection {
 
     /**
      * information about the configMap data to project
-     * 
     */
     public Optional<ConfigMapProjection> getConfigMap() {
         return Optional.ofNullable(this.configMap);
     }
     /**
      * information about the downwardAPI data to project
-     * 
     */
     public Optional<DownwardAPIProjection> getDownwardAPI() {
         return Optional.ofNullable(this.downwardAPI);
     }
     /**
      * information about the secret data to project
-     * 
     */
     public Optional<SecretProjection> getSecret() {
         return Optional.ofNullable(this.secret);
     }
     /**
      * information about the serviceAccountToken data to project
-     * 
     */
     public Optional<ServiceAccountTokenProjection> getServiceAccountToken() {
         return Optional.ofNullable(this.serviceAccountToken);

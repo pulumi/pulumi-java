@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
  * LimitedPriorityLevelConfiguration specifies how to handle requests that are subject to limits. It addresses two issues:
  *  * How are requests for this priority level limited?
  *  * What should be done with requests that exceed the limit?
- * 
  */
 public final class LimitedPriorityLevelConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class LimitedPriorityLevelConfigurationArgs extends io.pulumi.resou
      *             ACV(l) = ceil( SCL * ACS(l) / ( sum[priority levels k] ACS(k) ) )
      * 
      * bigger numbers of ACS mean more reserved concurrent requests (at the expense of every other PL). This field has a default value of 30.
-     * 
      */
     @Import(name="assuredConcurrencyShares")
       private final @Nullable Output<Integer> assuredConcurrencyShares;
@@ -38,7 +36,6 @@ public final class LimitedPriorityLevelConfigurationArgs extends io.pulumi.resou
 
     /**
      * `limitResponse` indicates what to do with requests that can not be executed right now
-     * 
      */
     @Import(name="limitResponse")
       private final @Nullable Output<LimitResponseArgs> limitResponse;

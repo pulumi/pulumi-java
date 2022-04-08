@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * NamespaceSpec describes the attributes on a Namespace.
- * 
  */
 public final class NamespaceSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class NamespaceSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Finalizers is an opaque list of values that must be empty to permanently remove object from storage. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
-     * 
      */
     @Import(name="finalizers")
       private final @Nullable Output<List<String>> finalizers;

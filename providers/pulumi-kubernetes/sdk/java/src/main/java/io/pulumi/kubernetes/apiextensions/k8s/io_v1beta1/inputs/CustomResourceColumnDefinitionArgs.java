@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * CustomResourceColumnDefinition specifies a column for server side printing.
- * 
  */
 public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
 
     /**
      * JSONPath is a simple JSON path (i.e. with array notation) which is evaluated against each custom resource to produce the value for this column.
-     * 
      */
     @Import(name="JSONPath", required=true)
       private final Output<String> JSONPath;
@@ -32,7 +30,6 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
 
     /**
      * description is a human readable description of this column.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -43,7 +40,6 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
 
     /**
      * format is an optional OpenAPI type definition for this column. The 'name' format is applied to the primary identifier column to assist in clients identifying column is the resource name. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.
-     * 
      */
     @Import(name="format")
       private final @Nullable Output<String> format;
@@ -54,7 +50,6 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
 
     /**
      * name is a human readable name for the column.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -65,7 +60,6 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
 
     /**
      * priority is an integer defining the relative importance of this column compared to others. Lower numbers are considered higher priority. Columns that may be omitted in limited space scenarios should be given a priority greater than 0.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
@@ -76,7 +70,6 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
 
     /**
      * type is an OpenAPI type definition for this column. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

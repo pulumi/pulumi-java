@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * OwnerReference contains enough information to let you identify an owning object. An owning object must be in the same namespace as the dependent, or be cluster-scoped, so there is no namespace field.
- * 
  */
 public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * API version of the referent.
-     * 
      */
     @Import(name="apiVersion", required=true)
       private final Output<String> apiVersion;
@@ -32,7 +30,6 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.
-     * 
      */
     @Import(name="blockOwnerDeletion")
       private final @Nullable Output<Boolean> blockOwnerDeletion;
@@ -43,7 +40,6 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If true, this reference points to the managing controller.
-     * 
      */
     @Import(name="controller")
       private final @Nullable Output<Boolean> controller;
@@ -54,7 +50,6 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -65,7 +60,6 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -76,7 +70,6 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
-     * 
      */
     @Import(name="uid", required=true)
       private final Output<String> uid;

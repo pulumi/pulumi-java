@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * ContainerStatus contains details for the current status of this container.
- * 
  */
 public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Container's ID in the format 'docker://<container_id>'.
-     * 
      */
     @Import(name="containerID")
       private final @Nullable Output<String> containerID;
@@ -34,7 +32,6 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The image the container is running. More info: https://kubernetes.io/docs/concepts/containers/images.
-     * 
      */
     @Import(name="image", required=true)
       private final Output<String> image;
@@ -45,7 +42,6 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * ImageID of the container's image.
-     * 
      */
     @Import(name="imageID", required=true)
       private final Output<String> imageID;
@@ -56,7 +52,6 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Details about the container's last termination condition.
-     * 
      */
     @Import(name="lastState")
       private final @Nullable Output<ContainerStateArgs> lastState;
@@ -67,7 +62,6 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * This must be a DNS_LABEL. Each container in a pod must have a unique name. Cannot be updated.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -78,7 +72,6 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Specifies whether the container has passed its readiness probe.
-     * 
      */
     @Import(name="ready", required=true)
       private final Output<Boolean> ready;
@@ -89,7 +82,6 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The number of times the container has been restarted.
-     * 
      */
     @Import(name="restartCount", required=true)
       private final Output<Integer> restartCount;
@@ -100,7 +92,6 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Specifies whether the container has passed its startup probe. Initialized as false, becomes true after startupProbe is considered successful. Resets to false when the container is restarted, or if kubelet loses state temporarily. Is always true when no startupProbe is defined.
-     * 
      */
     @Import(name="started")
       private final @Nullable Output<Boolean> started;
@@ -111,7 +102,6 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Details about the container's current condition.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<ContainerStateArgs> state;

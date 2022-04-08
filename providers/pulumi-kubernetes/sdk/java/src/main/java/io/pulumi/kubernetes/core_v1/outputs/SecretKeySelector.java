@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class SecretKeySelector {
     /**
      * The key of the secret to select from.  Must be a valid secret key.
-     * 
      */
     private final String key;
     /**
      * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
-     * 
      */
     private final @Nullable String name;
     /**
      * Specify whether the Secret or its key must be defined
-     * 
      */
     private final @Nullable Boolean optional;
 
@@ -40,21 +37,18 @@ public final class SecretKeySelector {
 
     /**
      * The key of the secret to select from.  Must be a valid secret key.
-     * 
     */
     public String getKey() {
         return this.key;
     }
     /**
      * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Specify whether the Secret or its key must be defined
-     * 
     */
     public Optional<Boolean> getOptional() {
         return Optional.ofNullable(this.optional);

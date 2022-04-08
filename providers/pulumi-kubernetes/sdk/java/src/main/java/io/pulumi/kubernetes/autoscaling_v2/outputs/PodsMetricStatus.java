@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class PodsMetricStatus {
     /**
      * current contains the current value for the given metric
-     * 
      */
     private final MetricValueStatus current;
     /**
      * metric identifies the target metric by name and selector
-     * 
      */
     private final MetricIdentifier metric;
 
@@ -31,14 +29,12 @@ public final class PodsMetricStatus {
 
     /**
      * current contains the current value for the given metric
-     * 
     */
     public MetricValueStatus getCurrent() {
         return this.current;
     }
     /**
      * metric identifies the target metric by name and selector
-     * 
     */
     public MetricIdentifier getMetric() {
         return this.metric;

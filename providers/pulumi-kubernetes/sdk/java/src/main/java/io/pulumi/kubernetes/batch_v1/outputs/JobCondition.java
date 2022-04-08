@@ -13,27 +13,22 @@ import javax.annotation.Nullable;
 public final class JobCondition {
     /**
      * Last time the condition was checked.
-     * 
      */
     private final @Nullable String lastProbeTime;
     /**
      * Last time the condition transit from one status to another.
-     * 
      */
     private final @Nullable String lastTransitionTime;
     /**
      * Human readable message indicating details about last transition.
-     * 
      */
     private final @Nullable String message;
     /**
      * (brief) reason for the condition's last transition.
-     * 
      */
     private final @Nullable String reason;
     /**
      * Status of the condition, one of True, False, Unknown.
-     * 
      */
     private final String status;
     /**
@@ -43,7 +38,6 @@ public final class JobCondition {
      *  - `"Complete"` means the job has completed its execution.
      *  - `"Failed"` means the job has failed its execution.
      *  - `"Suspended"` means the job has been suspended.
-     * 
      */
     private final String type;
 
@@ -65,35 +59,30 @@ public final class JobCondition {
 
     /**
      * Last time the condition was checked.
-     * 
     */
     public Optional<String> getLastProbeTime() {
         return Optional.ofNullable(this.lastProbeTime);
     }
     /**
      * Last time the condition transit from one status to another.
-     * 
     */
     public Optional<String> getLastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
      * Human readable message indicating details about last transition.
-     * 
     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * (brief) reason for the condition's last transition.
-     * 
     */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * Status of the condition, one of True, False, Unknown.
-     * 
     */
     public String getStatus() {
         return this.status;
@@ -105,7 +94,6 @@ public final class JobCondition {
      *  - `"Complete"` means the job has completed its execution.
      *  - `"Failed"` means the job has failed its execution.
      *  - `"Suspended"` means the job has been suspended.
-     * 
     */
     public String getType() {
         return this.type;

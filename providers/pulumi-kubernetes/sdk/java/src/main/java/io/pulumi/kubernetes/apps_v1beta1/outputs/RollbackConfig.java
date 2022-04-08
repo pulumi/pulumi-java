@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class RollbackConfig {
     /**
      * The revision to rollback to. If set to 0, rollback to the last revision.
-     * 
      */
     private final @Nullable Integer revision;
 
@@ -24,7 +23,6 @@ public final class RollbackConfig {
 
     /**
      * The revision to rollback to. If set to 0, rollback to the last revision.
-     * 
     */
     public Optional<Integer> getRevision() {
         return Optional.ofNullable(this.revision);

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a Fibre Channel volume. Fibre Channel volumes can only be mounted as read/write once. Fibre Channel volumes support ownership management and SELinux relabeling.
- * 
  */
 public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
-     * 
      */
     @Import(name="fsType")
       private final @Nullable Output<String> fsType;
@@ -34,7 +32,6 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional: FC target lun number
-     * 
      */
     @Import(name="lun")
       private final @Nullable Output<Integer> lun;
@@ -45,7 +42,6 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
-     * 
      */
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
@@ -56,7 +52,6 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional: FC target worldwide names (WWNs)
-     * 
      */
     @Import(name="targetWWNs")
       private final @Nullable Output<List<String>> targetWWNs;
@@ -67,7 +62,6 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.
-     * 
      */
     @Import(name="wwids")
       private final @Nullable Output<List<String>> wwids;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * DaemonSetStatus represents the current status of a daemon set.
- * 
  */
 public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Count of hash collisions for the DaemonSet. The DaemonSet controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ControllerRevision.
-     * 
      */
     @Import(name="collisionCount")
       private final @Nullable Output<Integer> collisionCount;
@@ -33,7 +31,6 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Represents the latest available observations of a DaemonSet's current state.
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<List<DaemonSetConditionArgs>> conditions;
@@ -44,7 +41,6 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The number of nodes that are running at least 1 daemon pod and are supposed to run the daemon pod. More info: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
-     * 
      */
     @Import(name="currentNumberScheduled", required=true)
       private final Output<Integer> currentNumberScheduled;
@@ -55,7 +51,6 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The total number of nodes that should be running the daemon pod (including nodes correctly running the daemon pod). More info: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
-     * 
      */
     @Import(name="desiredNumberScheduled", required=true)
       private final Output<Integer> desiredNumberScheduled;
@@ -66,7 +61,6 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The number of nodes that should be running the daemon pod and have one or more of the daemon pod running and available (ready for at least spec.minReadySeconds)
-     * 
      */
     @Import(name="numberAvailable")
       private final @Nullable Output<Integer> numberAvailable;
@@ -77,7 +71,6 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The number of nodes that are running the daemon pod, but are not supposed to run the daemon pod. More info: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
-     * 
      */
     @Import(name="numberMisscheduled", required=true)
       private final Output<Integer> numberMisscheduled;
@@ -88,7 +81,6 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * numberReady is the number of nodes that should be running the daemon pod and have one or more of the daemon pod running with a Ready Condition.
-     * 
      */
     @Import(name="numberReady", required=true)
       private final Output<Integer> numberReady;
@@ -99,7 +91,6 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The number of nodes that should be running the daemon pod and have none of the daemon pod running and available (ready for at least spec.minReadySeconds)
-     * 
      */
     @Import(name="numberUnavailable")
       private final @Nullable Output<Integer> numberUnavailable;
@@ -110,7 +101,6 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The most recent generation observed by the daemon set controller.
-     * 
      */
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
@@ -121,7 +111,6 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The total number of nodes that are running updated daemon pod
-     * 
      */
     @Import(name="updatedNumberScheduled")
       private final @Nullable Output<Integer> updatedNumberScheduled;

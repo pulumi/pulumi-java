@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a Quobyte mount that lasts the lifetime of a pod. Quobyte volumes do not support ownership management or SELinux relabeling.
- * 
  */
 public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Group to map volume access to Default is no group
-     * 
      */
     @Import(name="group")
       private final @Nullable Output<String> group;
@@ -32,7 +30,6 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * ReadOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.
-     * 
      */
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
@@ -43,7 +40,6 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes
-     * 
      */
     @Import(name="registry", required=true)
       private final Output<String> registry;
@@ -54,7 +50,6 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin
-     * 
      */
     @Import(name="tenant")
       private final @Nullable Output<String> tenant;
@@ -65,7 +60,6 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * User to map volume access to Defaults to serivceaccount user
-     * 
      */
     @Import(name="user")
       private final @Nullable Output<String> user;
@@ -76,7 +70,6 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Volume is a string that references an already created Quobyte volume by name.
-     * 
      */
     @Import(name="volume", required=true)
       private final Output<String> volume;

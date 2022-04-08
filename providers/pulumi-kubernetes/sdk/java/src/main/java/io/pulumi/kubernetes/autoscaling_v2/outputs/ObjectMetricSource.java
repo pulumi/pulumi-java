@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class ObjectMetricSource {
     /**
      * describedObject specifies the descriptions of a object,such as kind,name apiVersion
-     * 
      */
     private final CrossVersionObjectReference describedObject;
     /**
      * metric identifies the target metric by name and selector
-     * 
      */
     private final MetricIdentifier metric;
     /**
      * target specifies the target value for the given metric
-     * 
      */
     private final MetricTarget target;
 
@@ -39,21 +36,18 @@ public final class ObjectMetricSource {
 
     /**
      * describedObject specifies the descriptions of a object,such as kind,name apiVersion
-     * 
     */
     public CrossVersionObjectReference getDescribedObject() {
         return this.describedObject;
     }
     /**
      * metric identifies the target metric by name and selector
-     * 
     */
     public MetricIdentifier getMetric() {
         return this.metric;
     }
     /**
      * target specifies the target value for the given metric
-     * 
     */
     public MetricTarget getTarget() {
         return this.target;

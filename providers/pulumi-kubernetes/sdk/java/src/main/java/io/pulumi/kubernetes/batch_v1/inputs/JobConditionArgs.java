@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * JobCondition describes current state of a job.
- * 
  */
 public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Last time the condition was checked.
-     * 
      */
     @Import(name="lastProbeTime")
       private final @Nullable Output<String> lastProbeTime;
@@ -31,7 +29,6 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Last time the condition transit from one status to another.
-     * 
      */
     @Import(name="lastTransitionTime")
       private final @Nullable Output<String> lastTransitionTime;
@@ -42,7 +39,6 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Human readable message indicating details about last transition.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -53,7 +49,6 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * (brief) reason for the condition's last transition.
-     * 
      */
     @Import(name="reason")
       private final @Nullable Output<String> reason;
@@ -64,7 +59,6 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Status of the condition, one of True, False, Unknown.
-     * 
      */
     @Import(name="status", required=true)
       private final Output<String> status;
@@ -80,7 +74,6 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"Complete"` means the job has completed its execution.
      *  - `"Failed"` means the job has failed its execution.
      *  - `"Suspended"` means the job has been suspended.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

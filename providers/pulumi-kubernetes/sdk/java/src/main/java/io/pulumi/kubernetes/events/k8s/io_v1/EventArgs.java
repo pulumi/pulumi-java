@@ -21,7 +21,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * action is what action was taken/failed regarding to the regarding object. It is machine-readable. This field cannot be empty for new Events and it can have at most 128 characters.
-     * 
      */
     @Import(name="action")
       private final @Nullable Output<String> action;
@@ -32,7 +31,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
@@ -43,7 +41,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * deprecatedCount is the deprecated field assuring backward compatibility with core.v1 Event type.
-     * 
      */
     @Import(name="deprecatedCount")
       private final @Nullable Output<Integer> deprecatedCount;
@@ -54,7 +51,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * deprecatedFirstTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.
-     * 
      */
     @Import(name="deprecatedFirstTimestamp")
       private final @Nullable Output<String> deprecatedFirstTimestamp;
@@ -65,7 +61,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * deprecatedLastTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.
-     * 
      */
     @Import(name="deprecatedLastTimestamp")
       private final @Nullable Output<String> deprecatedLastTimestamp;
@@ -76,7 +71,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * deprecatedSource is the deprecated field assuring backward compatibility with core.v1 Event type.
-     * 
      */
     @Import(name="deprecatedSource")
       private final @Nullable Output<EventSourceArgs> deprecatedSource;
@@ -87,7 +81,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * eventTime is the time when this Event was first observed. It is required.
-     * 
      */
     @Import(name="eventTime", required=true)
       private final Output<String> eventTime;
@@ -98,7 +91,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -109,7 +101,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
@@ -120,7 +111,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * note is a human-readable description of the status of this operation. Maximal length of the note is 1kB, but libraries should be prepared to handle values up to 64kB.
-     * 
      */
     @Import(name="note")
       private final @Nullable Output<String> note;
@@ -131,7 +121,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * reason is why the action was taken. It is human-readable. This field cannot be empty for new Events and it can have at most 128 characters.
-     * 
      */
     @Import(name="reason")
       private final @Nullable Output<String> reason;
@@ -142,7 +131,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * regarding contains the object this Event is about. In most cases it's an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.
-     * 
      */
     @Import(name="regarding")
       private final @Nullable Output<ObjectReferenceArgs> regarding;
@@ -153,7 +141,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * related is the optional secondary object for more complex actions. E.g. when regarding object triggers a creation or deletion of related object.
-     * 
      */
     @Import(name="related")
       private final @Nullable Output<ObjectReferenceArgs> related;
@@ -164,7 +151,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * reportingController is the name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`. This field cannot be empty for new Events.
-     * 
      */
     @Import(name="reportingController")
       private final @Nullable Output<String> reportingController;
@@ -175,7 +161,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * reportingInstance is the ID of the controller instance, e.g. `kubelet-xyzf`. This field cannot be empty for new Events and it can have at most 128 characters.
-     * 
      */
     @Import(name="reportingInstance")
       private final @Nullable Output<String> reportingInstance;
@@ -186,7 +171,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * series is data about the Event series this event represents or nil if it's a singleton Event.
-     * 
      */
     @Import(name="series")
       private final @Nullable Output<EventSeriesArgs> series;
@@ -197,7 +181,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * type is the type of this event (Normal, Warning), new types could be added in the future. It is machine-readable. This field cannot be empty for new Events.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

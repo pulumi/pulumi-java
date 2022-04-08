@@ -19,7 +19,6 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
@@ -30,7 +29,6 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Suggested HTTP return code for this status, 0 if not set.
-     * 
      */
     @Import(name="code")
       private final @Nullable Output<Integer> code;
@@ -41,7 +39,6 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.
-     * 
      */
     @Import(name="details")
       private final @Nullable Output<StatusDetailsArgs> details;
@@ -52,7 +49,6 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -63,7 +59,6 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A human-readable description of the status of this operation.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -74,7 +69,6 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<ListMetaArgs> metadata;
@@ -85,7 +79,6 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A machine-readable description of why this operation is in the "Failure" status. If this value is empty there is no information available. A Reason clarifies an HTTP status code but does not override it.
-     * 
      */
     @Import(name="reason")
       private final @Nullable Output<String> reason;

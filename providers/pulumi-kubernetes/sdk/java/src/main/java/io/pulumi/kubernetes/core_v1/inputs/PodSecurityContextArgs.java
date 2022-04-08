@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
- * 
  */
 public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -31,7 +30,6 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
      * 1. The owning GID will be the FSGroup 2. The setgid bit is set (new files created in the volume will be owned by FSGroup) 3. The permission bits are OR'd with rw-rw----
      * 
      * If unset, the Kubelet will not modify the ownership and permissions of any volume. Note that this field cannot be set when spec.os.name is windows.
-     * 
      */
     @Import(name="fsGroup")
       private final @Nullable Output<Integer> fsGroup;
@@ -42,7 +40,6 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * fsGroupChangePolicy defines behavior of changing ownership and permission of the volume before being exposed inside Pod. This field will only apply to volume types which support fsGroup based ownership(and permissions). It will have no effect on ephemeral volume types such as: secret, configmaps and emptydir. Valid values are "OnRootMismatch" and "Always". If not specified, "Always" is used. Note that this field cannot be set when spec.os.name is windows.
-     * 
      */
     @Import(name="fsGroupChangePolicy")
       private final @Nullable Output<String> fsGroupChangePolicy;
@@ -53,7 +50,6 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The GID to run the entrypoint of the container process. Uses runtime default if unset. May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container. Note that this field cannot be set when spec.os.name is windows.
-     * 
      */
     @Import(name="runAsGroup")
       private final @Nullable Output<Integer> runAsGroup;
@@ -64,7 +60,6 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Indicates that the container must run as a non-root user. If true, the Kubelet will validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to start the container if it does. If unset or false, no such validation will be performed. May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.
-     * 
      */
     @Import(name="runAsNonRoot")
       private final @Nullable Output<Boolean> runAsNonRoot;
@@ -75,7 +70,6 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container. Note that this field cannot be set when spec.os.name is windows.
-     * 
      */
     @Import(name="runAsUser")
       private final @Nullable Output<Integer> runAsUser;
@@ -86,7 +80,6 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The SELinux context to be applied to all containers. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container. Note that this field cannot be set when spec.os.name is windows.
-     * 
      */
     @Import(name="seLinuxOptions")
       private final @Nullable Output<SELinuxOptionsArgs> seLinuxOptions;
@@ -97,7 +90,6 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The seccomp options to use by the containers in this pod. Note that this field cannot be set when spec.os.name is windows.
-     * 
      */
     @Import(name="seccompProfile")
       private final @Nullable Output<SeccompProfileArgs> seccompProfile;
@@ -108,7 +100,6 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * A list of groups applied to the first process run in each container, in addition to the container's primary GID.  If unspecified, no groups will be added to any container. Note that this field cannot be set when spec.os.name is windows.
-     * 
      */
     @Import(name="supplementalGroups")
       private final @Nullable Output<List<Integer>> supplementalGroups;
@@ -119,7 +110,6 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported sysctls (by the container runtime) might fail to launch. Note that this field cannot be set when spec.os.name is windows.
-     * 
      */
     @Import(name="sysctls")
       private final @Nullable Output<List<SysctlArgs>> sysctls;
@@ -130,7 +120,6 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The Windows specific settings applied to all containers. If unspecified, the options within a container's SecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is linux.
-     * 
      */
     @Import(name="windowsOptions")
       private final @Nullable Output<WindowsSecurityContextOptionsArgs> windowsOptions;

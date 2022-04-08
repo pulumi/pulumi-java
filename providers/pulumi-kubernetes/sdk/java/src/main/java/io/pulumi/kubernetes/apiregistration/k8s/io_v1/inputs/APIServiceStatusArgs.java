@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * APIServiceStatus contains derived information about an API server
- * 
  */
 public final class APIServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class APIServiceStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Current service state of apiService.
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<List<APIServiceConditionArgs>> conditions;

@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class CertificateSigningRequestSpec {
     /**
      * Extra information about the requesting user. See user.Info interface for details.
-     * 
      */
     private final @Nullable Map<String,List<String>> extra;
     /**
      * Group information about the requesting user. See user.Info interface for details.
-     * 
      */
     private final @Nullable List<String> groups;
     /**
      * Base64-encoded PKCS#10 CSR data
-     * 
      */
     private final String request;
     /**
@@ -35,24 +32,20 @@ public final class CertificateSigningRequestSpec {
      *  2. If it's a kubelet serving certificate, it is assigned
      *     "kubernetes.io/kubelet-serving".
      *  3. Otherwise, it is assigned "kubernetes.io/legacy-unknown".
-     *     Distribution of trust for signers happens out of band. You can select on this field using `spec.signerName`.
-     * 
+     * Distribution of trust for signers happens out of band. You can select on this field using `spec.signerName`.
      */
     private final @Nullable String signerName;
     /**
      * UID information about the requesting user. See user.Info interface for details.
-     * 
      */
     private final @Nullable String uid;
     /**
      * allowedUsages specifies a set of usage contexts the key will be valid for. See: https://tools.ietf.org/html/rfc5280#section-4.2.1.3
      *      https://tools.ietf.org/html/rfc5280#section-4.2.1.12
-     * 
      */
     private final @Nullable List<String> usages;
     /**
      * Information about the requesting user. See user.Info interface for details.
-     * 
      */
     private final @Nullable String username;
 
@@ -76,21 +69,18 @@ public final class CertificateSigningRequestSpec {
 
     /**
      * Extra information about the requesting user. See user.Info interface for details.
-     * 
     */
     public Map<String,List<String>> getExtra() {
         return this.extra == null ? Map.of() : this.extra;
     }
     /**
      * Group information about the requesting user. See user.Info interface for details.
-     * 
     */
     public List<String> getGroups() {
         return this.groups == null ? List.of() : this.groups;
     }
     /**
      * Base64-encoded PKCS#10 CSR data
-     * 
     */
     public String getRequest() {
         return this.request;
@@ -102,15 +92,13 @@ public final class CertificateSigningRequestSpec {
      *  2. If it's a kubelet serving certificate, it is assigned
      *     "kubernetes.io/kubelet-serving".
      *  3. Otherwise, it is assigned "kubernetes.io/legacy-unknown".
-     *     Distribution of trust for signers happens out of band. You can select on this field using `spec.signerName`.
-     * 
+     * Distribution of trust for signers happens out of band. You can select on this field using `spec.signerName`.
     */
     public Optional<String> getSignerName() {
         return Optional.ofNullable(this.signerName);
     }
     /**
      * UID information about the requesting user. See user.Info interface for details.
-     * 
     */
     public Optional<String> getUid() {
         return Optional.ofNullable(this.uid);
@@ -118,14 +106,12 @@ public final class CertificateSigningRequestSpec {
     /**
      * allowedUsages specifies a set of usage contexts the key will be valid for. See: https://tools.ietf.org/html/rfc5280#section-4.2.1.3
      *      https://tools.ietf.org/html/rfc5280#section-4.2.1.12
-     * 
     */
     public List<String> getUsages() {
         return this.usages == null ? List.of() : this.usages;
     }
     /**
      * Information about the requesting user. See user.Info interface for details.
-     * 
     */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);

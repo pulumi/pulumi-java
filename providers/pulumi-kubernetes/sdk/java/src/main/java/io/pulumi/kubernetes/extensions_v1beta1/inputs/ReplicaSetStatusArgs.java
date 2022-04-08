@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * ReplicaSetStatus represents the current status of a ReplicaSet.
- * 
  */
 public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The number of available replicas (ready for at least minReadySeconds) for this replica set.
-     * 
      */
     @Import(name="availableReplicas")
       private final @Nullable Output<Integer> availableReplicas;
@@ -33,7 +31,6 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Represents the latest available observations of a replica set's current state.
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<List<ReplicaSetConditionArgs>> conditions;
@@ -44,7 +41,6 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The number of pods that have labels matching the labels of the pod template of the replicaset.
-     * 
      */
     @Import(name="fullyLabeledReplicas")
       private final @Nullable Output<Integer> fullyLabeledReplicas;
@@ -55,7 +51,6 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * ObservedGeneration reflects the generation of the most recently observed ReplicaSet.
-     * 
      */
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
@@ -66,7 +61,6 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The number of ready replicas for this replica set.
-     * 
      */
     @Import(name="readyReplicas")
       private final @Nullable Output<Integer> readyReplicas;
@@ -77,7 +71,6 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Replicas is the most recently oberved number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/#what-is-a-replicationcontroller
-     * 
      */
     @Import(name="replicas", required=true)
       private final Output<Integer> replicas;

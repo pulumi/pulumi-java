@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class HostPathVolumeSource {
     /**
      * Path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
-     * 
      */
     private final String path;
     /**
      * Type for HostPath Volume Defaults to "" More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
-     * 
      */
     private final @Nullable String type;
 
@@ -32,14 +30,12 @@ public final class HostPathVolumeSource {
 
     /**
      * Path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
-     * 
     */
     public String getPath() {
         return this.path;
     }
     /**
      * Type for HostPath Volume Defaults to "" More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

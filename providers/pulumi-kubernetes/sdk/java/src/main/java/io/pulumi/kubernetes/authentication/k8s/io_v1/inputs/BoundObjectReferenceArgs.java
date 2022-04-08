@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * BoundObjectReference is a reference to an object that a token is bound to.
- * 
  */
 public final class BoundObjectReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BoundObjectReferenceArgs extends io.pulumi.resources.Resource
 
     /**
      * API version of the referent.
-     * 
      */
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
@@ -31,7 +29,6 @@ public final class BoundObjectReferenceArgs extends io.pulumi.resources.Resource
 
     /**
      * Kind of the referent. Valid kinds are 'Pod' and 'Secret'.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -42,7 +39,6 @@ public final class BoundObjectReferenceArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the referent.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -53,7 +49,6 @@ public final class BoundObjectReferenceArgs extends io.pulumi.resources.Resource
 
     /**
      * UID of the referent.
-     * 
      */
     @Import(name="uid")
       private final @Nullable Output<String> uid;

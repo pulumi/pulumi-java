@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * volumeDevice describes a mapping of a raw block device within a container.
- * 
  */
 public final class VolumeDeviceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class VolumeDeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * devicePath is the path inside of the container that the device will be mapped to.
-     * 
      */
     @Import(name="devicePath", required=true)
       private final Output<String> devicePath;
@@ -30,7 +28,6 @@ public final class VolumeDeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * name must match the name of a persistentVolumeClaim in the pod
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

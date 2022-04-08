@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class PodTemplateSpec {
     /**
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     private final @Nullable ObjectMeta metadata;
     /**
      * Specification of the desired behavior of the pod. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-     * 
      */
     private final @Nullable PodSpec spec;
 
@@ -33,14 +31,12 @@ public final class PodTemplateSpec {
 
     /**
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
     */
     public Optional<ObjectMeta> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * Specification of the desired behavior of the pod. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-     * 
     */
     public Optional<PodSpec> getSpec() {
         return Optional.ofNullable(this.spec);

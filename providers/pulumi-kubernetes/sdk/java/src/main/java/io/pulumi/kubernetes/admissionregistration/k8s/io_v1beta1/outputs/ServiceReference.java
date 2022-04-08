@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class ServiceReference {
     /**
      * `name` is the name of the service. Required
-     * 
      */
     private final String name;
     /**
      * `namespace` is the namespace of the service. Required
-     * 
      */
     private final String namespace;
     /**
      * `path` is an optional URL path which will be sent in any request to this service.
-     * 
      */
     private final @Nullable String path;
     /**
      * If specified, the port on the service that hosting webhook. Default to 443 for backward compatibility. `port` should be a valid port number (1-65535, inclusive).
-     * 
      */
     private final @Nullable Integer port;
 
@@ -47,28 +43,24 @@ public final class ServiceReference {
 
     /**
      * `name` is the name of the service. Required
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * `namespace` is the namespace of the service. Required
-     * 
     */
     public String getNamespace() {
         return this.namespace;
     }
     /**
      * `path` is an optional URL path which will be sent in any request to this service.
-     * 
     */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * If specified, the port on the service that hosting webhook. Default to 443 for backward compatibility. `port` should be a valid port number (1-65535, inclusive).
-     * 
     */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * ScaleIOVolumeSource represents a persistent ScaleIO volume
- * 
  */
 public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Default is "xfs".
-     * 
      */
     @Import(name="fsType")
       private final @Nullable Output<String> fsType;
@@ -33,7 +31,6 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The host address of the ScaleIO API Gateway.
-     * 
      */
     @Import(name="gateway", required=true)
       private final Output<String> gateway;
@@ -44,7 +41,6 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the ScaleIO Protection Domain for the configured storage.
-     * 
      */
     @Import(name="protectionDomain")
       private final @Nullable Output<String> protectionDomain;
@@ -55,7 +51,6 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
-     * 
      */
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
@@ -66,7 +61,6 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * SecretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.
-     * 
      */
     @Import(name="secretRef", required=true)
       private final Output<LocalObjectReferenceArgs> secretRef;
@@ -77,7 +71,6 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Flag to enable/disable SSL communication with Gateway, default false
-     * 
      */
     @Import(name="sslEnabled")
       private final @Nullable Output<Boolean> sslEnabled;
@@ -88,7 +81,6 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.
-     * 
      */
     @Import(name="storageMode")
       private final @Nullable Output<String> storageMode;
@@ -99,7 +91,6 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The ScaleIO Storage Pool associated with the protection domain.
-     * 
      */
     @Import(name="storagePool")
       private final @Nullable Output<String> storagePool;
@@ -110,7 +101,6 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the storage system as configured in ScaleIO.
-     * 
      */
     @Import(name="system", required=true)
       private final Output<String> system;
@@ -121,7 +111,6 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of a volume already created in the ScaleIO system that is associated with this volume source.
-     * 
      */
     @Import(name="volumeName")
       private final @Nullable Output<String> volumeName;

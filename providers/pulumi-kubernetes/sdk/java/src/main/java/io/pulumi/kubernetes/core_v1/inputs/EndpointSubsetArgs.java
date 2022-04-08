@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
  * The resulting set of endpoints can be viewed as:
  *     a: [ 10.10.1.1:8675, 10.10.2.2:8675 ],
  *     b: [ 10.10.1.1:309, 10.10.2.2:309 ]
- * 
  */
 public final class EndpointSubsetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class EndpointSubsetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IP addresses which offer the related ports that are marked as ready. These endpoints should be considered safe for load balancers and clients to utilize.
-     * 
      */
     @Import(name="addresses")
       private final @Nullable Output<List<EndpointAddressArgs>> addresses;
@@ -40,7 +38,6 @@ public final class EndpointSubsetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IP addresses which offer the related ports but are not currently marked as ready because they have not yet finished starting, have recently failed a readiness check, or have recently failed a liveness check.
-     * 
      */
     @Import(name="notReadyAddresses")
       private final @Nullable Output<List<EndpointAddressArgs>> notReadyAddresses;
@@ -51,7 +48,6 @@ public final class EndpointSubsetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Port numbers available on the related IP addresses.
-     * 
      */
     @Import(name="ports")
       private final @Nullable Output<List<EndpointPortArgs>> ports;

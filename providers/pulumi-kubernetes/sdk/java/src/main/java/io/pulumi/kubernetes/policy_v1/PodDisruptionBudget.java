@@ -18,76 +18,65 @@ import javax.annotation.Nullable;
 
 /**
  * PodDisruptionBudget is an object to define the max disruption that can be caused to a collection of pods
- * 
  */
 @ResourceType(type="kubernetes:policy/v1:PodDisruptionBudget")
 public class PodDisruptionBudget extends io.pulumi.resources.CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
      * @return Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     public Output</* @Nullable */ ObjectMeta> getMetadata() {
         return this.metadata;
     }
     /**
      * Specification of the desired behavior of the PodDisruptionBudget.
-     * 
      */
     @Export(name="spec", type=PodDisruptionBudgetSpec.class, parameters={})
     private Output</* @Nullable */ PodDisruptionBudgetSpec> spec;
 
     /**
      * @return Specification of the desired behavior of the PodDisruptionBudget.
-     * 
      */
     public Output</* @Nullable */ PodDisruptionBudgetSpec> getSpec() {
         return this.spec;
     }
     /**
      * Most recently observed status of the PodDisruptionBudget.
-     * 
      */
     @Export(name="status", type=PodDisruptionBudgetStatus.class, parameters={})
     private Output</* @Nullable */ PodDisruptionBudgetStatus> status;
 
     /**
      * @return Most recently observed status of the PodDisruptionBudget.
-     * 
      */
     public Output</* @Nullable */ PodDisruptionBudgetStatus> getStatus() {
         return this.status;

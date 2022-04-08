@@ -19,7 +19,6 @@ public final class IngressRule {
      * 	  Currently the port of an Ingress is implicitly :80 for http and
      * 	  :443 for https.
      * Both these may change in the future. Incoming requests are matched against the host before the IngressRuleValue. If the host is unspecified, the Ingress routes all traffic based on the specified IngressRuleValue.
-     * 
      */
     private final @Nullable String host;
     private final @Nullable HTTPIngressRuleValue http;
@@ -39,7 +38,6 @@ public final class IngressRule {
      * 	  Currently the port of an Ingress is implicitly :80 for http and
      * 	  :443 for https.
      * Both these may change in the future. Incoming requests are matched against the host before the IngressRuleValue. If the host is unspecified, the Ingress routes all traffic based on the specified IngressRuleValue.
-     * 
     */
     public Optional<String> getHost() {
         return Optional.ofNullable(this.host);

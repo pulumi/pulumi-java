@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * PodDisruptionBudget is an object to define the max disruption that can be caused to a collection of pods
- * 
  */
 public final class PodDisruptionBudgetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class PodDisruptionBudgetArgs extends io.pulumi.resources.ResourceA
 
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
@@ -34,7 +32,6 @@ public final class PodDisruptionBudgetArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -45,7 +42,6 @@ public final class PodDisruptionBudgetArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
@@ -56,7 +52,6 @@ public final class PodDisruptionBudgetArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Specification of the desired behavior of the PodDisruptionBudget.
-     * 
      */
     @Import(name="spec")
       private final @Nullable Output<PodDisruptionBudgetSpecArgs> spec;
@@ -67,7 +62,6 @@ public final class PodDisruptionBudgetArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Most recently observed status of the PodDisruptionBudget.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<PodDisruptionBudgetStatusArgs> status;

@@ -19,7 +19,6 @@ public final class HorizontalPodAutoscalerListArgs extends io.pulumi.resources.R
 
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
@@ -30,7 +29,6 @@ public final class HorizontalPodAutoscalerListArgs extends io.pulumi.resources.R
 
     /**
      * items is the list of horizontal pod autoscaler objects.
-     * 
      */
     @Import(name="items", required=true)
       private final Output<List<HorizontalPodAutoscalerArgs>> items;
@@ -41,7 +39,6 @@ public final class HorizontalPodAutoscalerListArgs extends io.pulumi.resources.R
 
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -52,7 +49,6 @@ public final class HorizontalPodAutoscalerListArgs extends io.pulumi.resources.R
 
     /**
      * metadata is the standard list metadata.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<ListMetaArgs> metadata;

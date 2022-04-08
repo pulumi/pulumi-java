@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class NodeSelectorTerm {
     /**
      * A list of node selector requirements by node's labels.
-     * 
      */
     private final @Nullable List<NodeSelectorRequirement> matchExpressions;
     /**
      * A list of node selector requirements by node's fields.
-     * 
      */
     private final @Nullable List<NodeSelectorRequirement> matchFields;
 
@@ -32,14 +30,12 @@ public final class NodeSelectorTerm {
 
     /**
      * A list of node selector requirements by node's labels.
-     * 
     */
     public List<NodeSelectorRequirement> getMatchExpressions() {
         return this.matchExpressions == null ? List.of() : this.matchExpressions;
     }
     /**
      * A list of node selector requirements by node's fields.
-     * 
     */
     public List<NodeSelectorRequirement> getMatchFields() {
         return this.matchFields == null ? List.of() : this.matchFields;

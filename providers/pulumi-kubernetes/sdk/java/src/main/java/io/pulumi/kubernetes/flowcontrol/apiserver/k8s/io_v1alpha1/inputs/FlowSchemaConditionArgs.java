@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * FlowSchemaCondition describes conditions for a FlowSchema.
- * 
  */
 public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * `lastTransitionTime` is the last time the condition transitioned from one status to another.
-     * 
      */
     @Import(name="lastTransitionTime")
       private final @Nullable Output<String> lastTransitionTime;
@@ -31,7 +29,6 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * `message` is a human-readable message indicating details about last transition.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -42,7 +39,6 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * `reason` is a unique, one-word, CamelCase reason for the condition's last transition.
-     * 
      */
     @Import(name="reason")
       private final @Nullable Output<String> reason;
@@ -53,7 +49,6 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * `status` is the status of the condition. Can be True, False, Unknown. Required.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<String> status;
@@ -64,7 +59,6 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * `type` is the type of the condition. Required.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

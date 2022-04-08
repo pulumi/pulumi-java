@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * ReplicaSetSpec is the specification of a ReplicaSet.
- * 
  */
 public final class ReplicaSetSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ReplicaSetSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Minimum number of seconds for which a newly created pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready)
-     * 
      */
     @Import(name="minReadySeconds")
       private final @Nullable Output<Integer> minReadySeconds;
@@ -33,7 +31,6 @@ public final class ReplicaSetSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Replicas is the number of desired replicas. This is a pointer to distinguish between explicit zero and unspecified. Defaults to 1. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/#what-is-a-replicationcontroller
-     * 
      */
     @Import(name="replicas")
       private final @Nullable Output<Integer> replicas;
@@ -44,7 +41,6 @@ public final class ReplicaSetSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Selector is a label query over pods that should match the replica count. Label keys and values that must match in order to be controlled by this replica set. It must match the pod template's labels. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors
-     * 
      */
     @Import(name="selector", required=true)
       private final Output<LabelSelectorArgs> selector;
@@ -55,7 +51,6 @@ public final class ReplicaSetSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Template is the object that describes the pod that will be created if insufficient replicas are detected. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template
-     * 
      */
     @Import(name="template")
       private final @Nullable Output<PodTemplateSpecArgs> template;

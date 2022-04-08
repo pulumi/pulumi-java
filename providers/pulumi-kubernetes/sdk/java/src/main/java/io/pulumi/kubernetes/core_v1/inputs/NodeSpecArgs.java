@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * NodeSpec describes the attributes that a node is created with.
- * 
  */
 public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Deprecated. If specified, the source of the node's configuration. The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field. This field is deprecated as of 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
-     * 
      */
     @Import(name="configSource")
       private final @Nullable Output<NodeConfigSourceArgs> configSource;
@@ -35,7 +33,6 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Deprecated. Not all kubelets will set this field. Remove field after 1.13. see: https://issues.k8s.io/61966
-     * 
      */
     @Import(name="externalID")
       private final @Nullable Output<String> externalID;
@@ -46,7 +43,6 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * PodCIDR represents the pod IP range assigned to the node.
-     * 
      */
     @Import(name="podCIDR")
       private final @Nullable Output<String> podCIDR;
@@ -57,7 +53,6 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * podCIDRs represents the IP ranges assigned to the node for usage by Pods on that node. If this field is specified, the 0th entry must match the podCIDR field. It may contain at most 1 value for each of IPv4 and IPv6.
-     * 
      */
     @Import(name="podCIDRs")
       private final @Nullable Output<List<String>> podCIDRs;
@@ -68,7 +63,6 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ID of the node assigned by the cloud provider in the format: <ProviderName>://<ProviderSpecificNodeID>
-     * 
      */
     @Import(name="providerID")
       private final @Nullable Output<String> providerID;
@@ -79,7 +73,6 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If specified, the node's taints.
-     * 
      */
     @Import(name="taints")
       private final @Nullable Output<List<TaintArgs>> taints;
@@ -90,7 +83,6 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unschedulable controls node schedulability of new pods. By default, node is schedulable. More info: https://kubernetes.io/docs/concepts/nodes/node/#manual-node-administration
-     * 
      */
     @Import(name="unschedulable")
       private final @Nullable Output<Boolean> unschedulable;

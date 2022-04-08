@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * ContainerPort represents a network port in a single container.
- * 
  */
 public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.
-     * 
      */
     @Import(name="containerPort", required=true)
       private final Output<Integer> containerPort;
@@ -32,7 +30,6 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * What host IP to bind the external port to.
-     * 
      */
     @Import(name="hostIP")
       private final @Nullable Output<String> hostIP;
@@ -43,7 +40,6 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.
-     * 
      */
     @Import(name="hostPort")
       private final @Nullable Output<Integer> hostPort;
@@ -54,7 +50,6 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -70,7 +65,6 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"SCTP"` is the SCTP protocol.
      *  - `"TCP"` is the TCP protocol.
      *  - `"UDP"` is the UDP protocol.
-     * 
      */
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;

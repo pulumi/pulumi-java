@@ -18,34 +18,29 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a certificate signing request
- * 
  */
 @ResourceType(type="kubernetes:certificates.k8s.io/v1beta1:CertificateSigningRequest")
 public class CertificateSigningRequest extends io.pulumi.resources.CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
@@ -58,28 +53,24 @@ public class CertificateSigningRequest extends io.pulumi.resources.CustomResourc
     }
     /**
      * The certificate request itself and any additional information.
-     * 
      */
     @Export(name="spec", type=CertificateSigningRequestSpec.class, parameters={})
     private Output</* @Nullable */ CertificateSigningRequestSpec> spec;
 
     /**
      * @return The certificate request itself and any additional information.
-     * 
      */
     public Output</* @Nullable */ CertificateSigningRequestSpec> getSpec() {
         return this.spec;
     }
     /**
      * Derived information about the request.
-     * 
      */
     @Export(name="status", type=CertificateSigningRequestStatus.class, parameters={})
     private Output</* @Nullable */ CertificateSigningRequestStatus> status;
 
     /**
      * @return Derived information about the request.
-     * 
      */
     public Output</* @Nullable */ CertificateSigningRequestStatus> getStatus() {
         return this.status;

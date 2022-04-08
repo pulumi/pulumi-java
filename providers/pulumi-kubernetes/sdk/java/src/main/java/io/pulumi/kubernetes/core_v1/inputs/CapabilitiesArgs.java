@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Adds and removes POSIX capabilities from running containers.
- * 
  */
 public final class CapabilitiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class CapabilitiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Added capabilities
-     * 
      */
     @Import(name="add")
       private final @Nullable Output<List<String>> add;
@@ -32,7 +30,6 @@ public final class CapabilitiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Removed capabilities
-     * 
      */
     @Import(name="drop")
       private final @Nullable Output<List<String>> drop;

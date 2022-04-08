@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * ResourceQuotaSpec defines the desired hard limits to enforce for Quota.
- * 
  */
 public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * hard is the set of desired hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/
-     * 
      */
     @Import(name="hard")
       private final @Nullable Output<Map<String,String>> hard;
@@ -34,7 +32,6 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * scopeSelector is also a collection of filters like scopes that must match each object tracked by a quota but expressed using ScopeSelectorOperator in combination with possible values. For a resource to match, both scopes AND scopeSelector (if specified in spec), must be matched.
-     * 
      */
     @Import(name="scopeSelector")
       private final @Nullable Output<ScopeSelectorArgs> scopeSelector;
@@ -45,7 +42,6 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A collection of filters that must match each object tracked by a quota. If not specified, the quota matches all objects.
-     * 
      */
     @Import(name="scopes")
       private final @Nullable Output<List<String>> scopes;

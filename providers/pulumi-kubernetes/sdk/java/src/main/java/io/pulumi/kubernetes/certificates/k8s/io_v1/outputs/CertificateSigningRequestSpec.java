@@ -29,22 +29,18 @@ public final class CertificateSigningRequestSpec {
      * The minimum valid value for expirationSeconds is 600, i.e. 10 minutes.
      * 
      * As of v1.22, this field is beta and is controlled via the CSRDuration feature gate.
-     * 
      */
     private final @Nullable Integer expirationSeconds;
     /**
      * extra contains extra attributes of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
-     * 
      */
     private final @Nullable Map<String,List<String>> extra;
     /**
      * groups contains group membership of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
-     * 
      */
     private final @Nullable List<String> groups;
     /**
      * request contains an x509 certificate signing request encoded in a "CERTIFICATE REQUEST" PEM block. When serialized as JSON or YAML, the data is additionally base64-encoded.
-     * 
      */
     private final String request;
     /**
@@ -54,11 +50,11 @@ public final class CertificateSigningRequestSpec {
      * 
      * Well-known Kubernetes signers are:
      *  1. "kubernetes.io/kube-apiserver-client": issues client certificates that can be used to authenticate to kube-apiserver.
-     *       Requests for this signer are never auto-approved by kube-controller-manager, can be issued by the "csrsigning" controller in kube-controller-manager.
+     *   Requests for this signer are never auto-approved by kube-controller-manager, can be issued by the "csrsigning" controller in kube-controller-manager.
      *  2. "kubernetes.io/kube-apiserver-client-kubelet": issues client certificates that kubelets use to authenticate to kube-apiserver.
-     *       Requests for this signer can be auto-approved by the "csrapproving" controller in kube-controller-manager, and can be issued by the "csrsigning" controller in kube-controller-manager.
+     *   Requests for this signer can be auto-approved by the "csrapproving" controller in kube-controller-manager, and can be issued by the "csrsigning" controller in kube-controller-manager.
      *  3. "kubernetes.io/kubelet-serving" issues serving certificates that kubelets use to serve TLS endpoints, which kube-apiserver can connect to securely.
-     *       Requests for this signer are never auto-approved by kube-controller-manager, and can be issued by the "csrsigning" controller in kube-controller-manager.
+     *   Requests for this signer are never auto-approved by kube-controller-manager, and can be issued by the "csrsigning" controller in kube-controller-manager.
      * 
      * More details are available at https://k8s.io/docs/reference/access-authn-authz/certificate-signing-requests/#kubernetes-signers
      * 
@@ -69,12 +65,10 @@ public final class CertificateSigningRequestSpec {
      *  4. Required, permitted, or forbidden key usages / extended key usages.
      *  5. Expiration/certificate lifetime: whether it is fixed by the signer, configurable by the admin.
      *  6. Whether or not requests for CA certificates are allowed.
-     * 
      */
     private final String signerName;
     /**
      * uid contains the uid of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
-     * 
      */
     private final @Nullable String uid;
     /**
@@ -92,12 +86,10 @@ public final class CertificateSigningRequestSpec {
      *  "code signing", "email protection", "s/mime",
      *  "ipsec end system", "ipsec tunnel", "ipsec user",
      *  "timestamping", "ocsp signing", "microsoft sgc", "netscape sgc"
-     * 
      */
     private final @Nullable List<String> usages;
     /**
      * username contains the name of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
-     * 
      */
     private final @Nullable String username;
 
@@ -136,28 +128,24 @@ public final class CertificateSigningRequestSpec {
      * The minimum valid value for expirationSeconds is 600, i.e. 10 minutes.
      * 
      * As of v1.22, this field is beta and is controlled via the CSRDuration feature gate.
-     * 
     */
     public Optional<Integer> getExpirationSeconds() {
         return Optional.ofNullable(this.expirationSeconds);
     }
     /**
      * extra contains extra attributes of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
-     * 
     */
     public Map<String,List<String>> getExtra() {
         return this.extra == null ? Map.of() : this.extra;
     }
     /**
      * groups contains group membership of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
-     * 
     */
     public List<String> getGroups() {
         return this.groups == null ? List.of() : this.groups;
     }
     /**
      * request contains an x509 certificate signing request encoded in a "CERTIFICATE REQUEST" PEM block. When serialized as JSON or YAML, the data is additionally base64-encoded.
-     * 
     */
     public String getRequest() {
         return this.request;
@@ -169,11 +157,11 @@ public final class CertificateSigningRequestSpec {
      * 
      * Well-known Kubernetes signers are:
      *  1. "kubernetes.io/kube-apiserver-client": issues client certificates that can be used to authenticate to kube-apiserver.
-     *       Requests for this signer are never auto-approved by kube-controller-manager, can be issued by the "csrsigning" controller in kube-controller-manager.
+     *   Requests for this signer are never auto-approved by kube-controller-manager, can be issued by the "csrsigning" controller in kube-controller-manager.
      *  2. "kubernetes.io/kube-apiserver-client-kubelet": issues client certificates that kubelets use to authenticate to kube-apiserver.
-     *       Requests for this signer can be auto-approved by the "csrapproving" controller in kube-controller-manager, and can be issued by the "csrsigning" controller in kube-controller-manager.
+     *   Requests for this signer can be auto-approved by the "csrapproving" controller in kube-controller-manager, and can be issued by the "csrsigning" controller in kube-controller-manager.
      *  3. "kubernetes.io/kubelet-serving" issues serving certificates that kubelets use to serve TLS endpoints, which kube-apiserver can connect to securely.
-     *       Requests for this signer are never auto-approved by kube-controller-manager, and can be issued by the "csrsigning" controller in kube-controller-manager.
+     *   Requests for this signer are never auto-approved by kube-controller-manager, and can be issued by the "csrsigning" controller in kube-controller-manager.
      * 
      * More details are available at https://k8s.io/docs/reference/access-authn-authz/certificate-signing-requests/#kubernetes-signers
      * 
@@ -184,14 +172,12 @@ public final class CertificateSigningRequestSpec {
      *  4. Required, permitted, or forbidden key usages / extended key usages.
      *  5. Expiration/certificate lifetime: whether it is fixed by the signer, configurable by the admin.
      *  6. Whether or not requests for CA certificates are allowed.
-     * 
     */
     public String getSignerName() {
         return this.signerName;
     }
     /**
      * uid contains the uid of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
-     * 
     */
     public Optional<String> getUid() {
         return Optional.ofNullable(this.uid);
@@ -211,14 +197,12 @@ public final class CertificateSigningRequestSpec {
      *  "code signing", "email protection", "s/mime",
      *  "ipsec end system", "ipsec tunnel", "ipsec user",
      *  "timestamping", "ocsp signing", "microsoft sgc", "netscape sgc"
-     * 
     */
     public List<String> getUsages() {
         return this.usages == null ? List.of() : this.usages;
     }
     /**
      * username contains the name of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
-     * 
     */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);

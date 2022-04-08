@@ -18,76 +18,65 @@ import javax.annotation.Nullable;
 
 /**
  * configuration of a horizontal pod autoscaler.
- * 
  */
 @ResourceType(type="kubernetes:autoscaling/v1:HorizontalPodAutoscaler")
 public class HorizontalPodAutoscaler extends io.pulumi.resources.CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
      * @return Standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     public Output</* @Nullable */ ObjectMeta> getMetadata() {
         return this.metadata;
     }
     /**
      * behaviour of autoscaler. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.
-     * 
      */
     @Export(name="spec", type=HorizontalPodAutoscalerSpec.class, parameters={})
     private Output</* @Nullable */ HorizontalPodAutoscalerSpec> spec;
 
     /**
      * @return behaviour of autoscaler. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.
-     * 
      */
     public Output</* @Nullable */ HorizontalPodAutoscalerSpec> getSpec() {
         return this.spec;
     }
     /**
      * current information about the autoscaler.
-     * 
      */
     @Export(name="status", type=HorizontalPodAutoscalerStatus.class, parameters={})
     private Output</* @Nullable */ HorizontalPodAutoscalerStatus> status;
 
     /**
      * @return current information about the autoscaler.
-     * 
      */
     public Output</* @Nullable */ HorizontalPodAutoscalerStatus> getStatus() {
         return this.status;

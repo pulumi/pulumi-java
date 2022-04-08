@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * SELinuxStrategyOptions defines the strategy type and any options used to create the strategy. Deprecated: use SELinuxStrategyOptions from policy API Group instead.
- * 
  */
 public final class SELinuxStrategyOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SELinuxStrategyOptionsArgs extends io.pulumi.resources.Resour
 
     /**
      * rule is the strategy that will dictate the allowable labels that may be set.
-     * 
      */
     @Import(name="rule", required=true)
       private final Output<String> rule;
@@ -32,7 +30,6 @@ public final class SELinuxStrategyOptionsArgs extends io.pulumi.resources.Resour
 
     /**
      * seLinuxOptions required to run as; required for MustRunAs More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
-     * 
      */
     @Import(name="seLinuxOptions")
       private final @Nullable Output<SELinuxOptionsArgs> seLinuxOptions;

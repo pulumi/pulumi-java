@@ -14,14 +14,12 @@ import javax.annotation.Nullable;
 public final class WebhookClientConfig {
     /**
      * caBundle is a PEM encoded CA bundle which will be used to validate the webhook's server certificate. If unspecified, system trust roots on the apiserver are used.
-     * 
      */
     private final @Nullable String caBundle;
     /**
      * service is a reference to the service for this webhook. Either service or url must be specified.
      * 
      * If the webhook is running within the cluster, then you should use `service`.
-     * 
      */
     private final @Nullable ServiceReference service;
     /**
@@ -36,7 +34,6 @@ public final class WebhookClientConfig {
      * A path is optional, and if present may be any string permissible in a URL. You may use the path to pass an arbitrary string to the webhook, for example, a cluster identifier.
      * 
      * Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fragments ("#...") and query parameters ("?...") are not allowed, either.
-     * 
      */
     private final @Nullable String url;
 
@@ -52,7 +49,6 @@ public final class WebhookClientConfig {
 
     /**
      * caBundle is a PEM encoded CA bundle which will be used to validate the webhook's server certificate. If unspecified, system trust roots on the apiserver are used.
-     * 
     */
     public Optional<String> getCaBundle() {
         return Optional.ofNullable(this.caBundle);
@@ -61,7 +57,6 @@ public final class WebhookClientConfig {
      * service is a reference to the service for this webhook. Either service or url must be specified.
      * 
      * If the webhook is running within the cluster, then you should use `service`.
-     * 
     */
     public Optional<ServiceReference> getService() {
         return Optional.ofNullable(this.service);
@@ -78,7 +73,6 @@ public final class WebhookClientConfig {
      * A path is optional, and if present may be any string permissible in a URL. You may use the path to pass an arbitrary string to the webhook, for example, a cluster identifier.
      * 
      * Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fragments ("#...") and query parameters ("?...") are not allowed, either.
-     * 
     */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);

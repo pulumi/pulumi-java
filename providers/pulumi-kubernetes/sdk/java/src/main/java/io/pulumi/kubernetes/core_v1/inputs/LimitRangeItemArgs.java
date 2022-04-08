@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * LimitRangeItem defines a min/max usage limit for any resource that matches on kind.
- * 
  */
 public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Default resource requirement limit value by resource name if resource limit is omitted.
-     * 
      */
     @Import(name="default")
       private final @Nullable Output<Map<String,String>> default_;
@@ -32,7 +30,6 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * DefaultRequest is the default resource requirement request value by resource name if resource request is omitted.
-     * 
      */
     @Import(name="defaultRequest")
       private final @Nullable Output<Map<String,String>> defaultRequest;
@@ -43,7 +40,6 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Max usage constraints on this kind by resource name.
-     * 
      */
     @Import(name="max")
       private final @Nullable Output<Map<String,String>> max;
@@ -54,7 +50,6 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * MaxLimitRequestRatio if specified, the named resource must have a request and limit that are both non-zero where limit divided by request is less than or equal to the enumerated value; this represents the max burst for the named resource.
-     * 
      */
     @Import(name="maxLimitRequestRatio")
       private final @Nullable Output<Map<String,String>> maxLimitRequestRatio;
@@ -65,7 +60,6 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Min usage constraints on this kind by resource name.
-     * 
      */
     @Import(name="min")
       private final @Nullable Output<Map<String,String>> min;
@@ -81,7 +75,6 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"Container"` Limit that applies to all containers in a namespace
      *  - `"PersistentVolumeClaim"` Limit that applies to all persistent volume claims in a namespace
      *  - `"Pod"` Limit that applies to all pods in a namespace
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

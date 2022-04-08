@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class FlowDistinguisherMethod {
     /**
      * `type` is the type of flow distinguisher method The supported types are "ByUser" and "ByNamespace". Required.
-     * 
      */
     private final String type;
 
@@ -22,7 +21,6 @@ public final class FlowDistinguisherMethod {
 
     /**
      * `type` is the type of flow distinguisher method The supported types are "ByUser" and "ByNamespace". Required.
-     * 
     */
     public String getType() {
         return this.type;

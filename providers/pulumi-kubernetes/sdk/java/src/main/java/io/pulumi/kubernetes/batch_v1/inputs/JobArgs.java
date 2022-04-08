@@ -25,17 +25,16 @@ import javax.annotation.Nullable;
  * 2. The Job's '.status.conditions' has a status of type 'Complete', and a 'status' set
  *    to 'True'.
  * 3. The Job's '.status.conditions' do not have a status of type 'Failed', with a
- *     'status' set to 'True'. If this condition is set, we should fail the Job immediately.
+ * 	'status' set to 'True'. If this condition is set, we should fail the Job immediately.
  * 
  * If the Job has not reached a Ready state after 10 minutes, it will
  * time out and mark the resource update as Failed. You can override the default timeout value
  * by setting the 'customTimeouts' option on the resource.
  * 
- * By default, if a resource failed to become ready in a previous update,
+ * By default, if a resource failed to become ready in a previous update, 
  * Pulumi will continue to wait for readiness on the next update. If you would prefer
  * to schedule a replacement for an unready resource on the next update, you can add the
  * "pulumi.com/replaceUnready": "true" annotation to the resource definition.
- * 
  */
 public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -43,7 +42,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
@@ -54,7 +52,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -65,7 +62,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
@@ -76,7 +72,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specification of the desired behavior of a job. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-     * 
      */
     @Import(name="spec")
       private final @Nullable Output<JobSpecArgs> spec;
@@ -87,7 +82,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Current status of a job. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<JobStatusArgs> status;

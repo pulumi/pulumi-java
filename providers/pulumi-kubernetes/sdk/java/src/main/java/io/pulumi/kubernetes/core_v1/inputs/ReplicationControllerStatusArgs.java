@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * ReplicationControllerStatus represents the current status of a replication controller.
- * 
  */
 public final class ReplicationControllerStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
 
     /**
      * The number of available replicas (ready for at least minReadySeconds) for this replication controller.
-     * 
      */
     @Import(name="availableReplicas")
       private final @Nullable Output<Integer> availableReplicas;
@@ -33,7 +31,6 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
 
     /**
      * Represents the latest available observations of a replication controller's current state.
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<List<ReplicationControllerConditionArgs>> conditions;
@@ -44,7 +41,6 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
 
     /**
      * The number of pods that have labels matching the labels of the pod template of the replication controller.
-     * 
      */
     @Import(name="fullyLabeledReplicas")
       private final @Nullable Output<Integer> fullyLabeledReplicas;
@@ -55,7 +51,6 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
 
     /**
      * ObservedGeneration reflects the generation of the most recently observed replication controller.
-     * 
      */
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
@@ -66,7 +61,6 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
 
     /**
      * The number of ready replicas for this replication controller.
-     * 
      */
     @Import(name="readyReplicas")
       private final @Nullable Output<Integer> readyReplicas;
@@ -77,7 +71,6 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
 
     /**
      * Replicas is the most recently oberved number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#what-is-a-replicationcontroller
-     * 
      */
     @Import(name="replicas", required=true)
       private final Output<Integer> replicas;

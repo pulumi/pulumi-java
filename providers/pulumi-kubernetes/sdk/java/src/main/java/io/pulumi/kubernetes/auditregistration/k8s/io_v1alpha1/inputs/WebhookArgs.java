@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Webhook holds the configuration of the webhook
- * 
  */
 public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ClientConfig holds the connection parameters for the webhook required
-     * 
      */
     @Import(name="clientConfig", required=true)
       private final Output<WebhookClientConfigArgs> clientConfig;
@@ -32,7 +30,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Throttle holds the options for throttling the webhook
-     * 
      */
     @Import(name="throttle")
       private final @Nullable Output<WebhookThrottleConfigArgs> throttle;

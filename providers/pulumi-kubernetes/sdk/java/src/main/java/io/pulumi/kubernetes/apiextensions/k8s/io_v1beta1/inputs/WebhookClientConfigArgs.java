@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * WebhookClientConfig contains the information to make a TLS connection with the webhook.
- * 
  */
 public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * caBundle is a PEM encoded CA bundle which will be used to validate the webhook's server certificate. If unspecified, system trust roots on the apiserver are used.
-     * 
      */
     @Import(name="caBundle")
       private final @Nullable Output<String> caBundle;
@@ -34,7 +32,6 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
      * service is a reference to the service for this webhook. Either service or url must be specified.
      * 
      * If the webhook is running within the cluster, then you should use `service`.
-     * 
      */
     @Import(name="service")
       private final @Nullable Output<ServiceReferenceArgs> service;
@@ -55,7 +52,6 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
      * A path is optional, and if present may be any string permissible in a URL. You may use the path to pass an arbitrary string to the webhook, for example, a cluster identifier.
      * 
      * Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fragments ("#...") and query parameters ("?...") are not allowed, either.
-     * 
      */
     @Import(name="url")
       private final @Nullable Output<String> url;

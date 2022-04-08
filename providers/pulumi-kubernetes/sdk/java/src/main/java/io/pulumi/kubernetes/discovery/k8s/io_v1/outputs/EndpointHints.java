@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class EndpointHints {
     /**
      * forZones indicates the zone(s) this endpoint should be consumed by to enable topology aware routing.
-     * 
      */
     private final @Nullable List<ForZone> forZones;
 
@@ -24,7 +23,6 @@ public final class EndpointHints {
 
     /**
      * forZones indicates the zone(s) this endpoint should be consumed by to enable topology aware routing.
-     * 
     */
     public List<ForZone> getForZones() {
         return this.forZones == null ? List.of() : this.forZones;

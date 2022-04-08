@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * StatefulSetStatus represents the current state of a StatefulSet.
- * 
  */
 public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * collisionCount is the count of hash collisions for the StatefulSet. The StatefulSet controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ControllerRevision.
-     * 
      */
     @Import(name="collisionCount")
       private final @Nullable Output<Integer> collisionCount;
@@ -34,7 +32,6 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Represents the latest available observations of a statefulset's current state.
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<List<StatefulSetConditionArgs>> conditions;
@@ -45,7 +42,6 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * currentReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by currentRevision.
-     * 
      */
     @Import(name="currentReplicas")
       private final @Nullable Output<Integer> currentReplicas;
@@ -56,7 +52,6 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * currentRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence [0,currentReplicas).
-     * 
      */
     @Import(name="currentRevision")
       private final @Nullable Output<String> currentRevision;
@@ -67,7 +62,6 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * observedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the StatefulSet's generation, which is updated on mutation by the API Server.
-     * 
      */
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
@@ -78,7 +72,6 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * readyReplicas is the number of Pods created by the StatefulSet controller that have a Ready Condition.
-     * 
      */
     @Import(name="readyReplicas")
       private final @Nullable Output<Integer> readyReplicas;
@@ -89,7 +82,6 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * replicas is the number of Pods created by the StatefulSet controller.
-     * 
      */
     @Import(name="replicas", required=true)
       private final Output<Integer> replicas;
@@ -100,7 +92,6 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * updateRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence [replicas-updatedReplicas,replicas)
-     * 
      */
     @Import(name="updateRevision")
       private final @Nullable Output<String> updateRevision;
@@ -111,7 +102,6 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * updatedReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by updateRevision.
-     * 
      */
     @Import(name="updatedReplicas")
       private final @Nullable Output<Integer> updatedReplicas;

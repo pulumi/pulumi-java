@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * PersistentVolumeStatus is the current status of a persistent volume.
- * 
  */
 public final class PersistentVolumeStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PersistentVolumeStatusArgs extends io.pulumi.resources.Resour
 
     /**
      * A human-readable message indicating details about why the volume is in this state.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -38,7 +36,6 @@ public final class PersistentVolumeStatusArgs extends io.pulumi.resources.Resour
      *  - `"Failed"` used for PersistentVolumes that failed to be correctly recycled or deleted after being released from a claim
      *  - `"Pending"` used for PersistentVolumes that are not available
      *  - `"Released"` used for PersistentVolumes where the bound PersistentVolumeClaim was deleted released volumes must be recycled before becoming available again this phase is used by the persistent volume claim binder to signal to another process to reclaim the resource
-     * 
      */
     @Import(name="phase")
       private final @Nullable Output<String> phase;
@@ -49,7 +46,6 @@ public final class PersistentVolumeStatusArgs extends io.pulumi.resources.Resour
 
     /**
      * Reason is a brief CamelCase string that describes any failure and is meant for machine parsing and tidy display in the CLI.
-     * 
      */
     @Import(name="reason")
       private final @Nullable Output<String> reason;

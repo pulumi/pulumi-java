@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * SubjectAccessReviewSpec is a description of the access request.  Exactly one of ResourceAuthorizationAttributes and NonResourceAuthorizationAttributes must be set
- * 
  */
 public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
 
     /**
      * Extra corresponds to the user.Info.GetExtra() method from the authenticator.  Since that is input to the authorizer it needs a reflection here.
-     * 
      */
     @Import(name="extra")
       private final @Nullable Output<Map<String,List<String>>> extra;
@@ -35,7 +33,6 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
 
     /**
      * Groups is the groups you're testing for.
-     * 
      */
     @Import(name="group")
       private final @Nullable Output<List<String>> group;
@@ -46,7 +43,6 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
 
     /**
      * NonResourceAttributes describes information for a non-resource access request
-     * 
      */
     @Import(name="nonResourceAttributes")
       private final @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes;
@@ -57,7 +53,6 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
 
     /**
      * ResourceAuthorizationAttributes describes information for a resource access request
-     * 
      */
     @Import(name="resourceAttributes")
       private final @Nullable Output<ResourceAttributesArgs> resourceAttributes;
@@ -68,7 +63,6 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
 
     /**
      * UID information about the requesting user.
-     * 
      */
     @Import(name="uid")
       private final @Nullable Output<String> uid;
@@ -79,7 +73,6 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
 
     /**
      * User is the user you're testing for. If you specify "User" but not "Group", then is it interpreted as "What if User were not a member of any groups
-     * 
      */
     @Import(name="user")
       private final @Nullable Output<String> user;

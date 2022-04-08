@@ -19,7 +19,6 @@ public final class ScopedResourceSelectorRequirement {
      *  - `"Exists"`
      *  - `"In"`
      *  - `"NotIn"`
-     * 
      */
     private final String operator;
     /**
@@ -32,12 +31,10 @@ public final class ScopedResourceSelectorRequirement {
      *  - `"NotTerminating"` Match all pod objects where spec.activeDeadlineSeconds is nil
      *  - `"PriorityClass"` Match all pod objects that have priority class mentioned
      *  - `"Terminating"` Match all pod objects where spec.activeDeadlineSeconds >=0
-     * 
      */
     private final String scopeName;
     /**
      * An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
-     * 
      */
     private final @Nullable List<String> values;
 
@@ -59,7 +56,6 @@ public final class ScopedResourceSelectorRequirement {
      *  - `"Exists"`
      *  - `"In"`
      *  - `"NotIn"`
-     * 
     */
     public String getOperator() {
         return this.operator;
@@ -74,14 +70,12 @@ public final class ScopedResourceSelectorRequirement {
      *  - `"NotTerminating"` Match all pod objects where spec.activeDeadlineSeconds is nil
      *  - `"PriorityClass"` Match all pod objects that have priority class mentioned
      *  - `"Terminating"` Match all pod objects where spec.activeDeadlineSeconds >=0
-     * 
     */
     public String getScopeName() {
         return this.scopeName;
     }
     /**
      * An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
-     * 
     */
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;

@@ -17,37 +17,30 @@ import javax.annotation.Nullable;
 public final class NodeSpec {
     /**
      * Deprecated. If specified, the source of the node's configuration. The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field. This field is deprecated as of 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
-     * 
      */
     private final @Nullable NodeConfigSource configSource;
     /**
      * Deprecated. Not all kubelets will set this field. Remove field after 1.13. see: https://issues.k8s.io/61966
-     * 
      */
     private final @Nullable String externalID;
     /**
      * PodCIDR represents the pod IP range assigned to the node.
-     * 
      */
     private final @Nullable String podCIDR;
     /**
      * podCIDRs represents the IP ranges assigned to the node for usage by Pods on that node. If this field is specified, the 0th entry must match the podCIDR field. It may contain at most 1 value for each of IPv4 and IPv6.
-     * 
      */
     private final @Nullable List<String> podCIDRs;
     /**
      * ID of the node assigned by the cloud provider in the format: <ProviderName>://<ProviderSpecificNodeID>
-     * 
      */
     private final @Nullable String providerID;
     /**
      * If specified, the node's taints.
-     * 
      */
     private final @Nullable List<Taint> taints;
     /**
      * Unschedulable controls node schedulability of new pods. By default, node is schedulable. More info: https://kubernetes.io/docs/concepts/nodes/node/#manual-node-administration
-     * 
      */
     private final @Nullable Boolean unschedulable;
 
@@ -71,49 +64,42 @@ public final class NodeSpec {
 
     /**
      * Deprecated. If specified, the source of the node's configuration. The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field. This field is deprecated as of 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
-     * 
     */
     public Optional<NodeConfigSource> getConfigSource() {
         return Optional.ofNullable(this.configSource);
     }
     /**
      * Deprecated. Not all kubelets will set this field. Remove field after 1.13. see: https://issues.k8s.io/61966
-     * 
     */
     public Optional<String> getExternalID() {
         return Optional.ofNullable(this.externalID);
     }
     /**
      * PodCIDR represents the pod IP range assigned to the node.
-     * 
     */
     public Optional<String> getPodCIDR() {
         return Optional.ofNullable(this.podCIDR);
     }
     /**
      * podCIDRs represents the IP ranges assigned to the node for usage by Pods on that node. If this field is specified, the 0th entry must match the podCIDR field. It may contain at most 1 value for each of IPv4 and IPv6.
-     * 
     */
     public List<String> getPodCIDRs() {
         return this.podCIDRs == null ? List.of() : this.podCIDRs;
     }
     /**
      * ID of the node assigned by the cloud provider in the format: <ProviderName>://<ProviderSpecificNodeID>
-     * 
     */
     public Optional<String> getProviderID() {
         return Optional.ofNullable(this.providerID);
     }
     /**
      * If specified, the node's taints.
-     * 
     */
     public List<Taint> getTaints() {
         return this.taints == null ? List.of() : this.taints;
     }
     /**
      * Unschedulable controls node schedulability of new pods. By default, node is schedulable. More info: https://kubernetes.io/docs/concepts/nodes/node/#manual-node-administration
-     * 
     */
     public Optional<Boolean> getUnschedulable() {
         return Optional.ofNullable(this.unschedulable);

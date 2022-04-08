@@ -15,22 +15,18 @@ import javax.annotation.Nullable;
 public final class CSINode {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     private final @Nullable String apiVersion;
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     private final @Nullable String kind;
     /**
      * metadata.name must be the Kubernetes node name.
-     * 
      */
     private final @Nullable ObjectMeta metadata;
     /**
      * spec is the specification of CSINode
-     * 
      */
     private final CSINodeSpec spec;
 
@@ -48,28 +44,24 @@ public final class CSINode {
 
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
     */
     public Optional<String> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * metadata.name must be the Kubernetes node name.
-     * 
     */
     public Optional<ObjectMeta> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * spec is the specification of CSINode
-     * 
     */
     public CSINodeSpec getSpec() {
         return this.spec;

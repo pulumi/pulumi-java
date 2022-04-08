@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * AuditSinkSpec holds the spec for the audit sink
- * 
  */
 public final class AuditSinkSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AuditSinkSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Policy defines the policy for selecting which events should be sent to the webhook required
-     * 
      */
     @Import(name="policy", required=true)
       private final Output<PolicyArgs> policy;
@@ -31,7 +29,6 @@ public final class AuditSinkSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Webhook to send events required
-     * 
      */
     @Import(name="webhook", required=true)
       private final Output<WebhookArgs> webhook;

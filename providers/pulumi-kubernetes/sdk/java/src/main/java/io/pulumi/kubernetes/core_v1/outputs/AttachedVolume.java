@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class AttachedVolume {
     /**
      * DevicePath represents the device path where the volume should be available
-     * 
      */
     private final String devicePath;
     /**
      * Name of the attached volume
-     * 
      */
     private final String name;
 
@@ -30,14 +28,12 @@ public final class AttachedVolume {
 
     /**
      * DevicePath represents the device path where the volume should be available
-     * 
     */
     public String getDevicePath() {
         return this.devicePath;
     }
     /**
      * Name of the attached volume
-     * 
     */
     public String getName() {
         return this.name;

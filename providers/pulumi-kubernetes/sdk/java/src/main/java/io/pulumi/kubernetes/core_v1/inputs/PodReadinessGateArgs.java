@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * PodReadinessGate contains the reference to a pod condition
- * 
  */
 public final class PodReadinessGateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class PodReadinessGateArgs extends io.pulumi.resources.ResourceArgs
      *  - `"Initialized"` means that all init containers in the pod have started successfully.
      *  - `"PodScheduled"` represents status of the scheduling process for this pod.
      *  - `"Ready"` means the pod is able to service requests and should be added to the load balancing pools of all matching services.
-     * 
      */
     @Import(name="conditionType", required=true)
       private final Output<String> conditionType;

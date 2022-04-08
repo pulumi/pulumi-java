@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class RollingUpdateStatefulSetStrategy {
     /**
      * Partition indicates the ordinal at which the StatefulSet should be partitioned.
-     * 
      */
     private final @Nullable Integer partition;
 
@@ -24,7 +23,6 @@ public final class RollingUpdateStatefulSetStrategy {
 
     /**
      * Partition indicates the ordinal at which the StatefulSet should be partitioned.
-     * 
     */
     public Optional<Integer> getPartition() {
         return Optional.ofNullable(this.partition);

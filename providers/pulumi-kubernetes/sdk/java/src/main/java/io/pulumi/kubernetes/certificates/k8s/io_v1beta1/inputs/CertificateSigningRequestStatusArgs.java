@@ -18,7 +18,6 @@ public final class CertificateSigningRequestStatusArgs extends io.pulumi.resourc
 
     /**
      * If request was approved, the controller will place the issued certificate here.
-     * 
      */
     @Import(name="certificate")
       private final @Nullable Output<String> certificate;
@@ -29,7 +28,6 @@ public final class CertificateSigningRequestStatusArgs extends io.pulumi.resourc
 
     /**
      * Conditions applied to the request, such as approval or denial.
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<List<CertificateSigningRequestConditionArgs>> conditions;

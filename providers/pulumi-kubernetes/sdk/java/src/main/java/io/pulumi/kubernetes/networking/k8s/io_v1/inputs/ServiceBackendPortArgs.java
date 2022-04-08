@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * ServiceBackendPort is the service port being referenced.
- * 
  */
 public final class ServiceBackendPortArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ServiceBackendPortArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Name is the name of the port on the Service. This is a mutually exclusive setting with "Number".
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -32,7 +30,6 @@ public final class ServiceBackendPortArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Number is the numerical port number (e.g. 80) on the Service. This is a mutually exclusive setting with "Name".
-     * 
      */
     @Import(name="number")
       private final @Nullable Output<Integer> number;

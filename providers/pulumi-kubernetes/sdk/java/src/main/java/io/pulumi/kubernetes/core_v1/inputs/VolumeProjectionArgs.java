@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Projection that may be projected along with other supported volume types
- * 
  */
 public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * information about the configMap data to project
-     * 
      */
     @Import(name="configMap")
       private final @Nullable Output<ConfigMapProjectionArgs> configMap;
@@ -34,7 +32,6 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * information about the downwardAPI data to project
-     * 
      */
     @Import(name="downwardAPI")
       private final @Nullable Output<DownwardAPIProjectionArgs> downwardAPI;
@@ -45,7 +42,6 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * information about the secret data to project
-     * 
      */
     @Import(name="secret")
       private final @Nullable Output<SecretProjectionArgs> secret;
@@ -56,7 +52,6 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * information about the serviceAccountToken data to project
-     * 
      */
     @Import(name="serviceAccountToken")
       private final @Nullable Output<ServiceAccountTokenProjectionArgs> serviceAccountToken;

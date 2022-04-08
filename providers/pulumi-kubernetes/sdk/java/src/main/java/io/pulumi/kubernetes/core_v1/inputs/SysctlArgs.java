@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Sysctl defines a kernel parameter to be set
- * 
  */
 public final class SysctlArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class SysctlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of a property to set
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -30,7 +28,6 @@ public final class SysctlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value of a property to set
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

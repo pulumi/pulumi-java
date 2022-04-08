@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class DownwardAPIProjection {
     /**
      * Items is a list of DownwardAPIVolume file
-     * 
      */
     private final @Nullable List<DownwardAPIVolumeFile> items;
 
@@ -24,7 +23,6 @@ public final class DownwardAPIProjection {
 
     /**
      * Items is a list of DownwardAPIVolume file
-     * 
     */
     public List<DownwardAPIVolumeFile> getItems() {
         return this.items == null ? List.of() : this.items;

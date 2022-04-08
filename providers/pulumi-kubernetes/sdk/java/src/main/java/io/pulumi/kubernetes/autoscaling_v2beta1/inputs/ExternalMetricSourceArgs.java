@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * ExternalMetricSource indicates how to scale on a metric not associated with any Kubernetes object (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster). Exactly one "target" type should be set.
- * 
  */
 public final class ExternalMetricSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
 
     /**
      * metricName is the name of the metric in question.
-     * 
      */
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
@@ -32,7 +30,6 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
 
     /**
      * metricSelector is used to identify a specific time series within a given metric.
-     * 
      */
     @Import(name="metricSelector")
       private final @Nullable Output<LabelSelectorArgs> metricSelector;
@@ -43,7 +40,6 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
 
     /**
      * targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually exclusive with TargetValue.
-     * 
      */
     @Import(name="targetAverageValue")
       private final @Nullable Output<String> targetAverageValue;
@@ -54,7 +50,6 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
 
     /**
      * targetValue is the target value of the metric (as a quantity). Mutually exclusive with TargetAverageValue.
-     * 
      */
     @Import(name="targetValue")
       private final @Nullable Output<String> targetValue;

@@ -15,22 +15,18 @@ import javax.annotation.Nullable;
 public final class UserInfo {
     /**
      * Any additional information provided by the authenticator.
-     * 
      */
     private final @Nullable Map<String,List<String>> extra;
     /**
      * The names of groups this user is a part of.
-     * 
      */
     private final @Nullable List<String> groups;
     /**
      * A unique value that identifies this user across time. If this user is deleted and another user by the same name is added, they will have different UIDs.
-     * 
      */
     private final @Nullable String uid;
     /**
      * The name that uniquely identifies this user among all active users.
-     * 
      */
     private final @Nullable String username;
 
@@ -48,28 +44,24 @@ public final class UserInfo {
 
     /**
      * Any additional information provided by the authenticator.
-     * 
     */
     public Map<String,List<String>> getExtra() {
         return this.extra == null ? Map.of() : this.extra;
     }
     /**
      * The names of groups this user is a part of.
-     * 
     */
     public List<String> getGroups() {
         return this.groups == null ? List.of() : this.groups;
     }
     /**
      * A unique value that identifies this user across time. If this user is deleted and another user by the same name is added, they will have different UIDs.
-     * 
     */
     public Optional<String> getUid() {
         return Optional.ofNullable(this.uid);
     }
     /**
      * The name that uniquely identifies this user among all active users.
-     * 
     */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);

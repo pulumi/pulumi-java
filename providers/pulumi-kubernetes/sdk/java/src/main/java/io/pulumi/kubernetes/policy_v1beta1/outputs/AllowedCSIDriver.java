@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class AllowedCSIDriver {
     /**
      * Name is the registered name of the CSI driver
-     * 
      */
     private final String name;
 
@@ -22,7 +21,6 @@ public final class AllowedCSIDriver {
 
     /**
      * Name is the registered name of the CSI driver
-     * 
     */
     public String getName() {
         return this.name;

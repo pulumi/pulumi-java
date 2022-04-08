@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class ResourceFieldSelector {
     /**
      * Container name: required for volumes, optional for env vars
-     * 
      */
     private final @Nullable String containerName;
     /**
      * Specifies the output format of the exposed resources, defaults to "1"
-     * 
      */
     private final @Nullable String divisor;
     /**
      * Required: resource to select
-     * 
      */
     private final String resource;
 
@@ -39,21 +36,18 @@ public final class ResourceFieldSelector {
 
     /**
      * Container name: required for volumes, optional for env vars
-     * 
     */
     public Optional<String> getContainerName() {
         return Optional.ofNullable(this.containerName);
     }
     /**
      * Specifies the output format of the exposed resources, defaults to "1"
-     * 
     */
     public Optional<String> getDivisor() {
         return Optional.ofNullable(this.divisor);
     }
     /**
      * Required: resource to select
-     * 
     */
     public String getResource() {
         return this.resource;

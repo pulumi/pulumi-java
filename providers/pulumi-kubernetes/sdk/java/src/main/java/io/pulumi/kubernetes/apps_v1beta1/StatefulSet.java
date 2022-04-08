@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
  * StatefulSet represents a set of pods with consistent identities. Identities are defined as:
  *  - Network: A single stable DNS and hostname.
  *  - Storage: As many VolumeClaims as requested.
- *    The StatefulSet guarantees that a given network identity will always map to the same storage identity.
+ * The StatefulSet guarantees that a given network identity will always map to the same storage identity.
  * 
  * This resource waits until its status is ready before registering success
  * for create/update, and populating output properties from the current state of the resource.
@@ -34,38 +34,32 @@ import javax.annotation.Nullable;
  * If the StatefulSet has not reached a Ready state after 10 minutes, it will
  * time out and mark the resource update as Failed. You can override the default timeout value
  * by setting the 'customTimeouts' option on the resource.
- * 
  * @Deprecated
  * apps/v1beta1/StatefulSet is deprecated by apps/v1/StatefulSet and not supported by Kubernetes v1.16+ clusters.
- * 
  */
 @Deprecated /* apps/v1beta1/StatefulSet is deprecated by apps/v1/StatefulSet and not supported by Kubernetes v1.16+ clusters. */
 @ResourceType(type="kubernetes:apps/v1beta1:StatefulSet")
 public class StatefulSet extends io.pulumi.resources.CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
@@ -78,28 +72,24 @@ public class StatefulSet extends io.pulumi.resources.CustomResource {
     }
     /**
      * Spec defines the desired identities of pods in this set.
-     * 
      */
     @Export(name="spec", type=StatefulSetSpec.class, parameters={})
     private Output</* @Nullable */ StatefulSetSpec> spec;
 
     /**
      * @return Spec defines the desired identities of pods in this set.
-     * 
      */
     public Output</* @Nullable */ StatefulSetSpec> getSpec() {
         return this.spec;
     }
     /**
      * Status is the current status of Pods in this StatefulSet. This data may be out of date by some window of time.
-     * 
      */
     @Export(name="status", type=StatefulSetStatus.class, parameters={})
     private Output</* @Nullable */ StatefulSetStatus> status;
 
     /**
      * @return Status is the current status of Pods in this StatefulSet. This data may be out of date by some window of time.
-     * 
      */
     public Output</* @Nullable */ StatefulSetStatus> getStatus() {
         return this.status;

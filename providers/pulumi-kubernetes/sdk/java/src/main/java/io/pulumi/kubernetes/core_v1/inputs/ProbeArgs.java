@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Probe describes a health check to be performed against a container to determine whether it is alive or ready to receive traffic.
- * 
  */
 public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Exec specifies the action to take.
-     * 
      */
     @Import(name="exec")
       private final @Nullable Output<ExecActionArgs> exec;
@@ -35,7 +33,6 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.
-     * 
      */
     @Import(name="failureThreshold")
       private final @Nullable Output<Integer> failureThreshold;
@@ -46,7 +43,6 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * GRPC specifies an action involving a GRPC port. This is an alpha field and requires enabling GRPCContainerProbe feature gate.
-     * 
      */
     @Import(name="grpc")
       private final @Nullable Output<GRPCActionArgs> grpc;
@@ -57,7 +53,6 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * HTTPGet specifies the http request to perform.
-     * 
      */
     @Import(name="httpGet")
       private final @Nullable Output<HTTPGetActionArgs> httpGet;
@@ -68,7 +63,6 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
-     * 
      */
     @Import(name="initialDelaySeconds")
       private final @Nullable Output<Integer> initialDelaySeconds;
@@ -79,7 +73,6 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
-     * 
      */
     @Import(name="periodSeconds")
       private final @Nullable Output<Integer> periodSeconds;
@@ -90,7 +83,6 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup. Minimum value is 1.
-     * 
      */
     @Import(name="successThreshold")
       private final @Nullable Output<Integer> successThreshold;
@@ -101,7 +93,6 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * TCPSocket specifies an action involving a TCP port.
-     * 
      */
     @Import(name="tcpSocket")
       private final @Nullable Output<TCPSocketActionArgs> tcpSocket;
@@ -112,7 +103,6 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset.
-     * 
      */
     @Import(name="terminationGracePeriodSeconds")
       private final @Nullable Output<Integer> terminationGracePeriodSeconds;
@@ -123,7 +113,6 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
-     * 
      */
     @Import(name="timeoutSeconds")
       private final @Nullable Output<Integer> timeoutSeconds;

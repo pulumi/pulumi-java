@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * PodsMetricStatus indicates the current value of a metric describing each pod in the current scale target (for example, transactions-processed-per-second).
- * 
  */
 public final class PodsMetricStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PodsMetricStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * current contains the current value for the given metric
-     * 
      */
     @Import(name="current", required=true)
       private final Output<MetricValueStatusArgs> current;
@@ -31,7 +29,6 @@ public final class PodsMetricStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * metric identifies the target metric by name and selector
-     * 
      */
     @Import(name="metric", required=true)
       private final Output<MetricIdentifierArgs> metric;

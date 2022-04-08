@@ -13,27 +13,22 @@ import javax.annotation.Nullable;
 public final class ReplicationControllerCondition {
     /**
      * The last time the condition transitioned from one status to another.
-     * 
      */
     private final @Nullable String lastTransitionTime;
     /**
      * A human readable message indicating details about the transition.
-     * 
      */
     private final @Nullable String message;
     /**
      * The reason for the condition's last transition.
-     * 
      */
     private final @Nullable String reason;
     /**
      * Status of the condition, one of True, False, Unknown.
-     * 
      */
     private final String status;
     /**
      * Type of replication controller condition.
-     * 
      */
     private final String type;
 
@@ -53,35 +48,30 @@ public final class ReplicationControllerCondition {
 
     /**
      * The last time the condition transitioned from one status to another.
-     * 
     */
     public Optional<String> getLastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
      * A human readable message indicating details about the transition.
-     * 
     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * The reason for the condition's last transition.
-     * 
     */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * Status of the condition, one of True, False, Unknown.
-     * 
     */
     public String getStatus() {
         return this.status;
     }
     /**
      * Type of replication controller condition.
-     * 
     */
     public String getType() {
         return this.type;

@@ -20,244 +20,209 @@ import javax.annotation.Nullable;
 
 /**
  * Event is a report of an event somewhere in the cluster.  Events have a limited retention time and triggers and messages may evolve with time.  Event consumers should not rely on the timing of an event with a given Reason reflecting a consistent underlying trigger, or the continued existence of events with that Reason.  Events should be treated as informative, best-effort, supplemental data.
- * 
  */
 @ResourceType(type="kubernetes:core/v1:Event")
 public class Event extends io.pulumi.resources.CustomResource {
     /**
      * What action was taken/failed regarding to the Regarding object.
-     * 
      */
     @Export(name="action", type=String.class, parameters={})
     private Output</* @Nullable */ String> action;
 
     /**
      * @return What action was taken/failed regarding to the Regarding object.
-     * 
      */
     public Output</* @Nullable */ String> getAction() {
         return this.action;
     }
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
     /**
      * The number of times this event has occurred.
-     * 
      */
     @Export(name="count", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> count;
 
     /**
      * @return The number of times this event has occurred.
-     * 
      */
     public Output</* @Nullable */ Integer> getCount() {
         return this.count;
     }
     /**
      * Time when this Event was first observed.
-     * 
      */
     @Export(name="eventTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventTime;
 
     /**
      * @return Time when this Event was first observed.
-     * 
      */
     public Output</* @Nullable */ String> getEventTime() {
         return this.eventTime;
     }
     /**
      * The time at which the event was first recorded. (Time of server receipt is in TypeMeta.)
-     * 
      */
     @Export(name="firstTimestamp", type=String.class, parameters={})
     private Output</* @Nullable */ String> firstTimestamp;
 
     /**
      * @return The time at which the event was first recorded. (Time of server receipt is in TypeMeta.)
-     * 
      */
     public Output</* @Nullable */ String> getFirstTimestamp() {
         return this.firstTimestamp;
     }
     /**
      * The object that this event is about.
-     * 
      */
     @Export(name="involvedObject", type=ObjectReference.class, parameters={})
     private Output<ObjectReference> involvedObject;
 
     /**
      * @return The object that this event is about.
-     * 
      */
     public Output<ObjectReference> getInvolvedObject() {
         return this.involvedObject;
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * The time at which the most recent occurrence of this event was recorded.
-     * 
      */
     @Export(name="lastTimestamp", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastTimestamp;
 
     /**
      * @return The time at which the most recent occurrence of this event was recorded.
-     * 
      */
     public Output</* @Nullable */ String> getLastTimestamp() {
         return this.lastTimestamp;
     }
     /**
      * A human-readable description of the status of this operation.
-     * 
      */
     @Export(name="message", type=String.class, parameters={})
     private Output</* @Nullable */ String> message;
 
     /**
      * @return A human-readable description of the status of this operation.
-     * 
      */
     public Output</* @Nullable */ String> getMessage() {
         return this.message;
     }
     /**
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output<ObjectMeta> metadata;
 
     /**
      * @return Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     public Output<ObjectMeta> getMetadata() {
         return this.metadata;
     }
     /**
      * This should be a short, machine understandable string that gives the reason for the transition into the object's current status.
-     * 
      */
     @Export(name="reason", type=String.class, parameters={})
     private Output</* @Nullable */ String> reason;
 
     /**
      * @return This should be a short, machine understandable string that gives the reason for the transition into the object's current status.
-     * 
      */
     public Output</* @Nullable */ String> getReason() {
         return this.reason;
     }
     /**
      * Optional secondary object for more complex actions.
-     * 
      */
     @Export(name="related", type=ObjectReference.class, parameters={})
     private Output</* @Nullable */ ObjectReference> related;
 
     /**
      * @return Optional secondary object for more complex actions.
-     * 
      */
     public Output</* @Nullable */ ObjectReference> getRelated() {
         return this.related;
     }
     /**
      * Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.
-     * 
      */
     @Export(name="reportingComponent", type=String.class, parameters={})
     private Output</* @Nullable */ String> reportingComponent;
 
     /**
      * @return Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.
-     * 
      */
     public Output</* @Nullable */ String> getReportingComponent() {
         return this.reportingComponent;
     }
     /**
      * ID of the controller instance, e.g. `kubelet-xyzf`.
-     * 
      */
     @Export(name="reportingInstance", type=String.class, parameters={})
     private Output</* @Nullable */ String> reportingInstance;
 
     /**
      * @return ID of the controller instance, e.g. `kubelet-xyzf`.
-     * 
      */
     public Output</* @Nullable */ String> getReportingInstance() {
         return this.reportingInstance;
     }
     /**
      * Data about the Event series this event represents or nil if it's a singleton Event.
-     * 
      */
     @Export(name="series", type=EventSeries.class, parameters={})
     private Output</* @Nullable */ EventSeries> series;
 
     /**
      * @return Data about the Event series this event represents or nil if it's a singleton Event.
-     * 
      */
     public Output</* @Nullable */ EventSeries> getSeries() {
         return this.series;
     }
     /**
      * The component reporting this event. Should be a short machine understandable string.
-     * 
      */
     @Export(name="source", type=EventSource.class, parameters={})
     private Output</* @Nullable */ EventSource> source;
 
     /**
      * @return The component reporting this event. Should be a short machine understandable string.
-     * 
      */
     public Output</* @Nullable */ EventSource> getSource() {
         return this.source;
     }
     /**
      * Type of this event (Normal, Warning), new types could be added in the future
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**
      * @return Type of this event (Normal, Warning), new types could be added in the future
-     * 
      */
     public Output</* @Nullable */ String> getType() {
         return this.type;

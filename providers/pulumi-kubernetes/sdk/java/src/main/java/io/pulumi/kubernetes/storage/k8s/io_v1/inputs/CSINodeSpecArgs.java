@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * CSINodeSpec holds information about the specification of all CSI drivers installed on a node
- * 
  */
 public final class CSINodeSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CSINodeSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * drivers is a list of information of all CSI Drivers existing on a node. If all drivers in the list are uninstalled, this can become empty.
-     * 
      */
     @Import(name="drivers", required=true)
       private final Output<List<CSINodeDriverArgs>> drivers;

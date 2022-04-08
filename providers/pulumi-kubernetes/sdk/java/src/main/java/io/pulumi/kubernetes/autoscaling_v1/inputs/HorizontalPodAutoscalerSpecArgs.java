@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * specification of a horizontal pod autoscaler.
- * 
  */
 public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
 
     /**
      * upper limit for the number of pods that can be set by the autoscaler; cannot be smaller than MinReplicas.
-     * 
      */
     @Import(name="maxReplicas", required=true)
       private final Output<Integer> maxReplicas;
@@ -32,7 +30,6 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
 
     /**
      * minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.
-     * 
      */
     @Import(name="minReplicas")
       private final @Nullable Output<Integer> minReplicas;
@@ -43,7 +40,6 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
 
     /**
      * reference to scaled resource; horizontal pod autoscaler will learn the current resource consumption and will set the desired number of pods by using its Scale subresource.
-     * 
      */
     @Import(name="scaleTargetRef", required=true)
       private final Output<CrossVersionObjectReferenceArgs> scaleTargetRef;
@@ -54,7 +50,6 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
 
     /**
      * target average CPU utilization (represented as a percentage of requested CPU) over all the pods; if not specified the default autoscaling policy will be used.
-     * 
      */
     @Import(name="targetCPUUtilizationPercentage")
       private final @Nullable Output<Integer> targetCPUUtilizationPercentage;

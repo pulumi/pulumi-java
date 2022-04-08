@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * NodeDaemonEndpoints lists ports opened by daemons running on the Node.
- * 
  */
 public final class NodeDaemonEndpointsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class NodeDaemonEndpointsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Endpoint on which Kubelet is listening.
-     * 
      */
     @Import(name="kubeletEndpoint")
       private final @Nullable Output<DaemonEndpointArgs> kubeletEndpoint;

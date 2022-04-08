@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * ContainerStateTerminated is a terminated state of a container.
- * 
  */
 public final class ContainerStateTerminatedArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
 
     /**
      * Container's ID in the format 'docker://<container_id>'
-     * 
      */
     @Import(name="containerID")
       private final @Nullable Output<String> containerID;
@@ -32,7 +30,6 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
 
     /**
      * Exit status from the last termination of the container
-     * 
      */
     @Import(name="exitCode", required=true)
       private final Output<Integer> exitCode;
@@ -43,7 +40,6 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
 
     /**
      * Time at which the container last terminated
-     * 
      */
     @Import(name="finishedAt")
       private final @Nullable Output<String> finishedAt;
@@ -54,7 +50,6 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
 
     /**
      * Message regarding the last termination of the container
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -65,7 +60,6 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
 
     /**
      * (brief) reason from the last termination of the container
-     * 
      */
     @Import(name="reason")
       private final @Nullable Output<String> reason;
@@ -76,7 +70,6 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
 
     /**
      * Signal from the last termination of the container
-     * 
      */
     @Import(name="signal")
       private final @Nullable Output<Integer> signal;
@@ -87,7 +80,6 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
 
     /**
      * Time at which previous execution of the container started
-     * 
      */
     @Import(name="startedAt")
       private final @Nullable Output<String> startedAt;

@@ -41,7 +41,6 @@ import javax.annotation.Nullable;
 
 /**
  * Volume represents a named volume in a pod that may be accessed by any container in the pod.
- * 
  */
 public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -49,7 +48,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
-     * 
      */
     @Import(name="awsElasticBlockStore")
       private final @Nullable Output<AWSElasticBlockStoreVolumeSourceArgs> awsElasticBlockStore;
@@ -60,7 +58,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
-     * 
      */
     @Import(name="azureDisk")
       private final @Nullable Output<AzureDiskVolumeSourceArgs> azureDisk;
@@ -71,7 +68,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * AzureFile represents an Azure File Service mount on the host and bind mount to the pod.
-     * 
      */
     @Import(name="azureFile")
       private final @Nullable Output<AzureFileVolumeSourceArgs> azureFile;
@@ -82,7 +78,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * CephFS represents a Ceph FS mount on the host that shares a pod's lifetime
-     * 
      */
     @Import(name="cephfs")
       private final @Nullable Output<CephFSVolumeSourceArgs> cephfs;
@@ -93,7 +88,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
-     * 
      */
     @Import(name="cinder")
       private final @Nullable Output<CinderVolumeSourceArgs> cinder;
@@ -104,7 +98,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ConfigMap represents a configMap that should populate this volume
-     * 
      */
     @Import(name="configMap")
       private final @Nullable Output<ConfigMapVolumeSourceArgs> configMap;
@@ -115,7 +108,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * CSI (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature).
-     * 
      */
     @Import(name="csi")
       private final @Nullable Output<CSIVolumeSourceArgs> csi;
@@ -126,7 +118,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * DownwardAPI represents downward API about the pod that should populate this volume
-     * 
      */
     @Import(name="downwardAPI")
       private final @Nullable Output<DownwardAPIVolumeSourceArgs> downwardAPI;
@@ -137,7 +128,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * EmptyDir represents a temporary directory that shares a pod's lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir
-     * 
      */
     @Import(name="emptyDir")
       private final @Nullable Output<EmptyDirVolumeSourceArgs> emptyDir;
@@ -161,7 +151,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information.
      * 
      * A pod can use both types of ephemeral volumes and persistent volumes at the same time.
-     * 
      */
     @Import(name="ephemeral")
       private final @Nullable Output<EphemeralVolumeSourceArgs> ephemeral;
@@ -172,7 +161,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * FC represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.
-     * 
      */
     @Import(name="fc")
       private final @Nullable Output<FCVolumeSourceArgs> fc;
@@ -183,7 +171,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.
-     * 
      */
     @Import(name="flexVolume")
       private final @Nullable Output<FlexVolumeSourceArgs> flexVolume;
@@ -194,7 +181,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running
-     * 
      */
     @Import(name="flocker")
       private final @Nullable Output<FlockerVolumeSourceArgs> flocker;
@@ -205,7 +191,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
-     * 
      */
     @Import(name="gcePersistentDisk")
       private final @Nullable Output<GCEPersistentDiskVolumeSourceArgs> gcePersistentDisk;
@@ -216,7 +201,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * GitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.
-     * 
      */
     @Import(name="gitRepo")
       private final @Nullable Output<GitRepoVolumeSourceArgs> gitRepo;
@@ -227,7 +211,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md
-     * 
      */
     @Import(name="glusterfs")
       private final @Nullable Output<GlusterfsVolumeSourceArgs> glusterfs;
@@ -238,7 +221,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * HostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
-     * 
      */
     @Import(name="hostPath")
       private final @Nullable Output<HostPathVolumeSourceArgs> hostPath;
@@ -249,7 +231,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ISCSI represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md
-     * 
      */
     @Import(name="iscsi")
       private final @Nullable Output<ISCSIVolumeSourceArgs> iscsi;
@@ -260,7 +241,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Volume's name. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -271,7 +251,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * NFS represents an NFS mount on the host that shares a pod's lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
-     * 
      */
     @Import(name="nfs")
       private final @Nullable Output<NFSVolumeSourceArgs> nfs;
@@ -282,7 +261,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
-     * 
      */
     @Import(name="persistentVolumeClaim")
       private final @Nullable Output<PersistentVolumeClaimVolumeSourceArgs> persistentVolumeClaim;
@@ -293,7 +271,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * PhotonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine
-     * 
      */
     @Import(name="photonPersistentDisk")
       private final @Nullable Output<PhotonPersistentDiskVolumeSourceArgs> photonPersistentDisk;
@@ -304,7 +281,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * PortworxVolume represents a portworx volume attached and mounted on kubelets host machine
-     * 
      */
     @Import(name="portworxVolume")
       private final @Nullable Output<PortworxVolumeSourceArgs> portworxVolume;
@@ -315,7 +291,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Items for all in one resources secrets, configmaps, and downward API
-     * 
      */
     @Import(name="projected")
       private final @Nullable Output<ProjectedVolumeSourceArgs> projected;
@@ -326,7 +301,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Quobyte represents a Quobyte mount on the host that shares a pod's lifetime
-     * 
      */
     @Import(name="quobyte")
       private final @Nullable Output<QuobyteVolumeSourceArgs> quobyte;
@@ -337,7 +311,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * RBD represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
-     * 
      */
     @Import(name="rbd")
       private final @Nullable Output<RBDVolumeSourceArgs> rbd;
@@ -348,7 +321,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.
-     * 
      */
     @Import(name="scaleIO")
       private final @Nullable Output<ScaleIOVolumeSourceArgs> scaleIO;
@@ -359,7 +331,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
-     * 
      */
     @Import(name="secret")
       private final @Nullable Output<SecretVolumeSourceArgs> secret;
@@ -370,7 +341,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * StorageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.
-     * 
      */
     @Import(name="storageos")
       private final @Nullable Output<StorageOSVolumeSourceArgs> storageos;
@@ -381,7 +351,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine
-     * 
      */
     @Import(name="vsphereVolume")
       private final @Nullable Output<VsphereVirtualDiskVolumeSourceArgs> vsphereVolume;

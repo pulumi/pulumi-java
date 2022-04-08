@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * EndpointHints provides hints describing how an endpoint should be consumed.
- * 
  */
 public final class EndpointHintsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class EndpointHintsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * forZones indicates the zone(s) this endpoint should be consumed by to enable topology aware routing. May contain a maximum of 8 entries.
-     * 
      */
     @Import(name="forZones")
       private final @Nullable Output<List<ForZoneArgs>> forZones;

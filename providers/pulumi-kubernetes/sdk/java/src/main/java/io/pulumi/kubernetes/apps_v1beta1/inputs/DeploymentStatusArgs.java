@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * DeploymentStatus is the most recently observed status of the Deployment.
- * 
  */
 public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Total number of available pods (ready for at least minReadySeconds) targeted by this deployment.
-     * 
      */
     @Import(name="availableReplicas")
       private final @Nullable Output<Integer> availableReplicas;
@@ -33,7 +31,6 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Count of hash collisions for the Deployment. The Deployment controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ReplicaSet.
-     * 
      */
     @Import(name="collisionCount")
       private final @Nullable Output<Integer> collisionCount;
@@ -44,7 +41,6 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Represents the latest available observations of a deployment's current state.
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<List<DeploymentConditionArgs>> conditions;
@@ -55,7 +51,6 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The generation observed by the deployment controller.
-     * 
      */
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
@@ -66,7 +61,6 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Total number of ready pods targeted by this deployment.
-     * 
      */
     @Import(name="readyReplicas")
       private final @Nullable Output<Integer> readyReplicas;
@@ -77,7 +71,6 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Total number of non-terminated pods targeted by this deployment (their labels match the selector).
-     * 
      */
     @Import(name="replicas")
       private final @Nullable Output<Integer> replicas;
@@ -88,7 +81,6 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Total number of unavailable pods targeted by this deployment. This is the total number of pods that are still required for the deployment to have 100% available capacity. They may either be pods that are running but not yet available or pods that still have not been created.
-     * 
      */
     @Import(name="unavailableReplicas")
       private final @Nullable Output<Integer> unavailableReplicas;
@@ -99,7 +91,6 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Total number of non-terminated pods targeted by this deployment that have the desired template spec.
-     * 
      */
     @Import(name="updatedReplicas")
       private final @Nullable Output<Integer> updatedReplicas;

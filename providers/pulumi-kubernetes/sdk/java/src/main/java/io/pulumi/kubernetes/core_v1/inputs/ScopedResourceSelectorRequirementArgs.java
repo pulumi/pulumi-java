@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A scoped-resource selector requirement is a selector that contains values, a scope name, and an operator that relates the scope name and values.
- * 
  */
 public final class ScopedResourceSelectorRequirementArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class ScopedResourceSelectorRequirementArgs extends io.pulumi.resou
      *  - `"Exists"`
      *  - `"In"`
      *  - `"NotIn"`
-     * 
      */
     @Import(name="operator", required=true)
       private final Output<String> operator;
@@ -46,7 +44,6 @@ public final class ScopedResourceSelectorRequirementArgs extends io.pulumi.resou
      *  - `"NotTerminating"` Match all pod objects where spec.activeDeadlineSeconds is nil
      *  - `"PriorityClass"` Match all pod objects that have priority class mentioned
      *  - `"Terminating"` Match all pod objects where spec.activeDeadlineSeconds >=0
-     * 
      */
     @Import(name="scopeName", required=true)
       private final Output<String> scopeName;
@@ -57,7 +54,6 @@ public final class ScopedResourceSelectorRequirementArgs extends io.pulumi.resou
 
     /**
      * An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
-     * 
      */
     @Import(name="values")
       private final @Nullable Output<List<String>> values;

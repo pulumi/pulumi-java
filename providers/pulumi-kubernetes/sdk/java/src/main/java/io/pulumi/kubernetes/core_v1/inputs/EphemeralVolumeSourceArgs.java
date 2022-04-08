@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents an ephemeral volume that is handled by a normal storage driver.
- * 
  */
 public final class EphemeralVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class EphemeralVolumeSourceArgs extends io.pulumi.resources.Resourc
 
     /**
      * Specifies a read-only configuration for the volume. Defaults to false (read/write).
-     * 
      */
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
@@ -38,7 +36,6 @@ public final class EphemeralVolumeSourceArgs extends io.pulumi.resources.Resourc
      * This field is read-only and no changes will be made by Kubernetes to the PVC after it has been created.
      * 
      * Required, must not be nil.
-     * 
      */
     @Import(name="volumeClaimTemplate")
       private final @Nullable Output<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate;

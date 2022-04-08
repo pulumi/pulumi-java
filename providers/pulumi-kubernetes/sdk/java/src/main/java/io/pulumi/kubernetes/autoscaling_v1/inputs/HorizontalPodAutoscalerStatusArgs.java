@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * current status of a horizontal pod autoscaler
- * 
  */
 public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
 
     /**
      * current average CPU utilization over all pods, represented as a percentage of requested CPU, e.g. 70 means that an average pod is using now 70% of its requested CPU.
-     * 
      */
     @Import(name="currentCPUUtilizationPercentage")
       private final @Nullable Output<Integer> currentCPUUtilizationPercentage;
@@ -32,7 +30,6 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
 
     /**
      * current number of replicas of pods managed by this autoscaler.
-     * 
      */
     @Import(name="currentReplicas", required=true)
       private final Output<Integer> currentReplicas;
@@ -43,7 +40,6 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
 
     /**
      * desired number of replicas of pods managed by this autoscaler.
-     * 
      */
     @Import(name="desiredReplicas", required=true)
       private final Output<Integer> desiredReplicas;
@@ -54,7 +50,6 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
 
     /**
      * last time the HorizontalPodAutoscaler scaled the number of pods; used by the autoscaler to control how often the number of pods is changed.
-     * 
      */
     @Import(name="lastScaleTime")
       private final @Nullable Output<String> lastScaleTime;
@@ -65,7 +60,6 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
 
     /**
      * most recent generation observed by this autoscaler.
-     * 
      */
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;

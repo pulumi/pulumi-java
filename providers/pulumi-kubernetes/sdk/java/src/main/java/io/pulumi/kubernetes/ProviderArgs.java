@@ -20,7 +20,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If present, the name of the kubeconfig cluster to use.
-     * 
      */
     @Import(name="cluster")
       private final @Nullable Output<String> cluster;
@@ -31,7 +30,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If present, the name of the kubeconfig context to use.
-     * 
      */
     @Import(name="context")
       private final @Nullable Output<String> context;
@@ -43,7 +41,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * BETA FEATURE - If present and set to true, enable server-side diff calculations.
      * This feature is in developer preview, and is disabled by default.
-     * 
      */
     @Import(name="enableDryRun", json=true)
       private final @Nullable Output<Boolean> enableDryRun;
@@ -55,7 +52,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * BETA FEATURE - If present and set to true, replace CRDs on update rather than patching.
      * This feature is in developer preview, and is disabled by default.
-     * 
      */
     @Import(name="enableReplaceCRD", json=true)
       private final @Nullable Output<Boolean> enableReplaceCRD;
@@ -66,7 +62,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Options to configure the Helm Release resource.
-     * 
      */
     @Import(name="helmReleaseSettings", json=true)
       private final @Nullable Output<HelmReleaseSettingsArgs> helmReleaseSettings;
@@ -77,7 +72,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Options for tuning the Kubernetes client used by a Provider.
-     * 
      */
     @Import(name="kubeClientSettings", json=true)
       private final @Nullable Output<KubeClientSettingsArgs> kubeClientSettings;
@@ -88,7 +82,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The contents of a kubeconfig file or the path to a kubeconfig file.
-     * 
      */
     @Import(name="kubeconfig")
       private final @Nullable Output<String> kubeconfig;
@@ -104,7 +97,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 1. `.metadata.namespace` set on the resource.
      * 2. This `namespace` parameter.
      * 3. `namespace` set for the active context in the kubeconfig.
-     * 
      */
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
@@ -122,7 +114,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * since the resources are not created on a Kubernetes cluster. These Output values will remain undefined,
      * and may result in an error if they are referenced by other resources. Also note that any secret values
      * used in these resources will be rendered in plaintext to the resulting YAML.
-     * 
      */
     @Import(name="renderYamlToDirectory")
       private final @Nullable Output<String> renderYamlToDirectory;
@@ -133,7 +124,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If present and set to true, suppress apiVersion deprecation warnings from the CLI.
-     * 
      */
     @Import(name="suppressDeprecationWarnings", json=true)
       private final @Nullable Output<Boolean> suppressDeprecationWarnings;
@@ -144,7 +134,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If present and set to true, suppress unsupported Helm hook warnings from the CLI.
-     * 
      */
     @Import(name="suppressHelmHookWarnings", json=true)
       private final @Nullable Output<Boolean> suppressHelmHookWarnings;

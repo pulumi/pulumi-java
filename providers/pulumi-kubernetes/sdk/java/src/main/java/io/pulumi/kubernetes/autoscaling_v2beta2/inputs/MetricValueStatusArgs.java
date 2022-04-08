@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * MetricValueStatus holds the current value for a metric
- * 
  */
 public final class MetricValueStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class MetricValueStatusArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
-     * 
      */
     @Import(name="averageUtilization")
       private final @Nullable Output<Integer> averageUtilization;
@@ -32,7 +30,6 @@ public final class MetricValueStatusArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * averageValue is the current value of the average of the metric across all relevant pods (as a quantity)
-     * 
      */
     @Import(name="averageValue")
       private final @Nullable Output<String> averageValue;
@@ -43,7 +40,6 @@ public final class MetricValueStatusArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * value is the current value of the metric (as a quantity).
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The node this Taint is attached to has the "effect" on any pod that does not tolerate the Taint.
- * 
  */
 public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"NoExecute"` Evict any already-running pods that do not tolerate the taint. Currently enforced by NodeController.
      *  - `"NoSchedule"` Do not allow new pods to schedule onto the node unless they tolerate the taint, but allow all pods submitted to Kubelet without going through the scheduler to start, and allow all already-running pods to continue running. Enforced by the scheduler.
      *  - `"PreferNoSchedule"` Like TaintEffectNoSchedule, but the scheduler tries not to schedule new pods onto the node, rather than prohibiting new pods from scheduling onto the node entirely. Enforced by the scheduler.
-     * 
      */
     @Import(name="effect", required=true)
       private final Output<String> effect;
@@ -36,7 +34,6 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Required. The taint key to be applied to a node.
-     * 
      */
     @Import(name="key", required=true)
       private final Output<String> key;
@@ -47,7 +44,6 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * TimeAdded represents the time at which the taint was added. It is only written for NoExecute taints.
-     * 
      */
     @Import(name="timeAdded")
       private final @Nullable Output<String> timeAdded;
@@ -58,7 +54,6 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The taint value corresponding to the taint key.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

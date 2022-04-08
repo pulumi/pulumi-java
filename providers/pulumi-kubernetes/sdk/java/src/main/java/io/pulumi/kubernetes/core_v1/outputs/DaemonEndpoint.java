@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class DaemonEndpoint {
     /**
      * Port number of the given endpoint.
-     * 
      */
     private final Integer Port;
 
@@ -22,7 +21,6 @@ public final class DaemonEndpoint {
 
     /**
      * Port number of the given endpoint.
-     * 
     */
     public Integer getPort() {
         return this.Port;

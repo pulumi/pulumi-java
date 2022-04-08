@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * LimitResponse defines how to handle requests that can not be executed right now.
- * 
  */
 public final class LimitResponseArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class LimitResponseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * `queuing` holds the configuration parameters for queuing. This field may be non-empty only if `type` is `"Queue"`.
-     * 
      */
     @Import(name="queuing")
       private final @Nullable Output<QueuingConfigurationArgs> queuing;
@@ -32,7 +30,6 @@ public final class LimitResponseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * `type` is "Queue" or "Reject". "Queue" means that requests that can not be executed upon arrival are held in a queue until they can be executed or a queuing limit is reached. "Reject" means that requests that can not be executed upon arrival are rejected. Required.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

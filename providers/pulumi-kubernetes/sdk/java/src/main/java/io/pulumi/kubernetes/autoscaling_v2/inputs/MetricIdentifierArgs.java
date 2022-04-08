@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * MetricIdentifier defines the name and optionally selector for a metric
- * 
  */
 public final class MetricIdentifierArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class MetricIdentifierArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * name is the name of the given metric
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -32,7 +30,6 @@ public final class MetricIdentifierArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.
-     * 
      */
     @Import(name="selector")
       private final @Nullable Output<LabelSelectorArgs> selector;

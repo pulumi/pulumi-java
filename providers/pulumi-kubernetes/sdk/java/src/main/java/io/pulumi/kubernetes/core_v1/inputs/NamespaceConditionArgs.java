@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * NamespaceCondition contains details about state of namespace.
- * 
  */
 public final class NamespaceConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -41,7 +40,6 @@ public final class NamespaceConditionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Status of the condition, one of True, False, Unknown.
-     * 
      */
     @Import(name="status", required=true)
       private final Output<String> status;
@@ -59,7 +57,6 @@ public final class NamespaceConditionArgs extends io.pulumi.resources.ResourceAr
      *  - `"NamespaceDeletionDiscoveryFailure"` contains information about namespace deleter errors during resource discovery.
      *  - `"NamespaceDeletionGroupVersionParsingFailure"` contains information about namespace deleter errors parsing GV for legacy types.
      *  - `"NamespaceFinalizersRemaining"` contains information about which finalizers are on resources remaining in a namespace.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

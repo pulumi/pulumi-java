@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class MetricTarget {
     /**
      * averageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods. Currently only valid for Resource metric source type
-     * 
      */
     private final @Nullable Integer averageUtilization;
     /**
      * averageValue is the target value of the average of the metric across all relevant pods (as a quantity)
-     * 
      */
     private final @Nullable String averageValue;
     /**
      * type represents whether the metric type is Utilization, Value, or AverageValue
-     * 
      */
     private final String type;
     /**
      * value is the target value of the metric (as a quantity).
-     * 
      */
     private final @Nullable String value;
 
@@ -47,28 +43,24 @@ public final class MetricTarget {
 
     /**
      * averageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods. Currently only valid for Resource metric source type
-     * 
     */
     public Optional<Integer> getAverageUtilization() {
         return Optional.ofNullable(this.averageUtilization);
     }
     /**
      * averageValue is the target value of the average of the metric across all relevant pods (as a quantity)
-     * 
     */
     public Optional<String> getAverageValue() {
         return Optional.ofNullable(this.averageValue);
     }
     /**
      * type represents whether the metric type is Utilization, Value, or AverageValue
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * value is the target value of the metric (as a quantity).
-     * 
     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);

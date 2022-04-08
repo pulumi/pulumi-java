@@ -17,7 +17,6 @@ public final class Subject {
     private final @Nullable GroupSubject group;
     /**
      * Required
-     * 
      */
     private final String kind;
     private final @Nullable ServiceAccountSubject serviceAccount;
@@ -40,7 +39,6 @@ public final class Subject {
     }
     /**
      * Required
-     * 
     */
     public String getKind() {
         return this.kind;

@@ -16,76 +16,65 @@ import javax.annotation.Nullable;
 
 /**
  * TokenRequest requests a token for a given service account.
- * 
  */
 @ResourceType(type="kubernetes:authentication.k8s.io/v1:TokenRequest")
 public class TokenRequest extends io.pulumi.resources.CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
      * @return Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     public Output</* @Nullable */ ObjectMeta> getMetadata() {
         return this.metadata;
     }
     /**
      * Spec holds information about the request being evaluated
-     * 
      */
     @Export(name="spec", type=TokenRequestSpec.class, parameters={})
     private Output<TokenRequestSpec> spec;
 
     /**
      * @return Spec holds information about the request being evaluated
-     * 
      */
     public Output<TokenRequestSpec> getSpec() {
         return this.spec;
     }
     /**
      * Status is filled in by the server and indicates whether the token can be authenticated.
-     * 
      */
     @Export(name="status", type=TokenRequestStatus.class, parameters={})
     private Output</* @Nullable */ TokenRequestStatus> status;
 
     /**
      * @return Status is filled in by the server and indicates whether the token can be authenticated.
-     * 
      */
     public Output</* @Nullable */ TokenRequestStatus> getStatus() {
         return this.status;
