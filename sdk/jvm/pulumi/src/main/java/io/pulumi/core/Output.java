@@ -77,7 +77,7 @@ public interface Output<T> extends Copyable<Output<T>> {
      * @see Output#apply(Function) for more details.
      */
     default <U> Output<U> applyValue(Function<T, U> func) {
-        return apply(t -> Output.of(func.apply(t)));
+        return apply(t -> Output.ofNullable(func.apply(t)));
     }
 
     /**
