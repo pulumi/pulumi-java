@@ -6,7 +6,6 @@ package io.pulumi.plant.tree_v1.inputs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
-import io.pulumi.core.internal.Codegen;
 import io.pulumi.plant.tree_v1.enums.Farm;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class RubberTreeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<Farm,String>> farm;
 
     public Output<Either<Farm,String>> getFarm() {
-        return this.farm == null ? Codegen.empty() : this.farm;
+        return this.farm == null ? Output.empty() : this.farm;
     }
 
     public RubberTreeState(@Nullable Output<Either<Farm,String>> farm) {
@@ -29,7 +28,7 @@ public final class RubberTreeState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RubberTreeState() {
-        this.farm = Codegen.empty();
+        this.farm = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,7 +56,7 @@ public final class RubberTreeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder farm(@Nullable Either<Farm,String> farm) {
-            this.farm = Codegen.ofNullable(farm);
+            this.farm = Output.ofNullable(farm);
             return this;
         }        public RubberTreeState build() {
             return new RubberTreeState(farm);

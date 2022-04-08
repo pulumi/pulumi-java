@@ -5,7 +5,6 @@ package io.pulumi.kubernetes.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
-import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import java.lang.Double;
 import java.lang.Integer;
@@ -29,7 +28,7 @@ public final class KubeClientSettingsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> burst;
 
     public Output<Integer> getBurst() {
-        return this.burst == null ? Codegen.empty() : this.burst;
+        return this.burst == null ? Output.empty() : this.burst;
     }
 
     /**
@@ -40,7 +39,7 @@ public final class KubeClientSettingsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Double> qps;
 
     public Output<Double> getQps() {
-        return this.qps == null ? Codegen.empty() : this.qps;
+        return this.qps == null ? Output.empty() : this.qps;
     }
 
     public KubeClientSettingsArgs(
@@ -51,8 +50,8 @@ public final class KubeClientSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private KubeClientSettingsArgs() {
-        this.burst = Codegen.empty();
-        this.qps = Codegen.empty();
+        this.burst = Output.empty();
+        this.qps = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +81,7 @@ public final class KubeClientSettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder burst(@Nullable Integer burst) {
-            this.burst = Codegen.ofNullable(burst);
+            this.burst = Output.ofNullable(burst);
             return this;
         }
         public Builder qps(@Nullable Output<Double> qps) {
@@ -90,7 +89,7 @@ public final class KubeClientSettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder qps(@Nullable Double qps) {
-            this.qps = Codegen.ofNullable(qps);
+            this.qps = Output.ofNullable(qps);
             return this;
         }        public KubeClientSettingsArgs build() {
             return new KubeClientSettingsArgs(burst, qps);

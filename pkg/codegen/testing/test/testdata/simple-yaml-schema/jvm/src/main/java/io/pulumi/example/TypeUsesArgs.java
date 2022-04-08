@@ -5,7 +5,6 @@ package io.pulumi.example;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
-import io.pulumi.core.internal.Codegen;
 import io.pulumi.example.enums.RubberTreeVariety;
 import io.pulumi.example.inputs.ObjectArgs;
 import io.pulumi.example.inputs.ObjectWithNodeOptionalInputsArgs;
@@ -22,28 +21,28 @@ public final class TypeUsesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SomeOtherObjectArgs> bar;
 
     public Output<SomeOtherObjectArgs> getBar() {
-        return this.bar == null ? Codegen.empty() : this.bar;
+        return this.bar == null ? Output.empty() : this.bar;
     }
 
     @Import(name="baz")
       private final @Nullable Output<ObjectWithNodeOptionalInputsArgs> baz;
 
     public Output<ObjectWithNodeOptionalInputsArgs> getBaz() {
-        return this.baz == null ? Codegen.empty() : this.baz;
+        return this.baz == null ? Output.empty() : this.baz;
     }
 
     @Import(name="foo")
       private final @Nullable Output<ObjectArgs> foo;
 
     public Output<ObjectArgs> getFoo() {
-        return this.foo == null ? Codegen.empty() : this.foo;
+        return this.foo == null ? Output.empty() : this.foo;
     }
 
     @Import(name="qux")
       private final @Nullable Output<RubberTreeVariety> qux;
 
     public Output<RubberTreeVariety> getQux() {
-        return this.qux == null ? Codegen.empty() : this.qux;
+        return this.qux == null ? Output.empty() : this.qux;
     }
 
     public TypeUsesArgs(
@@ -58,10 +57,10 @@ public final class TypeUsesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TypeUsesArgs() {
-        this.bar = Codegen.empty();
-        this.baz = Codegen.empty();
-        this.foo = Codegen.empty();
-        this.qux = Codegen.empty();
+        this.bar = Output.empty();
+        this.baz = Output.empty();
+        this.foo = Output.empty();
+        this.qux = Output.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +94,7 @@ public final class TypeUsesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bar(@Nullable SomeOtherObjectArgs bar) {
-            this.bar = Codegen.ofNullable(bar);
+            this.bar = Output.ofNullable(bar);
             return this;
         }
         public Builder baz(@Nullable Output<ObjectWithNodeOptionalInputsArgs> baz) {
@@ -103,7 +102,7 @@ public final class TypeUsesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder baz(@Nullable ObjectWithNodeOptionalInputsArgs baz) {
-            this.baz = Codegen.ofNullable(baz);
+            this.baz = Output.ofNullable(baz);
             return this;
         }
         public Builder foo(@Nullable Output<ObjectArgs> foo) {
@@ -111,7 +110,7 @@ public final class TypeUsesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder foo(@Nullable ObjectArgs foo) {
-            this.foo = Codegen.ofNullable(foo);
+            this.foo = Output.ofNullable(foo);
             return this;
         }
         public Builder qux(@Nullable Output<RubberTreeVariety> qux) {
@@ -119,7 +118,7 @@ public final class TypeUsesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder qux(@Nullable RubberTreeVariety qux) {
-            this.qux = Codegen.ofNullable(qux);
+            this.qux = Output.ofNullable(qux);
             return this;
         }        public TypeUsesArgs build() {
             return new TypeUsesArgs(bar, baz, foo, qux);

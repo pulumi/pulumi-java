@@ -5,7 +5,6 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
-import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +18,7 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
       private final @Nullable Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
-        return this.resourceType == null ? Codegen.empty() : this.resourceType;
+        return this.resourceType == null ? Output.empty() : this.resourceType;
     }
 
     public WebAppRelayServiceConnectionArgs(@Nullable Output<String> resourceType) {
@@ -27,7 +26,7 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
     }
 
     private WebAppRelayServiceConnectionArgs() {
-        this.resourceType = Codegen.empty();
+        this.resourceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -55,7 +54,7 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Codegen.ofNullable(resourceType);
+            this.resourceType = Output.ofNullable(resourceType);
             return this;
         }        public WebAppRelayServiceConnectionArgs build() {
             return new WebAppRelayServiceConnectionArgs(resourceType);

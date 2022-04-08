@@ -5,7 +5,6 @@ package io.pulumi.example.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
-import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +18,7 @@ public final class PetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Codegen.empty() : this.name;
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public PetArgs(@Nullable Output<String> name) {
@@ -27,7 +26,7 @@ public final class PetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PetArgs() {
-        this.name = Codegen.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -55,7 +54,7 @@ public final class PetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }        public PetArgs build() {
             return new PetArgs(name);

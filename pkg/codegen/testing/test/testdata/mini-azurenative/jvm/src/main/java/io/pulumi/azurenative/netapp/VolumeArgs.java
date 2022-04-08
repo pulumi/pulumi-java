@@ -5,7 +5,6 @@ package io.pulumi.azurenative.netapp;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
-import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +18,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> throughputMibps;
 
     public Output<Double> getThroughputMibps() {
-        return this.throughputMibps == null ? Codegen.empty() : this.throughputMibps;
+        return this.throughputMibps == null ? Output.empty() : this.throughputMibps;
     }
 
     /**
@@ -41,8 +40,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VolumeArgs() {
-        this.throughputMibps = Codegen.empty();
-        this.usageThreshold = Codegen.empty();
+        this.throughputMibps = Output.empty();
+        this.usageThreshold = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +71,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder throughputMibps(@Nullable Double throughputMibps) {
-            this.throughputMibps = Codegen.ofNullable(throughputMibps);
+            this.throughputMibps = Output.ofNullable(throughputMibps);
             return this;
         }
         public Builder usageThreshold(Output<Double> usageThreshold) {

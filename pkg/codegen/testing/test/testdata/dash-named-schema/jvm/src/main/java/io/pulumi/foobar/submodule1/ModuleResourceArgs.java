@@ -5,7 +5,6 @@ package io.pulumi.foobar.submodule1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
-import io.pulumi.core.internal.Codegen;
 import io.pulumi.foobar.inputs.TopLevelArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +18,7 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TopLevelArgs> thing;
 
     public Output<TopLevelArgs> getThing() {
-        return this.thing == null ? Codegen.empty() : this.thing;
+        return this.thing == null ? Output.empty() : this.thing;
     }
 
     public ModuleResourceArgs(@Nullable Output<TopLevelArgs> thing) {
@@ -27,7 +26,7 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ModuleResourceArgs() {
-        this.thing = Codegen.empty();
+        this.thing = Output.empty();
     }
 
     public static Builder builder() {
@@ -55,7 +54,7 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder thing(@Nullable TopLevelArgs thing) {
-            this.thing = Codegen.ofNullable(thing);
+            this.thing = Output.ofNullable(thing);
             return this;
         }        public ModuleResourceArgs build() {
             return new ModuleResourceArgs(thing);

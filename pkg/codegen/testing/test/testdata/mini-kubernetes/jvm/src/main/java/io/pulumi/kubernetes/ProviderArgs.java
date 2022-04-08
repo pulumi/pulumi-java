@@ -5,7 +5,6 @@ package io.pulumi.kubernetes;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
-import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.inputs.KubeClientSettingsArgs;
 import java.lang.String;
@@ -25,7 +24,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cluster;
 
     public Output<String> getCluster() {
-        return this.cluster == null ? Codegen.empty() : this.cluster;
+        return this.cluster == null ? Output.empty() : this.cluster;
     }
 
     /**
@@ -36,7 +35,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> context;
 
     public Output<String> getContext() {
-        return this.context == null ? Codegen.empty() : this.context;
+        return this.context == null ? Output.empty() : this.context;
     }
 
     /**
@@ -47,7 +46,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<KubeClientSettingsArgs> kubeClientSettings;
 
     public Output<KubeClientSettingsArgs> getKubeClientSettings() {
-        return this.kubeClientSettings == null ? Codegen.empty() : this.kubeClientSettings;
+        return this.kubeClientSettings == null ? Output.empty() : this.kubeClientSettings;
     }
 
     /**
@@ -58,7 +57,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kubeconfig;
 
     public Output<String> getKubeconfig() {
-        return this.kubeconfig == null ? Codegen.empty() : this.kubeconfig;
+        return this.kubeconfig == null ? Output.empty() : this.kubeconfig;
     }
 
     public ProviderArgs(
@@ -73,10 +72,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProviderArgs() {
-        this.cluster = Codegen.empty();
-        this.context = Codegen.empty();
-        this.kubeClientSettings = Codegen.empty();
-        this.kubeconfig = Codegen.empty();
+        this.cluster = Output.empty();
+        this.context = Output.empty();
+        this.kubeClientSettings = Output.empty();
+        this.kubeconfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +109,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cluster(@Nullable String cluster) {
-            this.cluster = Codegen.ofNullable(cluster);
+            this.cluster = Output.ofNullable(cluster);
             return this;
         }
         public Builder context(@Nullable Output<String> context) {
@@ -118,7 +117,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder context(@Nullable String context) {
-            this.context = Codegen.ofNullable(context);
+            this.context = Output.ofNullable(context);
             return this;
         }
         public Builder kubeClientSettings(@Nullable Output<KubeClientSettingsArgs> kubeClientSettings) {
@@ -126,7 +125,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kubeClientSettings(@Nullable KubeClientSettingsArgs kubeClientSettings) {
-            this.kubeClientSettings = Codegen.ofNullable(kubeClientSettings);
+            this.kubeClientSettings = Output.ofNullable(kubeClientSettings);
             return this;
         }
         public Builder kubeconfig(@Nullable Output<String> kubeconfig) {
@@ -134,7 +133,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kubeconfig(@Nullable String kubeconfig) {
-            this.kubeconfig = Codegen.ofNullable(kubeconfig);
+            this.kubeconfig = Output.ofNullable(kubeconfig);
             return this;
         }        public ProviderArgs build() {
             return new ProviderArgs(cluster, context, kubeClientSettings, kubeconfig);

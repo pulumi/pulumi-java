@@ -5,7 +5,6 @@ package io.pulumi.example;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
-import io.pulumi.core.internal.Codegen;
 import io.pulumi.example.Resource;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +28,7 @@ public final class OtherResourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Resource> foo;
 
     public Output<Resource> getFoo() {
-        return this.foo == null ? Codegen.empty() : this.foo;
+        return this.foo == null ? Output.empty() : this.foo;
     }
 
     public OtherResourceArgs(
@@ -41,7 +40,7 @@ public final class OtherResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     private OtherResourceArgs() {
         this.bar = List.of();
-        this.foo = Codegen.empty();
+        this.foo = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +77,7 @@ public final class OtherResourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder foo(@Nullable Resource foo) {
-            this.foo = Codegen.ofNullable(foo);
+            this.foo = Output.ofNullable(foo);
             return this;
         }        public OtherResourceArgs build() {
             return new OtherResourceArgs(bar, foo);

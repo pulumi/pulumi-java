@@ -5,7 +5,6 @@ package io.pulumi.example.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
-import io.pulumi.core.internal.Codegen;
 import io.pulumi.example.Resource;
 import io.pulumi.example.inputs.ConfigMapArgs;
 import io.pulumi.example.inputs.SomeOtherObjectArgs;
@@ -24,21 +23,21 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> bar;
 
     public Output<String> getBar() {
-        return this.bar == null ? Codegen.empty() : this.bar;
+        return this.bar == null ? Output.empty() : this.bar;
     }
 
     @Import(name="configs")
       private final @Nullable Output<List<ConfigMapArgs>> configs;
 
     public Output<List<ConfigMapArgs>> getConfigs() {
-        return this.configs == null ? Codegen.empty() : this.configs;
+        return this.configs == null ? Output.empty() : this.configs;
     }
 
     @Import(name="foo")
       private final @Nullable Output<Resource> foo;
 
     public Output<Resource> getFoo() {
-        return this.foo == null ? Codegen.empty() : this.foo;
+        return this.foo == null ? Output.empty() : this.foo;
     }
 
     /**
@@ -49,7 +48,7 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<List<SomeOtherObjectArgs>>> others;
 
     public Output<List<List<SomeOtherObjectArgs>>> getOthers() {
-        return this.others == null ? Codegen.empty() : this.others;
+        return this.others == null ? Output.empty() : this.others;
     }
 
     /**
@@ -60,7 +59,7 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,List<SomeOtherObjectArgs>>> stillOthers;
 
     public Output<Map<String,List<SomeOtherObjectArgs>>> getStillOthers() {
-        return this.stillOthers == null ? Codegen.empty() : this.stillOthers;
+        return this.stillOthers == null ? Output.empty() : this.stillOthers;
     }
 
     public ObjectArgs(
@@ -77,11 +76,11 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ObjectArgs() {
-        this.bar = Codegen.empty();
-        this.configs = Codegen.empty();
-        this.foo = Codegen.empty();
-        this.others = Codegen.empty();
-        this.stillOthers = Codegen.empty();
+        this.bar = Output.empty();
+        this.configs = Output.empty();
+        this.foo = Output.empty();
+        this.others = Output.empty();
+        this.stillOthers = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +116,7 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bar(@Nullable String bar) {
-            this.bar = Codegen.ofNullable(bar);
+            this.bar = Output.ofNullable(bar);
             return this;
         }
         public Builder configs(@Nullable Output<List<ConfigMapArgs>> configs) {
@@ -125,7 +124,7 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configs(@Nullable List<ConfigMapArgs> configs) {
-            this.configs = Codegen.ofNullable(configs);
+            this.configs = Output.ofNullable(configs);
             return this;
         }
         public Builder configs(ConfigMapArgs... configs) {
@@ -136,7 +135,7 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder foo(@Nullable Resource foo) {
-            this.foo = Codegen.ofNullable(foo);
+            this.foo = Output.ofNullable(foo);
             return this;
         }
         public Builder others(@Nullable Output<List<List<SomeOtherObjectArgs>>> others) {
@@ -144,7 +143,7 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder others(@Nullable List<List<SomeOtherObjectArgs>> others) {
-            this.others = Codegen.ofNullable(others);
+            this.others = Output.ofNullable(others);
             return this;
         }
         public Builder stillOthers(@Nullable Output<Map<String,List<SomeOtherObjectArgs>>> stillOthers) {
@@ -152,7 +151,7 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stillOthers(@Nullable Map<String,List<SomeOtherObjectArgs>> stillOthers) {
-            this.stillOthers = Codegen.ofNullable(stillOthers);
+            this.stillOthers = Output.ofNullable(stillOthers);
             return this;
         }        public ObjectArgs build() {
             return new ObjectArgs(bar, configs, foo, others, stillOthers);
