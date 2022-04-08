@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2;
 
-import io.pulumi.core.AssetOrArchive;
+import io.pulumi.asset.AssetOrArchive;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationArgs;

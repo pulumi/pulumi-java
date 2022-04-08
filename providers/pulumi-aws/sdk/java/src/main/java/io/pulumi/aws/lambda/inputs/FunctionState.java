@@ -3,6 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
+import io.pulumi.asset.Archive;
 import io.pulumi.aws.lambda.enums.Runtime;
 import io.pulumi.aws.lambda.inputs.FunctionDeadLetterConfigGetArgs;
 import io.pulumi.aws.lambda.inputs.FunctionEnvironmentGetArgs;
@@ -10,7 +11,6 @@ import io.pulumi.aws.lambda.inputs.FunctionFileSystemConfigGetArgs;
 import io.pulumi.aws.lambda.inputs.FunctionImageConfigGetArgs;
 import io.pulumi.aws.lambda.inputs.FunctionTracingConfigGetArgs;
 import io.pulumi.aws.lambda.inputs.FunctionVpcConfigGetArgs;
-import io.pulumi.core.Archive;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;

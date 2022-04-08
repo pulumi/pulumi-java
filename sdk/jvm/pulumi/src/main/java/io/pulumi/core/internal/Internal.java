@@ -1,13 +1,17 @@
 package io.pulumi.core.internal;
 
 import io.pulumi.Stack;
-import io.pulumi.core.AssetOrArchive;
+import io.pulumi.asset.AssetOrArchive;
 import io.pulumi.core.Output;
 import io.pulumi.deployment.CallOptions;
 import io.pulumi.deployment.InvokeOptions;
-import io.pulumi.resources.*;
+import io.pulumi.resources.ComponentResource;
 import io.pulumi.resources.ComponentResource.ComponentResourceInternal;
+import io.pulumi.resources.CustomResource;
 import io.pulumi.resources.CustomResource.CustomResourceInternal;
+import io.pulumi.resources.InputArgs;
+import io.pulumi.resources.ProviderResource;
+import io.pulumi.resources.Resource;
 import io.pulumi.resources.Resource.ResourceInternal;
 
 import java.lang.annotation.ElementType;

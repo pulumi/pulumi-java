@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.AssetOrArchive;
+import io.pulumi.asset.AssetOrArchive;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.storage.inputs.BucketObjectCustomerEncryptionGetArgs;

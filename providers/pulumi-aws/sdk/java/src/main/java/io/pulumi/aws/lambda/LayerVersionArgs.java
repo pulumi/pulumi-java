@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda;
 
-import io.pulumi.core.Archive;
+import io.pulumi.asset.Archive;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
