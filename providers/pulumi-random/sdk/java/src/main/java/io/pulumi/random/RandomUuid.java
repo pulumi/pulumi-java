@@ -19,7 +19,75 @@ import javax.annotation.Nullable;
  * 
  * This resource uses [hashicorp/go-uuid](https://github.com/hashicorp/go-uuid) to generate a UUID-formatted string for use with services needed a unique string identifier.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure from "@pulumi/azure";
+ * import * as random from "@pulumi/random";
+ * 
+ * const testRandomUuid = new random.RandomUuid("test", {});
+ * const testResourceGroup = new azure.core.ResourceGroup("test", {
+ *     location: "Central US",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_azure as azure
+ * import pulumi_random as random
+ * 
+ * test_random_uuid = random.RandomUuid("testRandomUuid")
+ * test_resource_group = azure.core.ResourceGroup("testResourceGroup", location="Central US")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Azure = Pulumi.Azure;
+ * using Random = Pulumi.Random;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testRandomUuid = new Random.RandomUuid("testRandomUuid", new Random.RandomUuidArgs
+ *         {
+ *         });
+ *         var testResourceGroup = new Azure.Core.ResourceGroup("testResourceGroup", new Azure.Core.ResourceGroupArgs
+ *         {
+ *             Location = "Central US",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+ * 	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := random.NewRandomUuid(ctx, "testRandomUuid", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = core.NewResourceGroup(ctx, "testResourceGroup", &core.ResourceGroupArgs{
+ * 			Location: pulumi.String("Central US"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +97,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import random:index/randomUuid:RandomUuid main aabbccdd-eeff-0011-2233-445566778899
  * ```
  * 
+ *  
  */
 @ResourceType(type="random:index/randomUuid:RandomUuid")
 public class RandomUuid extends io.pulumi.resources.CustomResource {

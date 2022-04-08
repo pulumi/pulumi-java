@@ -23,7 +23,73 @@ import javax.annotation.Nullable;
  * 
  * Historically this resource's intended usage has been ambiguous as the original example used it in a password. For backwards compatibility it will continue to exist. For unique ids please use random_id, for sensitive random values please use random_password.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as random from "@pulumi/random";
+ * 
+ * const randomRandomString = new random.RandomString("random", {
+ *     length: 16,
+ *     overrideSpecial: "/@£$",
+ *     special: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_random as random
+ * 
+ * random = random.RandomString("random",
+ *     length=16,
+ *     override_special="/@£$",
+ *     special=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Random = Pulumi.Random;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var random = new Random.RandomString("random", new Random.RandomStringArgs
+ *         {
+ *             Length = 16,
+ *             OverrideSpecial = "/@£$",
+ *             Special = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := random.NewRandomString(ctx, "random", &random.RandomStringArgs{
+ * 			Length:          pulumi.Int(16),
+ * 			OverrideSpecial: pulumi.String(fmt.Sprintf("%v%v", "/@£", "$")),
+ * 			Special:         pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,6 +99,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import random:index/randomString:RandomString test test
  * ```
  * 
+ *  
  */
 @ResourceType(type="random:index/randomString:RandomString")
 public class RandomString extends io.pulumi.resources.CustomResource {
