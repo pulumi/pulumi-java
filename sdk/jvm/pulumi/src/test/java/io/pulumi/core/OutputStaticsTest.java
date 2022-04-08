@@ -63,13 +63,16 @@ public class OutputStaticsTest {
 
         // Check that the input maps haven't changed
         OutputTests.waitFor(
-                Output.tuple(list1, outV2).applyVoid(t -> {
+                Output.tuple(list1, outV2)
+                        .applyValue(t -> {
                     assertThat(t.t1).hasSize(2);
                     assertThat(t.t1).contains("V1", t.t2);
+                    return (Void) null;
                 }),
-                Output.tuple(list2, outV3).applyVoid(t -> {
+                Output.tuple(list2, outV3).applyValue(t -> {
                     assertThat(t.t1).hasSize(2);
                     assertThat(t.t1).containsOnly(t.t2, "V4");
+                    return (Void) null;
                 })
         );
     }
@@ -123,13 +126,15 @@ public class OutputStaticsTest {
 
         // Check that the input maps haven't changed
         OutputTests.waitFor(
-                Output.tuple(map1, outV3wrong).applyVoid(t -> {
+                Output.tuple(map1, outV3wrong).applyValue(t -> {
                     assertThat(t.t1).hasSize(3);
                     assertThat(t.t1).contains(entry("K3", t.t2));
+                    return (Void) null;
                 }),
-                Output.tuple(map2, outV3).applyVoid(t -> {
+                Output.tuple(map2, outV3).applyValue(t -> {
                     assertThat(t.t1).hasSize(2);
                     assertThat(t.t1).contains(entry("K3", t.t2));
+                    return (Void) null;
                 })
         );
     }
@@ -250,7 +255,7 @@ public class OutputStaticsTest {
         assertThatThrownBy(() ->
                 OutputTests.waitFor(
                         Output.of(1)
-                                .applyFuture(__ -> CompletableFuture.<Integer>supplyAsync(() -> null))
+                                .apply(__ -> Output.of(CompletableFuture.<Integer>supplyAsync(() -> null)))
                                 .applyValue(x -> x + 1)
                 )
         ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);

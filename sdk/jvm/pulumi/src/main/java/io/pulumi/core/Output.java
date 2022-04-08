@@ -81,26 +81,6 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     /**
-     * @see Output#apply(Function) for more details.
-     */
-    default <U> Output<U> applyFuture(Function<T, CompletableFuture<U>> func) {
-        return apply(t -> Output.of(func.apply(t)));
-    }
-
-    /**
-     * A special case of {@link Output#apply(Function)} that takes {@link Consumer}
-     *
-     * @see Output#apply(Function) for more details.
-     */
-    @CanIgnoreReturnValue
-    default Output<Void> applyVoid(Consumer<T> consumer) {
-        return apply(t -> {
-            consumer.accept(t);
-            return Output.ofNullable(null);
-        });
-    }
-
-    /**
      * Creates a shallow copy (the underlying CompletableFuture is copied) of this @see {@link Output<T>}
      *
      * @return a shallow copy of the @see {@link Output<T>}

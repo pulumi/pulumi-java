@@ -55,8 +55,9 @@ public class DeploymentInvokeTest {
                 })
                 .setSpyGlobalInstance();
 
-        var out = CustomInvokes.doStuff(CustomArgs.Empty, InvokeOptions.Empty).applyVoid(r -> {
+        var out = CustomInvokes.doStuff(CustomArgs.Empty, InvokeOptions.Empty).applyValue(r -> {
             assertThat(r).hasSize(1);
+            return (Void) null;
         });
 
         Internal.of(out).getDataAsync().join();

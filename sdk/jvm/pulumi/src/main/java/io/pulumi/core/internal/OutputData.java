@@ -266,7 +266,7 @@ public final class OutputData<T> implements Copyable<OutputData<T>> {
             @SuppressWarnings("rawtypes") @Nullable Output obj
     ) {
         if (obj == null) {
-            return CompletableFuture.completedFuture(OutputData.of((Object) null));
+            return CompletableFuture.completedFuture(OutputData.ofNullable(null));
         }
         //noinspection unchecked,rawtypes
         return ((OutputInternal<Object>) obj).getDataAsync().copy();
